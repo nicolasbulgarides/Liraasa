@@ -843,6 +843,16 @@
     color: var(--error);
   }
 
+  .cnote {
+    flex-basis: 100%;
+    font-size: 11px;
+    color: var(--ink-faint);
+  }
+
+  .clause-sep {
+    margin-top: var(--s2);
+  }
+
   /* ----------------------------------------------------------- lexicon */
   #q {
     width: 100%;
@@ -1726,36 +1736,70 @@
   };
   const POSSESSIVE = new Set(['my', 'your', 'his', 'her', 'its', 'our', 'their']);
 
-  /* English grammar markers → the particle and the slot it belongs in. */
+  /* English grammar markers → the particle and the slot it belongs in. Each
+     marker becomes a row of its own in the breakdown, so nothing the grammar
+     adds is hidden. `verb` marks an English verb ("began") that stands in for
+     a real verb when its clause has no other. */
   const MARKERS = [
-    { re: /\b(will|shall)\b/, word: 'futu', slot: 'TENSE' },
-    { re: /\b(was|were|did|had|ago)\b/, word: 'po', slot: 'TENSE' },
-    { re: /\b(can|could|able to)\b/, word: 'povi', slot: 'MODAL' },
-    { re: /\b(might|maybe|possibly)\b/, word: 'nosi', slot: 'MODAL' },
-    { re: /\b(may|allowed to|permitted)\b/, word: 'dagi', slot: 'MODAL' },
-    { re: /\b(must|have to|has to|need to)\b/, word: 'musi', slot: 'MODAL' },
-    { re: /\bshould\b/, word: 'suvi', slot: 'MODAL' },
-    { re: /\bwould\b/, word: 'viki', slot: 'MODAL' },
-    { re: /\b(almost|nearly)\b/, word: 'tavki', slot: 'APPROACH' },
-    { re: /\babout to\b/, word: 'fututi', slot: 'APPROACH' },
-    { re: /\b(began|begin|begins|started|start)\b/, word: 'hiro', slot: 'PHASE' },
-    { re: /\b(stopped|stop|ceased)\b/, word: 'teki', slot: 'PHASE' },
-    { re: /\b(tried to|try to|tries to)\b/, word: 'telvo', slot: 'EFFORT' },
-    { re: /\b(managed to|succeeded)\b/, word: 'vazdi', slot: 'EFFORT' },
-    { re: /\b(again)\b/, word: 'reve', slot: 'ITERATION' },
-    { re: /\b(still|keeps|keep on)\b/, word: 'loki', slot: 'ITERATION' },
-    { re: /\b(already)\b/, word: 'bodu', slot: 'ITERATION' },
-    { re: /\b(suddenly)\b/, word: 'zafra', slot: 'FRAME' },
-    { re: /\b(finally|at last)\b/, word: 'finra', slot: 'FRAME' },
-    { re: /\b(eventually)\b/, word: 'lanto', slot: 'FRAME' },
-    { re: /\b(at once|immediately)\b/, word: 'kenvi', slot: 'FRAME' },
-    { re: /\b(certainly|surely|indeed)\b/, word: 'seye', slot: 'ATTITUDE' },
-    { re: /\b(perhaps|maybe)\b/, word: 'poye', slot: 'ATTITUDE' },
-    { re: /\b(only)\b/, word: 'doli', slot: 'SCOPE' },
-    { re: /\b(also|too)\b/, word: 'tu', slot: 'SCOPE' },
-    { re: /\b(even)\b/, word: 'yesta', slot: 'SCOPE' },
-  ];
-  const NEGATION = /\b(not|never|n't|cannot|can't|don't|doesn't|didn't|won't|no)\b/;
+    { en: ['will', 'shall'], word: 'futu', slot: 'TENSE' },
+    { en: ['was', 'were', 'did', 'had', 'ago'], word: 'po', slot: 'TENSE' },
+    { en: ['can', 'could', 'able to'], word: 'povi', slot: 'MODAL' },
+    { en: ['might', 'maybe', 'possibly'], word: 'nosi', slot: 'MODAL' },
+    { en: ['may', 'allowed to', 'permitted'], word: 'dagi', slot: 'MODAL' },
+    { en: ['must', 'have to', 'has to', 'need to'], word: 'musi', slot: 'MODAL' },
+    { en: ['should'], word: 'suvi', slot: 'MODAL' },
+    { en: ['would'], word: 'viki', slot: 'MODAL' },
+    { en: ['almost', 'nearly'], word: 'tavki', slot: 'APPROACH' },
+    { en: ['about to'], word: 'fututi', slot: 'APPROACH' },
+    {
+      en: ['began to', 'begin to', 'begins to', 'started to', 'start to', 'starts to'],
+      word: 'hiro',
+      slot: 'PHASE',
+    },
+    {
+      en: ['began', 'begin', 'begins', 'started', 'start'],
+      word: 'hiro',
+      slot: 'PHASE',
+      verb: true,
+    },
+    { en: ['stopped', 'stop', 'ceased'], word: 'teki', slot: 'PHASE', verb: true },
+    { en: ['tried to', 'try to', 'tries to'], word: 'telvo', slot: 'EFFORT' },
+    { en: ['managed to', 'succeeded'], word: 'vazdi', slot: 'EFFORT' },
+    { en: ['again'], word: 'reve', slot: 'ITERATION' },
+    { en: ['still', 'keeps', 'keep on'], word: 'loki', slot: 'ITERATION' },
+    { en: ['already'], word: 'bodu', slot: 'ITERATION' },
+    { en: ['suddenly'], word: 'zafra', slot: 'FRAME' },
+    { en: ['finally', 'at last'], word: 'finra', slot: 'FRAME' },
+    { en: ['eventually'], word: 'lanto', slot: 'FRAME' },
+    { en: ['at once', 'immediately'], word: 'kenvi', slot: 'FRAME' },
+    { en: ['certainly', 'surely', 'indeed'], word: 'seye', slot: 'ATTITUDE' },
+    { en: ['perhaps'], word: 'poye', slot: 'ATTITUDE' },
+    { en: ['only'], word: 'doli', slot: 'SCOPE' },
+    { en: ['also', 'too'], word: 'tu', slot: 'SCOPE' },
+    { en: ['even'], word: 'yesta', slot: 'SCOPE' },
+  ].map((m) => ({ ...m, phrases: m.en.map((p) => p.split(' ')) }));
+
+  /* Negative words → ne, plus the marker a contraction carries with it:
+     "can't" is povi and ne, "didn't" is po and ne. */
+  const NEGATIVE = {
+    not: null,
+    never: null,
+    no: null,
+    "don't": null,
+    "doesn't": null,
+    cannot: 'can',
+    "can't": 'can',
+    "couldn't": 'could',
+    "didn't": 'did',
+    "won't": 'will',
+    "wouldn't": 'would',
+    "shouldn't": 'should',
+  };
+
+  /* English words that open a new clause, as the checker's clause reset does
+     for their Liraasa equivalents. "that" opens one only when a subject
+     follows it ("I know that you sing"), not as a determiner ("that song"). */
+  const CLAUSE_OPENERS = new Set(['when', 'because', 'if', 'who', 'which', 'and', 'but']);
 
   /* Words carried by Liraasa grammar rather than by a dictionary entry. */
   const STRUCTURAL = {
@@ -1821,6 +1865,7 @@
     seen: 'see',
     sang: 'sing',
     sung: 'sing',
+    began: 'begin',
     begun: 'begin',
     had: 'have',
     said: 'say',
@@ -1996,44 +2041,116 @@
     return [...seen.values()].sort((a, b) => b.score - a.score).slice(0, 6);
   }
 
-  /** Build a draft for one English sentence. */
-  function composeSentence(sentence) {
-    const raw = sentence.trim();
-    const lower = ' ' + raw.toLowerCase() + ' ';
-    const question = /\?\s*$/.test(raw);
+  const PRONOUN_GLOSS = new Map(
+    D.pronouns.map(([form, person, number]) => [form, person + ' ' + number]),
+  );
+  const isPastEn = (w) => IRREGULAR_PAST.has(w) || /[a-z]{3}ed$/.test(w);
+  const particle = (word, slotName) => ({ word, kind: 'particle', slotName });
+  const glossOf = (word) => (CLOSED.get(word) || {}).gloss || '';
 
-    const marks = [];
-    let consumed = lower;
+  /** One sentence's English as words, with commas kept as clause hints. */
+  const englishTokens = (s) =>
+    s
+      .toLowerCase()
+      .replace(/[‘’]/g, "'")
+      .match(/[a-z]+(?:['-][a-z]+)*|,/g) || [];
+
+  /** The marker a run of tokens starts with, longest phrase first. */
+  function markerAt(tokens, i) {
+    let best = null;
     for (const m of MARKERS) {
-      if (m.re.test(consumed)) {
-        marks.push(m);
-        consumed = consumed.replace(m.re, ' ');
+      for (const p of m.phrases) {
+        if (p.every((w, k) => tokens[i + k] === w) && (!best || p.length > best.len)) {
+          best = { m, len: p.length };
+        }
       }
     }
-    const negated = NEGATION.test(consumed);
-    if (negated) consumed = consumed.replace(NEGATION, ' ');
+    return best;
+  }
 
-    const chunks = [];
-    const words = consumed.match(/[a-z'-]+/g) || [];
-    /* A past-tense content word puts the clause in the past. Checked after
-       the marker pass, so "allowed to" — already read as dagi — does not look
-       like a past just because it ends in -ed. */
-    let sawPast = false;
-    for (const w of consumed.match(/[a-z'-]+/g) || []) {
-      if (IRREGULAR_PAST.has(w)) sawPast = true;
-      else if (/[a-z]{3}ed$/.test(w)) sawPast = true;
+  const opensClause = (tokens, i) =>
+    CLAUSE_OPENERS.has(tokens[i]) ||
+    (tokens[i] === 'that' &&
+      (Boolean(PRONOUN_EN[tokens[i + 1]]) || ['the', 'a', 'an'].includes(tokens[i + 1])));
+
+  /* Split before a clause opener, and at the comma that closes a leading
+     subordinate clause: "When time began, I heard your voice" is two clauses,
+     each with its own subject, verb and operators. */
+  function splitEnglishClauses(tokens) {
+    const words = [];
+    const commaBefore = new Set();
+    for (const t of tokens) {
+      if (t === ',') commaBefore.add(words.length);
+      else words.push(t);
     }
-    for (let i = 0; i < words.length; i += 1) {
-      const w = words[i];
-      const afterDeterminer = i > 0 && DETERMINER_EN.has(words[i - 1]);
+    const clauses = [];
+    let cur = [];
+    const close = (comma) => {
+      if (cur.length) clauses.push({ tokens: cur, comma });
+      cur = [];
+    };
+    words.forEach((w, i) => {
+      const comma = commaBefore.has(i);
+      const subordinate =
+        cur.length && CLAUSE_OPENERS.has(cur[0]) && !['and', 'but'].includes(cur[0]);
+      if (cur.length && (opensClause(words, i) || (comma && subordinate))) close(comma);
+      cur.push(w);
+    });
+    close(false);
+    return clauses;
+  }
+
+  /** Build one clause's chunks: a row per English word, markers included. */
+  function composeClause(tokens, sole) {
+    const chunks = [];
+    let negated = false;
+    const markerChunk = (en, m) => ({
+      en,
+      role: 'grammar',
+      marker: m,
+      options: [particle(m.word, m.slot)],
+      chosen: 0,
+      note: glossOf(m.word),
+    });
+
+    for (let i = 0; i < tokens.length; ) {
+      const hit = markerAt(tokens, i);
+      if (hit) {
+        chunks.push(markerChunk(tokens.slice(i, i + hit.len).join(' '), hit.m));
+        i += hit.len;
+        continue;
+      }
+      const w = tokens[i];
+      const afterDeterminer = i > 0 && DETERMINER_EN.has(tokens[i - 1]);
+      i += 1;
+      if (Object.hasOwn(NEGATIVE, w)) {
+        negated = true;
+        chunks.push({
+          en: w,
+          role: 'grammar',
+          negation: true,
+          options: [particle('ne', 'NEGATION')],
+          chosen: 0,
+          note: glossOf('ne'),
+        });
+        const carried = NEGATIVE[w] && markerAt([NEGATIVE[w]], 0);
+        if (carried) chunks.push(markerChunk(w, carried.m));
+        continue;
+      }
       if (STOPWORDS.has(w)) continue;
       if (POSSESSIVE.has(w)) {
+        const owner = PRONOUN_EN[w];
         chunks.push({
           en: w,
           role: 'possessor',
-          options: [{ word: PRONOUN_EN[w], kind: 'pronoun' }],
+          options: [{ word: owner, kind: 'pronoun' }],
           chosen: 0,
           after: 'de',
+          note:
+            owner +
+            ' = ' +
+            (PRONOUN_GLOSS.get(owner) || 'pronoun') +
+            ' · de marks possession: owner + de + possessed noun',
         });
         continue;
       }
@@ -2052,15 +2169,7 @@
           role: 'structure',
           options: [{ word: STRUCTURAL[w], kind: 'function word' }],
           chosen: 0,
-        });
-        continue;
-      }
-      if (STRUCTURAL[w]) {
-        chunks.push({
-          en: w,
-          role: 'structure',
-          options: [{ word: STRUCTURAL[w], kind: 'function word' }],
-          chosen: 0,
+          note: glossOf(STRUCTURAL[w]),
         });
         continue;
       }
@@ -2091,73 +2200,132 @@
        amor. Promote the first candidate offering a glossed verb slot — the
        index holds only slots that carry a meaning, so this can never pick an
        unused one. Every alternative stays one click away. */
-    let verbIx = chunks.findIndex((c) => c.isVerb);
-    if (verbIx < 0) {
-      for (let i = 0; i < chunks.length; i += 1) {
-        if (chunks[i].nounish) continue; // a determiner marks it as a noun
-        const at = chunks[i].options.findIndex((o) => o.kind === 'lexical' && o.slot === 3);
-        if (at >= 0 && (i > 0 || chunks.length === 1)) {
-          chunks[i].chosen = at;
-          chunks[i].isVerb = true;
-          chunks[i].role = 'verb';
-          chunks[i].plural = false; // "works" is third person, not a plural
-          verbIx = i;
+    const standIn = chunks.findIndex((c) => c.marker && c.marker.verb);
+    if (!chunks.some((c) => c.isVerb)) {
+      const content = [];
+      chunks.forEach((c, i) => {
+        if (c.role !== 'structure' && c.role !== 'grammar') content.push(i);
+      });
+      // The first content word is the subject, unless it is a one-word command.
+      const subject = content.length === 1 && sole && standIn < 0 ? -1 : content[0];
+      for (const i of content) {
+        const c = chunks[i];
+        if (i === subject || c.nounish) continue;
+        const at = c.options.findIndex((o) => o.kind === 'lexical' && o.slot === 3);
+        if (at >= 0) {
+          c.chosen = at;
+          c.isVerb = true;
+          c.role = 'verb';
+          c.plural = false; // "works" is third person, not a plural
           break;
         }
       }
     }
 
-    // Assemble: the operators go in slot order before the verb, the rest keep
-    // the order they were written in, which is already SVO in English.
-    const order = [
-      'FRAME',
-      'TENSE',
-      'REALITY',
-      'MODAL',
-      'APPROACH',
-      'PHASE',
-      'EFFORT',
-      'ASPECT',
-      'ITERATION',
-      'EVIDENTIAL',
-    ];
+    /* "Time began": no verb follows "began", so `hiro` (begin to) would have
+       nothing to scope over. The English verb is then the clause's verb,
+       found in the lexicon like any other; the particle stays one click away. */
+    if (!chunks.some((c) => c.isVerb) && standIn >= 0) {
+      const c = chunks[standIn];
+      const verbs = lookupEnglish(c.en).filter((o) => o.kind === 'lexical' && o.slot === 3);
+      if (verbs.length) {
+        const m = c.marker;
+        c.options = [...verbs, ...c.options];
+        c.chosen = 0;
+        c.isVerb = true;
+        c.role = 'verb';
+        c.marker = null;
+        c.note =
+          'no verb follows “' +
+          c.en +
+          '”, so it is the verb here; ' +
+          m.word +
+          ' (' +
+          glossOf(m.word) +
+          ') needs a verb after it';
+      }
+    }
+
+    /* A past-tense content word puts the clause in the past, so it takes `po`
+       — the author's corpus writes "Toda-nela po venreva sabri Dorin", not
+       "Toda-nela venreva". Shown as its own row, beside the word that set it.
+       A past marker counts too: "began to" is hiro, and still past. */
+    if (!chunks.some((c) => c.marker && c.marker.slot === 'TENSE')) {
+      const at = chunks.findIndex((c) => !c.negation && isPastEn(c.en.split(' ')[0]));
+      if (at >= 0) {
+        chunks.splice(at, 0, {
+          en: chunks[at].en,
+          role: 'grammar',
+          marker: { word: 'po', slot: 'TENSE' },
+          options: [particle('po', 'TENSE')],
+          chosen: 0,
+          note: 'English past tense, so po goes before the verb',
+        });
+      }
+    }
+
+    return { chunks, negated };
+  }
+
+  /** Build a draft for one English sentence: one entry per clause. */
+  function composeSentence(sentence) {
+    const raw = sentence.trim();
+    const question = /\?\s*$/.test(raw);
+    const split = splitEnglishClauses(englishTokens(raw));
+    const clauses = split.map((c) => ({
+      ...composeClause(c.tokens, split.length === 1),
+      comma: c.comma,
+    }));
+    return { raw, clauses, question };
+  }
+
+  const PRE_ORDER = [
+    'FRAME',
+    'TENSE',
+    'REALITY',
+    'MODAL',
+    'APPROACH',
+    'PHASE',
+    'EFFORT',
+    'ASPECT',
+    'ITERATION',
+    'EVIDENTIAL',
+  ];
+
+  /** One clause's current choices as Liraasa parts. */
+  function clauseLine(k) {
+    const marks = k.chunks.filter((c) => c.marker).map((c) => c.marker);
     const pre = marks
-      .filter((m) => order.includes(m.slot))
-      .sort((a, b) => order.indexOf(a.slot) - order.indexOf(b.slot));
+      .filter((m) => PRE_ORDER.includes(m.slot))
+      .sort((a, b) => PRE_ORDER.indexOf(a.slot) - PRE_ORDER.indexOf(b.slot));
     const frame = pre.filter((m) => m.slot === 'FRAME').map((m) => m.word);
     const preverbal = pre.filter((m) => m.slot !== 'FRAME').map((m) => m.word);
     const scope = marks.filter((m) => m.slot === 'SCOPE').map((m) => m.word);
     const attitude = marks.filter((m) => m.slot === 'ATTITUDE').map((m) => m.word);
 
-    // A past-tense verb with no explicit tense marker still needs `po`.
-    if (sawPast && !preverbal.some((w) => RANK[w] === 4)) preverbal.unshift('po');
-
-    return { raw, chunks, frame, preverbal, scope, attitude, negated, question };
-  }
-
-  /** Render a draft's current choices as a Liraasa line. */
-  function draftLine(d) {
     /* The preverbal stack, in slot order: tense, then ne, then the rest.
        `ne` follows the tense (1.0:G1) — "Maivo po ne lirala", never
        "Maivo ne po lirala". */
     const stack = [];
-    stack.push(...d.preverbal.filter((w) => RANK[w] === 4));
-    if (d.negated) stack.push('ne');
-    stack.push(...d.preverbal.filter((w) => RANK[w] !== 4));
+    stack.push(...preverbal.filter((w) => RANK[w] === 4));
+    if (k.negated) stack.push('ne');
+    stack.push(...preverbal.filter((w) => RANK[w] !== 4));
 
-    const verbAt = d.chunks.findIndex((c) => c.isVerb);
+    const verbAt = k.chunks.findIndex((c) => c.isVerb);
     const parts = [];
+    // A clause opener (kube, kasa, si…) comes before the clause's own frame.
+    const first = k.chunks[0];
+    const lead =
+      first && first.role === 'structure' && (CLAUSE_OPENERS.has(first.en) || first.en === 'that')
+        ? 1
+        : 0;
 
-    for (const w of d.frame) parts.push({ text: w });
-    if (d.frame.length) parts.push({ text: ',', tight: true });
-    for (const w of d.scope) parts.push({ text: w });
-
-    let placed = stack.length === 0;
-    d.chunks.forEach((c, i) => {
+    const emit = (c, i) => {
       if (!placed && verbAt >= 0 && i === verbAt) {
         for (const w of stack) parts.push({ text: w });
         placed = true;
       }
+      if (c.role === 'grammar') return; // carried by the stack, frame or scope
       if (c.role === 'gap') {
         parts.push({ gap: true, text: c.en });
         return;
@@ -2166,12 +2334,30 @@
       if (!opt) return;
       parts.push({ text: opt.word + (c.plural ? 'ri' : '') });
       if (c.after) parts.push({ text: c.after });
+    };
+
+    let placed = stack.length === 0;
+    k.chunks.slice(0, lead).forEach(emit);
+    for (const w of frame) parts.push({ text: w });
+    if (frame.length) parts.push({ text: ',', tight: true });
+    for (const w of scope) parts.push({ text: w });
+    k.chunks.forEach((c, i) => {
+      if (i >= lead) emit(c, i);
     });
     // No verb was identified, so the operators go at the end rather than
     // disappearing; the writer can move them.
     if (!placed) for (const w of stack) parts.push({ text: w });
+    for (const t of attitude) parts.push({ text: t });
+    return parts;
+  }
 
-    for (const t of d.attitude) parts.push({ text: t });
+  /** Render a draft's current choices as a Liraasa line. */
+  function draftLine(d) {
+    const parts = [];
+    d.clauses.forEach((k, i) => {
+      parts.push(...clauseLine(k));
+      if (k.comma && i < d.clauses.length - 1) parts.push({ text: ',', tight: true });
+    });
     if (d.question) parts.push({ text: 'ki' });
     return parts;
   }
@@ -2203,61 +2389,70 @@
     renderCompose();
   }
 
+  function optLabel(c, o) {
+    let label = esc(o.word) + (c.after ? ' ' + esc(c.after) : '');
+    if (o.kind === 'lexical' && o.slot)
+      label += '<span class="sl">' + SLOT_NAME[o.slot] + '</span>';
+    if (o.kind === 'particle') label += '<span class="sl">' + esc(o.slotName) + '</span>';
+    return label;
+  }
+
+  function chunkRow(c, di, ki, ci) {
+    if (c.role === 'gap') {
+      return (
+        '<div class="chunk"><span class="en">' +
+        esc(c.en) +
+        '<span class="role">no match</span></span>' +
+        '<span class="nomatch">Liraasa has no word for this. Build a MODIFIER+HEAD compound ' +
+        'from two roots, or rephrase.</span></div>'
+      );
+    }
+    const opts = c.options
+      .map(
+        (o, oi) =>
+          '<button class="opt" type="button" aria-pressed="' +
+          (oi === c.chosen) +
+          '" data-d="' +
+          di +
+          '" data-k="' +
+          ki +
+          '" data-c="' +
+          ci +
+          '" data-o="' +
+          oi +
+          '">' +
+          optLabel(c, o) +
+          '</button>',
+      )
+      .join('');
+    return (
+      '<div class="chunk"><span class="en">' +
+      esc(c.en) +
+      '<span class="role">' +
+      esc(c.role) +
+      '</span></span>' +
+      '<span class="opts">' +
+      opts +
+      (c.note ? '<span class="cnote">' + esc(c.note) + '</span>' : '') +
+      '</span></div>'
+    );
+  }
+
   function renderCompose() {
     els.composeOut.innerHTML = drafts
       .map((d, di) => {
         const line = draftLine(d)
           .map((p) => (p.gap ? '<span class="gap">⟨' + esc(p.text) + '⟩</span>' : esc(p.text)))
-          .join(' ');
-        const rows = d.chunks
-          .map((c, ci) => {
-            if (c.role === 'gap') {
-              return (
-                '<div class="chunk"><span class="en">' +
-                esc(c.en) +
-                '<span class="role">no match</span></span>' +
-                '<span class="nomatch">Liraasa has no word for this. Build a MODIFIER+HEAD compound ' +
-                'from two roots, or rephrase.</span></div>'
-              );
-            }
-            const opts = c.options
-              .map(
-                (o, oi) =>
-                  '<button class="opt" type="button" aria-pressed="' +
-                  (oi === c.chosen) +
-                  '" data-d="' +
-                  di +
-                  '" data-c="' +
-                  ci +
-                  '" data-o="' +
-                  oi +
-                  '">' +
-                  esc(o.word) +
-                  (o.kind === 'lexical' && o.slot
-                    ? '<span class="sl">' + SLOT_NAME[o.slot] + '</span>'
-                    : '') +
-                  '</button>',
-              )
-              .join('');
-            return (
-              '<div class="chunk"><span class="en">' +
-              esc(c.en) +
-              '<span class="role">' +
-              esc(c.role) +
-              '</span></span>' +
-              '<span class="opts">' +
-              opts +
-              '</span></div>'
-            );
-          })
+          .join(' ')
+          .replace(/\s+,/g, ',');
+        const rows = d.clauses
+          .map(
+            (k, ki) =>
+              (d.clauses.length > 1
+                ? '<div class="clause-sep label">clause ' + (ki + 1) + '</div>'
+                : '') + k.chunks.map((c, ci) => chunkRow(c, di, ki, ci)).join(''),
+          )
           .join('');
-        const ops = [
-          ...d.frame,
-          ...d.preverbal,
-          ...(d.negated ? ['ne'] : []),
-          ...d.scope,
-          ...d.attitude,
-        ];
         return (
           '<div class="draft">' +
           '<div class="label">' +
@@ -2266,11 +2461,6 @@
           '<div class="out" style="margin-top:4px">' +
           line +
           '</div>' +
-          (ops.length
-            ? '<div class="label" style="margin-top:6px">from grammar: ' +
-              esc(ops.join(' · ')) +
-              '</div>'
-            : '') +
           '<div class="chunks">' +
           rows +
           '</div>' +
@@ -3160,7 +3350,7 @@
   els.composeOut.addEventListener('click', (e) => {
     const opt = e.target.closest('.opt');
     if (opt) {
-      drafts[+opt.dataset.d].chunks[+opt.dataset.c].chosen = +opt.dataset.o;
+      drafts[+opt.dataset.d].clauses[+opt.dataset.k].chunks[+opt.dataset.c].chosen = +opt.dataset.o;
       renderCompose();
       return;
     }
