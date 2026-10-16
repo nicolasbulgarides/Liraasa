@@ -1,0 +1,107 @@
+# song_II_merceria - extracted from the 0.8 Grammar Guide and Codex.
+# Liraasa lines unprefixed; English on "# EN:" comment lines.
+
+# EN: Merceria's Honey Song — Milobeasasan
+# EN: A light, tender devotional where Merceria's mercy gives back innocence, sweetness and joy. Its
+# EN: subtitle, Milobeasasan, is the lexicon's word for a smile of undeserved mercy.
+# EN: Merceria… Merceria…
+Kube li mernolumi lombila, taivo milobema,
+Ata toda folniri lallela vobi taivo.
+Taivo de reso ka gase megesan gase yoga,
+Ata li lulfari lulfala ligo taivo de sabaye.
+Maivo po ke baba linuti raho ralnora en li galsa,
+Ata taivo po lomola maivo ko sumasan manliri.
+Taivo po veseva: “Ne nemenia, linuti.”
+Ata maivo de timruri po loya resori.
+Yava pelipa en li laviganre,
+Yava rohura toda-pago!
+Merceria, Merceria, li meraasasan,
+Taivo merama, ata maivo loya gilbuna.
+Taivo yogaya maivo de lore,
+Ata maivo de lavi ka taivo de juba.
+Milobeasa… linuasa… jubalaviasa…
+Taivo savalisia maivo de mergu,
+Ata maivo sonsasia ata resora.
+Nevi maivo kapoki gilbusan,
+Taivo vimova doli li linu intra maivo.
+Yava pelipa en li laviganre,
+Yava rohura toda-pago!
+Merceria, Merceria, li meraasasan,
+Taivo merama, ata maivo loya gilbuna.
+Taivo yogaya maivo de lore,
+Ata maivo de lavi ka taivo de juba.
+Milobeasa… linuasa… jubalaviasa…
+Kube li ruhe venreva,
+Taivo ka maivo de renlinimu.
+Ata kube maivo nemenia,
+Taivo vaku maivo momvilavima.
+Momvilaviasasan!
+Merceria, Merceria, li meraasasan,
+Taivo merama, ata maivo loya gilbuna.
+Taivo yogaya maivo de lore,
+Ata maivori lavila fuyi.
+Milobeasa… linuasa… jubalaviasa…
+Merceria… la linusan, maivo amora taivo.
+Lorejuba.
+Kube li mernolumi lombila, taivo milobema,
+# EN: When the dawn begins, you smile,
+Ata toda folniri lallela vobi taivo.
+# EN: And all the flowers open for you.
+Taivo de reso ka gase megesan gase yoga,
+# EN: Your laughter is as sweet as honey,
+Ata li lulfari lulfala ligo taivo de sabaye.
+# EN: And the butterflies flutter near your hair.
+Maivo po ke baba linuti raho ralnora en li galsa,
+# EN: I was a little child who fell in the grass,
+# EN: THE DEVOTIONALS AND SONGS
+Ata taivo po lomola maivo ko sumasan manliri.
+# EN: And you embraced me with warm hands.
+Taivo po veseva: “Ne nemenia, linuti.”
+# EN: You whispered: “Do not grieve, little one.”
+Ata maivo de timruri po loya resori.
+# EN: And my tears became laughter.
+Yava pelipa en li laviganre,
+# EN: Let us play in the garden of joy,
+Yava rohura toda-pago!
+# EN: Let us scatter petals everywhere!
+Merceria, Merceria, li meraasasan,
+# EN: Merceria, Merceria, divinely merciful one,
+Taivo merama, ata maivo loya gilbuna.
+# EN: You forgive, and I become innocence.
+Taivo yogaya maivo de lore,
+# EN: You sweeten my heart with honey,
+Ata maivo de lavi ka taivo de juba.
+# EN: And my joy is your gift.
+Milobeasa… linuasa… jubalaviasa…
+# EN: The smile that restores hope… the eternal child… the
+# EN: grace of unnoticed gifts…
+Taivo savalisia maivo de mergu,
+# EN: You kiss my brow,
+Ata maivo sonsasia ata resora.
+# EN: And I blush and laugh.
+Nevi maivo kapoki gilbusan,
+# EN: Though I was once guilty, and am no longer,
+Taivo vimova doli li linu intra maivo.
+# EN: You see only the child within me.
+Kube li ruhe venreva,
+# EN: When the storm comes,
+Taivo ka maivo de renlinimu.
+# EN: You are my shelter from the rain.
+Ata kube maivo nemenia,
+# EN: And when I grieve,
+Taivo vaku maivo momvilavima.
+# EN: You make me find joy again after loss.
+Momvilaviasasan!
+# EN: Joy restored against all odds!
+Ata maivori lavila fuyi.
+# EN: And we delight in each other.
+Merceria… la linusan, maivo amora taivo.
+# EN: Merceria… like a child, I love you.
+Lorejuba.
+# EN: Thank you.
+# EN: forgiveness turns the singer back into innocence. kapoki (was, but no longer) makes the past guilt explicitly
+# EN: over. The chorus uses meraasasan rather than meraasa, whose gloss is "a peaceful death."
+# EN: Style prompt: joyful devotional folk-pop, bright veena and glockenspiel, light hand percussion, warm gentle
+# EN: vocal, 92 BPM, playful hummed intro, children's choir on final chorus, hushed spoken outro.
+# EN: THE DEVOTIONALS AND SONGS
+# EN: SONG III

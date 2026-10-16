@@ -1,0 +1,3191 @@
+{
+ "report": "Liraasa 1.0 -> 1.1 machine-readable comparison",
+ "generated_from": "scripts/report_1_1.ts",
+ "files": {
+  "lexicon_0_8_rc2.json": {
+   "sha256": "b2702d1cf0bfff676ef47f9f9db8d47b12b5178af125fadd4abd5494acd81fa2"
+  },
+  "liraasa_1_0.json": {
+   "sha256": "adc013cf99b79ec597c8cfcb9aee9f942e520010556ab6b072bcaa9a606608f3",
+   "headwords": 1099
+  },
+  "liraasa_1_1.json": {
+   "sha256": "819b002c48be6c570d8b9fc6c2d4101fe6accaddee9688d74ff3bb8269b06e18",
+   "headwords": 1418
+  },
+  "Liraasa_1_1_Vocabulary_Proposal.json": {
+   "sha256": "79f17d944819f37ca70c99353cefbb03e00295e0aa620f874dc95235bdf8c841"
+  },
+  "validation_1_1.json": {
+   "sha256": "71409a5fdd2a9f5f1674ef3a5fa66c5447387fda7c10410c63a61825e27ce229"
+  }
+ },
+ "unchanged": {
+  "headwords_1_0_identical": true,
+  "examples_1_0_identical": true,
+  "frozen_sections": {
+   "phonology": true,
+   "morphology": true,
+   "motion_prefixes": true,
+   "grammar": true,
+   "function_words": true,
+   "pronouns": true,
+   "correlatives": true,
+   "numbers": true,
+   "time_and_dates": true,
+   "colors": true,
+   "discourse_particles": true,
+   "rulings_1_0": true,
+   "rulings_0_8_carried": true,
+   "legacy": true,
+   "sound_ledger": true,
+   "dispositions": true,
+   "settled_open_questions_0_8": true,
+   "snapshot_0_8": true,
+   "changelog_1_0": true,
+   "rhyme_families": true
+  }
+ },
+ "changed": {
+  "version": [
+   "1.0",
+   "1.1"
+  ],
+  "built_utc": [
+   "2026-10-16T00:00:00Z",
+   "2026-10-16T12:00:00Z"
+  ],
+  "source": "rewritten to record the 1.1 provenance",
+  "headwords": "+319",
+  "examples": "+134"
+ },
+ "added": [
+  {
+   "root": "lazu",
+   "type": "Primal",
+   "components": null,
+   "domain": "Ecology & biology",
+   "gloss": "animal; living member of the animal kingdom"
+  },
+  {
+   "root": "jemla",
+   "type": "Primal",
+   "components": null,
+   "domain": "Ecology & biology",
+   "gloss": "insect; six-legged arthropod in ordinary usage"
+  },
+  {
+   "root": "pavma",
+   "type": "Primal",
+   "components": null,
+   "domain": "Materials & physics",
+   "gloss": "matter; physical substance; material"
+  },
+  {
+   "root": "germa",
+   "type": "Primal",
+   "components": null,
+   "domain": "Materials & physics",
+   "gloss": "metal; metallic material"
+  },
+  {
+   "root": "yalmu",
+   "type": "Primal",
+   "components": null,
+   "domain": "Materials & physics",
+   "gloss": "energy; capacity to produce physical change"
+  },
+  {
+   "root": "serna",
+   "type": "Primal",
+   "components": null,
+   "domain": "Information & technology",
+   "gloss": "information; encoded or communicable content"
+  },
+  {
+   "root": "lermi",
+   "type": "Primal",
+   "components": null,
+   "domain": "Information & technology",
+   "gloss": "language; structured human/animal/artificial system of meaningful signs"
+  },
+  {
+   "root": "nurmi",
+   "type": "Primal",
+   "components": null,
+   "domain": "Mind & philosophy",
+   "gloss": "consciousness; subjective awareness or experience"
+  },
+  {
+   "root": "ravmi",
+   "type": "Primal",
+   "components": null,
+   "domain": "Mind & philosophy",
+   "gloss": "intelligence; capacity to learn, reason, generalize and solve problems"
+  },
+  {
+   "root": "divma",
+   "type": "Primal",
+   "components": null,
+   "domain": "Systems & relations",
+   "gloss": "system; organized arrangement of interacting parts"
+  },
+  {
+   "root": "favro",
+   "type": "Primal",
+   "components": null,
+   "domain": "Systems & relations",
+   "gloss": "signal; sign conveying information"
+  },
+  {
+   "root": "vamri",
+   "type": "Primal",
+   "components": null,
+   "domain": "Space & orientation",
+   "gloss": "space; spatial extent, independent of location"
+  },
+  {
+   "root": "demro",
+   "type": "Primal",
+   "components": null,
+   "domain": "Space & orientation",
+   "gloss": "motion; change of spatial position"
+  },
+  {
+   "root": "purma",
+   "type": "Primal",
+   "components": null,
+   "domain": "Family & society",
+   "gloss": "parent; parenthood independent of sex"
+  },
+  {
+   "root": "hunra",
+   "type": "Primal",
+   "components": null,
+   "domain": "Family & society",
+   "gloss": "maturity; being fully developed or adult"
+  },
+  {
+   "root": "lizma",
+   "type": "Primal",
+   "components": null,
+   "domain": "Space & orientation",
+   "gloss": "leftward orientation; left side"
+  },
+  {
+   "root": "rizno",
+   "type": "Primal",
+   "components": null,
+   "domain": "Space & orientation",
+   "gloss": "rightward orientation; right side"
+  },
+  {
+   "root": "zavme",
+   "type": "Primal",
+   "components": null,
+   "domain": "Space & orientation",
+   "gloss": "front; forward-facing side"
+  },
+  {
+   "root": "nazru",
+   "type": "Primal",
+   "components": null,
+   "domain": "Space & orientation",
+   "gloss": "rear; back; posterior side"
+  },
+  {
+   "root": "tilnu",
+   "type": "Primal",
+   "components": null,
+   "domain": "Everyday objects & health",
+   "gloss": "waste; refuse; discarded output"
+  },
+  {
+   "root": "zarmo",
+   "type": "Primal",
+   "components": null,
+   "domain": "Actions & physical processes",
+   "gloss": "strike; impact; physical blow/contact with force"
+  },
+  {
+   "root": "lizmasilda",
+   "type": "Compound",
+   "components": [
+    "lizma",
+    "silda"
+   ],
+   "domain": "Space & orientation",
+   "gloss": "left side"
+  },
+  {
+   "root": "riznosilda",
+   "type": "Compound",
+   "components": [
+    "rizno",
+    "silda"
+   ],
+   "domain": "Space & orientation",
+   "gloss": "right side"
+  },
+  {
+   "root": "zavmesilda",
+   "type": "Compound",
+   "components": [
+    "zavme",
+    "silda"
+   ],
+   "domain": "Space & orientation",
+   "gloss": "front side"
+  },
+  {
+   "root": "nazrusilda",
+   "type": "Compound",
+   "components": [
+    "nazru",
+    "silda"
+   ],
+   "domain": "Space & orientation",
+   "gloss": "rear side"
+  },
+  {
+   "root": "zavmedemro",
+   "type": "Compound",
+   "components": [
+    "zavme",
+    "demro"
+   ],
+   "domain": "Space & orientation",
+   "gloss": "forward motion"
+  },
+  {
+   "root": "nazrudemro",
+   "type": "Compound",
+   "components": [
+    "nazru",
+    "demro"
+   ],
+   "domain": "Space & orientation",
+   "gloss": "backward motion"
+  },
+  {
+   "root": "sildademro",
+   "type": "Compound",
+   "components": [
+    "silda",
+    "demro"
+   ],
+   "domain": "Space & orientation",
+   "gloss": "sideways motion"
+  },
+  {
+   "root": "darnonulu",
+   "type": "Compound",
+   "components": [
+    "darno",
+    "nulu"
+   ],
+   "domain": "Space & orientation",
+   "gloss": "route"
+  },
+  {
+   "root": "nulutilma",
+   "type": "Compound",
+   "components": [
+    "nulu",
+    "tilma"
+   ],
+   "domain": "Space & orientation",
+   "gloss": "intersection"
+  },
+  {
+   "root": "vamrilalni",
+   "type": "Compound",
+   "components": [
+    "vamri",
+    "lalni"
+   ],
+   "domain": "Space & orientation",
+   "gloss": "spatial distance"
+  },
+  {
+   "root": "jomruvelbi",
+   "type": "Compound",
+   "components": [
+    "jomru",
+    "velbi"
+   ],
+   "domain": "Space & orientation",
+   "gloss": "travel speed"
+  },
+  {
+   "root": "lizmavopra",
+   "type": "Compound",
+   "components": [
+    "lizma",
+    "vopra"
+   ],
+   "domain": "Space & orientation",
+   "gloss": "left turn"
+  },
+  {
+   "root": "riznovopra",
+   "type": "Compound",
+   "components": [
+    "rizno",
+    "vopra"
+   ],
+   "domain": "Space & orientation",
+   "gloss": "right turn"
+  },
+  {
+   "root": "zavmepago",
+   "type": "Compound",
+   "components": [
+    "zavme",
+    "pago"
+   ],
+   "domain": "Space & orientation",
+   "gloss": "front area"
+  },
+  {
+   "root": "nazrupago",
+   "type": "Compound",
+   "components": [
+    "nazru",
+    "pago"
+   ],
+   "domain": "Space & orientation",
+   "gloss": "rear area"
+  },
+  {
+   "root": "darnobiti",
+   "type": "Compound",
+   "components": [
+    "darno",
+    "biti"
+   ],
+   "domain": "Space & orientation",
+   "gloss": "compass"
+  },
+  {
+   "root": "nimulazu",
+   "type": "Compound",
+   "components": [
+    "nimu",
+    "lazu"
+   ],
+   "domain": "Ecology & biology",
+   "gloss": "pet"
+  },
+  {
+   "root": "farvilazu",
+   "type": "Compound",
+   "components": [
+    "farvi",
+    "lazu"
+   ],
+   "domain": "Ecology & biology",
+   "gloss": "wild animal"
+  },
+  {
+   "root": "talilazu",
+   "type": "Compound",
+   "components": [
+    "tali",
+    "lazu"
+   ],
+   "domain": "Ecology & biology",
+   "gloss": "working animal"
+  },
+  {
+   "root": "sevulazu",
+   "type": "Compound",
+   "components": [
+    "sevu",
+    "lazu"
+   ],
+   "domain": "Ecology & biology",
+   "gloss": "marine animal"
+  },
+  {
+   "root": "jemlatino",
+   "type": "Compound",
+   "components": [
+    "jemla",
+    "tino"
+   ],
+   "domain": "Ecology & biology",
+   "gloss": "insect kind"
+  },
+  {
+   "root": "jemlayano",
+   "type": "Compound",
+   "components": [
+    "jemla",
+    "yano"
+   ],
+   "domain": "Ecology & biology",
+   "gloss": "insect swarm"
+  },
+  {
+   "root": "lazunimu",
+   "type": "Compound",
+   "components": [
+    "lazu",
+    "nimu"
+   ],
+   "domain": "Ecology & biology",
+   "gloss": "animal den"
+  },
+  {
+   "root": "lazupago",
+   "type": "Compound",
+   "components": [
+    "lazu",
+    "pago"
+   ],
+   "domain": "Ecology & biology",
+   "gloss": "habitat"
+  },
+  {
+   "root": "biodivma",
+   "type": "Compound",
+   "components": [
+    "bio",
+    "divma"
+   ],
+   "domain": "Ecology & biology",
+   "gloss": "ecosystem"
+  },
+  {
+   "root": "biotino",
+   "type": "Compound",
+   "components": [
+    "bio",
+    "tino"
+   ],
+   "domain": "Ecology & biology",
+   "gloss": "species"
+  },
+  {
+   "root": "bioyuge",
+   "type": "Compound",
+   "components": [
+    "bio",
+    "yuge"
+   ],
+   "domain": "Ecology & biology",
+   "gloss": "organism"
+  },
+  {
+   "root": "lazuyano",
+   "type": "Compound",
+   "components": [
+    "lazu",
+    "yano"
+   ],
+   "domain": "Ecology & biology",
+   "gloss": "herd or pack"
+  },
+  {
+   "root": "loterobiotino",
+   "type": "Compound",
+   "components": [
+    "lotero",
+    "biotino"
+   ],
+   "domain": "Ecology & biology",
+   "gloss": "biological diversity"
+  },
+  {
+   "root": "lazujomru",
+   "type": "Compound",
+   "components": [
+    "lazu",
+    "jomru"
+   ],
+   "domain": "Ecology & biology",
+   "gloss": "animal migration"
+  },
+  {
+   "root": "biotinosolma",
+   "type": "Compound",
+   "components": [
+    "biotino",
+    "solma"
+   ],
+   "domain": "Ecology & biology",
+   "gloss": "extinction of a species; the dying out of a kind of life"
+  },
+  {
+   "root": "biodonu",
+   "type": "Compound",
+   "components": [
+    "bio",
+    "donu"
+   ],
+   "domain": "Ecology & biology",
+   "gloss": "reproduction"
+  },
+  {
+   "root": "linuvenre",
+   "type": "Compound",
+   "components": [
+    "linu",
+    "venre"
+   ],
+   "domain": "Ecology & biology",
+   "gloss": "birth"
+  },
+  {
+   "root": "biovamri",
+   "type": "Compound",
+   "components": [
+    "bio",
+    "vamri"
+   ],
+   "domain": "Ecology & biology",
+   "gloss": "biosphere"
+  },
+  {
+   "root": "lazuralka",
+   "type": "Compound",
+   "components": [
+    "lazu",
+    "ralka"
+   ],
+   "domain": "Ecology & biology",
+   "gloss": "animal aggression; struggle between animals"
+  },
+  {
+   "root": "folnitino",
+   "type": "Compound",
+   "components": [
+    "folni",
+    "tino"
+   ],
+   "domain": "Ecology & biology",
+   "gloss": "flowering-plant species"
+  },
+  {
+   "root": "larbobiodivma",
+   "type": "Compound",
+   "components": [
+    "larbo",
+    "biodivma"
+   ],
+   "domain": "Ecology & biology",
+   "gloss": "forest ecosystem"
+  },
+  {
+   "root": "ceresolo",
+   "type": "Compound",
+   "components": [
+    "cere",
+    "solo"
+   ],
+   "domain": "Materials & physics",
+   "gloss": "glass"
+  },
+  {
+   "root": "farusolo",
+   "type": "Compound",
+   "components": [
+    "faru",
+    "solo"
+   ],
+   "domain": "Materials & physics",
+   "gloss": "ceramic"
+  },
+  {
+   "root": "domlusolo",
+   "type": "Compound",
+   "components": [
+    "domlu",
+    "solo"
+   ],
+   "domain": "Materials & physics",
+   "gloss": "brick"
+  },
+  {
+   "root": "mirutamra",
+   "type": "Compound",
+   "components": [
+    "miru",
+    "tamra"
+   ],
+   "domain": "Materials & physics",
+   "gloss": "mud"
+  },
+  {
+   "root": "biotamra",
+   "type": "Compound",
+   "components": [
+    "bio",
+    "tamra"
+   ],
+   "domain": "Materials & physics",
+   "gloss": "soil"
+  },
+  {
+   "root": "mirunumo",
+   "type": "Compound",
+   "components": [
+    "miru",
+    "numo"
+   ],
+   "domain": "Materials & physics",
+   "gloss": "steam"
+  },
+  {
+   "root": "tibipavma",
+   "type": "Compound",
+   "components": [
+    "tibi",
+    "pavma"
+   ],
+   "domain": "Materials & physics",
+   "gloss": "fabric"
+  },
+  {
+   "root": "tibivelma",
+   "type": "Compound",
+   "components": [
+    "tibi",
+    "velma"
+   ],
+   "domain": "Materials & physics",
+   "gloss": "textile garment"
+  },
+  {
+   "root": "tiselarboyuge",
+   "type": "Compound",
+   "components": [
+    "tise",
+    "larboyuge"
+   ],
+   "domain": "Materials & physics",
+   "gloss": "plank"
+  },
+  {
+   "root": "germatibi",
+   "type": "Compound",
+   "components": [
+    "germa",
+    "tibi"
+   ],
+   "domain": "Materials & physics",
+   "gloss": "wire"
+  },
+  {
+   "root": "germalavlo",
+   "type": "Compound",
+   "components": [
+    "germa",
+    "lavlo"
+   ],
+   "domain": "Materials & physics",
+   "gloss": "metal foil"
+  },
+  {
+   "root": "colbilisi",
+   "type": "Compound",
+   "components": [
+    "colbi",
+    "lisi"
+   ],
+   "domain": "Materials & physics",
+   "gloss": "paint"
+  },
+  {
+   "root": "yalmunami",
+   "type": "Compound",
+   "components": [
+    "yalmu",
+    "nami"
+   ],
+   "domain": "Materials & physics",
+   "gloss": "fuel"
+  },
+  {
+   "root": "yalmukova",
+   "type": "Compound",
+   "components": [
+    "yalmu",
+    "kova"
+   ],
+   "domain": "Materials & physics",
+   "gloss": "battery"
+  },
+  {
+   "root": "pusanumo",
+   "type": "Compound",
+   "components": [
+    "pusa",
+    "numo"
+   ],
+   "domain": "Materials & physics",
+   "gloss": "cloud of dust"
+  },
+  {
+   "root": "sumayalmu",
+   "type": "Compound",
+   "components": [
+    "suma",
+    "yalmu"
+   ],
+   "domain": "Materials & physics",
+   "gloss": "thermal energy"
+  },
+  {
+   "root": "lumiyalmu",
+   "type": "Compound",
+   "components": [
+    "lumi",
+    "yalmu"
+   ],
+   "domain": "Materials & physics",
+   "gloss": "radiant energy"
+  },
+  {
+   "root": "demroyalmu",
+   "type": "Compound",
+   "components": [
+    "demro",
+    "yalmu"
+   ],
+   "domain": "Materials & physics",
+   "gloss": "kinetic energy"
+  },
+  {
+   "root": "germativro",
+   "type": "Compound",
+   "components": [
+    "germa",
+    "tivro"
+   ],
+   "domain": "Materials & physics",
+   "gloss": "magnet"
+  },
+  {
+   "root": "germabiti",
+   "type": "Compound",
+   "components": [
+    "germa",
+    "biti"
+   ],
+   "domain": "Materials & physics",
+   "gloss": "metal tool; metal implement"
+  },
+  {
+   "root": "germabimne",
+   "type": "Compound",
+   "components": [
+    "germa",
+    "bimne"
+   ],
+   "domain": "Materials & physics",
+   "gloss": "metallic structure"
+  },
+  {
+   "root": "pavmasovla",
+   "type": "Compound",
+   "components": [
+    "pavma",
+    "sovla"
+   ],
+   "domain": "Materials & physics",
+   "gloss": "material property"
+  },
+  {
+   "root": "mavoyuge",
+   "type": "Compound",
+   "components": [
+    "mavo",
+    "yuge"
+   ],
+   "domain": "Health & anatomy",
+   "gloss": "brain"
+  },
+  {
+   "root": "surutibi",
+   "type": "Compound",
+   "components": [
+    "suru",
+    "tibi"
+   ],
+   "domain": "Health & anatomy",
+   "gloss": "nerve"
+  },
+  {
+   "root": "ranbeyuge",
+   "type": "Compound",
+   "components": [
+    "ranbe",
+    "yuge"
+   ],
+   "domain": "Health & anatomy",
+   "gloss": "muscle"
+  },
+  {
+   "root": "sapukova",
+   "type": "Compound",
+   "components": [
+    "sapu",
+    "kova"
+   ],
+   "domain": "Health & anatomy",
+   "gloss": "stomach"
+  },
+  {
+   "root": "linukova",
+   "type": "Compound",
+   "components": [
+    "linu",
+    "kova"
+   ],
+   "domain": "Health & anatomy",
+   "gloss": "womb"
+  },
+  {
+   "root": "linufule",
+   "type": "Compound",
+   "components": [
+    "linu",
+    "fule"
+   ],
+   "domain": "Health & anatomy",
+   "gloss": "pregnancy"
+  },
+  {
+   "root": "senrulalle",
+   "type": "Compound",
+   "components": [
+    "senru",
+    "lalle"
+   ],
+   "domain": "Health & anatomy",
+   "gloss": "skin pore"
+  },
+  {
+   "root": "mudubio",
+   "type": "Compound",
+   "components": [
+    "mudu",
+    "bio"
+   ],
+   "domain": "Health & anatomy",
+   "gloss": "pathogen"
+  },
+  {
+   "root": "nulvazogu",
+   "type": "Compound",
+   "components": [
+    "nulva",
+    "zogu"
+   ],
+   "domain": "Health & anatomy",
+   "gloss": "sneeze"
+  },
+  {
+   "root": "senrunuravu",
+   "type": "Compound",
+   "components": [
+    "senru",
+    "nuravu"
+   ],
+   "domain": "Health & anatomy",
+   "gloss": "itch"
+  },
+  {
+   "root": "yugefule",
+   "type": "Compound",
+   "components": [
+    "yuge",
+    "fule"
+   ],
+   "domain": "Health & anatomy",
+   "gloss": "swelling"
+  },
+  {
+   "root": "mavovulra",
+   "type": "Compound",
+   "components": [
+    "mavo",
+    "vulra"
+   ],
+   "domain": "Health & anatomy",
+   "gloss": "psychological trauma"
+  },
+  {
+   "root": "barnirale",
+   "type": "Compound",
+   "components": [
+    "barni",
+    "rale"
+   ],
+   "domain": "Health & anatomy",
+   "gloss": "pulse"
+  },
+  {
+   "root": "yugetali",
+   "type": "Compound",
+   "components": [
+    "yuge",
+    "tali"
+   ],
+   "domain": "Health & anatomy",
+   "gloss": "exercise"
+  },
+  {
+   "root": "namitrana",
+   "type": "Compound",
+   "components": [
+    "nami",
+    "trana"
+   ],
+   "domain": "Health & anatomy",
+   "gloss": "physical digestion"
+  },
+  {
+   "root": "yugehelna",
+   "type": "Compound",
+   "components": [
+    "yuge",
+    "helna"
+   ],
+   "domain": "Health & anatomy",
+   "gloss": "physical therapy"
+  },
+  {
+   "root": "helnabiti",
+   "type": "Compound",
+   "components": [
+    "helna",
+    "biti"
+   ],
+   "domain": "Health & anatomy",
+   "gloss": "medical instrument"
+  },
+  {
+   "root": "senrumudubio",
+   "type": "Compound",
+   "components": [
+    "senru",
+    "mudubio"
+   ],
+   "domain": "Health & anatomy",
+   "gloss": "skin infection"
+  },
+  {
+   "root": "purmafamli",
+   "type": "Compound",
+   "components": [
+    "purma",
+    "famli"
+   ],
+   "domain": "Family & society",
+   "gloss": "aunt or uncle"
+  },
+  {
+   "root": "purmafamlilinu",
+   "type": "Compound",
+   "components": [
+    "purmafamli",
+    "linu"
+   ],
+   "domain": "Family & society",
+   "gloss": "cousin"
+  },
+  {
+   "root": "purmapurma",
+   "type": "Compound",
+   "components": [
+    "purma",
+    "purma"
+   ],
+   "domain": "Family & society",
+   "gloss": "grandparent"
+  },
+  {
+   "root": "linulinu",
+   "type": "Compound",
+   "components": [
+    "linu",
+    "linu"
+   ],
+   "domain": "Family & society",
+   "gloss": "grandchild"
+  },
+  {
+   "root": "kronopurma",
+   "type": "Compound",
+   "components": [
+    "krono",
+    "purma"
+   ],
+   "domain": "Family & society",
+   "gloss": "ancestor"
+  },
+  {
+   "root": "kronolinu",
+   "type": "Compound",
+   "components": [
+    "krono",
+    "linu"
+   ],
+   "domain": "Family & society",
+   "gloss": "later descendant"
+  },
+  {
+   "root": "purmalinu",
+   "type": "Compound",
+   "components": [
+    "purma",
+    "linu"
+   ],
+   "domain": "Family & society",
+   "gloss": "offspring"
+  },
+  {
+   "root": "famanela",
+   "type": "Compound",
+   "components": [
+    "fama",
+    "nela"
+   ],
+   "domain": "Family & society",
+   "gloss": "family member"
+  },
+  {
+   "root": "hunranela",
+   "type": "Compound",
+   "components": [
+    "hunra",
+    "nela"
+   ],
+   "domain": "Family & society",
+   "gloss": "adult person"
+  },
+  {
+   "root": "hunralinu",
+   "type": "Compound",
+   "components": [
+    "hunra",
+    "linu"
+   ],
+   "domain": "Family & society",
+   "gloss": "adolescent"
+  },
+  {
+   "root": "talirivo",
+   "type": "Compound",
+   "components": [
+    "tali",
+    "rivo"
+   ],
+   "domain": "Family & society",
+   "gloss": "colleague"
+  },
+  {
+   "root": "talilirbu",
+   "type": "Compound",
+   "components": [
+    "tali",
+    "lirbu"
+   ],
+   "domain": "Family & society",
+   "gloss": "supervisor"
+  },
+  {
+   "root": "lemudonurivo",
+   "type": "Compound",
+   "components": [
+    "lemudonu",
+    "rivo"
+   ],
+   "domain": "Family & society",
+   "gloss": "mentor"
+  },
+  {
+   "root": "lemutali",
+   "type": "Compound",
+   "components": [
+    "lemu",
+    "tali"
+   ],
+   "domain": "Family & society",
+   "gloss": "apprenticeship"
+  },
+  {
+   "root": "nelayano",
+   "type": "Compound",
+   "components": [
+    "nela",
+    "yano"
+   ],
+   "domain": "Family & society",
+   "gloss": "community"
+  },
+  {
+   "root": "nelacunu",
+   "type": "Compound",
+   "components": [
+    "nela",
+    "cunu"
+   ],
+   "domain": "Family & society",
+   "gloss": "population"
+  },
+  {
+   "root": "cilninela",
+   "type": "Compound",
+   "components": [
+    "cilni",
+    "nela"
+   ],
+   "domain": "Family & society",
+   "gloss": "civic member"
+  },
+  {
+   "root": "gonbibena",
+   "type": "Compound",
+   "components": [
+    "gonbi",
+    "bena"
+   ],
+   "domain": "Family & society",
+   "gloss": "hospitality"
+  },
+  {
+   "root": "soratilma",
+   "type": "Compound",
+   "components": [
+    "sora",
+    "tilma"
+   ],
+   "domain": "Family & society",
+   "gloss": "friendship"
+  },
+  {
+   "root": "linurilli",
+   "type": "Compound",
+   "components": [
+    "linu",
+    "rilli"
+   ],
+   "domain": "Family & society",
+   "gloss": "adoption"
+  },
+  {
+   "root": "maretilma",
+   "type": "Compound",
+   "components": [
+    "mare",
+    "tilma"
+   ],
+   "domain": "Family & society",
+   "gloss": "motherhood"
+  },
+  {
+   "root": "pilotilma",
+   "type": "Compound",
+   "components": [
+    "pilo",
+    "tilma"
+   ],
+   "domain": "Family & society",
+   "gloss": "fatherhood"
+  },
+  {
+   "root": "purmatali",
+   "type": "Compound",
+   "components": [
+    "purma",
+    "tali"
+   ],
+   "domain": "Family & society",
+   "gloss": "parenting"
+  },
+  {
+   "root": "devotilma",
+   "type": "Compound",
+   "components": [
+    "devo",
+    "tilma"
+   ],
+   "domain": "Family & society",
+   "gloss": "mutual trust"
+  },
+  {
+   "root": "namresomubiti",
+   "type": "Compound",
+   "components": [
+    "namre",
+    "somubiti"
+   ],
+   "domain": "Everyday objects & work",
+   "gloss": "pillow"
+  },
+  {
+   "root": "somuvelma",
+   "type": "Compound",
+   "components": [
+    "somu",
+    "velma"
+   ],
+   "domain": "Everyday objects & work",
+   "gloss": "blanket"
+  },
+  {
+   "root": "yugesomubiti",
+   "type": "Compound",
+   "components": [
+    "yuge",
+    "somubiti"
+   ],
+   "domain": "Everyday objects & work",
+   "gloss": "mattress"
+  },
+  {
+   "root": "yugetilnu",
+   "type": "Compound",
+   "components": [
+    "yuge",
+    "tilnu"
+   ],
+   "domain": "Everyday objects & work",
+   "gloss": "body waste"
+  },
+  {
+   "root": "yugetilnubiti",
+   "type": "Compound",
+   "components": [
+    "yugetilnu",
+    "biti"
+   ],
+   "domain": "Everyday objects & work",
+   "gloss": "toilet fixture"
+  },
+  {
+   "root": "tilnukova",
+   "type": "Compound",
+   "components": [
+    "tilnu",
+    "kova"
+   ],
+   "domain": "Everyday objects & work",
+   "gloss": "waste bin"
+  },
+  {
+   "root": "tilnupago",
+   "type": "Compound",
+   "components": [
+    "tilnu",
+    "pago"
+   ],
+   "domain": "Everyday objects & work",
+   "gloss": "rubbish dump"
+  },
+  {
+   "root": "safapavma",
+   "type": "Compound",
+   "components": [
+    "safa",
+    "pavma"
+   ],
+   "domain": "Everyday objects & work",
+   "gloss": "soap"
+  },
+  {
+   "root": "safavelma",
+   "type": "Compound",
+   "components": [
+    "safa",
+    "velma"
+   ],
+   "domain": "Everyday objects & work",
+   "gloss": "washcloth"
+  },
+  {
+   "root": "silikova",
+   "type": "Compound",
+   "components": [
+    "sili",
+    "kova"
+   ],
+   "domain": "Everyday objects & work",
+   "gloss": "refrigerator"
+  },
+  {
+   "root": "lumikemye",
+   "type": "Compound",
+   "components": [
+    "lumi",
+    "kemye"
+   ],
+   "domain": "Everyday objects & work",
+   "gloss": "light switch"
+  },
+  {
+   "root": "mirudorbi",
+   "type": "Compound",
+   "components": [
+    "miru",
+    "dorbi"
+   ],
+   "domain": "Everyday objects & work",
+   "gloss": "faucet"
+  },
+  {
+   "root": "domlubiti",
+   "type": "Compound",
+   "components": [
+    "domlu",
+    "biti"
+   ],
+   "domain": "Everyday objects & work",
+   "gloss": "furniture"
+  },
+  {
+   "root": "kelebiti",
+   "type": "Compound",
+   "components": [
+    "kele",
+    "biti"
+   ],
+   "domain": "Everyday objects & work",
+   "gloss": "ladder"
+  },
+  {
+   "root": "zarmobiti",
+   "type": "Compound",
+   "components": [
+    "zarmo",
+    "biti"
+   ],
+   "domain": "Everyday objects & work",
+   "gloss": "hammer"
+  },
+  {
+   "root": "tibiteyo",
+   "type": "Compound",
+   "components": [
+    "tibi",
+    "teyo"
+   ],
+   "domain": "Everyday objects & work",
+   "gloss": "needle"
+  },
+  {
+   "root": "valminulu",
+   "type": "Compound",
+   "components": [
+    "valmi",
+    "nulu"
+   ],
+   "domain": "Everyday objects & work",
+   "gloss": "road"
+  },
+  {
+   "root": "jomrubiti",
+   "type": "Compound",
+   "components": [
+    "jomru",
+    "biti"
+   ],
+   "domain": "Everyday objects & work",
+   "gloss": "vehicle"
+  },
+  {
+   "root": "kronobiti",
+   "type": "Compound",
+   "components": [
+    "krono",
+    "biti"
+   ],
+   "domain": "Everyday objects & work",
+   "gloss": "clock"
+  },
+  {
+   "root": "kronosarbisenru",
+   "type": "Compound",
+   "components": [
+    "krono",
+    "sarbisenru"
+   ],
+   "domain": "Everyday objects & work",
+   "gloss": "calendar"
+  },
+  {
+   "root": "dapasarbisenru",
+   "type": "Compound",
+   "components": [
+    "dapa",
+    "sarbisenru"
+   ],
+   "domain": "Everyday objects & work",
+   "gloss": "receipt"
+  },
+  {
+   "root": "mavopagodapa",
+   "type": "Compound",
+   "components": [
+    "mavopago",
+    "dapa"
+   ],
+   "domain": "Everyday objects & work",
+   "gloss": "income tax"
+  },
+  {
+   "root": "gurapari",
+   "type": "Compound",
+   "components": [
+    "gura",
+    "pari"
+   ],
+   "domain": "Everyday objects & work",
+   "gloss": "interest on debt"
+  },
+  {
+   "root": "rimadapa",
+   "type": "Compound",
+   "components": [
+    "rima",
+    "dapa"
+   ],
+   "domain": "Everyday objects & work",
+   "gloss": "rental fee for non-housing property"
+  },
+  {
+   "root": "harludapa",
+   "type": "Compound",
+   "components": [
+    "harlu",
+    "dapa"
+   ],
+   "domain": "Everyday objects & work",
+   "gloss": "insurance premium"
+  },
+  {
+   "root": "conokova",
+   "type": "Compound",
+   "components": [
+    "cono",
+    "kova"
+   ],
+   "domain": "Everyday objects & work",
+   "gloss": "bank or vault"
+  },
+  {
+   "root": "lirasarbi",
+   "type": "Compound",
+   "components": [
+    "lira",
+    "sarbi"
+   ],
+   "domain": "Music & storytelling",
+   "gloss": "poem"
+  },
+  {
+   "root": "liralarda",
+   "type": "Compound",
+   "components": [
+    "lira",
+    "larda"
+   ],
+   "domain": "Music & storytelling",
+   "gloss": "poetry"
+  },
+  {
+   "root": "lirapatu",
+   "type": "Compound",
+   "components": [
+    "lira",
+    "patu"
+   ],
+   "domain": "Music & storytelling",
+   "gloss": "verse"
+  },
+  {
+   "root": "sarbilirapatu",
+   "type": "Compound",
+   "components": [
+    "sarbi",
+    "lirapatu"
+   ],
+   "domain": "Music & storytelling",
+   "gloss": "stanza"
+  },
+  {
+   "root": "yanolira",
+   "type": "Compound",
+   "components": [
+    "yano",
+    "lira"
+   ],
+   "domain": "Music & storytelling",
+   "gloss": "chorus; a group-sung section"
+  },
+  {
+   "root": "ralelirapatu",
+   "type": "Compound",
+   "components": [
+    "rale",
+    "lirapatu"
+   ],
+   "domain": "Music & storytelling",
+   "gloss": "refrain"
+  },
+  {
+   "root": "sonbusamba",
+   "type": "Compound",
+   "components": [
+    "sonbu",
+    "samba"
+   ],
+   "domain": "Music & storytelling",
+   "gloss": "rhyme"
+  },
+  {
+   "root": "kronosonbu",
+   "type": "Compound",
+   "components": [
+    "krono",
+    "sonbu"
+   ],
+   "domain": "Music & storytelling",
+   "gloss": "rhythm"
+  },
+  {
+   "root": "melonulu",
+   "type": "Compound",
+   "components": [
+    "melo",
+    "nulu"
+   ],
+   "domain": "Music & storytelling",
+   "gloss": "melody"
+  },
+  {
+   "root": "yanosonbu",
+   "type": "Compound",
+   "components": [
+    "yano",
+    "sonbu"
+   ],
+   "domain": "Music & storytelling",
+   "gloss": "harmony"
+  },
+  {
+   "root": "ralkasonbu",
+   "type": "Compound",
+   "components": [
+    "ralka",
+    "sonbu"
+   ],
+   "domain": "Music & storytelling",
+   "gloss": "dissonance"
+  },
+  {
+   "root": "melobiti",
+   "type": "Compound",
+   "components": [
+    "melo",
+    "biti"
+   ],
+   "domain": "Music & storytelling",
+   "gloss": "musical instrument"
+  },
+  {
+   "root": "leninela",
+   "type": "Compound",
+   "components": [
+    "leni",
+    "nela"
+   ],
+   "domain": "Music & storytelling",
+   "gloss": "listener or audience member"
+  },
+  {
+   "root": "lardayano",
+   "type": "Compound",
+   "components": [
+    "larda",
+    "yano"
+   ],
+   "domain": "Music & storytelling",
+   "gloss": "ensemble"
+  },
+  {
+   "root": "telnepatu",
+   "type": "Compound",
+   "components": [
+    "telne",
+    "patu"
+   ],
+   "domain": "Music & storytelling",
+   "gloss": "scene"
+  },
+  {
+   "root": "telnenulu",
+   "type": "Compound",
+   "components": [
+    "telne",
+    "nulu"
+   ],
+   "domain": "Music & storytelling",
+   "gloss": "plot of a story; narrative line"
+  },
+  {
+   "root": "senotilma",
+   "type": "Compound",
+   "components": [
+    "seno",
+    "tilma"
+   ],
+   "domain": "Music & storytelling",
+   "gloss": "spoken dialogue"
+  },
+  {
+   "root": "lideosovla",
+   "type": "Compound",
+   "components": [
+    "lideo",
+    "sovla"
+   ],
+   "domain": "Music & storytelling",
+   "gloss": "metaphor"
+  },
+  {
+   "root": "nafetelne",
+   "type": "Compound",
+   "components": [
+    "nafe",
+    "telne"
+   ],
+   "domain": "Music & storytelling",
+   "gloss": "fiction"
+  },
+  {
+   "root": "nelatelne",
+   "type": "Compound",
+   "components": [
+    "nela",
+    "telne"
+   ],
+   "domain": "Music & storytelling",
+   "gloss": "biography"
+  },
+  {
+   "root": "kronoramu",
+   "type": "Compound",
+   "components": [
+    "krono",
+    "ramu"
+   ],
+   "domain": "Music & storytelling",
+   "gloss": "history"
+  },
+  {
+   "root": "ramutelne",
+   "type": "Compound",
+   "components": [
+    "ramu",
+    "telne"
+   ],
+   "domain": "Music & storytelling",
+   "gloss": "legend"
+  },
+  {
+   "root": "liratelne",
+   "type": "Compound",
+   "components": [
+    "lira",
+    "telne"
+   ],
+   "domain": "Music & storytelling",
+   "gloss": "opera"
+  },
+  {
+   "root": "melolordi",
+   "type": "Compound",
+   "components": [
+    "melo",
+    "lordi"
+   ],
+   "domain": "Music & storytelling",
+   "gloss": "musical arrangement"
+  },
+  {
+   "root": "veraserbu",
+   "type": "Compound",
+   "components": [
+    "vera",
+    "serbu"
+   ],
+   "domain": "Science & philosophical inquiry",
+   "gloss": "science"
+  },
+  {
+   "root": "sabeserbu",
+   "type": "Compound",
+   "components": [
+    "sabe",
+    "serbu"
+   ],
+   "domain": "Science & philosophical inquiry",
+   "gloss": "research"
+  },
+  {
+   "root": "sabetelba",
+   "type": "Compound",
+   "components": [
+    "sabe",
+    "telba"
+   ],
+   "domain": "Science & philosophical inquiry",
+   "gloss": "experiment"
+  },
+  {
+   "root": "vismatali",
+   "type": "Compound",
+   "components": [
+    "visma",
+    "tali"
+   ],
+   "domain": "Science & philosophical inquiry",
+   "gloss": "observation"
+  },
+  {
+   "root": "mellicunu",
+   "type": "Compound",
+   "components": [
+    "melli",
+    "cunu"
+   ],
+   "domain": "Science & philosophical inquiry",
+   "gloss": "measurement"
+  },
+  {
+   "root": "sambaseno",
+   "type": "Compound",
+   "components": [
+    "samba",
+    "seno"
+   ],
+   "domain": "Science & philosophical inquiry",
+   "gloss": "mathematical equation"
+  },
+  {
+   "root": "cunuranfa",
+   "type": "Compound",
+   "components": [
+    "cunu",
+    "ranfa"
+   ],
+   "domain": "Science & philosophical inquiry",
+   "gloss": "mathematics"
+  },
+  {
+   "root": "sovlaranfa",
+   "type": "Compound",
+   "components": [
+    "sovla",
+    "ranfa"
+   ],
+   "domain": "Science & philosophical inquiry",
+   "gloss": "geometry"
+  },
+  {
+   "root": "pavmasabe",
+   "type": "Compound",
+   "components": [
+    "pavma",
+    "sabe"
+   ],
+   "domain": "Science & philosophical inquiry",
+   "gloss": "physics"
+  },
+  {
+   "root": "pavmatrana",
+   "type": "Compound",
+   "components": [
+    "pavma",
+    "trana"
+   ],
+   "domain": "Science & philosophical inquiry",
+   "gloss": "chemistry"
+  },
+  {
+   "root": "biosabe",
+   "type": "Compound",
+   "components": [
+    "bio",
+    "sabe"
+   ],
+   "domain": "Science & philosophical inquiry",
+   "gloss": "biology"
+  },
+  {
+   "root": "biotilma",
+   "type": "Compound",
+   "components": [
+    "bio",
+    "tilma"
+   ],
+   "domain": "Science & philosophical inquiry",
+   "gloss": "ecological relations"
+  },
+  {
+   "root": "mavosabe",
+   "type": "Compound",
+   "components": [
+    "mavo",
+    "sabe"
+   ],
+   "domain": "Science & philosophical inquiry",
+   "gloss": "psychology"
+  },
+  {
+   "root": "navusabe",
+   "type": "Compound",
+   "components": [
+    "navu",
+    "sabe"
+   ],
+   "domain": "Science & philosophical inquiry",
+   "gloss": "astronomy"
+  },
+  {
+   "root": "lideoserbu",
+   "type": "Compound",
+   "components": [
+    "lideo",
+    "serbu"
+   ],
+   "domain": "Science & philosophical inquiry",
+   "gloss": "philosophy"
+  },
+  {
+   "root": "benaranfa",
+   "type": "Compound",
+   "components": [
+    "bena",
+    "ranfa"
+   ],
+   "domain": "Science & philosophical inquiry",
+   "gloss": "ethics"
+  },
+  {
+   "root": "ranfalideo",
+   "type": "Compound",
+   "components": [
+    "ranfa",
+    "lideo"
+   ],
+   "domain": "Science & philosophical inquiry",
+   "gloss": "theory"
+  },
+  {
+   "root": "sovlalideo",
+   "type": "Compound",
+   "components": [
+    "sovla",
+    "lideo"
+   ],
+   "domain": "Science & philosophical inquiry",
+   "gloss": "conceptual model"
+  },
+  {
+   "root": "vorduyordo",
+   "type": "Compound",
+   "components": [
+    "vordu",
+    "yordo"
+   ],
+   "domain": "Science & philosophical inquiry",
+   "gloss": "causal outcome"
+  },
+  {
+   "root": "pesbivordu",
+   "type": "Compound",
+   "components": [
+    "pesbi",
+    "vordu"
+   ],
+   "domain": "Science & philosophical inquiry",
+   "gloss": "gravity"
+  },
+  {
+   "root": "demrovordu",
+   "type": "Compound",
+   "components": [
+    "demro",
+    "vordu"
+   ],
+   "domain": "Science & philosophical inquiry",
+   "gloss": "physical force"
+  },
+  {
+   "root": "pavmapatu",
+   "type": "Compound",
+   "components": [
+    "pavma",
+    "patu"
+   ],
+   "domain": "Science & philosophical inquiry",
+   "gloss": "material particle"
+  },
+  {
+   "root": "navuvamri",
+   "type": "Compound",
+   "components": [
+    "navu",
+    "vamri"
+   ],
+   "domain": "Science & philosophical inquiry",
+   "gloss": "outer space"
+  },
+  {
+   "root": "vamridarno",
+   "type": "Compound",
+   "components": [
+    "vamri",
+    "darno"
+   ],
+   "domain": "Science & philosophical inquiry",
+   "gloss": "spatial dimension"
+  },
+  {
+   "root": "navutrana",
+   "type": "Compound",
+   "components": [
+    "navu",
+    "trana"
+   ],
+   "domain": "Science & philosophical inquiry",
+   "gloss": "weather"
+  },
+  {
+   "root": "sornimodo",
+   "type": "Compound",
+   "components": [
+    "sorni",
+    "modo"
+   ],
+   "domain": "Science & philosophical inquiry",
+   "gloss": "climate"
+  },
+  {
+   "root": "sumamelli",
+   "type": "Compound",
+   "components": [
+    "suma",
+    "melli"
+   ],
+   "domain": "Science & philosophical inquiry",
+   "gloss": "temperature"
+  },
+  {
+   "root": "demrovelbi",
+   "type": "Compound",
+   "components": [
+    "demro",
+    "velbi"
+   ],
+   "domain": "Science & philosophical inquiry",
+   "gloss": "speed of movement"
+  },
+  {
+   "root": "vamrimelli",
+   "type": "Compound",
+   "components": [
+    "vamri",
+    "melli"
+   ],
+   "domain": "Science & philosophical inquiry",
+   "gloss": "volume"
+  },
+  {
+   "root": "veralanve",
+   "type": "Compound",
+   "components": [
+    "vera",
+    "lanve"
+   ],
+   "domain": "Science & philosophical inquiry",
+   "gloss": "scientific law"
+  },
+  {
+   "root": "ranfasude",
+   "type": "Compound",
+   "components": [
+    "ranfa",
+    "sude"
+   ],
+   "domain": "Science & philosophical inquiry",
+   "gloss": "mathematical proof"
+  },
+  {
+   "root": "veraserbubiti",
+   "type": "Compound",
+   "components": [
+    "veraserbu",
+    "biti"
+   ],
+   "domain": "Science & philosophical inquiry",
+   "gloss": "scientific instrument"
+  },
+  {
+   "root": "sabebiti",
+   "type": "Compound",
+   "components": [
+    "sabe",
+    "biti"
+   ],
+   "domain": "Technology & AI",
+   "gloss": "technology"
+  },
+  {
+   "root": "divmabiti",
+   "type": "Compound",
+   "components": [
+    "divma",
+    "biti"
+   ],
+   "domain": "Technology & AI",
+   "gloss": "machine"
+  },
+  {
+   "root": "cunudivmabiti",
+   "type": "Compound",
+   "components": [
+    "cunu",
+    "divmabiti"
+   ],
+   "domain": "Technology & AI",
+   "gloss": "computer"
+  },
+  {
+   "root": "lordinulu",
+   "type": "Compound",
+   "components": [
+    "lordi",
+    "nulu"
+   ],
+   "domain": "Technology & AI",
+   "gloss": "algorithm"
+  },
+  {
+   "root": "sernadivma",
+   "type": "Compound",
+   "components": [
+    "serna",
+    "divma"
+   ],
+   "domain": "Technology & AI",
+   "gloss": "software"
+  },
+  {
+   "root": "pavmadivmabiti",
+   "type": "Compound",
+   "components": [
+    "pavma",
+    "divmabiti"
+   ],
+   "domain": "Technology & AI",
+   "gloss": "hardware"
+  },
+  {
+   "root": "farlaravmi",
+   "type": "Compound",
+   "components": [
+    "farla",
+    "ravmi"
+   ],
+   "domain": "Technology & AI",
+   "gloss": "artificial intelligence"
+  },
+  {
+   "root": "farvisimvo",
+   "type": "Compound",
+   "components": [
+    "farvi",
+    "simvo"
+   ],
+   "domain": "Technology & AI",
+   "gloss": "autonomy"
+  },
+  {
+   "root": "farvisimvodivmabiti",
+   "type": "Compound",
+   "components": [
+    "farvisimvo",
+    "divmabiti"
+   ],
+   "domain": "Technology & AI",
+   "gloss": "robot"
+  },
+  {
+   "root": "divmatali",
+   "type": "Compound",
+   "components": [
+    "divma",
+    "tali"
+   ],
+   "domain": "Technology & AI",
+   "gloss": "automation"
+  },
+  {
+   "root": "tilmadivma",
+   "type": "Compound",
+   "components": [
+    "tilma",
+    "divma"
+   ],
+   "domain": "Technology & AI",
+   "gloss": "network"
+  },
+  {
+   "root": "sernakova",
+   "type": "Compound",
+   "components": [
+    "serna",
+    "kova"
+   ],
+   "domain": "Technology & AI",
+   "gloss": "database"
+  },
+  {
+   "root": "sernaramu",
+   "type": "Compound",
+   "components": [
+    "serna",
+    "ramu"
+   ],
+   "domain": "Technology & AI",
+   "gloss": "data storage"
+  },
+  {
+   "root": "silbeseno",
+   "type": "Compound",
+   "components": [
+    "silbe",
+    "seno"
+   ],
+   "domain": "Technology & AI",
+   "gloss": "message"
+  },
+  {
+   "root": "favrosilbe",
+   "type": "Compound",
+   "components": [
+    "favro",
+    "silbe"
+   ],
+   "domain": "Technology & AI",
+   "gloss": "signal transmission"
+  },
+  {
+   "root": "favrotilma",
+   "type": "Compound",
+   "components": [
+    "favro",
+    "tilma"
+   ],
+   "domain": "Technology & AI",
+   "gloss": "communication"
+  },
+  {
+   "root": "yalmunulu",
+   "type": "Compound",
+   "components": [
+    "yalmu",
+    "nulu"
+   ],
+   "domain": "Technology & AI",
+   "gloss": "energy conduit"
+  },
+  {
+   "root": "germayalmunulu",
+   "type": "Compound",
+   "components": [
+    "germa",
+    "yalmunulu"
+   ],
+   "domain": "Technology & AI",
+   "gloss": "electrical wire"
+  },
+  {
+   "root": "vismabiti",
+   "type": "Compound",
+   "components": [
+    "visma",
+    "biti"
+   ],
+   "domain": "Technology & AI",
+   "gloss": "sensor"
+  },
+  {
+   "root": "vimobiti",
+   "type": "Compound",
+   "components": [
+    "vimo",
+    "biti"
+   ],
+   "domain": "Technology & AI",
+   "gloss": "camera"
+  },
+  {
+   "root": "lenibiti",
+   "type": "Compound",
+   "components": [
+    "leni",
+    "biti"
+   ],
+   "domain": "Technology & AI",
+   "gloss": "microphone"
+  },
+  {
+   "root": "vallabiti",
+   "type": "Compound",
+   "components": [
+    "valla",
+    "biti"
+   ],
+   "domain": "Technology & AI",
+   "gloss": "loudspeaker"
+  },
+  {
+   "root": "vimolavlo",
+   "type": "Compound",
+   "components": [
+    "vimo",
+    "lavlo"
+   ],
+   "domain": "Technology & AI",
+   "gloss": "display screen"
+  },
+  {
+   "root": "senobiti",
+   "type": "Compound",
+   "components": [
+    "seno",
+    "biti"
+   ],
+   "domain": "Technology & AI",
+   "gloss": "text input device"
+  },
+  {
+   "root": "kemyeseno",
+   "type": "Compound",
+   "components": [
+    "kemye",
+    "seno"
+   ],
+   "domain": "Technology & AI",
+   "gloss": "password"
+  },
+  {
+   "root": "silrodivma",
+   "type": "Compound",
+   "components": [
+    "silro",
+    "divma"
+   ],
+   "domain": "Technology & AI",
+   "gloss": "cryptographic system"
+  },
+  {
+   "root": "tilmadivmapatu",
+   "type": "Compound",
+   "components": [
+    "tilmadivma",
+    "patu"
+   ],
+   "domain": "Technology & AI",
+   "gloss": "network node"
+  },
+  {
+   "root": "sernarilli",
+   "type": "Compound",
+   "components": [
+    "serna",
+    "rilli"
+   ],
+   "domain": "Technology & AI",
+   "gloss": "information download"
+  },
+  {
+   "root": "sernasilbe",
+   "type": "Compound",
+   "components": [
+    "serna",
+    "silbe"
+   ],
+   "domain": "Technology & AI",
+   "gloss": "information upload"
+  },
+  {
+   "root": "sernasamba",
+   "type": "Compound",
+   "components": [
+    "serna",
+    "samba"
+   ],
+   "domain": "Technology & AI",
+   "gloss": "information copying"
+  },
+  {
+   "root": "divmaperemo",
+   "type": "Compound",
+   "components": [
+    "divma",
+    "peremo"
+   ],
+   "domain": "Technology & AI",
+   "gloss": "system error"
+  },
+  {
+   "root": "divmaperemomeyi",
+   "type": "Compound",
+   "components": [
+    "divmaperemo",
+    "meyi"
+   ],
+   "domain": "Technology & AI",
+   "gloss": "software debugging"
+  },
+  {
+   "root": "lideodivma",
+   "type": "Compound",
+   "components": [
+    "lideo",
+    "divma"
+   ],
+   "domain": "Technology & AI",
+   "gloss": "simulation"
+  },
+  {
+   "root": "nafevemi",
+   "type": "Compound",
+   "components": [
+    "nafe",
+    "vemi"
+   ],
+   "domain": "Technology & AI",
+   "gloss": "virtual world"
+  },
+  {
+   "root": "sernasimvo",
+   "type": "Compound",
+   "components": [
+    "serna",
+    "simvo"
+   ],
+   "domain": "Technology & AI",
+   "gloss": "digital identity"
+  },
+  {
+   "root": "farlamavo",
+   "type": "Compound",
+   "components": [
+    "farla",
+    "mavo"
+   ],
+   "domain": "Technology & AI",
+   "gloss": "artificial mind"
+  },
+  {
+   "root": "divmabitinurmi",
+   "type": "Compound",
+   "components": [
+    "divmabiti",
+    "nurmi"
+   ],
+   "domain": "Technology & AI",
+   "gloss": "machine consciousness"
+  },
+  {
+   "root": "divmabitilemu",
+   "type": "Compound",
+   "components": [
+    "divmabiti",
+    "lemu"
+   ],
+   "domain": "Technology & AI",
+   "gloss": "machine learning"
+  },
+  {
+   "root": "lemulordinulu",
+   "type": "Compound",
+   "components": [
+    "lemu",
+    "lordinulu"
+   ],
+   "domain": "Technology & AI",
+   "gloss": "learning algorithm"
+  },
+  {
+   "root": "sernasilro",
+   "type": "Compound",
+   "components": [
+    "serna",
+    "silro"
+   ],
+   "domain": "Technology & AI",
+   "gloss": "data privacy"
+  },
+  {
+   "root": "sernadivmasasva",
+   "type": "Compound",
+   "components": [
+    "sernadivma",
+    "sasva"
+   ],
+   "domain": "Technology & AI",
+   "gloss": "computer security"
+  },
+  {
+   "root": "nelasimvo",
+   "type": "Compound",
+   "components": [
+    "nela",
+    "simvo"
+   ],
+   "domain": "Technology & AI",
+   "gloss": "personhood"
+  },
+  {
+   "root": "farviyeba",
+   "type": "Compound",
+   "components": [
+    "farvi",
+    "yeba"
+   ],
+   "domain": "Ethics & emotions",
+   "gloss": "consent"
+  },
+  {
+   "root": "vordumusva",
+   "type": "Compound",
+   "components": [
+    "vordu",
+    "musva"
+   ],
+   "domain": "Ethics & emotions",
+   "gloss": "accountability"
+  },
+  {
+   "root": "kulpamera",
+   "type": "Compound",
+   "components": [
+    "kulpa",
+    "mera"
+   ],
+   "domain": "Ethics & emotions",
+   "gloss": "forgiveness"
+  },
+  {
+   "root": "verasimvo",
+   "type": "Compound",
+   "components": [
+    "vera",
+    "simvo"
+   ],
+   "domain": "Ethics & emotions",
+   "gloss": "honesty"
+  },
+  {
+   "root": "benasimvo",
+   "type": "Compound",
+   "components": [
+    "bena",
+    "simvo"
+   ],
+   "domain": "Ethics & emotions",
+   "gloss": "moral integrity"
+  },
+  {
+   "root": "surutilma",
+   "type": "Compound",
+   "components": [
+    "suru",
+    "tilma"
+   ],
+   "domain": "Ethics & emotions",
+   "gloss": "empathy"
+  },
+  {
+   "root": "nememera",
+   "type": "Compound",
+   "components": [
+    "neme",
+    "mera"
+   ],
+   "domain": "Ethics & emotions",
+   "gloss": "compassion"
+  },
+  {
+   "root": "amorharlu",
+   "type": "Compound",
+   "components": [
+    "amor",
+    "harlu"
+   ],
+   "domain": "Ethics & emotions",
+   "gloss": "romantic jealousy"
+  },
+  {
+   "root": "loterovorba",
+   "type": "Compound",
+   "components": [
+    "lotero",
+    "vorba"
+   ],
+   "domain": "Ethics & emotions",
+   "gloss": "social envy"
+  },
+  {
+   "root": "nelavarde",
+   "type": "Compound",
+   "components": [
+    "nela",
+    "varde"
+   ],
+   "domain": "Ethics & emotions",
+   "gloss": "human dignity"
+  },
+  {
+   "root": "devobena",
+   "type": "Compound",
+   "components": [
+    "devo",
+    "bena"
+   ],
+   "domain": "Ethics & emotions",
+   "gloss": "trustworthiness"
+  },
+  {
+   "root": "jusedivma",
+   "type": "Compound",
+   "components": [
+    "juse",
+    "divma"
+   ],
+   "domain": "Ethics & emotions",
+   "gloss": "justice system"
+  },
+  {
+   "root": "maivokaldo",
+   "type": "Compound",
+   "components": [
+    "maivo",
+    "kaldo"
+   ],
+   "domain": "Ethics & emotions",
+   "gloss": "self-restraint"
+  },
+  {
+   "root": "vulraranbe",
+   "type": "Compound",
+   "components": [
+    "vulra",
+    "ranbe"
+   ],
+   "domain": "Ethics & emotions",
+   "gloss": "resilience"
+  },
+  {
+   "root": "simvolivna",
+   "type": "Compound",
+   "components": [
+    "simvo",
+    "livna"
+   ],
+   "domain": "Ethics & emotions",
+   "gloss": "self-determination"
+  },
+  {
+   "root": "benamavopago",
+   "type": "Compound",
+   "components": [
+    "bena",
+    "mavopago"
+   ],
+   "domain": "Ethics & emotions",
+   "gloss": "ethical society"
+  },
+  {
+   "root": "benavulra",
+   "type": "Compound",
+   "components": [
+    "bena",
+    "vulra"
+   ],
+   "domain": "Ethics & emotions",
+   "gloss": "moral injury"
+  },
+  {
+   "root": "fulepari",
+   "type": "Compound",
+   "components": [
+    "fule",
+    "pari"
+   ],
+   "domain": "Time, quantity & work",
+   "gloss": "surplus; quantity beyond what is needed"
+  },
+  {
+   "root": "kronocunu",
+   "type": "Compound",
+   "components": [
+    "krono",
+    "cunu"
+   ],
+   "domain": "Time, quantity & work",
+   "gloss": "frequency"
+  },
+  {
+   "root": "kronolalni",
+   "type": "Compound",
+   "components": [
+    "krono",
+    "lalni"
+   ],
+   "domain": "Time, quantity & work",
+   "gloss": "duration"
+  },
+  {
+   "root": "kronopatu",
+   "type": "Compound",
+   "components": [
+    "krono",
+    "patu"
+   ],
+   "domain": "Time, quantity & work",
+   "gloss": "period or era"
+  },
+  {
+   "root": "talikrono",
+   "type": "Compound",
+   "components": [
+    "tali",
+    "krono"
+   ],
+   "domain": "Time, quantity & work",
+   "gloss": "work shift"
+  },
+  {
+   "root": "kronotrana",
+   "type": "Compound",
+   "components": [
+    "krono",
+    "trana"
+   ],
+   "domain": "Time, quantity & work",
+   "gloss": "progress"
+  },
+  {
+   "root": "kronosulno",
+   "type": "Compound",
+   "components": [
+    "krono",
+    "sulno"
+   ],
+   "domain": "Time, quantity & work",
+   "gloss": "delay"
+  },
+  {
+   "root": "kronoharlu",
+   "type": "Compound",
+   "components": [
+    "krono",
+    "harlu"
+   ],
+   "domain": "Time, quantity & work",
+   "gloss": "urgency"
+  },
+  {
+   "root": "talilordi",
+   "type": "Compound",
+   "components": [
+    "tali",
+    "lordi"
+   ],
+   "domain": "Time, quantity & work",
+   "gloss": "work schedule"
+  },
+  {
+   "root": "kendepatu",
+   "type": "Compound",
+   "components": [
+    "kende",
+    "patu"
+   ],
+   "domain": "Time, quantity & work",
+   "gloss": "milestone"
+  },
+  {
+   "root": "kendelordi",
+   "type": "Compound",
+   "components": [
+    "kende",
+    "lordi"
+   ],
+   "domain": "Time, quantity & work",
+   "gloss": "priority"
+  },
+  {
+   "root": "divmaranbe",
+   "type": "Compound",
+   "components": [
+    "divma",
+    "ranbe"
+   ],
+   "domain": "Time, quantity & work",
+   "gloss": "operational capacity"
+  },
+  {
+   "root": "yusopavma",
+   "type": "Compound",
+   "components": [
+    "yuso",
+    "pavma"
+   ],
+   "domain": "Time, quantity & work",
+   "gloss": "resource"
+  },
+  {
+   "root": "codacunu",
+   "type": "Compound",
+   "components": [
+    "coda",
+    "cunu"
+   ],
+   "domain": "Time, quantity & work",
+   "gloss": "inventory"
+  },
+  {
+   "root": "talibena",
+   "type": "Compound",
+   "components": [
+    "tali",
+    "bena"
+   ],
+   "domain": "Time, quantity & work",
+   "gloss": "quality of work"
+  },
+  {
+   "root": "talipesbi",
+   "type": "Compound",
+   "components": [
+    "tali",
+    "pesbi"
+   ],
+   "domain": "Time, quantity & work",
+   "gloss": "workload"
+  },
+  {
+   "root": "conolordi",
+   "type": "Compound",
+   "components": [
+    "cono",
+    "lordi"
+   ],
+   "domain": "Time, quantity & work",
+   "gloss": "budget"
+  },
+  {
+   "root": "parimelli",
+   "type": "Compound",
+   "components": [
+    "pari",
+    "melli"
+   ],
+   "domain": "Time, quantity & work",
+   "gloss": "profit margin"
+  },
+  {
+   "root": "mavopagodivma",
+   "type": "Compound",
+   "components": [
+    "mavopago",
+    "divma"
+   ],
+   "domain": "Society & governance",
+   "gloss": "government"
+  },
+  {
+   "root": "lanvedivma",
+   "type": "Compound",
+   "components": [
+    "lanve",
+    "divma"
+   ],
+   "domain": "Society & governance",
+   "gloss": "public institution"
+  },
+  {
+   "root": "tahayano",
+   "type": "Compound",
+   "components": [
+    "taha",
+    "yano"
+   ],
+   "domain": "Society & governance",
+   "gloss": "nation"
+  },
+  {
+   "root": "mavopagolivna",
+   "type": "Compound",
+   "components": [
+    "mavopago",
+    "livna"
+   ],
+   "domain": "Society & governance",
+   "gloss": "election"
+  },
+  {
+   "root": "livnaseno",
+   "type": "Compound",
+   "components": [
+    "livna",
+    "seno"
+   ],
+   "domain": "Society & governance",
+   "gloss": "vote"
+  },
+  {
+   "root": "lanvefarvi",
+   "type": "Compound",
+   "components": [
+    "lanve",
+    "farvi"
+   ],
+   "domain": "Society & governance",
+   "gloss": "legal rights"
+  },
+  {
+   "root": "cilnitilma",
+   "type": "Compound",
+   "components": [
+    "cilni",
+    "tilma"
+   ],
+   "domain": "Society & governance",
+   "gloss": "citizenship"
+  },
+  {
+   "root": "tahatilma",
+   "type": "Compound",
+   "components": [
+    "taha",
+    "tilma"
+   ],
+   "domain": "Society & governance",
+   "gloss": "international relations"
+  },
+  {
+   "root": "tahalelde",
+   "type": "Compound",
+   "components": [
+    "taha",
+    "lelde"
+   ],
+   "domain": "Society & governance",
+   "gloss": "a national border"
+  },
+  {
+   "root": "nelajomru",
+   "type": "Compound",
+   "components": [
+    "nela",
+    "jomru"
+   ],
+   "domain": "Society & governance",
+   "gloss": "human migration"
+  },
+  {
+   "root": "taradadivma",
+   "type": "Compound",
+   "components": [
+    "tarada",
+    "divma"
+   ],
+   "domain": "Society & governance",
+   "gloss": "economic system"
+  },
+  {
+   "root": "volrudonu",
+   "type": "Compound",
+   "components": [
+    "volru",
+    "donu"
+   ],
+   "domain": "Society & governance",
+   "gloss": "wealth transfer"
+  },
+  {
+   "root": "mavopagomelva",
+   "type": "Compound",
+   "components": [
+    "mavopago",
+    "melva"
+   ],
+   "domain": "Society & governance",
+   "gloss": "social welfare"
+  },
+  {
+   "root": "jusenulu",
+   "type": "Compound",
+   "components": [
+    "juse",
+    "nulu"
+   ],
+   "domain": "Society & governance",
+   "gloss": "justice process"
+  },
+  {
+   "root": "mavopagolemudonu",
+   "type": "Compound",
+   "components": [
+    "mavopago",
+    "lemudonu"
+   ],
+   "domain": "Society & governance",
+   "gloss": "public education"
+  },
+  {
+   "root": "mavopagosenotilma",
+   "type": "Compound",
+   "components": [
+    "mavopago",
+    "senotilma"
+   ],
+   "domain": "Society & governance",
+   "gloss": "civic debate"
+  },
+  {
+   "root": "mavopagovalla",
+   "type": "Compound",
+   "components": [
+    "mavopago",
+    "valla"
+   ],
+   "domain": "Society & governance",
+   "gloss": "political representation"
+  },
+  {
+   "root": "nelalanve",
+   "type": "Compound",
+   "components": [
+    "nela",
+    "lanve"
+   ],
+   "domain": "Society & governance",
+   "gloss": "civil law"
+  },
+  {
+   "root": "tamramiru",
+   "type": "Compound",
+   "components": [
+    "tamra",
+    "miru"
+   ],
+   "domain": "Nature & geography",
+   "gloss": "lake"
+  },
+  {
+   "root": "sevupusa",
+   "type": "Compound",
+   "components": [
+    "sevu",
+    "pusa"
+   ],
+   "domain": "Nature & geography",
+   "gloss": "beach"
+  },
+  {
+   "root": "sevulelde",
+   "type": "Compound",
+   "components": [
+    "sevu",
+    "lelde"
+   ],
+   "domain": "Nature & geography",
+   "gloss": "coast"
+  },
+  {
+   "root": "tamralelde",
+   "type": "Compound",
+   "components": [
+    "tamra",
+    "lelde"
+   ],
+   "domain": "Nature & geography",
+   "gloss": "cliff"
+  },
+  {
+   "root": "farumonru",
+   "type": "Compound",
+   "components": [
+    "faru",
+    "monru"
+   ],
+   "domain": "Nature & geography",
+   "gloss": "volcano"
+  },
+  {
+   "root": "lesmamiru",
+   "type": "Compound",
+   "components": [
+    "lesma",
+    "miru"
+   ],
+   "domain": "Nature & geography",
+   "gloss": "oasis"
+  },
+  {
+   "root": "mirugalsa",
+   "type": "Compound",
+   "components": [
+    "miru",
+    "galsa"
+   ],
+   "domain": "Nature & geography",
+   "gloss": "marsh"
+  },
+  {
+   "root": "miruralno",
+   "type": "Compound",
+   "components": [
+    "miru",
+    "ralno"
+   ],
+   "domain": "Nature & geography",
+   "gloss": "waterfall"
+  },
+  {
+   "root": "mirunululombi",
+   "type": "Compound",
+   "components": [
+    "mirunulu",
+    "lombi"
+   ],
+   "domain": "Nature & geography",
+   "gloss": "source of a river"
+  },
+  {
+   "root": "teruzego",
+   "type": "Compound",
+   "components": [
+    "teru",
+    "zego"
+   ],
+   "domain": "Nature & geography",
+   "gloss": "earthquake"
+  },
+  {
+   "root": "ruhevabeve",
+   "type": "Compound",
+   "components": [
+    "ruhe",
+    "vabeve"
+   ],
+   "domain": "Nature & geography",
+   "gloss": "storm surge"
+  },
+  {
+   "root": "renlicolbi",
+   "type": "Compound",
+   "components": [
+    "renli",
+    "colbi"
+   ],
+   "domain": "Nature & geography",
+   "gloss": "rainbow"
+  },
+  {
+   "root": "veluralno",
+   "type": "Compound",
+   "components": [
+    "velu",
+    "ralno"
+   ],
+   "domain": "Nature & geography",
+   "gloss": "meteor"
+  },
+  {
+   "root": "sulbasado",
+   "type": "Compound",
+   "components": [
+    "sulba",
+    "sado"
+   ],
+   "domain": "Nature & geography",
+   "gloss": "solar eclipse"
+  },
+  {
+   "root": "lunosado",
+   "type": "Compound",
+   "components": [
+    "luno",
+    "sado"
+   ],
+   "domain": "Nature & geography",
+   "gloss": "lunar eclipse"
+  },
+  {
+   "root": "veluvemi",
+   "type": "Compound",
+   "components": [
+    "velu",
+    "vemi"
+   ],
+   "domain": "Nature & geography",
+   "gloss": "planet"
+  },
+  {
+   "root": "veluyano",
+   "type": "Compound",
+   "components": [
+    "velu",
+    "yano"
+   ],
+   "domain": "Nature & geography",
+   "gloss": "galaxy"
+  },
+  {
+   "root": "vopranulu",
+   "type": "Compound",
+   "components": [
+    "vopra",
+    "nulu"
+   ],
+   "domain": "Nature & geography",
+   "gloss": "orbit"
+  },
+  {
+   "root": "tamrasovla",
+   "type": "Compound",
+   "components": [
+    "tamra",
+    "sovla"
+   ],
+   "domain": "Nature & geography",
+   "gloss": "landscape"
+  },
+  {
+   "root": "mirulombi",
+   "type": "Compound",
+   "components": [
+    "miru",
+    "lombi"
+   ],
+   "domain": "Nature & geography",
+   "gloss": "water source"
+  }
+ ]
+}

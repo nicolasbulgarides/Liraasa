@@ -1,0 +1,3200 @@
+<title>Liraasa Songbook</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
+/>
+
+<style>
+  /* ============================================================== tokens
+     A composer's manuscript book: ledger paper with a red margin rule, written
+     in blue-black ink. The red is a hairline only — it marks the margin, it is
+     never a fill — and the gold appears on exactly one thing, the stressed
+     syllable, because that is the mark a singer is looking for. */
+  :root {
+    color-scheme: light dark;
+
+    --paper: #eceadf;
+    --page: #fbfaf6;
+    --raised: #f6f4ec;
+    --ink: #1c2026;
+    --ink-soft: #595f68;
+    --ink-faint: #8a8f98;
+    --rule: #dad7cb;
+    --rule-firm: #bbb6a6;
+    --margin: #b0564f;
+    --accent: #2f4858;
+    --accent-soft: #e2e9ee;
+    --accent-ink: #ffffff;
+    --gold: #8a6a1f;
+    --gold-soft: #f2ead5;
+
+    --error: #a3302f;
+    --error-soft: #f8e8e6;
+    --warn: #7e5a12;
+    --warn-soft: #f6eedb;
+    --ok: #2d5f4a;
+    --ok-soft: #e4eee8;
+
+    --ui: 'Work Sans', ui-sans-serif, system-ui, sans-serif;
+    --lira: 'EB Garamond', 'Iowan Old Style', Palatino, Georgia, serif;
+    --mono: 'IBM Plex Mono', ui-monospace, 'Cascadia Mono', Menlo, monospace;
+
+    --s1: 0.25rem;
+    --s2: 0.5rem;
+    --s3: 0.75rem;
+    --s4: 1rem;
+    --s5: 1.5rem;
+    --s6: 2.25rem;
+    --r: 4px;
+    --rail: 232px;
+    --insp: 400px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme='light']) {
+      --paper: #121419;
+      --page: #1a1d23;
+      --raised: #22262d;
+      --ink: #e7e5de;
+      --ink-soft: #a0a5ae;
+      --ink-faint: #767c86;
+      --rule: #2b2f37;
+      --rule-firm: #434852;
+      --margin: #94514c;
+      --accent: #93b6cb;
+      --accent-soft: #1e2831;
+      --accent-ink: #12151a;
+      --gold: #cfae68;
+      --gold-soft: #2a2417;
+
+      --error: #ef9a96;
+      --error-soft: #2d1b1a;
+      --warn: #dcb871;
+      --warn-soft: #2a2214;
+      --ok: #85c3a5;
+      --ok-soft: #16251f;
+    }
+  }
+
+  :root[data-theme='dark'] {
+    --paper: #121419;
+    --page: #1a1d23;
+    --raised: #22262d;
+    --ink: #e7e5de;
+    --ink-soft: #a0a5ae;
+    --ink-faint: #767c86;
+    --rule: #2b2f37;
+    --rule-firm: #434852;
+    --margin: #94514c;
+    --accent: #93b6cb;
+    --accent-soft: #1e2831;
+    --accent-ink: #12151a;
+    --gold: #cfae68;
+    --gold-soft: #2a2417;
+
+    --error: #ef9a96;
+    --error-soft: #2d1b1a;
+    --warn: #dcb871;
+    --warn-soft: #2a2214;
+    --ok: #85c3a5;
+    --ok-soft: #16251f;
+  }
+
+  /* ================================================================ base */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    height: 100%;
+  }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--ui);
+    font-size: 14px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  button,
+  select,
+  input,
+  textarea {
+    font: inherit;
+    color: inherit;
+  }
+
+  .mono {
+    font-family: var(--mono);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+
+  .btn {
+    background: transparent;
+    border: 1px solid var(--rule-firm);
+    border-radius: var(--r);
+    padding: 4px 9px;
+    cursor: pointer;
+    color: var(--ink-soft);
+    font-size: 12px;
+  }
+
+  .btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  .btn-primary {
+    background: var(--accent);
+    color: var(--accent-ink);
+    border-color: var(--accent);
+    font-weight: 500;
+  }
+
+  .btn-primary:hover {
+    color: var(--accent-ink);
+    opacity: 0.9;
+  }
+
+  .btn-quiet {
+    border-color: transparent;
+  }
+
+  select {
+    background: transparent;
+    border: 1px solid var(--rule-firm);
+    border-radius: var(--r);
+    padding: 3px 6px;
+    font-size: 12px;
+    cursor: pointer;
+  }
+
+  /* =============================================================== shell */
+  .app {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    height: 100%;
+    min-height: 0;
+  }
+
+  .masthead {
+    display: flex;
+    align-items: center;
+    gap: var(--s3);
+    padding: var(--s2) var(--s4);
+    padding-top: calc(var(--s2) + env(safe-area-inset-top, 0px));
+    border-bottom: 1px solid var(--rule);
+    background: var(--raised);
+    flex-wrap: wrap;
+  }
+
+  .masthead h1 {
+    margin: 0;
+    font-family: var(--lira);
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+  }
+
+  .masthead .ed {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--ink-faint);
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    padding: 0 4px;
+  }
+
+  .spacer {
+    margin-left: auto;
+  }
+
+  .desk {
+    display: grid;
+    grid-template-columns: var(--rail) minmax(0, 1fr) var(--insp);
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .desk[data-rail='off'] {
+    grid-template-columns: 0 minmax(0, 1fr) var(--insp);
+  }
+
+  .desk[data-insp='off'] {
+    grid-template-columns: var(--rail) minmax(0, 1fr) 0;
+  }
+
+  .desk[data-rail='off'][data-insp='off'] {
+    grid-template-columns: 0 minmax(0, 1fr) 0;
+  }
+
+  .col {
+    min-width: 0;
+    min-height: 0;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .col.hidden {
+    display: none;
+  }
+
+  /* ============================================================= library */
+  .rail {
+    background: var(--raised);
+    border-right: 1px solid var(--rule);
+  }
+
+  .rail-head {
+    display: flex;
+    align-items: center;
+    gap: var(--s2);
+    padding: var(--s3) var(--s3) var(--s2);
+    position: sticky;
+    top: 0;
+    background: var(--raised);
+    border-bottom: 1px solid var(--rule);
+    z-index: 1;
+  }
+
+  .coll {
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .coll-head {
+    display: flex;
+    align-items: center;
+    gap: var(--s2);
+    padding: var(--s2) var(--s3);
+  }
+
+  .coll-name {
+    font-family: var(--lira);
+    font-size: 1rem;
+    font-weight: 600;
+    background: transparent;
+    border: none;
+    padding: 1px 2px;
+    border-radius: 3px;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .coll-name:hover {
+    background: var(--accent-soft);
+  }
+
+  .coll-count {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--ink-faint);
+  }
+
+  .piece {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: baseline;
+    gap: var(--s2);
+    width: 100%;
+    text-align: left;
+    background: transparent;
+    border: none;
+    border-left: 2px solid transparent;
+    padding: 5px var(--s3) 5px calc(var(--s3) + 10px);
+    cursor: pointer;
+    color: var(--ink-soft);
+  }
+
+  .piece:hover {
+    background: var(--accent-soft);
+  }
+
+  .piece[aria-current='true'] {
+    border-left-color: var(--margin);
+    background: var(--page);
+    color: var(--ink);
+  }
+
+  .piece .t {
+    font-family: var(--lira);
+    font-size: 0.98rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .piece .m {
+    font-family: var(--mono);
+    font-size: 9px;
+    color: var(--ink-faint);
+    white-space: nowrap;
+  }
+
+  .rail-foot {
+    padding: var(--s3);
+    display: flex;
+    gap: var(--s2);
+    flex-wrap: wrap;
+  }
+
+  /* ================================================================ page */
+  .pagewrap {
+    padding: var(--s5) var(--s4) var(--s6);
+    display: flex;
+    justify-content: center;
+  }
+
+  .page {
+    background: var(--page);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    box-shadow: 0 1px 2px rgb(0 0 0 / 0.04);
+    width: 100%;
+    max-width: 44rem;
+    min-height: 100%;
+  }
+
+  .page-head {
+    padding: var(--s5) var(--s5) var(--s3);
+    border-bottom: 1px solid var(--rule);
+  }
+
+  #title {
+    font-family: var(--lira);
+    font-size: 1.75rem;
+    font-weight: 600;
+    width: 100%;
+    background: transparent;
+    border: none;
+    padding: 0;
+    line-height: 1.2;
+  }
+
+  #title:focus {
+    outline: none;
+  }
+
+  .page-meta {
+    display: flex;
+    gap: var(--s3);
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: var(--s2);
+  }
+
+  /* The writing surface: a red margin rule, as on ledger paper, and the
+     gutter counts sitting outside it. */
+  .sheet {
+    display: grid;
+    grid-template-columns: 3.1rem 1fr;
+    align-items: start;
+  }
+
+  .gutter {
+    display: grid;
+    border-right: 1px solid var(--margin);
+    padding: var(--s5) 0 var(--s6);
+  }
+
+  .grow {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 5px;
+    padding-right: 9px;
+    height: 1.95rem;
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--ink-faint);
+    white-space: nowrap;
+  }
+
+  .grow.err {
+    color: var(--error);
+  }
+  .grow.wrn {
+    color: var(--warn);
+  }
+
+  .dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    flex: none;
+    background: transparent;
+  }
+  .dot.ok {
+    background: var(--rule-firm);
+  }
+  .dot.wrn {
+    background: var(--warn);
+  }
+  .dot.err {
+    background: var(--error);
+  }
+
+  #text {
+    font-family: var(--lira);
+    font-size: 1.22rem;
+    line-height: 1.95rem;
+    width: 100%;
+    border: none;
+    background: transparent;
+    padding: var(--s5) var(--s5) var(--s6) var(--s4);
+    resize: none;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+  }
+
+  #text:focus {
+    outline: none;
+  }
+
+  /* =========================================================== inspector */
+  .insp {
+    border-left: 1px solid var(--rule);
+    background: var(--raised);
+  }
+
+  .insp-head {
+    position: sticky;
+    top: 0;
+    background: var(--raised);
+    border-bottom: 1px solid var(--rule);
+    z-index: 1;
+  }
+
+  .tabs {
+    display: flex;
+    overflow-x: auto;
+  }
+
+  .tab {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid transparent;
+    padding: 8px 10px;
+    cursor: pointer;
+    color: var(--ink-faint);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .tab[aria-selected='true'] {
+    color: var(--ink);
+    border-bottom-color: var(--margin);
+  }
+
+  .panel {
+    padding: var(--s4);
+    overflow-x: hidden;
+  }
+
+  .panel table {
+    max-width: 100%;
+  }
+
+  .empty {
+    color: var(--ink-faint);
+    font-style: italic;
+  }
+
+  /* ---------------------------------------------------------- findings */
+  .finding {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: var(--s3);
+    padding: var(--s2) var(--s3);
+    border-left: 2px solid var(--rule-firm);
+    background: var(--page);
+    margin-bottom: var(--s2);
+  }
+
+  .finding.error {
+    border-left-color: var(--error);
+    background: var(--error-soft);
+  }
+  .finding.warn {
+    border-left-color: var(--warn);
+    background: var(--warn-soft);
+  }
+
+  .finding .where {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--ink-faint);
+    white-space: nowrap;
+  }
+
+  .finding .rule {
+    font-family: var(--mono);
+    font-size: 9px;
+    color: var(--ink-faint);
+  }
+
+  /* ------------------------------------------------------------- table */
+  .tbl {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+  }
+
+  .tbl th,
+  .tbl td {
+    text-align: left;
+    padding: 4px 6px;
+    border-bottom: 1px solid var(--rule);
+    vertical-align: top;
+  }
+
+  .tbl th {
+    font-size: 9px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    font-weight: 600;
+  }
+
+  .tbl .n {
+    font-family: var(--mono);
+    color: var(--ink-faint);
+    white-space: nowrap;
+  }
+
+  .tbl .lira {
+    font-family: var(--lira);
+    font-size: 1rem;
+  }
+
+  .shape {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--ink-faint);
+    letter-spacing: 1px;
+    overflow-wrap: anywhere;
+  }
+
+  .tbl.lines {
+    table-layout: fixed;
+  }
+
+  .tbl.lines td:first-child,
+  .tbl.lines th:first-child {
+    width: 2.2rem;
+  }
+
+  .tbl.lines td:nth-child(2),
+  .tbl.lines th:nth-child(2) {
+    width: 1.2rem;
+  }
+
+  .tbl.lines td:nth-child(3),
+  .tbl.lines th:nth-child(3) {
+    width: 2.6rem;
+  }
+
+  .shape b {
+    color: var(--gold);
+  }
+
+  /* ------------------------------------------------------------- gloss */
+  .gl {
+    margin-bottom: var(--s4);
+    padding-bottom: var(--s3);
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .gl:last-child {
+    border-bottom: none;
+  }
+
+  .gl-no {
+    font-family: var(--mono);
+    font-size: 9px;
+    color: var(--ink-faint);
+  }
+
+  .gl-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--s3) var(--s4);
+    margin-top: 3px;
+  }
+
+  .mo {
+    display: grid;
+    gap: 0;
+    min-width: 0;
+  }
+
+  .mo .s {
+    font-family: var(--lira);
+    font-size: 1.05rem;
+  }
+
+  .mo .g {
+    font-family: var(--mono);
+    font-size: 9px;
+    color: var(--accent);
+  }
+
+  .mo .e {
+    font-size: 11px;
+    color: var(--ink-soft);
+    max-width: 17ch;
+  }
+
+  .mo.unk .s {
+    color: var(--error);
+    text-decoration: underline wavy var(--error);
+    text-underline-offset: 3px;
+  }
+
+  .mo.nm .s {
+    color: var(--gold);
+  }
+
+  /* ------------------------------------------------------------- sound */
+  .ph {
+    padding: var(--s3) 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .ph:last-child {
+    border-bottom: none;
+  }
+
+  .ph-head {
+    display: flex;
+    gap: var(--s3);
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .beats {
+    display: flex;
+    gap: 3px;
+    align-items: center;
+  }
+
+  .beat {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--rule-firm);
+  }
+
+  .beat.on {
+    background: var(--gold);
+    width: 9px;
+    height: 9px;
+  }
+
+  .ipa {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--ink-faint);
+    word-break: break-word;
+    margin-top: 2px;
+  }
+
+  .syls {
+    font-family: var(--mono);
+    font-size: 12px;
+    margin-top: 3px;
+  }
+
+  .syls b {
+    color: var(--gold);
+  }
+
+  /* ----------------------------------------------------------- compose */
+  .compose-in {
+    width: 100%;
+    min-height: 5.5rem;
+    border: 1px solid var(--rule-firm);
+    border-radius: var(--r);
+    background: var(--page);
+    padding: var(--s3);
+    font-family: var(--ui);
+    font-size: 13px;
+    resize: vertical;
+  }
+
+  .draft {
+    margin-top: var(--s3);
+    padding: var(--s3);
+    border: 1px solid var(--rule);
+    border-left: 2px solid var(--margin);
+    background: var(--page);
+  }
+
+  .draft .out {
+    font-family: var(--lira);
+    font-size: 1.22rem;
+    line-height: 1.6;
+  }
+
+  .draft .out .gap {
+    color: var(--error);
+    border-bottom: 1px dashed var(--error);
+  }
+
+  .chunks {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    margin-top: var(--s3);
+  }
+
+  .chunk {
+    display: grid;
+    grid-template-columns: 8.5rem 1fr;
+    gap: var(--s2);
+    align-items: baseline;
+    padding: 3px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .chunk .en {
+    font-size: 12px;
+    color: var(--ink-soft);
+  }
+
+  .chunk .role {
+    font-family: var(--mono);
+    font-size: 9px;
+    color: var(--ink-faint);
+    display: block;
+  }
+
+  .opts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+  }
+
+  .opt {
+    font-family: var(--lira);
+    font-size: 1rem;
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    padding: 0 5px;
+    cursor: pointer;
+    color: var(--ink-soft);
+  }
+
+  .opt:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  .opt[aria-pressed='true'] {
+    background: var(--accent-soft);
+    border-color: var(--accent);
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  .opt .sl {
+    font-family: var(--mono);
+    font-size: 8px;
+    color: var(--ink-faint);
+    margin-left: 3px;
+  }
+
+  .nomatch {
+    font-size: 12px;
+    color: var(--error);
+  }
+
+  /* ----------------------------------------------------------- lexicon */
+  #q {
+    width: 100%;
+    padding: 6px 9px;
+    border: 1px solid var(--rule-firm);
+    border-radius: var(--r);
+    background: var(--page);
+    margin-bottom: var(--s3);
+  }
+
+  .hit {
+    padding: var(--s2) 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .hit-top {
+    display: flex;
+    gap: var(--s2);
+    align-items: baseline;
+    flex-wrap: wrap;
+  }
+
+  .hit .w {
+    font-family: var(--lira);
+    font-size: 1.05rem;
+    font-weight: 600;
+  }
+
+  .chip {
+    font-family: var(--mono);
+    font-size: 8px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 1px 4px;
+    border-radius: 2px;
+    background: var(--raised);
+    color: var(--ink-faint);
+    border: 1px solid var(--rule);
+  }
+
+  .chip.new {
+    background: var(--gold-soft);
+    color: var(--gold);
+    border-color: var(--gold);
+  }
+
+  .hit .d {
+    color: var(--ink-soft);
+    font-size: 12px;
+  }
+
+  .forms {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1px var(--s3);
+    margin-top: 2px;
+  }
+
+  .fbtn {
+    background: none;
+    border: none;
+    padding: 1px 3px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-family: var(--lira);
+    font-size: 0.95rem;
+    text-align: left;
+  }
+
+  .fbtn:hover {
+    background: var(--accent-soft);
+    color: var(--accent);
+  }
+
+  .fbtn .sl {
+    font-family: var(--mono);
+    font-size: 8px;
+    color: var(--ink-faint);
+    display: block;
+  }
+
+  .fbtn[disabled] {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+
+  .pre {
+    font-family: var(--mono);
+    font-size: 11px;
+    line-height: 1.7;
+    background: var(--page);
+    padding: var(--s3);
+    border: 1px solid var(--rule);
+    overflow-x: auto;
+    margin-bottom: var(--s4);
+  }
+
+  /* ============================================================== foot */
+  .foot {
+    display: flex;
+    align-items: center;
+    gap: var(--s4);
+    flex-wrap: wrap;
+    padding: var(--s2) var(--s4);
+    padding-bottom: calc(var(--s2) + env(safe-area-inset-bottom, 0px));
+    border-top: 1px solid var(--rule);
+    background: var(--raised);
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--ink-faint);
+  }
+
+  .foot b {
+    color: var(--ink-soft);
+    font-weight: 500;
+  }
+
+  .foot .sep {
+    color: var(--rule-firm);
+  }
+
+  /* ============================================================ dialog */
+  dialog {
+    border: 1px solid var(--rule-firm);
+    border-radius: var(--r);
+    background: var(--page);
+    color: var(--ink);
+    padding: 0;
+    max-width: min(92vw, 760px);
+    width: 100%;
+    max-height: 86vh;
+  }
+
+  dialog::backdrop {
+    background: rgb(20 20 24 / 0.5);
+  }
+
+  .dlg-head {
+    display: flex;
+    align-items: center;
+    gap: var(--s3);
+    padding: var(--s3) var(--s4);
+    border-bottom: 1px solid var(--rule);
+    flex-wrap: wrap;
+  }
+
+  .dlg-head h2 {
+    margin: 0;
+    font-family: var(--lira);
+    font-size: 1.1rem;
+    margin-right: auto;
+  }
+
+  #exportText {
+    width: 100%;
+    min-height: 42vh;
+    border: none;
+    padding: var(--s4);
+    background: var(--raised);
+    font-family: var(--mono);
+    font-size: 11px;
+    line-height: 1.6;
+    resize: vertical;
+    white-space: pre;
+    overflow: auto;
+  }
+
+  .dlg-note {
+    padding: var(--s3) var(--s4);
+    border-top: 1px solid var(--rule);
+    color: var(--ink-soft);
+    font-size: 12px;
+  }
+
+  /* ============================================================= narrow */
+  @media (max-width: 1100px) {
+    :root {
+      --insp: 340px;
+      --rail: 200px;
+    }
+  }
+
+  @media (max-width: 920px) {
+    .desk,
+    .desk[data-rail='off'],
+    .desk[data-insp='off'],
+    .desk[data-rail='off'][data-insp='off'] {
+      grid-template-columns: 1fr;
+      grid-auto-rows: min-content;
+      overflow: auto;
+    }
+
+    .rail,
+    .insp {
+      border: none;
+      border-top: 1px solid var(--rule);
+    }
+
+    .col {
+      overflow: visible;
+    }
+
+    .pagewrap {
+      padding: var(--s3);
+    }
+
+    .page-head,
+    #text {
+      padding-left: var(--s3);
+      padding-right: var(--s3);
+    }
+
+    .sheet {
+      grid-template-columns: 2.4rem 1fr;
+    }
+  }
+</style>
+
+<div class="app">
+  <header class="masthead">
+    <h1>Songbook</h1>
+    <span class="ed mono" id="edition">1.1</span>
+    <span class="spacer"></span>
+    <button class="btn btn-quiet" id="railBtn" type="button" aria-pressed="true">Library</button>
+    <button class="btn btn-quiet" id="inspBtn" type="button" aria-pressed="true">Workbench</button>
+    <button class="btn btn-quiet" id="themeBtn" type="button">Theme</button>
+    <button class="btn" id="exportBtn" type="button">Export…</button>
+  </header>
+
+  <div class="desk" id="desk" data-rail="on" data-insp="on">
+    <nav class="col rail" id="rail" aria-label="Library">
+      <div class="rail-head">
+        <span class="label">Library</span>
+        <span class="spacer"></span>
+        <button class="btn btn-quiet" id="newColl" type="button" title="New collection">
+          + Shelf
+        </button>
+      </div>
+      <div id="collections"></div>
+      <div class="rail-foot">
+        <button class="btn" id="newPiece" type="button">+ New piece</button>
+      </div>
+    </nav>
+
+    <div class="col" id="pagecol">
+      <div class="pagewrap">
+        <article class="page">
+          <div class="page-head">
+            <input id="title" aria-label="Title" placeholder="Untitled" />
+            <div class="page-meta">
+              <select id="kind" aria-label="Kind">
+                <option value="song">Song</option>
+                <option value="speech">Speech</option>
+                <option value="devotional">Devotional</option>
+                <option value="dialogue">Dialogue</option>
+                <option value="prose">Prose</option>
+                <option value="note">Note</option>
+              </select>
+              <select id="register" aria-label="Register">
+                <option value="everyday">Everyday</option>
+                <option value="poetic">Poetic</option>
+                <option value="sacred">Sacred</option>
+              </select>
+              <span class="label" id="stamp"></span>
+            </div>
+          </div>
+          <div class="sheet">
+            <div class="gutter" id="gutter" aria-hidden="true"></div>
+            <textarea
+              id="text"
+              spellcheck="false"
+              autocapitalize="off"
+              autocomplete="off"
+              aria-label="Liraasa text"
+            ></textarea>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <aside class="col insp" id="insp" aria-label="Workbench">
+      <div class="insp-head">
+        <div class="tabs" role="tablist">
+          <button class="tab" role="tab" aria-selected="true" data-tab="check" type="button">
+            Check <span id="nFind" class="mono"></span>
+          </button>
+          <button class="tab" role="tab" aria-selected="false" data-tab="compose" type="button">
+            Compose
+          </button>
+          <button class="tab" role="tab" aria-selected="false" data-tab="gloss" type="button">
+            Gloss
+          </button>
+          <button class="tab" role="tab" aria-selected="false" data-tab="sound" type="button">
+            Sound
+          </button>
+          <button class="tab" role="tab" aria-selected="false" data-tab="lex" type="button">
+            Lexicon
+          </button>
+          <button class="tab" role="tab" aria-selected="false" data-tab="gram" type="button">
+            Grammar
+          </button>
+        </div>
+      </div>
+
+      <div class="panel" id="panel-check" role="tabpanel"></div>
+
+      <div class="panel" id="panel-compose" role="tabpanel" hidden>
+        <p class="label">Write in English</p>
+        <textarea
+          id="englishIn"
+          class="compose-in"
+          placeholder="The stars began to sing.&#10;I love you, certainly."
+          aria-label="English to compose from"
+        ></textarea>
+        <div style="display: flex; gap: var(--s2); margin-top: var(--s2); flex-wrap: wrap">
+          <button class="btn btn-primary" id="composeBtn" type="button">Compose</button>
+          <button class="btn" id="appendBtn" type="button">Append to page</button>
+        </div>
+        <div id="composeOut"></div>
+      </div>
+
+      <div class="panel" id="panel-gloss" role="tabpanel" hidden></div>
+      <div class="panel" id="panel-sound" role="tabpanel" hidden></div>
+      <div class="panel" id="panel-lex" role="tabpanel" hidden>
+        <input
+          id="q"
+          type="search"
+          placeholder="Search Liraasa or English…"
+          aria-label="Search the lexicon"
+        />
+        <div id="hits"></div>
+      </div>
+      <div class="panel" id="panel-gram" role="tabpanel" hidden></div>
+    </aside>
+  </div>
+
+  <footer class="foot">
+    <span><b id="sLines">0</b> lines</span>
+    <span class="sep">·</span>
+    <span><b id="sWords">0</b> words</span>
+    <span class="sep">·</span>
+    <span><b id="sSyls">0</b> syllables</span>
+    <span class="sep">·</span>
+    <span><b id="sUnknown">0</b> unknown</span>
+    <span class="sep">·</span>
+    <span><b id="sErrors">0</b> grammar</span>
+    <span class="spacer"></span>
+    <span id="sLex"></span>
+  </footer>
+</div>
+
+<dialog id="exportDlg">
+  <div class="dlg-head">
+    <h2>Export</h2>
+    <select id="exportScope">
+      <option value="piece">This piece</option>
+      <option value="collection">This collection</option>
+      <option value="all">Whole songbook</option>
+    </select>
+    <select id="exportKind">
+      <option value="text">Plain text</option>
+      <option value="interlinear">Interlinear gloss</option>
+      <option value="lab">MFA transcripts (.lab)</option>
+      <option value="dict">MFA dictionary for this text</option>
+      <option value="syl">Syllable and stress sheet</option>
+      <option value="json">Structured JSON</option>
+    </select>
+    <button class="btn btn-primary" id="copyBtn" type="button">Copy</button>
+    <button class="btn" id="closeDlg" type="button">Close</button>
+  </div>
+  <textarea id="exportText" readonly spellcheck="false" aria-label="Export output"></textarea>
+  <p class="dlg-note" id="exportNote"></p>
+</dialog>
+
+<script src="liraasa-data.js"></script>
+<script>
+  'use strict';
+
+  /* =====================================================================
+     Liraasa Songbook — a journal for writing songs and speeches.
+
+     Everything runs in this file against the bundle in liraasa-data.js.
+     Nothing is sent anywhere; the songbook lives in this browser.
+
+     Rules come from the lexicon's own `grammar`, `morphology` and `phonology`
+     blocks and from the Grammar Guide, not from guesswork:
+       - the seven forms and the verb rule
+       - lexicon-first parsing, never blind suffix stripping
+       - the 20-slot clause template and its 13 exclusions
+       - penultimate stress; hiatus vowels are separate syllables
+
+     The Compose tab is an **assisted composer**, not a translator. It finds
+     candidate words through the English synonym and gloss index and assembles
+     them in clause-template order. Every word it offers is a real lexicon
+     entry; where English has no Liraasa equivalent it says so rather than
+     inventing one.
+     ===================================================================== */
+
+  const D = window.LIRAASA;
+  const VOWELS = 'aeiou';
+  const SLOT_NAME = ['R', 'R+asa', 'R+na', 'VERB', 'R+nasan', 'R+san', 'R+asasan'];
+  const SUFFIX = ['', 'asa', 'na', null, 'nasan', 'san', 'asasan'];
+
+  /* ----------------------------------------------------------- morphology */
+
+  function verbOf(root) {
+    if (root === 'opi') return 'opioa';
+    const f = root[0];
+    if (f === 'n') return root + 'nia';
+    if (f === 's') return root + 'sia';
+    if (VOWELS.includes(f)) return root + 'a';
+    return root + f + 'a';
+  }
+
+  const formsOf = (root) => SUFFIX.map((s, i) => (i === 3 ? verbOf(root) : root + s));
+
+  /* ------------------------------------------------------------ phonetics */
+
+  const PHONE = {
+    a: 'a',
+    e: 'e',
+    i: 'i',
+    o: 'o',
+    u: 'u',
+    l: 'l',
+    m: 'm',
+    n: 'n',
+    r: 'r',
+    s: 's',
+    v: 'v',
+    y: 'j',
+    b: 'b',
+    d: 'd',
+    p: 'p',
+    t: 't',
+    g: 'ɡ',
+    h: 'h',
+    z: 'z',
+    k: 'k',
+    c: 'k',
+    f: 'f',
+    j: 'd͡ʒ',
+  };
+  const DIGRAPH = { sh: 'ʃ', ch: 't͡ʃ' };
+
+  function toPhones(word) {
+    const w = word.toLowerCase();
+    const out = [];
+    for (let i = 0; i < w.length; ) {
+      const pair = w.slice(i, i + 2);
+      if (DIGRAPH[pair]) {
+        out.push(DIGRAPH[pair]);
+        i += 2;
+        continue;
+      }
+      const ch = w.charAt(i);
+      i += 1;
+      if (PHONE[ch]) out.push(PHONE[ch]);
+    }
+    return out;
+  }
+
+  /** Every vowel is a nucleus; a medial cluster splits between consonants. */
+  function syllabify(word) {
+    const w = word.toLowerCase();
+    const units = [];
+    for (let i = 0; i < w.length; ) {
+      const pair = w.slice(i, i + 2);
+      if (DIGRAPH[pair]) {
+        units.push({ v: false, t: pair });
+        i += 2;
+        continue;
+      }
+      const ch = w.charAt(i);
+      i += 1;
+      if (PHONE[ch]) units.push({ v: VOWELS.includes(ch), t: ch });
+    }
+    const sy = [];
+    let onset = [];
+    for (const u of units) {
+      if (!u.v) {
+        onset.push(u.t);
+        continue;
+      }
+      if (sy.length && onset.length > 1) {
+        sy[sy.length - 1] += onset.slice(0, -1).join('');
+        onset = onset.slice(-1);
+      }
+      sy.push(onset.join('') + u.t);
+      onset = [];
+    }
+    if (onset.length) {
+      if (!sy.length) return { syllables: [], stress: 0 };
+      sy[sy.length - 1] += onset.join('');
+    }
+    return { syllables: sy, stress: sy.length <= 1 ? 0 : sy.length - 2 };
+  }
+
+  const syllableCount = (w) => syllabify(w).syllables.length;
+
+  /* ---------------------------------------------------------- the index */
+
+  const H = new Map();
+  const FORM = new Map();
+  const DERIV = new Map();
+  const CLOSED = new Map();
+  /** English phrase -> candidate Liraasa words. Built for the composer. */
+  const EN = new Map();
+
+  function pushForm(sp, ref) {
+    const l = FORM.get(sp);
+    if (l) l.push(ref);
+    else FORM.set(sp, [ref]);
+  }
+
+  function addEn(phrase, cand) {
+    const key = String(phrase)
+      .trim()
+      .toLowerCase()
+      .replace(/^(a|an|the|to)\s+/, '');
+    if (key.length < 2 || key.length > 42) return;
+    const l = EN.get(key);
+    if (l) {
+      if (!l.some((c) => c.word === cand.word)) l.push(cand);
+    } else {
+      EN.set(key, [cand]);
+    }
+  }
+
+  /** Split a gloss into its separate senses, the way the lexicon writes them. */
+  const senses = (g) =>
+    String(g)
+      .split(/[;,]/)
+      .map((s) => s.trim())
+      .filter((s) => s.length > 1);
+
+  (function buildIndex() {
+    for (const [root, type, components, glosses, register, dIx, synonyms, since] of D.headwords) {
+      const rec = {
+        root,
+        type,
+        components: components || null,
+        glosses,
+        register,
+        domain: D.domains[dIx],
+        synonyms,
+        since,
+        forms: formsOf(root),
+      };
+      H.set(root, rec);
+      rec.forms.forEach((f, slot) => pushForm(f, { root, slot }));
+      for (const d of ['yo', 'vu', 'pago']) {
+        if (root === 'mavo' && d === 'pago') continue; // blocked by morphology
+        DERIV.set(root + d, { root, suffix: d });
+      }
+      // The English index: every glossed slot and every synonym.
+      glosses.forEach((g, slot) => {
+        if (!g) return;
+        for (const s of senses(g)) addEn(s, { word: rec.forms[slot], root, slot, kind: 'lexical' });
+      });
+      for (const syn of synonyms) {
+        addEn(syn, { word: root, root, slot: 0, kind: 'lexical' });
+      }
+    }
+
+    const closed = (rows, kind, fIx, gIx) => {
+      for (const r of rows) {
+        const form = r[fIx];
+        if (!form || form.includes(' ') || form.startsWith('-')) continue;
+        if (!CLOSED.has(form)) CLOSED.set(form, { kind, gloss: r[gIx] || '' });
+        for (const s of String(r[gIx] || '').split(/[;,/]/)) {
+          addEn(s.replace(/\(.*?\)/g, ''), { word: form, kind });
+        }
+      }
+    };
+    closed(D.functionWords, 'function word', 0, 1);
+    closed(D.correlatives, 'correlative', 0, 3);
+    closed(D.timeWords, 'time word', 0, 1);
+    closed(D.particles, 'particle', 0, 1);
+    for (const [form, person, number] of D.pronouns) {
+      CLOSED.set(form, { kind: 'pronoun', gloss: person + ' ' + number });
+    }
+    for (const [base, family] of D.colors) {
+      CLOSED.set(base, { kind: 'colour', gloss: family.toLowerCase() });
+      addEn(family, { word: base, kind: 'colour' });
+      for (const m of ['narvo', 'bio', 'juba', 'lumi']) {
+        CLOSED.set(base + m, { kind: 'colour', gloss: family.toLowerCase() + ' · ' + m });
+      }
+    }
+    for (const v of Object.values(D.numbers)) CLOSED.set(v, { kind: 'numeral', gloss: '' });
+    for (const [n, v] of Object.entries(D.numbers)) addEn(n, { word: v, kind: 'numeral' });
+  })();
+
+  const NAMES = new Set(D.names.map((n) => n.toLowerCase()));
+  const NUMERALS = new Set(Object.values(D.numbers));
+  const knownStem = (s) => FORM.has(s) || DERIV.has(s) || CLOSED.has(s);
+
+  /* ---------------------------------------------------------- the parser
+     Lexicon-first: many roots end in letters that look like suffixes (navu,
+     sevu, trana, pago), so a known spelling always beats a decomposition. */
+
+  function parseWord(raw) {
+    const w = raw.toLowerCase();
+    if (!w) return null;
+    if (FORM.has(w)) return { kind: 'lexical', refs: FORM.get(w), suffixes: [], stem: w };
+
+    const c = CLOSED.get(w);
+    if (c) return { kind: c.kind, gloss: c.gloss, stem: w, suffixes: [] };
+
+    let body = w;
+    let ordinal = false;
+    if (body.endsWith('-ne')) {
+      body = body.slice(0, -3);
+      ordinal = true;
+    }
+    const parts = body.split('-');
+    if (parts.length && parts.every((p) => NUMERALS.has(p))) {
+      return { kind: 'numeral', stem: w, suffixes: [], gloss: ordinal ? 'ordinal' : '' };
+    }
+
+    if (DERIV.has(w))
+      return { kind: 'derivation', derivation: DERIV.get(w), suffixes: [], stem: w };
+
+    let stem = w;
+    const sfx = [];
+    if (stem.endsWith('ri') && stem.length > 4) {
+      stem = stem.slice(0, -2);
+      sfx.unshift('-ri');
+      if (!knownStem(stem) && stem.endsWith('ti') && stem.length > 4) {
+        const inner = stem.slice(0, -2);
+        if (knownStem(inner)) {
+          stem = inner;
+          sfx.unshift('-ti');
+        }
+      }
+    } else if (stem.endsWith('ti') && stem.length > 4) {
+      stem = stem.slice(0, -2);
+      sfx.unshift('-ti');
+    }
+    if (sfx.length) {
+      if (FORM.has(stem)) return { kind: 'lexical', refs: FORM.get(stem), suffixes: sfx, stem };
+      if (DERIV.has(stem))
+        return { kind: 'derivation', derivation: DERIV.get(stem), suffixes: sfx, stem };
+      const c2 = CLOSED.get(stem);
+      if (c2) return { kind: c2.kind, gloss: c2.gloss, suffixes: sfx, stem };
+    }
+
+    for (const p of D.motionPrefixes) {
+      if (w.startsWith(p)) {
+        const rest = w.slice(p.length);
+        const refs = (FORM.get(rest) || []).filter((r) => r.slot === 3);
+        if (refs.length) return { kind: 'motion', prefix: p, refs, stem: rest, suffixes: [] };
+      }
+    }
+
+    if (w.includes('-de-')) {
+      const [l, r] = w.split('-de-');
+      if (NUMERALS.has(l) && NUMERALS.has(r)) return { kind: 'fraction', stem: w, suffixes: [] };
+    }
+
+    if (D.legacy[w]) return { kind: 'legacy', to: D.legacy[w], stem: w, suffixes: [] };
+    if (NAMES.has(w) || /^[A-Z]/.test(raw)) return { kind: 'name', stem: raw, suffixes: [] };
+    return null;
+  }
+
+  function glossFor(p) {
+    if (!p) return '?';
+    if (p.kind === 'lexical' || p.kind === 'motion') {
+      const ref = p.refs[0];
+      const g = H.get(ref.root).glosses[ref.slot];
+      return (p.prefix ? p.prefix + ' ' : '') + (g || '(' + SLOT_NAME[ref.slot] + ', unused)');
+    }
+    if (p.kind === 'derivation') {
+      const map = { yo: 'one who', vu: 'great', pago: 'place of' };
+      return (
+        map[p.derivation.suffix] + ' ' + (H.get(p.derivation.root).glosses[0] || p.derivation.root)
+      );
+    }
+    if (p.kind === 'legacy') return 'pre-1.0 → ' + p.to;
+    if (p.kind === 'name') return 'name';
+    return p.gloss || p.kind;
+  }
+
+  function segFor(p) {
+    if (!p) return '';
+    const s = (p.suffixes || []).join('');
+    if (p.kind === 'lexical') {
+      const ref = p.refs[0];
+      const rec = H.get(ref.root);
+      const base = rec.components ? rec.components.join('+') : ref.root;
+      const slot =
+        ref.slot === 0 ? '' : '-' + SLOT_NAME[ref.slot].replace('R+', '').replace('VERB', 'v');
+      return base + slot + s;
+    }
+    if (p.kind === 'derivation') return p.derivation.root + '-' + p.derivation.suffix + s;
+    if (p.kind === 'motion') return p.prefix + p.refs[0].root + '-v';
+    return p.kind + s;
+  }
+
+  /* --------------------------------------------------- clause checking */
+
+  const RANK = {};
+  const slotRow = (name) => D.grammar.slots.find((s) => s[1] === name) || [0, 0, []];
+  for (const [n, name] of [
+    [4, 'TENSE'],
+    [5, 'REALITY'],
+    [7, 'MODAL'],
+    [8, 'APPROACH'],
+    [9, 'PHASE'],
+    [10, 'EFFORT'],
+    [11, 'ASPECT'],
+    [12, 'ITERATION'],
+    [13, 'EVIDENTIAL'],
+  ]) {
+    for (const w of slotRow(name)[2]) RANK[w] = n;
+  }
+  const SLOT_OF = {};
+  for (const [, name, words] of D.grammar.slots) for (const w of words) SLOT_OF[w] ||= name;
+  const EVID = new Set(slotRow('EVIDENTIAL')[2]);
+  const ATT = new Set(slotRow('ATTITUDE')[2]);
+  const STAT = new Set(slotRow('STATUS')[2]);
+  const COPULA = new Set(['ke', 'ka', 'kapoki', 'loya', 'miyo']);
+  const VALENCY = new Set(Object.keys(D.grammar.valency).filter((k) => k !== 'pattern'));
+  const RESET = new Set(
+    (
+      'ata nara oro si sina kasa kopisa nevi raho fime kube nayo tuni sige kureli sidu ' +
+      'tonsi narli korsi krotiata yava gome ki-oro sabri'
+    ).split(' '),
+  );
+
+  function tokenize(text) {
+    const out = [];
+    const re = /[A-Za-z][A-Za-z'-]*/g;
+    let m;
+    while ((m = re.exec(text))) {
+      const t = m[0].replace(/^[-']+|[-']+$/g, '');
+      if (t) out.push(t);
+    }
+    return out;
+  }
+
+  function splitClauses(words) {
+    const out = [];
+    let cur = [];
+    for (const w of words) {
+      const lw = w.toLowerCase();
+      if ((RESET.has(lw) || (lw.startsWith('ki-') && lw !== 'ki-oro')) && cur.length) {
+        out.push(cur);
+        cur = [w];
+      } else cur.push(w);
+    }
+    if (cur.length) out.push(cur);
+    return out;
+  }
+
+  const isVerb = (w, p) =>
+    COPULA.has(w) ||
+    (p && (p.kind === 'motion' || (p.kind === 'lexical' && p.refs.some((r) => r.slot === 3))));
+
+  function checkLine(text, no, register) {
+    const f = [];
+    const add = (severity, message, rule) => f.push({ line: no, severity, message, rule });
+
+    for (const sentence of text.split(/[.,;:!?—…"“”()]+/)) {
+      const words = tokenize(sentence);
+      if (!words.length) continue;
+      for (const clause of splitClauses(words)) {
+        const lw = clause.map((w) => w.toLowerCase());
+        const set = new Set(lw);
+
+        for (const [a, b] of D.grammar.exclusions) {
+          if (set.has(a) && set.has(b))
+            add('error', a + ' and ' + b + ' cannot share a clause', '1.0:G16');
+        }
+        const ev = lw.filter((w) => EVID.has(w));
+        if (new Set(ev).size > 1) {
+          add('error', 'two evidentials in one clause: ' + [...new Set(ev)].join(', '), '1.0:G16');
+        }
+
+        lw.forEach((w, i) => {
+          const rest = lw.slice(i + 1);
+          if (w === 'ki' && rest.length) add('error', 'ki must end the clause', '1.0:G22');
+          if (ATT.has(w) && rest.some((r) => !ATT.has(r) && r !== 'ki')) {
+            add('error', w + ' is clause-final only', '1.0:G22');
+          }
+          if (STAT.has(w) && rest.some((r) => !ATT.has(r) && r !== 'ki')) {
+            add('error', w + ' sits after the predicate, before the attitude marker', '1.0:G16');
+          }
+        });
+
+        let last = 0;
+        let seen = false;
+        let pre = 0;
+        lw.forEach((w, i) => {
+          if (VALENCY.has(w) || w === 'sidu') {
+            last = 0;
+            seen = false;
+            return;
+          }
+          const rank = RANK[w];
+          if (rank === undefined) {
+            if (isVerb(w, parseWord(clause[i]))) {
+              seen = true;
+              last = 99;
+            }
+            return;
+          }
+          pre += 1;
+          if (seen) {
+            if (!['reve', 'loki', 'bodu'].includes(w)) {
+              add('error', w + ' (' + SLOT_OF[w] + ') cannot follow the verb', '1.0:G1');
+            }
+            return;
+          }
+          if (rank < last) add('error', w + ' (' + SLOT_OF[w] + ') is out of slot order', '1.0:G1');
+          last = Math.max(last, rank);
+        });
+
+        if (pre > D.grammar.maxPreverbal) {
+          add(
+            'warn',
+            pre + ' preverbal operators; ' + D.grammar.maxPreverbal + ' is the practical ceiling',
+            '1.0:G16',
+          );
+        }
+      }
+    }
+
+    for (const t of tokenize(text)) {
+      const p = parseWord(t);
+      if (!p) {
+        add('error', '“' + t + '” is not a word of Liraasa', 'never invent a root');
+        continue;
+      }
+      if (p.kind === 'legacy') add('warn', '“' + t + '” is pre-1.0; now ' + p.to, '1.0:G19');
+      if (p.kind === 'lexical') {
+        if (p.refs.some((r) => r.slot === 1 || r.slot === 6) && register !== 'sacred') {
+          add(
+            'note',
+            '“' + t + '” is an ascended form; sacred register, or irreverent on purpose',
+            '0.8:R10',
+          );
+        }
+        if (p.refs.every((r) => !H.get(r.root).glosses[r.slot])) {
+          add('warn', '“' + t + '” is a form whose slot has no meaning — “— (unused)”', '0.8:R2');
+        }
+      }
+    }
+    return f;
+  }
+
+  /* ================================================== the assisted composer
+
+     Not a translator. It looks each English chunk up in the index built from
+     the lexicon's own glosses and synonyms, offers every candidate it finds,
+     and assembles the chosen ones in clause-template order. Anything it cannot
+     find is reported as a gap, never guessed at. */
+
+  const PRONOUN_EN = {
+    i: 'maivo',
+    me: 'maivo',
+    my: 'maivo',
+    mine: 'maivo',
+    you: 'taivo',
+    your: 'taivo',
+    yours: 'taivo',
+    he: 'saivo',
+    him: 'saivo',
+    his: 'saivo',
+    she: 'saivo',
+    her: 'saivo',
+    hers: 'saivo',
+    it: 'ito',
+    its: 'ito',
+    we: 'maivori',
+    us: 'maivori',
+    our: 'maivori',
+    they: 'saivori',
+    them: 'saivori',
+    their: 'saivori',
+  };
+  const POSSESSIVE = new Set(['my', 'your', 'his', 'her', 'its', 'our', 'their']);
+
+  /* English grammar markers → the particle and the slot it belongs in. */
+  const MARKERS = [
+    { re: /\b(will|shall)\b/, word: 'futu', slot: 'TENSE' },
+    { re: /\b(was|were|did|had|ago)\b/, word: 'po', slot: 'TENSE' },
+    { re: /\b(can|could|able to)\b/, word: 'povi', slot: 'MODAL' },
+    { re: /\b(might|maybe|possibly)\b/, word: 'nosi', slot: 'MODAL' },
+    { re: /\b(may|allowed to|permitted)\b/, word: 'dagi', slot: 'MODAL' },
+    { re: /\b(must|have to|has to|need to)\b/, word: 'musi', slot: 'MODAL' },
+    { re: /\bshould\b/, word: 'suvi', slot: 'MODAL' },
+    { re: /\bwould\b/, word: 'viki', slot: 'MODAL' },
+    { re: /\b(almost|nearly)\b/, word: 'tavki', slot: 'APPROACH' },
+    { re: /\babout to\b/, word: 'fututi', slot: 'APPROACH' },
+    { re: /\b(began|begin|begins|started|start)\b/, word: 'hiro', slot: 'PHASE' },
+    { re: /\b(stopped|stop|ceased)\b/, word: 'teki', slot: 'PHASE' },
+    { re: /\b(tried to|try to|tries to)\b/, word: 'telvo', slot: 'EFFORT' },
+    { re: /\b(managed to|succeeded)\b/, word: 'vazdi', slot: 'EFFORT' },
+    { re: /\b(again)\b/, word: 'reve', slot: 'ITERATION' },
+    { re: /\b(still|keeps|keep on)\b/, word: 'loki', slot: 'ITERATION' },
+    { re: /\b(already)\b/, word: 'bodu', slot: 'ITERATION' },
+    { re: /\b(suddenly)\b/, word: 'zafra', slot: 'FRAME' },
+    { re: /\b(finally|at last)\b/, word: 'finra', slot: 'FRAME' },
+    { re: /\b(eventually)\b/, word: 'lanto', slot: 'FRAME' },
+    { re: /\b(at once|immediately)\b/, word: 'kenvi', slot: 'FRAME' },
+    { re: /\b(certainly|surely|indeed)\b/, word: 'seye', slot: 'ATTITUDE' },
+    { re: /\b(perhaps|maybe)\b/, word: 'poye', slot: 'ATTITUDE' },
+    { re: /\b(only)\b/, word: 'doli', slot: 'SCOPE' },
+    { re: /\b(also|too)\b/, word: 'tu', slot: 'SCOPE' },
+    { re: /\b(even)\b/, word: 'yesta', slot: 'SCOPE' },
+  ];
+  const NEGATION = /\b(not|never|n't|cannot|can't|don't|doesn't|didn't|won't|no)\b/;
+
+  /* Words carried by Liraasa grammar rather than by a dictionary entry. */
+  const STRUCTURAL = {
+    the: 'li',
+    a: 'baba',
+    an: 'baba',
+    of: 'de',
+    in: 'en',
+    inside: 'en',
+    to: 'ala',
+    toward: 'ala',
+    with: 'ko',
+    from: 'da',
+    and: 'ata',
+    but: 'nara',
+    because: 'kasa',
+    when: 'kube',
+    if: 'si',
+    that: 'fime',
+    who: 'raho',
+    which: 'raho',
+    all: 'toda',
+    every: 'toda',
+    many: 'muya',
+    this: 'eli',
+    there: 'ola-pago',
+    here: 'eli-pago',
+    now: 'eli-krono',
+    always: 'toda-krono',
+    never: 'nuna-krono',
+    nothing: 'nuna-coda',
+    everyone: 'toda-nela',
+    someone: 'somi-nela',
+    'no one': 'nuna-nela',
+    why: 'ki-kasa',
+    how: 'ki-modo',
+    where: 'ki-pago',
+    what: 'ki-coda',
+    who_q: 'ki-nela',
+  };
+
+  /* English "to be" is a copula in Liraasa, not a word to drop. `ke` is the
+     temporary state, `ka` the enduring one; both are offered. */
+  const COPULA_EN = {
+    is: 'ke',
+    are: 'ke',
+    am: 'ke',
+    be: 'ke',
+    being: 'ke',
+    was: 'ke',
+    were: 'ke',
+    been: 'ke',
+  };
+  const COPULA_ALTS = ['ke', 'ka', 'kapoki', 'loya', 'miyo'];
+
+  /* Irregular pasts and participles, so "came" can find venreva. */
+  const IRREGULAR = {
+    came: 'come',
+    went: 'go',
+    gone: 'go',
+    done: 'do',
+    saw: 'see',
+    seen: 'see',
+    sang: 'sing',
+    sung: 'sing',
+    begun: 'begin',
+    had: 'have',
+    said: 'say',
+    made: 'make',
+    took: 'take',
+    taken: 'take',
+    gave: 'give',
+    given: 'give',
+    knew: 'know',
+    known: 'know',
+    felt: 'feel',
+    told: 'tell',
+    left: 'leave',
+    found: 'find',
+    heard: 'hear',
+    held: 'hold',
+    kept: 'keep',
+    slept: 'sleep',
+    spoke: 'speak',
+    spoken: 'speak',
+    stood: 'stand',
+    understood: 'understand',
+    wrote: 'write',
+    written: 'write',
+    ate: 'eat',
+    eaten: 'eat',
+    fell: 'fall',
+    fallen: 'fall',
+    ran: 'run',
+    sat: 'sit',
+    lost: 'lose',
+    won: 'win',
+    brought: 'bring',
+    bought: 'buy',
+    thought: 'think',
+    caught: 'catch',
+    taught: 'teach',
+    built: 'build',
+    sent: 'send',
+    spent: 'spend',
+    rose: 'rise',
+    risen: 'rise',
+    grew: 'grow',
+    grown: 'grow',
+    drew: 'draw',
+    threw: 'throw',
+    wore: 'wear',
+    broke: 'break',
+    broken: 'break',
+    chose: 'choose',
+    chosen: 'choose',
+  };
+
+  const STOPWORDS = new Set(['do', 'does', 'own']);
+
+  /* Simple pasts, as opposed to participles. Seeing one means the clause is
+     past, so it takes `po` — the author's corpus writes "Toda-nela po venreva
+     sabri Dorin", not "Toda-nela venreva". */
+  const IRREGULAR_PAST = new Set([
+    'came',
+    'went',
+    'saw',
+    'sang',
+    'began',
+    'had',
+    'said',
+    'made',
+    'took',
+    'gave',
+    'knew',
+    'felt',
+    'told',
+    'left',
+    'found',
+    'heard',
+    'held',
+    'kept',
+    'slept',
+    'spoke',
+    'stood',
+    'understood',
+    'wrote',
+    'ate',
+    'fell',
+    'ran',
+    'sat',
+    'lost',
+    'won',
+    'brought',
+    'bought',
+    'thought',
+    'caught',
+    'taught',
+    'built',
+    'sent',
+    'spent',
+    'rose',
+    'grew',
+    'drew',
+    'threw',
+    'wore',
+    'broke',
+    'chose',
+    'was',
+    'were',
+  ]);
+
+  /* Words after which the next content word is a noun, never the verb. */
+  const DETERMINER_EN = new Set([
+    'the',
+    'a',
+    'an',
+    'this',
+    'that',
+    'these',
+    'those',
+    'my',
+    'your',
+    'his',
+    'her',
+    'its',
+    'our',
+    'their',
+    'every',
+    'all',
+    'many',
+    'some',
+    'no',
+  ]);
+
+  function lemmas(word) {
+    const w = word.toLowerCase();
+    const out = [w];
+    if (IRREGULAR[w]) out.push(IRREGULAR[w]);
+    if (w.endsWith('ies') && w.length > 4) out.push(w.slice(0, -3) + 'y');
+    if (w.endsWith('es') && w.length > 3) out.push(w.slice(0, -2));
+    if (w.endsWith('s') && w.length > 3) out.push(w.slice(0, -1));
+    if (w.endsWith('ed') && w.length > 4) {
+      out.push(w.slice(0, -2), w.slice(0, -1));
+      if (w.length > 5 && w[w.length - 3] === w[w.length - 4]) out.push(w.slice(0, -3));
+    }
+    if (w.endsWith('ing') && w.length > 5) {
+      out.push(w.slice(0, -3), w.slice(0, -3) + 'e');
+      if (w[w.length - 4] === w[w.length - 5]) out.push(w.slice(0, -4));
+    }
+    return [...new Set(out)];
+  }
+
+  /** Candidates for one English chunk, best first. */
+  function lookupEnglish(chunk) {
+    const seen = new Map();
+    const take = (list, bonus) => {
+      for (const c of list || []) {
+        const key = c.word;
+        const score = (c.kind === 'lexical' ? 10 : 20) + bonus - (c.slot || 0);
+        if (!seen.has(key) || seen.get(key).score < score) seen.set(key, { ...c, score });
+      }
+    };
+    take(EN.get(chunk), 100);
+    for (const l of lemmas(chunk)) if (l !== chunk) take(EN.get(l), 60);
+    take(EN.get('to ' + chunk), 80);
+    if (seen.size === 0) {
+      // A loose pass: any indexed phrase containing this word.
+      let n = 0;
+      for (const [phrase, list] of EN) {
+        if (n > 400) break;
+        if (phrase.includes(chunk) && phrase.length < chunk.length + 14) {
+          take(list, 10);
+          n += 1;
+        }
+      }
+    }
+    return [...seen.values()].sort((a, b) => b.score - a.score).slice(0, 6);
+  }
+
+  /** Build a draft for one English sentence. */
+  function composeSentence(sentence) {
+    const raw = sentence.trim();
+    const lower = ' ' + raw.toLowerCase() + ' ';
+    const question = /\?\s*$/.test(raw);
+
+    const marks = [];
+    let consumed = lower;
+    for (const m of MARKERS) {
+      if (m.re.test(consumed)) {
+        marks.push(m);
+        consumed = consumed.replace(m.re, ' ');
+      }
+    }
+    const negated = NEGATION.test(consumed);
+    if (negated) consumed = consumed.replace(NEGATION, ' ');
+
+    const chunks = [];
+    const words = consumed.match(/[a-z'-]+/g) || [];
+    /* A past-tense content word puts the clause in the past. Checked after
+       the marker pass, so "allowed to" — already read as dagi — does not look
+       like a past just because it ends in -ed. */
+    let sawPast = false;
+    for (const w of consumed.match(/[a-z'-]+/g) || []) {
+      if (IRREGULAR_PAST.has(w)) sawPast = true;
+      else if (/[a-z]{3}ed$/.test(w)) sawPast = true;
+    }
+    for (let i = 0; i < words.length; i += 1) {
+      const w = words[i];
+      const afterDeterminer = i > 0 && DETERMINER_EN.has(words[i - 1]);
+      if (STOPWORDS.has(w)) continue;
+      if (POSSESSIVE.has(w)) {
+        chunks.push({
+          en: w,
+          role: 'possessor',
+          options: [{ word: PRONOUN_EN[w], kind: 'pronoun' }],
+          chosen: 0,
+          after: 'de',
+        });
+        continue;
+      }
+      if (PRONOUN_EN[w]) {
+        chunks.push({
+          en: w,
+          role: 'pronoun',
+          options: [{ word: PRONOUN_EN[w], kind: 'pronoun' }],
+          chosen: 0,
+        });
+        continue;
+      }
+      if (STRUCTURAL[w]) {
+        chunks.push({
+          en: w,
+          role: 'structure',
+          options: [{ word: STRUCTURAL[w], kind: 'function word' }],
+          chosen: 0,
+        });
+        continue;
+      }
+      if (STRUCTURAL[w]) {
+        chunks.push({
+          en: w,
+          role: 'structure',
+          options: [{ word: STRUCTURAL[w], kind: 'function word' }],
+          chosen: 0,
+        });
+        continue;
+      }
+      if (COPULA_EN[w]) {
+        chunks.push({
+          en: w,
+          role: 'copula',
+          options: COPULA_ALTS.map((x) => ({ word: x, kind: 'copula' })),
+          chosen: 0,
+          isVerb: true,
+        });
+        continue;
+      }
+      const options = lookupEnglish(w);
+      const isPlural = /[a-z]{3}s$/.test(w) && !w.endsWith('ss');
+      chunks.push({
+        en: w,
+        role: options.length ? 'word' : 'gap',
+        options,
+        chosen: 0,
+        nounish: afterDeterminer,
+        plural: Boolean(isPlural && options.length && options[0].slot === 0),
+      });
+    }
+
+    /* Choose the verb. English puts it after the subject, and a word used as a
+       verb takes the verb form, not the root: "I love you" wants amora, not
+       amor. Promote the first candidate offering a glossed verb slot — the
+       index holds only slots that carry a meaning, so this can never pick an
+       unused one. Every alternative stays one click away. */
+    let verbIx = chunks.findIndex((c) => c.isVerb);
+    if (verbIx < 0) {
+      for (let i = 0; i < chunks.length; i += 1) {
+        if (chunks[i].nounish) continue; // a determiner marks it as a noun
+        const at = chunks[i].options.findIndex((o) => o.kind === 'lexical' && o.slot === 3);
+        if (at >= 0 && (i > 0 || chunks.length === 1)) {
+          chunks[i].chosen = at;
+          chunks[i].isVerb = true;
+          chunks[i].role = 'verb';
+          chunks[i].plural = false; // "works" is third person, not a plural
+          verbIx = i;
+          break;
+        }
+      }
+    }
+
+    // Assemble: the operators go in slot order before the verb, the rest keep
+    // the order they were written in, which is already SVO in English.
+    const order = [
+      'FRAME',
+      'TENSE',
+      'REALITY',
+      'MODAL',
+      'APPROACH',
+      'PHASE',
+      'EFFORT',
+      'ASPECT',
+      'ITERATION',
+      'EVIDENTIAL',
+    ];
+    const pre = marks
+      .filter((m) => order.includes(m.slot))
+      .sort((a, b) => order.indexOf(a.slot) - order.indexOf(b.slot));
+    const frame = pre.filter((m) => m.slot === 'FRAME').map((m) => m.word);
+    const preverbal = pre.filter((m) => m.slot !== 'FRAME').map((m) => m.word);
+    const scope = marks.filter((m) => m.slot === 'SCOPE').map((m) => m.word);
+    const attitude = marks.filter((m) => m.slot === 'ATTITUDE').map((m) => m.word);
+
+    // A past-tense verb with no explicit tense marker still needs `po`.
+    if (sawPast && !preverbal.some((w) => RANK[w] === 4)) preverbal.unshift('po');
+
+    return { raw, chunks, frame, preverbal, scope, attitude, negated, question };
+  }
+
+  /** Render a draft's current choices as a Liraasa line. */
+  function draftLine(d) {
+    /* The preverbal stack, in slot order: tense, then ne, then the rest.
+       `ne` follows the tense (1.0:G1) — "Maivo po ne lirala", never
+       "Maivo ne po lirala". */
+    const stack = [];
+    stack.push(...d.preverbal.filter((w) => RANK[w] === 4));
+    if (d.negated) stack.push('ne');
+    stack.push(...d.preverbal.filter((w) => RANK[w] !== 4));
+
+    const verbAt = d.chunks.findIndex((c) => c.isVerb);
+    const parts = [];
+
+    for (const w of d.frame) parts.push({ text: w });
+    if (d.frame.length) parts.push({ text: ',', tight: true });
+    for (const w of d.scope) parts.push({ text: w });
+
+    let placed = stack.length === 0;
+    d.chunks.forEach((c, i) => {
+      if (!placed && verbAt >= 0 && i === verbAt) {
+        for (const w of stack) parts.push({ text: w });
+        placed = true;
+      }
+      if (c.role === 'gap') {
+        parts.push({ gap: true, text: c.en });
+        return;
+      }
+      const opt = c.options[c.chosen];
+      if (!opt) return;
+      parts.push({ text: opt.word + (c.plural ? 'ri' : '') });
+      if (c.after) parts.push({ text: c.after });
+    });
+    // No verb was identified, so the operators go at the end rather than
+    // disappearing; the writer can move them.
+    if (!placed) for (const w of stack) parts.push({ text: w });
+
+    for (const t of d.attitude) parts.push({ text: t });
+    if (d.question) parts.push({ text: 'ki' });
+    return parts;
+  }
+
+  const draftText = (d) =>
+    draftLine(d)
+      .map((p) => p.text)
+      .join(' ')
+      .replace(/\s+,/g, ',')
+      .trim() + (d.question ? '?' : '.');
+
+  let drafts = [];
+
+  function runCompose() {
+    const src = els.englishIn.value.trim();
+    if (!src) {
+      els.composeOut.innerHTML =
+        '<p class="empty" style="margin-top:var(--s3)">Write an English line or two and press Compose. ' +
+        'Every word offered is a real lexicon entry — where Liraasa has no word for something, it says so ' +
+        'rather than inventing one.</p>';
+      return;
+    }
+    drafts = src
+      .split(/\n+/)
+      .map((l) => l.trim())
+      .filter(Boolean)
+      .flatMap((l) => l.split(/(?<=[.!?])\s+/).filter(Boolean))
+      .map(composeSentence);
+    renderCompose();
+  }
+
+  function renderCompose() {
+    els.composeOut.innerHTML = drafts
+      .map((d, di) => {
+        const line = draftLine(d)
+          .map((p) => (p.gap ? '<span class="gap">⟨' + esc(p.text) + '⟩</span>' : esc(p.text)))
+          .join(' ');
+        const rows = d.chunks
+          .map((c, ci) => {
+            if (c.role === 'gap') {
+              return (
+                '<div class="chunk"><span class="en">' +
+                esc(c.en) +
+                '<span class="role">no match</span></span>' +
+                '<span class="nomatch">Liraasa has no word for this. Build a MODIFIER+HEAD compound ' +
+                'from two roots, or rephrase.</span></div>'
+              );
+            }
+            const opts = c.options
+              .map(
+                (o, oi) =>
+                  '<button class="opt" type="button" aria-pressed="' +
+                  (oi === c.chosen) +
+                  '" data-d="' +
+                  di +
+                  '" data-c="' +
+                  ci +
+                  '" data-o="' +
+                  oi +
+                  '">' +
+                  esc(o.word) +
+                  (o.kind === 'lexical' && o.slot
+                    ? '<span class="sl">' + SLOT_NAME[o.slot] + '</span>'
+                    : '') +
+                  '</button>',
+              )
+              .join('');
+            return (
+              '<div class="chunk"><span class="en">' +
+              esc(c.en) +
+              '<span class="role">' +
+              esc(c.role) +
+              '</span></span>' +
+              '<span class="opts">' +
+              opts +
+              '</span></div>'
+            );
+          })
+          .join('');
+        const ops = [
+          ...d.frame,
+          ...d.preverbal,
+          ...(d.negated ? ['ne'] : []),
+          ...d.scope,
+          ...d.attitude,
+        ];
+        return (
+          '<div class="draft">' +
+          '<div class="label">' +
+          esc(d.raw) +
+          '</div>' +
+          '<div class="out" style="margin-top:4px">' +
+          line +
+          '</div>' +
+          (ops.length
+            ? '<div class="label" style="margin-top:6px">from grammar: ' +
+              esc(ops.join(' · ')) +
+              '</div>'
+            : '') +
+          '<div class="chunks">' +
+          rows +
+          '</div>' +
+          '<button class="btn" type="button" data-insert-draft="' +
+          di +
+          '" style="margin-top:var(--s2)">' +
+          'Insert this line</button>' +
+          '</div>'
+        );
+      })
+      .join('');
+  }
+
+  /* ------------------------------------------------------------- store */
+
+  const KEY = 'liraasa-songbook-v2';
+  const OLD_KEY = 'liraasa-songwright-v1';
+  const uid = () => 'p' + Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
+
+  let store = null;
+
+  function blankPiece(collectionId, title) {
+    const now = new Date().toISOString();
+    return {
+      id: uid(),
+      collectionId,
+      title: title || 'Untitled',
+      kind: 'song',
+      register: 'poetic',
+      text: '',
+      created: now,
+      updated: now,
+    };
+  }
+
+  const SAMPLE = [
+    'Kroti li lombi, po miyo doli lirana.',
+    'Taivo po havliha, ata li veluri po lombila sidu lirala.',
+    'Ata toda-coda raho bioba ka taivo de rale.',
+    '',
+    'Melodia, Melodia, li meloasasan,',
+    'Taivo ka maivo de loresonbu.',
+    'Maivo bisu amora taivo seye —',
+    'Maivo de valla ka doli taivo de lira.',
+  ].join('\n');
+
+  function seed() {
+    const c1 = { id: 'c' + uid(), name: 'Devotionals', created: new Date().toISOString() };
+    const c2 = { id: 'c' + uid(), name: 'Drafts', created: new Date().toISOString() };
+    const p1 = blankPiece(c1.id, 'Vorbalira ala Melodia');
+    p1.text = SAMPLE;
+    p1.kind = 'song';
+    p1.register = 'sacred';
+    const p2 = blankPiece(c2.id, 'Untitled');
+    return { version: 2, collections: [c1, c2], pieces: [p1, p2], activeId: p1.id };
+  }
+
+  function loadStore() {
+    try {
+      const raw = localStorage.getItem(KEY);
+      if (raw) {
+        const s = JSON.parse(raw);
+        if (s && Array.isArray(s.pieces) && s.pieces.length) return s;
+      }
+      // Carry a draft over from the single-document version.
+      const old = localStorage.getItem(OLD_KEY);
+      if (old) {
+        const d = JSON.parse(old);
+        const s = seed();
+        const p = s.pieces[0];
+        p.title = d.title || p.title;
+        p.text = typeof d.text === 'string' ? d.text : p.text;
+        p.kind = d.kind || p.kind;
+        p.register = d.register || p.register;
+        return s;
+      }
+    } catch (e) {
+      /* fall through to a fresh songbook */
+    }
+    return seed();
+  }
+
+  function saveStore() {
+    try {
+      localStorage.setItem(KEY, JSON.stringify(store));
+      els.stamp.textContent = 'kept ' + new Date().toLocaleTimeString();
+    } catch (e) {
+      els.stamp.textContent = 'not kept — storage blocked';
+    }
+  }
+
+  const activePiece = () => store.pieces.find((p) => p.id === store.activeId) || store.pieces[0];
+
+  function openPiece(id) {
+    store.activeId = id;
+    const p = activePiece();
+    els.title.value = p.title;
+    els.text.value = p.text;
+    els.kind.value = p.kind;
+    els.register.value = p.register;
+    renderLibrary();
+    sizeText();
+    analyse();
+    saveStore();
+  }
+
+  function capturePiece() {
+    const p = activePiece();
+    if (!p) return;
+    p.title = els.title.value;
+    p.text = els.text.value;
+    p.kind = els.kind.value;
+    p.register = els.register.value;
+    p.updated = new Date().toISOString();
+  }
+
+  /* ------------------------------------------------------------ render */
+
+  const els = {};
+  for (const id of [
+    'text',
+    'gutter',
+    'title',
+    'kind',
+    'register',
+    'q',
+    'hits',
+    'nFind',
+    'sLines',
+    'sWords',
+    'sSyls',
+    'sUnknown',
+    'sErrors',
+    'sLex',
+    'edition',
+    'stamp',
+    'exportDlg',
+    'exportKind',
+    'exportScope',
+    'exportText',
+    'exportNote',
+    'collections',
+    'englishIn',
+    'composeOut',
+    'desk',
+    'rail',
+    'insp',
+  ]) {
+    els[id] = document.getElementById(id);
+  }
+
+  const esc = (s) =>
+    String(s).replace(
+      /[&<>"]/g,
+      (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c],
+    );
+
+  let analysis = { lines: [], findings: [], words: 0, syllables: 0, unknown: 0, errors: 0 };
+
+  function analyse() {
+    const register = els.register.value;
+    const lines = [];
+    let words = 0,
+      syllables = 0,
+      unknown = 0,
+      errors = 0;
+    const all = [];
+
+    els.text.value.split('\n').forEach((line, i) => {
+      const toks = tokenize(line);
+      const parsed = toks.map((t) => ({ token: t, parse: parseWord(t) }));
+      const findings = line.trim() ? checkLine(line, i + 1, register) : [];
+      const syl = toks.reduce((n, t) => n + syllableCount(t), 0);
+      const nUnk = parsed.filter((p) => !p.parse).length;
+      const nErr = findings.filter((f) => f.severity === 'error').length;
+      const nWrn = findings.filter((f) => f.severity === 'warn').length;
+      words += toks.length;
+      syllables += syl;
+      unknown += nUnk;
+      errors += nErr;
+      all.push(...findings);
+      lines.push({ no: i + 1, text: line, tokens: parsed, findings, syllables: syl, nErr, nWrn });
+    });
+
+    analysis = { lines, findings: all, words, syllables, unknown, errors };
+    renderAll();
+  }
+
+  function renderAll() {
+    renderGutter();
+    renderCheck();
+    renderGloss();
+    renderSound();
+    renderFoot();
+  }
+
+  function renderGutter() {
+    els.gutter.innerHTML = analysis.lines
+      .map((l) => {
+        const cls = l.nErr ? 'err' : l.nWrn ? 'wrn' : '';
+        const dot = l.nErr ? 'err' : l.nWrn ? 'wrn' : l.text.trim() ? 'ok' : '';
+        return (
+          '<div class="grow ' +
+          cls +
+          '"><span>' +
+          (l.text.trim() ? l.syllables : '') +
+          '</span>' +
+          '<span class="dot ' +
+          dot +
+          '"></span></div>'
+        );
+      })
+      .join('');
+  }
+
+  function renderCheck() {
+    const f = analysis.findings;
+    els.nFind.textContent = f.length ? '(' + f.length + ')' : '';
+    const panel = document.getElementById('panel-check');
+    const live = analysis.lines.filter((l) => l.text.trim());
+    if (!live.length) {
+      panel.innerHTML =
+        '<p class="empty">An empty page. Write a line and it is checked as you type.</p>';
+      return;
+    }
+    const order = { error: 0, warn: 1, note: 2 };
+    const findings = [...f]
+      .sort((a, b) => order[a.severity] - order[b.severity] || a.line - b.line)
+      .map(
+        (x) =>
+          '<div class="finding ' +
+          x.severity +
+          '"><span class="where">line ' +
+          x.line +
+          '</span>' +
+          '<span>' +
+          esc(x.message) +
+          '<span class="rule"> · ' +
+          esc(x.rule) +
+          '</span></span></div>',
+      )
+      .join('');
+
+    const rows = live
+      .map((l) => {
+        const shape = l.tokens
+          .map((t) => {
+            const sy = syllabify(t.token);
+            return sy.syllables.map((_, i) => (i === sy.stress ? '<b>•</b>' : '·')).join('');
+          })
+          .join(' ');
+        const dot = l.nErr ? 'err' : l.nWrn ? 'wrn' : 'ok';
+        return (
+          '<tr><td class="n">' +
+          l.no +
+          '</td><td><span class="dot ' +
+          dot +
+          '"></span></td>' +
+          '<td class="n">' +
+          l.syllables +
+          '</td><td class="shape">' +
+          shape +
+          '</td></tr>'
+        );
+      })
+      .join('');
+    const counts = live.map((l) => l.syllables);
+    const lo = Math.min(...counts);
+    const hi = Math.max(...counts);
+
+    panel.innerHTML =
+      findings +
+      '<p class="label" style="margin-top:' +
+      (findings ? 'var(--s4)' : '0') +
+      '">' +
+      live.length +
+      ' lines · ' +
+      lo +
+      '–' +
+      hi +
+      ' syllables' +
+      (lo === hi ? ' (even)' : '') +
+      '</p>' +
+      '<table class="tbl lines"><thead><tr><th>#</th><th></th><th>Syl</th><th>Stress</th></tr></thead>' +
+      '<tbody>' +
+      rows +
+      '</tbody></table>' +
+      (findings
+        ? ''
+        : '<p class="empty" style="margin-top:var(--s3)">Every word is in the lexicon and every clause keeps slot order.</p>');
+  }
+
+  function renderGloss() {
+    const panel = document.getElementById('panel-gloss');
+    const live = analysis.lines.filter((l) => l.text.trim());
+    if (!live.length) {
+      panel.innerHTML = '<p class="empty">The interlinear gloss appears here, line by line.</p>';
+      return;
+    }
+    panel.innerHTML = live
+      .map(
+        (l) =>
+          '<div class="gl"><div class="gl-no">line ' +
+          l.no +
+          ' · ' +
+          l.syllables +
+          ' syllables</div>' +
+          '<div class="gl-row">' +
+          l.tokens
+            .map((t) => {
+              const p = t.parse;
+              const cls = !p ? 'unk' : p.kind === 'name' ? 'nm' : '';
+              return (
+                '<span class="mo ' +
+                cls +
+                '"><span class="s">' +
+                esc(t.token) +
+                '</span>' +
+                '<span class="g">' +
+                esc(segFor(p)) +
+                '</span>' +
+                '<span class="e">' +
+                esc(glossFor(p)) +
+                '</span></span>'
+              );
+            })
+            .join('') +
+          '</div></div>',
+      )
+      .join('');
+  }
+
+  function renderSound() {
+    const panel = document.getElementById('panel-sound');
+    const live = analysis.lines.filter((l) => l.text.trim());
+    if (!live.length) {
+      panel.innerHTML =
+        '<p class="empty">Syllables, stress and IPA appear here — the three things a sung line lives or dies by.</p>';
+      return;
+    }
+    panel.innerHTML = live
+      .map((l) => {
+        const beats = [];
+        const sy = [];
+        const ipa = [];
+        for (const t of l.tokens) {
+          const s = syllabify(t.token);
+          s.syllables.forEach((_, i) =>
+            beats.push('<span class="beat' + (i === s.stress ? ' on' : '') + '"></span>'),
+          );
+          sy.push(
+            s.syllables
+              .map((x, i) => (i === s.stress ? '<b>' + esc(x) + '</b>' : esc(x)))
+              .join('-'),
+          );
+          ipa.push(toPhones(t.token).join(' '));
+        }
+        return (
+          '<div class="ph"><div class="ph-head"><span class="label">line ' +
+          l.no +
+          '</span>' +
+          '<span class="mono">' +
+          l.syllables +
+          '</span>' +
+          '<span class="beats">' +
+          beats.join('') +
+          '</span></div>' +
+          '<div class="syls">' +
+          sy.join(' &nbsp; ') +
+          '</div>' +
+          '<div class="ipa">' +
+          esc(ipa.join('  ‖  ')) +
+          '</div></div>'
+        );
+      })
+      .join('');
+  }
+
+  function renderFoot() {
+    els.sLines.textContent = analysis.lines.filter((l) => l.text.trim()).length;
+    els.sWords.textContent = analysis.words;
+    els.sSyls.textContent = analysis.syllables;
+    els.sUnknown.textContent = analysis.unknown;
+    els.sErrors.textContent = analysis.errors;
+  }
+
+  function renderLibrary() {
+    const byColl = new Map(store.collections.map((c) => [c.id, []]));
+    const loose = [];
+    for (const p of store.pieces) {
+      const l = byColl.get(p.collectionId);
+      if (l) l.push(p);
+      else loose.push(p);
+    }
+    if (loose.length) {
+      if (!byColl.has('__loose')) byColl.set('__loose', loose);
+    }
+
+    els.collections.innerHTML = store.collections
+      .map((c) => {
+        const pieces = (byColl.get(c.id) || [])
+          .sort((a, b) => b.updated.localeCompare(a.updated))
+          .map((p) => {
+            const n = p.text.trim()
+              ? p.text
+                  .trim()
+                  .split('\n')
+                  .filter((x) => x.trim()).length
+              : 0;
+            return (
+              '<button class="piece" type="button" data-piece="' +
+              p.id +
+              '"' +
+              (p.id === store.activeId ? ' aria-current="true"' : '') +
+              '>' +
+              '<span class="t">' +
+              esc(p.title || 'Untitled') +
+              '</span>' +
+              '<span class="m">' +
+              n +
+              '</span></button>'
+            );
+          })
+          .join('');
+        return (
+          '<section class="coll"><div class="coll-head">' +
+          '<input class="coll-name" value="' +
+          esc(c.name) +
+          '" data-coll="' +
+          c.id +
+          '" aria-label="Collection name" />' +
+          '<span class="coll-count mono">' +
+          (byColl.get(c.id) || []).length +
+          '</span>' +
+          '<button class="btn btn-quiet" type="button" data-addto="' +
+          c.id +
+          '" title="New piece here">+</button>' +
+          '</div>' +
+          pieces +
+          '</section>'
+        );
+      })
+      .join('');
+  }
+
+  /* ----------------------------------------------------------- lexicon */
+
+  function searchLexicon(q) {
+    const s = q.trim().toLowerCase();
+    if (s.length < 2) return { words: [], closed: [] };
+    const scored = [];
+    for (const rec of H.values()) {
+      let score = 0;
+      if (rec.root === s) score = 100;
+      else if (rec.forms.includes(s)) score = 90;
+      else if (rec.root.startsWith(s)) score = 60;
+      else if (rec.forms.some((f) => f.startsWith(s))) score = 40;
+      if (!score) {
+        for (const g of rec.glosses) {
+          if (!g) continue;
+          const gl = g.toLowerCase();
+          if (gl === s) {
+            score = 80;
+            break;
+          }
+          if (gl.startsWith(s)) score = Math.max(score, 50);
+          else if (gl.includes(s)) score = Math.max(score, 25);
+        }
+      }
+      if (!score && rec.synonyms.some((x) => String(x).toLowerCase().includes(s))) score = 20;
+      if (score) scored.push({ rec, score });
+    }
+    const closed = [];
+    for (const [form, info] of CLOSED) {
+      if (form === s || form.startsWith(s) || String(info.gloss).toLowerCase().includes(s)) {
+        closed.push({ form, info });
+      }
+    }
+    scored.sort((a, b) => b.score - a.score || a.rec.root.localeCompare(b.rec.root));
+    return { words: scored.slice(0, 40), closed: closed.slice(0, 16) };
+  }
+
+  function renderHits() {
+    const r = searchLexicon(els.q.value);
+    if (!r.words.length && !r.closed.length) {
+      els.hits.innerHTML =
+        els.q.value.trim().length < 2
+          ? '<p class="empty">Two letters or more. Searches spelling, any of the seven forms, the glosses and the English synonyms.</p>'
+          : '<p class="empty">Nothing matches. Build a transparent MODIFIER+HEAD compound from two existing roots instead.</p>';
+      return;
+    }
+    const parts = [];
+    for (const { rec } of r.words) {
+      const chips =
+        '<span class="chip">' +
+        (rec.type === 'P' ? 'primal' : 'compound') +
+        '</span>' +
+        (rec.register === 'p' ? '<span class="chip">poetic</span>' : '') +
+        (rec.since === '1.1' ? '<span class="chip new">1.1</span>' : '') +
+        (rec.components ? '<span class="chip">' + esc(rec.components.join(' + ')) + '</span>' : '');
+      const forms = rec.forms
+        .map((f, i) => {
+          const g = rec.glosses[i];
+          return (
+            '<button class="fbtn" type="button" data-insert="' +
+            esc(f) +
+            '"' +
+            (g ? '' : ' disabled aria-disabled="true"') +
+            ' title="' +
+            esc(g || 'unused slot — no meaning') +
+            '">' +
+            esc(f) +
+            '<span class="sl">' +
+            SLOT_NAME[i] +
+            (g ? '' : ' · unused') +
+            '</span></button>'
+          );
+        })
+        .join('');
+      parts.push(
+        '<div class="hit"><div class="hit-top"><span class="w">' +
+          esc(rec.root) +
+          '</span>' +
+          chips +
+          '</div>' +
+          '<div class="d">' +
+          esc(rec.glosses[0]) +
+          '</div><div class="forms">' +
+          forms +
+          '</div></div>',
+      );
+    }
+    for (const { form, info } of r.closed) {
+      parts.push(
+        '<div class="hit"><div class="hit-top"><span class="w">' +
+          esc(form) +
+          '</span>' +
+          '<span class="chip">' +
+          esc(info.kind) +
+          '</span></div>' +
+          '<div class="d">' +
+          esc(info.gloss) +
+          '</div>' +
+          '<div class="forms"><button class="fbtn" type="button" data-insert="' +
+          esc(form) +
+          '">' +
+          esc(form) +
+          '<span class="sl">insert</span></button></div></div>',
+      );
+    }
+    els.hits.innerHTML = parts.join('');
+  }
+
+  function renderGrammar() {
+    const rows = D.grammar.slots
+      .map(
+        ([n, slot, words, notes]) =>
+          '<tr><td class="n">' +
+          n +
+          '</td><td><b>' +
+          esc(slot) +
+          '</b><br><span class="label">' +
+          esc(notes || '') +
+          '</span></td><td class="lira">' +
+          esc(words.join(' · ')) +
+          '</td></tr>',
+      )
+      .join('');
+    document.getElementById('panel-gram').innerHTML =
+      '<p class="label">Clause template</p><div class="pre">' +
+      esc(D.grammar.clauseTemplate) +
+      '</div>' +
+      '<p class="label">Noun phrase</p><div class="pre">' +
+      esc(D.grammar.nounPhrase) +
+      '</div>' +
+      '<p class="label">The twenty slots · left scopes over right</p>' +
+      '<table class="tbl"><thead><tr><th>#</th><th>Slot</th><th>Words</th></tr></thead><tbody>' +
+      rows +
+      '</tbody></table>' +
+      '<p class="label" style="margin-top:var(--s4)">Never together · 1.0:G16</p><div class="pre">' +
+      D.grammar.exclusions.map((p) => esc(p.join(' + '))).join('<br>') +
+      '</div>' +
+      '<p class="label" style="margin-top:var(--s4)">Sound</p><div class="pre">' +
+      'vowels — ' +
+      esc(D.phonology.vowels) +
+      '<br>core — ' +
+      esc(D.phonology.consonantsCore) +
+      '<br>others — ' +
+      esc(D.phonology.consonantsOther) +
+      '<br>stress — ' +
+      esc(D.phonology.stress) +
+      '</div>';
+  }
+
+  /* ------------------------------------------------------------ insert */
+
+  function insertAtCursor(word) {
+    const ta = els.text;
+    const a = ta.selectionStart;
+    const b = ta.selectionEnd;
+    const before = ta.value.slice(0, a);
+    const pad = before && !/\s$/.test(before) ? ' ' : '';
+    ta.value = before + pad + word + ta.value.slice(b);
+    const pos = a + pad.length + word.length;
+    ta.focus();
+    ta.setSelectionRange(pos, pos);
+    onEdit();
+  }
+
+  function appendLine(line) {
+    const ta = els.text;
+    ta.value = ta.value + (ta.value && !ta.value.endsWith('\n') ? '\n' : '') + line;
+    sizeText();
+    onEdit();
+  }
+
+  /* ------------------------------------------------------------ export */
+
+  function piecesFor(scope) {
+    const p = activePiece();
+    if (scope === 'piece') return [p];
+    if (scope === 'collection')
+      return store.pieces.filter((x) => x.collectionId === p.collectionId);
+    return store.pieces;
+  }
+
+  function analyseText(text, register) {
+    return text.split('\n').map((line, i) => ({
+      no: i + 1,
+      text: line,
+      tokens: tokenize(line).map((t) => ({ token: t, parse: parseWord(t) })),
+      syllables: tokenize(line).reduce((n, t) => n + syllableCount(t), 0),
+      findings: line.trim() ? checkLine(line, i + 1, register) : [],
+    }));
+  }
+
+  function exportAs(kind, scope) {
+    capturePiece();
+    const pieces = piecesFor(scope);
+    const out = [];
+
+    if (kind === 'text') {
+      for (const p of pieces) out.push(p.title, '', p.text, '', '');
+      return { text: out.join('\n'), note: pieces.length + ' piece(s), as written.' };
+    }
+
+    if (kind === 'interlinear') {
+      for (const p of pieces) {
+        out.push(p.title, '');
+        for (const l of analyseText(p.text, p.register).filter((l) => l.text.trim())) {
+          out.push(l.text);
+          out.push('  ' + l.tokens.map((t) => segFor(t.parse)).join('  '));
+          out.push('  ' + l.tokens.map((t) => glossFor(t.parse)).join(' · '));
+          out.push('');
+        }
+        out.push('');
+      }
+      return { text: out.join('\n'), note: 'Surface, segmentation and per-morpheme gloss.' };
+    }
+
+    if (kind === 'lab') {
+      out.push('# One .lab file per audio clip. Save each block as its own file,');
+      out.push('# named to match the .wav. Text is already lowercased.', '');
+      for (const p of pieces) {
+        const slug = (p.title || 'untitled')
+          .replace(/\s+/g, '_')
+          .toLowerCase()
+          .replace(/[^a-z0-9_]/g, '');
+        analyseText(p.text, p.register)
+          .filter((l) => l.text.trim())
+          .forEach((l, i) => {
+            out.push('### ' + slug + '_' + String(i + 1).padStart(3, '0') + '.lab');
+            out.push(
+              tokenize(l.text)
+                .map((t) => t.toLowerCase())
+                .join(' '),
+            );
+            out.push('');
+          });
+      }
+      return {
+        text: out.join('\n'),
+        note: 'Montreal Forced Aligner transcripts, one block per line.',
+      };
+    }
+
+    if (kind === 'dict') {
+      const words = new Set();
+      for (const p of pieces) for (const t of tokenize(p.text)) words.add(t.toLowerCase());
+      const missing = [];
+      for (const w of [...words].sort()) {
+        if (!parseWord(w)) missing.push(w);
+        const ph = toPhones(w);
+        out.push(w + '\t' + ph.join(' '));
+        const glided = [];
+        let did = false;
+        for (let i = 0; i < ph.length; i += 1) {
+          if (ph[i] === ph[i + 1] && VOWELS.includes(ph[i])) {
+            glided.push(ph[i]);
+            i += 1;
+            did = true;
+          } else glided.push(ph[i]);
+        }
+        if (did) out.push(w + '\t' + glided.join(' '));
+      }
+      return {
+        text: out.join('\n'),
+        note:
+          words.size +
+          ' words, with a glided variant where there is hiatus.' +
+          (missing.length ? '  ⚠ not in the lexicon: ' + missing.join(', ') : ''),
+      };
+    }
+
+    if (kind === 'syl') {
+      out.push('piece\tline\tsyllables\tstress\ttext');
+      for (const p of pieces) {
+        for (const l of analyseText(p.text, p.register).filter((l) => l.text.trim())) {
+          const pat = l.tokens
+            .map((t) => {
+              const s = syllabify(t.token);
+              return s.syllables.map((_, i) => (i === s.stress ? 'X' : '.')).join('');
+            })
+            .join(' ');
+          out.push([p.title, l.no, l.syllables, pat, l.text].join('\t'));
+        }
+      }
+      return {
+        text: out.join('\n'),
+        note: 'X marks the stressed syllable. Paste into a spreadsheet.',
+      };
+    }
+
+    const coll = new Map(store.collections.map((c) => [c.id, c.name]));
+    const doc = {
+      songbook: scope === 'all' ? 'complete' : scope,
+      edition: D.version,
+      exported: new Date().toISOString(),
+      pieces: pieces.map((p) => ({
+        title: p.title,
+        collection: coll.get(p.collectionId) || null,
+        kind: p.kind,
+        register: p.register,
+        updated: p.updated,
+        lines: analyseText(p.text, p.register)
+          .filter((l) => l.text.trim())
+          .map((l) => ({
+            text: l.text,
+            syllables: l.syllables,
+            tokens: l.tokens.map((t) => ({
+              surface: t.token,
+              kind: t.parse ? t.parse.kind : 'unknown',
+              segmentation: segFor(t.parse),
+              gloss: glossFor(t.parse),
+            })),
+          })),
+      })),
+    };
+    return { text: JSON.stringify(doc, null, 2), note: 'Structured, ready to store or re-render.' };
+  }
+
+  const showExport = () => {
+    const { text, note } = exportAs(els.exportKind.value, els.exportScope.value);
+    els.exportText.value = text;
+    els.exportNote.textContent = note;
+  };
+
+  /* -------------------------------------------------------------- wire */
+
+  let timer = null;
+  function onEdit() {
+    analyse();
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      capturePiece();
+      renderLibrary();
+      saveStore();
+    }, 500);
+  }
+
+  function sizeText() {
+    const rows = els.text.value.split('\n').length;
+    els.text.style.height = Math.max(rows * 31.2 + 64, 420) + 'px';
+  }
+
+  els.text.addEventListener('input', () => {
+    sizeText();
+    onEdit();
+  });
+  els.title.addEventListener('input', onEdit);
+  els.register.addEventListener('change', onEdit);
+  els.kind.addEventListener('change', onEdit);
+  els.q.addEventListener('input', renderHits);
+
+  els.hits.addEventListener('click', (e) => {
+    const b = e.target.closest('[data-insert]');
+    if (b && !b.disabled) insertAtCursor(b.dataset.insert);
+  });
+
+  els.collections.addEventListener('click', (e) => {
+    const piece = e.target.closest('[data-piece]');
+    if (piece) {
+      capturePiece();
+      saveStore();
+      openPiece(piece.dataset.piece);
+      return;
+    }
+    const add = e.target.closest('[data-addto]');
+    if (add) {
+      capturePiece();
+      const p = blankPiece(add.dataset.addto);
+      store.pieces.push(p);
+      openPiece(p.id);
+      els.title.focus();
+      els.title.select();
+    }
+  });
+
+  els.collections.addEventListener('input', (e) => {
+    const name = e.target.closest('[data-coll]');
+    if (!name) return;
+    const c = store.collections.find((x) => x.id === name.dataset.coll);
+    if (c) {
+      c.name = name.value;
+      clearTimeout(timer);
+      timer = setTimeout(saveStore, 500);
+    }
+  });
+
+  document.getElementById('newColl').addEventListener('click', () => {
+    capturePiece();
+    const c = { id: 'c' + uid(), name: 'New shelf', created: new Date().toISOString() };
+    store.collections.push(c);
+    const p = blankPiece(c.id);
+    store.pieces.push(p);
+    openPiece(p.id);
+  });
+
+  document.getElementById('newPiece').addEventListener('click', () => {
+    capturePiece();
+    const p = blankPiece(activePiece().collectionId);
+    store.pieces.push(p);
+    openPiece(p.id);
+    els.title.focus();
+    els.title.select();
+  });
+
+  for (const tab of document.querySelectorAll('.tab')) {
+    tab.addEventListener('click', () => {
+      for (const t of document.querySelectorAll('.tab')) {
+        const on = t === tab;
+        t.setAttribute('aria-selected', String(on));
+        document.getElementById('panel-' + t.dataset.tab).hidden = !on;
+      }
+      if (tab.dataset.tab === 'lex') els.q.focus();
+      if (tab.dataset.tab === 'compose') els.englishIn.focus();
+    });
+  }
+
+  const toggle = (btn, key) =>
+    btn.addEventListener('click', () => {
+      const on = els.desk.dataset[key] === 'on';
+      els.desk.dataset[key] = on ? 'off' : 'on';
+      btn.setAttribute('aria-pressed', String(!on));
+      (key === 'rail' ? els.rail : els.insp).classList.toggle('hidden', on);
+    });
+  toggle(document.getElementById('railBtn'), 'rail');
+  toggle(document.getElementById('inspBtn'), 'insp');
+
+  document.getElementById('themeBtn').addEventListener('click', () => {
+    const root = document.documentElement;
+    const now = root.getAttribute('data-theme');
+    const dark = now ? now === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+    root.setAttribute('data-theme', dark ? 'light' : 'dark');
+  });
+
+  document.getElementById('composeBtn').addEventListener('click', runCompose);
+  els.englishIn.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' && (e.metaKey || e.ctrlKey)) runCompose();
+  });
+
+  document.getElementById('appendBtn').addEventListener('click', () => {
+    if (!drafts.length) runCompose();
+    for (const d of drafts) appendLine(draftText(d));
+  });
+
+  els.composeOut.addEventListener('click', (e) => {
+    const opt = e.target.closest('.opt');
+    if (opt) {
+      drafts[+opt.dataset.d].chunks[+opt.dataset.c].chosen = +opt.dataset.o;
+      renderCompose();
+      return;
+    }
+    const ins = e.target.closest('[data-insert-draft]');
+    if (ins) appendLine(draftText(drafts[+ins.dataset.insertDraft]));
+  });
+
+  document.getElementById('exportBtn').addEventListener('click', () => {
+    showExport();
+    els.exportDlg.showModal();
+  });
+  els.exportKind.addEventListener('change', showExport);
+  els.exportScope.addEventListener('change', showExport);
+  document.getElementById('closeDlg').addEventListener('click', () => els.exportDlg.close());
+  document.getElementById('copyBtn').addEventListener('click', async () => {
+    const btn = document.getElementById('copyBtn');
+    try {
+      await navigator.clipboard.writeText(els.exportText.value);
+      btn.textContent = 'Copied';
+    } catch (e) {
+      els.exportText.select();
+      btn.textContent = 'Press ⌘/Ctrl-C';
+    }
+    setTimeout(() => (btn.textContent = 'Copy'), 1600);
+  });
+
+  /* -------------------------------------------------------------- boot */
+
+  els.edition.textContent = D.version;
+  els.sLex.textContent =
+    D.headwords.length + ' headwords · ' + D.functionWords.length + ' function words';
+  store = loadStore();
+  renderGrammar();
+  openPiece(store.activeId || store.pieces[0].id);
+  renderHits();
+  runCompose();
+</script>

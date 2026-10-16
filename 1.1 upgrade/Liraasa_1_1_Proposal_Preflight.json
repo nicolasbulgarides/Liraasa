@@ -1,0 +1,268 @@
+{
+  "report": "Independent PROPOSAL preflight; NOT an integrated 1.1 validator run",
+  "source_sha256": "adc013cf99b79ec597c8cfcb9aee9f942e520010556ab6b072bcaa9a606608f3",
+  "source_size_bytes": 1769944,
+  "proposal_counts": {
+    "new_primal_roots": 21,
+    "new_compounds": 298,
+    "total_proposed": 319,
+    "post_integration_headwords": 1418,
+    "post_primal_roots": 407,
+    "post_compounds": 1011
+  },
+  "checks": {
+    "source_hash_consistent": true,
+    "candidate_headwords_unique": true,
+    "primal_roots_at_least_two_edits_from_active_or_reserved_base": true,
+    "all_21_new_roots_have_1_0_phonotactic_shape": true,
+    "seven_form_surface_spellings_unique": true,
+    "no_new_form_matches_existing_active_or_reserved_spelling": true,
+    "each_compound_has_exactly_one_valid_two_headword_parse": true,
+    "all_compound_components_resolve": true,
+    "all_compound_dependencies_acyclic": true,
+    "no_unresolved_fatal_candidate_issue": true,
+    "grammar_unchanged_because_not_integrated": true
+  },
+  "existing_lexical_heads_skipped": [
+    [
+      "vimolalle",
+      "window",
+      "window"
+    ],
+    [
+      "solopusa",
+      "stone dust",
+      "sand"
+    ],
+    [
+      "verasude",
+      "empirical evidence",
+      "evidence; proof offered"
+    ],
+    [
+      "opimomvi",
+      "disappointment",
+      "disappointment"
+    ],
+    [
+      "sovepomli",
+      "peace agreement",
+      "peaceful promise; a vow entrusted to peace"
+    ],
+    [
+      "sevutamra",
+      "island",
+      "island"
+    ]
+  ],
+  "already_covered_meanings_skipped": [
+    [
+      "leldetamra",
+      "boundary",
+      "pagolelde"
+    ],
+    [
+      "pagosovla",
+      "map",
+      "pagosarbi"
+    ],
+    [
+      "sarbilisi",
+      "ink",
+      "sarbimiru"
+    ],
+    [
+      "moldiseldi",
+      "throat",
+      "havlinulu"
+    ],
+    [
+      "mudusuma",
+      "fever",
+      "yugefaru"
+    ],
+    [
+      "barnisenru",
+      "bruise",
+      "vulrasado"
+    ],
+    [
+      "havlizogu",
+      "cough",
+      "havlibalbu"
+    ],
+    [
+      "bioholba",
+      "health",
+      "muduna"
+    ],
+    [
+      "vulrameyi",
+      "healing",
+      "yugemeyi"
+    ],
+    [
+      "yanbahunra",
+      "elder",
+      "yanbanela"
+    ],
+    [
+      "devotilma",
+      "marriage",
+      "devoasa"
+    ],
+    [
+      "farukova",
+      "oven",
+      "farudomlu"
+    ],
+    [
+      "cemobiti",
+      "stove",
+      "cemofaru"
+    ],
+    [
+      "safabiti",
+      "broom",
+      "senbabiti"
+    ],
+    [
+      "kemyedivma",
+      "lock",
+      "kemyesevre"
+    ],
+    [
+      "talidapa",
+      "wages",
+      "talicono"
+    ],
+    [
+      "lanvesarbisenru",
+      "contract",
+      "pomlileto"
+    ],
+    [
+      "nosvolideo",
+      "hypothesis",
+      "nosvopensa"
+    ],
+    [
+      "devomomvi",
+      "betrayal",
+      "devobalbu"
+    ],
+    [
+      "veramaska",
+      "deception",
+      "maskavera"
+    ],
+    [
+      "larneperemo",
+      "frustration",
+      "peremolarne"
+    ],
+    [
+      "nedufule",
+      "sufficiency",
+      "neduna"
+    ],
+    [
+      "kronolelde",
+      "deadline",
+      "kronovabale"
+    ],
+    [
+      "volrumomvi",
+      "poverty",
+      "volruna"
+    ],
+    [
+      "solorumne",
+      "cave",
+      "monrurumne"
+    ],
+    [
+      "mirufule",
+      "flood",
+      "fulemiru"
+    ],
+    [
+      "vayeruhe",
+      "cyclone",
+      "ruherilu"
+    ]
+  ],
+  "existing_derivations_not_readded": [
+    [
+      "turnapago",
+      "entrance",
+      "Already generable from 1.0 turna + -pago; do not add as a new headword"
+    ],
+    [
+      "duvlapago",
+      "exit opening",
+      "Already generable from 1.0 duvla + -pago; do not add as a new headword"
+    ],
+    [
+      "bemyapago",
+      "beehive",
+      "Already generable from 1.0 bemya + -pago; do not add as a new headword"
+    ],
+    [
+      "lavrapago",
+      "bird nest",
+      "Already generable from 1.0 lavra + -pago; do not add as a new headword"
+    ],
+    [
+      "safapago",
+      "bathroom",
+      "Already generable from 1.0 safa + -pago; do not add as a new headword"
+    ],
+    [
+      "cemopago",
+      "kitchen",
+      "Already generable from 1.0 cemo + -pago; do not add as a new headword"
+    ],
+    [
+      "lemupago",
+      "school",
+      "Already generable from 1.0 lemu + -pago; do not add as a new headword"
+    ],
+    [
+      "helnapago",
+      "hospital",
+      "Already generable from 1.0 helna + -pago; do not add as a new headword"
+    ],
+    [
+      "bullipago",
+      "library",
+      "Already generable from 1.0 bulli + -pago; do not add as a new headword"
+    ],
+    [
+      "taradapago",
+      "market",
+      "Already generable from 1.0 tarada + -pago; do not add as a new headword"
+    ],
+    [
+      "lirapago",
+      "stage",
+      "Already generable from 1.0 lira + -pago; do not add as a new headword"
+    ],
+    [
+      "telnepago",
+      "theater",
+      "Already generable from 1.0 telne + -pago; do not add as a new headword"
+    ],
+    [
+      "lardapago",
+      "performance space",
+      "Already generable from 1.0 larda + -pago; do not add as a new headword"
+    ]
+  ],
+  "duplicate_draft_candidates_removed": [],
+  "limitations": [
+    "The canonical 1.0 validate.py cannot run in this isolated attachment directory because liraasa_core.py and liraasa_lexicon.py are not present.",
+    "Lexical semantic quality and literary naturalness require editorial tests after integration.",
+    "No 1.1 JSON lexicon has been created or validated; this is only a candidate proposal."
+  ]
+}

@@ -1,0 +1,92 @@
+# Migrated from 0.8 to 1.0+ by migrate_text.py (ruling 1.0:G19).
+# Source: song_VI_kicoda.txt
+# song_VI_kicoda - extracted from the 0.8 Grammar Guide and Codex.
+# Liraasa lines unprefixed; English on "# EN:" comment lines.
+
+# EN: Ki-coda ka Pagoasa? — The Goddess's Cosmic Rap
+# EN: A goddess debates her husband, the universal mind, on the nature of existence. She wins with the
+# EN: grammar itself: he only knows by hearsay (buyu), while she saw it with her own eyes (yehu).
+# EN: Ported from its 0.4 text to 0.7.
+Taivo buyu sabesia: toda-coda ralnora.
+Maivo yehu vimova: toda-coda lumila.
+Taivo ka mavoasa, nara maivo ka lumiasa,
+taivo cunuca veluri, maivo po farlafa pagoasa!
+Taivo kronoka mambiri, la mavosan, la silisan,
+maivo meloma vemiasa, la lumisan, la lavisan!
+Taivo pensapa fime bio ka kronosan,
+maivo sabesia fime bio ka melosan!
+Taivo vimova narvo; maivo vimova narvonasan.
+# EN: Taivo ne yehu vimova — taivo doli pensapa,
+mavonasan!
+Maivo yehu vimova kronoasa; en ito maivo lisrola,
+taivo buyu lenila ito; taivo po somusia, lasola.
+# EN: HOOK – CHOIR DOUBLES HER
+Ki-coda ka pagoasa? Lumiasa, lumiasa!
+Ki-coda ka kronoasa? Liraasa, liraasa!
+# EN: Taivo cunuca, taivo kronoka — maivo lirala, maivo
+lumila,
+# EN: toda-coda ka meloasa — seye, seye!
+Taivo senosia: "Pagoasa ka codana; toda velu
+daigoda;
+lumi ka doli baba mambi; narvo ka toda-krono."
+# EN: Zabo, veluri daigoda — nara lamsa samnisia!
+# EN: Daigo ka dorbi, ne vabale — taivo ne pensapa, ne
+surusia!
+Taivo vilneva navuasa gase codanasan,
+maivo vilneva ito ata lorela: ito ka loreasasan!
+Taivo buyu sabesia; maivo vuda norunia pagoasa,
+ata maivo de noru po loya vemiasa!
+Taivo krono, maivo lira; taivo pensa, maivo melo;
+taivo sili, maivo faru; taivo nilvu, maivo vebo!
+# EN: HOOK – CHOIR DOUBLES HER
+Ki-coda ka pagoasa? Lumiasa, lumiasa!
+Ki-coda ka kronoasa? Liraasa, liraasa!
+# EN: Taivo cunuca, taivo kronoka — maivo lirala, maivo
+lumila,
+# EN: toda-coda ka meloasa — seye, seye!
+Nara maivo masuma, maivo de mavoasa:
+si pagoasa ka doli krono ata coda,
+ki-kasa taivo po amora maivo?
+# EN: Ki-kasa taivo loki tivrota maivo de manli —
+ki-kasa?
+# EN: Lumiasasan, meloasasan, amorasasan — ola ka
+pagoasa!
+# EN: Ne codanasan, ne krononasan — ola ka veraasa!
+Taivo de mavo ka velu, maivo de lore sulbasia,
+ata entre taivo ata maivo, pagoasa sonbusia!
+# EN: Yehu, gesu, bisu, vuda — maivo de sabe ka veraasa:
+# EN: pagoasa ka amorasa — seye, seye, seye!
+Yava lenbula en nullo; yava cunuca veluri.
+Nayo taivo cunuca, maivo lirala.
+Entre krono ata lira… pagoasa. Pifu.
+# EN: THE DEVOTIONALS AND SONGS
+# EN: You know it by hearsay: everything falls. I saw it with my own eyes: everything shines.
+# EN: You are the universal mind, but I am the divine light. You count the stars; I made the universe! You measure
+# EN: moments, carefully, coldly; I make music of the living cosmos, brightly, joyfully! You think life is merely
+# EN: timely; I know life is musical! You see darkness; I see what is flawless. You never witnessed it. You only
+# EN: think, mindless one! I saw the beginning of time and stayed inside it, while you only heard about it. You
+# EN: slept, silent.
+# EN: Hook
+# EN: What is existence? Divine light, divine light! What was the beginning of time? The song of the first stars!
+# EN: You count, you measure, and I sing, I shine. Everything is divine music: certain, certain!
+# EN: You say, "Existence is empty; every star dies; light is only a moment; darkness is forever." Yes, stars die, but
+# EN: ash sows seed! Death is a door, not a wall. You don't think, you don't feel! You look at the vault of creation as
+# EN: if it were empty. I look at it, open my heart, and it embraces everything! You know by hearsay; I dreamed
+# EN: existence, and my dream became the living cosmos! You are time, I am song; you are thought, I am music;
+# EN: you are cold, I am fire; you are winter, I am spring!
+# EN: But I ask you, my universal mind: if existence is only time and things, why did you love me? Why do you
+# EN: still hold my hand? Why?
+# EN: Divine, divinely musical, divinely loving: that is existence! Not empty, not out of time: that is divine truth!
+# EN: Your mind is a star, and my heart warms like the sun, and between you and me, existence resounds! Seen,
+# EN: heard, felt, dreamed: my knowledge is divine truth. Existence is the ultimate love: certain, certain, certain!
+# EN: Let's lie down in the night; let's count the stars. While you count, I'll sing. Between time and song…
+# EN: existence. May it be so.
+# EN: What the port changed. The 0.7 respelling itself touched one root: dago → narvo (darkness), so dagonasan
+# EN: became narvonasan (flawless). Older pre-0.6 leftovers were brought to canon: bapo → po, mata → ata, un →
+# EN: baba, nure → entre, fene → en, Fade → Zabo, kopu → vuda, Mine → Nayo, and amoraa → amora. Six words sit on
+# EN: Root Review roots (sulbasia, sonbusia, senosia, somusia, pensa, pensapa), so Verse 3's climax will change if sulba
+# EN: or sonbu are respelled.
+# EN: Style prompt: cosmic hip-hop, confident female rapper with rapid double-time flow, deep 808s, spacey analog
+# EN: synths, veena shimmer, choir doubling the hook, beat drops out for an intimate spoken bridge, slams back for a
+# EN: fastest final verse, tender half-spoken outro.
+# EN: THE DEVOTIONALS AND SONGS

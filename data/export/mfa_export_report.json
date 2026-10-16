@@ -1,0 +1,101 @@
+{
+ "report": "Liraasa MFA dictionary export",
+ "lexicon": "C:/Users/nicol/Desktop/Liraasa-workbench/data/lexicon/liraasa_1_1.json",
+ "version": "1.1",
+ "words": 49511,
+ "by_source": {
+  "closed class": 246,
+  "corpus": 822,
+  "form": 9926,
+  "inflection": 29778,
+  "derivation": 8506,
+  "colour": 45,
+  "name": 14,
+  "numeral": 1002
+ },
+ "phones": {
+  "ipa": [
+   "a",
+   "b",
+   "d",
+   "d͡ʒ",
+   "e",
+   "f",
+   "ɡ",
+   "h",
+   "i",
+   "j",
+   "k",
+   "l",
+   "m",
+   "n",
+   "o",
+   "p",
+   "r",
+   "s",
+   "ʃ",
+   "t",
+   "t͡ʃ",
+   "u",
+   "v",
+   "z"
+  ],
+  "ascii": [
+   "A",
+   "B",
+   "CH",
+   "D",
+   "E",
+   "F",
+   "G",
+   "HH",
+   "I",
+   "JH",
+   "K",
+   "L",
+   "M",
+   "N",
+   "O",
+   "P",
+   "R",
+   "S",
+   "SH",
+   "T",
+   "U",
+   "V",
+   "Y",
+   "Z"
+  ]
+ },
+ "proper_names": [
+  "aviya",
+  "dorin",
+  "dorinti",
+  "hypermatria",
+  "ilora",
+  "kipo",
+  "lina",
+  "lunaria",
+  "melodia",
+  "merceria",
+  "nicolas",
+  "pietri",
+  "solaria",
+  "velina"
+ ],
+ "unconvertible": [],
+ "open_questions": [
+  {
+   "letter": "c",
+   "chosen": "/k/",
+   "alternative": "/s/ or /t͡s/",
+   "why": "c occurs before all five vowels, so a phonetic spelling cannot be giving it positional variants. /k/ matches the hard-g precedent, at the cost of c and k spelling one phoneme."
+  },
+  {
+   "letter": "j",
+   "chosen": "/d͡ʒ/",
+   "alternative": "/x/ or /ʒ/",
+   "why": "juba (gem) echoes English \"jewel\"; the colour word ojo would suggest Spanish /x/."
+  }
+ ]
+}

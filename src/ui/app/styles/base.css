@@ -1,0 +1,51 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-ui);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Liraasa text is never restyled in a way that alters spelling (SPEC §12). */
+.liraasa {
+  font-family: var(--font-liraasa);
+  font-size: 1.0625em;
+}
+
+.shell {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: var(--space-8) var(--space-4);
+}
+
+.shell__title {
+  margin: 0 0 var(--space-2);
+  font-size: 1.75rem;
+}
+
+.shell__lede {
+  margin: 0;
+  color: var(--fg-muted);
+  max-width: 48rem;
+}

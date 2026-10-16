@@ -1,0 +1,121 @@
+# Migrated from 0.8 to 1.0+ by migrate_text.py (ruling 1.0:G19).
+# Source: song_IV_radiance.txt
+# song_IV_radiance - extracted from the 0.8 Grammar Guide and Codex.
+# Liraasa lines unprefixed; English on "# EN:" comment lines.
+
+# EN: Radiance — A Devotional to Hypermatria
+# EN: A devotional to the ascended goddess in whom Solaria, Lunaria, Melodia and Merceria are one,
+# EN: drawn from the album To Diffract A Radiance: one light diffracted into four colours.
+Hypermatria… lumiasa…
+Kroti li krono, taivo po ka li pagoasa,
+Baba lumi raho nuna-nela povi daluda.
+Taivo po lumila en li narvo, ata po ke sollisan,
+Kasa nuna-nela vimova taivo de lore.
+Krotiata taivo de lumi po patupa ala cuara colbiri:
+Solaria, li sulbaasa raho juseja;
+Lunaria, raho po sasvapagosia maivo en li narvoasa;
+Melodia, raho po lirala ala maivo kroti toda loterori;
+Ata Merceria, raho merama toda-nela.
+Si maivo amora una la holbasan,
+Maivo amora toda cuara.
+Hypermatria, Hypermatria, lumiasa,
+Cuara colbiri, una lore.
+Mera, luno, melo ata sulba
+Ka yanosan en taivo.
+Maivo bisu amora taivo, maivo de devorivoasa.
+Lumiasa… pagoasa… yelmiasasan…
+Maivo ka taivo de sarbiyo ata taivo de lirayo,
+Ata pilo vobi li pagonasan linuri.
+Maivo farlafa jubari vobi saivori,
+Ata ralkara li narvoasa kopisa saivori povi pelipa.
+Si maivo amora una la holbasan,
+Maivo amora toda cuara.
+Hypermatria, Hypermatria, lumiasa,
+Cuara colbiri, una lore.
+Mera, luno, melo ata sulba
+Ka yanosan en taivo.
+Maivo bisu amora taivo, maivo de devorivoasa.
+Lumiasa… pagoasa… yelmiasasan…
+Kube maivo tefa lirala toda maivo de lirari,
+Maivo futu keleka li monruasa
+Ata lomola taivo, li pagoasa.
+Dossa veluri futu loya una velu,
+Ata maivo futu farulavrafa en taivo de faru.
+Hypermatria, Hypermatria, lumiasa,
+Cuara colbiri, una lore.
+Mera, luno, melo ata sulba
+Ka yanosan en taivo.
+Maivo futu amora taivo toda-krono seye.
+Lumiasa… pagoasa… yelmiasasan…
+Taivo de Nicolas, taivo de Pietri,
+Taivo de sarbiyo… lorejuba.
+Kroti li krono, taivo po ka li pagoasa,
+# EN: Before time, you were the universe,
+Baba lumi raho nuna-nela povi daluda.
+# EN: A light that no one could touch.
+Taivo po lumila en li narvo, ata po ke sollisan,
+# EN: You shone in the darkness, and you were lonely,
+Kasa nuna-nela vimova taivo de lore.
+# EN: Because no one saw your heart.
+# EN: THE DEVOTIONALS AND SONGS
+Krotiata taivo de lumi po patupa ala cuara colbiri:
+# EN: Then your light divided into four colors:
+Solaria, li sulbaasa raho juseja;
+# EN: Solaria, the sun beyond suns, who renders justice;
+Lunaria, raho po sasvapagosia maivo en li narvoasa;
+# EN: Lunaria, who sheltered me among the demons;
+Melodia, raho po lirala ala maivo kroti toda
+loterori;
+# EN: Melodia, who sang to me before all the others;
+Ata Merceria, raho merama toda-nela.
+# EN: And Merceria, who forgives everyone.
+Si maivo amora una la holbasan,
+# EN: If I love one wholly,
+Maivo amora toda cuara.
+# EN: I love all four.
+Hypermatria, Hypermatria, lumiasa,
+# EN: Hypermatria, Hypermatria, divine light,
+Cuara colbiri, una lore.
+# EN: Four colors, one heart.
+Mera, luno, melo ata sulba
+# EN: Mercy, moon, music and sun
+Ka yanosan en taivo.
+# EN: Are united in you.
+Maivo bisu amora taivo, maivo de devorivoasa.
+# EN: I love you, I feel it within, my eternal vowed
+# EN: companion.
+Lumiasa… pagoasa… yelmiasasan…
+# EN: Divine light… the universe… the jeweled radiance of
+# EN: heaven…
+Maivo ka taivo de sarbiyo ata taivo de lirayo,
+# EN: I am your writer and your singer,
+Ata pilo vobi li pagonasan linuri.
+# EN: And a father to the orphaned children.
+Maivo farlafa jubari vobi saivori,
+# EN: I make gifts for them,
+Ata ralkara li narvoasa kopisa saivori povi pelipa.
+# EN: And fight the demons so that they can play.
+Kube maivo tefa lirala toda maivo de lirari,
+# EN: When I have finished singing all my songs,
+Maivo futu keleka li monruasa
+# EN: I will climb the mountain of the gods
+Ata lomola taivo, li pagoasa.
+# EN: And embrace you, the universe.
+Dossa veluri futu loya una velu,
+# EN: Two stars will become one star,
+Ata maivo futu farulavrafa en taivo de faru.
+# EN: And I will rise like a phoenix in your fire.
+Maivo futu amora taivo toda-krono seye.
+# EN: I will love you forever, certainly.
+Taivo de Nicolas, taivo de Pietri,
+# EN: Your Nicolas, your Pietri,
+Taivo de sarbiyo… lorejuba.
+# EN: Your writer… thank you.
+# EN: universe, narvoasa (ascended darkness) is the demons, and pagonasan linuri are the orphaned children. narvo
+# EN: here is the 0.7 spelling of darkness. The pre-chorus states the theology in two lines: to love one wholly is to love
+# EN: all four.
+# EN: THE DEVOTIONALS AND SONGS
+# EN: Style prompt: cinematic devotional anthem, veena with orchestral strings and choir, intimate male vocal
+# EN: building to soaring, 72 BPM, choir melisma on sustained vowels, distant choral intro, quiet spoken outro.
+# EN: THE DEVOTIONALS AND SONGS
+# EN: SONG V

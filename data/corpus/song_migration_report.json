@@ -1,0 +1,179 @@
+{
+ "lexicon": "liraasa_1_1.json",
+ "substitutions": 17,
+ "distinct": [
+  {
+   "from": "minema",
+   "to": "milvema",
+   "kind": "respelled"
+  },
+  {
+   "from": "rohura",
+   "to": "folnipatufa",
+   "kind": "retired"
+  },
+  {
+   "from": "sabiresan",
+   "to": "sasvapagosan",
+   "kind": "retired"
+  },
+  {
+   "from": "sabiresia",
+   "to": "sasvapagosia",
+   "kind": "retired"
+  },
+  {
+   "from": "sonsasia",
+   "to": "farufasbifa",
+   "kind": "retired"
+  },
+  {
+   "from": "yoga",
+   "to": "yomla",
+   "kind": "respelled"
+  },
+  {
+   "from": "yogaya",
+   "to": "yomlaya",
+   "kind": "respelled"
+  }
+ ],
+ "changes": [
+  {
+   "file": "song_III_somulira.txt",
+   "line": 17,
+   "from": "sabiresan",
+   "to": "sasvapagosan",
+   "kind": "retired",
+   "phrase_substitution": false
+  },
+  {
+   "file": "song_III_somulira.txt",
+   "line": 28,
+   "from": "sabiresan",
+   "to": "sasvapagosan",
+   "kind": "retired",
+   "phrase_substitution": false
+  },
+  {
+   "file": "song_III_somulira.txt",
+   "line": 63,
+   "from": "sabiresan",
+   "to": "sasvapagosan",
+   "kind": "retired",
+   "phrase_substitution": false
+  },
+  {
+   "file": "song_II_merceria.txt",
+   "line": 10,
+   "from": "yoga",
+   "to": "yomla",
+   "kind": "respelled",
+   "phrase_substitution": false
+  },
+  {
+   "file": "song_II_merceria.txt",
+   "line": 17,
+   "from": "rohura",
+   "to": "folnipatufa",
+   "kind": "retired",
+   "phrase_substitution": false
+  },
+  {
+   "file": "song_II_merceria.txt",
+   "line": 20,
+   "from": "yogaya",
+   "to": "yomlaya",
+   "kind": "respelled",
+   "phrase_substitution": false
+  },
+  {
+   "file": "song_II_merceria.txt",
+   "line": 24,
+   "from": "sonsasia",
+   "to": "farufasbifa",
+   "kind": "retired",
+   "phrase_substitution": false
+  },
+  {
+   "file": "song_II_merceria.txt",
+   "line": 28,
+   "from": "rohura",
+   "to": "folnipatufa",
+   "kind": "retired",
+   "phrase_substitution": false
+  },
+  {
+   "file": "song_II_merceria.txt",
+   "line": 31,
+   "from": "yogaya",
+   "to": "yomlaya",
+   "kind": "respelled",
+   "phrase_substitution": false
+  },
+  {
+   "file": "song_II_merceria.txt",
+   "line": 41,
+   "from": "yogaya",
+   "to": "yomlaya",
+   "kind": "respelled",
+   "phrase_substitution": false
+  },
+  {
+   "file": "song_II_merceria.txt",
+   "line": 50,
+   "from": "yoga",
+   "to": "yomla",
+   "kind": "respelled",
+   "phrase_substitution": false
+  },
+  {
+   "file": "song_II_merceria.txt",
+   "line": 65,
+   "from": "rohura",
+   "to": "folnipatufa",
+   "kind": "retired",
+   "phrase_substitution": false
+  },
+  {
+   "file": "song_II_merceria.txt",
+   "line": 71,
+   "from": "yogaya",
+   "to": "yomlaya",
+   "kind": "respelled",
+   "phrase_substitution": false
+  },
+  {
+   "file": "song_II_merceria.txt",
+   "line": 80,
+   "from": "sonsasia",
+   "to": "farufasbifa",
+   "kind": "retired",
+   "phrase_substitution": false
+  },
+  {
+   "file": "song_IV_radiance.txt",
+   "line": 14,
+   "from": "sabiresia",
+   "to": "sasvapagosia",
+   "kind": "retired",
+   "phrase_substitution": false
+  },
+  {
+   "file": "song_IV_radiance.txt",
+   "line": 63,
+   "from": "sabiresia",
+   "to": "sasvapagosia",
+   "kind": "retired",
+   "phrase_substitution": false
+  },
+  {
+   "file": "song_V_sulbaasa.txt",
+   "line": 14,
+   "from": "minema",
+   "to": "milvema",
+   "kind": "respelled",
+   "phrase_substitution": false
+  }
+ ]
+}

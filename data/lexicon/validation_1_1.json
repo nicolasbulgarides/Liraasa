@@ -1,0 +1,277 @@
+{
+ "summary": {
+  "lexicon": "liraasa_1_1.json",
+  "version": "1.1",
+  "counts": {
+   "headwords": 1418,
+   "primal_roots": 407,
+   "compounds": 1011,
+   "forms": 9926,
+   "unused_forms": 6460,
+   "function_words": 149,
+   "new_function_words_1_0": 27,
+   "new_in_1_1": 319,
+   "new_primal_roots": 21,
+   "new_compounds": 298
+  },
+  "status_counts": {
+   "PASS": 25
+  },
+  "wrapper": "validate_1_1.py: checks [5, 9, 18] re-run against since == '1.1' because validate.py gates them on status_1_0; check 25 added. No grammar or rule was changed."
+ },
+ "checks": [
+  {
+   "id": 1,
+   "check": "Duplicate headwords",
+   "status": "PASS",
+   "count": 0,
+   "details": [],
+   "details_total": 0,
+   "note": "",
+   "executed_against": "validate.py, unmodified"
+  },
+  {
+   "id": 2,
+   "check": "Root collisions (a root equals another headword's form)",
+   "status": "PASS",
+   "count": 0,
+   "details": [],
+   "details_total": 0,
+   "note": "",
+   "executed_against": "validate.py, unmodified"
+  },
+  {
+   "id": 3,
+   "check": "Collisions among all seven-form derivatives and -yo/-vu/-pago derivations",
+   "status": "PASS",
+   "count": 0,
+   "details": [],
+   "details_total": 0,
+   "note": "",
+   "executed_against": "validate.py, unmodified"
+  },
+  {
+   "id": 4,
+   "check": "Function-word, pronoun, correlative, number and time-word collisions with lexical forms",
+   "status": "PASS",
+   "count": 0,
+   "details": [],
+   "details_total": 0,
+   "note": "maivo (pronoun) = maivo (root) is a declared overlap.",
+   "executed_against": "validate.py, unmodified"
+  },
+  {
+   "id": 5,
+   "check": "Phonotactics of new and respelled roots and new function words",
+   "status": "PASS",
+   "count": 0,
+   "details": [],
+   "details_total": 0,
+   "note": "21 new roots and 0 new function words checked.",
+   "executed_against": "entries with since == '1.1' (wrapper)",
+   "gated_note": "validate.py selects new material by status_1_0, which a 1.1 entry does not carry; re-run here against since == '1.1'."
+  },
+  {
+   "id": 6,
+   "check": "Syllable structure and stress (roots ≥2 syllables, vowel-final except protected amor/apok heads)",
+   "status": "PASS",
+   "count": 0,
+   "details": [],
+   "details_total": 0,
+   "note": "Stress is penultimate by rule; with hiatus every vowel is a syllable.",
+   "executed_against": "validate.py, unmodified"
+  },
+  {
+   "id": 7,
+   "check": "Compound well-formedness (two active components, MODIFIER+HEAD spelling)",
+   "status": "PASS",
+   "count": 0,
+   "details": [],
+   "details_total": 0,
+   "note": "",
+   "executed_against": "validate.py, unmodified"
+  },
+  {
+   "id": 8,
+   "check": "Compound dependency cycles",
+   "status": "PASS",
+   "count": 0,
+   "details": [],
+   "details_total": 0,
+   "note": "",
+   "executed_against": "validate.py, unmodified"
+  },
+  {
+   "id": 9,
+   "check": "Required metadata (and no unresolved glosses)",
+   "status": "PASS",
+   "count": 0,
+   "details": [],
+   "details_total": 0,
+   "note": "319 added entries checked.",
+   "executed_against": "entries with since == '1.1' (wrapper)",
+   "gated_note": "validate.py selects new material by status_1_0, which a 1.1 entry does not carry; re-run here against since == '1.1'."
+  },
+  {
+   "id": 10,
+   "check": "Seven forms follow the rules (incl. verb rule)",
+   "status": "PASS",
+   "count": 0,
+   "details": [],
+   "details_total": 0,
+   "note": "",
+   "executed_against": "validate.py, unmodified"
+  },
+  {
+   "id": 11,
+   "check": "Register labels",
+   "status": "PASS",
+   "count": 0,
+   "details": [],
+   "details_total": 0,
+   "note": "",
+   "executed_against": "validate.py, unmodified"
+  },
+  {
+   "id": 12,
+   "check": "Every 0.8 headword is carried unchanged or has a recorded disposition",
+   "status": "PASS",
+   "count": 0,
+   "details": [],
+   "details_total": 0,
+   "note": "",
+   "executed_against": "validate.py, unmodified"
+  },
+  {
+   "id": 13,
+   "check": "Reserved (retired/respelled) spellings are not reused by any active item",
+   "status": "PASS",
+   "count": 0,
+   "details": [],
+   "details_total": 0,
+   "note": "497 reserved spellings.",
+   "executed_against": "validate.py, unmodified"
+  },
+  {
+   "id": 14,
+   "check": "Examples and corpus contain no unknown words",
+   "status": "PASS",
+   "count": 0,
+   "details": [],
+   "details_total": 0,
+   "note": "581 example sentences, 562 corpus lines checked.",
+   "executed_against": "validate.py, unmodified"
+  },
+  {
+   "id": 15,
+   "check": "No retired or respelled spellings in live examples and corpus",
+   "status": "PASS",
+   "count": 0,
+   "details": [],
+   "details_total": 0,
+   "note": "",
+   "executed_against": "validate.py, unmodified"
+  },
+  {
+   "id": 16,
+   "check": "Duplicate root glosses (editorial review)",
+   "status": "PASS",
+   "count": 0,
+   "details": [],
+   "details_total": 0,
+   "note": "Same gloss on different headwords: true synonyms, deliberate shades, or an editing slip.",
+   "executed_against": "validate.py, unmodified"
+  },
+  {
+   "id": 17,
+   "check": "Compound segmentation ambiguity (more than one valid two-part split)",
+   "status": "PASS",
+   "count": 0,
+   "details": [],
+   "details_total": 0,
+   "note": "Not an error when the lexicon records the intended split; listed for parsers.",
+   "executed_against": "validate.py, unmodified"
+  },
+  {
+   "id": 18,
+   "check": "New roots and particles are at least two edits from every active spelling",
+   "status": "PASS",
+   "count": 0,
+   "details": [],
+   "details_total": 0,
+   "note": "21 new roots checked against 10625 active and reserved spellings.",
+   "executed_against": "entries with since == '1.1' (wrapper)",
+   "gated_note": "validate.py selects new material by status_1_0, which a 1.1 entry does not carry; re-run here against since == '1.1'."
+  },
+  {
+   "id": 19,
+   "check": "New monosyllabic particles: one-edit neighbours only where declared and positionally distinct",
+   "status": "PASS",
+   "count": 0,
+   "details": [],
+   "details_total": 0,
+   "note": "monosyllables: da de en ka ke ki ko la li ne po si su tu ∅",
+   "executed_against": "validate.py, unmodified"
+  },
+  {
+   "id": 20,
+   "check": "New particles cannot be read as a lexical form or a suffix",
+   "status": "PASS",
+   "count": 0,
+   "details": [],
+   "details_total": 0,
+   "note": "",
+   "executed_against": "validate.py, unmodified"
+  },
+  {
+   "id": 21,
+   "check": "Clause grammar: operator order, one evidential, attitude/status/ki clause-final, exclusions",
+   "status": "PASS",
+   "count": 0,
+   "details": [],
+   "details_total": 0,
+   "note": "1143 sentences checked (legacy 0.8 texts are exempt).",
+   "executed_against": "validate.py, unmodified"
+  },
+  {
+   "id": 22,
+   "check": "Every candidate has one final disposition (182 audit, 150 storytelling, 40 review, 3 unresolved); no TBD",
+   "status": "PASS",
+   "count": 0,
+   "details": [],
+   "details_total": 0,
+   "note": "{\"retirement_candidates\": 182, \"storytelling\": 150, \"root_review\": 40, \"unresolved_compounds\": 3}",
+   "executed_against": "validate.py, unmodified"
+  },
+  {
+   "id": 23,
+   "check": "Migration table maps every retired form to an active 1.0 form",
+   "status": "PASS",
+   "count": 0,
+   "details": [],
+   "details_total": 0,
+   "note": "509 legacy spellings mapped.",
+   "executed_against": "validate.py, unmodified"
+  },
+  {
+   "id": 24,
+   "check": "No active compound depends on a retired or respelled primitive",
+   "status": "PASS",
+   "count": 0,
+   "details": [],
+   "details_total": 0,
+   "note": "",
+   "executed_against": "validate.py, unmodified"
+  },
+  {
+   "id": 25,
+   "check": "Previous edition carried verbatim (headwords, grammar, closed classes, examples)",
+   "status": "PASS",
+   "count": 0,
+   "details": [],
+   "details_total": 0,
+   "note": "Compared against liraasa_1_0.json.",
+   "executed_against": "validate_1_1.py wrapper"
+  }
+ ]
+}

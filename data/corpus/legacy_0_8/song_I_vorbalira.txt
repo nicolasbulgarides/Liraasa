@@ -1,0 +1,116 @@
+# song_I_vorbalira - extracted from the 0.8 Grammar Guide and Codex.
+# Liraasa lines unprefixed; English on "# EN:" comment lines.
+
+# EN: Vorbalira ala Melodia — A Serenade to Melodia
+# EN: A serenade from a mortal singer to the goddess of music. Vorbalira is the lexicon's word for a song
+# EN: offered to an absent beloved.
+# EN: Melodia… Melodia…
+Kroti li lombi, po miyo doli lirana.
+Taivo po havliha, ata li veluri po lombila sidu lirala.
+Ata toda-coda raho bioba ka taivo de rale.
+Kube maivo ke linuti en li nullo,
+Maivo po lenila taivo de vese,
+Ata maivo de lore po nonmonia.
+Eli-krono, rada lira ka baba savali ala taivo.
+# EN: Ne pagopa, Melodia —
+Fisa, rizira ko maivo,
+Nayo li veluri loki lirala.
+Melodia, Melodia, li meloasasan,
+Taivo ka maivo de loresonbu.
+# EN: Maivo bisu amora taivo seye —
+Maivo de valla ka doli taivo de lira.
+Meloasa… liraasa… lorelumiasa…
+Maivo selvesia en taivo de melopago,
+Ata jubaja maivo de havli ala taivo.
+Taivo de finiri daluda maivo de valla,
+Ata maivo devoda taivo toda-krono seye.
+# EN: Ne pagopa, Melodia —
+Fisa, rizira ko maivo,
+Nayo li veluri loki lirala.
+Melodia, Melodia, li meloasasan,
+Taivo ka maivo de loresonbu.
+# EN: Maivo bisu amora taivo seye —
+Maivo de valla ka doli taivo de lira.
+Meloasa… liraasa… lorelumiasa…
+Kube maivo de havli loya lasosan,
+Maivo de valla futu loya raleasa
+Ata relnura ala taivo.
+Ultra li navu, ultra li krono,
+Maivori futu lirala fuyi.
+Melodia, Melodia, li meloasasan,
+Lorejuba ala taivo,
+Kasa taivo po farlafa baba lira en maivo.
+# EN: Maivori de lira futu ka kronoasasan —
+Maivo bisu amora taivo seye.
+Meloasa… liraasa… lorelumiasa…
+Melodia… maivo veseva:
+Maivo amora taivo.
+Kroti li lombi, po miyo doli lirana.
+# EN: Before the beginning, there was only silence.
+Taivo po havliha, ata li veluri po lombila sidu
+lirala.
+# EN: You breathed, and the stars began to sing.
+# EN: The song of the first stars came from your lips,
+Ata toda-coda raho bioba ka taivo de rale.
+# EN: And everything that lives is your echo.
+# EN: THE DEVOTIONALS AND SONGS
+Kube maivo ke linuti en li nullo,
+# EN: When I was a little child in the night,
+Maivo po lenila taivo de vese,
+# EN: I heard your whisper,
+Ata maivo de lore po nonmonia.
+# EN: And my heart rose like a lotus from the water.
+Eli-krono, rada lira ka baba savali ala taivo.
+# EN: Now every song is a kiss to you.
+# EN: Ne pagopa, Melodia —
+# EN: Do not go, Melodia —
+Fisa, rizira ko maivo,
+# EN: Please, linger with me,
+Nayo li veluri loki lirala.
+# EN: While the stars are still singing.
+Melodia, Melodia, li meloasasan,
+# EN: Melodia, Melodia, divinely musical one,
+Taivo ka maivo de loresonbu.
+# EN: You are my heartbeat.
+# EN: Maivo bisu amora taivo seye —
+# EN: I love you, I feel it within, certainly —
+Maivo de valla ka doli taivo de lira.
+# EN: My voice is only your song.
+Meloasa… liraasa… lorelumiasa…
+# EN: Divine music… song of the first stars… beloved, my
+# EN: source of light…
+Maivo selvesia en taivo de melopago,
+# EN: I kneel in your hall of music,
+Ata jubaja maivo de havli ala taivo.
+# EN: And give my breath to you as a gift.
+Taivo de finiri daluda maivo de valla,
+# EN: Your fingers touch my voice,
+Ata maivo devoda taivo toda-krono seye.
+# EN: And I pledge myself to you forever, certainly.
+Kube maivo de havli loya lasosan,
+# EN: When my breath falls silent,
+Maivo de valla futu loya raleasa
+# EN: My voice will become an echo through the ages
+Ata relnura ala taivo.
+# EN: And return to you.
+Ultra li navu, ultra li krono,
+# EN: Beyond the sky, beyond time,
+Maivori futu lirala fuyi.
+# EN: We will sing to each other.
+Lorejuba ala taivo,
+# EN: I thank you,
+Kasa taivo po farlafa baba lira en maivo.
+# EN: Because you made a song in me.
+# EN: Maivori de lira futu ka kronoasasan —
+# EN: Our song will be timeless —
+Melodia… maivo veseva:
+# EN: Melodia… I whisper:
+Maivo amora taivo.
+# EN: I love you.
+# EN: taivo" is worship and a wedding vow at once. The language's own name, liraasa, appears in Verse 1 as the song
+# EN: born from Melodia's lips.
+# EN: THE DEVOTIONALS AND SONGS
+# EN: Style prompt: romantic devotional ballad, solo veena and soft strings, warm intimate vocal, slow 66 BPM, long
+# EN: melismatic sustained vowels, choir swells on final chorus, whispered intro and outro.
+# EN: THE DEVOTIONALS AND SONGS
+# EN: SONG II

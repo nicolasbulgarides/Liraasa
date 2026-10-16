@@ -1,0 +1,24 @@
+node_modules/
+dist/
+coverage/
+.vite/
+*.tsbuildinfo
+
+# Local settings: the Anthropic API key lives here, never in the repo (SPEC §8).
+.env
+.env.local
+.DS_Store
+Thumbs.db
+
+# Timestamped lexicon backups written on every save (SPEC §10).
+data/lexicon/backups/
+
+# Python bytecode from the reconstructed validator modules.
+__pycache__/
+*.pyc
+
+# The editor's data bundle is generated beside the page by `npm run build:editor`.
+editor/liraasa-data.js
+
+# The voice lab's virtualenv (89 MB). The two source files are tracked.
+liraasa_voice_lab/.venv/

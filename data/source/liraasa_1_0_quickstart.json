@@ -1,0 +1,1600 @@
+{
+ "version": "1.0",
+ "clause_template": "[FRAME] [TOPIC hozi] SUBJECT [TENSE] [noma] [ne] [MODAL] [APPROACH] [PHASE] [EFFORT] [ASPECT] [ITERATION] [EVIDENTIAL] VERB [OBJECT] [ADJUNCTS] [fuyi] [hoyo|yasmo] [ATTITUDE] [ki]",
+ "slots": [
+  {
+   "n": 1,
+   "slot": "FRAME",
+   "words": [
+    "time words",
+    "correlatives of time",
+    "zafra",
+    "finra",
+    "lanto",
+    "kenvi"
+   ],
+   "notes": "clause-initial; followed by a pause"
+  },
+  {
+   "n": 2,
+   "slot": "TOPIC",
+   "words": [
+    "NP + hozi"
+   ],
+   "notes": "optional; at most one per clause except paired contrastive topics in parallel clauses"
+  },
+  {
+   "n": 3,
+   "slot": "SUBJECT",
+   "words": [
+    "noun phrase",
+    "pronoun"
+   ],
+   "notes": "obligatory except in commands, hortatives and permitted ellipsis"
+  },
+  {
+   "n": 4,
+   "slot": "TENSE",
+   "words": [
+    "po",
+    "futu",
+    "pressa"
+   ],
+   "notes": "none = present"
+  },
+  {
+   "n": 5,
+   "slot": "REALITY",
+   "words": [
+    "noma"
+   ],
+   "notes": "counterfactual"
+  },
+  {
+   "n": 6,
+   "slot": "NEGATION",
+   "words": [
+    "ne"
+   ],
+   "notes": "floats: may also stand before any later operator or the verb, negating what follows"
+  },
+  {
+   "n": 7,
+   "slot": "MODAL",
+   "words": [
+    "povi",
+    "nosi",
+    "dagi",
+    "musi",
+    "suvi",
+    "viki",
+    "kopi"
+   ],
+   "notes": "one per clause"
+  },
+  {
+   "n": 8,
+   "slot": "APPROACH",
+   "words": [
+    "tavki",
+    "fututi"
+   ],
+   "notes": "almost / about to"
+  },
+  {
+   "n": 9,
+   "slot": "PHASE",
+   "words": [
+    "hiro",
+    "teki"
+   ],
+   "notes": "begin / stop"
+  },
+  {
+   "n": 10,
+   "slot": "EFFORT",
+   "words": [
+    "telvo",
+    "vazdi",
+    "fesmo"
+   ],
+   "notes": "try / manage / try and fail"
+  },
+  {
+   "n": 11,
+   "slot": "ASPECT",
+   "words": [
+    "roni",
+    "tefa",
+    "sahi"
+   ],
+   "notes": "progressive / completed / habitual"
+  },
+  {
+   "n": 12,
+   "slot": "ITERATION",
+   "words": [
+    "bodu",
+    "reve",
+    "loki"
+   ],
+   "notes": "already / again / still; reve and loki may instead close the clause"
+  },
+  {
+   "n": 13,
+   "slot": "EVIDENTIAL",
+   "words": [
+    "yehu",
+    "gesu",
+    "bisu",
+    "vuda",
+    "buyu",
+    "tosu"
+   ],
+   "notes": "one per clause"
+  },
+  {
+   "n": 14,
+   "slot": "VERB",
+   "words": [
+    "any verb form",
+    "copulas ke ka kapoki loya miyo",
+    "valency operators vaku lesvu tekvu (+ ACTOR + embedded verb)",
+    "gome (+ verb)"
+   ],
+   "notes": ""
+  },
+  {
+   "n": 15,
+   "slot": "OBJECT",
+   "words": [
+    "noun phrase"
+   ],
+   "notes": ""
+  },
+  {
+   "n": 16,
+   "slot": "ADJUNCTS",
+   "words": [
+    "prepositional phrases",
+    "la + adjective",
+    "vobi NP",
+    "sabri NP",
+    "korsi NP"
+   ],
+   "notes": ""
+  },
+  {
+   "n": 17,
+   "slot": "RECIPROCAL",
+   "words": [
+    "fuyi"
+   ],
+   "notes": ""
+  },
+  {
+   "n": 18,
+   "slot": "STATUS",
+   "words": [
+    "hoyo",
+    "yasmo"
+   ],
+   "notes": "mirative / shared knowledge"
+  },
+  {
+   "n": 19,
+   "slot": "ATTITUDE",
+   "words": [
+    "seye",
+    "mufe",
+    "poye",
+    "pifu",
+    "zoke"
+   ],
+   "notes": "zoke excludes the other four"
+  },
+  {
+   "n": 20,
+   "slot": "QUESTION",
+   "words": [
+    "ki"
+   ],
+   "notes": "last word of its clause"
+  }
+ ],
+ "scope_operators": {
+  "words": [
+   "ne",
+   "doli",
+   "tu",
+   "yesta",
+   "pendi",
+   "vinto"
+  ],
+  "rule": "immediately before the constituent they scope over (noun phrase, verb, adjective, number, clause-introducer such as si)"
+ },
+ "stacking": {
+  "one_per_slot": true,
+  "exclusions": [
+   [
+    "hiro",
+    "roni"
+   ],
+   [
+    "hiro",
+    "tefa"
+   ],
+   [
+    "teki",
+    "roni"
+   ],
+   [
+    "teki",
+    "tefa"
+   ],
+   [
+    "telvo",
+    "tefa"
+   ],
+   [
+    "vazdi",
+    "tefa"
+   ],
+   [
+    "fesmo",
+    "tefa"
+   ],
+   [
+    "zoke",
+    "seye"
+   ],
+   [
+    "zoke",
+    "mufe"
+   ],
+   [
+    "zoke",
+    "poye"
+   ],
+   [
+    "zoke",
+    "pifu"
+   ],
+   [
+    "tavki",
+    "fututi"
+   ],
+   [
+    "hoyo",
+    "yasmo"
+   ]
+  ],
+  "max_preverbal_operators_recommended": 4,
+  "scope": "left scopes over right (G1); ne negates everything to its right up to the verb"
+ },
+ "valency": {
+  "vaku": "make (causative)",
+  "lesvu": "let (permissive)",
+  "tekvu": "prevent (preventive)",
+  "pattern": "CAUSER [TENSE…] OP ACTOR [ne] [APPROACH] [PHASE] [EFFORT] VERB [OBJECT]"
+ },
+ "verb_rule": {
+  "opi": "opioa",
+  "n-initial": "R+nia",
+  "s-initial": "R+sia",
+  "vowel-initial": "R+a",
+  "otherwise": "R + first consonant + a"
+ },
+ "seven_forms": [
+  "R",
+  "R+asa",
+  "R+na",
+  "VERB",
+  "R+nasan",
+  "R+san",
+  "R+asasan"
+ ],
+ "suffix_order": "ROOT + (one form OR one derivation) + -ti + -ri",
+ "function_words": [
+  {
+   "form": "li",
+   "meaning": "the",
+   "position": "definite article"
+  },
+  {
+   "form": "baba",
+   "meaning": "a / an",
+   "position": "indefinite article, any gender/vowel"
+  },
+  {
+   "form": "eli",
+   "meaning": "this",
+   "position": "near demonstrative"
+  },
+  {
+   "form": "ola",
+   "meaning": "that",
+   "position": "far demonstrative"
+  },
+  {
+   "form": "eliri",
+   "meaning": "these",
+   "position": "plural demonstrative"
+  },
+  {
+   "form": "olari",
+   "meaning": "those",
+   "position": "plural demonstrative"
+  },
+  {
+   "form": "de",
+   "meaning": "of / belonging to",
+   "position": "owner + de + possessed noun"
+  },
+  {
+   "form": "sela",
+   "meaning": "oneself / reflexive",
+   "position": "pronoun + sela"
+  },
+  {
+   "form": "-na",
+   "meaning": "lexical negation",
+   "position": "suffix within seven-form root system"
+  },
+  {
+   "form": "ne",
+   "meaning": "not (sentence/action)",
+   "position": "put immediately before scope of negation"
+  },
+  {
+   "form": "ke",
+   "meaning": "temporary is / are",
+   "position": "copula for state or location now"
+  },
+  {
+   "form": "ka",
+   "meaning": "enduring is / are",
+   "position": "copula for stable quality"
+  },
+  {
+   "form": "kapoki",
+   "meaning": "previously was",
+   "position": "historical copula; po + ka is also regular"
+  },
+  {
+   "form": "po",
+   "meaning": "past marker (preverbal)",
+   "position": "Preverbal tense. po ka = was as a trait; kapoki = no longer is."
+  },
+  {
+   "form": "pressa",
+   "meaning": "present (optional)",
+   "position": "unmarked present preferred | v0.5: author correction"
+  },
+  {
+   "form": "futu",
+   "meaning": "future",
+   "position": "tense before verb/predicate"
+  },
+  {
+   "form": "roni",
+   "meaning": "in progress",
+   "position": "progressive aspect, before verb"
+  },
+  {
+   "form": "tefa",
+   "meaning": "completed",
+   "position": "completed aspect, before verb"
+  },
+  {
+   "form": "sahi",
+   "meaning": "habitually",
+   "position": "habitual aspect, before verb"
+  },
+  {
+   "form": "kopi",
+   "meaning": "hope to",
+   "position": "aspirational modality, not plain future | v0.5: author correction"
+  },
+  {
+   "form": "povi",
+   "meaning": "can / be able",
+   "position": "ability modality before verb"
+  },
+  {
+   "form": "nosi",
+   "meaning": "might (epistemic possibility)",
+   "position": "uncertain possibility modality"
+  },
+  {
+   "form": "musi",
+   "meaning": "must (obligation / circumstantial necessity)",
+   "position": "necessity/obligation modality"
+  },
+  {
+   "form": "suvi",
+   "meaning": "should",
+   "position": "advisability modality"
+  },
+  {
+   "form": "viki",
+   "meaning": "would",
+   "position": "hypothetical modality"
+  },
+  {
+   "form": "ata",
+   "meaning": "and",
+   "position": "connect equal constituents | v0.5: author correction"
+  },
+  {
+   "form": "nara",
+   "meaning": "but / however",
+   "position": "contrast two clauses"
+  },
+  {
+   "form": "oro",
+   "meaning": "or",
+   "position": "choose among alternatives | v0.5: author correction"
+  },
+  {
+   "form": "si",
+   "meaning": "if",
+   "position": "introduces condition"
+  },
+  {
+   "form": "sina",
+   "meaning": "unless",
+   "position": "negative condition"
+  },
+  {
+   "form": "kasa",
+   "meaning": "because",
+   "position": "introduces cause clause | v0.5: author correction"
+  },
+  {
+   "form": "kopisa",
+   "meaning": "so that / in order to",
+   "position": "purpose clause"
+  },
+  {
+   "form": "nevi",
+   "meaning": "although",
+   "position": "concessive subordinate clause"
+  },
+  {
+   "form": "raho",
+   "meaning": "who / that / which (relative)",
+   "position": "relative clause marker | v0.5: author correction"
+  },
+  {
+   "form": "kroti",
+   "meaning": "before",
+   "position": "temporal relation | v0.5: author correction"
+  },
+  {
+   "form": "krotiata",
+   "meaning": "then / next",
+   "position": "sequence marker; original compound"
+  },
+  {
+   "form": "krotiapo",
+   "meaning": "after",
+   "position": "temporal relation; lexicalized existing compound"
+  },
+  {
+   "form": "en",
+   "meaning": "in / inside",
+   "position": "location | v0.5: author correction"
+  },
+  {
+   "form": "su",
+   "meaning": "on / upon",
+   "position": "surface location | v0.5: author correction"
+  },
+  {
+   "form": "ala",
+   "meaning": "to / toward",
+   "position": "goal and direction"
+  },
+  {
+   "form": "da",
+   "meaning": "from",
+   "position": "source | v0.5: author correction"
+  },
+  {
+   "form": "ko",
+   "meaning": "with / alongside",
+   "position": "accompaniment | v0.5: author correction"
+  },
+  {
+   "form": "vobi",
+   "meaning": "for / on behalf of",
+   "position": "benefactive purpose | v0.5: author correction"
+  },
+  {
+   "form": "intra",
+   "meaning": "within",
+   "position": "internal relation | v0.5: author correction"
+  },
+  {
+   "form": "entre",
+   "meaning": "between",
+   "position": "between two entities | v0.5: author correction"
+  },
+  {
+   "form": "transa",
+   "meaning": "through / across",
+   "position": "passage | v0.5: author correction"
+  },
+  {
+   "form": "ultra",
+   "meaning": "beyond",
+   "position": "beyond a limit | v0.5: author correction"
+  },
+  {
+   "form": "hupi",
+   "meaning": "above",
+   "position": "vertical relation"
+  },
+  {
+   "form": "tula",
+   "meaning": "below",
+   "position": "vertical relation"
+  },
+  {
+   "form": "ligo",
+   "meaning": "near",
+   "position": "proximity"
+  },
+  {
+   "form": "vofa",
+   "meaning": "far from",
+   "position": "distance"
+  },
+  {
+   "form": "voyu",
+   "meaning": "without",
+   "position": "prepositional absence"
+  },
+  {
+   "form": "ki",
+   "meaning": "yes/no question",
+   "position": "sentence-final particle; no inversion"
+  },
+  {
+   "form": "ki-coda",
+   "meaning": "what",
+   "position": "ki- + thing"
+  },
+  {
+   "form": "ki-pago",
+   "meaning": "where",
+   "position": "ki- + place"
+  },
+  {
+   "form": "ki-krono",
+   "meaning": "when",
+   "position": "ki- + time"
+  },
+  {
+   "form": "ki-kasa",
+   "meaning": "why",
+   "position": "ki- + cause"
+  },
+  {
+   "form": "ki-saivo",
+   "meaning": "who",
+   "position": "HISTORICAL ONLY; preferred productive interrogative ki-nela."
+  },
+  {
+   "form": "ki-modo",
+   "meaning": "how",
+   "position": "ki- + manner"
+  },
+  {
+   "form": "ki-nela de",
+   "meaning": "whose",
+   "position": "interrogative person (ki-nela) + possession; ki-saivo de is historical"
+  },
+  {
+   "form": "ki-muya",
+   "meaning": "how many",
+   "position": "question + quantity"
+  },
+  {
+   "form": "la",
+   "meaning": "adverbial particle",
+   "position": "la + adjective; adverbs do not need an eighth form"
+  },
+  {
+   "form": "ruli",
+   "meaning": "very / intensely",
+   "position": "degree intensifier"
+  },
+  {
+   "form": "doli",
+   "meaning": "only",
+   "position": "restrictive focus"
+  },
+  {
+   "form": "kasi",
+   "meaning": "more",
+   "position": "comparative marker before adjective"
+  },
+  {
+   "form": "menu",
+   "meaning": "less",
+   "position": "comparative marker before adjective"
+  },
+  {
+   "form": "tamo",
+   "meaning": "than",
+   "position": "comparison reference marker"
+  },
+  {
+   "form": "mosa",
+   "meaning": "most",
+   "position": "superlative marker"
+  },
+  {
+   "form": "lusu",
+   "meaning": "least",
+   "position": "minimum superlative"
+  },
+  {
+   "form": "gase",
+   "meaning": "as (comparison)",
+   "position": "comparative equality"
+  },
+  {
+   "form": "toda",
+   "meaning": "all / every",
+   "position": "universal quantifier"
+  },
+  {
+   "form": "somi",
+   "meaning": "some",
+   "position": "indefinite quantity"
+  },
+  {
+   "form": "nuna",
+   "meaning": "none / no",
+   "position": "zero quantity"
+  },
+  {
+   "form": "muya",
+   "meaning": "many",
+   "position": "large quantity"
+  },
+  {
+   "form": "poka",
+   "meaning": "few",
+   "position": "small quantity"
+  },
+  {
+   "form": "rada",
+   "meaning": "each",
+   "position": "distributive quantity"
+  },
+  {
+   "form": "-ti",
+   "meaning": "little / diminutive",
+   "position": "suffix after lexical form, before plural"
+  },
+  {
+   "form": "-ri",
+   "meaning": "plurality",
+   "position": "suffix after lexical form / -ti"
+  },
+  {
+   "form": "zabo",
+   "meaning": "yes / affirmative",
+   "position": "affirmative response | v0.5: author correction"
+  },
+  {
+   "form": "kepi",
+   "meaning": "no",
+   "position": "negative response"
+  },
+  {
+   "form": "fisa",
+   "meaning": "please",
+   "position": "request softener"
+  },
+  {
+   "form": "yade",
+   "meaning": "sorry / pardon",
+   "position": "apology | v0.5: author correction"
+  },
+  {
+   "form": "yeko",
+   "meaning": "hello",
+   "position": "greeting"
+  },
+  {
+   "form": "voge",
+   "meaning": "goodbye / parting",
+   "position": "farewell | v0.5: author correction"
+  },
+  {
+   "form": "futupago",
+   "meaning": "sometime in the future",
+   "position": "established time-place metaphor"
+  },
+  {
+   "form": "fututi",
+   "meaning": "soon",
+   "position": "futu + diminutive ti"
+  },
+  {
+   "form": "deyapressa",
+   "meaning": "today",
+   "position": "day + present"
+  },
+  {
+   "form": "deyaapo",
+   "meaning": "yesterday",
+   "position": "day + past"
+  },
+  {
+   "form": "deyafutu",
+   "meaning": "tomorrow",
+   "position": "day + future"
+  },
+  {
+   "form": "sidu",
+   "meaning": "infinitive / chaining",
+   "position": "Between first lexical verb and bare second verb"
+  },
+  {
+   "form": "kube",
+   "meaning": "when (subordinate)",
+   "position": "Before time clause, not a question"
+  },
+  {
+   "form": "nayo",
+   "meaning": "while (subordinate time)",
+   "position": "Introduces simultaneous event clause | v0.5: author correction"
+  },
+  {
+   "form": "tuni",
+   "meaning": "until",
+   "position": "Introduces endpoint time clause"
+  },
+  {
+   "form": "sige",
+   "meaning": "since (time)",
+   "position": "Introduces beginning point / since-event clause"
+  },
+  {
+   "form": "kureli",
+   "meaning": "as soon as",
+   "position": "Introduces immediately-following time relation"
+  },
+  {
+   "form": "yava",
+   "meaning": "let us (hortative)",
+   "position": "Sentence-initial particle + plain verb; includes speaker and listener"
+  },
+  {
+   "form": "vaku",
+   "meaning": "causative",
+   "position": "Approved productive causative. CAUSER + vaku + ACTOR/PATIENT + intransitive VERB; patient/actor retains position after vaku."
+  },
+  {
+   "form": "gome",
+   "meaning": "passive voice",
+   "position": "PATIENT + [TENSE] + gome + TRANSITIVE VERB + [gagu AGENT]"
+  },
+  {
+   "form": "gagu",
+   "meaning": "passive agent: by",
+   "position": "Introduces optional external actor after passive verb"
+  },
+  {
+   "form": "miyo",
+   "meaning": "existential there is / are",
+   "position": "miyo + noun phrase (+ location); agreement invariant"
+  },
+  {
+   "form": "loya",
+   "meaning": "become",
+   "position": "Subject + [tense] loya + noun/adjective/state"
+  },
+  {
+   "form": "fuyi",
+   "meaning": "each other / reciprocal",
+   "position": "After mutually directed verb; requires plural/multiple actors"
+  },
+  {
+   "form": "ki-eli",
+   "meaning": "which? + noun",
+   "position": "Interrogative determiner immediately before noun"
+  },
+  {
+   "form": "ki-nela",
+   "meaning": "who? preferred",
+   "position": "Interrogative person; old ki-saivo allowed historically"
+  },
+  {
+   "form": "-yo",
+   "meaning": "agentive derivation",
+   "position": "Attach to the ROOT: ROOT + yo = agent/doer (lira → lirayo); no seven-form expansion"
+  },
+  {
+   "form": "-pago",
+   "meaning": "place derivation",
+   "position": "Attach to root: R + pago = place associated with root"
+  },
+  {
+   "form": "-vu",
+   "meaning": "augmentative derivation",
+   "position": "Attach to the ROOT: ROOT + vu (lira → liravu); ordinary large/intense, not sacred"
+  },
+  {
+   "form": "fime",
+   "meaning": "complementizer: that",
+   "position": "introduces a finite content clause; distinct from relative marker"
+  },
+  {
+   "form": "lorejuba",
+   "meaning": "thank you (short, native)",
+   "position": "everyday standalone heart-gift thanks"
+  },
+  {
+   "form": "lorejuba ala taivo",
+   "meaning": "thank you (formal)",
+   "position": "heart-gift + to + listener; can address another pronoun/name"
+  },
+  {
+   "form": "reve",
+   "meaning": "again; repeated event",
+   "position": "independent temporal adverb, preceding verb or final in clause"
+  },
+  {
+   "form": "loki",
+   "meaning": "still; continuing",
+   "position": "independent temporal adverb, preceding verb or final in clause"
+  },
+  {
+   "form": "bodu",
+   "meaning": "already; before expected time",
+   "position": "before predicate, following tense; distinct from perfective"
+  },
+  {
+   "form": "yehu",
+   "meaning": "evidential: witnessed",
+   "position": "Immediately before lexical verb, after tense/aspect: speaker saw it"
+  },
+  {
+   "form": "gesu",
+   "meaning": "evidential: heard",
+   "position": "Immediately before lexical verb, after tense/aspect: speaker heard it"
+  },
+  {
+   "form": "bisu",
+   "meaning": "evidential: felt",
+   "position": "Immediately before lexical verb, after tense/aspect: introspective feeling"
+  },
+  {
+   "form": "vuda",
+   "meaning": "evidential: dreamed / imagined",
+   "position": "Immediately before lexical verb, after tense/aspect: dream or imagination | v0.5: author correction"
+  },
+  {
+   "form": "buyu",
+   "meaning": "evidential: reported",
+   "position": "Immediately before lexical verb, after tense/aspect: learned from others"
+  },
+  {
+   "form": "seye",
+   "meaning": "final certainty: certain",
+   "position": "Sentence-final, before punctuation / after predicate"
+  },
+  {
+   "form": "mufe",
+   "meaning": "final certainty: probable",
+   "position": "Sentence-final, before punctuation / after predicate"
+  },
+  {
+   "form": "poye",
+   "meaning": "final certainty: maybe",
+   "position": "Sentence-final, before punctuation / after predicate"
+  },
+  {
+   "form": "pifu",
+   "meaning": "final certainty: wish / hope",
+   "position": "Sentence-final, before punctuation / after predicate"
+  },
+  {
+   "form": "tu",
+   "meaning": "also; too (additive focus)",
+   "position": "before its constituent"
+  },
+  {
+   "form": "yesta",
+   "meaning": "even (scalar focus: the least expected member)",
+   "position": "before its constituent"
+  },
+  {
+   "form": "pendi",
+   "meaning": "exactly; precisely",
+   "position": "before its constituent"
+  },
+  {
+   "form": "vinto",
+   "meaning": "narrow focus: it is X (and not something else) that…",
+   "position": "before its constituent"
+  },
+  {
+   "form": "hozi",
+   "meaning": "topic: as for X; two parallel hozi-phrases mark contrastive topics",
+   "position": "after a clause-initial noun phrase, followed by a pause"
+  },
+  {
+   "form": "sabri",
+   "meaning": "except; excluding; except that",
+   "position": "before a noun phrase or clause"
+  },
+  {
+   "form": "korsi",
+   "meaning": "instead of; rather than; instead",
+   "position": "before a noun phrase; or clause-initial"
+  },
+  {
+   "form": "tonsi",
+   "meaning": "therefore; so (logical consequence)",
+   "position": "clause-initial"
+  },
+  {
+   "form": "narli",
+   "meaning": "nevertheless; even so",
+   "position": "clause-initial"
+  },
+  {
+   "form": "ki-oro",
+   "meaning": "whether (or not)",
+   "position": "introduces an embedded yes/no question"
+  },
+  {
+   "form": "dagi",
+   "meaning": "be allowed to; may (permission)",
+   "position": "modal slot"
+  },
+  {
+   "form": "noma",
+   "meaning": "counterfactual: the clause is contrary to fact",
+   "position": "right after tense, before ne"
+  },
+  {
+   "form": "tosu",
+   "meaning": "inferred from evidence",
+   "position": "evidential slot"
+  },
+  {
+   "form": "tavki",
+   "meaning": "almost; nearly (the event came close but did not happen)",
+   "position": "approach slot"
+  },
+  {
+   "form": "hiro",
+   "meaning": "begin to (inceptive)",
+   "position": "phase slot"
+  },
+  {
+   "form": "teki",
+   "meaning": "stop; cease doing (cessative)",
+   "position": "phase slot"
+  },
+  {
+   "form": "telvo",
+   "meaning": "try to (outcome open)",
+   "position": "effort slot"
+  },
+  {
+   "form": "vazdi",
+   "meaning": "manage to; succeed in",
+   "position": "effort slot"
+  },
+  {
+   "form": "fesmo",
+   "meaning": "try and fail to",
+   "position": "effort slot"
+  },
+  {
+   "form": "lesvu",
+   "meaning": "let; allow (permissive)",
+   "position": "verb slot: CAUSER lesvu ACTOR VERB"
+  },
+  {
+   "form": "tekvu",
+   "meaning": "prevent from; stop someone doing",
+   "position": "verb slot: CAUSER tekvu ACTOR VERB"
+  },
+  {
+   "form": "hoyo",
+   "meaning": "mirative: newly discovered or surprising to the speaker",
+   "position": "after the predicate, before certainty"
+  },
+  {
+   "form": "yasmo",
+   "meaning": "as is known; shared knowledge",
+   "position": "after the predicate, before certainty"
+  },
+  {
+   "form": "zafra",
+   "meaning": "suddenly (abrupt onset)",
+   "position": "clause-initial frame slot"
+  },
+  {
+   "form": "finra",
+   "meaning": "finally; at last (after delay or effort)",
+   "position": "clause-initial frame slot"
+  },
+  {
+   "form": "lanto",
+   "meaning": "eventually (after time has passed)",
+   "position": "clause-initial frame slot"
+  },
+  {
+   "form": "kenvi",
+   "meaning": "immediately; at once",
+   "position": "clause-initial frame slot"
+  }
+ ],
+ "rulings": [
+  {
+   "id": "G1",
+   "topic": "Scope by position",
+   "ruling": "Every preverbal operator scopes over everything to its right. Pre-constituent operators (ne, doli, tu, yesta, pendi, vinto) scope over the single constituent that follows them."
+  },
+  {
+   "id": "G2",
+   "topic": "si and whether",
+   "ruling": "si means only 'if'. 'whether' is ki-oro. 0.8 texts that used si for 'whether' are read under 0.8 rules."
+  },
+  {
+   "id": "G3",
+   "topic": "Permission vs possibility vs ability",
+   "ruling": "povi = ability; nosi = epistemic possibility (might); dagi = permission (may, be allowed). 0.8's double use of nosi is split."
+  },
+  {
+   "id": "G4",
+   "topic": "Epistemic necessity",
+   "ruling": "'must (logically)' = inferential evidential tosu + seye; musi is only obligation or circumstantial necessity."
+  },
+  {
+   "id": "G5",
+   "topic": "Intention",
+   "ruling": "Intent is the verb chain 'dorvada sidu VERB' (intend to); kopi is only 'hope to'. Deliberately = la dorvasan; accidentally = la dorvanasan."
+  },
+  {
+   "id": "G6",
+   "topic": "Counterfactual",
+   "ruling": "noma marks a clause as contrary to fact. 'should have' = po noma suvi; 'could have' = po noma povi; 'would have' = po viki (in a consequence clause) or po noma viki."
+  },
+  {
+   "id": "G7",
+   "topic": "Imminence",
+   "ruling": "fututi in the approach slot means 'about to': Maivo po fututi pagopa = I was about to leave. As a clause-initial time word it still means 'soon'."
+  },
+  {
+   "id": "G8",
+   "topic": "Continuation",
+   "ruling": "loki covers both 'still' and 'keep on'; no separate continuative is added."
+  },
+  {
+   "id": "G9",
+   "topic": "Quantity limits",
+   "ruling": "Before a number or quantity, lusu = at least, mosa = at most, gase = approximately; pendi = exactly."
+  },
+  {
+   "id": "G10",
+   "topic": "Paired conjunctions",
+   "ruling": "oro A oro B = either A or B; ne A ne B = neither A nor B; doli si = only if; yesta si = even if; 'si …, ata doli si …' = if and only if."
+  },
+  {
+   "id": "G11",
+   "topic": "Despite",
+   "ruling": "nevi + noun phrase = despite: nevi li zeldo, despite the resistance. nevi + clause = although."
+  },
+  {
+   "id": "G12",
+   "topic": "Benefactive",
+   "ruling": "vobi + noun phrase = for the benefit of / on behalf of (unchanged), and combines with any operator."
+  },
+  {
+   "id": "G13",
+   "topic": "ata",
+   "ruling": "ata is 'and' only; additive 'also' is tu."
+  },
+  {
+   "id": "G14",
+   "topic": "Valency operators",
+   "ruling": "vaku (make), lesvu (let) and tekvu (prevent) fill the verb slot of the main clause; the actor follows, then the actor's own [ne] [phase] [effort] verb. Tense, modal and evidential belong to the main clause only."
+  },
+  {
+   "id": "G15",
+   "topic": "Negation and operators",
+   "ruling": "ne before an operator negates the operator; ne after it negates the event: po ne vazdi lirala = didn't manage to sing; po vazdi ne lirala = managed not to sing."
+  },
+  {
+   "id": "G16",
+   "topic": "Exclusions",
+   "ruling": "At most one word per slot. hiro/teki do not combine with roni or tefa. tavki excludes fututi (same slot). The effort slot (telvo, vazdi, fesmo) excludes tefa. noma requires a tense, modal or si-clause context."
+  },
+  {
+   "id": "G17",
+   "topic": "Unexpectedly / previously / simultaneously",
+   "ruling": "la nerponasan = unexpectedly; kroti ola = previously; nayo ola = meanwhile/simultaneously; krotiapo = subsequently. No new words."
+  },
+  {
+   "id": "G18",
+   "topic": "Topic and focus together",
+   "ruling": "A hozi-topic opens the clause; vinto may then mark a focus inside it. hozi and vinto never mark the same constituent."
+  },
+  {
+   "id": "G19",
+   "topic": "Version gating",
+   "ruling": "Texts dated before 1.0 are interpreted with the 0.8 lexicon and rules. A 1.0 reader meeting a retired spelling looks it up in legacy.retired and reads the 1.0 replacement."
+  },
+  {
+   "id": "G20",
+   "topic": "Lexicalised derivations",
+   "ruling": "tisebitivu (sword), tibivu (rope), kaldopago (prison) and zeldoyo (rebel) are fixed meanings of regular derivations."
+  },
+  {
+   "id": "G21",
+   "topic": "Closing a relative clause",
+   "ruling": "A raho-clause that does not end the sentence is closed by a comma in writing and a pause in speech: Li sabeyo raho vismava eli, ne yehu vimova li vordu. (Found in stress-testing: without the pause the main verb is read inside the relative clause.)"
+  },
+  {
+   "id": "G22",
+   "topic": "Attitude words are clause-final only",
+   "ruling": "seye, mufe, poye, pifu and zoke never open a clause. 'Perhaps, …' at the start of a sentence is written with the clause-final poye. (Found in stress-testing.)"
+  },
+  {
+   "id": "G23",
+   "topic": "Events taking place",
+   "ruling": "venreva (come) with an event as subject means 'take place, happen': Li dapadonu po venreva kroti li nilvu, the sale took place before winter."
+  }
+ ],
+ "validated_examples": [
+  {
+   "liraasa": "Maivo po tavki ralnora.",
+   "english": "I almost fell."
+  },
+  {
+   "liraasa": "Saivo po vazdi hirnaha.",
+   "english": "They managed to escape."
+  },
+  {
+   "liraasa": "Maivo po vaku ito farufa — nara la dorvanasan!",
+   "english": "I made it burn — but by accident!"
+  },
+  {
+   "liraasa": "Maivo po tekvu saivo pagopa.",
+   "english": "I prevented them from leaving."
+  },
+  {
+   "liraasa": "Taivo ne dagi talita eli-pago.",
+   "english": "You are not allowed to work here."
+  },
+  {
+   "liraasa": "Si taivo po noma masuma, maivo po viki relsira.",
+   "english": "If you had asked, I would have answered."
+  },
+  {
+   "liraasa": "Li loteronela roni tosu vimova li domlu seye.",
+   "english": "The stranger must have been watching the house."
+  },
+  {
+   "liraasa": "Maivo masuma ki-oro taivo futu relnura.",
+   "english": "I'm asking whether you'll come back."
+  },
+  {
+   "liraasa": "Toda-nela po venreva sabri Dorin.",
+   "english": "Everyone came except Dorin."
+  },
+  {
+   "liraasa": "Yesta Dorin po resora.",
+   "english": "Even Dorin laughed."
+  },
+  {
+   "liraasa": "Li bumre hozi, Kipo po bumreba ito.",
+   "english": "As for the bread, Kipo baked it."
+  },
+  {
+   "liraasa": "Saivo milobema hoyo!",
+   "english": "She's smiling — who knew!"
+  }
+ ],
+ "primal_roots": [
+  "amor",
+  "apok",
+  "balbu",
+  "banu",
+  "barni",
+  "belda",
+  "belfi",
+  "belru",
+  "bemya",
+  "bena",
+  "bimne",
+  "bio",
+  "bire",
+  "biti",
+  "bote",
+  "bulli",
+  "bumre",
+  "buvo",
+  "camvi",
+  "cemnu",
+  "cemo",
+  "cere",
+  "cilni",
+  "coda",
+  "colbi",
+  "cono",
+  "corvi",
+  "cunu",
+  "daigo",
+  "dalu",
+  "damru",
+  "damva",
+  "danvu",
+  "dapa",
+  "darno",
+  "dendu",
+  "derdi",
+  "devo",
+  "domlu",
+  "donu",
+  "dorbi",
+  "dorva",
+  "duvla",
+  "falne",
+  "fama",
+  "famli",
+  "farla",
+  "faru",
+  "farvi",
+  "fasbi",
+  "fato",
+  "fefe",
+  "felbe",
+  "felra",
+  "feyu",
+  "filse",
+  "fini",
+  "fohe",
+  "follu",
+  "folni",
+  "fule",
+  "furo",
+  "galsa",
+  "ganre",
+  "gilbu",
+  "gonbi",
+  "gulma",
+  "gura",
+  "halra",
+  "harlu",
+  "havli",
+  "helna",
+  "helvi",
+  "hemlu",
+  "hifa",
+  "hirna",
+  "holba",
+  "hume",
+  "huvu",
+  "jomru",
+  "juba",
+  "jurevi",
+  "juse",
+  "kaldo",
+  "kavbi",
+  "kele",
+  "kemye",
+  "kende",
+  "kova",
+  "krono",
+  "kulpa",
+  "lalle",
+  "lalni",
+  "lalvu",
+  "lamsa",
+  "lanve",
+  "larbo",
+  "larda",
+  "larne",
+  "laso",
+  "lavbu",
+  "lavi",
+  "lavlo",
+  "lavra",
+  "lehe",
+  "lelde",
+  "lelga",
+  "lelhi",
+  "lelko",
+  "lelsu",
+  "lemu",
+  "lemvo",
+  "lenbu",
+  "leni",
+  "lenra",
+  "lenyo",
+  "lesma",
+  "leto",
+  "leva",
+  "lideo",
+  "linu",
+  "lira",
+  "lirbu",
+  "lisi",
+  "lisro",
+  "live",
+  "livna",
+  "lolmi",
+  "lolte",
+  "lombi",
+  "lomo",
+  "lonse",
+  "lordi",
+  "lore",
+  "lorgo",
+  "lornu",
+  "lotero",
+  "lovu",
+  "luka",
+  "lulfa",
+  "lumi",
+  "lumra",
+  "luno",
+  "madi",
+  "maivo",
+  "malo",
+  "mambi",
+  "manli",
+  "mare",
+  "marna",
+  "maska",
+  "masu",
+  "mavo",
+  "mebane",
+  "mege",
+  "melli",
+  "melo",
+  "melva",
+  "menha",
+  "menme",
+  "menso",
+  "mera",
+  "mergu",
+  "merno",
+  "meyi",
+  "milno",
+  "milobe",
+  "milra",
+  "milve",
+  "milyu",
+  "miru",
+  "mivi",
+  "mobe",
+  "modo",
+  "moldi",
+  "molfa",
+  "molovu",
+  "molu",
+  "momra",
+  "momvi",
+  "monru",
+  "morza",
+  "mubo",
+  "mudu",
+  "mufra",
+  "musva",
+  "nafe",
+  "nami",
+  "namre",
+  "narvo",
+  "navdi",
+  "navu",
+  "nedu",
+  "nela",
+  "neme",
+  "nemva",
+  "nenga",
+  "nerpo",
+  "nevlo",
+  "nevra",
+  "nibe",
+  "nilvu",
+  "nimu",
+  "nole",
+  "nolsa",
+  "nonmo",
+  "noru",
+  "nosvo",
+  "noto",
+  "nullo",
+  "nulu",
+  "nulva",
+  "numo",
+  "nuravu",
+  "opi",
+  "pago",
+  "palvi",
+  "paralo",
+  "pari",
+  "patu",
+  "pave",
+  "pavru",
+  "pebu",
+  "peli",
+  "pensa",
+  "peremo",
+  "pesbi",
+  "pilo",
+  "polva",
+  "pomli",
+  "pune",
+  "pusa",
+  "rabi",
+  "rale",
+  "ralka",
+  "ralno",
+  "ramu",
+  "ranbe",
+  "ranfa",
+  "ravnu",
+  "reku",
+  "relnu",
+  "relsi",
+  "remni",
+  "renli",
+  "reso",
+  "reza",
+  "rilli",
+  "rilu",
+  "rima",
+  "rinba",
+  "rivo",
+  "rizi",
+  "rofe",
+  "rolvu",
+  "ruhe",
+  "rumne",
+  "ruva",
+  "sabaye",
+  "sabe",
+  "sado",
+  "safa",
+  "salru",
+  "salta",
+  "salye",
+  "samba",
+  "samni",
+  "sapu",
+  "sarbi",
+  "sasva",
+  "savali",
+  "sebi",
+  "seldi",
+  "selve",
+  "semne",
+  "semra",
+  "semvi",
+  "senba",
+  "seno",
+  "senru",
+  "serbu",
+  "sevre",
+  "sevu",
+  "silbe",
+  "silda",
+  "sili",
+  "silro",
+  "simvo",
+  "sirla",
+  "sizo",
+  "solli",
+  "solma",
+  "solo",
+  "somu",
+  "sonbu",
+  "sonhi",
+  "sora",
+  "sorni",
+  "sove",
+  "sovla",
+  "sude",
+  "sulba",
+  "sulme",
+  "sulno",
+  "suma",
+  "sumbi",
+  "supo",
+  "suru",
+  "tabu",
+  "taha",
+  "talbe",
+  "tali",
+  "talva",
+  "tamra",
+  "tarada",
+  "tavre",
+  "tekla",
+  "telba",
+  "telne",
+  "teru",
+  "tevulu",
+  "teyo",
+  "tibi",
+  "tilma",
+  "timru",
+  "tino",
+  "tise",
+  "tivro",
+  "tovo",
+  "trana",
+  "turna",
+  "vabale",
+  "vabeve",
+  "vaga",
+  "valla",
+  "valmi",
+  "valyu",
+  "vamdu",
+  "vamle",
+  "vani",
+  "vanru",
+  "varde",
+  "varo",
+  "vaye",
+  "vazra",
+  "vebo",
+  "velbi",
+  "velma",
+  "velu",
+  "vemi",
+  "venre",
+  "venya",
+  "vera",
+  "vese",
+  "vesno",
+  "vila",
+  "vilne",
+  "vimo",
+  "visma",
+  "voho",
+  "volda",
+  "volru",
+  "vopra",
+  "vorba",
+  "vordu",
+  "vulra",
+  "vure",
+  "vurlo",
+  "yanba",
+  "yano",
+  "yeba",
+  "yedi",
+  "yelfa",
+  "yelmi",
+  "yendo",
+  "yolbe",
+  "yomla",
+  "yordo",
+  "yuge",
+  "yunlu",
+  "yuso",
+  "zego",
+  "zeldo",
+  "zivu",
+  "zogu",
+  "zonra"
+ ]
+}

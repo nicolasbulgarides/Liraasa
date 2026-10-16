@@ -1,0 +1,83 @@
+# Migrated from 0.8 to 1.0+ by migrate_text.py (ruling 1.0:G19).
+# Source: song_V_sulbaasa.txt
+# song_V_sulbaasa - extracted from the 0.8 Grammar Guide and Codex.
+# Liraasa lines unprefixed; English on "# EN:" comment lines.
+
+# EN: Sulbaasa ata Farulavra — Sun Beyond Suns and
+# EN: Phoenix
+# EN: A celestial romance in Solaria's voice: the sun goddess and her phoenix burn together, become ash
+# EN: and stardust, and are born again as one fire. The lexicon already held the core words: farulavra
+# EN: (phoenix), farulavrafa (to rise again like a firebird) and velulamsa (stardust).
+Maivo ka sulbaasa. Taivo ka farulavra.
+Yava farufa… pifu.
+Maivo po lumila en velusolli,
+taivo po vagava ala maivo, navuasa de farulavra.
+Kube taivo savalisia maivo de fasbi,
+taivo de lore farufa, maivo de lore milvema.
+Ne relnura, ne venyava,
+lomola maivo, lomola maivo!
+Si maivo daigoda, maivo futu daigoda ko taivo.
+Yava farufa, yava farufa,
+sulba ata farulavra, yanoya, yanoya!
+Yava lamsala ko velulamsa,
+ata entre lamsa, maivori farulavrafa!
+Lumiasa, lumiasa, maivori ka una faru,
+amorasa, amorasa, seye, seye!
+Maivo de senru loya yelmisan, taivo de sulme loya
+sizosan,
+taivo de havli ka maivo de havli, maivo de loresonbu
+ka taivo de lira.
+Li yunlu yunluya hupi maivori; li navu ralnora, li
+veluri lirala,
+toda-coda tranata ko maivori.
+Nayo maivori farufa, li navuasa ke farusan!
+Ne opina, maivo de amor, ola ne ka daigoasa:
+daigo ka dorbi, ata daigona ka taivo.
+Si maivo daigoda, maivo futu daigoda ko taivo.
+Yava farufa, yava farufa,
+sulba ata farulavra, yanoya, yanoya!
+Yava lamsala ko velulamsa,
+ata entre lamsa, maivori farulavrafa!
+Lumiasa, lumiasa, maivori ka una faru,
+amorasa, amorasa, seye, seye!
+Maivo ne ka sulba. Taivo ne ka farulavra.
+Maivori ka lamsa… maivori ka lumi…
+maivori ka mernolumiasa.
+Yava farulavrafa, yava farulavrafa,
+sulba ata farulavra, yanoya, yanoya!
+Yava navunia ko velulamsa,
+ata entre veluri, maivori kronobioka!
+Lumiasa, lumiasa, maivori ka una faru,
+amorasa, amorasa, seye, seye, seye!
+Kroti mernolumi, maivori po daigoda.
+Krotiapo mernolumi, maivori kronobioka: una lira,
+una faru.
+Lorejuba, maivo de amor. Pifu.
+# EN: THE DEVOTIONALS AND SONGS
+# EN: I am the sun beyond suns. You are the phoenix. Let us burn… may it be so.
+# EN: I used to shine in starlit solitude. You flew to me, phoenix of the heavens. When you kiss my face,
+# EN: your heart catches fire and my heart melts.
+# EN: Don't turn back, don't sigh. Hold me, hold me! If I die, I will die with you.
+# EN: Let us burn, let us burn: sun and phoenix, uniting, uniting! Let us become ash with the stardust,
+# EN: and from within the ash we rise again! Divine light, divine light, we are one fire. Love beyond love:
+# EN: certain, certain!
+# EN: My skin turns glittering, your smoke turns shimmering. Your breath is my breath; my heartbeat is
+# EN: your song. The aurora glows above us; the sky falls, the stars sing, and everything changes with us.
+# EN: While we burn, heaven is on fire!
+# EN: Not hopeless, my love; this is not the final death. Death is a door, and you are resurrection.
+# EN: I am not the sun. You are not the phoenix. We are ash… we are light… we are the first dawn of
+# EN: creation.
+# EN: Let us rise like firebirds, uniting! Let us rise into the sky with the stardust, and among the stars we
+# EN: are born!
+# EN: Before the dawn, we died. After the dawn, we are born: one song, one fire. Thank you, my love. May
+# EN: it be so.
+# EN: says death is a door and the beloved is its undoing. The song also showcases two 0.7 respellings: yelmisan
+# EN: (glittering, from zeiu) and yunlu (aurora, from kuzu). sulba (sun) and fasbi (face) are on the Root Review sheet,
+# EN: so settle them before committing to a recording.
+# EN: Style prompt: cinematic celestial pop ballad, ethereal female soprano lead, breathy and intimate in verses,
+# EN: soaring in choruses, invented language with pure Italian-style vowels, veena shimmer, warm analog synth pads,
+# EN: heartbeat drums, crackling fire textures, angelic choir, slow build from whisper to euphoric climax, key change
+# EN: on final chorus. Darker alternative: epic mythic world-fusion, tribal percussion, cello drones, veena and bansuri,
+# EN: female alto rising to soprano, cathedral choir, sacred and sensual, fire and rebirth.
+# EN: THE DEVOTIONALS AND SONGS
+# EN: SONG VI
