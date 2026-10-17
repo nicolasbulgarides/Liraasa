@@ -148,6 +148,10 @@ export interface Ruling {
   localId: string;
   topic: string;
   ruling: string;
+  /** What the ruling refines, as the data words it (1.2 on). */
+  refines: readonly string[];
+  /** Worked examples, `[liraasa, english]`, where the data gives them (1.2 on). */
+  examples: readonly { liraasa: string; english: string }[];
 }
 
 export interface RhymeFamily {

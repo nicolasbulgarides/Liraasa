@@ -334,6 +334,8 @@ export interface RawLexicon {
   grammar: RawGrammar;
   rulings_1_0: RawRuling[];
   rulings_0_8_carried: RawRuling[];
+  /** From 1.2 on (ADR-0012): the rulings the changesets add, with examples. */
+  rulings_1_2?: RawRuling[];
   examples: RawExample[];
   rhyme_families: RawRhymeFamily[];
   legacy: RawLegacy;

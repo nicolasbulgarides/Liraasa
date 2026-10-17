@@ -11,6 +11,7 @@
     "build:handoff": "tsx scripts/build_handoff.ts",
     "build:llm": "tsx scripts/build_llm_json.ts && tsx scripts/build_checker_data.ts",
     "build:checker": "tsx scripts/build_checker_data.ts",
+    "build:learn": "tsx scripts/build_learn.ts",
     "build:guide": "npm run build:handoff && npm run build:llm && tsx scripts/build_grammar_guide.ts",
     "publish:guide": "tsx scripts/publish_guide.ts",
     "preview": "vite preview",
@@ -31,6 +32,7 @@
     "validate:1.2": "python scripts/validate_1_2.py data/lexicon/liraasa_1_2.json --previous data/lexicon/liraasa_1_1.json --changes data/changes/2026-10-17-grammar-rulings.json data/changes/2026-10-17-lexicon-1-2.json --baseline lexicon_0_8_rc2.json --out data/lexicon/validation_1_2.json",
     "report:1.1": "tsx scripts/report_1_1.ts",
     "export:mfa": "tsx scripts/export_mfa.ts",
+    "learn:report": "tsx scripts/learn_report.ts",
     "check:sounds": "python scripts/check_sounds.py data/lexicon/liraasa_1_2.json --audit --json review/sound_audit_1_2.json",
     "test:sounds": "python -m unittest scripts/test_check_sounds.py",
     "check": "npm run typecheck && npm run lint && npm run format:check && npm run test"

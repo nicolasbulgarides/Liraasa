@@ -6,6 +6,8 @@
   href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
 />
 
+<link rel="stylesheet" href="learn/learn.css" />
+
 <style>
   /* ============================================================== tokens
      A composer's manuscript book: ledger paper with a red margin rule, written
@@ -1425,6 +1427,7 @@
     <h1>Songbook</h1>
     <span class="ed mono" id="edition">1.1</span>
     <span class="spacer"></span>
+    <button class="btn btn-quiet" id="learnBtn" type="button" aria-pressed="false">Learn</button>
     <button class="btn btn-quiet" id="railBtn" type="button" aria-pressed="true">Library</button>
     <button class="btn btn-quiet" id="inspBtn" type="button" aria-pressed="true">Workbench</button>
     <button class="btn btn-quiet" id="themeBtn" type="button">Theme</button>
@@ -1558,6 +1561,10 @@
     </aside>
   </div>
 
+  <!-- Learn (editor/learn, ADR-0015): drawn by learn/app.js -->
+  <main id="learnView" aria-label="Learn"></main>
+  <p class="sr-only" id="learnLive" aria-live="polite"></p>
+
   <footer class="foot">
     <span><b id="sLines">0</b> lines</span>
     <span class="sep">·</span>
@@ -1651,6 +1658,11 @@
 <script src="checker/gloss.js"></script>
 <script src="checker/rules/english.js"></script>
 <script src="checker/index.js"></script>
+<!-- Learn: its engine (learn-core.js) and data (learn-data.js) load on first use -->
+<script src="learn/store.js"></script>
+<script src="learn/session.js"></script>
+<script src="learn/author.js"></script>
+<script src="learn/app.js"></script>
 <div class="diag-tip" id="diagTip" role="tooltip" hidden></div>
 <p class="sr-only" id="caretDiag" aria-live="polite"></p>
 <script>
@@ -2930,8 +2942,14 @@
     renderCompose();
   }
 
+  /* How well the active learner knows a word (Learn), when Learn has loaded. */
+  const learnBadge = (spelling) =>
+    window.LiraasaLearnUI && window.LiraasaLearnUI.masteryBadge
+      ? window.LiraasaLearnUI.masteryBadge(spelling)
+      : '';
+
   function optLabel(c, o) {
-    let label = esc(o.word) + (c.after ? ' ' + esc(c.after) : '');
+    let label = esc(o.word) + learnBadge(o.word) + (c.after ? ' ' + esc(c.after) : '');
     if (o.kind === 'lexical' && o.slot)
       label += '<span class="sl">' + SLOT_NAME[o.slot] + '</span>';
     if (o.kind === 'particle') label += '<span class="sl">' + esc(o.slotName) + '</span>';
@@ -4101,6 +4119,7 @@
         '<div class="hit"><div class="hit-top"><span class="w">' +
           esc(rec.root) +
           '</span>' +
+          learnBadge(rec.root) +
           chips +
           '</div>' +
           '<div class="d">' +
@@ -4738,6 +4757,43 @@
       btn.textContent = 'Press ⌘/Ctrl-C';
     }
     setTimeout(() => (btn.textContent = 'Copy'), 1600);
+  });
+
+  /* ------------------------------------------------------------- Learn
+     Learn (editor/learn) talks to the songbook through window events only. */
+  window.addEventListener('liraasa:open-lexicon', (e) => {
+    const tab = document.querySelector('.tab[data-tab="lex"]');
+    if (tab) tab.click();
+    els.q.value = e.detail.spelling;
+    renderHits();
+    els.q.focus();
+  });
+  window.addEventListener('liraasa:open-piece', (e) => {
+    if (!store.pieces.some((p) => p.id === e.detail.id)) return;
+    capturePiece();
+    openPiece(e.detail.id);
+    els.text.focus();
+  });
+  // a root was renamed or retired in Learn's roots tool: correct every writing
+  window.addEventListener('liraasa:lexicon-changed', (e) => {
+    const L = window.LiraasaLearn;
+    if (!L || !e.detail || !e.detail.mapping) return;
+    capturePiece();
+    let corrected = 0;
+    for (const p of store.pieces) {
+      const r = L.correctText(p.text || '', e.detail.mapping);
+      if (r.changed > 0) {
+        p.text = r.text;
+        p.updated = new Date().toISOString();
+        corrected += r.changed;
+      }
+    }
+    e.detail.corrected = corrected;
+    if (corrected > 0) openPiece(store.activeId);
+  });
+  window.addEventListener('liraasa:learn-ready', () => {
+    renderHits();
+    runCompose();
   });
 
   /* -------------------------------------------------------------- boot */

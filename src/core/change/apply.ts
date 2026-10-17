@@ -18,6 +18,7 @@ import { IdAssigner, type IdKind, type IdMapFile } from '../model/ids';
 import type { RawLexicon, RawSlots } from '../model/raw';
 import { sevenForms } from '../morphology/sevenForms';
 import { type ChangeRecord, type Changeset, validateChangeset } from './changelog';
+import { respellRootInPlace, retireRootInPlace } from './respell';
 
 export interface ChangesetRuling {
   id: string;
@@ -397,8 +398,20 @@ export function applyChangesets(
           break;
         }
         case 'respell_root':
+        case 'retire_and_replace': {
+          // the same code the editor's rename tool runs (respell.ts)
+          if (op.to === null) throw new ApplyError(`${op.entry}: ${op.op} needs a "to"`);
+          if (op.op === 'respell_root') respellRootInPlace(lex, op.entry, op.to, op.reason);
+          else retireRootInPlace(lex, op.entry, op.to, op.reason);
+          byId.clear();
+          byRoot.clear();
+          for (const h of heads) {
+            byId.set(String(h.id), h);
+            byRoot.set(h.root, h);
+          }
+          break;
+        }
         case 'retire_root':
-        case 'retire_and_replace':
         case 'merge_entries':
         case 'split_entry':
           throw new ApplyError(`${op.entry}: ${op.op} is not supported by the build`);

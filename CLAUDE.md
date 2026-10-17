@@ -30,7 +30,11 @@ standalone writing tool in `editor/` — a journal with collections, an
 English-to-Liraasa assisted composer, MFA export, and a grammar checker
 (`editor/checker/`, ADR-0014) that underlines each finding with its rule and
 fix. The checker reads the 1.2 LLM reference; what the JSON does not say is
-data in `data/checker/`, never code. Phase 2 is the TypeScript validator and
+data in `data/checker/`, never code. **Learn** (ADR-0015) is the editor's
+training program: a pure core in `src/core/learn/`, bundled into
+`editor/learn/` by `npm run build:learn`, progress in IndexedDB, author
+overrides in `data/lessons/overrides.json`, and a rename/retire tool whose
+change records build through `apply.ts`. Phase 2 is the TypeScript validator and
 parser.
 
 ---
@@ -74,6 +78,8 @@ parser.
 | `npm run export:mfa`     | Montreal Forced Aligner dictionary, phone inventory and syllable sheet into `data/export/`.                                                          | **working** |
 | `npm run build:llm`      | The whole language in one JSON for language models → `handoff/liraasa_1_2_llm.json` (also published to `LirasaCodexLatest/`). Only meaningful forms. | **working** |
 | `npm run build:checker`  | Wrap the LLM reference and `data/checker/*.json` as the scripts `editor/checker/` loads. Run by `build:llm`.                                         | **working** |
+| `npm run build:learn`    | Bundle `src/core/learn` and its data (lexicon, corpus, overrides, previous edition) into `editor/learn/`. Run after any data change.                 | **working** |
+| `npm run learn:report`   | The Learn curriculum and every gap → `review/learn_report.md`.                                                                                       | **working** |
 | `npm run build:editor`   | Rebuild the data bundle that `editor/index.html` loads.                                                                                              | **working** |
 | `npm run build:guide`    | Rebuild the handoff JSON, then the 1.2 grammar guide into `handoff/` (`-- --pdf` also prints it). Word list in `scripts/grammar_guide/config.ts`.    | **working** |
 

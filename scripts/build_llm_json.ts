@@ -117,15 +117,13 @@ function compactJson(value: unknown, indent = ''): string {
 function main(): void {
   const { flags } = parseArgs(process.argv.slice(2), ['lexicon', 'out']);
   const lexPath = flags.lexicon ?? LEXICON;
-  const lex = JSON.parse(readFileSync(resolve(lexPath), 'utf8')) as RawLexicon & {
-    rulings_1_2: Ruling[];
-  };
+  const lex = JSON.parse(readFileSync(resolve(lexPath), 'utf8')) as RawLexicon;
   const heads = lex.headwords as unknown as Head[];
   const bena = heads.find((h) => h.root === 'bena');
   if (bena === undefined) throw new Error('bena is missing');
 
   const rulings = [
-    ...lex.rulings_1_2.map((r) => ({ edition: '1.2', r })),
+    ...((lex.rulings_1_2 ?? []) as unknown as Ruling[]).map((r) => ({ edition: '1.2', r })),
     ...(lex.rulings_1_0 as unknown as Ruling[]).map((r) => ({ edition: '1.0', r })),
     ...(lex.rulings_0_8_carried as unknown as Ruling[]).map((r) => ({ edition: '0.8', r })),
   ].map(({ edition, r }) => ({

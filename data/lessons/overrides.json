@@ -1,0 +1,47 @@
+{
+ "version": 1,
+ "pins": [],
+ "levels": {},
+ "notes": {},
+ "lessons": [],
+ "rulingLinks": {
+  "1.0:G2": [
+   "clause",
+   "slot:QUESTION"
+  ],
+  "1.0:G9": [
+   "numbers"
+  ],
+  "1.0:G13": [
+   "clause"
+  ],
+  "1.0:G20": [
+   "suffix:yo",
+   "suffix:vu",
+   "suffix:pago"
+  ],
+  "0.8:R5": [
+   "nounPhrase"
+  ],
+  "0.8:R6": [
+   "slot:TENSE"
+  ],
+  "0.8:R8": [
+   "form:verb",
+   "compound"
+  ],
+  "0.8:R10": [
+   "form:ascended"
+  ],
+  "1.2:G35": [
+   "motion"
+  ]
+ },
+ "exclude": [
+  "rule:1.0:G19",
+  "rule:0.8:R1",
+  "rule:0.8:R2",
+  "rule:0.8:R3",
+  "rule:0.8:R11"
+ ]
+}

@@ -86,13 +86,23 @@ function decodeSection<Raw extends object, Internal extends object>(
 }
 
 function decodeRulings(rows: readonly RawRuling[], edition: string): Ruling[] {
-  return rows.map((raw) => ({
-    ref: rulingRef(edition, raw.id),
-    edition,
-    localId: raw.id,
-    topic: raw.topic,
-    ruling: raw.ruling,
-  }));
+  return rows.map((raw) => {
+    const refines = Array.isArray(raw.refines) ? raw.refines.map(String) : [];
+    const examples = Array.isArray(raw.examples)
+      ? (raw.examples as unknown[])
+          .filter((e): e is [string, string] => Array.isArray(e) && typeof e[0] === 'string')
+          .map(([liraasa, english]) => ({ liraasa, english }))
+      : [];
+    return {
+      ref: rulingRef(edition, raw.id),
+      edition,
+      localId: raw.id,
+      topic: raw.topic,
+      ruling: raw.ruling,
+      refines,
+      examples,
+    };
+  });
 }
 
 export function importLexicon(raw: RawLexicon, options: ImportOptions = {}): ImportResult {
@@ -192,6 +202,7 @@ export function importLexicon(raw: RawLexicon, options: ImportOptions = {}): Imp
   const rulings: Ruling[] = [
     ...decodeRulings(raw.rulings_1_0, '1.0'),
     ...decodeRulings(raw.rulings_0_8_carried, '0.8'),
+    ...decodeRulings(raw.rulings_1_2 ?? [], '1.2'),
   ];
 
   const rhymeFamilies: RhymeFamily[] = raw.rhyme_families.map((r) => ({
