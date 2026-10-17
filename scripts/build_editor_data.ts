@@ -16,6 +16,14 @@ import type { RawLexicon } from '../src/core/model/raw';
 import { parseArgs } from './args';
 
 const DEFAULT_LEXICON = 'data/lexicon/liraasa_1_1.json';
+/** Grammar rulings on top of 1.1 (ADR-0012): its rulings and example revisions. */
+const GRAMMAR_CHANGESET = 'data/changes/2026-10-17-grammar-rulings.json';
+
+interface GrammarChangeset {
+  edition: string;
+  rulings: { id: string; topic: string; ruling: string; examples: [string, string][] }[];
+  ops: { entry: string; op: string; from: string | null; to: string | null }[];
+}
 const DEFAULT_OUT = 'data/editor';
 
 function main(): void {
@@ -23,6 +31,18 @@ function main(): void {
   const lexPath = resolve(flags.lexicon ?? DEFAULT_LEXICON);
   const outDir = resolve(flags['out-dir'] ?? DEFAULT_OUT);
   const lex = JSON.parse(readFileSync(lexPath, 'utf8')) as RawLexicon;
+  const grammar = JSON.parse(readFileSync(resolve(GRAMMAR_CHANGESET), 'utf8')) as GrammarChangeset;
+
+  // The changeset's example revisions, applied by index to the 1.1 text.
+  const revised = new Map<number, string>();
+  for (const op of grammar.ops) {
+    if (op.op !== 'edit_example' || op.to === null) continue;
+    const index = Number(op.entry.replace('example:', ''));
+    if (lex.examples[index]?.liraasa !== op.from) {
+      throw new Error(`${op.entry}: expected "${String(op.from)}" in ${lexPath}`);
+    }
+    revised.set(index, op.to);
+  }
 
   /*
    * Headwords, as compact tuples. Order:
@@ -97,9 +117,11 @@ function main(): void {
       phones: phoneInventory('ipa'),
     },
     motionPrefixes: Object.keys(lex.motion_prefixes.canon),
+    // [id, topic, ruling, examples]; newest edition first.
     rulings: [
-      ...lex.rulings_1_0.map((r) => [`1.0:${r.id}`, r.topic, r.ruling]),
-      ...lex.rulings_0_8_carried.map((r) => [`0.8:${r.id}`, r.topic, r.ruling]),
+      ...grammar.rulings.map((r) => [`${grammar.edition}:${r.id}`, r.topic, r.ruling, r.examples]),
+      ...lex.rulings_1_0.map((r) => [`1.0:${r.id}`, r.topic, r.ruling, []]),
+      ...lex.rulings_0_8_carried.map((r) => [`0.8:${r.id}`, r.topic, r.ruling, []]),
     ],
     // Pre-1.0 spellings, for ruling 1.0:G19 version gating.
     legacy: Object.fromEntries(
@@ -123,6 +145,7 @@ function main(): void {
       'Vorbalira',
     ],
     examples: lex.examples
+      .map((e, i) => ({ ...e, liraasa: revised.get(i) ?? e.liraasa }))
       .filter((e) => e.status !== 'HISTORICAL')
       .map((e) => [e.liraasa, e.english, e.feature]),
   };

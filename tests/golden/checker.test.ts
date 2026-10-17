@@ -33,36 +33,28 @@ const shape = (line: string, severity: Finding['severity'] = 'error'): string[] 
     .map((f) => f.message);
 
 describe('the lexicon examples pass', () => {
-  /* The canon has three noun + noun phrases. The author has ruled that a
-     noun never modifies a noun (ADR-0011), so they are errors now: reported
-     here for the author, never corrected. Nothing else in the canon trips a
-     shape error. */
-  /* And two that use eli-krono at the end of the clause, where the author's
-     frame rule wants it clause-initial: reported, not loosened. */
-  const NOUN_NOUN = [
-    'Maivo melo bena opioa lumi :: “melo” is in the verb slot but is not a verb form; its verb is meloma',
-    'Maivo melo bena opioa lumi :: “opioa” is a second verb in one clause; open its clause with a linker (fime, raho, ata, kopisa…)',
-    'Maivo melo bena opioa lumi :: “melo bena”: a noun does not modify a noun; use the adjective melosan (musical; melodic): melosan bena',
-    'Lotero silda, li cilni ka lasona. :: “Lotero silda”: a noun does not modify a noun; use the adjective loterosan (other): loterosan silda',
-    'Saivo po venreva pendi eli-krono. :: eli-krono is a clause-initial frame, followed by a comma',
-    'Li navutrana ne ka sovesan eli-krono. :: eli-krono is a clause-initial frame, followed by a comma',
-    'Maivo po lemula baba lotero lermi. :: “lotero lermi”: a noun does not modify a noun; use the adjective loterosan (other): loterosan lermi',
-  ];
-
-  it('no live example trips a shape error but the ones reported to the author', () => {
+  /* The editor's bundle carries the 1.2 example revisions
+     (data/changes/2026-10-17-grammar-rulings.json), so the three noun + noun
+     examples ADR-0011 flagged are revised there and every live example is
+     clean. The frozen 1.0 text stays pinned in validator.test.ts. */
+  it('no live example trips a shape error', () => {
     const hits = composer.examples.flatMap(([liraasa]) =>
       shape(liraasa).map((m) => liraasa + ' :: ' + m),
     );
-    expect(hits).toEqual(NOUN_NOUN);
+    expect(hits).toEqual([]);
   });
 
-  it('warns only on eli-krono without its comma', () => {
+  it('carries the revised examples, not the 1.1 text', () => {
+    const lines = composer.examples.map(([liraasa]) => liraasa);
+    expect(lines).toContain('Maivo de benasan melo opioa lumi.');
+    expect(lines).not.toContain('Maivo melo bena opioa lumi');
+  });
+
+  it('warns on no example: a time word needs no comma (1.2:G24)', () => {
     const hits = composer.examples.flatMap(([liraasa]) =>
       shape(liraasa, 'warn').map((m) => liraasa + ' :: ' + m),
     );
-    expect(hits).toEqual([
-      'Eli-krono maivo lirala. :: eli-krono frames the clause and is followed by a comma',
-    ]);
+    expect(hits).toEqual([]);
   });
 });
 
@@ -244,15 +236,14 @@ describe('Song of Time, round 2', () => {
     ).toEqual([]);
   });
 
-  /* The author's frame rule makes eli-krono clause-initial only, so the
-     round-2 line that ends "… eli-krono ata toda-krono ki?" is flagged now.
-     Reported to the author, as the canon does the same. */
-  it('flags eli-krono at the end of a clause under the frame rule', () => {
+  /* A time word may close its clause (1.2:G24), so the round-2 line that
+     ends "… eli-krono ata toda-krono ki?" passes the shape rules. */
+  it('lets eli-krono close a clause', () => {
     expect(
       shape(
         'oro maivo ke taivo de kronoasasan jomrusan lavra de lirari eli-krono ata toda-krono ki?',
       ),
-    ).toContain('eli-krono is a clause-initial frame, followed by a comma');
+    ).toEqual([]);
   });
 
   /* The corrected song (docs/reviews/2026-10-16-song-of-time.md, round 2):

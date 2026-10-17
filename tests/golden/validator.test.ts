@@ -31,18 +31,6 @@ describe('must flag', () => {
     expect(m).toContainEqual(expect.stringMatching(/de after the adjective “vardesan”/));
   });
 
-  it('an unpaired oro across two questions', () => {
-    const f = composer.checkText(
-      ['maivo ke taivo de lirasan lavra ki?', 'oro maivo ke li suma ki?'],
-      'poetic',
-      [],
-    );
-    expect(f.filter((x) => x.severity === 'error').map((x) => [x.line, x.message])).toContainEqual([
-      2,
-      expect.stringMatching(/oro is paired/),
-    ]);
-  });
-
   it('adjacent bare nouns', () => {
     expect(errors('maivo po ke baba melo lavra.')).toContainEqual(
       expect.stringMatching(/“melo lavra”: a noun does not modify a noun/),
@@ -91,9 +79,11 @@ describe('must flag', () => {
     );
   });
 
-  it('warns on a give-type verb with two bare noun phrases', () => {
-    expect(of('taivo de valla po donuda maivo lavi.', 'warn')).toContainEqual(
-      expect.stringMatching(/donuda.*VERB THEME ala RECIPIENT.*donuda lavi ala maivo/),
+  it('warns on a give-type verb whose bare recipient is not a pronoun (1.2:G26)', () => {
+    expect(of('taivo de valla po donuda li linu lavi.', 'warn')).toContainEqual(
+      expect.stringMatching(
+        /donuda.*only a pronoun.*VERB THEME ala RECIPIENT.*donuda lavi ala li linu/,
+      ),
     );
   });
 
@@ -101,6 +91,41 @@ describe('must flag', () => {
     expect(of('li peremori po ne relsira.', 'warn', 'were not answered')).toContainEqual(
       expect.stringMatching(/the English is passive \(“were not answered”\)/),
     );
+  });
+});
+
+describe('the 1.2 rulings', () => {
+  const notes = (line: string): Finding[] => findings(line).filter((f) => f.severity !== 'note');
+
+  it('a time word may close its clause, and its opening comma is optional (G24)', () => {
+    expect(notes('Saivo po venreva pendi eli-krono.')).toEqual([]);
+    expect(notes('Eli-krono maivo lirala.')).toEqual([]);
+    expect(notes('Eli-krono, maivo lirala.')).toEqual([]);
+  });
+
+  it('the four frame words still open their clause (G24)', () => {
+    expect(errors('maivo po lenila taivo de valla kenvi.')).toContainEqual(
+      expect.stringMatching(/^kenvi is a clause-initial frame/),
+    );
+  });
+
+  it('a lone oro joins two parts, and may open a line (G25)', () => {
+    expect(notes('miru oro nami')).toEqual([]);
+    const f = composer.checkText(
+      ['maivo ke taivo de lirasan lavra ki?', 'oro maivo ke li suma ki?'],
+      'poetic',
+      [],
+    );
+    expect(f.filter((x) => x.severity !== 'note')).toEqual([]);
+  });
+
+  it('a pronoun recipient may stand bare after a give-type verb (G26)', () => {
+    expect(notes('Taivo guraga maivo dossa cono.')).toEqual([]);
+    expect(notes('taivo de valla po donuda maivo lavi.')).toEqual([]);
+  });
+
+  it('back-translates a pronoun after de as the owner (G27)', () => {
+    expect(composer.backTranslate('li purma de maivo')).toMatch(/of me$/);
   });
 });
 
@@ -128,9 +153,9 @@ describe('advisories', () => {
     expect(composer.backTranslate('maivo de letosan nimu')).toBe('my written home');
   });
 
-  it('warns that 1.0 has no "about" after a communication verb with su', () => {
+  it('warns that there is no "about" after a communication verb with su (1.2:G30)', () => {
     expect(of('li veluri po sarbisia su li faru.', 'warn')).toContainEqual(
-      "1.0 has no 'about'; “sarbisia su” reads literally",
+      "Liraasa has no 'about'; “sarbisia su” reads literally: use a de phrase",
     );
   });
 });
@@ -160,11 +185,9 @@ function guideCorpus(): string[] {
      the 1.1 lexicon, the guide was written against 1.0.
    - Maivo melo bena opioa lumi: a pronoun owner without de, and two nouns.
    - Lotero silda: two nouns (ADR-0011).
-   - Eli-krono maivo lirala, …pendi eli-krono: eli-krono without its comma,
-     and not clause-initial.
-   - Taivo guraga maivo (dossa) cono: guraga, "to owe", as VERB RECIPIENT
-     THEME, where the give-type pattern expects THEME ala RECIPIENT.
-   - miru oro nami: a lone oro, where oro is paired.
+     Revised in 1.2 by data/changes/2026-10-17-grammar-rulings.json; the
+     1.0 text is frozen, so the finding stays pinned here.
+   - Lotero silda: two nouns (ADR-0011). Revised in the same changeset.
    - lira + yo = lirayo: a morphology formula, not a sentence.
    - Taivo futu yugemeyiya fututi: fututi after the verb (1.0:G1). */
 const GUIDE_FINDINGS: string[] = [
@@ -172,22 +195,15 @@ const GUIDE_FINDINGS: string[] = [
   'Maivo melo bena opioa lumi :: error: “melo” is in the verb slot but is not a verb form; its verb is meloma',
   'Maivo melo bena opioa lumi :: error: “opioa” is a second verb in one clause; open its clause with a linker (fime, raho, ata, kopisa…)',
   'Maivo melo bena opioa lumi :: error: “melo bena”: a noun does not modify a noun; use the adjective melosan (musical; melodic): melosan bena',
-  'Eli-krono maivo lirala. :: warn: eli-krono frames the clause and is followed by a comma',
   'lira + yo = lirayo :: error: “yo” is not a word of Liraasa',
   'lira + vu = liravu :: error: “vu” is not a word of Liraasa',
   'Ola ka li bumreasasan, zoke. :: warn: “bumreasasan” is a form whose slot has no meaning — “— (unused)”',
   'Lotero silda, li cilni ka lasona. :: error: “Lotero silda”: a noun does not modify a noun; use the adjective loterosan (other): loterosan silda',
-  'Taivo guraga maivo dossa cono. :: warn: “guraga” is a give-type verb: the pattern is VERB THEME ala RECIPIENT (guraga dossa cono ala maivo)',
   'Taivo futu yugemeyiya fututi. :: error: fututi (APPROACH) cannot follow the verb',
-  'Taivo guraga maivo cono. :: warn: “guraga” is a give-type verb: the pattern is VERB THEME ala RECIPIENT (guraga cono ala maivo)',
-  'Taivo guraga maivo pendi dossa cono. :: warn: “guraga” is a give-type verb: the pattern is VERB THEME ala RECIPIENT (guraga pendi dossa cono ala maivo)',
-  'Saivo po venreva pendi eli-krono. :: error: eli-krono is a clause-initial frame, followed by a comma',
   'Li dorbi ke lallesan hoyo! :: warn: “lallesan” is a form whose slot has no meaning — “— (unused)”',
-  'miru oro nami :: error: oro is paired: oro A oro B (either A or B); this oro has no partner',
   'Ki-saivo lirala? (historical) :: error: “historical” is not a word of Liraasa',
   'Miyo baba sola. :: error: “sola” is not a word of Liraasa',
   'Li sola loya benasan. :: error: “sola” is not a word of Liraasa',
-  'Taivo guraga maivo pendi dossa cono. :: warn: “guraga” is a give-type verb: the pattern is VERB THEME ala RECIPIENT (guraga pendi dossa cono ala maivo)',
   'Li dorbi ke lallesan hoyo! :: warn: “lallesan” is a form whose slot has no meaning — “— (unused)”',
   'Maivo vurlova, hema, baba cupa de miru. :: warn: “cupa” is pre-1.0; now buvokova',
   'Ola ka li bumreasasan, zoke. :: warn: “bumreasasan” is a form whose slot has no meaning — “— (unused)”',

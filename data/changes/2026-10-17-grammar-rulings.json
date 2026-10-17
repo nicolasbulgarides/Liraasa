@@ -1,0 +1,108 @@
+{
+ "id": "2026-10-17-grammar-rulings",
+ "edition": "1.2",
+ "created": "2026-10-17T12:00:00Z",
+ "author": "nicolas",
+ "summary": "Grammar rulings G24–G31 from the open-questions review of 2026-10-17 (ADR-0012), and the three examples ADR-0011 left to revise. 1.1 stays vocabulary-only (ADR-0009); these land on top of it.",
+ "rulings": [
+  {
+   "id": "G24",
+   "topic": "Time words: opening or closing",
+   "ruling": "A time word or time correlative (eli-krono, deyapressa, fututi, ki-krono's answers…) may open its clause or close it. When it opens the clause, the comma after it is optional. Only the four frame words zafra, finra, lanto and kenvi are opening-only, and they keep their comma.",
+   "refines": ["1.0 slot 1 FRAME"],
+   "examples": [
+    ["Eli-krono, maivo lirala.", "Now I sing."],
+    ["Eli-krono maivo lirala.", "Now I sing."],
+    ["Saivo po venreva pendi eli-krono.", "They arrived exactly now."],
+    ["Zafra, li dorbi po lallela.", "Suddenly the door opened."]
+   ]
+  },
+  {
+   "id": "G25",
+   "topic": "oro, alone and paired",
+   "ruling": "A single oro joins two equal constituents, exactly as ata does: miru oro nami, water or food. It may also open a clause or line that continues the one before (\"Or …\"). The pair oro A oro B is the emphatic \"either A or B\".",
+   "refines": ["1.0:G10"],
+   "examples": [
+    ["miru oro nami", "water or food"],
+    ["oro maivo ke li suma ki?", "Or am I the one…?"]
+   ]
+  },
+  {
+   "id": "G26",
+   "topic": "Give-type verbs: where the recipient goes",
+   "ruling": "A verb of giving (give, lend, send, owe, sell, pay, bring, teach, show) takes VERB THEME ala RECIPIENT. When the recipient is a pronoun it may instead stand bare straight after the verb: VERB PRONOUN THEME. Any other recipient takes ala.",
+   "refines": [],
+   "examples": [
+    ["Taivo guraga maivo dossa cono.", "You owe me two coins."],
+    ["Fisa, rimara tressa cono ala maivo.", "Please lend me three coins."]
+   ]
+  },
+  {
+   "id": "G27",
+   "topic": "Which side of de is the owner",
+   "ruling": "In X de Y the owner is Y, read as English \"X of Y\": li bumre de li cilni, the bread of the city; li lira de amor, the song of love. One exception: a pronoun or a personal name (pilo, father, used as a name included) standing before de is the owner, read as English \"X's Y\": maivo de lira, my song; pilo de bumre, father's bread. A pronoun is the owner wherever it stands: li purma de maivo, my parent. Fractions (tressa de cuara) are their own construction.",
+   "refines": ["1.0:G7"],
+   "examples": [
+    ["Taivo de lira ka vanisan.", "Your song is beautiful."],
+    ["Li bitiri de pilo ka su li tabu.", "Father's tools are on the table."],
+    ["Eli bumre ka sambasan ko pilo de bumre.", "This bread is the same as father's bread."],
+    ["Li bumre de li cilni ka sambanasan da eli bumre.", "City bread is different from this bread."],
+    ["Nullo de deyaapo, maivo po ne somusia.", "Last night, I didn't sleep."]
+   ]
+  },
+  {
+   "id": "G28",
+   "topic": "-ri after a number or quantifier",
+   "ruling": "After a number or a quantifier the plural -ri is optional: the number already says how many. Choose by sound and meter. Without a number or quantifier, a plural noun takes -ri.",
+   "refines": ["1.0:G7"],
+   "examples": [
+    ["Li dossa veluri lumila.", "The two stars shine."],
+    ["Taivo guraga maivo dossa cono.", "You owe me two coins."],
+    ["Maivo po vimova muya jemlari en li folni.", "I saw many insects on the flower."],
+    ["Li vila tovota muya marna.", "The village has much grain."]
+   ]
+  },
+  {
+   "id": "G29",
+   "topic": "An adjective standing as a noun",
+   "ruling": "An adjective may stand as a noun phrase on its own only after an article or determiner (li, eli, ola, baba): li ramumomvisan, the forgotten. Without one, an adjective needs its noun.",
+   "refines": ["1.0:G7"],
+   "examples": [
+    ["yesta li raleri de li sadori de li ramumomvisan po lenila maivori de lira.", "even the echoes of the sorrows of the forgotten heard our song"]
+   ]
+  },
+  {
+   "id": "G30",
+   "topic": "\"About\" is de",
+   "ruling": "Liraasa has no word for \"about / concerning\". A song, story or word about something is a de phrase under G27: li lira de amor, the song of (about) love. After a verb of saying, give the verb an object rather than su: po sarbisia lirari de amor, wrote songs of love.",
+   "refines": [],
+   "examples": [
+    ["Li ralelirapatu de li lira ka melosan.", "The song's refrain is musical."],
+    ["Li veluri po sarbisia lirari de amor.", "The stars wrote songs of love."]
+   ]
+  },
+  {
+   "id": "G31",
+   "topic": "Commands, address and narrative present",
+   "ruling": "A command has no subject: the clause opens at the verb (slot 3 notes), softened with fisa. A person addressed is a noun phrase set off by commas, at the start or end of the clause. In verse, once the time has been set, the bare present may narrate past events.",
+   "refines": [],
+   "examples": [
+    ["Vulravelmava maivo de yendo, fisa.", "Bandage my palm, please."],
+    ["Taivo viki pagopa ligo maivo ki, maivo de amor?", "Would you come near me, my love?"]
+   ]
+  }
+ ],
+ "ops": [
+  {"entry": "1.2:G24", "op": "add_ruling", "from": null, "to": "Time words open or close a clause; the opening comma is optional; zafra, finra, lanto, kenvi stay opening-only.", "addedIn": "1.2", "reason": "Canon closes clauses with eli-krono (Saivo po venreva pendi eli-krono; Li navutrana ne ka sovesan eli-krono) and once omits the comma (Eli-krono maivo lirala). Author's ruling, 2026-10-17.", "at": "2026-10-17T12:00:00Z", "author": "nicolas"},
+  {"entry": "1.2:G25", "op": "add_ruling", "from": null, "to": "A lone oro joins two equal parts like ata, and may open a continuing clause; oro A oro B is emphatic either/or.", "addedIn": "1.2", "ruling": "1.0:G10", "reason": "The function-word table's own example is a lone oro (miru oro nami). Author's ruling, 2026-10-17.", "at": "2026-10-17T12:00:00Z", "author": "nicolas"},
+  {"entry": "1.2:G26", "op": "add_ruling", "from": null, "to": "A give-type verb takes THEME ala RECIPIENT, or a bare pronoun recipient straight after the verb.", "addedIn": "1.2", "reason": "Canon writes guraga maivo (pendi) (dossa) cono four times; every bare recipient in canon is a pronoun. Author's ruling, 2026-10-17.", "at": "2026-10-17T12:00:00Z", "author": "nicolas"},
+  {"entry": "1.2:G27", "op": "add_ruling", "from": null, "to": "In X de Y the owner is Y, except a pronoun or personal name before de is the owner; a pronoun is always the owner.", "addedIn": "1.2", "ruling": "1.0:G7", "reason": "Fits every one of the 65 canon de phrases, including pilo de bumre, livna de taivo and nullo de deyaapo. Author's ruling, 2026-10-17.", "at": "2026-10-17T12:00:00Z", "author": "nicolas"},
+  {"entry": "1.2:G28", "op": "add_ruling", "from": null, "to": "-ri is optional after a number or quantifier.", "addedIn": "1.2", "ruling": "1.0:G7", "reason": "Canon has both dossa veluri and dossa cono, muya jemlari and muya marna. Author's ruling, 2026-10-17.", "at": "2026-10-17T12:00:00Z", "author": "nicolas"},
+  {"entry": "1.2:G29", "op": "add_ruling", "from": null, "to": "An adjective stands as a noun only after an article or determiner.", "addedIn": "1.2", "reason": "li ramumomvisan, \"the forgotten\", in Lira de Kronoasa; the -san ending keeps it parseable. Author's ruling, 2026-10-17.", "at": "2026-10-17T12:00:00Z", "author": "nicolas"},
+  {"entry": "1.2:G30", "op": "add_ruling", "from": null, "to": "\"About\" is a de phrase; no new word.", "addedIn": "1.2", "reason": "1.0 has no word for about; a de phrase is short, singable and reads as English verse (songs of love). Author's ruling, 2026-10-17.", "at": "2026-10-17T12:00:00Z", "author": "nicolas"},
+  {"entry": "1.2:G31", "op": "add_ruling", "from": null, "to": "Commands have no subject (fisa softens); address is set off by commas; verse may narrate in the present.", "addedIn": "1.2", "reason": "Commands and address are already written this way in canon (Vulravelmava maivo de yendo, fisa; …ki, maivo de amor?); the narrative present gives verse metrical freedom. Author's ruling, 2026-10-17.", "at": "2026-10-17T12:00:00Z", "author": "nicolas"},
+  {"entry": "example:41", "op": "edit_example", "from": "Maivo melo bena opioa lumi", "to": "Maivo de benasan melo opioa lumi.", "addedIn": "1.2", "ruling": "1.2:G27", "reason": "ADR-0011: melo bena is noun + noun, melo sat in the verb slot, and the pronoun owner lacked de. Rewritten to keep the gloss \"My good music hopes for light\" using only existing forms.", "at": "2026-10-17T12:00:00Z", "author": "nicolas"},
+  {"entry": "example:252", "op": "edit_example", "from": "Lotero silda, li cilni ka lasona.", "to": "Loterosan silda, li cilni ka lasona.", "addedIn": "1.2", "reason": "ADR-0011: lotero silda is noun + noun; loterosan is the adjective \"other\".", "at": "2026-10-17T12:00:00Z", "author": "nicolas"},
+  {"entry": "example:522", "op": "edit_example", "from": "Maivo po lemula baba lotero lermi.", "to": "Maivo po lemula baba loterosan lermi.", "addedIn": "1.2", "reason": "ADR-0011: lotero lermi is noun + noun; loterosan is the adjective \"other\".", "at": "2026-10-17T12:00:00Z", "author": "nicolas"}
+ ]
+}

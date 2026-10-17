@@ -22,7 +22,11 @@ export type ChangeOp =
   | 'retire_and_replace'
   | 'activate_slot'
   | 'merge_entries'
-  | 'split_entry';
+  | 'split_entry'
+  /** A grammar ruling. `entry` is its edition-qualified id, e.g. `1.2:G24`. */
+  | 'add_ruling'
+  /** An example sentence. `entry` is `example:<index>` in the lexicon's `examples`. */
+  | 'edit_example';
 
 /**
  * One recorded change.

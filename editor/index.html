@@ -900,13 +900,19 @@
   }
 
   /* ----------------------------------------------------------- lexicon */
-  #q {
+  #q,
+  #rq {
     width: 100%;
     padding: 6px 9px;
     border: 1px solid var(--rule-firm);
     border-radius: var(--r);
     background: var(--page);
     margin-bottom: var(--s3);
+  }
+
+  .rule-ex {
+    font-family: var(--lira);
+    font-size: 1rem;
   }
 
   .hit {
@@ -1749,8 +1755,10 @@
   const TENSE = new Set(slotRow('TENSE')[2]);
   // FRAME also lists "time words" and "correlatives of time": descriptions, not words.
   const FRAME_OPS = new Set(slotRow('FRAME')[2].filter((w) => !w.includes(' ')));
-  // The frame words that open their clause, followed by a comma.
-  const FRAME_WORDS = new Set([...FRAME_OPS, 'eli-krono']);
+  // The frame words that open their clause, followed by a comma. Time words
+  // such as eli-krono are not among them: they open or close a clause, and
+  // the comma after an opening one is optional (1.2:G24).
+  const FRAME_WORDS = FRAME_OPS;
   // Prepositions, read from the function-word positions; the copulas and the
   // clause conjunction kureli mention location too, and are not prepositions.
   const PREP = new Set(
@@ -2039,11 +2047,14 @@
       // A noun phrase: the subject before the verb, an object or complement after it.
       const e = np(i);
       if (e > i) {
-        // A give-type verb takes VERB THEME ala RECIPIENT, not two bare phrases.
+        /* A give-type verb takes VERB THEME ala RECIPIENT, or, when the
+           recipient is a pronoun, VERB PRONOUN THEME: guraga maivo dossa
+           cono (1.2:G26). Any other bare recipient is warned. */
         if (
           state === 'post' &&
           i === lastVerb + 1 &&
           GIVE_VERBS.has(cl[lastVerb]) &&
+          !(e === i + 1 && PRONOUNS.has(cl[i])) &&
           !is(e, 'adv') &&
           np(e) > e
         ) {
@@ -2052,7 +2063,7 @@
           warn(
             '“' +
               cr[lastVerb] +
-              '” is a give-type verb: the pattern is VERB THEME ala RECIPIENT (' +
+              '” is a give-type verb: only a pronoun recipient stands bare after it; otherwise VERB THEME ala RECIPIENT (' +
               cr[lastVerb] +
               ' ' +
               theme +
@@ -2256,14 +2267,18 @@
             ? 'de needs a noun phrase after it'
             : 'de cannot follow the verb “' +
                 words[i - 1] +
-                '”; de joins an owner and a thing (1.0 has no “about”: give the verb an object)',
+                '”; de joins an owner and a thing (for “about”, give the verb an object: 1.2:G30)',
           'noun phrase',
         );
       }
 
       // 1.0 has no "about": a communication verb with su reads as "on".
       if (SAY_VERBS.has(w) && next === 'su') {
-        add('warn', "1.0 has no 'about'; “" + words[i] + ' su” reads literally', 'about');
+        add(
+          'warn',
+          "Liraasa has no 'about'; “" + words[i] + ' su” reads literally: use a de phrase',
+          '1.2:G30',
+        );
       }
 
       // fime introduces a content clause, whose subject comes next.
@@ -2275,8 +2290,8 @@
         );
       }
 
-      // zafra, finra, lanto, kenvi, eli-krono open the clause, followed by a
-      // pause. A scope word may stand before it (1.0:G1): Ne eli-krono.
+      // zafra, finra, lanto, kenvi open the clause, followed by a pause. A
+      // scope word may stand before it (1.0:G1): Ne zafra.
       if (FRAME_WORDS.has(w) && lw.slice(0, i).some((x) => !FOCUS_W.has(x) && x !== 'ne')) {
         add('error', w + ' is a clause-initial frame, followed by a comma', '1.0 slot 1 FRAME');
       }
@@ -2326,15 +2341,15 @@
       }
     }
 
-    // A frame opens the clause and is followed by a pause. Any other time word
-    // only usually takes the comma, so for those it is a note.
+    // A frame opens the clause and is followed by a pause. For any other time
+    // word the comma is optional (1.2:G24), so for those it is a note.
     if (FRAME_WORDS.has(lw[0]) && lw.length > 1) {
       add('warn', lw[0] + ' frames the clause and is followed by a comma', '1.0 slot 1 FRAME');
     } else if (/-krono$/.test(lw[0]) && lw.length > 1) {
       add(
         'note',
-        lw[0] + ' frames the clause; a comma after it marks the pause',
-        '1.0 slot 1 FRAME',
+        lw[0] + ' frames the clause; a comma after it, optional, marks the pause',
+        '1.2:G24',
       );
     }
 
@@ -2371,19 +2386,9 @@
       }
     }
 
-    // oro is paired (1.0:G10): oro A oro B. A question that opens with a lone
-    // oro may pair with the question beside it, which checkText looks at.
-    for (const sentence of text.split(/(?<=[.!?])\s*/)) {
-      const t = tokenize(sentence).map((w) => w.toLowerCase());
-      const pairsAcross = t[0] === 'oro' && /\?\s*$/.test(sentence);
-      if (t.filter((w) => w === 'oro').length === 1 && !pairsAcross) {
-        add(
-          'error',
-          'oro is paired: oro A oro B (either A or B); this oro has no partner',
-          '1.0:G10',
-        );
-      }
-    }
+    // A lone oro joins two equal parts, as ata does, and may open a clause
+    // that continues the one before ("Or …"); oro A oro B is the emphatic
+    // "either A or B" (1.2:G25). Nothing to check.
 
     const pieces = text.split(/([.,;:!?—…"“”()+=]+)/);
     for (let n = 0; n < pieces.length; n += 2) {
@@ -2494,31 +2499,9 @@
     return f;
   }
 
-  /** A question that opens with a lone oro: it pairs with its neighbour. */
-  const opensWithOro = (line) =>
-    /^\s*oro\b/i.test(line) &&
-    /\?\s*$/.test(line) &&
-    tokenize(line).filter((w) => w.toLowerCase() === 'oro').length === 1;
-
-  /** Every line's findings, plus what only shows across lines: oro paired
-      over two consecutive questions, each of which must open with oro. */
+  /** Every line's findings. */
   function checkText(lines, register, english) {
-    const out = lines.map((l, i) => (l.trim() ? checkLine(l, i + 1, register, english[i]) : []));
-    const live = lines.map((l, i) => [l, i]).filter(([l]) => l.trim());
-    live.forEach(([l, i], k) => {
-      if (!opensWithOro(l)) return;
-      const beside = [live[k - 1], live[k + 1]].filter(Boolean);
-      if (!beside.some(([m]) => opensWithOro(m))) {
-        out[i].push({
-          line: i + 1,
-          severity: 'error',
-          message:
-            'oro is paired: oro A oro B; a question that opens with oro needs the question before or after it to open with oro too',
-          rule: '1.0:G10',
-        });
-      }
-    });
-    return out.flat();
+    return lines.flatMap((l, i) => (l.trim() ? checkLine(l, i + 1, register, english[i]) : []));
   }
 
   /* A mechanical back-translation from the lexicon: each word's first sense,
@@ -2544,6 +2527,16 @@
     saivori: 'they',
     itori: 'they',
   };
+  const OBJECT_OF = {
+    maivo: 'me',
+    taivo: 'you',
+    saivo: 'him/her',
+    ito: 'it',
+    maivori: 'us',
+    taivori: 'you',
+    saivori: 'them',
+    itori: 'them',
+  };
   const firstSense = (g) =>
     String(g)
       .split(/[;,/]/)[0]
@@ -2558,6 +2551,12 @@
     for (let i = 0; i < t.length; i += 1) {
       const w = t[i].toLowerCase();
       if (PRONOUNS.has(w)) {
+        // A pronoun is always the owner (1.2:G27): before de it is "my",
+        // after it "of me".
+        if ((t[i - 1] || '').toLowerCase() === 'de') {
+          out.push(OBJECT_OF[w] || w);
+          continue;
+        }
         if ((t[i + 1] || '').toLowerCase() === 'de') {
           out.push(POSSESSIVE_OF[w] || w);
           i += 1;
@@ -4337,6 +4336,61 @@
     els.hits.innerHTML = parts.join('');
   }
 
+  // Slot notes are 1.0 data; a later ruling that changes one is noted beside it.
+  const SLOT_UPDATES = {
+    FRAME:
+      'time words may also close the clause, and their comma is optional; only zafra, finra, lanto, kenvi must open it (1.2:G24)',
+  };
+
+  const EDITION_NAMES = { 1.2: '1.2 · new', '1.0': '1.0', 0.8: '0.8 · carried' };
+
+  /** The rulings, grouped by edition, filtered by a search over every field. */
+  function renderRulings(query) {
+    const q = query.trim().toLowerCase();
+    const hits = D.rulings.filter((r) => !q || JSON.stringify(r).toLowerCase().includes(q));
+    const groups = new Map();
+    for (const r of hits) {
+      const ed = r[0].split(':')[0];
+      if (!groups.has(ed)) groups.set(ed, []);
+      groups.get(ed).push(r);
+    }
+    const out = [];
+    for (const [ed, rs] of groups) {
+      out.push(
+        '<p class="label" style="margin-top:var(--s3)">' + esc(EDITION_NAMES[ed] || ed) + '</p>',
+      );
+      for (const [id, topic, ruling, examples] of rs) {
+        out.push(
+          '<div class="hit"><span class="mono label">' +
+            esc(id) +
+            '</span> <b>' +
+            esc(topic) +
+            '</b><div>' +
+            esc(ruling) +
+            '</div>' +
+            (examples || [])
+              .map(
+                ([li, en]) =>
+                  '<div><span class="liraasa rule-ex">' +
+                  esc(li) +
+                  '</span> <span class="label">' +
+                  esc(en) +
+                  '</span></div>',
+              )
+              .join('') +
+            '</div>',
+        );
+      }
+    }
+    document.getElementById('rulingList').innerHTML =
+      '<p class="label">' +
+      hits.length +
+      ' of ' +
+      D.rulings.length +
+      '</p>' +
+      (out.join('') || '<p class="label">No ruling matches.</p>');
+  }
+
   function renderGrammar() {
     const rows = D.grammar.slots
       .map(
@@ -4347,7 +4401,11 @@
           esc(slot) +
           '</b><br><span class="label">' +
           esc(notes || '') +
-          '</span></td><td class="lira">' +
+          '</span>' +
+          (SLOT_UPDATES[slot]
+            ? '<br><span class="label">' + esc(SLOT_UPDATES[slot]) + '</span>'
+            : '') +
+          '</td><td class="lira">' +
           esc(words.join(' · ')) +
           '</td></tr>',
       )
@@ -4375,7 +4433,14 @@
       esc(D.phonology.consonantsOther) +
       '<br>stress — ' +
       esc(D.phonology.stress) +
-      '</div>';
+      '</div>' +
+      '<p class="label" style="margin-top:var(--s4)">Rulings</p>' +
+      '<input id="rq" type="search" placeholder="Search rulings: oro, de, 1.2:G27…" aria-label="Search the rulings" />' +
+      '<div id="rulingList" aria-live="polite"></div>';
+    renderRulings('');
+    document.getElementById('rq').addEventListener('input', (e) => {
+      renderRulings(e.target.value);
+    });
   }
 
   /* ------------------------------------------------------------ insert */
