@@ -20,5 +20,8 @@ editor/liraasa-data.js
 # `npm run build:handoff`, and the brief's tables are hand-aligned.
 handoff
 
+# The published copy of the grammar guide (`npm run publish:guide`).
+LirasaCodexLatest
+
 # The author's separate TTS experiment.
 liraasa_voice_lab
