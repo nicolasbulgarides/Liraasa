@@ -26,6 +26,17 @@ export const GUIDE = {
   title: 'Liraasa 1.1 Grammar Guide',
   subtitle: 'A language built for singing',
 
+  /**
+   * The four words under the cover emblem, one per motif: sun, heart, moon,
+   * song. Each must be a canon spelling; the build's word check enforces it.
+   */
+  coverMotif: [
+    ['sulba', 'sun'],
+    ['lore', 'heart'],
+    ['luno', 'moon'],
+    ['lira', 'song'],
+  ] as const,
+
   /** Featured words: every form, sound, derivation, compound, rhyme and canon example. */
   coreGroups: [
     {
