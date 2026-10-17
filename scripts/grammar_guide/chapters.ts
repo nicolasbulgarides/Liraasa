@@ -76,7 +76,10 @@ export function welcome(index: Index): string {
       ],
       ['Function words', n(lex.function_words.length)],
       ['Pronouns', n(lex.pronouns.length)],
-      ['Correlatives', `${n(lex.correlatives.length)}, a 6 × 6 grid`],
+      [
+        'Correlatives',
+        `${n(lex.correlatives.length)}: a 6 × 6 grid, plus ${n(lex.correlatives.length - 36)} frequency words [[1.2:G34]]`,
+      ],
       [
         'Time words',
         `${n(lex.time_and_dates.length)} rows, ${n(new Set(lex.time_and_dates.map((t) => t.form)).size)} distinct forms`,
@@ -102,7 +105,7 @@ export function welcome(index: Index): string {
     'Liraasa is a constructed language **built for singing**: open syllables, pure vowels, penultimate stress and a regular morphology, so lyrics scan and rhyme predictably.',
     `${h3('What this guide covers')}
 ${paras(
-  `This is the grammar of Liraasa ${lex.version}: all of 1.0, the 1.1 vocabulary supplement, and the 1.2 grammar rulings. It starts with the sound, moves to words and the core vocabulary, then the small words and the clause, then recipes for turning English into Liraasa, every ruling, and finally how a machine reads a line.`,
+  `This is the grammar of Liraasa ${lex.version}: all of 1.0, the 1.1 vocabulary supplement, and the 1.2 update, its grammar rulings and its new words. It starts with the sound, moves to words, the core vocabulary and what 1.2 adds, then the small words and the clause, then recipes for turning English into Liraasa, every ruling, how a machine reads a line, and the 1.2 changelog.`,
   'It is written for three readers at once: the songwriter who writes and sings in Liraasa, a learner coming from English, and anyone rebuilding the parser, who needs the rules stated exactly.',
 )}
 ${h3('At a glance')}
@@ -166,8 +169,8 @@ ${table(
   ],
 )}
 ${callout(
-  'caution',
-  'The protected-exceptions label says “36 amor- double-a roots”. That count is from 0.8: these are compounds, and 1.0 has **39** of them (20 ending in `amor`, 19 beginning with it). The label is scheduled for repair.',
+  'parsing',
+  'Until 1.2 the protected-exceptions label read “36 amor- double-a roots”, the 0.8 count. They are compounds, and there are **39** of them: 20 ending in `amor`, 19 beginning with it. 1.2 repaired the label.',
 )}
 ${h3('Rhyme')}
 ${p(`Every headword belongs to a rhyme family by its ending: ${n(index.lex.rhyme_families.length)} families in all. Each featured word in Part 4 lists its rhymes.`)}`,
@@ -325,7 +328,7 @@ export function smallWordsPart(index: Index): string {
   );
 
   return part(
-    '5',
+    '6',
     'The small words',
     'Pronouns, correlatives, numbers, colours and particles: closed classes, each with its own pattern. The full tables are in the appendices.',
     `${h3('Pronouns')}
@@ -334,6 +337,7 @@ ${callout('parsing', '`maivo` is both a pronoun and a root. A spelling can belon
 ${h3('Correlatives: determiner + concept')}
 ${grid}
 ${p('Correlatives of place, time, manner and cause (`-pago`, `-krono`, `-modo`, `-kasa`) work as adverbials. Those of thing and person (`-coda`, `-nela`) work as nouns.')}
+${p('Since 1.2 three quantifiers join `krono` and only `krono`: `muya-krono` often, `poka-krono` rarely, `rada-krono` each time [[1.2:G34]].')}
 ${h3('Numbers')}
 ${table(['Value', 'Word'], digits, { cls: 'compact digits' })}
 ${paras(
@@ -422,7 +426,7 @@ export function clausePart(index: Index): string {
   );
 
   return part(
-    '6',
+    '7',
     'The clause',
     'A Liraasa clause is a row of twenty slots in a fixed order, anchored on the verb. Only the subject and the verb are required.',
     `${h3('The 20-slot template')}
@@ -475,7 +479,7 @@ ${examples([['Taivo futu relnura ki?', 'Will you come back?']])}`,
 
 // --------------------------------------------------------------- 7. Recipes
 
-const RECIPES: readonly (readonly [string, string, string, string, string])[] = [
+export const RECIPES: readonly (readonly [string, string, string, string, string])[] = [
   ['my / your X', 'PRONOUN de X', 'taivo de lira', 'your song', '1.2:G27'],
   ["Father's X", 'NAME de X', 'pilo de bumre', "father's bread", '1.2:G27'],
   ['the X of the Y', 'li X de li Y', 'li bumre de li cilni', 'the bread of the city', '1.2:G27'],
@@ -506,6 +510,31 @@ const RECIPES: readonly (readonly [string, string, string, string, string])[] = 
     'slot 1',
   ],
   ['water or food', 'A oro B', 'miru oro nami', 'water or food', '1.2:G25'],
+  [
+    'open it with a key',
+    'yuta + the instrument',
+    'Maivo lallela li dorbi yuta li kemye.',
+    'I open the door with the key.',
+    '1.2:G33',
+  ],
+  ['often / rarely', 'quantifier-krono', 'Maivo lirala muya-krono.', 'I sing often.', '1.2:G34'],
+  ['too many songs', 'diba + quantifier or adjective', 'diba muya lirari', 'too many songs', ''],
+  [
+    'my father',
+    'a pronoun outranks a name',
+    'Pilo de maivo po lirala.',
+    'My father sang.',
+    '1.2:G32',
+  ],
+  ['my daughter', 'FEMALE + linu', 'Maivo de minvalinu lirala.', 'My daughter sings.', '1.2:G36'],
+  ['aunt', 'gender adjective + neutral noun', 'minvasan purmafamli', 'aunt', '1.2:G36'],
+  [
+    'recognize',
+    'curated motion metaphor',
+    'Maivo revo-sabesia taivo.',
+    'I recognize you.',
+    '1.2:G35',
+  ],
   ['did / -ed', 'po + verb', 'Saivo po venreva.', 'They arrived.', 'slot 4'],
   ['will', 'futu + verb', 'Taivo futu relnura ki?', 'Will you come back?', 'slot 4'],
   ['not', 'ne before what it negates', 'Maivo po ne somusia.', 'I did not sleep.', '1.0:G1'],
@@ -556,7 +585,7 @@ const RECIPES: readonly (readonly [string, string, string, string, string])[] = 
 
 export function recipesPart(): string {
   return part(
-    '7',
+    '8',
     'Patterns: English → Liraasa',
     'The recipes a translator follows. Every example is canon.',
     table(
@@ -614,9 +643,9 @@ ${r.examples === undefined ? '' : examples(r.examples)}
   );
 
   return part(
-    '8',
+    '9',
     'Every ruling',
-    'Verbatim from the lexicon, grouped by edition, newest first. The 1.2 rulings come from the open-questions review of 2026-10-17 (ADR-0012).',
+    'Verbatim from the lexicon, grouped by edition, newest first. 1.2:G24–G31 come from the open-questions review of 2026-10-17 (ADR-0012), G32–G36 from the 1.2 lexicon update (ADR-0013).',
     `${h3(`Rulings 1.2 (${lex.rulings_1_2[0]?.id ?? ''}–${lex.rulings_1_2.at(-1)?.id ?? ''})`)}
 ${r12}
 ${h3('Rulings 1.0')}
@@ -648,7 +677,7 @@ ${revisedTable}`,
 
 // ---------------------------------------------------------------- 9. Parsing
 
-const READ_ORDER = [
+export const READ_ORDER = [
   'Exact form in the form index → **lexical** (every reading kept).',
   'A closed-class word → its class.',
   'A numeral, plain or hyphenated, optionally with `-ne` (ordinal).',
@@ -661,7 +690,7 @@ const READ_ORDER = [
   'Otherwise: **“not a word of Liraasa”**, an error. Never guess a meaning.',
 ];
 
-const RULES: readonly (readonly [string, string, string])[] = [
+export const RULES: readonly (readonly [string, string, string])[] = [
   ['error', 'unknown word: “not a word of Liraasa”', 'never invent'],
   ['warn', 'a form whose slot is unused', '0.8:R2'],
   ['warn', 'a pre-1.0 spelling, with its replacement', '1.0:G19'],
@@ -691,7 +720,7 @@ export function parsingPart(): string {
   const linkers =
     'ata nara oro si sina kasa kopisa nevi raho fime kube nayo tuni sige kureli sidu tonsi narli korsi krotiata yava gome ki-oro sabri';
   return part(
-    '9',
+    '10',
     'Parsing: how a machine reads a line',
     'The reference implementation is the checker in the Workbench’s editor/index.html (parseWord, splitClauses, placeClause, checkLine, backTranslate). This part specifies it.',
     `${h3('Data built from the lexicon')}
@@ -743,19 +772,21 @@ ${callout('parsing', 'Generated text is untrusted. Every machine-written Liraasa
 
 // --------------------------------------------------------- 10. Open questions
 
+/** Not decided: presented as open, resolved nowhere (SPEC §14). */
+export const OPEN_QUESTIONS: readonly string[] = [
+  '**“Once”, “N times”:** no construction yet.',
+  '**“To + verb”:** a general complement beyond `sidu` (shared subject) and `kopisa` (purpose).',
+  '**Evidentials:** the meaning when absent, whose evidence counts inside a `fime` clause, and the meaning in a question.',
+  '**Relative clauses on a prepositional object:** “the house in which …”.',
+  '**Restoring retired roots** needed for *Bumrepago* and possibly others: deferred to the author.',
+];
+
 export function openQuestionsPart(): string {
   return part(
-    '10',
+    '11',
     'Open questions',
     'These are not decided. They are presented as open, and nothing in this guide resolves them.',
-    ul([
-      '**“Once”, “N times”:** no construction yet.',
-      '**“To + verb”:** a general complement beyond `sidu` (shared subject) and `kopisa` (purpose).',
-      '**Evidentials:** the meaning when absent, whose evidence counts inside a `fime` clause, and the meaning in a question.',
-      '**Relative clauses on a prepositional object:** “the house in which …”.',
-      '**The protected-exceptions label:** it says 36 where 1.0 has 39 compounds; scheduled for repair.',
-      '**Restoring retired roots** needed for *Bumrepago* and possibly others: deferred to the author.',
-    ]),
+    ul(OPEN_QUESTIONS),
   );
 }
 

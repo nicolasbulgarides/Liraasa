@@ -15,8 +15,12 @@ import { phoneInventory } from '../src/core/phonetics/g2p';
 import type { RawLexicon } from '../src/core/model/raw';
 import { parseArgs } from './args';
 
-const DEFAULT_LEXICON = 'data/lexicon/liraasa_1_1.json';
-/** Grammar rulings on top of 1.1 (ADR-0012): its rulings and example revisions. */
+const DEFAULT_LEXICON = 'data/lexicon/liraasa_1_2.json';
+/**
+ * Grammar rulings on top of 1.1 (ADR-0012). A 1.1 lexicon needs them applied
+ * here; 1.2 already carries them as `rulings_1_2`, its examples revised
+ * (ADR-0013).
+ */
 const GRAMMAR_CHANGESET = 'data/changes/2026-10-17-grammar-rulings.json';
 
 interface GrammarChangeset {
@@ -25,6 +29,7 @@ interface GrammarChangeset {
   ops: { entry: string; op: string; from: string | null; to: string | null }[];
 }
 const DEFAULT_OUT = 'data/editor';
+const NAMES = 'data/checker/names.json';
 
 function main(): void {
   const { flags } = parseArgs(process.argv.slice(2), ['lexicon', 'out-dir']);
@@ -34,8 +39,10 @@ function main(): void {
   const grammar = JSON.parse(readFileSync(resolve(GRAMMAR_CHANGESET), 'utf8')) as GrammarChangeset;
 
   // The changeset's example revisions, applied by index to the 1.1 text.
+  const lexRulings12 = (lex as unknown as { rulings_1_2?: GrammarChangeset['rulings'] })
+    .rulings_1_2;
   const revised = new Map<number, string>();
-  for (const op of grammar.ops) {
+  for (const op of lexRulings12 === undefined ? grammar.ops : []) {
     if (op.op !== 'edit_example' || op.to === null) continue;
     const index = Number(op.entry.replace('example:', ''));
     if (lex.examples[index]?.liraasa !== op.from) {
@@ -119,7 +126,12 @@ function main(): void {
     motionPrefixes: Object.keys(lex.motion_prefixes.canon),
     // [id, topic, ruling, examples]; newest edition first.
     rulings: [
-      ...grammar.rulings.map((r) => [`${grammar.edition}:${r.id}`, r.topic, r.ruling, r.examples]),
+      ...(lexRulings12 ?? grammar.rulings).map((r) => [
+        `1.2:${r.id}`,
+        r.topic,
+        r.ruling,
+        r.examples,
+      ]),
       ...lex.rulings_1_0.map((r) => [`1.0:${r.id}`, r.topic, r.ruling, []]),
       ...lex.rulings_0_8_carried.map((r) => [`0.8:${r.id}`, r.topic, r.ruling, []]),
     ],
@@ -127,23 +139,8 @@ function main(): void {
     legacy: Object.fromEntries(
       Object.entries(lex.legacy.migration_forms).map(([from, m]) => [from, m.to]),
     ),
-    // Proper names attested in the texts, so the editor does not flag them.
-    names: [
-      'Melodia',
-      'Lunaria',
-      'Merceria',
-      'Hypermatria',
-      'Kipo',
-      'Dorin',
-      'Aviya',
-      'Ilora',
-      'Velina',
-      'Lina',
-      'Pietri',
-      'Nicolas',
-      'Narvolore',
-      'Vorbalira',
-    ],
+    // Proper names attested in the texts (data/checker/names.json), so the editor does not flag them.
+    names: (JSON.parse(readFileSync(resolve(NAMES), 'utf8')) as { names: string[] }).names,
     examples: lex.examples
       .map((e, i) => ({ ...e, liraasa: revised.get(i) ?? e.liraasa }))
       .filter((e) => e.status !== 'HISTORICAL')

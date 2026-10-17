@@ -67,7 +67,7 @@ export function resolveCore(index: Index, ids: Map<string, string>, groups: read
   }));
 }
 
-function formsTable(h: Headword): string {
+export function formsTable(h: Headword): string {
   const rows = FORM_SLOTS.map((slot, i) => {
     const form = formOf(h, slot);
     const used = isUsed(h, slot);

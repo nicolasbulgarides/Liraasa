@@ -1,5 +1,6 @@
 import { beforeAll, describe, expect, it } from 'vitest';
 import { type Composer, type ComposerDraft, loadComposer } from './editorComposer';
+import { type Checker, loadChecker } from '../checker/loadChecker';
 
 /**
  * The editor's assisted composer (editor/index.html, Compose tab). Two
@@ -9,8 +10,10 @@ import { type Composer, type ComposerDraft, loadComposer } from './editorCompose
  */
 
 let composer: Composer;
+let checker: Checker;
 beforeAll(() => {
   composer = loadComposer();
+  checker = loadChecker().checker;
 });
 
 const compose = (s: string): ComposerDraft => composer.composeSentence(s);
@@ -94,8 +97,8 @@ describe('every draft passes the checker', () => {
     'Suddenly the stars began to sing again.',
     'Will you sing?',
   ])('%s', (en) => {
-    const errors = composer
-      .checkLine(text(en), 1, 'everyday')
+    const errors = checker
+      .checkLine(text(en), 1, '', { register: 'everyday' })
       .filter((f) => f.severity === 'error');
     expect(errors).toEqual([]);
   });
@@ -195,8 +198,8 @@ describe('Song of Time', () => {
       'Your beauty was a shimmering light that shone.',
       'Even the echoes of the shadows of the forgotten heard your song.',
     ]) {
-      const errors = composer
-        .checkLine(text(en), 1, 'poetic')
+      const errors = checker
+        .checkLine(text(en), 1, '', { register: 'poetic' })
         .filter((f) => f.severity === 'error');
       expect(errors, en).toEqual([]);
     }

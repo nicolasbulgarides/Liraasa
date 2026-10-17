@@ -3,69 +3,74 @@
  *
  *   npm run build:handoff
  *
- * Writes handoff/liraasa_1_1_complete.json: the 1.1 lexicon (every 1.0 entry,
- * every 1.1 addition, every section and ruling, untouched) plus the 1.2
- * grammar changeset applied on top — its rulings as `rulings_1_2`, its example
- * revisions in place with the 1.1 text kept beside them. The canonical files
- * are only read.
+ * Writes handoff/liraasa_1_2_complete.json: the canonical 1.2 lexicon (built
+ * from 1.1 by `npm run integrate:1.2`, ADR-0013), with two things a guide
+ * needs that the lexicon records elsewhere:
+ *
+ * - each example the 1.2 grammar changeset revised keeps its 1.1 text beside
+ *   it (`liraasa_1_1`, `revised_in`, `revision_reason`);
+ * - the 1.2 changesets themselves, as `changesets_1_2_full`, so the guide's
+ *   changelog is generated from the record rather than written beside it.
+ *
+ * The canonical files are only read.
  */
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
-import type { Changeset } from '../src/core/change/changelog';
+import type { LexiconChangeset } from '../src/core/change/apply';
+import { CHANGESETS_1_2 } from './changesets_1_2';
 
-const LEXICON = 'data/lexicon/liraasa_1_1.json';
-const CHANGESET = 'data/changes/2026-10-17-grammar-rulings.json';
+const LEXICON = 'data/lexicon/liraasa_1_2.json';
+const REPORT = 'data/lexicon/integration_report_1_2.json';
 const OUT_DIR = 'handoff';
-const OUT = 'liraasa_1_1_complete.json';
-
-interface RulingsChangeset extends Changeset {
-  rulings: Record<string, unknown>[];
-}
+const OUT = 'liraasa_1_2_complete.json';
 
 function main(): void {
   const lexicon = JSON.parse(readFileSync(resolve(LEXICON), 'utf8')) as Record<string, unknown> & {
     examples: Record<string, unknown>[];
+    headwords: unknown[];
   };
-  const changeset = JSON.parse(readFileSync(resolve(CHANGESET), 'utf8')) as RulingsChangeset;
+  const changesets = CHANGESETS_1_2.map(
+    (p) => JSON.parse(readFileSync(resolve(p), 'utf8')) as LexiconChangeset,
+  );
+  const report = JSON.parse(readFileSync(resolve(REPORT), 'utf8')) as { counts: unknown };
 
   const examples = lexicon.examples.map((e) => ({ ...e }));
-  for (const op of changeset.ops) {
-    if (op.op !== 'edit_example') continue;
-    const index = Number(op.entry.replace('example:', ''));
-    const example = examples[index];
-    if (example?.liraasa !== op.from) {
-      throw new Error(`${op.entry}: expected "${String(op.from)}" in the 1.1 lexicon`);
+  let revised = 0;
+  for (const cs of changesets) {
+    for (const op of cs.ops) {
+      if (op.op !== 'edit_example') continue;
+      const index = Number(op.entry.replace('example:', ''));
+      const example = examples[index];
+      if (example?.liraasa !== op.to) {
+        throw new Error(`${op.entry}: expected "${String(op.to)}" in the 1.2 lexicon`);
+      }
+      examples[index] = {
+        ...example,
+        liraasa_1_1: op.from,
+        revised_in: op.addedIn,
+        revision_reason: op.reason,
+      };
+      revised += 1;
     }
-    examples[index] = {
-      ...example,
-      liraasa: op.to,
-      liraasa_1_1: op.from,
-      revised_in: op.addedIn,
-      revision_reason: op.reason,
-    };
   }
 
   const complete = {
     ...lexicon,
     handoff_note:
-      'Liraasa 1.1 (all of 1.0 plus the 1.1 vocabulary supplement) with the 1.2 grammar changeset ' +
-      `${changeset.id} applied: rulings_1_2 holds the new rulings, and revised examples keep their ` +
-      '1.1 text in liraasa_1_1. Ruling ids are edition-qualified: 0.8:R1, 1.0:G7, 1.2:G24. ' +
-      'Built by scripts/build_handoff.ts; the canonical files are data/lexicon/liraasa_1_1.json ' +
-      `and ${CHANGESET}.`,
+      'Liraasa 1.2: all of 1.0, the 1.1 vocabulary supplement, and the 1.2 changesets ' +
+      `${changesets.map((c) => c.id).join(' and ')} (rulings_1_2, new vocabulary, reglosses). ` +
+      'Revised examples keep their 1.1 text in liraasa_1_1. Ruling ids are edition-qualified: ' +
+      '0.8:R1, 1.0:G7, 1.2:G24. Built by scripts/build_handoff.ts from data/lexicon/liraasa_1_2.json.',
     examples,
-    rulings_1_2: changeset.rulings,
-    changeset_1_2: { id: changeset.id, summary: changeset.summary, ops: changeset.ops },
+    counts_1_1_to_1_2: report.counts,
+    changesets_1_2_full: changesets,
   };
 
   mkdirSync(resolve(OUT_DIR), { recursive: true });
   writeFileSync(resolve(OUT_DIR, OUT), JSON.stringify(complete, null, 1), 'utf8');
   console.log(`wrote ${OUT_DIR}/${OUT}`);
-  console.log(`  ${String((lexicon.headwords as unknown[]).length)} headwords`);
-  console.log(
-    `  ${String(examples.length)} examples, ${String(changeset.ops.filter((o) => o.op === 'edit_example').length)} revised`,
-  );
-  console.log(`  ${String(changeset.rulings.length)} rulings added as rulings_1_2`);
+  console.log(`  ${String(lexicon.headwords.length)} headwords`);
+  console.log(`  ${String(examples.length)} examples, ${String(revised)} revised`);
 }
 
 main();

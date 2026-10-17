@@ -1,0 +1,545 @@
+{
+ "lexicon": "data/lexicon/liraasa_1_2.json",
+ "active": 12770,
+ "reserved": 509,
+ "audit": {
+  "template": [
+   {
+    "word": "amor",
+    "problem": "not consonant-initial"
+   },
+   {
+    "word": "apok",
+    "problem": "not consonant-initial"
+   },
+   {
+    "word": "bulli",
+    "problem": "doubled letter 'll'"
+   },
+   {
+    "word": "daigo",
+    "problem": "3 syllable(s), template wants 2"
+   },
+   {
+    "word": "follu",
+    "problem": "doubled letter 'll'"
+   },
+   {
+    "word": "jurevi",
+    "problem": "3 syllable(s), template wants 2"
+   },
+   {
+    "word": "lalle",
+    "problem": "doubled letter 'll'"
+   },
+   {
+    "word": "lideo",
+    "problem": "3 syllable(s), template wants 2"
+   },
+   {
+    "word": "lotero",
+    "problem": "3 syllable(s), template wants 2"
+   },
+   {
+    "word": "maivo",
+    "problem": "3 syllable(s), template wants 2"
+   },
+   {
+    "word": "mebane",
+    "problem": "3 syllable(s), template wants 2"
+   },
+   {
+    "word": "melli",
+    "problem": "doubled letter 'll'"
+   },
+   {
+    "word": "milobe",
+    "problem": "3 syllable(s), template wants 2"
+   },
+   {
+    "word": "molovu",
+    "problem": "3 syllable(s), template wants 2"
+   },
+   {
+    "word": "nullo",
+    "problem": "doubled letter 'll'"
+   },
+   {
+    "word": "nuravu",
+    "problem": "3 syllable(s), template wants 2"
+   },
+   {
+    "word": "opi",
+    "problem": "not consonant-initial"
+   },
+   {
+    "word": "paralo",
+    "problem": "3 syllable(s), template wants 2"
+   },
+   {
+    "word": "peremo",
+    "problem": "3 syllable(s), template wants 2"
+   },
+   {
+    "word": "rilli",
+    "problem": "doubled letter 'll'"
+   },
+   {
+    "word": "sabaye",
+    "problem": "3 syllable(s), template wants 2"
+   },
+   {
+    "word": "savali",
+    "problem": "3 syllable(s), template wants 2"
+   },
+   {
+    "word": "solli",
+    "problem": "doubled letter 'll'"
+   },
+   {
+    "word": "tarada",
+    "problem": "3 syllable(s), template wants 2"
+   },
+   {
+    "word": "tevulu",
+    "problem": "3 syllable(s), template wants 2"
+   },
+   {
+    "word": "vabale",
+    "problem": "3 syllable(s), template wants 2"
+   },
+   {
+    "word": "vabeve",
+    "problem": "3 syllable(s), template wants 2"
+   },
+   {
+    "word": "valla",
+    "problem": "doubled letter 'll'"
+   },
+   {
+    "word": "pressa",
+    "problem": "function word: initial cluster 'pr'"
+   },
+   {
+    "word": "pressa",
+    "problem": "function word: doubled letter 'ss'"
+   },
+   {
+    "word": "krotiata",
+    "problem": "function word: 4 syllable(s), template wants 1-3"
+   },
+   {
+    "word": "krotiapo",
+    "problem": "function word: 4 syllable(s), template wants 1-3"
+   },
+   {
+    "word": "en",
+    "problem": "function word: not vowel-final"
+   },
+   {
+    "word": "intra",
+    "problem": "function word: three-consonant cluster 'ntr'"
+   },
+   {
+    "word": "entre",
+    "problem": "function word: three-consonant cluster 'ntr'"
+   },
+   {
+    "word": "ultra",
+    "problem": "function word: three-consonant cluster 'ltr'"
+   },
+   {
+    "word": "futupago",
+    "problem": "function word: 4 syllable(s), template wants 1-3"
+   },
+   {
+    "word": "deyapressa",
+    "problem": "function word: 4 syllable(s), template wants 1-3"
+   },
+   {
+    "word": "deyapressa",
+    "problem": "function word: doubled letter 'ss'"
+   },
+   {
+    "word": "deyaapo",
+    "problem": "function word: 4 syllable(s), template wants 1-3"
+   },
+   {
+    "word": "deyafutu",
+    "problem": "function word: 4 syllable(s), template wants 1-3"
+   },
+   {
+    "word": "lorejuba",
+    "problem": "function word: 4 syllable(s), template wants 1-3"
+   }
+  ],
+  "collision": [
+   {
+    "word": "maivo",
+    "form": "maivori",
+    "built": "root + -ri",
+    "is": [
+     "pronoun"
+    ]
+   }
+  ],
+  "distance": [
+   {
+    "word": "bio",
+    "near": "vio",
+    "sources": [
+     "colour"
+    ]
+   },
+   {
+    "word": "coda",
+    "near": "toda",
+    "sources": [
+     "function word"
+    ]
+   },
+   {
+    "word": "livna",
+    "near": "livena",
+    "sources": [
+     "live (negative)"
+    ]
+   },
+   {
+    "word": "maivo",
+    "near": "saivo",
+    "sources": [
+     "pronoun"
+    ]
+   },
+   {
+    "word": "maivo",
+    "near": "taivo",
+    "sources": [
+     "function word",
+     "pronoun"
+    ]
+   },
+   {
+    "word": "malo",
+    "near": "mavo",
+    "sources": [
+     "mavo (root)"
+    ]
+   },
+   {
+    "word": "malo",
+    "near": "melo",
+    "sources": [
+     "melo (root)"
+    ]
+   },
+   {
+    "word": "marna",
+    "near": "marena",
+    "sources": [
+     "mare (negative)"
+    ]
+   },
+   {
+    "word": "mavo",
+    "near": "malo",
+    "sources": [
+     "malo (root)"
+    ]
+   },
+   {
+    "word": "melo",
+    "near": "malo",
+    "sources": [
+     "malo (root)"
+    ]
+   },
+   {
+    "word": "mera",
+    "near": "vera",
+    "sources": [
+     "vera (root)"
+    ]
+   },
+   {
+    "word": "molovu",
+    "near": "solovu",
+    "sources": [
+     "lexicalised derivation (boulder (big stone))"
+    ]
+   },
+   {
+    "word": "nela",
+    "near": "sela",
+    "sources": [
+     "function word"
+    ]
+   },
+   {
+    "word": "opi",
+    "near": "kopi",
+    "sources": [
+     "function word"
+    ]
+   },
+   {
+    "word": "rabi",
+    "near": "rubi",
+    "sources": [
+     "colour"
+    ]
+   },
+   {
+    "word": "trana",
+    "near": "transa",
+    "sources": [
+     "function word"
+    ]
+   },
+   {
+    "word": "vaga",
+    "near": "vana",
+    "sources": [
+     "colour"
+    ]
+   },
+   {
+    "word": "vani",
+    "near": "vana",
+    "sources": [
+     "colour"
+    ]
+   },
+   {
+    "word": "varde",
+    "near": "verde",
+    "sources": [
+     "colour"
+    ]
+   },
+   {
+    "word": "vera",
+    "near": "mera",
+    "sources": [
+     "mera (root)"
+    ]
+   },
+   {
+    "word": "vimo",
+    "near": "vio",
+    "sources": [
+     "colour"
+    ]
+   }
+  ],
+  "parse": [],
+  "segmentation": [],
+  "distance_1_forms": [
+   {
+    "word": "bio",
+    "form": "bioti",
+    "built": "root + -ti",
+    "near": "biti"
+   },
+   {
+    "word": "damru",
+    "form": "damrutiri",
+    "built": "root + -ti + -ri",
+    "near": "damrutibi"
+   },
+   {
+    "word": "fule",
+    "form": "fulenari",
+    "built": "negative + -ri",
+    "near": "fulepari"
+   },
+   {
+    "word": "fule",
+    "form": "fulefari",
+    "built": "verb + -ri",
+    "near": "fulepari"
+   },
+   {
+    "word": "germa",
+    "form": "germatiri",
+    "built": "root + -ti + -ri",
+    "near": "germatibi"
+   },
+   {
+    "word": "gura",
+    "form": "guranari",
+    "built": "negative + -ri",
+    "near": "gurapari"
+   },
+   {
+    "word": "gura",
+    "form": "guragari",
+    "built": "verb + -ri",
+    "near": "gurapari"
+   },
+   {
+    "word": "gura",
+    "form": "guravu",
+    "built": "-vu",
+    "near": "nuravu"
+   },
+   {
+    "word": "lazu",
+    "form": "lazuri",
+    "built": "root + -ri",
+    "near": "azuri"
+   },
+   {
+    "word": "leni",
+    "form": "leniyo",
+    "built": "-yo",
+    "near": "lenyo"
+   },
+   {
+    "word": "maivo",
+    "form": "maivoti",
+    "built": "root + -ti",
+    "near": "maivori"
+   },
+   {
+    "word": "maivo",
+    "form": "maivori",
+    "built": "root + -ri",
+    "near": "saivori"
+   },
+   {
+    "word": "maivo",
+    "form": "maivori",
+    "built": "root + -ri",
+    "near": "taivori"
+   },
+   {
+    "word": "malo",
+    "form": "malovu",
+    "built": "-vu",
+    "near": "molovu"
+   },
+   {
+    "word": "malo",
+    "form": "malopago",
+    "built": "-pago",
+    "near": "mavopago"
+   },
+   {
+    "word": "melo",
+    "form": "melotiri",
+    "built": "root + -ti + -ri",
+    "near": "melotibi"
+   },
+   {
+    "word": "melo",
+    "form": "melovu",
+    "built": "-vu",
+    "near": "molovu"
+   },
+   {
+    "word": "modo",
+    "form": "modovu",
+    "built": "-vu",
+    "near": "molovu"
+   },
+   {
+    "word": "molu",
+    "form": "moluvu",
+    "built": "-vu",
+    "near": "molovu"
+   },
+   {
+    "word": "monru",
+    "form": "monruri",
+    "built": "root + -ri",
+    "near": "monruti"
+   },
+   {
+    "word": "pavma",
+    "form": "pavmapati",
+    "built": "verb + -ti",
+    "near": "pavmapatu"
+   },
+   {
+    "word": "pusa",
+    "form": "pusati",
+    "built": "root + -ti",
+    "near": "pusti"
+   },
+   {
+    "word": "relnu",
+    "form": "relnurati",
+    "built": "verb + -ti",
+    "near": "relnurabi"
+   },
+   {
+    "word": "relnu",
+    "form": "relnurari",
+    "built": "verb + -ri",
+    "near": "relnurabi"
+   },
+   {
+    "word": "rima",
+    "form": "rimanari",
+    "built": "negative + -ri",
+    "near": "rimapari"
+   },
+   {
+    "word": "rima",
+    "form": "rimarari",
+    "built": "verb + -ri",
+    "near": "rimapari"
+   },
+   {
+    "word": "sabe",
+    "form": "saberi",
+    "built": "root + -ri",
+    "near": "sabri"
+   },
+   {
+    "word": "solo",
+    "form": "solori",
+    "built": "root + -ri",
+    "near": "soloti"
+   },
+   {
+    "word": "suru",
+    "form": "surutiri",
+    "built": "root + -ti + -ri",
+    "near": "surutibi"
+   },
+   {
+    "word": "tilnu",
+    "form": "tilnupagoti",
+    "built": "-pago + -ti",
+    "near": "tilnupagota"
+   },
+   {
+    "word": "yalmu",
+    "form": "yalmunati",
+    "built": "negative + -ti",
+    "near": "yalmunami"
+   },
+   {
+    "word": "yalmu",
+    "form": "yalmunari",
+    "built": "negative + -ri",
+    "near": "yalmunami"
+   },
+   {
+    "word": "yuge",
+    "form": "yugenati",
+    "built": "negative + -ti",
+    "near": "yugenami"
+   },
+   {
+    "word": "yuge",
+    "form": "yugenari",
+    "built": "negative + -ri",
+    "near": "yugenami"
+   }
+  ]
+ }
+}

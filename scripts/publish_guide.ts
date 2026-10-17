@@ -25,6 +25,7 @@ import {
   mkdirSync,
   readFileSync,
   readdirSync,
+  rmSync,
   statSync,
   writeFileSync,
 } from 'node:fs';
@@ -33,14 +34,18 @@ import { GUIDE } from './grammar_guide/config';
 
 const PUBLISH_DIR = 'LirasaCodexLatest';
 const STAMP = join(PUBLISH_DIR, '.build-stamp.json');
+const LLM_FILE = 'liraasa_1_2_llm.json';
 
 /** What the guide is built from. A change to any of these means a rebuild. */
 const INPUTS = [
-  'data/lexicon/liraasa_1_1.json',
+  'data/lexicon/liraasa_1_2.json',
+  'data/lexicon/integration_report_1_2.json',
   'data/lexicon/ids.json',
   'data/changes',
   'scripts/build_handoff.ts',
+  'scripts/changesets_1_2.ts',
   'scripts/build_grammar_guide.ts',
+  'scripts/build_llm_json.ts',
   'scripts/grammar_guide',
   'src/core/config',
   'src/core/morphology',
@@ -83,7 +88,9 @@ function hookInput(): { stop_hook_active?: boolean } {
 function main(): void {
   const force = process.argv.includes('--force');
   const hook = hookInput();
-  const outputs = ['html', 'pdf'].map((ext) => `${GUIDE.outName}.${ext}`);
+  const guide = ['html', 'pdf'].map((ext) => `${GUIDE.outName}.${ext}`);
+  // The one-file reference for language models, built beside the guide.
+  const outputs = [...guide, LLM_FILE];
 
   const current = fingerprint();
   const previous = existsSync(STAMP)
@@ -117,6 +124,15 @@ function main(): void {
   }
 
   mkdirSync(PUBLISH_DIR, { recursive: true });
+  // Only the current edition is published: an older edition's guide stays in handoff/.
+  for (const f of readdirSync(PUBLISH_DIR)) {
+    if (
+      /^(Liraasa_.*_Grammar_Guide\.(html|pdf)|liraasa_.*_llm\.json)$/.test(f) &&
+      !outputs.includes(f)
+    ) {
+      rmSync(join(PUBLISH_DIR, f));
+    }
+  }
   for (const f of outputs) copyFileSync(join(GUIDE.outDir, f), join(PUBLISH_DIR, f));
   writeFileSync(
     STAMP,

@@ -1,0 +1,3384 @@
+{
+ "id": "2026-10-17-lexicon-1-2",
+ "edition": "1.2",
+ "created": "2026-10-17T12:00:00Z",
+ "author": "nicolas",
+ "summary": "The 1.2 lexicon update (ADR-0013): rulings G32–G36, 57 primal roots, 22 compounds, 2 function words, 3 frequency correlatives, 24 lexicalised derivations, 2 curated motion metaphors, 3 reglosses, 6 predictable slots activated, and the protected-exceptions label repaired. Applied after 2026-10-17-grammar-rulings by npm run integrate:1.2.",
+ "rulings": [
+  {
+   "id": "G32",
+   "topic": "Possession precedence",
+   "ruling": "When de joins two candidates for owner, the owner is decided in this order: a pronoun, then a personal name (pilo, mare used as names included), then the default of 1.2:G27 (in X de Y, Y is the owner). Pilo de maivo is my father, not father's me. PRONOUN de PRONOUN is allowed, and the right-hand pronoun is the owner: taivo de maivo, you of mine.",
+   "refines": [
+    "1.2:G27"
+   ],
+   "examples": [
+    [
+     "Pilo de maivo po lirala.",
+     "My father sang."
+    ],
+    [
+     "taivo de maivo",
+     "you of mine"
+    ]
+   ]
+  },
+  {
+   "id": "G33",
+   "topic": "yuta: the instrument",
+   "ruling": "yuta + noun phrase names the instrument or means of an action: with, using, by means of. It fills the ADJUNCTS slot like the other prepositions. It never means accompaniment: \"with a friend\" stays ko.",
+   "refines": [],
+   "examples": [
+    [
+     "Maivo lallela li dorbi yuta li kemye.",
+     "I open the door with the key."
+    ],
+    [
+     "Li lirayo po yugemeyiya saivo yuta melo.",
+     "The singer healed him with music."
+    ],
+    [
+     "Saivori po ka vazranasan yuta benamolu.",
+     "They were defeated with kindness."
+    ],
+    [
+     "Maivo lirala ko saivo.",
+     "I sing with him."
+    ]
+   ]
+  },
+  {
+   "id": "G34",
+   "topic": "Frequency correlatives",
+   "ruling": "A quantifier joined to krono with a hyphen gives a frequency adverbial: muya-krono often, poka-krono rarely, rada-krono each time. Like the other -krono correlatives it opens or closes its clause (1.2:G24). The pattern is limited to krono; muya, poka and rada form no other correlatives.",
+   "refines": [
+    "1.2:G24"
+   ],
+   "examples": [
+    [
+     "Maivo lirala muya-krono.",
+     "I sing often."
+    ],
+    [
+     "Rada-krono, li veluri lumila.",
+     "Each time, the stars shine."
+    ]
+   ]
+  },
+  {
+   "id": "G35",
+   "topic": "Two more curated motion metaphors",
+   "ruling": "revo-sabesia (know again: recognize) and yave-donuda (give together: share) join revo-vimova and revo-lirala as curated metaphors. The motion prefixes otherwise stay non-productive.",
+   "refines": [],
+   "examples": [
+    [
+     "Maivo revo-sabesia taivo.",
+     "I recognize you."
+    ],
+    [
+     "Yave-donuda li bumre, fisa.",
+     "Share the bread, please."
+    ]
+   ]
+  },
+  {
+   "id": "G36",
+   "topic": "Gender in kinship",
+   "ruling": "Kinship words are neutral: purma parent, famli sibling, linu child, purmafamli aunt or uncle. Gender is marked only when it matters, by a compound with minva (female) or tarnu (male) where the lexicon has one (minvalinu daughter, tarnufamli brother), and otherwise by the adjective before the noun (minvasan purmafamli, aunt). mare and pilo remain mother and father. Kin by marriage compound with rilde: rildemare mother-in-law. Neither gender root is the negative of the other.",
+   "refines": [
+    "ADR-0011"
+   ],
+   "examples": [
+    [
+     "Maivo de minvalinu lirala.",
+     "My daughter sings."
+    ],
+    [
+     "Li tarnufamli de taivo ka corvisan.",
+     "Your brother is brave."
+    ],
+    [
+     "minvasan purmafamli",
+     "aunt"
+    ],
+    [
+     "rildemare",
+     "mother-in-law"
+    ]
+   ]
+  }
+ ],
+ "headwords": [
+  {
+   "id": "lx_minva_1419",
+   "root": "minva",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "woman; the feminine",
+    "ascended": "the divine feminine",
+    "negative": "— (unused)",
+    "verb": "— (unused)",
+    "negative_adjective": "— (unused)",
+    "adjective": "female; feminine",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "People",
+   "english_synonyms": [
+    "woman",
+    "the feminine",
+    "the divine feminine",
+    "female",
+    "feminine"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). Concept: female."
+  },
+  {
+   "id": "lx_tarnu_1420",
+   "root": "tarnu",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "man; the masculine",
+    "ascended": "the divine masculine",
+    "negative": "— (unused)",
+    "verb": "— (unused)",
+    "negative_adjective": "— (unused)",
+    "adjective": "male; masculine",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "People",
+   "english_synonyms": [
+    "man",
+    "the masculine",
+    "the divine masculine",
+    "male",
+    "masculine"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). Concept: male."
+  },
+  {
+   "id": "lx_rilde_1421",
+   "root": "rilde",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "kinship by marriage; affinity",
+    "ascended": "the joining of two families",
+    "negative": "— (unused)",
+    "verb": "to become kin by marriage",
+    "negative_adjective": "— (unused)",
+    "adjective": "related by marriage; in-law",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Family & society",
+   "english_synonyms": [
+    "kinship by marriage",
+    "affinity",
+    "the joining of two families",
+    "to become kin by marriage",
+    "related by marriage",
+    "in-law"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). Concept: by marriage."
+  },
+  {
+   "id": "lx_karko_1422",
+   "root": "karko",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "killing; slaying",
+    "ascended": "— (unused)",
+    "negative": "sparing; a life spared",
+    "verb": "to kill; to slay",
+    "negative_adjective": "— (unused)",
+    "adjective": "deadly; lethal",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Actions",
+   "english_synonyms": [
+    "killing",
+    "slaying",
+    "sparing",
+    "a life spared",
+    "to kill",
+    "to slay",
+    "deadly",
+    "lethal"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). Concept: kill."
+  },
+  {
+   "id": "lx_tomnu_1423",
+   "root": "tomnu",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "grave; tomb; burial place",
+    "ascended": "the resting place of all who have lived",
+    "negative": "— (unused)",
+    "verb": "to bury; to inter",
+    "negative_adjective": "— (unused)",
+    "adjective": "buried; entombed",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Storytelling",
+   "english_synonyms": [
+    "grave",
+    "tomb",
+    "burial place",
+    "the resting place of all who have lived",
+    "to bury",
+    "to inter",
+    "buried",
+    "entombed"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). Concept: grave."
+  },
+  {
+   "id": "lx_dumdo_1424",
+   "root": "dumdo",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "drum",
+    "ascended": "the heartbeat of the world",
+    "negative": "— (unused)",
+    "verb": "to drum; to beat",
+    "negative_adjective": "— (unused)",
+    "adjective": "pounding; rhythmic",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Music & storytelling",
+   "english_synonyms": [
+    "drum",
+    "the heartbeat of the world",
+    "to drum",
+    "to beat",
+    "pounding",
+    "rhythmic"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). Concept: drum."
+  },
+  {
+   "id": "lx_filvi_1425",
+   "root": "filvi",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "reed",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "to pipe",
+    "negative_adjective": "— (unused)",
+    "adjective": "reedy; thin-voiced",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Flowers & Plants",
+   "english_synonyms": [
+    "reed",
+    "to pipe",
+    "reedy",
+    "thin-voiced"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). Concept: reed."
+  },
+  {
+   "id": "lx_lanla_1426",
+   "root": "lanla",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "horizon",
+    "ascended": "the edge of the world",
+    "negative": "— (unused)",
+    "verb": "— (unused)",
+    "negative_adjective": "— (unused)",
+    "adjective": "far-reaching",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "poetic",
+   "domain": "Space & orientation",
+   "english_synonyms": [
+    "horizon",
+    "the edge of the world",
+    "far-reaching"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). Concept: horizon."
+  },
+  {
+   "id": "lx_velso_1427",
+   "root": "velso",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "veil",
+    "ascended": "the veil between worlds",
+    "negative": "unveiling; revelation",
+    "verb": "to veil",
+    "negative_adjective": "— (unused)",
+    "adjective": "veiled",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "poetic",
+   "domain": "Home & objects",
+   "english_synonyms": [
+    "veil",
+    "the veil between worlds",
+    "unveiling",
+    "revelation",
+    "to veil",
+    "veiled"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). Concept: veil."
+  },
+  {
+   "id": "lx_zirki_1428",
+   "root": "zirki",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "madness",
+    "ascended": "divine frenzy",
+    "negative": "sanity",
+    "verb": "— (unused)",
+    "negative_adjective": "sane",
+    "adjective": "mad",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Mind & dreams",
+   "english_synonyms": [
+    "madness",
+    "divine frenzy",
+    "sanity",
+    "sane",
+    "mad"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). Concept: madness."
+  },
+  {
+   "id": "lx_lurva_1429",
+   "root": "lurva",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "pouring",
+    "ascended": "outpouring",
+    "negative": "— (unused)",
+    "verb": "to pour",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Actions",
+   "english_synonyms": [
+    "pouring",
+    "outpouring",
+    "to pour"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). Concept: pour."
+  },
+  {
+   "id": "lx_filpa_1430",
+   "root": "filpa",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "fold",
+    "ascended": "— (unused)",
+    "negative": "unfolding",
+    "verb": "to fold",
+    "negative_adjective": "— (unused)",
+    "adjective": "folded",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Actions",
+   "english_synonyms": [
+    "fold",
+    "unfolding",
+    "to fold",
+    "folded"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). Concept: fold."
+  },
+  {
+   "id": "lx_kerti_1431",
+   "root": "kerti",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "carving; engraving",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "to carve; to engrave",
+    "negative_adjective": "— (unused)",
+    "adjective": "carved; engraved",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Actions",
+   "english_synonyms": [
+    "carving",
+    "engraving",
+    "to carve",
+    "to engrave",
+    "carved",
+    "engraved"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). Concept: carve."
+  },
+  {
+   "id": "lx_nalfa_1432",
+   "root": "nalfa",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "wing",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "— (unused)",
+    "negative_adjective": "— (unused)",
+    "adjective": "winged",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Animals",
+   "english_synonyms": [
+    "wing",
+    "winged"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). Concept: wing."
+  },
+  {
+   "id": "lx_pulmi_1433",
+   "root": "pulmi",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "feather",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "— (unused)",
+    "negative_adjective": "— (unused)",
+    "adjective": "feathered; feathery",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Animals",
+   "english_synonyms": [
+    "feather",
+    "feathered",
+    "feathery"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). Concept: feather."
+  },
+  {
+   "id": "lx_vurvi_1434",
+   "root": "vurvi",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "tail",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "— (unused)",
+    "negative_adjective": "— (unused)",
+    "adjective": "tailed",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Animals",
+   "english_synonyms": [
+    "tail",
+    "tailed"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). Concept: tail."
+  },
+  {
+   "id": "lx_kalga_1435",
+   "root": "kalga",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "claw; talon",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "to claw",
+    "negative_adjective": "— (unused)",
+    "adjective": "clawed",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Animals",
+   "english_synonyms": [
+    "claw",
+    "talon",
+    "to claw",
+    "clawed"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). Concept: claw."
+  },
+  {
+   "id": "lx_mulfo_1436",
+   "root": "mulfo",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "fur; pelt",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "— (unused)",
+    "negative_adjective": "— (unused)",
+    "adjective": "furred; furry",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Animals",
+   "english_synonyms": [
+    "fur",
+    "pelt",
+    "furred",
+    "furry"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). Concept: fur."
+  },
+  {
+   "id": "lx_pirke_1437",
+   "root": "pirke",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "beak",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "to peck",
+    "negative_adjective": "— (unused)",
+    "adjective": "beaked",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Animals",
+   "english_synonyms": [
+    "beak",
+    "to peck",
+    "beaked"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). Concept: beak."
+  },
+  {
+   "id": "lx_kurno_1438",
+   "root": "kurno",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "horn",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "— (unused)",
+    "negative_adjective": "— (unused)",
+    "adjective": "horned",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Animals",
+   "english_synonyms": [
+    "horn",
+    "horned"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). Concept: horn."
+  },
+  {
+   "id": "lx_zelki_1439",
+   "root": "zelki",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "scale (of a fish or serpent)",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "— (unused)",
+    "negative_adjective": "— (unused)",
+    "adjective": "scaled; scaly",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Animals",
+   "english_synonyms": [
+    "scale (of a fish or serpent)",
+    "scaled",
+    "scaly"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). Concept: scale."
+  },
+  {
+   "id": "lx_mulyi_1440",
+   "root": "mulyi",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "wetness",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "to wet",
+    "negative_adjective": "— (unused)",
+    "adjective": "wet",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Qualities",
+   "english_synonyms": [
+    "wetness",
+    "to wet",
+    "wet"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). Concept: wet."
+  },
+  {
+   "id": "lx_nilmi_1441",
+   "root": "nilmi",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "smoothness",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "to smooth",
+    "negative_adjective": "rough",
+    "adjective": "smooth",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Qualities",
+   "english_synonyms": [
+    "smoothness",
+    "to smooth",
+    "rough",
+    "smooth"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). Concept: smooth."
+  },
+  {
+   "id": "lx_burdo_1442",
+   "root": "burdo",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "thickness",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "— (unused)",
+    "negative_adjective": "thin",
+    "adjective": "thick",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Qualities",
+   "english_synonyms": [
+    "thickness",
+    "thin",
+    "thick"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). Concept: thick."
+  },
+  {
+   "id": "lx_zeti_1443",
+   "root": "zeti",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "sourness",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "— (unused)",
+    "negative_adjective": "— (unused)",
+    "adjective": "sour",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Qualities",
+   "english_synonyms": [
+    "sourness",
+    "sour"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). Concept: sour."
+  },
+  {
+   "id": "lx_lalfo_1444",
+   "root": "lalfo",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "floating",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "to float",
+    "negative_adjective": "— (unused)",
+    "adjective": "floating; buoyant",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Actions",
+   "english_synonyms": [
+    "floating",
+    "to float",
+    "buoyant"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). Concept: float."
+  },
+  {
+   "id": "lx_nombu_1445",
+   "root": "nombu",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "sinking",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "to sink",
+    "negative_adjective": "— (unused)",
+    "adjective": "sunken",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Actions",
+   "english_synonyms": [
+    "sinking",
+    "to sink",
+    "sunken"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). Concept: sink."
+  },
+  {
+   "id": "lx_turgo_1446",
+   "root": "turgo",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "digging",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "to dig",
+    "negative_adjective": "— (unused)",
+    "adjective": "dug",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Actions",
+   "english_synonyms": [
+    "digging",
+    "to dig",
+    "dug"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). Concept: dig."
+  },
+  {
+   "id": "lx_kirpa_1447",
+   "root": "kirpa",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "split; cleft",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "to split",
+    "negative_adjective": "— (unused)",
+    "adjective": "split; cloven",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Actions",
+   "english_synonyms": [
+    "split",
+    "cleft",
+    "to split",
+    "cloven"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). Concept: split."
+  },
+  {
+   "id": "lx_tenva_1448",
+   "root": "tenva",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "weaving",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "to weave",
+    "negative_adjective": "— (unused)",
+    "adjective": "woven",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Actions",
+   "english_synonyms": [
+    "weaving",
+    "to weave",
+    "woven"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). Concept: weave."
+  },
+  {
+   "id": "lx_sispa_1449",
+   "root": "sispa",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "wiping",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "to wipe",
+    "negative_adjective": "— (unused)",
+    "adjective": "wiped",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Actions",
+   "english_synonyms": [
+    "wiping",
+    "to wipe",
+    "wiped"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). Concept: wipe."
+  },
+  {
+   "id": "lx_girze_1450",
+   "root": "girze",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "scratch",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "to scratch",
+    "negative_adjective": "— (unused)",
+    "adjective": "scratched",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Actions",
+   "english_synonyms": [
+    "scratch",
+    "to scratch",
+    "scratched"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). Concept: scratch."
+  },
+  {
+   "id": "lx_pusti_1451",
+   "root": "pusti",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "spit; spittle",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "to spit",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Actions",
+   "english_synonyms": [
+    "spit",
+    "spittle",
+    "to spit"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). Concept: spit."
+  },
+  {
+   "id": "lx_volme_1452",
+   "root": "volme",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "ghost; spirit of the dead",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "— (unused)",
+    "negative_adjective": "— (unused)",
+    "adjective": "ghostly",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "poetic",
+   "domain": "Storytelling",
+   "english_synonyms": [
+    "ghost",
+    "spirit of the dead",
+    "ghostly"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). Concept: ghost."
+  },
+  {
+   "id": "lx_zirme_1453",
+   "root": "zirme",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "magic",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "to work magic; to enchant",
+    "negative_adjective": "— (unused)",
+    "adjective": "magical",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "poetic",
+   "domain": "Storytelling",
+   "english_synonyms": [
+    "magic",
+    "to work magic",
+    "to enchant",
+    "magical"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). Concept: magic."
+  },
+  {
+   "id": "lx_lansi_1454",
+   "root": "lansi",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "angel",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "— (unused)",
+    "negative_adjective": "— (unused)",
+    "adjective": "angelic",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "poetic",
+   "domain": "Storytelling",
+   "english_synonyms": [
+    "angel",
+    "angelic"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). Concept: angel."
+  },
+  {
+   "id": "lx_tilki_1455",
+   "root": "tilki",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "spider",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "— (unused)",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Animals",
+   "english_synonyms": [
+    "spider"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). Concept: spider."
+  },
+  {
+   "id": "lx_vurfa_1456",
+   "root": "vurfa",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "fox",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "— (unused)",
+    "negative_adjective": "— (unused)",
+    "adjective": "foxlike",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Animals",
+   "english_synonyms": [
+    "fox",
+    "foxlike"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). Concept: fox."
+  },
+  {
+   "id": "lx_garvu_1457",
+   "root": "garvu",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "lion",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "— (unused)",
+    "negative_adjective": "— (unused)",
+    "adjective": "leonine",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Animals",
+   "english_synonyms": [
+    "lion",
+    "leonine"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). Concept: lion."
+  },
+  {
+   "id": "lx_limli_1458",
+   "root": "limli",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "lamb",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "— (unused)",
+    "negative_adjective": "— (unused)",
+    "adjective": "lamblike",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Animals",
+   "english_synonyms": [
+    "lamb",
+    "lamblike"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). Concept: lamb."
+  },
+  {
+   "id": "lx_cipi_1459",
+   "root": "cipi",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "mouse",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "— (unused)",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Animals",
+   "english_synonyms": [
+    "mouse"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). Concept: mouse."
+  },
+  {
+   "id": "lx_bansa_1460",
+   "root": "bansa",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "sufficiency; enough",
+    "ascended": "abundance",
+    "negative": "— (unused)",
+    "verb": "to suffice",
+    "negative_adjective": "insufficient",
+    "adjective": "enough; sufficient",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Qualities",
+   "english_synonyms": [
+    "sufficiency",
+    "enough",
+    "abundance",
+    "to suffice",
+    "insufficient",
+    "sufficient"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). Concept: sufficiency."
+  },
+  {
+   "id": "lx_hurvo_1461",
+   "root": "hurvo",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "strangeness",
+    "ascended": "the uncanny",
+    "negative": "— (unused)",
+    "verb": "— (unused)",
+    "negative_adjective": "— (unused)",
+    "adjective": "strange",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Qualities",
+   "english_synonyms": [
+    "strangeness",
+    "the uncanny",
+    "strange"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). Concept: strangeness."
+  },
+  {
+   "id": "lx_gargo_1462",
+   "root": "gargo",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "ferocity",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "— (unused)",
+    "negative_adjective": "tame; gentle",
+    "adjective": "fierce",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Emotions",
+   "english_synonyms": [
+    "ferocity",
+    "tame",
+    "gentle",
+    "fierce"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). Concept: ferocity."
+  },
+  {
+   "id": "lx_sirmo_1463",
+   "root": "sirmo",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "fame; renown",
+    "ascended": "legend",
+    "negative": "obscurity",
+    "verb": "— (unused)",
+    "negative_adjective": "— (unused)",
+    "adjective": "famous",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Society",
+   "english_synonyms": [
+    "fame",
+    "renown",
+    "legend",
+    "obscurity",
+    "famous"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). Concept: fame."
+  },
+  {
+   "id": "lx_gerpe_1464",
+   "root": "gerpe",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "greed",
+    "ascended": "— (unused)",
+    "negative": "contentment",
+    "verb": "— (unused)",
+    "negative_adjective": "— (unused)",
+    "adjective": "greedy",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Emotions",
+   "english_synonyms": [
+    "greed",
+    "contentment",
+    "greedy"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). Concept: greed."
+  },
+  {
+   "id": "lx_holmo_1465",
+   "root": "holmo",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "hollow; hollowness",
+    "ascended": "— (unused)",
+    "negative": "solidity",
+    "verb": "— (unused)",
+    "negative_adjective": "— (unused)",
+    "adjective": "hollow",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Qualities",
+   "english_synonyms": [
+    "hollow",
+    "hollowness",
+    "solidity"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). Concept: hollow."
+  },
+  {
+   "id": "lx_felti_1466",
+   "root": "felti",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "fragility",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "— (unused)",
+    "negative_adjective": "sturdy",
+    "adjective": "fragile",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Qualities",
+   "english_synonyms": [
+    "fragility",
+    "sturdy",
+    "fragile"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). Concept: fragile."
+  },
+  {
+   "id": "lx_salko_1467",
+   "root": "salko",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "shell",
+    "ascended": "pearl",
+    "negative": "— (unused)",
+    "verb": "— (unused)",
+    "negative_adjective": "— (unused)",
+    "adjective": "guarded",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Nature",
+   "english_synonyms": [
+    "shell",
+    "pearl",
+    "guarded"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). Concept: shell."
+  },
+  {
+   "id": "lx_cirsi_1468",
+   "root": "cirsi",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "crystal",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "to crystallize",
+    "negative_adjective": "— (unused)",
+    "adjective": "crystalline",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Materials & physics",
+   "english_synonyms": [
+    "crystal",
+    "to crystallize",
+    "crystalline"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). Concept: crystal."
+  },
+  {
+   "id": "lx_vasko_1469",
+   "root": "vasko",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "mask",
+    "ascended": "— (unused)",
+    "negative": "unmasking",
+    "verb": "to mask",
+    "negative_adjective": "— (unused)",
+    "adjective": "masked",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Home & objects",
+   "english_synonyms": [
+    "mask",
+    "unmasking",
+    "to mask",
+    "masked"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). Concept: mask."
+  },
+  {
+   "id": "lx_lundu_1470",
+   "root": "lundu",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "bareness; nakedness",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "to lay bare",
+    "negative_adjective": "— (unused)",
+    "adjective": "naked; bare",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Body",
+   "english_synonyms": [
+    "bareness",
+    "nakedness",
+    "to lay bare",
+    "naked",
+    "bare"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). Concept: bareness."
+  },
+  {
+   "id": "lx_mervi_1471",
+   "root": "mervi",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "service",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "to serve",
+    "negative_adjective": "— (unused)",
+    "adjective": "serving; of service",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Society",
+   "english_synonyms": [
+    "service",
+    "to serve",
+    "serving",
+    "of service"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). Concept: serve."
+  },
+  {
+   "id": "lx_murta_1472",
+   "root": "murta",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "crowd; throng",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "to crowd; to throng",
+    "negative_adjective": "— (unused)",
+    "adjective": "crowded",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Society",
+   "english_synonyms": [
+    "crowd",
+    "throng",
+    "to crowd",
+    "to throng",
+    "crowded"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). Concept: crowd."
+  },
+  {
+   "id": "lx_nirma_1473",
+   "root": "nirma",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "victim",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "— (unused)",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Society",
+   "english_synonyms": [
+    "victim"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). Concept: victim."
+  },
+  {
+   "id": "lx_tinsa_1474",
+   "root": "tinsa",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "guess",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "to guess",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Speech & mind",
+   "english_synonyms": [
+    "guess",
+    "to guess"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). Concept: guess."
+  },
+  {
+   "id": "lx_yorve_1475",
+   "root": "yorve",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "obedience",
+    "ascended": "— (unused)",
+    "negative": "disobedience",
+    "verb": "to obey",
+    "negative_adjective": "disobedient",
+    "adjective": "obedient",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Society",
+   "english_synonyms": [
+    "obedience",
+    "disobedience",
+    "to obey",
+    "disobedient",
+    "obedient"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). Concept: obey."
+  },
+  {
+   "id": "lx_minvalinu_1476",
+   "root": "minvalinu",
+   "type": "Compound",
+   "components": [
+    "minva",
+    "linu"
+   ],
+   "glosses": {
+    "root": "daughter; girl",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "— (unused)",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Family & society",
+   "english_synonyms": [
+    "daughter",
+    "girl"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). minva + linu."
+  },
+  {
+   "id": "lx_tarnulinu_1477",
+   "root": "tarnulinu",
+   "type": "Compound",
+   "components": [
+    "tarnu",
+    "linu"
+   ],
+   "glosses": {
+    "root": "son; boy",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "— (unused)",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Family & society",
+   "english_synonyms": [
+    "son",
+    "boy"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). tarnu + linu."
+  },
+  {
+   "id": "lx_minvafamli_1478",
+   "root": "minvafamli",
+   "type": "Compound",
+   "components": [
+    "minva",
+    "famli"
+   ],
+   "glosses": {
+    "root": "sister",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "— (unused)",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Family & society",
+   "english_synonyms": [
+    "sister"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). minva + famli."
+  },
+  {
+   "id": "lx_tarnufamli_1479",
+   "root": "tarnufamli",
+   "type": "Compound",
+   "components": [
+    "tarnu",
+    "famli"
+   ],
+   "glosses": {
+    "root": "brother",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "— (unused)",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Family & society",
+   "english_synonyms": [
+    "brother"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). tarnu + famli."
+  },
+  {
+   "id": "lx_purmamare_1480",
+   "root": "purmamare",
+   "type": "Compound",
+   "components": [
+    "purma",
+    "mare"
+   ],
+   "glosses": {
+    "root": "grandmother; a parent's mother",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "— (unused)",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Family & society",
+   "english_synonyms": [
+    "grandmother",
+    "a parent's mother"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). purma + mare."
+  },
+  {
+   "id": "lx_purmapilo_1481",
+   "root": "purmapilo",
+   "type": "Compound",
+   "components": [
+    "purma",
+    "pilo"
+   ],
+   "glosses": {
+    "root": "grandfather; a parent's father",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "— (unused)",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Family & society",
+   "english_synonyms": [
+    "grandfather",
+    "a parent's father"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). purma + pilo."
+  },
+  {
+   "id": "lx_rildemare_1482",
+   "root": "rildemare",
+   "type": "Compound",
+   "components": [
+    "rilde",
+    "mare"
+   ],
+   "glosses": {
+    "root": "mother-in-law",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "— (unused)",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Family & society",
+   "english_synonyms": [
+    "mother-in-law"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). rilde + mare."
+  },
+  {
+   "id": "lx_rildepilo_1483",
+   "root": "rildepilo",
+   "type": "Compound",
+   "components": [
+    "rilde",
+    "pilo"
+   ],
+   "glosses": {
+    "root": "father-in-law",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "— (unused)",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Family & society",
+   "english_synonyms": [
+    "father-in-law"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). rilde + pilo."
+  },
+  {
+   "id": "lx_rildepurma_1484",
+   "root": "rildepurma",
+   "type": "Compound",
+   "components": [
+    "rilde",
+    "purma"
+   ],
+   "glosses": {
+    "root": "parent-in-law",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "— (unused)",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Family & society",
+   "english_synonyms": [
+    "parent-in-law"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). rilde + purma."
+  },
+  {
+   "id": "lx_rildefamli_1485",
+   "root": "rildefamli",
+   "type": "Compound",
+   "components": [
+    "rilde",
+    "famli"
+   ],
+   "glosses": {
+    "root": "sibling-in-law",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "— (unused)",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Family & society",
+   "english_synonyms": [
+    "sibling-in-law"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). rilde + famli."
+  },
+  {
+   "id": "lx_rildelinu_1486",
+   "root": "rildelinu",
+   "type": "Compound",
+   "components": [
+    "rilde",
+    "linu"
+   ],
+   "glosses": {
+    "root": "child-in-law",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "— (unused)",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Family & society",
+   "english_synonyms": [
+    "child-in-law"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). rilde + linu."
+  },
+  {
+   "id": "lx_luminela_1487",
+   "root": "luminela",
+   "type": "Compound",
+   "components": [
+    "lumi",
+    "nela"
+   ],
+   "glosses": {
+    "root": "priest; a person of light",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "— (unused)",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Society & governance",
+   "english_synonyms": [
+    "priest",
+    "a person of light"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). lumi + nela."
+  },
+  {
+   "id": "lx_mernonela_1488",
+   "root": "mernonela",
+   "type": "Compound",
+   "components": [
+    "merno",
+    "nela"
+   ],
+   "glosses": {
+    "root": "prophet; one who stands where the light is coming",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "— (unused)",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "poetic",
+   "domain": "Society & governance",
+   "english_synonyms": [
+    "prophet",
+    "one who stands where the light is coming"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). merno + nela."
+  },
+  {
+   "id": "lx_nemerivo_1489",
+   "root": "nemerivo",
+   "type": "Compound",
+   "components": [
+    "neme",
+    "rivo"
+   ],
+   "glosses": {
+    "root": "widow; widower; a companion left in sorrow",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "— (unused)",
+    "negative_adjective": "— (unused)",
+    "adjective": "widowed",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Family & society",
+   "english_synonyms": [
+    "widow",
+    "widower",
+    "a companion left in sorrow",
+    "widowed"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). neme + rivo."
+  },
+  {
+   "id": "lx_sulbacemnu_1490",
+   "root": "sulbacemnu",
+   "type": "Compound",
+   "components": [
+    "sulba",
+    "cemnu"
+   ],
+   "glosses": {
+    "root": "noon; midday",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "— (unused)",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Time",
+   "english_synonyms": [
+    "noon",
+    "midday"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). sulba + cemnu."
+  },
+  {
+   "id": "lx_nullocemnu_1491",
+   "root": "nullocemnu",
+   "type": "Compound",
+   "components": [
+    "nullo",
+    "cemnu"
+   ],
+   "glosses": {
+    "root": "midnight",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "— (unused)",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Time",
+   "english_synonyms": [
+    "midnight"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). nullo + cemnu."
+  },
+  {
+   "id": "lx_melotibi_1492",
+   "root": "melotibi",
+   "type": "Compound",
+   "components": [
+    "melo",
+    "tibi"
+   ],
+   "glosses": {
+    "root": "string (of an instrument)",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "— (unused)",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Music & storytelling",
+   "english_synonyms": [
+    "string (of an instrument)"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). melo + tibi."
+  },
+  {
+   "id": "lx_filvibiti_1493",
+   "root": "filvibiti",
+   "type": "Compound",
+   "components": [
+    "filvi",
+    "biti"
+   ],
+   "glosses": {
+    "root": "flute; reed pipe",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "— (unused)",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Music & storytelling",
+   "english_synonyms": [
+    "flute",
+    "reed pipe"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). filvi + biti."
+  },
+  {
+   "id": "lx_mernodarno_1494",
+   "root": "mernodarno",
+   "type": "Compound",
+   "components": [
+    "merno",
+    "darno"
+   ],
+   "glosses": {
+    "root": "east",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "— (unused)",
+    "negative_adjective": "— (unused)",
+    "adjective": "eastern",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Space & orientation",
+   "english_synonyms": [
+    "east",
+    "eastern"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). merno + darno."
+  },
+  {
+   "id": "lx_vesnodarno_1495",
+   "root": "vesnodarno",
+   "type": "Compound",
+   "components": [
+    "vesno",
+    "darno"
+   ],
+   "glosses": {
+    "root": "west",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "— (unused)",
+    "negative_adjective": "— (unused)",
+    "adjective": "western",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Space & orientation",
+   "english_synonyms": [
+    "west",
+    "western"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). vesno + darno."
+  },
+  {
+   "id": "lx_veludarno_1496",
+   "root": "veludarno",
+   "type": "Compound",
+   "components": [
+    "velu",
+    "darno"
+   ],
+   "glosses": {
+    "root": "north; toward the fixed stars",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "— (unused)",
+    "negative_adjective": "— (unused)",
+    "adjective": "northern",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Space & orientation",
+   "english_synonyms": [
+    "north",
+    "toward the fixed stars",
+    "northern"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). velu + darno."
+  },
+  {
+   "id": "lx_sulbadarno_1497",
+   "root": "sulbadarno",
+   "type": "Compound",
+   "components": [
+    "sulba",
+    "darno"
+   ],
+   "glosses": {
+    "root": "south; toward the noon sun",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "— (unused)",
+    "negative_adjective": "— (unused)",
+    "adjective": "southern",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Space & orientation",
+   "english_synonyms": [
+    "south",
+    "toward the noon sun",
+    "southern"
+   ],
+   "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). sulba + darno."
+  }
+ ],
+ "function_words": [
+  {
+   "form": "yuta",
+   "meaning": "with; using; by means of",
+   "position": "instrument: the tool or means of an action, in the ADJUNCTS slot; never accompaniment, which is ko",
+   "example": "yuta li kemye",
+   "example_gloss": "with the key",
+   "class": null,
+   "status_1_0": "NEW",
+   "status_1_2": "NEW",
+   "since": "1.2",
+   "id": "fw_yuta_0150"
+  },
+  {
+   "form": "diba",
+   "meaning": "too; excessively",
+   "position": "degree word before an adjective or quantifier: excess; never additive, which is tu",
+   "example": "diba muya lirari",
+   "example_gloss": "too many songs",
+   "class": null,
+   "status_1_0": "NEW",
+   "status_1_2": "NEW",
+   "since": "1.2",
+   "id": "fw_diba_0151"
+  }
+ ],
+ "correlatives": [
+  {
+   "form": "muya-krono",
+   "determiner": "muya",
+   "concept": "krono",
+   "gloss": "often",
+   "since": "1.2",
+   "id": "cr_muyakrono_0037"
+  },
+  {
+   "form": "poka-krono",
+   "determiner": "poka",
+   "concept": "krono",
+   "gloss": "rarely",
+   "since": "1.2",
+   "id": "cr_pokakrono_0038"
+  },
+  {
+   "form": "rada-krono",
+   "determiner": "rada",
+   "concept": "krono",
+   "gloss": "each time",
+   "since": "1.2",
+   "id": "cr_radakrono_0039"
+  }
+ ],
+ "lexicalised_derivations": {
+  "lemupago": "school (place of learning): lemu + -pago",
+  "lemuyo": "student (one who learns): lemu + -yo",
+  "lemudonuyo": "teacher (one who teaches): lemudonu + -yo",
+  "vanruyo": "soldier (one who wages war): vanru + -yo",
+  "marnapago": "farm (place of grain): marna + -pago",
+  "marnayo": "farmer (one who grows grain): marna + -yo",
+  "monruti": "hill (little mountain): monru + -ti",
+  "yugemeyiyo": "healer; doctor (one who heals): yugemeyi + -yo",
+  "dapadonuyo": "merchant (one who sells): dapadonu + -yo",
+  "juseyo": "judge (one who renders justice): juse + -yo",
+  "devobalbuyo": "traitor (one who betrays): devobalbu + -yo",
+  "sevuyo": "sailor (one who sails): sevu + -yo",
+  "mambiletoyo": "messenger (one who carries notes): mambileto + -yo",
+  "filseyo": "fisher (one who fishes): filse + -yo",
+  "helviyo": "spy (one who hides): helvi + -yo",
+  "lavbupago": "temple (place of prayer): lavbu + -pago",
+  "mirunuluti": "stream (little river): mirunulu + -ti",
+  "tamramiruti": "pond (little lake): tamramiru + -ti",
+  "soloti": "pebble (little stone): solo + -ti",
+  "solovu": "boulder (big stone): solo + -vu",
+  "corviyo": "hero (one of courage): corvi + -yo",
+  "karkoyo": "killer (one who kills): karko + -yo",
+  "merviyo": "servant (one who serves): mervi + -yo",
+  "tomnupago": "graveyard; cemetery (place of graves): tomnu + -pago"
+ },
+ "motion_metaphors": {
+  "revo-sabesia": "recognize; know again",
+  "yave-donuda": "share; give together"
+ },
+ "ops": [
+  {
+   "entry": "1.2:G32",
+   "op": "add_ruling",
+   "from": null,
+   "to": "Possession precedence",
+   "addedIn": "1.2",
+   "reason": "Section A of the 1.2 lexicon update (ADR-0013). Author's brief, 2026-10-17.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "1.2:G33",
+   "op": "add_ruling",
+   "from": null,
+   "to": "yuta: the instrument",
+   "addedIn": "1.2",
+   "reason": "Section A of the 1.2 lexicon update (ADR-0013). Author's brief, 2026-10-17.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "1.2:G34",
+   "op": "add_ruling",
+   "from": null,
+   "to": "Frequency correlatives",
+   "addedIn": "1.2",
+   "reason": "Section A of the 1.2 lexicon update (ADR-0013). Author's brief, 2026-10-17.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "1.2:G35",
+   "op": "add_ruling",
+   "from": null,
+   "to": "Two more curated motion metaphors",
+   "addedIn": "1.2",
+   "reason": "Section A of the 1.2 lexicon update (ADR-0013). Author's brief, 2026-10-17.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "1.2:G36",
+   "op": "add_ruling",
+   "from": null,
+   "to": "Gender in kinship",
+   "addedIn": "1.2",
+   "reason": "Section A of the 1.2 lexicon update (ADR-0013). From the author's decision on gender roots, 2026-10-17; aunt and uncle take the adjective (review Q1 a).",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_minva_1419",
+   "op": "add_root",
+   "from": null,
+   "to": "minva",
+   "addedIn": "1.2",
+   "reason": "female: Spelling chosen by Claude under the author's delegation (\"use best judgement\", 2026-10-17) from the three options in review/1_2_candidates.md; passes scripts/check_sounds.py with zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_tarnu_1420",
+   "op": "add_root",
+   "from": null,
+   "to": "tarnu",
+   "addedIn": "1.2",
+   "reason": "male: Spelling chosen by Claude under the author's delegation (\"use best judgement\", 2026-10-17) from the three options in review/1_2_candidates.md; passes scripts/check_sounds.py with zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_rilde_1421",
+   "op": "add_root",
+   "from": null,
+   "to": "rilde",
+   "addedIn": "1.2",
+   "reason": "by marriage: Spelling chosen by Claude under the author's delegation (\"use best judgement\", 2026-10-17) from the three options in review/1_2_candidates.md; passes scripts/check_sounds.py with zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_karko_1422",
+   "op": "add_root",
+   "from": null,
+   "to": "karko",
+   "addedIn": "1.2",
+   "reason": "kill: Spelling chosen by Claude under the author's delegation (\"use best judgement\", 2026-10-17) from the three options in review/1_2_candidates.md; passes scripts/check_sounds.py with zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_tomnu_1423",
+   "op": "add_root",
+   "from": null,
+   "to": "tomnu",
+   "addedIn": "1.2",
+   "reason": "grave: Spelling chosen by Claude under the author's delegation (\"use best judgement\", 2026-10-17) from the three options in review/1_2_candidates.md; passes scripts/check_sounds.py with zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_dumdo_1424",
+   "op": "add_root",
+   "from": null,
+   "to": "dumdo",
+   "addedIn": "1.2",
+   "reason": "drum: Spelling chosen by Claude under the author's delegation (\"use best judgement\", 2026-10-17) from the three options in review/1_2_candidates.md; passes scripts/check_sounds.py with zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_filvi_1425",
+   "op": "add_root",
+   "from": null,
+   "to": "filvi",
+   "addedIn": "1.2",
+   "reason": "reed: Spelling chosen by Claude under the author's delegation (\"use best judgement\", 2026-10-17) from the three options in review/1_2_candidates.md; passes scripts/check_sounds.py with zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lanla_1426",
+   "op": "add_root",
+   "from": null,
+   "to": "lanla",
+   "addedIn": "1.2",
+   "reason": "horizon: Spelling chosen by Claude under the author's delegation (\"use best judgement\", 2026-10-17) from the three options in review/1_2_candidates.md; passes scripts/check_sounds.py with zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_velso_1427",
+   "op": "add_root",
+   "from": null,
+   "to": "velso",
+   "addedIn": "1.2",
+   "reason": "veil: Spelling chosen by Claude under the author's delegation (\"use best judgement\", 2026-10-17) from the three options in review/1_2_candidates.md; passes scripts/check_sounds.py with zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_zirki_1428",
+   "op": "add_root",
+   "from": null,
+   "to": "zirki",
+   "addedIn": "1.2",
+   "reason": "madness: Spelling chosen by Claude under the author's delegation (\"use best judgement\", 2026-10-17) from the three options in review/1_2_candidates.md; passes scripts/check_sounds.py with zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lurva_1429",
+   "op": "add_root",
+   "from": null,
+   "to": "lurva",
+   "addedIn": "1.2",
+   "reason": "pour: Spelling chosen by Claude under the author's delegation (\"use best judgement\", 2026-10-17) from the three options in review/1_2_candidates.md; passes scripts/check_sounds.py with zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_filpa_1430",
+   "op": "add_root",
+   "from": null,
+   "to": "filpa",
+   "addedIn": "1.2",
+   "reason": "fold: Spelling chosen by Claude under the author's delegation (\"use best judgement\", 2026-10-17) from the three options in review/1_2_candidates.md; passes scripts/check_sounds.py with zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_kerti_1431",
+   "op": "add_root",
+   "from": null,
+   "to": "kerti",
+   "addedIn": "1.2",
+   "reason": "carve: Spelling chosen by Claude under the author's delegation (\"use best judgement\", 2026-10-17) from the three options in review/1_2_candidates.md; passes scripts/check_sounds.py with zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_nalfa_1432",
+   "op": "add_root",
+   "from": null,
+   "to": "nalfa",
+   "addedIn": "1.2",
+   "reason": "wing: Spelling chosen by Claude under the author's delegation (\"use best judgement\", 2026-10-17) from the three options in review/1_2_candidates.md; passes scripts/check_sounds.py with zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_pulmi_1433",
+   "op": "add_root",
+   "from": null,
+   "to": "pulmi",
+   "addedIn": "1.2",
+   "reason": "feather: Spelling chosen by Claude under the author's delegation (\"use best judgement\", 2026-10-17) from the three options in review/1_2_candidates.md; passes scripts/check_sounds.py with zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_vurvi_1434",
+   "op": "add_root",
+   "from": null,
+   "to": "vurvi",
+   "addedIn": "1.2",
+   "reason": "tail: Spelling chosen by Claude under the author's delegation (\"use best judgement\", 2026-10-17) from the three options in review/1_2_candidates.md; passes scripts/check_sounds.py with zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_kalga_1435",
+   "op": "add_root",
+   "from": null,
+   "to": "kalga",
+   "addedIn": "1.2",
+   "reason": "claw: Spelling chosen by Claude under the author's delegation (\"use best judgement\", 2026-10-17) from the three options in review/1_2_candidates.md; passes scripts/check_sounds.py with zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_mulfo_1436",
+   "op": "add_root",
+   "from": null,
+   "to": "mulfo",
+   "addedIn": "1.2",
+   "reason": "fur: Spelling chosen by Claude under the author's delegation (\"use best judgement\", 2026-10-17) from the three options in review/1_2_candidates.md; passes scripts/check_sounds.py with zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_pirke_1437",
+   "op": "add_root",
+   "from": null,
+   "to": "pirke",
+   "addedIn": "1.2",
+   "reason": "beak: Spelling chosen by Claude under the author's delegation (\"use best judgement\", 2026-10-17) from the three options in review/1_2_candidates.md; passes scripts/check_sounds.py with zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_kurno_1438",
+   "op": "add_root",
+   "from": null,
+   "to": "kurno",
+   "addedIn": "1.2",
+   "reason": "horn: Spelling chosen by Claude under the author's delegation (\"use best judgement\", 2026-10-17) from the three options in review/1_2_candidates.md; passes scripts/check_sounds.py with zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_zelki_1439",
+   "op": "add_root",
+   "from": null,
+   "to": "zelki",
+   "addedIn": "1.2",
+   "reason": "scale: Spelling chosen by Claude under the author's delegation (\"use best judgement\", 2026-10-17) from the three options in review/1_2_candidates.md; passes scripts/check_sounds.py with zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_mulyi_1440",
+   "op": "add_root",
+   "from": null,
+   "to": "mulyi",
+   "addedIn": "1.2",
+   "reason": "wet: Spelling chosen by Claude under the author's delegation (\"use best judgement\", 2026-10-17) from the three options in review/1_2_candidates.md; passes scripts/check_sounds.py with zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_nilmi_1441",
+   "op": "add_root",
+   "from": null,
+   "to": "nilmi",
+   "addedIn": "1.2",
+   "reason": "smooth: Spelling chosen by Claude under the author's delegation (\"use best judgement\", 2026-10-17) from the three options in review/1_2_candidates.md; passes scripts/check_sounds.py with zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_burdo_1442",
+   "op": "add_root",
+   "from": null,
+   "to": "burdo",
+   "addedIn": "1.2",
+   "reason": "thick: Spelling chosen by Claude under the author's delegation (\"use best judgement\", 2026-10-17) from the three options in review/1_2_candidates.md; passes scripts/check_sounds.py with zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_zeti_1443",
+   "op": "add_root",
+   "from": null,
+   "to": "zeti",
+   "addedIn": "1.2",
+   "reason": "sour: Spelling chosen by Claude under the author's delegation (\"use best judgement\", 2026-10-17) from the three options in review/1_2_candidates.md; passes scripts/check_sounds.py with zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lalfo_1444",
+   "op": "add_root",
+   "from": null,
+   "to": "lalfo",
+   "addedIn": "1.2",
+   "reason": "float: Spelling chosen by Claude under the author's delegation (\"use best judgement\", 2026-10-17) from the three options in review/1_2_candidates.md; passes scripts/check_sounds.py with zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_nombu_1445",
+   "op": "add_root",
+   "from": null,
+   "to": "nombu",
+   "addedIn": "1.2",
+   "reason": "sink: Spelling chosen by Claude under the author's delegation (\"use best judgement\", 2026-10-17) from the three options in review/1_2_candidates.md; passes scripts/check_sounds.py with zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_turgo_1446",
+   "op": "add_root",
+   "from": null,
+   "to": "turgo",
+   "addedIn": "1.2",
+   "reason": "dig: Spelling chosen by Claude under the author's delegation (\"use best judgement\", 2026-10-17) from the three options in review/1_2_candidates.md; passes scripts/check_sounds.py with zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_kirpa_1447",
+   "op": "add_root",
+   "from": null,
+   "to": "kirpa",
+   "addedIn": "1.2",
+   "reason": "split: Spelling chosen by Claude under the author's delegation (\"use best judgement\", 2026-10-17) from the three options in review/1_2_candidates.md; passes scripts/check_sounds.py with zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_tenva_1448",
+   "op": "add_root",
+   "from": null,
+   "to": "tenva",
+   "addedIn": "1.2",
+   "reason": "weave: Spelling chosen by Claude under the author's delegation (\"use best judgement\", 2026-10-17) from the three options in review/1_2_candidates.md; passes scripts/check_sounds.py with zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_sispa_1449",
+   "op": "add_root",
+   "from": null,
+   "to": "sispa",
+   "addedIn": "1.2",
+   "reason": "wipe: Spelling chosen by Claude under the author's delegation (\"use best judgement\", 2026-10-17) from the three options in review/1_2_candidates.md; passes scripts/check_sounds.py with zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_girze_1450",
+   "op": "add_root",
+   "from": null,
+   "to": "girze",
+   "addedIn": "1.2",
+   "reason": "scratch: Spelling chosen by Claude under the author's delegation (\"use best judgement\", 2026-10-17) from the three options in review/1_2_candidates.md; passes scripts/check_sounds.py with zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_pusti_1451",
+   "op": "add_root",
+   "from": null,
+   "to": "pusti",
+   "addedIn": "1.2",
+   "reason": "spit: Spelling chosen by Claude under the author's delegation (\"use best judgement\", 2026-10-17) from the three options in review/1_2_candidates.md; passes scripts/check_sounds.py with zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_volme_1452",
+   "op": "add_root",
+   "from": null,
+   "to": "volme",
+   "addedIn": "1.2",
+   "reason": "ghost: Spelling chosen by Claude under the author's delegation (\"use best judgement\", 2026-10-17) from the three options in review/1_2_candidates.md; passes scripts/check_sounds.py with zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_zirme_1453",
+   "op": "add_root",
+   "from": null,
+   "to": "zirme",
+   "addedIn": "1.2",
+   "reason": "magic: Spelling chosen by Claude under the author's delegation (\"use best judgement\", 2026-10-17) from the three options in review/1_2_candidates.md; passes scripts/check_sounds.py with zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lansi_1454",
+   "op": "add_root",
+   "from": null,
+   "to": "lansi",
+   "addedIn": "1.2",
+   "reason": "angel: Spelling chosen by Claude under the author's delegation (\"use best judgement\", 2026-10-17) from the three options in review/1_2_candidates.md; passes scripts/check_sounds.py with zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_tilki_1455",
+   "op": "add_root",
+   "from": null,
+   "to": "tilki",
+   "addedIn": "1.2",
+   "reason": "spider: Spelling chosen by Claude under the author's delegation (\"use best judgement\", 2026-10-17) from the three options in review/1_2_candidates.md; passes scripts/check_sounds.py with zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_vurfa_1456",
+   "op": "add_root",
+   "from": null,
+   "to": "vurfa",
+   "addedIn": "1.2",
+   "reason": "fox: Spelling chosen by Claude under the author's delegation (\"use best judgement\", 2026-10-17) from the three options in review/1_2_candidates.md; passes scripts/check_sounds.py with zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_garvu_1457",
+   "op": "add_root",
+   "from": null,
+   "to": "garvu",
+   "addedIn": "1.2",
+   "reason": "lion: Spelling chosen by Claude under the author's delegation (\"use best judgement\", 2026-10-17) from the three options in review/1_2_candidates.md; passes scripts/check_sounds.py with zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_limli_1458",
+   "op": "add_root",
+   "from": null,
+   "to": "limli",
+   "addedIn": "1.2",
+   "reason": "lamb: Spelling chosen by Claude under the author's delegation (\"use best judgement\", 2026-10-17) from the three options in review/1_2_candidates.md; passes scripts/check_sounds.py with zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_cipi_1459",
+   "op": "add_root",
+   "from": null,
+   "to": "cipi",
+   "addedIn": "1.2",
+   "reason": "mouse: Spelling chosen by Claude under the author's delegation (\"use best judgement\", 2026-10-17) from the three options in review/1_2_candidates.md; passes scripts/check_sounds.py with zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_bansa_1460",
+   "op": "add_root",
+   "from": null,
+   "to": "bansa",
+   "addedIn": "1.2",
+   "reason": "sufficiency: Spelling chosen by Claude under the author's delegation (\"use best judgement\", 2026-10-17) from the three options in review/1_2_candidates.md; passes scripts/check_sounds.py with zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_hurvo_1461",
+   "op": "add_root",
+   "from": null,
+   "to": "hurvo",
+   "addedIn": "1.2",
+   "reason": "strangeness: Spelling chosen by Claude under the author's delegation (\"use best judgement\", 2026-10-17) from the three options in review/1_2_candidates.md; passes scripts/check_sounds.py with zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_gargo_1462",
+   "op": "add_root",
+   "from": null,
+   "to": "gargo",
+   "addedIn": "1.2",
+   "reason": "ferocity: Spelling chosen by Claude under the author's delegation (\"use best judgement\", 2026-10-17) from the three options in review/1_2_candidates.md; passes scripts/check_sounds.py with zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_sirmo_1463",
+   "op": "add_root",
+   "from": null,
+   "to": "sirmo",
+   "addedIn": "1.2",
+   "reason": "fame: Spelling chosen by Claude under the author's delegation (\"use best judgement\", 2026-10-17) from the three options in review/1_2_candidates.md; passes scripts/check_sounds.py with zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_gerpe_1464",
+   "op": "add_root",
+   "from": null,
+   "to": "gerpe",
+   "addedIn": "1.2",
+   "reason": "greed: Spelling chosen by Claude under the author's delegation (\"use best judgement\", 2026-10-17) from the three options in review/1_2_candidates.md; passes scripts/check_sounds.py with zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_holmo_1465",
+   "op": "add_root",
+   "from": null,
+   "to": "holmo",
+   "addedIn": "1.2",
+   "reason": "hollow: Spelling chosen by Claude under the author's delegation (\"use best judgement\", 2026-10-17) from the three options in review/1_2_candidates.md; passes scripts/check_sounds.py with zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_felti_1466",
+   "op": "add_root",
+   "from": null,
+   "to": "felti",
+   "addedIn": "1.2",
+   "reason": "fragile: Spelling chosen by Claude under the author's delegation (\"use best judgement\", 2026-10-17) from the three options in review/1_2_candidates.md; passes scripts/check_sounds.py with zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_salko_1467",
+   "op": "add_root",
+   "from": null,
+   "to": "salko",
+   "addedIn": "1.2",
+   "reason": "shell: Spelling chosen by Claude under the author's delegation (\"use best judgement\", 2026-10-17) from the three options in review/1_2_candidates.md; passes scripts/check_sounds.py with zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_cirsi_1468",
+   "op": "add_root",
+   "from": null,
+   "to": "cirsi",
+   "addedIn": "1.2",
+   "reason": "crystal: Spelling chosen by Claude under the author's delegation (\"use best judgement\", 2026-10-17) from the three options in review/1_2_candidates.md; passes scripts/check_sounds.py with zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_vasko_1469",
+   "op": "add_root",
+   "from": null,
+   "to": "vasko",
+   "addedIn": "1.2",
+   "reason": "mask: Spelling chosen by Claude under the author's delegation (\"use best judgement\", 2026-10-17) from the three options in review/1_2_candidates.md; passes scripts/check_sounds.py with zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lundu_1470",
+   "op": "add_root",
+   "from": null,
+   "to": "lundu",
+   "addedIn": "1.2",
+   "reason": "bareness: Spelling chosen by Claude under the author's delegation (\"use best judgement\", 2026-10-17) from the three options in review/1_2_candidates.md; passes scripts/check_sounds.py with zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_mervi_1471",
+   "op": "add_root",
+   "from": null,
+   "to": "mervi",
+   "addedIn": "1.2",
+   "reason": "serve: Spelling chosen by Claude under the author's delegation (\"use best judgement\", 2026-10-17) from the three options in review/1_2_candidates.md; passes scripts/check_sounds.py with zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_murta_1472",
+   "op": "add_root",
+   "from": null,
+   "to": "murta",
+   "addedIn": "1.2",
+   "reason": "crowd: Spelling chosen by Claude under the author's delegation (\"use best judgement\", 2026-10-17) from the three options in review/1_2_candidates.md; passes scripts/check_sounds.py with zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_nirma_1473",
+   "op": "add_root",
+   "from": null,
+   "to": "nirma",
+   "addedIn": "1.2",
+   "reason": "victim: Spelling chosen by Claude under the author's delegation (\"use best judgement\", 2026-10-17) from the three options in review/1_2_candidates.md; passes scripts/check_sounds.py with zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_tinsa_1474",
+   "op": "add_root",
+   "from": null,
+   "to": "tinsa",
+   "addedIn": "1.2",
+   "reason": "guess: Spelling chosen by Claude under the author's delegation (\"use best judgement\", 2026-10-17) from the three options in review/1_2_candidates.md; passes scripts/check_sounds.py with zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_yorve_1475",
+   "op": "add_root",
+   "from": null,
+   "to": "yorve",
+   "addedIn": "1.2",
+   "reason": "obey: Spelling chosen by Claude under the author's delegation (\"use best judgement\", 2026-10-17) from the three options in review/1_2_candidates.md; passes scripts/check_sounds.py with zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_minvalinu_1476",
+   "op": "add_compound",
+   "from": null,
+   "to": "minvalinu",
+   "ruling": "1.2:G36",
+   "addedIn": "1.2",
+   "reason": "daughter; girl: minva + linu, two active headwords, no nesting. Checked with scripts/check_sounds.py: zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_tarnulinu_1477",
+   "op": "add_compound",
+   "from": null,
+   "to": "tarnulinu",
+   "ruling": "1.2:G36",
+   "addedIn": "1.2",
+   "reason": "son; boy: tarnu + linu, two active headwords, no nesting. Checked with scripts/check_sounds.py: zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_minvafamli_1478",
+   "op": "add_compound",
+   "from": null,
+   "to": "minvafamli",
+   "ruling": "1.2:G36",
+   "addedIn": "1.2",
+   "reason": "sister: minva + famli, two active headwords, no nesting. Checked with scripts/check_sounds.py: zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_tarnufamli_1479",
+   "op": "add_compound",
+   "from": null,
+   "to": "tarnufamli",
+   "ruling": "1.2:G36",
+   "addedIn": "1.2",
+   "reason": "brother: tarnu + famli, two active headwords, no nesting. Checked with scripts/check_sounds.py: zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_purmamare_1480",
+   "op": "add_compound",
+   "from": null,
+   "to": "purmamare",
+   "ruling": "1.2:G36",
+   "addedIn": "1.2",
+   "reason": "Grandmother as the parent's mother, after purmafamli; avoids nesting purmapurma (review section 1). Checked with scripts/check_sounds.py: zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_purmapilo_1481",
+   "op": "add_compound",
+   "from": null,
+   "to": "purmapilo",
+   "ruling": "1.2:G36",
+   "addedIn": "1.2",
+   "reason": "Grandfather as the parent's father, after purmafamli. Checked with scripts/check_sounds.py: zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_rildemare_1482",
+   "op": "add_compound",
+   "from": null,
+   "to": "rildemare",
+   "ruling": "1.2:G36",
+   "addedIn": "1.2",
+   "reason": "mother-in-law: rilde + mare, two active headwords, no nesting. Checked with scripts/check_sounds.py: zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_rildepilo_1483",
+   "op": "add_compound",
+   "from": null,
+   "to": "rildepilo",
+   "ruling": "1.2:G36",
+   "addedIn": "1.2",
+   "reason": "father-in-law: rilde + pilo, two active headwords, no nesting. Checked with scripts/check_sounds.py: zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_rildepurma_1484",
+   "op": "add_compound",
+   "from": null,
+   "to": "rildepurma",
+   "ruling": "1.2:G36",
+   "addedIn": "1.2",
+   "reason": "parent-in-law: rilde + purma, two active headwords, no nesting. Checked with scripts/check_sounds.py: zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_rildefamli_1485",
+   "op": "add_compound",
+   "from": null,
+   "to": "rildefamli",
+   "ruling": "1.2:G36",
+   "addedIn": "1.2",
+   "reason": "sibling-in-law: rilde + famli, two active headwords, no nesting. Checked with scripts/check_sounds.py: zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_rildelinu_1486",
+   "op": "add_compound",
+   "from": null,
+   "to": "rildelinu",
+   "ruling": "1.2:G36",
+   "addedIn": "1.2",
+   "reason": "child-in-law: rilde + linu, two active headwords, no nesting. Checked with scripts/check_sounds.py: zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_luminela_1487",
+   "op": "add_compound",
+   "from": null,
+   "to": "luminela",
+   "addedIn": "1.2",
+   "reason": "priest; a person of light: lumi + nela, two active headwords, no nesting. Checked with scripts/check_sounds.py: zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_mernonela_1488",
+   "op": "add_compound",
+   "from": null,
+   "to": "mernonela",
+   "addedIn": "1.2",
+   "reason": "Prophet, \"person of future light\": morning + person, two components with no nesting (review Q2 a). Checked with scripts/check_sounds.py: zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_nemerivo_1489",
+   "op": "add_compound",
+   "from": null,
+   "to": "nemerivo",
+   "addedIn": "1.2",
+   "reason": "Widowhood (author: \"do something graceful with compounds\"): sorrow + companion, neutral between widow and widower (review Q3 a). Checked with scripts/check_sounds.py: zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_sulbacemnu_1490",
+   "op": "add_compound",
+   "from": null,
+   "to": "sulbacemnu",
+   "addedIn": "1.2",
+   "reason": "noon; midday: sulba + cemnu, two active headwords, no nesting. Checked with scripts/check_sounds.py: zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_nullocemnu_1491",
+   "op": "add_compound",
+   "from": null,
+   "to": "nullocemnu",
+   "addedIn": "1.2",
+   "reason": "Midnight: night + center; preferred over luno (moon) because the moon is not always up at midnight. Checked with scripts/check_sounds.py: zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_melotibi_1492",
+   "op": "add_compound",
+   "from": null,
+   "to": "melotibi",
+   "addedIn": "1.2",
+   "reason": "string (of an instrument): melo + tibi, two active headwords, no nesting. Checked with scripts/check_sounds.py: zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_filvibiti_1493",
+   "op": "add_compound",
+   "from": null,
+   "to": "filvibiti",
+   "addedIn": "1.2",
+   "reason": "flute; reed pipe: filvi + biti, two active headwords, no nesting. Checked with scripts/check_sounds.py: zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_mernodarno_1494",
+   "op": "add_compound",
+   "from": null,
+   "to": "mernodarno",
+   "addedIn": "1.2",
+   "reason": "east: merno + darno, two active headwords, no nesting. Checked with scripts/check_sounds.py: zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_vesnodarno_1495",
+   "op": "add_compound",
+   "from": null,
+   "to": "vesnodarno",
+   "addedIn": "1.2",
+   "reason": "west: vesno + darno, two active headwords, no nesting. Checked with scripts/check_sounds.py: zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_veludarno_1496",
+   "op": "add_compound",
+   "from": null,
+   "to": "veludarno",
+   "addedIn": "1.2",
+   "reason": "North: star + direction, where the fixed stars turn (review Q5 a). Checked with scripts/check_sounds.py: zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_sulbadarno_1497",
+   "op": "add_compound",
+   "from": null,
+   "to": "sulbadarno",
+   "addedIn": "1.2",
+   "reason": "South: sun + direction, where the noon sun stands (review Q5 a). Checked with scripts/check_sounds.py: zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "fw_yuta_0150",
+   "op": "add_function_word",
+   "from": null,
+   "to": "yuta",
+   "ruling": "1.2:G33",
+   "addedIn": "1.2",
+   "reason": "with; using; by means of: Spelling chosen by Claude under the author's delegation (\"use best judgement\", 2026-10-17) from the three options in review/1_2_candidates.md; passes scripts/check_sounds.py with zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "fw_diba_0151",
+   "op": "add_function_word",
+   "from": null,
+   "to": "diba",
+   "addedIn": "1.2",
+   "reason": "too; excessively: Spelling chosen by Claude under the author's delegation (\"use best judgement\", 2026-10-17) from the three options in review/1_2_candidates.md; passes scripts/check_sounds.py with zero ERRORs.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "cr_muyakrono_0037",
+   "op": "add_correlative",
+   "from": null,
+   "to": "muya-krono",
+   "ruling": "1.2:G34",
+   "addedIn": "1.2",
+   "reason": "Section A3: quantifier + krono, often. Limited to krono.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "cr_pokakrono_0038",
+   "op": "add_correlative",
+   "from": null,
+   "to": "poka-krono",
+   "ruling": "1.2:G34",
+   "addedIn": "1.2",
+   "reason": "Section A3: quantifier + krono, rarely. Limited to krono.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "cr_radakrono_0039",
+   "op": "add_correlative",
+   "from": null,
+   "to": "rada-krono",
+   "ruling": "1.2:G34",
+   "addedIn": "1.2",
+   "reason": "Section A3: quantifier + krono, each time. Limited to krono.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "derivation:lx_lemu_0256:-pago",
+   "op": "add_derivation",
+   "from": null,
+   "to": "lemupago",
+   "addedIn": "1.2",
+   "reason": "Section C of the author's brief. Suffix order holds: -pago on the root spelling. Checked with scripts/check_sounds.py.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "derivation:lx_lemu_0256:-yo",
+   "op": "add_derivation",
+   "from": null,
+   "to": "lemuyo",
+   "addedIn": "1.2",
+   "reason": "Section C of the author's brief. Suffix order holds: -yo on the root spelling. Checked with scripts/check_sounds.py.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "derivation:lx_lemudonu_0257:-yo",
+   "op": "add_derivation",
+   "from": null,
+   "to": "lemudonuyo",
+   "addedIn": "1.2",
+   "reason": "Section C of the author's brief. Suffix order holds: -yo on the root spelling. Checked with scripts/check_sounds.py.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "derivation:lx_vanru_0941:-yo",
+   "op": "add_derivation",
+   "from": null,
+   "to": "vanruyo",
+   "addedIn": "1.2",
+   "reason": "Section C of the author's brief. Suffix order holds: -yo on the root spelling. Checked with scripts/check_sounds.py.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "derivation:lx_marna_0356:-pago",
+   "op": "add_derivation",
+   "from": null,
+   "to": "marnapago",
+   "addedIn": "1.2",
+   "reason": "Section C of the author's brief. Suffix order holds: -pago on the root spelling. Checked with scripts/check_sounds.py.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "derivation:lx_marna_0356:-yo",
+   "op": "add_derivation",
+   "from": null,
+   "to": "marnayo",
+   "addedIn": "1.2",
+   "reason": "Section C of the author's brief. Suffix order holds: -yo on the root spelling. Checked with scripts/check_sounds.py.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "derivation:lx_monru_0431:-ti",
+   "op": "add_derivation",
+   "from": null,
+   "to": "monruti",
+   "addedIn": "1.2",
+   "reason": "Section C of the author's brief. Suffix order holds: -ti on the root spelling. Checked with scripts/check_sounds.py.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "derivation:lx_yugemeyi_1088:-yo",
+   "op": "add_derivation",
+   "from": null,
+   "to": "yugemeyiyo",
+   "addedIn": "1.2",
+   "reason": "Section C of the author's brief. Suffix order holds: -yo on the root spelling. Checked with scripts/check_sounds.py.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "derivation:lx_dapadonu_0073:-yo",
+   "op": "add_derivation",
+   "from": null,
+   "to": "dapadonuyo",
+   "addedIn": "1.2",
+   "reason": "Section C of the author's brief. Suffix order holds: -yo on the root spelling. Checked with scripts/check_sounds.py.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "derivation:lx_juse_0181:-yo",
+   "op": "add_derivation",
+   "from": null,
+   "to": "juseyo",
+   "addedIn": "1.2",
+   "reason": "Section C of the author's brief. Suffix order holds: -yo on the root spelling. Checked with scripts/check_sounds.py.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "derivation:lx_devobalbu_0081:-yo",
+   "op": "add_derivation",
+   "from": null,
+   "to": "devobalbuyo",
+   "addedIn": "1.2",
+   "reason": "Section C of the author's brief. Suffix order holds: -yo on the root spelling. Checked with scripts/check_sounds.py.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "derivation:lx_sevu_0770:-yo",
+   "op": "add_derivation",
+   "from": null,
+   "to": "sevuyo",
+   "addedIn": "1.2",
+   "reason": "Section C of the author's brief. Suffix order holds: -yo on the root spelling. Checked with scripts/check_sounds.py.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "derivation:lx_mambileto_0345:-yo",
+   "op": "add_derivation",
+   "from": null,
+   "to": "mambiletoyo",
+   "addedIn": "1.2",
+   "reason": "Section C of the author's brief. Suffix order holds: -yo on the root spelling. Checked with scripts/check_sounds.py.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "derivation:lx_filse_0121:-yo",
+   "op": "add_derivation",
+   "from": null,
+   "to": "filseyo",
+   "addedIn": "1.2",
+   "reason": "Section C of the author's brief. Suffix order holds: -yo on the root spelling. Checked with scripts/check_sounds.py.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "derivation:lx_helvi_0163:-yo",
+   "op": "add_derivation",
+   "from": null,
+   "to": "helviyo",
+   "addedIn": "1.2",
+   "reason": "Section C of the author's brief. Suffix order holds: -yo on the root spelling. Checked with scripts/check_sounds.py.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "derivation:lx_lavbu_0227:-pago",
+   "op": "add_derivation",
+   "from": null,
+   "to": "lavbupago",
+   "addedIn": "1.2",
+   "reason": "Section C of the author's brief. Suffix order holds: -pago on the root spelling. Checked with scripts/check_sounds.py.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "derivation:lx_mirunulu_0404:-ti",
+   "op": "add_derivation",
+   "from": null,
+   "to": "mirunuluti",
+   "addedIn": "1.2",
+   "reason": "Section C of the author's brief. Suffix order holds: -ti on the root spelling. Checked with scripts/check_sounds.py.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "derivation:lx_tamramiru_1399:-ti",
+   "op": "add_derivation",
+   "from": null,
+   "to": "tamramiruti",
+   "addedIn": "1.2",
+   "reason": "Section C of the author's brief. Suffix order holds: -ti on the root spelling. Checked with scripts/check_sounds.py.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "derivation:lx_solo_0813:-ti",
+   "op": "add_derivation",
+   "from": null,
+   "to": "soloti",
+   "addedIn": "1.2",
+   "reason": "Section C of the author's brief. Suffix order holds: -ti on the root spelling. Checked with scripts/check_sounds.py.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "derivation:lx_solo_0813:-vu",
+   "op": "add_derivation",
+   "from": null,
+   "to": "solovu",
+   "addedIn": "1.2",
+   "reason": "Section C of the author's brief. Suffix order holds: -vu on the root spelling. Checked with scripts/check_sounds.py.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "derivation:lx_corvi_0062:-yo",
+   "op": "add_derivation",
+   "from": null,
+   "to": "corviyo",
+   "addedIn": "1.2",
+   "reason": "Hero = the courage root + -yo (brief, section C); corvi is the only root glossed courage. Suffix order holds: -yo on the root spelling. Checked with scripts/check_sounds.py.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "derivation:lx_karko_1422:-yo",
+   "op": "add_derivation",
+   "from": null,
+   "to": "karkoyo",
+   "addedIn": "1.2",
+   "reason": "Derivation of a new 1.2 root, requested with it. Suffix order holds: -yo on the root spelling. Checked with scripts/check_sounds.py.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "derivation:lx_mervi_1471:-yo",
+   "op": "add_derivation",
+   "from": null,
+   "to": "merviyo",
+   "addedIn": "1.2",
+   "reason": "Derivation of a new 1.2 root, requested with it. Suffix order holds: -yo on the root spelling. Checked with scripts/check_sounds.py.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "derivation:lx_tomnu_1423:-pago",
+   "op": "add_derivation",
+   "from": null,
+   "to": "tomnupago",
+   "addedIn": "1.2",
+   "reason": "Derivation of a new 1.2 root, requested with it. Suffix order holds: -pago on the root spelling. Checked with scripts/check_sounds.py.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "motion:revo-:lx_sabe_0718",
+   "op": "add_motion_metaphor",
+   "from": null,
+   "to": "revo-sabesia",
+   "ruling": "1.2:G35",
+   "addedIn": "1.2",
+   "reason": "Section A4: recognize; know again. Curated; the prefixes stay non-productive.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "motion:yave-:lx_donu_0095",
+   "op": "add_motion_metaphor",
+   "from": null,
+   "to": "yave-donuda",
+   "ruling": "1.2:G35",
+   "addedIn": "1.2",
+   "reason": "Section A4: share; give together. Curated; the prefixes stay non-productive.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_daigo_0065",
+   "op": "edit_gloss",
+   "slot": "adjective",
+   "from": "Murderous, perilous",
+   "to": "dead; mortal",
+   "addedIn": "1.2",
+   "reason": "B1: the killing sense moves to the new kill root (adjective: deadly; lethal). The 1.1 sense is archived in legacy.archived_senses.",
+   "archive": true,
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_noru_0545",
+   "op": "edit_gloss",
+   "slot": "negative",
+   "from": "wakefulness",
+   "to": "disillusionment; waking from a dream",
+   "addedIn": "1.2",
+   "reason": "B2: noruna duplicated somuna (wakefulness); the negative of dream is waking from one.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_devorivo_0089",
+   "op": "edit_gloss",
+   "slot": "negative",
+   "from": "a severed marriage bond",
+   "to": "divorce; a marriage bond severed by choice",
+   "addedIn": "1.2",
+   "reason": "B3: narrowed to divorce; widowhood is the compound nemerivo, never a bond severed.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_sabe_0718",
+   "op": "activate_slot",
+   "slot": "ascended",
+   "from": "— (unused)",
+   "to": "wisdom",
+   "ruling": "0.8:R2",
+   "addedIn": "1.2",
+   "reason": "B4: ascended knowing is predictable as wisdom.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_sabe_0718",
+   "op": "activate_slot",
+   "slot": "ascendedAdjective",
+   "from": "— (unused)",
+   "to": "wise",
+   "ruling": "0.8:R2",
+   "addedIn": "1.2",
+   "reason": "B4: predictable from sabeasa, wisdom.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_monru_0431",
+   "op": "activate_slot",
+   "slot": "negativeAdjective",
+   "from": "— (unused)",
+   "to": "flat",
+   "ruling": "0.8:R2",
+   "addedIn": "1.2",
+   "reason": "B4: monruna is flatland, so its adjective is flat.",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_pensa_0601",
+   "op": "activate_slot",
+   "slot": "ascended",
+   "from": "— (unused)",
+   "to": "contemplation",
+   "ruling": "0.8:R2",
+   "addedIn": "1.2",
+   "reason": "Tier 3 ponder: covered by pensa; ascended thought is predictable as contemplation (review Q4).",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_linufule_1185",
+   "op": "activate_slot",
+   "slot": "verb",
+   "from": "— (unused)",
+   "to": "to be with child; to carry a child",
+   "ruling": "0.8:R2",
+   "addedIn": "1.2",
+   "reason": "Tier 3 pregnancy: covered by linufule; its verb is predictable (review Q4).",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_linufule_1185",
+   "op": "activate_slot",
+   "slot": "adjective",
+   "from": "— (unused)",
+   "to": "expectant; with child",
+   "ruling": "0.8:R2",
+   "addedIn": "1.2",
+   "reason": "Tier 3 pregnancy: its adjective is predictable (review Q4).",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_hunra_1114",
+   "op": "edit_metadata",
+   "slot": "metadata",
+   "from": "[\"maturity\", \"being fully developed or adult\", \"immaturity\", \"to mature\", \"ripen\", \"become fully developed\", \"immature\", \"not fully developed\", \"mature\", \"fully developed\"]",
+   "to": "[\"maturity\", \"being fully developed or adult\", \"immaturity\", \"to mature\", \"ripen\", \"become fully developed\", \"immature\", \"not fully developed\", \"mature\", \"fully developed\", \"ripe\", \"unripe\"]",
+   "addedIn": "1.2",
+   "reason": "Tier 3 ripe: covered by hunra (hunraha to ripen, hunranasan immature); add the English so search and the translator find it.",
+   "field": "english_synonyms",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "phonology.protected_exceptions",
+   "op": "edit_metadata",
+   "slot": "metadata",
+   "from": "36 amor- double-a roots (legacy canon)",
+   "to": "39 amor compounds (legacy canon): 20 ending -amor, 19 beginning amor-",
+   "addedIn": "1.2",
+   "reason": "The label said 36 roots: they are compounds, and 1.0 has 39 (src/core/config/phonology.ts). Scheduled repair, CLAUDE.md.",
+   "field": "protected_exceptions",
+   "at": "2026-10-17T12:00:00Z",
+   "author": "nicolas"
+  }
+ ]
+}

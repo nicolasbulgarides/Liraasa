@@ -1,0 +1,877 @@
+{
+ "report": "Liraasa 1.2 build",
+ "built_utc": "2026-10-17T12:00:00Z",
+ "baseline": {
+  "file": "liraasa_1_1.json",
+  "sha256": "819b002c48be6c570d8b9fc6c2d4101fe6accaddee9688d74ff3bb8269b06e18"
+ },
+ "changesets": [
+  {
+   "file": "data/changes/2026-10-17-grammar-rulings.json",
+   "id": "2026-10-17-grammar-rulings",
+   "sha256": "825d0da928f62e03672469a0335a8c2f50cb57726d8d6a5d62cfc065b83fb33b"
+  },
+  {
+   "file": "data/changes/2026-10-17-lexicon-1-2.json",
+   "id": "2026-10-17-lexicon-1-2",
+   "sha256": "e974836c67cf36c2c6bfdadff51b8c03a0dc258c1268e37050d085357ef00543"
+  }
+ ],
+ "output": {
+  "file": "liraasa_1_2.json",
+  "sha256": "12e9d262ec56b1515dba196b2ecf7de432dae611d7a5af213dc206f477441fe3",
+  "bytes": 2263710
+ },
+ "counts": {
+  "before": {
+   "headwords": 1418,
+   "primalRoots": 407,
+   "compounds": 1011,
+   "forms": 9926,
+   "distinctForms": 9926,
+   "functionWords": 149,
+   "correlatives": 36,
+   "lexicalisedDerivations": 5,
+   "rhymeFamilies": 387
+  },
+  "after": {
+   "headwords": 1497,
+   "primalRoots": 464,
+   "compounds": 1033,
+   "forms": 10479,
+   "distinctForms": 10479,
+   "functionWords": 151,
+   "correlatives": 39,
+   "lexicalisedDerivations": 29,
+   "rhymeFamilies": 466
+  }
+ },
+ "audit": {
+  "passed": true,
+  "findings": []
+ },
+ "applied": [
+  {
+   "changeset": "2026-10-17-grammar-rulings",
+   "op": "add_ruling",
+   "entry": "1.2:G24",
+   "to": "Time words open or close a clause; the opening comma is optional; zafra, finra, lanto, kenvi stay opening-only."
+  },
+  {
+   "changeset": "2026-10-17-grammar-rulings",
+   "op": "add_ruling",
+   "entry": "1.2:G25",
+   "to": "A lone oro joins two equal parts like ata, and may open a continuing clause; oro A oro B is emphatic either/or."
+  },
+  {
+   "changeset": "2026-10-17-grammar-rulings",
+   "op": "add_ruling",
+   "entry": "1.2:G26",
+   "to": "A give-type verb takes THEME ala RECIPIENT, or a bare pronoun recipient straight after the verb."
+  },
+  {
+   "changeset": "2026-10-17-grammar-rulings",
+   "op": "add_ruling",
+   "entry": "1.2:G27",
+   "to": "In X de Y the owner is Y, except a pronoun or personal name before de is the owner; a pronoun is always the owner."
+  },
+  {
+   "changeset": "2026-10-17-grammar-rulings",
+   "op": "add_ruling",
+   "entry": "1.2:G28",
+   "to": "-ri is optional after a number or quantifier."
+  },
+  {
+   "changeset": "2026-10-17-grammar-rulings",
+   "op": "add_ruling",
+   "entry": "1.2:G29",
+   "to": "An adjective stands as a noun only after an article or determiner."
+  },
+  {
+   "changeset": "2026-10-17-grammar-rulings",
+   "op": "add_ruling",
+   "entry": "1.2:G30",
+   "to": "\"About\" is a de phrase; no new word."
+  },
+  {
+   "changeset": "2026-10-17-grammar-rulings",
+   "op": "add_ruling",
+   "entry": "1.2:G31",
+   "to": "Commands have no subject (fisa softens); address is set off by commas; verse may narrate in the present."
+  },
+  {
+   "changeset": "2026-10-17-grammar-rulings",
+   "op": "edit_example",
+   "entry": "example:41",
+   "to": "Maivo de benasan melo opioa lumi."
+  },
+  {
+   "changeset": "2026-10-17-grammar-rulings",
+   "op": "edit_example",
+   "entry": "example:252",
+   "to": "Loterosan silda, li cilni ka lasona."
+  },
+  {
+   "changeset": "2026-10-17-grammar-rulings",
+   "op": "edit_example",
+   "entry": "example:522",
+   "to": "Maivo po lemula baba loterosan lermi."
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_ruling",
+   "entry": "1.2:G32",
+   "to": "Possession precedence"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_ruling",
+   "entry": "1.2:G33",
+   "to": "yuta: the instrument"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_ruling",
+   "entry": "1.2:G34",
+   "to": "Frequency correlatives"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_ruling",
+   "entry": "1.2:G35",
+   "to": "Two more curated motion metaphors"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_ruling",
+   "entry": "1.2:G36",
+   "to": "Gender in kinship"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_root",
+   "entry": "lx_minva_1419",
+   "to": "minva"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_root",
+   "entry": "lx_tarnu_1420",
+   "to": "tarnu"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_root",
+   "entry": "lx_rilde_1421",
+   "to": "rilde"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_root",
+   "entry": "lx_karko_1422",
+   "to": "karko"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_root",
+   "entry": "lx_tomnu_1423",
+   "to": "tomnu"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_root",
+   "entry": "lx_dumdo_1424",
+   "to": "dumdo"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_root",
+   "entry": "lx_filvi_1425",
+   "to": "filvi"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_root",
+   "entry": "lx_lanla_1426",
+   "to": "lanla"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_root",
+   "entry": "lx_velso_1427",
+   "to": "velso"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_root",
+   "entry": "lx_zirki_1428",
+   "to": "zirki"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_root",
+   "entry": "lx_lurva_1429",
+   "to": "lurva"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_root",
+   "entry": "lx_filpa_1430",
+   "to": "filpa"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_root",
+   "entry": "lx_kerti_1431",
+   "to": "kerti"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_root",
+   "entry": "lx_nalfa_1432",
+   "to": "nalfa"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_root",
+   "entry": "lx_pulmi_1433",
+   "to": "pulmi"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_root",
+   "entry": "lx_vurvi_1434",
+   "to": "vurvi"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_root",
+   "entry": "lx_kalga_1435",
+   "to": "kalga"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_root",
+   "entry": "lx_mulfo_1436",
+   "to": "mulfo"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_root",
+   "entry": "lx_pirke_1437",
+   "to": "pirke"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_root",
+   "entry": "lx_kurno_1438",
+   "to": "kurno"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_root",
+   "entry": "lx_zelki_1439",
+   "to": "zelki"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_root",
+   "entry": "lx_mulyi_1440",
+   "to": "mulyi"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_root",
+   "entry": "lx_nilmi_1441",
+   "to": "nilmi"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_root",
+   "entry": "lx_burdo_1442",
+   "to": "burdo"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_root",
+   "entry": "lx_zeti_1443",
+   "to": "zeti"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_root",
+   "entry": "lx_lalfo_1444",
+   "to": "lalfo"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_root",
+   "entry": "lx_nombu_1445",
+   "to": "nombu"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_root",
+   "entry": "lx_turgo_1446",
+   "to": "turgo"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_root",
+   "entry": "lx_kirpa_1447",
+   "to": "kirpa"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_root",
+   "entry": "lx_tenva_1448",
+   "to": "tenva"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_root",
+   "entry": "lx_sispa_1449",
+   "to": "sispa"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_root",
+   "entry": "lx_girze_1450",
+   "to": "girze"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_root",
+   "entry": "lx_pusti_1451",
+   "to": "pusti"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_root",
+   "entry": "lx_volme_1452",
+   "to": "volme"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_root",
+   "entry": "lx_zirme_1453",
+   "to": "zirme"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_root",
+   "entry": "lx_lansi_1454",
+   "to": "lansi"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_root",
+   "entry": "lx_tilki_1455",
+   "to": "tilki"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_root",
+   "entry": "lx_vurfa_1456",
+   "to": "vurfa"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_root",
+   "entry": "lx_garvu_1457",
+   "to": "garvu"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_root",
+   "entry": "lx_limli_1458",
+   "to": "limli"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_root",
+   "entry": "lx_cipi_1459",
+   "to": "cipi"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_root",
+   "entry": "lx_bansa_1460",
+   "to": "bansa"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_root",
+   "entry": "lx_hurvo_1461",
+   "to": "hurvo"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_root",
+   "entry": "lx_gargo_1462",
+   "to": "gargo"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_root",
+   "entry": "lx_sirmo_1463",
+   "to": "sirmo"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_root",
+   "entry": "lx_gerpe_1464",
+   "to": "gerpe"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_root",
+   "entry": "lx_holmo_1465",
+   "to": "holmo"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_root",
+   "entry": "lx_felti_1466",
+   "to": "felti"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_root",
+   "entry": "lx_salko_1467",
+   "to": "salko"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_root",
+   "entry": "lx_cirsi_1468",
+   "to": "cirsi"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_root",
+   "entry": "lx_vasko_1469",
+   "to": "vasko"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_root",
+   "entry": "lx_lundu_1470",
+   "to": "lundu"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_root",
+   "entry": "lx_mervi_1471",
+   "to": "mervi"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_root",
+   "entry": "lx_murta_1472",
+   "to": "murta"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_root",
+   "entry": "lx_nirma_1473",
+   "to": "nirma"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_root",
+   "entry": "lx_tinsa_1474",
+   "to": "tinsa"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_root",
+   "entry": "lx_yorve_1475",
+   "to": "yorve"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_compound",
+   "entry": "lx_minvalinu_1476",
+   "to": "minvalinu"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_compound",
+   "entry": "lx_tarnulinu_1477",
+   "to": "tarnulinu"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_compound",
+   "entry": "lx_minvafamli_1478",
+   "to": "minvafamli"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_compound",
+   "entry": "lx_tarnufamli_1479",
+   "to": "tarnufamli"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_compound",
+   "entry": "lx_purmamare_1480",
+   "to": "purmamare"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_compound",
+   "entry": "lx_purmapilo_1481",
+   "to": "purmapilo"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_compound",
+   "entry": "lx_rildemare_1482",
+   "to": "rildemare"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_compound",
+   "entry": "lx_rildepilo_1483",
+   "to": "rildepilo"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_compound",
+   "entry": "lx_rildepurma_1484",
+   "to": "rildepurma"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_compound",
+   "entry": "lx_rildefamli_1485",
+   "to": "rildefamli"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_compound",
+   "entry": "lx_rildelinu_1486",
+   "to": "rildelinu"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_compound",
+   "entry": "lx_luminela_1487",
+   "to": "luminela"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_compound",
+   "entry": "lx_mernonela_1488",
+   "to": "mernonela"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_compound",
+   "entry": "lx_nemerivo_1489",
+   "to": "nemerivo"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_compound",
+   "entry": "lx_sulbacemnu_1490",
+   "to": "sulbacemnu"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_compound",
+   "entry": "lx_nullocemnu_1491",
+   "to": "nullocemnu"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_compound",
+   "entry": "lx_melotibi_1492",
+   "to": "melotibi"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_compound",
+   "entry": "lx_filvibiti_1493",
+   "to": "filvibiti"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_compound",
+   "entry": "lx_mernodarno_1494",
+   "to": "mernodarno"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_compound",
+   "entry": "lx_vesnodarno_1495",
+   "to": "vesnodarno"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_compound",
+   "entry": "lx_veludarno_1496",
+   "to": "veludarno"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_compound",
+   "entry": "lx_sulbadarno_1497",
+   "to": "sulbadarno"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_function_word",
+   "entry": "fw_yuta_0150",
+   "to": "yuta"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_function_word",
+   "entry": "fw_diba_0151",
+   "to": "diba"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_correlative",
+   "entry": "cr_muyakrono_0037",
+   "to": "muya-krono"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_correlative",
+   "entry": "cr_pokakrono_0038",
+   "to": "poka-krono"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_correlative",
+   "entry": "cr_radakrono_0039",
+   "to": "rada-krono"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_derivation",
+   "entry": "derivation:lx_lemu_0256:-pago",
+   "to": "lemupago"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_derivation",
+   "entry": "derivation:lx_lemu_0256:-yo",
+   "to": "lemuyo"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_derivation",
+   "entry": "derivation:lx_lemudonu_0257:-yo",
+   "to": "lemudonuyo"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_derivation",
+   "entry": "derivation:lx_vanru_0941:-yo",
+   "to": "vanruyo"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_derivation",
+   "entry": "derivation:lx_marna_0356:-pago",
+   "to": "marnapago"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_derivation",
+   "entry": "derivation:lx_marna_0356:-yo",
+   "to": "marnayo"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_derivation",
+   "entry": "derivation:lx_monru_0431:-ti",
+   "to": "monruti"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_derivation",
+   "entry": "derivation:lx_yugemeyi_1088:-yo",
+   "to": "yugemeyiyo"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_derivation",
+   "entry": "derivation:lx_dapadonu_0073:-yo",
+   "to": "dapadonuyo"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_derivation",
+   "entry": "derivation:lx_juse_0181:-yo",
+   "to": "juseyo"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_derivation",
+   "entry": "derivation:lx_devobalbu_0081:-yo",
+   "to": "devobalbuyo"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_derivation",
+   "entry": "derivation:lx_sevu_0770:-yo",
+   "to": "sevuyo"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_derivation",
+   "entry": "derivation:lx_mambileto_0345:-yo",
+   "to": "mambiletoyo"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_derivation",
+   "entry": "derivation:lx_filse_0121:-yo",
+   "to": "filseyo"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_derivation",
+   "entry": "derivation:lx_helvi_0163:-yo",
+   "to": "helviyo"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_derivation",
+   "entry": "derivation:lx_lavbu_0227:-pago",
+   "to": "lavbupago"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_derivation",
+   "entry": "derivation:lx_mirunulu_0404:-ti",
+   "to": "mirunuluti"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_derivation",
+   "entry": "derivation:lx_tamramiru_1399:-ti",
+   "to": "tamramiruti"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_derivation",
+   "entry": "derivation:lx_solo_0813:-ti",
+   "to": "soloti"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_derivation",
+   "entry": "derivation:lx_solo_0813:-vu",
+   "to": "solovu"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_derivation",
+   "entry": "derivation:lx_corvi_0062:-yo",
+   "to": "corviyo"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_derivation",
+   "entry": "derivation:lx_karko_1422:-yo",
+   "to": "karkoyo"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_derivation",
+   "entry": "derivation:lx_mervi_1471:-yo",
+   "to": "merviyo"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_derivation",
+   "entry": "derivation:lx_tomnu_1423:-pago",
+   "to": "tomnupago"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_motion_metaphor",
+   "entry": "motion:revo-:lx_sabe_0718",
+   "to": "revo-sabesia"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "add_motion_metaphor",
+   "entry": "motion:yave-:lx_donu_0095",
+   "to": "yave-donuda"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "edit_gloss",
+   "entry": "lx_daigo_0065",
+   "to": "dead; mortal"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "edit_gloss",
+   "entry": "lx_noru_0545",
+   "to": "disillusionment; waking from a dream"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "edit_gloss",
+   "entry": "lx_devorivo_0089",
+   "to": "divorce; a marriage bond severed by choice"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "activate_slot",
+   "entry": "lx_sabe_0718",
+   "to": "wisdom"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "activate_slot",
+   "entry": "lx_sabe_0718",
+   "to": "wise"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "activate_slot",
+   "entry": "lx_monru_0431",
+   "to": "flat"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "activate_slot",
+   "entry": "lx_pensa_0601",
+   "to": "contemplation"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "activate_slot",
+   "entry": "lx_linufule_1185",
+   "to": "to be with child; to carry a child"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "activate_slot",
+   "entry": "lx_linufule_1185",
+   "to": "expectant; with child"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "edit_metadata",
+   "entry": "lx_hunra_1114",
+   "to": "[\"maturity\", \"being fully developed or adult\", \"immaturity\", \"to mature\", \"ripen\", \"become fully developed\", \"immature\", \"not fully developed\", \"mature\", \"fully developed\", \"ripe\", \"unripe\"]"
+  },
+  {
+   "changeset": "2026-10-17-lexicon-1-2",
+   "op": "edit_metadata",
+   "entry": "phonology.protected_exceptions",
+   "to": "39 amor compounds (legacy canon): 20 ending -amor, 19 beginning amor-"
+  }
+ ]
+}

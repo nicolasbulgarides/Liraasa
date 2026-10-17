@@ -42,7 +42,7 @@ function clean(phrase: string): string {
  * only when the gloss has no semicolon, because 1.0 uses commas inside a single
  * sense ("Self, I, Myself, Me, My") as often as between senses.
  */
-function senses(gloss: string): string[] {
+export function senses(gloss: string): string[] {
   const parts = gloss.includes(';') ? gloss.split(';') : gloss.split(',');
   return parts.map(clean).filter((p) => p.length > 2 && !NON_SPECIFIC.has(p.toLowerCase()));
 }

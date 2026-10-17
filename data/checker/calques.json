@@ -1,0 +1,54 @@
+{
+ "about": "English shapes that are calqued into Liraasa word for word (Phase 4). When the English line matches 'english' and the Liraasa line lacks the word 'needs' names, the checker reports it. 'needs' names a Liraasa word by meaning, never by spelling, so a respelling cannot break this table: valency:<meaning> (clause.valency_operators), correlative:<gloss> (small_words.correlatives), function:<meaning regex> (small_words.function_words), preposition:<sense> (lexicon_flags.preposition_sense).",
+ "calques": [
+  {
+   "id": "make-do",
+   "english": "\\b(make|makes|made|making)\\s+(me|us|you|him|her|them|it)\\s+[a-z]+",
+   "needs": "valency:causative",
+   "severity": "warn",
+   "ruling": "1.0:G14",
+   "message": "“make X do …” is the causative {word} + actor + verb, not a verb meaning “make”."
+  },
+  {
+   "id": "never",
+   "english": "\\bnever\\b(?!\\s+mind)",
+   "needs": "correlative:never",
+   "severity": "warn",
+   "ruling": "0.8:G2",
+   "message": "“never” is {word}; ne alone is “not”."
+  },
+  {
+   "id": "as-while",
+   "english": "\\b(while\\s+(i|you|we|they|he|she|it|the|my|your|our|their)|(?<!soon )as\\s+(i|you|we|they|he|she|it)\\s+(?!was\\b|were\\b|all\\b|know\\b|knew\\b|said\\b|say\\b|told\\b)[a-z]+)\\b",
+   "needs": "function:^while",
+   "severity": "warn",
+   "ruling": "0.8:G8",
+   "message": "“as / while” joining two events is {word}; gase only compares."
+  },
+  {
+   "id": "with-object",
+   "english": "\\bwith\\b",
+   "needs": "preposition:instrument",
+   "unless": "preposition:accompaniment",
+   "severity": "note",
+   "ruling": "1.2:G33",
+   "message": "The English has “with”: a tool or means takes {word}; a companion takes ko."
+  },
+  {
+   "id": "in-manner",
+   "english": "\\bin an?\\s+(\\w+\\s+)?(voice|tone|manner|way|whisper|song|melody)\\b",
+   "needs": "preposition:instrument",
+   "severity": "warn",
+   "ruling": "1.2:G33",
+   "message": "“in a voice / tone / manner” is the means of the act: {word}, not en (location)."
+  },
+  {
+   "id": "sing-me",
+   "english": "\\b(sing|sings|tell|tells|read|reads|play|plays|write|writes)\\s+(me|us|him|her|them)\\b",
+   "needs": "preposition:benefactive",
+   "severity": "warn",
+   "ruling": "1.0:G12",
+   "message": "“sing / tell me …”: a singing or telling verb is not give-type, so the person sung to is {word} + pronoun (for me)."
+  }
+ ]
+}

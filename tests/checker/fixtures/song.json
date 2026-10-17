@@ -1,0 +1,228 @@
+{
+  "about": "The author's regression song. 'original' is the song as first written; 'fixed' is the corrected line, which is canonical from now on. Each original must produce 'expect' (rule ids, by phase); each fixed line must pass with no errors or warnings. English marked 'derived' was written from the dictionary glosses because the song arrived without it; the author's own wording is used for lines 2 and 14. Line 16 arrived cut off and is completed from the author's fix table.",
+  "lines": [
+    {
+      "n": 1,
+      "original": "kube krono po lombila, maivo po surusia baba faruti.",
+      "fixed": "kube krono po lombila, maivo po surusia baba faruti.",
+      "english": "When time began, I felt a little fire.",
+      "english_source": "derived",
+      "expect": []
+    },
+    {
+      "n": 2,
+      "original": "mareasasan velu po savalisia maivo su li lehe.",
+      "fixed": "maresan velu po savalisia maivo su li lehe.",
+      "english": "A mother star kissed me on the cheek.",
+      "english_source": "author (\"A mother star\")",
+      "expect": [
+        {
+          "phase": 4,
+          "severity": "warn",
+          "rule": "gloss drift",
+          "token": "mareasasan"
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "original": "saivo po senosia en baba melosan valla.",
+      "fixed": "saivo po senosia yuta baba melosan valla.",
+      "english": "They spoke in a musical voice.",
+      "english_source": "derived",
+      "expect": [
+        {
+          "phase": 3,
+          "severity": "warn",
+          "rule": "1.2:G33",
+          "token": "en"
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "original": "taivo ke baba farulavra.",
+      "fixed": "taivo ka baba farulavra.",
+      "english": "You are a phoenix.",
+      "english_source": "derived",
+      "expect": [
+        {
+          "phase": 3,
+          "severity": "note",
+          "rule": "clause.copulas",
+          "token": "ke"
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "original": "ramumomvira taivo de lumiasasan kronobio ne.",
+      "fixed": "nuna-krono ramumomvira taivo de lumiasasan kronobio.",
+      "english": "Never forget your holy birth.",
+      "english_source": "derived",
+      "expect": [
+        {
+          "phase": 2,
+          "severity": "error",
+          "rule": "0.8:G2",
+          "token": "ne"
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "original": "taivo de nalfari donuda suma ala li navuri.",
+      "fixed": "taivo de nalfari donuda suma ala li navuri.",
+      "english": "Your wings give warmth to the skies.",
+      "english_source": "derived",
+      "expect": []
+    },
+    {
+      "n": 7,
+      "original": "taivo vagava hupi li sabesan lanla.",
+      "fixed": "taivo vagava hupi li sabesan lanla.",
+      "english": "You fly above the familiar horizon.",
+      "english_source": "derived",
+      "expect": []
+    },
+    {
+      "n": 8,
+      "original": "li luno salrusia ata taivo somusia en maivo de varori.",
+      "fixed": "li luno salrusia ata taivo somusia en maivo de varori.",
+      "english": "The moon rises and you sleep in my arms.",
+      "english_source": "derived",
+      "expect": []
+    },
+    {
+      "n": 9,
+      "original": "maivo de navuasasan faru donuda taivo polva.",
+      "fixed": "maivo de navuasasan faru donuda taivo polva.",
+      "english": "My celestial fire gives you power.",
+      "english_source": "derived",
+      "expect": []
+    },
+    {
+      "n": 10,
+      "original": "maivo de savali su taivo de lehe donuda taivo opi.",
+      "fixed": "maivo de savali, raho ke su taivo de lehe, donuda taivo opi.",
+      "english": "My kiss on your cheek gives you hope.",
+      "english_source": "derived",
+      "expect": [
+        {
+          "phase": 2,
+          "severity": "error",
+          "rule": "1.0:G21",
+          "token": "su"
+        }
+      ]
+    },
+    {
+      "n": 11,
+      "original": "maivo de lomo senosia ala taivo fime taivo ke nimu.",
+      "fixed": "maivo de lomo senosia ala taivo fime taivo ke nimusan.",
+      "english": "My embrace tells you that you are at home.",
+      "english_source": "derived",
+      "expect": [
+        {
+          "phase": 3,
+          "severity": "note",
+          "rule": "clause.copulas",
+          "token": "ke"
+        }
+      ]
+    },
+    {
+      "n": 12,
+      "original": "faruti, taivo de corvi farlafa maivo milobe.",
+      "fixed": "faruti, taivo de corvi vaku maivo milobema.",
+      "english": "Little fire, your courage makes me smile.",
+      "english_source": "derived",
+      "expect": [
+        {
+          "phase": 3,
+          "severity": "warn",
+          "rule": "1.0:G14",
+          "token": "farlafa"
+        },
+        {
+          "phase": 2,
+          "severity": "error",
+          "rule": "1.2:G26",
+          "token": "milobe"
+        }
+      ]
+    },
+    {
+      "n": 13,
+      "original": "lirala maivo baba somulira su li suma de narvonasan faru.",
+      "fixed": "lirala baba somulira vobi maivo su li suma de narvonasan faru.",
+      "english": "Sing me a lullaby on the warmth of the innocent fire.",
+      "english_source": "derived",
+      "expect": [
+        {
+          "phase": 2,
+          "severity": "error",
+          "rule": "1.2:G26",
+          "token": "somulira"
+        }
+      ]
+    },
+    {
+      "n": 14,
+      "original": "taivo po ke gonbihemlusan ala li suma de maivo de yuge.",
+      "fixed": "taivo ke gonbihemlusan ala li suma de maivo de yuge.",
+      "english": "You are invited to the warmth of my body.",
+      "english_source": "author (\"are invited\")",
+      "expect": [
+        {
+          "phase": 4,
+          "severity": "warn",
+          "rule": "tense",
+          "token": "po"
+        }
+      ]
+    },
+    {
+      "n": 15,
+      "original": "fisa lavbu gase taivo venreva ala maivo de lumiasasan pago.",
+      "fixed": "fisa, lavbula nayo taivo venreva ala maivo de lumiasasan pago.",
+      "english": "Please pray as you come to my holy place.",
+      "english_source": "derived",
+      "expect": [
+        {
+          "phase": 2,
+          "severity": "error",
+          "rule": "slot",
+          "token": "lavbu"
+        },
+        {
+          "phase": 3,
+          "severity": "warn",
+          "rule": "0.8:G8",
+          "token": "gase"
+        }
+      ]
+    },
+    {
+      "n": 16,
+      "original": "ata maivo futu lisila taivo ko maivo de mavolumisan miru.",
+      "fixed": "ata maivo futu lisila taivo yuta maivo de mavolumisan miru.",
+      "english": "And I will anoint you with my soulful water.",
+      "english_source": "derived",
+      "expect": [
+        {
+          "phase": 3,
+          "severity": "warn",
+          "rule": "1.2:G33",
+          "token": "ko"
+        },
+        {
+          "phase": 2,
+          "severity": "unsettled",
+          "rule": "1.2:G25",
+          "token": "ata"
+        }
+      ]
+    }
+  ]
+}

@@ -18,12 +18,12 @@ export interface CoreGroup {
 
 export const GUIDE = {
   /** Read only. Rebuilt by `npm run build:handoff`. */
-  lexicon: 'handoff/liraasa_1_1_complete.json',
+  lexicon: 'handoff/liraasa_1_2_complete.json',
   ids: 'data/lexicon/ids.json',
   outDir: 'handoff',
   /** The file stem; `.html` and `.pdf` are added. */
-  outName: 'Liraasa_1_1_Grammar_Guide',
-  title: 'Liraasa 1.1 Grammar Guide',
+  outName: 'Liraasa_1_2_Grammar_Guide',
+  title: 'Liraasa 1.2 Grammar Guide',
   subtitle: 'A language built for singing',
 
   /**

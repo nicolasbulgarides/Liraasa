@@ -26,7 +26,15 @@ export type ChangeOp =
   /** A grammar ruling. `entry` is its edition-qualified id, e.g. `1.2:G24`. */
   | 'add_ruling'
   /** An example sentence. `entry` is `example:<index>` in the lexicon's `examples`. */
-  | 'edit_example';
+  | 'edit_example'
+  /** A function word. `entry` is its `fw_` id; the payload is in the changeset (ADR-0013). */
+  | 'add_function_word'
+  /** A correlative. `entry` is its `cr_` id; the payload is in the changeset. */
+  | 'add_correlative'
+  /** A lexicalised derivation. `entry` is `derivation:<base id>:-<suffix>`. */
+  | 'add_derivation'
+  /** A curated motion metaphor. `entry` is `motion:<prefix>-:<verb's headword id>`. */
+  | 'add_motion_metaphor';
 
 /**
  * One recorded change.
@@ -48,6 +56,10 @@ export interface ChangeRecord {
   to: string | null;
   /** Edition-qualified ruling reference, e.g. `1.0:G19` (ADR-0004). */
   ruling?: RulingRef;
+  /** For `edit_metadata`: which field `from` and `to` describe. */
+  field?: string;
+  /** For `edit_gloss`: keep the old gloss in `legacy.archived_senses`. */
+  archive?: boolean;
   /** The edition this change lands in. */
   addedIn: string;
   /** Why. Required: a change with no reason is not traceable. */

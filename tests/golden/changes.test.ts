@@ -2,7 +2,7 @@ import { readFileSync } from 'node:fs';
 import { fileURLToPath, URL } from 'node:url';
 import { beforeAll, describe, expect, it } from 'vitest';
 import { type Changeset, validateChangeset } from '../../src/core/change/changelog';
-import { type Composer, loadComposer } from './editorComposer';
+import { type Checker, loadChecker } from '../checker/loadChecker';
 
 /**
  * The grammar changeset of 2026-10-17 (ADR-0012): traceable, aimed at the
@@ -21,9 +21,9 @@ const lexicon = read('../../data/lexicon/liraasa_1_1.json') as {
   examples: { liraasa: string }[];
 };
 
-let composer: Composer;
+let checker: Checker;
 beforeAll(() => {
-  composer = loadComposer();
+  checker = loadChecker().checker;
 });
 
 describe('the 1.2 grammar changeset', () => {
@@ -51,9 +51,9 @@ describe('the 1.2 grammar changeset', () => {
       ...changeset.rulings.flatMap((r) => r.examples.map(([liraasa]) => liraasa)),
     ];
     const hits = lines.flatMap((line) =>
-      composer
-        .checkLine(line, 1, 'poetic')
-        .filter((f) => f.severity !== 'note')
+      checker
+        .checkLine(line, 1, '', { register: 'poetic' })
+        .filter((f) => f.severity === 'error' || f.severity === 'warn')
         .map((f) => line + ' :: ' + f.message),
     );
     expect(hits).toEqual([]);

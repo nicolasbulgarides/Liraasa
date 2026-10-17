@@ -19,6 +19,8 @@ point.
 | [0010](0010-reconstructed-python-modules.md)  | `liraasa_core.py` and `liraasa_lexicon.py`, reconstructed          | accepted | 1.1   |
 | [0011](0011-noun-does-not-modify-noun.md)     | A noun does not modify a noun: the first becomes its adjective     | accepted | 1.1   |
 | [0012](0012-grammar-rulings-1-2.md)           | Grammar rulings G24–G31: time words, oro, give-type, de, -ri, …    | accepted | 1.1   |
+| [0013](0013-lexicon-1-2.md)                   | The 1.2 lexicon update, and how 1.2 is built from 1.1              | accepted | 1.2   |
+| [0014](0014-grammar-checker.md)               | The editor's grammar checker: data-driven, rule-cited diagnostics  | accepted | 1.2   |
 
 ADR-0007 and ADR-0008 record decisions the author made in answer to the Phase 0
 report; the questions and answers are summarised in each. ADR-0009 and ADR-0010

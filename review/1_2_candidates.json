@@ -1,0 +1,1066 @@
+{
+ "candidates": [
+  {
+   "concept": "female",
+   "spelling": "minva",
+   "kind": "root",
+   "domain": "People"
+  },
+  {
+   "concept": "female",
+   "spelling": "yile",
+   "kind": "root",
+   "domain": "People"
+  },
+  {
+   "concept": "female",
+   "spelling": "linva",
+   "kind": "root",
+   "domain": "People"
+  },
+  {
+   "concept": "male",
+   "spelling": "tarnu",
+   "kind": "root",
+   "domain": "People"
+  },
+  {
+   "concept": "male",
+   "spelling": "dalbo",
+   "kind": "root",
+   "domain": "People"
+  },
+  {
+   "concept": "male",
+   "spelling": "tondu",
+   "kind": "root",
+   "domain": "People"
+  },
+  {
+   "concept": "by marriage",
+   "spelling": "rilde",
+   "kind": "root",
+   "domain": "Family & society"
+  },
+  {
+   "concept": "by marriage",
+   "spelling": "nilde",
+   "kind": "root",
+   "domain": "Family & society"
+  },
+  {
+   "concept": "by marriage",
+   "spelling": "rinde",
+   "kind": "root",
+   "domain": "Family & society"
+  },
+  {
+   "concept": "kill",
+   "spelling": "karko",
+   "kind": "root",
+   "domain": "Actions"
+  },
+  {
+   "concept": "kill",
+   "spelling": "zurka",
+   "kind": "root",
+   "domain": "Actions"
+  },
+  {
+   "concept": "kill",
+   "spelling": "galku",
+   "kind": "root",
+   "domain": "Actions"
+  },
+  {
+   "concept": "grave",
+   "spelling": "tomnu",
+   "kind": "root",
+   "domain": "Storytelling"
+  },
+  {
+   "concept": "grave",
+   "spelling": "dulmo",
+   "kind": "root",
+   "domain": "Storytelling"
+  },
+  {
+   "concept": "grave",
+   "spelling": "bumno",
+   "kind": "root",
+   "domain": "Storytelling"
+  },
+  {
+   "concept": "drum",
+   "spelling": "dumdo",
+   "kind": "root",
+   "domain": "Music & storytelling"
+  },
+  {
+   "concept": "drum",
+   "spelling": "kumda",
+   "kind": "root",
+   "domain": "Music & storytelling"
+  },
+  {
+   "concept": "drum",
+   "spelling": "bumba",
+   "kind": "root",
+   "domain": "Music & storytelling"
+  },
+  {
+   "concept": "reed",
+   "spelling": "filvi",
+   "kind": "root",
+   "domain": "Flowers & Plants"
+  },
+  {
+   "concept": "reed",
+   "spelling": "pilfe",
+   "kind": "root",
+   "domain": "Flowers & Plants"
+  },
+  {
+   "concept": "reed",
+   "spelling": "virle",
+   "kind": "root",
+   "domain": "Flowers & Plants"
+  },
+  {
+   "concept": "horizon",
+   "spelling": "lanla",
+   "kind": "root",
+   "domain": "Space & orientation"
+  },
+  {
+   "concept": "horizon",
+   "spelling": "nanlo",
+   "kind": "root",
+   "domain": "Space & orientation"
+  },
+  {
+   "concept": "horizon",
+   "spelling": "lonla",
+   "kind": "root",
+   "domain": "Space & orientation"
+  },
+  {
+   "concept": "veil",
+   "spelling": "velso",
+   "kind": "root",
+   "domain": "Home & objects"
+  },
+  {
+   "concept": "veil",
+   "spelling": "hilsa",
+   "kind": "root",
+   "domain": "Home & objects"
+  },
+  {
+   "concept": "veil",
+   "spelling": "hilva",
+   "kind": "root",
+   "domain": "Home & objects"
+  },
+  {
+   "concept": "madness",
+   "spelling": "zirki",
+   "kind": "root",
+   "domain": "Mind & dreams"
+  },
+  {
+   "concept": "madness",
+   "spelling": "hirzi",
+   "kind": "root",
+   "domain": "Mind & dreams"
+  },
+  {
+   "concept": "madness",
+   "spelling": "jirka",
+   "kind": "root",
+   "domain": "Mind & dreams"
+  },
+  {
+   "concept": "pour",
+   "spelling": "lurva",
+   "kind": "root",
+   "domain": "Actions"
+  },
+  {
+   "concept": "pour",
+   "spelling": "rulvo",
+   "kind": "root",
+   "domain": "Actions"
+  },
+  {
+   "concept": "pour",
+   "spelling": "yurva",
+   "kind": "root",
+   "domain": "Actions"
+  },
+  {
+   "concept": "fold",
+   "spelling": "filpa",
+   "kind": "root",
+   "domain": "Actions"
+  },
+  {
+   "concept": "fold",
+   "spelling": "belpo",
+   "kind": "root",
+   "domain": "Actions"
+  },
+  {
+   "concept": "fold",
+   "spelling": "pelpo",
+   "kind": "root",
+   "domain": "Actions"
+  },
+  {
+   "concept": "carve",
+   "spelling": "kerti",
+   "kind": "root",
+   "domain": "Actions"
+  },
+  {
+   "concept": "carve",
+   "spelling": "girta",
+   "kind": "root",
+   "domain": "Actions"
+  },
+  {
+   "concept": "carve",
+   "spelling": "kerda",
+   "kind": "root",
+   "domain": "Actions"
+  },
+  {
+   "concept": "wing",
+   "spelling": "nalfa",
+   "kind": "root",
+   "domain": "Animals"
+  },
+  {
+   "concept": "wing",
+   "spelling": "salfi",
+   "kind": "root",
+   "domain": "Animals"
+  },
+  {
+   "concept": "wing",
+   "spelling": "falfa",
+   "kind": "root",
+   "domain": "Animals"
+  },
+  {
+   "concept": "feather",
+   "spelling": "pulmi",
+   "kind": "root",
+   "domain": "Animals"
+  },
+  {
+   "concept": "feather",
+   "spelling": "hulmi",
+   "kind": "root",
+   "domain": "Animals"
+  },
+  {
+   "concept": "feather",
+   "spelling": "fulmi",
+   "kind": "root",
+   "domain": "Animals"
+  },
+  {
+   "concept": "tail",
+   "spelling": "vurvi",
+   "kind": "root",
+   "domain": "Animals"
+  },
+  {
+   "concept": "tail",
+   "spelling": "surli",
+   "kind": "root",
+   "domain": "Animals"
+  },
+  {
+   "concept": "tail",
+   "spelling": "nurve",
+   "kind": "root",
+   "domain": "Animals"
+  },
+  {
+   "concept": "claw",
+   "spelling": "kalga",
+   "kind": "root",
+   "domain": "Animals"
+  },
+  {
+   "concept": "claw",
+   "spelling": "garki",
+   "kind": "root",
+   "domain": "Animals"
+  },
+  {
+   "concept": "claw",
+   "spelling": "garka",
+   "kind": "root",
+   "domain": "Animals"
+  },
+  {
+   "concept": "fur",
+   "spelling": "mulfo",
+   "kind": "root",
+   "domain": "Animals"
+  },
+  {
+   "concept": "fur",
+   "spelling": "fofu",
+   "kind": "root",
+   "domain": "Animals"
+  },
+  {
+   "concept": "fur",
+   "spelling": "fulfo",
+   "kind": "root",
+   "domain": "Animals"
+  },
+  {
+   "concept": "beak",
+   "spelling": "pirke",
+   "kind": "root",
+   "domain": "Animals"
+  },
+  {
+   "concept": "beak",
+   "spelling": "bilke",
+   "kind": "root",
+   "domain": "Animals"
+  },
+  {
+   "concept": "beak",
+   "spelling": "pite",
+   "kind": "root",
+   "domain": "Animals"
+  },
+  {
+   "concept": "horn",
+   "spelling": "kurno",
+   "kind": "root",
+   "domain": "Animals"
+  },
+  {
+   "concept": "horn",
+   "spelling": "gurmo",
+   "kind": "root",
+   "domain": "Animals"
+  },
+  {
+   "concept": "horn",
+   "spelling": "korna",
+   "kind": "root",
+   "domain": "Animals"
+  },
+  {
+   "concept": "scale",
+   "spelling": "zelki",
+   "kind": "root",
+   "domain": "Animals"
+  },
+  {
+   "concept": "scale",
+   "spelling": "zilka",
+   "kind": "root",
+   "domain": "Animals"
+  },
+  {
+   "concept": "scale",
+   "spelling": "tika",
+   "kind": "root",
+   "domain": "Animals"
+  },
+  {
+   "concept": "wet",
+   "spelling": "mulyi",
+   "kind": "root",
+   "domain": "Qualities"
+  },
+  {
+   "concept": "wet",
+   "spelling": "nulye",
+   "kind": "root",
+   "domain": "Qualities"
+  },
+  {
+   "concept": "wet",
+   "spelling": "lulyi",
+   "kind": "root",
+   "domain": "Qualities"
+  },
+  {
+   "concept": "smooth",
+   "spelling": "nilmi",
+   "kind": "root",
+   "domain": "Qualities"
+  },
+  {
+   "concept": "smooth",
+   "spelling": "lulne",
+   "kind": "root",
+   "domain": "Qualities"
+  },
+  {
+   "concept": "smooth",
+   "spelling": "lilme",
+   "kind": "root",
+   "domain": "Qualities"
+  },
+  {
+   "concept": "thick",
+   "spelling": "burdo",
+   "kind": "root",
+   "domain": "Qualities"
+  },
+  {
+   "concept": "thick",
+   "spelling": "donba",
+   "kind": "root",
+   "domain": "Qualities"
+  },
+  {
+   "concept": "thick",
+   "spelling": "domba",
+   "kind": "root",
+   "domain": "Qualities"
+  },
+  {
+   "concept": "sour",
+   "spelling": "zeti",
+   "kind": "root",
+   "domain": "Qualities"
+  },
+  {
+   "concept": "sour",
+   "spelling": "zinta",
+   "kind": "root",
+   "domain": "Qualities"
+  },
+  {
+   "concept": "sour",
+   "spelling": "kita",
+   "kind": "root",
+   "domain": "Qualities"
+  },
+  {
+   "concept": "float",
+   "spelling": "lalfo",
+   "kind": "root",
+   "domain": "Actions"
+  },
+  {
+   "concept": "float",
+   "spelling": "fona",
+   "kind": "root",
+   "domain": "Actions"
+  },
+  {
+   "concept": "float",
+   "spelling": "nelfo",
+   "kind": "root",
+   "domain": "Actions"
+  },
+  {
+   "concept": "sink",
+   "spelling": "nombu",
+   "kind": "root",
+   "domain": "Actions"
+  },
+  {
+   "concept": "sink",
+   "spelling": "nurbo",
+   "kind": "root",
+   "domain": "Actions"
+  },
+  {
+   "concept": "sink",
+   "spelling": "nomdu",
+   "kind": "root",
+   "domain": "Actions"
+  },
+  {
+   "concept": "dig",
+   "spelling": "turgo",
+   "kind": "root",
+   "domain": "Actions"
+  },
+  {
+   "concept": "dig",
+   "spelling": "dulga",
+   "kind": "root",
+   "domain": "Actions"
+  },
+  {
+   "concept": "dig",
+   "spelling": "kurga",
+   "kind": "root",
+   "domain": "Actions"
+  },
+  {
+   "concept": "split",
+   "spelling": "kirpa",
+   "kind": "root",
+   "domain": "Actions"
+  },
+  {
+   "concept": "split",
+   "spelling": "tirpe",
+   "kind": "root",
+   "domain": "Actions"
+  },
+  {
+   "concept": "split",
+   "spelling": "cirpe",
+   "kind": "root",
+   "domain": "Actions"
+  },
+  {
+   "concept": "weave",
+   "spelling": "tenva",
+   "kind": "root",
+   "domain": "Actions"
+  },
+  {
+   "concept": "weave",
+   "spelling": "yenva",
+   "kind": "root",
+   "domain": "Actions"
+  },
+  {
+   "concept": "weave",
+   "spelling": "terva",
+   "kind": "root",
+   "domain": "Actions"
+  },
+  {
+   "concept": "wipe",
+   "spelling": "sispa",
+   "kind": "root",
+   "domain": "Actions"
+  },
+  {
+   "concept": "wipe",
+   "spelling": "fespa",
+   "kind": "root",
+   "domain": "Actions"
+  },
+  {
+   "concept": "wipe",
+   "spelling": "faspo",
+   "kind": "root",
+   "domain": "Actions"
+  },
+  {
+   "concept": "scratch",
+   "spelling": "girze",
+   "kind": "root",
+   "domain": "Actions"
+  },
+  {
+   "concept": "scratch",
+   "spelling": "kirze",
+   "kind": "root",
+   "domain": "Actions"
+  },
+  {
+   "concept": "scratch",
+   "spelling": "cirza",
+   "kind": "root",
+   "domain": "Actions"
+  },
+  {
+   "concept": "spit",
+   "spelling": "pusti",
+   "kind": "root",
+   "domain": "Actions"
+  },
+  {
+   "concept": "spit",
+   "spelling": "tupo",
+   "kind": "root",
+   "domain": "Actions"
+  },
+  {
+   "concept": "spit",
+   "spelling": "pufti",
+   "kind": "root",
+   "domain": "Actions"
+  },
+  {
+   "concept": "ghost",
+   "spelling": "volme",
+   "kind": "root",
+   "domain": "Storytelling"
+  },
+  {
+   "concept": "ghost",
+   "spelling": "folme",
+   "kind": "root",
+   "domain": "Storytelling"
+  },
+  {
+   "concept": "ghost",
+   "spelling": "folve",
+   "kind": "root",
+   "domain": "Storytelling"
+  },
+  {
+   "concept": "magic",
+   "spelling": "zirme",
+   "kind": "root",
+   "domain": "Storytelling"
+  },
+  {
+   "concept": "magic",
+   "spelling": "mirme",
+   "kind": "root",
+   "domain": "Storytelling"
+  },
+  {
+   "concept": "magic",
+   "spelling": "marmi",
+   "kind": "root",
+   "domain": "Storytelling"
+  },
+  {
+   "concept": "angel",
+   "spelling": "lansi",
+   "kind": "root",
+   "domain": "Storytelling"
+  },
+  {
+   "concept": "angel",
+   "spelling": "linle",
+   "kind": "root",
+   "domain": "Storytelling"
+  },
+  {
+   "concept": "angel",
+   "spelling": "lenle",
+   "kind": "root",
+   "domain": "Storytelling"
+  },
+  {
+   "concept": "spider",
+   "spelling": "tilki",
+   "kind": "root",
+   "domain": "Animals"
+  },
+  {
+   "concept": "spider",
+   "spelling": "kilki",
+   "kind": "root",
+   "domain": "Animals"
+  },
+  {
+   "concept": "spider",
+   "spelling": "tilti",
+   "kind": "root",
+   "domain": "Animals"
+  },
+  {
+   "concept": "fox",
+   "spelling": "vurfa",
+   "kind": "root",
+   "domain": "Animals"
+  },
+  {
+   "concept": "fox",
+   "spelling": "rorfi",
+   "kind": "root",
+   "domain": "Animals"
+  },
+  {
+   "concept": "fox",
+   "spelling": "rorfa",
+   "kind": "root",
+   "domain": "Animals"
+  },
+  {
+   "concept": "lion",
+   "spelling": "garvu",
+   "kind": "root",
+   "domain": "Animals"
+  },
+  {
+   "concept": "lion",
+   "spelling": "borma",
+   "kind": "root",
+   "domain": "Animals"
+  },
+  {
+   "concept": "lion",
+   "spelling": "lerba",
+   "kind": "root",
+   "domain": "Animals"
+  },
+  {
+   "concept": "lamb",
+   "spelling": "limli",
+   "kind": "root",
+   "domain": "Animals"
+  },
+  {
+   "concept": "lamb",
+   "spelling": "yimi",
+   "kind": "root",
+   "domain": "Animals"
+  },
+  {
+   "concept": "lamb",
+   "spelling": "nimli",
+   "kind": "root",
+   "domain": "Animals"
+  },
+  {
+   "concept": "mouse",
+   "spelling": "cipi",
+   "kind": "root",
+   "domain": "Animals"
+  },
+  {
+   "concept": "mouse",
+   "spelling": "tute",
+   "kind": "root",
+   "domain": "Animals"
+  },
+  {
+   "concept": "mouse",
+   "spelling": "misti",
+   "kind": "root",
+   "domain": "Animals"
+  },
+  {
+   "concept": "sufficiency",
+   "spelling": "bansa",
+   "kind": "root",
+   "domain": "Qualities"
+  },
+  {
+   "concept": "sufficiency",
+   "spelling": "saste",
+   "kind": "root",
+   "domain": "Qualities"
+  },
+  {
+   "concept": "sufficiency",
+   "spelling": "dasta",
+   "kind": "root",
+   "domain": "Qualities"
+  },
+  {
+   "concept": "strangeness",
+   "spelling": "hurvo",
+   "kind": "root",
+   "domain": "Qualities"
+  },
+  {
+   "concept": "strangeness",
+   "spelling": "zorvu",
+   "kind": "root",
+   "domain": "Qualities"
+  },
+  {
+   "concept": "strangeness",
+   "spelling": "zurvo",
+   "kind": "root",
+   "domain": "Qualities"
+  },
+  {
+   "concept": "ferocity",
+   "spelling": "gargo",
+   "kind": "root",
+   "domain": "Emotions"
+  },
+  {
+   "concept": "ferocity",
+   "spelling": "darga",
+   "kind": "root",
+   "domain": "Emotions"
+  },
+  {
+   "concept": "ferocity",
+   "spelling": "garzo",
+   "kind": "root",
+   "domain": "Emotions"
+  },
+  {
+   "concept": "fame",
+   "spelling": "sirmo",
+   "kind": "root",
+   "domain": "Society"
+  },
+  {
+   "concept": "fame",
+   "spelling": "farme",
+   "kind": "root",
+   "domain": "Society"
+  },
+  {
+   "concept": "fame",
+   "spelling": "rarme",
+   "kind": "root",
+   "domain": "Society"
+  },
+  {
+   "concept": "greed",
+   "spelling": "gerpe",
+   "kind": "root",
+   "domain": "Emotions"
+  },
+  {
+   "concept": "greed",
+   "spelling": "geri",
+   "kind": "root",
+   "domain": "Emotions"
+  },
+  {
+   "concept": "greed",
+   "spelling": "gelpe",
+   "kind": "root",
+   "domain": "Emotions"
+  },
+  {
+   "concept": "hollow",
+   "spelling": "holmo",
+   "kind": "root",
+   "domain": "Qualities"
+  },
+  {
+   "concept": "hollow",
+   "spelling": "homlo",
+   "kind": "root",
+   "domain": "Qualities"
+  },
+  {
+   "concept": "hollow",
+   "spelling": "holvo",
+   "kind": "root",
+   "domain": "Qualities"
+  },
+  {
+   "concept": "fragile",
+   "spelling": "felti",
+   "kind": "root",
+   "domain": "Qualities"
+  },
+  {
+   "concept": "fragile",
+   "spelling": "firte",
+   "kind": "root",
+   "domain": "Qualities"
+  },
+  {
+   "concept": "fragile",
+   "spelling": "firti",
+   "kind": "root",
+   "domain": "Qualities"
+  },
+  {
+   "concept": "shell",
+   "spelling": "salko",
+   "kind": "root",
+   "domain": "Nature"
+  },
+  {
+   "concept": "shell",
+   "spelling": "kolka",
+   "kind": "root",
+   "domain": "Nature"
+  },
+  {
+   "concept": "shell",
+   "spelling": "colka",
+   "kind": "root",
+   "domain": "Nature"
+  },
+  {
+   "concept": "crystal",
+   "spelling": "cirsi",
+   "kind": "root",
+   "domain": "Materials & physics"
+  },
+  {
+   "concept": "crystal",
+   "spelling": "cirli",
+   "kind": "root",
+   "domain": "Materials & physics"
+  },
+  {
+   "concept": "crystal",
+   "spelling": "sirsi",
+   "kind": "root",
+   "domain": "Materials & physics"
+  },
+  {
+   "concept": "mask",
+   "spelling": "vasko",
+   "kind": "root",
+   "domain": "Home & objects"
+  },
+  {
+   "concept": "mask",
+   "spelling": "naspa",
+   "kind": "root",
+   "domain": "Home & objects"
+  },
+  {
+   "concept": "mask",
+   "spelling": "vaspa",
+   "kind": "root",
+   "domain": "Home & objects"
+  },
+  {
+   "concept": "bareness",
+   "spelling": "lundu",
+   "kind": "root",
+   "domain": "Body"
+  },
+  {
+   "concept": "bareness",
+   "spelling": "vundu",
+   "kind": "root",
+   "domain": "Body"
+  },
+  {
+   "concept": "bareness",
+   "spelling": "nundu",
+   "kind": "root",
+   "domain": "Body"
+  },
+  {
+   "concept": "serve",
+   "spelling": "mervi",
+   "kind": "root",
+   "domain": "Society"
+  },
+  {
+   "concept": "serve",
+   "spelling": "delvu",
+   "kind": "root",
+   "domain": "Society"
+  },
+  {
+   "concept": "serve",
+   "spelling": "sarve",
+   "kind": "root",
+   "domain": "Society"
+  },
+  {
+   "concept": "crowd",
+   "spelling": "murta",
+   "kind": "root",
+   "domain": "Society"
+  },
+  {
+   "concept": "crowd",
+   "spelling": "tunto",
+   "kind": "root",
+   "domain": "Society"
+  },
+  {
+   "concept": "crowd",
+   "spelling": "munto",
+   "kind": "root",
+   "domain": "Society"
+  },
+  {
+   "concept": "victim",
+   "spelling": "nirma",
+   "kind": "root",
+   "domain": "Society"
+  },
+  {
+   "concept": "victim",
+   "spelling": "nalme",
+   "kind": "root",
+   "domain": "Society"
+  },
+  {
+   "concept": "victim",
+   "spelling": "nalve",
+   "kind": "root",
+   "domain": "Society"
+  },
+  {
+   "concept": "guess",
+   "spelling": "tinsa",
+   "kind": "root",
+   "domain": "Speech & mind"
+  },
+  {
+   "concept": "guess",
+   "spelling": "gesti",
+   "kind": "root",
+   "domain": "Speech & mind"
+  },
+  {
+   "concept": "guess",
+   "spelling": "dilta",
+   "kind": "root",
+   "domain": "Speech & mind"
+  },
+  {
+   "concept": "obey",
+   "spelling": "yorve",
+   "kind": "root",
+   "domain": "Society"
+  },
+  {
+   "concept": "obey",
+   "spelling": "yone",
+   "kind": "root",
+   "domain": "Society"
+  },
+  {
+   "concept": "obey",
+   "spelling": "yervo",
+   "kind": "root",
+   "domain": "Society"
+  },
+  {
+   "concept": "with (instrumental)",
+   "spelling": "yuta",
+   "kind": "function_word",
+   "domain": null
+  },
+  {
+   "concept": "with (instrumental)",
+   "spelling": "buta",
+   "kind": "function_word",
+   "domain": null
+  },
+  {
+   "concept": "with (instrumental)",
+   "spelling": "duto",
+   "kind": "function_word",
+   "domain": null
+  },
+  {
+   "concept": "too (excess)",
+   "spelling": "diba",
+   "kind": "function_word",
+   "domain": null
+  },
+  {
+   "concept": "too (excess)",
+   "spelling": "yazi",
+   "kind": "function_word",
+   "domain": null
+  },
+  {
+   "concept": "too (excess)",
+   "spelling": "tane",
+   "kind": "function_word",
+   "domain": null
+  }
+ ]
+}

@@ -17,12 +17,20 @@ this file, SPEC or any document disagrees with
 baseline (ADR-0008). **The app owns the canonical JSON** from 1.1 on;
 `build_1_0.py` was a one-time migration, not the ongoing editor (ADR-0007).
 
-Phase 0 and Phase 1 are complete, and the **1.0 → 1.1 vocabulary supplement is
-integrated**: 1418 headwords (407 primal, 1011 compounds), 25 of 25 validator
-checks passing **against the real corpus** — the six migrated songs and
-Bumrepago. Also shipped: the MFA phonetic export (`npm run export:mfa`) and the
+Phase 0 and Phase 1 are complete, the **1.0 → 1.1 vocabulary supplement is
+integrated**, and **1.2 is built** (ADR-0013): `data/lexicon/liraasa_1_2.json`,
+made from the frozen 1.1 by the two changesets in `data/changes/` via
+`npm run integrate:1.2`. 1.2 has 1497 headwords (464 primal, 1033 compounds),
+151 function words, rulings 1.2:G24–G36, and 25 of 25 validator checks passing
+(`npm run validate:1.2`). The editor, handoff and grammar guide read 1.2.
+**A further 1.2 change is a new changeset op, then a rebuild**: never hand-edit
+`liraasa_1_2.json`. Every new spelling goes through `scripts/check_sounds.py`
+first. Also shipped: the MFA phonetic export (`npm run export:mfa`) and the
 standalone writing tool in `editor/` — a journal with collections, an
-English-to-Liraasa assisted composer, live checking and MFA export. Phase 2 is the TypeScript validator and
+English-to-Liraasa assisted composer, MFA export, and a grammar checker
+(`editor/checker/`, ADR-0014) that underlines each finding with its rule and
+fix. The checker reads the 1.2 LLM reference; what the JSON does not say is
+data in `data/checker/`, never code. Phase 2 is the TypeScript validator and
 parser.
 
 ---
@@ -53,16 +61,21 @@ parser.
 
 ### Data CLIs
 
-| Command                  | What it does                                                                                                                                      | Status      |
-| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| `npm run lexicon:import` | Import a lexicon into `data/lexicon/` and mint stable ids; prints the counts. Takes `[source.json]` and `--edition`.                              | **working** |
-| `npm run lexicon:export` | Export in the author's schema. **Verifies the round trip before writing** and exits non-zero if it is not lossless.                               | **working** |
-| `npm run validate`       | The 24 checks plus the corpus run, shaped like `validation_1_0.json`. Also what the app runs before every save (ADR-0007).                        | Phase 2     |
-| `npm run integrate`      | Build 1.1 from the frozen 1.0 plus a vocabulary proposal. `-- --check` audits and writes nothing (ADR-0009).                                      | **working** |
-| `npm run report:1.1`     | Regenerate the 1.1 changelog, LLM quickstart and compare report from the integration data.                                                        | **working** |
-| `npm run export:mfa`     | Montreal Forced Aligner dictionary, phone inventory and syllable sheet into `data/export/`.                                                       | **working** |
-| `npm run build:editor`   | Rebuild the data bundle that `editor/index.html` loads.                                                                                           | **working** |
-| `npm run build:guide`    | Rebuild the handoff JSON, then the 1.1 grammar guide into `handoff/` (`-- --pdf` also prints it). Word list in `scripts/grammar_guide/config.ts`. | **working** |
+| Command                  | What it does                                                                                                                                         | Status      |
+| ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| `npm run lexicon:import` | Import a lexicon into `data/lexicon/` and mint stable ids; prints the counts. Takes `[source.json]` and `--edition`.                                 | **working** |
+| `npm run lexicon:export` | Export in the author's schema. **Verifies the round trip before writing** and exits non-zero if it is not lossless.                                  | **working** |
+| `npm run validate`       | The 24 checks plus the corpus run, shaped like `validation_1_0.json`. Also what the app runs before every save (ADR-0007).                           | Phase 2     |
+| `npm run integrate:1.2`  | Build 1.2 from frozen 1.1 plus the 1.2 changesets; halts on any op that does not land. `-- --check` writes nothing (ADR-0013).                       | **working** |
+| `npm run validate:1.2`   | validate.py unmodified plus the edition-aware checks 5/9/12/18/25 → `data/lexicon/validation_1_2.json`.                                              | **working** |
+| `npm run check:sounds`   | Sound-collision audit of 1.2 (`--candidates FILE` vets proposed spellings: template, collision, distance, parse, singability). Python stdlib.        | **working** |
+| `npm run integrate`      | Build 1.1 from the frozen 1.0 plus a vocabulary proposal. `-- --check` audits and writes nothing (ADR-0009).                                         | **working** |
+| `npm run report:1.1`     | Regenerate the 1.1 changelog, LLM quickstart and compare report from the integration data.                                                           | **working** |
+| `npm run export:mfa`     | Montreal Forced Aligner dictionary, phone inventory and syllable sheet into `data/export/`.                                                          | **working** |
+| `npm run build:llm`      | The whole language in one JSON for language models → `handoff/liraasa_1_2_llm.json` (also published to `LirasaCodexLatest/`). Only meaningful forms. | **working** |
+| `npm run build:checker`  | Wrap the LLM reference and `data/checker/*.json` as the scripts `editor/checker/` loads. Run by `build:llm`.                                         | **working** |
+| `npm run build:editor`   | Rebuild the data bundle that `editor/index.html` loads.                                                                                              | **working** |
+| `npm run build:guide`    | Rebuild the handoff JSON, then the 1.2 grammar guide into `handoff/` (`-- --pdf` also prints it). Word list in `scripts/grammar_guide/config.ts`.    | **working** |
 
 ```sh
 # Import the frozen 1.0: a byte-identical copy plus the id sidecar.
