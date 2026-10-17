@@ -53,15 +53,16 @@ parser.
 
 ### Data CLIs
 
-| Command                  | What it does                                                                                                               | Status      |
-| ------------------------ | -------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| `npm run lexicon:import` | Import a lexicon into `data/lexicon/` and mint stable ids; prints the counts. Takes `[source.json]` and `--edition`.       | **working** |
-| `npm run lexicon:export` | Export in the author's schema. **Verifies the round trip before writing** and exits non-zero if it is not lossless.        | **working** |
-| `npm run validate`       | The 24 checks plus the corpus run, shaped like `validation_1_0.json`. Also what the app runs before every save (ADR-0007). | Phase 2     |
-| `npm run integrate`      | Build 1.1 from the frozen 1.0 plus a vocabulary proposal. `-- --check` audits and writes nothing (ADR-0009).               | **working** |
-| `npm run report:1.1`     | Regenerate the 1.1 changelog, LLM quickstart and compare report from the integration data.                                 | **working** |
-| `npm run export:mfa`     | Montreal Forced Aligner dictionary, phone inventory and syllable sheet into `data/export/`.                                | **working** |
-| `npm run build:editor`   | Rebuild the data bundle that `editor/index.html` loads.                                                                    | **working** |
+| Command                  | What it does                                                                                                                                      | Status      |
+| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| `npm run lexicon:import` | Import a lexicon into `data/lexicon/` and mint stable ids; prints the counts. Takes `[source.json]` and `--edition`.                              | **working** |
+| `npm run lexicon:export` | Export in the author's schema. **Verifies the round trip before writing** and exits non-zero if it is not lossless.                               | **working** |
+| `npm run validate`       | The 24 checks plus the corpus run, shaped like `validation_1_0.json`. Also what the app runs before every save (ADR-0007).                        | Phase 2     |
+| `npm run integrate`      | Build 1.1 from the frozen 1.0 plus a vocabulary proposal. `-- --check` audits and writes nothing (ADR-0009).                                      | **working** |
+| `npm run report:1.1`     | Regenerate the 1.1 changelog, LLM quickstart and compare report from the integration data.                                                        | **working** |
+| `npm run export:mfa`     | Montreal Forced Aligner dictionary, phone inventory and syllable sheet into `data/export/`.                                                       | **working** |
+| `npm run build:editor`   | Rebuild the data bundle that `editor/index.html` loads.                                                                                           | **working** |
+| `npm run build:guide`    | Rebuild the handoff JSON, then the 1.1 grammar guide into `handoff/` (`-- --pdf` also prints it). Word list in `scripts/grammar_guide/config.ts`. | **working** |
 
 ```sh
 # Import the frozen 1.0: a byte-identical copy plus the id sidecar.

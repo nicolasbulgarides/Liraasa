@@ -46,7 +46,14 @@ export const GUIDE = {
     {
       title: 'Song, truth and time',
       blurb: 'The words a songwriter reaches for about the work itself.',
-      ids: ['lx_lira_0272', 'lx_melo_0369', 'lx_vani_0940', 'lx_vera_1019', 'lx_krono_0193', 'lx_nimu_0526'],
+      ids: [
+        'lx_lira_0272',
+        'lx_melo_0369',
+        'lx_vani_0940',
+        'lx_vera_1019',
+        'lx_krono_0193',
+        'lx_nimu_0526',
+      ],
     },
   ] satisfies readonly CoreGroup[],
 

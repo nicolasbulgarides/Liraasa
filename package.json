@@ -9,6 +9,7 @@
     "build": "tsc -b && vite build",
     "build:editor": "tsx scripts/build_editor_data.ts",
     "build:handoff": "tsx scripts/build_handoff.ts",
+    "build:guide": "npm run build:handoff && tsx scripts/build_grammar_guide.ts",
     "preview": "vite preview",
     "typecheck": "tsc -b --noEmit",
     "test": "vitest run",

@@ -7,7 +7,12 @@
  */
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
-import { FORM_SLOTS, SLOT_RAW_KEY, isUnusedGloss, type FormSlot } from '../../src/core/config/slots';
+import {
+  FORM_SLOTS,
+  SLOT_RAW_KEY,
+  isUnusedGloss,
+  type FormSlot,
+} from '../../src/core/config/slots';
 
 export interface Headword {
   root: string;
@@ -53,7 +58,16 @@ export interface Lexicon {
   language: string;
   version: string;
   built_utc: string;
-  phonology: Record<string, string>;
+  phonology: {
+    vowels: string;
+    consonants_core: string;
+    consonants_other: string;
+    stress: string;
+    new_root_template: string;
+    function_word_template: string;
+    protected_exceptions: string[];
+    declared_distance_1_pairs: [string, string][];
+  };
   morphology: {
     seven_forms: string[];
     verb_rule: Record<string, string>;
@@ -74,7 +88,7 @@ export interface Lexicon {
     reflexive: string;
   }[];
   correlatives: { form: string; determiner: string; concept: string; gloss: string }[];
-  numbers: { rules: Record<string, string | number>[]; lookup_0_999: [string, string][] };
+  numbers: { rules: Record<string, string | number>[]; lookup_0_999: Record<string, string> };
   time_and_dates: { form: string; english: string }[];
   colors: Record<string, string>[];
   discourse_particles: {
@@ -178,7 +192,7 @@ export class Index {
       ...lex.correlatives.map((c) => c.form),
       ...lex.time_and_dates.map((t) => t.form),
       ...lex.discourse_particles.map((p) => p.form),
-      ...lex.numbers.lookup_0_999.map(([, w]) => w),
+      ...Object.values(lex.numbers.lookup_0_999),
       ...lex.numbers.rules.map((r) => String(r.Liraasa)),
       ...lex.colors.flatMap((c) =>
         Object.entries(c)
@@ -248,18 +262,24 @@ export class Index {
     return hits.every((h) => !isUsed(h.headword, h.slot)) ? hits : [];
   }
 
-  /** Live canon examples containing any form of this headword (or its inflections). */
+  /**
+   * Live canon examples containing any form of this headword (or its
+   * inflections), one per distinct Liraasa line: canon repeats a few lines.
+   */
   examplesFor(h: Headword): Example[] {
     const mine = new Set(FORM_SLOTS.map((s) => formOf(h, s)));
-    return liveExamples(this.lex).filter((e) =>
-      tokenize(e.liraasa).some((t) => {
+    const seen = new Set<string>();
+    return liveExamples(this.lex).filter((e) => {
+      if (seen.has(e.liraasa)) return false;
+      seen.add(e.liraasa);
+      return tokenize(e.liraasa).some((t) => {
         if (mine.has(t)) return true;
         for (const suffix of ['tiri', 'ri', 'ti']) {
           if (t.endsWith(suffix) && mine.has(t.slice(0, -suffix.length))) return true;
         }
         return false;
-      }),
-    );
+      });
+    });
   }
 
   /** `-yo` / `-vu` / `-pago` derivations of a root that canon actually uses. */

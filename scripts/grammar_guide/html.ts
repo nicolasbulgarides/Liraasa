@@ -23,7 +23,8 @@ export const recorded: { text: string; use: WordUse }[] = [];
 /** Liraasa text, set in the serif face and never re-spelled. */
 export function lir(text: string, use: WordUse = 'text'): string {
   recorded.push({ text, use });
-  const cls = use === 'unused-slot' ? 'liraasa unused' : use === 'retired' ? 'liraasa retired' : 'liraasa';
+  const cls =
+    use === 'unused-slot' ? 'liraasa unused' : use === 'retired' ? 'liraasa retired' : 'liraasa';
   return `<span class="${cls}" lang="x-liraasa">${esc(text)}</span>`;
 }
 
@@ -58,7 +59,8 @@ export function md(text: string): string {
 
 export function badge(id: string): string {
   const edition = id.split(':')[0] ?? '';
-  const cls = edition === '1.2' ? 'b12' : edition === '1.0' ? 'b10' : edition === '0.8' ? 'b08' : 'badr';
+  const cls =
+    edition === '1.2' ? 'b12' : edition === '1.0' ? 'b10' : edition === '0.8' ? 'b08' : 'badr';
   return `<span class="badge ${cls}" title="Ruling ${esc(id)}">${esc(id)}</span>`;
 }
 
@@ -89,9 +91,14 @@ const CALLOUT_ICON: Record<Callout, string> = {
 };
 
 export function callout(kind: Callout, ...texts: string[]): string {
+  return calloutHtml(kind, texts.map(p).join(''));
+}
+
+/** A callout whose body is already HTML. */
+export function calloutHtml(kind: Callout, body: string): string {
   return `<aside class="callout ${kind}" aria-label="${CALLOUT_LABEL[kind]}">
 <div class="callout-head"><span class="callout-icon" aria-hidden="true">${CALLOUT_ICON[kind]}</span>${CALLOUT_LABEL[kind]}</div>
-${texts.map(p).join('')}
+${body}
 </aside>`;
 }
 
@@ -137,14 +144,34 @@ export function table(
   return `<div class="table-wrap"><table${opts.cls === undefined ? '' : ` class="${opts.cls}"`}>${caption}<thead><tr>${th}</tr></thead><tbody>${body}</tbody></table></div>`;
 }
 
-/** A section heading with an anchor id, collected for the table of contents. */
+/**
+ * Headings that belong in the table of contents carry `data-toc`, and the
+ * contents are read back from the finished page (`tocEntries`), so they are
+ * always in document order.
+ */
 export interface TocEntry {
   id: string;
   title: string;
   level: 2 | 3;
 }
 
-export const toc: TocEntry[] = [];
+const usedIds = new Set<string>();
+
+/** A unique anchor id: a repeated heading gets `-2`, `-3` … */
+function uniqueId(base: string): string {
+  let id = base;
+  for (let i = 2; usedIds.has(id); i += 1) id = `${base}-${String(i)}`;
+  usedIds.add(id);
+  return id;
+}
+
+export function tocEntries(html: string): TocEntry[] {
+  const out: TocEntry[] = [];
+  for (const m of html.matchAll(/<h([23]) id="([^"]+)" data-toc="([^"]*)"/g)) {
+    out.push({ level: m[1] === '2' ? 2 : 3, id: m[2] ?? '', title: m[3] ?? '' });
+  }
+  return out;
+}
 
 export function slug(text: string): string {
   return text
@@ -154,14 +181,10 @@ export function slug(text: string): string {
     .replace(/^-|-$/g, '');
 }
 
-export function h2(title: string, id = slug(title)): string {
-  toc.push({ id, title, level: 2 });
-  return `<h2 id="${id}">${esc(title)}</h2>`;
-}
-
 export function h3(title: string, id = slug(title), inToc = true): string {
-  if (inToc) toc.push({ id, title, level: 3 });
-  return `<h3 id="${id}">${md(title)}</h3>`;
+  const uid = uniqueId(id);
+  const plain = title.replace(/`/g, '');
+  return `<h3 id="${uid}"${inToc ? ` data-toc="${esc(plain)}"` : ''}>${md(title)}</h3>`;
 }
 
 export function h4(title: string): string {
@@ -170,10 +193,9 @@ export function h4(title: string): string {
 
 /** A part of the guide: one chapter page in print. */
 export function part(n: string, title: string, intro: string, body: string): string {
-  const id = slug(`part-${n}-${title}`);
-  toc.push({ id, title: `${n}. ${title}`, level: 2 });
+  const id = uniqueId(slug(`part-${n}-${title}`));
   return `<section class="part" aria-labelledby="${id}">
-<header class="part-head"><div class="part-num" aria-hidden="true">${esc(n)}</div><h2 id="${id}"><span class="visually-hidden">Part ${esc(n)}: </span>${esc(title)}</h2><p class="part-intro">${md(intro)}</p></header>
+<header class="part-head"><div class="part-num" aria-hidden="true">${esc(n)}</div><h2 id="${id}" data-toc="${esc(`${n}. ${title}`)}"><span class="visually-hidden">Part ${esc(n)}: </span>${esc(title)}</h2><p class="part-intro">${md(intro)}</p></header>
 ${body}
 </section>`;
 }
