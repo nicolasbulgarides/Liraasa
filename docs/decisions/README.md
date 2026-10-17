@@ -17,6 +17,7 @@ point.
 | [0008](0008-editions-and-id-placement.md)     | 1.0 is frozen; ids go to a sidecar until 1.1                       | accepted | 1     |
 | [0009](0009-vocabulary-only-supplements.md)   | How a vocabulary-only supplement is integrated                     | accepted | 1.1   |
 | [0010](0010-reconstructed-python-modules.md)  | `liraasa_core.py` and `liraasa_lexicon.py`, reconstructed          | accepted | 1.1   |
+| [0011](0011-noun-does-not-modify-noun.md)     | A noun does not modify a noun: the first becomes its adjective     | accepted | 1.1   |
 
 ADR-0007 and ADR-0008 record decisions the author made in answer to the Phase 0
 report; the questions and answers are summarised in each. ADR-0009 and ADR-0010

@@ -35,7 +35,7 @@ describe('When time began, I heard your beautiful voice', () => {
     const d = compose(S);
     expect(d.clauses).toHaveLength(2);
     expect(d.clauses[0]?.comma).toBe(true);
-    expect(text(S)).toBe('kube krono po lombila, maivo po lenila taivo de vani valla.');
+    expect(text(S)).toBe('kube krono po lombila, maivo po lenila taivo de vanisan valla.');
   });
 
   it('keeps "began" in its own clause instead of giving hiro to "heard"', () => {
@@ -98,5 +98,107 @@ describe('every draft passes the checker', () => {
       .checkLine(text(en), 1, 'everyday')
       .filter((f) => f.severity === 'error');
     expect(errors).toEqual([]);
+  });
+});
+
+describe('the English under each line follows its line through edits', () => {
+  const A = 'kube krono po lombila, maivo po lenila taivo de vanisan valla.';
+  const realign = (before: string[], after: string[], english: string[]) =>
+    composer.realignEnglish(before, after, english);
+
+  it('keeps it when a word in the line is edited', () => {
+    const edited = A.replace('vani ', '');
+    expect(realign(['x', A], ['x', edited], ['', 'E'])).toEqual(['', 'E']);
+  });
+
+  it('keeps it on its line when a line is added above or below', () => {
+    expect(realign([A], ['', A], ['E'])).toEqual(['', 'E']);
+    expect(realign([A], [A, ''], ['E'])).toEqual(['E', '']);
+  });
+
+  it('drops it when its line is deleted', () => {
+    expect(realign(['x', A, 'y'], ['x', 'y'], ['', 'E', 'F'])).toEqual(['', 'F']);
+  });
+
+  it('keeps it on the first half when the line is split', () => {
+    expect(realign([A], ['kube krono po lombila,', 'maivo po lenila'], ['E'])).toEqual(['E', '']);
+  });
+});
+
+/* "Song of Time" was composed here, and every error the checker found in it
+   came from the composer: "was" lost its copula, synonyms picked the root over
+   the adjective, near matches were chosen silently ("at" became hema), and
+   relative "that" became fime with a bare root after it. These are its lines'
+   English, with the drafts a reader of the 1.0 grammar expects. */
+describe('Song of Time', () => {
+  it.each([
+    // "was" is po plus a copula; "shimmering" is the adjective sizosan
+    [
+      'Your voice was a song of shimmering light.',
+      'taivo de valla po ke baba lira de sizosan lumi.',
+    ],
+    // relative "that" is raho, and its verb takes the verb form
+    [
+      'You were the holy tool that created the universe.',
+      'taivo po ke li lumiasasan biti raho po farlafa li pagoasa.',
+    ],
+    // demonstrative "that" is ola; "hope to" is kopi; English drops the relative marker
+    [
+      'Now that is a holy light we hope to become.',
+      'eli-krono ola ke baba lumiasasan lumi raho maivori kopi loya.',
+    ],
+    // a clause after "and" shares the subject, so its first word is the verb
+    [
+      'Truth heard your voice and felt shame.',
+      'vera po lenila taivo de valla ata po surusia semra.',
+    ],
+    // "born" is kronobioka, glossed "to be born": the copula goes
+    ['Heaven was born in your eyes.', 'mavopagoasa po kronobioka en taivo de vilneri.'],
+    // "for the old stars to hear" is a kopisa purpose clause, not ala
+    [
+      'Holy light wrote songs for the old stars to hear.',
+      'lumiasasan lumi po sarbisia lirari kopisa li yanbasan veluri lenila.',
+    ],
+    // a question keeps statement order and adds ki
+    [
+      'Or am I the cold one who holds your maternal heart?',
+      'oro maivo ke li sili one raho tivrota taivo de maresan lore ki?',
+    ],
+  ])('%s', (en, liraasa) => {
+    expect(text(en)).toBe(liraasa);
+  });
+
+  // ADR-0011: a noun does not modify a noun; the first becomes its -san adjective
+  it.each([
+    ['I am a song bird.', 'maivo ke baba lirasan lavra.'],
+    ['I heard your honey voice.', 'maivo po lenila taivo de yomlasan valla.'],
+  ])('%s', (en, liraasa) => {
+    expect(text(en)).toBe(liraasa);
+  });
+
+  it('shows a word with only near matches as a gap, never a guess', () => {
+    for (const [en, word] of [
+      ['At the beginning of time I heard your song.', 'at'],
+      ['I heard your voice once.', 'once'],
+      ['The stars wrote about the fire.', 'about'],
+    ] as const) {
+      const row = rows(compose(en)).find((c) => c.en === word);
+      expect(row?.role === 'gap' || row?.chosen === -1, en).toBe(true);
+      expect(text(en)).not.toMatch(/\b(hema|kenvi|pago)\b/);
+    }
+  });
+
+  it('leaves the checker nothing but those gaps', () => {
+    for (const en of [
+      'Your voice was a song of shimmering light.',
+      'I was a bird of songs that learned your voice.',
+      'Your beauty was a shimmering light that shone.',
+      'Even the echoes of the shadows of the forgotten heard your song.',
+    ]) {
+      const errors = composer
+        .checkLine(text(en), 1, 'poetic')
+        .filter((f) => f.severity === 'error');
+      expect(errors, en).toEqual([]);
+    }
   });
 });

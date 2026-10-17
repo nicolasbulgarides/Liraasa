@@ -41,7 +41,34 @@ export interface Finding {
 export interface Composer {
   composeSentence(sentence: string): ComposerDraft;
   draftText(draft: ComposerDraft): string;
-  checkLine(text: string, no: number, register: string): Finding[];
+  checkLine(text: string, no: number, register: string, english?: string): Finding[];
+  realignEnglish(before: string[], after: string[], english: string[]): string[];
+  /** The bundle's live examples: [liraasa, english, feature]. */
+  examples: [string, string, string][];
+  checkText(lines: string[], register: string, english: string[]): Finding[];
+  backTranslate(line: string): string;
+  confirmsDelete(typed: string): boolean;
+  removePiece(book: Songbook, id: string, blank: (collectionId: string) => Piece): string;
+  songbookHtml(
+    pieces: Piece[],
+    opts: { collections: Map<string, string>; edition: string; title: string },
+  ): string;
+}
+
+export interface Piece {
+  id: string;
+  collectionId: string;
+  title: string;
+  kind: string;
+  register: string;
+  text: string;
+  updated: string;
+  englishLines?: string[];
+}
+
+export interface Songbook {
+  pieces: Piece[];
+  activeId: string;
 }
 
 export function loadComposer(): Composer {
@@ -57,7 +84,11 @@ export function loadComposer(): Composer {
   context.window = context;
   vm.runInContext(readFileSync(editorPath('liraasa-data.js'), 'utf8'), context);
   return vm.runInContext(
-    script + '\n;({ composeSentence, draftText, checkLine });',
+    script +
+      '\n;({ composeSentence, draftText, checkLine, realignEnglish, examples: D.examples,' +
+      ' confirmsDelete, removePiece, songbookHtml,' +
+      ' checkText: typeof checkText === "function" ? checkText : undefined,' +
+      ' backTranslate: typeof backTranslate === "function" ? backTranslate : undefined });',
     context,
   ) as Composer;
 }

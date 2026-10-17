@@ -1,3 +1,4 @@
+<meta charset="utf-8" />
 <title>Liraasa Songbook</title>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link
@@ -479,6 +480,51 @@
 
   #text:focus {
     outline: none;
+  }
+
+  /* Compose mode: the English under each line. The textarea cannot hold
+     anything between its lines, so line spacing doubles and a layer that
+     takes no pointer events draws the English in the gap, row for row, the
+     way the gutter draws the syllable counts. Lines do not wrap here, or the
+     rows would drift. */
+  .page-body {
+    position: relative;
+    min-width: 0;
+  }
+
+  .interlinear {
+    display: none;
+    position: absolute;
+    inset: 0;
+    padding: var(--s5) var(--s5) var(--s6) var(--s4);
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .il-row {
+    height: 4.3rem;
+    padding-top: 2.95rem;
+    font-size: 12.5px;
+    line-height: 1.1rem;
+    color: var(--ink-soft);
+    white-space: pre;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  body.interlinear-on .interlinear {
+    display: block;
+  }
+
+  body.interlinear-on #text {
+    line-height: 4.3rem;
+    white-space: pre;
+    overflow-wrap: normal;
+    overflow-x: auto;
+  }
+
+  body.interlinear-on .grow {
+    height: 4.3rem;
   }
 
   /* =========================================================== inspector */
@@ -974,6 +1020,17 @@
     color: var(--rule-firm);
   }
 
+  .gl-back {
+    margin-top: var(--s1);
+    font-size: 12px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+  }
+
+  .gl-back .label {
+    margin-right: var(--s1);
+  }
+
   /* ============================================================ dialog */
   dialog {
     border: 1px solid var(--rule-firm);
@@ -1027,6 +1084,64 @@
     font-size: 12px;
   }
 
+  .btn-danger {
+    color: var(--error);
+    border-color: var(--error);
+  }
+
+  .btn-danger:hover:not(:disabled) {
+    background: var(--error);
+    border-color: var(--error);
+    color: var(--page);
+  }
+
+  .btn:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+  }
+
+  #deleteDlg {
+    max-width: min(92vw, 460px);
+  }
+
+  .dlg-body {
+    display: grid;
+    gap: var(--s3);
+    padding: var(--s4);
+  }
+
+  .dlg-body p {
+    margin: 0;
+    line-height: 1.55;
+  }
+
+  .confirm-word {
+    font-family: var(--mono);
+    background: var(--error-soft);
+    color: var(--error);
+    padding: 1px 6px;
+    border-radius: var(--r);
+    white-space: nowrap;
+  }
+
+  #deleteInput {
+    font-family: var(--mono);
+    font-size: 14px;
+    padding: var(--s2) var(--s3);
+    border: 1px solid var(--rule-firm);
+    border-radius: var(--r);
+    background: var(--page);
+    color: var(--ink);
+  }
+
+  .dlg-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--s2);
+    padding: var(--s3) var(--s4);
+    border-top: 1px solid var(--rule);
+  }
+
   /* ============================================================= narrow */
   @media (max-width: 1100px) {
     :root {
@@ -1060,7 +1175,8 @@
     }
 
     .page-head,
-    #text {
+    #text,
+    .interlinear {
       padding-left: var(--s3);
       padding-right: var(--s3);
     }
@@ -1117,17 +1233,23 @@
                 <option value="sacred">Sacred</option>
               </select>
               <span class="label" id="stamp"></span>
+              <button class="btn btn-quiet btn-danger" id="deleteBtn" type="button">Delete…</button>
             </div>
           </div>
           <div class="sheet">
             <div class="gutter" id="gutter" aria-hidden="true"></div>
-            <textarea
-              id="text"
-              spellcheck="false"
-              autocapitalize="off"
-              autocomplete="off"
-              aria-label="Liraasa text"
-            ></textarea>
+            <div class="page-body">
+              <textarea
+                id="text"
+                spellcheck="false"
+                autocapitalize="off"
+                autocomplete="off"
+                aria-label="Liraasa text"
+              ></textarea>
+              <div class="interlinear" id="interlinear" aria-hidden="true">
+                <div class="il-inner" id="ilInner"></div>
+              </div>
+            </div>
           </div>
         </article>
       </div>
@@ -1207,12 +1329,13 @@
 <dialog id="exportDlg">
   <div class="dlg-head">
     <h2>Export</h2>
-    <select id="exportScope">
+    <select id="exportScope" aria-label="What to export">
       <option value="piece">This piece</option>
       <option value="collection">This collection</option>
       <option value="all">Whole songbook</option>
     </select>
-    <select id="exportKind">
+    <select id="exportKind" aria-label="Export format">
+      <option value="pdf">PDF — Liraasa with English</option>
       <option value="text">Plain text</option>
       <option value="interlinear">Interlinear gloss</option>
       <option value="lab">MFA transcripts (.lab)</option>
@@ -1220,11 +1343,39 @@
       <option value="syl">Syllable and stress sheet</option>
       <option value="json">Structured JSON</option>
     </select>
+    <button class="btn btn-primary" id="pdfBtn" type="button">Save PDF…</button>
     <button class="btn btn-primary" id="copyBtn" type="button">Copy</button>
     <button class="btn" id="closeDlg" type="button">Close</button>
   </div>
   <textarea id="exportText" readonly spellcheck="false" aria-label="Export output"></textarea>
   <p class="dlg-note" id="exportNote"></p>
+</dialog>
+
+<dialog id="deleteDlg" aria-labelledby="deleteTitle">
+  <form id="deleteForm" method="dialog">
+    <div class="dlg-head">
+      <h2 id="deleteTitle">Delete this piece?</h2>
+    </div>
+    <div class="dlg-body">
+      <p id="deleteWhat"></p>
+      <p>
+        This cannot be undone. To confirm, type
+        <span class="confirm-word">[FOREVER]</span> below.
+      </p>
+      <input
+        id="deleteInput"
+        autocomplete="off"
+        autocapitalize="off"
+        spellcheck="false"
+        aria-label="Type [FOREVER] to confirm"
+        aria-describedby="deleteWhat"
+      />
+    </div>
+    <div class="dlg-actions">
+      <button class="btn" id="deleteCancel" type="button">Keep it</button>
+      <button class="btn btn-danger" id="deleteGo" type="submit" disabled>Delete forever</button>
+    </div>
+  </form>
 </dialog>
 
 <script src="liraasa-data.js"></script>
@@ -1368,11 +1519,14 @@
     else FORM.set(sp, [ref]);
   }
 
-  function addEn(phrase, cand) {
-    const key = String(phrase)
+  const enKey = (phrase) =>
+    String(phrase)
       .trim()
       .toLowerCase()
       .replace(/^(a|an|the|to)\s+/, '');
+
+  function addEn(phrase, cand) {
+    const key = enKey(phrase);
     if (key.length < 2 || key.length > 42) return;
     const l = EN.get(key);
     if (l) {
@@ -1382,12 +1536,14 @@
     }
   }
 
-  /** Split a gloss into its separate senses, the way the lexicon writes them. */
+  /** Split a gloss into its separate senses, the way the lexicon writes them.
+      A parenthetical is a gloss's note, so "Society (Mind of Place)" also
+      stands as "Society". */
   const senses = (g) =>
     String(g)
       .split(/[;,]/)
-      .map((s) => s.trim())
-      .filter((s) => s.length > 1);
+      .flatMap((s) => [s.trim(), s.replace(/\s*\(.*?\)/g, '').trim()])
+      .filter((s, i, all) => s.length > 1 && all.indexOf(s) === i);
 
   (function buildIndex() {
     for (const [root, type, components, glosses, register, dIx, synonyms, since] of D.headwords) {
@@ -1408,13 +1564,20 @@
         if (root === 'mavo' && d === 'pago') continue; // blocked by morphology
         DERIV.set(root + d, { root, suffix: d });
       }
-      // The English index: every glossed slot and every synonym.
+      // The English index: every glossed slot and every synonym. The synonym
+      // list mixes the senses of all seven forms, so a synonym that is already
+      // a slot's gloss stays with that slot: "shimmering" is sizosan, not sizo.
+      const glossed = new Set();
       glosses.forEach((g, slot) => {
         if (!g) return;
-        for (const s of senses(g)) addEn(s, { word: rec.forms[slot], root, slot, kind: 'lexical' });
+        for (const s of senses(g)) {
+          glossed.add(enKey(s));
+          addEn(s, { word: rec.forms[slot], root, slot, kind: 'lexical' });
+        }
       });
       for (const syn of synonyms) {
-        addEn(syn, { word: root, root, slot: 0, kind: 'lexical' });
+        if (glossed.has(enKey(syn))) continue;
+        addEn(syn, { word: root, root, slot: 0, kind: 'lexical', synonym: true });
       }
     }
 
@@ -1583,6 +1746,36 @@
     ).split(' '),
   );
 
+  const TENSE = new Set(slotRow('TENSE')[2]);
+  // FRAME also lists "time words" and "correlatives of time": descriptions, not words.
+  const FRAME_OPS = new Set(slotRow('FRAME')[2].filter((w) => !w.includes(' ')));
+  // The frame words that open their clause, followed by a comma.
+  const FRAME_WORDS = new Set([...FRAME_OPS, 'eli-krono']);
+  // Prepositions, read from the function-word positions; the copulas and the
+  // clause conjunction kureli mention location too, and are not prepositions.
+  const PREP = new Set(
+    D.functionWords
+      .filter((r) =>
+        /location|goal and direction|source|accompaniment|benefactive|relation|between two|proximity|distance|prepositional absence|passive agent/.test(
+          r[2],
+        ),
+      )
+      .map((r) => r[0])
+      .filter((w) => !COPULA.has(w) && !RESET.has(w)),
+  );
+  // Clause openers whose clause must carry its own verb.
+  const SUBORDINATOR = new Set(['raho', 'fime', 'kube', 'si', 'kopisa', 'sige', 'nevi']);
+  const NOUN_SLOTS = [0, 1, 2];
+  /* Each noun form's own adjective: root → -san, -asa → -asasan, -na → -nasan.
+     lordina (chaos) describes with lordinasan, never lordisan. */
+  const ADJ_OF_NOUN = { 0: 5, 1: 6, 2: 4 };
+  /** The adjective a noun reading turns into: { form, gloss, slot }. Gloss is '' if unused. */
+  const adjectiveOf = (ref) => {
+    const h = H.get(ref.root);
+    const slot = ADJ_OF_NOUN[ref.slot];
+    return { form: h.forms[slot], gloss: h.glosses[slot] || '', slot };
+  };
+
   function tokenize(text) {
     const out = [];
     const re = /[A-Za-z][A-Za-z'-]*/g;
@@ -1612,12 +1805,590 @@
     COPULA.has(w) ||
     (p && (p.kind === 'motion' || (p.kind === 'lexical' && p.refs.some((r) => r.slot === 3))));
 
-  function checkLine(text, no, register) {
+  // Anything that can fill the verb slot: a verb form, a copula, a valency
+  // operator, or gome (whose own verb follows).
+  const fillsVerbSlot = (w, raw) => VALENCY.has(w) || w === 'gome' || isVerb(w, parseWord(raw));
+  // A lexical word with no verb reading: a noun or an adjective.
+  const nonVerbLexical = (p) => p && p.kind === 'lexical' && p.refs.every((r) => r.slot !== 3);
+  const onlyNoun = (p) =>
+    p && p.kind === 'lexical' && p.refs.every((r) => NOUN_SLOTS.includes(r.slot));
+  // A word with only verb readings, or a copula: one that cannot be a noun.
+  const strictVerb = (w, p) =>
+    COPULA.has(w) ||
+    Boolean(
+      p && (p.kind === 'motion' || (p.kind === 'lexical' && p.refs.every((r) => r.slot === 3))),
+    );
+  /** Lexicon compounds by their two components: "faru+lavra" → farulavra. */
+  let compoundOf = null;
+  const compoundFor = (a, b) => {
+    compoundOf ||= new Map(
+      [...H.values()].filter((h) => h.components).map((h) => [h.components.join('+'), h.root]),
+    );
+    return compoundOf.get(a + '+' + b);
+  };
+  const verbHint = (p) => {
+    const ref = p.refs.find((r) => H.get(r.root).glosses[3]);
+    return ref ? '; its verb is ' + H.get(ref.root).forms[3] : '';
+  };
+
+  /* ------------------------------------------------------ the slot parser
+     Every token of a clause lands in one slot of the 1.0 template, or in a
+     noun phrase inside one:
+
+       [FRAME] [NP hozi] SUBJECT [TENSE] [noma] [ne] [MODAL] … [EVIDENTIAL]
+       VERB [OBJECT] [ADJUNCTS] [fuyi] [STATUS] [ATTITUDE] [ki]
+
+     A token that cannot be placed is an error naming the token and the slot
+     that was expected there. Tokens a more precise rule already explains
+     (tense and operator order, frames, clause-final words, prepositions, sidu,
+     de after a verb, two bare nouns) are left to that rule. */
+
+  const DET_W = new Set(['li', 'baba', 'eli', 'ola', 'eliri', 'olari', 'ki-eli']);
+  const QUANT_W = new Set(['toda', 'somi', 'nuna', 'muya', 'poka', 'rada', 'ki-muya']);
+  const DEGREE_W = new Set(['ruli', 'kasi', 'menu', 'mosa', 'lusu', 'gase']);
+  const FOCUS_W = new Set(['tu', 'yesta', 'pendi', 'vinto', 'doli']);
+  // Words that stand outside the template: discourse, greetings, answers.
+  const FREE_W = new Set(
+    'hema nido yori zoke fisa yade yeko voge zabo kepi lorejuba hozi'.split(' '),
+  );
+  const PREP_ALL = new Set([...PREP, 'transa', 'ultra', 'tamo', 'sabri', 'korsi', 'gagu', 'gase']);
+  // Time words in the function-word table: adverbials, and nouns after de (vesno de deyaapo).
+  const TIME_FW = new Set(['deyapressa', 'deyaapo', 'deyafutu', 'futupago', 'fututi']);
+  const DEMONSTRATIVE = new Set(['eli', 'ola', 'eliri', 'olari']);
+  const PRONOUNS = new Set(D.pronouns.map((r) => r[0]));
+  // Coordinators and connectors: each clause they open has its own one verb.
+  const EMBEDS_NOT = new Set('ata nara oro tonsi narli korsi krotiata sabri yava gome'.split(' '));
+  // Correlatives of place, time, manner and cause are adverbials; of thing and person, nouns.
+  const ADVERB_CORR = /-(pago|krono|modo|kasa)$/;
+
+  /** What a token can be: a set of roles the parser may place it in. */
+  function rolesOf(w, p) {
+    const r = new Set();
+    if (TENSE.has(w)) r.add('tense');
+    if (RANK[w] !== undefined || w === 'noma') r.add('op');
+    // ne floats: before the verb, or before any constituent it negates (Ne Dorin bumreba).
+    if (w === 'ne') r.add('focus');
+    if (TIME_FW.has(w)) r.add('adv').add('noun');
+    // Question words: ki-coda and ki-nela are nouns, ki-pago and ki-krono adverbials.
+    if (w.startsWith('ki-') && !DET_W.has(w) && !QUANT_W.has(w) && w !== 'ki-oro') {
+      r.add(ADVERB_CORR.test(w) ? 'adv' : 'noun');
+    }
+    if (COPULA.has(w)) r.add('copula');
+    if (VALENCY.has(w) || w === 'gome') r.add('valency');
+    if (DET_W.has(w)) r.add('det');
+    if (QUANT_W.has(w)) r.add('quant');
+    if (DEGREE_W.has(w)) r.add('degree');
+    if (FOCUS_W.has(w)) r.add('focus');
+    if (FREE_W.has(w)) r.add('free');
+    if (PREP_ALL.has(w)) r.add('prep');
+    if (PRONOUNS.has(w)) r.add('noun');
+    if (ATT.has(w) || STAT.has(w) || FRAME_OPS.has(w) || w === 'ki' || w === 'fuyi')
+      r.add('placed');
+    if (!p) return r.add('noun'); // unknown or a name: reported elsewhere, placed as a noun
+    if (p.kind === 'lexical') {
+      for (const ref of p.refs) {
+        r.add(ref.slot === 3 ? 'verb' : NOUN_SLOTS.includes(ref.slot) ? 'noun' : 'adj');
+      }
+    } else if (p.kind === 'motion') r.add('verb');
+    else if (['derivation', 'name', 'fraction', 'legacy'].includes(p.kind)) r.add('noun');
+    else if (p.kind === 'numeral') r.add('num');
+    else if (p.kind === 'pronoun') r.add('noun');
+    else if (p.kind === 'colour') r.add('adj').add('noun');
+    else if (p.kind === 'correlative') r.add(ADVERB_CORR.test(w) ? 'adv' : 'noun');
+    else if (p.kind === 'time word' && !TENSE.has(w)) r.add('adv').add('noun');
+    else if (p.kind === 'particle') r.add('free');
+    return r;
+  }
+
+  /** Verb forms whose gloss matches: the lexicon decides what is give-type. */
+  const verbsGlossed = (re) =>
+    new Set([...H.values()].filter((h) => re.test(h.glosses[3] || '')).map((h) => h.forms[3]));
+  // The whole sense, not its first word: "to send up a stem" is not a giving.
+  const GIVE_VERBS = verbsGlossed(
+    /^to (give|lend|send|owe|sell|pay|bring|teach|show)(?=[;,]|$|\s+(alms|a gift|possession|rent)\b)/i,
+  );
+  const SAY_VERBS = verbsGlossed(
+    /^to (speak|say|write|tell|talk|sing|ask|answer|whisper|shout|call|read|inscribe|announce|discuss|explain|describe|argue|preach|pray)\b/i,
+  );
+
+  function placeClause(cl, cr, flag, skip, warn) {
+    const n = cl.length;
+    const R = cl.map((w, i) => rolesOf(w, parseWord(cr[i])));
+    const is = (i, role) => i < n && R[i].has(role);
+    const verbal = (i) => is(i, 'verb') || is(i, 'copula') || is(i, 'valency');
+    const strict = (i) => verbal(i) && !is(i, 'noun') && !is(i, 'adj');
+
+    /* A noun phrase from i, as the template has it:
+       [QUANT] [li|eli|ola…] [NUMBER] [ADJ…] NOUN[-ti][-ri] [sela] [de NP]…
+       An adjective after an article is a noun phrase on its own (li
+       ramumomvisan, "the forgotten"). Returns the end, or i for none. */
+    const np = (i) => {
+      let j = i;
+      while (is(j, 'focus')) j += 1;
+      if (is(j, 'quant')) j += 1;
+      const lead = is(j, 'det');
+      if (lead) j += 1;
+      while (is(j, 'num') || is(j, 'degree')) j += 1;
+      const before = j;
+      while (is(j, 'adj') && !is(j, 'noun')) j += 1;
+      if (is(j, 'noun')) {
+        j += 1;
+        if (cl[j] === 'sela') j += 1;
+      } else if (lead && j === before && DEMONSTRATIVE.has(cl[j - 1])) {
+        // eli, ola standing alone: "this", "that" (Ola ka vera.)
+      } else if (!(j > before && (lead || before > i)) && !(before > i && is(before - 1, 'num'))) {
+        return i;
+      }
+      while (cl[j] === 'de') {
+        const e = np(j + 1);
+        if (e === j + 1) break;
+        j = e;
+      }
+      return j;
+    };
+
+    const opener = RESET.has(cl[0]) || cl[0]?.startsWith('ki-');
+    // After sidu, gome and yava the verb comes at once; there is no subject.
+    let state = ['sidu', 'gome', 'yava'].includes(cl[0]) ? 'verb' : 'start';
+    let verbs = 0;
+    let actor = false; // a valency operator's actor takes its own verb
+    let lastVerb = -1;
+    let i = opener ? 1 : 0;
+    // A question word fronts its phrase: Ki-eli lira taivo amora?
+    if (cl[0]?.startsWith('ki-') && cl[0] !== 'ki-oro') i = Math.max(np(0), 1);
+    const hasVerb = cl.some((_, k) => verbal(k));
+    /* A clause opened by raho, fime, kube… runs on into the main predicate
+       (Li nela raho lirala ka benasan), so its second verb is not counted.
+       A coordinated clause (ata, nara, oro…) has its own one verb. */
+    const embeds = opener && !EMBEDS_NOT.has(cl[0]);
+
+    while (i < n) {
+      const w = cl[i];
+      if (skip(i) || is(i, 'free') || is(i, 'placed')) {
+        i += 1;
+        continue;
+      }
+      if (is(i, 'focus')) {
+        i += 1; // tu, yesta, pendi, vinto, doli, ne: before the constituent they scope over
+        continue;
+      }
+      if (is(i, 'tense') || is(i, 'op')) {
+        if (state === 'start' && is(i, 'adv')) {
+          i += 1; // fututi maivo lirala: "soon", framing the clause
+          continue;
+        }
+        if (state === 'start' || state === 'subject') state = 'verb';
+        i += 1;
+        continue;
+      }
+      if (is(i, 'prep')) {
+        i = Math.max(np(i + 1), i + 1); // a stranded one is reported by its own rule
+        continue;
+      }
+      if (w === 'la' && (is(i + 1, 'adj') || is(i + 1, 'noun'))) {
+        i += 2;
+        continue;
+      }
+      // A time word that opens the clause frames it (futupago maivo lirala);
+      // after de it is a noun (vesno de deyaapo).
+      if (is(i, 'adv') && (!is(i, 'noun') || (state === 'start' && np(i + 1) > i + 1))) {
+        i += 1;
+        continue;
+      }
+      if (w === 'de') {
+        // de after a verb, or with nothing after it, has its own rule.
+        if (i + 1 < n && !strict(i - 1)) {
+          flag(
+            i,
+            is(i - 1, 'adj')
+              ? 'de after the adjective “' +
+                  cr[i - 1] +
+                  '”: de needs a noun or pronoun on both sides (owner de thing)'
+              : 'de needs a noun or pronoun on both sides (owner de thing)',
+          );
+        }
+        i += 1;
+        continue;
+      }
+
+      // The verb slot.
+      if (
+        verbal(i) &&
+        (state === 'verb' ||
+          state === 'subject' ||
+          (state === 'start' && !is(i, 'noun')) ||
+          (state === 'post' && (actor || strict(i))))
+      ) {
+        if (state === 'post' && !actor && verbs > 0 && !embeds) {
+          flag(
+            i,
+            '“' +
+              cr[i] +
+              '” is a second verb in one clause; open its clause with a linker (fime, raho, ata, kopisa…)',
+          );
+        }
+        if (actor) actor = false;
+        else if (is(i, 'valency') && cl[i] !== 'gome') actor = true;
+        verbs += 1;
+        lastVerb = i;
+        state = 'post';
+        i += 1;
+        continue;
+      }
+
+      // A noun phrase: the subject before the verb, an object or complement after it.
+      const e = np(i);
+      if (e > i) {
+        // A give-type verb takes VERB THEME ala RECIPIENT, not two bare phrases.
+        if (
+          state === 'post' &&
+          i === lastVerb + 1 &&
+          GIVE_VERBS.has(cl[lastVerb]) &&
+          !is(e, 'adv') &&
+          np(e) > e
+        ) {
+          const recipient = cr.slice(i, e).join(' ');
+          const theme = cr.slice(e, np(e)).join(' ');
+          warn(
+            '“' +
+              cr[lastVerb] +
+              '” is a give-type verb: the pattern is VERB THEME ala RECIPIENT (' +
+              cr[lastVerb] +
+              ' ' +
+              theme +
+              ' ala ' +
+              recipient +
+              ')',
+          );
+        }
+        if (state === 'start') state = 'subject';
+        else if (state === 'subject' || state === 'verb') {
+          if (hasVerb) {
+            const pv = parseWord(cr[i]);
+            flag(
+              i,
+              '“' +
+                cr[i] +
+                '” is in the verb slot but is not a verb form' +
+                (pv && pv.kind === 'lexical' ? verbHint(pv) : ''),
+            );
+            verbs += 1; // read it as the verb, and go on
+            lastVerb = i;
+            state = 'post';
+            i += 1;
+            continue;
+          }
+          if (state === 'subject' && !cl.some((x) => TENSE.has(x))) {
+            flag(
+              i,
+              '“' + cr[i] + '” opens a second noun phrase, but the clause has no verb or copula',
+            );
+          }
+        }
+        i = e;
+        continue;
+      }
+
+      // An adjective after a copula is its complement. With no verb at all it
+      // is the predicate itself: the guide writes Lira benasan, Nela vanisan.
+      if (is(i, 'adj') && ((state === 'post' && COPULA.has(cl[lastVerb])) || !hasVerb)) {
+        i += 1;
+        while (is(i, 'adj') || is(i, 'degree')) i += 1;
+        continue;
+      }
+      if (is(i, 'degree') && is(i + 1, 'adj')) {
+        i += 1;
+        continue;
+      }
+
+      flag(
+        i,
+        '“' +
+          cr[i] +
+          '” cannot be placed: expected ' +
+          (state === 'post'
+            ? COPULA.has(cl[lastVerb])
+              ? 'the copula’s complement (a noun phrase or an adjective)'
+              : 'the OBJECT (a noun phrase) or an adjunct (la + adjective, a prepositional phrase)'
+            : state === 'start'
+              ? 'the SUBJECT (a noun phrase)'
+              : 'the VERB'),
+      );
+      i += 1;
+    }
+  }
+
+  /* Shapes that read as relexified English: Liraasa words in English word
+     order. Each one is a pattern the Song of Time audit found more than once.
+     None decides the language; the fix is always the author's. */
+  function checkShape(words, elided, add) {
+    const lw = words.map((w) => w.toLowerCase());
+    const p = words.map((w) => parseWord(w));
+    const clauses = splitClauses(words);
+
+    // Tense sits before the verb (slot 4 of 20), so something after it in the
+    // same clause must fill the verb slot. A clause-final po is English "was".
+    let at = 0;
+    clauses.forEach((clause, k) => {
+      const cl = lw.slice(at, at + clause.length);
+      const cr = words.slice(at, at + clause.length);
+      at += clause.length;
+      const verbAt = cl.map((w, i) => fillsVerbSlot(w, cr[i]));
+      const gomeNext = clauses[k + 1]?.[0]?.toLowerCase() === 'gome';
+      cl.forEach((w, i) => {
+        if (!TENSE.has(w)) return;
+        if (verbAt.slice(0, i).some(Boolean)) return; // after the verb: G1 says so
+        if (!verbAt.slice(i + 1).some(Boolean) && !gomeNext && !elided) {
+          add(
+            'error',
+            w + ' has no verb or copula after it; tense comes before the verb (ke, ka, loya…)',
+            'clause template',
+          );
+        }
+      });
+
+      // raho, fime, kube and the rest open a clause of their own: it needs a verb.
+      const adjective = cr.some((w) => {
+        const pw = parseWord(w);
+        return pw && pw.kind === 'lexical' && pw.refs.some((r) => [4, 5, 6].includes(r.slot));
+      });
+      const verbless =
+        SUBORDINATOR.has(cl[0]) &&
+        cl.length > 1 &&
+        !verbAt.some(Boolean) &&
+        !adjective &&
+        !gomeNext;
+      if (verbless) {
+        const noun = cr.slice(1).find((w) => nonVerbLexical(parseWord(w)));
+        add(
+          'error',
+          cl[0] +
+            ' opens a clause with no verb' +
+            (noun ? ' (“' + noun + '” is not a verb form' + verbHint(parseWord(noun)) + ')' : ''),
+          'clause template',
+        );
+        return; // that says it: the slot parser has nothing to add
+      }
+
+      // Every token lands in a slot. The parser leaves alone a token another
+      // rule here explains: the second of two bare nouns, and a non-verb
+      // straight after sidu.
+      const start = at - clause.length;
+      const nounPair = (g) =>
+        g > 0 &&
+        onlyNoun(p[g - 1]) &&
+        onlyNoun(p[g]) &&
+        !CLOSED.has(lw[g - 1]) &&
+        !CLOSED.has(lw[g]);
+      placeClause(
+        cl,
+        cr,
+        (i, message) => add('error', message, 'slot'),
+        (i) => nounPair(start + i) || (cl[0] === 'sidu' && i === 1 && !isVerb(cl[1], p[start + 1])),
+        (message) => add('warn', message, 'ditransitive'),
+      );
+    });
+
+    lw.forEach((w, i) => {
+      const next = lw[i + 1];
+      const pn = p[i + 1];
+
+      // A preposition takes a noun phrase. ala is "toward", never infinitive "to".
+      if (PREP.has(w)) {
+        const stranded =
+          (next === undefined && i > 0) ||
+          TENSE.has(next) ||
+          COPULA.has(next) ||
+          PREP.has(next) ||
+          ATT.has(next) ||
+          next === 'ki' ||
+          (pn && pn.kind === 'lexical' && pn.refs.every((r) => r.slot === 3));
+        if (stranded) {
+          add(
+            'error',
+            w +
+              ' needs a noun phrase after it' +
+              (w === 'ala' ? '; ala is “toward”, not the infinitive “to” (sidu, kopisa)' : ''),
+            'noun phrase',
+          );
+        }
+      }
+
+      // sidu joins two verbs that share a subject (Maivo vurlova sidu lirala).
+      // Clause-initial sidu nominalises a verb phrase (0.8:G6) and is left alone.
+      if (w === 'sidu' && i > 0) {
+        if (!isVerb(lw[i - 1], p[i - 1])) {
+          add(
+            'error',
+            'sidu joins two verbs; “' +
+              words[i - 1] +
+              '” before it is not a verb form' +
+              (nonVerbLexical(p[i - 1]) ? verbHint(p[i - 1]) : '') +
+              ', and an object comes after the second verb',
+            'sidu',
+          );
+        }
+        if (COPULA.has(next)) {
+          add(
+            'error',
+            'sidu takes a lexical verb, not the copula ' +
+              next +
+              ': “knew it to be truth” is fime ito ka …, “hope to become” is kopi loya',
+            'sidu',
+          );
+        } else if (next !== undefined && !isVerb(next, pn)) {
+          add(
+            'error',
+            'sidu joins two verbs; “' +
+              words[i + 1] +
+              '” after it is not a verb form' +
+              (nonVerbLexical(pn) ? verbHint(pn) : ''),
+            'sidu',
+          );
+        }
+      }
+
+      // de joins an owner and a thing: a noun phrase on each side, never a verb.
+      if (w === 'de' && i > 0 && (next === undefined || strictVerb(lw[i - 1], p[i - 1]))) {
+        add(
+          'error',
+          next === undefined
+            ? 'de needs a noun phrase after it'
+            : 'de cannot follow the verb “' +
+                words[i - 1] +
+                '”; de joins an owner and a thing (1.0 has no “about”: give the verb an object)',
+          'noun phrase',
+        );
+      }
+
+      // 1.0 has no "about": a communication verb with su reads as "on".
+      if (SAY_VERBS.has(w) && next === 'su') {
+        add('warn', "1.0 has no 'about'; “" + words[i] + ' su” reads literally', 'about');
+      }
+
+      // fime introduces a content clause, whose subject comes next.
+      if (w === 'fime' && next !== undefined && (COPULA.has(next) || TENSE.has(next))) {
+        add(
+          'error',
+          'fime introduces a clause (“I know that you sing”); the demonstrative “that” is ola',
+          'fime',
+        );
+      }
+
+      // zafra, finra, lanto, kenvi, eli-krono open the clause, followed by a
+      // pause. A scope word may stand before it (1.0:G1): Ne eli-krono.
+      if (FRAME_WORDS.has(w) && lw.slice(0, i).some((x) => !FOCUS_W.has(x) && x !== 'ne')) {
+        add('error', w + ' is a clause-initial frame, followed by a comma', '1.0 slot 1 FRAME');
+      }
+
+      // Two bare nouns side by side: a noun does not modify a noun (ADR-0011).
+      // The first becomes its -san adjective: lira lavra is lirasan lavra.
+      // Where that slot is "— (unused)" it cannot be used, so the lexicon's
+      // compound, or else a de phrase. A pronoun is never a modifier noun.
+      if (onlyNoun(p[i]) && onlyNoun(pn) && !CLOSED.has(lw[i]) && !CLOSED.has(next)) {
+        const compound = compoundFor(p[i].refs[0].root, pn.refs[0].root);
+        const adj = p[i].refs.map(adjectiveOf).find((x) => x.gloss);
+        add(
+          'error',
+          '“' +
+            words[i] +
+            ' ' +
+            words[i + 1] +
+            '”: a noun does not modify a noun; ' +
+            (adj
+              ? 'use the adjective ' +
+                adj.form +
+                ' (' +
+                adj.gloss +
+                '): ' +
+                adj.form +
+                ' ' +
+                words[i + 1]
+              : adjectiveOf(p[i].refs[0]).form +
+                ' is unused, so ' +
+                (compound
+                  ? 'use the compound ' + compound
+                  : 'use a de phrase (' + words[i + 1] + ' de ' + words[i] + ')')),
+          'noun phrase',
+        );
+      }
+    });
+
+    // A question keeps statement order and adds ki: no copula or tense up front.
+    if (lw[lw.length - 1] === 'ki') {
+      const s = RESET.has(lw[0]) ? 1 : 0;
+      if (COPULA.has(lw[s]) || TENSE.has(lw[s])) {
+        add(
+          'error',
+          'questions keep statement order; ' + lw[s] + ' is not moved to the front',
+          'ki',
+        );
+      }
+    }
+
+    // A frame opens the clause and is followed by a pause. Any other time word
+    // only usually takes the comma, so for those it is a note.
+    if (FRAME_WORDS.has(lw[0]) && lw.length > 1) {
+      add('warn', lw[0] + ' frames the clause and is followed by a comma', '1.0 slot 1 FRAME');
+    } else if (/-krono$/.test(lw[0]) && lw.length > 1) {
+      add(
+        'note',
+        lw[0] + ' frames the clause; a comma after it marks the pause',
+        '1.0 slot 1 FRAME',
+      );
+    }
+
+    // hema is hesitation: “well…”, “um”. It is not a preposition.
+    if (lw[0] === 'hema' && lw.length > 1) {
+      add('note', 'hema is hesitation (“well…”, “um”), usually set off by a pause', 'particles');
+    }
+  }
+
+  /* English passives: "was/were (not) + participle". Each wants gome + verb,
+     or a copula + the -san adjective, in its Liraasa line. */
+  const PASSIVE_EN =
+    /\b(?:was|were|is|are|been|be|being)\s+(?:not\s+)?(?:[a-z]+ed|[a-z]+en|born|done|made|sung|lost|found|heard|held|told|kept|left|taught|built|sent|brought|bought|thought|caught|won)\b/gi;
+
+  function checkLine(text, no, register, english) {
     const f = [];
     const add = (severity, message, rule) => f.push({ line: no, severity, message, rule });
 
-    for (const sentence of text.split(/[.,;:!?—…"“”()]+/)) {
-      const words = tokenize(sentence);
+    if (english) {
+      const passives = english.match(PASSIVE_EN) || [];
+      const lw = tokenize(text).map((w) => w.toLowerCase());
+      // A verb glossed "to be born" carries the passive itself: po kronobioka.
+      const passiveVerb = (w) =>
+        (FORM.get(w) || []).some((r) => r.slot === 3 && /^to be /i.test(H.get(r.root).glosses[3]));
+      const marked = lw.filter((w) => w === 'gome' || COPULA.has(w) || passiveVerb(w)).length;
+      if (passives.length > marked) {
+        add(
+          'warn',
+          'the English is passive (' +
+            passives.map((x) => '“' + x + '”').join(', ') +
+            '); Liraasa marks it with gome + verb, or ke/ka + the -san adjective',
+          'passive',
+        );
+      }
+    }
+
+    // oro is paired (1.0:G10): oro A oro B. A question that opens with a lone
+    // oro may pair with the question beside it, which checkText looks at.
+    for (const sentence of text.split(/(?<=[.!?])\s*/)) {
+      const t = tokenize(sentence).map((w) => w.toLowerCase());
+      const pairsAcross = t[0] === 'oro' && /\?\s*$/.test(sentence);
+      if (t.filter((w) => w === 'oro').length === 1 && !pairsAcross) {
+        add(
+          'error',
+          'oro is paired: oro A oro B (either A or B); this oro has no partner',
+          '1.0:G10',
+        );
+      }
+    }
+
+    const pieces = text.split(/([.,;:!?—…"“”()+=]+)/);
+    for (let n = 0; n < pieces.length; n += 2) {
+      const words = tokenize(pieces[n]);
+      const elided = /[—…]/.test(pieces[n + 1] || ''); // cut off: Po — …, Maivo po ne povi—
       if (!words.length) continue;
       for (const clause of splitClauses(words)) {
         const lw = clause.map((w) => w.toLowerCase());
@@ -1679,6 +2450,7 @@
           );
         }
       }
+      checkShape(words, elided, add);
     }
 
     for (const t of tokenize(text)) {
@@ -1696,12 +2468,114 @@
             '0.8:R10',
           );
         }
+        // A -na form inverts its root; show both so a flipped meaning is seen.
+        const neg = p.refs.find((r) => r.slot === 2);
+        if (neg) {
+          const g = H.get(neg.root).glosses;
+          add(
+            'note',
+            '“' +
+              t +
+              '” is the negative of ' +
+              neg.root +
+              ' (“' +
+              (g[0] || '?') +
+              '”): “' +
+              (g[2] || '?') +
+              '”',
+            '-na',
+          );
+        }
         if (p.refs.every((r) => !H.get(r.root).glosses[r.slot])) {
           add('warn', '“' + t + '” is a form whose slot has no meaning — “— (unused)”', '0.8:R2');
         }
       }
     }
     return f;
+  }
+
+  /** A question that opens with a lone oro: it pairs with its neighbour. */
+  const opensWithOro = (line) =>
+    /^\s*oro\b/i.test(line) &&
+    /\?\s*$/.test(line) &&
+    tokenize(line).filter((w) => w.toLowerCase() === 'oro').length === 1;
+
+  /** Every line's findings, plus what only shows across lines: oro paired
+      over two consecutive questions, each of which must open with oro. */
+  function checkText(lines, register, english) {
+    const out = lines.map((l, i) => (l.trim() ? checkLine(l, i + 1, register, english[i]) : []));
+    const live = lines.map((l, i) => [l, i]).filter(([l]) => l.trim());
+    live.forEach(([l, i], k) => {
+      if (!opensWithOro(l)) return;
+      const beside = [live[k - 1], live[k + 1]].filter(Boolean);
+      if (!beside.some(([m]) => opensWithOro(m))) {
+        out[i].push({
+          line: i + 1,
+          severity: 'error',
+          message:
+            'oro is paired: oro A oro B; a question that opens with oro needs the question before or after it to open with oro too',
+          rule: '1.0:G10',
+        });
+      }
+    });
+    return out.flat();
+  }
+
+  /* A mechanical back-translation from the lexicon: each word's first sense,
+     a pronoun before de as a possessive. It judges nothing; it is shown
+     beside the writer's own English so a drift in meaning can be seen. */
+  const POSSESSIVE_OF = {
+    maivo: 'my',
+    taivo: 'your',
+    saivo: 'his/her',
+    ito: 'its',
+    maivori: 'our',
+    taivori: 'your',
+    saivori: 'their',
+    itori: 'their',
+  };
+  const PRONOUN_OF = {
+    maivo: 'I',
+    taivo: 'you',
+    saivo: 'he/she',
+    ito: 'it',
+    maivori: 'we',
+    taivori: 'you',
+    saivori: 'they',
+    itori: 'they',
+  };
+  const firstSense = (g) =>
+    String(g)
+      .split(/[;,/]/)[0]
+      .replace(/\(.*?\)/g, '')
+      .replace(/^to\s+/i, '')
+      .trim()
+      .toLowerCase();
+
+  function backTranslate(line) {
+    const t = tokenize(line);
+    const out = [];
+    for (let i = 0; i < t.length; i += 1) {
+      const w = t[i].toLowerCase();
+      if (PRONOUNS.has(w)) {
+        if ((t[i + 1] || '').toLowerCase() === 'de') {
+          out.push(POSSESSIVE_OF[w] || w);
+          i += 1;
+        } else out.push(PRONOUN_OF[w] || w);
+        continue;
+      }
+      const p = parseWord(t[i]);
+      if (!p) out.push('[' + t[i] + ']');
+      else if (p.kind === 'name') out.push(t[i]);
+      else if (p.kind === 'lexical' || p.kind === 'motion') {
+        const ref = p.refs[0];
+        let g = firstSense(H.get(ref.root).glosses[ref.slot] || '?');
+        if (p.suffixes.includes('-ti')) g = 'little ' + g;
+        if (p.suffixes.includes('-ri')) g += 's';
+        out.push(g);
+      } else out.push(firstSense(glossFor(p)) || w);
+    }
+    return out.join(' ');
   }
 
   /* ================================================== the assisted composer
@@ -1742,12 +2616,14 @@
      a real verb when its clause has no other. */
   const MARKERS = [
     { en: ['will', 'shall'], word: 'futu', slot: 'TENSE' },
-    { en: ['was', 'were', 'did', 'had', 'ago'], word: 'po', slot: 'TENSE' },
+    // "was" and "were" are po plus a copula; composeClause adds both.
+    { en: ['did', 'had', 'ago'], word: 'po', slot: 'TENSE' },
     { en: ['can', 'could', 'able to'], word: 'povi', slot: 'MODAL' },
     { en: ['might', 'maybe', 'possibly'], word: 'nosi', slot: 'MODAL' },
     { en: ['may', 'allowed to', 'permitted'], word: 'dagi', slot: 'MODAL' },
     { en: ['must', 'have to', 'has to', 'need to'], word: 'musi', slot: 'MODAL' },
     { en: ['should'], word: 'suvi', slot: 'MODAL' },
+    { en: ['hope to', 'hopes to', 'hoped to'], word: 'kopi', slot: 'MODAL' },
     { en: ['would'], word: 'viki', slot: 'MODAL' },
     { en: ['almost', 'nearly'], word: 'tavki', slot: 'APPROACH' },
     { en: ['about to'], word: 'fututi', slot: 'APPROACH' },
@@ -1799,7 +2675,30 @@
   /* English words that open a new clause, as the checker's clause reset does
      for their Liraasa equivalents. "that" opens one only when a subject
      follows it ("I know that you sing"), not as a determiner ("that song"). */
-  const CLAUSE_OPENERS = new Set(['when', 'because', 'if', 'who', 'which', 'and', 'but']);
+  const CLAUSE_OPENERS = new Set([
+    'when',
+    'because',
+    'if',
+    'who',
+    'which',
+    'and',
+    'but',
+    'that+rel',
+    'that+obj',
+    'for+to',
+    'to+verb',
+  ]);
+  /* Openers whose clause has no subject of its own: the relative's head noun,
+     or the main clause's subject, fills it. */
+  const NO_SUBJECT = new Set(['who', 'which', 'that+rel', 'to+verb']);
+  /* Tokens rewriteEnglish coins, shown as the English the writer typed. */
+  const DISPLAY = {
+    'that+rel': 'that',
+    'that+obj': 'that',
+    'that+dem': 'that',
+    'for+to': 'for … to',
+    'to+verb': 'to',
+  };
 
   /* Words carried by Liraasa grammar rather than by a dictionary entry. */
   const STRUCTURAL = {
@@ -1819,6 +2718,11 @@
     when: 'kube',
     if: 'si',
     that: 'fime',
+    'that+rel': 'raho',
+    'that+obj': 'raho',
+    'that+dem': 'ola',
+    'for+to': 'kopisa',
+    'to+verb': 'sidu',
     who: 'raho',
     which: 'raho',
     all: 'toda',
@@ -1917,6 +2821,7 @@
     broken: 'break',
     chose: 'choose',
     chosen: 'choose',
+    shone: 'shine',
   };
 
   const STOPWORDS = new Set(['do', 'does', 'own']);
@@ -1969,6 +2874,7 @@
     'wore',
     'broke',
     'chose',
+    'shone',
     'was',
     'were',
   ]);
@@ -2014,26 +2920,40 @@
     return [...new Set(out)];
   }
 
+  /* Function words bound to a clause position — tense, modals, frames,
+     clause-final attitude — come from MARKERS, never from a word lookup:
+     "hope" is not pifu, which only closes a clause. */
+  const positional = (c) =>
+    c.kind === 'function word' &&
+    (RANK[c.word] !== undefined || ATT.has(c.word) || FRAME_OPS.has(c.word));
+
   /** Candidates for one English chunk, best first. */
   function lookupEnglish(chunk) {
     const seen = new Map();
-    const take = (list, bonus) => {
+    const take = (list, bonus, loose) => {
       for (const c of list || []) {
+        if (positional(c)) continue;
         const key = c.word;
-        const score = (c.kind === 'lexical' ? 10 : 20) + bonus - (c.slot || 0);
-        if (!seen.has(key) || seen.get(key).score < score) seen.set(key, { ...c, score });
+        const score =
+          (c.kind === 'lexical' ? 10 : 20) + bonus - (c.slot || 0) - (c.synonym ? 5 : 0);
+        if (!seen.has(key) || seen.get(key).score < score)
+          seen.set(key, loose ? { ...c, score, loose: true } : { ...c, score });
       }
     };
     take(EN.get(chunk), 100);
     for (const l of lemmas(chunk)) if (l !== chunk) take(EN.get(l), 60);
     take(EN.get('to ' + chunk), 80);
-    if (seen.size === 0) {
-      // A loose pass: any indexed phrase containing this word.
+    take(EN.get('be ' + chunk), 80); // "born" is kronobioka, glossed "to be born"
+    if (seen.size === 0 && chunk.length > 3) {
+      // A loose pass: an indexed phrase holding this word whole. These are only
+      // near matches ("once" is in kenvi's "at once"), so none is chosen for
+      // the writer; they are offered beside the gap.
+      const whole = new RegExp('\\b' + chunk + '\\b');
       let n = 0;
       for (const [phrase, list] of EN) {
         if (n > 400) break;
-        if (phrase.includes(chunk) && phrase.length < chunk.length + 14) {
-          take(list, 10);
+        if (whole.test(phrase) && phrase.length < chunk.length + 14) {
+          take(list, 10, true);
           n += 1;
         }
       }
@@ -2072,6 +2992,90 @@
     CLAUSE_OPENERS.has(tokens[i]) ||
     (tokens[i] === 'that' &&
       (Boolean(PRONOUN_EN[tokens[i + 1]]) || ['the', 'a', 'an'].includes(tokens[i + 1])));
+
+  const SUBJECT_EN = new Set(['i', 'you', 'he', 'she', 'it', 'we', 'they']);
+
+  /** Can this English word be a verb: a glossed verb slot, or a copula? */
+  const verbish = (w) =>
+    Boolean(w) &&
+    w !== ',' &&
+    !DETERMINER_EN.has(w) &&
+    !STRUCTURAL[w] &&
+    !PRONOUN_EN[w] &&
+    (Boolean(COPULA_EN[w]) ||
+      lookupEnglish(w).some(
+        (o) => (o.kind === 'lexical' && o.slot === 3 && !o.loose) || COPULA.has(o.word),
+      ));
+
+  /** Does a marker phrase ending in "to" ("hope to", "began to") end at j? */
+  const markerEndsAt = (t, j) =>
+    MARKERS.some((m) =>
+      m.phrases.some(
+        (p) =>
+          p.length > 1 &&
+          p[p.length - 1] === 'to' &&
+          p.every((w, k) => t[j - p.length + 1 + k] === w),
+      ),
+    );
+
+  /* English word order and English function words, rewritten to the Liraasa
+     structures they stand for before the clauses are split. Each rewrite is a
+     token DISPLAY shows as the English typed, so the rows stay readable. */
+  function rewriteEnglish(tokens, question) {
+    const t = [...tokens];
+    // A question keeps statement order and adds ki: "am I …?" is "I am … ki".
+    if (question) {
+      const s = ['or', 'and', 'but'].includes(t[0]) ? 1 : 0;
+      if (COPULA_EN[t[s]] && SUBJECT_EN.has(t[s + 1])) [t[s], t[s + 1]] = [t[s + 1], t[s]];
+    }
+    let verbSeen = false;
+    let detAt = -1;
+    for (let i = 0; i < t.length; i += 1) {
+      const [prev, w, next] = [t[i - 1], t[i], t[i + 1]];
+      if (w === 'that') {
+        if ((i === 0 || prev === 'now' || prev === ',') && COPULA_EN[next]) {
+          t[i] = 'that+dem'; // "that is a holy light": the demonstrative, ola
+        } else if (
+          i > 0 &&
+          !DETERMINER_EN.has(next) &&
+          !PRONOUN_EN[next] &&
+          (isPastEn(next || '') || verbish(next))
+        ) {
+          t[i] = 'that+rel'; // "the tool that created": a relative, raho
+        }
+      } else if (w === 'to' && verbish(next) && !markerEndsAt(t, i)) {
+        // "for the stars to hear" is a purpose clause; any other "to" + verb chains with sidu.
+        const f = t.lastIndexOf('for', i);
+        if (f >= 0 && t.slice(f + 1, i).every((x) => x !== ',' && !CLAUSE_OPENERS.has(x))) {
+          t[f] = 'for+to';
+          t.splice(i, 1);
+          i -= 1;
+          continue;
+        }
+        t[i] = 'to+verb';
+      } else if (
+        SUBJECT_EN.has(w) &&
+        verbSeen &&
+        detAt >= 0 &&
+        i - detAt <= 4 &&
+        prev &&
+        !STRUCTURAL[prev] &&
+        !PRONOUN_EN[prev] &&
+        !COPULA_EN[prev]
+      ) {
+        // "a holy light we hope to become": English drops the relative marker.
+        t.splice(i, 0, 'that+obj');
+        i += 1;
+      }
+      if (COPULA_EN[t[i]] || isPastEn(t[i])) verbSeen = true;
+      if (DETERMINER_EN.has(t[i]) && verbSeen) detAt = i;
+      if (t[i] === ',' || CLAUSE_OPENERS.has(t[i])) {
+        verbSeen = false;
+        detAt = -1;
+      }
+    }
+    return t;
+  }
 
   /* Split before a clause opener, and at the comma that closes a leading
      subordinate clause: "When time began, I heard your voice" is two clauses,
@@ -2165,7 +3169,8 @@
       }
       if (STRUCTURAL[w]) {
         chunks.push({
-          en: w,
+          en: DISPLAY[w] || w,
+          tok: w,
           role: 'structure',
           options: [{ word: STRUCTURAL[w], kind: 'function word' }],
           chosen: 0,
@@ -2174,6 +3179,11 @@
         continue;
       }
       if (COPULA_EN[w]) {
+        // "was" is the past of a copula: po, then ke or ka. Without the
+        // copula, po has no verb and drifts to the end of the clause.
+        if (w === 'was' || w === 'were') {
+          chunks.push({ ...markerChunk(w, { word: 'po', slot: 'TENSE' }), note: glossOf('po') });
+        }
         chunks.push({
           en: w,
           role: 'copula',
@@ -2185,14 +3195,35 @@
       }
       const options = lookupEnglish(w);
       const isPlural = /[a-z]{3}s$/.test(w) && !w.endsWith('ss');
+      // Near matches only: offered, never chosen. The line shows the gap.
+      const loose = options.length > 0 && options.every((o) => o.loose);
       chunks.push({
         en: w,
-        role: options.length ? 'word' : 'gap',
+        role: loose ? 'near' : options.length ? 'word' : 'gap',
         options,
-        chosen: 0,
+        chosen: loose ? -1 : 0,
         nounish: afterDeterminer,
-        plural: Boolean(isPlural && options.length && options[0].slot === 0),
+        plural: Boolean(!loose && isPlural && options.length && options[0].slot === 0),
+        ...(loose
+          ? { note: 'no exact match; these only contain the word. Pick one only if it fits.' }
+          : {}),
+        // "become" is loya, a copula: it fills the verb slot.
+        ...(!loose && options[0] && COPULA.has(options[0].word) ? { isVerb: true } : {}),
       });
+    }
+
+    /* "was born": English passive of a verb Liraasa glosses "to be born".
+       The verb itself carries it, so the copula goes: po kronobioka. */
+    for (let i = chunks.length - 2; i >= 0; i -= 1) {
+      const n = chunks[i + 1];
+      if (chunks[i].role !== 'copula' || n.role !== 'word') continue;
+      const at = n.options.findIndex(
+        (o) =>
+          o.kind === 'lexical' && o.slot === 3 && /^to be /i.test(H.get(o.root).glosses[3] || ''),
+      );
+      if (at < 0) continue;
+      Object.assign(n, { chosen: at, isVerb: true, role: 'verb', plural: false });
+      chunks.splice(i, 1);
     }
 
     /* Choose the verb. English puts it after the subject, and a word used as a
@@ -2206,20 +3237,70 @@
       chunks.forEach((c, i) => {
         if (c.role !== 'structure' && c.role !== 'grammar') content.push(i);
       });
-      // The first content word is the subject, unless it is a one-word command.
-      const subject = content.length === 1 && sole && standIn < 0 ? -1 : content[0];
-      for (const i of content) {
+      // The first content word is the subject, unless it is a one-word command
+      // or the clause is a relative ("who holds") or a chained "to hear".
+      // "and felt shame" shares the subject before "and", so its first word is the verb.
+      const shared =
+        ['and', 'but'].includes(chunks[0]?.tok) &&
+        content[0] !== undefined &&
+        chunks[content[0]].role === 'word' &&
+        !chunks[content[0]].nounish &&
+        verbish(chunks[content[0]].en);
+      const subject =
+        NO_SUBJECT.has(chunks[0]?.tok) || shared || (content.length === 1 && sole && standIn < 0)
+          ? -1
+          : content[0];
+      // A word whose best reading is a verb wins over one that merely has a
+      // verb form: in "the old stars hear", velu has veluva but hear is lenila.
+      const verbAt = (c, best) =>
+        best
+          ? c.options[0]?.kind === 'lexical' && c.options[0].slot === 3 && !c.options[0].loose
+            ? 0
+            : -1
+          : c.options.findIndex((o) => o.kind === 'lexical' && o.slot === 3 && !o.loose);
+      for (const best of [true, false]) {
+        const i = content.find(
+          (j) => j !== subject && !chunks[j].nounish && verbAt(chunks[j], best) >= 0,
+        );
+        if (i === undefined) continue;
         const c = chunks[i];
-        if (i === subject || c.nounish) continue;
-        const at = c.options.findIndex((o) => o.kind === 'lexical' && o.slot === 3);
-        if (at >= 0) {
-          c.chosen = at;
-          c.isVerb = true;
-          c.role = 'verb';
-          c.plural = false; // "works" is third person, not a plural
-          break;
-        }
+        c.chosen = verbAt(c, best);
+        c.isVerb = true;
+        c.role = 'verb';
+        c.plural = false; // "works" is third person, not a plural
+        break;
       }
+    }
+
+    /* A noun does not modify a noun (ADR-0011): of two nouns side by side the
+       first becomes its -san adjective, "phoenix love" is farulavrasan amor.
+       An unused -san slot is never used; the pair is left for the checker. */
+    for (let i = 0; i + 1 < chunks.length; i += 1) {
+      const [a, b] = [chunks[i], chunks[i + 1]];
+      const [oa, ob] = [a.options[a.chosen], b.options[b.chosen]];
+      if (
+        a.role !== 'word' ||
+        b.role !== 'word' ||
+        oa?.kind !== 'lexical' ||
+        ob?.kind !== 'lexical'
+      )
+        continue;
+      if (!NOUN_SLOTS.includes(oa.slot) || !NOUN_SLOTS.includes(ob.slot)) continue;
+      const adj = adjectiveOf(oa);
+      if (!adj.gloss) continue;
+      let at = a.options.findIndex((o) => o.word === adj.form);
+      if (at < 0)
+        at = a.options.push({ word: adj.form, root: oa.root, slot: adj.slot, kind: 'lexical' }) - 1;
+      a.chosen = at;
+      a.plural = false;
+      a.note =
+        'a noun does not modify a noun: ' +
+        oa.word +
+        ' becomes ' +
+        adj.form +
+        ' (' +
+        adj.gloss +
+        ')';
     }
 
     /* "Time began": no verb follows "began", so `hiro` (begin to) would have
@@ -2271,7 +3352,7 @@
   function composeSentence(sentence) {
     const raw = sentence.trim();
     const question = /\?\s*$/.test(raw);
-    const split = splitEnglishClauses(englishTokens(raw));
+    const split = splitEnglishClauses(rewriteEnglish(englishTokens(raw), question));
     const clauses = split.map((c) => ({
       ...composeClause(c.tokens, split.length === 1),
       comma: c.comma,
@@ -2316,7 +3397,7 @@
     // A clause opener (kube, kasa, si…) comes before the clause's own frame.
     const first = k.chunks[0];
     const lead =
-      first && first.role === 'structure' && (CLAUSE_OPENERS.has(first.en) || first.en === 'that')
+      first && first.role === 'structure' && (CLAUSE_OPENERS.has(first.tok) || first.tok === 'that')
         ? 1
         : 0;
 
@@ -2326,7 +3407,7 @@
         placed = true;
       }
       if (c.role === 'grammar') return; // carried by the stack, frame or scope
-      if (c.role === 'gap') {
+      if (c.role === 'gap' || c.chosen < 0) {
         parts.push({ gap: true, text: c.en });
         return;
       }
@@ -2474,6 +3555,217 @@
       .join('');
   }
 
+  /** Carry each line's English through an edit of the page. Lines before and
+      after the edit keep theirs; a line edited in place keeps its own; a new
+      line has none; a deleted line takes its English with it. */
+  function realignEnglish(before, after, english) {
+    let a = 0;
+    while (a < before.length && a < after.length && before[a] === after[a]) a += 1;
+    let b = 0;
+    while (
+      b < before.length - a &&
+      b < after.length - a &&
+      before[before.length - 1 - b] === after[after.length - 1 - b]
+    ) {
+      b += 1;
+    }
+    const removed = before.length - a - b;
+    const added = after.length - a - b;
+    return after.map((_, i) => {
+      if (i < a) return english[i] || '';
+      if (i < a + added) return i - a < removed ? english[i] || '' : '';
+      return english[i - after.length + before.length] || '';
+    });
+  }
+
+  /* ---------------------------------------------------------- songbook
+     Pure helpers for what the store does with whole pieces: deleting one,
+     and typesetting pieces as printed pages. */
+
+  const esc = (s) =>
+    String(s).replace(
+      /[&<>"]/g,
+      (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c],
+    );
+
+  /** Deleting a piece is forever, so the writer types this to confirm it. */
+  const FOREVER = '[FOREVER]';
+  const confirmsDelete = (typed) => String(typed).trim() === FOREVER;
+
+  /** Each line's English, by position; older pieces kept it by line text. */
+  const englishOf = (p) =>
+    p.text
+      .split('\n')
+      .map(
+        (l, i) => (p.englishLines && p.englishLines[i]) || (p.english && p.english[l.trim()]) || '',
+      );
+
+  /** Remove a piece and return the id to open next: the most recent piece on
+      the same shelf, then anywhere. The songbook is never left empty. */
+  function removePiece(book, id, blank) {
+    const gone = book.pieces.find((p) => p.id === id);
+    if (!gone) return book.activeId;
+    book.pieces = book.pieces.filter((p) => p.id !== id);
+    const recent = (list) => [...list].sort((a, b) => b.updated.localeCompare(a.updated))[0];
+    const next =
+      recent(book.pieces.filter((p) => p.collectionId === gone.collectionId)) ||
+      recent(book.pieces);
+    if (next) return next.id;
+    const fresh = blank(gone.collectionId);
+    book.pieces.push(fresh);
+    return fresh.id;
+  }
+
+  /** A piece's stanzas: blank lines divide them; each line pairs with its English. */
+  function stanzasOf(p) {
+    const english = englishOf(p);
+    const out = [];
+    let cur = [];
+    p.text.split('\n').forEach((line, i) => {
+      if (!line.trim()) {
+        if (cur.length) out.push(cur);
+        cur = [];
+      } else cur.push({ liraasa: line.trim(), english: (english[i] || '').trim() });
+    });
+    if (cur.length) out.push(cur);
+    return out;
+  }
+
+  const PRINT_CSS = `
+  @page {
+    size: A5;
+    margin: 20mm 17mm 22mm;
+    @bottom-center {
+      content: counter(page);
+      font: 8pt 'Work Sans', sans-serif;
+      color: #8a8f98;
+    }
+  }
+  @page :first {
+    @bottom-center { content: none; }
+  }
+  html { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+  body {
+    margin: 0;
+    background: #fff;
+    color: #1c2026;
+    font-family: 'EB Garamond', 'Iowan Old Style', Palatino, Georgia, serif;
+    font-variant-numeric: oldstyle-nums;
+  }
+  .sans { font-family: 'Work Sans', ui-sans-serif, system-ui, sans-serif; }
+  .kicker {
+    font-size: 7pt; letter-spacing: 0.24em; text-transform: uppercase; color: #b0564f;
+  }
+  .meta {
+    font-size: 7pt; letter-spacing: 0.12em; text-transform: uppercase; color: #8a8f98;
+  }
+  .rule { width: 16mm; border: 0; border-top: 0.6pt solid #b0564f; margin: 5mm auto 0; }
+
+  .cover { height: 150mm; display: flex; flex-direction: column; justify-content: center;
+    text-align: center; break-after: page; }
+  .cover h1 { font-weight: 500; font-size: 30pt; margin: 4mm 0 3mm; letter-spacing: 0.01em; }
+  .contents { break-after: page; }
+  .contents h2 { font-weight: 500; font-size: 15pt; margin: 0 0 6mm; text-align: center; }
+  .contents ol { list-style: none; margin: 0; padding: 0; }
+  .contents li { display: flex; align-items: baseline; gap: 3mm; padding: 1.6mm 0;
+    border-bottom: 0.4pt solid #e4e1d6; font-size: 11.5pt; }
+  .contents li .meta { margin-left: auto; letter-spacing: 0.08em; }
+
+  .piece + .piece { break-before: page; }
+  .head { text-align: center; margin: 4mm 0 10mm; }
+  .head h1 { font-weight: 500; font-size: 22pt; line-height: 1.1; margin: 2.5mm 0 2mm; }
+  .stanza { margin: 0 0 7mm; }
+  .pair { break-inside: avoid; margin: 0 0 3mm; }
+  .liraasa { font-size: 12.5pt; line-height: 1.28; margin: 0; }
+  /* A long line wraps under a hanging indent, level with its English. */
+  .pair .liraasa { padding-left: 6mm; text-indent: -6mm; }
+  .english { font-style: italic; font-size: 9.5pt; line-height: 1.3; color: #595f68;
+    margin: 0.7mm 0 0 6mm; }
+  .empty { text-align: center; color: #8a8f98; font-style: italic; }
+  `;
+
+  /** Pieces as a printable HTML document: each Liraasa line with its English
+      beneath, stanza by stanza, a piece to a page run. More than one piece
+      gets a title page and contents. Spelling is never altered for display. */
+  function songbookHtml(pieces, { collections, edition, title }) {
+    const shelf = (p) => collections.get(p.collectionId) || '';
+    const label = (p) =>
+      [p.kind, p.register].filter(Boolean).map(esc).join('<span aria-hidden="true"> · </span>');
+    const many = pieces.length > 1;
+
+    const front = many
+      ? '<section class="cover"><div class="kicker sans">Liraasa ' +
+        esc(edition) +
+        '</div><h1>' +
+        esc(title) +
+        '</h1><div class="meta sans">' +
+        pieces.length +
+        ' pieces</div><hr class="rule" /></section>' +
+        '<section class="contents"><h2>Contents</h2><ol>' +
+        pieces
+          .map(
+            (p) =>
+              '<li><span class="liraasa" lang="art-x-liraasa">' +
+              esc(p.title || 'Untitled') +
+              '</span><span class="meta sans">' +
+              esc(shelf(p)) +
+              '</span></li>',
+          )
+          .join('') +
+        '</ol></section>'
+      : '';
+
+    const body = pieces
+      .map((p) => {
+        const stanzas = stanzasOf(p);
+        return (
+          '<section class="piece"><header class="head"><div class="kicker sans">' +
+          esc(shelf(p) || 'Liraasa ' + edition) +
+          '</div><h1 class="liraasa" lang="art-x-liraasa">' +
+          esc(p.title || 'Untitled') +
+          '</h1><div class="meta sans">' +
+          label(p) +
+          '</div><hr class="rule" /></header>' +
+          (stanzas.length
+            ? stanzas
+                .map(
+                  (st) =>
+                    '<div class="stanza">' +
+                    st
+                      .map(
+                        (l) =>
+                          '<div class="pair"><p class="liraasa" lang="art-x-liraasa">' +
+                          esc(l.liraasa) +
+                          '</p>' +
+                          (l.english
+                            ? '<p class="english" lang="en">' + esc(l.english) + '</p>'
+                            : '') +
+                          '</div>',
+                      )
+                      .join('') +
+                    '</div>',
+                )
+                .join('')
+            : '<p class="empty">This piece has no lines yet.</p>') +
+          '</section>'
+        );
+      })
+      .join('');
+
+    return (
+      '<!doctype html><html lang="en"><head><meta charset="utf-8" /><title>' +
+      esc(title) +
+      '</title><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />' +
+      '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Work+Sans:wght@400;500&display=swap" />' +
+      '<style>' +
+      PRINT_CSS +
+      '</style></head><body>' +
+      front +
+      body +
+      '</body></html>'
+    );
+  }
+
   /* ------------------------------------------------------------- store */
 
   const KEY = 'liraasa-songbook-v2';
@@ -2561,6 +3853,10 @@
     els.text.value = p.text;
     els.kind.value = p.kind;
     els.register.value = p.register;
+    shownLines = p.text.split('\n');
+    // Pieces composed before the English followed its line kept it by text.
+    p.englishLines = englishOf(p);
+    delete p.english;
     renderLibrary();
     sizeText();
     analyse();
@@ -2605,18 +3901,14 @@
     'collections',
     'englishIn',
     'composeOut',
+    'interlinear',
+    'ilInner',
     'desk',
     'rail',
     'insp',
   ]) {
     els[id] = document.getElementById(id);
   }
-
-  const esc = (s) =>
-    String(s).replace(
-      /[&<>"]/g,
-      (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c],
-    );
 
   let analysis = { lines: [], findings: [], words: 0, syllables: 0, unknown: 0, errors: 0 };
 
@@ -2629,10 +3921,12 @@
       errors = 0;
     const all = [];
 
-    els.text.value.split('\n').forEach((line, i) => {
+    const text = els.text.value.split('\n');
+    const checked = checkText(text, register, activePiece().englishLines || []);
+    text.forEach((line, i) => {
       const toks = tokenize(line);
       const parsed = toks.map((t) => ({ token: t, parse: parseWord(t) }));
-      const findings = line.trim() ? checkLine(line, i + 1, register) : [];
+      const findings = checked.filter((f) => f.line === i + 1);
       const syl = toks.reduce((n, t) => n + syllableCount(t), 0);
       const nUnk = parsed.filter((p) => !p.parse).length;
       const nErr = findings.filter((f) => f.severity === 'error').length;
@@ -2651,6 +3945,7 @@
 
   function renderAll() {
     renderGutter();
+    renderInterlinear();
     renderCheck();
     renderGloss();
     renderSound();
@@ -2674,6 +3969,28 @@
         );
       })
       .join('');
+  }
+
+  const interlinearOn = () => document.body.classList.contains('interlinear-on');
+
+  /* The English under each line in Compose mode: the sentence a composed
+     line was built from. Lines with no English source show nothing. */
+  function renderInterlinear() {
+    if (!interlinearOn()) return;
+    const english = activePiece().englishLines || [];
+    els.ilInner.innerHTML = analysis.lines
+      .map((l, i) => '<div class="il-row">' + esc(english[i] || '') + '</div>')
+      .join('');
+  }
+
+  /* Keep each piece's English in step with its lines as they are edited. */
+  let shownLines = [];
+
+  function syncEnglish() {
+    const p = activePiece();
+    const now = els.text.value.split('\n');
+    p.englishLines = realignEnglish(shownLines, now, p.englishLines || []);
+    shownLines = now;
   }
 
   function renderCheck() {
@@ -2755,6 +4072,7 @@
 
   function renderGloss() {
     const panel = document.getElementById('panel-gloss');
+    const english = activePiece().englishLines || [];
     const live = analysis.lines.filter((l) => l.text.trim());
     if (!live.length) {
       panel.innerHTML = '<p class="empty">The interlinear gloss appears here, line by line.</p>';
@@ -2788,6 +4106,11 @@
               );
             })
             .join('') +
+          '</div><div class="gl-back"><span class="label">reads</span> ' +
+          esc(backTranslate(l.text)) +
+          (english[l.no - 1]
+            ? '<br /><span class="label">your English</span> ' + esc(english[l.no - 1])
+            : '') +
           '</div></div>',
       )
       .join('');
@@ -3070,11 +4393,15 @@
     onEdit();
   }
 
-  function appendLine(line) {
+  function appendLine(line, english) {
     const ta = els.text;
     ta.value = ta.value + (ta.value && !ta.value.endsWith('\n') ? '\n' : '') + line;
     sizeText();
     onEdit();
+    if (english) {
+      activePiece().englishLines[ta.value.split('\n').length - 1] = english;
+      renderInterlinear();
+    }
   }
 
   /* ------------------------------------------------------------ export */
@@ -3097,10 +4424,77 @@
     }));
   }
 
+  /* The book's title: the piece, its shelf, or the songbook. */
+  function bookTitle(scope) {
+    const p = activePiece();
+    if (scope === 'piece') return p.title || 'Untitled';
+    if (scope === 'collection')
+      return (store.collections.find((c) => c.id === p.collectionId) || {}).name || 'Songbook';
+    return 'Songbook';
+  }
+
+  /* Print the typeset pages from a hidden frame; the browser's print dialog
+     saves them as a PDF. The fonts load first, so the PDF is set in them. */
+  function savePdf(scope) {
+    capturePiece();
+    const title = bookTitle(scope);
+    const html = songbookHtml(piecesFor(scope), {
+      collections: new Map(store.collections.map((c) => [c.id, c.name])),
+      edition: D.version,
+      title,
+    });
+    const frame = document.createElement('iframe');
+    frame.setAttribute('aria-hidden', 'true');
+    frame.tabIndex = -1;
+    frame.style.cssText = 'position:fixed;right:0;bottom:0;width:0;height:0;border:0';
+    document.body.appendChild(frame);
+    const doc = frame.contentDocument;
+    doc.open();
+    doc.write(html);
+    doc.close();
+    const own = document.title;
+    let gone = false;
+    const done = () => {
+      if (gone) return;
+      gone = true;
+      document.title = own;
+      frame.remove();
+    };
+    const print = async () => {
+      const fonts = doc.fonts ? doc.fonts.ready : Promise.resolve();
+      await Promise.race([fonts, new Promise((r) => setTimeout(r, 2500))]);
+      // Chrome names the PDF after the page's title.
+      document.title = title;
+      frame.contentWindow.addEventListener('afterprint', () => setTimeout(done, 0));
+      frame.contentWindow.focus();
+      frame.contentWindow.print();
+      setTimeout(done, 60000); // in case afterprint never fires
+    };
+    if (doc.readyState === 'complete') print();
+    else frame.addEventListener('load', print, { once: true });
+  }
+
   function exportAs(kind, scope) {
     capturePiece();
     const pieces = piecesFor(scope);
     const out = [];
+
+    if (kind === 'pdf') {
+      for (const p of pieces) {
+        out.push(p.title || 'Untitled', '');
+        for (const st of stanzasOf(p)) {
+          for (const l of st) out.push(l.liraasa, '    ' + (l.english || '—'));
+          out.push('');
+        }
+        out.push('');
+      }
+      return {
+        text: out.join('\n'),
+        note:
+          'A5 pages, each Liraasa line with its English beneath. Save PDF opens the print ' +
+          'dialog: choose “Save as PDF” as the destination.',
+      };
+    }
 
     if (kind === 'text') {
       for (const p of pieces) out.push(p.title, '', p.text, '', '');
@@ -3226,12 +4620,16 @@
     const { text, note } = exportAs(els.exportKind.value, els.exportScope.value);
     els.exportText.value = text;
     els.exportNote.textContent = note;
+    const pdf = els.exportKind.value === 'pdf';
+    document.getElementById('pdfBtn').hidden = !pdf;
+    document.getElementById('copyBtn').hidden = pdf;
   };
 
   /* -------------------------------------------------------------- wire */
 
   let timer = null;
   function onEdit() {
+    syncEnglish();
     analyse();
     clearTimeout(timer);
     timer = setTimeout(() => {
@@ -3243,8 +4641,12 @@
 
   function sizeText() {
     const rows = els.text.value.split('\n').length;
-    els.text.style.height = Math.max(rows * 31.2 + 64, 420) + 'px';
+    els.text.style.height = Math.max(rows * (interlinearOn() ? 68.8 : 31.2) + 64, 420) + 'px';
   }
+
+  els.text.addEventListener('scroll', () => {
+    els.ilInner.style.transform = 'translateX(' + -els.text.scrollLeft + 'px)';
+  });
 
   els.text.addEventListener('input', () => {
     sizeText();
@@ -3316,6 +4718,9 @@
         document.getElementById('panel-' + t.dataset.tab).hidden = !on;
       }
       if (tab.dataset.tab === 'lex') els.q.focus();
+      document.body.classList.toggle('interlinear-on', tab.dataset.tab === 'compose');
+      sizeText();
+      renderInterlinear();
       if (tab.dataset.tab === 'compose') els.englishIn.focus();
     });
   }
@@ -3344,7 +4749,7 @@
 
   document.getElementById('appendBtn').addEventListener('click', () => {
     if (!drafts.length) runCompose();
-    for (const d of drafts) appendLine(draftText(d));
+    for (const d of drafts) appendLine(draftText(d), d.raw);
   });
 
   els.composeOut.addEventListener('click', (e) => {
@@ -3355,7 +4760,10 @@
       return;
     }
     const ins = e.target.closest('[data-insert-draft]');
-    if (ins) appendLine(draftText(drafts[+ins.dataset.insertDraft]));
+    if (ins) {
+      const d = drafts[+ins.dataset.insertDraft];
+      appendLine(draftText(d), d.raw);
+    }
   });
 
   document.getElementById('exportBtn').addEventListener('click', () => {
@@ -3365,6 +4773,46 @@
   els.exportKind.addEventListener('change', showExport);
   els.exportScope.addEventListener('change', showExport);
   document.getElementById('closeDlg').addEventListener('click', () => els.exportDlg.close());
+  document.getElementById('pdfBtn').addEventListener('click', () => savePdf(els.exportScope.value));
+
+  /* Deleting is forever: the button stays disabled until [FOREVER] is typed. */
+  const del = {
+    dlg: document.getElementById('deleteDlg'),
+    input: document.getElementById('deleteInput'),
+    go: document.getElementById('deleteGo'),
+    what: document.getElementById('deleteWhat'),
+  };
+  document.getElementById('deleteBtn').addEventListener('click', () => {
+    capturePiece();
+    const p = activePiece();
+    const lines = p.text.split('\n').filter((l) => l.trim()).length;
+    const shelf = (store.collections.find((c) => c.id === p.collectionId) || {}).name;
+    del.what.textContent =
+      '“' +
+      (p.title || 'Untitled') +
+      '”' +
+      (shelf ? ' on ' + shelf : '') +
+      ', ' +
+      lines +
+      (lines === 1 ? ' line' : ' lines') +
+      ', with its English, will be deleted.';
+    del.input.value = '';
+    del.go.disabled = true;
+    del.dlg.showModal();
+    del.input.focus();
+  });
+  del.input.addEventListener('input', () => {
+    del.go.disabled = !confirmsDelete(del.input.value);
+  });
+  document.getElementById('deleteCancel').addEventListener('click', () => del.dlg.close());
+  document.getElementById('deleteForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (!confirmsDelete(del.input.value)) return;
+    clearTimeout(timer); // a pending save must not write the deleted piece back
+    const next = removePiece(store, activePiece().id, blankPiece);
+    del.dlg.close();
+    openPiece(next);
+  });
   document.getElementById('copyBtn').addEventListener('click', async () => {
     const btn = document.getElementById('copyBtn');
     try {
