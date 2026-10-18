@@ -157,7 +157,8 @@ describe('must pass: Lira de Kronoasa', () => {
 
 describe('advisories', () => {
   it('shows a mechanical back-translation beside the gloss', () => {
-    expect(checker.backTranslate('maivo de letosan nimu').text).toBe('my written home');
+    // 2.0 differentiated letosan: "lettered; set down in a letter" (it was "written")
+    expect(checker.backTranslate('maivo de letosan nimu').text).toBe('my lettered home');
   });
 
   it('warns that there is no "about" after a communication verb with su (1.2:G30)', () => {
@@ -187,7 +188,9 @@ function guideCorpus(): string[] {
    the rule or the example is wrong. Pinned so a change to either shows.
 
    - Retired or respelled words, unused slots, sola: the 1.0 text predates the
-     1.1 lexicon the checker reads.
+     lexicon the checker reads. lallesan and vaniasasan are listed in 2.0, so
+     those two are no longer flagged; cupa, pamlonasan and bumreasasan were
+     mended in the lexicon's own examples (ADR-0016), not in the frozen guide.
    - Maivo melo bena opioa lumi, Lotero silda: noun + noun (ADR-0011). Revised
      in 1.2 (data/changes/2026-10-17-grammar-rulings.json); the 1.0 text is
      frozen, so the finding stays pinned here.
@@ -196,8 +199,6 @@ function guideCorpus(): string[] {
      fututi is also a time word, and a time word may close its clause (1.2:G24). */
 const GUIDE_FINDINGS = [
   'Ki-saivo lirala? (historical) :: never invent :: historical',
-  'Li dorbi ke lallesan hoyo! :: 0.8:R2 :: lallesan',
-  'Li lira ka vaniasasan. :: 0.8:R2 :: vaniasasan',
   'Li sola loya benasan. :: never invent :: sola',
   'Lotero silda, li cilni ka lasona. :: ADR-0011 :: Lotero silda',
   'Maivo melo bena opioa lumi :: ADR-0011 :: melo bena',

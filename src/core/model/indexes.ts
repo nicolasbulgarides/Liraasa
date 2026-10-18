@@ -13,6 +13,11 @@ import type { EntryId, Headword, Lexicon, MigrationForm, ReservedSpelling } from
 
 export type Namespace =
   | 'headword'
+  /**
+   * An image compound (2.0:G40): an attested one, with its own id, or any
+   * other modifier + head pair of the pattern, with the id `imageCompoundId`.
+   */
+  | 'imageCompound'
   | 'derivation'
   | 'functionWord'
   | 'pronoun'
@@ -30,6 +35,22 @@ export interface FormRef {
   slot?: FormSlot;
   /** Which derivation, for a `-yo` / `-vu` / `-pago` form. */
   derivation?: string;
+}
+
+/** A pattern pair that is not attested has no entry of its own: its id is made from its parts'. */
+export const imageCompoundId = (modifier: EntryId, head: EntryId): EntryId =>
+  `ic:${modifier}+${head}`;
+
+/** A modifier + head pair of the image-compound pattern. */
+export interface PatternPair {
+  id: EntryId;
+  spelling: string;
+  modifier: EntryId;
+  head: EntryId;
+  /** The attested entry, when the pair is one of the 391 former headwords. */
+  attested: Headword | null;
+  /** '<modifier as adjective> <head>': the predictable reading (2.0:G40). */
+  reading: string;
 }
 
 export interface ComponentUse {
@@ -58,6 +79,8 @@ export interface LexiconIndexes {
   byRhyme: ReadonlyMap<string, readonly string[]>;
   /** A pre-1.0 spelling to its 1.0 replacement (ruling 1.0:G19). */
   legacyForms: ReadonlyMap<string, MigrationForm>;
+  /** Every pair of the image-compound pattern by spelling, attested or not (2.0:G40). */
+  patternPairs: ReadonlyMap<string, PatternPair>;
   /** A reserved spelling to why it is reserved. */
   reserved: ReadonlyMap<string, ReservedSpelling>;
   /** Counts, for the dashboard and for assertions. */
@@ -182,6 +205,64 @@ export function buildIndexes(lexicon: Lexicon): LexiconIndexes {
     push(byForm, cell.form, { namespace: 'color', entryId, spelling: cell.base });
   }
 
+  // The image-compound pattern (2.0:G40). Attested pairs are indexed like
+  // headwords, under their own namespace and ids; every other pair by its
+  // root form, under an id made from its parts. A headword spelled the same wins.
+  const patternPairs = new Map<string, PatternPair>();
+  const pattern = lexicon.imageCompounds;
+  if (pattern !== null) {
+    const spellingOfId = new Map(lexicon.headwords.map((h) => [h.id, h]));
+    const attestedBySpelling = new Map(pattern.attested.map((h) => [h.spelling, h]));
+    for (const h of pattern.attested) {
+      byId.set(h.id, { namespace: 'imageCompound', spelling: h.spelling });
+      for (const slot of FORM_SLOTS) {
+        push(byForm, h.forms[slot], {
+          namespace: 'imageCompound',
+          entryId: h.id,
+          spelling: h.spelling,
+          slot,
+        });
+      }
+      for (const derivation of DERIVATION_KEYS) {
+        push(byForm, h.spelling + derivation, {
+          namespace: 'derivation',
+          entryId: h.id,
+          spelling: h.spelling,
+          derivation,
+        });
+      }
+    }
+    for (const [modId, mod] of pattern.modifiers) {
+      const m = spellingOfId.get(modId);
+      if (m === undefined) continue;
+      for (const [headId] of pattern.heads) {
+        const hd = spellingOfId.get(headId);
+        if (hd === undefined) continue;
+        const spelling = m.spelling + hd.spelling;
+        if (headwordBySpelling.has(spelling)) continue;
+        const attested = attestedBySpelling.get(spelling) ?? null;
+        const headSense = (hd.glosses.root.split(';')[0] ?? hd.spelling).trim().toLowerCase();
+        const pair: PatternPair = {
+          id: attested?.id ?? imageCompoundId(modId, headId),
+          spelling,
+          modifier: modId,
+          head: headId,
+          attested,
+          reading: `${mod.asModifier} ${headSense}`,
+        };
+        patternPairs.set(spelling, pair);
+        if (attested === null) {
+          push(byForm, spelling, {
+            namespace: 'imageCompound',
+            entryId: pair.id,
+            spelling,
+            slot: 'root',
+          });
+        }
+      }
+    }
+  }
+
   const legacyForms = new Map(lexicon.migrationForms.map((m) => [m.from, m]));
   const reserved = new Map(lexicon.soundLedger.map((s) => [s.spelling, s]));
 
@@ -199,6 +280,7 @@ export function buildIndexes(lexicon: Lexicon): LexiconIndexes {
     byGloss,
     byRhyme,
     legacyForms,
+    patternPairs,
     reserved,
     stats: {
       headwords: lexicon.headwords.length,

@@ -19,6 +19,8 @@ export default tseslint.config(
   {
     ignores: [
       'dist',
+      // The GitHub Pages site, assembled by scripts/build_site.sh.
+      '_site',
       'coverage',
       'node_modules',
       'data/**',

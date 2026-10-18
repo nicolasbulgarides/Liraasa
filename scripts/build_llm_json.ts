@@ -4,7 +4,7 @@
  *
  *   npm run build:llm
  *
- * Writes handoff/liraasa_1_2_llm.json from the canonical 1.2 lexicon. It holds
+ * Writes handoff/liraasa_2_0_llm.json from the canonical 2.0 lexicon. It holds
  * every grammar rule and the full dictionary. It is shaped for a reader that
  * goes top to bottom: instructions and hard rules first, then sound, word
  * building, the clause, recipes and every ruling, then the small words, the
@@ -24,10 +24,11 @@ import { basename, resolve } from 'node:path';
 import { FORM_SLOTS, SLOT_RAW_KEY, isUnusedGloss, type FormSlot } from '../src/core/config/slots';
 import type { RawLexicon } from '../src/core/model/raw';
 import { OPEN_QUESTIONS, READ_ORDER, RECIPES, RULES } from './grammar_guide/chapters';
+import { canonTexts, isCanonText, type Lexicon } from './grammar_guide/data';
 import { parseArgs } from './args';
 
-const LEXICON = 'data/lexicon/liraasa_1_2.json';
-const OUT = 'handoff/liraasa_1_2_llm.json';
+const LEXICON = 'data/lexicon/liraasa_2_0.json';
+const OUT = 'handoff/liraasa_2_0_llm.json';
 /** Every build also lands here, beside the published guide. */
 const LATEST_DIR = 'LirasaCodexLatest';
 
@@ -73,6 +74,8 @@ interface Head {
   root: string;
   type: string;
   components: [string, string] | null;
+  /** A compound lexicalised with a suffix (2.0:G38). */
+  suffix?: string;
   forms: Record<string, string>;
   glosses: Record<string, string>;
   register: string;
@@ -118,12 +121,22 @@ function main(): void {
   const { flags } = parseArgs(process.argv.slice(2), ['lexicon', 'out']);
   const lexPath = flags.lexicon ?? LEXICON;
   const lex = JSON.parse(readFileSync(resolve(lexPath), 'utf8')) as RawLexicon;
+  const canon = canonTexts(lex as unknown as Lexicon);
   const heads = lex.headwords as unknown as Head[];
   const bena = heads.find((h) => h.root === 'bena');
   if (bena === undefined) throw new Error('bena is missing');
 
+  // the newest edition's rulings first, then each earlier one
+  const later = Object.keys(lex)
+    .filter((k) => /^rulings_\d+_\d+$/.test(k) && k !== 'rulings_1_0')
+    .reverse();
   const rulings = [
-    ...((lex.rulings_1_2 ?? []) as unknown as Ruling[]).map((r) => ({ edition: '1.2', r })),
+    ...later.flatMap((k) =>
+      ((lex as unknown as Record<string, Ruling[]>)[k] ?? []).map((r) => ({
+        edition: k.slice('rulings_'.length).replace('_', '.'),
+        r,
+      })),
+    ),
     ...(lex.rulings_1_0 as unknown as Ruling[]).map((r) => ({ edition: '1.0', r })),
     ...(lex.rulings_0_8_carried as unknown as Ruling[]).map((r) => ({ edition: '0.8', r })),
   ].map(({ edition, r }) => ({
@@ -164,13 +177,40 @@ function main(): void {
       ];
       const line =
         h.root +
-        (h.components === null ? '' : ` [${h.components.join('+')}]`) +
+        (h.components === null
+          ? ''
+          : ` [${h.components.join('+')}${h.suffix === undefined ? '' : `+-${h.suffix}`}]`) +
         (flags.length === 0 ? '' : ` {${flags.join(', ')}}`) +
         `: ${forms.join(' | ')}`;
       return { domain: h.domain, forms: forms.length, line };
     });
 
   const usedForms = dictionary.reduce((n, e) => n + e.forms, 0);
+
+  // 2.0: the image-compound pattern and the productive derivations, by spelling
+  const ids = new Map(heads.map((h) => [(h as unknown as { id: string }).id, h.root]));
+  const pattern = lex.image_compounds;
+  const imageCompounds =
+    pattern === undefined
+      ? undefined
+      : {
+          ruling: pattern.ruling,
+          rule: pattern.rule,
+          why: pattern.why,
+          how_to_use:
+            'Any modifier + any head below, written as one word, is a valid noun with a predictable meaning: "<modifier as_modifier> <head>". It needs no "new" flag. The attested ones have a canonical reading; prefer it. Its verb class follows its first letter, as for every compound.',
+          modifiers: Object.fromEntries(
+            Object.entries(pattern.modifiers).map(([id, m]) => [ids.get(id) ?? id, m]),
+          ),
+          heads: Object.fromEntries(
+            Object.entries(pattern.heads).map(([id, h]) => [ids.get(id) ?? id, h]),
+          ),
+          attested: Object.fromEntries(pattern.attested.map((h) => [h.root, h.glosses.root])),
+          count: { attested: pattern.attested.length, possible: pattern.capacity },
+        };
+  const defaults = (lex.morphology as unknown as { derivation_defaults?: Record<string, string> })
+    .derivation_defaults;
+  const has = (ref: string): boolean => rulings.some((r) => r.id === ref);
   const live = lex.examples.filter((e) => e.status !== 'HISTORICAL');
   const numbers = lex.numbers.lookup_0_999;
 
@@ -237,9 +277,28 @@ function main(): void {
         liratiri: 'little songs (-ti then -ri)',
       },
       derivations_note:
-        'Derivations attach to the root spelling: R + yo (one who), R + vu (big, intense), R + pago (place of). A derivation takes no seven forms. Prefer the lexicalised ones below, which have fixed meanings.',
+        defaults === undefined
+          ? 'Derivations attach to the root spelling: R + yo (one who), R + vu (big, intense), R + pago (place of). A derivation takes no seven forms. Prefer the lexicalised ones below, which have fixed meanings.'
+          : `Derivations are productive (${defaults.ruling ?? ''}): they attach to the spelling of any root or compound and take no seven forms. Default readings: ${Object.entries(
+              defaults,
+            )
+              .filter(([k]) => k.startsWith('-'))
+              .map(([k, v]) => `R${k} = ${v}`)
+              .join(
+                '; ',
+              )}. ${defaults.constraints ?? ''} The lexicalised derivations below keep their fixed meanings and override the default.`,
+      ...(defaults === undefined ? {} : { derivation_defaults: defaults }),
       lexicalised_derivations: lex.morphology.lexicalised_derivations,
-      compounding: `${lex.morphology.compounding}. A compound is written as one word, modifier first and head last: lunolumi = moon-light. Use compounds listed in the dictionary; a new compound must join exactly two existing headwords and must be flagged as new.`,
+      compounding:
+        `${lex.morphology.compounding}. A compound is written as one word, modifier first and head last: lunolumi = moon-light. Use compounds listed in the dictionary; a new compound must join exactly two existing headwords and must be flagged as new.` +
+        (has('2.0:G38')
+          ? ' A colour base (small_words.colours) may be the modifier, and a compound may be lexicalised with -ti (2.0:G38).'
+          : '') +
+        (has('2.0:G42') ? ' Either part may itself be a compound (2.0:G42).' : '') +
+        (imageCompounds === undefined
+          ? ''
+          : ' Image compounds (image_compounds below) are valid without a flag (2.0:G40).'),
+      ...(imageCompounds === undefined ? {} : { image_compounds: imageCompounds }),
       motion_prefixes: lex.motion_prefixes,
       registers:
         'Entries are everyday or poetic. A text may be everyday, poetic or sacred; sacred is a property of the -asa / -asasan forms, not of a word list.',
@@ -262,10 +321,12 @@ function main(): void {
     },
     recipes: RECIPES.map(([english, pattern, liraasa, gloss, ruling]) => ({
       english,
-      pattern,
+      pattern: pattern.replace(/`/g, ''),
       liraasa,
       meaning: gloss,
       ...(ruling === '' ? {} : { ruling }),
+      // a sentence canon does not hold, though its words are canon: not yet approved
+      ...(isCanonText(canon, liraasa) ? {} : { status: 'awaiting author review' }),
     })),
     rulings,
     settled_questions: lex.settled_open_questions_0_8,
@@ -344,7 +405,7 @@ function main(): void {
     },
     dictionary: {
       how_to_read:
-        'One line per headword, grouped by domain, alphabetical within each. Line format: HEADWORD [PART+PART] {FLAGS}: (n) NOUN MEANING | FORM (ROLE) MEANING | … The noun form is the headword itself, so it is written only as (n) followed by its meaning: in "amor: (n) Love | amora (v) to love", amor means love and amora means to love. The [parts] appear only on compounds (both parts are headwords). {flags} appear only when the word is poetic or new in this edition. Only the forms on a line exist; a form not listed has no meaning. Add -ri / -ti to any noun form by the suffix rules.',
+        'One line per headword, grouped by domain, alphabetical within each. Line format: HEADWORD [PART+PART] {FLAGS}: (n) NOUN MEANING | FORM (ROLE) MEANING | … The noun form is the headword itself, so it is written only as (n) followed by its meaning: in "amor: (n) Love | amora (v) to love", amor means love and amora means to love. The [parts] appear only on compounds (both parts are headwords, or a colour base as the modifier; a lexicalised suffix follows as +-ti). {flags} appear only when the word is poetic or new in this edition. Only the forms on a line exist; a form not listed has no meaning. Add -ri / -ti to any noun form by the suffix rules.',
       role_codes: Object.fromEntries(FORM_SLOTS.map((s) => [SLOT_CODE[s], SLOT_ROLE[s]])),
       count: { headwords: dictionary.length, meaningful_forms: usedForms },
       by_domain: Object.fromEntries(

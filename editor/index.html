@@ -1,5 +1,11 @@
+<!doctype html>
 <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Liraasa Songbook</title>
+<script data-page-lang>
+  // the page has no <html> element to carry it (the formatter would re-indent the file)
+  document.documentElement.lang = 'en';
+</script>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link
   rel="stylesheet"
@@ -7,6 +13,7 @@
 />
 
 <link rel="stylesheet" href="learn/learn.css" />
+<link rel="stylesheet" href="learn/hall.css" />
 
 <style>
   /* ============================================================== tokens
@@ -1417,7 +1424,7 @@
     }
 
     .sheet {
-      grid-template-columns: 2.4rem 1fr;
+      grid-template-columns: 3.6rem 1fr;
     }
   }
 </style>
@@ -1659,10 +1666,16 @@
 <script src="checker/rules/english.js"></script>
 <script src="checker/index.js"></script>
 <!-- Learn: its engine (learn-core.js) and data (learn-data.js) load on first use -->
+<script src="learn/strings.js"></script>
 <script src="learn/store.js"></script>
 <script src="learn/session.js"></script>
 <script src="learn/author.js"></script>
 <script src="learn/app.js"></script>
+<script src="learn/hall.js"></script>
+<script src="learn/stars.js"></script>
+<script src="learn/loom.js"></script>
+<script src="learn/sandbox.js"></script>
+<script src="learn/observatory.js"></script>
 <div class="diag-tip" id="diagTip" role="tooltip" hidden></div>
 <p class="sr-only" id="caretDiag" aria-live="polite"></p>
 <script>
@@ -4492,7 +4505,10 @@
           })),
       })),
     };
-    return { text: JSON.stringify(doc, null, 2), note: 'Structured, ready to store or re-render.' };
+    return {
+      text: JSON.stringify(doc, null, 2),
+      note: 'Structured, ready to store or re-render.',
+    };
   }
 
   const showExport = () => {

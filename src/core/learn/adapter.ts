@@ -72,6 +72,7 @@ function headwordItem(
   indexes: LexiconIndexes,
   edition: string,
   gaps: Gap[],
+  colourIds: ReadonlyMap<string, EntryId> = new Map(),
 ): LearnItem {
   const forms = FORM_SLOTS.map((slot) => ({
     slot,
@@ -93,7 +94,10 @@ function headwordItem(
   }
   let components: [EntryId, EntryId] | null = null;
   if (h.components !== null) {
-    const ids = h.components.map((c) => indexes.headwordBySpelling.get(c)?.id);
+    // the modifier may be a colour base (2.0:G38): it links to its colour entry
+    const ids = h.components.map(
+      (c, i) => indexes.headwordBySpelling.get(c)?.id ?? (i === 0 ? colourIds.get(c) : undefined),
+    );
     const [modifier, head] = ids;
     if (modifier !== undefined && head !== undefined) {
       components = [modifier, head];
@@ -127,6 +131,7 @@ function headwordItem(
 function closedItems(
   lexicon: Lexicon,
   pronounEnglish: Readonly<Record<string, string>>,
+  indexes: LexiconIndexes,
 ): LearnItem[] {
   const base = {
     register: null,
@@ -184,6 +189,8 @@ function closedItems(
       meaning: c.family.toLowerCase(),
       theme: 'Colours',
       since: '',
+      // a colour base may be a compound's modifier (2.0:G38)
+      usedIn: (indexes.byComponent.get(c.base) ?? []).map((u) => u.entryId),
     })),
     ...lexicon.discourseParticles.map((d) => ({
       ...base,
@@ -219,7 +226,9 @@ function conceptsOf(
         if (r.slot === 'verb') verb = true;
       }
       if (r.derivation !== undefined) out.add(suffixConcept(r.derivation));
-      if (items.get(r.id)?.kind === 'compound') out.add(COMPOUND);
+      const k = items.get(r.id)?.kind;
+      if (k === 'compound' || k === 'imageCompound' || r.namespace === 'imageCompound')
+        out.add(COMPOUND);
       const slot = wordToSlot.get(r.id);
       if (slot !== undefined) out.add(slot);
     }
@@ -253,8 +262,22 @@ export function buildLearnSource(input: LearnInput): LearnSource {
 
   /* items */
   const items = new Map<EntryId, LearnItem>();
-  for (const h of lexicon.headwords) items.set(h.id, headwordItem(h, indexes, edition, gaps));
-  for (const item of closedItems(lexicon, input.pronounEnglish ?? {})) items.set(item.id, item);
+  const colourIds = new Map(lexicon.colors.map((c) => [c.base, c.id]));
+  for (const h of lexicon.headwords)
+    items.set(h.id, headwordItem(h, indexes, edition, gaps, colourIds));
+  // attested image compounds keep their ids: a learner's cards on them stay live (2.0:G40)
+  for (const h of lexicon.imageCompounds?.attested ?? []) {
+    items.set(h.id, {
+      ...headwordItem(h, indexes, edition, gaps, colourIds),
+      kind: 'imageCompound',
+    });
+  }
+  const patternReadings = new Map<EntryId, string>();
+  for (const pair of indexes.patternPairs.values()) {
+    if (pair.attested === null) patternReadings.set(pair.id, pair.reading);
+  }
+  for (const item of closedItems(lexicon, input.pronounEnglish ?? {}, indexes))
+    items.set(item.id, item);
 
   /* concepts */
   const derived = deriveConcepts(lexicon, input.lexicon, indexes, overrides);
@@ -406,6 +429,7 @@ export function buildLearnSource(input: LearnInput): LearnSource {
     frequency,
     numbers,
     names,
+    patternReadings,
     gaps,
   };
   const replacementFor = (spelling: string): string | undefined => {

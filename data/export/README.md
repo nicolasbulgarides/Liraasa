@@ -97,32 +97,14 @@ From the Grammar Guide §5, "Sound and spelling":
 Each of those is covered by a test in `src/core/phonetics/g2p.test.ts`, using
 the guide's own examples as the expected values.
 
-## Two open questions — your call
+## Settled: `c`, `j` and `r` (2.0:G43)
 
-Both letters occur before several different vowels, so a phonetic spelling
-cannot be giving them positional variants. I picked a documented default for
-each; changing one is a one-line edit in `src/core/phonetics/g2p.ts` followed
-by `npm run export:mfa`.
+The author fixed the open sound values on 2026-10-18 (ruling 2.0:G43):
 
-### `c` → currently `/k/`
+- `c` is always "ch" `/t͡ʃ/`, before every vowel: `cono` is cho-no, `cilni`
+  chil-ni. It is the same sound as the `ch` digraph, and no longer doubles `k`.
+- `j` is `/d͡ʒ/`, as in "jewel": the voiced partner of `c`, as `z` is of `s`.
+- `r` is a single tap, as in Spanish "pero". The dictionary writes it `r`.
 
-Appears before all five vowels: `cuara`, `cemo`, `cilni`, `cono`, `cupa`.
-Spanish would read `cuara` with /k/ but `cemo` with /s/ or /θ/, which would
-make the spelling unphonetic. `/k/` matches the guide's explicit statement that
-`g` is hard in every position.
-
-**The cost:** `c` and `k` then spell one phoneme, so `cono` and a hypothetical
-`kono` would be homophones. If you would rather `c` were `/s/` or `/t͡s/`, say
-so — that is a pronunciation decision, not something the data settles.
-
-### `j` → currently `/d͡ʒ/`
-
-Appears before o, u and e: `juba`, `jomru`, `jemla`. `/d͡ʒ/` as in the English
-"jewel" that `juba` (gem) echoes. The colour word `ojo` would suggest Spanish
-`/x/` instead.
-
-### A smaller one: `r`
-
-Emitted as a single phone `r`. Whether it is a tap or a trill does not change
-the dictionary, but it will change how you record and train. Worth deciding
-before you cut the training set.
+Changing a value is still a one-line edit in `src/core/phonetics/g2p.ts`
+followed by `npm run export:mfa`.

@@ -16,6 +16,12 @@ import type { EntryId } from '../model/types';
 export type ItemKind =
   | 'root'
   | 'compound'
+  /**
+   * An attested image compound (2.0:G40): a former headword kept, with its id,
+   * as an instance of the pattern. Met words stay met; it is not drawn as a
+   * dictionary word.
+   */
+  | 'imageCompound'
   | 'functionWord'
   | 'pronoun'
   | 'correlative'
@@ -182,6 +188,11 @@ export interface LearnData {
   numbers: ReadonlyMap<string, number>;
   /** Proper names attested in texts. */
   names: ReadonlySet<string>;
+  /**
+   * The predictable reading of each image-compound pair that is not attested,
+   * by its id (2.0:G40): what a reader understands by it.
+   */
+  patternReadings: ReadonlyMap<EntryId, string>;
   /** Problems found while deriving all of this, for the author. */
   gaps: readonly Gap[];
 }
@@ -261,6 +272,12 @@ export interface Overrides {
    * `candidateExamples`, never from invented text.
    */
   rulingExamples: Readonly<Record<string, readonly string[]>>;
+  /**
+   * `<entry id>|<form slot>` → why that form is what it is, in the author's
+   * words. Shown beside an irregular form (or any form) on its study card; the
+   * engine never writes one.
+   */
+  formNotes?: Readonly<Record<string, string>>;
 }
 
 /* ------------------------------------------------------------------- gaps */

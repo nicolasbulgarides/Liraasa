@@ -19,7 +19,7 @@ export interface LinkContext {
 }
 
 /** Namespaces a `-ri` / `-ti` ending may attach to: nouns, pronouns, time words. */
-const NOMINAL = new Set(['headword', 'derivation', 'pronoun', 'timeWord']);
+const NOMINAL = new Set(['headword', 'imageCompound', 'derivation', 'pronoun', 'timeWord']);
 
 /** How the number rules join an ordinal and a fraction, read off the generator. */
 const ORDINAL_MARK = spellOrdinal(1).slice(spellNumber(1).length);

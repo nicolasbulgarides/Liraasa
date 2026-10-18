@@ -142,7 +142,9 @@ describe('generating 1000 exercises with a fixed seed', () => {
             ? { kind: 'typed' as const, text: a.accepted[0] ?? '' }
             : a.kind === 'order'
               ? { kind: 'order' as const, ids: a.correct }
-              : { kind: 'pairs' as const, pairs: a.pairs };
+              : a.kind === 'multi'
+                ? { kind: 'multi' as const, ids: a.correct }
+                : { kind: 'pairs' as const, pairs: a.pairs };
       expect(gradeExercise(gctx, ex, response).verdict, ex.id).toBe('correct');
     }
   });

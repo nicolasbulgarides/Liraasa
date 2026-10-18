@@ -1,6 +1,6 @@
 /* Liraasa grammar checker: the word index (Phase 1).
  *
- * Built entirely from the reference (handoff/liraasa_1_2_llm.json, loaded as
+ * Built entirely from the reference (handoff/liraasa_2_0_llm.json, loaded as
  * window.LIRAASA_REF) plus the checker's extra data (legacy spellings and
  * names, window.LIRAASA_CHECKER_EXTRA). Nothing here names a Liraasa word:
  * suffixes, derivations, the verb rule, motion prefixes and the reader's
@@ -10,8 +10,8 @@
   'use strict';
   const C = (root.LiraasaChecker = root.LiraasaChecker || {});
 
-  /** HEADWORD [PART+PART] {FLAGS}: FORM (ROLE) MEANING | … (dictionary.how_to_read) */
-  const LINE = /^([a-z]+)(?: \[([a-z]+)\+([a-z]+)\])?(?: \{([^}]*)\})?: (.*)$/;
+  /** HEADWORD [PART+PART(+-SUFFIX)] {FLAGS}: FORM (ROLE) MEANING | … (dictionary.how_to_read) */
+  const LINE = /^([a-z]+)(?: \[([a-z]+)\+([a-z]+)(?:\+-([a-z]+))?\])?(?: \{([^}]*)\})?: (.*)$/;
   /** One form; the noun form is written only as "(n) meaning". */
   const FORM = /^(?:([a-z]+) )?\(([a-z]+)\) (.*)$/;
 
@@ -31,11 +31,12 @@
         const entry = {
           root: root_,
           parts: m[2] ? [m[2], m[3]] : null,
-          flags: m[4] ? m[4].split(', ') : [],
+          suffix: m[4] || null,
+          flags: m[5] ? m[5].split(', ') : [],
           domain,
           forms: {},
         };
-        for (const part of m[5].split(' | ')) {
+        for (const part of m[6].split(' | ')) {
           const f = FORM.exec(part);
           if (!f) fail('cannot read form "' + part + '" in ' + line);
           const role = f[2];
@@ -51,6 +52,51 @@
       }
     }
     return { headwords, forms };
+  }
+
+  /**
+   * The image-compound pattern (word_building.image_compounds, 2.0:G40): every
+   * modifier + head is a noun. An attested pair reads as its canonical gloss,
+   * any other as "<modifier as_modifier> <head>". A headword spelled the same
+   * wins. Added as headwords, so derivations attach to them as to any compound.
+   */
+  function addImageCompounds(ref, dict) {
+    const ic = ref.word_building.image_compounds;
+    if (!ic) return 0;
+    const noun = Object.keys(ref.dictionary.role_codes)[0];
+    const sense = (entry) =>
+      entry.forms[noun] ? entry.forms[noun].gloss.split(';')[0].trim().toLowerCase() : entry.root;
+    let added = 0;
+    for (const [m, mod] of Object.entries(ic.modifiers)) {
+      if (!dict.headwords.has(m)) continue;
+      for (const h of Object.keys(ic.heads)) {
+        const head = dict.headwords.get(h);
+        const word = m + h;
+        if (!head || dict.headwords.has(word)) continue;
+        const gloss = ic.attested[word] || mod.as_modifier + ' ' + sense(head);
+        const entry = {
+          root: word,
+          parts: [m, h],
+          suffix: null,
+          flags: ['image compound'],
+          domain: 'image compounds',
+          forms: {},
+        };
+        const reading = {
+          form: word,
+          root: word,
+          role: noun,
+          roleName: ref.dictionary.role_codes[noun],
+          gloss,
+          entry,
+        };
+        entry.forms[noun] = reading;
+        dict.forms.set(word, (dict.forms.get(word) || []).concat([reading]));
+        dict.headwords.set(word, entry);
+        added += 1;
+      }
+    }
+    return added;
   }
 
   /** Closed classes: every small word, with the class it was listed under. */
@@ -175,6 +221,9 @@
   function build(ref, extra) {
     if (!ref || !ref.dictionary) fail('the reference (window.LIRAASA_REF) is not loaded');
     const dict = parseDictionary(ref);
+    // the rule-built forms of listed headwords, before the pattern's nouns join them
+    const listed = new Map(dict.headwords);
+    addImageCompounds(ref, dict);
     const small = parseSmallWords(ref);
     const morph = parseMorphology(ref);
     const numerals = parseNumerals(ref);
@@ -182,7 +231,7 @@
     const longer = /longer than (\d+)/.exec(order);
     // every form a headword could have by rule, listed or not (for the unused-slot warning)
     const possible = new Map();
-    for (const entry of dict.headwords.values()) {
+    for (const entry of listed.values()) {
       for (const [i, s] of morph.slots.entries()) {
         const code = Object.keys(ref.dictionary.role_codes)[i];
         const form = s.suffix === null ? verbOf(morph.verbRule, entry.root) : entry.root + s.suffix;

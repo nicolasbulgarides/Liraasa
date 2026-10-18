@@ -8,6 +8,15 @@
  *   P        play the recording, when there is one
  * Tiles move by click or Enter (no drag), so every exercise has a keyboard
  * path. Feedback is announced through the live region.
+ *
+ * Options a caller may add (Ten Stars uses them; Classic Learn does not):
+ *   grade(ex, response, ms)   grade with something other than the core grader
+ *   requeue                   ask a missed exercise once more, a few later
+ *   verdictText(verdict, n)   the words for right / almost / not quite
+ *   diagnosisText(d)          the words for one diagnosis
+ *   glossOpen                 show the word-by-word gloss from the start (a
+ *                             setting, so it does not count as a hint)
+ * An exercise's `prefill` starts a typed answer (the sentence to change).
  */
 (function (root) {
   'use strict';
@@ -57,7 +66,8 @@
 
   U.runSession = function runSession(host, opts) {
     const L = root.LiraasaLearn;
-    const exercises = opts.exercises;
+    const exercises = opts.exercises.slice();
+    const again = new Set();
     const results = [];
     let i = 0;
     let state = null;
@@ -68,9 +78,10 @@
         ex,
         started: Date.now(),
         choice: null,
-        typed: '',
+        typed: ex.prefill || '',
         order: [],
         pairs: {},
+        multi: [],
         pick: null,
         hinted: false,
         choiceMode: false,
@@ -104,9 +115,10 @@
       } else if (p.liraasa) {
         out += '<div class="prompt-l" lang="x-liraasa">' + esc(p.liraasa) + '</div>';
       }
-      if (p.tokens && (state.hinted || state.grade)) out += U.interlinear(p.tokens);
+      if (p.tokens && (state.hinted || state.grade || opts.glossOpen))
+        out += U.interlinear(p.tokens);
       if (p.english) out += '<div class="prompt-e">' + esc(p.english) + '</div>';
-      if (p.tokens && !state.hinted && !state.grade) {
+      if (p.tokens && !state.hinted && !state.grade && !opts.glossOpen) {
         out +=
           '<button type="button" class="linkish" data-act="hint">Show the word-by-word gloss</button>';
       }
@@ -120,10 +132,50 @@
       return '';
     }
 
+    const verdictText = (v) =>
+      opts.verdictText ? opts.verdictText(v, results.length) : VERDICT[v];
+    const diagnosisText = (d) => (opts.diagnosisText ? opts.diagnosisText(d) : d.message);
+
+    function multiHtml(ex) {
+      const a = ex.answer;
+      const done = !!state.grade;
+      return (
+        '<div class="choices multi" role="group" aria-label="Choose every one that fits">' +
+        ex.choices
+          .map((c, k) => {
+            const on = state.multi.includes(c.id);
+            const right = a.correct.includes(c.id);
+            let cls = c.liraasa ? 'lw' : '';
+            if (done && right) cls += ' right';
+            if (done && on && !right) cls += ' wrong';
+            return (
+              '<button type="button" class="' +
+              cls +
+              '" data-multi="' +
+              esc(c.id) +
+              '" aria-pressed="' +
+              on +
+              '"' +
+              (done ? ' disabled' : '') +
+              (c.liraasa ? ' lang="x-liraasa"' : '') +
+              '><span class="key" aria-hidden="true">' +
+              (k + 1) +
+              '</span>' +
+              esc(c.text) +
+              (done && right ? '<span class="sr-only"> (fits)</span>' : '') +
+              '</button>'
+            );
+          })
+          .join('') +
+        '</div>'
+      );
+    }
+
     function inputHtml(ex) {
       const a = ex.answer;
       const done = !!state.grade;
       const dis = done ? ' disabled' : '';
+      if (a.kind === 'multi') return multiHtml(ex);
       if (a.kind === 'choice' || (a.kind === 'typed' && state.choiceMode && ex.choices)) {
         const correctId = a.kind === 'choice' ? a.correct : 'answer';
         return (
@@ -272,7 +324,7 @@
               (d.link.kind === 'concept' ? 'See the rule' : 'See the word') +
               '</button>'
             : '';
-          return '<li>' + esc(d.message) + link + '</li>';
+          return '<li>' + esc(diagnosisText(d)) + link + '</li>';
         })
         .join('');
       const show =
@@ -283,7 +335,7 @@
         '<div class="feedback ' +
         g.verdict +
         '"><div class="verdict">' +
-        VERDICT[g.verdict] +
+        esc(verdictText(g.verdict)) +
         '</div>' +
         show +
         (items ? '<ul>' + items + '</ul>' : '') +
@@ -362,6 +414,8 @@
       }
       if (a.kind === 'order')
         return state.order.length ? { kind: 'order', ids: state.order.slice() } : null;
+      if (a.kind === 'multi')
+        return state.multi.length ? { kind: 'multi', ids: state.multi.slice() } : null;
       return Object.keys(state.pairs).length === a.left.length
         ? { kind: 'pairs', pairs: { ...state.pairs } }
         : null;
@@ -385,19 +439,24 @@
           rating: 1,
         };
       } else {
-        g = L.gradeExercise(opts.gctx, state.ex, r, ms);
+        g = opts.grade ? opts.grade(state.ex, r, ms) : L.gradeExercise(opts.gctx, state.ex, r, ms);
       }
       // help lowers the rating: a hint or the easier choice mode is not full recall
       if ((state.hinted || state.choiceMode) && g.rating > 2) g = { ...g, rating: 2 };
       state.grade = g;
       results.push({ ex: state.ex, grade: g, ms });
+      // a miss comes back once, a few exercises later
+      if (opts.requeue && g.verdict !== 'correct' && !again.has(state.ex.id)) {
+        again.add(state.ex.id);
+        exercises.splice(Math.min(i + 4, exercises.length), 0, state.ex);
+      }
       if (opts.onAnswer) opts.onAnswer(state.ex, g, ms);
       render();
       announce(
-        VERDICT[g.verdict] +
-          '. ' +
+        verdictText(g.verdict) +
+          ' ' +
           (g.verdict !== 'correct' ? 'Answer: ' + g.expected + '. ' : '') +
-          g.diagnoses.map((d) => d.message).join(' '),
+          g.diagnoses.map(diagnosisText).join(' '),
       );
     }
 
@@ -406,6 +465,7 @@
       if (a.kind === 'choice') return { kind: 'choice', id: '' };
       if (a.kind === 'typed') return { kind: 'typed', text: '' };
       if (a.kind === 'order') return { kind: 'order', ids: [] };
+      if (a.kind === 'multi') return { kind: 'multi', ids: [] };
       return { kind: 'pairs', pairs: {} };
     }
 
@@ -456,6 +516,10 @@
       if (b.dataset.choice !== undefined) {
         state.choice = b.dataset.choice;
         return render();
+      }
+      if (b.dataset.multi !== undefined) {
+        toggleMulti(b.dataset.multi);
+        return;
       }
       if (b.dataset.tile !== undefined) {
         state.order.push(b.dataset.tile);
@@ -512,6 +576,11 @@
       }
       if (typing) return;
       const a = state.ex.answer;
+      if (/^[1-9]$/.test(e.key) && !state.grade && a.kind === 'multi') {
+        const c = state.ex.choices[Number(e.key) - 1];
+        if (c) toggleMulti(c.id);
+        return;
+      }
       if (/^[1-9]$/.test(e.key) && !state.grade && (a.kind === 'choice' || state.choiceMode)) {
         const c = state.ex.choices[Number(e.key) - 1];
         if (c) {
@@ -526,6 +595,15 @@
         state.order.pop();
         render();
       }
+    }
+
+    function toggleMulti(id) {
+      state.multi = state.multi.includes(id)
+        ? state.multi.filter((x) => x !== id)
+        : [...state.multi, id];
+      render();
+      const el = host.querySelector('[data-multi="' + CSS.escape(id) + '"]');
+      if (el) el.focus();
     }
 
     function teardown() {

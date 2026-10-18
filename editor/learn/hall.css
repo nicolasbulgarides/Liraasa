@@ -1,0 +1,1879 @@
+/* The Training Hall: a quiet observatory at night (TRAINING_DECISIONS D2).
+ *
+ * Scoped to #learnView, so the songbook keeps its paper. The Hall redefines
+ * the songbook's own tokens inside Learn, so every Learn view — the Hall's and
+ * Classic Learn's, the exercise runner and the Author tools — takes the sky
+ * with no per-component work.
+ *
+ *   data-sky="night"    the default: deep night, starlight ink, a warm gold accent
+ *   data-sky="dawn"     the light variant
+ *   data-sky="follow"   dawn when the songbook is light, night when it is dark
+ *
+ * Motion is slow and soft, and none of it runs under prefers-reduced-motion or
+ * the in-app "Reduced" setting. Nothing is conveyed by colour alone.
+ */
+
+/* ---------------------------------------------------------------- night */
+
+#learnView {
+  color-scheme: dark;
+
+  --paper: #0a0e1f;
+  --page: #121835;
+  --raised: #0d1229;
+  --ink: #e9ecf8;
+  --ink-soft: #b2b9d6;
+  --ink-faint: #8a92b4;
+  --rule: #262d50;
+  --rule-firm: #3b4473;
+  --margin: #e8c27a;
+  --accent: #b4c9ff;
+  --accent-soft: #1c2449;
+  --accent-ink: #0a0e1f;
+  --gold: #f0c879;
+  --gold-soft: #2b2512;
+
+  --error: #f2b0aa;
+  --error-soft: #2b1b25;
+  --warn: #ebc985;
+  --warn-soft: #2a2416;
+  --note: #a4c6ee;
+  --note-soft: #172240;
+  --unsettled: #a9afc7;
+  --unsettled-soft: #1b2038;
+  --ok: #93d8b8;
+  --ok-soft: #12271f;
+
+  /* the Hall's own */
+  --star: #fff6dd;
+  --glow: rgb(240 200 121 / 0.35);
+  --glass: rgb(18 24 53 / 0.72);
+  --sky-top: #0b1030;
+  --sky-bottom: #070a17;
+  --nebula: rgb(120 110 220 / 0.14);
+  --nebula-warm: rgb(240 190 120 / 0.07);
+  --stars-on: 1;
+
+  --ease: cubic-bezier(0.22, 0.8, 0.32, 1);
+  --t-quick: 160ms;
+  --t-soft: 260ms;
+
+  font-family: var(--ui);
+  background: linear-gradient(180deg, var(--sky-top), var(--sky-bottom));
+  color: var(--ink);
+  position: relative;
+}
+
+/* ----------------------------------------------------------------- dawn */
+
+#learnView[data-sky='dawn'],
+:root[data-theme='light'] #learnView[data-sky='follow'] {
+  color-scheme: light;
+
+  --paper: #f3f1fa;
+  --page: #ffffff;
+  --raised: #ebe8f5;
+  --ink: #1b1f3a;
+  --ink-soft: #464d6e;
+  --ink-faint: #5f6585;
+  --rule: #d9d5ea;
+  --rule-firm: #b5afd0;
+  --margin: #a8721a;
+  --accent: #34428a;
+  --accent-soft: #e3e6f6;
+  --accent-ink: #ffffff;
+  --gold: #85590f;
+  --gold-soft: #f6eed9;
+
+  --error: #a3302f;
+  --error-soft: #f8e8e6;
+  --warn: #7e5a12;
+  --warn-soft: #f6eedb;
+  --note: #2b5d8a;
+  --note-soft: #e3edf6;
+  --unsettled: #6b7079;
+  --unsettled-soft: #ececea;
+  --ok: #2d5f4a;
+  --ok-soft: #e4eee8;
+
+  --star: #c9a54e;
+  --glow: rgb(200 150 60 / 0.28);
+  --glass: rgb(255 255 255 / 0.78);
+  --sky-top: #e9e6f7;
+  --sky-bottom: #fbf4ea;
+  --nebula: rgb(150 140 230 / 0.16);
+  --nebula-warm: rgb(250 200 140 / 0.22);
+  --stars-on: 0;
+}
+
+/* follow the songbook: its explicit theme (above), then the system */
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme='dark']) #learnView[data-sky='follow'] {
+    color-scheme: light;
+    --paper: #f3f1fa;
+    --page: #ffffff;
+    --raised: #ebe8f5;
+    --ink: #1b1f3a;
+    --ink-soft: #464d6e;
+    --ink-faint: #5f6585;
+    --rule: #d9d5ea;
+    --rule-firm: #b5afd0;
+    --margin: #a8721a;
+    --accent: #34428a;
+    --accent-soft: #e3e6f6;
+    --accent-ink: #ffffff;
+    --gold: #85590f;
+    --gold-soft: #f6eed9;
+    --error: #a3302f;
+    --error-soft: #f8e8e6;
+    --warn: #7e5a12;
+    --warn-soft: #f6eedb;
+    --note: #2b5d8a;
+    --note-soft: #e3edf6;
+    --unsettled: #6b7079;
+    --unsettled-soft: #ececea;
+    --ok: #2d5f4a;
+    --ok-soft: #e4eee8;
+    --star: #c9a54e;
+    --glow: rgb(200 150 60 / 0.28);
+    --glass: rgb(255 255 255 / 0.78);
+    --sky-top: #e9e6f7;
+    --sky-bottom: #fbf4ea;
+    --nebula: rgb(150 140 230 / 0.16);
+    --nebula-warm: rgb(250 200 140 / 0.22);
+    --stars-on: 0;
+  }
+}
+
+/* high contrast, in either sky: solid surfaces, full-strength ink */
+#learnView[data-contrast='high'] {
+  --glass: var(--page);
+  --nebula: transparent;
+  --nebula-warm: transparent;
+}
+
+/* ------------------------------------------------------------ typeface */
+
+#learnView[data-font='readable'] {
+  --ui: 'OpenDyslexic', 'Atkinson Hyperlegible', 'Lexend', Verdana, Tahoma, sans-serif;
+  letter-spacing: 0.02em;
+  word-spacing: 0.1em;
+  line-height: 1.7;
+}
+
+/* ------------------------------------------------------------- the sky */
+
+/* Two layers of points, drawn with gradients: no images, nothing fetched.
+   The second layer breathes slowly; reduced motion stills it. */
+#learnView::before,
+#learnView::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: var(--stars-on);
+}
+
+#learnView::before {
+  background: radial-gradient(ellipse 60% 40% at 78% 8%, var(--nebula), transparent 70%),
+    radial-gradient(ellipse 50% 35% at 12% 92%, var(--nebula-warm), transparent 70%),
+    radial-gradient(1px 1px at 12% 18%, var(--star), transparent 60%),
+    radial-gradient(1px 1px at 27% 64%, var(--star), transparent 60%),
+    radial-gradient(1.5px 1.5px at 41% 32%, var(--star), transparent 60%),
+    radial-gradient(1px 1px at 58% 78%, var(--star), transparent 60%),
+    radial-gradient(1px 1px at 66% 22%, var(--star), transparent 60%),
+    radial-gradient(1.5px 1.5px at 83% 54%, var(--star), transparent 60%),
+    radial-gradient(1px 1px at 91% 12%, var(--star), transparent 60%),
+    radial-gradient(1px 1px at 6% 82%, var(--star), transparent 60%);
+}
+
+/* the Dawn sky keeps its two washes of colour, without the points */
+#learnView[data-sky='dawn']::before {
+  opacity: 1;
+  background: radial-gradient(ellipse 60% 40% at 78% 8%, var(--nebula), transparent 70%),
+    radial-gradient(ellipse 50% 35% at 12% 92%, var(--nebula-warm), transparent 70%);
+}
+
+#learnView::after {
+  background: radial-gradient(1px 1px at 19% 42%, var(--star), transparent 60%),
+    radial-gradient(1px 1px at 35% 12%, var(--star), transparent 60%),
+    radial-gradient(1.5px 1.5px at 52% 56%, var(--star), transparent 60%),
+    radial-gradient(1px 1px at 72% 88%, var(--star), transparent 60%),
+    radial-gradient(1px 1px at 77% 36%, var(--star), transparent 60%),
+    radial-gradient(1.5px 1.5px at 95% 70%, var(--star), transparent 60%);
+  background-size: 640px 520px;
+  animation: hall-breathe 9s ease-in-out infinite alternate;
+}
+
+@keyframes hall-breathe {
+  from {
+    opacity: calc(var(--stars-on) * 0.35);
+  }
+  to {
+    opacity: calc(var(--stars-on) * 0.9);
+  }
+}
+
+#learnView > .lnav,
+#learnView > .lmain {
+  position: relative;
+  z-index: 1;
+}
+
+#learnView .lmain {
+  background: transparent;
+}
+
+/* the songbook page has no doctype, so it renders in quirks mode, where a
+   table does not inherit colour or size: give Learn's tables the sky's ink */
+#learnView table {
+  color: var(--ink);
+  font-size: inherit;
+}
+
+#learnView .lnav {
+  background: var(--glass);
+  backdrop-filter: blur(6px);
+  border-right-color: var(--rule);
+}
+
+#learnView .lcard {
+  background: var(--glass);
+  border-radius: 10px;
+}
+
+/* ------------------------------------------------------------- the nav */
+
+.lnav button[aria-current='page'] {
+  box-shadow: inset 2px 0 0 var(--margin);
+}
+
+#learnView[data-mode='hall'] .lnav button[aria-current='page'] {
+  background: var(--accent-soft);
+}
+
+.lnav button.mode {
+  color: var(--ink-faint);
+  font-size: 0.85em;
+}
+
+.lnav button.keys {
+  margin-top: auto;
+  color: var(--ink-faint);
+  font-size: 0.8em;
+}
+
+.lnav button.keys + .who {
+  margin-top: var(--s2);
+}
+
+#learnView kbd {
+  font-family: var(--mono);
+  font-size: 0.85em;
+  border: 1px solid var(--rule-firm);
+  border-bottom-width: 2px;
+  border-radius: 4px;
+  padding: 0 5px;
+  color: var(--ink);
+  background: var(--raised);
+}
+
+/* ------------------------------------------------------------- the hub */
+
+.hall {
+  padding-bottom: var(--s6);
+}
+
+.hall-head {
+  margin: var(--s4) 0 var(--s6);
+}
+
+.hall .kicker {
+  font-size: 0.75em;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 0 0 var(--s2);
+}
+
+.lmain .hall h2 {
+  font-size: 2.6em;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  margin: 0;
+}
+
+.hall-greeting {
+  font-family: var(--lira);
+  font-style: italic;
+  font-size: 1.25em;
+  color: var(--ink-soft);
+  margin: var(--s2) 0 0;
+}
+
+.hall .lw,
+.hall .liraasa {
+  font-size: 1.12em;
+}
+
+.wings {
+  list-style: none;
+  margin: 0 0 var(--s5);
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--s4);
+}
+
+.wing {
+  width: 100%;
+  height: 100%;
+  min-height: 44px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--s2);
+  text-align: left;
+  font: inherit;
+  color: var(--ink);
+  background: var(--glass);
+  border: 1px solid var(--rule);
+  border-radius: 14px;
+  padding: var(--s4) var(--s4) var(--s5);
+  cursor: pointer;
+  transition:
+    border-color var(--t-soft) var(--ease),
+    box-shadow var(--t-soft) var(--ease),
+    transform var(--t-soft) var(--ease);
+}
+
+.wing:hover,
+.wing:focus-visible {
+  border-color: var(--rule-firm);
+  box-shadow:
+    0 0 0 1px var(--glow),
+    0 10px 30px -12px var(--glow);
+  transform: translateY(-2px);
+}
+
+.wing-title {
+  font-family: var(--lira);
+  font-size: 1.45em;
+  font-weight: 500;
+}
+
+.wing-line {
+  color: var(--ink-soft);
+  font-size: 0.92em;
+  line-height: 1.5;
+  flex: 1;
+}
+
+.wing-cta {
+  color: var(--gold);
+  font-size: 0.88em;
+  font-weight: 500;
+}
+
+/* constellations: faint lines, points that glow */
+.motif {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  max-height: 64px;
+  overflow: visible;
+}
+
+.motif line {
+  stroke: var(--ink-faint);
+  stroke-width: 0.6;
+  opacity: 0.55;
+}
+
+.motif circle {
+  fill: var(--star);
+  filter: drop-shadow(0 0 2px var(--glow));
+  animation: hall-twinkle 4.8s ease-in-out infinite;
+  animation-delay: calc(var(--i, 0) * -0.53s);
+}
+
+#learnView[data-sky='dawn'] .motif circle {
+  fill: var(--gold);
+}
+
+@keyframes hall-twinkle {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.55;
+  }
+}
+
+.hall-wing .hall-head .motif {
+  max-width: 260px;
+  margin-bottom: var(--s3);
+}
+
+.hall-due {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--s3);
+  background: var(--glass);
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  padding: var(--s3) var(--s4);
+  margin-bottom: var(--s5);
+}
+
+.hall-due p {
+  margin: 0;
+  color: var(--ink-soft);
+}
+
+.hall-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--s3);
+  margin: 0 0 var(--s3);
+}
+
+.hall-stats > div {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 2px;
+  padding: var(--s3) var(--s4);
+  border-left: 1px solid var(--rule);
+}
+
+.hall-stats dt {
+  color: var(--ink-faint);
+  font-size: 0.8em;
+}
+
+.hall-stats dd {
+  margin: 0;
+  font-family: var(--lira);
+  font-size: 2em;
+  color: var(--ink);
+}
+
+.hall-quiet,
+.hall-soon {
+  color: var(--ink-soft);
+  max-width: 60ch;
+  line-height: 1.6;
+}
+
+/* buttons inside the Hall: room to touch, a soft glow */
+#learnView .btn {
+  min-height: 44px;
+  transition:
+    box-shadow var(--t-quick) var(--ease),
+    background-color var(--t-quick) var(--ease);
+}
+
+#learnView .btn-primary:hover,
+#learnView .btn-primary:focus-visible {
+  box-shadow: 0 0 0 4px var(--glow);
+}
+
+/* ----------------------------------------------------------- settings */
+
+.hall-settings fieldset.lcard {
+  margin: 0 0 var(--s4);
+}
+
+.hall-settings legend {
+  font-family: var(--lira);
+  font-size: 1.3em;
+  padding: 0 var(--s2);
+}
+
+/* Standalone text buttons are touch targets too; links inside prose are not */
+#learnView .linkish[data-back],
+#learnView .linkish[data-star-sky] {
+  min-height: 44px;
+  padding-inline: var(--s1);
+}
+
+/* Audio coverage (D9) */
+.hs-coverage {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s2) var(--s5);
+}
+
+.hs-next {
+  list-style: none;
+  padding: 0;
+  columns: 2 14em;
+  column-gap: var(--s5);
+}
+
+.hs-next li {
+  break-inside: avoid;
+  padding: 2px 0;
+}
+
+.hall-settings details summary {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.hs-lines {
+  width: 100%;
+  font-family: var(--mono);
+  font-size: 0.85em;
+  color: var(--ink);
+  background: var(--page);
+  border: 1px solid var(--rule-firm);
+  border-radius: 6px;
+  padding: var(--s2);
+}
+
+.hs-scope,
+.hs-note {
+  color: var(--ink-faint);
+  font-size: 0.85em;
+  margin: 0 0 var(--s3);
+}
+
+.hs-field .hs-note {
+  margin: var(--s1) 0 0;
+  grid-column: 2;
+}
+
+.hs-field {
+  display: grid;
+  grid-template-columns: minmax(12em, 1fr) minmax(0, 1.2fr);
+  align-items: center;
+  gap: var(--s1) var(--s4);
+  padding: var(--s2) 0;
+  border-top: 1px solid var(--rule);
+}
+
+.hs-field select {
+  min-height: 44px;
+  font: inherit;
+  color: var(--ink);
+  background: var(--page);
+  border: 1px solid var(--rule-firm);
+  border-radius: 6px;
+  padding: 0 var(--s3);
+}
+
+.hall-settings h4 {
+  margin: var(--s5) 0 var(--s2);
+  font-weight: 500;
+}
+
+.hall-settings form#wipe label {
+  flex: 1 1 24em;
+  color: var(--ink-soft);
+}
+
+.hall-settings #wipeConfirm {
+  min-height: 44px;
+}
+
+.hall-keys {
+  border-collapse: collapse;
+}
+
+.hall-keys th,
+.hall-keys td {
+  text-align: left;
+  padding: var(--s1) var(--s4) var(--s1) 0;
+  font-weight: 400;
+}
+
+.hall-keys td {
+  color: var(--ink-soft);
+}
+
+/* ------------------------------------------------- the shortcut overlay */
+
+.hall-dialog {
+  color: var(--ink);
+  background: var(--page);
+  border: 1px solid var(--rule-firm);
+  border-radius: 14px;
+  padding: var(--s5) var(--s6);
+  box-shadow: 0 20px 60px -20px var(--glow);
+  max-width: min(92vw, 520px);
+}
+
+.hall-dialog h2 {
+  font-family: var(--lira);
+  font-weight: 500;
+  margin: 0 0 var(--s4);
+}
+
+.hall-dialog::backdrop {
+  background: rgb(5 8 20 / 0.6);
+  backdrop-filter: blur(3px);
+}
+
+/* --------------------------------------------------------------- motion */
+
+@media (prefers-reduced-motion: reduce) {
+  #learnView::after,
+  .motif circle {
+    animation: none;
+  }
+
+  .wing,
+  #learnView .btn {
+    transition: none;
+  }
+
+  .wing:hover,
+  .wing:focus-visible {
+    transform: none;
+  }
+}
+
+#learnView[data-motion='reduce']::after,
+#learnView[data-motion='reduce'] .motif circle {
+  animation: none;
+}
+
+#learnView[data-motion='reduce'] .wing,
+#learnView[data-motion='reduce'] .btn {
+  transition: none;
+}
+
+#learnView[data-motion='reduce'] .wing:hover,
+#learnView[data-motion='reduce'] .wing:focus-visible {
+  transform: none;
+}
+
+/* ---------------------------------------------------------------- phone */
+
+@media (max-width: 720px) {
+  .wings {
+    grid-template-columns: 1fr;
+  }
+
+  .hall-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hs-field {
+    grid-template-columns: 1fr;
+  }
+
+  .hs-field .hs-note {
+    grid-column: 1;
+  }
+
+  .lmain .hall h2 {
+    font-size: 2.1em;
+  }
+
+  .lnav button.keys {
+    margin-top: 0;
+  }
+}
+
+/* ============================================================ Ten Stars */
+
+.ts-note,
+.ts-short {
+  color: var(--ink-soft);
+}
+
+/* the constellation: a loose grid, each star nudged off its cell */
+.ts-sky {
+  list-style: none;
+  margin: 0 0 var(--s5);
+  padding: var(--s4) 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: var(--s5) var(--s4);
+}
+
+.ts-star {
+  display: flex;
+  justify-content: center;
+  transform: translate(var(--dx, 0), var(--dy, 0));
+}
+
+.ts-point {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  min-width: 44px;
+  min-height: 44px;
+  padding: var(--s2) var(--s3);
+  border: 1px solid transparent;
+  border-radius: 12px;
+  background: none;
+  color: var(--ink);
+  font: inherit;
+  text-align: center;
+  cursor: pointer;
+  transition:
+    border-color var(--t-soft) var(--ease),
+    background-color var(--t-soft) var(--ease);
+}
+
+span.ts-point {
+  cursor: default;
+}
+
+button.ts-point:hover,
+.ts-point[aria-pressed='true'] {
+  border-color: var(--rule-firm);
+  background: var(--glass);
+}
+
+.ts-point[aria-pressed='true'] {
+  box-shadow: 0 0 0 1px var(--glow);
+}
+
+.ts-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--star);
+  box-shadow:
+    0 0 6px 2px var(--glow),
+    0 0 18px 4px var(--glow);
+  animation: hall-twinkle 5.2s ease-in-out infinite;
+}
+
+/* an irregular word is a four-pointed star, not just another colour */
+.ts-star.irregular .ts-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 0;
+  clip-path: polygon(50% 0, 62% 38%, 100% 50%, 62% 62%, 50% 100%, 38% 62%, 0 50%, 38% 38%);
+  background: var(--gold);
+}
+
+.ts-star:nth-child(3n + 1) .ts-dot {
+  animation-delay: -1.7s;
+}
+
+.ts-star:nth-child(3n + 2) .ts-dot {
+  animation-delay: -3.4s;
+}
+
+.ts-point .lw {
+  font-size: 1.3em;
+  line-height: 1.2;
+}
+
+.ts-gloss {
+  color: var(--ink-soft);
+  font-size: 0.82em;
+  max-width: 16ch;
+}
+
+.ts-pin {
+  font-size: 0.72em;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.ts-star.pinned .ts-point {
+  border-color: var(--gold);
+  border-style: dashed;
+}
+
+.ts-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s3);
+  padding: var(--s3) var(--s4);
+  margin: 0 0 var(--s4);
+  background: var(--glass);
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+}
+
+.ts-actions > span {
+  margin-right: auto;
+  color: var(--ink-soft);
+}
+
+.ts-go {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s3);
+  margin: 0 0 var(--s5);
+}
+
+.ts-shape summary {
+  cursor: pointer;
+  font-family: var(--lira);
+  font-size: 1.2em;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+.ts-shape .hs-field select[multiple] {
+  min-height: 8em;
+  padding: var(--s1);
+}
+
+.ts-checks {
+  border: 0;
+  border-top: 1px solid var(--rule);
+  margin: 0;
+  padding: var(--s2) 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s1) var(--s4);
+}
+
+.ts-checks legend {
+  float: left;
+  width: 100%;
+  padding: var(--s2) 0;
+}
+
+.ts-checks label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s2);
+  min-height: 44px;
+}
+
+.ts-checks input {
+  width: 1.1em;
+  height: 1.1em;
+  accent-color: var(--gold);
+}
+
+/* ------------------------------------------------------- the study card */
+
+.ts-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--s3);
+  margin: 0 0 var(--s4);
+  min-height: 44px;
+}
+
+.ts-card {
+  background: var(--glass);
+  border: 1px solid var(--rule);
+  border-radius: 16px;
+  padding: var(--s5) var(--s6);
+  margin: 0 0 var(--s4);
+}
+
+.ts-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 0 var(--s4);
+  margin: 0 0 var(--s4);
+}
+
+.ts-head > :not(h2, .ts-listen) {
+  grid-column: 1 / -1;
+}
+
+.lmain .ts-head h2 {
+  margin: 0;
+}
+
+.ts-word {
+  font-size: 1.9em;
+  letter-spacing: 0.01em;
+  text-shadow: 0 0 24px var(--glow);
+}
+
+.ts-meaning {
+  font-size: 1.2em;
+  margin: var(--s2) 0 0;
+}
+
+.ts-alt {
+  color: var(--ink-soft);
+  margin: var(--s1) 0 0;
+}
+
+.ts-alt span {
+  color: var(--ink-faint);
+}
+
+.ts-tags {
+  margin: var(--s3) 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s2);
+}
+
+.ts-changed {
+  color: var(--note);
+  font-size: 0.88em;
+  margin: var(--s2) 0 0;
+}
+
+.ts-formhead {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--s3);
+}
+
+.ts-forms {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.ts-forms th,
+.ts-forms td {
+  text-align: left;
+  vertical-align: top;
+  padding: var(--s2) var(--s3) var(--s2) 0;
+  border-top: 1px solid var(--rule);
+}
+
+.ts-forms thead th {
+  font-size: 0.75em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  font-weight: 600;
+  border-top: 0;
+}
+
+.ts-forms tbody th {
+  font-weight: 400;
+  white-space: nowrap;
+  color: var(--ink-soft);
+}
+
+.ts-forms tbody th .linkish {
+  min-height: 32px;
+}
+
+.ts-form .lw {
+  font-size: 1.25em;
+}
+
+.ts-marker {
+  color: var(--gold);
+}
+
+.ts-boundary {
+  color: var(--ink-faint);
+  padding: 0 1px;
+}
+
+.ts-forms tr.irregular td.ts-form .lw {
+  text-shadow: 0 0 14px var(--glow);
+}
+
+.ts-why summary {
+  cursor: pointer;
+  color: var(--gold);
+  font-size: 0.85em;
+  min-height: 32px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.ts-why p {
+  margin: var(--s1) 0 0;
+  color: var(--ink-soft);
+  font-size: 0.9em;
+  max-width: 48ch;
+}
+
+.ts-irr {
+  font-size: 1.1em;
+}
+
+.ts-rulenote {
+  margin-top: var(--s1);
+  color: var(--ink-faint);
+  font-size: 0.82em;
+}
+
+.ts-rulenote p {
+  margin: var(--s1) 0 0;
+  max-width: 48ch;
+}
+
+.ts-rulenote code {
+  font-family: var(--mono);
+  color: var(--ink-soft);
+}
+
+.ts-peeks {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s1);
+}
+
+.ts-peek summary {
+  cursor: pointer;
+  min-height: 36px;
+  display: flex;
+  align-items: baseline;
+  gap: var(--s2);
+  padding: var(--s1) 0;
+}
+
+.ts-peek .lw {
+  font-size: 1.1em;
+}
+
+.ts-peek > :not(summary) {
+  margin: var(--s1) 0 var(--s2) var(--s4);
+}
+
+.ts-derivs {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ts-derivs li {
+  padding: var(--s1) 0;
+}
+
+.ts-ex .ts-line .lw {
+  font-size: 1.2em;
+}
+
+.ts-ex .src {
+  color: var(--ink-faint);
+  font-size: 0.8em;
+  margin: var(--s1) 0 0;
+}
+
+/* the progress row: ten small dots */
+.ts-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s3);
+}
+
+.ts-dots {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2px;
+}
+
+.ts-dotnav {
+  width: 28px;
+  height: 44px;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.ts-dotnav::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  margin: -4px 0 0 -4px;
+  border-radius: 50%;
+  border: 1px solid var(--ink-faint);
+}
+
+.ts-dotnav.studied::after {
+  background: var(--ink-soft);
+  border-color: var(--ink-soft);
+}
+
+.ts-dotnav[aria-current='step']::after {
+  width: 12px;
+  height: 12px;
+  margin: -6px 0 0 -6px;
+  background: var(--star);
+  border-color: var(--gold);
+  box-shadow: 0 0 8px 2px var(--glow);
+}
+
+.ts-known {
+  text-align: center;
+  margin: var(--s3) 0 0;
+}
+
+.ts-sky-done .ts-dot {
+  animation-duration: 3.4s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ts-dot {
+    animation: none;
+  }
+
+  .ts-point {
+    transition: none;
+  }
+}
+
+#learnView[data-motion='reduce'] .ts-dot {
+  animation: none;
+}
+
+#learnView[data-motion='reduce'] .ts-point {
+  transition: none;
+}
+
+@media (max-width: 720px) {
+  .ts-card {
+    padding: var(--s4);
+  }
+
+  .ts-sky {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ts-forms thead {
+    display: none;
+  }
+
+  .ts-forms tr {
+    display: grid;
+    grid-template-columns: 1fr;
+    border-top: 1px solid var(--rule);
+    padding: var(--s2) 0;
+  }
+
+  .ts-forms th,
+  .ts-forms td {
+    border: 0;
+    padding: 0;
+  }
+
+  .ts-nav {
+    flex-wrap: wrap;
+  }
+
+  .ts-dots {
+    order: -1;
+    width: 100%;
+  }
+}
+
+/* ============================================================ feedback */
+
+/* No red and no shaking (brief §7): a miss dims calmly and explains itself;
+   a right answer blooms with a little light. The verdict is always in words. */
+#learnView .feedback.wrong {
+  background: var(--unsettled-soft);
+  border-left-color: var(--unsettled);
+}
+
+#learnView .feedback.almost {
+  background: var(--gold-soft);
+  border-left-color: var(--gold);
+}
+
+#learnView .feedback.correct {
+  background: var(--accent-soft);
+  border-left-color: var(--ok);
+  animation: hall-bloom 600ms var(--ease) both;
+}
+
+#learnView .choices button.wrong,
+#learnView .pairs button.wrong {
+  border-color: var(--rule-firm);
+  background: var(--unsettled-soft);
+  opacity: 0.75;
+}
+
+#learnView .choices button.right,
+#learnView .pairs button.right {
+  border-color: var(--ok);
+  background: var(--ok-soft);
+  box-shadow: 0 0 0 1px var(--glow);
+}
+
+@keyframes hall-bloom {
+  from {
+    box-shadow: 0 0 0 0 var(--glow);
+  }
+  40% {
+    box-shadow: 0 0 22px 2px var(--glow);
+  }
+  to {
+    box-shadow: 0 0 0 0 transparent;
+  }
+}
+
+/* choose-every-one-that-fits: a tick, not only a colour */
+.choices.multi button[aria-pressed='true']::after {
+  content: ' ✓';
+  color: var(--gold);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #learnView .feedback.correct {
+    animation: none;
+  }
+}
+
+#learnView[data-motion='reduce'] .feedback.correct {
+  animation: none;
+}
+
+/* ---------------------------------------------- Ten Stars: practice */
+
+.ts-modes {
+  border: 0;
+  margin: 0 0 var(--s4);
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: var(--s2) var(--s4);
+}
+
+.ts-modes legend {
+  font-family: var(--lira);
+  font-size: 1.2em;
+  padding: 0 0 var(--s2);
+}
+
+.ts-modes label {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 2px var(--s2);
+  align-items: start;
+  min-height: 44px;
+  padding: var(--s2);
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  background: var(--glass);
+  cursor: pointer;
+}
+
+.ts-modes label > span:last-child {
+  grid-column: 2;
+  color: var(--ink-faint);
+  font-size: 0.85em;
+}
+
+.ts-modes input {
+  margin-top: 0.25em;
+  width: 1.1em;
+  height: 1.1em;
+  accent-color: var(--gold);
+}
+
+.ts-modes label.off {
+  opacity: 0.6;
+  cursor: default;
+}
+
+/* reflect: brighter or dimmer by how each word went, and said in words */
+.ts-reflect .ts-dot {
+  transition: none;
+}
+
+.ts-star.glow-bright .ts-dot {
+  width: 14px;
+  height: 14px;
+  box-shadow:
+    0 0 8px 3px var(--glow),
+    0 0 26px 8px var(--glow);
+}
+
+.ts-star.glow-steady .ts-dot {
+  opacity: 0.8;
+}
+
+.ts-star.glow-unasked .ts-dot {
+  opacity: 0.35;
+  box-shadow: none;
+  animation: none;
+}
+
+.ts-star.glow-faint .ts-dot {
+  width: 7px;
+  height: 7px;
+  opacity: 0.45;
+  box-shadow: none;
+}
+
+.ts-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.ts-how {
+  font-size: 0.72em;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+.ts-star.glow-bright .ts-how {
+  color: var(--gold);
+}
+
+/* ============================================================== The Loom */
+
+/* the map: each depth a thread, each rule a knot on it */
+.loom-group {
+  margin: 0 0 var(--s5);
+}
+
+.loom-group h3 {
+  margin-bottom: var(--s3);
+}
+
+.thread {
+  list-style: none;
+  margin: 0;
+  padding: var(--s2) 0 var(--s2) var(--s2);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s2);
+  position: relative;
+}
+
+/* the thread itself: a fine line the knots sit on */
+.thread::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  border-top: 1px dashed var(--rule-firm);
+  z-index: 0;
+}
+
+.thread + .thread {
+  margin-left: var(--s4);
+}
+
+.knot {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s2);
+  min-height: 44px;
+  padding: var(--s1) var(--s3);
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  background: var(--page);
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.88em;
+  cursor: pointer;
+  transition:
+    border-color var(--t-soft) var(--ease),
+    box-shadow var(--t-soft) var(--ease);
+}
+
+.knot:hover,
+.knot:focus-visible {
+  border-color: var(--rule-firm);
+  box-shadow: 0 0 0 1px var(--glow);
+}
+
+/* mastery as light: the knot's dot brightens with it */
+.knot-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: 1px solid var(--ink-faint);
+  background: color-mix(in srgb, var(--star) calc(var(--m, 0) * 100%), transparent);
+  box-shadow: 0 0 calc(var(--m, 0) * 12px) calc(var(--m, 0) * 3px) var(--glow);
+  flex: none;
+}
+
+.knot-state {
+  font-size: 0.75em;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+.knot-woven {
+  border-color: var(--gold);
+}
+
+.knot-woven .knot-state {
+  color: var(--gold);
+}
+
+.knot-open .knot-state {
+  color: var(--accent);
+}
+
+.knot-quiet {
+  opacity: 0.7;
+  border-style: dashed;
+}
+
+/* the lesson */
+.loom-steps {
+  list-style: none;
+  padding: 0;
+  margin: var(--s3) 0 var(--s4);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s2);
+}
+
+.loom-steps button {
+  min-height: 44px;
+  padding: var(--s2) var(--s4);
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  background: none;
+  color: var(--ink-soft);
+  font: inherit;
+  cursor: pointer;
+}
+
+.loom-steps button[aria-current='step'] {
+  color: var(--ink);
+  border-color: var(--gold);
+  background: var(--glass);
+  box-shadow: 0 0 0 1px var(--glow);
+}
+
+.step-n {
+  font-family: var(--mono);
+  font-size: 0.8em;
+  color: var(--gold);
+}
+
+.loom-pattern code {
+  font-family: var(--mono);
+  font-size: 0.95em;
+  color: var(--ink);
+  background: var(--raised);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 2px 8px;
+  line-height: 2;
+}
+
+.loom-explain {
+  font-size: 1.08em;
+  line-height: 1.6;
+  max-width: 64ch;
+}
+
+.loom-words {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s2) var(--s4);
+}
+
+.loom-links {
+  color: var(--ink-soft);
+}
+
+.loom-links span {
+  color: var(--ink-faint);
+}
+
+.loom-next {
+  margin-top: var(--s5);
+}
+
+.loom-use {
+  width: 100%;
+  font-size: 1.2em;
+  color: var(--ink);
+  background: var(--page);
+  border: 1px solid var(--rule-firm);
+  border-radius: 8px;
+  padding: var(--s2) var(--s3);
+  margin: var(--s2) 0;
+}
+
+/* watch it: the words arrive one by one; the morphemes slide together */
+.loom-build .build {
+  animation: loom-arrive 420ms var(--ease) both;
+  animation-delay: calc(var(--i, 0) * 260ms);
+}
+
+.loom-build .w.build {
+  display: inline-flex;
+  flex-direction: column;
+  padding: var(--s1) var(--s2);
+}
+
+@keyframes loom-arrive {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.loom-morph {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--s2);
+  font-family: var(--lira);
+  font-size: 1.6em;
+  margin: var(--s3) 0 var(--s4);
+}
+
+.morph {
+  animation: loom-slide 520ms var(--ease) both;
+  animation-delay: calc(var(--i, 0) * 380ms);
+}
+
+.morph-marker {
+  color: var(--gold);
+}
+
+.morph-whole {
+  text-shadow: 0 0 18px var(--glow);
+}
+
+.morph-plus,
+.morph-eq {
+  color: var(--ink-faint);
+  font-family: var(--ui);
+  font-size: 0.7em;
+}
+
+@keyframes loom-slide {
+  from {
+    opacity: 0;
+    transform: translateX(-14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loom-build .build,
+  .morph {
+    animation: none;
+  }
+
+  .knot {
+    transition: none;
+  }
+}
+
+#learnView[data-motion='reduce'] .loom-build .build,
+#learnView[data-motion='reduce'] .morph {
+  animation: none;
+}
+
+#learnView[data-motion='reduce'] .knot {
+  transition: none;
+}
+
+@media (max-width: 720px) {
+  .thread + .thread {
+    margin-left: 0;
+  }
+
+  .thread::before {
+    display: none;
+  }
+}
+
+/* ============================================================ the Sandbox */
+
+/* wide: the menus on the left, the sentence beside them, staying in view */
+.lmain > .inner:has(> .sandbox) {
+  max-width: 1180px;
+}
+
+.sb-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+  gap: var(--s5);
+  align-items: start;
+}
+
+.sb-panel {
+  grid-column: 2;
+  grid-row: 1;
+  position: sticky;
+  top: 0;
+  max-height: calc(100vh - 140px);
+  overflow-y: auto;
+}
+
+.sb-form {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.sb-form fieldset.lcard:first-of-type {
+  margin-top: var(--s2);
+}
+
+.sb-line {
+  margin: 0 0 var(--s3);
+}
+
+.sb-line .lw {
+  font-size: 1.8em;
+  text-shadow: 0 0 22px var(--glow);
+}
+
+.sb-il .sb-piece {
+  display: inline-flex;
+  flex-direction: column;
+  padding: var(--s1) var(--s2);
+  border-bottom: 2px solid transparent;
+}
+
+/* the role is said by position and gloss; the underline only echoes it */
+.sb-il .sb-subject {
+  border-bottom-color: var(--accent);
+}
+
+.sb-il .sb-verb {
+  border-bottom-color: var(--gold);
+}
+
+.sb-il .sb-object {
+  border-bottom-color: var(--ok);
+}
+
+.sb-reading {
+  color: var(--ink-soft);
+  margin: var(--s3) 0 var(--s2);
+}
+
+.sb-verdict {
+  margin: var(--s2) 0;
+  padding: var(--s2) var(--s3);
+  border-left: 3px solid var(--rule-firm);
+  border-radius: 4px;
+}
+
+.sb-clean {
+  border-left-color: var(--ok);
+  background: var(--accent-soft);
+}
+
+.sb-clean span {
+  color: var(--gold);
+}
+
+.sb-notes {
+  border-left-color: var(--gold);
+  background: var(--gold-soft);
+}
+
+.sb-notes ul {
+  margin: var(--s1) 0 0;
+  padding-left: 1.2em;
+}
+
+.sb-quiet {
+  color: var(--ink-soft);
+}
+
+.sb-why summary {
+  cursor: pointer;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  color: var(--ink-soft);
+}
+
+.sb-why ul {
+  margin: 0;
+  padding-left: 1.2em;
+}
+
+.sb-why li {
+  padding: 2px 0;
+}
+
+.sb-actions {
+  margin: var(--s3) 0 var(--s1);
+}
+
+.sb-form fieldset.lcard {
+  margin: var(--s4) 0 0;
+}
+
+.sb-form legend {
+  font-family: var(--lira);
+  font-size: 1.2em;
+  padding: 0 var(--s2);
+}
+
+.sb-check {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s2);
+  min-height: 44px;
+  margin-right: var(--s4);
+}
+
+.sb-check input {
+  width: 1.1em;
+  height: 1.1em;
+  accent-color: var(--gold);
+}
+
+/* narrow: the sentence first, then the menus, nothing pinned */
+@media (max-width: 980px) {
+  .sb-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sb-panel,
+  .sb-form {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .sb-panel {
+    position: static;
+    max-height: none;
+  }
+}
+
+/* ========================================================= the Observatory */
+
+.obs section {
+  margin: 0 0 var(--s6);
+}
+
+.obs-notes {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--s3);
+}
+
+.obs-notes li {
+  line-height: 1.6;
+}
+
+.obs-notes .pill {
+  margin-right: var(--s2);
+}
+
+.obs-retired {
+  border-left: 3px solid var(--gold);
+}
+
+/* the sky: a round field, stars placed on a golden-angle spiral */
+.obs-sky {
+  list-style: none;
+  margin: var(--s3) auto var(--s4);
+  padding: 0;
+  position: relative;
+  width: min(100%, 640px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 50%, var(--nebula), transparent 65%),
+    radial-gradient(circle at 50% 50%, transparent 69%, var(--rule) 70%, transparent 71%);
+}
+
+.obs-star {
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.obs-star button {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: none;
+  cursor: pointer;
+  position: relative;
+}
+
+/* brightness and size grow with mastery; a faint ring keeps a new star visible */
+.obs-dot {
+  width: calc(5px + var(--m, 0) * 9px);
+  height: calc(5px + var(--m, 0) * 9px);
+  border-radius: 50%;
+  background: var(--star);
+  opacity: calc(0.35 + var(--m, 0) * 0.65);
+  box-shadow: 0 0 calc(2px + var(--m, 0) * 14px) calc(var(--m, 0) * 4px) var(--glow);
+  outline: 1px solid color-mix(in srgb, var(--star) 30%, transparent);
+  outline-offset: 2px;
+}
+
+.obs-star.irregular .obs-dot {
+  border-radius: 0;
+  width: calc(10px + var(--m, 0) * 10px);
+  height: calc(10px + var(--m, 0) * 10px);
+  clip-path: polygon(50% 0, 62% 38%, 100% 50%, 62% 62%, 50% 100%, 38% 62%, 0 50%, 38% 38%);
+  background: var(--gold);
+  outline: none;
+}
+
+/* the word's name appears on hover or focus, beside its star */
+.obs-label {
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  padding: 2px 8px;
+  border-radius: 6px;
+  background: var(--page);
+  border: 1px solid var(--rule-firm);
+  font-size: 0.95em;
+  pointer-events: none;
+  opacity: 0;
+  z-index: 3;
+}
+
+.obs-star button:hover .obs-label,
+.obs-star button:focus-visible .obs-label {
+  opacity: 1;
+}
+
+.obs-star button:focus-visible {
+  outline: 2px solid var(--accent);
+}
+
+.obs-list summary {
+  cursor: pointer;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  color: var(--ink-soft);
+}

@@ -25,3 +25,6 @@ liraasa_voice_lab/.venv/
 
 # The latest grammar guide, copied there by `npm run publish:guide` (the Stop hook).
 LirasaCodexLatest/
+
+# The GitHub Pages site, assembled by scripts/build_site.sh.
+_site/

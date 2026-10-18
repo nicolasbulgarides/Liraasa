@@ -54,7 +54,9 @@ describe('the data adapter', () => {
       lex.correlatives.length +
       lex.time_and_dates.length +
       lex.colors.length +
-      lex.discourse_particles.length;
+      lex.discourse_particles.length +
+      // the attested image compounds keep their ids (2.0:G40)
+      (lex.image_compounds?.attested.length ?? 0);
     expect(data.items.size).toBe(expected);
     for (const h of lex.headwords) {
       const item = data.items.get(h.id!);
@@ -68,7 +70,8 @@ describe('the data adapter', () => {
       if (item.kind !== 'compound') continue;
       expect(item.components, item.spelling).not.toBeNull();
       const [modifier, head] = item.components ?? [];
-      expect(data.items.get(modifier ?? '')?.kind).toMatch(/root|compound/);
+      // the modifier may be a colour base (2.0:G38)
+      expect(data.items.get(modifier ?? '')?.kind).toMatch(/root|compound|color/);
       expect(data.items.get(head ?? '')?.kind).toMatch(/root|compound/);
       for (const part of item.components ?? []) {
         expect(data.items.get(part)?.usedIn, item.spelling).toContain(item.id);

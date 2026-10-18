@@ -16,7 +16,8 @@ export function esc(text: string): string {
 }
 
 /** How a recorded Liraasa string is to be checked. */
-export type WordUse = 'text' | 'unused-slot' | 'retired' | 'morpheme';
+/** `name`: a foreign name copied into Liraasa letters (2.0:G45), not a word of the lexicon. */
+export type WordUse = 'text' | 'unused-slot' | 'retired' | 'morpheme' | 'name';
 
 export const recorded: { text: string; use: WordUse }[] = [];
 
@@ -60,7 +61,15 @@ export function md(text: string): string {
 export function badge(id: string): string {
   const edition = id.split(':')[0] ?? '';
   const cls =
-    edition === '1.2' ? 'b12' : edition === '1.0' ? 'b10' : edition === '0.8' ? 'b08' : 'badr';
+    edition === '2.0'
+      ? 'b20'
+      : edition === '1.2'
+        ? 'b12'
+        : edition === '1.0'
+          ? 'b10'
+          : edition === '0.8'
+            ? 'b08'
+            : 'badr';
   return `<span class="badge ${cls}" title="Ruling ${esc(id)}">${esc(id)}</span>`;
 }
 
@@ -195,7 +204,28 @@ export function h4(title: string): string {
 export function part(n: string, title: string, intro: string, body: string): string {
   const id = uniqueId(slug(`part-${n}-${title}`));
   return `<section class="part" aria-labelledby="${id}">
-<header class="part-head"><div class="part-num" aria-hidden="true">${esc(n)}</div><h2 id="${id}" data-toc="${esc(`${n}. ${title}`)}"><span class="visually-hidden">Part ${esc(n)}: </span>${esc(title)}</h2><p class="part-intro">${md(intro)}</p></header>
+<header class="part-head"><div class="part-num" aria-hidden="true"><span class="part-word">Part</span>${esc(n)}</div><h2 id="${id}" data-toc="${esc(`${n}. ${title}`)}"><span class="visually-hidden">Part ${esc(n)}: </span>${esc(title)}</h2><p class="part-intro">${md(intro)}</p></header>
 ${body}
 </section>`;
+}
+
+/**
+ * Sentences on the page that are not canon examples, though every word in
+ * them is: they wait for the author's review, and each build lists them.
+ */
+export const awaitingReview: { liraasa: string; english: string; where: string }[] = [];
+
+/** Decisions only the author can make, each shown on the page as a placeholder. */
+export const decisionsNeeded: { what: string; where: string }[] = [];
+
+/** Register a non-canon sentence for review; returns it unchanged. */
+export function forReview(liraasa: string, english: string, where: string): string {
+  awaitingReview.push({ liraasa, english, where });
+  return liraasa;
+}
+
+/** A visible placeholder for a decision the author has not made. */
+export function decide(what: string, where: string): string {
+  decisionsNeeded.push({ what, where });
+  return `<span class="decide" role="note">Decision needed: ${esc(what)}</span>`;
 }

@@ -1,0 +1,4 @@
+{
+ "about": "The author's recordings of Liraasa, read by Learn (TRAINING_DECISIONS D9). Each key is a word's id (lx_…) or a sentence's key (ex:…); each value is a path under data/audio/. Run npm run build:learn after an edit: it bundles the files that exist and reports any that do not. Learn → Settings → Audio lists the words still to record, most used first, as lines ready to paste here.",
+ "files": {}
+}

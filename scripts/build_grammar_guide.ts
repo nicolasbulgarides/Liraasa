@@ -1,65 +1,43 @@
 /**
- * CLI: build the Liraasa grammar guide from the handoff lexicon.
+ * CLI: build the Liraasa Reference Grammar from the handoff lexicon.
  *
  *   npm run build:guide            # rebuild the handoff JSON, then the guide
  *   npm run build:guide -- --pdf   # also print it to PDF with Edge or Chrome
  *
+ * Then builds the Invitation (scripts/build_invitation.ts) with the same flags.
+ *
  * Writes handoff/<name>.html (and .pdf). Every table, count, ruling and
- * example is read from handoff/liraasa_1_2_complete.json; the teaching prose
- * lives in scripts/grammar_guide/chapters.ts; which words get a full
- * breakdown is set in scripts/grammar_guide/config.ts.
+ * example is read from handoff/liraasa_2_0_complete.json; the teaching prose
+ * lives in scripts/grammar_guide/chapters.ts; the song, the treasury words
+ * and the image-compound samples are set in scripts/grammar_guide/config.ts.
  *
  * Before writing, every piece of Liraasa on the page is checked against the
  * lexicon. A word that is not canon, or a form whose slot is unused shown as
  * if it meant something, fails the build (CLAUDE.md: never invent a word).
  */
 import { execFileSync } from 'node:child_process';
-import { existsSync, mkdirSync, writeFileSync } from 'node:fs';
+import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
-import { pathToFileURL } from 'node:url';
 import {
   appendices,
   clausePart,
   openQuestionsPart,
-  parsingPart,
   recipesPart,
-  rulingsPart,
   smallWordsPart,
   soundPart,
   welcome,
   wordsPart,
 } from './grammar_guide/chapters';
+import { checkWords, pdfPages, printPdf, reviewMarkdown } from './grammar_guide/check';
 import { GUIDE } from './grammar_guide/config';
-import { coreWordsPart } from './grammar_guide/core_words';
-import { changelogPart, newWordsPart } from './grammar_guide/new_in_1_2';
+import { songPart } from './grammar_guide/song';
+import { treasuryPart } from './grammar_guide/treasury';
+import { rulingIndex, rulingsMarkdown, type RenderedPart } from './grammar_guide/rulings';
 import { corner, divider, emblem, melody, rosette, starfield } from './grammar_guide/cover';
-import { Index, loadIdIndex, loadLexicon, tokenize } from './grammar_guide/data';
+import { Index, loadLexicon, tokenize } from './grammar_guide/data';
 import { esc, lir, recorded, tocEntries, type TocEntry } from './grammar_guide/html';
 import { CSS } from './grammar_guide/style';
 import { parseArgs } from './args';
-
-const MORPHEME = /^[-+]|[-+]$|\+|^R\b|^VERB$/;
-
-/** Every recorded Liraasa string must be canon. Returns the problems found. */
-function checkWords(index: Index): string[] {
-  const problems = new Set<string>();
-  for (const { text, use } of recorded) {
-    if (use === 'morpheme') {
-      if (!MORPHEME.test(text) && !index.isWord(text.toLowerCase())) {
-        problems.add(`morpheme "${text}" is neither a bound form nor a word`);
-      }
-      continue;
-    }
-    for (const token of tokenize(text)) {
-      if (use === 'retired') continue;
-      if (!index.isWord(token)) problems.add(`"${token}" (in "${text}") is not a word of Liraasa`);
-      if (use === 'text' && index.unusedReadings(token).length > 0) {
-        problems.add(`"${token}" is an unused slot shown as live text`);
-      }
-    }
-  }
-  return [...problems];
-}
 
 function tocHtml(toc: readonly TocEntry[]): string {
   const items = toc
@@ -68,40 +46,55 @@ function tocHtml(toc: readonly TocEntry[]): string {
   return `<nav class="toc" aria-labelledby="toc-h"><h2 id="toc-h">Contents</h2><ol>${items}</ol></nav>`;
 }
 
-function findBrowser(): string | undefined {
-  const candidates = [
-    process.env.GUIDE_BROWSER,
-    'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe',
-    'C:/Program Files/Microsoft/Edge/Application/msedge.exe',
-    'C:/Program Files/Google/Chrome/Application/chrome.exe',
-    '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
-    '/usr/bin/google-chrome',
-    '/usr/bin/chromium',
-  ];
-  return candidates.find((c): c is string => c !== undefined && existsSync(c));
-}
-
 function main(): void {
   const args = parseArgs(process.argv.slice(2), ['lexicon', 'out']);
   const lexPath = args.flags.lexicon ?? GUIDE.lexicon;
   const lex = loadLexicon(lexPath);
   const index = new Index(lex);
-  const ids = loadIdIndex(GUIDE.ids);
 
-  const body = [
+  const editions = lex as unknown as {
+    counts_1_1_to_1_2?: { before: { headwords: number }; after: { headwords: number } };
+    counts_1_2_to_2_0?: { after: { headwords: number }; imageCompoundsAttested: number };
+  };
+  const v10 = (
+    JSON.parse(readFileSync(resolve(GUIDE.lexicon10), 'utf8')) as { headwords: unknown[] }
+  ).headwords.length;
+
+  const parts = [
     welcome(index),
     soundPart(index),
     wordsPart(index),
-    coreWordsPart(index, ids),
-    newWordsPart(index),
     smallWordsPart(index),
     clausePart(index),
-    recipesPart(),
-    rulingsPart(index),
-    parsingPart(),
-    openQuestionsPart(),
-    changelogPart(index),
-    appendices(index),
+    recipesPart(index),
+    songPart(index, '7'),
+    treasuryPart(index, '8'),
+    openQuestionsPart('9'),
+  ];
+  // every Liraasa word and phrase shown so far: Appendix A lists only the function words not among them
+  const shownTexts = recorded.filter((r) => r.use !== 'morpheme').map((r) => r.text.toLowerCase());
+  const shownTokens = new Set(shownTexts.flatMap((t) => tokenize(t)));
+  const isShown = (form: string): boolean =>
+    form.includes(' ') ? shownTexts.some((t) => t.includes(form)) : shownTokens.has(form);
+  const rendered: RenderedPart[] = parts.map((html) => ({
+    title: /data-toc="([^"]*)"/.exec(html)?.[1] ?? '',
+    html,
+  }));
+  const rulingsFile = `${GUIDE.outName.replace('Reference_Grammar', 'Rulings')}.md`;
+  const body = [
+    ...parts,
+    appendices(
+      index,
+      isShown,
+      {
+        v10,
+        v11: editions.counts_1_1_to_1_2?.before.headwords ?? 0,
+        v12: editions.counts_1_1_to_1_2?.after.headwords ?? 0,
+        v20: editions.counts_1_2_to_2_0?.after.headwords ?? lex.headwords.length,
+        attested: editions.counts_1_2_to_2_0?.imageCompoundsAttested ?? 0,
+      },
+      rulingIndex(lex, rendered, rulingsFile),
+    ),
   ].join('\n');
   const toc = tocEntries(body);
 
@@ -131,18 +124,17 @@ ${starfield()}${rosette()}${corner('tl')}${corner('tr')}${corner('bl')}${corner(
 ${emblem()}
 <p class="motif">${GUIDE.coverMotif.map(([w]) => lir(w)).join('<span class="sep" aria-hidden="true"> · </span>')}<span class="motif-en">${GUIDE.coverMotif.map(([, e]) => esc(e)).join(' · ')}</span></p>
 <p class="eyebrow">The grammar of</p>
-<h1>${lir('Liraasa')}<span class="visually-hidden"> </span>${esc(lex.version)} Grammar Guide</h1>
+<h1>${lir('Liraasa')}<span class="visually-hidden"> </span>${esc(lex.version)} Reference Grammar</h1>
 <p class="sub">${esc(GUIDE.subtitle)}</p>
 ${divider()}
 ${melody()}
-<p class="meta">Liraasa ${esc(lex.version)}: all of 1.0, the 1.1 vocabulary supplement, and the 1.2 rulings and new words<br>
-Lexicon built ${esc(built)} · ${String(lex.headwords.length)} headwords · generated by the Liraasa Workbench</p>
+<p class="meta">Liraasa ${esc(lex.version)} · ${esc(built)}</p>
 </div>
 </header>
 ${tocHtml(toc)}
 ${body}
 <footer class="colophon">
-<p>Generated by <code>npm run build:guide</code> from <code>${esc(lexPath)}</code>. Every Liraasa word on these pages was checked against the lexicon at build time; where this guide and the lexicon disagree, the lexicon wins.</p>
+<p>Generated by the Liraasa Workbench on ${esc(built)}. Every Liraasa word on these pages was checked against the lexicon; where they disagree, the lexicon wins.</p>
 </footer>
 </main>
 </body>
@@ -154,30 +146,34 @@ ${body}
   const htmlPath = resolve(outDir, `${GUIDE.outName}.html`);
   writeFileSync(htmlPath, html, 'utf8');
   console.log(`wrote ${htmlPath}`);
+  const legacy = [
+    ...lex.legacy.retired_roots,
+    ...lex.legacy.respelled_roots.map((r) => ({ old: r.old, replacement: r.new })),
+  ];
+  writeFileSync(resolve(outDir, rulingsFile), rulingsMarkdown(lex, GUIDE.title, legacy), 'utf8');
+  console.log(`wrote ${resolve(outDir, rulingsFile)}`);
+  const reviewPath = resolve('review', `${GUIDE.outName}_review.md`);
+  writeFileSync(reviewPath, reviewMarkdown(GUIDE.title), 'utf8');
+  console.log(`wrote ${reviewPath}`);
   console.log(
     `  ${String(toc.length)} contents entries, ${String(recorded.length)} Liraasa strings checked`,
   );
 
   if (args.booleans.has('pdf')) {
-    const browser = findBrowser();
-    if (browser === undefined) {
-      console.error('--pdf: no Edge or Chrome found; set GUIDE_BROWSER to its path');
-      process.exit(1);
-    }
     const pdfPath = resolve(outDir, `${GUIDE.outName}.pdf`);
-    execFileSync(
-      browser,
-      [
-        '--headless=new',
-        '--disable-gpu',
-        '--no-pdf-header-footer',
-        `--print-to-pdf=${pdfPath}`,
-        pathToFileURL(htmlPath).href,
-      ],
-      { stdio: 'ignore' },
-    );
-    console.log(`wrote ${pdfPath}`);
+    printPdf(htmlPath, pdfPath);
+    console.log(`wrote ${pdfPath} (${String(pdfPages(pdfPath))} pages)`);
   }
+
+  // The Invitation is built from the same lexicon, in its own process: each
+  // document's word check reads only the words that document recorded.
+  execFileSync(
+    process.execPath,
+    [...process.execArgv, resolve('scripts/build_invitation.ts'), ...process.argv.slice(2)],
+    {
+      stdio: 'inherit',
+    },
+  );
 }
 
 main();

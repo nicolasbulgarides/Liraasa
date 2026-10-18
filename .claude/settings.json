@@ -6,8 +6,8 @@
           {
             "type": "command",
             "command": "cd \"$CLAUDE_PROJECT_DIR\" && npx tsx scripts/publish_guide.ts",
-            "timeout": 180,
-            "statusMessage": "Checking whether the grammar guide needs a rebuild"
+            "timeout": 300,
+            "statusMessage": "Checking whether the guide needs a rebuild and a push to GitHub"
           }
         ]
       }

@@ -9,7 +9,7 @@ import { basename, join } from 'node:path';
 import { parseOverrides, type CorpusFile, type LearnInput } from '../src/core/learn';
 import type { RawLexicon } from '../src/core/model/raw';
 
-export const LEARN_LEXICON = 'data/lexicon/liraasa_1_2.json';
+export const LEARN_LEXICON = 'data/lexicon/liraasa_2_0.json';
 export const LEARN_OVERRIDES = 'data/lessons/overrides.json';
 export const CORPUS_DIRS = ['data/corpus/songs_1_0', 'data/corpus/bumrepago_1_0'];
 const NAMES = 'data/checker/names.json';

@@ -13,7 +13,14 @@ interface SongLine {
   original: string;
   fixed: string;
   english: string;
-  expect: { phase: number; severity: string; rule: string; token: string }[];
+  expect: {
+    phase: number;
+    severity: string;
+    rule: string;
+    token: string;
+    /** A later edition's data made this diagnostic disappear, on the record (never silently). */
+    superseded?: { in: string; why: string };
+  }[];
 }
 const read = (rel: string): unknown =>
   JSON.parse(readFileSync(fileURLToPath(new URL(rel, import.meta.url)), 'utf8'));
@@ -44,13 +51,14 @@ describe('the fixture song', () => {
     for (const l of song.lines) {
       for (const e of l.expect.filter((x) => x.phase === 4)) {
         const d = checker.checkLine(l.original, l.n, l.english);
+        // a superseded expectation must really be gone: the record says why
         expect(
           d.some(
             (x) =>
               x.rule === e.rule && x.severity === e.severity && x.token?.toLowerCase() === e.token,
           ),
-          `line ${String(l.n)}: ${e.severity} ${e.rule} on “${e.token}”`,
-        ).toBe(true);
+          `line ${String(l.n)}: ${e.severity} ${e.rule} on “${e.token}”${e.superseded ? ` (superseded in ${e.superseded.in})` : ''}`,
+        ).toBe(e.superseded === undefined);
       }
     }
   });
@@ -66,15 +74,16 @@ describe('the fixture song', () => {
   });
 
   it('gloss drift points at the culprit and offers the form that means the English', () => {
+    // the song's own case (mareasasan, line 2) was superseded in 2.0; the same shape with amor
     const [d] = english(
-      'mareasasan velu po savalisia maivo su li lehe.',
-      'A mother star kissed me on the cheek.',
+      'amorasasan velu po savalisia maivo su li lehe.',
+      'A loving star kissed me on the cheek.',
     );
     expect(d).toMatchObject({
       severity: 'warn',
       rule: 'gloss drift',
-      token: 'mareasasan',
-      fix: 'maresan',
+      token: 'amorasasan',
+      fix: 'amorsan',
     });
   });
 });

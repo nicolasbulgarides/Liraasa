@@ -1,0 +1,108 @@
+{
+ "id": "2026-10-18-lexicon-2-0-review",
+ "edition": "2.0",
+ "created": "2026-10-18T18:00:00Z",
+ "author": "nicolas",
+ "summary": "The 2.0 grammar-guide review (ADR-0016 addendum): rulings 2.0:G43 (consonant values), G44 (neighbouring vowels in song) and G45 (foreign names), from the author's answers of 2026-10-18; lumiasa reglossed \"Divine Light, Goddess\", then \"Her Divine Light\"; two gloss typos fixed. No grammar rule changes.",
+ "rulings": [
+  {
+   "id": "G43",
+   "topic": "Consonant values",
+   "ruling": "Vowels are pure, as in Spanish or Italian. l m n s v b d p t f k sound as in English; y as in \"yes\"; r is a single tap, as in Spanish \"pero\"; g is always hard, as in \"go\"; h as in \"hope\"; z as in \"zone\". c is always \"ch\" as in \"chant\", before every vowel: ca = cha, co = cho, and likewise ce, ci, cu. j is the voiced partner of c, as in \"jewel\". sh is as in \"shade\"; ch, written only in a few colour and number words, is the same sound as c.",
+   "refines": [],
+   "examples": []
+  },
+  {
+   "id": "G44",
+   "topic": "Neighbouring vowels in song",
+   "ruling": "Every written vowel is its own syllable (0.8:R8), but in singing neighbouring vowels may glide into one note: benaasa may be sung be-na-a-sa or be-naa-sa. The spelling never changes; the songwriter chooses the count the melody needs.",
+   "refines": [
+    "0.8:R8"
+   ],
+   "examples": []
+  },
+  {
+   "id": "G45",
+   "topic": "Foreign names",
+   "ruling": "A foreign name is not translated. It is copied as closely as Liraasa letters allow, choosing among near spellings by how the name sounds and sings.",
+   "refines": [],
+   "examples": []
+  }
+ ],
+ "ops": [
+  {
+   "entry": "lx_lumi_0302",
+   "op": "edit_gloss",
+   "slot": "ascended",
+   "from": "Divine Light, God",
+   "to": "Divine Light, Goddess",
+   "reason": "Author decision, 2026-10-18: the ascended light is the Goddess, in keeping with the goddess-centric design.",
+   "addedIn": "2.0",
+   "at": "2026-10-18T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lumi_0302",
+   "op": "edit_gloss",
+   "slot": "ascended",
+   "from": "Divine Light, Goddess",
+   "to": "Her Divine Light",
+   "reason": "Author decision, 2026-10-18 (guide review, second pass): lumiasa is the Goddess's light, not the Goddess herself; deviasa is the Great Goddess. On Lament line 11 the Goddess waits in her own light.",
+   "addedIn": "2.0",
+   "at": "2026-10-18T19:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lumi_0302",
+   "op": "edit_gloss",
+   "slot": "negativeAdjective",
+   "from": "Without Light (Ireedeemable)",
+   "to": "Without Light (Irredeemable)",
+   "reason": "Typo: \"Ireedeemable\" for \"Irredeemable\".",
+   "addedIn": "2.0",
+   "at": "2026-10-18T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_krono_0193",
+   "op": "edit_gloss",
+   "slot": "ascendedAdjective",
+   "from": "Beyond Time, Timeless, ",
+   "to": "Beyond Time, Timeless",
+   "reason": "Typo: a trailing comma and space.",
+   "addedIn": "2.0",
+   "at": "2026-10-18T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "2.0:G43",
+   "op": "add_ruling",
+   "from": null,
+   "to": "Consonant values",
+   "reason": "Author decision, 2026-10-18 (grammar guide review). The sound values of c (ca = cha, co = cho), and the rest chosen for musicality; the phonology section listed the letters without their values.",
+   "addedIn": "2.0",
+   "at": "2026-10-18T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "2.0:G44",
+   "op": "add_ruling",
+   "from": null,
+   "to": "Neighbouring vowels in song",
+   "reason": "Author decision, 2026-10-18 (grammar guide review). Neighbouring vowels may glide in singing.",
+   "addedIn": "2.0",
+   "at": "2026-10-18T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "2.0:G45",
+   "op": "add_ruling",
+   "from": null,
+   "to": "Foreign names",
+   "reason": "Author decision, 2026-10-18 (grammar guide review). Foreign names are copied as closely as possible, by how they sound and sing.",
+   "addedIn": "2.0",
+   "at": "2026-10-18T18:00:00Z",
+   "author": "nicolas"
+  }
+ ]
+}

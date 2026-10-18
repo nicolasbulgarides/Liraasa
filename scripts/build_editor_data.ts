@@ -15,7 +15,7 @@ import { phoneInventory } from '../src/core/phonetics/g2p';
 import type { RawLexicon } from '../src/core/model/raw';
 import { parseArgs } from './args';
 
-const DEFAULT_LEXICON = 'data/lexicon/liraasa_1_2.json';
+const DEFAULT_LEXICON = 'data/lexicon/liraasa_2_0.json';
 /**
  * Grammar rulings on top of 1.1 (ADR-0012). A 1.1 lexicon needs them applied
  * here; 1.2 already carries them as `rulings_1_2`, its examples revised
@@ -124,8 +124,19 @@ function main(): void {
       phones: phoneInventory('ipa'),
     },
     motionPrefixes: Object.keys(lex.motion_prefixes.canon),
-    // [id, topic, ruling, examples]; newest edition first.
+    // [id, topic, ruling, examples]; newest edition first (2.0, then 1.2, …).
     rulings: [
+      ...Object.keys(lex)
+        .filter((k) => /^rulings_\d+_\d+$/.test(k) && k !== 'rulings_1_0' && k !== 'rulings_1_2')
+        .reverse()
+        .flatMap((k) =>
+          ((lex as unknown as Record<string, GrammarChangeset['rulings']>)[k] ?? []).map((r) => [
+            `${k.slice('rulings_'.length).replace('_', '.')}:${r.id}`,
+            r.topic,
+            r.ruling,
+            r.examples,
+          ]),
+        ),
       ...(lexRulings12 ?? grammar.rulings).map((r) => [
         `1.2:${r.id}`,
         r.topic,

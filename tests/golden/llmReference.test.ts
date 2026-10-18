@@ -5,7 +5,7 @@ import { FORM_SLOTS, SLOT_RAW_KEY, isUnusedGloss } from '../../src/core/config/s
 import type { RawLexicon } from '../../src/core/model/raw';
 
 /**
- * handoff/liraasa_1_2_llm.json: the one-file reference for language models
+ * handoff/liraasa_2_0_llm.json: the one-file reference for language models
  * (npm run build:llm). Its dictionary is one line per headword; parsing every
  * line back must give exactly the lexicon's meaningful forms, so the compact
  * format is lossless and adds nothing.
@@ -16,23 +16,29 @@ const read = (path: string): unknown =>
 
 interface Reference {
   rulings: { id: string }[];
+  word_building: {
+    image_compounds?: { attested: Record<string, string>; modifiers: object; heads: object };
+    derivation_defaults?: Record<string, string>;
+  };
   dictionary: { role_codes: Record<string, string>; by_domain: Record<string, string[]> };
   small_words: { function_words: { rows: string[][] } };
   examples: { sentences: [string, string][] };
 }
 
-const llm = read('../../handoff/liraasa_1_2_llm.json') as Reference;
-const latest = read('../../LirasaCodexLatest/liraasa_1_2_llm.json');
-const lex = read('../../data/lexicon/liraasa_1_2.json') as RawLexicon;
+const llm = read('../../handoff/liraasa_2_0_llm.json') as Reference;
+const latest = read('../../LirasaCodexLatest/liraasa_2_0_llm.json');
+const lex = read('../../data/lexicon/liraasa_2_0.json') as RawLexicon;
 const lines = Object.values(llm.dictionary.by_domain).flat();
 const CODE = ['n', 'an', 'nn', 'v', 'na', 'a', 'aa'];
-const LINE = /^([a-z]+)(?: \[([a-z]+)\+([a-z]+)\])?(?: \{([^}]*)\})?: (.*)$/;
+/** HEADWORD [PART+PART(+-SUFFIX)] {FLAGS}: … (a lexicalised suffix: 2.0:G38) */
+const LINE = /^([a-z]+)(?: \[([a-z]+)\+([a-z]+)(?:\+-([a-z]+))?\])?(?: \{([^}]*)\})?: (.*)$/;
 /** A form, or just `(n) …` for the noun form, which is the headword itself. */
 const FORM = /^(?:([a-z]+) )?\(([a-z]+)\) (.*)$/;
 
 interface Parsed {
   word: string;
   parts: [string, string] | null;
+  suffix: string | null;
   flags: string[];
   forms: [string, string, string][];
 }
@@ -40,7 +46,7 @@ interface Parsed {
 function parse(line: string): Parsed {
   const m = LINE.exec(line);
   if (m === null) throw new Error(`unparseable line: ${line}`);
-  const forms = (m[5] ?? '').split(' | ').map((f) => {
+  const forms = (m[6] ?? '').split(' | ').map((f) => {
     const fm = FORM.exec(f);
     if (fm === null) throw new Error(`unparseable form "${f}" in ${line}`);
     if ((fm[1] === undefined) !== (fm[2] === 'n'))
@@ -50,7 +56,8 @@ function parse(line: string): Parsed {
   return {
     word: m[1] ?? '',
     parts: m[2] === undefined ? null : [m[2], m[3] ?? ''],
-    flags: m[4] === undefined ? [] : m[4].split(', '),
+    suffix: m[4] ?? null,
+    flags: m[5] === undefined ? [] : m[5].split(', '),
     forms,
   };
 }
@@ -83,6 +90,7 @@ describe('the LLM reference', () => {
       ]).filter(([, , gloss]) => !isUnusedGloss(gloss ?? ''));
       expect(e.forms, e.word).toEqual(expected);
       expect(e.parts, e.word).toEqual(h.components);
+      expect(e.suffix, e.word).toBe((h as unknown as { suffix?: string }).suffix ?? null);
       const flags = [
         ...(h.register === 'poetic' ? ['poetic'] : []),
         ...(h.since === lex.version ? [`new in ${lex.version}`] : []),
@@ -93,7 +101,7 @@ describe('the LLM reference', () => {
 
   it('carries every ruling, every function word and only canon examples', () => {
     const r = lex as unknown as Record<string, { id: string }[]>;
-    const total = ['rulings_1_2', 'rulings_1_0', 'rulings_0_8_carried'].reduce(
+    const total = ['rulings_2_0', 'rulings_1_2', 'rulings_1_0', 'rulings_0_8_carried'].reduce(
       (n, k) => n + (r[k]?.length ?? 0),
       0,
     );
@@ -103,5 +111,19 @@ describe('the LLM reference', () => {
     );
     const live = lex.examples.filter((e) => e.status !== 'HISTORICAL');
     expect(llm.examples.sentences).toEqual(live.map((e) => [e.liraasa, e.english]));
+  });
+
+  it('carries the image-compound pattern with every attested pair, and the derivation defaults', () => {
+    const pc = lex.image_compounds;
+    const ic = llm.word_building.image_compounds;
+    if (pc === undefined || ic === undefined) throw new Error('no pattern');
+    expect(ic.attested).toEqual(
+      Object.fromEntries(pc.attested.map((h) => [h.root, h.glosses.root])),
+    );
+    expect(Object.keys(ic.modifiers)).toHaveLength(Object.keys(pc.modifiers).length);
+    expect(Object.keys(ic.heads)).toHaveLength(Object.keys(pc.heads).length);
+    expect(llm.word_building.derivation_defaults).toEqual(
+      (lex.morphology as unknown as { derivation_defaults: unknown }).derivation_defaults,
+    );
   });
 });

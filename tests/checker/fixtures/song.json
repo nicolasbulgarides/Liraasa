@@ -20,7 +20,11 @@
           "phase": 4,
           "severity": "warn",
           "rule": "gloss drift",
-          "token": "mareasasan"
+          "token": "mareasasan",
+          "superseded": {
+            "in": "2.0",
+            "why": "2.0 reglossed mareasasan as 'mothering all generations' (ADR-0016), which now matches the English 'A mother star', so the checker cannot see the drift from the English. The fixed line, maresan, still passes."
+          }
         }
       ]
     },

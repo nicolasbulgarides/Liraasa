@@ -33,6 +33,11 @@ export interface NewHeadword {
   root: string;
   type: 'Primal' | 'Compound';
   components: [string, string] | null;
+  /**
+   * A compound lexicalised with a suffix (2.0:G38): the spelling is the
+   * components joined, then this suffix (`viofuroti` = vio + furo + -ti).
+   */
+  suffix?: string;
   glosses: RawSlots;
   register: string;
   domain: string;
@@ -50,13 +55,31 @@ export interface LexiconChangeset extends Changeset {
   correlatives?: (Row & { id: string; form: string })[];
   lexicalised_derivations?: Record<string, string>;
   motion_metaphors?: Record<string, string>;
+  /** New data sections by path, for `add_section` (ADR-0016). */
+  sections?: Record<string, unknown>;
 }
+
+/**
+ * What an edition's word-building rulings allow that earlier editions did not.
+ * The integration script sets these from the rulings it applies (ADR-0016),
+ * so a 1.2 rebuild stays exactly as strict as it was.
+ */
+export interface WordBuilding {
+  /** A compound may take a compound as one of its two parts (2.0:G42). */
+  nesting: boolean;
+  /** A colour base (the colour table's "Base color") may be a compound's modifier (2.0:G38). */
+  colourModifiers: boolean;
+}
+
+export const STRICT_WORD_BUILDING: WordBuilding = { nesting: false, colourModifiers: false };
 
 export interface ApplyOptions {
   version: string;
   builtUtc: string;
   source: string;
   ids: IdMapFile;
+  /** Defaults to the strict 1.2 rules. */
+  wordBuilding?: WordBuilding;
 }
 
 export interface AppliedOp {
@@ -80,6 +103,7 @@ interface Headword extends Row {
   root: string;
   type: string;
   components: [string, string] | null;
+  suffix?: string;
   forms: Record<string, string>;
   glosses: Record<string, string>;
   english_synonyms: string[];
@@ -181,12 +205,29 @@ function withKeys(lex: RawLexicon, inserts: readonly [string, string, unknown][]
   return out as RawLexicon;
 }
 
+/** Where each new top-level section goes, after which baseline key. */
+const SECTION_AFTER: Readonly<Record<string, string>> = {
+  image_compounds: 'morphology',
+  reserved_root_bank: 'sound_ledger',
+};
+
+/** The colour bases a compound's modifier may be (2.0:G38). */
+const colourBases = (lex: RawLexicon): Set<string> =>
+  new Set(
+    (lex.colors as unknown as Row[])
+      .map((c) => c['Base color'])
+      .filter((b): b is string => typeof b === 'string'),
+  );
+
 export function applyChangesets(
   baseline: RawLexicon,
   changesets: readonly LexiconChangeset[],
   options: ApplyOptions,
 ): ApplyResult {
+  const rules = options.wordBuilding ?? STRICT_WORD_BUILDING;
   const lex = JSON.parse(JSON.stringify(baseline)) as RawLexicon;
+  const sectionInserts: [string, string, unknown][] = [];
+  const bases = colourBases(lex);
   const assigner = new IdAssigner(options.ids);
   assignSectionIds(lex, assigner);
 
@@ -201,6 +242,20 @@ export function applyChangesets(
     const h = byId.get(op.entry);
     if (h === undefined) throw new ApplyError(`${op.entry}: no headword has this id`);
     return h;
+  };
+  /**
+   * `derivation:<headword id>:-<suffix>`, or `derivation:lexicalised:<spelling>:-<suffix>`
+   * for a derivation built on a lexicalised derivation (lavbupago + -ti).
+   */
+  const derivationBase = (entry: string): { spelling: string; suffix: string } | null => {
+    const m = /^derivation:(?:lexicalised:([a-z]+)|(.+)):-([a-z]+)$/.exec(entry);
+    if (m === null) return null;
+    const suffix = m[3] ?? '';
+    if (m[1] !== undefined) {
+      return m[1] in lex.morphology.lexicalised_derivations ? { spelling: m[1], suffix } : null;
+    }
+    const base = byId.get(m[2] ?? '');
+    return base === undefined ? null : { spelling: base.root, suffix };
   };
   const mint = (kind: IdKind, key: string, claimed: string, entry: string): void => {
     const id = assigner.assign(kind, key);
@@ -237,12 +292,14 @@ export function applyChangesets(
           break;
         }
         case 'edit_example': {
+          // `field: 'english'` edits the English line; otherwise the Liraasa
           const i = Number(op.entry.replace('example:', ''));
-          const ex = lex.examples[i];
-          if (ex === undefined || ex.liraasa !== op.from || op.to === null) {
+          const ex = lex.examples[i] as unknown as Record<string, unknown> | undefined;
+          const field = op.field === 'english' ? 'english' : 'liraasa';
+          if (ex === undefined || ex[field] !== op.from || op.to === null) {
             throw new ApplyError(`${op.entry}: expected "${String(op.from)}"`);
           }
-          ex.liraasa = op.to;
+          ex[field] = op.to;
           break;
         }
         case 'add_root':
@@ -256,16 +313,22 @@ export function applyChangesets(
           }
           if (compound) {
             const parts = p.components;
-            if (parts?.join('') !== p.root) {
+            if (parts === null || parts.join('') + (p.suffix ?? '') !== p.root) {
               throw new ApplyError(`${p.root}: spelling is not its components joined`);
             }
-            for (const c of parts) {
-              const part = byRoot.get(c);
-              if (part === undefined)
-                throw new ApplyError(`${p.root}: component ${c} is not a headword`);
-              if (part.type === 'Compound')
-                throw new ApplyError(`${p.root}: component ${c} would nest`);
+            if (p.suffix !== undefined && !rules.colourModifiers) {
+              throw new ApplyError(`${p.root}: a compound lexicalised with a suffix needs 2.0:G38`);
             }
+            parts.forEach((c, i) => {
+              const part = byRoot.get(c);
+              if (part === undefined) {
+                // only the modifier may be a colour base, and only under 2.0:G38
+                if (i === 0 && rules.colourModifiers && bases.has(c)) return;
+                throw new ApplyError(`${p.root}: component ${c} is not a headword`);
+              }
+              if (part.type === 'Compound' && !rules.nesting)
+                throw new ApplyError(`${p.root}: component ${c} would nest`);
+            });
           } else if (p.components !== null) {
             throw new ApplyError(`${p.root}: a primal root has no components`);
           }
@@ -277,6 +340,7 @@ export function applyChangesets(
             root: p.root,
             type: p.type,
             components: p.components,
+            ...(p.suffix !== undefined ? { suffix: p.suffix } : {}),
             forms: rawForms(p.root),
             glosses,
             register: p.register,
@@ -311,17 +375,102 @@ export function applyChangesets(
           break;
         }
         case 'add_derivation': {
-          const m = /^derivation:(.+):-([a-z]+)$/.exec(op.entry);
-          const base = m === null ? undefined : byId.get(m[1] ?? '');
           const word = op.to ?? '';
+          const base = derivationBase(op.entry);
           const gloss = cs.lexicalised_derivations?.[word];
-          if (m === null || base === undefined || base.root + (m[2] ?? '') !== word) {
+          if (base === null || base.spelling + base.suffix !== word) {
             throw new ApplyError(`${op.entry}: does not build ${word}`);
           }
           if (gloss === undefined) throw new ApplyError(`${word}: no gloss in ${cs.id}`);
           const table = lex.morphology.lexicalised_derivations;
           if (word in table) throw new ApplyError(`${word}: already lexicalised`);
           table[word] = gloss;
+          break;
+        }
+        case 'edit_derivation': {
+          const base = derivationBase(op.entry);
+          const table = lex.morphology.lexicalised_derivations;
+          const word = base === null ? '' : base.spelling + base.suffix;
+          if (base === null || table[word] !== op.from || op.to === null) {
+            throw new ApplyError(`${op.entry}: expected "${String(op.from)}"`);
+          }
+          table[word] = op.to;
+          break;
+        }
+        case 'edit_particle_example': {
+          const m = /^particle:(.+):(\d+)$/.exec(op.entry);
+          const dp = (lex.discourse_particles as unknown as (Row & { examples: Row[] })[]).find(
+            (d) => d.id === m?.[1],
+          );
+          const ex = dp?.examples[Number(m?.[2])];
+          const field = op.field === 'english' ? 'english' : 'liraasa';
+          if (ex === undefined || ex[field] !== op.from || op.to === null) {
+            throw new ApplyError(`${op.entry}: expected "${String(op.from)}"`);
+          }
+          ex[field] = op.to;
+          break;
+        }
+        case 'add_section': {
+          const value = cs.sections?.[op.entry];
+          if (value === undefined) throw new ApplyError(`${op.entry}: no section in ${cs.id}`);
+          const [top, inner] = op.entry.split('.');
+          if (inner !== undefined) {
+            const parent = (lex as unknown as Record<string, Record<string, unknown>>)[top ?? ''];
+            if (parent === undefined || inner in parent)
+              throw new ApplyError(`${op.entry}: cannot add here`);
+            parent[inner] = JSON.parse(JSON.stringify(value)) as unknown;
+          } else {
+            const after = SECTION_AFTER[op.entry];
+            if (after === undefined || op.entry in lex)
+              throw new ApplyError(`${op.entry}: cannot add a top-level section here`);
+            const copy = JSON.parse(JSON.stringify(value)) as unknown;
+            (lex as unknown as Record<string, unknown>)[op.entry] = copy;
+            sectionInserts.push([op.entry, after, copy]);
+          }
+          break;
+        }
+        case 'move_to_pattern': {
+          const h = headword(op);
+          const pattern = (
+            lex as unknown as {
+              image_compounds?: {
+                attested: Row[];
+                modifiers: Record<string, unknown>;
+                heads: Record<string, unknown>;
+              };
+            }
+          ).image_compounds;
+          if (pattern === undefined) throw new ApplyError(`${op.entry}: add image_compounds first`);
+          const [mod, head] = h.components ?? [];
+          const modId = byRoot.get(mod ?? '')?.id;
+          const headId = byRoot.get(head ?? '')?.id;
+          if (
+            h.type !== 'Compound' ||
+            modId === undefined ||
+            headId === undefined ||
+            !(String(modId) in pattern.modifiers) ||
+            !(String(headId) in pattern.heads)
+          ) {
+            throw new ApplyError(`${op.entry}: ${h.root} is not a modifier + head of the pattern`);
+          }
+          const users = heads.filter((x) => x.components?.includes(h.root));
+          if (users.length > 0) {
+            throw new ApplyError(`${op.entry}: ${users.map((u) => u.root).join(', ')} build on it`);
+          }
+          heads.splice(heads.indexOf(h), 1);
+          byId.delete(String(h.id));
+          byRoot.delete(h.root);
+          pattern.attested.push(h);
+          break;
+        }
+        case 'edit_ledger': {
+          const spelling = op.entry.replace(/^ledger:/, '');
+          const row = (lex.sound_ledger as unknown as Row[]).find((r) => r.spelling === spelling);
+          if (row === undefined || row.state !== op.from || op.to === null) {
+            throw new ApplyError(`${op.entry}: expected state ${String(op.from)}`);
+          }
+          row.state = op.to;
+          row.reused_in = options.version;
           break;
         }
         case 'add_motion_metaphor': {
@@ -384,6 +533,15 @@ export function applyChangesets(
               throw new ApplyError(`${op.entry}: synonyms are not ${String(op.from)}`);
             }
             h.english_synonyms = JSON.parse(op.to) as string[];
+          } else if (op.entry === 'phonology.declared_distance_1_pairs') {
+            const pairs = lex.phonology.declared_distance_1_pairs as string[][];
+            const pair = op.to === null ? null : (JSON.parse(op.to) as string[]);
+            if (op.from !== null || pair?.length !== 2) {
+              throw new ApplyError(`${op.entry}: adds one pair, from null`);
+            }
+            if (pairs.some((x) => x.join() === pair.join()))
+              throw new ApplyError(`${op.entry}: ${pair.join('/')} is already declared`);
+            pairs.push(pair);
           } else if (op.entry === 'phonology.protected_exceptions') {
             const list = lex.phonology.protected_exceptions;
             const i = list.indexOf(op.from ?? '');
@@ -425,16 +583,22 @@ export function applyChangesets(
   lex.source = options.source;
   lex.rhyme_families = rhymeFamilies(heads.map((h) => h.root));
 
+  // a new edition's rulings and changesets follow the newest of their kind
+  const lastKey = (prefix: string, fallback: string): string =>
+    Object.keys(baseline)
+      .filter((k) => k.startsWith(prefix))
+      .pop() ?? fallback;
   const inserts: [string, string, unknown][] = [...rulingsByEdition.entries()].map(
     ([edition, rulings]) => [
       `rulings_${edition.replace('.', '_')}`,
-      'rulings_0_8_carried',
+      lastKey('rulings_', 'rulings_0_8_carried'),
       rulings,
     ],
   );
+  inserts.push(...sectionInserts);
   inserts.push([
     `changesets_${options.version.replace('.', '_')}`,
-    'changelog_1_0',
+    lastKey('changesets_', 'changelog_1_0'),
     changesets.map((c) => ({
       id: c.id,
       edition: c.edition,
@@ -462,10 +626,14 @@ export interface BuildAudit {
 }
 
 /** Structural checks on a built lexicon. The sound checker is separate. */
-export function auditBuild(lex: RawLexicon): BuildAudit {
+export function auditBuild(
+  lex: RawLexicon,
+  rules: WordBuilding = STRICT_WORD_BUILDING,
+): BuildAudit {
   const findings: string[] = [];
   const heads = lex.headwords as unknown as Headword[];
   const roots = new Set(heads.map((h) => h.root));
+  const bases = colourBases(lex);
   const forms: string[] = [];
   for (const h of heads) {
     const want = rawForms(h.root);
@@ -479,9 +647,12 @@ export function auditBuild(lex: RawLexicon): BuildAudit {
     }
     if (h.type === 'Compound') {
       const parts = h.components ?? [];
-      if (parts.join('') !== h.root) findings.push(`${h.root}: not its components joined`);
-      for (const c of parts)
-        if (!roots.has(c)) findings.push(`${h.root}: component ${c} is not a headword`);
+      if (parts.join('') + (h.suffix ?? '') !== h.root)
+        findings.push(`${h.root}: not its components joined`);
+      parts.forEach((c, i) => {
+        const colour = i === 0 && rules.colourModifiers && bases.has(c);
+        if (!roots.has(c) && !colour) findings.push(`${h.root}: component ${c} is not a headword`);
+      });
     }
     if (!Array.isArray(h.english_synonyms) || h.english_synonyms.length === 0) {
       findings.push(`${h.root}: no english_synonyms`);

@@ -9,7 +9,11 @@ import { type Checker, type Reading, loadChecker } from './loadChecker';
  */
 
 interface Ref {
-  dictionary: { by_domain: Record<string, string[]>; role_codes: Record<string, string> };
+  dictionary: {
+    by_domain: Record<string, string[]>;
+    role_codes: Record<string, string>;
+    count: { headwords: number; meaningful_forms: number };
+  };
   small_words: {
     function_words: { columns: string[]; rows: string[][] };
     pronouns: { form: string }[];
@@ -80,7 +84,8 @@ describe('the form index', () => {
         }
       }
     }
-    expect(count).toBe(3666);
+    // every listed form, as the reference counts them (3666 in 1.2, 4032 in 2.0)
+    expect(count).toBe(ref.dictionary.count.meaningful_forms);
   });
 
   it('reads every small word as its class', () => {
@@ -186,14 +191,11 @@ describe('the fixture song and canon', () => {
    * never auto-corrected (CLAUDE.md), so these are pinned for the author: the
    * test fails if one is fixed (remove it here) or a new one appears.
    */
+  // 2.0's canon fixes (ADR-0016) mended five: cupa → buvokova, pamlonasan →
+  // sulnosovenasan, lallesan and vaniasasan listed, the bumreasasan example rewritten.
   const KNOWN_CANON_FINDINGS = [
     'Miyo baba sola. :: never invent :: sola', // miyo example: sola is no headword
     'Li sola loya benasan. :: never invent :: sola', // loya example
-    'Maivo vurlova, hema, baba cupa de miru. :: 1.0:G19 :: cupa', // hema example: cupa → buvokova
-    'Taivo ka ruli pamlonasan, zoke. — Ne zoke. Vera. :: 1.0:G19 :: pamlonasan', // zoke example
-    'Li dorbi ke lallesan hoyo! :: 0.8:R2 :: lallesan', // hoyo example: unused adjective of lalle
-    'Ola ka li bumreasasan, zoke. :: 0.8:R2 :: bumreasasan', // zoke example
-    'Li lira ka vaniasasan. :: 0.8:R2 :: vaniasasan', // canon example
     'Maivo po helnaha li linu ko li helna. :: 1.2:G33 :: ko', // instrumental ko, written before yuta existed
   ];
 

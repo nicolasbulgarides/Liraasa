@@ -1,26 +1,39 @@
 /**
  * The teaching chapters of the grammar guide.
  *
- * Prose is written here; every table, count, ruling and example is read from
- * the lexicon at build time, so a new ruling or a new function word appears
- * in the next build without touching this file. The prose follows
- * `handoff/HANDOFF.md`, which is the brief and the grammar reference.
+ * The guide teaches the language; governance, storage and edition history
+ * live elsewhere (the full rulings are written beside it as Markdown). Prose
+ * is written here, as short as it can be while still teaching; every table,
+ * count, ruling and example is read from the lexicon at build time.
  */
-import { FORM_SLOTS, SLOT_BUILD, isUnusedGloss } from '../../src/core/config/slots';
-import { sound } from './core_words';
-import { formOf, glossOf, liveExamples, type Index, type Lexicon, type Ruling } from './data';
+import { FORM_SLOTS, SLOT_BUILD, isUnusedGloss, type FormSlot } from '../../src/core/config/slots';
+import { sound } from './sound';
+import {
+  canonTexts,
+  formOf,
+  glossOf,
+  isCanonText,
+  isUsed,
+  liveExamples,
+  normGloss,
+  rulingById,
+  type Headword,
+  type Index,
+  type Lexicon,
+} from './data';
+import { GUIDE } from './config';
 import {
   badge,
-  callout,
+  calloutHtml,
   cell,
   esc,
+  forReview,
   examples,
   h3,
   lir,
   md,
   morph,
   p,
-  paras,
   part,
   table,
   ul,
@@ -41,158 +54,256 @@ function fw(lex: Lexicon, form: string) {
   return w;
 }
 
-function fwRows(lex: Lexicon, forms: readonly string[]) {
-  return forms.map((f) => {
-    const w = fw(lex, f);
-    return [cell(lir(w.form)), cell(esc(w.meaning)), cell(esc(w.position))];
-  });
+/** A function word's position, without the data's provenance note (“| v0.5: author correction”). */
+function usage(position: string): string {
+  return position.replace(/\s*\|\s*v\d[^|]*$/, '').trim();
 }
 
-// ---------------------------------------------------------------- 1. Welcome
+/** `ke` temporary is / are · `ka` enduring is / are …, in the guide's markup. */
+function wordList(lex: Lexicon, forms: readonly string[]): string {
+  return forms.map((f) => `\`${fw(lex, f).form}\` ${fw(lex, f).meaning}`).join(' · ');
+}
+
+/** A ruling's text, read from the lexicon; the build fails if it is missing. */
+function rulingText(lex: Lexicon, id: string): string {
+  const r = rulingById(lex, id);
+  if (r === undefined) throw new Error(`ruling ${id} is missing from the lexicon`);
+  return r.ruling;
+}
+
+function headword(index: Index, root: string): Headword {
+  const h = index.byRoot.get(root);
+  if (h === undefined) throw new Error(`${root} is not a headword`);
+  return h;
+}
+
+/** The English of a canon example, found by its exact Liraasa. */
+function canonEnglish(lex: Lexicon, liraasa: string): string {
+  const e = liveExamples(lex).find((x) => x.liraasa === liraasa);
+  if (e === undefined) throw new Error(`"${liraasa}" is not a canon example`);
+  return e.english;
+}
+
+// ------------------------------------------------------------ 1. What it is
 
 export function welcome(index: Index): string {
   const lex = index.lex;
   const h = lex.headwords;
   const primal = h.filter((x) => x.type === 'Primal').length;
-  const isNew = h.filter((x) => x.since === lex.version).length;
-  const forms = h.length * FORM_SLOTS.length;
-  const unused = h.reduce(
-    (acc, x) => acc + FORM_SLOTS.filter((s) => isUnusedGloss(glossOf(x, s))).length,
-    0,
-  );
-  const live = liveExamples(lex).length;
-  const colourWords = lex.colors.length * 5;
+  const lira = headword(index, 'lira');
+  const thanks = 'Lorejuba ala taivo.';
 
-  const glance = table(
-    ['', 'Count'],
-    [
-      [
-        'Headwords',
-        `**${n(h.length)}**: ${n(primal)} primal roots, ${n(h.length - primal)} compounds (${n(isNew)} new in ${lex.version})`,
-      ],
-      [
-        'Word forms',
-        `${n(forms)}, seven per headword; ${n(unused)} are unused and have no meaning`,
-      ],
-      ['Function words', n(lex.function_words.length)],
-      ['Pronouns', n(lex.pronouns.length)],
-      [
-        'Correlatives',
-        `${n(lex.correlatives.length)}: a 6 × 6 grid, plus ${n(lex.correlatives.length - 36)} frequency words [[1.2:G34]]`,
-      ],
-      [
-        'Time words',
-        `${n(lex.time_and_dates.length)} rows, ${n(new Set(lex.time_and_dates.map((t) => t.form)).size)} distinct forms`,
-      ],
-      ['Colours', `${n(lex.colors.length)} families, ${n(colourWords)} words; none is a headword`],
-      ['Discourse particles', n(lex.discourse_particles.length)],
-      ['Rhyme families', n(lex.rhyme_families.length)],
-      [
-        'Examples',
-        `${n(lex.examples.length)} (${n(live)} live, ${n(lex.examples.length - live)} historical)`,
-      ],
-      [
-        'Rulings',
-        `0.8: ${n(lex.rulings_0_8_carried.length)} carried · 1.0: ${n(lex.rulings_1_0.length)} · 1.2: ${n(lex.rulings_1_2.length)} · plus ADR-0011`,
-      ],
-    ],
-    { cls: 'glance' },
-  );
+  const first = ['yeko', 'voge', 'zabo', 'kepi', 'fisa', 'yade', 'lorejuba']
+    .map((f) => `<li>${lir(f)} <span class="gloss">${esc(fw(lex, f).meaning)}</span></li>`)
+    .join('');
 
   return part(
     '1',
-    'Welcome',
-    'Liraasa is a constructed language **built for singing**: open syllables, pure vowels, penultimate stress and a regular morphology, so lyrics scan and rhyme predictably.',
-    `${h3('What this guide covers')}
-${paras(
-  `This is the grammar of Liraasa ${lex.version}: all of 1.0, the 1.1 vocabulary supplement, and the 1.2 update, its grammar rulings and its new words. It starts with the sound, moves to words, the core vocabulary and what 1.2 adds, then the small words and the clause, then recipes for turning English into Liraasa, every ruling, how a machine reads a line, and the 1.2 changelog.`,
-  'It is written for three readers at once: the songwriter who writes and sings in Liraasa, a learner coming from English, and anyone rebuilding the parser, who needs the rules stated exactly.',
-)}
-${h3('At a glance')}
-${glance}
-${h3('How to read it')}
-${ul([
-  'Liraasa is set in a serif face and its own colour, like `lira`, and is never re-spelled or hyphenated for display. Every example is a Liraasa line with its English underneath.',
-  'Each ruling carries a badge with its **edition-qualified id**, such as [[1.0:G7]] or [[1.2:G27]]. G1–G8 exist in both the 0.8 and 1.0 ruling sets with different content, so a bare id is never used.',
-  'Two notes recur: a **Singing note** for meter, rhyme and free choices, and a **Parsing note** for how a machine decides.',
-  'Every example is canon, taken from the lexicon. Nothing here invents a word.',
-])}
-${callout('singing', 'Every vowel is its own syllable and stress falls on the second-to-last. Once you know that, you can scan any line by counting vowels.')}
-${callout('parsing', 'Where this guide and the lexicon JSON disagree, the JSON wins.')}`,
+    'What Liraasa is',
+    `\`${formOf(lira, 'ascended')}\` is the ascended form of \`lira\`, song: “${glossOf(lira, 'ascended')}”. A goddess-centric language, built for singing.`,
+    `${p(`${n(h.length)} headwords: ${n(primal)} roots and ${n(h.length - primal)} compounds.`)}
+${h3('The grammar in eight lines')}
+<ol class="essentials">${[
+      'Every vowel is its own syllable; stress falls on the second-to-last. Spelling is sound.',
+      'Every headword has **seven slots** by rule: a noun, its ascended and negative nouns, an adjective for each, and a verb.',
+      'A compound is two headwords written as one, **head last**: `luno` + `lumi` = `lunolumi`, moonlight.',
+      'Word order is **subject, verb, object**; tense and every operator stand before the verb.',
+      '**Adjectives come before the noun**, and a noun never modifies a noun: make the first an adjective.',
+      'Two copulas: `ke` for what is so now, `ka` for what is so by nature.',
+      'A question keeps statement order and ends in `ki`.',
+      '`-ri` makes a plural, `-ti` a little or dear thing. In X `de` Y, Y owns X, unless X is a pronoun or a name.',
+    ]
+      .map((s) => `<li>${md(s)}</li>`)
+      .join('')}</ol>
+<aside class="first-words" aria-labelledby="first-words-h"><h3 id="first-words-h" data-toc="First words">First words</h3>
+<ul>${first}<li>${lir(thanks)} <span class="gloss">${esc(canonEnglish(lex, thanks))}</span></li></ul></aside>`,
   );
 }
 
-// ------------------------------------------------------------------ 2. Sound
+// --------------------------------------------------------- 2. Sound and song
+
+/**
+ * 0.8:R5 holds two rules: li may be dropped in everyday speech as well as in
+ * verse, and baba only in verse. The guide teaches them in different places.
+ */
+function omission(lex: Lexicon): [string, string, string] {
+  const text = rulingText(lex, '0.8:R5');
+  const m = /^(li [^.]*\.)\s*(baba [^.]*\.)$/.exec(text);
+  if (m === null) throw new Error('0.8:R5 no longer reads "li … . baba … ." : revise the guide');
+  return [text, m[1] ?? '', m[2] ?? ''];
+}
+
+/**
+ * A word's rhyme: from its stressed vowel to the end. Every vowel is its own
+ * syllable and stress falls on the second-to-last, so the rhyme starts at
+ * the second-to-last vowel (a one-vowel word rhymes on its vowel).
+ */
+export function rhymeOf(word: string): string {
+  const vowels = [...word.matchAll(/[aeiou]/g)].map((m) => m.index);
+  const at = vowels.length >= 2 ? vowels[vowels.length - 2] : vowels[0];
+  return word.slice(at ?? 0);
+}
+
+/**
+ * Rhyme families: the headwords, pronouns and single small words that share
+ * a rhyme, counted by the root they end in. A compound ends in its head, so
+ * `daigolira` counts as `lira`: two words with the same final root are an
+ * identity rhyme, not two members. A small word built on another member
+ * (`futupago` on `pago`) is the same rhyme again and is left out too.
+ */
+export function rhymeFamilies(index: Index): Map<string, string[]> {
+  const lex = index.lex;
+  const finalRoot = (root: string): string => {
+    let h = index.byRoot.get(root);
+    let at = root;
+    while (h?.components) {
+      at = h.components[1];
+      h = index.byRoot.get(at);
+    }
+    return at;
+  };
+  const byRhyme = new Map<string, Set<string>>();
+  const add = (word: string): void => {
+    const r = rhymeOf(word);
+    const set = byRhyme.get(r) ?? new Set<string>();
+    set.add(word);
+    byRhyme.set(r, set);
+  };
+  for (const h of lex.headwords) add(finalRoot(h.root));
+  const closed = [
+    ...lex.function_words.map((w) => w.form),
+    ...lex.pronouns.map((x) => x.form),
+  ].filter((f) => /^[a-z-]+$/.test(f) && !f.startsWith('-') && !f.endsWith('-'));
+  const isHeadword = (w: string): boolean => index.byRoot.has(w);
+  for (const f of closed) add(f.split('-').pop() ?? f);
+
+  const families = new Map<string, string[]>();
+  for (const [r, set] of byRhyme) {
+    const words = [...set];
+    const kept = words.filter(
+      (w) => isHeadword(w) || !words.some((o) => o !== w && w.length > o.length && w.endsWith(o)),
+    );
+    if (kept.length > 1) families.set(r, kept);
+  }
+  return families;
+}
 
 export function soundPart(index: Index): string {
-  const ph = index.lex.phonology;
-  const sample = ['lira', 'maivo', 'opioa', 'benaasasan', 'krono', 'amor'];
+  const lex = index.lex;
+  const ph = lex.phonology;
+  const sample = ['lira', 'maivo', 'opioa', 'benaasa', 'lunolumi'];
+
+  const rhymes = rhymeFamilies(index);
+  const families = GUIDE.rhymeShowcase
+    .map((r) => {
+      const members = rhymes.get(r);
+      if (members === undefined) throw new Error(`config: -${r} no longer joins two roots`);
+      return `<li><strong>-${esc(r)}</strong>: ${members.map((m) => lir(m)).join(', ')}</li>`;
+    })
+    .join('');
+
+  // the rhyme of an adjective is the vowel before -san, plus -san
+  const sanSets = ['a', 'e', 'i', 'o', 'u'].map((v) => {
+    const count = lex.headwords.filter(
+      (h) => isUsed(h, 'adjective') && formOf(h, 'adjective').endsWith(`${v}san`),
+    ).length;
+    const chosen = GUIDE.sanShowcase
+      .map((id) => index.byId.get(id))
+      .filter((h): h is Headword => h !== undefined && formOf(h, 'adjective').endsWith(`${v}san`))
+      .map((h) => `\`${formOf(h, 'adjective')}\``);
+    return `\`-${v}san\` ${n(count)} (${chosen.join(', ')})`;
+  });
+
+  const g31 = rulingText(lex, '1.2:G31');
+  const narrative = /In verse[^.]*\./.exec(g31)?.[0];
+  if (narrative === undefined) throw new Error('1.2:G31 no longer states the narrative present');
+  const [, , babaRule] = omission(lex);
 
   return part(
     '2',
-    'Sound',
+    'Sound and singing',
     'The spelling is phonetic: what you see is what you sing.',
-    `${h3('Letters')}
-${table(
-  ['Aspect', 'Rule'],
-  [
-    ['Vowels', esc(ph.vowels)],
-    ['Core consonants', esc(ph.consonants_core)],
-    ['Other consonants', esc(ph.consonants_other)],
-    ['Stress', esc(ph.stress)],
-  ].map(([a, b]) => [cell(esc(a ?? '')), cell(b ?? '')]),
-)}
-${h3('Syllables and stress')}
-${paras(
-  'Every vowel is its own syllable, because adjacent vowels never merge. A consonant between vowels starts the next syllable; of two consonants, the first closes the syllable before. Stress falls on the second-to-last syllable. The capitals below mark it.',
-)}
+    `${table(
+      ['Aspect', 'Rule'],
+      [
+        ['Vowels', esc(ph.vowels)],
+        ['Letters', `${esc(ph.consonants_core)}; ${esc(ph.consonants_other)}`],
+        ['Stress', esc(ph.stress)],
+      ].map(([a, b]) => [cell(esc(a ?? '')), cell(b ?? '')]),
+      { cls: 'compact' },
+    )}
+${p(`${rulingText(lex, '2.0:G43')} [[2.0:G43]]`)}
+${p('Adjacent vowels never merge. A consonant between vowels starts the next syllable; of two, the first closes the syllable before. Capitals mark the stress:')}
 ${table(
   ['Word', 'Syllables and stress'],
   sample.map((w) => [cell(lir(w)), cell(sound(w))]),
   { cls: 'compact' },
 )}
-${callout(
-  'singing',
-  '`maivo` is ma-i-vo, three syllables, not two. `opioa` is o-pi-o-a, four. Hiatus vowels may glide in fast singing without changing the spelling.',
-)}
-${h3('Templates for new words')}
-${table(
-  ['Kind', 'Template'],
-  [
-    [cell('New root'), cell(esc(ph.new_root_template))],
-    [cell('Function word'), cell(esc(ph.function_word_template))],
-    [cell('Protected exceptions'), cell(esc(ph.protected_exceptions.join('; ')))],
-    [
-      cell('Declared one-edit pairs'),
-      cell(ph.declared_distance_1_pairs.map(([a, b]) => `${lir(a)} / ${lir(b)}`).join('; ')),
-    ],
-  ],
-)}
-${callout(
-  'parsing',
-  'Until 1.2 the protected-exceptions label read “36 amor- double-a roots”, the 0.8 count. They are compounds, and there are **39** of them: 20 ending in `amor`, 19 beginning with it. 1.2 repaired the label.',
-)}
-${h3('Rhyme')}
-${p(`Every headword belongs to a rhyme family by its ending: ${n(index.lex.rhyme_families.length)} families in all. Each featured word in Part 4 lists its rhymes.`)}`,
+${h3('Writing for song')}
+${ul([
+  '**Stress and the beat.** Every word falls from its stressed syllable to a light last one: set the stressed syllable on a strong beat and let the last fall on a weak one. The small words are short and unstressed; let them fill the weak beats.',
+  `**Neighbouring vowels.** ${rulingText(lex, '2.0:G44')} [[2.0:G44]] [[0.8:R8]]`,
+  `**Rhyme.** A rhyme runs from the stressed vowel to the end of the word: \`devi\`, \`nevi\` and \`jurevi\` rhyme on -evi. A compound ends in its head, so \`lira\` and \`daigolira\` share the whole rhyme: an identity rhyme, the same word sounding twice, and a family counts it once. Counted by the root each word ends in, across headwords, pronouns and small words, there are ${n(rhymes.size)} rhyme families. Five of them:`,
+])}
+<ul class="families">${families}</ul>
+${p(`Every adjective ends in \`-san\`, so adjectives at the ends of lines rhyme in five sets, by the vowel before it: ${sanSets.join(' · ')}.`)}
+${h3('Licences of verse')}
+${ul([
+  `${babaRule} [[0.8:R5]]`,
+  `${narrative} [[1.2:G31]]`,
+  'After a number or quantifier the plural `-ri` is optional: choose by sound and meter [[1.2:G28]].',
+])}
+${h3('Names')}
+${p(`${rulingText(lex, '2.0:G45')} [[2.0:G45]] A name may take the affectionate \`-ti\` [[0.8:R12]].`)}
+<p>${GUIDE.names.map(([en, li]) => `${esc(en)} becomes ${lir(li, 'name')}`).join('; ')}.</p>`,
   );
 }
 
 // ------------------------------------------------------------------ 3. Words
 
+const GRID: readonly (readonly [string, FormSlot, FormSlot])[] = [
+  ['Plain', 'root', 'adjective'],
+  ['Ascended', 'ascended', 'ascendedAdjective'],
+  ['Negative', 'negative', 'negativeAdjective'],
+];
+
+/** One cell of the seven-form grid: the form, its meaning, or its emptiness. */
+function formCell(h: Headword, slot: FormSlot, rules: boolean): string {
+  const used = isUsed(h, slot);
+  const rule = rules ? `<span class="build">${morph(SLOT_BUILD[slot])}</span>` : '';
+  return `${lir(formOf(h, slot), used ? 'text' : 'unused-slot')}${rule}<span class="gloss">${
+    used ? esc(normGloss(glossOf(h, slot))) : '<em>empty</em>'
+  }</span>`;
+}
+
+/** The seven forms as a grid: plain, ascended, negative × noun, adjective; the verb below. */
+function formGrid(h: Headword, rules: boolean): string {
+  return table(
+    ['', 'Noun', 'Adjective'],
+    [
+      ...GRID.map(([label, noun, adj]) => [
+        cell(`<strong>${esc(label)}</strong>`),
+        cell(formCell(h, noun, rules)),
+        cell(formCell(h, adj, rules)),
+      ]),
+      [cell('<strong>Verb</strong>'), cell(formCell(h, 'verb', rules)), cell('')],
+    ],
+    { cls: 'forms grid7' },
+  );
+}
+
 export function wordsPart(index: Index): string {
   const lex = index.lex;
-  const bena = index.byRoot.get('bena');
-  if (bena === undefined) throw new Error('bena is missing');
-  const forms = table(
-    ['#', 'Slot', 'Rule', bena.root, 'Meaning'],
-    FORM_SLOTS.map((s, i) => [
-      cell(String(i + 1), 'num'),
-      cell(esc(s.replace(/([A-Z])/g, ' $1').toLowerCase())),
-      cell(morph(SLOT_BUILD[s])),
-      cell(lir(formOf(bena, s)), 'form'),
-      cell(esc(glossOf(bena, s))),
-    ]),
-    { cls: 'forms' },
+  const bena = headword(index, 'bena');
+  const daigo = headword(index, 'daigo');
+  const lumi = headword(index, 'lumi');
+  const narvo = headword(index, 'narvo');
+  const devi = headword(index, 'devi');
+  if (isUsed(devi, 'verb')) throw new Error('devi now has a verb: choose another empty form');
+  const total = lex.headwords.length * FORM_SLOTS.length;
+  const empty = lex.headwords.reduce(
+    (acc, x) => acc + FORM_SLOTS.filter((s) => isUnusedGloss(glossOf(x, s))).length,
+    0,
   );
 
   const verbExamples = ['lira', 'sabe', 'nedu', 'amor', 'opi']
@@ -218,82 +329,93 @@ export function wordsPart(index: Index): string {
         cell(ex === undefined ? '' : `${lir(ex.root)} → ${lir(formOf(ex, 'verb'))}`),
       ];
     }),
+    { cls: 'compact' },
   );
 
+  const defaults = lex.morphology.derivation_defaults ?? {};
   const suffixes = table(
-    ['Suffix', 'Meaning'],
-    Object.entries(lex.morphology.suffixes).map(([k, v]) => [cell(morph(k)), cell(esc(v))]),
-  );
-
-  const lexicalised = table(
-    ['Word', 'Meaning'],
-    Object.entries(lex.morphology.lexicalised_derivations).map(([k, v]) => [
-      cell(lir(k)),
-      cell(esc(v)),
+    ['Suffix', 'Meaning', 'Default reading'],
+    Object.entries(lex.morphology.suffixes).map(([k, v]) => [
+      cell(morph(k)),
+      // the data's asides belong to Appendix B and 2.0:G41, not to this table
+      cell(esc(v.replace(/\s*\(.*\)$/, ''))),
+      cell(esc(defaults[k] ?? '')),
     ]),
+    { cls: 'compact' },
   );
 
-  const motion = table(
-    ['Prefix', 'Meaning'],
-    Object.entries(lex.motion_prefixes.canon).map(([k, v]) => [cell(morph(k)), cell(esc(v))]),
-  );
-  const retiredMotion = Object.entries(lex.motion_prefixes.retired)
-    .map(([k, v]) => `${morph(k)} → ${esc(v)}`)
-    .join('; ');
+  const soulbond = headword(index, 'mavolumitilma');
+  const [sbA, sbB] = soulbond.components ?? ['', ''];
+  const motion = Object.entries(lex.motion_prefixes.canon)
+    .map(([k, v]) => `\`${k}\` ${v}`)
+    .join(' · ');
 
   return part(
     '3',
     'Words',
-    'Every content word is a headword with seven forms, built by rule. Learn the seven suffixes once and you can read every word in the lexicon.',
+    'Seven forms by rule, and meanings that are often the word’s own.',
     `${h3('The seven forms')}
-${p('Every headword has exactly seven forms, built from its root R. Here they are for `bena`, good:')}
-${forms}
-${callout('parsing', 'The forms object is stored in two key orders (80 entries put the verb second). Read forms by key, never by position.')}
-${callout('singing', 'The ascended forms in `-asa` and `-asasan` make a line sacred in register. Choose them for hymn-like moments; they add two syllables.')}
+${p('Every headword fills the same grid. Here it is for `bena`, good, with the rule for each cell:')}
+${formGrid(bena, true)}
+${p(`**Ascended** is the ultimate, cosmic degree, for good or ill: \`${formOf(lumi, 'ascended')}\` ${normGloss(glossOf(lumi, 'ascended'))}; \`${formOf(narvo, 'ascended')}\` ${normGloss(glossOf(narvo, 'ascended'))}, \`${formOf(narvo, 'ascendedAdjective')}\` ${normGloss(glossOf(narvo, 'ascendedAdjective'))}. **Negative** is the absence or the reversal.`)}
+<p>${md(`**Many cells are empty.** ${n(empty)} of the ${n(total)} forms have no meaning: the lexicon marks them unused, and this guide strikes them through. \`devi\`, goddess, has no verb:`)} ${lir(formOf(devi, 'verb'), 'unused-slot')} ${md('is an empty form, and an empty form is not a word.')}</p>
+${p('**Meanings are lexicalized.** The ascended and negative meanings are fixed by the lexicon, not summed from the parts: `daigo`, death, has resurrection as its negative.')}
+${formGrid(daigo, false)}
 ${h3('The verb rule')}
-${p('The verb is the only form that is not a plain suffix. It depends on the first letter of the word:')}
 ${verbRule}
-${p('`opi`, hope, is a real headword, so `opioa` is live data, not a reserved case. A compound takes the verb class of its first letter.')}
-${h3('Suffixes and derivations')}
-${p(`Order: **${esc(lex.morphology.suffix_order)}**. A word takes one form or one derivation, then \`-ti\`, then \`-ri\` (settled question 4).`)}
+${p('A compound takes the verb class of its first letter. `opi`, hope, owns the one irregular verb.')}
+${h3('Derivations')}
+${p(`Order: **${esc(lex.morphology.suffix_order)}**. Derivations attach to any root or compound, with these default readings; a listed meaning (Appendix B) overrides the default [[2.0:G41]] [[1.0:G20]].`)}
 ${suffixes}
-${p('Some derivations carry fixed meanings [[1.0:G20]]:')}
-${lexicalised}
 ${h3('Compounds')}
-${paras(
-  'A compound is MODIFIER + HEAD written together, head last: `lunolumi` is moon-light. Both components must be active headwords, and every compound has exactly two components, so its spelling is just the two joined. One compound is nested: `mudusomubiti` = `mudu` + `somubiti`.',
-  'A compound is **one word**, never two nouns side by side (ADR-0011). Its verb class follows its first letter.',
-)}
-${h3('Motion prefixes')}
-${p(`${esc(lex.motion_prefixes.rule)}.`)}
-${motion}
-${p(`Retired: ${retiredMotion}.`)}
-${h3('Registers')}
 ${ul([
-  'Entries are everyday or poetic only. There is no sacred word list [[0.8:R10]].',
-  'Texts are everyday, poetic or sacred. Sacred is a property of the form (`-asa`, `-asasan`), not of the entry.',
-  'Irreverent is an optional tone flag on a text, never on a lexicon entry.',
+  'MODIFIER + HEAD, written as one word, head last; the spelling is the two joined. A compound is one word, never two nouns side by side.',
+  `Either part may itself be a compound [[2.0:G42]]: \`${soulbond.root}\` = \`${sbA}\` ${index.senseOf(sbA)} + \`${sbB}\` ${index.senseOf(sbB)}, ${normGloss(glossOf(soulbond, 'root'))}. A colour base may be the modifier, and a compound may be lexicalised with \`-ti\` [[2.0:G38]].`,
+  'Image compounds are a pattern, not a list: any listed modifier with any listed head [[2.0:G40]] (Part 8).',
 ])}
-${h3('Retired spellings')}
-${p(
-  `${n(lex.legacy.retired_roots.length)} roots were retired and ${n(lex.legacy.respelled_roots.length)} respelled in 1.0. Retired spellings are reserved until 2.0. A pre-1.0 text is read with the 0.8 lexicon [[1.0:G19]], and a parser warns on a pre-1.0 spelling and names its replacement.`,
-)}`,
+${h3('Motion prefixes')}
+${p(`Written with a hyphen before the verb: \`revo-sabesia\`, recognize [[1.2:G35]]. A ${lex.motion_prefixes.rule}: ${motion}.`)}
+${h3('Registers')}
+${p('Entries are everyday or poetic. A headword whose root meaning is inherently sacred may be marked sacred after review; none has been yet [[0.8:R10]].')}`,
   );
 }
 
-// ------------------------------------------------------------- 5. Small words
+// ------------------------------------------------------------- 4. Small words
+
+/** Which letters only a closed class uses: checked, so the sentence stays true. */
+function digraphLine(index: Index): string {
+  const lex = index.lex;
+  const colours = new Set(
+    lex.colors.flatMap((c) =>
+      Object.entries(c)
+        .filter(([k]) => k !== 'Family' && k !== 'Example meanings / notes' && k !== 'id')
+        .map(([, v]) => v),
+    ),
+  );
+  const numbers = new Set([
+    ...Object.values(lex.numbers.lookup_0_999),
+    ...lex.numbers.rules.map((r) => String(r.Liraasa)),
+  ]);
+  const words = [
+    ...lex.headwords.flatMap((h) => Object.values(h.forms)),
+    ...lex.function_words.map((w) => w.form),
+    ...colours,
+    ...numbers,
+  ];
+  const sh = words.filter((w) => w.includes('sh'));
+  const ch = words.filter((w) => w.includes('ch'));
+  if (!sh.every((w) => colours.has(w)) || !ch.every((w) => numbers.has(w))) {
+    throw new Error('sh or ch now occurs outside the colour and number words: revise the guide');
+  }
+  return 'sh is written only in colour words (`shada`), and ch only in `ocha`, eight, and the numbers built on it.';
+}
 
 export function smallWordsPart(index: Index): string {
   const lex = index.lex;
   const pronouns = table(
-    ['Form', 'Person', 'Number', 'Possessive', 'Reflexive'],
-    lex.pronouns.map((x) => [
-      cell(lir(x.form), 'form'),
-      cell(esc(x.person)),
-      cell(esc(x.number)),
-      cell(withGloss(x.possessive)),
-      cell(withGloss(x.reflexive)),
-    ]),
+    ['Form', 'Person', 'Number'],
+    lex.pronouns.map((x) => [cell(lir(x.form), 'form'), cell(esc(x.person)), cell(esc(x.number))]),
+    { cls: 'compact' },
   );
 
   const dets = [...new Set(lex.correlatives.map((c) => c.determiner))];
@@ -314,7 +436,8 @@ export function smallWordsPart(index: Index): string {
 
   const digits = Object.entries(lex.numbers.lookup_0_999)
     .slice(0, 10)
-    .map(([v, w]) => [cell(v, 'num'), cell(lir(w))]);
+    .map(([v, w]) => `${esc(v)} ${lir(w)}`)
+    .join(' · ');
 
   const colours = table(
     ['Family', 'Base', '+narvo dark', '+bio life', '+juba gem', '+lumi light'],
@@ -328,63 +451,44 @@ export function smallWordsPart(index: Index): string {
   );
 
   return part(
-    '6',
+    '4',
     'The small words',
-    'Pronouns, correlatives, numbers, colours and particles: closed classes, each with its own pattern. The full tables are in the appendices.',
+    'Closed classes, each with its own pattern.',
     `${h3('Pronouns')}
 ${pronouns}
-${callout('parsing', '`maivo` is both a pronoun and a root. A spelling can belong to more than one namespace, so a word index maps a spelling to a list, never to one entry.')}
+${p('Possessive: PRONOUN `de` X, `maivo de lira`, my song. Reflexive: PRONOUN `sela`, `maivo sela`, myself.')}
 ${h3('Correlatives: determiner + concept')}
 ${grid}
-${p('Correlatives of place, time, manner and cause (`-pago`, `-krono`, `-modo`, `-kasa`) work as adverbials. Those of thing and person (`-coda`, `-nela`) work as nouns.')}
-${p('Since 1.2 three quantifiers join `krono` and only `krono`: `muya-krono` often, `poka-krono` rarely, `rada-krono` each time [[1.2:G34]].')}
+${p(`Beside the grid: ${wordList(lex, ['ki-eli', 'ki-muya', 'ki-oro'])}.`)}
+${p('Place, time, manner and cause (`-pago`, `-krono`, `-modo`, `-kasa`) work as adverbials; thing and person (`-coda`, `-nela`) as nouns. `muya-krono` often, `poka-krono` rarely, `rada-krono` each time [[1.2:G34]].')}
 ${h3('Numbers')}
-${table(['Value', 'Word'], digits, { cls: 'compact digits' })}
-${paras(
-  'Ten is `unzira`, and the tens to fifty are contracted: `dozira`, `trezira`, `cuazira`, `penzira`. A unit joins with a hyphen: `dozira-cuara`, 24. One hundred is `centa`; a thousand `mililumi`.',
-  'Ordinals take `-ne`: `una-ne`, first. Fractions are NUMBER `de` NUMBER: `tressa de cuara`, three quarters. A `ne` after a number is never negation (settled question 6).',
-)}
+<p class="chips">${digits}</p>
+${p('Ten is `unzira`; 11–19 add the unit with a hyphen: `unzira-una`, 11. Tens 20–50 contract (`dozira`, `trezira`, `cuazira`, `penzira`); from 60 they are the digit + `zira`: `sesazira`, `nivazira`. Hundreds are the digit + `centa`, and the rest joins with hyphens: `dossacenta-unzira-penta`, 215. `centa` is one hundred, `mililumi` a thousand. Ordinals take `-ne` (`una-ne`, first); fractions are N `de` N (`tressa de cuara`). A `ne` after a number is never negation.')}
 ${h3('Colours')}
-${p('Nine families, each a base and four shades. They are a closed class of their own: no colour is a headword. They are the only words that use sh and ch.')}
+${p(`Nine families, a base and four shades each. ${digraphLine(index)} A colour base may lead a compound [[2.0:G38]]; \`aurumijuba\` and \`vanajuba\` are also headwords [[2.0:G39]].`)}
 ${colours}
 ${h3('Discourse particles')}
 ${table(
-  ['Particle', 'Function', 'Where'],
-  lex.discourse_particles.map((d) => [
-    cell(lir(d.form), 'form'),
-    cell(esc(d.function)),
-    cell(esc(d.positions)),
-  ]),
+  ['Particle', 'Function', 'Where', 'Example'],
+  lex.discourse_particles.map((d) => {
+    const e = d.examples[0];
+    return [
+      cell(lir(d.form), 'form'),
+      cell(esc(d.function)),
+      cell(esc(d.positions)),
+      cell(e === undefined ? '' : `${lir(e.liraasa)}<span class="gloss">${esc(e.english)}</span>`),
+    ];
+  }),
+  { cls: 'compact' },
 )}`,
   );
 }
 
-/** `maivo de lira (my song)` → the Liraasa set apart, the gloss plain. */
-function withGloss(text: string): string {
-  const m = /^(.*?)\s*\((.*)\)$/.exec(text);
-  return m === null
-    ? lir(text)
-    : `${lir(m[1] ?? '')} <span class="gloss">${esc(m[2] ?? '')}</span>`;
-}
-
-// ---------------------------------------------------------------- 6. Clause
+// ---------------------------------------------------------------- 5. Clause
 
 export function clausePart(index: Index): string {
   const lex = index.lex;
   const g = lex.grammar;
-  const required = new Set(['SUBJECT', 'VERB']);
-
-  const diagram = `<figure class="slots" aria-label="The 20-slot clause template">
-<ol class="slot-row">${g.slots
-    .map(
-      (s) =>
-        `<li class="slot${required.has(s.slot) ? ' req' : ''}"><span class="slot-n">${String(s.n)}</span><span class="slot-name">${
-          required.has(s.slot) ? esc(s.slot) : `[${esc(s.slot)}]`
-        }</span></li>`,
-    )
-    .join('')}</ol>
-<figcaption>The 20 slots in order. SUBJECT and VERB are required (solid); every bracketed slot is optional. The order is fixed.</figcaption>
-</figure>`;
 
   const slotTable = table(
     ['#', 'Slot', 'Words', 'Notes'],
@@ -396,97 +500,276 @@ export function clausePart(index: Index): string {
       ),
       cell(esc(s.notes)),
     ]),
+    { cls: 'slots-table' },
   );
 
-  const exclusions = g.stacking.exclusions.map(([a, b]) => `${lir(a)} + ${lir(b)}`).join(' · ');
-  const copulas = table(
-    ['Word', 'Meaning', 'Use'],
-    fwRows(lex, ['ke', 'ka', 'kapoki', 'loya', 'miyo', 'gome']),
-  );
-  const linkers = table(
-    ['Word', 'Meaning', 'Use'],
-    fwRows(lex, [
-      'ata',
-      'nara',
-      'oro',
-      'si',
-      'sina',
-      'kasa',
-      'kopisa',
-      'nevi',
-      'fime',
-      'raho',
-      'sidu',
-      'kube',
-      'nayo',
-      'tuni',
-      'sige',
-      'kureli',
-    ]),
-  );
+  const [, liRule] = omission(lex);
+  const exclusions = g.stacking.exclusions.map(([a, b]) => `\`${a}\` + \`${b}\``).join(' · ');
 
   return part(
-    '7',
+    '5',
     'The clause',
-    'A Liraasa clause is a row of twenty slots in a fixed order, anchored on the verb. Only the subject and the verb are required.',
-    `${h3('The 20-slot template')}
-${diagram}
-<pre class="template"><code>${esc(g.clause_template)}</code></pre>
-${slotTable}
-${callout('parsing', 'SPEC §5.4 quotes an older 10-slot template. The 20-slot template above is the canon.')}
-${h3('Scope operators')}
-${p(`${g.scope_operators.words.map((w) => `\`${w}\``).join(' ')} stand ${esc(g.scope_operators.rule)}. Scope runs left over right [[1.0:G1]]; \`ne\` negates everything to its right, up to the verb.`)}
-${examples([['Maivo po ne somusia.', 'I did not sleep.']])}
-${h3('Stacking')}
-${p(`One word per slot. These pairs cannot share a clause [[1.0:G16]]:`)}
-<p class="pairs">${exclusions}</p>
-${p(`At most ${String(g.stacking.max_preverbal_operators_recommended)} pre-verbal operators are recommended.`)}
-${callout('singing', 'Operators are short and unstressed in the line, so they are good for filling a beat. But four before a verb is the comfortable limit.')}
-${h3('Copulas and the verb slot')}
-${copulas}
-${ul([
-  '`ke` is a temporary state or a location now: `li nela ke benasan`, the person is good right now. `ka` is a permanent identity or quality.',
-  'A predicate adjective may also stand bare, with no copula: `lira benasan`.',
-  'Transitivity is usage-based (settled question 5): `gome` can passivise any verb used with an object. There is no transitive flag.',
-  'Valency operators `vaku` (make), `lesvu` (let) and `tekvu` (prevent) follow CAUSER [TENSE…] OP ACTOR [ne] [APPROACH] [PHASE] [EFFORT] VERB [OBJECT] [[1.0:G14]].',
+    'A fixed order, anchored on the verb. Only the subject and the verb are required.',
+    `${h3('The core order')}
+<pre class="template core-order"><code>FRAME · SUBJECT · TENSE · ne · MODAL · VERB · OBJECT · ADJUNCTS · ATTITUDE · ki</code></pre>
+${examples([
+  ['Eli-krono, maivo lirala.', 'Now I sing.'],
+  ['Maivo po ne somusia.', 'I did not sleep.'],
+  ['Taivo futu relnura ki?', 'Will you come back?'],
+  ['Maivo lirala poye.', 'Perhaps I sing.'],
 ])}
+${ul([
+  `Operators stand before the verb, in the order of the full table below. ${g.scope_operators.words.map((w) => `\`${w}\``).join(' ')} stand ${esc(g.scope_operators.rule)}. Scope runs left over right [[1.0:G1]]: \`ne\` negates what follows it.`,
+  `One word per slot, at most ${String(g.stacking.max_preverbal_operators_recommended)} before the verb. These never share a clause [[1.0:G16]]: ${exclusions}.`,
+])}
+${calloutHtml(
+  'caution',
+  p(
+    'In X `de` Y, **Y owns X**: `li bumre de li cilni`, the bread of the city. **But a pronoun or a personal name on the left is the owner**: `taivo de lira`, your song; `pilo de bumre`, father’s bread [[1.2:G27]]. A pronoun outranks a name: `Pilo de maivo po lirala.` My father sang [[1.2:G32]].',
+  ),
+)}
+${h3('Copulas')}
+${p(wordList(lex, ['ke', 'ka', 'kapoki', 'loya', 'miyo']))}
+${p('A predicate adjective may stand bare: `lira benasan`. Transitivity is usage-based: `gome` passivises any verb used with an object. Valency: CAUSER [TENSE…] `vaku`/`lesvu`/`tekvu` ACTOR [ne] VERB [OBJECT] [[1.0:G14]].')}
 ${h3('The noun phrase')}
 <pre class="template"><code>${esc(g.noun_phrase)}</code></pre>
-${ul([
-  'Order: quantifier, then article or owner, then number, then adjectives, then the noun with `-ti` and `-ri`, then the `de` phrase, then the relative clause [[0.8:G7]].',
-  '**Adjectives come before the noun**, and a noun does not modify a noun (ADR-0011).',
-  '`toda` N is every N; `toda li` N is all the N.',
-])}
+${p('Adjectives before the noun; a noun never modifies a noun [[0.8:G7]]. `toda` N is every N; `toda li` N is all the N.')}
+${p(`${liRule} [[0.8:R5]]`)}
 ${h3('Linking clauses')}
-${p('A clause with its own verb is opened by a linker. Two verbs in one clause with no linker is an error.')}
-${linkers}
-${ul([
-  '`fime` opens a content clause, “that …”. The demonstrative “that” is `ola`.',
-  '`raho` opens a relative clause. If it does not end the sentence, a comma closes it [[1.0:G21]].',
-  '`sidu` joins two verbs that share a subject. It never takes a copula: “hope to become” is `kopi loya`.',
-  '`ala` means toward, **never** the infinitive “to”.',
-])}
+${p(
+  wordList(lex, [
+    'ata',
+    'nara',
+    'oro',
+    'si',
+    'sina',
+    'kasa',
+    'kopisa',
+    'nevi',
+    'fime',
+    'raho',
+    'sidu',
+    'kube',
+    'nayo',
+    'tuni',
+    'sige',
+    'kureli',
+  ]),
+)}
+${p('A clause with its own verb needs a linker. `fime` opens “that …” (the demonstrative is `ola`); `raho` opens a relative, closed by a comma unless it ends the sentence [[1.0:G21]]; `sidu` joins two verbs sharing a subject and never takes a copula; `ala` is toward, **never** the infinitive “to”.')}
 ${examples([
   ['Maivo sabesia fime taivo lirala.', 'I know that you sing.'],
   ['Li nela raho lirala ka benasan.', 'The person who sings is good.'],
   ['Maivo vurlova sidu lirala.', 'I want to sing.'],
 ])}
-${h3('Questions')}
-${p('A question keeps **statement order** and adds `ki` as the last word of the clause. Question words are `ki-` correlatives that stay in place; an embedded yes/no question uses `si` [[0.8:G4]]. The copula is never moved to the front.')}
-${examples([['Taivo futu relnura ki?', 'Will you come back?']])}`,
+${p('Questions keep statement order and end in `ki`; question words are `ki-` correlatives left in place; an embedded yes/no question uses `ki-oro` [[0.8:G4]] [[1.0:G2]].')}
+${h3('Reference: all twenty slots')}
+${slotTable}`,
   );
 }
 
-// --------------------------------------------------------------- 7. Recipes
+// --------------------------------------------------------------- 6. Recipes
 
+/**
+ * The recipes, simplest first: what a learner needs on day one (did, will,
+ * not, is, questions), then the noun phrase, comparison, modals, linked
+ * clauses, and the rarer machinery. Liraasa in a pattern is in backticks.
+ * Every example is a canon example, a canon function-word example or a
+ * phrase quoted in its ruling; the build tags any other for review.
+ */
 export const RECIPES: readonly (readonly [string, string, string, string, string])[] = [
-  ['my / your X', 'PRONOUN de X', 'taivo de lira', 'your song', '1.2:G27'],
-  ["Father's X", 'NAME de X', 'pilo de bumre', "father's bread", '1.2:G27'],
-  ['the X of the Y', 'li X de li Y', 'li bumre de li cilni', 'the bread of the city', '1.2:G27'],
-  ['a song about love', 'X de Y', 'li lira de amor', 'the song of love', '1.2:G30'],
+  ['did / -ed', '`po` + verb', 'maivo po lirala', 'I sang', 'slot 4'],
+  ['will', '`futu` + verb', 'Taivo futu relnura ki?', 'Will you come back?', 'slot 4'],
+  ['not', '`ne` before what it negates', 'Maivo po ne somusia.', 'I did not sleep.', '1.0:G1'],
+  [
+    'cannot / can … not',
+    '`ne` before a modal negates the modal; after it, the action',
+    'Maivo ne povi lirala. / Maivo povi ne lirala.',
+    'I cannot sing. / I am able not to sing.',
+    '1.0:G15',
+  ],
+  [
+    'is (now) / is (always)',
+    '`ke` / `ka`',
+    'li nela ke benasan',
+    'the person is good right now',
+    'copulas',
+  ],
+  ['do you …?', 'statement order, `ki` last', 'Taivo lirala ki?', 'Do you sing?', '1.0:G2'],
+  [
+    'yes / no',
+    '`zabo` / `kepi`, or tense + verb',
+    'Taivo po sapusia ki? — Zabo. / Po sapusia. / Zabo, maivo po sapusia.',
+    'Did you eat? — Yes. / (I) ate. / Yes, I ate.',
+    '0.8:G3',
+  ],
+  ["let's", '`yava` + verb', 'Yava lirala!', 'Let us sing!', ''],
+  ['command', 'no subject; `fisa` = please', 'Fisa, lisrola.', 'Please stay.', '1.2:G31'],
+  [
+    'addressing someone',
+    'set off by commas',
+    'Taivo viki pagopa ligo maivo ki, maivo de amor?',
+    'Would you come near me, my love?',
+    '1.2:G31',
+  ],
+  ['I have X', '`tovota` + object', 'Maivo tovota baba lira.', 'I have a song.', ''],
+  [
+    'there is',
+    '`miyo` + noun phrase',
+    'Miyo baba sora en li nimu.',
+    'There is a friend in the home.',
+    '',
+  ],
+  [
+    'become',
+    '`loya` + adjective or noun',
+    'Li nullo po loya sovesan.',
+    'The night became peaceful.',
+    '',
+  ],
+  [
+    'this / that, standing alone',
+    '`eli` / `ola` as pronouns; `eli-nela` for a person',
+    'Maivo vurlova eli, ne ola.',
+    'I want this, not that.',
+    '0.8:G1',
+  ],
+  ['my / your X', 'PRONOUN `de` X', 'taivo de lira', 'your song', '1.2:G27'],
+  ["Father's X", 'NAME `de` X', 'pilo de bumre', "father's bread", '1.2:G27'],
+  [
+    'the X of the Y',
+    '`li` X `de` `li` Y',
+    'li bumre de li cilni',
+    'the bread of the city',
+    '1.2:G27',
+  ],
+  [
+    'my father',
+    'a pronoun outranks a name',
+    'Pilo de maivo po lirala.',
+    'My father sang.',
+    '1.2:G32',
+  ],
+  ['a song about love', 'X `de` Y', 'li lira de amor', 'the song of love', '1.2:G30'],
   ['songbird (noun + noun)', 'first noun → its adjective', 'lirasan lavra', 'songbird', 'ADR-0011'],
-  ['two coins', 'NUMBER NOUN, -ri optional', 'dossa cono', 'two coins', '1.2:G28'],
   ['the forgotten', 'article + adjective', 'li ramumomvisan', 'the forgotten', '1.2:G29'],
+  ['my daughter', 'FEMALE + `linu`', 'Maivo de minvalinu lirala.', 'My daughter sings.', '1.2:G36'],
+  ['aunt', 'gender adjective + neutral noun', 'minvasan purmafamli', 'aunt', '1.2:G36'],
+  ['-ly (adverb)', '`la` + adjective', 'Maivo lirala la molusan.', 'I sing gently.', ''],
+  ['very X', '`ruli` ADJ', 'ruli vanisan', 'very beautiful', ''],
+  ['less X', '`menu` ADJ', 'menu vanisan', 'less beautiful', ''],
+  ['the most X', '`mosa` ADJ', 'mosa vanisan', 'most beautiful', ''],
+  [
+    'more X than Y',
+    '`kasi` ADJ `tamo` Y',
+    'Li lira ka kasi vanisan tamo li seno.',
+    'The song is more beautiful than the speech.',
+    '',
+  ],
+  ['as X as Y', '`gase` ADJ `gase` Y', 'gase vanisan gase taivo', 'as beautiful as you', '0.8:G8'],
+  ['like Y', '`gase` + noun phrase', 'Taivo lirala gase pilo.', 'You sing like father.', '0.8:G8'],
+  [
+    'the same as / different from',
+    'X `ka sambasan ko` Y / X `ka sambanasan da` Y',
+    'Eli bumre ka sambasan ko pilo de bumre.',
+    "This bread is the same as father's bread.",
+    '0.8:G8',
+  ],
+  ['also, too', '`tu` before what it adds', 'Tu Kipo po bumreba.', 'Kipo baked too.', '1.0:G13'],
+  ['too many songs', '`diba` + quantifier or adjective', 'diba muya lirari', 'too many songs', ''],
+  ['two coins', 'NUMBER NOUN, `-ri` optional', 'dossa cono', 'two coins', '1.2:G28'],
+  [
+    'at least / at most / about / exactly',
+    '`lusu` / `mosa` / `gase` / `pendi` + number',
+    'Taivo guraga maivo pendi dossa cono.',
+    'You owe me exactly two coins.',
+    '1.0:G9',
+  ],
+  ['often / rarely', 'quantifier-`krono`', 'Maivo lirala muya-krono.', 'I sing often.', '1.2:G34'],
+  ['now I sing', 'time word first or last', 'Eli-krono, maivo lirala.', 'Now I sing.', '1.2:G24'],
+  [
+    'suddenly, …',
+    'frame word first, with a comma',
+    'Zafra, li dorbi po lallela.',
+    'Suddenly the door opened.',
+    'slot 1',
+  ],
+  ['can', '`povi` (ability)', 'maivo povi lirala', 'I can sing', '1.0:G3'],
+  ['might', '`nosi` (it may be so)', 'saivo nosi lirala', 'they might sing', '1.0:G3'],
+  ['may (allowed)', '`dagi` (permission)', 'Taivo dagi lisrola.', 'You may stay.', '1.0:G3'],
+  ['must (have to)', '`musi`', 'maivo musi pagopa', 'I must go', '1.0:G4'],
+  [
+    'must (surely)',
+    '`tosu` + verb … `seye`',
+    'Kipo po tosu bumreba seye.',
+    'Kipo must have baked (I can tell from the evidence).',
+    '1.0:G4',
+  ],
+  [
+    'should / could / would have',
+    '`po noma suvi` / `po noma povi` / `po noma viki` + verb',
+    'Maivo po noma suvi lirala.',
+    "I should have sung (but I didn't).",
+    '1.0:G6',
+  ],
+  [
+    'if … would have',
+    '`si` … `po noma` …, … `po viki` …',
+    'Si maivo po noma masuma, taivo po viki relsira.',
+    'If I had asked, you would have answered.',
+    '1.0:G6',
+  ],
+  ['water or food', 'A `oro` B', 'miru oro nami', 'water or food', '1.2:G25'],
+  [
+    'either / neither / only if / even if',
+    '`oro` A `oro` B · `ne` A `ne` B · `doli si` · `yesta si`',
+    'Yesta si taivo tavreta, maivo futu pagopa.',
+    'Even if you refuse, I will go.',
+    '1.0:G10',
+  ],
+  [
+    'despite',
+    '`nevi` + noun phrase (+ clause: although)',
+    'nevi li zeldo',
+    'despite the resistance',
+    '1.0:G11',
+  ],
+  [
+    'I know that …',
+    '`fime` + clause',
+    'Maivo sabesia fime taivo lirala.',
+    'I know that you sing.',
+    '',
+  ],
+  [
+    'the person who sings',
+    '`raho` + clause',
+    'Li nela raho lirala ka benasan.',
+    'The person who sings is good.',
+    '1.0:G21',
+  ],
+  ['want to sing', 'VERB `sidu` VERB', 'Maivo vurlova sidu lirala.', 'I want to sing.', '0.8:G6'],
+  [
+    'perhaps …',
+    'attitude word at the clause end',
+    'Maivo lirala poye.',
+    'Perhaps I sing.',
+    '1.0:G22',
+  ],
+  [
+    'is done by',
+    '`gome` VERB `gagu` AGENT',
+    'Li lira gome sarbisia gagu maivo.',
+    'The song is written by me.',
+    '',
+  ],
+  [
+    'make someone do',
+    '`vaku` ACTOR VERB',
+    'Taivo vaku maivo lirala.',
+    'You make me sing.',
+    '1.0:G14',
+  ],
   [
     'owe me two coins',
     'VERB PRONOUN THEME',
@@ -496,38 +779,18 @@ export const RECIPES: readonly (readonly [string, string, string, string, string
   ],
   [
     'lend three coins to me',
-    'VERB THEME ala RECIPIENT',
+    'VERB THEME `ala` RECIPIENT',
     'rimara tressa cono ala maivo',
     'lend three coins to me',
     '1.2:G26',
   ],
-  ['now I sing', 'time word first or last', 'Eli-krono, maivo lirala.', 'Now I sing.', '1.2:G24'],
-  [
-    'suddenly, …',
-    'frame word first, with a comma',
-    'Zafra, li dorbi po lallela.',
-    'Suddenly the door opened.',
-    'slot 1',
-  ],
-  ['water or food', 'A oro B', 'miru oro nami', 'water or food', '1.2:G25'],
   [
     'open it with a key',
-    'yuta + the instrument',
+    '`yuta` + the instrument',
     'Maivo lallela li dorbi yuta li kemye.',
     'I open the door with the key.',
     '1.2:G33',
   ],
-  ['often / rarely', 'quantifier-krono', 'Maivo lirala muya-krono.', 'I sing often.', '1.2:G34'],
-  ['too many songs', 'diba + quantifier or adjective', 'diba muya lirari', 'too many songs', ''],
-  [
-    'my father',
-    'a pronoun outranks a name',
-    'Pilo de maivo po lirala.',
-    'My father sang.',
-    '1.2:G32',
-  ],
-  ['my daughter', 'FEMALE + linu', 'Maivo de minvalinu lirala.', 'My daughter sings.', '1.2:G36'],
-  ['aunt', 'gender adjective + neutral noun', 'minvasan purmafamli', 'aunt', '1.2:G36'],
   [
     'recognize',
     'curated motion metaphor',
@@ -535,150 +798,44 @@ export const RECIPES: readonly (readonly [string, string, string, string, string
     'I recognize you.',
     '1.2:G35',
   ],
-  ['did / -ed', 'po + verb', 'Saivo po venreva.', 'They arrived.', 'slot 4'],
-  ['will', 'futu + verb', 'Taivo futu relnura ki?', 'Will you come back?', 'slot 4'],
-  ['not', 'ne before what it negates', 'Maivo po ne somusia.', 'I did not sleep.', '1.0:G1'],
   [
-    'is (now) / is (always)',
-    'ke / ka',
-    'li nela ke benasan',
-    'the person is good right now',
-    'copulas',
-  ],
-  [
-    'I know that …',
-    'fime + clause',
-    'Maivo sabesia fime taivo lirala.',
-    'I know that you sing.',
-    '',
-  ],
-  [
-    'the person who sings',
-    'raho + clause',
-    'Li nela raho lirala ka benasan.',
-    'The person who sings is good.',
-    '1.0:G21',
-  ],
-  ['want to sing', 'VERB sidu VERB', 'Maivo vurlova sidu lirala.', 'I want to sing.', '0.8:G6'],
-  [
-    'command',
-    'no subject; fisa = please',
-    'Vulravelmava maivo de yendo, fisa.',
-    'Bandage my palm, please.',
-    '1.2:G31',
-  ],
-  [
-    'addressing someone',
-    'set off by commas',
-    'Taivo viki pagopa ligo maivo ki, maivo de amor?',
-    'Would you come near me, my love?',
-    '1.2:G31',
-  ],
-  [
-    'perhaps …',
-    'attitude word at the clause end',
-    'Maivo lirala poye.',
-    'Perhaps I sing.',
-    '1.0:G22',
+    'a tense for a whole passage',
+    'a lone `Po` or `Futu` opening a paragraph sets its tense',
+    'Po — Maivo semnesia ligo li tabu. Maivo pressa loki semnesia eli-pago.',
+    'I sat by the table. Now I am still sitting here.',
+    '0.8:R4',
   ],
 ];
 
-export function recipesPart(): string {
+export function recipesPart(index: Index): string {
+  const canon = canonTexts(index.lex);
   return part(
-    '8',
+    '6',
     'Patterns: English → Liraasa',
-    'The recipes a translator follows. Every example is canon.',
+    'The recipes a translator follows, simplest first. Every example is canon, except any marked for review.',
     table(
       ['English', 'Pattern', 'Example', 'Ruling'],
-      RECIPES.map(([en, pat, l, gloss, id]) => [
-        cell(esc(en)),
-        cell(esc(pat)),
-        cell(`${lir(l)}<span class="gloss">${esc(gloss)}</span>`),
-        cell(/^\d\.\d:|^ADR/.test(id) ? badge(id) : esc(id)),
-      ]),
+      RECIPES.map(([en, pat, l, gloss, id]) => {
+        const review = !isCanonText(canon, l);
+        if (review) forReview(l, gloss, `Reference, Patterns: ${en}`);
+        return [
+          cell(esc(en)),
+          cell(md(pat)),
+          cell(
+            `${lir(l)}${review ? '<span class="review-tag">for review</span>' : ''}<span class="gloss">${esc(gloss)}</span>`,
+          ),
+          cell(/^\d\.\d:|^ADR/.test(id) ? badge(id) : esc(id)),
+        ];
+      }),
       { cls: 'recipes' },
     ),
   );
 }
 
-// ---------------------------------------------------------------- 8. Rulings
-
-function rulingTable(edition: string, rs: readonly Ruling[]): string {
-  return table(
-    ['Id', 'Topic', 'Ruling'],
-    rs.map((r) => [
-      cell(badge(`${edition}:${r.id}`)),
-      cell(`<strong>${esc(r.topic)}</strong>`),
-      cell(esc(r.ruling)),
-    ]),
-    { cls: 'rulings' },
-  );
-}
-
-export function rulingsPart(index: Index): string {
-  const lex = index.lex;
-  const r12 = lex.rulings_1_2
-    .map(
-      (r) => `<article class="ruling" aria-labelledby="r12-${r.id}">
-<h4 id="r12-${r.id}">${badge(`1.2:${r.id}`)} ${esc(r.topic)}</h4>
-<p>${esc(r.ruling)}${r.refines === undefined || r.refines.length === 0 ? '' : ` <em class="refines">Refines ${esc(r.refines.join(', '))}.</em>`}</p>
-${r.examples === undefined ? '' : examples(r.examples)}
-</article>`,
-    )
-    .join('\n');
-
-  const settled = table(
-    ['Question', 'Answer'],
-    lex.settled_open_questions_0_8.map((q) => [cell(esc(q.q)), cell(esc(q.answer))]),
-  );
-
-  const revised = lex.examples.filter((e) => e.liraasa_1_1 !== undefined);
-  const revisedTable = table(
-    ['Before (1.1)', 'After (1.2)', 'English'],
-    revised.map((e) => [
-      cell(lir(e.liraasa_1_1 ?? '', 'retired')),
-      cell(lir(e.liraasa)),
-      cell(esc(e.english)),
-    ]),
-  );
-
-  return part(
-    '9',
-    'Every ruling',
-    'Verbatim from the lexicon, grouped by edition, newest first. 1.2:G24–G31 come from the open-questions review of 2026-10-17 (ADR-0012), G32–G36 from the 1.2 lexicon update (ADR-0013).',
-    `${h3(`Rulings 1.2 (${lex.rulings_1_2[0]?.id ?? ''}–${lex.rulings_1_2.at(-1)?.id ?? ''})`)}
-${r12}
-${h3('Rulings 1.0')}
-${rulingTable('1.0', lex.rulings_1_0)}
-${h3('Rulings carried from 0.8')}
-${rulingTable('0.8', lex.rulings_0_8_carried)}
-${h3('ADR-0011: a noun does not modify a noun')}
-${p('Of two nouns side by side, the first becomes its adjective, and that adjective describes the second: `lira` + `lavra` → `lirasan lavra`, a songbird. The adjective depends on the form of the first noun:')}
-${table(
-  ['Noun form', 'Adjective', 'Example'],
-  [
-    [cell('root'), cell(morph('-san')), cell(`${lir('sizo')} → ${lir('sizosan')}`)],
-    [
-      cell('ascended'),
-      cell(morph('-asasan')),
-      cell(`${lir('mavopagoasa')} → ${lir('mavopagoasasan')}`),
-    ],
-    [cell('negative'), cell(morph('-nasan')), cell(`${lir('melona')} → ${lir('melonasan')}`)],
-  ],
-)}
-${p('If that adjective slot is unused, it cannot be used. Then take the lexicon’s compound of the two nouns if one exists, or else a `de` phrase. Compounds are untouched by this rule.')}
-${h3('Settled questions from 0.8')}
-${settled}
-${h3('Revised examples')}
-${p(`These ${String(revised.length)} canon examples broke ADR-0011 and are revised in 1.2. The lexicon keeps the old text.`)}
-${revisedTable}`,
-  );
-}
-
-// ---------------------------------------------------------------- 9. Parsing
+// --------------------------------- Parsing (the LLM reference reads these)
 
 export const READ_ORDER = [
-  'Exact form in the form index → **lexical** (every reading kept).',
+  'Exact form in the form index → **lexical** (every reading kept; image compounds of the 2.0 pattern included).',
   'A closed-class word → its class.',
   'A numeral, plain or hyphenated, optionally with `-ne` (ordinal).',
   'A derivation (`-yo`, `-vu`, `-pago`).',
@@ -716,144 +873,95 @@ export const RULES: readonly (readonly [string, string, string])[] = [
   ['note', '-na direction; hema as hesitation', ''],
 ];
 
-export function parsingPart(): string {
-  const linkers =
-    'ata nara oro si sina kasa kopisa nevi raho fime kube nayo tuni sige kureli sidu tonsi narli korsi krotiata yava gome ki-oro sabri';
-  return part(
-    '10',
-    'Parsing: how a machine reads a line',
-    'The reference implementation is the checker in the Workbench’s editor/index.html (parseWord, splitClauses, placeClause, checkLine, backTranslate). This part specifies it.',
-    `${h3('Data built from the lexicon')}
-${ul([
-  '**Form index:** spelling → a **list** of readings. Some spellings belong to more than one namespace (`maivo` is a pronoun and a root).',
-  '**Closed-class table:** function words, correlatives, time words, particles, pronouns, colours and numerals.',
-  '**Derivations:** root + `-yo` / `-vu` / `-pago`; `mavopago` means only “society”.',
-  '**Legacy table:** pre-1.0 spelling → replacement. migration_forms.kind has five values; for archived phrases the target is a phrase, not a form.',
-  '**English index:** every glossed slot and every synonym.',
-])}
-${h3('Tokenising')}
-${p('Tokens are runs of letters, with internal hyphens and apostrophes kept: `eli-krono`, `una-ne` and `dozira-cuara` are one token each. Punctuation splits phrases. A comma is a pause, which matters for frames, for closing a relative clause [[1.0:G21]] and for address [[1.2:G31]].')}
-${h3('Reading one word, in order')}
-${p('**Lexicon first:** many roots end in letters that look like suffixes (`navu`, `sevu`, `pago`), so a known spelling always beats a decomposition.')}
-<ol class="steps">${READ_ORDER.map((s) => `<li>${md(s)}</li>`).join('')}</ol>
-${h3('Roles')}
-${ul([
-  'From the word itself: tense, operator, copula, valency, determiner, quantifier, degree, focus, preposition, free, placed.',
-  'Lexical readings: verb slot → **verb**; root, ascended and negative → **noun**; the three adjective slots → **adj**.',
-  'Pronouns, names, derivations and fractions → noun. Place, time, manner and cause correlatives → adverb; the others → noun. Time words → adverb or noun.',
-])}
-${h3('Splitting clauses')}
-${p('A new clause starts at a linker, or at any `ki-` question word. A coordinated clause has its own single verb; an embedded one runs on into the main predicate, so its verb is not counted as a second verb.')}
-<p class="pairs">${linkers
-      .split(' ')
-      .map((w) => lir(w))
-      .join(' ')}</p>
-${h3('Placing tokens in slots')}
-${paras(
-  'The parser is a state machine, start → subject → verb → post, walking left to right. Focus words stand before their constituent; free and placed words are skipped. Tense and operators move the state to verb. A preposition consumes the noun phrase after it, and `la` + adjective is an adjunct.',
-  'A time word opens or closes the clause freely [[1.2:G24]]; after `de` it is a noun. The verb slot takes a verb form, a copula, a valency operator or `gome`. A noun phrase before the verb is the subject; after it, the object or complement. Give-type verbs take two bare noun phrases only when the first is a pronoun [[1.2:G26]]. Anything left over is an error naming the token and the slot expected.',
-)}
-${h3('Reading de')}
-${p('In X `de` Y, Y is the owner, “X of Y”, **unless** X is a pronoun or a personal name, in which case X is the owner, “X’s Y” [[1.2:G27]]. A pronoun is the owner on either side. NUMBER `de` NUMBER is a fraction. `de` needs a noun phrase on both sides.')}
-${h3('The checker’s rules')}
-${table(
-  ['Severity', 'Rule', 'Id'],
-  RULES.map(([sev, rule, id]) => [
-    cell(`<span class="sev sev-${sev}">${esc(sev)}</span>`),
-    cell(esc(rule)),
-    cell(/^\d\.\d:|^ADR/.test(id) ? badge(id) : esc(id)),
-  ]),
-)}
-${h3('Back-translation')}
-${p('Back-translation is mechanical and judges nothing. Each word gets its first sense; a pronoun before `de` becomes a possessive and after `de` an object; `-ri` adds “s” and `-ti` adds “little”. It is shown beside the writer’s English so drift is visible.')}
-${callout('parsing', 'Generated text is untrusted. Every machine-written Liraasa line must be tokenised, parsed and checked before it is shown, and a flagged line does not go in the guide.')}`,
-  );
-}
+// ------------------------------------------------------------ Open questions
 
-// --------------------------------------------------------- 10. Open questions
-
-/** Not decided: presented as open, resolved nowhere (SPEC §14). */
+/** Not decided: presented as open, resolved nowhere (SPEC §14). Language only. */
 export const OPEN_QUESTIONS: readonly string[] = [
   '**“Once”, “N times”:** no construction yet.',
   '**“To + verb”:** a general complement beyond `sidu` (shared subject) and `kopisa` (purpose).',
   '**Evidentials:** the meaning when absent, whose evidence counts inside a `fime` clause, and the meaning in a question.',
   '**Relative clauses on a prepositional object:** “the house in which …”.',
-  '**Restoring retired roots** needed for *Bumrepago* and possibly others: deferred to the author.',
 ];
 
-export function openQuestionsPart(): string {
+export function openQuestionsPart(no: string): string {
   return part(
-    '11',
+    no,
     'Open questions',
-    'These are not decided. They are presented as open, and nothing in this guide resolves them.',
+    'Not decided. Nothing in this guide resolves them.',
     ul(OPEN_QUESTIONS),
   );
 }
 
 // ------------------------------------------------------------- Appendices
 
-export function appendices(index: Index): string {
+/** Rulings about the project, not the language: in the rulings file only. */
+export const GOVERNANCE = ['0.8:R1', '0.8:R2', '0.8:R3', '0.8:R11'];
+/** Rulings for reading pre-1.0 texts: in the rulings file only. */
+export const LEGACY = ['1.0:G19', '0.8:R7'];
+
+export interface EditionCounts {
+  v10: number;
+  v11: number;
+  v12: number;
+  v20: number;
+  attested: number;
+}
+
+/**
+ * Appendix A lists only the function words the guide has not already taught:
+ * `isShown` says whether a word or phrase was rendered before the appendices.
+ * The suffixes are taught with the seven forms and the derivations (Part 3),
+ * and the day words are Appendix C's, so none of them is listed again.
+ */
+export function appendices(
+  index: Index,
+  isShown: (form: string) => boolean,
+  counts: EditionCounts,
+  rulingIndex: string,
+): string {
   const lex = index.lex;
+  const timeWords = new Set(lex.time_and_dates.map((t) => t.form));
+  const rest = lex.function_words.filter(
+    (w) => !isShown(w.form) && !w.form.startsWith('-') && !timeWords.has(w.form),
+  );
   const fwTable = table(
-    ['Form', 'Meaning', 'Position', 'Example', 'Since'],
-    lex.function_words.map((w) => [
+    ['Form', 'Meaning', 'Position'],
+    rest.map((w) => [
       cell(fwForm(w.form), 'form'),
       cell(esc(w.meaning)),
-      cell(esc(w.position)),
-      cell(`${lir(w.example)}<span class="gloss">${esc(w.example_gloss)}</span>`),
-      cell(esc(w.since)),
+      cell(esc(usage(w.position))),
     ]),
     { cls: 'appendix' },
   );
 
-  const time = table(
-    ['Form', 'English'],
-    lex.time_and_dates.map((t) => [cell(lir(t.form)), cell(esc(t.english))]),
-    { cls: 'compact two-up' },
-  );
+  const derivations = Object.entries(lex.morphology.lexicalised_derivations)
+    .map(([k, v]) => `${lir(k)} <span class="gloss">${esc(normGloss(v))}</span>`)
+    .join(' · ');
+  const asides = Object.entries(lex.morphology.suffixes)
+    .map(([k, v]) => [k, /\((.*)\)$/.exec(v)?.[1]] as const)
+    .filter(([, a]) => a !== undefined && !a.startsWith('on the root') && !a.startsWith('always'))
+    .map(([k, a]) => `${k}: ${a ?? ''}`);
 
-  const numberRules = table(
-    ['Group', 'Value', 'Liraasa', 'Rule', 'Comment'],
-    lex.numbers.rules.map((r) => {
-      const word = String(r.Liraasa ?? '');
-      return [
-        cell(esc(String(r.Group ?? ''))),
-        cell(esc(String(r.Value ?? '')), 'num'),
-        cell(index.isWord(word.toLowerCase()) ? lir(word) : esc(word)),
-        cell(esc(String(r['Construction rule'] ?? ''))),
-        cell(esc(String(r['Usage / comment'] ?? ''))),
-      ];
-    }),
-    { cls: 'appendix' },
-  );
+  // place words are filed with the time words in the data; they are taught as correlatives
+  const place = new Set(lex.correlatives.filter((c) => c.concept === 'pago').map((c) => c.form));
+  const time = lex.time_and_dates
+    .filter((t, i, all) => !place.has(t.form) && all.findIndex((x) => x.form === t.form) === i)
+    .map((t) => `${lir(t.form)} <span class="gloss">${esc(normGloss(t.english))}</span>`)
+    .join(' · ');
 
-  const particles = lex.discourse_particles
-    .map(
-      (d) => `${h3(`\`${d.form}\``, `particle-${d.form}`, false)}
-${p(`${esc(d.function)}. **Where:** ${esc(d.positions)}. **Register:** ${esc(d.register)}.`)}
-${examples(d.examples.map((e) => [e.liraasa, e.english] as const))}`,
-    )
-    .join('\n');
-
-  const colourNotes = table(
-    ['Family', 'Notes'],
-    lex.colors.map((c) => [
-      cell(esc(c.Family ?? '')),
-      cell(esc(c['Example meanings / notes'] ?? '')),
-    ]),
-  );
-
+  const added = counts.v20 - counts.v12 + counts.attested;
   return `<section class="part appendices" aria-labelledby="appendices">
-<header class="part-head"><div class="part-num" aria-hidden="true">A–E</div><h2 id="appendices" data-toc="Appendices">Appendices</h2></header>
-${h3('A. Function words')}
+<header class="part-head"><div class="part-num" aria-hidden="true">A–D</div><h2 id="appendices" data-toc="Appendices">Appendices</h2></header>
+${h3('A. More function words')}
+${p(`The ${n(rest.length)} function words not taught above.`)}
 ${fwTable}
-${h3('B. Time and dates')}
-${time}
-${h3('C. Numbers: the construction rules')}
-${numberRules}
-${h3('D. Colours')}
-${colourNotes}
-${h3('E. Discourse particles')}
-${particles}
+${h3('B. Listed derivations')}
+${p(`These meanings override the default reading of their suffix [[1.0:G20]] [[2.0:G41]].${asides.length > 0 ? ` Note ${asides.map((a) => esc(a)).join('; ')}.` : ''}`)}
+<p class="chips">${derivations}</p>
+${h3('C. Time words')}
+<p class="chips">${time}</p>
+${h3('D. Editions and rulings')}
+${p(`Liraasa 1.0 (${n(counts.v10)} headwords) is the frozen base. 1.1 added vocabulary (${n(counts.v11)}); 1.2 added rulings 1.2:G24–G36 and words (${n(counts.v12)}). 2.0 added ${n(added)} headwords and moved ${n(counts.attested)} pattern-built compounds out of the dictionary into the image-compound pattern, hence ${n(counts.v12)} − ${n(counts.attested)} + ${n(added)} = ${n(counts.v20)}. The ${n(counts.attested)} keep their glosses as attested image compounds and are **not** counted in the ${n(counts.v20)}.`)}
+${rulingIndex}
 </section>`;
 }

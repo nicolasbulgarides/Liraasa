@@ -76,14 +76,14 @@ export function exportLexicon(lexicon: Lexicon, options: ExportOptions = {}): Ra
 
   const out: Record<string, unknown> = {};
 
-  // The 26 known keys first, in the author's order.
-  for (const key of TOP_LEVEL_KEY_ORDER) {
-    if (key in replaced) out[key] = replaced[key];
-    else if (key in source) out[key] = (source as Record<string, unknown>)[key];
-  }
-  // Then anything a future edition added that we do not model.
+  // The source's own key order, so every edition round-trips (1.0's is
+  // TOP_LEVEL_KEY_ORDER; later editions insert sections of their own).
   for (const key of Object.keys(source)) {
-    if (!(key in out)) out[key] = (source as Record<string, unknown>)[key];
+    out[key] = key in replaced ? replaced[key] : (source as Record<string, unknown>)[key];
+  }
+  // A known key the source lacks, in the author's order.
+  for (const key of TOP_LEVEL_KEY_ORDER) {
+    if (!(key in out) && key in replaced) out[key] = replaced[key];
   }
 
   return out as unknown as RawLexicon;

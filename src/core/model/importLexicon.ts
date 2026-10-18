@@ -28,6 +28,7 @@ import {
   type Example,
   type FunctionWord,
   type Headword,
+  type ImageCompounds,
   type Lexicon,
   type MigrationForm,
   type MigrationKind,
@@ -105,6 +106,12 @@ function decodeRulings(rows: readonly RawRuling[], edition: string): Ruling[] {
   });
 }
 
+/** The suffix a compound is lexicalised with (2.0:G38: viofuroti = vio + furo + -ti), or ''. */
+export function compoundSuffix(h: Headword): string {
+  const raw = (h as unknown as { [RAW]?: { suffix?: unknown } })[RAW];
+  return typeof raw?.suffix === 'string' ? raw.suffix : '';
+}
+
 export function importLexicon(raw: RawLexicon, options: ImportOptions = {}): ImportResult {
   const warnings: string[] = [];
   const assigner = new IdAssigner(options.ids ?? emptyIdMap(raw.version));
@@ -132,7 +139,7 @@ export function importLexicon(raw: RawLexicon, options: ImportOptions = {}): Imp
     if (h.type === 'primal' && h.components !== null) {
       warnings.push(`${h.spelling}: primal with components`);
     }
-    if (h.components !== null && h.components.join('') !== h.spelling) {
+    if (h.components !== null && h.components.join('') + compoundSuffix(h) !== h.spelling) {
       warnings.push(`${h.spelling}: spelling is not its components concatenated`);
     }
   }
@@ -199,11 +206,47 @@ export function importLexicon(raw: RawLexicon, options: ImportOptions = {}): Imp
     return attachRaw(decoded as unknown as Example, rawExample);
   });
 
+  // 1.0's and the carried 0.8 rulings, then every later edition's, in file order
   const rulings: Ruling[] = [
     ...decodeRulings(raw.rulings_1_0, '1.0'),
     ...decodeRulings(raw.rulings_0_8_carried, '0.8'),
-    ...decodeRulings(raw.rulings_1_2 ?? [], '1.2'),
+    ...Object.keys(raw)
+      .filter((k) => /^rulings_\d+_\d+$/.test(k) && k !== 'rulings_1_0')
+      .flatMap((k) =>
+        decodeRulings(
+          (raw as unknown as Record<string, RawRuling[]>)[k] ?? [],
+          k.slice('rulings_'.length).replace('_', '.'),
+        ),
+      ),
   ];
+
+  const rawPattern = raw.image_compounds;
+  const imageCompounds: ImageCompounds | null =
+    rawPattern === undefined
+      ? null
+      : {
+          ruling: rawPattern.ruling,
+          rule: rawPattern.rule,
+          modifiers: new Map(
+            Object.entries(rawPattern.modifiers).map(([id, m]) => [
+              id,
+              { asModifier: m.as_modifier, sense: m.sense },
+            ]),
+          ),
+          heads: new Map(
+            Object.entries(rawPattern.heads).map(([id, h]) => [id, { template: h.template }]),
+          ),
+          attested: decodeSection<RawLexicon['headwords'][number], Headword>(
+            headwordMap,
+            rawPattern.attested,
+            'headword',
+            (h) => h.root,
+            assigner,
+          ),
+          keptAsHeadwords: new Map(Object.entries(rawPattern.kept_as_headwords)),
+        };
+  const defaults = (raw.morphology as unknown as { derivation_defaults?: Record<string, string> })
+    .derivation_defaults;
 
   const rhymeFamilies: RhymeFamily[] = raw.rhyme_families.map((r) => ({
     ending: r.ending,
@@ -247,6 +290,8 @@ export function importLexicon(raw: RawLexicon, options: ImportOptions = {}): Imp
       builtUtc: raw.built_utc,
       source: raw.source,
       headwords,
+      imageCompounds,
+      derivationDefaults: defaults ?? null,
       functionWords,
       pronouns,
       correlatives,

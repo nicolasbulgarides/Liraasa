@@ -8,27 +8,13 @@
  * separate syllables — `soraasa` is so-ra-a-sa, `opioa` is o-pi-o-a — a medial
  * cluster splits between its consonants, and stress is penultimate.
  *
- * So conversion is a letter-by-letter mapping with two digraphs. The mapping is
- * declared here rather than inlined, because two letters are genuinely
- * undecided and the author must be able to change them in one place.
+ * So conversion is a letter-by-letter mapping with two digraphs, declared here
+ * rather than inlined so a sound value is changed in one place.
  *
- * ## The two open questions
- *
- * `c` and `j` each occur before several different vowels, so a phonetic
- * spelling cannot be giving them positional variants:
- *
- *  - `c` appears before a, e, i, o and u (`cuara`, `cemo`, `cilni`, `cono`,
- *    `cupa`). Spanish would read `cuara` with /k/ and `cemo` with /s~θ/, but
- *    that would make the spelling unphonetic. Default here: `/k/`, which also
- *    matches the guide's explicit note that `gura` "keeps its hard g" — `g` is
- *    hard in every position, so `c` is treated the same way. The cost is that
- *    `c` and `k` then spell one phoneme.
- *  - `j` appears before o, u and e (`juba`, `jomru`, `jemla`). Default here:
- *    `/d͡ʒ/`, as in the English "jewel" that `juba` (gem) echoes. Spanish
- *    `ojo` would suggest /x/ instead.
- *
- * Both are flagged in the export README and in `OPEN_QUESTIONS` below. Changing
- * either is a one-line edit followed by `npm run export:mfa`.
+ * The values are ruling 2.0:G43 (the author, 2026-10-18): `c` is always "ch"
+ * /t͡ʃ/ before every vowel (`ca` = cha, `co` = cho), so it no longer doubles
+ * `k`; `j` is its voiced partner /d͡ʒ/, as in "jewel"; the digraph `ch` is the
+ * same sound as `c`. `r` is a single tap, written /r/ here as the phoneme.
  */
 
 export const VOWEL_LETTERS = ['a', 'e', 'i', 'o', 'u'] as const;
@@ -65,7 +51,7 @@ const IPA: Mapping = {
     h: 'h',
     z: 'z',
     k: 'k',
-    c: 'k',
+    c: 't͡ʃ',
     f: 'f',
     j: 'd͡ʒ',
   },
@@ -98,7 +84,7 @@ const ASCII: Mapping = {
     h: 'HH',
     z: 'Z',
     k: 'K',
-    c: 'K',
+    c: 'CH',
     f: 'F',
     j: 'JH',
   },
@@ -106,26 +92,13 @@ const ASCII: Mapping = {
 
 const MAPPINGS: Readonly<Record<PhoneSet, Mapping>> = { ipa: IPA, ascii: ASCII };
 
-/** Letters whose phone value the author has not settled. */
+/** Letters whose phone value the author has not settled: none since 2.0:G43. */
 export const OPEN_QUESTIONS: readonly {
   letter: string;
   chosen: string;
   alternative: string;
   why: string;
-}[] = [
-  {
-    letter: 'c',
-    chosen: '/k/',
-    alternative: '/s/ or /t͡s/',
-    why: 'c occurs before all five vowels, so a phonetic spelling cannot be giving it positional variants. /k/ matches the hard-g precedent, at the cost of c and k spelling one phoneme.',
-  },
-  {
-    letter: 'j',
-    chosen: '/d͡ʒ/',
-    alternative: '/x/ or /ʒ/',
-    why: 'juba (gem) echoes English "jewel"; the colour word ojo would suggest Spanish /x/.',
-  },
-];
+}[] = [];
 
 export class G2PError extends Error {}
 

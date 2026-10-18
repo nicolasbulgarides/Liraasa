@@ -1,6 +1,6 @@
 /**
  * The author's curriculum overrides (data/lessons/overrides.json): pins,
- * core/advanced levels, notes, custom lessons and ruling links. Kept apart
+ * core/advanced levels, notes, custom lessons, ruling links and form notes. Kept apart
  * from the lexicon and keyed by id. Parsing is forgiving about missing
  * sections and strict about shape, so a hand-edited file fails loudly.
  */
@@ -15,6 +15,7 @@ export const EMPTY_OVERRIDES: Overrides = {
   rulingLinks: {},
   exclude: [],
   rulingExamples: {},
+  formNotes: {},
 };
 
 export class OverridesError extends Error {}
@@ -74,6 +75,15 @@ export function parseOverrides(input: unknown): Overrides {
     rulingLinks[ref] = strings(ids, `rulingLinks.${ref}`);
   }
 
+  const formNotes: Record<string, string> = {};
+  for (const [key, note] of Object.entries(isRecord(input.formNotes) ? input.formNotes : {})) {
+    if (typeof note !== 'string') throw new OverridesError(`formNotes.${key} must be a string`);
+    if (!/^[^|]+\|[A-Za-z]+$/.test(key)) {
+      throw new OverridesError(`formNotes key ${key} must be "<entry id>|<form slot>"`);
+    }
+    formNotes[key] = note;
+  }
+
   return {
     version: 1,
     pins: strings(input.pins, 'pins'),
@@ -87,5 +97,6 @@ export function parseOverrides(input: unknown): Overrides {
         ([ref, keys]) => [ref, strings(keys, `rulingExamples.${ref}`)],
       ),
     ),
+    formNotes,
   };
 }

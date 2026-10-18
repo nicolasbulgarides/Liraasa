@@ -34,7 +34,27 @@ export type ChangeOp =
   /** A lexicalised derivation. `entry` is `derivation:<base id>:-<suffix>`. */
   | 'add_derivation'
   /** A curated motion metaphor. `entry` is `motion:<prefix>-:<verb's headword id>`. */
-  | 'add_motion_metaphor';
+  | 'add_motion_metaphor'
+  /**
+   * A lexicalised derivation's gloss. `entry` is the derivation's, as for
+   * `add_derivation`; `from` and `to` are its whole text (ADR-0016).
+   */
+  | 'edit_derivation'
+  /** A discourse particle's example. `entry` is `particle:<dp id>:<index>`. */
+  | 'edit_particle_example'
+  /**
+   * A headword becomes an attested instance of the image-compound pattern:
+   * it leaves `headwords` and is kept, whole and with its id, in
+   * `image_compounds.attested` (2.0, ADR-0016).
+   */
+  | 'move_to_pattern'
+  /**
+   * A new data section, from the changeset's `sections` payload. `entry` is
+   * its path: `image_compounds`, `morphology.derivation_defaults`… (ADR-0016).
+   */
+  | 'add_section'
+  /** A sound-ledger row's state. `entry` is `ledger:<spelling>`. */
+  | 'edit_ledger';
 
 /**
  * One recorded change.

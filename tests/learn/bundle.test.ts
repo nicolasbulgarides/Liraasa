@@ -1,4 +1,5 @@
 import { readFileSync } from 'node:fs';
+import { LEARN_LEXICON } from '../../scripts/learn_inputs';
 import vm from 'node:vm';
 import { describe, expect, it } from 'vitest';
 
@@ -53,7 +54,7 @@ describe('the browser bundle', () => {
 
   it('is built from the current lexicon and overrides', () => {
     const data = readFileSync('editor/learn/learn-data.js', 'utf8');
-    const lexicon = JSON.parse(readFileSync('data/lexicon/liraasa_1_2.json', 'utf8')) as {
+    const lexicon = JSON.parse(readFileSync(LEARN_LEXICON, 'utf8')) as {
       built_utc: string;
     };
     const overrides = JSON.parse(readFileSync('data/lessons/overrides.json', 'utf8')) as unknown;

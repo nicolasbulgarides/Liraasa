@@ -15,6 +15,7 @@ import {
 } from '../../src/core/config/slots';
 
 export interface Headword {
+  id?: string;
   root: string;
   type: 'Primal' | 'Compound';
   components: [string, string] | null;
@@ -75,6 +76,7 @@ export interface Lexicon {
     suffixes: Record<string, string>;
     compounding: string;
     lexicalised_derivations: Record<string, string>;
+    derivation_defaults?: Record<string, string>;
   };
   motion_prefixes: { canon: Record<string, string>; retired: Record<string, string>; rule: string };
   settled_open_questions_0_8: { q: string; answer: string }[];
@@ -113,6 +115,15 @@ export interface Lexicon {
   rulings_1_0: Ruling[];
   rulings_0_8_carried: Ruling[];
   rulings_1_2: Ruling[];
+  rulings_2_0?: Ruling[];
+  /** 2.0: the image-compound pattern, with the attested pairs whole (ADR-0016). */
+  image_compounds?: {
+    rule: string;
+    capacity: number;
+    modifiers: Record<string, { as_modifier: string; sense: string }>;
+    heads: Record<string, { template: string }>;
+    attested: Headword[];
+  };
   examples: Example[];
   rhyme_families: { ending: string; members: string[]; count: number }[];
   legacy: {
@@ -123,14 +134,6 @@ export interface Lexicon {
 
 export function loadLexicon(path: string): Lexicon {
   return JSON.parse(readFileSync(resolve(path), 'utf8')) as Lexicon;
-}
-
-/** id → spelling, from the 1.0 id sidecar. */
-export function loadIdIndex(path: string): Map<string, string> {
-  const raw = JSON.parse(readFileSync(resolve(path), 'utf8')) as {
-    minted: { headword: Record<string, string> };
-  };
-  return new Map(Object.entries(raw.minted.headword).map(([spelling, id]) => [id, spelling]));
 }
 
 export function formOf(h: Headword, slot: FormSlot): string {
@@ -155,6 +158,61 @@ export function liveExamples(lex: Lexicon): Example[] {
   return lex.examples.filter((e) => e.status !== 'HISTORICAL');
 }
 
+/**
+ * The data capitalises glosses unevenly ("Light", "sun", "Person"). The guide
+ * lowercases them as it renders, keeping only names: "I", the Goddess, the
+ * Divine Light. The lexicon is not touched.
+ */
+const KEEP_CAPITALS = [
+  'Her Divine Light',
+  'Divine Light',
+  'Holy One',
+  'Goddess',
+  'God',
+  'Muse',
+  'I',
+];
+
+export function normGloss(gloss: string): string {
+  const kept: string[] = [];
+  let out = gloss;
+  for (const k of KEEP_CAPITALS) {
+    out = out.replace(new RegExp(`\\b${k}\\b`, 'g'), () => {
+      kept.push(k);
+      return `{${String(kept.length - 1)}}`;
+    });
+  }
+  out = out.replace(/\b([A-Z])([a-z])/g, (_m, a: string, b: string) => a.toLowerCase() + b);
+  return out.replace(/\{(\d+)\}/g, (_m, i: string) => kept[Number(i)] ?? '').trim();
+}
+
+/** A ruling by its edition-qualified id (`2.0:G43`), or undefined. */
+export function rulingById(lex: Lexicon, id: string): Ruling | undefined {
+  const [edition, rid] = id.split(':');
+  const sets: Record<string, readonly Ruling[] | undefined> = {
+    '2.0': lex.rulings_2_0,
+    '1.2': lex.rulings_1_2,
+    '1.0': lex.rulings_1_0,
+    '0.8': lex.rulings_0_8_carried,
+  };
+  return sets[edition ?? '']?.find((r) => r.id === rid);
+}
+
+/** The first sense of a gloss: up to the first semicolon, without a leading "to ". */
+export function firstSense(gloss: string): string {
+  return (gloss.split(';')[0] ?? '').trim();
+}
+
+/** One pair of the image-compound pattern: MODIFIER + HEAD, read by rule. */
+export interface PatternPair {
+  spelling: string;
+  modifier: Headword;
+  head: Headword;
+  /** The attested gloss, or "<modifier adjective> <head>; <template> <sense>". */
+  reading: string;
+  attested: boolean;
+}
+
 /** Spelling → headword plus slot, for every used and unused form. */
 export interface FormHit {
   headword: Headword;
@@ -168,11 +226,15 @@ export class Index {
   readonly closed = new Set<string>();
   readonly attested = new Set<string>();
   readonly retired = new Set<string>();
+  readonly byId = new Map<string, Headword>();
+  /** Every pair of the 2.0 image-compound pattern, attested or not (2.0:G40). */
+  readonly patterns = new Map<string, PatternPair>();
   readonly compoundsBy = new Map<string, { asModifier: Headword[]; asHead: Headword[] }>();
 
   constructor(readonly lex: Lexicon) {
     for (const h of lex.headwords) {
       this.byRoot.set(h.root, h);
+      if (h.id !== undefined) this.byId.set(h.id, h);
       for (const slot of FORM_SLOTS) {
         const f = formOf(h, slot);
         const list = this.forms.get(f) ?? [];
@@ -183,6 +245,41 @@ export class Index {
         const [mod, head] = h.components;
         this.compoundSide(mod).asModifier.push(h);
         this.compoundSide(head).asHead.push(h);
+      }
+    }
+
+    // 2.0: the attested image compounds are words of Liraasa too (2.0:G40)
+    for (const h of lex.image_compounds?.attested ?? []) {
+      for (const slot of FORM_SLOTS) {
+        const f = formOf(h, slot);
+        const list = this.forms.get(f) ?? [];
+        list.push({ headword: h, slot });
+        this.forms.set(f, list);
+      }
+    }
+
+    const ic = lex.image_compounds;
+    if (ic !== undefined) {
+      const attested = new Map(ic.attested.map((h) => [h.root, h]));
+      for (const [modId, mod] of Object.entries(ic.modifiers)) {
+        for (const [headId, head] of Object.entries(ic.heads)) {
+          const m = this.byId.get(modId);
+          const hd = this.byId.get(headId);
+          if (m === undefined || hd === undefined) continue;
+          const spelling = m.root + hd.root;
+          const seen = attested.get(spelling);
+          const noun = firstSense(glossOf(hd, 'root')).toLowerCase();
+          this.patterns.set(spelling, {
+            spelling,
+            modifier: m,
+            head: hd,
+            reading:
+              seen === undefined
+                ? `${mod.as_modifier} ${noun}; ${head.template} ${mod.sense}`
+                : glossOf(seen, 'root'),
+            attested: seen !== undefined,
+          });
+        }
       }
     }
 
@@ -207,9 +304,12 @@ export class Index {
     // is canon text; names (Kipo, Dorin, Melodia …) come in this way.
     const texts = [
       ...liveExamples(lex).map((e) => e.liraasa),
-      ...[...lex.rulings_1_0, ...lex.rulings_1_2, ...lex.rulings_0_8_carried].flatMap((r) =>
-        (r.examples ?? []).map(([l]) => l),
-      ),
+      ...[
+        ...lex.rulings_1_0,
+        ...lex.rulings_1_2,
+        ...(lex.rulings_2_0 ?? []),
+        ...lex.rulings_0_8_carried,
+      ].flatMap((r) => (r.examples ?? []).map(([l]) => l)),
       ...lex.discourse_particles.flatMap((p) => p.examples.map((e) => e.liraasa)),
       ...lex.function_words.map((w) => w.example),
       ...lex.pronouns.flatMap((p) => [p.possessive, p.reflexive]),
@@ -232,11 +332,12 @@ export class Index {
   /** Is this one token a word of Liraasa, by form, closed class, inflection or attestation? */
   isWord(token: string): boolean {
     if (this.forms.has(token) || this.closed.has(token) || this.attested.has(token)) return true;
+    if (this.patterns.has(token)) return true;
     // -ri, -ti, -tiri on a known form or closed word.
     for (const suffix of ['tiri', 'ri', 'ti']) {
       if (token.endsWith(suffix)) {
         const stem = token.slice(0, -suffix.length);
-        if (this.forms.has(stem) || this.closed.has(stem)) return true;
+        if (this.forms.has(stem) || this.closed.has(stem) || this.patterns.has(stem)) return true;
       }
     }
     // A motion prefix on a verb form.
@@ -253,6 +354,14 @@ export class Index {
       return true;
     }
     return false;
+  }
+
+  /** A compound part's first sense: a headword's root gloss, or a colour base's family. */
+  senseOf(root: string): string {
+    const h = this.byRoot.get(root);
+    if (h !== undefined) return firstSense(glossOf(h, 'root')).toLowerCase();
+    const colour = this.lex.colors.find((c) => c['Base color'] === root);
+    return (colour?.Family ?? '').toLowerCase();
   }
 
   /** The unused-slot readings of a token, if any reading of it is unused. */
@@ -313,4 +422,42 @@ export class Index {
     const family = this.lex.rhyme_families.find((f) => f.members.includes(h.root));
     return family === undefined ? [] : family.members.filter((m) => m !== h.root);
   }
+}
+
+/** Liraasa text as its run of tokens, for comparing sentences: “Fisa, lisrola.” → “fisa lisrola”. */
+function tokenRun(text: string): string {
+  return ` ${tokenize(text).join(' ')} `;
+}
+
+/**
+ * Every text canon vouches for, as token runs: live examples, function-word,
+ * ruling and particle examples, the pronouns' possessive and reflexive forms,
+ * and the ruling texts themselves, which quote phrases (“nevi li zeldo”).
+ */
+export function canonTexts(lex: Lexicon): string[] {
+  const rulings = [
+    ...lex.rulings_1_0,
+    ...lex.rulings_1_2,
+    ...(lex.rulings_2_0 ?? []),
+    ...lex.rulings_0_8_carried,
+  ];
+  return [
+    ...liveExamples(lex).map((e) => e.liraasa),
+    ...lex.function_words.map((w) => w.example),
+    ...rulings.flatMap((r) => [r.ruling, ...(r.examples ?? []).map(([l]) => l)]),
+    ...lex.discourse_particles.flatMap((p) => p.examples.map((e) => e.liraasa)),
+    ...lex.pronouns.flatMap((p) => [p.possessive, p.reflexive]),
+  ].map(tokenRun);
+}
+
+/**
+ * Is this example canon? Each part (split at “ / ” and “ — ”) must be a canon
+ * text or a whole-word stretch of one. A sentence that is not, however canon
+ * its words, is new language and waits for the author's review.
+ */
+export function isCanonText(canon: readonly string[], text: string): boolean {
+  return text
+    .split(/ \/ | — /)
+    .map(tokenRun)
+    .every((part) => part.trim() === '' || canon.some((c) => c.includes(part)));
 }

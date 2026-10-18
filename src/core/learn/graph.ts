@@ -83,9 +83,14 @@ export function buildSkillGraph(
     if (item.kind !== 'root' && item.kind !== 'compound') continue;
     const f = data.frequency.get(item.id) ?? { corpus: 0, examples: 0 };
     const occurs = f.corpus + f.examples > 0;
+    // a part that is not a headword (a colour base, 2.0:G38) teaches nothing first
+    const parts = (item.components ?? []).filter((c) => {
+      const k = data.items.get(c)?.kind;
+      return k === 'root' || k === 'compound';
+    });
     const prereqs =
       item.components !== null
-        ? [rootNode(item.components[0]), rootNode(item.components[1]), conceptNode(COMPOUND)]
+        ? [...parts.map(rootNode), conceptNode(COMPOUND)]
         : [conceptNode(formConcept('root'))];
     drafts.set(rootNode(item.id), {
       id: rootNode(item.id),

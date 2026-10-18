@@ -1,14 +1,14 @@
 {
  "report": "Liraasa MFA dictionary export",
- "lexicon": "C:/Users/nicol/Desktop/Liraasa-workbench/data/lexicon/liraasa_1_2.json",
- "version": "1.2",
- "words": 52202,
+ "lexicon": "C:/Users/nicol/Desktop/Liraasa-workbench/data/lexicon/liraasa_2_0.json",
+ "version": "2.0",
+ "words": 51011,
  "by_source": {
   "closed class": 251,
-  "corpus": 822,
-  "form": 10479,
-  "inflection": 31437,
-  "derivation": 8980,
+  "corpus": 823,
+  "form": 10234,
+  "inflection": 30702,
+  "derivation": 8770,
   "colour": 45,
   "name": 14,
   "numeral": 1002
@@ -84,18 +84,5 @@
   "velina"
  ],
  "unconvertible": [],
- "open_questions": [
-  {
-   "letter": "c",
-   "chosen": "/k/",
-   "alternative": "/s/ or /t͡s/",
-   "why": "c occurs before all five vowels, so a phonetic spelling cannot be giving it positional variants. /k/ matches the hard-g precedent, at the cost of c and k spelling one phoneme."
-  },
-  {
-   "letter": "j",
-   "chosen": "/d͡ʒ/",
-   "alternative": "/x/ or /ʒ/",
-   "why": "juba (gem) echoes English \"jewel\"; the colour word ojo would suggest Spanish /x/."
-  }
- ]
+ "open_questions": []
 }

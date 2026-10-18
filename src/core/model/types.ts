@@ -193,12 +193,30 @@ export interface SettledQuestion {
 }
 
 /** The whole loaded lexicon, in internal form. */
+/** The image-compound pattern of 2.0 (2.0:G40, ADR-0016). */
+export interface ImageCompounds {
+  ruling: string;
+  rule: string;
+  /** Modifier headword id → how it reads as a modifier. */
+  modifiers: ReadonlyMap<EntryId, { asModifier: string; sense: string }>;
+  /** Head headword id → its template. */
+  heads: ReadonlyMap<EntryId, { template: string }>;
+  /** The former headwords kept as attested instances, with their ids and glosses. */
+  attested: readonly Headword[];
+  /** Pairs that stay headwords as well, with why. */
+  keptAsHeadwords: ReadonlyMap<EntryId, string>;
+}
+
 export interface Lexicon {
   language: string;
   version: string;
   builtUtc: string;
   source: string;
   headwords: readonly Headword[];
+  /** The image-compound pattern, from 2.0 on; `null` before. */
+  imageCompounds: ImageCompounds | null;
+  /** Default readings of the productive derivations (2.0:G41); `null` before 2.0. */
+  derivationDefaults: Readonly<Record<string, string>> | null;
   functionWords: readonly FunctionWord[];
   pronouns: readonly Pronoun[];
   correlatives: readonly Correlative[];

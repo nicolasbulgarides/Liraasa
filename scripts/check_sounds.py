@@ -20,7 +20,14 @@ Two inventories are built from the lexicon:
             particles and the curated motion-prefix metaphors.
   RESERVED  every retired or respelled spelling (legacy.migration_forms and
             the old forms of legacy.retired_roots / respelled_roots) and every
-            sound_ledger entry. All are reserved until at least 2.0.
+            sound_ledger entry, until the ledger's "reusable_from" edition: in
+            that edition and later the reservation lapses (ADR-0016).
+
+Word-building rulings are read from the lexicon's own rulings, so the checker
+holds a lexicon to the rules of its edition: with 2.0:G42 a compound may nest,
+with 2.0:G38 a colour base may be a compound's modifier and a compound may be
+lexicalised with a suffix, and with 2.0:G41 a derivation may be built on a
+lexicalised derivation.
 
 Five checks run on each candidate; ERROR blocks, WARN is reported:
 
@@ -74,6 +81,15 @@ FORM_KEYS = (
 DERIVATIONS = ("yo", "vu", "pago")
 # ROOT + (one form OR one derivation) + -ti + -ri  (morphology.suffix_order)
 INFLECTIONS = ("", "ti", "ri", "tiri")
+
+
+def edition_key(edition: str) -> tuple[int, ...]:
+    """'1.2' → (1, 2), for comparing editions. Anything else ("never (respelled
+    for a defect)") sorts after every edition: such a reservation never lapses."""
+    try:
+        return tuple(int(x) for x in str(edition).split("."))
+    except ValueError:
+        return (10**6,)
 
 
 def verb_of(word: str) -> str:
@@ -261,6 +277,17 @@ class Lexicon:
     reserved: dict[str, set[str]] = field(default_factory=lambda: collections.defaultdict(set))
     declared: set[tuple[str, str]] = field(default_factory=set)
     rhyme: dict[str, list[str]] = field(default_factory=dict)
+    version: str = ""
+    rulings: set[str] = field(default_factory=set)
+    colour_bases: set[str] = field(default_factory=set)
+
+    @property
+    def nesting(self) -> bool:
+        return "2.0:G42" in self.rulings
+
+    @property
+    def colour_modifiers(self) -> bool:
+        return "2.0:G38" in self.rulings
 
     @classmethod
     def load(cls, path: str) -> "Lexicon":
@@ -270,6 +297,12 @@ class Lexicon:
     @classmethod
     def build(cls, raw: dict) -> "Lexicon":
         lx = cls(raw)
+        lx.version = str(raw.get("version", ""))
+        for key, rows in raw.items():
+            if key.startswith("rulings_") and key != "rulings_0_8_carried" and isinstance(rows, list):
+                edition = key[len("rulings_"):].replace("_", ".")
+                lx.rulings.update(f"{edition}:{r['id']}" for r in rows if isinstance(r, dict) and "id" in r)
+        lx.colour_bases = {c.get("Base color") for c in raw.get("colors", []) if c.get("Base color")}
         lx.declared = {tuple(sorted(p)) for p in raw["phonology"]["declared_distance_1_pairs"]}
         lx.motion_prefixes = [p.rstrip("-") for p in raw.get("motion_prefixes", {}).get("canon", {})]
         for h in raw["headwords"]:
@@ -317,11 +350,23 @@ class Lexicon:
                 for m in listed.split(","):
                     lx.active[m.strip()].add("curated motion metaphor")
 
+        # a ledger reservation lapses in its reusable_from edition (ADR-0016)
+        lapsed = {
+            s["spelling"]
+            for s in raw.get("sound_ledger", [])
+            if s.get("reusable_from") and edition_key(s["reusable_from"]) <= edition_key(lx.version)
+        }
         legacy = raw.get("legacy", {})
         for old, m in legacy.get("migration_forms", {}).items():
+            # a lapsed spelling is free again: 0.8 texts keep their legacy table,
+            # but a reader of this edition no longer reads it as the old word
+            if m.get("via") in lapsed or old in lapsed:
+                continue
             lx.legacy[old] = m["to"]
             lx.reserved[old].add(f"legacy {m['kind']} → {m['to']}")
         for r in legacy.get("retired_roots", []):
+            if r["old"] in lapsed:
+                continue
             for f in (r.get("old_forms") or {}).values():
                 lx.reserved[f].add(f"retired root {r['old']}")
         for r in legacy.get("respelled_roots", []):
@@ -330,6 +375,8 @@ class Lexicon:
         for r in legacy.get("retired_compounds", []):
             lx.reserved[r["old"]].add(f"retired compound → {r.get('new')}")
         for s in raw.get("sound_ledger", []):
+            if s["spelling"] in lapsed:
+                continue
             lx.reserved[s["spelling"]].add(f"sound ledger {s['state']} (reusable from {s['reusable_from']})")
 
         for fam in raw.get("rhyme_families", []):
@@ -534,7 +581,8 @@ def resolve_derivation(c: Candidate, lx: Lexicon, others: list[Candidate]) -> li
     elif c.base.endswith(DERIVATIONS) and c.suffix == "ti":
         findings.append(Finding(4, "INFO", f"{c.base!r} is itself a derivation; ROOT + derivation + -ti is in order"))
     else:
-        findings.append(Finding(4, "ERROR", f"base {c.base!r} is not a headword"))
+        if c.base not in lx.raw["morphology"].get("lexicalised_derivations", {}):
+            findings.append(Finding(4, "ERROR", f"base {c.base!r} is not a headword"))
     return findings
 
 
@@ -663,13 +711,20 @@ def check_candidates(lx: Lexicon, cands: list[Candidate], audit_self: str | None
             if c.kind == "compound":
                 splits = aug.segmentations(c.spelling)
                 extra = [s for s in splits if list(s) != list(c.components or [])]
-                if not splits:
+                colour_built = (
+                    lx.colour_modifiers
+                    and c.components is not None
+                    and len(c.components) == 2
+                    and c.components[0] in lx.colour_bases
+                    and c.spelling.startswith("".join(c.components))
+                )
+                if not splits and not colour_built:
                     f.append(Finding(4, "ERROR", f"{c.spelling} does not split into two headwords"))
                 elif extra:
                     f.append(Finding(4, "ERROR", f"{c.spelling} has more than one split: {', '.join('+'.join(s) for s in splits)}"))
                 for part in c.components or []:
                     ph = aug.heads.get(part)
-                    if ph and ph["type"] == "Compound":
+                    if ph and ph["type"] == "Compound" and not lx.nesting:
                         f.append(Finding(4, "ERROR", f"component {part} is itself a compound; compounds do not nest"))
 
         # 5 singability

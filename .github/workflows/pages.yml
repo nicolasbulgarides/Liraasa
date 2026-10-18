@@ -1,0 +1,36 @@
+# Publish the songbook editor as the GitHub Pages site on every push to master.
+# The site is assembled by scripts/build_site.sh: the editor at the root, the
+# published documents under codex/. Repository settings → Pages → Source must
+# be "GitHub Actions" (a one-time setting).
+name: Pages
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Assemble the site
+        run: bash scripts/build_site.sh _site
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deployment
+        uses: actions/deploy-pages@v4

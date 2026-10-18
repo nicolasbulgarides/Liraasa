@@ -81,6 +81,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       }))
     ]);
   }
+  const imageCompoundId = (modifier, head) => `ic:${modifier}+${head}`;
   function push(map, key, value) {
     const existing = map.get(key);
     if (existing === void 0) map.set(key, [value]);
@@ -163,6 +164,60 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       if (entryId === void 0) continue;
       push(byForm, cell.form, { namespace: "color", entryId, spelling: cell.base });
     }
+    const patternPairs = /* @__PURE__ */ new Map();
+    const pattern = lexicon.imageCompounds;
+    if (pattern !== null) {
+      const spellingOfId = new Map(lexicon.headwords.map((h) => [h.id, h]));
+      const attestedBySpelling = new Map(pattern.attested.map((h) => [h.spelling, h]));
+      for (const h of pattern.attested) {
+        byId.set(h.id, { namespace: "imageCompound", spelling: h.spelling });
+        for (const slot of FORM_SLOTS) {
+          push(byForm, h.forms[slot], {
+            namespace: "imageCompound",
+            entryId: h.id,
+            spelling: h.spelling,
+            slot
+          });
+        }
+        for (const derivation of DERIVATION_KEYS) {
+          push(byForm, h.spelling + derivation, {
+            namespace: "derivation",
+            entryId: h.id,
+            spelling: h.spelling,
+            derivation
+          });
+        }
+      }
+      for (const [modId, mod] of pattern.modifiers) {
+        const m = spellingOfId.get(modId);
+        if (m === void 0) continue;
+        for (const [headId] of pattern.heads) {
+          const hd = spellingOfId.get(headId);
+          if (hd === void 0) continue;
+          const spelling = m.spelling + hd.spelling;
+          if (headwordBySpelling.has(spelling)) continue;
+          const attested = attestedBySpelling.get(spelling) ?? null;
+          const headSense = (hd.glosses.root.split(";")[0] ?? hd.spelling).trim().toLowerCase();
+          const pair = {
+            id: attested?.id ?? imageCompoundId(modId, headId),
+            spelling,
+            modifier: modId,
+            head: headId,
+            attested,
+            reading: `${mod.asModifier} ${headSense}`
+          };
+          patternPairs.set(spelling, pair);
+          if (attested === null) {
+            push(byForm, spelling, {
+              namespace: "imageCompound",
+              entryId: pair.id,
+              spelling,
+              slot: "root"
+            });
+          }
+        }
+      }
+    }
     const legacyForms = new Map(lexicon.migrationForms.map((m) => [m.from, m]));
     const reserved = new Map(lexicon.soundLedger.map((s) => [s.spelling, s]));
     const multiNamespaceSpellings = [...byForm.values()].filter(
@@ -178,6 +233,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       byGloss,
       byRhyme,
       legacyForms,
+      patternPairs,
       reserved,
       stats: {
         headwords: lexicon.headwords.length,
@@ -543,6 +599,10 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       };
     });
   }
+  function compoundSuffix(h) {
+    const raw = h[RAW];
+    return typeof raw?.suffix === "string" ? raw.suffix : "";
+  }
   function importLexicon(raw, options = {}) {
     const warnings = [];
     const assigner = new IdAssigner(options.ids ?? emptyIdMap(raw.version));
@@ -567,7 +627,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       if (h.type === "primal" && h.components !== null) {
         warnings.push(`${h.spelling}: primal with components`);
       }
-      if (h.components !== null && h.components.join("") !== h.spelling) {
+      if (h.components !== null && h.components.join("") + compoundSuffix(h) !== h.spelling) {
         warnings.push(`${h.spelling}: spelling is not its components concatenated`);
       }
     }
@@ -620,8 +680,36 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     const rulings = [
       ...decodeRulings(raw.rulings_1_0, "1.0"),
       ...decodeRulings(raw.rulings_0_8_carried, "0.8"),
-      ...decodeRulings(raw.rulings_1_2 ?? [], "1.2")
+      ...Object.keys(raw).filter((k) => /^rulings_\d+_\d+$/.test(k) && k !== "rulings_1_0").flatMap(
+        (k) => decodeRulings(
+          raw[k] ?? [],
+          k.slice("rulings_".length).replace("_", ".")
+        )
+      )
     ];
+    const rawPattern = raw.image_compounds;
+    const imageCompounds = rawPattern === void 0 ? null : {
+      ruling: rawPattern.ruling,
+      rule: rawPattern.rule,
+      modifiers: new Map(
+        Object.entries(rawPattern.modifiers).map(([id, m]) => [
+          id,
+          { asModifier: m.as_modifier, sense: m.sense }
+        ])
+      ),
+      heads: new Map(
+        Object.entries(rawPattern.heads).map(([id, h]) => [id, { template: h.template }])
+      ),
+      attested: decodeSection(
+        headwordMap,
+        rawPattern.attested,
+        "headword",
+        (h) => h.root,
+        assigner
+      ),
+      keptAsHeadwords: new Map(Object.entries(rawPattern.kept_as_headwords))
+    };
+    const defaults = raw.morphology.derivation_defaults;
     const rhymeFamilies2 = raw.rhyme_families.map((r) => ({
       ending: r.ending,
       members: r.members,
@@ -660,6 +748,8 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
         builtUtc: raw.built_utc,
         source: raw.source,
         headwords,
+        imageCompounds,
+        derivationDefaults: defaults ?? null,
         functionWords,
         pronouns,
         correlatives,
@@ -683,7 +773,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       warnings
     };
   }
-  const CLOSED = /* @__PURE__ */ new Set(["functionWord", "pronoun", "correlative", "discourseParticle", "timeWord"]);
+  const CLOSED$1 = /* @__PURE__ */ new Set(["functionWord", "pronoun", "correlative", "discourseParticle", "timeWord"]);
   function humanize(name) {
     return name.replace(/([a-z])([A-Z])/g, "$1 $2").replace(/_/g, " ").toLowerCase();
   }
@@ -701,7 +791,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     for (const d of descriptions) {
       for (const w of d.toLowerCase().match(/[a-z]+(?:-[a-z]+)*/g) ?? []) {
         for (const r of resolveSpelling(indexes, w).refs) {
-          if (CLOSED.has(r.namespace) && !out.includes(r.entryId)) out.push(r.entryId);
+          if (CLOSED$1.has(r.namespace) && !out.includes(r.entryId)) out.push(r.entryId);
         }
       }
     }
@@ -971,7 +1061,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
   function spellFraction(numerator, denominator) {
     return `${spellNumber(numerator)} de ${spellNumber(denominator)}`;
   }
-  const NOMINAL = /* @__PURE__ */ new Set(["headword", "derivation", "pronoun", "timeWord"]);
+  const NOMINAL = /* @__PURE__ */ new Set(["headword", "imageCompound", "derivation", "pronoun", "timeWord"]);
   const ORDINAL_MARK = spellOrdinal(1).slice(spellNumber(1).length);
   const FRACTION_JOIN = spellFraction(1, 2).slice(spellNumber(1).length, -spellNumber(2).length);
   const WORD$1 = /[A-Za-z]+(?:-[A-Za-z]+)*/g;
@@ -1160,7 +1250,8 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     lessons: [],
     rulingLinks: {},
     exclude: [],
-    rulingExamples: {}
+    rulingExamples: {},
+    formNotes: {}
   };
   class OverridesError extends Error {
   }
@@ -1212,6 +1303,14 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     for (const [ref, ids] of Object.entries(isRecord(input.rulingLinks) ? input.rulingLinks : {})) {
       rulingLinks[ref] = strings(ids, `rulingLinks.${ref}`);
     }
+    const formNotes = {};
+    for (const [key, note] of Object.entries(isRecord(input.formNotes) ? input.formNotes : {})) {
+      if (typeof note !== "string") throw new OverridesError(`formNotes.${key} must be a string`);
+      if (!/^[^|]+\|[A-Za-z]+$/.test(key)) {
+        throw new OverridesError(`formNotes key ${key} must be "<entry id>|<form slot>"`);
+      }
+      formNotes[key] = note;
+    }
     return {
       version: 1,
       pins: strings(input.pins, "pins"),
@@ -1224,10 +1323,11 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
         Object.entries(isRecord(input.rulingExamples) ? input.rulingExamples : {}).map(
           ([ref, keys]) => [ref, strings(keys, `rulingExamples.${ref}`)]
         )
-      )
+      ),
+      formNotes
     };
   }
-  function headwordItem(h, indexes, edition, gaps) {
+  function headwordItem(h, indexes, edition, gaps, colourIds = /* @__PURE__ */ new Map()) {
     const forms = FORM_SLOTS.map((slot) => ({
       slot,
       form: h.forms[slot],
@@ -1245,7 +1345,9 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }
     let components = null;
     if (h.components !== null) {
-      const ids = h.components.map((c) => indexes.headwordBySpelling.get(c)?.id);
+      const ids = h.components.map(
+        (c, i) => indexes.headwordBySpelling.get(c)?.id ?? (i === 0 ? colourIds.get(c) : void 0)
+      );
       const [modifier, head] = ids;
       if (modifier !== void 0 && head !== void 0) {
         components = [modifier, head];
@@ -1275,7 +1377,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       status: typeof status === "string" ? status : null
     };
   }
-  function closedItems(lexicon, pronounEnglish) {
+  function closedItems(lexicon, pronounEnglish, indexes) {
     const base = {
       register: null,
       forms: [],
@@ -1328,7 +1430,9 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
         spelling: c.base,
         meaning: c.family.toLowerCase(),
         theme: "Colours",
-        since: ""
+        since: "",
+        // a colour base may be a compound's modifier (2.0:G38)
+        usedIn: (indexes.byComponent.get(c.base) ?? []).map((u) => u.entryId)
       })),
       ...lexicon.discourseParticles.map((d) => ({
         ...base,
@@ -1356,7 +1460,9 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
           if (r.slot === "verb") verb = true;
         }
         if (r.derivation !== void 0) out.add(suffixConcept(r.derivation));
-        if (items.get(r.id)?.kind === "compound") out.add(COMPOUND);
+        const k = items.get(r.id)?.kind;
+        if (k === "compound" || k === "imageCompound" || r.namespace === "imageCompound")
+          out.add(COMPOUND);
         const slot = wordToSlot.get(r.id);
         if (slot !== void 0) out.add(slot);
       }
@@ -1386,8 +1492,21 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     );
     const context = { indexes, numbers, names, motionPrefixes };
     const items = /* @__PURE__ */ new Map();
-    for (const h of lexicon.headwords) items.set(h.id, headwordItem(h, indexes, edition, gaps));
-    for (const item of closedItems(lexicon, input.pronounEnglish ?? {})) items.set(item.id, item);
+    const colourIds = new Map(lexicon.colors.map((c) => [c.base, c.id]));
+    for (const h of lexicon.headwords)
+      items.set(h.id, headwordItem(h, indexes, edition, gaps, colourIds));
+    for (const h of lexicon.imageCompounds?.attested ?? []) {
+      items.set(h.id, {
+        ...headwordItem(h, indexes, edition, gaps, colourIds),
+        kind: "imageCompound"
+      });
+    }
+    const patternReadings = /* @__PURE__ */ new Map();
+    for (const pair of indexes.patternPairs.values()) {
+      if (pair.attested === null) patternReadings.set(pair.id, pair.reading);
+    }
+    for (const item of closedItems(lexicon, input.pronounEnglish ?? {}, indexes))
+      items.set(item.id, item);
     const derived = deriveConcepts(lexicon, input.lexicon, indexes, overrides);
     gaps.push(...derived.gaps);
     const concepts = derived.concepts;
@@ -1511,6 +1630,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       frequency,
       numbers,
       names,
+      patternReadings,
       gaps
     };
     const replacementFor = (spelling) => {
@@ -1522,6 +1642,53 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
   }
   function buildLearnData(input) {
     return buildLearnSource(input).data;
+  }
+  const AUDIO_DIR = "data/audio";
+  function safePath(path) {
+    return path.length > 0 && !path.startsWith("/") && !/^[a-z]+:/i.test(path) && !path.includes("\\") && !path.split("/").includes("..");
+  }
+  function readAudioManifest(raw, data) {
+    const out = { files: {}, unknownKeys: [], badPaths: [] };
+    const files = raw !== null && typeof raw === "object" ? raw.files : void 0;
+    if (files === null || typeof files !== "object") return out;
+    const sentences = new Set(data.examples.map((e) => e.key));
+    for (const [key, path] of Object.entries(files)) {
+      if (!data.items.has(key) && !sentences.has(key)) {
+        out.unknownKeys.push(key);
+        continue;
+      }
+      if (typeof path !== "string" || !safePath(path)) {
+        out.badPaths.push(key);
+        continue;
+      }
+      out.files[key] = path;
+    }
+    return out;
+  }
+  function audioCoverage(data, have) {
+    const headwords = [...data.items.values()].filter(
+      (i) => i.kind === "root" || i.kind === "compound"
+    );
+    const count = (items) => ({
+      have: items.filter((i) => have.has(i.id)).length,
+      total: items.length
+    });
+    const use = (i) => {
+      const f2 = data.frequency.get(i.id);
+      return (f2?.corpus ?? 0) + (f2?.examples ?? 0) + i.usedIn.length;
+    };
+    const missing = headwords.filter((i) => !have.has(i.id)).sort(
+      (a, b) => Number(b.kind === "root") - Number(a.kind === "root") || use(b) - use(a) || a.spelling.localeCompare(b.spelling)
+    ).map((i) => i.id);
+    return {
+      roots: count(headwords.filter((i) => i.kind === "root")),
+      compounds: count(headwords.filter((i) => i.kind === "compound")),
+      sentences: {
+        have: data.examples.filter((e) => have.has(e.key)).length,
+        total: data.examples.length
+      },
+      missing
+    };
   }
   function normalize(text) {
     return text.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase().replace(/[.,!?;:"“”'‘’()[\]{}…—–]/g, " ").replace(/\s+/g, " ").trim();
@@ -1677,7 +1844,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     const ref = refs[0];
     const item = ref === void 0 ? void 0 : data.items.get(ref.id);
     const tags = [];
-    let gloss = item?.meaning ?? "?";
+    let gloss = item?.meaning ?? (ref === void 0 ? void 0 : data.patternReadings.get(ref.id)) ?? "?";
     if (item !== void 0 && ref?.slot !== void 0) {
       const form = item.forms.find((f2) => f2.slot === ref.slot);
       if (form?.meaningful === true) gloss = form.gloss;
@@ -1809,7 +1976,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     "listen"
   ];
   const cardId = (target, skill, direction) => `${target}|${skill}|${direction}`;
-  const HEADWORD = /* @__PURE__ */ new Set(["root", "compound"]);
+  const HEADWORD$1 = /* @__PURE__ */ new Set(["root", "compound", "imageCompound"]);
   const meaningful = (item) => item.forms.filter((f2) => f2.meaningful).map((f2) => f2.slot);
   const formOf$1 = (item, slot) => item.forms.find((f2) => f2.slot === slot)?.form ?? item.spelling;
   const glossOf = (item, slot) => {
@@ -1822,7 +1989,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     return b.synonyms.some((s) => syn.has(normalize(s)));
   }
   function distractorItems(ctx, item, n, rng, accept = () => true) {
-    const group = HEADWORD.has(item.kind) ? (k) => HEADWORD.has(k) : (k) => k === item.kind;
+    const group = HEADWORD$1.has(item.kind) ? (k) => HEADWORD$1.has(k) : (k) => k === item.kind;
     const scored = [];
     for (const other of ctx.data.items.values()) {
       if (other.id === item.id || !group(other.kind) || !accept(other)) continue;
@@ -2087,12 +2254,13 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       const ids = t.link.refs.map((r) => r.id);
       if (want?.item !== void 0) return ids.includes(want.item);
       if (want?.words !== void 0) return ids.some((id) => want.words?.includes(id));
-      return ids.some((id) => HEADWORD.has(ctx.data.items.get(id)?.kind ?? ""));
+      return ids.some((id) => HEADWORD$1.has(ctx.data.items.get(id)?.kind ?? ""));
     });
     const gap = rng.pick(candidates);
     if (gap === void 0 || gap.t.link.kind !== "entry") return null;
     const answer = gap.t.text;
-    const ref = gap.t.link.refs[0];
+    const refs = gap.t.link.refs;
+    const ref = (want?.item !== void 0 ? refs.find((r) => r.id === want.item) : void 0) ?? refs[0];
     const item = ref === void 0 ? void 0 : ctx.data.items.get(ref.id);
     if (item === void 0) return null;
     const slot = ref?.slot;
@@ -2188,7 +2356,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     if (ctx.known === void 0) return 0;
     let n = 0;
     for (const id of e.ids) {
-      if (HEADWORD.has(ctx.data.items.get(id)?.kind ?? "") && !ctx.known.has(id)) n += 1;
+      if (HEADWORD$1.has(ctx.data.items.get(id)?.kind ?? "") && !ctx.known.has(id)) n += 1;
     }
     return n;
   }
@@ -2317,6 +2485,325 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       if (ex !== null) return { ...ex, card };
     }
     return null;
+  }
+  const VERB_CLASSES = ["n-initial", "s-initial", "vowel-initial", "otherwise"];
+  const CLASS_LETTER = { "n-initial": "n", "s-initial": "s" };
+  function suffixOf(pattern) {
+    const m = /^R(?:\s*\+\s*([a-z]+))?$/.exec(pattern.trim());
+    return m === null ? null : m[1] ?? "";
+  }
+  function vowelsOf(phonology) {
+    const raw = phonology?.vowels;
+    if (typeof raw !== "string") return null;
+    const letters = (raw.split("(")[0] ?? "").match(/\b[a-z]\b/g);
+    return letters === null ? null : letters.join("");
+  }
+  function readFormRules(morphology, edition, phonology) {
+    const gaps = [];
+    const gap = (code, ref, message) => {
+      gaps.push({ severity: "error", code, ref, message });
+    };
+    const patterns = morphology.seven_forms;
+    if (patterns.length !== FORM_SLOTS.length) {
+      gap(
+        "forms-rule-shape",
+        "morphology.seven_forms",
+        `seven_forms lists ${String(patterns.length)} patterns; the engine reads them in the order ${FORM_SLOTS.join(", ")}.`
+      );
+    }
+    const slots = FORM_SLOTS.map((slot, i) => {
+      const pattern = patterns[i] ?? "";
+      if (pattern.trim() === "VERB") return { slot, pattern, kind: "verb" };
+      const suffix = suffixOf(pattern);
+      if (suffix !== null) return { slot, pattern, kind: "suffix", suffix };
+      gap(
+        "forms-rule-unreadable",
+        `form:${slot}`,
+        `The ${slot} pattern "${pattern}" is not R, R+suffix or VERB.`
+      );
+      return { slot, pattern, kind: "unknown" };
+    });
+    const verb = [];
+    const irregularVerbs = {};
+    const known = new Set(VERB_CLASSES);
+    for (const [key, value] of Object.entries(morphology.verb_rule)) {
+      if (!known.has(key)) {
+        irregularVerbs[key] = value;
+        continue;
+      }
+      const cls = key;
+      const ending = cls === "otherwise" ? /^R\s*\+\s*first consonant\s*\+\s*([a-z]+)$/.exec(value.trim())?.[1] : suffixOf(value) ?? void 0;
+      if (ending === void 0) {
+        gap(
+          "verb-rule-unreadable",
+          `verb_rule.${key}`,
+          `The verb rule "${key}: ${value}" cannot be read.`
+        );
+        continue;
+      }
+      const letter = CLASS_LETTER[cls];
+      verb.push({ cls, pattern: value, ending, ...letter !== void 0 ? { letter } : {} });
+    }
+    verb.sort((a, b) => VERB_CLASSES.indexOf(a.cls) - VERB_CLASSES.indexOf(b.cls));
+    for (const cls of VERB_CLASSES) {
+      if (!verb.some((v) => v.cls === cls)) {
+        gap("verb-rule-missing", `verb_rule.${cls}`, `verb_rule has no "${cls}" class.`);
+      }
+    }
+    const vowels = vowelsOf(phonology);
+    if (vowels === null && phonology !== void 0) {
+      gaps.push({
+        severity: "warn",
+        code: "vowels-unreadable",
+        ref: "phonology.vowels",
+        message: `phonology.vowels could not be read; using ${VOWELS}.`
+      });
+    }
+    const lexicalised = [];
+    for (const [spelling, text] of Object.entries(morphology.lexicalised_derivations)) {
+      const cut = text.lastIndexOf(": ");
+      const m = /^([a-z]+)\s*\+\s*-([a-z]+)$/.exec(cut < 0 ? "" : text.slice(cut + 2).trim());
+      const base = m?.[1];
+      const suffix = m?.[2];
+      if (base === void 0 || suffix === void 0 || base + suffix !== spelling) {
+        gaps.push({
+          severity: "warn",
+          code: "lexicalised-unreadable",
+          ref: spelling,
+          message: `lexicalised_derivations.${spelling} ("${text}") is not "gloss: base + -suffix" spelling ${spelling}.`
+        });
+        continue;
+      }
+      lexicalised.push({ spelling, base, suffix, gloss: text.slice(0, cut).trim() });
+    }
+    return {
+      rules: {
+        edition,
+        slots,
+        verb,
+        irregularVerbs,
+        vowels: vowels ?? VOWELS,
+        lexicalised,
+        suffixes: Object.entries(morphology.suffixes).map(([key, meaning]) => ({
+          spelling: key.replace(/^-/, ""),
+          meaning
+        }))
+      },
+      gaps
+    };
+  }
+  function verbClassFor(rules, spelling) {
+    const first = spelling[0] ?? "";
+    return rules.verb.find(
+      (v) => v.letter !== void 0 ? first === v.letter : v.cls === "vowel-initial" ? rules.vowels.includes(first) : v.cls === "otherwise"
+    );
+  }
+  function ruleForm(rules, spelling, slot) {
+    const rule = rules.slots.find((s) => s.slot === slot);
+    if (rule === void 0 || rule.kind === "unknown") {
+      return { form: null, parts: [{ text: spelling, role: "root" }], pattern: rule?.pattern ?? "" };
+    }
+    const root = { text: spelling, role: "root" };
+    if (rule.kind === "suffix") {
+      const parts = rule.suffix === "" ? [root] : [root, { text: rule.suffix, role: "marker" }];
+      return { form: spelling + rule.suffix, parts, pattern: rule.pattern };
+    }
+    const cls = verbClassFor(rules, spelling);
+    if (cls === void 0) return { form: null, parts: [root], pattern: rule.pattern };
+    const ending = cls.cls === "otherwise" ? (spelling[0] ?? "") + cls.ending : cls.ending;
+    return {
+      form: spelling + ending,
+      parts: [root, { text: ending, role: "marker" }],
+      pattern: cls.pattern,
+      verbClass: cls.cls
+    };
+  }
+  const SOURCE_ORDER = {
+    corpus: 0,
+    examples: 1,
+    ruling: 2,
+    functionWord: 3,
+    particle: 4
+  };
+  function createFormsEngine(input) {
+    const { data } = input;
+    const read = readFormRules(input.morphology, data.edition, input.phonology);
+    const { rules } = read;
+    const notes = input.overrides?.formNotes ?? {};
+    const bySpelling = /* @__PURE__ */ new Map();
+    for (const item of data.items.values()) {
+      if (item.forms.length > 0) bySpelling.set(item.spelling, item.id);
+    }
+    const verdict = (spelling, slot, stored) => {
+      const rule = ruleForm(rules, spelling, slot);
+      if (rule.form === null || rule.form === stored) return { rule, reason: null };
+      const listed = slot === "verb" && rules.irregularVerbs[spelling] === stored;
+      return { rule, reason: listed ? "listed" : "unexplained" };
+    };
+    const irregular = /* @__PURE__ */ new Set();
+    const unexplained = /* @__PURE__ */ new Map();
+    for (const item of data.items.values()) {
+      for (const f2 of item.forms) {
+        const { reason } = verdict(item.spelling, f2.slot, f2.form);
+        if (reason === null) continue;
+        irregular.add(item.id);
+        if (reason === "unexplained") {
+          const list = unexplained.get(f2.slot) ?? [];
+          list.push(item.id);
+          unexplained.set(f2.slot, list);
+        }
+      }
+    }
+    for (const [word, form] of Object.entries(rules.irregularVerbs)) {
+      const id = bySpelling.get(word);
+      const stored = id === void 0 ? void 0 : data.items.get(id)?.forms.find((f2) => f2.slot === "verb");
+      if (stored === void 0 || stored.form !== form) {
+        read.gaps.push({
+          severity: "error",
+          code: "irregular-unmatched",
+          ref: `verb_rule.${word}`,
+          message: stored === void 0 ? `verb_rule lists ${word} → ${form}, but ${word} is no headword in ${data.edition}.` : `verb_rule lists ${word} → ${form}, but the stored verb is ${stored.form}.`
+        });
+      }
+    }
+    for (const [slot, ids] of unexplained) {
+      read.gaps.push({
+        severity: "error",
+        code: "form-off-rule",
+        ref: formConcept(slot),
+        message: `${String(ids.length)} stored ${slot} forms differ from the rule ${rules.slots.find((s) => s.slot === slot)?.pattern ?? ""} and the data does not list them as irregular: ${ids.slice(0, 12).join(", ")}${ids.length > 12 ? ", …" : ""}. If the rule changed, the forms need a changeset; if the forms are right, the rule needs one.`
+      });
+    }
+    const ref = (id) => {
+      const i = data.items.get(id);
+      return i === void 0 ? null : { id, spelling: i.spelling, meaning: i.meaning };
+    };
+    const derivationsOf = /* @__PURE__ */ new Map();
+    const lexicalisedBySpelling = new Map(rules.lexicalised.map((d) => [d.spelling, d]));
+    const rootOf = (base, seen = /* @__PURE__ */ new Set()) => {
+      const inner = lexicalisedBySpelling.get(base);
+      if (bySpelling.has(base) || inner === void 0 || seen.has(base)) return base;
+      seen.add(base);
+      return rootOf(inner.base, seen);
+    };
+    for (const d of rules.lexicalised) {
+      const home = rootOf(d.base);
+      if (!bySpelling.has(home)) {
+        read.gaps.push({
+          severity: "warn",
+          code: "lexicalised-no-base",
+          ref: d.spelling,
+          message: `The lexicalised derivation ${d.spelling} is built on ${d.base}, which is no headword in ${data.edition}; no study card shows it.`
+        });
+      }
+      const list = derivationsOf.get(home) ?? [];
+      list.push(d);
+      derivationsOf.set(home, list);
+    }
+    const getForms = (id, options = {}) => {
+      const item = data.items.get(id);
+      if (item === void 0) return null;
+      const was = options.previous?.items[id];
+      const head = item.components !== null ? data.items.get(item.components[1]) : void 0;
+      const forms = [];
+      const unused = [];
+      for (const [i, f2] of item.forms.entries()) {
+        if (!f2.meaningful && options.includeUnused !== true) {
+          unused.push(f2.slot);
+          continue;
+        }
+        const { rule, reason } = verdict(item.spelling, f2.slot, f2.form);
+        const off = reason !== null;
+        const note = notes[`${id}|${f2.slot}`];
+        const verbClass = f2.slot !== "verb" ? void 0 : reason === "listed" ? "listed" : rule.verbClass;
+        const headClass = f2.slot === "verb" && head !== void 0 && rule.verbClass !== void 0 ? verbClassFor(rules, head.spelling)?.cls : void 0;
+        const glossWas = was?.[3][i];
+        forms.push({
+          category: f2.slot,
+          form: f2.form,
+          gloss: f2.gloss,
+          meaningful: f2.meaningful,
+          ruleId: formConcept(f2.slot),
+          pattern: rule.pattern,
+          parts: off ? [{ text: f2.form, role: "whole" }] : rule.parts,
+          irregular: off,
+          irregularReason: reason,
+          irregularNote: note ?? null,
+          regularWouldBe: off ? rule.form : null,
+          ...verbClass !== void 0 ? { verbClass } : {},
+          ...headClass !== void 0 && headClass !== rule.verbClass && !off ? { classFromModifier: { headClass } } : {},
+          ...glossWas !== void 0 && glossWas !== f2.gloss ? { glossWas } : {}
+        });
+      }
+      const root = item.forms.find((f2) => f2.slot === "root");
+      const senses = (root?.meaningful === true ? root.gloss : item.meaning).split(";").map((s) => s.trim()).filter((s) => s !== "");
+      const alt = new Set(senses.slice(1));
+      alt.delete(item.meaning);
+      const limit = options.examples ?? 3;
+      const examples = data.examples.filter((e) => e.ids.includes(id)).sort((a, b) => SOURCE_ORDER[a.source] - SOURCE_ORDER[b.source]).slice(0, limit).map((e) => {
+        const slots = /* @__PURE__ */ new Set();
+        for (const t of e.tokens) {
+          if (t.link.kind !== "entry") continue;
+          for (const r of t.link.refs) if (r.id === id && r.slot !== void 0) slots.add(r.slot);
+        }
+        return {
+          key: e.key,
+          liraasa: e.liraasa,
+          english: e.english,
+          source: e.source,
+          ...e.where !== void 0 ? { where: e.where } : {},
+          slots: FORM_SLOTS.filter((s) => slots.has(s)),
+          gloss: glossLine(data, e.tokens)
+        };
+      });
+      return {
+        root: {
+          id,
+          kind: item.kind,
+          spelling: item.spelling,
+          gloss: item.meaning,
+          sense: alt.size > 0 ? senses[0] ?? item.meaning : item.meaning,
+          altMeanings: [...alt],
+          theme: item.theme,
+          register: item.register,
+          version: item.since,
+          status: item.status,
+          ...was !== void 0 && was[0] !== item.spelling ? { spellingWas: was[0] } : {},
+          parts: item.components === null ? null : item.components.map(ref).filter((r) => r !== null)
+        },
+        forms,
+        unused,
+        compounds: item.usedIn.map(ref).filter((r) => r !== null),
+        derivations: (derivationsOf.get(item.spelling) ?? []).map((d) => ({
+          ...d,
+          ruleId: suffixConcept(d.suffix)
+        })),
+        examples,
+        hasIrregular: irregular.has(id)
+      };
+    };
+    let surprising = null;
+    const surprisingIds = () => {
+      if (surprising !== null) return surprising;
+      const out = new Set(irregular);
+      for (const item of data.items.values()) {
+        if (item.forms.length === 0) continue;
+        const w = getForms(item.id, { examples: 0 });
+        if (w === null) continue;
+        if (w.derivations.length > 0) out.add(item.id);
+        if (w.forms.some((f2) => f2.classFromModifier !== void 0)) out.add(item.id);
+      }
+      surprising = [...out];
+      return surprising;
+    };
+    return {
+      rules,
+      getForms,
+      isIrregular: (id) => irregular.has(id),
+      irregularIds: () => [...irregular],
+      surprisingIds,
+      gaps: read.gaps
+    };
   }
   const PARTICLE = /* @__PURE__ */ new Set(["functionWord", "correlative", "discourseParticle", "timeWord"]);
   const rating = (verdict, fast) => verdict === "wrong" ? 1 : verdict === "almost" ? 2 : fast ? 4 : 3;
@@ -2619,6 +3106,36 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       const right2 = response.ids.filter((id, i) => a.correct[i] === id).length;
       return grade("wrong", right2 / a.correct.length, expected2, diagnoses2, false);
     }
+    if (a.kind === "multi") {
+      const text = (id) => ex.choices?.find((c) => c.id === id)?.text ?? id;
+      const expected2 = a.correct.map(text).join(", ");
+      if (response.kind !== "multi") return grade("wrong", 0, expected2, [], false);
+      const want = new Set(a.correct);
+      const got = new Set(response.ids);
+      const hits = [...got].filter((id) => want.has(id)).length;
+      const extra = [...got].filter((id) => !want.has(id));
+      const missed = a.correct.filter((id) => !got.has(id));
+      if (extra.length === 0 && missed.length === 0) return grade("correct", 1, expected2, [], fast);
+      const diagnoses2 = [
+        ...extra.map(
+          (id) => ({
+            kind: "wrong-choice",
+            message: `“${text(id)}” does not fit.`,
+            got: text(id)
+          })
+        ),
+        ...missed.map(
+          (id) => ({
+            kind: "missed-choice",
+            message: `“${text(id)}” fits too.`,
+            expected: text(id)
+          })
+        )
+      ];
+      const score2 = Math.max(0, (hits - extra.length) / want.size);
+      const verdict2 = extra.length + missed.length === 1 ? "almost" : "wrong";
+      return grade(verdict2, score2, expected2, diagnoses2, false);
+    }
     const expected = a.left.map((l) => `${l.text} = ${a.right.find((r) => r.id === a.pairs[l.id])?.text ?? ""}`).join("; ");
     if (response.kind !== "pairs") return grade("wrong", 0, expected, [], false);
     const diagnoses = [];
@@ -2629,16 +3146,239 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
         continue;
       }
       const item = ctx.data.items.get(l.id);
-      diagnoses.push({
-        kind: "wrong-choice",
-        message: `“${l.text}” means “${item?.meaning ?? ""}”.`,
-        expected: item?.meaning ?? "",
-        link: itemLink(l.id)
-      });
+      const partner = a.right.find((r) => r.id === a.pairs[l.id])?.text ?? "";
+      diagnoses.push(
+        item !== void 0 ? {
+          kind: "wrong-choice",
+          message: `“${l.text}” means “${item.meaning}”.`,
+          expected: item.meaning,
+          link: itemLink(l.id)
+        } : {
+          // a pair that is not a word, e.g. a form and its name (Form Match)
+          kind: "wrong-choice",
+          message: `“${l.text}” goes with “${partner}”.`,
+          expected: partner
+        }
+      );
     }
     const score = right / a.left.length;
     const verdict = score === 1 ? "correct" : a.left.length - right <= 1 ? "almost" : "wrong";
     return grade(verdict, score, expected, diagnoses, fast && verdict === "correct");
+  }
+  const DRILL_MODES = [
+    "recognize",
+    "recall",
+    "forge",
+    "pattern",
+    "match",
+    "listen",
+    "slot"
+  ];
+  const meaningfulForms = (forms, id) => forms.getForms(id, { examples: 0 })?.forms ?? [];
+  function spotPattern(ctx, ids, rng, ask) {
+    const { data } = ctx.exercise;
+    const verbOf2 = (id) => meaningfulForms(ctx.forms, id).find((f2) => f2.category === "verb");
+    const drawn = ids.filter((id) => verbOf2(id) !== void 0);
+    if (drawn.length === 0) return null;
+    const others = rng.shuffle(
+      [...data.items.values()].filter((i) => (i.kind === "root" || i.kind === "compound") && !ids.includes(i.id)).filter((i) => i.forms.some((f2) => f2.slot === "verb" && f2.meaningful)).map((i) => i.id)
+    );
+    const grid = rng.shuffle(
+      [.../* @__PURE__ */ new Set([...rng.shuffle(drawn).slice(0, 4), ...others.slice(0, 6)])].slice(0, 6)
+    );
+    const classOf = (id) => verbOf2(id)?.verbClass;
+    const irregular = grid.filter((id) => verbOf2(id)?.irregular === true);
+    const present = VERB_CLASSES.filter((c) => grid.some((id) => classOf(id) === c));
+    const target = ask ?? (irregular.length > 0 && rng.next() < 0.5 ? "irregular" : rng.pick(present.filter((c) => grid.some((id) => classOf(id) !== c))));
+    if (target === void 0) return null;
+    const correct = target === "irregular" ? irregular : grid.filter((id) => classOf(id) === target);
+    if (correct.length === 0 || correct.length === grid.length) return null;
+    const pattern = ctx.forms.rules.verb.find((v) => v.cls === target)?.pattern ?? "";
+    const choices = grid.map((id) => ({
+      id,
+      text: verbOf2(id)?.form ?? "",
+      liraasa: true
+    }));
+    const first = correct.find((id) => ids.includes(id)) ?? drawn[0] ?? "";
+    return {
+      id: `spotPattern:${target}:${grid.join(",")}`,
+      type: "spotPattern",
+      skill: "morphology",
+      direction: "recognize",
+      card: cardId(first, "morphology", "recognize"),
+      target: first,
+      items: grid,
+      concepts: ["form:verb"],
+      instruction: target === "irregular" ? "Which of these verbs go their own way, not the rule?" : `Which of these verbs follow the pattern “${pattern}”?`,
+      prompt: {},
+      choices,
+      answer: { kind: "multi", correct }
+    };
+  }
+  function formMatch(ctx, id, rng) {
+    const forms = meaningfulForms(ctx.forms, id);
+    if (forms.length < 3) return null;
+    const chosen = rng.shuffle(forms).slice(0, 4);
+    const left = chosen.map((f2) => ({ id: `f:${f2.category}`, text: f2.form, liraasa: true }));
+    const right = rng.shuffle(
+      chosen.map((f2) => ({ id: `n:${f2.category}`, text: humanize(f2.category), liraasa: false }))
+    );
+    return {
+      id: `formMatch:${id}:${chosen.map((f2) => f2.category).join(",")}`,
+      type: "formMatch",
+      skill: "morphology",
+      direction: "recognize",
+      card: cardId(id, "morphology", "recognize"),
+      target: id,
+      items: [id],
+      concepts: chosen.map((f2) => f2.ruleId),
+      instruction: "Match each form to its name.",
+      prompt: {},
+      answer: {
+        kind: "pairs",
+        left,
+        right,
+        pairs: Object.fromEntries(chosen.map((f2) => [`f:${f2.category}`, `n:${f2.category}`]))
+      }
+    };
+  }
+  function starsDrill(ctx, ids, rng, options) {
+    const ex = ctx.exercise;
+    const modes = new Set(options.modes);
+    const buckets = /* @__PURE__ */ new Map();
+    const add = (mode, e) => {
+      if (e === null || !modes.has(mode)) return;
+      buckets.set(mode, [...buckets.get(mode) ?? [], e]);
+    };
+    for (const id of ids) {
+      const forms = meaningfulForms(ctx.forms, id);
+      const slots = forms.map((f2) => f2.category).filter((s) => s !== "root");
+      add("recognize", recognition(ex, id, rng));
+      for (const s of slots) add("recognize", recognition(ex, id, rng, s));
+      add("recall", recall(ex, id));
+      for (const s of slots) add("forge", formBuild(ex, id, rng, s));
+      add("match", formMatch(ctx, id, rng));
+      add("listen", listen(ex, id, rng));
+      const sentences = ex.data.examples.filter((e) => e.ids.includes(id));
+      for (const e of rng.shuffle(sentences).slice(0, 2))
+        add("slot", cloze(ex, e, rng, { item: id }));
+    }
+    if (ids.length >= 3) add("match", matching(ex, rng.shuffle(ids), rng));
+    if (modes.has("pattern")) {
+      const grids = /* @__PURE__ */ new Set();
+      for (let k = 0; k < 24 && grids.size < 6; k += 1) {
+        const e = spotPattern(ctx, ids, rng, VERB_CLASSES[k % VERB_CLASSES.length]);
+        if (e === null || grids.has(e.id)) continue;
+        grids.add(e.id);
+        add("pattern", e);
+      }
+    }
+    if (ids.some((id) => ctx.forms.isIrregular(id)))
+      add("pattern", spotPattern(ctx, ids, rng, "irregular"));
+    const queues = rng.shuffle([...buckets.values()].map((list) => rng.shuffle(list)));
+    const out = [];
+    const seen = /* @__PURE__ */ new Set();
+    let turn = 0;
+    for (const id of rng.shuffle(ids)) {
+      if (out.length >= options.length) break;
+      for (let k = 0; k < queues.length; k += 1) {
+        const q = queues[(turn + k) % queues.length] ?? [];
+        const at = q.findIndex((e) => e.target === id && !seen.has(e.id));
+        const next = at < 0 ? void 0 : q.splice(at, 1)[0];
+        if (next === void 0) continue;
+        seen.add(next.id);
+        out.push(next);
+        turn = (turn + k + 1) % queues.length;
+        break;
+      }
+    }
+    while (out.length < options.length && queues.some((q) => q.length > 0)) {
+      for (const q of queues) {
+        const next = q.shift();
+        if (next === void 0 || seen.has(next.id)) continue;
+        seen.add(next.id);
+        out.push(next);
+        if (out.length >= options.length) break;
+      }
+    }
+    for (let i = 1; i < out.length; i += 1) {
+      if (out[i]?.target !== out[i - 1]?.target) continue;
+      const j = out.findIndex((e, k) => k > i && e.target !== out[i - 1]?.target);
+      if (j < 0) break;
+      const a = out[i];
+      const b = out[j];
+      if (a === void 0 || b === void 0) break;
+      out[i] = b;
+      out[j] = a;
+    }
+    return out;
+  }
+  function typedText(ex, response) {
+    if (ex.answer.kind !== "typed" || ex.answer.lang !== "liraasa") return null;
+    if (response.kind === "typed") return response.text;
+    if (response.kind === "choice")
+      return ex.choices?.find((c) => c.id === response.id)?.text ?? null;
+    return null;
+  }
+  const askedSlot = (ex) => FORM_SLOTS.find((s) => ex.concepts.includes(`form:${s}`));
+  function gradeStars(gctx, forms, ex, response, ms, leniency) {
+    const g = gradeExercise(gctx, ex, response, ms);
+    if (g.verdict === "correct") return g;
+    const typed = typedText(ex, response);
+    if (typed === null || ex.answer.kind !== "typed") return g;
+    const got = normalize(typed);
+    const slot = ex.type === "formBuild" ? askedSlot(ex) : void 0;
+    if (slot !== void 0) {
+      const f2 = forms.getForms(ex.target, { includeUnused: true, examples: 0 })?.forms.find((x) => x.category === slot);
+      if (f2?.irregular === true && f2.regularWouldBe !== null && normalize(f2.regularWouldBe) === got) {
+        return {
+          ...g,
+          verdict: "almost",
+          score: 0.5,
+          rating: 2,
+          diagnoses: [
+            {
+              kind: "rule-for-irregular",
+              message: `The rule (${f2.pattern}) makes “${f2.regularWouldBe}”, and this word goes its own way: “${f2.form}”.`,
+              expected: f2.form,
+              got: typed,
+              link: { kind: "concept", id: f2.ruleId }
+            }
+          ]
+        };
+      }
+    }
+    if (leniency === "lenient") {
+      const vowels = forms.rules.vowels;
+      const squeeze = (s) => [...s].filter((ch, i) => !(vowels.includes(ch) && s[i - 1] === ch)).join("");
+      const match = ex.answer.accepted.find((a) => squeeze(normalize(a)) === squeeze(got));
+      if (match !== void 0) {
+        return {
+          verdict: "correct",
+          score: 1,
+          expected: match,
+          rating: 3,
+          diagnoses: [
+            {
+              kind: "vowel-length",
+              message: `Forgiven: the exact spelling is “${match}”.`,
+              expected: match,
+              got: typed
+            }
+          ]
+        };
+      }
+    }
+    return g;
+  }
+  function drillResults(ids, results) {
+    const worth = { correct: 1, almost: 0.5, wrong: 0 };
+    return ids.map((id) => {
+      const mine = results.filter((r) => r.ex.target === id);
+      const right = mine.filter((r) => r.grade.verdict === "correct").length;
+      const score = mine.length === 0 ? 0 : mine.reduce((sum, r) => sum + worth[r.grade.verdict], 0) / mine.length;
+      return { id, asked: mine.length, right, score };
+    });
   }
   const PATTERN_MIN = 4;
   const DEFAULT_GRAPH_OPTIONS = {
@@ -2672,7 +3412,11 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       if (item.kind !== "root" && item.kind !== "compound") continue;
       const f2 = data.frequency.get(item.id) ?? { corpus: 0, examples: 0 };
       const occurs = f2.corpus + f2.examples > 0;
-      const prereqs = item.components !== null ? [rootNode(item.components[0]), rootNode(item.components[1]), conceptNode(COMPOUND)] : [conceptNode(formConcept("root"))];
+      const parts = (item.components ?? []).filter((c) => {
+        const k = data.items.get(c)?.kind;
+        return k === "root" || k === "compound";
+      });
+      const prereqs = item.components !== null ? [...parts.map(rootNode), conceptNode(COMPOUND)] : [conceptNode(formConcept("root"))];
       drafts.set(rootNode(item.id), {
         id: rootNode(item.id),
         kind: "root",
@@ -2787,7 +3531,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     if (node === void 0) return false;
     return node.prereqs.every((p) => !graph.nodes.has(p) || mastery(p) >= threshold);
   }
-  const DAY$1 = 864e5;
+  const DAY$3 = 864e5;
   const MINUTE = 6e4;
   const FSRS_WEIGHTS = [
     0.4872,
@@ -2815,7 +3559,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     const w = (i) => weights[i] ?? 0;
     const d0 = (g) => clamp(w(4) - (g - 3) * w(5), 1, 10);
     const interval = (s) => Math.max(1, Math.round(s / FACTOR * (retention ** (1 / DECAY) - 1)));
-    const r = (state, now) => state.last === 0 || state.stability <= 0 ? 0 : (1 + FACTOR * (now - state.last) / DAY$1 / state.stability) ** DECAY;
+    const r = (state, now) => state.last === 0 || state.stability <= 0 ? 0 : (1 + FACTOR * (now - state.last) / DAY$3 / state.stability) ** DECAY;
     return {
       name: "fsrs",
       init: (now) => ({
@@ -2831,7 +3575,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       review(state, g, now) {
         if (state.reps === 0 || state.stability <= 0) {
           const stability = w(g - 1);
-          const due = g === 1 ? now + 5 * MINUTE : now + interval(stability) * DAY$1;
+          const due = g === 1 ? now + 5 * MINUTE : now + interval(stability) * DAY$3;
           return {
             stability,
             difficulty: d0(g),
@@ -2856,7 +3600,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
         return {
           stability: S,
           difficulty: D,
-          due: g === 1 ? now + 10 * MINUTE : now + interval(S) * DAY$1,
+          due: g === 1 ? now + 10 * MINUTE : now + interval(S) * DAY$3,
           last: now,
           reps: state.reps + 1,
           lapses: state.lapses + (g === 1 ? 1 : 0),
@@ -2878,7 +3622,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
         lapses: 0,
         streak: 0
       }),
-      retrievability: (s, now) => s.last === 0 || s.stability <= 0 ? 0 : Math.exp(Math.log(0.9) * (now - s.last) / DAY$1 / s.stability),
+      retrievability: (s, now) => s.last === 0 || s.stability <= 0 ? 0 : Math.exp(Math.log(0.9) * (now - s.last) / DAY$3 / s.stability),
       review(state, g, now) {
         const q = quality[g];
         const ease = Math.max(1.3, state.difficulty + (0.1 - (5 - q) * (0.08 + (5 - q) * 0.02)));
@@ -2899,7 +3643,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
         return {
           stability: days,
           difficulty: ease,
-          due: now + days * DAY$1,
+          due: now + days * DAY$3,
           last: now,
           reps: state.reps + 1,
           lapses: state.lapses,
@@ -2912,7 +3656,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     return name === "sm2" ? sm2() : fsrs(retention);
   }
   const PROGRESS_SCHEMA = 1;
-  const DAY = 864e5;
+  const DAY$2 = 864e5;
   const DEFAULT_SETTINGS = {
     newPerDay: 10,
     reviewsPerDay: 200,
@@ -3090,7 +3834,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
   function unitOpen(profile, unit) {
     return unit <= 0 || profile.checkpoints[String(unit - 1)]?.passed === true;
   }
-  const startOfDay = (now) => now - now % DAY;
+  const startOfDay = (now) => now - now % DAY$2;
   function dailyQueue(profile, graph, now) {
     const today = startOfDay(now);
     const reviewedToday = profile.log.filter((l) => l.at >= today).length;
@@ -3115,7 +3859,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     const today = startOfDay(now);
     for (const c of Object.values(profile.cards)) {
       if (c.retired !== void 0 || c.state.reps === 0) continue;
-      const d = Math.max(0, Math.floor((c.state.due - today) / DAY));
+      const d = Math.max(0, Math.floor((c.state.due - today) / DAY$2));
       if (d < days) out[d] = (out[d] ?? 0) + 1;
     }
     return out;
@@ -3124,7 +3868,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     const out = new Array(days).fill(0);
     const today = startOfDay(now);
     for (const l of profile.log) {
-      const ago = Math.floor((today - startOfDay(l.at)) / DAY);
+      const ago = Math.floor((today - startOfDay(l.at)) / DAY$2);
       if (ago >= 0 && ago < days) out[days - 1 - ago] = (out[days - 1 - ago] ?? 0) + 1;
     }
     return out;
@@ -3249,6 +3993,750 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     profile.edition = data.edition;
     return out;
   }
+  const HALL_SCHEMA = 1;
+  const DAY$1 = 864e5;
+  const STAR_COUNTS = [5, 10, 15, 20];
+  const DRILL_LENGTHS = [10, 20, 30];
+  const LOOM_LENGTHS = { quick: 5, standard: 10, deep: 25 };
+  const DEFAULT_HALL_SETTINGS = {
+    stars: 10,
+    drill: 20,
+    loom: "standard",
+    leniency: "exact",
+    gloss: "onRequest",
+    hints: "onRequest"
+  };
+  class HallError extends Error {
+  }
+  const HALL_SETTING_VALUES = {
+    stars: STAR_COUNTS,
+    drill: DRILL_LENGTHS,
+    loom: Object.keys(LOOM_LENGTHS),
+    leniency: ["exact", "lenient"],
+    gloss: ["always", "onRequest", "hidden"],
+    hints: ["off", "onRequest", "always"]
+  };
+  const SETTING_KEYS = Object.keys(DEFAULT_HALL_SETTINGS);
+  const valid = (key, value) => HALL_SETTING_VALUES[key].includes(value);
+  const time = (x) => typeof x === "number" && Number.isFinite(x) && x >= 0 ? x : null;
+  function readHallSettings(raw, base = DEFAULT_HALL_SETTINGS) {
+    const r = typeof raw === "object" && raw !== null ? raw : {};
+    const out = { ...base };
+    for (const key of SETTING_KEYS) if (valid(key, r[key])) Object.assign(out, { [key]: r[key] });
+    return out;
+  }
+  function hallOf(profile) {
+    const raw = profile.hall;
+    if (raw === void 0 || raw === null) {
+      return {
+        schema: HALL_SCHEMA,
+        settings: { ...DEFAULT_HALL_SETTINGS },
+        lastVisit: null,
+        previousVisit: null
+      };
+    }
+    if (typeof raw !== "object") throw new HallError("hall state must be an object");
+    const r = raw;
+    const schema = typeof r.schema === "number" ? r.schema : 0;
+    if (schema > HALL_SCHEMA) {
+      throw new HallError(
+        `hall schema ${String(schema)} is newer than this app (${String(HALL_SCHEMA)})`
+      );
+    }
+    return {
+      ...r,
+      schema: HALL_SCHEMA,
+      settings: readHallSettings(r.settings),
+      lastVisit: time(r.lastVisit),
+      previousVisit: time(r.previousVisit)
+    };
+  }
+  function setHall(profile, state) {
+    profile.hall = state;
+  }
+  function updateHallSettings(profile, patch) {
+    const state = hallOf(profile);
+    const settings = readHallSettings(patch, state.settings);
+    setHall(profile, { ...state, settings });
+    return settings;
+  }
+  function recordVisit(profile, now) {
+    const state = hallOf(profile);
+    const sameDay = state.lastVisit !== null && dayOf(state.lastVisit) === dayOf(now);
+    const next = {
+      ...state,
+      lastVisit: now,
+      previousVisit: sameDay ? state.previousVisit : state.lastVisit
+    };
+    setHall(profile, next);
+    return next;
+  }
+  const dayOf = (t) => Math.floor(t / DAY$1);
+  function greeting(state) {
+    if (state.previousVisit === null || state.lastVisit === null) return "first";
+    return dayOf(state.lastVisit) - dayOf(state.previousVisit) >= 2 ? "back" : "again";
+  }
+  function hallSummary(profile, data, now) {
+    const byTarget = /* @__PURE__ */ new Map();
+    let due = 0;
+    for (const c of Object.values(profile.cards)) {
+      if (c.retired !== void 0) continue;
+      const list = byTarget.get(c.target) ?? [];
+      list.push(cardMastery(profile, c, now));
+      byTarget.set(c.target, list);
+      if (c.state.reps > 0 && c.state.due <= now) due += 1;
+    }
+    let wordsMet = 0;
+    let wordsSteady = 0;
+    for (const [target, mastery] of byTarget) {
+      const kind = data.items.get(target)?.kind;
+      if (kind !== "root" && kind !== "compound" && kind !== "imageCompound") continue;
+      wordsMet += 1;
+      if (mastery.every((m) => m >= profile.settings.threshold)) wordsSteady += 1;
+    }
+    const practised = /* @__PURE__ */ new Set();
+    for (const l of profile.log) {
+      const target = profile.cards[l.card]?.target;
+      if (target !== void 0 && data.concepts.has(target)) practised.add(target);
+    }
+    const weekStart = (dayOf(now) - 6) * DAY$1;
+    let ms = 0;
+    const days = /* @__PURE__ */ new Set();
+    for (const l of profile.log) {
+      if (l.at < weekStart || l.at > now) continue;
+      ms += l.ms;
+      days.add(dayOf(l.at));
+    }
+    return {
+      wordsMet,
+      wordsSteady,
+      rulesPracticed: practised.size,
+      minutesThisWeek: Math.round(ms / 6e4),
+      daysThisWeek: days.size,
+      due
+    };
+  }
+  const SERIOUS = /* @__PURE__ */ new Set(["error", "warn"]);
+  const seriousProblems = (ps) => ps.filter((p) => SERIOUS.has(p.severity));
+  const memo = /* @__PURE__ */ new WeakMap();
+  function problemsOf(check, line) {
+    let m = memo.get(check);
+    if (m === void 0) {
+      m = /* @__PURE__ */ new Map();
+      memo.set(check, m);
+    }
+    const hit = m.get(line);
+    if (hit !== void 0) return hit;
+    const out = seriousProblems(check(line));
+    m.set(line, out);
+    return out;
+  }
+  const isClean = (check, line) => problemsOf(check, line).length === 0;
+  const CLOSED = /* @__PURE__ */ new Set(["functionWord", "correlative", "timeWord", "particle"]);
+  const HEADWORD = /* @__PURE__ */ new Set(["root", "compound", "imageCompound"]);
+  const SUBJECTISH = /* @__PURE__ */ new Set(["root", "compound", "imageCompound", "pronoun"]);
+  function sentenceOf(e) {
+    let rest = e.liraasa;
+    for (const t of [...e.tokens].reverse()) rest = rest.slice(0, t.start) + rest.slice(t.end);
+    const leftover = rest.replace(/\s+/g, "");
+    if (leftover !== "" && !/^[.!?]$/.test(leftover)) return null;
+    if (leftover !== "" && !/[.!?]\s*$/.test(e.liraasa)) return null;
+    const end = leftover === "" ? "." : leftover;
+    const words2 = e.tokens.map(
+      (t, i) => i === 0 && t.link.kind !== "name" ? t.text.charAt(0).toLowerCase() + t.text.slice(1) : t.text
+    );
+    return { words: words2, end };
+  }
+  function renderSentence(words2, end) {
+    const line = words2.join(" ");
+    return line.charAt(0).toUpperCase() + line.slice(1) + end;
+  }
+  const unknownHeadwords = (ctx, e) => ctx.known === void 0 ? 0 : e.ids.filter((id) => HEADWORD.has(ctx.data.items.get(id)?.kind ?? "") && !ctx.known?.has(id)).length;
+  function loomSentences(ctx, concept, limit = 12) {
+    const ex = ctx.exercise;
+    const list = unique(
+      ex.data.examples.filter(
+        (e) => e.concepts.includes(concept) && e.english !== null && e.tokens.length >= 2 && e.tokens.length <= 12 && e.tokens.every((t) => t.link.kind !== "unknown") && sentenceOf(e) !== null
+      ),
+      (e) => e.liraasa
+    );
+    return list.map((e) => ({ e, u: unknownHeadwords(ex, e) })).sort(
+      (a, b) => a.u - b.u || a.e.tokens.length - b.e.tokens.length || (a.e.key < b.e.key ? -1 : 1)
+    ).map((x) => x.e).filter((e) => isClean(ctx.check, e.liraasa)).slice(0, limit);
+  }
+  const DASH = " — ";
+  function ruleCard(ctx, id, overrides, limit = 4) {
+    const data = ctx.exercise.data;
+    const concept = data.concepts.get(id);
+    if (concept === void 0) return null;
+    const cut = concept.description.indexOf(DASH);
+    const patterned = concept.kind !== "ruling" && concept.kind !== "numbers" && concept.kind !== "motion";
+    const pattern = !patterned ? null : cut < 0 ? concept.description : concept.description.slice(0, cut);
+    const explanation = !patterned ? concept.description : cut < 0 ? "" : concept.description.slice(cut + DASH.length);
+    const title = (c) => ({
+      id: c,
+      title: data.concepts.get(c)?.title ?? c
+    });
+    const note = overrides.notes[id] ?? (concept.ruleRef !== void 0 ? overrides.notes[concept.ruleRef] : void 0);
+    return {
+      concept,
+      title: concept.title,
+      pattern,
+      explanation,
+      note: note ?? null,
+      version: concept.ruleRef?.split(":")[0] ?? data.edition,
+      prereqs: concept.prereqs.map(title),
+      leadsTo: [...data.concepts.values()].filter((c) => c.prereqs.includes(id)).map((c) => title(c.id)),
+      words: unique(
+        concept.words.map((w) => {
+          const it = data.items.get(w);
+          return { id: w, spelling: it?.spelling ?? w, meaning: it?.meaning ?? "" };
+        }),
+        (w) => w.spelling
+      ),
+      examples: loomSentences(ctx, id, limit).map((e) => ({
+        key: e.key,
+        liraasa: e.liraasa,
+        english: e.english,
+        gloss: glossLine(data, e.tokens)
+      }))
+    };
+  }
+  function ruleMap(ctx, overrides) {
+    const data = ctx.exercise.data;
+    const excluded = new Set(overrides.exclude);
+    const depth = /* @__PURE__ */ new Map();
+    const depthOf = (id, seen = /* @__PURE__ */ new Set()) => {
+      const known = depth.get(id);
+      if (known !== void 0) return known;
+      if (seen.has(id)) return 0;
+      seen.add(id);
+      const c = data.concepts.get(id);
+      const d = c === void 0 || c.prereqs.length === 0 ? 0 : 1 + Math.max(...c.prereqs.map((p) => depthOf(p, seen)));
+      depth.set(id, d);
+      return d;
+    };
+    const groupOf = (c) => c.kind === "ruling" ? "rulings" : c.kind === "slot" || c.id === CLAUSE ? "clause" : c.id === NOUN_PHRASE ? "phrase" : "forms";
+    const slotN = (c) => c.slot ?? 0;
+    return [...data.concepts.values()].filter((c) => !excluded.has(c.id)).map((c) => ({
+      id: c.id,
+      title: c.title,
+      group: groupOf(c),
+      depth: depthOf(c.id),
+      prereqs: c.prereqs,
+      sentences: loomSentences(ctx, c.id, 99).length,
+      version: c.ruleRef?.split(":")[0] ?? data.edition,
+      n: slotN(c)
+    })).sort((a, b) => a.depth - b.depth || a.n - b.n || (a.id < b.id ? -1 : 1)).map(({ n: _n, ...rest }) => rest);
+  }
+  const LOOM_TYPES = [
+    "weave",
+    "transform",
+    "mend",
+    "unravel",
+    "choose",
+    "translate",
+    "reverse"
+  ];
+  const closedAt = (data, e, i) => {
+    const t = e.tokens[i];
+    if (t?.link.kind !== "entry") return false;
+    return t.link.refs.some((r) => CLOSED.has(data.items.get(r.id)?.kind ?? ""));
+  };
+  function slotNumbers(data, t) {
+    if (t.link.kind !== "entry") return [];
+    const ids = new Set(t.link.refs.map((r) => r.id));
+    const out = [];
+    for (const c of data.concepts.values()) {
+      if (c.kind === "slot" && c.slot !== void 0 && c.words.some((w) => ids.has(w)))
+        out.push(c.slot);
+    }
+    return out;
+  }
+  function transform(ctx, e, slot, rng) {
+    const data = ctx.exercise.data;
+    const concept = data.concepts.get(slot);
+    const base = sentenceOf(e);
+    if (concept?.kind !== "slot" || concept.words.length === 0 || base === null) return null;
+    const present = new Set(e.ids);
+    if (concept.words.some((w) => present.has(w))) return null;
+    const word = rng.pick(
+      concept.words.map((w) => data.items.get(w)).filter((w) => w !== void 0 && w.kind === "functionWord")
+    );
+    if (word === void 0) return null;
+    const subjectSlot = [...data.concepts.values()].find((c) => c.id === "slot:SUBJECT")?.slot ?? 0;
+    const first = e.tokens[0];
+    const opensWithSubject = first !== void 0 && first.link.kind === "entry" && first.link.refs.some((r) => SUBJECTISH.has(data.items.get(r.id)?.kind ?? ""));
+    const from = (concept.slot ?? 0) > subjectSlot && opensWithSubject ? 1 : 0;
+    const n = concept.slot ?? 0;
+    const slotsAt = e.tokens.map((t) => slotNumbers(data, t));
+    const inOrder = (at) => slotsAt.slice(0, at).every((s) => s.length === 0 || s.some((m) => m <= n)) && slotsAt.slice(at).every((s) => s.length === 0 || s.some((m) => m >= n));
+    const answers = [];
+    for (let at = from; at <= base.words.length; at += 1) {
+      if (!inOrder(at)) continue;
+      const words2 = [...base.words.slice(0, at), word.spelling, ...base.words.slice(at)];
+      const line = renderSentence(words2, base.end);
+      if (isClean(ctx.check, line)) answers.push(line);
+    }
+    if (answers.length === 0 || answers.length > 2) return null;
+    const original = renderSentence(base.words, base.end);
+    return {
+      id: `transform:${e.key}:${word.id}`,
+      type: "transform",
+      skill: "grammar",
+      direction: "produce",
+      card: cardId(slot, "grammar", "produce"),
+      target: slot,
+      items: [...e.ids, word.id],
+      concepts: [slot],
+      instruction: `Add “${word.spelling}” (${word.meaning}) where it belongs.`,
+      prompt: { liraasa: original, english: e.english ?? "", tokens: glossLine(data, e.tokens) },
+      prefill: original,
+      answer: { kind: "typed", lang: "liraasa", accepted: answers },
+      source: e.key
+    };
+  }
+  function mutants(ctx, e, rng, want = 3) {
+    const data = ctx.exercise.data;
+    const base = sentenceOf(e);
+    if (base === null) return [];
+    const tries = [];
+    base.words.forEach((_, i) => {
+      if (!closedAt(data, e, i)) return;
+      for (let to = 0; to < base.words.length; to += 1) {
+        if (to === i) continue;
+        const words2 = [...base.words];
+        const [moved] = words2.splice(i, 1);
+        if (moved === void 0) continue;
+        words2.splice(to, 0, moved);
+        tries.push(words2);
+      }
+    });
+    e.tokens.forEach((t, i) => {
+      if (t.link.kind !== "entry" || t.link.refs.length !== 1) return;
+      const ref = t.link.refs[0];
+      const item = ref === void 0 ? void 0 : data.items.get(ref.id);
+      if (item === void 0 || ref?.slot === void 0 || t.link.via !== void 0) return;
+      if (!HEADWORD.has(item.kind)) return;
+      for (const f2 of item.forms) {
+        if (!f2.meaningful || f2.slot === ref.slot) continue;
+        const words2 = [...base.words];
+        words2[i] = f2.form;
+        tries.push(words2);
+      }
+    });
+    const original = renderSentence(base.words, base.end);
+    const out = [];
+    const seen = /* @__PURE__ */ new Set([original]);
+    for (const words2 of rng.shuffle(tries)) {
+      const line = renderSentence(words2, base.end);
+      if (seen.has(line)) continue;
+      seen.add(line);
+      const problem = problemsOf(ctx.check, line)[0];
+      if (problem === void 0) continue;
+      out.push({ line, problem });
+      if (out.length >= want) break;
+    }
+    return out;
+  }
+  function mend(ctx, e, rng, target) {
+    const base = sentenceOf(e);
+    const [m] = mutants(ctx, e, rng, 1);
+    if (base === null || m === void 0) return null;
+    const original = renderSentence(base.words, base.end);
+    return {
+      id: `mend:${e.key}:${m.line}`,
+      type: "mend",
+      skill: "grammar",
+      direction: "produce",
+      card: cardId(target, "grammar", "produce"),
+      target,
+      items: [...e.ids],
+      concepts: [...e.concepts],
+      instruction: "One thing is wrong. Mend the sentence.",
+      prompt: { liraasa: m.line, english: e.english ?? "" },
+      prefill: m.line,
+      answer: { kind: "typed", lang: "liraasa", accepted: [original] },
+      explain: { wrong: m.problem.message },
+      source: e.key
+    };
+  }
+  function choose(ctx, e, rng, target) {
+    const base = sentenceOf(e);
+    const ms = mutants(ctx, e, rng, 2);
+    if (base === null || ms.length < 2) return null;
+    const choices = rng.shuffle([
+      { id: "ok", text: renderSentence(base.words, base.end), liraasa: true },
+      ...ms.map((m, i) => ({ id: `m${String(i)}`, text: m.line, liraasa: true }))
+    ]);
+    return {
+      id: `choose:${e.key}`,
+      type: "choose",
+      skill: "grammar",
+      direction: "recognize",
+      card: cardId(target, "grammar", "recognize"),
+      target,
+      items: [...e.ids],
+      concepts: [...e.concepts],
+      instruction: "Which one is grammatical?",
+      prompt: { english: e.english ?? "" },
+      choices,
+      answer: { kind: "choice", correct: "ok" },
+      explain: Object.fromEntries(ms.map((m, i) => [`m${String(i)}`, m.problem.message])),
+      source: e.key
+    };
+  }
+  function unravel(ctx, e, rng, target) {
+    const gloss = glossLine(ctx.exercise.data, e.tokens);
+    const picked = [];
+    const labels = /* @__PURE__ */ new Set();
+    const texts = /* @__PURE__ */ new Set();
+    gloss.forEach((t, i) => {
+      if (t.kind !== "entry" || t.gloss === "") return;
+      const label = t.tags.length > 0 ? `${t.gloss} · ${t.tags.join(" · ")}` : t.gloss;
+      const key = normalize(t.text);
+      if (labels.has(label) || texts.has(key)) return;
+      labels.add(label);
+      texts.add(key);
+      picked.push({ i, t, label });
+    });
+    if (picked.length < 3) return null;
+    const chosen = picked.slice(0, 5);
+    return {
+      id: `unravel:${e.key}`,
+      type: "unravel",
+      skill: "grammar",
+      direction: "recognize",
+      card: cardId(target, "grammar", "recognize"),
+      target,
+      items: [...e.ids],
+      concepts: [...e.concepts],
+      instruction: "Gloss each word.",
+      prompt: { liraasa: e.liraasa, english: e.english ?? "" },
+      answer: {
+        kind: "pairs",
+        left: chosen.map((c) => ({ id: `u:${String(c.i)}`, text: c.t.text, liraasa: true })),
+        right: rng.shuffle(
+          chosen.map((c) => ({ id: `g:${String(c.i)}`, text: c.label, liraasa: false }))
+        ),
+        pairs: Object.fromEntries(chosen.map((c) => [`u:${String(c.i)}`, `g:${String(c.i)}`]))
+      },
+      source: e.key
+    };
+  }
+  function reverse(ctx, e, rng, target) {
+    const data = ctx.exercise.data;
+    if (e.english === null) return null;
+    const mine = normalize(e.english);
+    const ids = new Set(e.ids);
+    const others = unique(
+      rng.shuffle(data.examples.filter((x) => x.english !== null && normalize(x.english) !== mine)).sort(
+        (a, b) => b.ids.filter((i) => ids.has(i)).length - a.ids.filter((i) => ids.has(i)).length
+      ),
+      (x) => normalize(x.english ?? "")
+    ).slice(0, 2);
+    if (others.length < 2) return null;
+    return {
+      id: `reverse:${e.key}`,
+      type: "reverse",
+      skill: "grammar",
+      direction: "recognize",
+      card: cardId(target, "grammar", "recognize"),
+      target,
+      items: [...e.ids],
+      concepts: [...e.concepts],
+      instruction: "What does it mean?",
+      prompt: { liraasa: e.liraasa, tokens: glossLine(data, e.tokens) },
+      choices: rng.shuffle([
+        { id: "ok", text: e.english, liraasa: false },
+        ...others.map((o, i) => ({ id: `o${String(i)}`, text: o.english ?? "", liraasa: false }))
+      ]),
+      answer: { kind: "choice", correct: "ok" },
+      source: e.key
+    };
+  }
+  const transformSentences = (ctx, slot) => loomSentences(ctx, CLAUSE, 60).filter((e) => !slot.words.some((w) => e.ids.includes(w)));
+  function exercisesForRule(ctx, id, rng, types = LOOM_TYPES) {
+    const out = /* @__PURE__ */ new Map();
+    const add = (type, ex) => {
+      if (ex === null || !types.includes(type)) return;
+      out.set(type, [...out.get(type) ?? [], ex]);
+    };
+    const concept = ctx.exercise.data.concepts.get(id);
+    if (concept === void 0) return out;
+    const sentences = loomSentences(ctx, id, 8);
+    for (const e of sentences) {
+      const asWeave = assemble(ctx.exercise, e, rng, id);
+      add("weave", asWeave === null ? null : { ...asWeave, card: cardId(id, "grammar", "produce") });
+      if (types.includes("mend")) add("mend", mend(ctx, e, rng, id));
+      if (types.includes("choose")) add("choose", choose(ctx, e, rng, id));
+      add("unravel", unravel(ctx, e, rng, id));
+      const asTranslate = translateTo(ctx.exercise, e, id);
+      add(
+        "translate",
+        asTranslate === null ? null : { ...asTranslate, card: cardId(id, "grammar", "produce") }
+      );
+      add("reverse", reverse(ctx, e, rng, id));
+    }
+    if (concept.kind === "slot" && concept.words.length > 0 && types.includes("transform")) {
+      let made = 0;
+      for (const e of rng.shuffle(transformSentences(ctx, concept))) {
+        const t = transform(ctx, e, id, rng);
+        if (t === null) continue;
+        add("transform", t);
+        made += 1;
+        if (made >= 4) break;
+      }
+    }
+    return out;
+  }
+  function loomSession(ctx, rules, rng, options) {
+    const byType = /* @__PURE__ */ new Map();
+    for (const id of rules) {
+      for (const [type, list] of exercisesForRule(ctx, id, rng, options.types)) {
+        byType.set(type, [...byType.get(type) ?? [], ...list]);
+      }
+    }
+    const queues = rng.shuffle([...byType.values()].map((q) => rng.shuffle(q)));
+    const out = [];
+    const seen = /* @__PURE__ */ new Set();
+    while (out.length < options.length && queues.some((q) => q.length > 0)) {
+      for (const q of queues) {
+        const next = q.shift();
+        if (next === void 0 || seen.has(next.id)) continue;
+        seen.add(next.id);
+        out.push(next);
+        if (out.length >= options.length) break;
+      }
+    }
+    for (let i = 1; i < out.length; i += 1) {
+      if (out[i]?.source === void 0 || out[i]?.source !== out[i - 1]?.source) continue;
+      const j = out.findIndex((x, k) => k > i && x.source !== out[i - 1]?.source);
+      if (j < 0) break;
+      const a = out[i];
+      const b = out[j];
+      if (a === void 0 || b === void 0) break;
+      out[i] = b;
+      out[j] = a;
+    }
+    return out;
+  }
+  function withPrereqs(data, id) {
+    const out = [];
+    const walk = (c) => {
+      if (out.includes(c)) return;
+      out.push(c);
+      for (const p of data.concepts.get(c)?.prereqs ?? []) walk(p);
+    };
+    walk(id);
+    return out;
+  }
+  const wordsOf = (line) => normalize(line).split(/\s+/).filter((w) => w !== "");
+  function contentOf(link, data, line) {
+    return wordsOf(line).filter((w) => {
+      const l = linkWord(link, w);
+      if (l.kind !== "entry") return true;
+      return !l.refs.every((r) => CLOSED.has(data.items.get(r.id)?.kind ?? ""));
+    });
+  }
+  const sameBag = (a, b) => a.length === b.length && [...a].sort().join(" ") === [...b].sort().join(" ");
+  const typedOf = (ex, r) => {
+    if (r.kind === "typed") return r.text;
+    if (r.kind === "order" && ex.answer.kind === "order") {
+      const tiles = ex.answer.tiles;
+      return r.ids.map((id) => tiles.find((t) => t.id === id)?.text ?? "").join(" ");
+    }
+    return null;
+  };
+  function gradeLoom(ctx, ex, response, ms) {
+    const data = ctx.exercise.data;
+    const g = gradeExercise({ data, link: ctx.link }, ex, response, ms);
+    const explain = (id) => {
+      const why = ex.explain?.[id];
+      return why === void 0 ? [] : [{ kind: "checker", message: why }];
+    };
+    if (g.verdict === "correct") return g;
+    if (ex.type === "choose" && response.kind === "choice") {
+      return { ...g, diagnoses: [...g.diagnoses, ...explain(response.id)] };
+    }
+    const text = typedOf(ex, response);
+    const a = ex.answer;
+    const reference = a.kind === "typed" ? a.accepted[0] ?? "" : a.kind === "order" ? a.correct.map((id) => a.tiles.find((t) => t.id === id)?.text ?? "").join(" ") : "";
+    if (text === null || text.trim() === "" || reference === "") return g;
+    if (!["assemble", "transform", "mend", "translateTo"].includes(ex.type)) return g;
+    const problems = problemsOf(ctx.check, renderLine(text));
+    if (problems.length === 0) {
+      const mine = wordsOf(text);
+      const want = wordsOf(reference);
+      const sameOrder = contentOf(ctx.link, data, text).join(" ") === contentOf(ctx.link, data, reference).join(" ");
+      if (sameBag(mine, want) && sameOrder) {
+        return {
+          verdict: "correct",
+          score: 1,
+          expected: reference,
+          rating: 3,
+          diagnoses: [
+            {
+              kind: "other-order",
+              message: `Also right. The reference has: “${reference}”.`,
+              expected: reference
+            }
+          ]
+        };
+      }
+      if (ex.type === "translateTo") {
+        return {
+          verdict: "almost",
+          score: 0.5,
+          expected: reference,
+          rating: 2,
+          diagnoses: [
+            {
+              kind: "unverified",
+              message: `The checker finds nothing wrong, but cannot tell whether it means the same. Compare: “${reference}”.`,
+              expected: reference
+            }
+          ]
+        };
+      }
+      return g;
+    }
+    return {
+      ...g,
+      // each thing said once: the checker's notes on the answer, then why the original was broken
+      diagnoses: unique(
+        [
+          ...g.diagnoses,
+          ...problems.slice(0, 2).map((p) => ({ kind: "checker", message: p.message })),
+          ...ex.type === "mend" ? explain("wrong") : []
+        ],
+        (d) => d.message
+      )
+    };
+  }
+  function renderLine(text) {
+    const t = text.trim();
+    const ended = /[.!?]$/.test(t) ? t : `${t}.`;
+    return ended.charAt(0).toUpperCase() + ended.slice(1);
+  }
+  const DAY = 864e5;
+  const live = (profile) => Object.values(profile.cards).filter((c) => c.retired === void 0);
+  function skyOf(profile, data, forms, now) {
+    const byTarget = /* @__PURE__ */ new Map();
+    for (const c of live(profile)) {
+      const list = byTarget.get(c.target) ?? [];
+      list.push(c);
+      byTarget.set(c.target, list);
+    }
+    const ids = new Set(byTarget.keys());
+    for (const node of Object.keys(profile.seen))
+      if (node.startsWith("root:")) ids.add(node.slice(5));
+    const out = [];
+    for (const id of ids) {
+      const item = data.items.get(id);
+      if (item === void 0 || !["root", "compound", "imageCompound"].includes(item.kind)) continue;
+      const cards = byTarget.get(id) ?? [];
+      const mastery = cards.length === 0 ? 0 : cards.reduce((s, c) => s + cardMastery(profile, c, now), 0) / cards.length;
+      const met = Math.min(profile.seen[`root:${id}`] ?? Infinity, ...cards.map((c) => c.added));
+      out.push({
+        id,
+        spelling: item.spelling,
+        meaning: item.meaning,
+        theme: item.theme,
+        mastery,
+        irregular: forms.isIrregular(id),
+        met: Number.isFinite(met) ? met : now,
+        cards: cards.length
+      });
+    }
+    return out.sort((a, b) => a.met - b.met || (a.id < b.id ? -1 : 1));
+  }
+  function rulesLit(profile, data, now) {
+    const by = /* @__PURE__ */ new Map();
+    for (const c of live(profile)) {
+      if (!data.concepts.has(c.target) || c.state.reps === 0) continue;
+      by.set(c.target, [...by.get(c.target) ?? [], c]);
+    }
+    const reviews = /* @__PURE__ */ new Map();
+    for (const l of profile.log) {
+      const t = profile.cards[l.card]?.target;
+      if (t !== void 0 && by.has(t)) reviews.set(t, (reviews.get(t) ?? 0) + 1);
+    }
+    return [...by].map(([id, cards]) => ({
+      id,
+      title: data.concepts.get(id)?.title ?? id,
+      mastery: cards.reduce((s, c) => s + cardMastery(profile, c, now), 0) / cards.length,
+      reviews: reviews.get(id) ?? 0
+    })).sort((a, b) => b.mastery - a.mastery || (a.id < b.id ? -1 : 1));
+  }
+  function streakOf(profile, now) {
+    const days = new Set(profile.log.map((l) => Math.floor(l.at / DAY)));
+    const today = Math.floor(now / DAY);
+    let d = days.has(today) ? today : days.has(today - 1) ? today - 1 : null;
+    if (d === null) return 0;
+    let n = 0;
+    while (days.has(d)) {
+      n += 1;
+      d -= 1;
+    }
+    return n;
+  }
+  function changesFor(profile, data) {
+    const seen = new Set(retiredSeen(profile));
+    const notes = /* @__PURE__ */ new Map();
+    const add = (key, make, card) => {
+      const n = notes.get(key) ?? { ...make(), cards: [] };
+      n.cards.push(card);
+      notes.set(key, n);
+    };
+    for (const c of Object.values(profile.cards)) {
+      if (c.retired !== void 0) {
+        if (seen.has(c.target)) continue;
+        const replacement = c.retired.replacement;
+        add(
+          `retired|${c.target}`,
+          () => ({
+            kind: "retired",
+            target: c.target,
+            was: c.snapshot.spelling,
+            ...replacement !== void 0 ? { replacement } : {},
+            edition: c.retired?.edition ?? data.edition,
+            cards: []
+          }),
+          c.id
+        );
+        continue;
+      }
+      if (c.changed === void 0) continue;
+      const ch = c.changed;
+      add(
+        `${ch.reason}|${c.target}`,
+        () => ({
+          kind: ch.reason,
+          target: c.target,
+          was: ch.reason === "renamed" ? ch.from : c.snapshot.spelling,
+          from: ch.from,
+          to: ch.to,
+          edition: ch.edition,
+          cards: []
+        }),
+        c.id
+      );
+    }
+    const order = { retired: 0, renamed: 1, rewritten: 2, reglossed: 3 };
+    return [...notes.values()].sort(
+      (a, b) => order[a.kind] - order[b.kind] || (a.was < b.was ? -1 : 1)
+    );
+  }
+  const changedCards = (profile) => live(profile).filter((c) => c.changed !== void 0).map((c) => c.id);
+  function retiredSeen(profile) {
+    const raw = hallOf(profile).retiredSeen;
+    return Array.isArray(raw) ? raw.filter((x) => typeof x === "string") : [];
+  }
+  function acknowledgeRetired(profile, targets) {
+    const state = hallOf(profile);
+    setHall(profile, { ...state, retiredSeen: [.../* @__PURE__ */ new Set([...retiredSeen(profile), ...targets])] });
+  }
   function seedOf(seed) {
     if (typeof seed === "number") return seed >>> 0;
     let h = 1779033703 ^ seed.length;
@@ -3283,6 +4771,376 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
         return out;
       }
     };
+  }
+  const PHRASE_SLOTS = /* @__PURE__ */ new Set(["SUBJECT", "VERB", "OBJECT", "ADJUNCTS", "TOPIC"]);
+  const PAUSE = /followed by a pause/i;
+  const formGloss = (item, slot) => {
+    const f2 = item.forms.find((x) => x.slot === slot);
+    return f2?.meaningful === true ? f2.gloss : null;
+  };
+  function determinersOf(data) {
+    const template = data.concepts.get(NOUN_PHRASE)?.description ?? "";
+    const group = /\[([^\]]*\|[^\]]*)\]/.exec(template)?.[1] ?? "";
+    const spellings2 = group.split("|").map((s) => s.trim()).filter((s) => /^[a-z-]+$/.test(s));
+    const out = [];
+    for (const sp of spellings2) {
+      const it = [...data.items.values()].find((i) => i.kind === "functionWord" && i.spelling === sp);
+      if (it !== void 0) out.push(it);
+    }
+    return out;
+  }
+  const pluralOf = (forms) => forms.rules.suffixes.find((s) => /^plural\b/i.test(s.meaning)) ?? null;
+  function sandboxMenus(data, forms, known, perList = 60) {
+    const heads = [...data.items.values()].filter((i) => i.kind === "root" || i.kind === "compound");
+    const use = (id) => {
+      const f2 = data.frequency.get(id);
+      return f2 === void 0 ? 0 : f2.corpus * 2 + f2.examples;
+    };
+    const choose2 = (pool, gloss) => {
+      const withGloss = pool.map((i) => ({ i, g: gloss(i) })).filter((x) => x.g !== null && x.g !== "");
+      const mine = withGloss.filter((x) => known.has(x.i.id));
+      const rest = withGloss.filter((x) => !known.has(x.i.id)).sort((a, b) => use(b.i.id) - use(a.i.id) || (a.i.spelling < b.i.spelling ? -1 : 1)).slice(0, Math.max(0, perList - mine.length));
+      return [...mine, ...rest].map((x) => ({ id: x.i.id, spelling: x.i.spelling, meaning: x.g, known: known.has(x.i.id) })).sort((a, b) => a.spelling < b.spelling ? -1 : 1);
+    };
+    const slots = [...data.concepts.values()].filter((c) => c.kind === "slot" && c.slot !== void 0 && !PHRASE_SLOTS.has(c.id.slice(5))).map((c) => ({
+      id: c.id,
+      title: c.title,
+      slot: c.slot ?? 0,
+      words: c.words.map((w) => data.items.get(w)).filter((w) => w !== void 0 && w.kind === "functionWord").filter((w, i, all) => all.findIndex((x) => x.spelling === w.spelling) === i).map((w) => ({ id: w.id, spelling: w.spelling, meaning: w.meaning }))
+    })).filter((m) => m.words.length > 0).sort((a, b) => a.slot - b.slot);
+    return {
+      pronouns: [...data.items.values()].filter((i) => i.kind === "pronoun").map((i) => ({ id: i.id, spelling: i.spelling, meaning: i.meaning, known: true })),
+      nouns: choose2(heads, (i) => formGloss(i, "root")),
+      verbs: choose2(heads, (i) => formGloss(i, "verb")),
+      adjectives: choose2(heads, (i) => formGloss(i, "adjective")),
+      determiners: determinersOf(data).map((i) => ({
+        id: i.id,
+        spelling: i.spelling,
+        meaning: i.meaning,
+        known: true
+      })),
+      slots,
+      plural: pluralOf(forms)
+    };
+  }
+  const slotNumber = (data, name) => data.concepts.get(slotConcept(name))?.slot ?? 0;
+  function buildSandbox(data, forms, spec) {
+    const placed = [];
+    const rules = [
+      { id: CLAUSE, title: data.concepts.get(CLAUSE)?.title ?? CLAUSE, reason: "template" }
+    ];
+    const rule = (id, reason, word) => {
+      if (!data.concepts.has(id) || rules.some((r) => r.id === id && r.word === word)) return;
+      rules.push({
+        id,
+        title: data.concepts.get(id)?.title ?? id,
+        reason,
+        ...word !== void 0 ? { word } : {}
+      });
+    };
+    const plural = pluralOf(forms);
+    const formOf2 = (id, slot) => {
+      const w = forms.getForms(id, { includeUnused: true, examples: 0 });
+      const f2 = w?.forms.find((x) => x.category === slot);
+      if (w === null || f2 === void 0) return null;
+      return {
+        text: f2.form,
+        gloss: f2.meaningful ? f2.gloss : w.root.gloss,
+        tags: slot === "root" ? [] : [slot],
+        role: "operator",
+        id,
+        parts: f2.parts
+      };
+    };
+    const nounPhrase = (np, role, at) => {
+      const item = data.items.get(np.id);
+      if (item === void 0) return;
+      let sub = 0;
+      const put = (piece) => {
+        placed.push({ at, sub, piece: { ...piece, role } });
+        sub += 1;
+      };
+      if (item.kind === "pronoun") {
+        put({ text: item.spelling, gloss: item.meaning, tags: [], role, id: item.id, parts: [] });
+        return;
+      }
+      const det = np.determiner === void 0 ? void 0 : data.items.get(np.determiner);
+      if (det !== void 0) {
+        put({ text: det.spelling, gloss: det.meaning, tags: [], role, id: det.id, parts: [] });
+        rule(NOUN_PHRASE, "noun-phrase", det.spelling);
+      }
+      if (np.adjective !== void 0) {
+        const adj = formOf2(np.adjective, "adjective");
+        if (adj !== null) {
+          put(adj);
+          rule(formConcept("adjective"), "form", adj.text);
+          rule(NOUN_PHRASE, "noun-phrase", adj.text);
+        }
+      }
+      const noun = formOf2(np.id, "root");
+      if (noun === null) return;
+      if (np.plural === true && plural !== null) {
+        put({
+          ...noun,
+          text: noun.text + plural.spelling,
+          tags: ["PL"],
+          parts: [...noun.parts, { text: plural.spelling, role: "marker" }]
+        });
+        rule(suffixConcept(plural.spelling), "plural", noun.text + plural.spelling);
+      } else {
+        put(noun);
+      }
+    };
+    if (spec.subject !== void 0) {
+      nounPhrase(spec.subject, "subject", slotNumber(data, "SUBJECT"));
+      rule(slotConcept("SUBJECT"), "subject");
+    }
+    if (spec.verb !== void 0) {
+      const v = formOf2(spec.verb, "verb");
+      if (v !== null) {
+        placed.push({ at: slotNumber(data, "VERB"), sub: 0, piece: { ...v, role: "verb" } });
+        rule(slotConcept("VERB"), "verb", v.text);
+        rule(formConcept("verb"), "form", v.text);
+      }
+    }
+    if (spec.object !== void 0) {
+      nounPhrase(spec.object, "object", slotNumber(data, "OBJECT"));
+      rule(slotConcept("OBJECT"), "object");
+    }
+    for (const [slot, id] of Object.entries(spec.ops)) {
+      const c = data.concepts.get(slot);
+      const w = data.items.get(id);
+      if (c?.kind !== "slot" || w === void 0 || !c.words.includes(id)) continue;
+      placed.push({
+        at: c.slot ?? 0,
+        sub: 0,
+        piece: {
+          text: w.spelling,
+          gloss: w.meaning,
+          tags: [],
+          role: "operator",
+          id,
+          parts: [],
+          // grammar.slots says the frame is "followed by a pause" (and 1.2:G24 keeps its comma)
+          ...PAUSE.test(c.description) ? { after: "," } : {}
+        }
+      });
+      rule(slot, "slot", w.spelling);
+    }
+    const pieces = placed.sort((a, b) => a.at - b.at || a.sub - b.sub).map((p) => p.piece);
+    const question = Object.keys(spec.ops).includes(slotConcept("QUESTION"));
+    const words2 = pieces.map((p) => p.text + (p.after ?? "")).join(" ");
+    const line = words2 === "" ? "" : words2.charAt(0).toUpperCase() + words2.slice(1) + (question ? "?" : ".");
+    return {
+      pieces,
+      line,
+      reading: pieces.map(
+        (p) => p.tags.includes("PL") && plural !== null ? `${p.gloss} (${plural.meaning.split(/[\s(]/)[0] ?? ""})` : p.gloss
+      ).join(" · "),
+      rules,
+      incomplete: spec.verb === void 0
+    };
+  }
+  const DRAW_ONLY = [
+    "all",
+    "irregular",
+    "surprising",
+    "missed",
+    "unseen"
+  ];
+  const DRAW_SHAPES = ["any", "primal", "compound"];
+  const DRAW_WEIGHTINGS = ["random", "weak", "new", "due"];
+  const DEFAULT_DRAW = {
+    count: 10,
+    themes: [],
+    since: [],
+    shape: "any",
+    senses: [],
+    only: "all",
+    weighting: "random"
+  };
+  function statsOf(profile, now) {
+    const out = /* @__PURE__ */ new Map();
+    for (const c of Object.values(profile.cards)) {
+      if (c.retired !== void 0) continue;
+      const s = out.get(c.target) ?? {
+        met: true,
+        mastery: 0,
+        due: false,
+        missed: false,
+        sum: 0,
+        n: 0
+      };
+      s.sum += cardMastery(profile, c, now);
+      s.n += 1;
+      s.mastery = s.sum / s.n;
+      if (c.state.reps > 0 && c.state.due <= now) s.due = true;
+      if (c.state.lapses > 0) s.missed = true;
+      out.set(c.target, s);
+    }
+    for (const l of profile.log) {
+      if (l.verdict === "correct") continue;
+      const s = out.get(profile.cards[l.card]?.target ?? "");
+      if (s !== void 0) s.missed = true;
+    }
+    return out;
+  }
+  function drawPool(ctx, options) {
+    const { data, forms, profile } = ctx;
+    const stats = statsOf(profile, ctx.now);
+    const themes = new Set(options.themes);
+    const since = new Set(options.since);
+    const irregular = new Set(options.only === "irregular" ? forms.irregularIds() : []);
+    const surprising = new Set(options.only === "surprising" ? forms.surprisingIds() : []);
+    const out = [];
+    for (const item of data.items.values()) {
+      if (item.kind !== "root" && item.kind !== "compound") continue;
+      if (themes.size > 0 && !themes.has(item.theme)) continue;
+      if (since.size > 0 && !since.has(item.since)) continue;
+      if (options.shape === "primal" && item.kind !== "root") continue;
+      if (options.shape === "compound" && item.kind !== "compound") continue;
+      if (!options.senses.every((s) => item.forms.some((f2) => f2.slot === s && f2.meaningful)))
+        continue;
+      const st = stats.get(item.id);
+      const met = st !== void 0 || profile.seen[rootNode(item.id)] !== void 0;
+      if (options.only === "irregular" && !irregular.has(item.id)) continue;
+      if (options.only === "surprising" && !surprising.has(item.id)) continue;
+      if (options.only === "missed" && st?.missed !== true) continue;
+      if (options.only === "unseen" && met) continue;
+      out.push(item.id);
+    }
+    return out.sort();
+  }
+  function rankOf(st, weighting, threshold) {
+    switch (weighting) {
+      case "weak":
+        return st !== void 0 && st.mastery < threshold ? { tier: 0, weight: 1 + 4 * (1 - st.mastery) } : { tier: 1, weight: 1 };
+      case "new":
+        return { tier: st === void 0 ? 0 : 1, weight: 1 };
+      case "due":
+        return { tier: st?.due === true ? 0 : 1, weight: 1 };
+      case "random":
+        return { tier: 0, weight: 1 };
+    }
+  }
+  function sample(pool, k, rank, rng) {
+    return pool.map((id) => {
+      const r = rank(id);
+      return { id, tier: r.tier, key: -Math.log(1 - rng.next()) / r.weight };
+    }).sort((a, b) => a.tier - b.tier || a.key - b.key || (a.id < b.id ? -1 : 1)).slice(0, k).map((x) => x.id);
+  }
+  function readDrawOptions(raw) {
+    const r = typeof raw === "object" && raw !== null ? raw : {};
+    const strings2 = (x) => Array.isArray(x) ? x.filter((s) => typeof s === "string") : [];
+    const count = typeof r.count === "number" && Number.isInteger(r.count) ? r.count : DEFAULT_DRAW.count;
+    return {
+      count: Math.min(50, Math.max(1, count)),
+      themes: strings2(r.themes),
+      since: strings2(r.since),
+      shape: DRAW_SHAPES.includes(r.shape) ? r.shape : DEFAULT_DRAW.shape,
+      senses: strings2(r.senses).filter(
+        (s) => FORM_SLOTS.includes(s)
+      ),
+      only: DRAW_ONLY.includes(r.only) ? r.only : DEFAULT_DRAW.only,
+      weighting: DRAW_WEIGHTINGS.includes(r.weighting) ? r.weighting : DEFAULT_DRAW.weighting
+    };
+  }
+  function drawStars(ctx, options, seed, keep = []) {
+    const pool = drawPool(ctx, options);
+    const stats = statsOf(ctx.profile, ctx.now);
+    const kept = keep.filter((id) => ctx.data.items.has(id)).slice(0, options.count);
+    const rest = pool.filter((id) => !kept.includes(id));
+    const drawn = sample(
+      rest,
+      options.count - kept.length,
+      (id) => rankOf(stats.get(id), options.weighting, ctx.profile.settings.threshold),
+      createRng(seed)
+    );
+    return { seed, options, ids: [...kept, ...drawn], pinned: kept, rerolls: 0, pool: pool.length };
+  }
+  function rerollOne(ctx, draw, id) {
+    const at = draw.ids.indexOf(id);
+    if (at < 0 || draw.pinned.includes(id)) return draw;
+    const pool = drawPool(ctx, draw.options).filter((p) => !draw.ids.includes(p));
+    const stats = statsOf(ctx.profile, ctx.now);
+    const rerolls = draw.rerolls + 1;
+    const [next] = sample(
+      pool,
+      1,
+      (p) => rankOf(stats.get(p), draw.options.weighting, ctx.profile.settings.threshold),
+      createRng(`${draw.seed}|reroll|${String(rerolls)}`)
+    );
+    if (next === void 0) return draw;
+    const ids = [...draw.ids];
+    ids[at] = next;
+    return { ...draw, ids, rerolls };
+  }
+  function rerollAll(ctx, draw) {
+    const rerolls = draw.rerolls + 1;
+    const next = drawStars(ctx, draw.options, `${draw.seed}|all|${String(rerolls)}`, draw.pinned);
+    return { ...next, seed: draw.seed, rerolls };
+  }
+  function togglePin(draw, id) {
+    if (!draw.ids.includes(id)) return draw;
+    const pinned = draw.pinned.includes(id) ? draw.pinned.filter((p) => p !== id) : [...draw.pinned, id];
+    return { ...draw, pinned };
+  }
+  function starsOf(profile, data, defaults) {
+    const raw = hallOf(profile).stars;
+    const r = typeof raw === "object" && raw !== null ? raw : {};
+    const options = readDrawOptions({
+      ...DEFAULT_DRAW,
+      ...defaults,
+      ...r.options
+    });
+    const retired = [];
+    let draw = null;
+    const d = r.draw;
+    if (d !== null && d !== void 0 && typeof d.seed === "string" && Array.isArray(d.ids)) {
+      const ids = d.ids.filter((id) => typeof id === "string");
+      for (const id of ids) if (!data.items.has(id)) retired.push(id);
+      const live2 = ids.filter((id) => data.items.has(id));
+      draw = {
+        seed: d.seed,
+        options: readDrawOptions(d.options),
+        ids: live2,
+        pinned: (Array.isArray(d.pinned) ? d.pinned : []).filter(
+          (id) => typeof id === "string" && live2.includes(id)
+        ),
+        rerolls: typeof d.rerolls === "number" ? d.rerolls : 0,
+        pool: typeof d.pool === "number" ? d.pool : live2.length
+      };
+      if (live2.length === 0) draw = null;
+    }
+    const count = draw?.ids.length ?? 0;
+    const index = typeof r.index === "number" ? Math.min(Math.max(0, r.index), Math.max(0, count - 1)) : 0;
+    const studied = (Array.isArray(r.studied) ? r.studied : []).filter(
+      (id) => typeof id === "string" && (draw?.ids.includes(id) ?? false)
+    );
+    return {
+      state: {
+        options,
+        draw,
+        phase: r.phase === "study" && draw !== null ? "study" : "preview",
+        index,
+        studied
+      },
+      retired
+    };
+  }
+  function setStars(profile, state) {
+    setHall(profile, { ...hallOf(profile), stars: state });
+  }
+  function markKnown(profile, data, graph, id, now) {
+    const node = rootNode(id);
+    introduce(profile, data, graph, node, now);
+    for (const card of cardsForNode(data, graph, node)) {
+      if ((profile.cards[card]?.state.reps ?? 0) > 0) continue;
+      recordReview(profile, data, card, { verdict: "correct", rating: 4 }, "known", now);
+    }
+  }
+  function introduceStudied(profile, data, graph, ids, now) {
+    for (const id of ids) introduce(profile, data, graph, rootNode(id), now);
   }
   const REF = /\[\[([^\]]+)\]\]/g;
   function validateCurriculum(data, graph, overrides) {
@@ -3319,6 +5177,18 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
           });
         }
       }
+    }
+    const slots = new Set(FORM_SLOTS);
+    for (const key of Object.keys(overrides.formNotes ?? {})) {
+      const [id = "", slot = ""] = key.split("|");
+      const item = data.items.get(id);
+      if (item !== void 0 && item.forms.length > 0 && slots.has(slot)) continue;
+      gaps.push({
+        severity: "error",
+        code: "form-note-unknown",
+        ref: key,
+        message: `formNotes names ${key}, but ${item === void 0 ? `${id} is no entry` : item.forms.length === 0 ? `${id} has no forms` : `${slot} is not a form`} in ${data.edition}.`
+      });
     }
     for (const node of graph.nodes.values()) {
       if (node.unit >= 0) continue;
@@ -3671,15 +5541,28 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       return { ok: false, problems: [e.message] };
     }
   }
+  exports.AUDIO_DIR = AUDIO_DIR;
   exports.CLAUSE = CLAUSE;
   exports.COMPOUND = COMPOUND;
+  exports.DEFAULT_DRAW = DEFAULT_DRAW;
   exports.DEFAULT_GRAPH_OPTIONS = DEFAULT_GRAPH_OPTIONS;
+  exports.DEFAULT_HALL_SETTINGS = DEFAULT_HALL_SETTINGS;
   exports.DEFAULT_SETTINGS = DEFAULT_SETTINGS;
+  exports.DRAW_ONLY = DRAW_ONLY;
+  exports.DRAW_SHAPES = DRAW_SHAPES;
+  exports.DRAW_WEIGHTINGS = DRAW_WEIGHTINGS;
+  exports.DRILL_LENGTHS = DRILL_LENGTHS;
+  exports.DRILL_MODES = DRILL_MODES;
   exports.EMPTY_OVERRIDES = EMPTY_OVERRIDES;
   exports.EXERCISE_TYPES = EXERCISE_TYPES;
   exports.FORM_SLOTS = FORM_SLOTS;
   exports.FSRS_WEIGHTS = FSRS_WEIGHTS;
+  exports.HALL_SCHEMA = HALL_SCHEMA;
+  exports.HALL_SETTING_VALUES = HALL_SETTING_VALUES;
+  exports.HallError = HallError;
   exports.LINE_ALIGNED_SHARE = LINE_ALIGNED_SHARE;
+  exports.LOOM_LENGTHS = LOOM_LENGTHS;
+  exports.LOOM_TYPES = LOOM_TYPES;
   exports.MISLABELLED_SHARE = MISLABELLED_SHARE;
   exports.MOTION = MOTION;
   exports.NOUN_PHRASE = NOUN_PHRASE;
@@ -3688,20 +5571,29 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
   exports.PATTERN_MIN = PATTERN_MIN;
   exports.PROGRESS_SCHEMA = PROGRESS_SCHEMA;
   exports.ProgressError = ProgressError;
+  exports.STAR_COUNTS = STAR_COUNTS;
+  exports.VERB_CLASSES = VERB_CLASSES;
+  exports.acknowledgeRetired = acknowledgeRetired;
   exports.activeProfile = activeProfile;
   exports.activity = activity;
   exports.assemble = assemble;
+  exports.audioCoverage = audioCoverage;
   exports.buildLearnData = buildLearnData;
   exports.buildLearnSource = buildLearnSource;
+  exports.buildSandbox = buildSandbox;
   exports.buildSkillGraph = buildSkillGraph;
   exports.candidateExamples = candidateExamples;
   exports.cardId = cardId;
   exports.cardMastery = cardMastery;
   exports.cardsForNode = cardsForNode;
+  exports.changedCards = changedCards;
+  exports.changesFor = changesFor;
+  exports.choose = choose;
   exports.cloze = cloze;
   exports.compoundBuild = compoundBuild;
   exports.conceptNode = conceptNode;
   exports.correctText = correctText;
+  exports.createFormsEngine = createFormsEngine;
   exports.createProfile = createProfile;
   exports.createRng = createRng;
   exports.createStore = createStore;
@@ -3711,73 +5603,118 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
   exports.diffIsEmpty = diffIsEmpty;
   exports.diffSnapshots = diffSnapshots;
   exports.distractorItems = distractorItems;
+  exports.drawPool = drawPool;
+  exports.drawStars = drawStars;
+  exports.drillResults = drillResults;
   exports.editDistance = editDistance;
   exports.englishContent = englishContent;
   exports.ensureCard = ensureCard;
   exports.exerciseForCard = exerciseForCard;
   exports.exercisesForNode = exercisesForNode;
+  exports.exercisesForRule = exercisesForRule;
   exports.explainer = explainer;
   exports.exportStore = exportStore;
   exports.forecast = forecast;
   exports.formBuild = formBuild;
   exports.formConcept = formConcept;
   exports.formIdentify = formIdentify;
+  exports.formMatch = formMatch;
   exports.fsrs = fsrs;
   exports.glossLine = glossLine;
   exports.glossToken = glossToken;
   exports.gradeEnglish = gradeEnglish;
   exports.gradeExercise = gradeExercise;
+  exports.gradeLoom = gradeLoom;
   exports.gradeSentence = gradeSentence;
+  exports.gradeStars = gradeStars;
+  exports.greeting = greeting;
+  exports.hallOf = hallOf;
+  exports.hallSummary = hallSummary;
   exports.humanize = humanize;
   exports.idsNamedBy = idsNamedBy;
   exports.idsOf = idsOf;
   exports.importStore = importStore;
   exports.introduce = introduce;
+  exports.introduceStudied = introduceStudied;
   exports.isUnlocked = isUnlocked;
   exports.leeches = leeches;
   exports.linkLine = linkLine;
   exports.linkWord = linkWord;
   exports.linkedShare = linkedShare;
   exports.listen = listen;
+  exports.loomSentences = loomSentences;
+  exports.loomSession = loomSession;
+  exports.markKnown = markKnown;
   exports.masteryByConcept = masteryByConcept;
   exports.masteryByTheme = masteryByTheme;
   exports.matching = matching;
+  exports.mend = mend;
   exports.migrateStore = migrateStore;
   exports.mixedSession = mixedSession;
+  exports.mutants = mutants;
   exports.nodeAvailable = nodeAvailable;
   exports.nodeMastery = nodeMastery;
   exports.normalize = normalize;
   exports.parseOverrides = parseOverrides;
   exports.patternNode = patternNode;
+  exports.problemsOf = problemsOf;
+  exports.readAudioManifest = readAudioManifest;
   exports.readCorpus = readCorpus;
+  exports.readDrawOptions = readDrawOptions;
+  exports.readFormRules = readFormRules;
+  exports.readHallSettings = readHallSettings;
   exports.reading = reading;
   exports.recall = recall;
   exports.recognition = recognition;
   exports.reconcile = reconcile;
   exports.recordCheckpoint = recordCheckpoint;
   exports.recordReview = recordReview;
+  exports.recordVisit = recordVisit;
+  exports.renderSentence = renderSentence;
+  exports.rerollAll = rerollAll;
+  exports.rerollOne = rerollOne;
   exports.respellRoot = respellRoot;
   exports.retireRoot = retireRoot;
+  exports.reverse = reverse;
   exports.rootCard = rootCard;
   exports.rootNode = rootNode;
   exports.rootTemplateProblems = rootTemplateProblems;
+  exports.ruleCard = ruleCard;
+  exports.ruleForm = ruleForm;
+  exports.ruleMap = ruleMap;
+  exports.rulesLit = rulesLit;
   exports.rulingConcept = rulingConcept;
+  exports.sandboxMenus = sandboxMenus;
   exports.schedulerFor = schedulerFor;
   exports.seedOf = seedOf;
+  exports.seriousProblems = seriousProblems;
+  exports.setHall = setHall;
+  exports.setStars = setStars;
+  exports.skyOf = skyOf;
   exports.slotConcept = slotConcept;
   exports.sm2 = sm2;
   exports.snapshotEdition = snapshotEdition;
+  exports.spotPattern = spotPattern;
+  exports.starsDrill = starsDrill;
+  exports.starsOf = starsOf;
+  exports.streakOf = streakOf;
   exports.suffixConcept = suffixConcept;
   exports.textKey = textKey;
+  exports.togglePin = togglePin;
+  exports.transform = transform;
   exports.translateFrom = translateFrom;
   exports.translateTo = translateTo;
   exports.typoBudget = typoBudget;
   exports.unique = unique;
   exports.unitLesson = unitLesson;
   exports.unitOpen = unitOpen;
+  exports.unravel = unravel;
+  exports.updateHallSettings = updateHallSettings;
   exports.usagesOf = usagesOf;
   exports.validateCurriculum = validateCurriculum;
+  exports.verbClassFor = verbClassFor;
   exports.weakest = weakest;
+  exports.withPrereqs = withPrereqs;
   exports.words = words;
   exports.writingNodes = writingNodes;
   exports.writingToCorpusFile = writingToCorpusFile;

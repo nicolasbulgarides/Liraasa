@@ -24,6 +24,12 @@ describe('toPhones', () => {
     expect(toPhones('mege')).toEqual(['m', 'e', 'ɡ', 'e']);
   });
 
+  it('reads c as "ch" before every vowel, the sound of the ch digraph (2.0:G43)', () => {
+    expect(toPhones('cono')).toEqual(['t͡ʃ', 'o', 'n', 'o']);
+    expect(toPhones('cilni')).toEqual(['t͡ʃ', 'i', 'l', 'n', 'i']);
+    expect(toPhones('cono', 'ascii')).toEqual(['CH', 'O', 'N', 'O']);
+  });
+
   it('reads the sh and ch digraphs, which occur only in colour and number words', () => {
     expect(toPhones('shada')).toEqual(['ʃ', 'a', 'd', 'a']);
     expect(toPhones('ocha')).toEqual(['o', 't͡ʃ', 'a']);
@@ -126,10 +132,10 @@ describe('phoneInventory', () => {
     expect([...ipa].sort((a, b) => a.localeCompare(b))).toEqual(ipa);
   });
 
-  it('collapses c and k to one phone, as the documented default does', () => {
-    expect(toPhones('cono')[0]).toBe(toPhones('kova')[0]);
-    // 23 letters map to 22 phones, because c and k share one, plus the two
-    // digraphs that appear only in colour and number words.
+  it('gives c the sound of the ch digraph, not of k (2.0:G43)', () => {
+    expect(toPhones('cono')[0]).not.toBe(toPhones('kova')[0]);
+    expect(toPhones('cono')[0]).toBe(toPhones('ocha')[1]);
+    // 23 letters, 23 phones, plus sh; ch is the sound c already has
     expect(phoneInventory('ipa')).toHaveLength(24);
     expect(phoneInventory('ascii')).toHaveLength(24);
   });

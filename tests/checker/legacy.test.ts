@@ -127,14 +127,20 @@ describe('Song of Time, round 2', () => {
   });
 
   it('falls back to a compound or a de phrase when the adjective is unused', () => {
+    // 2.0 lists lavrasan ("avian; birdlike"), so ADR-0011's first choice, the adjective, applies
     expect(check('li lavra lira ka lumisan.').find((d) => d.rule === 'ADR-0011')?.fix).toBe(
-      'lira de lavra',
+      'lavrasan lira',
     );
+    // 2.0 also lists lordinasan ("chaotic; disordered")
     expect(
       check('li masudevori de li lordina mavopago po ke ramumomvisan ata po ne relsira.').find(
         (d) => d.rule === 'ADR-0011',
       )?.fix,
-    ).toBe('mavopago de lordina');
+    ).toBe('lordinasan mavopago');
+    // where the adjective is still unused, the fallback is the de phrase
+    expect(check('li kova lira ka lumisan.').find((d) => d.rule === 'ADR-0011')?.fix).toBe(
+      'lira de kova',
+    );
   });
 
   it('flags sidu with a noun before it or a copula after it (L4, L5, L6)', () => {

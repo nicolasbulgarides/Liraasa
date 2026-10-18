@@ -32,7 +32,19 @@ export type ErrorKind =
   | 'not-a-word'
   | 'wrong-choice'
   | 'wrong-part'
-  | 'meaning-missing';
+  | 'meaning-missing'
+  /** The regular rule applied to a word that goes its own way (Ten Stars). */
+  | 'rule-for-irregular'
+  /** Right but for a doubled or single vowel, forgiven under lenient checking. */
+  | 'vowel-length'
+  /** Multiple choice where some, not all, of the right choices were picked. */
+  | 'missed-choice'
+  /** What the grammar checker says is wrong (The Loom). */
+  | 'checker'
+  /** Right, with the small words in another place the template allows. */
+  | 'other-order'
+  /** Grammatical, but the engine cannot tell whether it means the same. */
+  | 'unverified';
 
 export interface DiagnosisLink {
   kind: 'item' | 'concept';
@@ -63,7 +75,8 @@ export type Response =
   | { kind: 'choice'; id: string }
   | { kind: 'typed'; text: string }
   | { kind: 'order'; ids: readonly string[] }
-  | { kind: 'pairs'; pairs: Readonly<Record<string, string>> };
+  | { kind: 'pairs'; pairs: Readonly<Record<string, string>> }
+  | { kind: 'multi'; ids: readonly string[] };
 
 export interface GradeContext {
   data: LearnData;
@@ -461,6 +474,37 @@ export function gradeExercise(
     return grade('wrong', right / a.correct.length, expected, diagnoses, false);
   }
 
+  if (a.kind === 'multi') {
+    const text = (id: string): string => ex.choices?.find((c) => c.id === id)?.text ?? id;
+    const expected = a.correct.map(text).join(', ');
+    if (response.kind !== 'multi') return grade('wrong', 0, expected, [], false);
+    const want = new Set(a.correct);
+    const got = new Set(response.ids);
+    const hits = [...got].filter((id) => want.has(id)).length;
+    const extra = [...got].filter((id) => !want.has(id));
+    const missed = a.correct.filter((id) => !got.has(id));
+    if (extra.length === 0 && missed.length === 0) return grade('correct', 1, expected, [], fast);
+    const diagnoses: Diagnosis[] = [
+      ...extra.map(
+        (id): Diagnosis => ({
+          kind: 'wrong-choice',
+          message: `“${text(id)}” does not fit.`,
+          got: text(id),
+        }),
+      ),
+      ...missed.map(
+        (id): Diagnosis => ({
+          kind: 'missed-choice',
+          message: `“${text(id)}” fits too.`,
+          expected: text(id),
+        }),
+      ),
+    ];
+    const score = Math.max(0, (hits - extra.length) / want.size);
+    const verdict: Verdict = extra.length + missed.length === 1 ? 'almost' : 'wrong';
+    return grade(verdict, score, expected, diagnoses, false);
+  }
+
   // pairs
   const expected = a.left
     .map((l) => `${l.text} = ${a.right.find((r) => r.id === a.pairs[l.id])?.text ?? ''}`)
@@ -474,12 +518,22 @@ export function gradeExercise(
       continue;
     }
     const item = ctx.data.items.get(l.id);
-    diagnoses.push({
-      kind: 'wrong-choice',
-      message: `“${l.text}” means “${item?.meaning ?? ''}”.`,
-      expected: item?.meaning ?? '',
-      link: itemLink(l.id),
-    });
+    const partner = a.right.find((r) => r.id === a.pairs[l.id])?.text ?? '';
+    diagnoses.push(
+      item !== undefined
+        ? {
+            kind: 'wrong-choice',
+            message: `“${l.text}” means “${item.meaning}”.`,
+            expected: item.meaning,
+            link: itemLink(l.id),
+          }
+        : {
+            // a pair that is not a word, e.g. a form and its name (Form Match)
+            kind: 'wrong-choice',
+            message: `“${l.text}” goes with “${partner}”.`,
+            expected: partner,
+          },
+    );
   }
   const score = right / a.left.length;
   const verdict: Verdict =

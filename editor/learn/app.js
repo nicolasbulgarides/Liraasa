@@ -6,6 +6,8 @@
  *
  * Views: Today · Path · Unit · Review · Practice · Read · Card · Rule ·
  *        What changed · Progress · Author (author.js)
+ *        and the Training Hall's: Hall · Ten Stars · The Loom · Observatory ·
+ *        Settings (hall.js). The Hall is home unless the learner chose Classic.
  *
  * Events, shared with the songbook editor:
  *   liraasa:lexicon-changed  {mapping, record}   a root was renamed or retired
@@ -61,8 +63,10 @@
       }
       A.changes = (await U.store.get('lexicon-changes')) || [];
       A.draft = (await U.store.get('overrides')) || null;
+      // the author's files from data/audio/manifest.json, and recordings made here
+      A.files = A.P.audioFiles || {};
       const keys = await U.store.audioKeys();
-      A.audio = new Set(keys.filter((k) => A.store.audio[k]));
+      A.audio = new Set([...Object.keys(A.files), ...keys.filter((k) => A.store.audio[k])]);
       applyLexiconChanges();
       rebuild();
       reconcileAll();
@@ -124,6 +128,12 @@
     });
     A.data = A.src.data;
     A.graph = L.buildSkillGraph(A.data, A.overrides);
+    A.forms = L.createFormsEngine({
+      data: A.data,
+      morphology: A.lex.morphology,
+      phonology: A.lex.phonology,
+      overrides: A.overrides,
+    });
     A.ctx = { data: A.data, graph: A.graph, audio: A.audio, known: knownSet() };
     A.gctx = { data: A.data, link: A.src.context };
     A.diff = A.P.previous
@@ -1094,6 +1104,12 @@
       title,
       exercises,
       gctx: A.gctx,
+      // a wing may grade, word and re-ask in its own way (Ten Stars does)
+      ...(o.grade ? { grade: o.grade } : {}),
+      ...(o.requeue ? { requeue: true } : {}),
+      ...(o.verdictText ? { verdictText: o.verdictText } : {}),
+      ...(o.diagnosisText ? { diagnosisText: o.diagnosisText } : {}),
+      ...(o.glossOpen ? { glossOpen: true } : {}),
       badge: (ex) => {
         const c = profile().cards[ex.card];
         return c && c.changed
@@ -1102,13 +1118,15 @@
       },
       onAnswer: (ex, grade, ms) => {
         A.L.recordReview(profile(), A.data, ex.card, grade, ex.type, now(), ms);
+        if (grade.verdict === 'correct' && U.hall) U.hall.chime();
         save();
       },
       onDone: (results) => {
+        if (o.onFinish) return o.onFinish(results);
         const note = o.onDone ? o.onDone(results) : '';
-        summary(title, results, o.back || 'today', note || '');
+        summary(title, results, o.back || home(), note || '');
       },
-      onExit: () => go(o.back || 'today'),
+      onExit: () => go(o.back || home()),
       openRef: (ref) => openRef(ref),
       playAudio: (key) => play(key),
     });
@@ -1297,13 +1315,27 @@
 
   function openRef(ref) {
     closePop();
-    if (ref.kind === 'item') go('card', { id: ref.id });
+    // in the Hall, a rule opens its Loom lesson and a headword its study card
+    const hall = home() === 'hall';
+    const head = ref.kind === 'item' && ['root', 'compound'].includes((item(ref.id) || {}).kind);
+    if (hall && head) go('word', { id: ref.id });
+    else if (hall && ref.kind === 'concept' && A.data.concepts.has(ref.id))
+      go('loom', { id: ref.id, step: 'see' });
+    else if (ref.kind === 'item') go('card', { id: ref.id });
     else if (ref.kind === 'concept') go('concept', { id: ref.id });
     else if (ref.kind === 'text') go('text', { id: ref.id });
   }
   U.openRef = (ref) => {
     U.setLearn(true).then(() => openRef(ref));
   };
+
+  /** Home: the Training Hall, or Classic Learn's Today for a learner who chose it. */
+  const home = () => (A.ui && A.ui.mode === 'classic' ? 'today' : 'hall');
+
+  function setMode(mode) {
+    A.ui.mode = mode === 'classic' ? 'classic' : 'hall';
+    applyUi();
+  }
 
   function go(name, args) {
     if (A.view && A.view.name !== 'session') (A.history = A.history || []).push(A.view);
@@ -1313,7 +1345,7 @@
 
   function back() {
     const prev = (A.history || []).pop();
-    A.view = prev || { name: 'today', args: {} };
+    A.view = prev || { name: home(), args: {} };
     render();
   }
 
@@ -1324,7 +1356,7 @@
       A.view.name === 'unit' && A.view.args.index === undefined && A.unitBack !== undefined
         ? { name: 'unit', args: { index: A.unitBack } }
         : A.view.name === 'summary' || A.view.name === 'session'
-          ? { name: 'today', args: {} }
+          ? { name: home(), args: {} }
           : A.view;
     A.view = v;
     if (v.name === 'author') {
@@ -1333,7 +1365,7 @@
     } else if (v.name === 'review') {
       return review();
     } else {
-      const f = VIEWS[v.name] || VIEWS.today;
+      const f = VIEWS[v.name] || VIEWS[home()];
       A.main.innerHTML = '<div class="inner">' + f(v.args) + '</div>';
     }
     A.main.scrollTop = 0;
@@ -1345,33 +1377,66 @@
   function renderNav() {
     const p = profile();
     const due = A.L.dailyQueue(p, A.graph, now()).due.length;
-    const items = [
-      ['today', 'Today'],
-      ['path', 'Path'],
-      ['review', 'Review', due],
-      ['practice', 'Practice'],
-      ['read', 'Read'],
-      ['progress', 'Progress'],
-      ['changes', 'What changed'],
-      ['sep'],
-      ['author', 'Author'],
-    ];
-    const current = A.view.name === 'unit' ? 'path' : A.view.name === 'text' ? 'read' : A.view.name;
+    const S = U.S;
+    const hall = home() === 'hall';
+    const items = hall
+      ? [
+          ['hall', S.hall],
+          ['stars', S.stars],
+          ['loom', S.loom],
+          ['observatory', S.observatory],
+          ['review', S.review, due],
+          ['hallSettings', S.settings],
+          ['sep'],
+          ['mode:classic', S.classic],
+          ['author', S.author],
+        ]
+      : [
+          ['mode:hall', S.backToHall],
+          ['sep'],
+          ['today', 'Today'],
+          ['path', 'Path'],
+          ['review', 'Review', due],
+          ['practice', 'Practice'],
+          ['read', 'Read'],
+          ['progress', 'Progress'],
+          ['changes', 'What changed'],
+          ['sep'],
+          ['author', 'Author'],
+        ];
+    const current =
+      A.view.name === 'unit'
+        ? 'path'
+        : A.view.name === 'text'
+          ? 'read'
+          : A.view.name === 'sandbox'
+            ? 'loom'
+            : A.view.name;
+    A.el.dataset.mode = hall ? 'hall' : 'classic';
     A.nav.innerHTML =
       items
         .map((x) =>
           x[0] === 'sep'
             ? '<div class="sep" role="separator"></div>'
-            : '<button type="button" data-go="' +
-              x[0] +
-              '"' +
-              (current === x[0] ? ' aria-current="page"' : '') +
-              '>' +
-              x[1] +
-              (x[2] ? '<span class="count">' + x[2] + '</span>' : '') +
-              '</button>',
+            : x[0].startsWith('mode:')
+              ? '<button type="button" class="mode" data-mode="' +
+                x[0].slice(5) +
+                '">' +
+                esc(x[1]) +
+                '</button>'
+              : '<button type="button" data-go="' +
+                x[0] +
+                '"' +
+                (current === x[0] ? ' aria-current="page"' : '') +
+                '>' +
+                x[1] +
+                (x[2] ? '<span class="count">' + x[2] + '</span>' : '') +
+                '</button>',
         )
         .join('') +
+      '<button type="button" class="keys" data-keys aria-keyshortcuts="?">' +
+      esc(S.keys.title) +
+      ' <kbd>?</kbd></button>' +
       '<div class="who">' +
       esc(p.name) +
       ' · ' +
@@ -1381,16 +1446,21 @@
 
   /* ------------------------------------------------------------- audio */
 
+  /**
+   * A recording made in Learn wins; otherwise the file the manifest lists,
+   * which lives beside the editor in data/audio/. Never synthesised speech.
+   */
   let playing = null;
   async function play(key) {
     const blob = await U.store.audioGet(key);
-    if (!blob) return flash('That recording is missing.');
+    const file = A.files && A.files[key];
+    if (!blob && !file) return flash('That recording is missing.');
     if (playing) {
       playing.pause();
-      URL.revokeObjectURL(playing.src);
+      if (playing.src.startsWith('blob:')) URL.revokeObjectURL(playing.src);
     }
-    playing = new Audio(URL.createObjectURL(blob));
-    playing.play();
+    playing = new Audio(blob ? URL.createObjectURL(blob) : '../data/audio/' + file);
+    playing.play().catch(() => flash('That recording could not be played.'));
   }
   U.play = play;
 
@@ -1411,8 +1481,10 @@
     box.setAttribute('role', 'status');
     box.style.borderColor = 'var(--accent)';
     box.textContent = text;
-    const inner = A.main.querySelector('.inner');
-    if (inner) inner.insertBefore(box, inner.firstChild.nextSibling);
+    // right under the view's heading (or its header, in the Hall)
+    const h = A.main.querySelector('.inner h2');
+    const anchor = h ? h.closest('header') || h : null;
+    if (anchor) anchor.after(box);
   }
   U.flash = flash;
 
@@ -1448,7 +1520,7 @@
         A.changes = raw.changes || [];
         for (const [key, url] of Object.entries(raw.audio || {}))
           await U.store.audioSet(key, await U.dataUrlToBlob(url));
-        A.audio = new Set(Object.keys(raw.audio || {}));
+        A.audio = new Set([...Object.keys(A.files), ...Object.keys(raw.audio || {})]);
         await U.store.set('overrides', A.draft);
         await U.store.set('lexicon-changes', A.changes);
         applyLexiconChanges();
@@ -1473,6 +1545,7 @@
     if (d.go)
       return d.go === 'review' ? ((A.view = { name: 'review', args: {} }), review()) : go(d.go);
     if (d.back) return back();
+    if (U.hall && U.hall.onClick(b)) return;
     if (d.ref) {
       const [kind, ...rest] = d.ref.split(':');
       const id = rest.join(':');
@@ -1543,6 +1616,7 @@
     const f = e.target;
     if (!A.ready || !A.main.contains(f)) return;
     e.preventDefault();
+    if (U.hall && U.hall.onSubmit(f)) return;
     const p = profile();
     if (f.id === 'drill') {
       const fd = new FormData(f);
@@ -1578,6 +1652,7 @@
       p.settings.scheduler = fd.get('scheduler');
       p.settings.retention = Number(fd.get('retention'));
       A.ui = {
+        ...A.ui,
         scale: Number(fd.get('scale')),
         contrast: fd.get('contrast'),
         motion: fd.get('motion'),
@@ -1614,6 +1689,8 @@
     A.el.style.setProperty('--ls', String(A.ui.scale || 1));
     A.el.dataset.contrast = A.ui.contrast || 'normal';
     A.el.dataset.motion = A.ui.motion || 'system';
+    A.el.dataset.sky = A.ui.sky || 'night';
+    A.el.dataset.font = A.ui.font || 'default';
   }
 
   /* -------------------------------------------- live change from outside */
@@ -1689,6 +1766,12 @@
     } else if (root.localStorage.getItem(SONGBOOK) !== A.writingsKey) {
       rebuild();
     }
+    if (!A.visited) {
+      // once per opening of the page: what the Hall's greeting compares with
+      A.visited = true;
+      A.L.recordVisit(profile(), now());
+      save();
+    }
     render();
   };
 
@@ -1705,7 +1788,18 @@
     } catch {
       A.ui = {};
     }
-    A.ui = { scale: 1, contrast: 'normal', motion: 'system', ...A.ui };
+    A.ui = {
+      scale: 1,
+      contrast: 'normal',
+      motion: 'system',
+      sky: 'night',
+      font: 'default',
+      sound: 'off',
+      mode: 'hall',
+      ...A.ui,
+    };
+    if (U.hall) Object.assign(VIEWS, U.hall.views);
+    A.view = { name: home(), args: {} };
     applyUi();
     A.btn.addEventListener('click', () =>
       U.setLearn(!document.body.classList.contains('learn-on')),
@@ -1748,6 +1842,26 @@
       );
     }
   }
+
+  U.hallApi = {
+    get A() {
+      return A;
+    },
+    profile,
+    now,
+    go,
+    render,
+    flash,
+    save,
+    applyUi,
+    setMode,
+    announce,
+    md,
+    practiseNodes,
+    startSession,
+    play: (key) => play(key),
+    refreshKnown: () => U.refreshKnown(),
+  };
 
   U.authorApi = {
     get A() {

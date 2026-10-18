@@ -1,3 +1,4 @@
+import { CHANGESETS_2_0 } from '../../scripts/changesets_2_0';
 import { readFileSync } from 'node:fs';
 import { beforeAll, describe, expect, it } from 'vitest';
 import {
@@ -234,10 +235,16 @@ describe('a new edition', () => {
       corpus: [],
       ...(ids ? { ids } : {}),
     });
+    // the frozen 1.2, whatever the current edition is
+    const at12 = buildLearnSource({
+      ...input,
+      lexicon: JSON.parse(readFileSync('data/lexicon/liraasa_1_2.json', 'utf8')) as RawLexicon,
+      corpus: [],
+    });
     const d = diffSnapshots(
       snapshotEdition(prev.data),
-      snapshotEdition(source.data),
-      source.replacementFor,
+      snapshotEdition(at12.data),
+      at12.replacementFor,
     );
     expect([d.from, d.to]).toEqual(['1.1', '1.2']);
     // what the two 1.2 changesets did, op by op
@@ -259,6 +266,39 @@ describe('a new edition', () => {
     expect(d.rulesAdded).toHaveLength(13);
     expect(d.renamed).toEqual([]);
     expect(d.removed).toEqual([]);
+  });
+
+  it('ACCEPTANCE: the 1.2 → 2.0 diff lesson is the 2.0 changeset, op by op', () => {
+    const at12 = buildLearnSource({
+      ...input,
+      lexicon: JSON.parse(readFileSync('data/lexicon/liraasa_1_2.json', 'utf8')) as RawLexicon,
+      corpus: [],
+    });
+    const d = diffSnapshots(
+      snapshotEdition(at12.data),
+      snapshotEdition(source.data),
+      source.replacementFor,
+    );
+    expect([d.from, d.to]).toEqual(['1.2', '2.0']);
+    const ops = CHANGESETS_2_0.flatMap(
+      (path) =>
+        (JSON.parse(readFileSync(path, 'utf8')) as { ops: { op: string; entry: string }[] }).ops,
+    );
+    const added = ops.filter((o) => o.op === 'add_root' || o.op === 'add_compound');
+    expect(d.added.map((a) => a.id).sort()).toEqual(added.map((o) => o.entry).sort());
+    const reglossed = new Set(
+      ops.filter((o) => o.op === 'edit_gloss' || o.op === 'activate_slot').map((o) => o.entry),
+    );
+    expect(d.reglossed.map((r) => r.id).sort()).toEqual([...reglossed].sort());
+    expect(d.rulesAdded.map((r) => r.id)).toEqual(
+      ['G37', 'G38', 'G39', 'G40', 'G41', 'G42', 'G43', 'G44', 'G45'].map((g) => `rule:2.0:${g}`),
+    );
+    // the 391 template headwords moved into the pattern keep their ids: nothing is removed or renamed
+    expect(d.renamed).toEqual([]);
+    expect(d.removed).toEqual([]);
+    const moved = ops.filter((o) => o.op === 'move_to_pattern').map((o) => o.entry);
+    expect(moved).toHaveLength(391);
+    for (const id of moved) expect(source.data.items.get(id)?.kind, id).toBe('imageCompound');
   });
 });
 

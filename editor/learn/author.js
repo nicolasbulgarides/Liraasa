@@ -23,6 +23,12 @@
 
   const clone = (x) => JSON.parse(JSON.stringify(x));
 
+  /** Open the Roots tool on one root (from a study card). */
+  U.openAuthorRoots = function openAuthorRoots(id) {
+    tab = 'roots';
+    rootsState = { ...rootsState, id, preview: null };
+  };
+
   U.renderAuthor = function renderAuthor(host, api) {
     const A = api.A;
     const L = A.L;
@@ -717,7 +723,8 @@
         const key = b.dataset.key;
         await U.store.audioDel(key);
         delete A.store.audio[key];
-        A.audio.delete(key);
+        // a file from the manifest still plays once the recording made here is gone
+        if (!(A.files && A.files[key])) A.audio.delete(key);
         api.save();
         return draw();
       }

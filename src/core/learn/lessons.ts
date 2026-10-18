@@ -62,7 +62,9 @@ export function glossToken(data: LearnData, token: LinkedToken): GlossedToken {
   const ref = refs[0];
   const item = ref === undefined ? undefined : data.items.get(ref.id);
   const tags: string[] = [];
-  let gloss = item?.meaning ?? '?';
+  // a pattern pair with no entry of its own reads predictably (2.0:G40)
+  let gloss =
+    item?.meaning ?? (ref === undefined ? undefined : data.patternReadings.get(ref.id)) ?? '?';
   if (item !== undefined && ref?.slot !== undefined) {
     const form = item.forms.find((f) => f.slot === ref.slot);
     if (form?.meaningful === true) gloss = form.gloss;

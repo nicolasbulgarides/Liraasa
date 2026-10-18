@@ -39,7 +39,16 @@ export type ExerciseType =
   | 'translateTo'
   | 'cloze'
   | 'matching'
-  | 'listen';
+  | 'listen'
+  /* Ten Stars (stars drill, drill.ts): not part of Classic Learn's sessions */
+  | 'spotPattern'
+  | 'formMatch'
+  /* The Loom (loom.ts) */
+  | 'transform'
+  | 'mend'
+  | 'unravel'
+  | 'choose'
+  | 'reverse';
 
 export const EXERCISE_TYPES: readonly ExerciseType[] = [
   'recognition',
@@ -80,6 +89,8 @@ export type Answer =
       accepted: readonly string[];
     }
   | { kind: 'order'; tiles: readonly Tile[]; correct: readonly string[] }
+  /** Choose every choice that fits; `correct` lists their ids. */
+  | { kind: 'multi'; correct: readonly string[] }
   | {
       kind: 'pairs';
       left: readonly Choice[];
@@ -116,6 +127,10 @@ export interface Exercise {
   audio?: string;
   /** The sentence an exercise is drawn from. */
   source?: string;
+  /** Text to start a typed answer from: the sentence to change or mend. */
+  prefill?: string;
+  /** Why a wrong choice (or the broken sentence, `wrong`) is wrong, in the checker's words. */
+  explain?: Readonly<Record<string, string>>;
 }
 
 export interface ExerciseContext {
@@ -135,7 +150,7 @@ export const cardId = (target: string, skill: Skill, direction: Direction): stri
 
 /* ------------------------------------------------------------ helpers */
 
-const HEADWORD = new Set(['root', 'compound']);
+const HEADWORD = new Set(['root', 'compound', 'imageCompound']);
 const meaningful = (item: LearnItem): FormSlot[] =>
   item.forms.filter((f) => f.meaningful).map((f) => f.slot);
 const formOf = (item: LearnItem, slot: FormSlot): string =>
@@ -507,7 +522,10 @@ export function cloze(
   const gap = rng.pick(candidates);
   if (gap === undefined || gap.t.link.kind !== 'entry') return null;
   const answer = gap.t.text;
-  const ref = gap.t.link.refs[0];
+  // the reading the exercise is about, when the word has several
+  const refs = gap.t.link.refs;
+  const ref =
+    (want?.item !== undefined ? refs.find((r) => r.id === want.item) : undefined) ?? refs[0];
   const item = ref === undefined ? undefined : ctx.data.items.get(ref.id);
   if (item === undefined) return null;
   const slot = ref?.slot;

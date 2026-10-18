@@ -309,6 +309,24 @@ export interface RawSnapshot08 {
 }
 
 /** The whole file. The 26 keys, in the order they appear. */
+/**
+ * The image-compound pattern (2.0:G40): any listed modifier + any listed head
+ * is a word. Modifiers and heads are keyed by headword id; `attested` holds the
+ * 391 former headwords, whole and with their ids, whose glosses are the
+ * canonical readings of those pairs.
+ */
+export interface RawImageCompounds {
+  name: string;
+  ruling: string;
+  rule: string;
+  why: string;
+  capacity: number;
+  modifiers: Record<string, { as_modifier: string; sense: string }>;
+  heads: Record<string, { template: string }>;
+  kept_as_headwords: Record<string, string>;
+  attested: RawHeadword[];
+}
+
 export interface RawLexicon {
   language: string;
   version: string;
@@ -336,6 +354,9 @@ export interface RawLexicon {
   rulings_0_8_carried: RawRuling[];
   /** From 1.2 on (ADR-0012): the rulings the changesets add, with examples. */
   rulings_1_2?: RawRuling[];
+  rulings_2_0?: RawRuling[];
+  /** The image-compound pattern (2.0:G40, ADR-0016). */
+  image_compounds?: RawImageCompounds;
   examples: RawExample[];
   rhyme_families: RawRhymeFamily[];
   legacy: RawLegacy;
