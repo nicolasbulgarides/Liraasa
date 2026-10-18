@@ -1,0 +1,578 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Liraasa: An Invitation</title>
+<meta name="description" content="A short introduction to Liraasa, a language built for singing, read through the Goddess's Lament.">
+<style>
+:root {
+  --bg: #fbf8f3; --surface: #ffffff; --ink: #1f1c24; --muted: #5b5563; --rule: #ddd5ca;
+  --lir: #6b2d5c; --accent: #2f4f7a; --accent-soft: #e8eef6;
+  --sing: #8a4b00; --sing-bg: #fdf3e4; --parse: #23566b; --parse-bg: #e6f2f5;
+  --warn: #8b1e1e; --warn-bg: #fbeaea; --unused: #8a8490;
+  --b20: #8a4b00; --b12: #6b2d5c; --b10: #2f4f7a; --b08: #4b5a2a; --badr: #5b5563;
+  --sun: #b0700f; --sun-bg: #fbe9c2; --moon: #3f5f8f; --moon-bg: #e3ebf7;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #17151b; --surface: #211e26; --ink: #ece7f0; --muted: #b3abbb; --rule: #3a3541;
+    --lir: #e7a9d6; --accent: #9dbbe6; --accent-soft: #26303f;
+    --sing: #f1bd77; --sing-bg: #2e2416; --parse: #8fcfe0; --parse-bg: #16282e;
+    --warn: #f3a3a3; --warn-bg: #321a1a; --unused: #8f8897;
+    --b20: #f1bd77; --b12: #e7a9d6; --b10: #9dbbe6; --b08: #c4d39a; --badr: #b3abbb;
+    --sun: #f2c26b; --sun-bg: #3b2c12; --moon: #b9cbea; --moon-bg: #222c3d;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #17151b; --surface: #211e26; --ink: #ece7f0; --muted: #b3abbb; --rule: #3a3541;
+  --lir: #e7a9d6; --accent: #9dbbe6; --accent-soft: #26303f;
+  --sing: #f1bd77; --sing-bg: #2e2416; --parse: #8fcfe0; --parse-bg: #16282e;
+  --warn: #f3a3a3; --warn-bg: #321a1a; --unused: #8f8897;
+  --b20: #f1bd77; --b12: #e7a9d6; --b10: #9dbbe6; --b08: #c4d39a; --badr: #b3abbb;
+  --sun: #f2c26b; --sun-bg: #3b2c12; --moon: #b9cbea; --moon-bg: #222c3d;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font: 16px/1.6 "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+}
+main { max-width: 60rem; margin: 0 auto; padding: 0 1rem 4rem; }
+a { color: var(--accent); }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.skip { position: absolute; left: -999px; top: 0; background: var(--surface); padding: .5rem 1rem; }
+.skip:focus { left: 1rem; }
+
+.liraasa {
+  font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, "Times New Roman", serif;
+  color: var(--lir); font-style: normal; hyphens: none; -webkit-hyphens: none; word-break: keep-all;
+}
+.liraasa.unused { color: var(--unused); text-decoration: line-through; }
+.liraasa.retired { color: var(--muted); }
+code, pre { font-family: Consolas, "Cascadia Mono", Menlo, monospace; font-size: .88em; }
+code.morph { background: var(--accent-soft); color: var(--ink); padding: 0 .3em; border-radius: 4px; white-space: nowrap; }
+pre.template { background: var(--surface); border: 1px solid var(--rule); border-radius: 8px; padding: .75rem 1rem; white-space: pre-wrap; overflow-wrap: anywhere; }
+
+/* Cover */
+.cover { min-height: 92vh; display: flex; flex-direction: column; justify-content: center; text-align: center; padding: 3rem 1rem; }
+.cover .eyebrow { letter-spacing: .3em; text-transform: uppercase; color: var(--muted); font-size: .85rem; }
+.cover h1 { font-family: "Palatino Linotype", Palatino, Georgia, serif; font-weight: 400; font-size: clamp(2.4rem, 7vw, 4.2rem); line-height: 1.1; margin: .5rem 0; }
+.cover h1 .liraasa { display: block; font-size: 1.15em; }
+.cover .sub { font-size: 1.25rem; color: var(--muted); font-style: italic; }
+.cover .meta { margin-top: 2.5rem; color: var(--muted); font-size: .9rem; }
+.cover { position: relative; overflow: hidden; isolation: isolate; }
+.cover-inner { position: relative; z-index: 1; }
+.cover-stars { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -2; }
+.field-star { fill: var(--sun); opacity: .5; }
+.field-spark { fill: var(--moon); opacity: .45; }
+.cover-rosette { position: absolute; left: 50%; top: 50%; width: min(48rem, 125vw); height: auto; transform: translate(-50%, -50%); z-index: -1;
+  fill: none; stroke: var(--lir); stroke-width: 1; opacity: .1; }
+.cover-rosette .dash { stroke-dasharray: 2 6; }
+.cover-corner { position: absolute; width: clamp(4.5rem, 14vw, 8rem); height: auto; fill: none; stroke: var(--lir); stroke-width: 1.2; opacity: .6; }
+.cover-corner .dash { stroke-dasharray: 1 4; stroke-linecap: round; }
+.cover-corner.tl { top: .5rem; left: .5rem; }
+.cover-corner.tr { top: .5rem; right: .5rem; transform: scaleX(-1); }
+.cover-corner.bl { bottom: .5rem; left: .5rem; transform: scaleY(-1); }
+.cover-corner.br { bottom: .5rem; right: .5rem; transform: scale(-1, -1); }
+.corner-spark { fill: var(--sun); stroke: none; }
+.corner-heart { fill: var(--lir); stroke: none; opacity: .8; }
+.corner-dot { fill: var(--lir); stroke: none; }
+.cover-emblem { display: block; width: min(30rem, 100%); height: auto; margin: 0 auto .4rem; }
+.ray { fill: var(--sun); }
+.ray.short { opacity: .55; }
+.sun-disc { fill: var(--sun-bg); stroke: var(--sun); stroke-width: 1.6; }
+.sun-ring { fill: none; stroke: var(--sun); stroke-width: 1; stroke-dasharray: 2 3; }
+.sun-dot { fill: var(--sun); }
+.core-heart { fill: var(--lir); }
+.moon { fill: var(--moon-bg); stroke: var(--moon); stroke-width: 1.6; }
+.orbit { fill: none; stroke: var(--moon); stroke-width: 1.4; stroke-dasharray: .5 6; stroke-linecap: round; }
+.spark { fill: var(--sun); }
+.small-heart { fill: none; stroke: var(--lir); stroke-width: 1.4; }
+.cover .motif { margin: 0 0 1.6rem; font-size: 1.15rem; letter-spacing: .08em; }
+.cover .motif .sep { color: var(--muted); }
+.cover .motif-en { display: block; font-size: .78rem; letter-spacing: .25em; text-transform: uppercase; color: var(--muted); }
+.cover-divider { display: block; width: min(22rem, 90%); height: auto; margin: 1.6rem auto .4rem; }
+.cover-divider line { stroke: var(--lir); stroke-width: 1; opacity: .6; }
+.cover-divider .diamond { fill: var(--sun); }
+.cover-melody { display: block; width: min(40rem, 100%); height: auto; margin: .2rem auto 0; }
+.staff { fill: none; stroke: var(--muted); stroke-width: .9; opacity: .7; }
+.note-head { fill: var(--lir); }
+.note-head.hollow { fill: none; stroke: var(--lir); stroke-width: 1.8; }
+.note-stem { stroke: var(--lir); stroke-width: 1.4; }
+.note-flag { fill: none; stroke: var(--lir); stroke-width: 1.4; }
+.beam { fill: var(--lir); }
+.note-heart { fill: var(--lir); }
+
+/* TOC */
+nav.toc { background: var(--surface); border: 1px solid var(--rule); border-radius: 12px; padding: 1.5rem 2rem; margin: 2rem 0; }
+nav.toc h2 { margin-top: 0; font-size: 1.4rem; }
+nav.toc ol { list-style: none; padding: 0; margin: 0; columns: 2 18rem; column-gap: 2rem; }
+nav.toc li { break-inside: avoid; }
+nav.toc li.l2 { font-weight: 600; margin-top: .6rem; }
+nav.toc li.l3 { padding-left: 1rem; font-size: .92rem; }
+nav.toc a { text-decoration: none; color: var(--ink); }
+nav.toc a:hover { text-decoration: underline; }
+
+/* Parts */
+.part { margin-top: 4rem; }
+.part-head { border-bottom: 2px solid var(--rule); padding-bottom: 1rem; margin-bottom: 1.5rem; }
+.part-num { font-family: Georgia, serif; font-size: 3.2rem; line-height: 1; color: var(--lir); }
+.part-word { font-family: "Segoe UI", system-ui, sans-serif; font-size: .8rem; letter-spacing: .3em; text-transform: uppercase; color: var(--muted); margin-right: .6rem; vertical-align: .9em; }
+.decide { display: inline-block; border: 2px dashed var(--warn); color: var(--warn); background: var(--warn-bg); border-radius: 6px; padding: 0 .4em; font-size: .88em; font-weight: 600; }
+.review-tag { font-size: .7rem; text-transform: uppercase; letter-spacing: .06em; color: var(--sing); border: 1px solid; border-radius: 999px; padding: 0 .4em; margin-left: .3em; white-space: nowrap; }
+.closing-box { background: var(--surface); border: 1px solid var(--rule); border-left: 4px solid var(--lir); border-radius: 0 10px 10px 0; padding: .3rem 1.2rem .6rem; margin: 1.4rem 0; break-inside: avoid; }
+.closing-box h3 { margin: .6rem 0 .3rem; }
+.part-head h2 { font-family: "Palatino Linotype", Palatino, Georgia, serif; font-weight: 400; font-size: 2.2rem; margin: .2rem 0 .4rem; }
+.part-intro { font-size: 1.1rem; color: var(--muted); margin: 0; }
+h3 { font-size: 1.35rem; margin: 2.2rem 0 .6rem; color: var(--accent); }
+h4 { font-size: 1.02rem; margin: 1.4rem 0 .4rem; }
+p, ul, ol { margin: .5rem 0 .9rem; }
+.muted { color: var(--muted); }
+
+/* Tables */
+.table-wrap { overflow-x: auto; margin: .8rem 0 1.2rem; }
+table { border-collapse: collapse; width: 100%; background: var(--surface); font-size: .92rem; }
+caption { text-align: left; color: var(--muted); padding-bottom: .4rem; }
+th, td { border-bottom: 1px solid var(--rule); padding: .45rem .6rem; text-align: left; vertical-align: top; }
+thead th { background: var(--accent-soft); font-weight: 600; border-bottom: 2px solid var(--rule); }
+td.num { text-align: right; font-variant-numeric: tabular-nums; color: var(--muted); width: 2.5rem; }
+td.form .liraasa, td .liraasa:first-child { font-size: 1.08em; }
+td.unused { color: var(--unused); }
+.unused-note { font-style: italic; }
+.gloss { display: block; color: var(--muted); font-size: .86em; }
+table.compact { width: auto; min-width: 50%; }
+table.grid td { white-space: nowrap; }
+
+/* Callouts and badges */
+.callout { border-left: 5px solid; border-radius: 0 10px 10px 0; padding: .7rem 1rem; margin: 1rem 0; }
+.callout p { margin: .2rem 0; }
+.callout-head { font-weight: 700; font-size: .85rem; letter-spacing: .06em; text-transform: uppercase; }
+.callout-icon { display: inline-block; width: 1.4em; }
+.callout.singing { border-color: var(--sing); background: var(--sing-bg); }
+.callout.singing .callout-head { color: var(--sing); }
+.callout.parsing { border-color: var(--parse); background: var(--parse-bg); }
+.callout.parsing .callout-head { color: var(--parse); }
+.callout.caution { border-color: var(--warn); background: var(--warn-bg); }
+.callout.caution .callout-head { color: var(--warn); }
+.badge { display: inline-block; font: 600 .78rem/1.5 Consolas, Menlo, monospace; padding: 0 .45em; border-radius: 999px; border: 1.5px solid; white-space: nowrap; vertical-align: .08em; }
+.badge.b20 { color: var(--b20); } .badge.b12 { color: var(--b12); } .badge.b10 { color: var(--b10); } .badge.b08 { color: var(--b08); } .badge.badr { color: var(--badr); }
+.sev { font-weight: 700; text-transform: uppercase; font-size: .78rem; }
+.sev-error { color: var(--warn); } .sev-warn { color: var(--sing); } .sev-note { color: var(--parse); }
+
+/* Examples */
+.exs { margin: .6rem 0 1rem; display: grid; gap: .5rem; }
+.ex { background: var(--surface); border: 1px solid var(--rule); border-radius: 8px; padding: .5rem .9rem; break-inside: avoid; }
+.ex-l { font-size: 1.12rem; }
+.ex-e { color: var(--muted); font-size: .92rem; }
+
+/* Compact lists */
+.pairs { line-height: 2; }
+.chips { line-height: 1.9; margin: .5rem 0 1rem; }
+.chips .gloss, .treasure .gloss { display: inline; margin-left: .2rem; }
+.chips strong { margin-right: .4rem; }
+.essentials li { margin: .2rem 0; }
+.steps li { margin: .25rem 0; }
+.sound { color: var(--muted); }
+.sound .stress { font-family: Consolas, Menlo, monospace; color: var(--ink); }
+.sound .ipa { font-family: "Segoe UI", "Lucida Sans Unicode", "DejaVu Sans", sans-serif; }
+.sound .syl { font-size: .82em; }
+.sound .stress, .sound .ipa { white-space: nowrap; }
+table.roots td:last-child { font-size: .88rem; line-height: 1.7; }
+table.roots td:last-child .gloss { display: inline; margin-left: .15rem; }
+table.rulings td:first-child { width: 5.5rem; }
+ul.treasure { list-style: none; padding: 0; columns: 2 20rem; column-gap: 2rem; }
+ul.treasure li { break-inside: avoid; padding: .2rem 0; }
+ul.treasure .liraasa { font-size: 1.08em; }
+.parts { color: var(--muted); font-size: .82em; }
+.parts::before { content: "("; } .parts::after { content: ")"; }
+
+/* First words */
+.first-words { background: var(--surface); border: 1px solid var(--rule); border-left: 4px solid var(--lir); border-radius: 0 10px 10px 0; padding: .4rem 1.2rem .6rem; margin: 1.2rem 0; break-inside: avoid; }
+.first-words h3 { margin: .5rem 0; }
+.first-words ul { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr)); gap: .2rem 1.5rem; }
+.first-words .liraasa { font-size: 1.1em; }
+.first-words .gloss, .families .gloss { display: inline; margin-left: .35rem; }
+table.grid7 td:first-child { width: 7rem; }
+.ruling-index { list-style: none; padding: 0; line-height: 2; }
+
+/* The song */
+ol.song { list-style: none; padding: 0; }
+.verse { background: var(--surface); border: 1px solid var(--rule); border-radius: 10px; padding: .6rem 1rem .5rem 2.6rem; margin: .7rem 0; position: relative; break-inside: avoid; }
+.v-num { position: absolute; left: .9rem; top: .7rem; color: var(--lir); font-family: Georgia, serif; }
+.v-g { display: flex; flex-wrap: wrap; gap: .1rem .7rem; margin: 0; }
+.w { display: inline-flex; flex-direction: column; }
+.w .liraasa { font-size: 1.12rem; }
+.w .g { font-size: .74rem; color: var(--muted); line-height: 1.25; }
+.v-e { margin: .35rem 0 .1rem; font-style: italic; }
+.v-n { margin: .2rem 0 0; font-size: .86rem; color: var(--muted); border-top: 1px dashed var(--rule); padding-top: .3rem; }
+ul.glossary { columns: 2 20rem; column-gap: 2rem; font-size: .92rem; }
+ul.glossary li { break-inside: avoid; }
+.new { font-size: .7rem; text-transform: uppercase; letter-spacing: .06em; color: var(--sing); border: 1px solid; border-radius: 999px; padding: 0 .4em; }
+footer.colophon { margin-top: 4rem; padding-top: 1rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: .85rem; }
+
+@media (max-width: 600px) {
+  .verse { padding-left: 2rem; }
+  th, td { padding: .35rem .4rem; }
+}
+
+@page { size: A4; margin: 16mm 14mm 18mm; }
+@media print {
+  :root, :root[data-theme="dark"] {
+    --bg: #ffffff; --surface: #ffffff; --ink: #1a1a1a; --muted: #4f4f4f; --rule: #cfc8bd;
+    --lir: #6b2d5c; --accent: #2f4f7a; --accent-soft: #eef2f8;
+    --sun: #b0700f; --sun-bg: #fbe9c2; --moon: #3f5f8f; --moon-bg: #e3ebf7;
+  }
+  body { font-size: 10.5pt; background: #fff; }
+  main { max-width: none; padding: 0; }
+  .skip { display: none; }
+  .cover { min-height: 262mm; break-after: page; }
+  .cover-rosette { width: 175mm; }
+  .cover-corner { width: 26mm; }
+  nav.toc { break-after: page; border: none; padding: 0; }
+  .part { break-before: page; margin-top: 0; }
+  h3, h4 { break-after: avoid; }
+  tr, .ex, .callout, .verse { break-inside: avoid; }
+  thead { display: table-header-group; }
+  a { color: inherit; text-decoration: none; }
+}
+
+body.invitation { font-size: 17px; line-height: 1.65; }
+.invitation main { max-width: 46rem; }
+.invitation .cover h1 { font-size: clamp(3rem, 10vw, 5.4rem); }
+.invitation .cover h1 .liraasa { display: block; }
+.h1-sub { display: block; font-size: .38em; letter-spacing: .32em; text-transform: uppercase; color: var(--muted); margin-top: .8rem; }
+.page { margin-top: 4.5rem; }
+.page h2 { font-family: "Palatino Linotype", Palatino, Georgia, serif; font-weight: 400; font-size: 2.1rem; line-height: 1.2; margin: .2rem 0 1rem; color: var(--lir); }
+.page-eyebrow { letter-spacing: .3em; text-transform: uppercase; font-size: .78rem; color: var(--muted); margin: 0; }
+.page h3 { color: var(--accent); font-size: 1.2rem; margin: 1.6rem 0 .4rem; }
+
+.sentence { margin: 1rem 0; padding: .7rem 1rem; background: var(--surface); border: 1px solid var(--rule); border-left: 4px solid var(--lir); border-radius: 0 10px 10px 0; break-inside: avoid; }
+.sentence figcaption { margin-top: .35rem; }
+.s-e { font-style: italic; }
+.s-src { color: var(--muted); font-size: .8rem; letter-spacing: .04em; white-space: nowrap; }
+.s-src::before { content: "— "; }
+.s-n { display: block; margin-top: .3rem; padding-top: .3rem; border-top: 1px dashed var(--rule); color: var(--muted); font-size: .9rem; }
+
+.name-line { font-size: 1.9rem; text-align: center; margin: .6rem 0; }
+.name-gloss { display: block; font-size: 1rem; color: var(--muted); font-style: italic; }
+.listen, .singing { margin: 1.4rem 0; padding: .7rem 1.1rem; border-radius: 10px; background: var(--sing-bg); border: 1px solid var(--sing); break-inside: avoid; }
+.album { display: flex; gap: 1rem; align-items: center; }
+.album > div { flex: 1; }
+.album .qr { flex: none; width: 5.5rem; height: 5.5rem; border-radius: 4px; }
+a.url { overflow-wrap: anywhere; font-size: .86rem; }
+.big-verse { margin: 1.4rem 0 1.6rem; padding: 1.2rem 1.4rem; background: var(--surface); border: 1px solid var(--rule); border-left: 4px solid var(--lir); border-radius: 0 12px 12px 0; }
+.big-line { margin: 0 0 1rem; }
+.big-line .liraasa { display: block; font-size: 1.55rem; line-height: 1.35; }
+.big-en { display: block; font-style: italic; color: var(--muted); margin-top: .2rem; }
+.big-verse figcaption { font-size: .8rem; color: var(--muted); letter-spacing: .04em; }
+.lyric-sub { font-style: italic; color: var(--muted); margin-top: -.6rem; }
+table.lyrics { background: none; font-size: .88rem; line-height: 1.38; }
+table.lyrics th, table.lyrics td { border-bottom: 1px dotted var(--rule); padding: .2rem .45rem; }
+table.lyrics td.ly-l { width: 52%; }
+table.lyrics thead th { background: none; font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+td.ly-n { width: 1.8rem; color: var(--lir); font-family: Georgia, serif; text-align: right; }
+td.ly-l .liraasa { font-size: 1rem; }
+td.ly-e { font-style: italic; color: var(--ink); }
+.credits { margin-top: 1.6rem; padding-top: .8rem; border-top: 1px solid var(--rule); font-size: .9rem; color: var(--muted); }
+@media (max-width: 520px) { .album { flex-direction: column; align-items: flex-start; } }
+.listen-head { margin: 0 0 .2rem; font-weight: 700; font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; color: var(--sing); }
+
+ul.cards { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr)); gap: .8rem; }
+.card { background: var(--surface); border: 1px solid var(--rule); border-radius: 10px; padding: .6rem .9rem; break-inside: avoid; }
+.card-word .liraasa { font-size: 1.35rem; }
+.card-parts { display: block; font-size: .82rem; color: var(--muted); }
+.card-meaning { display: block; margin-top: .2rem; }
+
+.sound-list li { margin: .4rem 0; }
+figure.beats { margin: 1.2rem 0; }
+figure.beats table { width: auto; background: none; }
+figure.beats caption { font-size: 1.05rem; color: var(--ink); }
+figure.beats td { border: none; text-align: center; padding: .2rem .35rem; font-family: "Palatino Linotype", Palatino, Georgia, serif; }
+figure.beats td.wstart { border-left: 1px solid var(--rule); }
+figure.beats .beat { display: block; color: var(--sun); font-size: 1.1rem; line-height: 1; }
+figure.beats td.strong .syl { font-weight: 700; color: var(--lir); }
+figure.beats td.weak .syl { color: var(--muted); }
+figure.beats figcaption { font-size: .88rem; color: var(--muted); }
+.beat-text { font-family: Consolas, Menlo, monospace; color: var(--ink); }
+.beats-head { margin: 0 0 .2rem; font-size: 1.15rem; }
+.beats-head .gloss { display: inline; margin-left: .4rem; font-size: .85rem; }
+.invitation ol.song { font-size: .95em; }
+.invitation .verse { padding: .35rem .9rem .3rem 2.3rem; margin: .4rem 0; }
+.invitation .v-num { top: .45rem; left: .8rem; }
+.invitation .v-e { margin: .2rem 0 0; }
+.invitation .v-n { font-size: .82rem; margin-top: .15rem; padding-top: .15rem; }
+.invitation .closing-box { margin-top: .8rem; padding-bottom: .3rem; }
+.invitation ul.glossary { font-size: .84rem; margin: .2rem 0; }
+
+ul.wheel { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr)); gap: .6rem; }
+.shape { background: var(--surface); border: 1px solid var(--rule); border-radius: 10px; padding: .5rem .8rem; }
+.shape.s-root { border: 2px solid var(--lir); }
+.shape-label { display: block; font-size: .74rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.shape .liraasa { font-size: 1.3rem; }
+.shape-gloss { display: block; font-size: .88rem; }
+
+.equation { font-size: 1.3rem; text-align: center; margin: 1rem 0; }
+.equation .gloss, .equations .gloss, .engine .gloss, .tryit .gloss { display: inline; margin: 0 .2rem; }
+ul.equations, ul.engine { list-style: none; padding: 0; }
+ul.equations li, ul.engine li { padding: .3rem 0; border-bottom: 1px dotted var(--rule); }
+.ie-parts { color: var(--muted); font-size: .85rem; margin-left: .3rem; }
+.ie-reading { display: block; font-size: .92rem; }
+
+.tryit { margin: 1.4rem 0; padding: .6rem 1.1rem .8rem; border: 2px dashed var(--accent); border-radius: 12px; break-inside: avoid; }
+.tryit h3 { margin-top: .3rem; }
+.blank { display: inline-block; min-width: 6rem; border-bottom: 1.5px solid var(--ink); text-align: center; color: var(--muted); }
+.answers { margin: .8rem 0 0; font-size: .82rem; color: var(--muted); text-align: right; }
+.flip { display: inline-block; transform: rotate(180deg); }
+
+table.owners { width: auto; min-width: 60%; }
+.exchange { margin: .5rem 0; }
+.turn { display: flex; gap: .7rem; align-items: flex-start; }
+.turn .sentence { flex: 1; margin: .4rem 0; }
+.who { flex: none; width: 2rem; height: 2rem; border-radius: 50%; background: var(--accent-soft); color: var(--accent); font-weight: 700; display: flex; align-items: center; justify-content: center; margin-top: .9rem; }
+.stage { font-style: italic; color: var(--muted); text-align: center; margin: .3rem 0; }
+ul.first-words-list { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr)); gap: .2rem 1.2rem; }
+ul.first-words-list .liraasa { font-size: 1.15rem; }
+ul.first-words-list .gloss { display: inline; margin-left: .3rem; }
+ul.next li { margin: .8rem 0; }
+.farewell { text-align: center; font-size: 1.6rem; margin-top: 3rem; }
+.farewell .gloss { font-size: .9rem; }
+
+.cheat { display: grid; grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); gap: 1rem; }
+.cheat section { background: var(--surface); border: 1px solid var(--rule); border-radius: 10px; padding: .3rem 1rem .6rem; }
+.cheat h3 { margin-top: .5rem; }
+.cheat ul { padding-left: 1.1rem; margin: .2rem 0; }
+.cheat .gloss { display: inline; margin-left: .3rem; }
+.order { font-size: 1.05rem; }
+
+@media print {
+  body.invitation { font-size: 11.5pt; }
+  .page { break-before: page; margin-top: 0; }
+  .sentence, .card, .shape, .tryit, .turn { break-inside: avoid; }
+  .cheat section { break-inside: avoid; }
+}
+</style>
+</head>
+<body class="invitation">
+<main id="content">
+<header class="cover">
+<div class="cover-inner">
+<svg class="cover-emblem" viewBox="0 0 480 200" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path class="orbit" d="M70,100 A170,96 0 0,1 410,100"/><path class="orbit" d="M70,100 A170,96 0 0,0 410,100"/><path class="moon" d="M95,74 A26,26 0 0,0 95,126 A16.12,26 0 0,1 95,74 Z"/><g transform="translate(480,0) scale(-1,1)"><path class="moon" d="M95,74 A26,26 0 0,0 95,126 A16.12,26 0 0,1 95,74 Z"/></g><path class="small-heart" d="M118,103.21 C116.71,101.93 113.5,100 113.5,97.75 C113.5,95.82 115.11,94.86 116.39,94.86 C117.36,94.86 118,95.5 118,96.46 C118,95.5 118.64,94.86 119.61,94.86 C120.89,94.86 122.5,95.82 122.5,97.75 C122.5,100 119.29,101.93 118,103.21 Z"/><path class="small-heart" d="M362,103.21 C360.71,101.93 357.5,100 357.5,97.75 C357.5,95.82 359.11,94.86 360.39,94.86 C361.36,94.86 362,95.5 362,96.46 C362,95.5 362.64,94.86 363.61,94.86 C364.89,94.86 366.5,95.82 366.5,97.75 C366.5,100 363.29,101.93 362,103.21 Z"/><path class="spark" d="M150,40 Q151.32,44.68 156,46 Q151.32,47.32 150,52 Q148.68,47.32 144,46 Q148.68,44.68 150,40 Z"/><path class="spark" d="M330,40 Q331.32,44.68 336,46 Q331.32,47.32 330,52 Q328.68,47.32 324,46 Q328.68,44.68 330,40 Z"/><path class="spark" d="M150,149 Q151.1,152.9 155,154 Q151.1,155.1 150,159 Q148.9,155.1 145,154 Q148.9,152.9 150,149 Z"/><path class="spark" d="M330,149 Q331.1,152.9 335,154 Q331.1,155.1 330,159 Q328.9,155.1 325,154 Q328.9,152.9 330,149 Z"/><path class="spark" d="M40,66 Q40.88,69.12 44,70 Q40.88,70.88 40,74 Q39.12,70.88 36,70 Q39.12,69.12 40,66 Z"/><path class="spark" d="M440,66 Q440.88,69.12 444,70 Q440.88,70.88 440,74 Q439.12,70.88 436,70 Q439.12,69.12 440,66 Z"/><path class="spark" d="M40,129 Q40.66,131.34 43,132 Q40.66,132.66 40,135 Q39.34,132.66 37,132 Q39.34,131.34 40,129 Z"/><path class="spark" d="M440,129 Q440.66,131.34 443,132 Q440.66,132.66 440,135 Q439.34,132.66 437,132 Q439.34,131.34 440,129 Z"/><path class="spark" d="M240,4 Q240.88,7.12 244,8 Q240.88,8.88 240,12 Q239.12,8.88 236,8 Q239.12,7.12 240,4 Z"/><path class="spark" d="M240,188 Q240.88,191.12 244,192 Q240.88,192.88 240,196 Q239.12,192.88 236,192 Q239.12,191.12 240,188 Z"/><g><polygon class="ray" points="237.6,60.07 240,26 242.4,60.07"/><polygon class="ray short" points="246.03,60.46 251.32,43.11 249.56,61.16"/><polygon class="ray" points="253.06,62.19 268.32,31.63 257.5,64.03"/><polygon class="ray short" points="260.7,65.78 272.22,51.77 263.7,67.77"/><polygon class="ray" points="266.54,70.07 292.33,47.67 269.93,73.46"/><polygon class="ray short" points="272.23,76.3 288.23,67.78 274.22,79.3"/><polygon class="ray" points="275.97,82.5 308.37,71.68 277.81,86.94"/><polygon class="ray short" points="278.84,90.44 296.89,88.68 279.54,93.97"/><polygon class="ray" points="279.93,97.6 314,100 279.93,102.4"/><polygon class="ray short" points="279.54,106.03 296.89,111.32 278.84,109.56"/><polygon class="ray" points="277.81,113.06 308.37,128.32 275.97,117.5"/><polygon class="ray short" points="274.22,120.7 288.23,132.22 272.23,123.7"/><polygon class="ray" points="269.93,126.54 292.33,152.33 266.54,129.93"/><polygon class="ray short" points="263.7,132.23 272.22,148.23 260.7,134.22"/><polygon class="ray" points="257.5,135.97 268.32,168.37 253.06,137.81"/><polygon class="ray short" points="249.56,138.84 251.32,156.89 246.03,139.54"/><polygon class="ray" points="242.4,139.93 240,174 237.6,139.93"/><polygon class="ray short" points="233.97,139.54 228.68,156.89 230.44,138.84"/><polygon class="ray" points="226.94,137.81 211.68,168.37 222.5,135.97"/><polygon class="ray short" points="219.3,134.22 207.78,148.23 216.3,132.23"/><polygon class="ray" points="213.46,129.93 187.67,152.33 210.07,126.54"/><polygon class="ray short" points="207.77,123.7 191.77,132.22 205.78,120.7"/><polygon class="ray" points="204.03,117.5 171.63,128.32 202.19,113.06"/><polygon class="ray short" points="201.16,109.56 183.11,111.32 200.46,106.03"/><polygon class="ray" points="200.07,102.4 166,100 200.07,97.6"/><polygon class="ray short" points="200.46,93.97 183.11,88.68 201.16,90.44"/><polygon class="ray" points="202.19,86.94 171.63,71.68 204.03,82.5"/><polygon class="ray short" points="205.78,79.3 191.77,67.78 207.77,76.3"/><polygon class="ray" points="210.07,73.46 187.67,47.67 213.46,70.07"/><polygon class="ray short" points="216.3,67.77 207.78,51.77 219.3,65.78"/><polygon class="ray" points="222.5,64.03 211.68,31.63 226.94,62.19"/><polygon class="ray short" points="230.44,61.16 228.68,43.11 233.97,60.46"/>
+<circle class="sun-disc" cx="240" cy="100" r="30"/>
+<circle class="sun-ring" cx="240" cy="100" r="38"/>
+<circle class="sun-dot" cx="275" cy="100" r="1.3"/><circle class="sun-dot" cx="272.34" cy="113.39" r="1.3"/><circle class="sun-dot" cx="264.75" cy="124.75" r="1.3"/><circle class="sun-dot" cx="253.39" cy="132.34" r="1.3"/><circle class="sun-dot" cx="240" cy="135" r="1.3"/><circle class="sun-dot" cx="226.61" cy="132.34" r="1.3"/><circle class="sun-dot" cx="215.25" cy="124.75" r="1.3"/><circle class="sun-dot" cx="207.66" cy="113.39" r="1.3"/><circle class="sun-dot" cx="205" cy="100" r="1.3"/><circle class="sun-dot" cx="207.66" cy="86.61" r="1.3"/><circle class="sun-dot" cx="215.25" cy="75.25" r="1.3"/><circle class="sun-dot" cx="226.61" cy="67.66" r="1.3"/><circle class="sun-dot" cx="240" cy="65" r="1.3"/><circle class="sun-dot" cx="253.39" cy="67.66" r="1.3"/><circle class="sun-dot" cx="264.75" cy="75.25" r="1.3"/><circle class="sun-dot" cx="272.34" cy="86.61" r="1.3"/>
+<path class="core-heart" d="M240,112.71 C235.71,108.43 225,102 225,94.5 C225,88.07 230.36,84.86 234.64,84.86 C237.86,84.86 240,87 240,90.21 C240,87 242.14,84.86 245.36,84.86 C249.64,84.86 255,88.07 255,94.5 C255,102 244.29,108.43 240,112.71 Z"/></g></svg>
+<p class="motif"><span class="liraasa" lang="x-liraasa">sulba</span><span class="sep" aria-hidden="true"> · </span><span class="liraasa" lang="x-liraasa">lore</span><span class="sep" aria-hidden="true"> · </span><span class="liraasa" lang="x-liraasa">luno</span><span class="sep" aria-hidden="true"> · </span><span class="liraasa" lang="x-liraasa">lira</span><span class="motif-en">sun · heart · moon · song</span></p>
+<h1><span class="liraasa" lang="x-liraasa">Liraasa</span><span class="h1-sub">An Invitation</span></h1>
+<p class="sub">To a language made for singing</p>
+</div>
+</header>
+<section class="page" aria-labelledby="opening">
+<h2 id="opening">A song before anything else</h2>
+<figure class="big-verse"><p class="big-line"><span class="liraasa" lang="x-liraasa">Maivo de lunosavali loki ke su taivo de rezari.</span><span class="big-en">My moonlit kiss still rests upon your lips.</span></p>
+<p class="big-line"><span class="liraasa" lang="x-liraasa">Li velumelo loki lirala taivo de nole ultra li navu.</span><span class="big-en">The music of the spheres still sings your name beyond the sky.</span></p><figcaption>The Goddess’s Lament, lines 12 and 13</figcaption></figure>
+<p>These two lines come from <em>Nemelira de devi</em>, The Goddess’s Lament. A goddess sings to the one she loves, who fell from the sky and became mortal. By the end of this booklet you will read the whole song, word by word.</p>
+<h3>The name</h3>
+<p class="name-line"><span class="liraasa" lang="x-liraasa">liraasa</span> <span class="name-gloss">“song of the first stars”</span></p>
+<p>The word for song is <span class="liraasa" lang="x-liraasa">lira</span>. Raised to its highest degree it becomes <span class="liraasa" lang="x-liraasa">liraasa</span>, song of the first stars, and that is the language’s name. Four words carry most of its imagery: <span class="liraasa" lang="x-liraasa">sulba</span> sun, <span class="liraasa" lang="x-liraasa">lore</span> heart, <span class="liraasa" lang="x-liraasa">luno</span> moon, <span class="liraasa" lang="x-liraasa">lira</span> song.</p>
+<p>Liraasa is a language centred on a goddess, and it was built for singing. Its vowels are pure, most of its words end on an open vowel, and every word leans on the same syllable, so a melody always knows where to land.</p>
+<aside class="listen"><p class="listen-head">Listen first</p>
+<div class="album"><div><p>The album <em>Liraasa: Songs of the First Stars</em> sets Liraasa to music. Hear a song before you read about one.</p><p><a class="url" href="https://music.apple.com/us/album/liraasa-songs-of-the-first-stars/6824147719">music.apple.com/us/album/liraasa-songs-of-the-first-stars/6824147719</a></p></div><svg class="qr" viewBox="0 0 45 45" role="img" aria-label="QR code: Liraasa: Songs of the First Stars on Apple Music" shape-rendering="crispEdges"><rect width="45" height="45" fill="#ffffff"/><path d="M4,4h1v1h-1zM5,4h1v1h-1zM6,4h1v1h-1zM7,4h1v1h-1zM8,4h1v1h-1zM9,4h1v1h-1zM10,4h1v1h-1zM15,4h1v1h-1zM17,4h1v1h-1zM18,4h1v1h-1zM20,4h1v1h-1zM21,4h1v1h-1zM25,4h1v1h-1zM27,4h1v1h-1zM28,4h1v1h-1zM30,4h1v1h-1zM32,4h1v1h-1zM34,4h1v1h-1zM35,4h1v1h-1zM36,4h1v1h-1zM37,4h1v1h-1zM38,4h1v1h-1zM39,4h1v1h-1zM40,4h1v1h-1zM4,5h1v1h-1zM10,5h1v1h-1zM14,5h1v1h-1zM16,5h1v1h-1zM17,5h1v1h-1zM19,5h1v1h-1zM20,5h1v1h-1zM24,5h1v1h-1zM25,5h1v1h-1zM26,5h1v1h-1zM28,5h1v1h-1zM31,5h1v1h-1zM32,5h1v1h-1zM34,5h1v1h-1zM40,5h1v1h-1zM4,6h1v1h-1zM6,6h1v1h-1zM7,6h1v1h-1zM8,6h1v1h-1zM10,6h1v1h-1zM12,6h1v1h-1zM16,6h1v1h-1zM19,6h1v1h-1zM20,6h1v1h-1zM22,6h1v1h-1zM25,6h1v1h-1zM26,6h1v1h-1zM28,6h1v1h-1zM34,6h1v1h-1zM36,6h1v1h-1zM37,6h1v1h-1zM38,6h1v1h-1zM40,6h1v1h-1zM4,7h1v1h-1zM6,7h1v1h-1zM7,7h1v1h-1zM8,7h1v1h-1zM10,7h1v1h-1zM12,7h1v1h-1zM14,7h1v1h-1zM17,7h1v1h-1zM19,7h1v1h-1zM21,7h1v1h-1zM26,7h1v1h-1zM29,7h1v1h-1zM30,7h1v1h-1zM31,7h1v1h-1zM32,7h1v1h-1zM34,7h1v1h-1zM36,7h1v1h-1zM37,7h1v1h-1zM38,7h1v1h-1zM40,7h1v1h-1zM4,8h1v1h-1zM6,8h1v1h-1zM7,8h1v1h-1zM8,8h1v1h-1zM10,8h1v1h-1zM12,8h1v1h-1zM14,8h1v1h-1zM15,8h1v1h-1zM17,8h1v1h-1zM18,8h1v1h-1zM19,8h1v1h-1zM21,8h1v1h-1zM22,8h1v1h-1zM23,8h1v1h-1zM24,8h1v1h-1zM26,8h1v1h-1zM27,8h1v1h-1zM30,8h1v1h-1zM32,8h1v1h-1zM34,8h1v1h-1zM36,8h1v1h-1zM37,8h1v1h-1zM38,8h1v1h-1zM40,8h1v1h-1zM4,9h1v1h-1zM10,9h1v1h-1zM12,9h1v1h-1zM13,9h1v1h-1zM17,9h1v1h-1zM19,9h1v1h-1zM21,9h1v1h-1zM24,9h1v1h-1zM30,9h1v1h-1zM31,9h1v1h-1zM32,9h1v1h-1zM34,9h1v1h-1zM40,9h1v1h-1zM4,10h1v1h-1zM5,10h1v1h-1zM6,10h1v1h-1zM7,10h1v1h-1zM8,10h1v1h-1zM9,10h1v1h-1zM10,10h1v1h-1zM12,10h1v1h-1zM14,10h1v1h-1zM16,10h1v1h-1zM18,10h1v1h-1zM20,10h1v1h-1zM22,10h1v1h-1zM24,10h1v1h-1zM26,10h1v1h-1zM28,10h1v1h-1zM30,10h1v1h-1zM32,10h1v1h-1zM34,10h1v1h-1zM35,10h1v1h-1zM36,10h1v1h-1zM37,10h1v1h-1zM38,10h1v1h-1zM39,10h1v1h-1zM40,10h1v1h-1zM12,11h1v1h-1zM14,11h1v1h-1zM15,11h1v1h-1zM18,11h1v1h-1zM21,11h1v1h-1zM22,11h1v1h-1zM23,11h1v1h-1zM24,11h1v1h-1zM27,11h1v1h-1zM31,11h1v1h-1zM4,12h1v1h-1zM6,12h1v1h-1zM7,12h1v1h-1zM8,12h1v1h-1zM9,12h1v1h-1zM10,12h1v1h-1zM14,12h1v1h-1zM15,12h1v1h-1zM19,12h1v1h-1zM20,12h1v1h-1zM23,12h1v1h-1zM27,12h1v1h-1zM29,12h1v1h-1zM31,12h1v1h-1zM32,12h1v1h-1zM34,12h1v1h-1zM35,12h1v1h-1zM36,12h1v1h-1zM37,12h1v1h-1zM38,12h1v1h-1zM4,13h1v1h-1zM5,13h1v1h-1zM6,13h1v1h-1zM7,13h1v1h-1zM11,13h1v1h-1zM12,13h1v1h-1zM17,13h1v1h-1zM19,13h1v1h-1zM21,13h1v1h-1zM22,13h1v1h-1zM24,13h1v1h-1zM25,13h1v1h-1zM28,13h1v1h-1zM32,13h1v1h-1zM35,13h1v1h-1zM39,13h1v1h-1zM4,14h1v1h-1zM5,14h1v1h-1zM6,14h1v1h-1zM9,14h1v1h-1zM10,14h1v1h-1zM16,14h1v1h-1zM17,14h1v1h-1zM18,14h1v1h-1zM19,14h1v1h-1zM20,14h1v1h-1zM22,14h1v1h-1zM23,14h1v1h-1zM31,14h1v1h-1zM33,14h1v1h-1zM38,14h1v1h-1zM39,14h1v1h-1zM40,14h1v1h-1zM5,15h1v1h-1zM6,15h1v1h-1zM7,15h1v1h-1zM11,15h1v1h-1zM13,15h1v1h-1zM15,15h1v1h-1zM17,15h1v1h-1zM18,15h1v1h-1zM19,15h1v1h-1zM23,15h1v1h-1zM24,15h1v1h-1zM25,15h1v1h-1zM26,15h1v1h-1zM27,15h1v1h-1zM33,15h1v1h-1zM34,15h1v1h-1zM35,15h1v1h-1zM40,15h1v1h-1zM6,16h1v1h-1zM7,16h1v1h-1zM10,16h1v1h-1zM12,16h1v1h-1zM14,16h1v1h-1zM16,16h1v1h-1zM19,16h1v1h-1zM20,16h1v1h-1zM21,16h1v1h-1zM23,16h1v1h-1zM27,16h1v1h-1zM28,16h1v1h-1zM29,16h1v1h-1zM30,16h1v1h-1zM31,16h1v1h-1zM33,16h1v1h-1zM34,16h1v1h-1zM36,16h1v1h-1zM38,16h1v1h-1zM39,16h1v1h-1zM40,16h1v1h-1zM4,17h1v1h-1zM5,17h1v1h-1zM6,17h1v1h-1zM8,17h1v1h-1zM9,17h1v1h-1zM12,17h1v1h-1zM13,17h1v1h-1zM14,17h1v1h-1zM18,17h1v1h-1zM20,17h1v1h-1zM23,17h1v1h-1zM27,17h1v1h-1zM28,17h1v1h-1zM29,17h1v1h-1zM32,17h1v1h-1zM33,17h1v1h-1zM35,17h1v1h-1zM4,18h1v1h-1zM6,18h1v1h-1zM8,18h1v1h-1zM9,18h1v1h-1zM10,18h1v1h-1zM12,18h1v1h-1zM13,18h1v1h-1zM17,18h1v1h-1zM18,18h1v1h-1zM19,18h1v1h-1zM20,18h1v1h-1zM22,18h1v1h-1zM24,18h1v1h-1zM30,18h1v1h-1zM31,18h1v1h-1zM35,18h1v1h-1zM36,18h1v1h-1zM37,18h1v1h-1zM39,18h1v1h-1zM40,18h1v1h-1zM4,19h1v1h-1zM7,19h1v1h-1zM8,19h1v1h-1zM12,19h1v1h-1zM13,19h1v1h-1zM14,19h1v1h-1zM15,19h1v1h-1zM17,19h1v1h-1zM18,19h1v1h-1zM19,19h1v1h-1zM20,19h1v1h-1zM24,19h1v1h-1zM25,19h1v1h-1zM30,19h1v1h-1zM32,19h1v1h-1zM34,19h1v1h-1zM35,19h1v1h-1zM36,19h1v1h-1zM4,20h1v1h-1zM7,20h1v1h-1zM8,20h1v1h-1zM9,20h1v1h-1zM10,20h1v1h-1zM12,20h1v1h-1zM13,20h1v1h-1zM14,20h1v1h-1zM16,20h1v1h-1zM22,20h1v1h-1zM23,20h1v1h-1zM24,20h1v1h-1zM26,20h1v1h-1zM27,20h1v1h-1zM28,20h1v1h-1zM29,20h1v1h-1zM30,20h1v1h-1zM32,20h1v1h-1zM33,20h1v1h-1zM34,20h1v1h-1zM35,20h1v1h-1zM36,20h1v1h-1zM38,20h1v1h-1zM39,20h1v1h-1zM4,21h1v1h-1zM5,21h1v1h-1zM6,21h1v1h-1zM9,21h1v1h-1zM12,21h1v1h-1zM14,21h1v1h-1zM15,21h1v1h-1zM16,21h1v1h-1zM17,21h1v1h-1zM19,21h1v1h-1zM20,21h1v1h-1zM27,21h1v1h-1zM28,21h1v1h-1zM29,21h1v1h-1zM30,21h1v1h-1zM32,21h1v1h-1zM35,21h1v1h-1zM37,21h1v1h-1zM39,21h1v1h-1zM5,22h1v1h-1zM9,22h1v1h-1zM10,22h1v1h-1zM13,22h1v1h-1zM14,22h1v1h-1zM17,22h1v1h-1zM21,22h1v1h-1zM22,22h1v1h-1zM24,22h1v1h-1zM26,22h1v1h-1zM30,22h1v1h-1zM31,22h1v1h-1zM32,22h1v1h-1zM33,22h1v1h-1zM34,22h1v1h-1zM35,22h1v1h-1zM38,22h1v1h-1zM39,22h1v1h-1zM40,22h1v1h-1zM5,23h1v1h-1zM6,23h1v1h-1zM8,23h1v1h-1zM9,23h1v1h-1zM11,23h1v1h-1zM12,23h1v1h-1zM14,23h1v1h-1zM15,23h1v1h-1zM18,23h1v1h-1zM20,23h1v1h-1zM22,23h1v1h-1zM25,23h1v1h-1zM26,23h1v1h-1zM27,23h1v1h-1zM28,23h1v1h-1zM31,23h1v1h-1zM33,23h1v1h-1zM34,23h1v1h-1zM35,23h1v1h-1zM36,23h1v1h-1zM37,23h1v1h-1zM40,23h1v1h-1zM4,24h1v1h-1zM6,24h1v1h-1zM8,24h1v1h-1zM10,24h1v1h-1zM15,24h1v1h-1zM21,24h1v1h-1zM26,24h1v1h-1zM28,24h1v1h-1zM29,24h1v1h-1zM30,24h1v1h-1zM33,24h1v1h-1zM34,24h1v1h-1zM36,24h1v1h-1zM37,24h1v1h-1zM38,24h1v1h-1zM4,25h1v1h-1zM5,25h1v1h-1zM9,25h1v1h-1zM13,25h1v1h-1zM16,25h1v1h-1zM17,25h1v1h-1zM18,25h1v1h-1zM21,25h1v1h-1zM22,25h1v1h-1zM23,25h1v1h-1zM24,25h1v1h-1zM25,25h1v1h-1zM27,25h1v1h-1zM33,25h1v1h-1zM37,25h1v1h-1zM4,26h1v1h-1zM5,26h1v1h-1zM10,26h1v1h-1zM12,26h1v1h-1zM15,26h1v1h-1zM17,26h1v1h-1zM18,26h1v1h-1zM19,26h1v1h-1zM20,26h1v1h-1zM21,26h1v1h-1zM24,26h1v1h-1zM26,26h1v1h-1zM29,26h1v1h-1zM31,26h1v1h-1zM32,26h1v1h-1zM33,26h1v1h-1zM34,26h1v1h-1zM35,26h1v1h-1zM36,26h1v1h-1zM37,26h1v1h-1zM39,26h1v1h-1zM40,26h1v1h-1zM4,27h1v1h-1zM5,27h1v1h-1zM7,27h1v1h-1zM8,27h1v1h-1zM12,27h1v1h-1zM13,27h1v1h-1zM15,27h1v1h-1zM18,27h1v1h-1zM19,27h1v1h-1zM21,27h1v1h-1zM22,27h1v1h-1zM24,27h1v1h-1zM26,27h1v1h-1zM27,27h1v1h-1zM30,27h1v1h-1zM33,27h1v1h-1zM34,27h1v1h-1zM35,27h1v1h-1zM36,27h1v1h-1zM39,27h1v1h-1zM7,28h1v1h-1zM8,28h1v1h-1zM9,28h1v1h-1zM10,28h1v1h-1zM11,28h1v1h-1zM12,28h1v1h-1zM13,28h1v1h-1zM15,28h1v1h-1zM16,28h1v1h-1zM17,28h1v1h-1zM19,28h1v1h-1zM20,28h1v1h-1zM27,28h1v1h-1zM29,28h1v1h-1zM30,28h1v1h-1zM31,28h1v1h-1zM34,28h1v1h-1zM36,28h1v1h-1zM38,28h1v1h-1zM39,28h1v1h-1zM4,29h1v1h-1zM5,29h1v1h-1zM6,29h1v1h-1zM7,29h1v1h-1zM8,29h1v1h-1zM12,29h1v1h-1zM13,29h1v1h-1zM18,29h1v1h-1zM19,29h1v1h-1zM22,29h1v1h-1zM24,29h1v1h-1zM25,29h1v1h-1zM26,29h1v1h-1zM27,29h1v1h-1zM30,29h1v1h-1zM32,29h1v1h-1zM38,29h1v1h-1zM4,30h1v1h-1zM6,30h1v1h-1zM7,30h1v1h-1zM8,30h1v1h-1zM9,30h1v1h-1zM10,30h1v1h-1zM13,30h1v1h-1zM14,30h1v1h-1zM15,30h1v1h-1zM19,30h1v1h-1zM20,30h1v1h-1zM22,30h1v1h-1zM23,30h1v1h-1zM25,30h1v1h-1zM28,30h1v1h-1zM30,30h1v1h-1zM31,30h1v1h-1zM34,30h1v1h-1zM36,30h1v1h-1zM39,30h1v1h-1zM40,30h1v1h-1zM4,31h1v1h-1zM6,31h1v1h-1zM8,31h1v1h-1zM11,31h1v1h-1zM12,31h1v1h-1zM13,31h1v1h-1zM14,31h1v1h-1zM16,31h1v1h-1zM17,31h1v1h-1zM19,31h1v1h-1zM23,31h1v1h-1zM24,31h1v1h-1zM25,31h1v1h-1zM26,31h1v1h-1zM27,31h1v1h-1zM28,31h1v1h-1zM30,31h1v1h-1zM32,31h1v1h-1zM33,31h1v1h-1zM35,31h1v1h-1zM4,32h1v1h-1zM7,32h1v1h-1zM8,32h1v1h-1zM10,32h1v1h-1zM11,32h1v1h-1zM12,32h1v1h-1zM18,32h1v1h-1zM19,32h1v1h-1zM21,32h1v1h-1zM23,32h1v1h-1zM24,32h1v1h-1zM26,32h1v1h-1zM28,32h1v1h-1zM29,32h1v1h-1zM31,32h1v1h-1zM32,32h1v1h-1zM33,32h1v1h-1zM34,32h1v1h-1zM35,32h1v1h-1zM36,32h1v1h-1zM37,32h1v1h-1zM38,32h1v1h-1zM40,32h1v1h-1zM12,33h1v1h-1zM14,33h1v1h-1zM20,33h1v1h-1zM22,33h1v1h-1zM23,33h1v1h-1zM24,33h1v1h-1zM25,33h1v1h-1zM27,33h1v1h-1zM31,33h1v1h-1zM32,33h1v1h-1zM36,33h1v1h-1zM37,33h1v1h-1zM4,34h1v1h-1zM5,34h1v1h-1zM6,34h1v1h-1zM7,34h1v1h-1zM8,34h1v1h-1zM9,34h1v1h-1zM10,34h1v1h-1zM13,34h1v1h-1zM17,34h1v1h-1zM19,34h1v1h-1zM20,34h1v1h-1zM22,34h1v1h-1zM25,34h1v1h-1zM30,34h1v1h-1zM32,34h1v1h-1zM34,34h1v1h-1zM36,34h1v1h-1zM38,34h1v1h-1zM39,34h1v1h-1zM40,34h1v1h-1zM4,35h1v1h-1zM10,35h1v1h-1zM12,35h1v1h-1zM13,35h1v1h-1zM15,35h1v1h-1zM23,35h1v1h-1zM25,35h1v1h-1zM27,35h1v1h-1zM28,35h1v1h-1zM32,35h1v1h-1zM36,35h1v1h-1zM37,35h1v1h-1zM39,35h1v1h-1zM4,36h1v1h-1zM6,36h1v1h-1zM7,36h1v1h-1zM8,36h1v1h-1zM10,36h1v1h-1zM12,36h1v1h-1zM13,36h1v1h-1zM14,36h1v1h-1zM15,36h1v1h-1zM16,36h1v1h-1zM17,36h1v1h-1zM19,36h1v1h-1zM22,36h1v1h-1zM29,36h1v1h-1zM30,36h1v1h-1zM31,36h1v1h-1zM32,36h1v1h-1zM33,36h1v1h-1zM34,36h1v1h-1zM35,36h1v1h-1zM36,36h1v1h-1zM38,36h1v1h-1zM40,36h1v1h-1zM4,37h1v1h-1zM6,37h1v1h-1zM7,37h1v1h-1zM8,37h1v1h-1zM10,37h1v1h-1zM12,37h1v1h-1zM14,37h1v1h-1zM17,37h1v1h-1zM18,37h1v1h-1zM19,37h1v1h-1zM20,37h1v1h-1zM26,37h1v1h-1zM27,37h1v1h-1zM29,37h1v1h-1zM33,37h1v1h-1zM34,37h1v1h-1zM36,37h1v1h-1zM38,37h1v1h-1zM40,37h1v1h-1zM4,38h1v1h-1zM6,38h1v1h-1zM7,38h1v1h-1zM8,38h1v1h-1zM10,38h1v1h-1zM12,38h1v1h-1zM14,38h1v1h-1zM15,38h1v1h-1zM17,38h1v1h-1zM22,38h1v1h-1zM24,38h1v1h-1zM25,38h1v1h-1zM26,38h1v1h-1zM29,38h1v1h-1zM30,38h1v1h-1zM31,38h1v1h-1zM32,38h1v1h-1zM38,38h1v1h-1zM39,38h1v1h-1zM40,38h1v1h-1zM4,39h1v1h-1zM10,39h1v1h-1zM14,39h1v1h-1zM15,39h1v1h-1zM17,39h1v1h-1zM18,39h1v1h-1zM20,39h1v1h-1zM25,39h1v1h-1zM28,39h1v1h-1zM31,39h1v1h-1zM32,39h1v1h-1zM33,39h1v1h-1zM36,39h1v1h-1zM40,39h1v1h-1zM4,40h1v1h-1zM5,40h1v1h-1zM6,40h1v1h-1zM7,40h1v1h-1zM8,40h1v1h-1zM9,40h1v1h-1zM10,40h1v1h-1zM12,40h1v1h-1zM14,40h1v1h-1zM17,40h1v1h-1zM20,40h1v1h-1zM21,40h1v1h-1zM23,40h1v1h-1zM26,40h1v1h-1zM28,40h1v1h-1zM29,40h1v1h-1zM30,40h1v1h-1zM33,40h1v1h-1zM34,40h1v1h-1zM36,40h1v1h-1zM37,40h1v1h-1zM38,40h1v1h-1zM39,40h1v1h-1zM40,40h1v1h-1z" fill="#6b2d5c"/></svg></div></aside>
+</section>
+<section class="page" aria-labelledby="untranslatables">
+<h2 id="untranslatables">Words English doesn’t have</h2>
+<p>Some feelings take English a whole sentence. Liraasa gives them a word, and each word is two older words joined, so you can see how the meaning was made.</p>
+<ul class="cards"><li class="card"><span class="card-word"><span class="liraasa" lang="x-liraasa">loterotelne</span></span>
+<span class="card-parts"><span class="liraasa" lang="x-liraasa">lotero</span> other + <span class="liraasa" lang="x-liraasa">telne</span> story</span>
+<span class="card-meaning">the realization that every stranger lives a story as deep as your own</span></li>
+<li class="card"><span class="card-word"><span class="liraasa" lang="x-liraasa">lorenerpo</span></span>
+<span class="card-parts"><span class="liraasa" lang="x-liraasa">lore</span> heart + <span class="liraasa" lang="x-liraasa">nerpo</span> expectation</span>
+<span class="card-meaning">the sense that one is about to fall in love</span></li>
+<li class="card"><span class="card-word"><span class="liraasa" lang="x-liraasa">balbuvani</span></span>
+<span class="card-parts"><span class="liraasa" lang="x-liraasa">balbu</span> break + <span class="liraasa" lang="x-liraasa">vani</span> beauty</span>
+<span class="card-meaning">the beauty of broken and imperfect things</span></li>
+<li class="card"><span class="card-word"><span class="liraasa" lang="x-liraasa">aurumimeyi</span></span>
+<span class="card-parts"><span class="liraasa" lang="x-liraasa">aurumi</span> yellow + <span class="liraasa" lang="x-liraasa">meyi</span> mend</span>
+<span class="card-meaning">mending with gold; a wound made beautiful</span></li>
+<li class="card"><span class="card-word"><span class="liraasa" lang="x-liraasa">lasomambi</span></span>
+<span class="card-parts"><span class="liraasa" lang="x-liraasa">laso</span> peaceful quiet + <span class="liraasa" lang="x-liraasa">mambi</span> moment</span>
+<span class="card-meaning">a meaningful pause; the space between notes</span></li>
+<li class="card"><span class="card-word"><span class="liraasa" lang="x-liraasa">nemeamor</span></span>
+<span class="card-parts"><span class="liraasa" lang="x-liraasa">neme</span> sorrow + <span class="liraasa" lang="x-liraasa">amor</span> love</span>
+<span class="card-meaning">grief remade as love</span></li>
+<li class="card"><span class="card-word"><span class="liraasa" lang="x-liraasa">vanineme</span></span>
+<span class="card-parts"><span class="liraasa" lang="x-liraasa">vani</span> beauty + <span class="liraasa" lang="x-liraasa">neme</span> sorrow</span>
+<span class="card-meaning">the sorrow of beautiful things passing</span></li>
+<li class="card"><span class="card-word"><span class="liraasa" lang="x-liraasa">momvilavi</span></span>
+<span class="card-parts"><span class="liraasa" lang="x-liraasa">momvi</span> loss + <span class="liraasa" lang="x-liraasa">lavi</span> joy</span>
+<span class="card-meaning">joy after loss</span></li>
+<li class="card"><span class="card-word"><span class="liraasa" lang="x-liraasa">sabesuru</span></span>
+<span class="card-parts"><span class="liraasa" lang="x-liraasa">sabe</span> knowing + <span class="liraasa" lang="x-liraasa">suru</span> feeling</span>
+<span class="card-meaning">feeling understood</span></li>
+<li class="card"><span class="card-word"><span class="liraasa" lang="x-liraasa">melolavi</span></span>
+<span class="card-parts"><span class="liraasa" lang="x-liraasa">melo</span> music + <span class="liraasa" lang="x-liraasa">lavi</span> joy</span>
+<span class="card-meaning">ecstasy brought on by music</span></li></ul>
+</section>
+<section class="page" aria-labelledby="sound">
+<h2 id="sound">How it sounds</h2>
+<p>Liraasa is spelled exactly as it is sung. Nothing is silent, and nothing changes its sound from one word to the next.</p>
+<ul class="sound-list">
+<li><strong>Five pure vowels</strong>, <em>a e i o u</em>, as in Italian or Spanish. Every vowel is its own syllable: <span class="liraasa" lang="x-liraasa">daigo</span> is da-i-go, three syllables.</li>
+<li><strong>Three letters to watch.</strong> <em>c</em> is always “ch”: <span class="liraasa" lang="x-liraasa">cilni</span>, city, is “chil-ni”. <em>r</em> is a single tap of the tongue, as in Spanish <em>pero</em>. <em>g</em> is always hard, as in “go”: <span class="liraasa" lang="x-liraasa">gase</span>.</li>
+<li><strong>The weight falls on the second-to-last syllable</strong>: LI-ra, lu-no-LU-mi, ma-I-vo.</li>
+</ul>
+<figure class="beats"><p class="beats-head"><span class="liraasa" lang="x-liraasa">Kube taivo relnura</span> <span class="gloss">When you return: one way to set it</span></p><div class="table-wrap"><table><tbody><tr><td class="strong wstart"><span class="beat" aria-hidden="true">●</span><span class="syl">ku</span></td><td class="weak"><span class="beat" aria-hidden="true">·</span><span class="syl">be</span></td><td class="weak wstart"><span class="beat" aria-hidden="true">·</span><span class="syl">ta</span></td><td class="strong"><span class="beat" aria-hidden="true">●</span><span class="syl">i</span></td><td class="weak"><span class="beat" aria-hidden="true">·</span><span class="syl">vo</span></td><td class="weak wstart"><span class="beat" aria-hidden="true">·</span><span class="syl">rel</span></td><td class="strong"><span class="beat" aria-hidden="true">●</span><span class="syl">nu</span></td><td class="weak"><span class="beat" aria-hidden="true">·</span><span class="syl">ra</span></td></tr></tbody></table></div>
+<figcaption>The big dots are the strong beats: <span class="beat-text">KU be ta I vo rel NU ra</span>. They fall on every third syllable, so the line moves in three, like a waltz.</figcaption></figure>
+<p>Every word falls from its strong syllable to a light last one, and the small words are light all through. Put the strong syllables on the strong beats and the line sings itself.</p>
+<aside class="singing"><p class="listen-head">A singer’s freedom</p>
+<p>In song, neighbouring vowels may share one note. <span class="liraasa" lang="x-liraasa">daigo</span> can be sung da-i-go or dai-go; <span class="liraasa" lang="x-liraasa">navuasa</span>, the firmament, na-vu-a-sa or na-vua-sa. The spelling never changes. The melody chooses.</p></aside>
+</section>
+<section class="page" aria-labelledby="hello">
+<h2 id="hello">Saying hello</h2>
+<ul class="first-words-list"><li><span class="liraasa" lang="x-liraasa">yeko</span> <span class="gloss">hello</span></li><li><span class="liraasa" lang="x-liraasa">voge</span> <span class="gloss">goodbye / parting</span></li><li><span class="liraasa" lang="x-liraasa">zabo</span> <span class="gloss">yes / affirmative</span></li><li><span class="liraasa" lang="x-liraasa">kepi</span> <span class="gloss">no</span></li><li><span class="liraasa" lang="x-liraasa">fisa</span> <span class="gloss">please</span></li><li><span class="liraasa" lang="x-liraasa">yade</span> <span class="gloss">sorry / pardon</span></li><li><span class="liraasa" lang="x-liraasa">lorejuba</span> <span class="gloss">thank you</span></li></ul>
+<p>And a first conversation. Under each word is its meaning; the pages that follow show how the words are built.</p>
+<div class="exchange"><div class="turn"><span class="who" aria-label="Speaker A">A</span><figure class="sentence"><p class="v-g"><span class="w"><span class="liraasa" lang="x-liraasa">Yeko,</span><span class="g">hello</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">sora!</span><span class="g">friend</span></span></p>
+<figcaption><span class="s-e">Hello, friend!</span></figcaption></figure></div>
+<div class="turn"><span class="who" aria-label="Speaker B">B</span><figure class="sentence"><p class="v-g"><span class="w"><span class="liraasa" lang="x-liraasa">Yeko!</span><span class="g">hello</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">Taivo</span><span class="g">you</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">lirala</span><span class="g">sing</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">ki?</span><span class="g">(question)</span></span></p>
+<figcaption><span class="s-e">Hello! Do you sing?</span></figcaption></figure></div>
+<div class="turn"><span class="who" aria-label="Speaker A">A</span><figure class="sentence"><p class="v-g"><span class="w"><span class="liraasa" lang="x-liraasa">Zabo.</span><span class="g">yes</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">Maivo</span><span class="g">I</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">lirala</span><span class="g">sing</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">muya-krono.</span><span class="g">often</span></span></p>
+<figcaption><span class="s-e">Yes. I sing often.</span></figcaption></figure></div>
+<div class="turn"><span class="who" aria-label="Speaker B">B</span><figure class="sentence"><p class="v-g"><span class="w"><span class="liraasa" lang="x-liraasa">Fisa,</span><span class="g">please</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">lirala!</span><span class="g">sing</span></span></p>
+<figcaption><span class="s-e">Please sing!</span></figcaption></figure></div>
+<p class="stage">A sings.</p><div class="turn"><span class="who" aria-label="Speaker B">B</span><figure class="sentence"><p class="v-g"><span class="w"><span class="liraasa" lang="x-liraasa">Lorejuba</span><span class="g">thank you</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">ala</span><span class="g">to</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">taivo.</span><span class="g">you</span></span></p>
+<figcaption><span class="s-e">Thank you, from the heart.</span></figcaption></figure></div>
+<div class="turn"><span class="who" aria-label="Speaker A">A</span><figure class="sentence"><p class="v-g"><span class="w"><span class="liraasa" lang="x-liraasa">Voge,</span><span class="g">goodbye</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">sora.</span><span class="g">friend</span></span></p>
+<figcaption><span class="s-e">Goodbye, friend.</span></figcaption></figure></div></div>
+</section>
+<section class="page" aria-labelledby="seven">
+<h2 id="seven">One root, seven words</h2>
+<figure class="sentence"><p class="v-g"><span class="w"><span class="liraasa" lang="x-liraasa">Li</span><span class="g">the</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">daigo</span><span class="g">death</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">ka</span><span class="g">is (always)</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">baba</span><span class="g">a</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">dorbi,</span><span class="g">door</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">ata</span><span class="g">and</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">maivo</span><span class="g">I</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">sulnosia</span><span class="g">wait</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">taivo</span><span class="g">you</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">en</span><span class="g">in</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">li</span><span class="g">the</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">lumiasa.</span><span class="g">light-ASC</span></span></p>
+<figcaption><span class="s-e">Death is a door, and I wait for you in the Divine Light.</span> <span class="s-src">The Lament, line 11</span><span class="s-n">Death is a door, and so is the word for it: <span class="liraasa" lang="x-liraasa">daigo</span> opens onto six more.</span></figcaption></figure>
+<p>Every root in Liraasa can take seven shapes. Here is <span class="liraasa" lang="x-liraasa">daigo</span>, death, in all of them:</p>
+<ul class="wheel"><li class="shape s-root"><span class="shape-label">the thing itself</span><span class="liraasa" lang="x-liraasa">daigo</span><span class="shape-gloss">death</span></li><li class="shape s-ascended"><span class="shape-label">raised to its highest <code class="morph">-asa</code></span><span class="liraasa" lang="x-liraasa">daigoasa</span><span class="shape-gloss">ultimate death, final death</span></li><li class="shape s-negative"><span class="shape-label">turned around <code class="morph">-na</code></span><span class="liraasa" lang="x-liraasa">daigona</span><span class="shape-gloss">resurrection</span></li><li class="shape s-verb"><span class="shape-label">to do it</span><span class="liraasa" lang="x-liraasa">daigoda</span><span class="shape-gloss">to die</span></li><li class="shape s-adjective"><span class="shape-label">describing <code class="morph">-san</code></span><span class="liraasa" lang="x-liraasa">daigosan</span><span class="shape-gloss">mortal</span></li><li class="shape s-ascendedAdjective"><span class="shape-label">describing, raised <code class="morph">-asasan</code></span><span class="liraasa" lang="x-liraasa">daigoasasan</span><span class="shape-gloss">of the final death</span></li><li class="shape s-negativeAdjective"><span class="shape-label">describing, turned <code class="morph">-nasan</code></span><span class="liraasa" lang="x-liraasa">daigonasan</span><span class="shape-gloss">death-ending, healing, life-giving; deathless; immortal</span></li></ul>
+<p>The shapes are made by rule, but each meaning is the language’s own: the highest degree of death is the final death, and death turned around is <span class="liraasa" lang="x-liraasa">daigona</span>, resurrection.</p>
+<p>Not every root fills every shape. A shape is a word only when the language has given it a meaning: <span class="liraasa" lang="x-liraasa">garvu</span>, lion, has no verb, and <span class="liraasa unused" lang="x-liraasa">garvuga</span> stays empty.</p>
+<h3>A word, not a “not”</h3>
+<p><span class="liraasa" lang="x-liraasa">daigona</span> is a word of its own, resurrection, not “no death”. To say <em>not</em>, Liraasa uses a separate small word, <span class="liraasa" lang="x-liraasa">ne</span>, set just before what it denies:</p>
+<figure class="sentence"><p class="v-g"><span class="w"><span class="liraasa" lang="x-liraasa">Li</span><span class="g">the</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">harmavurlo</span><span class="g">temptation</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">tivrota</span><span class="g">hold</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">taivo,</span><span class="g">you</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">ata</span><span class="g">and</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">li</span><span class="g">the</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">kronorivla</span><span class="g">flow of time</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">ne</span><span class="g">not</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">teklata.</span><span class="g">stop</span></span></p>
+<figcaption><span class="s-e">Temptation holds you, and the flow of time does not stop.</span> <span class="s-src">The Lament, line 6</span></figcaption></figure>
+</section>
+<section class="page" aria-labelledby="compounds">
+<h2 id="compounds">Words from words</h2>
+<p>Two words make a third. The second word is what the thing <em>is</em>; the first tells you what kind.</p>
+<p class="equation"><span class="liraasa" lang="x-liraasa">luno</span> <span class="gloss">moon</span> + <span class="liraasa" lang="x-liraasa">lumi</span> <span class="gloss">light</span> = <span class="liraasa" lang="x-liraasa">lunolumi</span> <span class="gloss">moonlight</span></p>
+<p>The Lament is full of them:</p>
+<ul class="equations"><li><span class="liraasa" lang="x-liraasa">sulba</span> <span class="gloss">sun</span> + <span class="liraasa" lang="x-liraasa">nevra</span> <span class="gloss">descent</span> = <span class="liraasa" lang="x-liraasa">sulbanevra</span> <span class="gloss">sunset</span></li><li><span class="liraasa" lang="x-liraasa">krono</span> <span class="gloss">time</span> + <span class="liraasa" lang="x-liraasa">rivla</span> <span class="gloss">flow</span> = <span class="liraasa" lang="x-liraasa">kronorivla</span> <span class="gloss">the flow of time</span></li><li><span class="liraasa" lang="x-liraasa">velu</span> <span class="gloss">star</span> + <span class="liraasa" lang="x-liraasa">melo</span> <span class="gloss">music</span> = <span class="liraasa" lang="x-liraasa">velumelo</span> <span class="gloss">the music of the spheres</span></li><li><span class="liraasa" lang="x-liraasa">ramu</span> <span class="gloss">memory</span> + <span class="liraasa" lang="x-liraasa">vorba</span> <span class="gloss">longing</span> = <span class="liraasa" lang="x-liraasa">ramuvorba</span> <span class="gloss">longing for what is gone</span></li><li><span class="liraasa" lang="x-liraasa">velu</span> <span class="gloss">star</span> + <span class="liraasa" lang="x-liraasa">solo</span> <span class="gloss">stone</span> = <span class="liraasa" lang="x-liraasa">velusolo</span> <span class="gloss">meteorite; a fallen star-stone</span></li></ul>
+<p>A word made this way can be used again. <span class="liraasa" lang="x-liraasa">mavolumi</span>, soul, is <span class="liraasa" lang="x-liraasa">mavo</span> mind + <span class="liraasa" lang="x-liraasa">lumi</span> light: the light of the mind. Add <span class="liraasa" lang="x-liraasa">tilma</span>, relation, and you have <span class="liraasa" lang="x-liraasa">mavolumitilma</span>, a soulbond.</p>
+</section>
+<section class="page" aria-labelledby="engine">
+<h2 id="engine">The image engine</h2>
+<p>Some words join so often that Liraasa lets them pair freely. Take any of 57 words for a colour, a season or a feeling, and any of 31 words for a thing: every pair is a word, 1,767 in all, and you can read its meaning straight off its parts.</p>
+<p>The first word lends its colour; the second is the thing. So <span class="liraasa" lang="x-liraasa">lunosavali</span>, moon + kiss, is the moonlit kiss of the Lament, and here are a few more:</p>
+<ul class="engine"><li><span class="liraasa" lang="x-liraasa">veluvulra</span> <span class="ie-parts">starlit + wound</span><span class="ie-reading">starlit wound; a wound that remembers distant stars</span></li><li><span class="liraasa" lang="x-liraasa">nevlosavali</span> <span class="ie-parts">snow-softened + kiss</span><span class="ie-reading">snow-softened kiss; an intimate kiss recalling falling snow</span></li><li><span class="liraasa" lang="x-liraasa">veluvilne</span> <span class="ie-parts">starlit + eye</span><span class="ie-reading">starlit eyes; eyes brightened or clouded by distant stars</span></li><li><span class="liraasa" lang="x-liraasa">sevuhavli</span> <span class="ie-parts">sea-borne + breath</span><span class="ie-reading">sea-borne breath; a breath filled with the sea</span></li><li><span class="liraasa" lang="x-liraasa">norunulu</span> <span class="ie-parts">dream-born + path</span><span class="ie-reading">dream-born path; a trail shaped by dreams</span></li><li><span class="liraasa" lang="x-liraasa">ramubelda</span> <span class="ie-parts">remembered + bell</span><span class="ie-reading">remembered bell; a bell stirred by memory</span></li><li><span class="liraasa" lang="x-liraasa">vesnolira</span> <span class="ie-parts">twilight-soft + song</span><span class="ie-reading">twilight-soft song; a melody given the color of evening</span></li><li><span class="liraasa" lang="x-liraasa">lumimanli</span> <span class="ie-parts">luminous + hand</span><span class="ie-reading">luminous hand; hands marked by light</span></li></ul>
+<aside class="tryit" aria-labelledby="try1"><h3 id="try1">Try it</h3>
+<p>Join each pair into one word, and say what it means.</p>
+<ol><li><span class="liraasa" lang="x-liraasa">merno</span> <span class="gloss">dawn-fresh</span> + <span class="liraasa" lang="x-liraasa">lira</span> <span class="gloss">song</span> = <span class="blank" aria-label="answer 1 at the foot of the box">?</span></li><li><span class="liraasa" lang="x-liraasa">noru</span> <span class="gloss">dream-born</span> + <span class="liraasa" lang="x-liraasa">havli</span> <span class="gloss">breath</span> = <span class="blank" aria-label="answer 2 at the foot of the box">?</span></li><li><span class="liraasa" lang="x-liraasa">nevlo</span> <span class="gloss">snow-softened</span> + <span class="liraasa" lang="x-liraasa">belda</span> <span class="gloss">bell</span> = <span class="blank" aria-label="answer 3 at the foot of the box">?</span></li></ol>
+<p class="answers"><span class="visually-hidden">Answers: </span><span class="flip">1. <span class="liraasa" lang="x-liraasa">mernolira</span>: dawn-fresh song; a melody given the color of morning · 2. <span class="liraasa" lang="x-liraasa">noruhavli</span>: dream-born breath; a breath filled with dreams · 3. <span class="liraasa" lang="x-liraasa">nevlobelda</span>: snow-softened bell; a bell stirred by falling snow</span></p></aside>
+</section>
+<section class="page" aria-labelledby="grammar-1">
+<h2 id="grammar-1">Just enough grammar to read a song</h2>
+<h3>The order is English order</h3>
+<p>Who, then what happens, then to what. The describing word comes first: <span class="liraasa" lang="x-liraasa">daigosan yuge</span>, a mortal body.</p>
+<figure class="sentence"><p class="v-g"><span class="w"><span class="liraasa" lang="x-liraasa">Taivo</span><span class="g">you</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">po</span><span class="g">(past)</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">yugeya</span><span class="g">embody</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">baba</span><span class="g">a</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">daigosan</span><span class="g">mortal</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">yuge,</span><span class="g">body</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">ata</span><span class="g">and</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">li</span><span class="g">the</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">veluri</span><span class="g">star-PL</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">po</span><span class="g">(past)</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">lasola.</span><span class="g">hush</span></span></p>
+<figcaption><span class="s-e">You took on a mortal body, and the stars fell silent.</span> <span class="s-src">The Lament, line 2</span></figcaption></figure>
+<h3>Two ways to say “is”</h3>
+<p><span class="liraasa" lang="x-liraasa">ka</span> is for what is so by nature; <span class="liraasa" lang="x-liraasa">ke</span> is for what is so for now. English needs a phrase for what Liraasa says in one small word.</p>
+<figure class="sentence"><p class="v-g"><span class="w"><span class="liraasa" lang="x-liraasa">Taivo</span><span class="g">you</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">de</span><span class="g">of</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">mavolumi</span><span class="g">soul</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">ka</span><span class="g">is (always)</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">velusan,</span><span class="g">starlit</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">nara</span><span class="g">but</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">taivo</span><span class="g">you</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">de</span><span class="g">of</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">yuge</span><span class="g">body</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">ke</span><span class="g">is (now)</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">vulrasan.</span><span class="g">wounded</span></span></p>
+<figcaption><span class="s-e">Your soul is starlit by nature, but your body is wounded for now.</span> <span class="s-src">The Lament, line 4</span><span class="s-n">The soul is starlit for ever (<span class="liraasa" lang="x-liraasa">ka</span>); the body is wounded for a while (<span class="liraasa" lang="x-liraasa">ke</span>).</span></figcaption></figure>
+<h3>“Not” goes first</h3>
+<p><span class="liraasa" lang="x-liraasa">ne</span> stands just before what it denies. Before <span class="liraasa" lang="x-liraasa">povi</span>, can, it makes <em>cannot</em>.</p>
+<figure class="sentence"><p class="v-g"><span class="w"><span class="liraasa" lang="x-liraasa">Kasa</span><span class="g">because</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">maivo</span><span class="g">I</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">ka</span><span class="g">is (always)</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">devi,</span><span class="g">goddess</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">maivo</span><span class="g">I</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">ne</span><span class="g">not</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">povi</span><span class="g">can</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">venreva</span><span class="g">come</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">ala</span><span class="g">to</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">taivo.</span><span class="g">you</span></span></p>
+<figcaption><span class="s-e">Because I am a goddess, I cannot come to you.</span> <span class="s-src">The Lament, line 10</span></figcaption></figure>
+<h3>A question ends in <span class="liraasa" lang="x-liraasa">ki</span></h3>
+<p>Say it as a statement, then add <span class="liraasa" lang="x-liraasa">ki</span>.</p>
+<figure class="sentence"><p class="v-g"><span class="w"><span class="liraasa" lang="x-liraasa">Taivo</span><span class="g">you</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">futu</span><span class="g">will</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">relnura</span><span class="g">return</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">ki?</span><span class="g">(question)</span></span></p>
+<figcaption><span class="s-e">Will you come back?</span></figcaption></figure>
+</section>
+<section class="page" aria-labelledby="grammar-2">
+<h2 id="grammar-2">Past, future, and “of”</h2>
+<h3>Past and future are small words</h3>
+<p>A verb never changes its ending for time. <span class="liraasa" lang="x-liraasa">po</span> before it means it happened; <span class="liraasa" lang="x-liraasa">futu</span> means it will. With neither, it is happening now.</p>
+<figure class="sentence"><p class="v-g"><span class="w"><span class="liraasa" lang="x-liraasa">Kube</span><span class="g">when</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">taivo</span><span class="g">you</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">relnura,</span><span class="g">return</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">maivo</span><span class="g">I</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">futu</span><span class="g">will</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">lomola</span><span class="g">embrace</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">taivo,</span><span class="g">you</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">ata</span><span class="g">and</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">li</span><span class="g">the</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">lektaasa</span><span class="g">gathering-ASC</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">futu</span><span class="g">will</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">venreva.</span><span class="g">come</span></span></p>
+<figcaption><span class="s-e">When you return, I will embrace you, and the great reunion of all souls will come.</span> <span class="s-src">The Lament, line 16</span><span class="s-n">The song begins with <span class="liraasa" lang="x-liraasa">po</span>, she <em>descended</em>, and ends with <span class="liraasa" lang="x-liraasa">futu</span> twice: I <em>will</em> embrace you, the reunion <em>will</em> come.</span></figcaption></figure>
+<h3>Whose is it?</h3>
+<p><span class="liraasa" lang="x-liraasa">de</span> means <em>of</em>. Usually the owner comes second, as in English “the bread of the city”. But when the first word is a person, <em>I</em>, <em>you</em> or someone’s name, that person is the owner.</p>
+<div class="table-wrap"><table class="owners"><thead><tr><th scope="col">Liraasa</th><th scope="col">English</th></tr></thead><tbody><tr><td><span class="liraasa" lang="x-liraasa">maivo de lira</span></td><td>my song</td></tr><tr><td><span class="liraasa" lang="x-liraasa">taivo de lira</span></td><td>your song</td></tr><tr><td><span class="liraasa" lang="x-liraasa">pilo de bumre</span></td><td>father’s bread</td></tr><tr><td><span class="liraasa" lang="x-liraasa">li bumre de li cilni</span></td><td>the bread of the city</td></tr></tbody></table></div>
+<p>That is how the Lament opens: <span class="liraasa" lang="x-liraasa">Maivo de amor</span>, my love.</p>
+<aside class="tryit" aria-labelledby="try2"><h3 id="try2">Try it</h3>
+<p>The Goddess says <span class="liraasa" lang="x-liraasa">maivo de amor</span>, my love. How does she say <em>your heart</em>? (Heart is <span class="liraasa" lang="x-liraasa">lore</span>.)</p>
+<p class="answers"><span class="visually-hidden">Answer: </span><span class="flip"><span class="liraasa" lang="x-liraasa">taivo de lore</span>, as in line 8 of the Lament</span></p></aside>
+</section>
+<section class="page" aria-labelledby="lyrics">
+<p class="page-eyebrow">The song</p><h2 id="lyrics"><span class="liraasa" lang="x-liraasa">Nemelira de devi</span></h2>
+<p class="lyric-sub">The Goddess's Lament</p>
+<div class="table-wrap"><table class="lyrics"><thead><tr><th scope="col"><span class="visually-hidden">Line</span></th><th scope="col">Liraasa</th><th scope="col">English</th></tr></thead><tbody><tr><td class="ly-n" aria-hidden="true">1</td><td class="ly-l"><span class="liraasa" lang="x-liraasa">Maivo de amor, taivo po nevrania da li navuasa ala li teru gase baba velusolo.</span></td><td class="ly-e">My love, you descended from the firmament to the earth like a falling star-stone.</td></tr>
+<tr><td class="ly-n" aria-hidden="true">2</td><td class="ly-l"><span class="liraasa" lang="x-liraasa">Taivo po yugeya baba daigosan yuge, ata li veluri po lasola.</span></td><td class="ly-e">You took on a mortal body, and the stars fell silent.</td></tr>
+<tr><td class="ly-n" aria-hidden="true">3</td><td class="ly-l"><span class="liraasa" lang="x-liraasa">Eli-krono taivo ke lemvosan en li cilniri de li nelari.</span></td><td class="ly-e">Now you are weary in the cities of humankind.</td></tr>
+<tr><td class="ly-n" aria-hidden="true">4</td><td class="ly-l"><span class="liraasa" lang="x-liraasa">Taivo de mavolumi ka velusan, nara taivo de yuge ke vulrasan.</span></td><td class="ly-e">Your soul is starlit by nature, but your body is wounded for now.</td></tr>
+<tr><td class="ly-n" aria-hidden="true">5</td><td class="ly-l"><span class="liraasa" lang="x-liraasa">Maivo vuda vimova taivo de timruri raho ralnora gase renli.</span></td><td class="ly-e">In dreams I see your tears, which fall like rain.</td></tr>
+<tr><td class="ly-n" aria-hidden="true">6</td><td class="ly-l"><span class="liraasa" lang="x-liraasa">Li harmavurlo tivrota taivo, ata li kronorivla ne teklata.</span></td><td class="ly-e">Temptation holds you, and the flow of time does not stop.</td></tr>
+<tr><td class="ly-n" aria-hidden="true">7</td><td class="ly-l"><span class="liraasa" lang="x-liraasa">Taivo lemula li lorenuravu de li nelari ata li vemineme.</span></td><td class="ly-e">You learn the anguish of humankind and the sorrow of the world.</td></tr>
+<tr><td class="ly-n" aria-hidden="true">8</td><td class="ly-l"><span class="liraasa" lang="x-liraasa">Taivo de manliri yanbaya, ata taivo de lore ke lemvosan.</span></td><td class="ly-e">Your hands grow old, and your heart is weary.</td></tr>
+<tr><td class="ly-n" aria-hidden="true">9</td><td class="ly-l"><span class="liraasa" lang="x-liraasa">Maivo lavbula vobi taivo hupi li sulbanevra, nara maivo de valla ke lasosan.</span></td><td class="ly-e">I pray for you above the sunset, but my voice is silent.</td></tr>
+<tr><td class="ly-n" aria-hidden="true">10</td><td class="ly-l"><span class="liraasa" lang="x-liraasa">Kasa maivo ka devi, maivo ne povi venreva ala taivo.</span></td><td class="ly-e">Because I am a goddess, I cannot come to you.</td></tr>
+<tr><td class="ly-n" aria-hidden="true">11</td><td class="ly-l"><span class="liraasa" lang="x-liraasa">Li daigo ka baba dorbi, ata maivo sulnosia taivo en li lumiasa.</span></td><td class="ly-e">Death is a door, and I wait for you in the Divine Light.</td></tr>
+<tr><td class="ly-n" aria-hidden="true">12</td><td class="ly-l"><span class="liraasa" lang="x-liraasa">Maivo de lunosavali loki ke su taivo de rezari.</span></td><td class="ly-e">My moonlit kiss still rests upon your lips.</td></tr>
+<tr><td class="ly-n" aria-hidden="true">13</td><td class="ly-l"><span class="liraasa" lang="x-liraasa">Li velumelo loki lirala taivo de nole ultra li navu.</span></td><td class="ly-e">The music of the spheres still sings your name beyond the sky.</td></tr>
+<tr><td class="ly-n" aria-hidden="true">14</td><td class="ly-l"><span class="liraasa" lang="x-liraasa">Maivo de ramuvorba ka gase dendusan gase li vamrisevu.</span></td><td class="ly-e">My longing for what is gone is as deep as the dark between the stars.</td></tr>
+<tr><td class="ly-n" aria-hidden="true">15</td><td class="ly-l"><span class="liraasa" lang="x-liraasa">Taivo kersoka en li narvo gase baba nolsakerso su li lamsa.</span></td><td class="ly-e">You grow in the darkness like new shoots upon the ashes.</td></tr>
+<tr><td class="ly-n" aria-hidden="true">16</td><td class="ly-l"><span class="liraasa" lang="x-liraasa">Kube taivo relnura, maivo futu lomola taivo, ata li lektaasa futu venreva.</span></td><td class="ly-e">When you return, I will embrace you, and the great reunion of all souls will come.</td></tr></tbody></table></div>
+<p>Sing it through once. The pages that follow take it word by word.</p>
+</section>
+<section class="page" aria-labelledby="lament">
+<p class="page-eyebrow">The centrepiece</p><h2 id="lament"><span class="liraasa" lang="x-liraasa">Nemelira de devi</span>, word by word</h2>
+<p><em>The Goddess's Lament</em> again, now with its meaning under every word. ASC marks a word raised to its highest, PL more than one.</p>
+<ol class="song"><li class="verse"><span class="v-num" aria-hidden="true">1</span><p class="v-g"><span class="w"><span class="liraasa" lang="x-liraasa">Maivo</span><span class="g">I</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">de</span><span class="g">of</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">amor,</span><span class="g">love</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">taivo</span><span class="g">you</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">po</span><span class="g">(past)</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">nevrania</span><span class="g">descend</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">da</span><span class="g">from</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">li</span><span class="g">the</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">navuasa</span><span class="g">sky-ASC</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">ala</span><span class="g">to</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">li</span><span class="g">the</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">teru</span><span class="g">earth</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">gase</span><span class="g">as</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">baba</span><span class="g">a</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">velusolo.</span><span class="g">meteorite</span></span></p><p class="v-e">My love, you descended from the firmament to the earth like a falling star-stone.</p><p class="v-n"><span class="liraasa" lang="x-liraasa">Maivo de amor</span>, my love: the Goddess is speaking. <span class="liraasa" lang="x-liraasa">navuasa</span> is <span class="liraasa" lang="x-liraasa">navu</span>, sky, raised to its highest: the firmament. <span class="liraasa" lang="x-liraasa">gase baba</span> …, like a …, makes a simile.</p></li>
+<li class="verse"><span class="v-num" aria-hidden="true">2</span><p class="v-g"><span class="w"><span class="liraasa" lang="x-liraasa">Taivo</span><span class="g">you</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">po</span><span class="g">(past)</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">yugeya</span><span class="g">embody</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">baba</span><span class="g">a</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">daigosan</span><span class="g">mortal</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">yuge,</span><span class="g">body</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">ata</span><span class="g">and</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">li</span><span class="g">the</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">veluri</span><span class="g">star-PL</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">po</span><span class="g">(past)</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">lasola.</span><span class="g">hush</span></span></p><p class="v-e">You took on a mortal body, and the stars fell silent.</p><p class="v-n">A mortal body: the describing word comes first.</p></li>
+<li class="verse"><span class="v-num" aria-hidden="true">3</span><p class="v-g"><span class="w"><span class="liraasa" lang="x-liraasa">Eli-krono</span><span class="g">now</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">taivo</span><span class="g">you</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">ke</span><span class="g">is (now)</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">lemvosan</span><span class="g">tired</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">en</span><span class="g">in</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">li</span><span class="g">the</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">cilniri</span><span class="g">city-PL</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">de</span><span class="g">of</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">li</span><span class="g">the</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">nelari.</span><span class="g">person-PL</span></span></p><p class="v-e">Now you are weary in the cities of humankind.</p><p class="v-n"><code class="morph">-ri</code> makes more than one: <span class="liraasa" lang="x-liraasa">cilni</span>, city, <span class="liraasa" lang="x-liraasa">cilniri</span>, cities; <span class="liraasa" lang="x-liraasa">nela</span>, person, <span class="liraasa" lang="x-liraasa">nelari</span>, people.</p></li>
+<li class="verse"><span class="v-num" aria-hidden="true">4</span><p class="v-g"><span class="w"><span class="liraasa" lang="x-liraasa">Taivo</span><span class="g">you</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">de</span><span class="g">of</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">mavolumi</span><span class="g">soul</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">ka</span><span class="g">is (always)</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">velusan,</span><span class="g">starlit</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">nara</span><span class="g">but</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">taivo</span><span class="g">you</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">de</span><span class="g">of</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">yuge</span><span class="g">body</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">ke</span><span class="g">is (now)</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">vulrasan.</span><span class="g">wounded</span></span></p><p class="v-e">Your soul is starlit by nature, but your body is wounded for now.</p><p class="v-n"><span class="liraasa" lang="x-liraasa">ka</span> by nature, <span class="liraasa" lang="x-liraasa">ke</span> for now.</p></li>
+<li class="verse"><span class="v-num" aria-hidden="true">5</span><p class="v-g"><span class="w"><span class="liraasa" lang="x-liraasa">Maivo</span><span class="g">I</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">vuda</span><span class="g">in a dream</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">vimova</span><span class="g">see</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">taivo</span><span class="g">you</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">de</span><span class="g">of</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">timruri</span><span class="g">tear-PL</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">raho</span><span class="g">which</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">ralnora</span><span class="g">fall</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">gase</span><span class="g">as</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">renli.</span><span class="g">rain</span></span></p><p class="v-e">In dreams I see your tears, which fall like rain.</p><p class="v-n"><span class="liraasa" lang="x-liraasa">vuda</span> tells you how the singer knows: she sees this in a dream. <span class="liraasa" lang="x-liraasa">raho</span>, which, begins a description of the tears.</p></li>
+<li class="verse"><span class="v-num" aria-hidden="true">6</span><p class="v-g"><span class="w"><span class="liraasa" lang="x-liraasa">Li</span><span class="g">the</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">harmavurlo</span><span class="g">temptation</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">tivrota</span><span class="g">hold</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">taivo,</span><span class="g">you</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">ata</span><span class="g">and</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">li</span><span class="g">the</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">kronorivla</span><span class="g">flow of time</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">ne</span><span class="g">not</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">teklata.</span><span class="g">stop</span></span></p><p class="v-e">Temptation holds you, and the flow of time does not stop.</p><p class="v-n"><span class="liraasa" lang="x-liraasa">ne</span> comes right before what it denies.</p></li>
+<li class="verse"><span class="v-num" aria-hidden="true">7</span><p class="v-g"><span class="w"><span class="liraasa" lang="x-liraasa">Taivo</span><span class="g">you</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">lemula</span><span class="g">learn</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">li</span><span class="g">the</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">lorenuravu</span><span class="g">anguish</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">de</span><span class="g">of</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">li</span><span class="g">the</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">nelari</span><span class="g">person-PL</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">ata</span><span class="g">and</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">li</span><span class="g">the</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">vemineme.</span><span class="g">world-weariness</span></span></p><p class="v-e">You learn the anguish of humankind and the sorrow of the world.</p><p class="v-n"><span class="liraasa" lang="x-liraasa">lorenuravu</span>, heart + ache, is anguish; <span class="liraasa" lang="x-liraasa">vemineme</span>, world + sorrow, is world-weariness.</p></li>
+<li class="verse"><span class="v-num" aria-hidden="true">8</span><p class="v-g"><span class="w"><span class="liraasa" lang="x-liraasa">Taivo</span><span class="g">you</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">de</span><span class="g">of</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">manliri</span><span class="g">hand-PL</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">yanbaya,</span><span class="g">age</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">ata</span><span class="g">and</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">taivo</span><span class="g">you</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">de</span><span class="g">of</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">lore</span><span class="g">heart</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">ke</span><span class="g">is (now)</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">lemvosan.</span><span class="g">tired</span></span></p><p class="v-e">Your hands grow old, and your heart is weary.</p></li>
+<li class="verse"><span class="v-num" aria-hidden="true">9</span><p class="v-g"><span class="w"><span class="liraasa" lang="x-liraasa">Maivo</span><span class="g">I</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">lavbula</span><span class="g">pray</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">vobi</span><span class="g">for</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">taivo</span><span class="g">you</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">hupi</span><span class="g">above</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">li</span><span class="g">the</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">sulbanevra,</span><span class="g">sunset</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">nara</span><span class="g">but</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">maivo</span><span class="g">I</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">de</span><span class="g">of</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">valla</span><span class="g">voice</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">ke</span><span class="g">is (now)</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">lasosan.</span><span class="g">silent</span></span></p><p class="v-e">I pray for you above the sunset, but my voice is silent.</p><p class="v-n"><span class="liraasa" lang="x-liraasa">vobi</span>, for, and <span class="liraasa" lang="x-liraasa">hupi</span>, above, come before what they govern. <span class="liraasa" lang="x-liraasa">sulbanevra</span>, sun + going down, is sunset.</p></li>
+<li class="verse"><span class="v-num" aria-hidden="true">10</span><p class="v-g"><span class="w"><span class="liraasa" lang="x-liraasa">Kasa</span><span class="g">because</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">maivo</span><span class="g">I</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">ka</span><span class="g">is (always)</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">devi,</span><span class="g">goddess</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">maivo</span><span class="g">I</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">ne</span><span class="g">not</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">povi</span><span class="g">can</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">venreva</span><span class="g">come</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">ala</span><span class="g">to</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">taivo.</span><span class="g">you</span></span></p><p class="v-e">Because I am a goddess, I cannot come to you.</p><p class="v-n"><span class="liraasa" lang="x-liraasa">ne povi</span>: cannot.</p></li>
+<li class="verse"><span class="v-num" aria-hidden="true">11</span><p class="v-g"><span class="w"><span class="liraasa" lang="x-liraasa">Li</span><span class="g">the</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">daigo</span><span class="g">death</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">ka</span><span class="g">is (always)</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">baba</span><span class="g">a</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">dorbi,</span><span class="g">door</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">ata</span><span class="g">and</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">maivo</span><span class="g">I</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">sulnosia</span><span class="g">wait</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">taivo</span><span class="g">you</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">en</span><span class="g">in</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">li</span><span class="g">the</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">lumiasa.</span><span class="g">light-ASC</span></span></p><p class="v-e">Death is a door, and I wait for you in the Divine Light.</p><p class="v-n"><span class="liraasa" lang="x-liraasa">lumiasa</span>: Her Divine Light, the Goddess’s own light.</p></li>
+<li class="verse"><span class="v-num" aria-hidden="true">12</span><p class="v-g"><span class="w"><span class="liraasa" lang="x-liraasa">Maivo</span><span class="g">I</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">de</span><span class="g">of</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">lunosavali</span><span class="g">moonlit kiss</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">loki</span><span class="g">still</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">ke</span><span class="g">is (now)</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">su</span><span class="g">on</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">taivo</span><span class="g">you</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">de</span><span class="g">of</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">rezari.</span><span class="g">lip-PL</span></span></p><p class="v-e">My moonlit kiss still rests upon your lips.</p><p class="v-n"><span class="liraasa" lang="x-liraasa">lunosavali</span>: the moonlit kiss.</p></li>
+<li class="verse"><span class="v-num" aria-hidden="true">13</span><p class="v-g"><span class="w"><span class="liraasa" lang="x-liraasa">Li</span><span class="g">the</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">velumelo</span><span class="g">music of the spheres</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">loki</span><span class="g">still</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">lirala</span><span class="g">sing</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">taivo</span><span class="g">you</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">de</span><span class="g">of</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">nole</span><span class="g">name</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">ultra</span><span class="g">beyond</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">li</span><span class="g">the</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">navu.</span><span class="g">sky</span></span></p><p class="v-e">The music of the spheres still sings your name beyond the sky.</p><p class="v-n"><span class="liraasa" lang="x-liraasa">velumelo</span>: the music of the spheres.</p></li>
+<li class="verse"><span class="v-num" aria-hidden="true">14</span><p class="v-g"><span class="w"><span class="liraasa" lang="x-liraasa">Maivo</span><span class="g">I</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">de</span><span class="g">of</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">ramuvorba</span><span class="g">longing for what is gone</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">ka</span><span class="g">is (always)</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">gase</span><span class="g">as</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">dendusan</span><span class="g">deep</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">gase</span><span class="g">as</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">li</span><span class="g">the</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">vamrisevu.</span><span class="g">sea of space</span></span></p><p class="v-e">My longing for what is gone is as deep as the dark between the stars.</p><p class="v-n"><span class="liraasa" lang="x-liraasa">gase</span> … <span class="liraasa" lang="x-liraasa">gase</span> … is “as … as …”. <span class="liraasa" lang="x-liraasa">vamrisevu</span>, space + sea, is the dark between the stars.</p></li>
+<li class="verse"><span class="v-num" aria-hidden="true">15</span><p class="v-g"><span class="w"><span class="liraasa" lang="x-liraasa">Taivo</span><span class="g">you</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">kersoka</span><span class="g">grow</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">en</span><span class="g">in</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">li</span><span class="g">the</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">narvo</span><span class="g">darkness</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">gase</span><span class="g">as</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">baba</span><span class="g">a</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">nolsakerso</span><span class="g">new growth</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">su</span><span class="g">on</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">li</span><span class="g">the</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">lamsa.</span><span class="g">ash</span></span></p><p class="v-e">You grow in the darkness like new shoots upon the ashes.</p><p class="v-n"><span class="liraasa" lang="x-liraasa">kersoka</span>, to grow, is the verb of <span class="liraasa" lang="x-liraasa">kerso</span>, growth; <span class="liraasa" lang="x-liraasa">nolsakerso</span>, newness + growth, is new growth.</p></li>
+<li class="verse"><span class="v-num" aria-hidden="true">16</span><p class="v-g"><span class="w"><span class="liraasa" lang="x-liraasa">Kube</span><span class="g">when</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">taivo</span><span class="g">you</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">relnura,</span><span class="g">return</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">maivo</span><span class="g">I</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">futu</span><span class="g">will</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">lomola</span><span class="g">embrace</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">taivo,</span><span class="g">you</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">ata</span><span class="g">and</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">li</span><span class="g">the</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">lektaasa</span><span class="g">gathering-ASC</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">futu</span><span class="g">will</span></span> <span class="w"><span class="liraasa" lang="x-liraasa">venreva.</span><span class="g">come</span></span></p><p class="v-e">When you return, I will embrace you, and the great reunion of all souls will come.</p><p class="v-n"><span class="liraasa" lang="x-liraasa">futu</span> twice: the song ends in the future.</p></li></ol>
+</section>
+<section class="page" aria-labelledby="next">
+<h2 id="next">Where to go next</h2>
+<ul class="next">
+<li><strong>The Liraasa 2.0 Reference Grammar.</strong> Everything this booklet left out: every rule, how to say almost anything from English, the numbers and colours, and a treasury of words for songwriters. <a class="url" href="https://github.com/nicolasbulgarides/Liraasa/blob/codex-latest/Liraasa_Reference_Grammar.pdf">github.com/nicolasbulgarides/Liraasa/blob/codex-latest/Liraasa_Reference_Grammar.pdf</a></li>
+<li><div class="album"><div><p><strong>The album, <em>Liraasa: Songs of the First Stars</em>.</strong> Listen on Apple Music.</p><p><a class="url" href="https://music.apple.com/us/album/liraasa-songs-of-the-first-stars/6824147719">music.apple.com/us/album/liraasa-songs-of-the-first-stars/6824147719</a></p></div><svg class="qr" viewBox="0 0 45 45" role="img" aria-label="QR code: Liraasa: Songs of the First Stars on Apple Music" shape-rendering="crispEdges"><rect width="45" height="45" fill="#ffffff"/><path d="M4,4h1v1h-1zM5,4h1v1h-1zM6,4h1v1h-1zM7,4h1v1h-1zM8,4h1v1h-1zM9,4h1v1h-1zM10,4h1v1h-1zM15,4h1v1h-1zM17,4h1v1h-1zM18,4h1v1h-1zM20,4h1v1h-1zM21,4h1v1h-1zM25,4h1v1h-1zM27,4h1v1h-1zM28,4h1v1h-1zM30,4h1v1h-1zM32,4h1v1h-1zM34,4h1v1h-1zM35,4h1v1h-1zM36,4h1v1h-1zM37,4h1v1h-1zM38,4h1v1h-1zM39,4h1v1h-1zM40,4h1v1h-1zM4,5h1v1h-1zM10,5h1v1h-1zM14,5h1v1h-1zM16,5h1v1h-1zM17,5h1v1h-1zM19,5h1v1h-1zM20,5h1v1h-1zM24,5h1v1h-1zM25,5h1v1h-1zM26,5h1v1h-1zM28,5h1v1h-1zM31,5h1v1h-1zM32,5h1v1h-1zM34,5h1v1h-1zM40,5h1v1h-1zM4,6h1v1h-1zM6,6h1v1h-1zM7,6h1v1h-1zM8,6h1v1h-1zM10,6h1v1h-1zM12,6h1v1h-1zM16,6h1v1h-1zM19,6h1v1h-1zM20,6h1v1h-1zM22,6h1v1h-1zM25,6h1v1h-1zM26,6h1v1h-1zM28,6h1v1h-1zM34,6h1v1h-1zM36,6h1v1h-1zM37,6h1v1h-1zM38,6h1v1h-1zM40,6h1v1h-1zM4,7h1v1h-1zM6,7h1v1h-1zM7,7h1v1h-1zM8,7h1v1h-1zM10,7h1v1h-1zM12,7h1v1h-1zM14,7h1v1h-1zM17,7h1v1h-1zM19,7h1v1h-1zM21,7h1v1h-1zM26,7h1v1h-1zM29,7h1v1h-1zM30,7h1v1h-1zM31,7h1v1h-1zM32,7h1v1h-1zM34,7h1v1h-1zM36,7h1v1h-1zM37,7h1v1h-1zM38,7h1v1h-1zM40,7h1v1h-1zM4,8h1v1h-1zM6,8h1v1h-1zM7,8h1v1h-1zM8,8h1v1h-1zM10,8h1v1h-1zM12,8h1v1h-1zM14,8h1v1h-1zM15,8h1v1h-1zM17,8h1v1h-1zM18,8h1v1h-1zM19,8h1v1h-1zM21,8h1v1h-1zM22,8h1v1h-1zM23,8h1v1h-1zM24,8h1v1h-1zM26,8h1v1h-1zM27,8h1v1h-1zM30,8h1v1h-1zM32,8h1v1h-1zM34,8h1v1h-1zM36,8h1v1h-1zM37,8h1v1h-1zM38,8h1v1h-1zM40,8h1v1h-1zM4,9h1v1h-1zM10,9h1v1h-1zM12,9h1v1h-1zM13,9h1v1h-1zM17,9h1v1h-1zM19,9h1v1h-1zM21,9h1v1h-1zM24,9h1v1h-1zM30,9h1v1h-1zM31,9h1v1h-1zM32,9h1v1h-1zM34,9h1v1h-1zM40,9h1v1h-1zM4,10h1v1h-1zM5,10h1v1h-1zM6,10h1v1h-1zM7,10h1v1h-1zM8,10h1v1h-1zM9,10h1v1h-1zM10,10h1v1h-1zM12,10h1v1h-1zM14,10h1v1h-1zM16,10h1v1h-1zM18,10h1v1h-1zM20,10h1v1h-1zM22,10h1v1h-1zM24,10h1v1h-1zM26,10h1v1h-1zM28,10h1v1h-1zM30,10h1v1h-1zM32,10h1v1h-1zM34,10h1v1h-1zM35,10h1v1h-1zM36,10h1v1h-1zM37,10h1v1h-1zM38,10h1v1h-1zM39,10h1v1h-1zM40,10h1v1h-1zM12,11h1v1h-1zM14,11h1v1h-1zM15,11h1v1h-1zM18,11h1v1h-1zM21,11h1v1h-1zM22,11h1v1h-1zM23,11h1v1h-1zM24,11h1v1h-1zM27,11h1v1h-1zM31,11h1v1h-1zM4,12h1v1h-1zM6,12h1v1h-1zM7,12h1v1h-1zM8,12h1v1h-1zM9,12h1v1h-1zM10,12h1v1h-1zM14,12h1v1h-1zM15,12h1v1h-1zM19,12h1v1h-1zM20,12h1v1h-1zM23,12h1v1h-1zM27,12h1v1h-1zM29,12h1v1h-1zM31,12h1v1h-1zM32,12h1v1h-1zM34,12h1v1h-1zM35,12h1v1h-1zM36,12h1v1h-1zM37,12h1v1h-1zM38,12h1v1h-1zM4,13h1v1h-1zM5,13h1v1h-1zM6,13h1v1h-1zM7,13h1v1h-1zM11,13h1v1h-1zM12,13h1v1h-1zM17,13h1v1h-1zM19,13h1v1h-1zM21,13h1v1h-1zM22,13h1v1h-1zM24,13h1v1h-1zM25,13h1v1h-1zM28,13h1v1h-1zM32,13h1v1h-1zM35,13h1v1h-1zM39,13h1v1h-1zM4,14h1v1h-1zM5,14h1v1h-1zM6,14h1v1h-1zM9,14h1v1h-1zM10,14h1v1h-1zM16,14h1v1h-1zM17,14h1v1h-1zM18,14h1v1h-1zM19,14h1v1h-1zM20,14h1v1h-1zM22,14h1v1h-1zM23,14h1v1h-1zM31,14h1v1h-1zM33,14h1v1h-1zM38,14h1v1h-1zM39,14h1v1h-1zM40,14h1v1h-1zM5,15h1v1h-1zM6,15h1v1h-1zM7,15h1v1h-1zM11,15h1v1h-1zM13,15h1v1h-1zM15,15h1v1h-1zM17,15h1v1h-1zM18,15h1v1h-1zM19,15h1v1h-1zM23,15h1v1h-1zM24,15h1v1h-1zM25,15h1v1h-1zM26,15h1v1h-1zM27,15h1v1h-1zM33,15h1v1h-1zM34,15h1v1h-1zM35,15h1v1h-1zM40,15h1v1h-1zM6,16h1v1h-1zM7,16h1v1h-1zM10,16h1v1h-1zM12,16h1v1h-1zM14,16h1v1h-1zM16,16h1v1h-1zM19,16h1v1h-1zM20,16h1v1h-1zM21,16h1v1h-1zM23,16h1v1h-1zM27,16h1v1h-1zM28,16h1v1h-1zM29,16h1v1h-1zM30,16h1v1h-1zM31,16h1v1h-1zM33,16h1v1h-1zM34,16h1v1h-1zM36,16h1v1h-1zM38,16h1v1h-1zM39,16h1v1h-1zM40,16h1v1h-1zM4,17h1v1h-1zM5,17h1v1h-1zM6,17h1v1h-1zM8,17h1v1h-1zM9,17h1v1h-1zM12,17h1v1h-1zM13,17h1v1h-1zM14,17h1v1h-1zM18,17h1v1h-1zM20,17h1v1h-1zM23,17h1v1h-1zM27,17h1v1h-1zM28,17h1v1h-1zM29,17h1v1h-1zM32,17h1v1h-1zM33,17h1v1h-1zM35,17h1v1h-1zM4,18h1v1h-1zM6,18h1v1h-1zM8,18h1v1h-1zM9,18h1v1h-1zM10,18h1v1h-1zM12,18h1v1h-1zM13,18h1v1h-1zM17,18h1v1h-1zM18,18h1v1h-1zM19,18h1v1h-1zM20,18h1v1h-1zM22,18h1v1h-1zM24,18h1v1h-1zM30,18h1v1h-1zM31,18h1v1h-1zM35,18h1v1h-1zM36,18h1v1h-1zM37,18h1v1h-1zM39,18h1v1h-1zM40,18h1v1h-1zM4,19h1v1h-1zM7,19h1v1h-1zM8,19h1v1h-1zM12,19h1v1h-1zM13,19h1v1h-1zM14,19h1v1h-1zM15,19h1v1h-1zM17,19h1v1h-1zM18,19h1v1h-1zM19,19h1v1h-1zM20,19h1v1h-1zM24,19h1v1h-1zM25,19h1v1h-1zM30,19h1v1h-1zM32,19h1v1h-1zM34,19h1v1h-1zM35,19h1v1h-1zM36,19h1v1h-1zM4,20h1v1h-1zM7,20h1v1h-1zM8,20h1v1h-1zM9,20h1v1h-1zM10,20h1v1h-1zM12,20h1v1h-1zM13,20h1v1h-1zM14,20h1v1h-1zM16,20h1v1h-1zM22,20h1v1h-1zM23,20h1v1h-1zM24,20h1v1h-1zM26,20h1v1h-1zM27,20h1v1h-1zM28,20h1v1h-1zM29,20h1v1h-1zM30,20h1v1h-1zM32,20h1v1h-1zM33,20h1v1h-1zM34,20h1v1h-1zM35,20h1v1h-1zM36,20h1v1h-1zM38,20h1v1h-1zM39,20h1v1h-1zM4,21h1v1h-1zM5,21h1v1h-1zM6,21h1v1h-1zM9,21h1v1h-1zM12,21h1v1h-1zM14,21h1v1h-1zM15,21h1v1h-1zM16,21h1v1h-1zM17,21h1v1h-1zM19,21h1v1h-1zM20,21h1v1h-1zM27,21h1v1h-1zM28,21h1v1h-1zM29,21h1v1h-1zM30,21h1v1h-1zM32,21h1v1h-1zM35,21h1v1h-1zM37,21h1v1h-1zM39,21h1v1h-1zM5,22h1v1h-1zM9,22h1v1h-1zM10,22h1v1h-1zM13,22h1v1h-1zM14,22h1v1h-1zM17,22h1v1h-1zM21,22h1v1h-1zM22,22h1v1h-1zM24,22h1v1h-1zM26,22h1v1h-1zM30,22h1v1h-1zM31,22h1v1h-1zM32,22h1v1h-1zM33,22h1v1h-1zM34,22h1v1h-1zM35,22h1v1h-1zM38,22h1v1h-1zM39,22h1v1h-1zM40,22h1v1h-1zM5,23h1v1h-1zM6,23h1v1h-1zM8,23h1v1h-1zM9,23h1v1h-1zM11,23h1v1h-1zM12,23h1v1h-1zM14,23h1v1h-1zM15,23h1v1h-1zM18,23h1v1h-1zM20,23h1v1h-1zM22,23h1v1h-1zM25,23h1v1h-1zM26,23h1v1h-1zM27,23h1v1h-1zM28,23h1v1h-1zM31,23h1v1h-1zM33,23h1v1h-1zM34,23h1v1h-1zM35,23h1v1h-1zM36,23h1v1h-1zM37,23h1v1h-1zM40,23h1v1h-1zM4,24h1v1h-1zM6,24h1v1h-1zM8,24h1v1h-1zM10,24h1v1h-1zM15,24h1v1h-1zM21,24h1v1h-1zM26,24h1v1h-1zM28,24h1v1h-1zM29,24h1v1h-1zM30,24h1v1h-1zM33,24h1v1h-1zM34,24h1v1h-1zM36,24h1v1h-1zM37,24h1v1h-1zM38,24h1v1h-1zM4,25h1v1h-1zM5,25h1v1h-1zM9,25h1v1h-1zM13,25h1v1h-1zM16,25h1v1h-1zM17,25h1v1h-1zM18,25h1v1h-1zM21,25h1v1h-1zM22,25h1v1h-1zM23,25h1v1h-1zM24,25h1v1h-1zM25,25h1v1h-1zM27,25h1v1h-1zM33,25h1v1h-1zM37,25h1v1h-1zM4,26h1v1h-1zM5,26h1v1h-1zM10,26h1v1h-1zM12,26h1v1h-1zM15,26h1v1h-1zM17,26h1v1h-1zM18,26h1v1h-1zM19,26h1v1h-1zM20,26h1v1h-1zM21,26h1v1h-1zM24,26h1v1h-1zM26,26h1v1h-1zM29,26h1v1h-1zM31,26h1v1h-1zM32,26h1v1h-1zM33,26h1v1h-1zM34,26h1v1h-1zM35,26h1v1h-1zM36,26h1v1h-1zM37,26h1v1h-1zM39,26h1v1h-1zM40,26h1v1h-1zM4,27h1v1h-1zM5,27h1v1h-1zM7,27h1v1h-1zM8,27h1v1h-1zM12,27h1v1h-1zM13,27h1v1h-1zM15,27h1v1h-1zM18,27h1v1h-1zM19,27h1v1h-1zM21,27h1v1h-1zM22,27h1v1h-1zM24,27h1v1h-1zM26,27h1v1h-1zM27,27h1v1h-1zM30,27h1v1h-1zM33,27h1v1h-1zM34,27h1v1h-1zM35,27h1v1h-1zM36,27h1v1h-1zM39,27h1v1h-1zM7,28h1v1h-1zM8,28h1v1h-1zM9,28h1v1h-1zM10,28h1v1h-1zM11,28h1v1h-1zM12,28h1v1h-1zM13,28h1v1h-1zM15,28h1v1h-1zM16,28h1v1h-1zM17,28h1v1h-1zM19,28h1v1h-1zM20,28h1v1h-1zM27,28h1v1h-1zM29,28h1v1h-1zM30,28h1v1h-1zM31,28h1v1h-1zM34,28h1v1h-1zM36,28h1v1h-1zM38,28h1v1h-1zM39,28h1v1h-1zM4,29h1v1h-1zM5,29h1v1h-1zM6,29h1v1h-1zM7,29h1v1h-1zM8,29h1v1h-1zM12,29h1v1h-1zM13,29h1v1h-1zM18,29h1v1h-1zM19,29h1v1h-1zM22,29h1v1h-1zM24,29h1v1h-1zM25,29h1v1h-1zM26,29h1v1h-1zM27,29h1v1h-1zM30,29h1v1h-1zM32,29h1v1h-1zM38,29h1v1h-1zM4,30h1v1h-1zM6,30h1v1h-1zM7,30h1v1h-1zM8,30h1v1h-1zM9,30h1v1h-1zM10,30h1v1h-1zM13,30h1v1h-1zM14,30h1v1h-1zM15,30h1v1h-1zM19,30h1v1h-1zM20,30h1v1h-1zM22,30h1v1h-1zM23,30h1v1h-1zM25,30h1v1h-1zM28,30h1v1h-1zM30,30h1v1h-1zM31,30h1v1h-1zM34,30h1v1h-1zM36,30h1v1h-1zM39,30h1v1h-1zM40,30h1v1h-1zM4,31h1v1h-1zM6,31h1v1h-1zM8,31h1v1h-1zM11,31h1v1h-1zM12,31h1v1h-1zM13,31h1v1h-1zM14,31h1v1h-1zM16,31h1v1h-1zM17,31h1v1h-1zM19,31h1v1h-1zM23,31h1v1h-1zM24,31h1v1h-1zM25,31h1v1h-1zM26,31h1v1h-1zM27,31h1v1h-1zM28,31h1v1h-1zM30,31h1v1h-1zM32,31h1v1h-1zM33,31h1v1h-1zM35,31h1v1h-1zM4,32h1v1h-1zM7,32h1v1h-1zM8,32h1v1h-1zM10,32h1v1h-1zM11,32h1v1h-1zM12,32h1v1h-1zM18,32h1v1h-1zM19,32h1v1h-1zM21,32h1v1h-1zM23,32h1v1h-1zM24,32h1v1h-1zM26,32h1v1h-1zM28,32h1v1h-1zM29,32h1v1h-1zM31,32h1v1h-1zM32,32h1v1h-1zM33,32h1v1h-1zM34,32h1v1h-1zM35,32h1v1h-1zM36,32h1v1h-1zM37,32h1v1h-1zM38,32h1v1h-1zM40,32h1v1h-1zM12,33h1v1h-1zM14,33h1v1h-1zM20,33h1v1h-1zM22,33h1v1h-1zM23,33h1v1h-1zM24,33h1v1h-1zM25,33h1v1h-1zM27,33h1v1h-1zM31,33h1v1h-1zM32,33h1v1h-1zM36,33h1v1h-1zM37,33h1v1h-1zM4,34h1v1h-1zM5,34h1v1h-1zM6,34h1v1h-1zM7,34h1v1h-1zM8,34h1v1h-1zM9,34h1v1h-1zM10,34h1v1h-1zM13,34h1v1h-1zM17,34h1v1h-1zM19,34h1v1h-1zM20,34h1v1h-1zM22,34h1v1h-1zM25,34h1v1h-1zM30,34h1v1h-1zM32,34h1v1h-1zM34,34h1v1h-1zM36,34h1v1h-1zM38,34h1v1h-1zM39,34h1v1h-1zM40,34h1v1h-1zM4,35h1v1h-1zM10,35h1v1h-1zM12,35h1v1h-1zM13,35h1v1h-1zM15,35h1v1h-1zM23,35h1v1h-1zM25,35h1v1h-1zM27,35h1v1h-1zM28,35h1v1h-1zM32,35h1v1h-1zM36,35h1v1h-1zM37,35h1v1h-1zM39,35h1v1h-1zM4,36h1v1h-1zM6,36h1v1h-1zM7,36h1v1h-1zM8,36h1v1h-1zM10,36h1v1h-1zM12,36h1v1h-1zM13,36h1v1h-1zM14,36h1v1h-1zM15,36h1v1h-1zM16,36h1v1h-1zM17,36h1v1h-1zM19,36h1v1h-1zM22,36h1v1h-1zM29,36h1v1h-1zM30,36h1v1h-1zM31,36h1v1h-1zM32,36h1v1h-1zM33,36h1v1h-1zM34,36h1v1h-1zM35,36h1v1h-1zM36,36h1v1h-1zM38,36h1v1h-1zM40,36h1v1h-1zM4,37h1v1h-1zM6,37h1v1h-1zM7,37h1v1h-1zM8,37h1v1h-1zM10,37h1v1h-1zM12,37h1v1h-1zM14,37h1v1h-1zM17,37h1v1h-1zM18,37h1v1h-1zM19,37h1v1h-1zM20,37h1v1h-1zM26,37h1v1h-1zM27,37h1v1h-1zM29,37h1v1h-1zM33,37h1v1h-1zM34,37h1v1h-1zM36,37h1v1h-1zM38,37h1v1h-1zM40,37h1v1h-1zM4,38h1v1h-1zM6,38h1v1h-1zM7,38h1v1h-1zM8,38h1v1h-1zM10,38h1v1h-1zM12,38h1v1h-1zM14,38h1v1h-1zM15,38h1v1h-1zM17,38h1v1h-1zM22,38h1v1h-1zM24,38h1v1h-1zM25,38h1v1h-1zM26,38h1v1h-1zM29,38h1v1h-1zM30,38h1v1h-1zM31,38h1v1h-1zM32,38h1v1h-1zM38,38h1v1h-1zM39,38h1v1h-1zM40,38h1v1h-1zM4,39h1v1h-1zM10,39h1v1h-1zM14,39h1v1h-1zM15,39h1v1h-1zM17,39h1v1h-1zM18,39h1v1h-1zM20,39h1v1h-1zM25,39h1v1h-1zM28,39h1v1h-1zM31,39h1v1h-1zM32,39h1v1h-1zM33,39h1v1h-1zM36,39h1v1h-1zM40,39h1v1h-1zM4,40h1v1h-1zM5,40h1v1h-1zM6,40h1v1h-1zM7,40h1v1h-1zM8,40h1v1h-1zM9,40h1v1h-1zM10,40h1v1h-1zM12,40h1v1h-1zM14,40h1v1h-1zM17,40h1v1h-1zM20,40h1v1h-1zM21,40h1v1h-1zM23,40h1v1h-1zM26,40h1v1h-1zM28,40h1v1h-1zM29,40h1v1h-1zM30,40h1v1h-1zM33,40h1v1h-1zM34,40h1v1h-1zM36,40h1v1h-1zM37,40h1v1h-1zM38,40h1v1h-1zM39,40h1v1h-1zM40,40h1v1h-1z" fill="#6b2d5c"/></svg></div></li>
+<li><strong>The Liraasa lexicon.</strong> 1,462 words, and the image engine’s 1,767 more, each in its seven shapes, with the whole grammar, in one file built for reading and for language tools. <a class="url" href="https://github.com/nicolasbulgarides/Liraasa/blob/codex-latest/liraasa_lexicon.json">github.com/nicolasbulgarides/Liraasa/blob/codex-latest/liraasa_lexicon.json</a></li>
+</ul>
+<p class="credits">Liraasa was created by Peter Pietri. Follow the language, read its source, or get in touch on GitHub: <a class="url" href="https://github.com/nicolasbulgarides/Liraasa">github.com/nicolasbulgarides/Liraasa</a></p>
+<p class="farewell"><span class="liraasa" lang="x-liraasa">Voge, sora.</span><span class="gloss">Goodbye, friend.</span></p>
+</section>
+<section class="page" aria-labelledby="cheat">
+<h2 id="cheat">On one page</h2>
+<div class="cheat">
+<section><h3>Sounds</h3><ul><li>a e i o u: pure, each its own syllable</li><li>c = “ch”, r = a tap, g = hard</li><li>Weight on the second-to-last syllable</li></ul></section>
+<section><h3>Seven shapes</h3><ul><li><span class="liraasa" lang="x-liraasa">daigo</span> <span class="gloss">the thing itself</span></li><li><span class="liraasa" lang="x-liraasa">daigoasa</span> <span class="gloss">raised to its highest</span></li><li><span class="liraasa" lang="x-liraasa">daigona</span> <span class="gloss">turned around</span></li><li><span class="liraasa" lang="x-liraasa">daigoda</span> <span class="gloss">to do it</span></li><li><span class="liraasa" lang="x-liraasa">daigosan</span> <span class="gloss">describing</span></li><li><span class="liraasa" lang="x-liraasa">daigoasasan</span> <span class="gloss">describing, raised</span></li><li><span class="liraasa" lang="x-liraasa">daigonasan</span> <span class="gloss">describing, turned</span></li></ul></section>
+<section><h3>Word order</h3><p class="order">who · (<span class="liraasa" lang="x-liraasa">po</span> / <span class="liraasa" lang="x-liraasa">futu</span>) · (<span class="liraasa" lang="x-liraasa">ne</span>) · does · what · (<span class="liraasa" lang="x-liraasa">ki</span>)</p><p>Describing words before the thing. Two words joined: the second is the thing.</p></section>
+<section><h3>Small words</h3><ul><li><span class="liraasa" lang="x-liraasa">li</span> <span class="gloss">the</span></li><li><span class="liraasa" lang="x-liraasa">baba</span> <span class="gloss">a</span></li><li><span class="liraasa" lang="x-liraasa">de</span> <span class="gloss">of</span></li><li><span class="liraasa" lang="x-liraasa">ata</span> <span class="gloss">and</span></li><li><span class="liraasa" lang="x-liraasa">nara</span> <span class="gloss">but</span></li><li><span class="liraasa" lang="x-liraasa">ke / ka</span> <span class="gloss">is (now) / is (always)</span></li><li><span class="liraasa" lang="x-liraasa">ne</span> <span class="gloss">not</span></li><li><span class="liraasa" lang="x-liraasa">po</span> <span class="gloss">did (past)</span></li><li><span class="liraasa" lang="x-liraasa">futu</span> <span class="gloss">will</span></li><li><span class="liraasa" lang="x-liraasa">ki</span> <span class="gloss">makes a question</span></li><li><span class="liraasa" lang="x-liraasa">maivo / taivo</span> <span class="gloss">I / you</span></li></ul></section>
+</div>
+<p class="credits">Liraasa was created by Peter Pietri. Follow the language, read its source, or get in touch on GitHub: <a class="url" href="https://github.com/nicolasbulgarides/Liraasa">github.com/nicolasbulgarides/Liraasa</a></p>
+</section>
+<footer class="colophon">
+<p>Liraasa 2.0 · 2026-10-18. Every Liraasa word in this booklet was checked against the lexicon.</p>
+</footer>
+</main>
+</body>
+</html>
