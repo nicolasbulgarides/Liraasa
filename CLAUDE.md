@@ -49,10 +49,10 @@ overrides in `data/lessons/overrides.json`, and a rename/retire tool whose
 change records build through `apply.ts`. The **Training Hall** is Learn's new
 home (`editor/learn/hall.js`, `strings.js`, `hall.css`; forms engine
 `src/core/learn/forms.ts`), built in eight phases, all done: decisions in
-`TRAINING_DECISIONS.md`. Recordings are keyed by id in
+`docs/TRAINING_DECISIONS.md`. Recordings are keyed by id in
 `data/audio/manifest.json` (ships empty; `build:learn` bundles the files that
 exist, D35); Learn never synthesises speech. The grammar guide is compact by
-design: it teaches, reads the author's song `Nemelira de devi.txt` word by word,
+design: it teaches, reads the author's song `data/songs/Nemelira de devi.txt` word by word,
 and leaves the full changelogs to the handoff JSON and every ruling, verbatim, to `handoff/Liraasa_2_0_Rulings.md`. Phase 2 is the TypeScript
 validator and parser.
 
@@ -136,10 +136,10 @@ explicit encoding:
 ```sh
 cd data/source
 # 1.0, the parity check: must reproduce validation_1_0.json
-PYTHONUTF8=1 python validate.py liraasa_1_0.json --baseline ../../lexicon_0_8_rc2.json
+PYTHONUTF8=1 python validate.py liraasa_1_0.json --baseline ../lexicon/lexicon_0_8_rc2.json
 
 # 1.1, through the wrapper that un-gates the version-specific checks
-PYTHONUTF8=1 python validate_1_1.py ../lexicon/liraasa_1_1.json   --baseline-1-0 liraasa_1_0.json --baseline ../../lexicon_0_8_rc2.json   --out ../lexicon/validation_1_1.json
+PYTHONUTF8=1 python validate_1_1.py ../lexicon/liraasa_1_1.json   --baseline-1-0 liraasa_1_0.json --baseline ../lexicon/lexicon_0_8_rc2.json   --out ../lexicon/validation_1_1.json
 ```
 
 `openpyxl` is not installed, so the workbook generators cannot run. The two
@@ -156,12 +156,20 @@ data/lexicon/    the working canonical lexicon (author's schema + additive field
 data/texts/      token documents (SCHEMA §3)
 data/lessons/    lesson definitions
 data/changes/    changesets and editions
+data/proposals/  the author's 1.1 vocabulary proposal and 2.0 patch (inputs, read-only)
+data/lexicon/    also holds lexicon_0_8_rc2.json, the validators' 0.8 baseline
+data/songs/      the author's songs the guide reads (Nemelira de devi.txt)
 src/core/        pure TypeScript: no DOM, no React, no I/O. Lint-enforced.
 src/storage/     StorageAdapter implementations
 src/ui/          shell, components, one folder per module
+editor/          the standalone songbook editor; the GitHub Pages site root
 scripts/         CLI entry points
 tests/golden/    fixtures and assertions built from the real data
-docs/            SPEC (author's), SCHEMA, ARCHITECTURE, decisions/
+docs/            SPEC (author's), SCHEMA, ARCHITECTURE, decisions/, TRAINING_DECISIONS
+handoff/         the generated documents and JSON for each edition
+review/          generated review lists and audits for the author
+tools/voice_lab/ the local voice-synthesis lab (its .venv is ignored)
+archive/         superseded guides and documents, kept for reference
 ```
 
 Import boundaries are enforced by ESLint, not convention:

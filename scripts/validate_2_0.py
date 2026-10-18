@@ -4,7 +4,7 @@
         --previous data/lexicon/liraasa_1_2.json \
         --changes data/changes/2026-10-17-grammar-rulings.json data/changes/2026-10-17-lexicon-1-2.json \
                   data/changes/2026-10-18-lexicon-2-0.json \
-        --baseline lexicon_0_8_rc2.json --out data/lexicon/validation_2_0.json
+        --baseline data/lexicon/lexicon_0_8_rc2.json --out data/lexicon/validation_2_0.json
 
 validate.py runs unmodified, as a subprocess. Then, as validate_1_2.py did
 for 1.2 (ADR-0013), the checks a later edition's own rulings change are re-run

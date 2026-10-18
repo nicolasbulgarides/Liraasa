@@ -3,7 +3,7 @@
     PYTHONUTF8=1 python scripts/validate_1_2.py data/lexicon/liraasa_1_2.json \
         --previous data/lexicon/liraasa_1_1.json \
         --changes data/changes/2026-10-17-grammar-rulings.json data/changes/2026-10-17-lexicon-1-2.json \
-        --baseline lexicon_0_8_rc2.json --out data/lexicon/validation_1_2.json
+        --baseline data/lexicon/lexicon_0_8_rc2.json --out data/lexicon/validation_1_2.json
 
 Builds on data/source/validate_1_1.py (ADR-0009 §5), which it imports
 without modifying: validate.py runs unmodified as a subprocess, and checks 5,

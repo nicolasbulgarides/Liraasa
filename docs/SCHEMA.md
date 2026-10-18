@@ -407,14 +407,14 @@ Two structural facts change with 1.1:
 
 ### 1.12.1 Files
 
-| File                                              | What it is                                             |
-| ------------------------------------------------- | ------------------------------------------------------ |
-| `data/lexicon/liraasa_1_1.json`                   | the 1.1 lexicon                                        |
-| `data/lexicon/validation_1_1.json`                | 25 checks, all PASS, with `executed_against` per check |
-| `data/lexicon/integration_report_1_1.json`        | every added entry, every narrowing, checksums          |
-| `data/lexicon/compare_1_0_to_1_1.json`            | machine-readable 1.0 → 1.1 comparison with checksums   |
-| `1.1 upgrade/Liraasa_1_1_Vocabulary_Changelog.md` | the human-readable changelog                           |
-| `1.1 upgrade/Liraasa_1_1_LLM_Quickstart.md`       | vocabulary addendum to the unchanged 1.0 grammar       |
+| File                                                     | What it is                                             |
+| -------------------------------------------------------- | ------------------------------------------------------ |
+| `data/lexicon/liraasa_1_1.json`                          | the 1.1 lexicon                                        |
+| `data/lexicon/validation_1_1.json`                       | 25 checks, all PASS, with `executed_against` per check |
+| `data/lexicon/integration_report_1_1.json`               | every added entry, every narrowing, checksums          |
+| `data/lexicon/compare_1_0_to_1_1.json`                   | machine-readable 1.0 → 1.1 comparison with checksums   |
+| `data/proposals/1.1/Liraasa_1_1_Vocabulary_Changelog.md` | the human-readable changelog                           |
+| `data/proposals/1.1/Liraasa_1_1_LLM_Quickstart.md`       | vocabulary addendum to the unchanged 1.0 grammar       |
 
 ---
 

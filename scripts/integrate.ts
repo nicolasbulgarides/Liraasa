@@ -21,7 +21,7 @@ import { buildNewExamples } from '../src/core/integrate/examples';
 import { parseArgs } from './args';
 
 const BASELINE = 'data/source/liraasa_1_0.json';
-const PROPOSAL = '1.1 upgrade/Liraasa_1_1_Vocabulary_Proposal.json';
+const PROPOSAL = 'data/proposals/1.1/Liraasa_1_1_Vocabulary_Proposal.json';
 const EXPECTED_SHA = 'adc013cf99b79ec597c8cfcb9aee9f942e520010556ab6b072bcaa9a606608f3';
 
 /**

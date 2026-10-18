@@ -27,7 +27,7 @@ function repoPath(rel: string): string {
 }
 
 const proposal = JSON.parse(
-  readFileSync(repoPath('1.1 upgrade/Liraasa_1_1_Vocabulary_Proposal.json'), 'utf8'),
+  readFileSync(repoPath('data/proposals/1.1/Liraasa_1_1_Vocabulary_Proposal.json'), 'utf8'),
 ) as Proposal;
 
 let baseline: RawLexicon;

@@ -21,7 +21,7 @@ __pycache__/
 editor/liraasa-data.js
 
 # The voice lab's virtualenv (89 MB). The two source files are tracked.
-liraasa_voice_lab/.venv/
+tools/voice_lab/.venv/
 
 # The latest grammar guide, copied there by `npm run publish:guide` (the Stop hook).
 LirasaCodexLatest/

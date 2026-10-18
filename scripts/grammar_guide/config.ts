@@ -63,7 +63,7 @@ export const GUIDE = {
   ],
 
   /** The author's song, read line by line in its own part: title, English title, then line pairs. */
-  song: 'Nemelira de devi.txt',
+  song: 'data/songs/Nemelira de devi.txt',
 
   /** The core roots of the treasury, each shown with every form it uses. */
   coreRoots: [

@@ -20,7 +20,7 @@ import { deriveSynonyms } from '../src/core/integrate/synonyms';
 import type { RawLexicon, RawSlots } from '../src/core/model/raw';
 import { parseArgs } from './args';
 
-const PATCH = 'liraasa_2_0_patch.json';
+const PATCH = 'data/proposals/liraasa_2_0_patch.json';
 const BASELINE = 'data/lexicon/liraasa_1_2.json';
 const OUT = 'data/changes/2026-10-18-lexicon-2-0.json';
 const ID = '2026-10-18-lexicon-2-0';

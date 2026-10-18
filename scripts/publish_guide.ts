@@ -50,7 +50,7 @@ const INPUTS = [
   'data/lexicon/liraasa_1_2.json',
   'data/lexicon/integration_report_1_2.json',
   'data/lexicon/ids.json',
-  'Nemelira de devi.txt',
+  'data/songs/Nemelira de devi.txt',
   'data/changes',
   'scripts/build_handoff.ts',
   'scripts/changesets_1_2.ts',

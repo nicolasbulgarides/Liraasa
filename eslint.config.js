@@ -32,7 +32,7 @@ export default tseslint.config(
       'editor/learn/learn-core.js',
       'editor/learn/learn-data.js',
       // The author's separate TTS experiment, with its own virtualenv.
-      'liraasa_voice_lab/**',
+      'tools/voice_lab/**',
     ],
   },
 

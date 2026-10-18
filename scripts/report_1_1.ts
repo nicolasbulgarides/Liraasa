@@ -14,10 +14,10 @@ import { NEW_EXAMPLES } from '../src/core/integrate/examples';
 import type { Proposal } from '../src/core/integrate/proposalTypes';
 import type { RawHeadword, RawLexicon } from '../src/core/model/raw';
 
-const OUT_DIR = '1.1 upgrade';
+const OUT_DIR = 'data/proposals/1.1';
 const LEXICON = 'data/lexicon/liraasa_1_1.json';
 const BASELINE = 'data/source/liraasa_1_0.json';
-const PROPOSAL = '1.1 upgrade/Liraasa_1_1_Vocabulary_Proposal.json';
+const PROPOSAL = 'data/proposals/1.1/Liraasa_1_1_Vocabulary_Proposal.json';
 const VALIDATION = 'data/lexicon/validation_1_1.json';
 
 interface ValidationReport {
@@ -242,7 +242,7 @@ function changelog(
   L.push('```sh');
   L.push('cd data/source');
   L.push('python validate_1_1.py ../lexicon/liraasa_1_1.json \\');
-  L.push('  --baseline-1-0 liraasa_1_0.json --baseline ../../lexicon_0_8_rc2.json \\');
+  L.push('  --baseline-1-0 liraasa_1_0.json --baseline ../lexicon/lexicon_0_8_rc2.json \\');
   L.push('  --out ../lexicon/validation_1_1.json');
   L.push('```');
   L.push('');
@@ -461,7 +461,7 @@ function compareReport(baseline: RawLexicon, next: RawLexicon): string {
       report: 'Liraasa 1.0 -> 1.1 machine-readable comparison',
       generated_from: 'scripts/report_1_1.ts',
       files: {
-        'lexicon_0_8_rc2.json': { sha256: sha('lexicon_0_8_rc2.json') },
+        'lexicon_0_8_rc2.json': { sha256: sha('data/lexicon/lexicon_0_8_rc2.json') },
         'liraasa_1_0.json': { sha256: sha(BASELINE), headwords: baseline.headwords.length },
         'liraasa_1_1.json': { sha256: sha(LEXICON), headwords: next.headwords.length },
         'Liraasa_1_1_Vocabulary_Proposal.json': { sha256: sha(PROPOSAL) },
