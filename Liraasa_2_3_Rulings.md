@@ -20,6 +20,48 @@ larbopagobudi -> farvibudi (farvi + budi), 'wild dog', read like farvilazu (wild
 
 Supersedes 2.1:G59.
 
+### 2.3:G72: A line that continues: ata
+
+ata may open a line or clause that continues the one before, as oro may (1.2:G25): 'And …'. The album opens lines with ata throughout (2.2:G68).
+
+Refines 1.2:G25, 1.0:G13.
+
+- *ata maivo lemula saivo de sizosan lumi.*
+- *ata maivori revo-lirala ata relsira!*
+
+### 2.3:G73: Manner with en and ko
+
+en + an abstract noun names the manner or medium of an act: en baba melosan valla, in a musical voice; en veraasa, in truth. ko + a feeling names the spirit in which it is done: ko amor, with love; ko bapi, in surprise. yuta stays the tool or means (1.2:G33); with an abstract noun, choose by meaning. As the album sings (2.2:G68).
+
+Refines 1.2:G33.
+
+- *saivo po senosia en baba melosan valla.*
+- *ata li veluri po sarbisia ko bapi su li doza de farulavrasan amor.*
+
+### 2.3:G74: raho opening a question
+
+A direct question may open with raho for 'who' or 'what' and ends in ki, as the album asks twice (05:22, 11:12). ki-nela and ki-coda remain the ordinary question words. Supersedes the clause of 2.2:G64 that raho is never a question word; headless raho stands.
+
+Supersedes 2.2:G64.
+
+- *raho povi sabesia baba kasi polvasan sove ki?*
+
+### 2.3:G75: pagopa takes the motion prefixes
+
+pagopa (to go) is a motion verb: the motion prefixes attach to it, as in taro-pagopa, to go across (album 05alt). The prefixes stay a closed list, on the motion verbs and the curated metaphors only (1.2:G35).
+
+Refines 1.2:G35.
+
+- *taivo ne taro-pagopa, nara lalfola hupi li lelde,*
+
+### 2.3:G76: Questions with ki-eli and ki-muya
+
+A question with ki-eli + noun or ki-muya + noun ends in ki; without ki the clause is an exclamation (2.2:G61). Other ki-word questions may still end without ki (2.2:G60).
+
+Refines 2.2:G60, 2.2:G61.
+
+- *Taivo amora ki-eli lira ki?* — Which song do you love?
+
 ## Rulings 2.2
 
 ### 2.2:G60: Question-word position
@@ -59,6 +101,8 @@ After a main clause, a fime clause whose verb carries nosi means “in the hope 
 - *maivo futu donuda ito biti de lalfo, fime taivo nosi semnesia ko maivo en moluvaye.*
 
 ### 2.2:G64: Headless raho
+
+**In part superseded by 2.3:G74:** its clause “raho is never a question word” is replaced; the rest stands.
 
 raho with no noun before it means “the one who, that which”, as subject, object or complement. raho is never a question word: questions use ki-nela or ki-coda.
 

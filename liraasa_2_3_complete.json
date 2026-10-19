@@ -2,7 +2,7 @@
  "language": "Liraasa",
  "version": "2.3",
  "built_utc": "2026-10-19T18:00:00Z",
- "source": "Built deterministically from liraasa_2_2.json (sha256 318d7ef9f3cb8ea63f31f04444c59644656002cf11f019b075160a2572676c77) by scripts/integrate_2_3.ts, applying the changeset 2026-10-19-lexicon-2-3 and 2026-10-19-lexicon-2-3-review (ADR-0019). This JSON is the single source of truth for Liraasa 2.3.",
+ "source": "Built deterministically from liraasa_2_2.json (sha256 318d7ef9f3cb8ea63f31f04444c59644656002cf11f019b075160a2572676c77) by scripts/integrate_2_3.ts, applying the changeset 2026-10-19-lexicon-2-3 and 2026-10-19-lexicon-2-3-review and 2026-10-19-lexicon-2-3-audit (ADR-0019). This JSON is the single source of truth for Liraasa 2.3.",
  "snapshot_0_8": {
   "source_file": "lexicon_0_8_rc2.json",
   "source_version": "0.8-rc2",
@@ -82896,6 +82896,12 @@
      "saivo po farufasbifa kube saivo ramura raho maivo po ke.",
      ""
     ]
+   ],
+   "superseded_in_part": [
+    {
+     "clause": "raho is never a question word",
+     "by": "2.3:G74"
+    }
    ]
   },
   {
@@ -82972,6 +82978,87 @@
     "2.1:G59"
    ],
    "examples": []
+  },
+  {
+   "id": "G72",
+   "topic": "A line that continues: ata",
+   "ruling": "ata may open a line or clause that continues the one before, as oro may (1.2:G25): 'And …'. The album opens lines with ata throughout (2.2:G68).",
+   "refines": [
+    "1.2:G25",
+    "1.0:G13"
+   ],
+   "examples": [
+    [
+     "ata maivo lemula saivo de sizosan lumi.",
+     ""
+    ],
+    [
+     "ata maivori revo-lirala ata relsira!",
+     ""
+    ]
+   ]
+  },
+  {
+   "id": "G73",
+   "topic": "Manner with en and ko",
+   "ruling": "en + an abstract noun names the manner or medium of an act: en baba melosan valla, in a musical voice; en veraasa, in truth. ko + a feeling names the spirit in which it is done: ko amor, with love; ko bapi, in surprise. yuta stays the tool or means (1.2:G33); with an abstract noun, choose by meaning. As the album sings (2.2:G68).",
+   "refines": [
+    "1.2:G33"
+   ],
+   "examples": [
+    [
+     "saivo po senosia en baba melosan valla.",
+     ""
+    ],
+    [
+     "ata li veluri po sarbisia ko bapi su li doza de farulavrasan amor.",
+     ""
+    ]
+   ]
+  },
+  {
+   "id": "G74",
+   "topic": "raho opening a question",
+   "ruling": "A direct question may open with raho for 'who' or 'what' and ends in ki, as the album asks twice (05:22, 11:12). ki-nela and ki-coda remain the ordinary question words. Supersedes the clause of 2.2:G64 that raho is never a question word; headless raho stands.",
+   "refines": [],
+   "supersedes": [
+    "2.2:G64"
+   ],
+   "examples": [
+    [
+     "raho povi sabesia baba kasi polvasan sove ki?",
+     ""
+    ]
+   ]
+  },
+  {
+   "id": "G75",
+   "topic": "pagopa takes the motion prefixes",
+   "ruling": "pagopa (to go) is a motion verb: the motion prefixes attach to it, as in taro-pagopa, to go across (album 05alt). The prefixes stay a closed list, on the motion verbs and the curated metaphors only (1.2:G35).",
+   "refines": [
+    "1.2:G35"
+   ],
+   "examples": [
+    [
+     "taivo ne taro-pagopa, nara lalfola hupi li lelde,",
+     ""
+    ]
+   ]
+  },
+  {
+   "id": "G76",
+   "topic": "Questions with ki-eli and ki-muya",
+   "ruling": "A question with ki-eli + noun or ki-muya + noun ends in ki; without ki the clause is an exclamation (2.2:G61). Other ki-word questions may still end without ki (2.2:G60).",
+   "refines": [
+    "2.2:G60",
+    "2.2:G61"
+   ],
+   "examples": [
+    [
+     "Taivo amora ki-eli lira ki?",
+     "Which song do you love?"
+    ]
+   ]
   }
  ],
  "examples": [
@@ -119503,9 +119590,15 @@
    "edition": "2.3",
    "summary": "The 2.3 integration review (ADR-0019 addendum), from the author's answers of 2026-10-19: dento (tooth) and ruko (blood) are kept as the patch substitutes them; the respelled example of 1.2:G28 is kept and its 2.2 text retired to the new archive, legacy.archived_text; the stale history in the notes of bumbo, murmu and mirunululira moves there too; the root bank is left as it is. No rule changes.",
    "ops": 4
+  },
+  {
+   "id": "2026-10-19-lexicon-2-3-audit",
+   "edition": "2.3",
+   "summary": "The grammar audit's decisions (review/audit-report.md, ADR-0019 addendum), from the author's answers of 2026-10-19: the album's consistent usage becomes grammar, as rulings 2.3:G72 (line-initial ata), G73 (manner with en and ko), G74 (raho opening a question, superseding that clause of 2.2:G64) and G75 (pagopa takes the motion prefixes); and G76 (ki-eli and ki-muya questions end in ki), on the editor's judgement. Tense inheritance after kureli, sina, si and nevi stays open; whether an ascended form is sacred depends on the word.",
+   "ops": 6
   }
  ],
- "handoff_note": "Liraasa 2.3: all of 1.0, the 1.1 vocabulary supplement, the 1.2 changesets 2026-10-17-grammar-rulings and 2026-10-17-lexicon-1-2, the 2.0 changesets 2026-10-18-lexicon-2-0 and 2026-10-18-lexicon-2-0-review (word-building rulings 2.0:G37–G45, new vocabulary, the image-compound pattern), and the 2.1 changeset 2026-10-18-lexicon-2-1 and 2026-10-19-lexicon-2-1-review (rulings 2.1:G46–G59, 30 roots respelled), and the 2.2 changeset 2026-10-19-lexicon-2-2 (rulings 2.2:G60–G68, silro restored, the album), and the 2.3 changeset 2026-10-19-lexicon-2-3 and 2026-10-19-lexicon-2-3-review (rulings 2.3:G69–G71, the sound pass: 13 roots respelled, bear, cow and frog made roots, wolf rebuilt on farvi). Revised examples keep their earlier text in liraasa_1_1 (1.2), liraasa_1_2 (2.0), liraasa_2_0 (2.1), liraasa_2_1 (2.2) or liraasa_2_2 (2.3). Ruling ids are edition-qualified: 0.8:R1, 1.0:G7, 1.2:G24, 2.0:G40, 2.1:G46, 2.2:G60, 2.3:G69. Built by scripts/build_handoff.ts from data/lexicon/liraasa_2_3.json.",
+ "handoff_note": "Liraasa 2.3: all of 1.0, the 1.1 vocabulary supplement, the 1.2 changesets 2026-10-17-grammar-rulings and 2026-10-17-lexicon-1-2, the 2.0 changesets 2026-10-18-lexicon-2-0 and 2026-10-18-lexicon-2-0-review (word-building rulings 2.0:G37–G45, new vocabulary, the image-compound pattern), and the 2.1 changeset 2026-10-18-lexicon-2-1 and 2026-10-19-lexicon-2-1-review (rulings 2.1:G46–G59, 30 roots respelled), and the 2.2 changeset 2026-10-19-lexicon-2-2 (rulings 2.2:G60–G68, silro restored, the album), and the 2.3 changeset 2026-10-19-lexicon-2-3 and 2026-10-19-lexicon-2-3-review and 2026-10-19-lexicon-2-3-audit (rulings 2.3:G69–G71, the sound pass: 13 roots respelled, bear, cow and frog made roots, wolf rebuilt on farvi). Revised examples keep their earlier text in liraasa_1_1 (1.2), liraasa_1_2 (2.0), liraasa_2_0 (2.1), liraasa_2_1 (2.2) or liraasa_2_2 (2.3). Ruling ids are edition-qualified: 0.8:R1, 1.0:G7, 1.2:G24, 2.0:G40, 2.1:G46, 2.2:G60, 2.3:G69. Built by scripts/build_handoff.ts from data/lexicon/liraasa_2_3.json.",
  "counts_1_1_to_1_2": {
   "before": {
    "headwords": 1418,
@@ -149297,6 +149390,165 @@
      "addedIn": "2.3",
      "reason": "Author decision 2026-10-19: history that is no longer pertinent leaves the note for the archive. frog is the root kerku since 2.3:G70, so mirunululira is no longer the base for frog; the rest of the note stands.",
      "at": "2026-10-19T20:00:00Z",
+     "author": "nicolas"
+    }
+   ]
+  },
+  {
+   "id": "2026-10-19-lexicon-2-3-audit",
+   "edition": "2.3",
+   "created": "2026-10-19T22:00:00Z",
+   "author": "nicolas",
+   "summary": "The grammar audit's decisions (review/audit-report.md, ADR-0019 addendum), from the author's answers of 2026-10-19: the album's consistent usage becomes grammar, as rulings 2.3:G72 (line-initial ata), G73 (manner with en and ko), G74 (raho opening a question, superseding that clause of 2.2:G64) and G75 (pagopa takes the motion prefixes); and G76 (ki-eli and ki-muya questions end in ki), on the editor's judgement. Tense inheritance after kureli, sina, si and nevi stays open; whether an ascended form is sacred depends on the word.",
+   "rulings": [
+    {
+     "id": "G72",
+     "topic": "A line that continues: ata",
+     "ruling": "ata may open a line or clause that continues the one before, as oro may (1.2:G25): 'And …'. The album opens lines with ata throughout (2.2:G68).",
+     "refines": [
+      "1.2:G25",
+      "1.0:G13"
+     ],
+     "examples": [
+      [
+       "ata maivo lemula saivo de sizosan lumi.",
+       ""
+      ],
+      [
+       "ata maivori revo-lirala ata relsira!",
+       ""
+      ]
+     ]
+    },
+    {
+     "id": "G73",
+     "topic": "Manner with en and ko",
+     "ruling": "en + an abstract noun names the manner or medium of an act: en baba melosan valla, in a musical voice; en veraasa, in truth. ko + a feeling names the spirit in which it is done: ko amor, with love; ko bapi, in surprise. yuta stays the tool or means (1.2:G33); with an abstract noun, choose by meaning. As the album sings (2.2:G68).",
+     "refines": [
+      "1.2:G33"
+     ],
+     "examples": [
+      [
+       "saivo po senosia en baba melosan valla.",
+       ""
+      ],
+      [
+       "ata li veluri po sarbisia ko bapi su li doza de farulavrasan amor.",
+       ""
+      ]
+     ]
+    },
+    {
+     "id": "G74",
+     "topic": "raho opening a question",
+     "ruling": "A direct question may open with raho for 'who' or 'what' and ends in ki, as the album asks twice (05:22, 11:12). ki-nela and ki-coda remain the ordinary question words. Supersedes the clause of 2.2:G64 that raho is never a question word; headless raho stands.",
+     "refines": [],
+     "supersedes": [
+      "2.2:G64"
+     ],
+     "examples": [
+      [
+       "raho povi sabesia baba kasi polvasan sove ki?",
+       ""
+      ]
+     ]
+    },
+    {
+     "id": "G75",
+     "topic": "pagopa takes the motion prefixes",
+     "ruling": "pagopa (to go) is a motion verb: the motion prefixes attach to it, as in taro-pagopa, to go across (album 05alt). The prefixes stay a closed list, on the motion verbs and the curated metaphors only (1.2:G35).",
+     "refines": [
+      "1.2:G35"
+     ],
+     "examples": [
+      [
+       "taivo ne taro-pagopa, nara lalfola hupi li lelde,",
+       ""
+      ]
+     ]
+    },
+    {
+     "id": "G76",
+     "topic": "Questions with ki-eli and ki-muya",
+     "ruling": "A question with ki-eli + noun or ki-muya + noun ends in ki; without ki the clause is an exclamation (2.2:G61). Other ki-word questions may still end without ki (2.2:G60).",
+     "refines": [
+      "2.2:G60",
+      "2.2:G61"
+     ],
+     "examples": [
+      [
+       "Taivo amora ki-eli lira ki?",
+       "Which song do you love?"
+      ]
+     ]
+    }
+   ],
+   "ops": [
+    {
+     "entry": "2.3:G72",
+     "op": "add_ruling",
+     "from": null,
+     "to": "A line that continues: ata",
+     "ruling": "2.3:G72",
+     "addedIn": "2.3",
+     "reason": "Grammar audit, the author's decision of 2026-10-19 on the grammar audit: the album's consistent usage becomes grammar (2.2:G68); line-initial ata (12 album lines).",
+     "at": "2026-10-19T22:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "2.3:G73",
+     "op": "add_ruling",
+     "from": null,
+     "to": "Manner with en and ko",
+     "ruling": "2.3:G73",
+     "addedIn": "2.3",
+     "reason": "Grammar audit, the author's decision of 2026-10-19 on the grammar audit: the album's consistent usage becomes grammar (2.2:G68); en for manner (album 02:14, 03:3) and ko with a feeling (05:29, 05alt:32, 07:11).",
+     "at": "2026-10-19T22:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "2.3:G74",
+     "op": "add_ruling",
+     "from": null,
+     "to": "raho opening a question",
+     "ruling": "2.3:G74",
+     "addedIn": "2.3",
+     "reason": "Grammar audit, the author's decision of 2026-10-19 on the grammar audit: the album's consistent usage becomes grammar (2.2:G68); raho opens a question at 05:22 and 11:12 (album reading AR-16).",
+     "at": "2026-10-19T22:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "2.3:G75",
+     "op": "add_ruling",
+     "from": null,
+     "to": "pagopa takes the motion prefixes",
+     "ruling": "2.3:G75",
+     "addedIn": "2.3",
+     "reason": "Grammar audit, the author's decision of 2026-10-19 on the grammar audit: the album's consistent usage becomes grammar (2.2:G68); taro-pagopa (05alt:13).",
+     "at": "2026-10-19T22:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "2.3:G76",
+     "op": "add_ruling",
+     "from": null,
+     "to": "Questions with ki-eli and ki-muya",
+     "ruling": "2.3:G76",
+     "addedIn": "2.3",
+     "reason": "Grammar audit, the author asked for the editor's judgement (grammar audit, 2026-10-19): 2.2:G60 lets a ki-word question end without ki, but 2.2:G61 makes ki-eli/ki-muya + noun without ki an exclamation; requiring ki keeps G61 exact and extends its own rule for degree questions.",
+     "at": "2026-10-19T22:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "2.2:G64",
+     "op": "supersede_ruling",
+     "field": "raho is never a question word",
+     "from": "Headless raho",
+     "to": "2.3:G74",
+     "ruling": "2.3:G74",
+     "addedIn": "2.3",
+     "reason": "2.3:G74 lets raho open a direct question (album 05:22, 11:12); only that clause of 2.2:G64 is superseded, and headless raho stands. The ruling is kept as ruled, never reworded.",
+     "at": "2026-10-19T22:00:00Z",
      "author": "nicolas"
     }
    ]
