@@ -54,19 +54,9 @@
       return { kind: 'fraction', word: w, readings: [], suffixes: [] };
     }
 
-    // 8 legacy spelling
-    const legacy = ix.legacy.get(w);
-    if (legacy)
-      return {
-        kind: 'legacy',
-        word: w,
-        to: legacy.to,
-        migration: legacy.kind,
-        edition: legacy.edition || null,
-        since: legacy.since || null,
-        readings: [],
-        suffixes: [],
-      };
+    // 8 legacy spelling, bare or with -ri / -ti
+    const legacy = readLegacy(ix, w);
+    if (legacy) return legacy;
 
     // a rule-built form the dictionary leaves unlisted: an unused slot
     const unlisted = ix.unlisted.get(w);
@@ -87,6 +77,34 @@
     );
     if (dim) return true;
     return token.capital && !token.first;
+  }
+
+  /**
+   * An older spelling, or one with its -ri / -ti ending (lenrari, 2.3:G69):
+   * the current spelling keeps the ending, so the fix is the whole word.
+   */
+  function readLegacy(ix, w) {
+    const reading = (legacy, suffixes) => ({
+      kind: 'legacy',
+      word: w,
+      to: legacy.to + suffixes.join(''),
+      migration: legacy.kind,
+      edition: legacy.edition || null,
+      since: legacy.since || null,
+      readings: [],
+      suffixes,
+    });
+    const bare = ix.legacy.get(w);
+    if (bare) return reading(bare, []);
+    const chain = ix.morph.inflections; // ['ti', 'ri'] in suffix order
+    for (const suffixes of [chain.slice(-1), chain.slice(-2), chain.slice(-2, -1)]) {
+      const end = suffixes.join('');
+      if (suffixes.length === 0 || !w.endsWith(end)) continue;
+      const legacy = ix.legacy.get(w.slice(0, -end.length));
+      // a phrase (an archived sense) takes no ending
+      if (legacy && !legacy.to.includes(' ')) return reading(legacy, suffixes);
+    }
+    return null;
   }
 
   function readNumeral(ix, w) {

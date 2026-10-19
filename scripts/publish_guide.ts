@@ -41,10 +41,12 @@ import { CODEX, GUIDE, INVITATION, codexUrl } from './grammar_guide/config';
 
 const PUBLISH_DIR = 'LirasaCodexLatest';
 const STAMP = join(PUBLISH_DIR, '.build-stamp.json');
-const LLM_FILE = 'liraasa_2_2_llm.json';
+const LLM_FILE = 'liraasa_2_3_llm.json';
 
 /** What the guide is built from. A change to any of these means a rebuild. */
 const INPUTS = [
+  'data/lexicon/liraasa_2_3.json',
+  'data/lexicon/integration_report_2_3.json',
   'data/lexicon/liraasa_2_2.json',
   'data/lexicon/integration_report_2_2.json',
   'data/lexicon/liraasa_2_1.json',
@@ -61,6 +63,7 @@ const INPUTS = [
   'scripts/changesets_2_0.ts',
   'scripts/changesets_2_1.ts',
   'scripts/changesets_2_2.ts',
+  'scripts/changesets_2_3.ts',
   'data/corpus/album_2_0',
   'scripts/build_grammar_guide.ts',
   'scripts/build_invitation.ts',

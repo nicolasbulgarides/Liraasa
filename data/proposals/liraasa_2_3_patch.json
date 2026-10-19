@@ -1,0 +1,1447 @@
+{
+ "patch": "Liraasa sound-pass patch (draft)",
+ "base_edition": "Liraasa 2.2 (liraasa_2_2_llm.json, 2026-10-19)",
+ "apply_to": "data/lexicon/liraasa_2_2.json via the Workbench; regenerate the llm JSON with npm run build:llm (the llm JSON says never edit by hand)",
+ "requested": {
+  "larbopagobudi": "farvibudi",
+  "larbopagoregna": "bumbo",
+  "maremirulazu": "murmu",
+  "mirunululirayo": "kerku",
+  "lenra": "zarku",
+  "vanru": "dokra",
+  "voho": "kezdo",
+  "vabale": "tobra",
+  "teyo": "deti / denta",
+  "mege": "yumli",
+  "kupa": "ruka",
+  "jemla": "zimzi",
+  "pesbi": "bondo",
+  "menha": "gamdo",
+  "vugo": "vizu",
+  "salye": "bapi",
+  "senba": "linle"
+ },
+ "substitutions": [
+  {
+   "requested": "deti",
+   "for": "teyo (tooth)",
+   "status": "not free",
+   "reason": "one edit from devi (goddess), desi (want) and zeti (sourness); the -ti ending also reads as the diminutive, 'a little de'"
+  },
+  {
+   "requested": "denta",
+   "for": "teyo (tooth)",
+   "status": "not free",
+   "reason": "one edit from penta (five) and centa (hundred)"
+  },
+  {
+   "used": "dento",
+   "for": "teyo (tooth)",
+   "reason": "free; closest free spelling to denta. Other free options: detu, dete"
+  },
+  {
+   "requested": "ruka",
+   "for": "kupa (blood)",
+   "status": "not free",
+   "reason": "one edit from luka (luck) and ruva (frost)"
+  },
+  {
+   "used": "ruko",
+   "for": "kupa (blood)",
+   "reason": "free; one vowel from ruka. Other free options: rudo, runka"
+  }
+ ],
+ "draft_rulings": [
+  {
+   "id": "G69 (draft)",
+   "topic": "Second respelling pass",
+   "rule": "Thirteen roots are respelled: lenra -> zarku; vanru -> dokra; voho -> kezdo; vabale -> tobra; teyo -> dento; mege -> yumli; kupa -> ruko; jemla -> zimzi; pesbi -> bondo; menha -> gamdo; vugo -> vizu; salye -> bapi; senba -> linle. 2.1:G58 applies in full: a respelled root keeps every meaning and empty slot; all forms, derivations, compounds and image compounds respell with it; compound verbs follow the new first letter; 2.2 spellings retired; older texts, including the album, are read under the spellings they were written in."
+  },
+  {
+   "id": "G70 (draft)",
+   "topic": "Roots for common animals",
+   "rule": "bumbo (bear), murmu (cow; cattle) and kerku (frog) are new roots. They replace larbopagoregna, maremirulazu and the listed derivation mirunululirayo, which are retired; kerku takes the verb kerkuka, to croak. mirunululira (river-song) stays."
+  },
+  {
+   "id": "G71 (draft)",
+   "topic": "Wolf",
+   "rule": "larbopagobudi -> farvibudi (farvi + budi), 'wild dog', read like farvilazu (wild animal); lunolarbopagobudi -> lunofarvibudi. Supersedes the wolf half of 2.1:G59; its taha -> kezupago half stands."
+  }
+ ],
+ "counts": {
+  "headwords_before": 1462,
+  "headwords_after": 1463,
+  "roots_before": 472,
+  "roots_after": 475,
+  "compounds_before": 990,
+  "compounds_after": 988,
+  "meaningful_forms_before": 4034,
+  "meaningful_forms_after": 4036,
+  "headwords_respelled": 47,
+  "spellings_changed_total": 122
+ },
+ "root_respellings": [
+  {
+   "old": "lenra",
+   "new": "zarku",
+   "gloss": "enemy; active adversary, not merely unloved; foe"
+  },
+  {
+   "old": "vanru",
+   "new": "dokra",
+   "gloss": "war"
+  },
+  {
+   "old": "voho",
+   "new": "kezdo",
+   "gloss": "revenge; retaliation; vengeance"
+  },
+  {
+   "old": "vabale",
+   "new": "tobra",
+   "gloss": "wall"
+  },
+  {
+   "old": "teyo",
+   "new": "dento",
+   "gloss": "tooth"
+  },
+  {
+   "old": "mege",
+   "new": "yumli",
+   "gloss": "sweetness"
+  },
+  {
+   "old": "kupa",
+   "new": "ruko",
+   "gloss": "blood"
+  },
+  {
+   "old": "jemla",
+   "new": "zimzi",
+   "gloss": "insect; six-legged arthropod in ordinary usage"
+  },
+  {
+   "old": "pesbi",
+   "new": "bondo",
+   "gloss": "weight"
+  },
+  {
+   "old": "menha",
+   "new": "gamdo",
+   "gloss": "jaw"
+  },
+  {
+   "old": "vugo",
+   "new": "vizu",
+   "gloss": "speed"
+  },
+  {
+   "old": "salye",
+   "new": "bapi",
+   "gloss": "surprise"
+  },
+  {
+   "old": "senba",
+   "new": "linle",
+   "gloss": "cleanliness"
+  }
+ ],
+ "compounds_to_roots": [
+  {
+   "old": "larbopagoregna",
+   "new": "bumbo",
+   "gloss": "bear",
+   "domain": "Animals",
+   "new_line": "bumbo {formerly larbopagoregna}: (n) bear"
+  },
+  {
+   "old": "maremirulazu",
+   "new": "murmu",
+   "gloss": "cow; cattle",
+   "domain": "Animals",
+   "new_line": "murmu {formerly maremirulazu}: (n) cow; cattle"
+  }
+ ],
+ "derivation_to_root": [
+  {
+   "old": "mirunululirayo",
+   "old_listing": "frog (river-singer): mirunululira + -yo",
+   "new": "kerku",
+   "domain": "Animals",
+   "new_line": "kerku {formerly mirunululirayo}: (n) frog | kerkuka (v) to croak",
+   "note": "remove from lexicalised_derivations; mirunululirayo stays buildable by the default -yo reading ('one devoted to river-song'). kerkuka (v) to croak is a new meaningful form."
+  }
+ ],
+ "compound_restructures": [
+  {
+   "old": "larbopagobudi",
+   "old_parts": "larbopago+budi",
+   "new": "farvibudi",
+   "new_parts": "farvi+budi"
+  },
+  {
+   "old": "lunolarbopagobudi",
+   "old_parts": "luno+larbopagobudi",
+   "new": "lunofarvibudi",
+   "new_parts": "luno+farvibudi"
+  }
+ ],
+ "headword_migration": [
+  {
+   "old": "pesbi",
+   "new": "bondo",
+   "kind": "root",
+   "old_parts": null,
+   "new_parts": null,
+   "domain": "Abstract",
+   "new_dictionary_line": "bondo {formerly pesbi}: (n) weight | bondona (nn) lightness | bondoba (v) to weigh | bondonasan (na) light (in weight) | bondosan (a) heavy"
+  },
+  {
+   "old": "kupa",
+   "new": "ruko",
+   "kind": "root",
+   "old_parts": null,
+   "new_parts": null,
+   "domain": "Body",
+   "new_dictionary_line": "ruko {formerly kupa, barni}: (n) blood | rukona (nn) bloodlessness | rukora (v) to bleed | rukonasan (na) bloodless | rukosan (a) bloody; blood-red"
+  },
+  {
+   "old": "menha",
+   "new": "gamdo",
+   "kind": "root",
+   "old_parts": null,
+   "new_parts": null,
+   "domain": "Body",
+   "new_dictionary_line": "gamdo {formerly menha}: (n) jaw | gamdoga (v) to clench the jaw | gamdosan (a) tight-jawed"
+  },
+  {
+   "old": "teyo",
+   "new": "dento",
+   "kind": "root",
+   "old_parts": null,
+   "new_parts": null,
+   "domain": "Body",
+   "new_dictionary_line": "dento {formerly teyo}: (n) tooth | dentoda (v) to bite | dentosan (a) toothed"
+  },
+  {
+   "old": "jemla",
+   "new": "zimzi",
+   "kind": "root",
+   "old_parts": null,
+   "new_parts": null,
+   "domain": "Ecology & biology",
+   "new_dictionary_line": "zimzi {formerly jemla}: (n) insect; six-legged arthropod in ordinary usage | zimzisan (a) insect-related; entomological"
+  },
+  {
+   "old": "voho",
+   "new": "kezdo",
+   "kind": "root",
+   "old_parts": null,
+   "new_parts": null,
+   "domain": "Emotion & song",
+   "new_dictionary_line": "kezdo {formerly voho}: (n) revenge; retaliation; vengeance | kezdoasa (an) revenge pursued beyond death | kezdona (nn) reconciliation after injury | kezdoka (v) to avenge; to retaliate | kezdonasan (na) reconciled instead of vengeful | kezdosan (a) vengeful; retaliatory | kezdoasasan (aa) vengeance claimed as destiny"
+  },
+  {
+   "old": "salye",
+   "new": "bapi",
+   "kind": "root",
+   "old_parts": null,
+   "new_parts": null,
+   "domain": "Emotions",
+   "new_dictionary_line": "bapi {formerly salye}: (n) surprise | bapina (nn) the expected; nothing surprising | bapiba (v) to surprise | bapinasan (na) unsurprising | bapisan (a) surprising"
+  },
+  {
+   "old": "vabale",
+   "new": "tobra",
+   "kind": "root",
+   "old_parts": null,
+   "new_parts": null,
+   "domain": "Home & objects",
+   "new_dictionary_line": "tobra {formerly vabale}: (n) wall | tobrata (v) to wall off | tobrasan (a) walled"
+  },
+  {
+   "old": "mege",
+   "new": "yumli",
+   "kind": "root",
+   "old_parts": null,
+   "new_parts": null,
+   "domain": "Qualities",
+   "new_dictionary_line": "yumli {formerly mege}: (n) sweetness | yumlina (nn) bitterness | yumliya (v) to sweeten | yumlinasan (na) bitter | yumlisan (a) sweet; pleasant"
+  },
+  {
+   "old": "senba",
+   "new": "linle",
+   "kind": "root",
+   "old_parts": null,
+   "new_parts": null,
+   "domain": "Qualities",
+   "new_dictionary_line": "linle {formerly senba}: (n) cleanliness | linleasa (an) purity of soul; holiness | linlena (nn) dirtiness | linlela (v) to cleanse | linlenasan (na) dirty | linlesan (a) clean | linleasasan (aa) pure; sanctified"
+  },
+  {
+   "old": "vugo",
+   "new": "vizu",
+   "kind": "root",
+   "old_parts": null,
+   "new_parts": null,
+   "domain": "Qualities",
+   "new_dictionary_line": "vizu {formerly vugo, velbi}: (n) speed | vizuna (nn) slowness | vizuva (v) to accelerate | vizunasan (na) slow | vizusan (a) swift; quick"
+  },
+  {
+   "old": "lenra",
+   "new": "zarku",
+   "kind": "root",
+   "old_parts": null,
+   "new_parts": null,
+   "domain": "Society",
+   "new_dictionary_line": "zarku {formerly lenra}: (n) enemy; active adversary, not merely unloved; foe | zarkuna (nn) ally | zarkuza (v) to oppose as an enemy | zarkusan (a) hostile"
+  },
+  {
+   "old": "vanru",
+   "new": "dokra",
+   "kind": "root",
+   "old_parts": null,
+   "new_parts": null,
+   "domain": "Society",
+   "new_dictionary_line": "dokra {formerly vanru}: (n) war | dokraasa (an) the war in heaven; the last battle | dokrana (nn) peacetime; the absence of war | dokrada (v) to wage war | dokranasan (na) at peace; unwarlike | dokrasan (a) warlike"
+  },
+  {
+   "old": "larbopagobudi",
+   "new": "farvibudi",
+   "kind": "compound",
+   "old_parts": "larbopago+budi",
+   "new_parts": "farvi+budi",
+   "domain": "Animals",
+   "new_dictionary_line": "farvibudi [farvi+budi] {formerly larbopagobudi, volda}: (n) wolf | farvibudifa (v) to hunt in a pack | farvibudisan (a) wolfish"
+  },
+  {
+   "old": "larbopagoregna",
+   "new": "bumbo",
+   "kind": "compound->root",
+   "old_parts": "larbopago+regna",
+   "new_parts": null,
+   "domain": "Animals",
+   "new_dictionary_line": "bumbo {formerly larbopagoregna}: (n) bear"
+  },
+  {
+   "old": "maremirulazu",
+   "new": "murmu",
+   "kind": "compound->root",
+   "old_parts": "maremiru+lazu",
+   "new_parts": null,
+   "domain": "Animals",
+   "new_dictionary_line": "murmu {formerly maremirulazu}: (n) cow; cattle"
+  },
+  {
+   "old": "jemlatino",
+   "new": "zimzitino",
+   "kind": "compound",
+   "old_parts": "jemla+tino",
+   "new_parts": "zimzi+tino",
+   "domain": "Ecology & biology",
+   "new_dictionary_line": "zimzitino [zimzi+tino] {formerly jemlatino}: (n) insect kind"
+  },
+  {
+   "old": "jemlayano",
+   "new": "zimziyano",
+   "kind": "compound",
+   "old_parts": "jemla+yano",
+   "new_parts": "zimzi+yano",
+   "domain": "Ecology & biology",
+   "new_dictionary_line": "zimziyano [zimzi+yano] {formerly jemlayano}: (n) insect swarm"
+  },
+  {
+   "old": "vugolavi",
+   "new": "vizulavi",
+   "kind": "compound",
+   "old_parts": "vugo+lavi",
+   "new_parts": "vizu+lavi",
+   "domain": "Emotions",
+   "new_dictionary_line": "vizulavi [vizu+lavi] {formerly vugolavi, velbilavi}: (n) excitement | vizulavina (nn) unhurried calm; the absence of excitement | vizulaviva (v) to excite | vizulavisan (a) excited"
+  },
+  {
+   "old": "kuparivla",
+   "new": "rukorivla",
+   "kind": "compound",
+   "old_parts": "kupa+rivla",
+   "new_parts": "ruko+rivla",
+   "domain": "Everyday",
+   "new_dictionary_line": "rukorivla [ruko+rivla] {formerly kuparivla, barnirivla}: (n) circulation; the flow of blood"
+  },
+  {
+   "old": "megepusa",
+   "new": "yumlipusa",
+   "kind": "compound",
+   "old_parts": "mege+pusa",
+   "new_parts": "yumli+pusa",
+   "domain": "Everyday",
+   "new_dictionary_line": "yumlipusa [yumli+pusa] {formerly megepusa}: (n) sugar"
+  },
+  {
+   "old": "talijemla",
+   "new": "talizimzi",
+   "kind": "compound",
+   "old_parts": "tali+jemla",
+   "new_parts": "tali+zimzi",
+   "domain": "Everyday",
+   "new_dictionary_line": "talizimzi [tali+zimzi] {formerly talijemla}: (n) ant"
+  },
+  {
+   "old": "tibiteyo",
+   "new": "tibidento",
+   "kind": "compound",
+   "old_parts": "tibi+teyo",
+   "new_parts": "tibi+dento",
+   "domain": "Everyday objects & work",
+   "new_dictionary_line": "tibidento [tibi+dento] {formerly tibiteyo}: (n) needle | tibidentota (v) to sew"
+  },
+  {
+   "old": "kupavolme",
+   "new": "rukovolme",
+   "kind": "compound",
+   "old_parts": "kupa+volme",
+   "new_parts": "ruko+volme",
+   "domain": "Fantasy",
+   "new_dictionary_line": "rukovolme [ruko+volme] {formerly kupavolme, barnivolme}: (n) vampire"
+  },
+  {
+   "old": "lunolarbopagobudi",
+   "new": "lunofarvibudi",
+   "kind": "compound",
+   "old_parts": "luno+larbopagobudi",
+   "new_parts": "luno+farvibudi",
+   "domain": "Fantasy",
+   "new_dictionary_line": "lunofarvibudi [luno+farvibudi] {formerly lunolarbopagobudi, lunovolda}: (n) werewolf"
+  },
+  {
+   "old": "vanruyano",
+   "new": "dokrayano",
+   "kind": "compound",
+   "old_parts": "vanru+yano",
+   "new_parts": "dokra+yano",
+   "domain": "Fiction",
+   "new_dictionary_line": "dokrayano [dokra+yano] {formerly vanruyano}: (n) army; host (an army)"
+  },
+  {
+   "old": "folnimege",
+   "new": "folniyumli",
+   "kind": "compound",
+   "old_parts": "folni+mege",
+   "new_parts": "folni+yumli",
+   "domain": "Flowers & Plants",
+   "new_dictionary_line": "folniyumli [folni+yumli] {formerly folnimege}: (n) floral nectar | folniyumlina (nn) nectarless flower | folniyumlifa (v) to gather nectar | folniyumlisan (a) nectar-sweet"
+  },
+  {
+   "old": "kuparale",
+   "new": "rukorale",
+   "kind": "compound",
+   "old_parts": "kupa+rale",
+   "new_parts": "ruko+rale",
+   "domain": "Health & anatomy",
+   "new_dictionary_line": "rukorale [ruko+rale] {formerly kuparale, barnirale}: (n) pulse | rukoralera (v) to pulse; to throb"
+  },
+  {
+   "old": "teyonuravu",
+   "new": "dentonuravu",
+   "kind": "compound",
+   "old_parts": "teyo+nuravu",
+   "new_parts": "dento+nuravu",
+   "domain": "Health & body",
+   "new_dictionary_line": "dentonuravu [dento+nuravu] {formerly teyonuravu}: (n) toothache"
+  },
+  {
+   "old": "senbabiti",
+   "new": "linlebiti",
+   "kind": "compound",
+   "old_parts": "senba+biti",
+   "new_parts": "linle+biti",
+   "domain": "Home, kitchen & labor",
+   "new_dictionary_line": "linlebiti [linle+biti] {formerly senbabiti}: (n) broom | linlebitila (v) to sweep"
+  },
+  {
+   "old": "menhasabaye",
+   "new": "gamdosabaye",
+   "kind": "compound",
+   "old_parts": "menha+sabaye",
+   "new_parts": "gamdo+sabaye",
+   "domain": "Narration",
+   "new_dictionary_line": "gamdosabaye [gamdo+sabaye] {formerly menhasabaye}: (n) beard"
+  },
+  {
+   "old": "farujemla",
+   "new": "faruzimzi",
+   "kind": "compound",
+   "old_parts": "faru+jemla",
+   "new_parts": "faru+zimzi",
+   "domain": "Nature & light",
+   "new_dictionary_line": "faruzimzi [faru+zimzi] {formerly farujemla}: (n) firefly"
+  },
+  {
+   "old": "lenralavi",
+   "new": "zarkulavi",
+   "kind": "compound",
+   "old_parts": "lenra+lavi",
+   "new_parts": "zarku+lavi",
+   "domain": "Poetry & feeling",
+   "new_dictionary_line": "zarkulavi [zarku+lavi] {poetic, formerly lenralavi}: (n) joy at an enemy’s misfortune"
+  },
+  {
+   "old": "vanrulirbu",
+   "new": "dokralirbu",
+   "kind": "compound",
+   "old_parts": "vanru+lirbu",
+   "new_parts": "dokra+lirbu",
+   "domain": "Rank & titles",
+   "new_dictionary_line": "dokralirbu [dokra+lirbu] {formerly vanrulirbu}: (n) commander; officer"
+  },
+  {
+   "old": "demrovugo",
+   "new": "demrovizu",
+   "kind": "compound",
+   "old_parts": "demro+vugo",
+   "new_parts": "demro+vizu",
+   "domain": "Science & philosophical inquiry",
+   "new_dictionary_line": "demrovizu [demro+vizu] {formerly demrovugo, demrovelbi}: (n) speed of movement"
+  },
+  {
+   "old": "pesbivordu",
+   "new": "bondovordu",
+   "kind": "compound",
+   "old_parts": "pesbi+vordu",
+   "new_parts": "bondo+vordu",
+   "domain": "Science & philosophical inquiry",
+   "new_dictionary_line": "bondovordu [bondo+vordu] {formerly pesbivordu}: (n) gravity"
+  },
+  {
+   "old": "jomruvugo",
+   "new": "jomruvizu",
+   "kind": "compound",
+   "old_parts": "jomru+vugo",
+   "new_parts": "jomru+vizu",
+   "domain": "Space & orientation",
+   "new_dictionary_line": "jomruvizu [jomru+vizu] {formerly jomruvugo, jomruvelbi}: (n) travel speed"
+  },
+  {
+   "old": "salyehavli",
+   "new": "bapihavli",
+   "kind": "compound",
+   "old_parts": "salye+havli",
+   "new_parts": "bapi+havli",
+   "domain": "Storytelling",
+   "new_dictionary_line": "bapihavli [bapi+havli] {formerly salyehavli}: (n) gasp | bapihavliba (v) to gasp | bapihavlisan (a) gasping"
+  },
+  {
+   "old": "salyesemra",
+   "new": "bapisemra",
+   "kind": "compound",
+   "old_parts": "salye+semra",
+   "new_parts": "bapi+semra",
+   "domain": "Storytelling",
+   "new_dictionary_line": "bapisemra [bapi+semra] {formerly salyesemra}: (n) embarrassment | bapisemraba (v) to embarrass | bapisemrasan (a) embarrassed"
+  },
+  {
+   "old": "vanrudomlu",
+   "new": "dokradomlu",
+   "kind": "compound",
+   "old_parts": "vanru+domlu",
+   "new_parts": "dokra+domlu",
+   "domain": "Storytelling",
+   "new_dictionary_line": "dokradomlu [dokra+domlu] {formerly vanrudomlu}: (n) fortress; castle"
+  },
+  {
+   "old": "vugorabi",
+   "new": "vizurabi",
+   "kind": "compound",
+   "old_parts": "vugo+rabi",
+   "new_parts": "vizu+rabi",
+   "domain": "Storytelling",
+   "new_dictionary_line": "vizurabi [vizu+rabi] {formerly vugorabi, velbirabi}: (n) dash; sprint; rush | vizurabiva (v) to dash; to rush | vizurabisan (a) rushing"
+  },
+  {
+   "old": "vugovalmi",
+   "new": "vizuvalmi",
+   "kind": "compound",
+   "old_parts": "vugo+valmi",
+   "new_parts": "vizu+valmi",
+   "domain": "Storytelling",
+   "new_dictionary_line": "vizuvalmi [vizu+valmi] {formerly vugovalmi, velbivalmi}: (n) hurry; haste | vizuvalmiva (v) to hurry | vizuvalmisan (a) hurried; hasty"
+  },
+  {
+   "old": "kronovabale",
+   "new": "kronotobra",
+   "kind": "compound",
+   "old_parts": "krono+vabale",
+   "new_parts": "krono+tobra",
+   "domain": "Time & sequence",
+   "new_dictionary_line": "kronotobra [krono+tobra] {formerly kronovabale}: (n) deadline | kronotobraka (v) to set a deadline"
+  },
+  {
+   "old": "talipesbi",
+   "new": "talibondo",
+   "kind": "compound",
+   "old_parts": "tali+pesbi",
+   "new_parts": "tali+bondo",
+   "domain": "Time, quantity & work",
+   "new_dictionary_line": "talibondo [tali+bondo] {formerly talipesbi}: (n) workload"
+  },
+  {
+   "old": "vanruvalmi",
+   "new": "dokravalmi",
+   "kind": "compound",
+   "old_parts": "vanru+valmi",
+   "new_parts": "dokra+valmi",
+   "domain": "Travel & war",
+   "new_dictionary_line": "dokravalmi [dokra+valmi] {formerly vanruvalmi}: (n) march | dokravalmida (v) to march"
+  },
+  {
+   "old": "bojiteyo",
+   "new": "bojidento",
+   "kind": "compound",
+   "old_parts": "boji+teyo",
+   "new_parts": "boji+dento",
+   "domain": "Weather",
+   "new_dictionary_line": "bojidento [boji+dento] {formerly bojiteyo, yelfateyo}: (n) icicle; hanging spear of ice | bojidentoba (v) to form icicles | bojidentosan (a) icicle-hung"
+  },
+  {
+   "old": "vugovaye",
+   "new": "vizuvaye",
+   "kind": "compound",
+   "old_parts": "vugo+vaye",
+   "new_parts": "vizu+vaye",
+   "domain": "Wind",
+   "new_dictionary_line": "vizuvaye [vizu+vaye] {formerly vugovaye, velbivaye}: (n) gust; brief strong wind | vizuvayeva (v) to gust suddenly | vizuvayesan (a) gusty; buffeted"
+  }
+ ],
+ "form_migration": [
+  {
+   "headword": "pesbi",
+   "old": "pesbina",
+   "new": "bondona",
+   "role": "nn",
+   "gloss": "lightness"
+  },
+  {
+   "headword": "pesbi",
+   "old": "pesbipa",
+   "new": "bondoba",
+   "role": "v",
+   "gloss": "to weigh"
+  },
+  {
+   "headword": "pesbi",
+   "old": "pesbinasan",
+   "new": "bondonasan",
+   "role": "na",
+   "gloss": "light (in weight)"
+  },
+  {
+   "headword": "pesbi",
+   "old": "pesbisan",
+   "new": "bondosan",
+   "role": "a",
+   "gloss": "heavy"
+  },
+  {
+   "headword": "kupa",
+   "old": "kupana",
+   "new": "rukona",
+   "role": "nn",
+   "gloss": "bloodlessness"
+  },
+  {
+   "headword": "kupa",
+   "old": "kupaka",
+   "new": "rukora",
+   "role": "v",
+   "gloss": "to bleed"
+  },
+  {
+   "headword": "kupa",
+   "old": "kupanasan",
+   "new": "rukonasan",
+   "role": "na",
+   "gloss": "bloodless"
+  },
+  {
+   "headword": "kupa",
+   "old": "kupasan",
+   "new": "rukosan",
+   "role": "a",
+   "gloss": "bloody; blood-red"
+  },
+  {
+   "headword": "menha",
+   "old": "menhama",
+   "new": "gamdoga",
+   "role": "v",
+   "gloss": "to clench the jaw"
+  },
+  {
+   "headword": "menha",
+   "old": "menhasan",
+   "new": "gamdosan",
+   "role": "a",
+   "gloss": "tight-jawed"
+  },
+  {
+   "headword": "teyo",
+   "old": "teyota",
+   "new": "dentoda",
+   "role": "v",
+   "gloss": "to bite"
+  },
+  {
+   "headword": "teyo",
+   "old": "teyosan",
+   "new": "dentosan",
+   "role": "a",
+   "gloss": "toothed"
+  },
+  {
+   "headword": "jemla",
+   "old": "jemlasan",
+   "new": "zimzisan",
+   "role": "a",
+   "gloss": "insect-related; entomological"
+  },
+  {
+   "headword": "voho",
+   "old": "vohoasa",
+   "new": "kezdoasa",
+   "role": "an",
+   "gloss": "revenge pursued beyond death"
+  },
+  {
+   "headword": "voho",
+   "old": "vohona",
+   "new": "kezdona",
+   "role": "nn",
+   "gloss": "reconciliation after injury"
+  },
+  {
+   "headword": "voho",
+   "old": "vohova",
+   "new": "kezdoka",
+   "role": "v",
+   "gloss": "to avenge; to retaliate"
+  },
+  {
+   "headword": "voho",
+   "old": "vohonasan",
+   "new": "kezdonasan",
+   "role": "na",
+   "gloss": "reconciled instead of vengeful"
+  },
+  {
+   "headword": "voho",
+   "old": "vohosan",
+   "new": "kezdosan",
+   "role": "a",
+   "gloss": "vengeful; retaliatory"
+  },
+  {
+   "headword": "voho",
+   "old": "vohoasasan",
+   "new": "kezdoasasan",
+   "role": "aa",
+   "gloss": "vengeance claimed as destiny"
+  },
+  {
+   "headword": "salye",
+   "old": "salyena",
+   "new": "bapina",
+   "role": "nn",
+   "gloss": "the expected; nothing surprising"
+  },
+  {
+   "headword": "salye",
+   "old": "salyesia",
+   "new": "bapiba",
+   "role": "v",
+   "gloss": "to surprise"
+  },
+  {
+   "headword": "salye",
+   "old": "salyenasan",
+   "new": "bapinasan",
+   "role": "na",
+   "gloss": "unsurprising"
+  },
+  {
+   "headword": "salye",
+   "old": "salyesan",
+   "new": "bapisan",
+   "role": "a",
+   "gloss": "surprising"
+  },
+  {
+   "headword": "vabale",
+   "old": "vabaleva",
+   "new": "tobrata",
+   "role": "v",
+   "gloss": "to wall off"
+  },
+  {
+   "headword": "vabale",
+   "old": "vabalesan",
+   "new": "tobrasan",
+   "role": "a",
+   "gloss": "walled"
+  },
+  {
+   "headword": "mege",
+   "old": "megena",
+   "new": "yumlina",
+   "role": "nn",
+   "gloss": "bitterness"
+  },
+  {
+   "headword": "mege",
+   "old": "megema",
+   "new": "yumliya",
+   "role": "v",
+   "gloss": "to sweeten"
+  },
+  {
+   "headword": "mege",
+   "old": "megenasan",
+   "new": "yumlinasan",
+   "role": "na",
+   "gloss": "bitter"
+  },
+  {
+   "headword": "mege",
+   "old": "megesan",
+   "new": "yumlisan",
+   "role": "a",
+   "gloss": "sweet; pleasant"
+  },
+  {
+   "headword": "senba",
+   "old": "senbaasa",
+   "new": "linleasa",
+   "role": "an",
+   "gloss": "purity of soul; holiness"
+  },
+  {
+   "headword": "senba",
+   "old": "senbana",
+   "new": "linlena",
+   "role": "nn",
+   "gloss": "dirtiness"
+  },
+  {
+   "headword": "senba",
+   "old": "senbasia",
+   "new": "linlela",
+   "role": "v",
+   "gloss": "to cleanse"
+  },
+  {
+   "headword": "senba",
+   "old": "senbanasan",
+   "new": "linlenasan",
+   "role": "na",
+   "gloss": "dirty"
+  },
+  {
+   "headword": "senba",
+   "old": "senbasan",
+   "new": "linlesan",
+   "role": "a",
+   "gloss": "clean"
+  },
+  {
+   "headword": "senba",
+   "old": "senbaasasan",
+   "new": "linleasasan",
+   "role": "aa",
+   "gloss": "pure; sanctified"
+  },
+  {
+   "headword": "vugo",
+   "old": "vugona",
+   "new": "vizuna",
+   "role": "nn",
+   "gloss": "slowness"
+  },
+  {
+   "headword": "vugo",
+   "old": "vugova",
+   "new": "vizuva",
+   "role": "v",
+   "gloss": "to accelerate"
+  },
+  {
+   "headword": "vugo",
+   "old": "vugonasan",
+   "new": "vizunasan",
+   "role": "na",
+   "gloss": "slow"
+  },
+  {
+   "headword": "vugo",
+   "old": "vugosan",
+   "new": "vizusan",
+   "role": "a",
+   "gloss": "swift; quick"
+  },
+  {
+   "headword": "lenra",
+   "old": "lenrana",
+   "new": "zarkuna",
+   "role": "nn",
+   "gloss": "ally"
+  },
+  {
+   "headword": "lenra",
+   "old": "lenrala",
+   "new": "zarkuza",
+   "role": "v",
+   "gloss": "to oppose as an enemy"
+  },
+  {
+   "headword": "lenra",
+   "old": "lenrasan",
+   "new": "zarkusan",
+   "role": "a",
+   "gloss": "hostile"
+  },
+  {
+   "headword": "vanru",
+   "old": "vanruasa",
+   "new": "dokraasa",
+   "role": "an",
+   "gloss": "the war in heaven; the last battle"
+  },
+  {
+   "headword": "vanru",
+   "old": "vanruna",
+   "new": "dokrana",
+   "role": "nn",
+   "gloss": "peacetime; the absence of war"
+  },
+  {
+   "headword": "vanru",
+   "old": "vanruva",
+   "new": "dokrada",
+   "role": "v",
+   "gloss": "to wage war"
+  },
+  {
+   "headword": "vanru",
+   "old": "vanrunasan",
+   "new": "dokranasan",
+   "role": "na",
+   "gloss": "at peace; unwarlike"
+  },
+  {
+   "headword": "vanru",
+   "old": "vanrusan",
+   "new": "dokrasan",
+   "role": "a",
+   "gloss": "warlike"
+  },
+  {
+   "headword": "larbopagobudi",
+   "old": "larbopagobudila",
+   "new": "farvibudifa",
+   "role": "v",
+   "gloss": "to hunt in a pack"
+  },
+  {
+   "headword": "larbopagobudi",
+   "old": "larbopagobudisan",
+   "new": "farvibudisan",
+   "role": "a",
+   "gloss": "wolfish"
+  },
+  {
+   "headword": "vugolavi",
+   "old": "vugolavina",
+   "new": "vizulavina",
+   "role": "nn",
+   "gloss": "unhurried calm; the absence of excitement"
+  },
+  {
+   "headword": "vugolavi",
+   "old": "vugolaviva",
+   "new": "vizulaviva",
+   "role": "v",
+   "gloss": "to excite"
+  },
+  {
+   "headword": "vugolavi",
+   "old": "vugolavisan",
+   "new": "vizulavisan",
+   "role": "a",
+   "gloss": "excited"
+  },
+  {
+   "headword": "tibiteyo",
+   "old": "tibiteyota",
+   "new": "tibidentota",
+   "role": "v",
+   "gloss": "to sew"
+  },
+  {
+   "headword": "folnimege",
+   "old": "folnimegena",
+   "new": "folniyumlina",
+   "role": "nn",
+   "gloss": "nectarless flower"
+  },
+  {
+   "headword": "folnimege",
+   "old": "folnimegefa",
+   "new": "folniyumlifa",
+   "role": "v",
+   "gloss": "to gather nectar"
+  },
+  {
+   "headword": "folnimege",
+   "old": "folnimegesan",
+   "new": "folniyumlisan",
+   "role": "a",
+   "gloss": "nectar-sweet"
+  },
+  {
+   "headword": "kuparale",
+   "old": "kuparaleka",
+   "new": "rukoralera",
+   "role": "v",
+   "gloss": "to pulse; to throb"
+  },
+  {
+   "headword": "senbabiti",
+   "old": "senbabitisia",
+   "new": "linlebitila",
+   "role": "v",
+   "gloss": "to sweep"
+  },
+  {
+   "headword": "salyehavli",
+   "old": "salyehavlisia",
+   "new": "bapihavliba",
+   "role": "v",
+   "gloss": "to gasp"
+  },
+  {
+   "headword": "salyehavli",
+   "old": "salyehavlisan",
+   "new": "bapihavlisan",
+   "role": "a",
+   "gloss": "gasping"
+  },
+  {
+   "headword": "salyesemra",
+   "old": "salyesemrasia",
+   "new": "bapisemraba",
+   "role": "v",
+   "gloss": "to embarrass"
+  },
+  {
+   "headword": "salyesemra",
+   "old": "salyesemrasan",
+   "new": "bapisemrasan",
+   "role": "a",
+   "gloss": "embarrassed"
+  },
+  {
+   "headword": "vugorabi",
+   "old": "vugorabiva",
+   "new": "vizurabiva",
+   "role": "v",
+   "gloss": "to dash; to rush"
+  },
+  {
+   "headword": "vugorabi",
+   "old": "vugorabisan",
+   "new": "vizurabisan",
+   "role": "a",
+   "gloss": "rushing"
+  },
+  {
+   "headword": "vugovalmi",
+   "old": "vugovalmiva",
+   "new": "vizuvalmiva",
+   "role": "v",
+   "gloss": "to hurry"
+  },
+  {
+   "headword": "vugovalmi",
+   "old": "vugovalmisan",
+   "new": "vizuvalmisan",
+   "role": "a",
+   "gloss": "hurried; hasty"
+  },
+  {
+   "headword": "kronovabale",
+   "old": "kronovabaleka",
+   "new": "kronotobraka",
+   "role": "v",
+   "gloss": "to set a deadline"
+  },
+  {
+   "headword": "vanruvalmi",
+   "old": "vanruvalmiva",
+   "new": "dokravalmida",
+   "role": "v",
+   "gloss": "to march"
+  },
+  {
+   "headword": "bojiteyo",
+   "old": "bojiteyoba",
+   "new": "bojidentoba",
+   "role": "v",
+   "gloss": "to form icicles"
+  },
+  {
+   "headword": "bojiteyo",
+   "old": "bojiteyosan",
+   "new": "bojidentosan",
+   "role": "a",
+   "gloss": "icicle-hung"
+  },
+  {
+   "headword": "vugovaye",
+   "old": "vugovayeva",
+   "new": "vizuvayeva",
+   "role": "v",
+   "gloss": "to gust suddenly"
+  },
+  {
+   "headword": "vugovaye",
+   "old": "vugovayesan",
+   "new": "vizuvayesan",
+   "role": "a",
+   "gloss": "gusty; buffeted"
+  }
+ ],
+ "lexicalised_derivations": [
+  {
+   "old": "vanruyo",
+   "new": "dokrayo",
+   "new_listing": "soldier; warrior (one who wages war): dokra + -yo"
+  },
+  {
+   "old": "vanrupago",
+   "new": "dokrapago",
+   "new_listing": "battlefield: dokra + -pago"
+  },
+  {
+   "old": "mirunululirayo",
+   "new": null,
+   "note": "retired; frog is now the root kerku"
+  }
+ ],
+ "album_read_today": [
+  {
+   "track": "01",
+   "line": 7,
+   "recorded_2_0": "li merasan minva po milobema ala saivo de lenrari.",
+   "current_2_2": null,
+   "current_after_patch": "li merasan minva po milobema ala saivo de zarkuri."
+  },
+  {
+   "track": "01",
+   "line": 8,
+   "recorded_2_0": "saivo po lallela saivo de manliri ata baba tarnu po kronobioka vobi vanru.",
+   "current_2_2": null,
+   "current_after_patch": "saivo po lallela saivo de manliri ata baba tarnu po kronobioka vobi dokra."
+  },
+  {
+   "track": "01",
+   "line": 13,
+   "recorded_2_0": "li suma de barni po ke yalmunami vobi saivo de faru.",
+   "current_2_2": "li suma de kupa po ke yalmunami vobi saivo de faru.",
+   "current_after_patch": "li suma de ruko po ke yalmunami vobi saivo de faru."
+  },
+  {
+   "track": "04",
+   "line": 3,
+   "recorded_2_0": "taivo vurlova sidu turnata maivo de vanrunasan yuge ki?",
+   "current_2_2": "taivo desida sidu turnata maivo de vanrunasan yuge ki?",
+   "current_after_patch": "taivo desida sidu turnata maivo de dokranasan yuge ki?"
+  },
+  {
+   "track": "04",
+   "line": 7,
+   "recorded_2_0": "oro taivo suvi turnata maivo ko velbivalmi gase navufaru ki?",
+   "current_2_2": "oro taivo suvi turnata maivo ko vugovalmi gase navufaru ki?",
+   "current_after_patch": "oro taivo suvi turnata maivo ko vizuvalmi gase navufaru ki?"
+  },
+  {
+   "track": "05",
+   "line": 14,
+   "recorded_2_0": "ola-pago povi ke baba kasi vanrunasan sonbu ki?",
+   "current_2_2": null,
+   "current_after_patch": "ola-pago povi ke baba kasi dokranasan sonbu ki?"
+  },
+  {
+   "track": "05",
+   "line": 21,
+   "recorded_2_0": "baba lavra de velbi oro baba lavra de vera",
+   "current_2_2": "baba lavra de vugo oro baba lavra de vera",
+   "current_after_patch": "baba lavra de vizu oro baba lavra de vera"
+  },
+  {
+   "track": "05",
+   "line": 25,
+   "recorded_2_0": "si krono ke li vanru raho maivo musi sulnosovesia sidu biolisroba.",
+   "current_2_2": null,
+   "current_after_patch": "si krono ke li dokra raho maivo musi sulnosovesia sidu biolisroba."
+  },
+  {
+   "track": "05",
+   "line": 26,
+   "recorded_2_0": "milobesan taivo dagi livnala maivo de lenra.",
+   "current_2_2": null,
+   "current_after_patch": "milobesan taivo dagi livnala maivo de zarku."
+  },
+  {
+   "track": "06",
+   "line": 20,
+   "recorded_2_0": "Daigo ka dorbi, ne vabale — taivo ne pensapa, ne surusia!",
+   "current_2_2": null,
+   "current_after_patch": "Daigo ka dorbi, ne tobra — taivo ne pensapa, ne surusia!"
+  },
+  {
+   "track": "07",
+   "line": 11,
+   "recorded_2_0": "ata li veluri po sarbisia ko salye su li ranbe de farulavrasan amor.",
+   "current_2_2": "ata li veluri po sarbisia ko salye su li doza de farulavrasan amor.",
+   "current_after_patch": "ata li veluri po sarbisia ko bapi su li doza de farulavrasan amor."
+  },
+  {
+   "track": "07",
+   "line": 14,
+   "recorded_2_0": "maivo lenila li mege de taivo de yomlasan valla.",
+   "current_2_2": null,
+   "current_after_patch": "maivo lenila li yumli de taivo de yomlasan valla."
+  },
+  {
+   "track": "08",
+   "line": 7,
+   "recorded_2_0": "ito ke li sonbusamba de folniri ko mege.",
+   "current_2_2": null,
+   "current_after_patch": "ito ke li sonbusamba de folniri ko yumli."
+  },
+  {
+   "track": "08",
+   "line": 10,
+   "recorded_2_0": "saivo de somuvelma ke baba sove gase megesan gase mavopagoasa.",
+   "current_2_2": null,
+   "current_after_patch": "saivo de somuvelma ke baba sove gase yumlisan gase mavopagoasa."
+  }
+ ],
+ "example_sentences": [
+  {
+   "path": "examples/sentences/327/0",
+   "before": "Li kronovabale ka deyafutu.",
+   "after": "Li kronotobra ka deyafutu."
+  },
+  {
+   "path": "examples/sentences/341/0",
+   "before": "Eli-krono, la vugosan!",
+   "after": "Eli-krono, la vizusan!"
+  },
+  {
+   "path": "examples/sentences/370/0",
+   "before": "Senbabitisia li teru!",
+   "after": "Linlebitila li teru!"
+  },
+  {
+   "path": "examples/sentences/381/0",
+   "before": "Velina de teyonuravu ka ruli lasona.",
+   "after": "Velina de dentonuravu ka ruli lasona."
+  },
+  {
+   "path": "examples/sentences/448/0",
+   "before": "Li jemla ka baba lazu.",
+   "after": "Li zimzi ka baba lazu."
+  },
+  {
+   "path": "examples/sentences/449/0",
+   "before": "Maivo po vimova muya jemlari en li folni.",
+   "after": "Maivo po vimova muya zimziri en li folni."
+  },
+  {
+   "path": "examples/sentences/472/0",
+   "before": "Li tibiteyo ke germasan.",
+   "after": "Li tibidento ke germasan."
+  },
+  {
+   "path": "examples/sentences/477/0",
+   "before": "Li demro de li miru ke vugosan.",
+   "after": "Li demro de li miru ke vizusan."
+  },
+  {
+   "path": "examples/sentences/486/0",
+   "before": "Li pesbivordu po demroda li solo.",
+   "after": "Li bondovordu po demroda li solo."
+  },
+  {
+   "path": "examples/sentences/489/0",
+   "before": "Maivo po lenila li jemla en li nullo.",
+   "after": "Maivo po lenila li zimzi en li nullo."
+  },
+  {
+   "path": "examples/sentences/495/0",
+   "before": "Li jemla po demroda ala li folni.",
+   "after": "Li zimzi po demroda ala li folni."
+  },
+  {
+   "path": "examples/sentences/536/0",
+   "before": "Li pesbivordu ka baba vordu de li demro.",
+   "after": "Li bondovordu ka baba vordu de li demro."
+  },
+  {
+   "path": "examples/sentences/556/0",
+   "before": "Li farvisimvodivmabiti demroda la vugosan.",
+   "after": "Li farvisimvodivmabiti demroda la vizusan."
+  }
+ ],
+ "rulings_left_verbatim": [
+  {
+   "path": "rulings/22/rule",
+   "text": "volda -> larbopagobudi (larbopago + budi); taha -> kezupago (kezu + pago). Compound reading of kezupago is canon.",
+   "note": "ruling text is kept as ruled; superseded in part by the draft rulings below"
+  },
+  {
+   "path": "rulings/36/examples/2/liraasa",
+   "text": "Maivo po vimova muya jemlari en li folni.",
+   "note": "ruling text is kept as ruled; superseded in part by the draft rulings below"
+  }
+ ],
+ "token_map": {
+  "pesbi": "bondo",
+  "pesbina": "bondona",
+  "pesbipa": "bondoba",
+  "pesbinasan": "bondonasan",
+  "pesbisan": "bondosan",
+  "kupa": "ruko",
+  "kupana": "rukona",
+  "kupaka": "rukora",
+  "kupanasan": "rukonasan",
+  "kupasan": "rukosan",
+  "menha": "gamdo",
+  "menhama": "gamdoga",
+  "menhasan": "gamdosan",
+  "teyo": "dento",
+  "teyota": "dentoda",
+  "teyosan": "dentosan",
+  "jemla": "zimzi",
+  "jemlasan": "zimzisan",
+  "voho": "kezdo",
+  "vohoasa": "kezdoasa",
+  "vohona": "kezdona",
+  "vohova": "kezdoka",
+  "vohonasan": "kezdonasan",
+  "vohosan": "kezdosan",
+  "vohoasasan": "kezdoasasan",
+  "salye": "bapi",
+  "salyena": "bapina",
+  "salyesia": "bapiba",
+  "salyenasan": "bapinasan",
+  "salyesan": "bapisan",
+  "vabale": "tobra",
+  "vabaleva": "tobrata",
+  "vabalesan": "tobrasan",
+  "mege": "yumli",
+  "megena": "yumlina",
+  "megema": "yumliya",
+  "megenasan": "yumlinasan",
+  "megesan": "yumlisan",
+  "senba": "linle",
+  "senbaasa": "linleasa",
+  "senbana": "linlena",
+  "senbasia": "linlela",
+  "senbanasan": "linlenasan",
+  "senbasan": "linlesan",
+  "senbaasasan": "linleasasan",
+  "vugo": "vizu",
+  "vugona": "vizuna",
+  "vugova": "vizuva",
+  "vugonasan": "vizunasan",
+  "vugosan": "vizusan",
+  "lenra": "zarku",
+  "lenrana": "zarkuna",
+  "lenrala": "zarkuza",
+  "lenrasan": "zarkusan",
+  "vanru": "dokra",
+  "vanruasa": "dokraasa",
+  "vanruna": "dokrana",
+  "vanruva": "dokrada",
+  "vanrunasan": "dokranasan",
+  "vanrusan": "dokrasan",
+  "larbopagobudi": "farvibudi",
+  "larbopagobudila": "farvibudifa",
+  "larbopagobudisan": "farvibudisan",
+  "larbopagoregna": "bumbo",
+  "maremirulazu": "murmu",
+  "jemlatino": "zimzitino",
+  "jemlayano": "zimziyano",
+  "vugolavi": "vizulavi",
+  "vugolavina": "vizulavina",
+  "vugolaviva": "vizulaviva",
+  "vugolavisan": "vizulavisan",
+  "kuparivla": "rukorivla",
+  "megepusa": "yumlipusa",
+  "talijemla": "talizimzi",
+  "tibiteyo": "tibidento",
+  "tibiteyota": "tibidentota",
+  "kupavolme": "rukovolme",
+  "lunolarbopagobudi": "lunofarvibudi",
+  "vanruyano": "dokrayano",
+  "folnimege": "folniyumli",
+  "folnimegena": "folniyumlina",
+  "folnimegefa": "folniyumlifa",
+  "folnimegesan": "folniyumlisan",
+  "kuparale": "rukorale",
+  "kuparaleka": "rukoralera",
+  "teyonuravu": "dentonuravu",
+  "senbabiti": "linlebiti",
+  "senbabitisia": "linlebitila",
+  "menhasabaye": "gamdosabaye",
+  "farujemla": "faruzimzi",
+  "lenralavi": "zarkulavi",
+  "vanrulirbu": "dokralirbu",
+  "demrovugo": "demrovizu",
+  "pesbivordu": "bondovordu",
+  "jomruvugo": "jomruvizu",
+  "salyehavli": "bapihavli",
+  "salyehavlisia": "bapihavliba",
+  "salyehavlisan": "bapihavlisan",
+  "salyesemra": "bapisemra",
+  "salyesemrasia": "bapisemraba",
+  "salyesemrasan": "bapisemrasan",
+  "vanrudomlu": "dokradomlu",
+  "vugorabi": "vizurabi",
+  "vugorabiva": "vizurabiva",
+  "vugorabisan": "vizurabisan",
+  "vugovalmi": "vizuvalmi",
+  "vugovalmiva": "vizuvalmiva",
+  "vugovalmisan": "vizuvalmisan",
+  "kronovabale": "kronotobra",
+  "kronovabaleka": "kronotobraka",
+  "talipesbi": "talibondo",
+  "vanruvalmi": "dokravalmi",
+  "vanruvalmiva": "dokravalmida",
+  "bojiteyo": "bojidento",
+  "bojiteyoba": "bojidentoba",
+  "bojiteyosan": "bojidentosan",
+  "vugovaye": "vizuvaye",
+  "vugovayeva": "vizuvayeva",
+  "vugovayesan": "vizuvayesan",
+  "mirunululirayo": "kerku",
+  "vanruyo": "dokrayo",
+  "vanrupago": "dokrapago"
+ },
+ "checks": {
+  "all_new_roots_free": "two edits or more from every live word after the patch; no suffix look-alike endings",
+  "exact_collisions": 0,
+  "duplicates_among_new_spellings": 0,
+  "verb_rule": "every verb regenerated from the new first letter; the rule reproduces all 2.2 verbs, so no irregulars are lost"
+ }
+}

@@ -100,7 +100,7 @@ Zabo. Ne senosia ala li vila.
 # EN: Yes. Don't tell the village.
 Li vila futu venreva kube li merno lombila. Toda li vila. Kasa ola ka li apok.
 # EN: The village will come when the morning begins. The whole village. Because this is the end.
-Ata Velina futu masuma vobi li bumre de yomla, ata Velina futu senosia fime ito ka menu megesan tamo pilo de bumre. Velina senosia eli-coda rada merno yasmo, sige maivo po ke linuti.
+Ata Velina futu masuma vobi li bumre de yomla, ata Velina futu senosia fime ito ka menu yumlisan tamo pilo de bumre. Velina senosia eli-coda rada merno yasmo, sige maivo po ke linuti.
 # EN: And Velina will ask for the honey bread, and Velina will say that it's less sweet than father's
 # EN: bread. Velina says it every morning, as we all know, since I was a little child.
 Velina loki bioba ki?
@@ -319,7 +319,7 @@ Ne, Dorin. Maivo senosia eli-krono. Maivo po talita eli-pago pendi unzira-dossa 
 # EN: Kipo. I handed over all my coins. All. I'm not carrying it off, Aviya. I'm staying with it.
 # EN: Taivo ne ka famli. Zabo. Taivo ne ka—
 # EN: You're not family. Yes. You're not—
-Ne famli. Nara famamiga ne ka doli kupa. Pilo po nolenia maivo "linu". Una krono. Taivo po ne ke eli-pago. Maivo loki ramura ito.
+Ne famli. Nara famamiga ne ka doli ruko. Pilo po nolenia maivo "linu". Una krono. Taivo po ne ke eli-pago. Maivo loki ramura ito.
 # EN: Not family. But kinship is not only blood. Father named me "child". One time. You were not
 # EN: here. I still remember it.
 Taivo ka li lanvetovoyo, Kipo. Nara eli-pago ka maivo de nimu. Maivo dagi lisrola ki?

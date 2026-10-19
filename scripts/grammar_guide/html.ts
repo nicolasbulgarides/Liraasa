@@ -67,19 +67,21 @@ export function md(text: string): string {
 export function badge(id: string): string {
   const edition = id.split(':')[0] ?? '';
   const cls =
-    edition === '2.2'
-      ? 'b22'
-      : edition === '2.1'
-        ? 'b21'
-        : edition === '2.0'
-          ? 'b20'
-          : edition === '1.2'
-            ? 'b12'
-            : edition === '1.0'
-              ? 'b10'
-              : edition === '0.8'
-                ? 'b08'
-                : 'badr';
+    edition === '2.3'
+      ? 'b23'
+      : edition === '2.2'
+        ? 'b22'
+        : edition === '2.1'
+          ? 'b21'
+          : edition === '2.0'
+            ? 'b20'
+            : edition === '1.2'
+              ? 'b12'
+              : edition === '1.0'
+                ? 'b10'
+                : edition === '0.8'
+                  ? 'b08'
+                  : 'badr';
   return `<span class="badge ${cls}" title="Ruling ${esc(id)}">${esc(id)}</span>`;
 }
 

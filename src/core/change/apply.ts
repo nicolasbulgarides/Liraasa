@@ -18,7 +18,14 @@ import { IdAssigner, type IdKind, type IdMapFile } from '../model/ids';
 import type { RawLexicon, RawSlots } from '../model/raw';
 import { sevenForms } from '../morphology/sevenForms';
 import { type ChangeRecord, type Changeset, validateChangeset } from './changelog';
-import { respellAsCompoundInPlace, respellRootInPlace, retireRootInPlace } from './respell';
+import {
+  recomposeCompoundInPlace,
+  respellAsCompoundInPlace,
+  respellCompoundAsRootInPlace,
+  respellRootInPlace,
+  retireDerivationInPlace,
+  retireRootInPlace,
+} from './respell';
 
 export interface ChangesetRuling {
   id: string;
@@ -408,6 +415,19 @@ export function applyChangesets(
           table[word] = op.to;
           break;
         }
+        case 'retire_derivation': {
+          const base = derivationBase(op.entry);
+          const table = lex.morphology.lexicalised_derivations;
+          const word = base === null ? '' : base.spelling + base.suffix;
+          const rep = byId.get(op.to ?? '');
+          if (base === null || table[word] !== op.from) {
+            throw new ApplyError(`${op.entry}: expected "${String(op.from)}"`);
+          }
+          if (rep === undefined)
+            throw new ApplyError(`${op.entry}: ${String(op.to)} is not a headword`);
+          retireDerivationInPlace(lex, word, rep.root);
+          break;
+        }
         case 'edit_particle_example': {
           const m = /^particle:(.+):(\d+)$/.exec(op.entry);
           const dp = (lex.discourse_particles as unknown as (Row & { examples: Row[] })[]).find(
@@ -568,6 +588,8 @@ export function applyChangesets(
         }
         case 'respell_root':
         case 'respell_as_compound':
+        case 'recompose_compound':
+        case 'respell_compound_as_root':
         case 'retire_and_replace': {
           // the same code the editor's rename tool runs (respell.ts)
           if (op.to === null) throw new ApplyError(`${op.entry}: ${op.op} needs a "to"`);
@@ -577,13 +599,18 @@ export function applyChangesets(
           }
           try {
             if (op.op === 'respell_root') respellRootInPlace(lex, op.entry, op.to, op.reason);
-            else if (op.op === 'respell_as_compound') {
+            else if (op.op === 'respell_compound_as_root')
+              respellCompoundAsRootInPlace(lex, op.entry, op.to, op.reason);
+            else if (op.op === 'respell_as_compound' || op.op === 'recompose_compound') {
               const parts = op.to.split('+');
               if (parts.length !== 2 || parts.some((x) => x === ''))
                 throw new ApplyError(`${op.entry}: "to" must be MODIFIER+HEAD`);
               if (!rules.nesting && parts.some((x) => byRoot.get(x)?.type === 'Compound'))
                 throw new ApplyError(`${op.entry}: ${op.to} would nest`);
-              respellAsCompoundInPlace(lex, op.entry, parts as [string, string], op.reason);
+              const pair = parts as [string, string];
+              if (op.op === 'respell_as_compound')
+                respellAsCompoundInPlace(lex, op.entry, pair, op.reason);
+              else recomposeCompoundInPlace(lex, op.entry, pair, op.reason);
             } else retireRootInPlace(lex, op.entry, op.to, op.reason);
           } catch (e) {
             if (e instanceof ApplyError) throw e;
@@ -656,6 +683,48 @@ export function applyChangesets(
             const parts = (old.superseded_in_part ?? []) as { clause: string; by: string }[];
             old.superseded_in_part = [...parts, { clause: op.field, by: op.to }];
           }
+          break;
+        }
+        case 'archive_text': {
+          const field = op.field ?? '';
+          let read: () => unknown;
+          let write: (v: string) => void;
+          if (field === 'notes') {
+            const h = headword(op);
+            read = () => h.notes;
+            write = (v) => {
+              h.notes = v;
+            };
+          } else {
+            const [edition, id] = op.entry.split(':');
+            const set = (lex as unknown as Record<string, unknown>)[
+              `rulings_${(edition ?? '').replace('.', '_')}${edition === '0.8' ? '_carried' : ''}`
+            ];
+            const r = Array.isArray(set) ? (set as Row[]).find((x) => x.id === id) : undefined;
+            const i = Number(/^example:(\d+)$/.exec(field)?.[1] ?? NaN);
+            const pair = (r?.examples as [string, string][] | undefined)?.[i];
+            if (pair === undefined) throw new ApplyError(`${op.entry}: no ${field} to archive`);
+            read = () => pair[0];
+            write = (v) => {
+              pair[0] = v;
+            };
+          }
+          const now = read();
+          if (op.from === null || op.to === null || (now !== op.from && now !== op.to))
+            throw new ApplyError(`${op.entry}: ${field} reads "${String(now)}"`);
+          write(op.to);
+          const legacy = lex.legacy as unknown as { archived_text?: Row[] };
+          legacy.archived_text = [
+            ...(legacy.archived_text ?? []),
+            {
+              entry: op.entry,
+              field,
+              text: op.from,
+              now: op.to,
+              archived_in: cs.edition,
+              reason: op.reason,
+            },
+          ];
           break;
         }
         case 'retire_root':

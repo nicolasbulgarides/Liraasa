@@ -7,7 +7,7 @@
  * JSON file, so each data file is written as a script that assigns it to a
  * global. The content is the JSON itself, unchanged:
  *
- *   editor/checker/data/reference.js  window.LIRAASA_REF          handoff/liraasa_2_2_llm.json
+ *   editor/checker/data/reference.js  window.LIRAASA_REF          handoff/liraasa_2_3_llm.json
  *   editor/checker/data/extra.js      window.LIRAASA_CHECKER_EXTRA legacy spellings + names
  *   editor/checker/data/flags.js      window.LIRAASA_FLAGS        data/checker/lexicon_flags.json
  *   editor/checker/data/english.js    window.LIRAASA_ENGLISH      data/checker/english.json + calques.json
@@ -22,8 +22,8 @@
 import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 
-const REFERENCE = 'handoff/liraasa_2_2_llm.json';
-const LEXICON = 'data/lexicon/liraasa_2_2.json';
+const REFERENCE = 'handoff/liraasa_2_3_llm.json';
+const LEXICON = 'data/lexicon/liraasa_2_3.json';
 const NAMES = 'data/checker/names.json';
 const FLAGS = 'data/checker/lexicon_flags.json';
 const ENGLISH = 'data/checker/english.json';
@@ -38,10 +38,20 @@ interface Migration {
 }
 
 /**
- * From the changesets' ops: the edition each root was respelled in, by its old
- * spelling (`out`), and the edition a respelled spelling came in, by that
- * spelling (`introduced`: puzu came in 2.1 and left in 2.2).
+ * From the changesets' ops: the edition each entry was respelled or rebuilt
+ * in, or each listed derivation retired in, by its old spelling (`out`), and
+ * the edition a respelled spelling came in, by that spelling (`introduced`:
+ * puzu came in 2.1 and left in 2.2).
  */
+const MOVES = new Set([
+  'respell_root',
+  'respell_as_compound',
+  'recompose_compound',
+  'respell_compound_as_root',
+]);
+/** The ops whose `to` is a new root spelling. */
+const ROOT_TARGET = new Set(['respell_root', 'respell_compound_as_root']);
+
 function respelledIn(): { out: Map<string, string>; introduced: Map<string, string> } {
   const out = new Map<string, string>();
   const introduced = new Map<string, string>();
@@ -53,10 +63,14 @@ function respelledIn(): { out: Map<string, string>; introduced: Map<string, stri
       ops?: { op: string; from: string | null; to: string | null }[];
     };
     for (const op of cs.ops ?? []) {
-      if ((op.op === 'respell_root' || op.op === 'respell_as_compound') && op.from !== null) {
+      if (MOVES.has(op.op) && op.from !== null) {
         out.set(op.from, cs.edition ?? '');
-        if (op.op === 'respell_root' && op.to !== null) introduced.set(op.to, cs.edition ?? '');
+        if (ROOT_TARGET.has(op.op) && op.to !== null) introduced.set(op.to, cs.edition ?? '');
       }
+      // the gloss line of a retired derivation ends `: <base> + -<suffix>` (2.3:G70)
+      const m = /: ([a-z]+) \+ -([a-z]+)$/.exec(op.from ?? '');
+      if (op.op === 'retire_derivation' && m !== null)
+        out.set(`${m[1] ?? ''}${m[2] ?? ''}`, cs.edition ?? '');
     }
   }
   return { out, introduced };

@@ -11,7 +11,7 @@ import { validateChangeset } from '../../src/core/change/changelog';
 import type { IdMapFile } from '../../src/core/model/ids';
 import { serializeLexicon } from '../../src/core/model/exportLexicon';
 import type { RawLexicon } from '../../src/core/model/raw';
-import { type Checker, loadChecker } from '../checker/loadChecker';
+import { type Checker, loadChecker, readToday } from '../checker/loadChecker';
 
 /**
  * Liraasa 1.2 (ADR-0013): built from the frozen 1.1 by the two 1.2
@@ -127,7 +127,7 @@ describe('the 1.2 build', () => {
 });
 
 describe('1.2 text under the editor checker', () => {
-  it('every 1.2 ruling example and every new function-word example checks clean', () => {
+  it('every 1.2 ruling example and every new function-word example checks clean, read today', () => {
     const r12 = (v12 as unknown as { rulings_1_2: { id: string; examples?: [string, string][] }[] })
       .rulings_1_2;
     const lines = [
@@ -135,7 +135,7 @@ describe('1.2 text under the editor checker', () => {
       ...v12.function_words.flatMap((f) =>
         f.since === '1.2' && f.example !== null ? [f.example] : [],
       ),
-    ];
+    ].map((line) => readToday(checker, line));
     const hits = lines.flatMap((line) =>
       checker
         .checkLine(line, 1, '', { register: 'poetic' })

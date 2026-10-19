@@ -9,7 +9,7 @@
 # EN: Merceria… Merceria…
 Kube li mernolumi lombila, taivo milobema,
 Ata toda folniri lallela vobi taivo.
-Taivo de reso ka gase megesan gase yomla,
+Taivo de reso ka gase yumlisan gase yomla,
 Ata li lulfari lulfala ligo taivo de sabaye.
 Maivo po ke baba linuti raho ralnora en li galsa,
 Ata taivo po lomola maivo ko sumasan manliri.
@@ -49,7 +49,7 @@ Kube li mernolumi lombila, taivo milobema,
 # EN: When the dawn begins, you smile,
 Ata toda folniri lallela vobi taivo.
 # EN: And all the flowers open for you.
-Taivo de reso ka gase megesan gase yomla,
+Taivo de reso ka gase yumlisan gase yomla,
 # EN: Your laughter is as sweet as honey,
 Ata li lulfari lulfala ligo taivo de sabaye.
 # EN: And the butterflies flutter near your hair.

@@ -15,7 +15,7 @@ import { phoneInventory } from '../src/core/phonetics/g2p';
 import type { RawLexicon } from '../src/core/model/raw';
 import { parseArgs } from './args';
 
-const DEFAULT_LEXICON = 'data/lexicon/liraasa_2_2.json';
+const DEFAULT_LEXICON = 'data/lexicon/liraasa_2_3.json';
 /**
  * Grammar rulings on top of 1.1 (ADR-0012). A 1.1 lexicon needs them applied
  * here; 1.2 already carries them as `rulings_1_2`, its examples revised

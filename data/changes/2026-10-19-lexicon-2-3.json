@@ -1,0 +1,316 @@
+{
+ "id": "2026-10-19-lexicon-2-3",
+ "edition": "2.3",
+ "created": "2026-10-19T18:00:00Z",
+ "author": "nicolas",
+ "summary": "Liraasa 2.3 (ADR-0019), from the author's sound-pass patch: rulings 2.3:G69–G71; 13 roots respelled (lenra → zarku, vanru → dokra, voho → kezdo, vabale → tobra, teyo → dento, mege → yumli, kupa → ruko, jemla → zimzi, pesbi → bondo, menha → gamdo, vugo → vizu, salye → bapi, senba → linle); bear and cow made the roots bumbo and murmu, and frog the new root kerku (mirunululirayo retired); wolf rebuilt as farvibudi (farvi + budi), superseding the wolf half of 2.1:G59; every form, compound, image compound, derivation and example sentence built on them follows.",
+ "rulings": [
+  {
+   "id": "G69",
+   "topic": "Second respelling pass",
+   "ruling": "Thirteen roots are respelled: lenra -> zarku; vanru -> dokra; voho -> kezdo; vabale -> tobra; teyo -> dento; mege -> yumli; kupa -> ruko; jemla -> zimzi; pesbi -> bondo; menha -> gamdo; vugo -> vizu; salye -> bapi; senba -> linle. 2.1:G58 applies in full: a respelled root keeps every meaning and empty slot; all forms, derivations, compounds and image compounds respell with it; compound verbs follow the new first letter; 2.2 spellings retired; older texts, including the album, are read under the spellings they were written in.",
+   "refines": [
+    "2.1:G58"
+   ],
+   "examples": []
+  },
+  {
+   "id": "G70",
+   "topic": "Roots for common animals",
+   "ruling": "bumbo (bear), murmu (cow; cattle) and kerku (frog) are new roots. They replace larbopagoregna, maremirulazu and the listed derivation mirunululirayo, which are retired; kerku takes the verb kerkuka, to croak. mirunululira (river-song) stays.",
+   "refines": [],
+   "examples": []
+  },
+  {
+   "id": "G71",
+   "topic": "Wolf",
+   "ruling": "larbopagobudi -> farvibudi (farvi + budi), 'wild dog', read like farvilazu (wild animal); lunolarbopagobudi -> lunofarvibudi. Supersedes the wolf half of 2.1:G59; its taha -> kezupago half stands.",
+   "refines": [],
+   "supersedes": [
+    "2.1:G59"
+   ],
+   "examples": []
+  }
+ ],
+ "headwords": [
+  {
+   "id": "lx_kerku_1854",
+   "root": "kerku",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "frog",
+    "verb": "to croak"
+   },
+   "register": "everyday",
+   "domain": "Animals",
+   "english_synonyms": [
+    "frog",
+    "to croak"
+   ],
+   "notes": "Added in 2.3 (changeset 2026-10-19-lexicon-2-3). Replaces the listed derivation mirunululira + -yo (frog (river-singer)), which is retired (2.3:G70)."
+  }
+ ],
+ "ops": [
+  {
+   "entry": "2.3:G69",
+   "op": "add_ruling",
+   "from": null,
+   "to": "Second respelling pass",
+   "ruling": "2.3:G69",
+   "reason": "Liraasa 2.3 sound-pass patch, draft ruling G69: Second respelling pass.",
+   "addedIn": "2.3",
+   "at": "2026-10-19T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "2.3:G70",
+   "op": "add_ruling",
+   "from": null,
+   "to": "Roots for common animals",
+   "ruling": "2.3:G70",
+   "reason": "Liraasa 2.3 sound-pass patch, draft ruling G70: Roots for common animals.",
+   "addedIn": "2.3",
+   "at": "2026-10-19T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "2.3:G71",
+   "op": "add_ruling",
+   "from": null,
+   "to": "Wolf",
+   "ruling": "2.3:G71",
+   "reason": "Liraasa 2.3 sound-pass patch, draft ruling G71: Wolf.",
+   "addedIn": "2.3",
+   "at": "2026-10-19T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "2.1:G59",
+   "op": "supersede_ruling",
+   "field": "volda -> larbopagobudi (larbopago + budi)",
+   "from": "Roots replaced by compounds",
+   "to": "2.3:G71",
+   "ruling": "2.3:G71",
+   "reason": "Liraasa 2.3 patch: 2.3:G71 rebuilds wolf on farvi and supersedes the wolf half of 2.1:G59; its taha -> kezupago half stands. The ruling is kept as ruled, never reworded.",
+   "addedIn": "2.3",
+   "at": "2026-10-19T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lenra_0261",
+   "op": "respell_root",
+   "slot": "root",
+   "from": "lenra",
+   "to": "zarku",
+   "ruling": "2.3:G69",
+   "reason": "Liraasa 2.3 patch: lenra (\"enemy; active adversary, not merely unloved; foe\") is respelled zarku; every meaning and empty slot is kept, and every form, compound, image compound and derivation follows (2.3:G69, 2.1:G58).",
+   "addedIn": "2.3",
+   "at": "2026-10-19T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_vanru_0941",
+   "op": "respell_root",
+   "slot": "root",
+   "from": "vanru",
+   "to": "dokra",
+   "ruling": "2.3:G69",
+   "reason": "Liraasa 2.3 patch: vanru (\"war\") is respelled dokra; every meaning and empty slot is kept, and every form, compound, image compound and derivation follows (2.3:G69, 2.1:G58).",
+   "addedIn": "2.3",
+   "at": "2026-10-19T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_voho_1038",
+   "op": "respell_root",
+   "slot": "root",
+   "from": "voho",
+   "to": "kezdo",
+   "ruling": "2.3:G69",
+   "reason": "Liraasa 2.3 patch: voho (\"revenge; retaliation; vengeance\") is respelled kezdo; every meaning and empty slot is kept, and every form, compound, image compound and derivation follows (2.3:G69, 2.1:G58).",
+   "addedIn": "2.3",
+   "at": "2026-10-19T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_vabale_0931",
+   "op": "respell_root",
+   "slot": "root",
+   "from": "vabale",
+   "to": "tobra",
+   "ruling": "2.3:G69",
+   "reason": "Liraasa 2.3 patch: vabale (\"wall\") is respelled tobra; every meaning and empty slot is kept, and every form, compound, image compound and derivation follows (2.3:G69, 2.1:G58).",
+   "addedIn": "2.3",
+   "at": "2026-10-19T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_teyo_0915",
+   "op": "respell_root",
+   "slot": "root",
+   "from": "teyo",
+   "to": "dento",
+   "ruling": "2.3:G69",
+   "reason": "Liraasa 2.3 patch: teyo (\"tooth\") is respelled dento; every meaning and empty slot is kept, and every form, compound, image compound and derivation follows (2.3:G69, 2.1:G58).",
+   "addedIn": "2.3",
+   "at": "2026-10-19T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_mege_0367",
+   "op": "respell_root",
+   "slot": "root",
+   "from": "mege",
+   "to": "yumli",
+   "ruling": "2.3:G69",
+   "reason": "Liraasa 2.3 patch: mege (\"sweetness\") is respelled yumli; every meaning and empty slot is kept, and every form, compound, image compound and derivation follows (2.3:G69, 2.1:G58).",
+   "addedIn": "2.3",
+   "at": "2026-10-19T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_barni_0025",
+   "op": "respell_root",
+   "slot": "root",
+   "from": "kupa",
+   "to": "ruko",
+   "ruling": "2.3:G69",
+   "reason": "Liraasa 2.3 patch: kupa (\"blood\") is respelled ruko; every meaning and empty slot is kept, and every form, compound, image compound and derivation follows (2.3:G69, 2.1:G58).",
+   "addedIn": "2.3",
+   "at": "2026-10-19T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_jemla_1101",
+   "op": "respell_root",
+   "slot": "root",
+   "from": "jemla",
+   "to": "zimzi",
+   "ruling": "2.3:G69",
+   "reason": "Liraasa 2.3 patch: jemla (\"insect; six-legged arthropod in ordinary usage\") is respelled zimzi; every meaning and empty slot is kept, and every form, compound, image compound and derivation follows (2.3:G69, 2.1:G58).",
+   "addedIn": "2.3",
+   "at": "2026-10-19T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_pesbi_0604",
+   "op": "respell_root",
+   "slot": "root",
+   "from": "pesbi",
+   "to": "bondo",
+   "ruling": "2.3:G69",
+   "reason": "Liraasa 2.3 patch: pesbi (\"weight\") is respelled bondo; every meaning and empty slot is kept, and every form, compound, image compound and derivation follows (2.3:G69, 2.1:G58).",
+   "addedIn": "2.3",
+   "at": "2026-10-19T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_menha_0373",
+   "op": "respell_root",
+   "slot": "root",
+   "from": "menha",
+   "to": "gamdo",
+   "ruling": "2.3:G69",
+   "reason": "Liraasa 2.3 patch: menha (\"jaw\") is respelled gamdo; every meaning and empty slot is kept, and every form, compound, image compound and derivation follows (2.3:G69, 2.1:G58).",
+   "addedIn": "2.3",
+   "at": "2026-10-19T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_velbi_0982",
+   "op": "respell_root",
+   "slot": "root",
+   "from": "vugo",
+   "to": "vizu",
+   "ruling": "2.3:G69",
+   "reason": "Liraasa 2.3 patch: vugo (\"speed\") is respelled vizu; every meaning and empty slot is kept, and every form, compound, image compound and derivation follows (2.3:G69, 2.1:G58).",
+   "addedIn": "2.3",
+   "at": "2026-10-19T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_salye_0728",
+   "op": "respell_root",
+   "slot": "root",
+   "from": "salye",
+   "to": "bapi",
+   "ruling": "2.3:G69",
+   "reason": "Liraasa 2.3 patch: salye (\"surprise\") is respelled bapi; every meaning and empty slot is kept, and every form, compound, image compound and derivation follows (2.3:G69, 2.1:G58).",
+   "addedIn": "2.3",
+   "at": "2026-10-19T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_senba_0755",
+   "op": "respell_root",
+   "slot": "root",
+   "from": "senba",
+   "to": "linle",
+   "ruling": "2.3:G69",
+   "reason": "Liraasa 2.3 patch: senba (\"cleanliness\") is respelled linle; every meaning and empty slot is kept, and every form, compound, image compound and derivation follows (2.3:G69, 2.1:G58).",
+   "addedIn": "2.3",
+   "at": "2026-10-19T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_volda_1039",
+   "op": "recompose_compound",
+   "slot": "root",
+   "from": "larbopagobudi",
+   "to": "farvi+budi",
+   "ruling": "2.3:G71",
+   "reason": "Liraasa 2.3 patch: larbopagobudi (larbopago + budi) is rebuilt as farvibudi (farvi + budi), \"wild dog\", read like farvilazu (wild animal); the entry keeps its id and glosses, and every compound built on it follows (2.3:G71).",
+   "addedIn": "2.3",
+   "at": "2026-10-19T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_larbopagoregna_1763",
+   "op": "respell_compound_as_root",
+   "slot": "root",
+   "from": "larbopagoregna",
+   "to": "bumbo",
+   "ruling": "2.3:G70",
+   "reason": "Liraasa 2.3 patch: the compound larbopagoregna (\"bear\") is replaced by the root bumbo; the entry keeps its id and glosses, and larbopagoregna is retired (2.3:G70).",
+   "addedIn": "2.3",
+   "at": "2026-10-19T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_maremirulazu_1782",
+   "op": "respell_compound_as_root",
+   "slot": "root",
+   "from": "maremirulazu",
+   "to": "murmu",
+   "ruling": "2.3:G70",
+   "reason": "Liraasa 2.3 patch: the compound maremirulazu (\"cow; cattle\") is replaced by the root murmu; the entry keeps its id and glosses, and maremirulazu is retired (2.3:G70).",
+   "addedIn": "2.3",
+   "at": "2026-10-19T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_kerku_1854",
+   "op": "add_root",
+   "slot": "root",
+   "from": null,
+   "to": "kerku",
+   "ruling": "2.3:G70",
+   "reason": "Liraasa 2.3 patch: kerku (\"frog\") is a new root, with the verb kerkuka \"to croak\" (2.3:G70).",
+   "addedIn": "2.3",
+   "at": "2026-10-19T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "derivation:lx_mirunululira_1601:-yo",
+   "op": "retire_derivation",
+   "from": "frog (river-singer): mirunululira + -yo",
+   "to": "lx_kerku_1854",
+   "ruling": "2.3:G70",
+   "reason": "Liraasa 2.3 patch: frog is now the root kerku, so mirunululirayo leaves the listed derivations; old texts read it as kerku, and it stays buildable by the default -yo reading (2.3:G70).",
+   "addedIn": "2.3",
+   "at": "2026-10-19T18:00:00Z",
+   "author": "nicolas"
+  }
+ ]
+}

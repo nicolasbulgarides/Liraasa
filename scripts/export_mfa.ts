@@ -39,9 +39,9 @@ import {
 import type { RawLexicon } from '../src/core/model/raw';
 import { parseArgs } from './args';
 
-const DEFAULT_LEXICON = 'data/lexicon/liraasa_2_2.json';
+const DEFAULT_LEXICON = 'data/lexicon/liraasa_2_3.json';
 const DEFAULT_OUT = 'data/export';
-const CORPUS_DIRS = ['data/corpus/songs_2_2', 'data/corpus/bumrepago_2_2'];
+const CORPUS_DIRS = ['data/corpus/songs_2_3', 'data/corpus/bumrepago_2_3'];
 
 /** Where each word came from, so the report can say what covers what. */
 type Source =

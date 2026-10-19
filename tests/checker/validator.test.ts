@@ -206,8 +206,9 @@ function guideCorpus(): string[] {
      ("solitude"). Reported to the author.
    - 2.2 restores silro (2.2:G68), so its two forms in the guide are no longer
      respelled (28 → 26), and 2.2:G60 lets a ki-word open a question and end
-     without ki, so none of the 18 questions 2.1:G46 flagged is flagged now. */
-const SINCE_2_1 = { respelled: 26, questions: 0 };
+     without ki, so none of the 18 questions 2.1:G46 flagged is flagged now.
+   - 2.3 respells thirteen more roots (2.3:G69), counted the same way as 2.1's. */
+const SINCE_2_1 = { respelled: 26, respelled23: 3, questions: 0 };
 const GUIDE_FINDINGS = [
   'Ki-saivo lirala? (historical) :: never invent :: historical',
   'Lotero silda, li cilni ka lasona. :: ADR-0011 :: Lotero silda',
@@ -224,14 +225,16 @@ const GUIDE_FINDINGS = [
   'lira + yo = lirayo :: slot :: yo',
 ];
 
-/** What 2.1 and 2.2 add to the frozen text: the 2.1 respellings and the 2.2 question rules. */
-function since2_1(d: Diagnostic): boolean {
+/** The edition that respelled a word the checker flags as an older spelling. */
+function respelledIn(d: Diagnostic): string | undefined {
   const legacy = checker.index.legacy as Map<string, { edition?: string }>;
-  return (
-    d.rule === '2.2:G60' ||
-    d.rule === '2.2:G61' ||
-    (d.rule === '1.0:G19' && legacy.get(String(d.token).toLowerCase())?.edition === '2.1')
-  );
+  return d.rule === '1.0:G19' ? legacy.get(String(d.token).toLowerCase())?.edition : undefined;
+}
+
+/** What 2.1 to 2.3 add to the frozen text: the 2.1 and 2.3 respellings and the 2.2 question rules. */
+function since2_1(d: Diagnostic): boolean {
+  const edition = respelledIn(d);
+  return d.rule === '2.2:G60' || d.rule === '2.2:G61' || edition === '2.1' || edition === '2.3';
 }
 
 describe('must pass: the 1.0 grammar guide', () => {
@@ -245,7 +248,8 @@ describe('must pass: the 1.0 grammar guide', () => {
     expect([...found].sort()).toEqual(GUIDE_FINDINGS);
     const added = all.filter(({ d }) => since2_1(d));
     expect({
-      respelled: added.filter(({ d }) => d.rule === '1.0:G19').length,
+      respelled: added.filter(({ d }) => respelledIn(d) === '2.1').length,
+      respelled23: added.filter(({ d }) => respelledIn(d) === '2.3').length,
       questions: added.filter(({ d }) => d.rule.startsWith('2.2:G6')).length,
     }).toEqual(SINCE_2_1);
   });

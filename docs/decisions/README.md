@@ -25,6 +25,7 @@ point.
 | [0016](0016-lexicon-2-0.md)                   | Liraasa 2.0: the lexicon expansion, built from frozen 1.2          | accepted | 2.0   |
 | [0017](0017-lexicon-2-1.md)                   | Liraasa 2.1: thirty roots respelled, grammar rulings G46–G59       | accepted | 2.1   |
 | [0018](0018-lexicon-2-2.md)                   | Liraasa 2.2: the grammar of the album, silro restored              | accepted | 2.2   |
+| [0019](0019-lexicon-2-3.md)                   | Liraasa 2.3: the sound pass, bear, cow and frog made roots         | accepted | 2.3   |
 
 ADR-0007 and ADR-0008 record decisions the author made in answer to the Phase 0
 report; the questions and answers are summarised in each. ADR-0009 and ADR-0010

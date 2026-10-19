@@ -1,0 +1,57 @@
+{
+ "id": "2026-10-19-lexicon-2-3-review",
+ "edition": "2.3",
+ "created": "2026-10-19T20:00:00Z",
+ "author": "nicolas",
+ "summary": "The 2.3 integration review (ADR-0019 addendum), from the author's answers of 2026-10-19: dento (tooth) and ruko (blood) are kept as the patch substitutes them; the respelled example of 1.2:G28 is kept and its 2.2 text retired to the new archive, legacy.archived_text; the stale history in the notes of bumbo, murmu and mirunululira moves there too; the root bank is left as it is. No rule changes.",
+ "ops": [
+  {
+   "entry": "1.2:G28",
+   "op": "archive_text",
+   "field": "example:2",
+   "from": "Maivo po vimova muya jemlari en li folni.",
+   "to": "Maivo po vimova muya zimziri en li folni.",
+   "ruling": "2.3:G69",
+   "addedIn": "2.3",
+   "reason": "Author decision 2026-10-19: the example stays respelled (jemla is zimzi since 2.3:G69, and 2.1:G58 applies in full); its 2.2 text, which taught the retired spelling jemlari, is retired to the archive.",
+   "at": "2026-10-19T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_larbopagoregna_1763",
+   "op": "archive_text",
+   "field": "notes",
+   "from": "Added in 2.0 (changeset 2026-10-18-lexicon-2-0). Tier null: forest-king, now built on regna as you first asked (replaces larbopagolirbu).",
+   "to": "Added in 2.0 (changeset 2026-10-18-lexicon-2-0).",
+   "ruling": "2.3:G70",
+   "addedIn": "2.3",
+   "reason": "Author decision 2026-10-19: history that is no longer pertinent leaves the note for the archive. bear is a root since 2.3:G70; the note described it as the compound larbopagoregna (forest-king, built on regna).",
+   "at": "2026-10-19T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_maremirulazu_1782",
+   "op": "archive_text",
+   "field": "notes",
+   "from": "Added in 2.0 (changeset 2026-10-18-lexicon-2-0). Tier GAP: milk-animal.",
+   "to": "Added in 2.0 (changeset 2026-10-18-lexicon-2-0).",
+   "ruling": "2.3:G70",
+   "addedIn": "2.3",
+   "reason": "Author decision 2026-10-19: history that is no longer pertinent leaves the note for the archive. cow is a root since 2.3:G70; the note described it as the compound maremirulazu (milk-animal).",
+   "at": "2026-10-19T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_mirunululira_1601",
+   "op": "archive_text",
+   "field": "notes",
+   "from": "Added in 2.0 (changeset 2026-10-18-lexicon-2-0). Tier null: Needed as the base for frog, and a lovely word in its own right..",
+   "to": "Added in 2.0 (changeset 2026-10-18-lexicon-2-0). A lovely word in its own right.",
+   "ruling": "2.3:G70",
+   "addedIn": "2.3",
+   "reason": "Author decision 2026-10-19: history that is no longer pertinent leaves the note for the archive. frog is the root kerku since 2.3:G70, so mirunululira is no longer the base for frog; the rest of the note stands.",
+   "at": "2026-10-19T20:00:00Z",
+   "author": "nicolas"
+  }
+ ]
+}

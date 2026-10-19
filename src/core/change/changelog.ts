@@ -77,7 +77,34 @@ export type ChangeOp =
    * that clause of it is superseded (`superseded_in_part`). `entry` is the old
    * ruling's edition-qualified id; `to` the new one's (ADR-0018).
    */
-  | 'supersede_ruling';
+  | 'supersede_ruling'
+  /**
+   * A compound rebuilt on two other headwords, keeping its id and glosses
+   * (2.3:G71). `entry` is its id; `to` is the new parts joined with `+`,
+   * e.g. `farvi+budi`; every compound built on it follows (ADR-0019).
+   */
+  | 'recompose_compound'
+  /**
+   * A compound replaced by a primal root, keeping its id and glosses
+   * (2.3:G70). `entry` is its id; `to` is the root's spelling (ADR-0019).
+   */
+  | 'respell_compound_as_root'
+  /**
+   * A lexicalised derivation leaves the table, its meaning now carried by a
+   * headword (2.3:G70). `entry` is the derivation's, as for `add_derivation`;
+   * `from` is its gloss line; `to` is the id of the headword that replaces it.
+   * Old texts read the derivation as that headword (ADR-0019).
+   */
+  | 'retire_derivation'
+  /**
+   * A text leaves the living lexicon for `legacy.archived_text`, kept whole
+   * with the edition and the reason (2.3 review). `entry` is a headword id
+   * with `field: "notes"`, or an edition-qualified ruling id with
+   * `field: "example:<index>"`. `from` is the text archived; `to` is what the
+   * field reads now. The field must read `from`, or already read `to` because
+   * a respelling earlier in the build moved it (ADR-0019).
+   */
+  | 'archive_text';
 
 /**
  * One recorded change.

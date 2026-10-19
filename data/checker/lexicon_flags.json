@@ -1,5 +1,5 @@
 {
- "about": "Semantic overlay for the grammar checker (editor/checker). The main reference, handoff/liraasa_2_2_llm.json, stays clean; the checker merges this file in at load. Every key is a spelling in the reference, and tests/checker fails if one stops existing (a respelling must update this file). Author-reviewed data: edit here, never in code.",
+ "about": "Semantic overlay for the grammar checker (editor/checker). The main reference, handoff/liraasa_2_3_llm.json, stays clean; the checker merges this file in at load. Every key is a spelling in the reference, and tests/checker fails if one stops existing (a respelling must update this file). Author-reviewed data: edit here, never in code.",
  "word_class": {
   "_about": "The grammatical class of each small word the clause template does not already name. Operators, copulas, valency operators, gome, la, the frame, topic, status, attitude, reciprocal and question words are read from clause.slots and clause.scope_operators, not from here.",
   "li": "determiner",
@@ -188,7 +188,10 @@
   "loteronela": "person",
   "farulavra": "animal",
   "lazu": "animal",
-  "jemla": "animal",
+  "zimzi": "animal",
+  "bumbo": "animal",
+  "murmu": "animal",
+  "kerku": "animal",
   "lavra": "animal",
   "budi": "animal",
   "filse": "animal",

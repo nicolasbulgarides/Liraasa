@@ -122,6 +122,7 @@ export interface Lexicon {
   rulings_2_0?: Ruling[];
   rulings_2_1?: Ruling[];
   rulings_2_2?: Ruling[];
+  rulings_2_3?: Ruling[];
   /** 2.0: the image-compound pattern, with the attested pairs whole (ADR-0016). */
   image_compounds?: {
     rule: string;
@@ -143,12 +144,18 @@ export interface Lexicon {
 
 /**
  * The current spelling of a word an older text spells otherwise (2.1:G58: a
- * 2.0 text is read under its 2.0 spellings). Only respellings: a retired
- * word has a replacement, not a new spelling.
+ * 2.0 text is read under its 2.0 spellings), a -ri / -ti ending kept as
+ * respell.ts `correctText` keeps it (lenrari → zarkuri, 2.3:G69). Only
+ * respellings: a retired word has a replacement, not a new spelling.
  */
 export function respelledAs(lex: Lexicon, word: string): string | undefined {
   const m = lex.legacy.migration_forms[word];
-  return m?.kind === 'respelled' ? m.to : undefined;
+  if (m !== undefined) return m.kind === 'respelled' ? m.to : undefined;
+  for (const suffix of ['tiri', 'ri', 'ti']) {
+    const stem = lex.legacy.migration_forms[word.slice(0, -suffix.length)];
+    if (word.endsWith(suffix) && stem?.kind === 'respelled') return stem.to + suffix;
+  }
+  return undefined;
 }
 
 export function loadLexicon(path: string): Lexicon {
@@ -209,6 +216,7 @@ export function normGloss(gloss: string): string {
 export function rulingById(lex: Lexicon, id: string): Ruling | undefined {
   const [edition, rid] = id.split(':');
   const sets: Record<string, readonly Ruling[] | undefined> = {
+    '2.3': lex.rulings_2_3,
     '2.2': lex.rulings_2_2,
     '2.1': lex.rulings_2_1,
     '2.0': lex.rulings_2_0,
@@ -331,6 +339,8 @@ export class Index {
         ...(lex.rulings_2_0 ?? []),
         ...(lex.rulings_2_1 ?? []),
         ...(lex.rulings_2_2 ?? []),
+        ...(lex.rulings_2_3 ?? []),
+        ...(lex.rulings_2_3 ?? []),
         ...lex.rulings_0_8_carried,
       ].flatMap((r) => (r.examples ?? []).map(([l]) => l)),
       ...lex.discourse_particles.flatMap((p) => p.examples.map((e) => e.liraasa)),
@@ -470,6 +480,7 @@ export function canonTexts(lex: Lexicon): string[] {
     ...(lex.rulings_2_0 ?? []),
     ...(lex.rulings_2_1 ?? []),
     ...(lex.rulings_2_2 ?? []),
+    ...(lex.rulings_2_3 ?? []),
     ...lex.rulings_0_8_carried,
   ];
   return [

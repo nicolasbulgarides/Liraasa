@@ -216,10 +216,13 @@ describe('the album (step 3)', () => {
     for (const s of album) {
       for (const l of s.lines) {
         expect(unread(l.recorded), `${s.track}:${String(l.n)}`).toEqual([]);
-        // a word read as a legacy spelling is a 2.0 spelling, read under 2.0 (2.1:G58)
+        // a word read as a legacy spelling is a 2.0 spelling, read under 2.0 (2.1:G58),
+        // with any -ri / -ti ending it carries (lenrari, 2.3:G69)
         for (const t of checker.readLine(l.recorded)) {
-          if (t.reading?.kind === 'legacy')
-            expect(was.has(t.text.toLowerCase()), t.text).toBe(true);
+          if (t.reading?.kind !== 'legacy') continue;
+          const ending = t.reading.suffixes.join('').length;
+          const word = t.text.toLowerCase();
+          expect(was.has(ending > 0 ? word.slice(0, -ending) : word), t.text).toBe(true);
         }
       }
     }

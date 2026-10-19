@@ -205,7 +205,21 @@ export interface RawLegacy {
   editorial_notes_0_7: Record<string, unknown>[];
   data_fixes_0_8: Record<string, unknown>[];
   rulings_0_8: RawRuling[];
+  /** 2.3 on (ADR-0019): texts retired from the living lexicon, kept whole. */
+  archived_text?: RawArchivedText[];
   [key: string]: unknown;
+}
+
+export interface RawArchivedText {
+  /** A headword id, or an edition-qualified ruling id. */
+  entry: string;
+  /** `notes`, or `example:<index>` of a ruling. */
+  field: string;
+  text: string;
+  /** What the field reads instead. */
+  now: string;
+  archived_in: string;
+  reason: string;
 }
 
 export interface RawDisposition {
@@ -360,6 +374,7 @@ export interface RawLexicon {
   rulings_2_1?: RawRuling[];
   /** 2.2 (ADR-0018): rulings G60–G68, the grammar of the album. */
   rulings_2_2?: RawRuling[];
+  rulings_2_3?: RawRuling[];
   /** The image-compound pattern (2.0:G40, ADR-0016). */
   image_compounds?: RawImageCompounds;
   examples: RawExample[];

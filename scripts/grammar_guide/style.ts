@@ -5,7 +5,7 @@ export const CSS = `
   --lir: #6b2d5c; --accent: #2f4f7a; --accent-soft: #e8eef6;
   --sing: #8a4b00; --sing-bg: #fdf3e4; --parse: #23566b; --parse-bg: #e6f2f5;
   --warn: #8b1e1e; --warn-bg: #fbeaea; --unused: #8a8490;
-  --b22: #1f5f8b; --b21: #0b6656; --b20: #8a4b00; --b12: #6b2d5c; --b10: #2f4f7a; --b08: #4b5a2a; --badr: #5b5563;
+  --b23: #7a3e9d; --b22: #1f5f8b; --b21: #0b6656; --b20: #8a4b00; --b12: #6b2d5c; --b10: #2f4f7a; --b08: #4b5a2a; --badr: #5b5563;
   --sun: #b0700f; --sun-bg: #fbe9c2; --moon: #3f5f8f; --moon-bg: #e3ebf7;
 }
 @media (prefers-color-scheme: dark) {
@@ -14,7 +14,7 @@ export const CSS = `
     --lir: #e7a9d6; --accent: #9dbbe6; --accent-soft: #26303f;
     --sing: #f1bd77; --sing-bg: #2e2416; --parse: #8fcfe0; --parse-bg: #16282e;
     --warn: #f3a3a3; --warn-bg: #321a1a; --unused: #8f8897;
-    --b22: #8cc4ef; --b21: #7fd6c4; --b20: #f1bd77; --b12: #e7a9d6; --b10: #9dbbe6; --b08: #c4d39a; --badr: #b3abbb;
+    --b23: #d3aef0; --b22: #8cc4ef; --b21: #7fd6c4; --b20: #f1bd77; --b12: #e7a9d6; --b10: #9dbbe6; --b08: #c4d39a; --badr: #b3abbb;
     --sun: #f2c26b; --sun-bg: #3b2c12; --moon: #b9cbea; --moon-bg: #222c3d;
   }
 }
@@ -23,7 +23,7 @@ export const CSS = `
   --lir: #e7a9d6; --accent: #9dbbe6; --accent-soft: #26303f;
   --sing: #f1bd77; --sing-bg: #2e2416; --parse: #8fcfe0; --parse-bg: #16282e;
   --warn: #f3a3a3; --warn-bg: #321a1a; --unused: #8f8897;
-  --b22: #8cc4ef; --b21: #7fd6c4; --b20: #f1bd77; --b12: #e7a9d6; --b10: #9dbbe6; --b08: #c4d39a; --badr: #b3abbb;
+  --b23: #d3aef0; --b22: #8cc4ef; --b21: #7fd6c4; --b20: #f1bd77; --b12: #e7a9d6; --b10: #9dbbe6; --b08: #c4d39a; --badr: #b3abbb;
   --sun: #f2c26b; --sun-bg: #3b2c12; --moon: #b9cbea; --moon-bg: #222c3d;
 }
 * { box-sizing: border-box; }
@@ -151,7 +151,7 @@ table.grid td { white-space: nowrap; }
 .callout.caution { border-color: var(--warn); background: var(--warn-bg); }
 .callout.caution .callout-head { color: var(--warn); }
 .badge { display: inline-block; font: 600 .78rem/1.5 Consolas, Menlo, monospace; padding: 0 .45em; border-radius: 999px; border: 1.5px solid; white-space: nowrap; vertical-align: .08em; }
-.badge.b22 { color: var(--b22); } .badge.b21 { color: var(--b21); } .badge.b20 { color: var(--b20); } .badge.b12 { color: var(--b12); } .badge.b10 { color: var(--b10); } .badge.b08 { color: var(--b08); } .badge.badr { color: var(--badr); }
+.badge.b23 { color: var(--b23); } .badge.b22 { color: var(--b22); } .badge.b21 { color: var(--b21); } .badge.b20 { color: var(--b20); } .badge.b12 { color: var(--b12); } .badge.b10 { color: var(--b10); } .badge.b08 { color: var(--b08); } .badge.badr { color: var(--badr); }
 .sev { font-weight: 700; text-transform: uppercase; font-size: .78rem; }
 .sev-error { color: var(--warn); } .sev-warn { color: var(--sing); } .sev-note { color: var(--parse); }
 

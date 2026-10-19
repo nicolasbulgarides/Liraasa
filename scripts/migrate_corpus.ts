@@ -1,14 +1,15 @@
 /**
  * CLI: carry the validated corpus into the current edition's spelling
- * (ADR-0017, ADR-0018).
+ * (ADR-0017, ADR-0018, ADR-0019).
  *
  *   npx tsx scripts/migrate_corpus.ts
  *
  * As data/source/migrate_text.py carried the songs into 1.0, this rewrites
  * the 1.0 corpora (data/corpus/songs_1_0, bumrepago_1_0) with the
- * respellings since 2.0 only: the forms of the roots a 2.1 or later op
- * respells, as legacy.migration_forms records them (a respelling undone, as
- * silro in 2.2, leaves no row), through the same `correctText` the
+ * respellings since 2.0 only: the forms of the entries a 2.1 or later op
+ * respells or rebuilds, and the derivations a 2.3 op retires, as
+ * legacy.migration_forms records them (a respelling undone, as silro in 2.2,
+ * leaves no row), through the same `correctText` the
  * lexicon's own sentences go through (a -ri / -ti ending and a capital kept).
  * Comment lines (English, notes) are copied as they are. File names are kept,
  * so a learner's progress on a text, keyed by its name, carries over.
@@ -21,20 +22,33 @@ import { correctText } from '../src/core/change/respell';
 import type { RawLexicon } from '../src/core/model/raw';
 import { CHANGESETS_2_1 } from './changesets_2_1';
 import { CHANGESETS_2_2 } from './changesets_2_2';
+import { CHANGESETS_2_3 } from './changesets_2_3';
 
-const LEXICON = 'data/lexicon/liraasa_2_2.json';
+const LEXICON = 'data/lexicon/liraasa_2_3.json';
 const DIRS: [string, string][] = [
-  ['data/corpus/songs_1_0', 'data/corpus/songs_2_2'],
-  ['data/corpus/bumrepago_1_0', 'data/corpus/bumrepago_2_2'],
+  ['data/corpus/songs_1_0', 'data/corpus/songs_2_3'],
+  ['data/corpus/bumrepago_1_0', 'data/corpus/bumrepago_2_3'],
 ];
-const REPORT = 'data/corpus/corpus_migration_2_2.json';
+const REPORT = 'data/corpus/corpus_migration_2_3.json';
+
+const MOVES = new Set([
+  'respell_root',
+  'respell_as_compound',
+  'recompose_compound',
+  'respell_compound_as_root',
+]);
 
 const lex = JSON.parse(readFileSync(LEXICON, 'utf8')) as RawLexicon;
 const respelled = new Set(
-  [...CHANGESETS_2_1, ...CHANGESETS_2_2]
+  [...CHANGESETS_2_1, ...CHANGESETS_2_2, ...CHANGESETS_2_3]
     .flatMap((p) => (JSON.parse(readFileSync(p, 'utf8')) as LexiconChangeset).ops)
-    .filter((o) => o.op === 'respell_root' || o.op === 'respell_as_compound')
-    .map((o) => o.from ?? ''),
+    .flatMap((o) =>
+      MOVES.has(o.op)
+        ? [o.from ?? '']
+        : o.op === 'retire_derivation' // the gloss line ends `: <base> + -<suffix>`
+          ? [(o.from ?? '').replace(/^.*: ([a-z]+) \+ -([a-z]+)$/, '$1$2')]
+          : [],
+    ),
 );
 const mapping = Object.fromEntries(
   Object.entries(lex.legacy.migration_forms)

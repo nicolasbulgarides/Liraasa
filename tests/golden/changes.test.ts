@@ -2,7 +2,7 @@ import { readFileSync } from 'node:fs';
 import { fileURLToPath, URL } from 'node:url';
 import { beforeAll, describe, expect, it } from 'vitest';
 import { type Changeset, validateChangeset } from '../../src/core/change/changelog';
-import { type Checker, loadChecker } from '../checker/loadChecker';
+import { type Checker, loadChecker, readToday } from '../checker/loadChecker';
 
 /**
  * The grammar changeset of 2026-10-17 (ADR-0012): traceable, aimed at the
@@ -45,11 +45,11 @@ describe('the 1.2 grammar changeset', () => {
     }
   });
 
-  it('every revised example and every ruling example checks clean', () => {
+  it('every revised example and every ruling example checks clean, read today', () => {
     const lines = [
       ...changeset.ops.filter((o) => o.op === 'edit_example').map((o) => o.to ?? ''),
       ...changeset.rulings.flatMap((r) => r.examples.map(([liraasa]) => liraasa)),
-    ];
+    ].map((line) => readToday(checker, line));
     const hits = lines.flatMap((line) =>
       checker
         .checkLine(line, 1, '', { register: 'poetic' })

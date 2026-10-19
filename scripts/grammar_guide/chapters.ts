@@ -1117,6 +1117,8 @@ export interface EditionCounts {
   note22: string;
   /** Slots 2.2 filled: each adds one meaningful form. */
   filled22: number;
+  /** 2.2's headword count, before 2.3 made frog a root (2.3:G70). */
+  v22: number;
 }
 
 /** Every headword form whose slot has a meaning (the LLM reference counts the same). */
@@ -1183,7 +1185,8 @@ ${h3('C. Time words')}
 ${h3('D. Editions and rulings')}
 ${p(`Liraasa 1.0 (${n(counts.v10)} headwords) is the frozen base. 1.1 added vocabulary (${n(counts.v11)}); 1.2 added rulings 1.2:G24–G36 and words (${n(counts.v12)}). 2.0 added ${n(added)} headwords and moved ${n(counts.attested)} pattern-built compounds out of the dictionary into the image-compound pattern, hence ${n(counts.v12)} − ${n(counts.attested)} + ${n(added)} = ${n(counts.v20)}. The ${n(counts.attested)} keep their glosses as attested image compounds and are **not** counted in the ${n(counts.v20)}.`)}
 ${p(`2.1 added rulings 2.1:G46–G59 and respelled ${n(counts.respelled)} roots, ${n(counts.becameCompounds)} of them replaced by compounds, with every form, compound, image compound and derivation built on them; the headword count stays ${n(counts.v21)}. ${rulingText(lex, '2.1:G58')} [[2.1:G58]] ${rulingText(lex, '2.1:G59')} [[2.1:G59]]`)}
-${p(`${esc(counts.note22)} [[2.2:G68]] The headword count stays ${n(lex.headwords.length)}; the filled slots add ${n(counts.filled22)} meaningful forms, for ${n(meaningfulForms(lex))} in all.`)}
+${p(`${esc(counts.note22)} [[2.2:G68]] The headword count stays ${n(counts.v22)}; the filled slots add ${n(counts.filled22)} meaningful forms.`)}
+${p(`2.3 is a sound pass. ${rulingText(lex, '2.3:G69')} [[2.3:G69]] ${rulingText(lex, '2.3:G70')} [[2.3:G70]] ${rulingText(lex, '2.3:G71')} [[2.3:G71]] With frog a new root there are ${n(lex.headwords.length)} headwords, and ${n(meaningfulForms(lex))} meaningful forms in all.`)}
 ${rulingIndex}
 </section>`;
 }

@@ -201,6 +201,8 @@ function migrateExamples(
     .filter(([k]) => k.startsWith('rulings_'))
     .flatMap(([, v]) => (Array.isArray(v) ? (v as RawRuling[]) : []));
   for (const r of rulings) {
+    // a superseded ruling, whole or in part, is kept as ruled, never reworded (ADR-0018)
+    if (r.superseded_by !== undefined || r.superseded_in_part !== undefined) continue;
     r.ruling = fix(r.ruling);
     const ex = r.examples;
     if (Array.isArray(ex))
@@ -295,9 +297,10 @@ function respellDerivations(
 }
 
 /**
- * Move a primal root to a new spelling, or into a compound of two existing
- * headwords, and carry every compound, attested image compound and listed
- * derivation built on it (2.1:G58). Ids never change.
+ * Move an entry to a new spelling: a primal root to another root or into a
+ * compound of two existing headwords, or (2.3) a compound onto other parts or
+ * into a primal root. Every compound, attested image compound and listed
+ * derivation built on it follows (2.1:G58). Ids never change.
  */
 function moveRoot(
   lex: RawLexicon,
@@ -305,11 +308,16 @@ function moveRoot(
   spelling: string,
   components: [string, string] | null,
   reason: string,
+  source: 'Primal' | 'Compound' = 'Primal',
 ): RespellImpact {
   const heads = lex.headwords as unknown as Head[];
   const h = heads.find((x) => String(x.id) === id);
   if (h === undefined) throw new Error(`${id}: no headword has this id`);
-  if (h.components !== null) throw new Error(`${h.root} is a compound: respell its parts`);
+  if (source === 'Primal' && h.components !== null)
+    throw new Error(`${h.root} is a compound: respell its parts`);
+  if (source === 'Compound' && h.components === null)
+    throw new Error(`${h.root} is a primal root, not a compound`);
+  const oldComponents = h.components;
   if (components !== null) {
     if (components.join('') !== spelling)
       throw new Error(`${spelling} is not ${components.join(' + ')} joined`);
@@ -324,10 +332,8 @@ function moveRoot(
   const slots: Record<string, string> = {};
 
   h.root = spelling;
-  if (components !== null) {
-    h.type = 'Compound';
-    h.components = [...components];
-  }
+  h.type = components !== null ? 'Compound' : 'Primal';
+  h.components = components !== null ? [...components] : null;
   regenerate(h);
   for (const [k, f] of Object.entries(oldForms)) {
     const next = h.forms[k];
@@ -375,6 +381,7 @@ function moveRoot(
     old,
     new: spelling,
     ...(components !== null ? { components: [...components] } : {}),
+    ...(oldComponents !== null ? { old_components: [...oldComponents] } : {}),
     old_forms: oldForms,
     glosses: h.glosses,
     reason,
@@ -409,6 +416,52 @@ export function respellAsCompoundInPlace(
   reason: string,
 ): RespellImpact {
   return moveRoot(lex, id, components.join(''), components, reason);
+}
+
+/**
+ * Rebuild a compound on two other existing headwords, in place (2.3:G71):
+ * the entry keeps its id and glosses; its forms and every compound built on
+ * it follow.
+ */
+export function recomposeCompoundInPlace(
+  lex: RawLexicon,
+  id: string,
+  components: [string, string],
+  reason: string,
+): RespellImpact {
+  return moveRoot(lex, id, components.join(''), components, reason, 'Compound');
+}
+
+/**
+ * Replace a compound by a primal root, in place (2.3:G70): the entry keeps
+ * its id, glosses and every empty slot, and becomes that root.
+ */
+export function respellCompoundAsRootInPlace(
+  lex: RawLexicon,
+  id: string,
+  spelling: string,
+  reason: string,
+): RespellImpact {
+  return moveRoot(lex, id, spelling, null, reason, 'Compound');
+}
+
+/**
+ * A lexicalised derivation leaves the table because a headword now carries its
+ * meaning (2.3:G70): old texts read it as that headword, and the lexicon's own
+ * sentences follow. The spelling stays buildable by its default reading.
+ */
+export function retireDerivationInPlace(
+  lex: RawLexicon,
+  word: string,
+  replacement: string,
+): RespellImpact {
+  const table = lex.morphology.lexicalised_derivations;
+  if (!(word in table)) throw new Error(`${word}: not a lexicalised derivation`);
+  Reflect.deleteProperty(table, word);
+  const mapping = { [word]: replacement };
+  recordMigration(lex, mapping, { [word]: 'derivation' }, word, 'retired');
+  const examples = migrateExamples(lex, mapping);
+  return { forms: mapping, compounds: [], verbClass: null, examples };
 }
 
 /** Check, then respell, on a copy. The original lexicon is never touched. */

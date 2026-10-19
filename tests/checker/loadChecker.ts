@@ -1,6 +1,7 @@
 import { readFileSync } from 'node:fs';
 import { fileURLToPath, URL } from 'node:url';
 import vm from 'node:vm';
+import { correctText } from '../../src/core/change/respell';
 
 /**
  * Load the browser grammar checker (editor/checker/*.js) into a Node context,
@@ -80,4 +81,17 @@ export function loadChecker(): { api: CheckerApi; checker: Checker; ref: Record<
     checker: api.default,
     ref: (context as { LIRAASA_REF: Record<string, unknown> }).LIRAASA_REF,
   };
+}
+
+/**
+ * An older text read under today's spellings (2.1:G58, 2.3:G69): every word a
+ * later edition respelled, through the checker's own legacy table, by the
+ * same `correctText` every migration uses. A retired word is left as it is.
+ */
+export function readToday(checker: Checker, line: string): string {
+  const legacy = checker.index.legacy as Map<string, { to: string; kind: string }>;
+  const mapping = Object.fromEntries(
+    [...legacy].filter(([, m]) => m.kind === 'respelled').map(([old, m]) => [old, m.to]),
+  );
+  return correctText(line, mapping).text;
 }

@@ -1,5 +1,6 @@
 import { CHANGESETS_2_0 } from '../../scripts/changesets_2_0';
 import { CHANGESETS_2_1 } from '../../scripts/changesets_2_1';
+import { CHANGESETS_2_3 } from '../../scripts/changesets_2_3';
 import { readFileSync } from 'node:fs';
 import { beforeAll, describe, expect, it } from 'vitest';
 import {
@@ -339,10 +340,11 @@ describe('a new edition', () => {
 
   it('ACCEPTANCE: the 2.1 → 2.2 diff lesson is silro restored, two forms filled, G60–G68', () => {
     const at21 = atEdition('data/lexicon/liraasa_2_1.json');
+    const at22 = atEdition('data/lexicon/liraasa_2_2.json');
     const d = diffSnapshots(
       snapshotEdition(at21.data),
-      snapshotEdition(source.data),
-      source.replacementFor,
+      snapshotEdition(at22.data),
+      at22.replacementFor,
     );
     expect([d.from, d.to]).toEqual(['2.1', '2.2']);
     expect(d.added).toEqual([]);
@@ -359,6 +361,34 @@ describe('a new edition', () => {
     expect(d.rulesAdded.map((r) => r.id)).toEqual(
       Array.from({ length: 9 }, (_, i) => `rule:2.2:G${String(60 + i)}`),
     );
+  });
+
+  it('ACCEPTANCE: the 2.2 → 2.3 diff lesson is the sound pass, id by id, and frog', () => {
+    const at22 = atEdition('data/lexicon/liraasa_2_2.json');
+    const d = diffSnapshots(
+      snapshotEdition(at22.data),
+      snapshotEdition(source.data),
+      source.replacementFor,
+    );
+    expect([d.from, d.to]).toEqual(['2.2', '2.3']);
+    // frog is a new root (2.3:G70); bear, cow and wolf keep their ids, so nothing is removed
+    expect(d.added.map((a) => [a.spelling, a.meaning])).toEqual([['kerku', 'frog']]);
+    expect(d.removed).toEqual([]);
+    expect(d.reglossed).toEqual([]);
+    // the patch's 47 headwords respelled, each the one its headword_migration lists
+    const patch = JSON.parse(readFileSync('data/proposals/liraasa_2_3_patch.json', 'utf8')) as {
+      headword_migration: { old: string; new: string }[];
+    };
+    expect(d.renamed.map((r) => `${r.from} → ${r.to}`).sort()).toEqual(
+      patch.headword_migration.map((h) => `${h.old} → ${h.new}`).sort(),
+    );
+    const ids = new Set(d.renamed.map((r) => r.id));
+    for (const o of CHANGESETS_2_3.flatMap(
+      (path) =>
+        (JSON.parse(readFileSync(path, 'utf8')) as { ops: { op: string; entry: string }[] }).ops,
+    ).filter((x) => x.op.startsWith('respell') || x.op === 'recompose_compound'))
+      expect(ids.has(o.entry), o.entry).toBe(true);
+    expect(d.rulesAdded.map((r) => r.id)).toEqual(['rule:2.3:G69', 'rule:2.3:G70', 'rule:2.3:G71']);
   });
 });
 

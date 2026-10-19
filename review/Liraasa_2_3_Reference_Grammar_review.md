@@ -1,4 +1,4 @@
-# Liraasa 2.2 Reference Grammar: for the author
+# Liraasa 2.3 Reference Grammar: for the author
 
 Written by the build. Nothing here is canon until the author says so.
 

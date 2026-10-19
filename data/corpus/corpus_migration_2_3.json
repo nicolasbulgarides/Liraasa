@@ -1,202 +1,220 @@
 {
- "report": "Corpus carried into Liraasa 2.2 spelling",
- "lexicon": "data/lexicon/liraasa_2_2.json",
- "lines_changed": 33,
+ "report": "Corpus carried into Liraasa 2.3 spelling",
+ "lexicon": "data/lexicon/liraasa_2_3.json",
+ "lines_changed": 36,
  "changes": [
   {
-   "file": "songs_2_2/song_III_somulira.txt",
+   "file": "songs_2_3/song_III_somulira.txt",
    "line": 10,
    "from": "Li sulba po vesnolumiva,",
    "to": "Li sola po vesnolumiva,"
   },
   {
-   "file": "songs_2_2/song_III_somulira.txt",
+   "file": "songs_2_3/song_III_somulira.txt",
    "line": 46,
    "from": "Li sulba po vesnolumiva,",
    "to": "Li sola po vesnolumiva,"
   },
   {
-   "file": "songs_2_2/song_IV_radiance.txt",
+   "file": "songs_2_3/song_II_merceria.txt",
+   "line": 12,
+   "from": "Taivo de reso ka gase megesan gase yomla,",
+   "to": "Taivo de reso ka gase yumlisan gase yomla,"
+  },
+  {
+   "file": "songs_2_3/song_II_merceria.txt",
+   "line": 52,
+   "from": "Taivo de reso ka gase megesan gase yomla,",
+   "to": "Taivo de reso ka gase yumlisan gase yomla,"
+  },
+  {
+   "file": "songs_2_3/song_IV_radiance.txt",
    "line": 15,
    "from": "Solaria, li sulbaasa raho juseja;",
    "to": "Solaria, li solaasa raho juseja;"
   },
   {
-   "file": "songs_2_2/song_IV_radiance.txt",
+   "file": "songs_2_3/song_IV_radiance.txt",
    "line": 23,
    "from": "Mera, luno, melo ata sulba",
    "to": "Mera, luno, melo ata sola"
   },
   {
-   "file": "songs_2_2/song_IV_radiance.txt",
+   "file": "songs_2_3/song_IV_radiance.txt",
    "line": 35,
    "from": "Mera, luno, melo ata sulba",
    "to": "Mera, luno, melo ata sola"
   },
   {
-   "file": "songs_2_2/song_IV_radiance.txt",
+   "file": "songs_2_3/song_IV_radiance.txt",
    "line": 46,
    "from": "Mera, luno, melo ata sulba",
    "to": "Mera, luno, melo ata sola"
   },
   {
-   "file": "songs_2_2/song_IV_radiance.txt",
+   "file": "songs_2_3/song_IV_radiance.txt",
    "line": 63,
    "from": "Solaria, li sulbaasa raho juseja;",
    "to": "Solaria, li solaasa raho juseja;"
   },
   {
-   "file": "songs_2_2/song_IV_radiance.txt",
+   "file": "songs_2_3/song_IV_radiance.txt",
    "line": 80,
    "from": "Mera, luno, melo ata sulba",
    "to": "Mera, luno, melo ata sola"
   },
   {
-   "file": "songs_2_2/song_VI_kicoda.txt",
+   "file": "songs_2_3/song_VI_kicoda.txt",
    "line": 40,
    "from": "taivo sili, maivo faru; taivo nilvu, maivo vebo!",
    "to": "taivo sili, maivo faru; taivo foji, maivo faji!"
   },
   {
-   "file": "songs_2_2/song_VI_kicoda.txt",
+   "file": "songs_2_3/song_VI_kicoda.txt",
    "line": 55,
    "from": "Taivo de mavo ka velu, maivo de lore sulbasia,",
    "to": "Taivo de mavo ka velu, maivo de lore solasia,"
   },
   {
-   "file": "songs_2_2/song_V_sulbaasa.txt",
+   "file": "songs_2_3/song_V_sulbaasa.txt",
    "line": 11,
    "from": "Maivo ka sulbaasa. Taivo ka farulavra.",
    "to": "Maivo ka solaasa. Taivo ka farulavra."
   },
   {
-   "file": "songs_2_2/song_V_sulbaasa.txt",
+   "file": "songs_2_3/song_V_sulbaasa.txt",
    "line": 14,
    "from": "taivo po vagava ala maivo, navuasa de farulavra.",
    "to": "taivo po diyida ala maivo, navuasa de farulavra."
   },
   {
-   "file": "songs_2_2/song_V_sulbaasa.txt",
+   "file": "songs_2_3/song_V_sulbaasa.txt",
    "line": 21,
    "from": "sulba ata farulavra, yanoya, yanoya!",
    "to": "sola ata farulavra, yanoya, yanoya!"
   },
   {
-   "file": "songs_2_2/song_V_sulbaasa.txt",
+   "file": "songs_2_3/song_V_sulbaasa.txt",
    "line": 38,
    "from": "sulba ata farulavra, yanoya, yanoya!",
    "to": "sola ata farulavra, yanoya, yanoya!"
   },
   {
-   "file": "songs_2_2/song_V_sulbaasa.txt",
+   "file": "songs_2_3/song_V_sulbaasa.txt",
    "line": 43,
    "from": "Maivo ne ka sulba. Taivo ne ka farulavra.",
    "to": "Maivo ne ka sola. Taivo ne ka farulavra."
   },
   {
-   "file": "songs_2_2/song_V_sulbaasa.txt",
+   "file": "songs_2_3/song_V_sulbaasa.txt",
    "line": 47,
    "from": "sulba ata farulavra, yanoya, yanoya!",
    "to": "sola ata farulavra, yanoya, yanoya!"
   },
   {
-   "file": "bumrepago_2_2/bumrepago.txt",
+   "file": "bumrepago_2_3/bumrepago.txt",
    "line": 67,
    "from": "Ata nuna-nela vimova li tali de ito. Nuna-nela vimova li vordu; toda-nela sapusia li yordo.",
    "to": "Ata nuna-nela vimova li tali de ito. Nuna-nela vimova li vordu; toda-nela sapusia li puku."
   },
   {
-   "file": "bumrepago_2_2/bumrepago.txt",
+   "file": "bumrepago_2_3/bumrepago.txt",
+   "line": 103,
+   "from": "Ata Velina futu masuma vobi li bumre de yomla, ata Velina futu senosia fime ito ka menu megesan tamo pilo de bumre. Velina senosia eli-coda rada merno yasmo, sige maivo po ke linuti.",
+   "to": "Ata Velina futu masuma vobi li bumre de yomla, ata Velina futu senosia fime ito ka menu yumlisan tamo pilo de bumre. Velina senosia eli-coda rada merno yasmo, sige maivo po ke linuti."
+  },
+  {
+   "file": "bumrepago_2_3/bumrepago.txt",
    "line": 110,
    "from": "Toda-coda loki ke eli-pago, sabri pilo. Li tabu. Li buvokovari. Li faru raho po sumasia maivo de manliri kube maivo po ke linuti, ata maivo po somusia su li bumre.",
    "to": "Toda-coda loki ke eli-pago, sabri pilo. Li tabu. Li buzakovari. Li faru raho po sumasia maivo de manliri kube maivo po ke linuti, ata maivo po somusia su li bumre."
   },
   {
-   "file": "bumrepago_2_2/bumrepago.txt",
+   "file": "bumrepago_2_3/bumrepago.txt",
    "line": 125,
    "from": "Li lotero farudomlu po balbuba. Maivo po talvata baba bumre ala ito. Ito po talvata baba bumre ala maivo.",
    "to": "Li lotero farudomlu po bakoba. Maivo po talvata baba bumre ala ito. Ito po talvata baba bumre ala maivo."
   },
   {
-   "file": "bumrepago_2_2/bumrepago.txt",
+   "file": "bumrepago_2_3/bumrepago.txt",
    "line": 127,
    "from": "Ito po ne talvata. Kipo po ralnora. Kipo po vaku ito balbuba, la dorvanasan.",
    "to": "Ito po ne talvata. Kipo po ralnora. Kipo po vaku ito bakoba, la dorvanasan."
   },
   {
-   "file": "bumrepago_2_2/bumrepago.txt",
+   "file": "bumrepago_2_3/bumrepago.txt",
    "line": 131,
    "from": "Maivo po nimuvorbania vobi eli reso. En li cilni, nuna-nela resora la verasan.",
    "to": "Maivo po nimuduhania vobi eli reso. En li cilni, nuna-nela resora la verasan."
   },
   {
-   "file": "bumrepago_2_2/bumrepago.txt",
+   "file": "bumrepago_2_3/bumrepago.txt",
    "line": 227,
    "from": "Maivo po letola rada deyafama.",
    "to": "Maivo po cuzaca rada deyafama."
   },
   {
-   "file": "bumrepago_2_2/bumrepago.txt",
+   "file": "bumrepago_2_3/bumrepago.txt",
    "line": 229,
    "from": "Letori. Letori ne bumreba. Letori ne melvama pilo sidu sapusia.",
    "to": "Cuzari. Cuzari ne bumreba. Cuzari ne melvama pilo sidu sapusia."
   },
   {
-   "file": "bumrepago_2_2/bumrepago.txt",
+   "file": "bumrepago_2_3/bumrepago.txt",
    "line": 231,
    "from": "Ata taivo po letola ala maivo ki? Una leto? Una?",
    "to": "Ata taivo po cuzaca ala maivo ki? Una cuza? Una?"
   },
   {
-   "file": "bumrepago_2_2/bumrepago.txt",
+   "file": "bumrepago_2_3/bumrepago.txt",
    "line": 257,
    "from": "Taivo senosia ito ko toda taivo de vilneri. Rada montafama. Rada leto raho taivo po ne letola.",
    "to": "Taivo senosia ito ko toda taivo de vilneri. Rada montafama. Rada cuza raho taivo po ne cuzaca."
   },
   {
-   "file": "bumrepago_2_2/bumrepago.txt",
+   "file": "bumrepago_2_3/bumrepago.txt",
    "line": 259,
    "from": "Taivo vurlova fime maivo senosia: \"Benasan, Aviya! Pagopa, lirala! Maivo futu talita vobi dossa!\" zoke ki?",
    "to": "Taivo desida fime maivo senosia: \"Benasan, Aviya! Pagopa, lirala! Maivo futu talita vobi dossa!\" zoke ki?"
   },
   {
-   "file": "bumrepago_2_2/bumrepago.txt",
+   "file": "bumrepago_2_3/bumrepago.txt",
    "line": 262,
    "from": "Maivo po vurlova fime taivo senosia ala maivo. Doli ola-coda. Somi-coda. Maivo larnela kasa taivo po helviha ito!",
    "to": "Maivo po desida fime taivo senosia ala maivo. Doli ola-coda. Somi-coda. Maivo larnela kasa taivo po helviha ito!"
   },
   {
-   "file": "bumrepago_2_2/bumrepago.txt",
+   "file": "bumrepago_2_3/bumrepago.txt",
    "line": 287,
    "from": "Ata taivo, Dorin. Taivo po sabesia. Taivo po vurlova fime maivo ne sabesia.",
    "to": "Ata taivo, Dorin. Taivo po sabesia. Taivo po desida fime maivo ne sabesia."
   },
   {
-   "file": "bumrepago_2_2/bumrepago.txt",
+   "file": "bumrepago_2_3/bumrepago.txt",
    "line": 299,
    "from": "Taivo po silrosia vobi taivo sela, Dorin. Ne vobi maivo. Taivo po ne vurlova fime Aviya masuma: \"Ata taivo? Ki-pago taivo futu pagopa?\"",
    "to": "Taivo po silrosia vobi taivo sela, Dorin. Ne vobi maivo. Taivo po ne desida fime Aviya masuma: \"Ata taivo? Ki-pago taivo futu pagopa?\""
   },
   {
-   "file": "bumrepago_2_2/bumrepago.txt",
+   "file": "bumrepago_2_3/bumrepago.txt",
    "line": 322,
    "from": "Ne famli. Nara famatilma ne ka doli barni. Pilo po nolenia maivo \"linu\". Una krono. Taivo po ne ke eli-pago. Maivo loki ramura ito.",
-   "to": "Ne famli. Nara famamiga ne ka doli kupa. Pilo po nolenia maivo \"linu\". Una krono. Taivo po ne ke eli-pago. Maivo loki ramura ito."
+   "to": "Ne famli. Nara famamiga ne ka doli ruko. Pilo po nolenia maivo \"linu\". Una krono. Taivo po ne ke eli-pago. Maivo loki ramura ito."
   },
   {
-   "file": "bumrepago_2_2/bumrepago.txt",
+   "file": "bumrepago_2_3/bumrepago.txt",
    "line": 328,
    "from": "Pilo po ne lenila maivo de lirari. Pilo po senosia fime lira ka lasona, ata bumre ka nami. Pilo po ne vurlova fime maivo pagopa. Ata eli-krono pilo de bumrepago ka taivo de bumrepago, ata maivo ka baba loteronela en maivo de nimu.",
    "to": "Pilo po ne lenila maivo de lirari. Pilo po senosia fime lira ka lasona, ata bumre ka nami. Pilo po ne desida fime maivo pagopa. Ata eli-krono pilo de bumrepago ka taivo de bumrepago, ata maivo ka baba loteronela en maivo de nimu."
   },
   {
-   "file": "bumrepago_2_2/bumrepago.txt",
+   "file": "bumrepago_2_3/bumrepago.txt",
    "line": 339,
    "from": "Li nilvu kroti li mudu. Pilo po senosia: \"Maivo vurlova sidu lenila Aviya.\" Maivo po kavbika pilo ala li cilni. Tressa lornuri. Pilo po semnesia vofa li lumibitiri, en li sado. Taivo po hiro lirala. Pilo po fesmo ne timruta.",
    "to": "Li foji kroti li mudu. Pilo po senosia: \"Maivo desida sidu lenila Aviya.\" Maivo po kavbika pilo ala li cilni. Tressa lornuri. Pilo po semnesia vofa li lumibitiri, en li sado. Taivo po hiro lirala. Pilo po fesmo ne timruta."
   },
   {
-   "file": "bumrepago_2_2/bumrepago.txt",
+   "file": "bumrepago_2_3/bumrepago.txt",
    "line": 347,
    "from": "Maivo ne sabesia li nole. Baba lira de nilvu. Pilo po senosia fime li lira ka gase sumasan gase li faru.",
    "to": "Maivo ne sabesia li nole. Baba lira de foji. Pilo po senosia fime li lira ka gase sumasan gase li faru."

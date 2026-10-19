@@ -7,7 +7,7 @@
  * Then builds the Invitation (scripts/build_invitation.ts) with the same flags.
  *
  * Writes handoff/<name>.html (and .pdf). Every table, count, ruling and
- * example is read from handoff/liraasa_2_2_complete.json; the teaching prose
+ * example is read from handoff/liraasa_2_3_complete.json; the teaching prose
  * lives in scripts/grammar_guide/chapters.ts; the song, the treasury words
  * and the image-compound samples are set in scripts/grammar_guide/config.ts.
  *
@@ -59,6 +59,7 @@ function main(): void {
     counts_2_0_to_2_1?: { after: { headwords: number } };
     changesets_2_1_full?: { ops: { op: string }[] }[];
     changesets_2_2_full?: { summary: string; ops: { op: string }[] }[];
+    counts_2_2_to_2_3?: { before: { headwords: number } };
   };
   const ops21 = (editions.changesets_2_1_full ?? []).flatMap((c) => c.ops);
   const ops22 = (editions.changesets_2_2_full ?? []).flatMap((c) => c.ops);
@@ -105,6 +106,7 @@ function main(): void {
         becameCompounds: ops21.filter((o) => o.op === 'respell_as_compound').length,
         note22: (editions.changesets_2_2_full ?? []).map((c) => c.summary).join(' '),
         filled22: ops22.filter((o) => o.op === 'activate_slot').length,
+        v22: editions.counts_2_2_to_2_3?.before.headwords ?? lex.headwords.length,
       },
       rulingIndex(lex, rendered, rulingsFile),
     ),

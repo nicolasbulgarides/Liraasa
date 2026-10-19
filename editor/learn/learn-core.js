@@ -5377,6 +5377,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }
     const rulings = Object.entries(lex).filter(([k]) => k.startsWith("rulings_")).flatMap(([, v]) => Array.isArray(v) ? v : []);
     for (const r of rulings) {
+      if (r.superseded_by !== void 0 || r.superseded_in_part !== void 0) continue;
       r.ruling = fix(r.ruling);
       const ex = r.examples;
       if (Array.isArray(ex))
@@ -5438,16 +5439,22 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }
     if (moved) lex.morphology.lexicalised_derivations = next;
   }
-  function moveRoot(lex, id, spelling, components, reason) {
+  function moveRoot(lex, id, spelling, components, reason, source = "Primal") {
     const heads = lex.headwords;
     const h = heads.find((x) => String(x.id) === id);
     if (h === void 0) throw new Error(`${id}: no headword has this id`);
-    if (h.components !== null) throw new Error(`${h.root} is a compound: respell its parts`);
+    if (source === "Primal" && h.components !== null)
+      throw new Error(`${h.root} is a compound: respell its parts`);
+    if (source === "Compound" && h.components === null)
+      throw new Error(`${h.root} is a primal root, not a compound`);
+    const oldComponents = h.components;
     const old = h.root;
     const oldForms = { ...h.forms };
     const mapping = {};
     const slots = {};
     h.root = spelling;
+    h.type = "Primal";
+    h.components = null;
     regenerate(h);
     for (const [k, f2] of Object.entries(oldForms)) {
       const next = h.forms[k];
@@ -5491,6 +5498,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       old,
       new: spelling,
       ...{},
+      ...oldComponents !== null ? { old_components: [...oldComponents] } : {},
       old_forms: oldForms,
       glosses: h.glosses,
       reason

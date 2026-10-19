@@ -4,7 +4,7 @@
  *
  *   npm run build:llm
  *
- * Writes handoff/liraasa_2_2_llm.json from the canonical 2.1 lexicon. It holds
+ * Writes handoff/liraasa_2_3_llm.json from the canonical 2.3 lexicon. It holds
  * every grammar rule and the full dictionary. It is shaped for a reader that
  * goes top to bottom: instructions and hard rules first, then sound, word
  * building, the clause, recipes and every ruling, then the small words, the
@@ -27,8 +27,8 @@ import { OPEN_QUESTIONS, READ_ORDER, RECIPES, RULES } from './grammar_guide/chap
 import { canonTexts, isCanonText, type Lexicon } from './grammar_guide/data';
 import { parseArgs } from './args';
 
-const LEXICON = 'data/lexicon/liraasa_2_2.json';
-const OUT = 'handoff/liraasa_2_2_llm.json';
+const LEXICON = 'data/lexicon/liraasa_2_3.json';
+const OUT = 'handoff/liraasa_2_3_llm.json';
 /** The album, read against the live lexicon by scripts/build_album.ts (2.2:G68). */
 const ALBUM = 'data/corpus/album_2_0/album_current.json';
 const ALBUM_READINGS = 'data/corpus/album_2_0/album_readings.json';
@@ -242,10 +242,14 @@ function main(): void {
     examples: [{ liraasa: 'lirasan lavra', english: 'songbird' }],
   });
 
-  // a headword respelled in an earlier edition: its old root, for reading older texts
+  // a headword respelled in an earlier edition: its old root, for reading older texts;
+  // and a listed derivation retired for a headword (2.3:G70 mirunululirayo → kerku)
   const formerly = new Map<string, string[]>();
   for (const [old, m] of Object.entries(lex.legacy.migration_forms)) {
-    if (m.slot === 'root' && m.kind === 'respelled') {
+    if (
+      (m.slot === 'root' && m.kind === 'respelled') ||
+      (m.slot === 'derivation' && m.kind === 'retired')
+    ) {
       formerly.set(m.to, [...(formerly.get(m.to) ?? []), old]);
     }
   }
