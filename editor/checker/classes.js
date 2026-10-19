@@ -53,6 +53,12 @@
       Object.entries((flags && flags.word_class) || {}).filter(([k]) => !k.startsWith('_')),
     );
     const corrRole = (flags && flags.correlative_role) || {};
+    // 2.2:G67: side nouns that may stand bare as prepositions (they stay nouns too)
+    const sidePreps = new Set(
+      Object.keys((flags && flags.side_nouns_as_prepositions) || {}).filter(
+        (k) => !k.startsWith('_'),
+      ),
+    );
     const exclusions = ref.clause.stacking.exclusions;
     const slotByName = new Map(ref.clause.slots.map((s) => [s.slot, s]));
 
@@ -74,6 +80,7 @@
       if (w === topicWord) add('topic');
       if (scope.has(w)) add(w === 'ne' ? 'ne' : 'scope');
       if (wordClass[w]) add(wordClass[w]);
+      if (sidePreps.has(w)) add('preposition');
       for (const c of closed) {
         if (c.cls === 'pronoun') add('noun').add('pronoun');
         else if (c.cls === 'correlative') {

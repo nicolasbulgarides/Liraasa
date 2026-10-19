@@ -197,7 +197,8 @@ describe('the fixture song and canon', () => {
   // ("Miyo baba sola.", "Li sola loya benasan.", glossed "solitude") are no longer
   // flagged: they now read "sun", against their English. Reported to the author.
   const KNOWN_CANON_FINDINGS = [
-    'Ki-saivo lirala? :: 2.1:G46 :: lirala', // the historical ki-saivo example, kept as written
+    // 'Ki-saivo lirala?', the historical ki-saivo example, was a 2.1:G46 finding: under 2.2:G60
+    // a question with a ki-word may end without ki, so it now reads clean
     'Maivo po helnaha li linu ko li helna. :: 1.2:G33 :: ko', // instrumental ko, written before yuta existed
   ];
 

@@ -5,7 +5,7 @@ import { FORM_SLOTS, SLOT_RAW_KEY, isUnusedGloss } from '../../src/core/config/s
 import type { RawLexicon } from '../../src/core/model/raw';
 
 /**
- * handoff/liraasa_2_1_llm.json: the one-file reference for language models
+ * handoff/liraasa_2_2_llm.json: the one-file reference for language models
  * (npm run build:llm). Its dictionary is one line per headword; parsing every
  * line back must give exactly the lexicon's meaningful forms, so the compact
  * format is lossless and adds nothing.
@@ -25,9 +25,9 @@ interface Reference {
   examples: { sentences: [string, string][] };
 }
 
-const llm = read('../../handoff/liraasa_2_1_llm.json') as Reference;
-const latest = read('../../LirasaCodexLatest/liraasa_2_1_llm.json');
-const lex = read('../../data/lexicon/liraasa_2_1.json') as RawLexicon;
+const llm = read('../../handoff/liraasa_2_2_llm.json') as Reference;
+const latest = read('../../LirasaCodexLatest/liraasa_2_2_llm.json');
+const lex = read('../../data/lexicon/liraasa_2_2.json') as RawLexicon;
 const lines = Object.values(llm.dictionary.by_domain).flat();
 const CODE = ['n', 'an', 'nn', 'v', 'na', 'a', 'aa'];
 /** HEADWORD [PART+PART(+-SUFFIX)] {FLAGS}: … (a lexicalised suffix: 2.0:G38) */
@@ -105,13 +105,10 @@ describe('the LLM reference', () => {
 
   it('carries every ruling, every function word and only canon examples', () => {
     const r = lex as unknown as Record<string, { id: string }[]>;
-    const total = [
-      'rulings_2_1',
-      'rulings_2_0',
-      'rulings_1_2',
-      'rulings_1_0',
-      'rulings_0_8_carried',
-    ].reduce((n, k) => n + (r[k]?.length ?? 0), 0);
+    // every edition's rulings, superseded ones included (kept and marked, 2.2)
+    const total = Object.keys(r)
+      .filter((k) => k.startsWith('rulings_'))
+      .reduce((n, k) => n + (r[k]?.length ?? 0), 0);
     expect(llm.rulings).toHaveLength(total + 1); // + ADR-0011
     expect(llm.small_words.function_words.rows.map((row) => row[0])).toEqual(
       lex.function_words.map((f) => f.form),

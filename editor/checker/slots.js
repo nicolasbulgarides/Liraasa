@@ -283,6 +283,12 @@
       }
       if (R.has('preposition') || R.has('comparison')) {
         const obj = np(i + 1, false);
+        if (!obj && R.has('noun') && s.verbs.length) {
+          // a side noun after its verb with no noun phrase is an adverb (2.2:G67)
+          s.adjuncts.push({ start: i, end: i + 1, prep: i, head: i, kind: 'adverb' });
+          i += 1;
+          continue;
+        }
         if (!obj) {
           s.stranded.push(i);
           i += 1;

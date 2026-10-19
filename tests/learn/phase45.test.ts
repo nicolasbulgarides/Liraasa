@@ -308,10 +308,11 @@ describe('a new edition', () => {
 
   it('ACCEPTANCE: the 2.0 → 2.1 diff lesson is the 2.1 respelling, id by id', () => {
     const at20 = atEdition('data/lexicon/liraasa_2_0.json');
+    const at21 = atEdition('data/lexicon/liraasa_2_1.json');
     const d = diffSnapshots(
       snapshotEdition(at20.data),
-      snapshotEdition(source.data),
-      source.replacementFor,
+      snapshotEdition(at21.data),
+      at21.replacementFor,
     );
     expect([d.from, d.to]).toEqual(['2.0', '2.1']);
     const ops = CHANGESETS_2_1.flatMap(
@@ -328,10 +329,35 @@ describe('a new edition', () => {
     for (const o of ops.filter((x) => x.op === 'respell_root' || x.op === 'respell_as_compound'))
       expect(renamed.has(o.entry), o.entry).toBe(true);
     // every rename is the one the legacy table records
-    const migration = input.lexicon.legacy.migration_forms;
+    const v21 = JSON.parse(readFileSync('data/lexicon/liraasa_2_1.json', 'utf8')) as RawLexicon;
+    const migration = v21.legacy.migration_forms;
     for (const r of d.renamed) expect(migration[r.from]?.to, r.from).toBe(r.to);
     expect(d.rulesAdded.map((r) => r.id)).toEqual(
       Array.from({ length: 14 }, (_, i) => `rule:2.1:G${String(46 + i)}`),
+    );
+  });
+
+  it('ACCEPTANCE: the 2.1 → 2.2 diff lesson is silro restored, two forms filled, G60–G68', () => {
+    const at21 = atEdition('data/lexicon/liraasa_2_1.json');
+    const d = diffSnapshots(
+      snapshotEdition(at21.data),
+      snapshotEdition(source.data),
+      source.replacementFor,
+    );
+    expect([d.from, d.to]).toEqual(['2.1', '2.2']);
+    expect(d.added).toEqual([]);
+    expect(d.removed).toEqual([]);
+    // 1 root, 12 compounds and 8 image compounds go back to their 2.0 spellings (the patch's counts)
+    expect(d.renamed).toHaveLength(1 + 12 + 8);
+    for (const r of d.renamed) {
+      expect(r.from, r.id).toMatch(/puzu/);
+      expect(r.to, r.id).toBe(r.from.replace('puzu', 'silro'));
+    }
+    // soloasa and tarnulinusan: one filled form each
+    expect(d.reglossed.map((r) => r.spelling).sort()).toEqual(['solo', 'tarnulinu']);
+    for (const r of d.reglossed) expect(r.slots).toHaveLength(1);
+    expect(d.rulesAdded.map((r) => r.id)).toEqual(
+      Array.from({ length: 9 }, (_, i) => `rule:2.2:G${String(60 + i)}`),
     );
   });
 });

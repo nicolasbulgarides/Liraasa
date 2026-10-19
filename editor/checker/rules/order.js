@@ -8,10 +8,13 @@
  *   … or without its comma                            warn   slot 1
  *   a time word opening a clause with no comma        note   1.2:G24
  *   a question with the copula or tense in front      error  ki
- *   a direct question with no final ki, or a fronted
- *     question word that is not of time or the subject error 2.1:G46
+ *   a yes/no question, or a degree question, with no
+ *     final ki                                        error  2.2:G60, G61
+ *   a ! clause with a ki-word that cannot exclaim     warn   2.2:G61
+ *   raho opening a direct question                    error  2.2:G64
  *   fime followed by a copula or tense                error  fime
- *   sidu between non-verbs, or before a copula        error  sidu
+ *   sidu between non-verbs (an adjective may take it,
+ *     2.2:G65), after or before a copula              error  sidu
  *   a relative clause not closed by a comma           note   1.0:G21
  *   ata opening a line with a clause                  unsettled 1.2:G25
  *   a token that fits no slot; a second verb          error  slot
@@ -213,7 +216,22 @@
       for (const k of s.chains) {
         const lineStart = ctx.words.indexOf(W[k]) === 0;
         if (lineStart) continue; // clause-initial sidu nominalises (0.8:G6)
-        if (!C.verbal(W[k - 1] || { roles: new Set() })) {
+        const before = W[k - 1] || { roles: new Set() };
+        if (before.roles.has('copula')) {
+          // ke sidu VERB, "destined to", is an open question (album 08), not grammar
+          out.push(
+            C.diagnostic({
+              ...at(k),
+              severity: 'error',
+              rule: 'sidu',
+              message:
+                'sidu never follows a copula: “' +
+                word(k - 1) +
+                ' sidu” is not grammar (whether it can mean “destined to” is an open question). Use a modal (musi) or an adjective + sidu (2.2:G65).',
+            }),
+          );
+        } else if (!C.verbal(before) && !before.roles.has('adj')) {
+          // an adjective may take sidu + verb, "easy to …, ready to …" (2.2:G65)
           const prevVerb = W[k - 1] ? C.verbFormOf(ctx.ix, W[k - 1]) : null;
           out.push(
             C.diagnostic({
@@ -221,9 +239,9 @@
               severity: 'error',
               rule: 'sidu',
               message:
-                'sidu joins two verbs; “' +
+                'sidu joins two verbs, or an adjective and a verb (2.2:G65); “' +
                 (W[k - 1] ? word(k - 1) : '') +
-                '” before it is not a verb form' +
+                '” before it is neither' +
                 (prevVerb ? '; its verb is ' + prevVerb.form : '') +
                 '.',
               fix: undefined,
@@ -332,7 +350,7 @@
     // must not open with the copula or a tense (… raho … ki? still counts)
     const last = ctx.words[ctx.words.length - 1];
     const firstClause = ctx.parsed[0];
-    // (a clause opened by a ki-word is 2.1:G46's, below)
+    // (a clause opened by a ki-word may front it: 2.2:G60)
     if (
       last &&
       last.roles.has('question') &&
@@ -386,59 +404,103 @@
     return out;
   }
 
+  /** A ki- question word (ki-oro, "whether", is a linker, not one). */
+  const kiWord = (w) => /^ki-/.test(w.lower) && !w.roles.has('subordinator');
+
+  /** Does a ki-word open an exclamative: ki-modo + adjective, ki-eli / ki-muya + noun (2.2:G61)? */
+  function exclamative(words, j) {
+    const w = words[j];
+    const next = words[j + 1];
+    if (!next) return false;
+    if (w.lower === 'ki-modo') return next.roles.has('adj');
+    if (w.lower === 'ki-eli' || w.lower === 'ki-muya') return next.roles.has('noun');
+    return false;
+  }
+
   /**
-   * 2.1:G46: a question word stands where its answer would stand, and every
-   * direct question ends in ki. A ki-word of time may open the clause as a
-   * frame; a ki-word that is the subject is already in place. A clause with a
-   * ki-word and no final ki that ends in ! is an exclamation (2.1:G47), and
-   * an embedded question keeps no ki, so only sentences ending in ? are read.
+   * Questions and exclamations (2.2:G60, G61, G64; they supersede 2.1:G46,
+   * G47). A ki-word may open the clause or stay where its answer would stand.
+   * A yes/no question ends in ki; a question with a ki-word may end in ki or
+   * not, except a degree question (ki-modo + adjective), which must. Only
+   * ki-modo + adjective, ki-eli + noun and ki-muya + noun make an
+   * exclamation, and only without a final ki. raho is never a question word.
+   * An embedded question (a ki-word after the main verb) is left alone.
    */
   function questionsInPlace(ctx) {
     const out = [];
     for (const sent of sentences(ctx)) {
-      if (!sent.end || sent.end.text !== '?') continue;
-      const first = sent.words[0];
-      const last = sent.words[sent.words.length - 1];
-      const hasKi = sent.words.some((w) => w.roles.has('question'));
-      const main = ctx.parsed.find((p) => p.clause.words[0] === first);
+      if (!sent.end || (sent.end.text !== '?' && sent.end.text !== '!')) continue;
+      const words = sent.words;
+      const first = words[0];
+      const last = words[words.length - 1];
+      // ki closes its clause, which may be followed by a person addressed (1.2:G31)
+      const endsKi = words.some((w) => w.roles.has('question'));
       const verbs = ctx.parsed.some(
-        (p) => sent.words.includes(p.clause.words[0]) && p.s.verbs.length > 0,
+        (p) => words.includes(p.clause.words[0]) && p.s.verbs.length > 0,
       );
-      // a fronted question word: not of time, not the subject, not a linker (ki-oro)
-      const R = first.roles;
-      const fronted =
-        main &&
-        main.clause.kind === 'question' &&
-        !R.has('time') &&
-        !R.has('subordinator') &&
-        (R.has('adverb') || main.s.subject !== null);
-      if (fronted) {
-        out.push(
-          C.diagnostic({
-            ...C.at(ctx, first),
-            severity: 'error',
-            rule: '2.1:G46',
-            message:
-              'A question word stands where its answer would stand, and the question ends in ki: say it in statement order with “' +
-              first.text.toLowerCase() +
-              '” in the answer’s place (Taivo pagopa ki-pago ki?, where are you going?). Only a ki-word of time may open the clause.',
-          }),
-        );
-      } else if (!hasKi && verbs) {
-        out.push(
-          C.diagnostic({
-            ...C.at(ctx, last),
-            severity: 'error',
-            rule: '2.1:G46',
-            message:
-              'Every direct question ends in ki: “' +
-              last.text +
-              ' ki?”. A ki-word with no final ki makes an exclamation, ending in ! (2.1:G47).',
-            fix: last.text + ' ki',
-            autoFix: true,
-          }),
-        );
+      // the ki-words of the main clause: a ki-word that opens a clause of its own
+      // after a lexical verb is an embedded question (Maivo ne sabesia ki-pago …)
+      const lexicalVerbBefore = (j) =>
+        words.slice(0, j).some((x) => C.verbal(x) && !x.roles.has('copula'));
+      const embedded = (j) => {
+        const p = ctx.parsed.find((x) => x.clause.words[0] === words[j]);
+        return j > 0 && p !== undefined && p.s.verbs.length > 0 && lexicalVerbBefore(j);
+      };
+      const mainKis = words.map((_, j) => j).filter((j) => kiWord(words[j]) && !embedded(j));
+      const addKi = (rule, message) =>
+        C.diagnostic({
+          ...C.at(ctx, last),
+          severity: 'error',
+          rule,
+          message,
+          fix: last.text + ' ki',
+          autoFix: true,
+        });
+
+      if (sent.end.text === '?') {
+        if (first.lower === 'raho') {
+          out.push(
+            C.diagnostic({
+              ...C.at(ctx, first),
+              severity: 'error',
+              rule: '2.2:G64',
+              message:
+                'raho is never a question word: it opens a relative clause, or stands for “the one who, that which”. Ask with ki-nela (who) or ki-coda (what).',
+              fix: /^R/.test(first.text) ? 'Ki-nela' : 'ki-nela',
+            }),
+          );
+          continue;
+        }
+        if (endsKi) continue;
+        if (mainKis.some((j) => words[j].lower === 'ki-modo' && exclamative(words, j))) {
+          out.push(
+            addKi(
+              '2.2:G61',
+              'A degree question (ki-modo + adjective) must end in ki: “' +
+                last.text +
+                ' ki?”. Without ki it is an exclamation, ending in !.',
+            ),
+          );
+        } else if (mainKis.length === 0 && verbs) {
+          out.push(addKi('2.2:G60', 'A yes/no question must end in ki: “' + last.text + ' ki?”.'));
+        }
+        continue;
       }
+      // "!": a ki-word clause without a final ki is an exclamation only in the three shapes
+      if (endsKi || mainKis.length === 0) continue;
+      if (mainKis.some((j) => exclamative(words, j))) continue;
+      const j = mainKis[0];
+      out.push(
+        C.diagnostic({
+          ...C.at(ctx, words[j]),
+          severity: 'warn',
+          rule: '2.2:G61',
+          message:
+            'Only ki-modo + adjective, ki-eli + noun and ki-muya + noun make an exclamation; a clause with “' +
+            words[j].text.toLowerCase() +
+            '” and no final ki is a question: end it with ?.',
+        }),
+      );
     }
     return out;
   }

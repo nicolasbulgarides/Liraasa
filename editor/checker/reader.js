@@ -63,6 +63,7 @@
         to: legacy.to,
         migration: legacy.kind,
         edition: legacy.edition || null,
+        since: legacy.since || null,
         readings: [],
         suffixes: [],
       };

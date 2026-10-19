@@ -83,25 +83,36 @@
             severity: 'warn',
             rule: '1.0:G19',
             // an edition named: a spelling that edition respelled (2.1:G58); else pre-1.0
-            message: r.edition
+            // a spelling one edition brought in and a later one undid (2.1's puzu, 2.2:G68)
+            message: r.since
               ? '“' +
                 t.text +
-                '” is the spelling before ' +
-                r.edition +
-                ' (' +
-                r.migration +
-                '); ' +
+                '” is the spelling of ' +
+                r.since +
+                '; ' +
                 r.edition +
                 ' spells it “' +
                 r.to +
                 '”.'
-              : '“' +
-                t.text +
-                '” is a pre-1.0 spelling (' +
-                r.migration +
-                '); 1.0 reads it as “' +
-                r.to +
-                '”.',
+              : r.edition
+                ? '“' +
+                  t.text +
+                  '” is the spelling before ' +
+                  r.edition +
+                  ' (' +
+                  r.migration +
+                  '); ' +
+                  r.edition +
+                  ' spells it “' +
+                  r.to +
+                  '”.'
+                : '“' +
+                  t.text +
+                  '” is a pre-1.0 spelling (' +
+                  r.migration +
+                  '); 1.0 reads it as “' +
+                  r.to +
+                  '”.',
             fix: r.to,
             autoFix: !r.to.includes(' '),
           }),

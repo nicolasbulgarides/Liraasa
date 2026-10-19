@@ -3,7 +3,9 @@ import { type Checker, type Diagnostic, loadChecker } from './loadChecker';
 
 /**
  * Liraasa 2.1 (ADR-0017): every sentence the 2.1 rulings print reads clean,
- * and the question rule (2.1:G46) and the N-times adverbials (2.1:G49) are read.
+ * and the N-times adverbials (2.1:G49) are read. The question rules 2.1:G46
+ * and G47 are superseded by 2.2:G60 and G61 (ADR-0018): what they allowed is
+ * still clean; what they forbade, 2.2 allows.
  */
 
 let checker: Checker;
@@ -39,31 +41,33 @@ describe('the 2.1 rulings', () => {
   });
 });
 
-describe('questions keep every word in place (2.1:G46)', () => {
-  it('reads a question word in its answer’s place, closed by ki', () => {
+describe('questions in place (2.1:G46), superseded by 2.2:G60', () => {
+  it('still reads a question word in its answer’s place, closed by ki', () => {
     for (const line of [
       'Taivo pagopa ki-pago ki?',
       'Taivo amora ki-eli lira ki?',
       'Li tisebiti ka ki-pago ki?',
-      'Ki-nela lirala ki?', // the subject is already first
-      'ki-krono maivo lirala ki?', // a ki-word of time may open the clause as a frame
-      'Maivo ne sabesia ki-pago taivo futu pagopa.', // embedded: in place, no ki
-      'Li nullo ka ki-modo vanisan!', // an exclamation (2.1:G47)
+      'Ki-nela lirala ki?',
+      'ki-krono maivo lirala ki?',
+      'Maivo ne sabesia ki-pago taivo futu pagopa.', // embedded: no ki
+      'Li nullo ka ki-modo vanisan!', // an exclamation (2.1:G47, now 2.2:G61)
     ])
       expect(serious(line), line).toEqual([]);
   });
 
-  it('flags a fronted question word that is neither of time nor the subject', () => {
-    expect(has('Ki-pago taivo pagopa ki?', '2.1:G46', 'Ki-pago')).toBe(true);
-    expect(has('Ki-eli lira taivo amora ki?', '2.1:G46', 'Ki-eli')).toBe(true);
-    expect(has('Ki-pago ka li tisebiti ki?', '2.1:G46', 'Ki-pago')).toBe(true);
+  it('no longer flags a fronted question word: 2.2:G60 lets it open the clause', () => {
+    for (const line of [
+      'Ki-pago taivo pagopa ki?',
+      'Ki-eli lira taivo amora ki?',
+      'Ki-pago ka li tisebiti ki?',
+    ])
+      expect(serious(line), line).toEqual([]);
   });
 
-  it('flags a direct question with no final ki, and fixes it', () => {
-    const [d] = serious('Taivo pagopa ki-pago?').filter((x) => x.rule === '2.1:G46');
-    expect(d?.autoFix).toBe(true);
-    expect(d && checker.applyFix('Taivo pagopa ki-pago?', d)).toBe('Taivo pagopa ki-pago ki?');
-    expect(has('Taivo lirala?', '2.1:G46', 'lirala')).toBe(true);
+  it('no longer asks a ki-word question for its final ki (2.2:G60)', () => {
+    expect(serious('Taivo pagopa ki-pago?')).toEqual([]);
+    // a yes/no question still ends in ki, now under 2.2:G60
+    expect(has('Taivo lirala?', '2.2:G60', 'lirala')).toBe(true);
   });
 });
 

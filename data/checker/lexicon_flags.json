@@ -1,5 +1,5 @@
 {
- "about": "Semantic overlay for the grammar checker (editor/checker). The main reference, handoff/liraasa_2_1_llm.json, stays clean; the checker merges this file in at load. Every key is a spelling in the reference, and tests/checker fails if one stops existing (a respelling must update this file). Author-reviewed data: edit here, never in code.",
+ "about": "Semantic overlay for the grammar checker (editor/checker). The main reference, handoff/liraasa_2_2_llm.json, stays clean; the checker merges this file in at load. Every key is a spelling in the reference, and tests/checker fails if one stops existing (a respelling must update this file). Author-reviewed data: edit here, never in code.",
  "word_class": {
   "_about": "The grammatical class of each small word the clause template does not already name. Operators, copulas, valency operators, gome, la, the frame, topic, status, attitude, reciprocal and question words are read from clause.slots and clause.scope_operators, not from here.",
   "li": "determiner",
@@ -87,6 +87,15 @@
   "deyapressa": "time",
   "deyaapo": "time",
   "deyafutu": "time"
+ },
+ "side_nouns_as_prepositions": {
+  "_about": "2.2:G67: these side nouns may stand bare before a noun phrase as prepositions, or after a verb as adverbs. They keep their noun reading too.",
+  "nazru": "behind",
+  "zavme": "in front of",
+  "silda": "beside",
+  "cemnu": "in the middle of",
+  "lizma": "left of",
+  "rizno": "right of"
  },
  "subordinators_taking_a_noun_phrase": {
   "_about": "Subordinators that may also take a bare noun phrase instead of a clause.",

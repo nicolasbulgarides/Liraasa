@@ -203,8 +203,11 @@ function guideCorpus(): string[] {
      and a fronted or ki-less question (2.1:G46). "Miyo baba sola" and "Li sola
      loya benasan" are no longer flagged: 2.1 made sola a word (sun, respelled
      from sulba), so they now read "there is a sun", against their English
-     ("solitude"). Reported to the author. */
-const SINCE_2_1 = { respelled: 28, questions: 18 };
+     ("solitude"). Reported to the author.
+   - 2.2 restores silro (2.2:G68), so its two forms in the guide are no longer
+     respelled (28 → 26), and 2.2:G60 lets a ki-word open a question and end
+     without ki, so none of the 18 questions 2.1:G46 flagged is flagged now. */
+const SINCE_2_1 = { respelled: 26, questions: 0 };
 const GUIDE_FINDINGS = [
   'Ki-saivo lirala? (historical) :: never invent :: historical',
   'Lotero silda, li cilni ka lasona. :: ADR-0011 :: Lotero silda',
@@ -221,11 +224,12 @@ const GUIDE_FINDINGS = [
   'lira + yo = lirayo :: slot :: yo',
 ];
 
-/** What 2.1 adds to the frozen text: its respellings and its question rule. */
+/** What 2.1 and 2.2 add to the frozen text: the 2.1 respellings and the 2.2 question rules. */
 function since2_1(d: Diagnostic): boolean {
   const legacy = checker.index.legacy as Map<string, { edition?: string }>;
   return (
-    d.rule === '2.1:G46' ||
+    d.rule === '2.2:G60' ||
+    d.rule === '2.2:G61' ||
     (d.rule === '1.0:G19' && legacy.get(String(d.token).toLowerCase())?.edition === '2.1')
   );
 }
@@ -242,7 +246,7 @@ describe('must pass: the 1.0 grammar guide', () => {
     const added = all.filter(({ d }) => since2_1(d));
     expect({
       respelled: added.filter(({ d }) => d.rule === '1.0:G19').length,
-      questions: added.filter(({ d }) => d.rule === '2.1:G46').length,
+      questions: added.filter(({ d }) => d.rule.startsWith('2.2:G6')).length,
     }).toEqual(SINCE_2_1);
   });
 });
