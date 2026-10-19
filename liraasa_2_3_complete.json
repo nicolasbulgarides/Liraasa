@@ -102,11 +102,11 @@
   "suffixes": {
    "-ti": "diminutive",
    "-ri": "plural (always last)",
-   "-yo": "agent (on the root)",
-   "-vu": "augmentative (on the root)",
+   "-yo": "agent (on any root or compound, 2.0:G41)",
+   "-vu": "augmentative (on any root or compound, 2.0:G41)",
    "-pago": "place (mavo+pago blocked; mavopago = society only)"
   },
-  "compounding": "MODIFIER+HEAD written together; head rightmost; components must be active 1.0 headwords; a compound's verb class follows its first letter",
+  "compounding": "MODIFIER+HEAD written together; head rightmost; components must be active headwords (a colour base may be the modifier, 2.0:G38; a component may itself be a compound, 2.0:G42); a compound's verb class follows its first letter",
   "lexicalised_derivations": {
    "tisebitivu": "sword (big knife): tisebiti + -vu",
    "tibivu": "rope (big thread): tibi + -vu",
@@ -70149,7 +70149,7 @@
    "status_2_0": "NEW",
    "since": "2.0",
    "history_0_8": null,
-   "notes": "Added in 2.0 (changeset 2026-10-18-lexicon-2-0). Tier null: death-magic; daigozirmeyo = necromancer.",
+   "notes": "Added in 2.0 (changeset 2026-10-18-lexicon-2-0). Tier null: death-magic.",
    "protected": true,
    "id": "lx_daigozirme_1656"
   },
@@ -78498,7 +78498,7 @@
    "form": "ki-saivo",
    "meaning": "who",
    "position": "HISTORICAL ONLY; preferred productive interrogative ki-nela.",
-   "example": "Ki-saivo lirala? (historical)",
+   "example": "Ki-saivo lirala?",
    "example_gloss": "who is singing?",
    "class": null,
    "status_1_0": "CARRIED",
@@ -80418,10 +80418,10 @@
    {
     "Group": "Non-integers",
     "Value": "J",
-    "Liraasa": "not defined in 0.2",
-    "Construction rule": "negative, decimal, ordinal, fractions await separate policy",
+    "Liraasa": "NUMBER-ne; NUMBER de NUMBER",
+    "Construction rule": "ordinals: NUMBER-ne before the noun (una-ne, first); fractions: NUMBER de NUMBER (tressa de cuara); negative and decimal numbers await separate policy",
     "English interpretation": "e.g., -3 / 2.5 / third",
-    "Usage / comment": "Avoid inventing unwritten rules."
+    "Usage / comment": "Ordinals and fractions are settled (settled_open_questions_0_8; 1.2:G27, 2.1:G49, 2.1:G53); do not invent the rest."
    }
   ],
   "lookup_0_999": {
@@ -82324,6 +82324,10 @@
     {
      "clause": "embedded wh-word stays in place",
      "by": "2.2:G60"
+    },
+    {
+     "clause": "embedded yes/no questions use si (whether)",
+     "by": "2.3:G77"
     }
    ]
   },
@@ -82990,11 +82994,11 @@
    "examples": [
     [
      "ata maivo lemula saivo de sizosan lumi.",
-     ""
+     "And I learn his shimmering light."
     ],
     [
      "ata maivori revo-lirala ata relsira!",
-     ""
+     "And we sing again and answer!"
     ]
    ]
   },
@@ -83008,11 +83012,11 @@
    "examples": [
     [
      "saivo po senosia en baba melosan valla.",
-     ""
+     "She spoke in a musical voice."
     ],
     [
      "ata li veluri po sarbisia ko bapi su li doza de farulavrasan amor.",
-     ""
+     "And the stars wrote in surprise on the strength of phoenix-like love."
     ]
    ]
   },
@@ -83027,7 +83031,7 @@
    "examples": [
     [
      "raho povi sabesia baba kasi polvasan sove ki?",
-     ""
+     "Who can know a more powerful peace?"
     ]
    ]
   },
@@ -83041,7 +83045,7 @@
    "examples": [
     [
      "taivo ne taro-pagopa, nara lalfola hupi li lelde,",
-     ""
+     "you do not go across, but float above the edge,"
     ]
    ]
   },
@@ -83059,6 +83063,159 @@
      "Which song do you love?"
     ]
    ]
+  },
+  {
+   "id": "G77",
+   "topic": "Embedded yes/no questions",
+   "ruling": "An embedded yes/no question is opened by ki-oro, never by si, which means only 'if' (1.0:G2, 2.2:G60). Supersedes the clause of 0.8:G4 that has si mean 'whether'.",
+   "refines": [],
+   "examples": [
+    [
+     "Maivo masuma ki-oro taivo futu relnura.",
+     "I ask whether you will return."
+    ]
+   ],
+   "supersedes": [
+    "0.8:G4"
+   ]
+  },
+  {
+   "id": "G78",
+   "topic": "Opening and closing a clause",
+   "ruling": "nara may open a line that continues the one before, as ata and oro may (2.3:G72, 1.2:G25). Hortative yava stands where the subject would, opening the clause. A frame may hold more than one time phrase, the wider first. A clause closes in this order: a closing time word, an attitude word, ki (1.2:G24, 1.0:G22).",
+   "refines": [
+    "1.2:G24",
+    "1.0:G22",
+    "2.1:G56"
+   ],
+   "examples": [
+    [
+     "Nara li devi po ne lenila.",
+     "But the goddess did not listen."
+    ],
+    [
+     "Yava ne lirala.",
+     "Let us not sing."
+    ],
+    [
+     "Saivori de lira sasvasia taivo toda-krono pifu.",
+     "May their song protect you always."
+    ]
+   ]
+  },
+  {
+   "id": "G79",
+   "topic": "Time phrases",
+   "ruling": "A measure is a number or a quantifier with a unit: kroti + a measure is 'ago' (kroti dossa deya, two days ago), and kroti + a bare noun is 'before' it (kroti deya) (2.1:G55). 'Since' a time is da + the time word: da ola-krono, since then. tuni may take a noun phrase of time: tuni merno, until morning.",
+   "refines": [
+    "2.1:G55"
+   ],
+   "examples": [
+    [
+     "Maivo po venreva kroti dossa deya.",
+     "I came two days ago."
+    ],
+    [
+     "Da ola-krono, maivori lirala fuyi.",
+     "Since then, we sing to each other."
+    ],
+    [
+     "Li lirayo po sulnosia tuni merno.",
+     "The singer waited until morning."
+    ]
+   ]
+  },
+  {
+   "id": "G80",
+   "topic": "About, after hearing and knowing",
+   "ruling": "1.2:G30 extends to verbs of hearing, knowing and thinking: give the verb an object with a de phrase. Saivo po lenila li telne de li lirayo, he heard about the singer (the story of the singer).",
+   "refines": [
+    "1.2:G30"
+   ],
+   "examples": [
+    [
+     "Li tarnuregna po lenila li telne de li lirayo.",
+     "The king heard about the singer."
+    ]
+   ]
+  },
+  {
+   "id": "G81",
+   "topic": "lusu and mosa",
+   "ruling": "Before a number or quantity, lusu and mosa are 'at least' and 'at most' (1.0:G9); before an adjective they make the superlative: mosa vanisan, most beautiful; lusu vanisan, least beautiful.",
+   "refines": [
+    "1.0:G9"
+   ],
+   "examples": [
+    [
+     "Taivo guraga maivo lusu dossa cono.",
+     "You owe me at least two coins."
+    ],
+    [
+     "Taivo de lira ka mosa vanisan.",
+     "Your song is the most beautiful."
+    ]
+   ]
+  },
+  {
+   "id": "G82",
+   "topic": "An adjective noun keeps its article",
+   "ruling": "An adjective standing as a noun keeps its determiner even where li could otherwise be omitted (0.8:R5, 1.2:G29): li corvisan, the brave one.",
+   "refines": [
+    "1.2:G29",
+    "0.8:R5"
+   ],
+   "examples": [
+    [
+     "Li corvisan lirala.",
+     "The brave one sings."
+    ]
+   ]
+  },
+  {
+   "id": "G83",
+   "topic": "Quotations and past exclamations",
+   "ruling": "A direct quotation follows its verb of saying after a colon, in quotation marks; ki may close the main clause before it (0.8:G4). An exclamation in the past uses ki-modo + adjective with a copula and its tense (2.2:G61).",
+   "refines": [
+    "0.8:G4",
+    "2.2:G61"
+   ],
+   "examples": [
+    [
+     "Li devi po masuma: “Ki-nela roni lirala ki?”",
+     "The goddess asked: “Who is singing?”"
+    ],
+    [
+     "Li nullo po ka ki-modo vanisan!",
+     "How beautiful the night was!"
+    ]
+   ]
+  },
+  {
+   "id": "G84",
+   "topic": "Superseded rulings",
+   "ruling": "A superseded ruling is kept as it was ruled. A construction it allowed stays grammatical in texts written under it and is not wrong in new text, but the superseding ruling is the one to follow.",
+   "refines": [],
+   "examples": []
+  },
+  {
+   "id": "G85",
+   "topic": "A retired listed derivation",
+   "ruling": "A listed derivation retired for a headword stays buildable with its default reading (2.0:G41); a text written before the retirement reads it through the legacy table, as mirunululirayo reads kerku (2.3:G70).",
+   "refines": [
+    "2.0:G41",
+    "2.3:G70"
+   ],
+   "examples": []
+  },
+  {
+   "id": "G86",
+   "topic": "Ascended forms and the sacred",
+   "ruling": "Whether an ascended form (-asa, -asasan) is sacred or simply the highest degree of its root depends on the word and its gloss; a sacred text uses the sacred ones (0.8:R10).",
+   "refines": [
+    "0.8:R10"
+   ],
+   "examples": []
   }
  ],
  "examples": [
@@ -87441,11 +87598,14 @@
    "source": "1.1 vocabulary examples (philosophical)"
   },
   {
-   "liraasa": "Maivo ne sabesia fime li lazu nurminia.",
+   "liraasa": "Maivo ne sabesia ki-oro li lazu nurminia.",
    "english": "I do not know whether the animal is conscious.",
    "feature": "lazu, nurmi; ne with fime",
    "status": "NEW",
-   "source": "1.1 vocabulary examples (philosophical)"
+   "source": "1.1 vocabulary examples (philosophical)",
+   "liraasa_2_2": "Maivo ne sabesia fime li lazu nurminia.",
+   "revised_in": "2.3",
+   "revision_reason": "Grammar audit: the English is 'whether', which is ki-oro (1.0:G2, 2.3:G77); fime is 'that'. A 1.1 vocabulary example never reviewed for grammar."
   },
   {
    "liraasa": "Li vamri ka pavmanasan.",
@@ -115035,6 +115195,14 @@
     "now": "Added in 2.0 (changeset 2026-10-18-lexicon-2-0). A lovely word in its own right.",
     "archived_in": "2.3",
     "reason": "Author decision 2026-10-19: history that is no longer pertinent leaves the note for the archive. frog is the root kerku since 2.3:G70, so mirunululira is no longer the base for frog; the rest of the note stands."
+   },
+   {
+    "entry": "lx_daigozirme_1656",
+    "field": "notes",
+    "text": "Added in 2.0 (changeset 2026-10-18-lexicon-2-0). Tier null: death-magic; daigozirmeyo = necromancer.",
+    "now": "Added in 2.0 (changeset 2026-10-18-lexicon-2-0). Tier null: death-magic.",
+    "archived_in": "2.3",
+    "reason": "Grammar audit (L04): the note named daigozirmeyo, a 2.0 spelling (zirme is zayu since 2.1); the stale clause goes to the archive."
    }
   ]
  },
@@ -119594,8 +119762,8 @@
   {
    "id": "2026-10-19-lexicon-2-3-audit",
    "edition": "2.3",
-   "summary": "The grammar audit's decisions (review/audit-report.md, ADR-0019 addendum), from the author's answers of 2026-10-19: the album's consistent usage becomes grammar, as rulings 2.3:G72 (line-initial ata), G73 (manner with en and ko), G74 (raho opening a question, superseding that clause of 2.2:G64) and G75 (pagopa takes the motion prefixes); and G76 (ki-eli and ki-muya questions end in ki), on the editor's judgement. Tense inheritance after kureli, sina, si and nevi stays open; whether an ascended form is sacred depends on the word.",
-   "ops": 6
+   "summary": "The grammar audit's decisions (review/audit-report.md, ADR-0019 addendum), from the author's answers of 2026-10-19. The album's consistent usage becomes grammar: 2.3:G72 (line-initial ata), G73 (manner with en and ko), G74 (raho opening a question, superseding that clause of 2.2:G64) and G75 (pagopa takes the motion prefixes). Left to the editor's judgement: G76 (ki-eli and ki-muya questions end in ki), G77 (si is never 'whether', superseding that clause of 0.8:G4), G78 (opening and closing a clause), G79 (time phrases), G80 ('about' after hearing and knowing), G81 (lusu and mosa), G82 (an adjective noun keeps li), G83 (quotations, past exclamations), G84 (superseded rulings) and G85 (retired listed derivations). G86: whether an ascended form is sacred depends on the word. Tense inheritance after kureli, sina, si and nevi stays open. Stale texts in morphology and the numbers table corrected; a function-word example and a note cleaned.",
+   "ops": 26
   }
  ],
  "handoff_note": "Liraasa 2.3: all of 1.0, the 1.1 vocabulary supplement, the 1.2 changesets 2026-10-17-grammar-rulings and 2026-10-17-lexicon-1-2, the 2.0 changesets 2026-10-18-lexicon-2-0 and 2026-10-18-lexicon-2-0-review (word-building rulings 2.0:G37–G45, new vocabulary, the image-compound pattern), and the 2.1 changeset 2026-10-18-lexicon-2-1 and 2026-10-19-lexicon-2-1-review (rulings 2.1:G46–G59, 30 roots respelled), and the 2.2 changeset 2026-10-19-lexicon-2-2 (rulings 2.2:G60–G68, silro restored, the album), and the 2.3 changeset 2026-10-19-lexicon-2-3 and 2026-10-19-lexicon-2-3-review and 2026-10-19-lexicon-2-3-audit (rulings 2.3:G69–G71, the sound pass: 13 roots respelled, bear, cow and frog made roots, wolf rebuilt on farvi). Revised examples keep their earlier text in liraasa_1_1 (1.2), liraasa_1_2 (2.0), liraasa_2_0 (2.1), liraasa_2_1 (2.2) or liraasa_2_2 (2.3). Ruling ids are edition-qualified: 0.8:R1, 1.0:G7, 1.2:G24, 2.0:G40, 2.1:G46, 2.2:G60, 2.3:G69. Built by scripts/build_handoff.ts from data/lexicon/liraasa_2_3.json.",
@@ -149399,7 +149567,7 @@
    "edition": "2.3",
    "created": "2026-10-19T22:00:00Z",
    "author": "nicolas",
-   "summary": "The grammar audit's decisions (review/audit-report.md, ADR-0019 addendum), from the author's answers of 2026-10-19: the album's consistent usage becomes grammar, as rulings 2.3:G72 (line-initial ata), G73 (manner with en and ko), G74 (raho opening a question, superseding that clause of 2.2:G64) and G75 (pagopa takes the motion prefixes); and G76 (ki-eli and ki-muya questions end in ki), on the editor's judgement. Tense inheritance after kureli, sina, si and nevi stays open; whether an ascended form is sacred depends on the word.",
+   "summary": "The grammar audit's decisions (review/audit-report.md, ADR-0019 addendum), from the author's answers of 2026-10-19. The album's consistent usage becomes grammar: 2.3:G72 (line-initial ata), G73 (manner with en and ko), G74 (raho opening a question, superseding that clause of 2.2:G64) and G75 (pagopa takes the motion prefixes). Left to the editor's judgement: G76 (ki-eli and ki-muya questions end in ki), G77 (si is never 'whether', superseding that clause of 0.8:G4), G78 (opening and closing a clause), G79 (time phrases), G80 ('about' after hearing and knowing), G81 (lusu and mosa), G82 (an adjective noun keeps li), G83 (quotations, past exclamations), G84 (superseded rulings) and G85 (retired listed derivations). G86: whether an ascended form is sacred depends on the word. Tense inheritance after kureli, sina, si and nevi stays open. Stale texts in morphology and the numbers table corrected; a function-word example and a note cleaned.",
    "rulings": [
     {
      "id": "G72",
@@ -149412,11 +149580,11 @@
      "examples": [
       [
        "ata maivo lemula saivo de sizosan lumi.",
-       ""
+       "And I learn his shimmering light."
       ],
       [
        "ata maivori revo-lirala ata relsira!",
-       ""
+       "And we sing again and answer!"
       ]
      ]
     },
@@ -149430,11 +149598,11 @@
      "examples": [
       [
        "saivo po senosia en baba melosan valla.",
-       ""
+       "She spoke in a musical voice."
       ],
       [
        "ata li veluri po sarbisia ko bapi su li doza de farulavrasan amor.",
-       ""
+       "And the stars wrote in surprise on the strength of phoenix-like love."
       ]
      ]
     },
@@ -149449,7 +149617,7 @@
      "examples": [
       [
        "raho povi sabesia baba kasi polvasan sove ki?",
-       ""
+       "Who can know a more powerful peace?"
       ]
      ]
     },
@@ -149463,7 +149631,7 @@
      "examples": [
       [
        "taivo ne taro-pagopa, nara lalfola hupi li lelde,",
-       ""
+       "you do not go across, but float above the edge,"
       ]
      ]
     },
@@ -149481,6 +149649,159 @@
        "Which song do you love?"
       ]
      ]
+    },
+    {
+     "id": "G77",
+     "topic": "Embedded yes/no questions",
+     "ruling": "An embedded yes/no question is opened by ki-oro, never by si, which means only 'if' (1.0:G2, 2.2:G60). Supersedes the clause of 0.8:G4 that has si mean 'whether'.",
+     "refines": [],
+     "examples": [
+      [
+       "Maivo masuma ki-oro taivo futu relnura.",
+       "I ask whether you will return."
+      ]
+     ],
+     "supersedes": [
+      "0.8:G4"
+     ]
+    },
+    {
+     "id": "G78",
+     "topic": "Opening and closing a clause",
+     "ruling": "nara may open a line that continues the one before, as ata and oro may (2.3:G72, 1.2:G25). Hortative yava stands where the subject would, opening the clause. A frame may hold more than one time phrase, the wider first. A clause closes in this order: a closing time word, an attitude word, ki (1.2:G24, 1.0:G22).",
+     "refines": [
+      "1.2:G24",
+      "1.0:G22",
+      "2.1:G56"
+     ],
+     "examples": [
+      [
+       "Nara li devi po ne lenila.",
+       "But the goddess did not listen."
+      ],
+      [
+       "Yava ne lirala.",
+       "Let us not sing."
+      ],
+      [
+       "Saivori de lira sasvasia taivo toda-krono pifu.",
+       "May their song protect you always."
+      ]
+     ]
+    },
+    {
+     "id": "G79",
+     "topic": "Time phrases",
+     "ruling": "A measure is a number or a quantifier with a unit: kroti + a measure is 'ago' (kroti dossa deya, two days ago), and kroti + a bare noun is 'before' it (kroti deya) (2.1:G55). 'Since' a time is da + the time word: da ola-krono, since then. tuni may take a noun phrase of time: tuni merno, until morning.",
+     "refines": [
+      "2.1:G55"
+     ],
+     "examples": [
+      [
+       "Maivo po venreva kroti dossa deya.",
+       "I came two days ago."
+      ],
+      [
+       "Da ola-krono, maivori lirala fuyi.",
+       "Since then, we sing to each other."
+      ],
+      [
+       "Li lirayo po sulnosia tuni merno.",
+       "The singer waited until morning."
+      ]
+     ]
+    },
+    {
+     "id": "G80",
+     "topic": "About, after hearing and knowing",
+     "ruling": "1.2:G30 extends to verbs of hearing, knowing and thinking: give the verb an object with a de phrase. Saivo po lenila li telne de li lirayo, he heard about the singer (the story of the singer).",
+     "refines": [
+      "1.2:G30"
+     ],
+     "examples": [
+      [
+       "Li tarnuregna po lenila li telne de li lirayo.",
+       "The king heard about the singer."
+      ]
+     ]
+    },
+    {
+     "id": "G81",
+     "topic": "lusu and mosa",
+     "ruling": "Before a number or quantity, lusu and mosa are 'at least' and 'at most' (1.0:G9); before an adjective they make the superlative: mosa vanisan, most beautiful; lusu vanisan, least beautiful.",
+     "refines": [
+      "1.0:G9"
+     ],
+     "examples": [
+      [
+       "Taivo guraga maivo lusu dossa cono.",
+       "You owe me at least two coins."
+      ],
+      [
+       "Taivo de lira ka mosa vanisan.",
+       "Your song is the most beautiful."
+      ]
+     ]
+    },
+    {
+     "id": "G82",
+     "topic": "An adjective noun keeps its article",
+     "ruling": "An adjective standing as a noun keeps its determiner even where li could otherwise be omitted (0.8:R5, 1.2:G29): li corvisan, the brave one.",
+     "refines": [
+      "1.2:G29",
+      "0.8:R5"
+     ],
+     "examples": [
+      [
+       "Li corvisan lirala.",
+       "The brave one sings."
+      ]
+     ]
+    },
+    {
+     "id": "G83",
+     "topic": "Quotations and past exclamations",
+     "ruling": "A direct quotation follows its verb of saying after a colon, in quotation marks; ki may close the main clause before it (0.8:G4). An exclamation in the past uses ki-modo + adjective with a copula and its tense (2.2:G61).",
+     "refines": [
+      "0.8:G4",
+      "2.2:G61"
+     ],
+     "examples": [
+      [
+       "Li devi po masuma: “Ki-nela roni lirala ki?”",
+       "The goddess asked: “Who is singing?”"
+      ],
+      [
+       "Li nullo po ka ki-modo vanisan!",
+       "How beautiful the night was!"
+      ]
+     ]
+    },
+    {
+     "id": "G84",
+     "topic": "Superseded rulings",
+     "ruling": "A superseded ruling is kept as it was ruled. A construction it allowed stays grammatical in texts written under it and is not wrong in new text, but the superseding ruling is the one to follow.",
+     "refines": [],
+     "examples": []
+    },
+    {
+     "id": "G85",
+     "topic": "A retired listed derivation",
+     "ruling": "A listed derivation retired for a headword stays buildable with its default reading (2.0:G41); a text written before the retirement reads it through the legacy table, as mirunululirayo reads kerku (2.3:G70).",
+     "refines": [
+      "2.0:G41",
+      "2.3:G70"
+     ],
+     "examples": []
+    },
+    {
+     "id": "G86",
+     "topic": "Ascended forms and the sacred",
+     "ruling": "Whether an ascended form (-asa, -asasan) is sacred or simply the highest degree of its root depends on the word and its gloss; a sacred text uses the sacred ones (0.8:R10).",
+     "refines": [
+      "0.8:R10"
+     ],
+     "examples": []
     }
    ],
    "ops": [
@@ -149540,6 +149861,116 @@
      "author": "nicolas"
     },
     {
+     "entry": "2.3:G77",
+     "op": "add_ruling",
+     "from": null,
+     "to": "Embedded yes/no questions",
+     "ruling": "2.3:G77",
+     "addedIn": "2.3",
+     "reason": "Grammar audit, the author left this decision to the editor's judgement (grammar audit, 2026-10-19): 0.8:G4's standing clause contradicted 1.0:G2 and 2.2:G60; the later rulings win.",
+     "at": "2026-10-19T23:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "2.3:G78",
+     "op": "add_ruling",
+     "from": null,
+     "to": "Opening and closing a clause",
+     "ruling": "2.3:G78",
+     "addedIn": "2.3",
+     "reason": "Grammar audit, the author left this decision to the editor's judgement (grammar audit, 2026-10-19): nara is symmetric with ata (2.3:G72); the order follows the clause template, time before attitude before ki.",
+     "at": "2026-10-19T23:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "2.3:G79",
+     "op": "add_ruling",
+     "from": null,
+     "to": "Time phrases",
+     "ruling": "2.3:G79",
+     "addedIn": "2.3",
+     "reason": "Grammar audit, the author left this decision to the editor's judgement (grammar audit, 2026-10-19): it keeps the function-word example kroti deya (before day), and uses existing words for 'since' and 'until'.",
+     "at": "2026-10-19T23:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "2.3:G80",
+     "op": "add_ruling",
+     "from": null,
+     "to": "About, after hearing and knowing",
+     "ruling": "2.3:G80",
+     "addedIn": "2.3",
+     "reason": "Grammar audit, the author left this decision to the editor's judgement (grammar audit, 2026-10-19): the same construction 1.2:G30 gives verbs of saying.",
+     "at": "2026-10-19T23:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "2.3:G81",
+     "op": "add_ruling",
+     "from": null,
+     "to": "lusu and mosa",
+     "ruling": "2.3:G81",
+     "addedIn": "2.3",
+     "reason": "Grammar audit, the author left this decision to the editor's judgement (grammar audit, 2026-10-19): it states together the two uses the function-word table and 1.0:G9 each give.",
+     "at": "2026-10-19T23:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "2.3:G82",
+     "op": "add_ruling",
+     "from": null,
+     "to": "An adjective noun keeps its article",
+     "ruling": "2.3:G82",
+     "addedIn": "2.3",
+     "reason": "Grammar audit, the author left this decision to the editor's judgement (grammar audit, 2026-10-19): without the article an adjective cannot be told from a predicate.",
+     "at": "2026-10-19T23:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "2.3:G83",
+     "op": "add_ruling",
+     "from": null,
+     "to": "Quotations and past exclamations",
+     "ruling": "2.3:G83",
+     "addedIn": "2.3",
+     "reason": "Grammar audit, the author left this decision to the editor's judgement (grammar audit, 2026-10-19): it writes down the punctuation 0.8:G4's example shows, and gives past exclamations the only shape that has a verb.",
+     "at": "2026-10-19T23:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "2.3:G84",
+     "op": "add_ruling",
+     "from": null,
+     "to": "Superseded rulings",
+     "ruling": "2.3:G84",
+     "addedIn": "2.3",
+     "reason": "Grammar audit, the author left this decision to the editor's judgement (grammar audit, 2026-10-19): rulings are kept, never reworded, and texts written under them stay valid.",
+     "at": "2026-10-19T23:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "2.3:G85",
+     "op": "add_ruling",
+     "from": null,
+     "to": "A retired listed derivation",
+     "ruling": "2.3:G85",
+     "addedIn": "2.3",
+     "reason": "Grammar audit, the author left this decision to the editor's judgement (grammar audit, 2026-10-19): 2.0:G41 makes every derivation productive; retirement removes only the listed meaning.",
+     "at": "2026-10-19T23:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "2.3:G86",
+     "op": "add_ruling",
+     "from": null,
+     "to": "Ascended forms and the sacred",
+     "ruling": "2.3:G86",
+     "addedIn": "2.3",
+     "reason": "Grammar audit, the author's decision of 2026-10-19: it depends on the word.",
+     "at": "2026-10-19T23:00:00Z",
+     "author": "nicolas"
+    },
+    {
      "entry": "2.2:G64",
      "op": "supersede_ruling",
      "field": "raho is never a question word",
@@ -149550,6 +149981,119 @@
      "reason": "2.3:G74 lets raho open a direct question (album 05:22, 11:12); only that clause of 2.2:G64 is superseded, and headless raho stands. The ruling is kept as ruled, never reworded.",
      "at": "2026-10-19T22:00:00Z",
      "author": "nicolas"
+    },
+    {
+     "entry": "0.8:G4",
+     "op": "supersede_ruling",
+     "field": "embedded yes/no questions use si (whether)",
+     "from": "Quotation and embedded questions",
+     "to": "2.3:G77",
+     "ruling": "2.3:G77",
+     "reason": "2.3:G77: si means only 'if' (1.0:G2); only that clause of 0.8:G4 is superseded, and the rest stands. Kept as ruled.",
+     "addedIn": "2.3",
+     "at": "2026-10-19T23:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "text:morphology.compounding",
+     "op": "edit_text",
+     "from": "MODIFIER+HEAD written together; head rightmost; components must be active 1.0 headwords; a compound's verb class follows its first letter",
+     "to": "MODIFIER+HEAD written together; head rightmost; components must be active headwords (a colour base may be the modifier, 2.0:G38; a component may itself be a compound, 2.0:G42); a compound's verb class follows its first letter",
+     "ruling": "2.0:G42",
+     "reason": "Grammar audit (S04): the text still said '1.0 headwords', which 2.0:G38, 2.0:G42 and every later compound contradict.",
+     "addedIn": "2.3",
+     "at": "2026-10-19T23:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "text:morphology.suffixes.-yo",
+     "op": "edit_text",
+     "from": "agent (on the root)",
+     "to": "agent (on any root or compound, 2.0:G41)",
+     "ruling": "2.0:G41",
+     "reason": "Grammar audit (S04): 2.0:G41 lets derivations attach to any root or compound.",
+     "addedIn": "2.3",
+     "at": "2026-10-19T23:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "text:morphology.suffixes.-vu",
+     "op": "edit_text",
+     "from": "augmentative (on the root)",
+     "to": "augmentative (on any root or compound, 2.0:G41)",
+     "ruling": "2.0:G41",
+     "reason": "Grammar audit (S04): 2.0:G41 lets derivations attach to any root or compound.",
+     "addedIn": "2.3",
+     "at": "2026-10-19T23:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "text:numbers.rules.39.Liraasa",
+     "op": "edit_text",
+     "from": "not defined in 0.2",
+     "to": "NUMBER-ne; NUMBER de NUMBER",
+     "ruling": "2.1:G53",
+     "reason": "Grammar audit (S04): rule J still said ordinals and fractions await policy, but the settled 0.8 questions, 1.2:G27, 2.1:G49 and 2.1:G53 rule on them.",
+     "addedIn": "2.3",
+     "at": "2026-10-19T23:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "text:numbers.rules.39.Construction rule",
+     "op": "edit_text",
+     "from": "negative, decimal, ordinal, fractions await separate policy",
+     "to": "ordinals: NUMBER-ne before the noun (una-ne, first); fractions: NUMBER de NUMBER (tressa de cuara); negative and decimal numbers await separate policy",
+     "ruling": "2.1:G53",
+     "reason": "Grammar audit (S04): rule J still said ordinals and fractions await policy, but the settled 0.8 questions, 1.2:G27, 2.1:G49 and 2.1:G53 rule on them.",
+     "addedIn": "2.3",
+     "at": "2026-10-19T23:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "text:numbers.rules.39.Usage / comment",
+     "op": "edit_text",
+     "from": "Avoid inventing unwritten rules.",
+     "to": "Ordinals and fractions are settled (settled_open_questions_0_8; 1.2:G27, 2.1:G49, 2.1:G53); do not invent the rest.",
+     "ruling": "2.1:G53",
+     "reason": "Grammar audit (S04): rule J still said ordinals and fractions await policy, but the settled 0.8 questions, 1.2:G27, 2.1:G49 and 2.1:G53 rule on them.",
+     "addedIn": "2.3",
+     "at": "2026-10-19T23:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "fw_kisaivo_0058",
+     "op": "edit_function_word",
+     "field": "example",
+     "from": "Ki-saivo lirala? (historical)",
+     "to": "Ki-saivo lirala?",
+     "ruling": "1.0:G19",
+     "reason": "Grammar audit (L04): English annotation inside the Liraasa example; the row's position already says HISTORICAL ONLY.",
+     "addedIn": "2.3",
+     "at": "2026-10-19T23:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_daigozirme_1656",
+     "op": "archive_text",
+     "field": "notes",
+     "from": "Added in 2.0 (changeset 2026-10-18-lexicon-2-0). Tier null: death-magic; daigozirmeyo = necromancer.",
+     "to": "Added in 2.0 (changeset 2026-10-18-lexicon-2-0). Tier null: death-magic.",
+     "ruling": "2.1:G58",
+     "reason": "Grammar audit (L04): the note named daigozirmeyo, a 2.0 spelling (zirme is zayu since 2.1); the stale clause goes to the archive.",
+     "addedIn": "2.3",
+     "at": "2026-10-19T23:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "example:555",
+     "op": "edit_example",
+     "from": "Maivo ne sabesia fime li lazu nurminia.",
+     "to": "Maivo ne sabesia ki-oro li lazu nurminia.",
+     "ruling": "2.3:G77",
+     "addedIn": "2.3",
+     "at": "2026-10-19T23:00:00Z",
+     "author": "nicolas",
+     "reason": "Grammar audit: the English is 'whether', which is ki-oro (1.0:G2, 2.3:G77); fime is 'that'. A 1.1 vocabulary example never reviewed for grammar."
     }
    ]
   }

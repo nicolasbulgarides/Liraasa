@@ -26,8 +26,8 @@ ata may open a line or clause that continues the one before, as oro may (1.2:G25
 
 Refines 1.2:G25, 1.0:G13.
 
-- *ata maivo lemula saivo de sizosan lumi.*
-- *ata maivori revo-lirala ata relsira!*
+- *ata maivo lemula saivo de sizosan lumi.* — And I learn his shimmering light.
+- *ata maivori revo-lirala ata relsira!* — And we sing again and answer!
 
 ### 2.3:G73: Manner with en and ko
 
@@ -35,8 +35,8 @@ en + an abstract noun names the manner or medium of an act: en baba melosan vall
 
 Refines 1.2:G33.
 
-- *saivo po senosia en baba melosan valla.*
-- *ata li veluri po sarbisia ko bapi su li doza de farulavrasan amor.*
+- *saivo po senosia en baba melosan valla.* — She spoke in a musical voice.
+- *ata li veluri po sarbisia ko bapi su li doza de farulavrasan amor.* — And the stars wrote in surprise on the strength of phoenix-like love.
 
 ### 2.3:G74: raho opening a question
 
@@ -44,7 +44,7 @@ A direct question may open with raho for 'who' or 'what' and ends in ki, as the 
 
 Supersedes 2.2:G64.
 
-- *raho povi sabesia baba kasi polvasan sove ki?*
+- *raho povi sabesia baba kasi polvasan sove ki?* — Who can know a more powerful peace?
 
 ### 2.3:G75: pagopa takes the motion prefixes
 
@@ -52,7 +52,7 @@ pagopa (to go) is a motion verb: the motion prefixes attach to it, as in taro-pa
 
 Refines 1.2:G35.
 
-- *taivo ne taro-pagopa, nara lalfola hupi li lelde,*
+- *taivo ne taro-pagopa, nara lalfola hupi li lelde,* — you do not go across, but float above the edge,
 
 ### 2.3:G76: Questions with ki-eli and ki-muya
 
@@ -61,6 +61,84 @@ A question with ki-eli + noun or ki-muya + noun ends in ki; without ki the claus
 Refines 2.2:G60, 2.2:G61.
 
 - *Taivo amora ki-eli lira ki?* — Which song do you love?
+
+### 2.3:G77: Embedded yes/no questions
+
+An embedded yes/no question is opened by ki-oro, never by si, which means only 'if' (1.0:G2, 2.2:G60). Supersedes the clause of 0.8:G4 that has si mean 'whether'.
+
+Supersedes 0.8:G4.
+
+- *Maivo masuma ki-oro taivo futu relnura.* — I ask whether you will return.
+
+### 2.3:G78: Opening and closing a clause
+
+nara may open a line that continues the one before, as ata and oro may (2.3:G72, 1.2:G25). Hortative yava stands where the subject would, opening the clause. A frame may hold more than one time phrase, the wider first. A clause closes in this order: a closing time word, an attitude word, ki (1.2:G24, 1.0:G22).
+
+Refines 1.2:G24, 1.0:G22, 2.1:G56.
+
+- *Nara li devi po ne lenila.* — But the goddess did not listen.
+- *Yava ne lirala.* — Let us not sing.
+- *Saivori de lira sasvasia taivo toda-krono pifu.* — May their song protect you always.
+
+### 2.3:G79: Time phrases
+
+A measure is a number or a quantifier with a unit: kroti + a measure is 'ago' (kroti dossa deya, two days ago), and kroti + a bare noun is 'before' it (kroti deya) (2.1:G55). 'Since' a time is da + the time word: da ola-krono, since then. tuni may take a noun phrase of time: tuni merno, until morning.
+
+Refines 2.1:G55.
+
+- *Maivo po venreva kroti dossa deya.* — I came two days ago.
+- *Da ola-krono, maivori lirala fuyi.* — Since then, we sing to each other.
+- *Li lirayo po sulnosia tuni merno.* — The singer waited until morning.
+
+### 2.3:G80: About, after hearing and knowing
+
+1.2:G30 extends to verbs of hearing, knowing and thinking: give the verb an object with a de phrase. Saivo po lenila li telne de li lirayo, he heard about the singer (the story of the singer).
+
+Refines 1.2:G30.
+
+- *Li tarnuregna po lenila li telne de li lirayo.* — The king heard about the singer.
+
+### 2.3:G81: lusu and mosa
+
+Before a number or quantity, lusu and mosa are 'at least' and 'at most' (1.0:G9); before an adjective they make the superlative: mosa vanisan, most beautiful; lusu vanisan, least beautiful.
+
+Refines 1.0:G9.
+
+- *Taivo guraga maivo lusu dossa cono.* — You owe me at least two coins.
+- *Taivo de lira ka mosa vanisan.* — Your song is the most beautiful.
+
+### 2.3:G82: An adjective noun keeps its article
+
+An adjective standing as a noun keeps its determiner even where li could otherwise be omitted (0.8:R5, 1.2:G29): li corvisan, the brave one.
+
+Refines 1.2:G29, 0.8:R5.
+
+- *Li corvisan lirala.* — The brave one sings.
+
+### 2.3:G83: Quotations and past exclamations
+
+A direct quotation follows its verb of saying after a colon, in quotation marks; ki may close the main clause before it (0.8:G4). An exclamation in the past uses ki-modo + adjective with a copula and its tense (2.2:G61).
+
+Refines 0.8:G4, 2.2:G61.
+
+- *Li devi po masuma: “Ki-nela roni lirala ki?”* — The goddess asked: “Who is singing?”
+- *Li nullo po ka ki-modo vanisan!* — How beautiful the night was!
+
+### 2.3:G84: Superseded rulings
+
+A superseded ruling is kept as it was ruled. A construction it allowed stays grammatical in texts written under it and is not wrong in new text, but the superseding ruling is the one to follow.
+
+### 2.3:G85: A retired listed derivation
+
+A listed derivation retired for a headword stays buildable with its default reading (2.0:G41); a text written before the retirement reads it through the legacy table, as mirunululirayo reads kerku (2.3:G70).
+
+Refines 2.0:G41, 2.3:G70.
+
+### 2.3:G86: Ascended forms and the sacred
+
+Whether an ascended form (-asa, -asasan) is sacred or simply the highest degree of its root depends on the word and its gloss; a sacred text uses the sacred ones (0.8:R10).
+
+Refines 0.8:R10.
 
 ## Rulings 2.2
 
@@ -525,6 +603,8 @@ Everyday speech may omit a repeated subject in coordinated clauses and in answer
 
 **In part superseded by 2.2:G60:** its clause “embedded wh-word stays in place” is replaced; the rest stands.
 
+**In part superseded by 2.3:G77:** its clause “embedded yes/no questions use si (whether)” is replaced; the rest stands.
+
 ki may close the main clause before an appended direct quotation (Taivo desida ki, fime maivo senosia: "...") as well as after it (0.7 order). Embedded wh-questions keep the wh-word in place with no ki; embedded yes/no questions use si (whether).
 
 ### 0.8:G5: Relative time in subordinate clauses
@@ -555,7 +635,7 @@ Retired and respelled roots, and what replaces them (1.0:G19). A pre-1.0 text is
 - fesi → yugenulu
 - hulo → renlisolo
 - lalma → lumibiti
-- lilba → sevutamra
+- lilba → sevukezu
 - lonfi → folnidamva
 - lorha → folnilombi
 - mabape → pagosarbi
@@ -563,8 +643,8 @@ Retired and respelled roots, and what replaces them (1.0:G19). A pre-1.0 text is
 - melku → havlikova
 - molne → yolbefolni
 - mormu → rivorelnu
-- nalsi → velbivaye
-- nalto → ranbevaye
+- nalsi → vizuvaye
+- nalto → dozavaye
 - neho → moludonu
 - nelbu → sovelavi
 - nonte → amorpeli
@@ -589,24 +669,24 @@ Retired and respelled roots, and what replaces them (1.0:G19). A pre-1.0 text is
 - fomre → larbopago
 - cafi → bitifarla
 - camne → farubiti
-- canva → monrurumne
-- cupa → buvokova
+- canva → monruzupa
+- cupa → buzakova
 - duye → mirudaigo
-- fogi → tamrasenru
+- fogi → kezusenru
 - fumlu → nibevimo
 - hene → nulloramu
 - mohi → amorserbu
-- nolmu → folnimege
+- nolmu → folniyumli
 - relpa → mubomomvi
-- rogo → amorvorba
+- rogo → amorduha
 - sanlu → loteronela
 - sarmu → riluvaye
 - selmo → senrusado
 - sonsa → farufasbi
 - tulhe → fulemiru
-- vide → loterovurlo
-- yulve → yelfateyo
-- zella → velbilavi
+- vide → loterodesi
+- yulve → bojidento
+- zella → vizulavi
 - zudo → ruherilu
 - zuloe → larneramu
 - tulru → ruhesonbu
@@ -626,8 +706,8 @@ Retired and respelled roots, and what replaces them (1.0:G19). A pre-1.0 text is
 - zarmo → hata
 - danvu → budi
 - milyu → cibu
-- volda → larbopagobudi
-- barni → kupa
+- volda → farvibudi
+- barni → ruko
 - menme → haza
 - supo → goza
 - vorba → duha
@@ -641,7 +721,7 @@ Retired and respelled roots, and what replaces them (1.0:G19). A pre-1.0 text is
 - yelfa → boji
 - nerpo → vuzi
 - ranbe → doza
-- velbi → vugo
+- velbi → vizu
 - silro → puzu (respelling undone: silro is the word again)
 - nilvu → foji
 - vebo → faji
