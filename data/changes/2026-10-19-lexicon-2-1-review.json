@@ -1,0 +1,68 @@
+{
+ "id": "2026-10-19-lexicon-2-1-review",
+ "edition": "2.1",
+ "created": "2026-10-19T09:00:00Z",
+ "author": "nicolas",
+ "summary": "The 2.1 integration review (ADR-0017 addendum), from the author's answers of 2026-10-19: the miyo and loya examples, whose sola now means sun, are deleted; the elliptical question Ata taivo? ends in ki. The new spellings are kept as the patch describes, and kezupagolelde stands. No rule changes.",
+ "ops": [
+  {
+   "entry": "fw_miyo_0100",
+   "op": "edit_function_word",
+   "field": "example",
+   "from": "Miyo baba sola.",
+   "to": null,
+   "ruling": "2.1:G58",
+   "addedIn": "2.1",
+   "reason": "Author decision 2026-10-19: delete the example. sola was not a word when it was written; 2.1 makes sola \"sun\", against its English (\"There is solitude.\").",
+   "at": "2026-10-19T09:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "fw_miyo_0100",
+   "op": "edit_function_word",
+   "field": "example_gloss",
+   "from": "There is solitude.",
+   "to": null,
+   "ruling": "2.1:G58",
+   "addedIn": "2.1",
+   "reason": "Author decision 2026-10-19: the English of the deleted example goes with it.",
+   "at": "2026-10-19T09:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "fw_loya_0101",
+   "op": "edit_function_word",
+   "field": "example",
+   "from": "Li sola loya benasan.",
+   "to": null,
+   "ruling": "2.1:G58",
+   "addedIn": "2.1",
+   "reason": "Author decision 2026-10-19: delete the example. sola was not a word when it was written; 2.1 makes sola \"sun\", against its English (\"The solitude becomes good.\").",
+   "at": "2026-10-19T09:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "fw_loya_0101",
+   "op": "edit_function_word",
+   "field": "example_gloss",
+   "from": "The solitude becomes good.",
+   "to": null,
+   "ruling": "2.1:G58",
+   "addedIn": "2.1",
+   "reason": "Author decision 2026-10-19: the English of the deleted example goes with it.",
+   "at": "2026-10-19T09:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "example:280",
+   "op": "edit_example",
+   "from": "Maivo amora li bumre. Ata taivo?",
+   "to": "Maivo amora li bumre. Ata taivo ki?",
+   "ruling": "2.1:G46",
+   "addedIn": "2.1",
+   "reason": "Author left it to judgement, 2026-10-19: \"And you?\" asks a yes/no question of the listener, so it ends in ki, as the canon \"Ata li cono ki?\" does. \"Ata?\" (So?) stays bare: it is a discourse particle, not a clause.",
+   "at": "2026-10-19T09:00:00Z",
+   "author": "nicolas"
+  }
+ ]
+}

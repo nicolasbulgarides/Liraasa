@@ -378,7 +378,7 @@ function compounds(c: Ctx): string {
   const lunolumi = index.patterns.get('lunolumi');
   if (lunolumi === undefined) throw new Error('lunolumi is no longer a word of the pattern');
   // the song's own words; a word 2.1 respelled is shown in its 2.1 spelling (2.1:G58)
-  const fromSong = ['sulbanevra', 'kronorivla', 'velumelo', 'ramuvorba', 'velusolo']
+  const fromSong = ['solanevra', 'kronorivla', 'velumelo', 'ramuduha', 'velusolo']
     .map((w) => {
       const h = index.byRoot.get(respelledAs(index.lex, w) ?? w);
       if (h?.components === undefined || h.components === null) {
@@ -551,8 +551,8 @@ function lamentNotes(index: Index): readonly Note[] {
     ['kronorivla', '`ne` comes right before what it denies.'],
     ['vemineme', `${compoundNote(index, 'lorenuravu')}; ${compoundNote(index, 'vemineme')}.`],
     [
-      'sulbanevra',
-      '`vobi`, for, and `hupi`, above, come before what they govern. `solanevra`, sun + going down, is sunset; the song, written before the word was respelled, spells it sulbanevra.',
+      'solanevra',
+      '`vobi`, for, and `hupi`, above, come before what they govern. `solanevra`, sun + going down, is sunset.',
     ],
     ['povi', '`ne povi`: cannot.'],
     ['sulnosia', '`lumiasa`: Her Divine Light, the Goddess’s own light.'],

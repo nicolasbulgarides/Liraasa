@@ -61,7 +61,10 @@ export type ChangeOp =
    * with `+`, e.g. `kezu+pago` (ADR-0017).
    */
   | 'respell_as_compound'
-  /** A function word's example. `entry` is its `fw_` id; `field` is `example` (ADR-0017). */
+  /**
+   * A function word's example. `entry` is its `fw_` id; `field` is `example` or
+   * `example_gloss`; `to: null` deletes it (ADR-0017).
+   */
   | 'edit_function_word'
   /**
    * A root of `reserved_root_bank` given a meaning: it leaves the bank.

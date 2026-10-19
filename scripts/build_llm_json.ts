@@ -184,7 +184,7 @@ function main(): void {
       const flags = [
         ...(h.register === 'poetic' ? ['poetic'] : []),
         ...(h.since === lex.version ? [`new in ${lex.version}`] : []),
-        ...(formerly.has(h.root) ? [`formerly ${(formerly.get(h.root) ?? []).join(', ')}`] : []),
+        ...(formerly.get(h.root) ?? []).map((old) => `formerly ${old}`),
       ];
       const line =
         h.root +

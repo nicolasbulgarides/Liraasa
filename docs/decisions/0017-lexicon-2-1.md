@@ -133,3 +133,17 @@ Result: **22 PASS, 3 WARN**.
   - the elliptical questions;
   - two function-word examples whose `sola` now means sun;
   - whether the song gets a 2.1 version.
+
+## Addendum: the author's review (2026-10-19)
+
+`data/changes/2026-10-19-lexicon-2-1-review.json` applies after the 2.1
+changeset:
+
+- the `miyo` and `loya` examples are deleted, because their `sola` now means
+  sun (`edit_function_word` may set `example` and `example_gloss` to null);
+- `Ata taivo?` ends in `ki`;
+- the new spellings stand as the patch gives them;
+- the song is carried into 2.1 spelling.
+
+The build now drops the legacy rows of in-between spellings that no edition
+had (`tahamiga`).

@@ -41,8 +41,8 @@ export interface FunctionWord {
   meaning: string;
   position: string;
   class: string | null;
-  example: string;
-  example_gloss: string;
+  example: string | null;
+  example_gloss: string | null;
   since: string;
 }
 
@@ -327,7 +327,7 @@ export class Index {
         ...lex.rulings_0_8_carried,
       ].flatMap((r) => (r.examples ?? []).map(([l]) => l)),
       ...lex.discourse_particles.flatMap((p) => p.examples.map((e) => e.liraasa)),
-      ...lex.function_words.map((w) => w.example),
+      ...lex.function_words.flatMap((w) => (w.example === null ? [] : [w.example])),
       ...lex.pronouns.flatMap((p) => [p.possessive, p.reflexive]),
     ];
     for (const text of texts) for (const t of tokenize(text)) this.attested.add(t);
@@ -466,7 +466,7 @@ export function canonTexts(lex: Lexicon): string[] {
   ];
   return [
     ...liveExamples(lex).map((e) => e.liraasa),
-    ...lex.function_words.map((w) => w.example),
+    ...lex.function_words.flatMap((w) => (w.example === null ? [] : [w.example])),
     ...rulings.flatMap((r) => [r.ruling, ...(r.examples ?? []).map(([l]) => l)]),
     ...lex.discourse_particles.flatMap((p) => p.examples.map((e) => e.liraasa)),
     ...lex.pronouns.flatMap((p) => [p.possessive, p.reflexive]),

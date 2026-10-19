@@ -68,8 +68,8 @@ export const REFERENCE_NOTES: readonly Note[] = [
     'No tense word means the present: the hands are aging now. Each half has its own subject and verb, so `ata` links them.',
   ],
   [
-    'sulbanevra',
-    '`vobi` (for) and `hupi` (above) are prepositions after the verb. `solanevra`, written sulbanevra in 2.0, is sun + descent: a compound is two headwords written as one word, the head last [[2.1:G58]].',
+    'solanevra',
+    '`vobi` (for) and `hupi` (above) are prepositions after the verb. `solanevra` is sun + descent: a compound is two headwords written as one word, the head last.',
   ],
   [
     'povi',
@@ -348,7 +348,7 @@ export function songPart(index: Index, n: string): string {
   return part(
     n,
     `${title}: ${englishTitle}`,
-    'A whole song, one line at a time: the Liraasa, a gloss under each word, the English, and the grammar the line shows. The song was written in 2.0 and is shown as written; a word 2.1 respelled is read under its 2.0 spelling and shows its 2.1 spelling beneath (“now …”) [[2.1:G58]]. Glosses are read from the lexicon; a changed form is glossed by its root and a label (`navuasa`, sky-ASC). Labels: PST past, FUT future, NEG negation or negative form, Q question, PL plural, DIM diminutive, ASC ascended form, 1SG / 2SG I / you, COP.NOW `ke` (so now), COP.NAT `ka` (so by nature), DREAM.EVID `vuda` (seen in a dream).',
+    'A whole song, one line at a time: the Liraasa, a gloss under each word, the English, and the grammar the line shows. The song is in 2.1 spelling: the author carried it over when 2.1 respelled three of its words (`harmadesi`, `solanevra`, `ramuduha`) [[2.1:G58]]. Glosses are read from the lexicon; a changed form is glossed by its root and a label (`navuasa`, sky-ASC). Labels: PST past, FUT future, NEG negation or negative form, Q question, PL plural, DIM diminutive, ASC ascended form, 1SG / 2SG I / you, COP.NOW `ke` (so now), COP.NAT `ka` (so by nature), DREAM.EVID `vuda` (seen in a dream).',
     songVerses(index, REFERENCE_STYLE, REFERENCE_NOTES, 'The compounds of the song'),
   );
 }

@@ -77,7 +77,7 @@ def migrated(x, mapping):
 def recorded(changesets):
     rec = v20.recorded(changesets)
     rec["respelled"] = {}  # headword id -> (from, to)
-    rec["fw_examples"] = {}  # fw id -> (from, to)
+    rec["fw_examples"] = {}  # (fw id, field) -> (from, to)
     rec["bank"] = set()
     for cs in changesets:
         for op in cs["ops"]:
@@ -85,7 +85,7 @@ def recorded(changesets):
             if o in ("respell_root", "respell_as_compound"):
                 rec["respelled"][op["entry"]] = (op["from"], op["to"])
             elif o == "edit_function_word":
-                rec["fw_examples"][op["entry"]] = (op["from"], op["to"])
+                rec["fw_examples"][(op["entry"], op.get("field", "example"))] = (op["from"], op["to"])
             elif o == "spend_bank_root":
                 rec["bank"].add(op["entry"].replace("bank:", ""))
     return rec
@@ -243,11 +243,12 @@ def check_25(prev, data, rec, mapping):
     # function words: respelled examples, and recorded example edits
     for x, y in zip(prev["function_words"], data["function_words"]):
         x = m(x)
-        if x.get("example") != y.get("example"):
-            fr, to = rec["fw_examples"].get(y.get("id"), (None, None))
-            if x.get("example") != fr or y.get("example") != to:
-                det.append("function word %s example changed with no op" % y["form"])
-            x = dict(x, example=y.get("example"))
+        for field in ("example", "example_gloss"):
+            if x.get(field) != y.get(field):
+                fr, to = rec["fw_examples"].get((y.get("id"), field), (None, None))
+                if x.get(field) != fr or y.get(field) != to:
+                    det.append("function word %s %s changed with no op" % (y["form"], field))
+                x = dict(x, **{field: y.get(field)})
         if x != y:
             det.append("function word %s changed" % y["form"])
     if len(prev["function_words"]) != len(data["function_words"]):

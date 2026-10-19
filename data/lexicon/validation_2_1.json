@@ -11,7 +11,7 @@
    "function_words": 151,
    "new_function_words_1_0": 29,
    "respelled_in_2_1": 30,
-   "spellings_respelled": 1966,
+   "spellings_respelled": 1903,
    "image_compounds_attested": 391,
    "lexicalised_derivations": 106
   },
@@ -291,7 +291,7 @@
    "count": 0,
    "details": [],
    "details_total": 0,
-   "note": "2475 legacy spellings mapped.",
+   "note": "2412 legacy spellings mapped.",
    "executed_against": "validate.py, unmodified"
   },
   {
@@ -311,7 +311,7 @@
    "count": 0,
    "details": [],
    "details_total": 0,
-   "note": "Compared against liraasa_2_0.json; changesets: 2026-10-18-lexicon-2-1; 1966 spellings respelled.",
+   "note": "Compared against liraasa_2_0.json; changesets: 2026-10-18-lexicon-2-1, 2026-10-19-lexicon-2-1-review; 1903 spellings respelled.",
    "executed_against": "validate_2_1.py"
   }
  ]

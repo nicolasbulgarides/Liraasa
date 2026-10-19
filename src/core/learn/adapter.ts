@@ -344,7 +344,7 @@ export function buildLearnSource(input: LearnInput): LearnSource {
     if (e.isLive && e.status !== 'formula') addExample(e.liraasa, e.english, 'examples');
   }
   for (const w of lexicon.functionWords) {
-    if (w.example) addExample(w.example, w.exampleGloss || null, 'functionWord');
+    if (w.example) addExample(w.example, w.exampleGloss ?? null, 'functionWord');
     // stored as [liraasa, english] pairs, whatever the model's type says
     for (const e of (w.examples ?? []) as unknown[]) {
       const [liraasa, english] = Array.isArray(e)

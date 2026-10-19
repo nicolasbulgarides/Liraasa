@@ -2,7 +2,7 @@
  "language": "Liraasa",
  "version": "2.1",
  "built_utc": "2026-10-18T20:00:00Z",
- "source": "Built deterministically from liraasa_2_0.json (sha256 f958e760fa41ac10e21d8a5e04f68d7c18e98539b436e436ef0d1ca211706ae2) by scripts/integrate_2_1.ts, applying the changeset 2026-10-18-lexicon-2-1 (ADR-0017). This JSON is the single source of truth for Liraasa 2.1.",
+ "source": "Built deterministically from liraasa_2_0.json (sha256 f958e760fa41ac10e21d8a5e04f68d7c18e98539b436e436ef0d1ca211706ae2) by scripts/integrate_2_1.ts, applying the changeset 2026-10-18-lexicon-2-1 and 2026-10-19-lexicon-2-1-review (ADR-0017). This JSON is the single source of truth for Liraasa 2.1.",
  "snapshot_0_8": {
   "source_file": "lexicon_0_8_rc2.json",
   "source_version": "0.8-rc2",
@@ -78926,8 +78926,8 @@
    "form": "miyo",
    "meaning": "existential there is / are",
    "position": "miyo + noun phrase (+ location); agreement invariant",
-   "example": "Miyo baba sola.",
-   "example_gloss": "There is solitude.",
+   "example": null,
+   "example_gloss": null,
    "class": null,
    "status_1_0": "CARRIED",
    "since": "≤0.8",
@@ -78937,8 +78937,8 @@
    "form": "loya",
    "meaning": "become",
    "position": "Subject + [tense] loya + noun/adjective/state",
-   "example": "Li sola loya benasan.",
-   "example_gloss": "The solitude becomes good.",
+   "example": null,
+   "example_gloss": null,
    "class": null,
    "status_1_0": "CARRIED",
    "since": "≤0.8",
@@ -85013,7 +85013,7 @@
    "source": "0.8 grammar examples"
   },
   {
-   "liraasa": "Maivo amora li bumre. Ata taivo?",
+   "liraasa": "Maivo amora li bumre. Ata taivo ki?",
    "english": "I love the bread. And you?",
    "feature": "ellipsis",
    "status": "CARRIED",
@@ -104902,48 +104902,6 @@
     "via": "sulba",
     "kind": "respelled"
    },
-   "fojosulba": {
-    "to": "fojosola",
-    "slot": "root",
-    "via": "sulba",
-    "kind": "respelled"
-   },
-   "fojosulbaasa": {
-    "to": "fojosolaasa",
-    "slot": "ascended",
-    "via": "sulba",
-    "kind": "respelled"
-   },
-   "fojosulbana": {
-    "to": "fojosolana",
-    "slot": "negative",
-    "via": "sulba",
-    "kind": "respelled"
-   },
-   "fojosulbafa": {
-    "to": "fojosolafa",
-    "slot": "verb",
-    "via": "sulba",
-    "kind": "respelled"
-   },
-   "fojosulbanasan": {
-    "to": "fojosolanasan",
-    "slot": "negative_adjective",
-    "via": "sulba",
-    "kind": "respelled"
-   },
-   "fojosulbasan": {
-    "to": "fojosolasan",
-    "slot": "adjective",
-    "via": "sulba",
-    "kind": "respelled"
-   },
-   "fojosulbaasasan": {
-    "to": "fojosolaasasan",
-    "slot": "ascended_adjective",
-    "via": "sulba",
-    "kind": "respelled"
-   },
    "renlisulba": {
     "to": "renlisola",
     "slot": "root",
@@ -105864,48 +105822,6 @@
    },
    "sulbanavuasasan": {
     "to": "solanavuasasan",
-    "slot": "ascended_adjective",
-    "via": "sulba",
-    "kind": "respelled"
-   },
-   "sulbafojo": {
-    "to": "solafojo",
-    "slot": "root",
-    "via": "sulba",
-    "kind": "respelled"
-   },
-   "sulbafojoasa": {
-    "to": "solafojoasa",
-    "slot": "ascended",
-    "via": "sulba",
-    "kind": "respelled"
-   },
-   "sulbafojona": {
-    "to": "solafojona",
-    "slot": "negative",
-    "via": "sulba",
-    "kind": "respelled"
-   },
-   "sulbafojosia": {
-    "to": "solafojosia",
-    "slot": "verb",
-    "via": "sulba",
-    "kind": "respelled"
-   },
-   "sulbafojonasan": {
-    "to": "solafojonasan",
-    "slot": "negative_adjective",
-    "via": "sulba",
-    "kind": "respelled"
-   },
-   "sulbafojosan": {
-    "to": "solafojosan",
-    "slot": "adjective",
-    "via": "sulba",
-    "kind": "respelled"
-   },
-   "sulbafojoasasan": {
-    "to": "solafojoasasan",
     "slot": "ascended_adjective",
     "via": "sulba",
     "kind": "respelled"
@@ -107302,48 +107218,6 @@
     "via": "yelfa",
     "kind": "respelled"
    },
-   "fojoyelfa": {
-    "to": "fojoboji",
-    "slot": "root",
-    "via": "yelfa",
-    "kind": "respelled"
-   },
-   "fojoyelfaasa": {
-    "to": "fojobojiasa",
-    "slot": "ascended",
-    "via": "yelfa",
-    "kind": "respelled"
-   },
-   "fojoyelfana": {
-    "to": "fojobojina",
-    "slot": "negative",
-    "via": "yelfa",
-    "kind": "respelled"
-   },
-   "fojoyelfafa": {
-    "to": "fojobojifa",
-    "slot": "verb",
-    "via": "yelfa",
-    "kind": "respelled"
-   },
-   "fojoyelfanasan": {
-    "to": "fojobojinasan",
-    "slot": "negative_adjective",
-    "via": "yelfa",
-    "kind": "respelled"
-   },
-   "fojoyelfasan": {
-    "to": "fojobojisan",
-    "slot": "adjective",
-    "via": "yelfa",
-    "kind": "respelled"
-   },
-   "fojoyelfaasasan": {
-    "to": "fojobojiasasan",
-    "slot": "ascended_adjective",
-    "via": "yelfa",
-    "kind": "respelled"
-   },
    "nilvuyelfa": {
     "to": "fojiboji",
     "slot": "root",
@@ -107592,48 +107466,6 @@
    },
    "soveyelfaasasan": {
     "to": "sovebojiasasan",
-    "slot": "ascended_adjective",
-    "via": "yelfa",
-    "kind": "respelled"
-   },
-   "solayelfa": {
-    "to": "solaboji",
-    "slot": "root",
-    "via": "yelfa",
-    "kind": "respelled"
-   },
-   "solayelfaasa": {
-    "to": "solabojiasa",
-    "slot": "ascended",
-    "via": "yelfa",
-    "kind": "respelled"
-   },
-   "solayelfana": {
-    "to": "solabojina",
-    "slot": "negative",
-    "via": "yelfa",
-    "kind": "respelled"
-   },
-   "solayelfasia": {
-    "to": "solabojisia",
-    "slot": "verb",
-    "via": "yelfa",
-    "kind": "respelled"
-   },
-   "solayelfanasan": {
-    "to": "solabojinasan",
-    "slot": "negative_adjective",
-    "via": "yelfa",
-    "kind": "respelled"
-   },
-   "solayelfasan": {
-    "to": "solabojisan",
-    "slot": "adjective",
-    "via": "yelfa",
-    "kind": "respelled"
-   },
-   "solayelfaasasan": {
-    "to": "solabojiasasan",
     "slot": "ascended_adjective",
     "via": "yelfa",
     "kind": "respelled"
@@ -109996,48 +109828,6 @@
     "via": "nilvu",
     "kind": "respelled"
    },
-   "nilvufojo": {
-    "to": "fojifojo",
-    "slot": "root",
-    "via": "nilvu",
-    "kind": "respelled"
-   },
-   "nilvufojoasa": {
-    "to": "fojifojoasa",
-    "slot": "ascended",
-    "via": "nilvu",
-    "kind": "respelled"
-   },
-   "nilvufojona": {
-    "to": "fojifojona",
-    "slot": "negative",
-    "via": "nilvu",
-    "kind": "respelled"
-   },
-   "nilvufojonia": {
-    "to": "fojifojofa",
-    "slot": "verb",
-    "via": "nilvu",
-    "kind": "respelled"
-   },
-   "nilvufojonasan": {
-    "to": "fojifojonasan",
-    "slot": "negative_adjective",
-    "via": "nilvu",
-    "kind": "respelled"
-   },
-   "nilvufojosan": {
-    "to": "fojifojosan",
-    "slot": "adjective",
-    "via": "nilvu",
-    "kind": "respelled"
-   },
-   "nilvufojoasasan": {
-    "to": "fojifojoasasan",
-    "slot": "ascended_adjective",
-    "via": "nilvu",
-    "kind": "respelled"
-   },
    "nilvurenli": {
     "to": "fojirenli",
     "slot": "root",
@@ -110118,48 +109908,6 @@
    },
    "nilvuruheasasan": {
     "to": "fojiruheasasan",
-    "slot": "ascended_adjective",
-    "via": "nilvu",
-    "kind": "respelled"
-   },
-   "nilvuboji": {
-    "to": "fojiboji",
-    "slot": "root",
-    "via": "nilvu",
-    "kind": "respelled"
-   },
-   "nilvubojiasa": {
-    "to": "fojibojiasa",
-    "slot": "ascended",
-    "via": "nilvu",
-    "kind": "respelled"
-   },
-   "nilvubojina": {
-    "to": "fojibojina",
-    "slot": "negative",
-    "via": "nilvu",
-    "kind": "respelled"
-   },
-   "nilvubojinia": {
-    "to": "fojibojifa",
-    "slot": "verb",
-    "via": "nilvu",
-    "kind": "respelled"
-   },
-   "nilvubojinasan": {
-    "to": "fojibojinasan",
-    "slot": "negative_adjective",
-    "via": "nilvu",
-    "kind": "respelled"
-   },
-   "nilvubojisan": {
-    "to": "fojibojisan",
-    "slot": "adjective",
-    "via": "nilvu",
-    "kind": "respelled"
-   },
-   "nilvubojiasasan": {
-    "to": "fojibojiasasan",
     "slot": "ascended_adjective",
     "via": "nilvu",
     "kind": "respelled"
@@ -110668,48 +110416,6 @@
     "via": "vebo",
     "kind": "respelled"
    },
-   "vebofojo": {
-    "to": "fajifojo",
-    "slot": "root",
-    "via": "vebo",
-    "kind": "respelled"
-   },
-   "vebofojoasa": {
-    "to": "fajifojoasa",
-    "slot": "ascended",
-    "via": "vebo",
-    "kind": "respelled"
-   },
-   "vebofojona": {
-    "to": "fajifojona",
-    "slot": "negative",
-    "via": "vebo",
-    "kind": "respelled"
-   },
-   "vebofojova": {
-    "to": "fajifojofa",
-    "slot": "verb",
-    "via": "vebo",
-    "kind": "respelled"
-   },
-   "vebofojonasan": {
-    "to": "fajifojonasan",
-    "slot": "negative_adjective",
-    "via": "vebo",
-    "kind": "respelled"
-   },
-   "vebofojosan": {
-    "to": "fajifojosan",
-    "slot": "adjective",
-    "via": "vebo",
-    "kind": "respelled"
-   },
-   "vebofojoasasan": {
-    "to": "fajifojoasasan",
-    "slot": "ascended_adjective",
-    "via": "vebo",
-    "kind": "respelled"
-   },
    "veborenli": {
     "to": "fajirenli",
     "slot": "root",
@@ -110790,48 +110496,6 @@
    },
    "veboruheasasan": {
     "to": "fajiruheasasan",
-    "slot": "ascended_adjective",
-    "via": "vebo",
-    "kind": "respelled"
-   },
-   "vebosola": {
-    "to": "fajisola",
-    "slot": "root",
-    "via": "vebo",
-    "kind": "respelled"
-   },
-   "vebosolaasa": {
-    "to": "fajisolaasa",
-    "slot": "ascended",
-    "via": "vebo",
-    "kind": "respelled"
-   },
-   "vebosolana": {
-    "to": "fajisolana",
-    "slot": "negative",
-    "via": "vebo",
-    "kind": "respelled"
-   },
-   "vebosolava": {
-    "to": "fajisolafa",
-    "slot": "verb",
-    "via": "vebo",
-    "kind": "respelled"
-   },
-   "vebosolanasan": {
-    "to": "fajisolanasan",
-    "slot": "negative_adjective",
-    "via": "vebo",
-    "kind": "respelled"
-   },
-   "vebosolasan": {
-    "to": "fajisolasan",
-    "slot": "adjective",
-    "via": "vebo",
-    "kind": "respelled"
-   },
-   "vebosolaasasan": {
-    "to": "fajisolaasasan",
     "slot": "ascended_adjective",
     "via": "vebo",
     "kind": "respelled"
@@ -110958,48 +110622,6 @@
    },
    "tahayanoasasan": {
     "to": "kezupagoyanoasasan",
-    "slot": "ascended_adjective",
-    "via": "taha",
-    "kind": "respelled"
-   },
-   "tahamiga": {
-    "to": "kezupagomiga",
-    "slot": "root",
-    "via": "taha",
-    "kind": "respelled"
-   },
-   "tahamigaasa": {
-    "to": "kezupagomigaasa",
-    "slot": "ascended",
-    "via": "taha",
-    "kind": "respelled"
-   },
-   "tahamigana": {
-    "to": "kezupagomigana",
-    "slot": "negative",
-    "via": "taha",
-    "kind": "respelled"
-   },
-   "tahamigata": {
-    "to": "kezupagomigaka",
-    "slot": "verb",
-    "via": "taha",
-    "kind": "respelled"
-   },
-   "tahamiganasan": {
-    "to": "kezupagomiganasan",
-    "slot": "negative_adjective",
-    "via": "taha",
-    "kind": "respelled"
-   },
-   "tahamigasan": {
-    "to": "kezupagomigasan",
-    "slot": "adjective",
-    "via": "taha",
-    "kind": "respelled"
-   },
-   "tahamigaasasan": {
-    "to": "kezupagomigaasasan",
     "slot": "ascended_adjective",
     "via": "taha",
     "kind": "respelled"
@@ -117130,6 +116752,12 @@
    "edition": "2.1",
    "summary": "Liraasa 2.1 (ADR-0017), from the author's patch \"Liraasa 2.1\": rulings 2.1:G46–G59 (questions in place, exclamatives, blessings, N times, different-subject complements, evidentials, relatives on a prepositional object, partitive de, result clauses, duration, prohibitions, sound follows meaning, respelling); 28 roots respelled and 2 replaced by compounds, with every form, compound, image compound and derivation built on them; the lexicon's fronted questions rewritten under 2.1:G46.",
    "ops": 70
+  },
+  {
+   "id": "2026-10-19-lexicon-2-1-review",
+   "edition": "2.1",
+   "summary": "The 2.1 integration review (ADR-0017 addendum), from the author's answers of 2026-10-19: the miyo and loya examples, whose sola now means sun, are deleted; the elliptical question Ata taivo? ends in ki. The new spellings are kept as the patch describes, and kezupagolelde stands. No rule changes.",
+   "ops": 5
   }
  ]
 }

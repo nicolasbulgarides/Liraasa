@@ -141,12 +141,12 @@ describe('the respelling (2.1:G58, G59)', () => {
 
   it('leaves no direct question without its final ki (2.1:G46)', () => {
     const live = v21.examples.filter((e) => e.status !== 'HISTORICAL');
-    // ki may close the clause before a vocative (1.2:G31); the two elliptical questions are
-    // left for the author (review/2_1_integration.md)
+    // ki may close the clause before a vocative (1.2:G31); "Ata?" (So?) is a bare discourse
+    // particle, not a clause (the author's 2.1 review, 2026-10-19)
     const open = live
       .map((e) => e.liraasa)
       .filter((l) => /[A-Za-z]\?/.test(l) && !/\bki[?,]/.test(l) && /^[A-Z]/.test(l));
-    expect(open.sort()).toEqual(['Ata?', 'Maivo amora li bumre. Ata taivo?']);
+    expect(open).toEqual(['Ata?']);
   });
 });
 

@@ -73,8 +73,8 @@ export interface FunctionWord extends WithRaw<RawFunctionWord> {
   form: string;
   meaning: string;
   position: string;
-  example: string;
-  exampleGloss: string;
+  example: string | null;
+  exampleGloss: string | null;
   /** A clause-slot name on the 27 new in 1.0; `null` on the rest. */
   slotClass: string | null;
   status: string;

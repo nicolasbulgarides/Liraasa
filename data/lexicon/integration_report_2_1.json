@@ -10,12 +10,17 @@
    "file": "data/changes/2026-10-18-lexicon-2-1.json",
    "id": "2026-10-18-lexicon-2-1",
    "sha256": "a709fd3b094fbe344309bae2b46cfaeba5d4daac21ebb5f8c45c8b5a1e35b93b"
+  },
+  {
+   "file": "data/changes/2026-10-19-lexicon-2-1-review.json",
+   "id": "2026-10-19-lexicon-2-1-review",
+   "sha256": "2d27fa0f1efe54a53f26b794d8d3e04f4b652a363db82ad5e382ba174b46e722"
   }
  ],
  "output": {
   "file": "liraasa_2_1.json",
-  "sha256": "4bb9c544c940712a555aac6c9e70e69c001dc1096ef4673d7e494d768307e0b8",
-  "bytes": 2972223
+  "sha256": "3655d48bb21e8ebcc2eb56cf4dbb416e211b6a2a55037471a84179b8b4be63e9",
+  "bytes": 2964917
  },
  "counts": {
   "before": {

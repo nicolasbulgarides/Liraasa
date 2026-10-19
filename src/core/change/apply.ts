@@ -237,6 +237,15 @@ export function applyChangesets(
   const rulingsByEdition = new Map<string, ChangesetRuling[]>();
   const applied: AppliedOp[] = [];
   const archived = (lex.legacy as unknown as { archived_senses: Row[] }).archived_senses;
+  // every spelling a reader could have met before this build, so a respelling's legacy rows
+  // name real spellings only (a later op may move a form an earlier op of the build created)
+  const metBefore = new Set<string>([
+    ...Object.keys(lex.legacy.migration_forms),
+    ...Object.keys(lex.morphology.lexicalised_derivations),
+    ...[...heads, ...((lex.image_compounds?.attested ?? []) as unknown as Headword[])].flatMap(
+      (h) => Object.values(h.forms),
+    ),
+  ]);
 
   const headword = (op: ChangeRecord): Headword => {
     const h = byId.get(op.entry);
@@ -588,8 +597,13 @@ export function applyChangesets(
         }
         case 'edit_function_word': {
           const fw = (lex.function_words as unknown as Row[]).find((f) => f.id === op.entry);
+          // `to: null` deletes the example (it is kept as null, as the row's shape is fixed)
           const field = op.field ?? '';
-          if (field !== 'example' || fw === undefined || fw[field] !== op.from || op.to === null) {
+          if (
+            (field !== 'example' && field !== 'example_gloss') ||
+            fw === undefined ||
+            fw[field] !== op.from
+          ) {
             throw new ApplyError(`${op.entry}: expected ${field} "${String(op.from)}"`);
           }
           fw[field] = op.to;
@@ -627,6 +641,12 @@ export function applyChangesets(
     }
   }
 
+  // drop the in-between spellings no edition ever had (tilma → miga, then taha → kezupago,
+  // passes through tahamiga): the row from the real spelling already points to the end
+  const migration = lex.legacy.migration_forms;
+  for (const key of Object.keys(migration)) {
+    if (!metBefore.has(key)) Reflect.deleteProperty(migration, key);
+  }
   lex.version = options.version;
   lex.built_utc = options.builtUtc;
   lex.source = options.source;

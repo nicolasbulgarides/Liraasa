@@ -1559,7 +1559,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       if (e.isLive && e.status !== "formula") addExample(e.liraasa, e.english, "examples");
     }
     for (const w of lexicon.functionWords) {
-      if (w.example) addExample(w.example, w.exampleGloss || null, "functionWord");
+      if (w.example) addExample(w.example, w.exampleGloss ?? null, "functionWord");
       for (const e of w.examples ?? []) {
         const [liraasa, english] = Array.isArray(e) ? e : [e.liraasa, e.english];
         if (typeof liraasa === "string") {

@@ -145,3 +145,21 @@ make a 2.1 version?
 - **Rulings G46–G59.** Their text is the patch's, word for word. Where the
   text names an earlier ruling, the 2.1 ruling records it as refined:
   1.0:G22, 0.8:R6, 1.2:G27, 1.2:G32, 1.2:G31.
+
+## The author's answers (2026-10-19)
+
+Applied by `data/changes/2026-10-19-lexicon-2-1-review.json`, after the 2.1
+changeset:
+
+| Question | Decision |
+| --- | --- |
+| 1. One-edit neighbours | Kept as the patch spells them. Check 18 still lists them, as a record, not a request. |
+| 2. `sola` in the `miyo` / `loya` examples | Both examples and their English deleted (`example: null`). `sola` means sun. |
+| 3. `kezupagolelde` | Stands either way. |
+| 4. Elliptical questions | Left to judgement: `Ata taivo?` (And you?) asks a yes/no question, so it becomes `Ata taivo ki?`, like the canon `Ata li cono ki?`. `Ata?` (So?) stays bare: a discourse particle, not a clause. |
+| 5. The song | *Nemelira de devi* is carried into 2.1 spelling: `harmadesi`, `solanevra`, `ramuduha`. |
+
+The build also stopped recording in-between spellings that no edition ever
+had. For example, `tahamiga` was a halfway form inside the 2.1 build, after
+`tilma` was respelled but before `taha` was. The legacy table now maps each real
+2.0 spelling straight to its 2.1 form.

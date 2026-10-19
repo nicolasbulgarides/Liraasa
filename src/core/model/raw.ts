@@ -50,8 +50,9 @@ export interface RawFunctionWord {
   form: string;
   meaning: string;
   position: string;
-  example: string;
-  example_gloss: string;
+  /** null where an example was deleted (2.1 review, ADR-0017). */
+  example: string | null;
+  example_gloss: string | null;
   class: string | null;
   status_1_0: string;
   since: string;

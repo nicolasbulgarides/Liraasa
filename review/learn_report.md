@@ -6,7 +6,7 @@ module derives, and what it could not derive.
 
 ## Summary
 
-- 2107 items, 116 grammar concepts, 1256 sentences, 7 texts
+- 2107 items, 116 grammar concepts, 1254 sentences, 7 texts
 - 1756 skill-graph nodes in 190 units; 425 core roots, 1037 advanced (in no sentence)
 - gaps: 0 errors, 63 warnings, 1094 notes
 
@@ -17,21 +17,21 @@ module derives, and what it could not derive.
 3. **People**: The clause · pilo (Father) · linu (Child) · nela (Person) · yano (Unity) · famli (sibling) · rivo (Companion; fellow; company) · amor (Love) · lore (heart; emotional center)
 4. **Mind & dreams**: Slot 15: object · sabe (Knowing) · pensa (Thought; opinion) · noru (dream) · ramu (Memory; remembrance) · donu (giving; transferring ownership) · luno (moon) · velu (star) · melo (Music)
 5. **Established concepts**: Slot 3: subject · juba (Gift) · coda (Thing, Concept) · mera (Mercy) · bena (Good, Moral, Helpful) · vera (Truth (not knowledge)) · devo (Faith, Trust,) · trana (Change) · fama (Family)
-6. **Time**: Slot 4: tense · merno (morning) · nullo (night) · lornu (hour) · kele (climb) · somu (Sleep; slumber; repose) · lavi (Joy; happiness; pleasure) · tali (Work; labor) · sola (sun)
-7. **Home & objects**: Slot 14: verb · cono (coin) · nimu (home; belonging and refuge, not necessarily a building) · solo (Stone; rock) · domlu (house; dwelling structure) · nulu (Path) · dorbi (Door) · cuza (letter) · tabu (table)
+6. **Time**: Slot 4: tense · merno (morning) · nullo (night) · lornu (hour) · kele (climb) · somu (Sleep; slumber; repose) · lavi (Joy; happiness; pleasure) · tali (Work; labor) · cono (coin)
+7. **Nature**: Slot 14: verb · sola (sun) · navu (sky) · lavra (bird) · miru (water) · folni (flower) · lamsa (ash) · renli (rain) · sevu (Sea)
 8. **Body**: Compounds · vimo (sight; faculty of seeing) · manli (hand) · leni (Hearing) · havli (breath) · lomo (embrace) · savali (kiss) · valla (Voice) · yuge (body) · compounds on seno (Word; speech)
 9. **Emotions**: The adjective form · reso (Laughter; mirth) · vani (Beauty) · gilbu (guilt) · molu (Tenderness) · neme (sorrow; deep grief rather than passing disappointment; woe) · larne (anger; rage; fury) · follu (fear) · sove (peace) · compounds on nela (Person)
-10. **Emotion & song**: The noun phrase · milobe (smile) · rale (echo; reflected sound) · yelmi (glitter; bright sparkling) · rizi (lingering; staying beyond a moment) · venre (arrival) · navu (sky) · biti (tool; implement) · sulno (waiting) · compounds on biti (tool; implement)
-11. **Nature**: Slot 6: negation · lavra (bird) · miru (water) · folni (flower) · lamsa (ash) · renli (rain) · sevu (Sea) · sado (shadow) · samni (seed) · compounds on krono (Time)
-12. **Actions**: -ri: plural (always last) · cunu (count; number) · vese (whisper) · relsi (answer; reply) · peli (Play) · tovo (possession; having) · relnu (return) · tivro (physical grasp; holding) · lisro (staying) · compounds on miru (water)
-13. **Poetic compounds**: The ascended form · farulavra (phoenix; firebird) · mernolumi (dawn) · somulira (lullaby) · jubalavi (small unexpected joy) · lorelumi (light in a beloved face) · devorivo (betrothed companion; spouse; husband; wife) · lorenoru (dream of a beloved) · suma (Warmth) · compounds on lira (song)
-14. **Commerce & obligation**: Numbers · dapa (price; cost; worth in coin) · conodonu (payment) · famadonu (inheritance; what passes down in a family) · kova (vessel; container) · desi (want) · cilni (city) · lombi (beginning) · momvi (loss) · compounds on kova (vessel; container)
+10. **Emotion & song**: The noun phrase · milobe (smile) · rale (echo; reflected sound) · yelmi (glitter; bright sparkling) · rizi (lingering; staying beyond a moment) · nimu (home; belonging and refuge, not necessarily a building) · venre (arrival) · biti (tool; implement) · sulno (waiting) · compounds on biti (tool; implement)
+11. **Speech & mind**: Slot 6: negation · cunu (count; number) · vese (whisper) · relsi (answer; reply) · peli (Play) · tovo (possession; having) · relnu (return) · solo (Stone; rock) · tivro (physical grasp; holding) · compounds on krono (Time)
+12. **Actions**: -ri: plural (always last) · lisro (staying) · desi (want) · lombi (beginning) · momvi (loss) · sapu (Eating) · palvi (placement) · lalle (opening) · semne (sit) · compounds on miru (water)
+13. **Poetic compounds**: The ascended form · farulavra (phoenix; firebird) · mernolumi (dawn) · somulira (lullaby) · jubalavi (small unexpected joy) · lorelumi (light in a beloved face) · momvilavi (joy after loss) · devorivo (betrothed companion; spouse; husband; wife) · lorenoru (dream of a beloved) · compounds on lira (song)
+14. **Life & states**: Numbers · suma (Warmth) · sili (Cold) · solli (Solitude) · nolsa (Newness) · dapa (price; cost; worth in coin) · kova (vessel; container) · cilni (city) · domlu (house; dwelling structure) · compounds on kova (vessel; container)
 15. **Abstract**: Slot 16: adjuncts · lotero (other) · patu (part; piece) · sonbu (sound) · colbi (color) · miga (relation; bond; connection between things or people) · dorva (intention; purpose held in mind) · vordu (cause; that which brings something about) · silda (side) · compounds on sevu (Sea)
-16. **Actions**: Slot 20: question · sapu (Eating) · palvi (placement) · lalle (opening) · semne (sit) · farla (Making) · ralno (fall) · helvi (hide) · lenbu (lie down) · compounds on lumi (Light)
-17. **Relationships**: Slot 19: attitude · pomli (promise) · puzu (secret) · yomla (honey made by bees) · lazu (animal; living member of the animal kingdom) · sasva (safety) · sili (Cold) · divma (system; organized arrangement of interacting parts) · lanve (law) · compounds on solo (Stone; rock)
-18. **Home, kitchen & labor**: -pago: place (mavo+pago blocked; mavopago = society only) · divmabiti (machine) · lunopomli (moonlit promise) · farvi (freedom; liberty) · farudomlu (oven) · germa (metal; metallic material) · serna (information; encoded or communicable content) · manlibumre (dough) · monru (mountain) · compounds on nulu (Path)
-19. **Society**: Slot 7: modal · sasvapago (sanctuary; refuge) · vila (village; town) · juse (justice) · vaye (Wind) · vilne (eye; visual organ) · kavbi (carrying) · mudu (sickness; illness) · nami (Food) · compounds on linu (Child)
-20. **Materials & physics**: Slot 13: evidential · pavma (matter; physical substance; material) · yalmu (energy; capacity to produce physical change) · ruhe (storm; tempest) · purma (parent; parenthood independent of sex) · demro (motion; change of spatial position) · kelesamni (yeast; leaven) · livna (Choice) · vemi (world) · compounds on yuge (body)
+16. **Home & objects**: Slot 20: question · nulu (Path) · dorbi (Door) · cuza (letter) · tabu (table) · ganre (garden) · lumibiti (lamp) · velma (clothing) · tibi (thread) · compounds on lumi (Light)
+17. **Relationships**: Slot 19: attitude · pomli (promise) · puzu (secret) · yomla (honey made by bees) · lazu (animal; living member of the animal kingdom) · sasva (safety) · divma (system; organized arrangement of interacting parts) · farla (Making) · ralno (fall) · compounds on solo (Stone; rock)
+18. **Nature**: -pago: place (mavo+pago blocked; mavopago = society only) · divmabiti (machine) · lunopomli (moonlit promise) · helvi (hide) · lanve (law) · sado (shadow) · samni (seed) · farvi (freedom; liberty) · farudomlu (oven) · compounds on nulu (Path)
+19. **Actions**: Slot 7: modal · lenbu (lie down) · kavbi (carrying) · livna (Choice) · bako (break) · ralka (fight) · cemo (cook) · nedu (Need) · valmi (walking) · compounds on linu (Child)
+20. **Materials & physics**: Slot 13: evidential · germa (metal; metallic material) · pavma (matter; physical substance; material) · yalmu (energy; capacity to produce physical change) · serna (information; encoded or communicable content) · manlibumre (dough) · monru (mountain) · sasvapago (sanctuary; refuge) · vaye (Wind) · compounds on yuge (body)
 
 ## Grammar concepts, in teaching order
 

@@ -132,7 +132,9 @@ describe('1.2 text under the editor checker', () => {
       .rulings_1_2;
     const lines = [
       ...r12.flatMap((r) => (r.examples ?? []).map(([l]) => l)),
-      ...v12.function_words.filter((f) => f.since === '1.2').map((f) => f.example),
+      ...v12.function_words.flatMap((f) =>
+        f.since === '1.2' && f.example !== null ? [f.example] : [],
+      ),
     ];
     const hits = lines.flatMap((line) =>
       checker

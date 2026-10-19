@@ -1,7 +1,7 @@
 {
  "lexicon": "data/lexicon/liraasa_2_1.json",
  "active": 12600,
- "reserved": 2034,
+ "reserved": 1971,
  "audit": {
   "template": [
    {
