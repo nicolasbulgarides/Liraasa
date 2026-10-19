@@ -5,7 +5,7 @@ export const CSS = `
   --lir: #6b2d5c; --accent: #2f4f7a; --accent-soft: #e8eef6;
   --sing: #8a4b00; --sing-bg: #fdf3e4; --parse: #23566b; --parse-bg: #e6f2f5;
   --warn: #8b1e1e; --warn-bg: #fbeaea; --unused: #8a8490;
-  --b21: #0b6656; --b20: #8a4b00; --b12: #6b2d5c; --b10: #2f4f7a; --b08: #4b5a2a; --badr: #5b5563;
+  --b22: #1f5f8b; --b21: #0b6656; --b20: #8a4b00; --b12: #6b2d5c; --b10: #2f4f7a; --b08: #4b5a2a; --badr: #5b5563;
   --sun: #b0700f; --sun-bg: #fbe9c2; --moon: #3f5f8f; --moon-bg: #e3ebf7;
 }
 @media (prefers-color-scheme: dark) {
@@ -14,7 +14,7 @@ export const CSS = `
     --lir: #e7a9d6; --accent: #9dbbe6; --accent-soft: #26303f;
     --sing: #f1bd77; --sing-bg: #2e2416; --parse: #8fcfe0; --parse-bg: #16282e;
     --warn: #f3a3a3; --warn-bg: #321a1a; --unused: #8f8897;
-    --b21: #7fd6c4; --b20: #f1bd77; --b12: #e7a9d6; --b10: #9dbbe6; --b08: #c4d39a; --badr: #b3abbb;
+    --b22: #8cc4ef; --b21: #7fd6c4; --b20: #f1bd77; --b12: #e7a9d6; --b10: #9dbbe6; --b08: #c4d39a; --badr: #b3abbb;
     --sun: #f2c26b; --sun-bg: #3b2c12; --moon: #b9cbea; --moon-bg: #222c3d;
   }
 }
@@ -23,7 +23,7 @@ export const CSS = `
   --lir: #e7a9d6; --accent: #9dbbe6; --accent-soft: #26303f;
   --sing: #f1bd77; --sing-bg: #2e2416; --parse: #8fcfe0; --parse-bg: #16282e;
   --warn: #f3a3a3; --warn-bg: #321a1a; --unused: #8f8897;
-  --b21: #7fd6c4; --b20: #f1bd77; --b12: #e7a9d6; --b10: #9dbbe6; --b08: #c4d39a; --badr: #b3abbb;
+  --b22: #8cc4ef; --b21: #7fd6c4; --b20: #f1bd77; --b12: #e7a9d6; --b10: #9dbbe6; --b08: #c4d39a; --badr: #b3abbb;
   --sun: #f2c26b; --sun-bg: #3b2c12; --moon: #b9cbea; --moon-bg: #222c3d;
 }
 * { box-sizing: border-box; }
@@ -151,7 +151,7 @@ table.grid td { white-space: nowrap; }
 .callout.caution { border-color: var(--warn); background: var(--warn-bg); }
 .callout.caution .callout-head { color: var(--warn); }
 .badge { display: inline-block; font: 600 .78rem/1.5 Consolas, Menlo, monospace; padding: 0 .45em; border-radius: 999px; border: 1.5px solid; white-space: nowrap; vertical-align: .08em; }
-.badge.b21 { color: var(--b21); } .badge.b20 { color: var(--b20); } .badge.b12 { color: var(--b12); } .badge.b10 { color: var(--b10); } .badge.b08 { color: var(--b08); } .badge.badr { color: var(--badr); }
+.badge.b22 { color: var(--b22); } .badge.b21 { color: var(--b21); } .badge.b20 { color: var(--b20); } .badge.b12 { color: var(--b12); } .badge.b10 { color: var(--b10); } .badge.b08 { color: var(--b08); } .badge.badr { color: var(--badr); }
 .sev { font-weight: 700; text-transform: uppercase; font-size: .78rem; }
 .sev-error { color: var(--warn); } .sev-warn { color: var(--sing); } .sev-note { color: var(--parse); }
 
@@ -201,6 +201,14 @@ ol.song { list-style: none; padding: 0; }
 .w .g { font-size: .74rem; color: var(--muted); line-height: 1.25; }
 .v-e { margin: .35rem 0 .1rem; font-style: italic; }
 .v-n { margin: .2rem 0 0; font-size: .86rem; color: var(--muted); border-top: 1px dashed var(--rule); padding-top: .3rem; }
+.album-track { margin: 1.4rem 0 .6rem; }
+.album-title { margin-bottom: .1rem; }
+.album-no { color: var(--muted); font-variant-numeric: tabular-nums; margin-right: .3rem; }
+.album-en { margin: 0 0 .3rem; font-size: .86rem; color: var(--muted); font-style: italic; }
+ol.song.album { font-size: .86em; }
+ol.song.album .verse { padding: .3rem .8rem .25rem 2.2rem; margin: .3rem 0; border-radius: 7px; }
+ol.song.album .v-num { top: .35rem; left: .7rem; }
+ol.song.album .v-n { font-size: .8rem; margin-top: .15rem; padding-top: .15rem; }
 ul.glossary { columns: 2 20rem; column-gap: 2rem; font-size: .92rem; }
 ul.glossary li { break-inside: avoid; }
 .new { font-size: .7rem; text-transform: uppercase; letter-spacing: .06em; color: var(--sing); border: 1px solid; border-radius: 999px; padding: 0 .4em; }

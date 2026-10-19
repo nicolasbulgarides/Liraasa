@@ -10,6 +10,7 @@ import { badge, esc, h3, p } from './html';
 /** Every ruling set the lexicon carries, newest first, with its edition. */
 export function rulingSets(lex: Lexicon): [string, readonly Ruling[]][] {
   return [
+    ['2.2', lex.rulings_2_2 ?? []],
     ['2.1', lex.rulings_2_1 ?? []],
     ['2.0', lex.rulings_2_0 ?? []],
     ['1.2', lex.rulings_1_2],
@@ -31,10 +32,18 @@ export interface RenderedPart {
 export function rulingIndex(lex: Lexicon, parts: readonly RenderedPart[], file: string): string {
   const homes = new Map<string, string[]>();
   const elsewhere: string[] = [];
+  const superseded: string[] = [];
   for (const [edition, rs] of rulingSets(lex)) {
     for (const r of rs) {
       const id = `${edition}:${r.id}`;
       if (GOVERNANCE.includes(id) || LEGACY.includes(id)) continue;
+      // kept, never reworded, and not taught: the newer ruling is (2.2)
+      if (r.superseded_by !== undefined) {
+        superseded.push(`[[${id}]] by [[${r.superseded_by}]]`);
+        continue;
+      }
+      for (const s of r.superseded_in_part ?? [])
+        superseded.push(`[[${id}]] in part (“${s.clause}”) by [[${s.by}]]; the rest stands`);
       const home = parts.find((x) => x.html.includes(`title="Ruling ${id}"`));
       if (home === undefined) {
         elsewhere.push(id);
@@ -52,6 +61,7 @@ export function rulingIndex(lex: Lexicon, parts: readonly RenderedPart[], file: 
     .join('');
   return `${h3('Where each ruling is taught')}
 <ul class="ruling-index">${rows}</ul>
+${superseded.length === 0 ? '' : p(`Superseded, kept as ruled and not followed: ${superseded.join('; ')}.`)}
 ${p(`Reference only: ${elsewhere.map((id) => `[[${id}]]`).join(' ')}. Every ruling, verbatim, with the project and legacy rulings, is in ${file}.`)}`;
 }
 
@@ -73,11 +83,27 @@ export function rulingsMarkdown(
     lines.push(`## Rulings ${edition}`, '');
     for (const r of rs) {
       const id = `${edition}:${r.id}`;
-      lines.push(`### ${id}: ${r.topic}${kind(id)}`, '', r.ruling, '');
+      lines.push(`### ${id}: ${r.topic}${kind(id)}`, '');
+      if (r.superseded_by !== undefined) {
+        lines.push(
+          `**Superseded by ${r.superseded_by}.** Kept as it was ruled; follow ${r.superseded_by}.`,
+          '',
+        );
+      }
+      for (const s of r.superseded_in_part ?? []) {
+        lines.push(
+          `**In part superseded by ${s.by}:** its clause “${s.clause}” is replaced; the rest stands.`,
+          '',
+        );
+      }
+      lines.push(r.ruling, '');
       if (r.refines !== undefined && r.refines.length > 0) {
         lines.push(`Refines ${r.refines.join(', ')}.`, '');
       }
-      for (const [l, e] of r.examples ?? []) lines.push(`- *${l}* — ${e}`);
+      if (r.supersedes !== undefined && r.supersedes.length > 0) {
+        lines.push(`Supersedes ${r.supersedes.join(', ')}.`, '');
+      }
+      for (const [l, e] of r.examples ?? []) lines.push(e === '' ? `- *${l}*` : `- *${l}* — ${e}`);
       if ((r.examples ?? []).length > 0) lines.push('');
     }
   }

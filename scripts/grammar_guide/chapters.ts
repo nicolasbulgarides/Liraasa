@@ -375,7 +375,7 @@ ${h3('Compounds')}
 ${ul([
   'MODIFIER + HEAD, written as one word, head last; the spelling is the two joined. A compound is one word, never two nouns side by side.',
   `Either part may itself be a compound [[2.0:G42]]: \`${soulbond.root}\` = \`${sbA}\` ${index.senseOf(sbA)} + \`${sbB}\` ${index.senseOf(sbB)}, ${normGloss(glossOf(soulbond, 'root'))}. A colour base may be the modifier, and a compound may be lexicalised with \`-ti\` [[2.0:G38]].`,
-  'Image compounds are a pattern, not a list: any listed modifier with any listed head [[2.0:G40]] (Part 8).',
+  'Image compounds are a pattern, not a list: any listed modifier with any listed head [[2.0:G40]] (Part 9).',
 ])}
 ${h3('Motion prefixes')}
 ${p(`Written with a hyphen before the verb: \`revo-sabesia\`, recognize [[1.2:G35]]. A ${lex.motion_prefixes.rule}: ${motion}.`)}
@@ -416,6 +416,14 @@ function digraphLine(index: Index): string {
 
 export function smallWordsPart(index: Index): string {
   const lex = index.lex;
+  const G67A = example(lex, '2.2:G67', 'Li lavra semnesia nazru li nimu.');
+  const G67B = example(
+    lex,
+    '2.2:G67',
+    'saivo de melonulu venreva nazru gase baba lira de ruhesonbu.',
+  );
+  const gl67 = (l: string, english: string): string =>
+    composedGloss(l, english, 'Reference, The small words: 2.2:G67');
   const pronouns = table(
     ['Form', 'Person', 'Number'],
     lex.pronouns.map((x) => [cell(lir(x.form), 'form'), cell(esc(x.person)), cell(esc(x.number))]),
@@ -467,6 +475,8 @@ ${p(`Beside the grid: ${wordList(lex, ['ki-eli', 'ki-muya', 'ki-oro'])}.`)}
 ${p('Place, time, manner and cause (`-pago`, `-krono`, `-modo`, `-kasa`) work as adverbials; thing and person (`-coda`, `-nela`) as nouns. `muya-krono` often, `poka-krono` rarely, `rada-krono` each time [[1.2:G34]].')}
 ${p('A number joined to `krono` counts the times: `una-krono` once, `dossa-krono` twice; `ki-muya-krono` how many times; `una-ne krono` the first time. `una-krono` never means “formerly”: that is `somi-krono` [[2.1:G49]].')}
 ${p('A bare measure after the object is a duration; `kroti` + a measure, with no article, is “ago”; `krotiapo` + a measure is “in, after”. With `li` + a noun, `kroti` and `krotiapo` are “before” and “after” it [[2.1:G55]].')}
+${h3('Side nouns as prepositions')}
+${p(`\`nazru\` (behind), \`zavme\` (in front of), \`silda\` (beside), \`cemnu\` (in the middle of), \`lizma\` (left of) and \`rizno\` (right of) may stand bare before a noun phrase as prepositions, or after a verb as adverbs: \`${G67A}\` ${gl67(G67A, 'The bird sits behind the home.')} \`${G67B}\` ${gl67(G67B, 'Her melody comes behind, like a song of thunder.')} [[2.2:G67]]`)}
 ${h3('Numbers')}
 <p class="chips">${digits}</p>
 ${p('Ten is `unzira`; 11–19 add the unit with a hyphen: `unzira-una`, 11. Tens 20–50 contract (`dozira`, `trezira`, `cuazira`, `penzira`); from 60 they are the digit + `zira`: `sesazira`, `nivazira`. Hundreds are the digit + `centa`, and the rest joins with hyphens: `dossacenta-unzira-penta`, 215. `centa` is one hundred, `mililumi` a thousand. Ordinals take `-ne` (`una-ne`, first); fractions are N `de` N (`tressa de cuara`). A `ne` after a number is never negation.')}
@@ -499,17 +509,43 @@ function quoted(lex: Lexicon, id: string, sentence: string): string {
   return sentence;
 }
 
+/** A ruling's own example sentence (2.2 lists them apart from the text); the build fails if it is gone. */
+function example(lex: Lexicon, id: string, sentence: string): string {
+  if (!(rulingById(lex, id)?.examples ?? []).some(([l]) => l === sentence))
+    throw new Error(`${id} no longer has the example "${sentence}"`);
+  return sentence;
+}
+
 export function clausePart(index: Index): string {
   const lex = index.lex;
   const g = lex.grammar;
-  // the 2.1 rulings' own sentences; their English is the guide's, awaiting the author
-  const G47 = quoted(lex, '2.1:G47', 'Li nullo ka ki-modo vanisan!');
+  // the 2.1 and 2.2 rulings' own sentences; their English is the guide's, awaiting the author
+  const G60A = example(lex, '2.2:G60', 'Ki-pago taivo pagopa ki?');
+  const G60B = example(lex, '2.2:G60', 'Ki-kasa taivo po amora maivo?');
+  const G60C = example(lex, '2.2:G60', 'maivori ne sabesia ki-coda maivori ramura.');
+  const G61A = example(lex, '2.2:G61', 'Li nullo ka ki-modo vanisan!');
+  const G61B = example(lex, '2.2:G61', 'Ki-eli nullo!');
+  const G61C = example(lex, '2.2:G61', 'Li nullo ka ki-modo vanisan ki?');
+  const G62A = example(
+    lex,
+    '2.2:G62',
+    'taivo ke tonsi corvisan fime taivo viki savalisia maivo ki?',
+  );
+  const G62B = example(lex, '2.2:G62', 'si maivo ke tonsi lukasan, maivo futu ne salrusia.');
+  const G63 = example(
+    lex,
+    '2.2:G63',
+    'maivo futu donuda ito biti de lalfo, fime taivo nosi semnesia ko maivo en moluvaye.',
+  );
+  const G64A = example(lex, '2.2:G64', 'Maivo lirala raho taivo amora.');
+  const G64B = example(lex, '2.2:G64', 'saivo po farufasbifa kube saivo ramura raho maivo po ke.');
+  const G65 = example(lex, '2.2:G65', 'ito ke ruli levasan sidu zeldoza trana.');
+  const G66 = example(lex, '2.2:G66', 'kroti maivo lesvu taivo ke li sevusan ruhe.');
   const G48A = quoted(lex, '2.1:G48', 'Li lumi tivrota taivo pifu.');
   const G48B = quoted(lex, '2.1:G48', 'Taivo po noma lisrola pifu.');
   const G50 = quoted(lex, '2.1:G50', 'Maivo desida fime taivo lisrola.');
   const G52 = quoted(lex, '2.1:G52', 'Li nimu raho maivo po lirala en ito, ka vanisan.');
   const G53 = quoted(lex, '2.1:G53', 'Una de maivori futu relnura.');
-  const G54 = quoted(lex, '2.1:G54', 'Taivo ke ola-modo vanisan fime li veluri lasola.');
   const gl = (l: string, english: string, id: string): string =>
     composedGloss(l, english, `Reference, The clause: ${id}`);
 
@@ -558,7 +594,7 @@ ${h3('The noun phrase')}
 <pre class="template"><code>${esc(g.noun_phrase)}</code></pre>
 ${p('Adjectives before the noun; a noun never modifies a noun [[0.8:G7]]. `toda` N is every N; `toda li` N is all the N.')}
 ${p(`${liRule} [[0.8:R5]]`)}
-${p(`**Partitive \`de\`.** After a number, a quantifier or a superlative, \`de\` means of / among, and the ownership rules do not apply: \`${G53}\` ${gl(G53, 'One of us will return.', '2.1:G53')} Fractions are the same construction [[2.1:G53]].`)}
+${p(`**Partitive** \`de\`. After a number, a quantifier or a superlative, \`de\` means of / among, and the ownership rules do not apply: \`${G53}\` ${gl(G53, 'One of us will return.', '2.1:G53')} Fractions are the same construction [[2.1:G53]].`)}
 ${h3('Linking clauses')}
 ${p(
   wordList(lex, [
@@ -590,19 +626,26 @@ ${examples([
 ${ul([
   '`sidu` keeps one subject; a second verb with **its own subject** goes in a `fime` clause, which inherits the tense [[2.1:G50]] [[0.8:R6]].',
   `A relative on a prepositional object: \`raho\` opens the clause and the preposition keeps its place, followed by a resumptive pronoun (\`ito\`/\`itori\`, \`saivo\`/\`saivori\`): \`${G52}\` ${gl(G52, 'The home in which I sang is beautiful.', '2.1:G52')} [[2.1:G52]]`,
-  `**So … that**: \`ola-modo\` ADJ … \`fime\` CLAUSE: \`${G54}\` ${gl(G54, 'You are so beautiful that the stars fall silent.', '2.1:G54')} [[2.1:G54]]`,
   'Evidentials: with none, the sentence makes no claim about its source. Inside `fime`, the evidential reports the main-clause subject’s evidence; in a question it asks for the listener’s source [[2.1:G51]].',
+  `**Hopeful purpose.** After a main clause, a \`fime\` clause whose verb carries \`nosi\` means “in the hope that, so that perhaps”; \`kopisa\` stays the plain purpose linker: \`${G63}\` ${gl(G63, 'I will give it a tool of floating, so that perhaps you may sit with me in the breeze.', '2.2:G63')} [[2.2:G63]]`,
+  `**Headless relatives.** With no noun before it, \`raho\` is “the one who, that which”, as subject, object or complement: \`${G64A}\` ${gl(G64A, 'I sing what you love.', '2.2:G64')} \`${G64B}\` ${gl(G64B, 'She blushed when she remembered what I had been.', '2.2:G64')} \`raho\` is never a question word: a question uses \`ki-nela\` or \`ki-coda\` [[2.2:G64]].`,
+  `**Easy to …, ready to ….** An adjective may take \`sidu\` + verb; the verb’s object is what the adjective describes: \`${G65}\` ${gl(G65, 'It is very easy to resist change.', '2.2:G65')} [[2.2:G65]]`,
+  `**Before and after a clause.** \`kroti\` and \`krotiapo\` may open a clause, “before …” and “after …”; the clause inherits tense as after \`kube\` [[0.8:R6]]: \`${G66}\` ${gl(G66, 'Before I let you be the ocean storm.', '2.2:G66')} Before a measure they keep [[2.1:G55]]; before \`li\` + a noun, their older meaning [[2.2:G66]].`,
 ])}
 ${h3('Questions, exclamations, wishes')}
-${p('A question keeps statement order: **the question word stands where its answer would stand**, and **every direct question ends in `ki`**. A `ki-` word of time may open the clause as a frame. An embedded question keeps the word in place with no `ki`; an embedded yes/no question uses `ki-oro` [[2.1:G46]] [[0.8:G4]] [[1.0:G2]].')}
+${p('A **yes/no question** keeps statement order and must end in `ki`. A `ki-` word **may open the clause or stay where its answer would stand**; the album fronts it in most questions. A question with a `ki-` word may end in `ki` or not. An embedded wh-question may also front its `ki-` word and never ends in `ki`; an embedded yes/no question uses `ki-oro` [[2.2:G60]] [[1.0:G2]].')}
 ${examples([
+  ['Taivo lirala ki?', 'Do you sing?'],
+  [G60A, gl(G60A, 'Where are you going?', '2.2:G60')],
   ['Taivo pagopa ki-pago ki?', 'Where are you going?'],
-  ['Ki-nela lirala ki?', 'Who sings?'],
-  ['Taivo amora ki-eli lira ki?', 'Which song do you love?'],
+  [G60B, gl(G60B, 'Why did you love me?', '2.2:G60')],
   ['Maivo ne sabesia ki-pago taivo futu pagopa.', 'I don’t know where you will go.'],
+  [G60C, gl(G60C, 'We do not know what we remember.', '2.2:G60')],
 ])}
+${p('2.2 supersedes the 2.1 rulings on question-word position, exclamatives and “so … that”, and the in-place clause of the 0.8 ruling on embedded questions. They are kept as they were ruled, not deleted; follow the newer ones [[2.2:G60]] [[2.2:G61]] [[2.2:G62]].')}
 ${ul([
-  `**Exclamations.** A main clause with a \`ki-\` word and no final \`ki\` is an exclamation: \`ki-modo\` ADJ, how …!; \`ki-eli\` N, what a …!; \`ki-muya\` N, so many …! \`${G47}\` ${gl(G47, 'How beautiful the night is!', '2.1:G47')} [[2.1:G47]]`,
+  `**Exclamations.** Only \`ki-modo\` + adjective (how …!), \`ki-eli\` + noun (what a …!) and \`ki-muya\` + noun (so many …!) make an exclamation, and only when the clause does not end in \`ki\`: \`${G61A}\` ${gl(G61A, 'How beautiful the night is!', '2.2:G61')} \`${G61B}\` ${gl(G61B, 'What a night!', '2.2:G61')} Any other \`ki-\` clause without \`ki\` is a question, and a degree question must end in \`ki\`: \`${G61C}\` ${gl(G61C, 'How beautiful is the night?', '2.2:G61')} [[2.2:G61]]`,
+  `**So … that.** \`tonsi\` directly before an adjective is “so”, and a \`fime\` clause after it gives the result: \`${G62A}\` ${gl(G62A, 'Are you so brave that you would kiss me?', '2.2:G62')} \`${G62B}\` ${gl(G62B, 'If I am so lucky, I will not rise.', '2.2:G62')} Opening its clause, \`tonsi\` keeps its meaning “therefore” [[2.2:G62]].`,
   `**Blessings and wishes.** \`pifu\` with any subject is the blessing form: \`${G48A}\` ${gl(G48A, 'May the Light hold you.', '2.1:G48')} With \`noma\`, it is “if only”: \`${G48B}\` ${gl(G48B, 'If only you had stayed.', '2.1:G48')} [[2.1:G48]]`,
   '**Prohibitions.** `ne` + a command, with no subject; `fisa` softens it; `yava ne` + verb is “let us not”: `Ne senobakosia maivo!` Don’t interrupt me! [[2.1:G56]]',
 ])}
@@ -641,17 +684,17 @@ export const RECIPES: readonly (readonly [string, string, string, string, string
   ['do you …?', 'statement order, `ki` last', 'Taivo lirala ki?', 'Do you sing?', '1.0:G2'],
   [
     'where / who / which …?',
-    'the question word in its answer’s place, `ki` last',
-    'Taivo pagopa ki-pago ki?',
+    'the question word first or in its answer’s place; `ki` last is optional',
+    'Ki-pago taivo pagopa ki?',
     'Where are you going?',
-    '2.1:G46',
+    '2.2:G60',
   ],
   [
     'how …!',
     '`ki-modo` ADJ, no final `ki`',
     'Li nullo ka ki-modo vanisan!',
     'How beautiful the night is!',
-    '2.1:G47',
+    '2.2:G61',
   ],
   [
     'may … / bless …',
@@ -851,10 +894,45 @@ export const RECIPES: readonly (readonly [string, string, string, string, string
   ],
   [
     'so … that …',
-    '`ola-modo` ADJ … `fime` CLAUSE',
-    'Taivo ke ola-modo vanisan fime li veluri lasola.',
-    'You are so beautiful that the stars fall silent.',
-    '2.1:G54',
+    '`tonsi` ADJ … `fime` CLAUSE',
+    'taivo ke tonsi corvisan fime taivo viki savalisia maivo ki?',
+    'Are you so brave that you would kiss me?',
+    '2.2:G62',
+  ],
+  [
+    'so that perhaps …',
+    'main clause, `fime` … `nosi` VERB',
+    'maivo futu donuda ito biti de lalfo, fime taivo nosi semnesia ko maivo en moluvaye.',
+    'I will give it a tool of floating, so that perhaps you may sit with me in the breeze.',
+    '2.2:G63',
+  ],
+  [
+    'what you love',
+    '`raho` with no noun before it',
+    'Maivo lirala raho taivo amora.',
+    'I sing what you love.',
+    '2.2:G64',
+  ],
+  [
+    'easy to …',
+    'ADJ `sidu` VERB',
+    'ito ke ruli levasan sidu zeldoza trana.',
+    'It is very easy to resist change.',
+    '2.2:G65',
+  ],
+  [
+    'before / after I …',
+    '`kroti` / `krotiapo` + clause',
+    'kroti maivo lesvu taivo ke li sevusan ruhe.',
+    'Before I let you be the ocean storm.',
+    '2.2:G66',
+  ],
+  [
+    'behind the house',
+    'side noun as a preposition',
+    'Li lavra semnesia nazru li nimu.',
+    'The bird sits behind the home.',
+    '2.2:G67',
   ],
   [
     'perhaps …',
@@ -925,9 +1003,9 @@ export function recipesPart(index: Index): string {
       RECIPES.map(([en, pat, l, gloss, id]) => {
         const review = !isCanonText(canon, l);
         if (review) forReview(l, gloss, `Reference, Patterns: ${en}`);
-        // a 2.1 ruling's sentence comes without English: the gloss is the guide's
+        // a 2.1 or 2.2 ruling's sentence comes without English: the gloss is the guide's
         else if (
-          id.startsWith('2.1:') &&
+          (id.startsWith('2.1:') || id.startsWith('2.2:')) &&
           /[.!?]$/.test(l) &&
           !liveExamples(index.lex).some((e) => e.liraasa === l)
         )
@@ -984,10 +1062,15 @@ export const RULES: readonly (readonly [string, string, string])[] = [
   ['error', 'a question with the copula or tense moved to the front', 'ki'],
   [
     'error',
-    'a direct question that does not end in ki, or a question word moved out of its answer’s place (a ki- word of time may open the clause)',
-    '2.1:G46',
+    'a yes/no question that does not end in ki (a ki- word may open the clause)',
+    '2.2:G60',
   ],
-  ['note', 'a main clause with a ki- word and no final ki reads as an exclamation', '2.1:G47'],
+  [
+    'note',
+    'a ki- clause without ki is an exclamation only with ki-modo + adjective, ki-eli + noun or ki-muya + noun; otherwise a question',
+    '2.2:G61',
+  ],
+  ['error', 'raho used as a question word: a question takes ki-nela or ki-coda', '2.2:G64'],
   ['warn', 'a saying-verb + su read as “about”', '1.2:G30'],
   ['warn', 'English gloss is passive but the line has no gome', 'passive'],
   ['note', '-na direction; hema as hesitation', ''],
@@ -997,8 +1080,11 @@ export const RULES: readonly (readonly [string, string, string])[] = [
 
 /** Not decided: presented as open, resolved nowhere (SPEC §14). Language only. */
 export const OPEN_QUESTIONS: readonly string[] = [
-  '**Chains of `de`:** how X `de` Y `de` Z resolves when owners of different ranks mix.',
+  '**Chains of** `de`: how X `de` Y `de` Z resolves when owners of different ranks mix.',
   '**A vocative particle for verse.**',
+  '**“To + verb” in general:** `sidu` (same subject), `fime` (a different subject, 2.1:G50) and adjective + `sidu` (2.2:G65) cover the known cases; the general case remains open.',
+  '`ke sidu` VERB **as “destined to”** (album 08): hold until a second use.',
+  '**Relatives with a gap for time or place** (album 01: `krono raho` …): hold until a second use.',
 ];
 
 export function openQuestionsPart(no: string): string {
@@ -1027,6 +1113,18 @@ export interface EditionCounts {
   v21: number;
   respelled: number;
   becameCompounds: number;
+  /** 2.2's edition note, the changeset's summary (the patch's edition_note, verbatim). */
+  note22: string;
+  /** Slots 2.2 filled: each adds one meaningful form. */
+  filled22: number;
+}
+
+/** Every headword form whose slot has a meaning (the LLM reference counts the same). */
+function meaningfulForms(lex: Lexicon): number {
+  return lex.headwords.reduce(
+    (total, h) => total + FORM_SLOTS.filter((slot) => isUsed(h, slot)).length,
+    0,
+  );
 }
 
 /**
@@ -1085,6 +1183,7 @@ ${h3('C. Time words')}
 ${h3('D. Editions and rulings')}
 ${p(`Liraasa 1.0 (${n(counts.v10)} headwords) is the frozen base. 1.1 added vocabulary (${n(counts.v11)}); 1.2 added rulings 1.2:G24–G36 and words (${n(counts.v12)}). 2.0 added ${n(added)} headwords and moved ${n(counts.attested)} pattern-built compounds out of the dictionary into the image-compound pattern, hence ${n(counts.v12)} − ${n(counts.attested)} + ${n(added)} = ${n(counts.v20)}. The ${n(counts.attested)} keep their glosses as attested image compounds and are **not** counted in the ${n(counts.v20)}.`)}
 ${p(`2.1 added rulings 2.1:G46–G59 and respelled ${n(counts.respelled)} roots, ${n(counts.becameCompounds)} of them replaced by compounds, with every form, compound, image compound and derivation built on them; the headword count stays ${n(counts.v21)}. ${rulingText(lex, '2.1:G58')} [[2.1:G58]] ${rulingText(lex, '2.1:G59')} [[2.1:G59]]`)}
+${p(`${esc(counts.note22)} [[2.2:G68]] The headword count stays ${n(lex.headwords.length)}; the filled slots add ${n(counts.filled22)} meaningful forms, for ${n(meaningfulForms(lex))} in all.`)}
 ${rulingIndex}
 </section>`;
 }

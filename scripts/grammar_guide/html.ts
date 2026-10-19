@@ -18,7 +18,12 @@ export function esc(text: string): string {
 /** How a recorded Liraasa string is to be checked. */
 /** `name`: a foreign name copied into Liraasa letters (2.0:G45), not a word of the lexicon. */
 /** `older`: a respelled word as an older text spells it (2.1:G58), checked against the migration table. */
-export type WordUse = 'text' | 'unused-slot' | 'retired' | 'morpheme' | 'name' | 'older';
+/**
+ * `album`: the album's own text as recorded, canon 2.0 (2.2:G68): a word the
+ * lexicon does not list, or lists in an unused slot, is reported for the
+ * author rather than failing the build, since the recording is never edited.
+ */
+export type WordUse = 'text' | 'unused-slot' | 'retired' | 'morpheme' | 'name' | 'older' | 'album';
 
 export const recorded: { text: string; use: WordUse }[] = [];
 
@@ -62,17 +67,19 @@ export function md(text: string): string {
 export function badge(id: string): string {
   const edition = id.split(':')[0] ?? '';
   const cls =
-    edition === '2.1'
-      ? 'b21'
-      : edition === '2.0'
-        ? 'b20'
-        : edition === '1.2'
-          ? 'b12'
-          : edition === '1.0'
-            ? 'b10'
-            : edition === '0.8'
-              ? 'b08'
-              : 'badr';
+    edition === '2.2'
+      ? 'b22'
+      : edition === '2.1'
+        ? 'b21'
+        : edition === '2.0'
+          ? 'b20'
+          : edition === '1.2'
+            ? 'b12'
+            : edition === '1.0'
+              ? 'b10'
+              : edition === '0.8'
+                ? 'b08'
+                : 'badr';
   return `<span class="badge ${cls}" title="Ruling ${esc(id)}">${esc(id)}</span>`;
 }
 
@@ -232,6 +239,9 @@ export function composedGloss(liraasa: string, english: string, where: string): 
 
 /** Decisions only the author can make, each shown on the page as a placeholder. */
 export const decisionsNeeded: { what: string; where: string }[] = [];
+
+/** Album words (as recorded) the lexicon does not read as live words: for the author. */
+export const albumUnlisted: { token: string; text: string; why: string }[] = [];
 
 /** Register a non-canon sentence for review; returns it unchanged. */
 export function forReview(liraasa: string, english: string, where: string): string {

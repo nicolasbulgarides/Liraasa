@@ -7,7 +7,7 @@
  * Then builds the Invitation (scripts/build_invitation.ts) with the same flags.
  *
  * Writes handoff/<name>.html (and .pdf). Every table, count, ruling and
- * example is read from handoff/liraasa_2_0_complete.json; the teaching prose
+ * example is read from handoff/liraasa_2_2_complete.json; the teaching prose
  * lives in scripts/grammar_guide/chapters.ts; the song, the treasury words
  * and the image-compound samples are set in scripts/grammar_guide/config.ts.
  *
@@ -30,6 +30,7 @@ import {
 } from './grammar_guide/chapters';
 import { checkWords, pdfPages, printPdf, reviewMarkdown } from './grammar_guide/check';
 import { GUIDE } from './grammar_guide/config';
+import { albumPart } from './grammar_guide/album';
 import { songPart } from './grammar_guide/song';
 import { treasuryPart } from './grammar_guide/treasury';
 import { rulingIndex, rulingsMarkdown, type RenderedPart } from './grammar_guide/rulings';
@@ -57,8 +58,10 @@ function main(): void {
     counts_1_2_to_2_0?: { after: { headwords: number }; imageCompoundsAttested: number };
     counts_2_0_to_2_1?: { after: { headwords: number } };
     changesets_2_1_full?: { ops: { op: string }[] }[];
+    changesets_2_2_full?: { summary: string; ops: { op: string }[] }[];
   };
   const ops21 = (editions.changesets_2_1_full ?? []).flatMap((c) => c.ops);
+  const ops22 = (editions.changesets_2_2_full ?? []).flatMap((c) => c.ops);
   const v10 = (
     JSON.parse(readFileSync(resolve(GUIDE.lexicon10), 'utf8')) as { headwords: unknown[] }
   ).headwords.length;
@@ -71,8 +74,9 @@ function main(): void {
     clausePart(index),
     recipesPart(index),
     songPart(index, '7'),
-    treasuryPart(index, '8'),
-    openQuestionsPart('9'),
+    albumPart(index, '8'),
+    treasuryPart(index, '9'),
+    openQuestionsPart('10'),
   ];
   // every Liraasa word and phrase shown so far: Appendix A lists only the function words not among them
   const shownTexts = recorded.filter((r) => r.use !== 'morpheme').map((r) => r.text.toLowerCase());
@@ -99,6 +103,8 @@ function main(): void {
         respelled: ops21.filter((o) => o.op === 'respell_root' || o.op === 'respell_as_compound')
           .length,
         becameCompounds: ops21.filter((o) => o.op === 'respell_as_compound').length,
+        note22: (editions.changesets_2_2_full ?? []).map((c) => c.summary).join(' '),
+        filled22: ops22.filter((o) => o.op === 'activate_slot').length,
       },
       rulingIndex(lex, rendered, rulingsFile),
     ),
@@ -155,7 +161,11 @@ ${body}
   console.log(`wrote ${htmlPath}`);
   const legacy = [
     ...lex.legacy.retired_roots,
-    ...lex.legacy.respelled_roots.map((r) => ({ old: r.old, replacement: r.new })),
+    ...lex.legacy.respelled_roots.map((r) => ({
+      old: r.old,
+      replacement:
+        r.reverted === true ? `${r.new} (respelling undone: ${r.old} is the word again)` : r.new,
+    })),
   ];
   writeFileSync(resolve(outDir, rulingsFile), rulingsMarkdown(lex, GUIDE.title, legacy), 'utf8');
   console.log(`wrote ${resolve(outDir, rulingsFile)}`);

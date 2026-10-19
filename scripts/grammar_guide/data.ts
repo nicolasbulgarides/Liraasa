@@ -34,6 +34,10 @@ export interface Ruling {
   ruling: string;
   refines?: string[];
   examples?: [string, string][];
+  /** 2.2 on (ADR-0018): kept, never reworded, and marked when a later ruling replaces it. */
+  supersedes?: string[];
+  superseded_by?: string;
+  superseded_in_part?: { clause: string; by: string }[];
 }
 
 export interface FunctionWord {
@@ -117,6 +121,7 @@ export interface Lexicon {
   rulings_1_2: Ruling[];
   rulings_2_0?: Ruling[];
   rulings_2_1?: Ruling[];
+  rulings_2_2?: Ruling[];
   /** 2.0: the image-compound pattern, with the attested pairs whole (ADR-0016). */
   image_compounds?: {
     rule: string;
@@ -129,7 +134,8 @@ export interface Lexicon {
   rhyme_families: { ending: string; members: string[]; count: number }[];
   legacy: {
     retired_roots: { old: string; replacement: string }[];
-    respelled_roots: { old: string; new: string }[];
+    /** `reverted`: a respelling a later edition undid (2.2: silro → puzu, then back). */
+    respelled_roots: { old: string; new: string; reverted?: boolean }[];
     /** Every retired or respelled spelling, with the form that replaces it. */
     migration_forms: Record<string, { to: string; slot: string; via: string; kind: string }>;
   };
@@ -203,6 +209,7 @@ export function normGloss(gloss: string): string {
 export function rulingById(lex: Lexicon, id: string): Ruling | undefined {
   const [edition, rid] = id.split(':');
   const sets: Record<string, readonly Ruling[] | undefined> = {
+    '2.2': lex.rulings_2_2,
     '2.1': lex.rulings_2_1,
     '2.0': lex.rulings_2_0,
     '1.2': lex.rulings_1_2,
@@ -323,7 +330,7 @@ export class Index {
         ...lex.rulings_1_2,
         ...(lex.rulings_2_0 ?? []),
         ...(lex.rulings_2_1 ?? []),
-        ...(lex.rulings_2_1 ?? []),
+        ...(lex.rulings_2_2 ?? []),
         ...lex.rulings_0_8_carried,
       ].flatMap((r) => (r.examples ?? []).map(([l]) => l)),
       ...lex.discourse_particles.flatMap((p) => p.examples.map((e) => e.liraasa)),
@@ -333,7 +340,7 @@ export class Index {
     for (const text of texts) for (const t of tokenize(text)) this.attested.add(t);
 
     for (const r of lex.legacy.retired_roots) this.retired.add(r.old);
-    for (const r of lex.legacy.respelled_roots) this.retired.add(r.old);
+    for (const r of lex.legacy.respelled_roots) if (r.reverted !== true) this.retired.add(r.old);
   }
 
   private compoundSide(root: string): { asModifier: Headword[]; asHead: Headword[] } {
@@ -462,6 +469,7 @@ export function canonTexts(lex: Lexicon): string[] {
     ...lex.rulings_1_2,
     ...(lex.rulings_2_0 ?? []),
     ...(lex.rulings_2_1 ?? []),
+    ...(lex.rulings_2_2 ?? []),
     ...lex.rulings_0_8_carried,
   ];
   return [

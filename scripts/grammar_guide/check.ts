@@ -10,7 +10,7 @@ import { execFileSync } from 'node:child_process';
 import { existsSync, readFileSync } from 'node:fs';
 import { pathToFileURL } from 'node:url';
 import { respelledAs, tokenize, type Index } from './data';
-import { awaitingReview, composedGlosses, decisionsNeeded, recorded } from './html';
+import { albumUnlisted, awaitingReview, composedGlosses, decisionsNeeded, recorded } from './html';
 
 const MORPHEME = /^[-+]|[-+]$|\+|^R\b|^VERB$/;
 
@@ -39,7 +39,19 @@ export function checkWords(index: Index): string[] {
     }
     for (const token of tokenize(text)) {
       if (use === 'retired') continue;
-      if (use === 'older' && respelledAs(index.lex, token) !== undefined) continue;
+      if ((use === 'older' || use === 'album') && respelledAs(index.lex, token) !== undefined)
+        continue;
+      if (use === 'album') {
+        // the recording is canon and never edited: report, do not fail (2.2:G68)
+        const why = !index.isWord(token)
+          ? 'not a word of the lexicon'
+          : index.unusedReadings(token).length > 0
+            ? 'an unused slot of the lexicon'
+            : '';
+        if (why !== '' && !albumUnlisted.some((a) => a.token === token))
+          albumUnlisted.push({ token, text, why });
+        continue;
+      }
       if (!index.isWord(token)) problems.add(`"${token}" (in "${text}") is not a word of Liraasa`);
       if ((use === 'text' || use === 'older') && index.unusedReadings(token).length > 0) {
         problems.add(`"${token}" is an unused slot shown as live text`);
@@ -107,6 +119,9 @@ export function reviewMarkdown(title: string): string {
     composed.set(r.liraasa, seen);
   }
   for (const [l, r] of composed) lines.push(`- *${l}* — ${r.english} (${r.where.join('; ')})`);
+  lines.push('', '## REVIEW: album words the lexicon does not read (2.2:G68)', '');
+  if (albumUnlisted.length === 0) lines.push('None.', '');
+  for (const a of albumUnlisted) lines.push(`- *${a.token}* in “${a.text}”: ${a.why}`);
   lines.push('', '## DECISIONS NEEDED', '');
   if (decisionsNeeded.length === 0) lines.push('None.', '');
   for (const d of decisionsNeeded) lines.push(`- ${d.what} (${d.where})`);

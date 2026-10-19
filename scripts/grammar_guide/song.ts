@@ -195,7 +195,7 @@ function glossToken(index: Index, token: string, style: GlossStyle): Gloss {
 }
 
 /** The gloss of one token, read from the lexicon; a token it cannot read fails the build. */
-function lexiconGloss(index: Index, token: string, style: GlossStyle): Gloss {
+export function lexiconGloss(index: Index, token: string, style: GlossStyle): Gloss {
   const lex = index.lex;
   const pronoun = lex.pronouns.find((p) => p.form === token);
   if (pronoun !== undefined) {
@@ -240,6 +240,38 @@ function lexiconGloss(index: Index, token: string, style: GlossStyle): Gloss {
     if (!token.endsWith(suffix)) continue;
     const stem = lexical(token.slice(0, -suffix.length));
     if (stem !== undefined) return { ...stem, gloss: `${stem.gloss}-${mark}` };
+  }
+  // the closed classes a song may use beyond the ones above (the album does)
+  const particle = lex.discourse_particles.find((d) => d.form === token);
+  if (particle !== undefined) {
+    const gloss = shortClosed(particle.function.split(':')[0] ?? '');
+    return { gloss, lexicon: particle.function };
+  }
+  const number = Object.entries(lex.numbers.lookup_0_999).find(([, w]) => w === token)?.[0];
+  if (number !== undefined) return { gloss: number, lexicon: number };
+  const scale = lex.numbers.rules.find((r) => String(r.Liraasa) === token);
+  if (scale !== undefined) {
+    const gloss = String(scale['English interpretation'] ?? scale.Value);
+    return { gloss, lexicon: gloss };
+  }
+  const colour = lex.colors.find((c) => Object.values(c).includes(token));
+  if (colour !== undefined) {
+    const family = (colour.Family ?? '').toLowerCase();
+    // the notes name each shade: "azurijuba sapphire; azurilumi light blue"
+    const named = new RegExp(`\\b${token} ([^;.]+)`).exec(colour['Example meanings / notes'] ?? '');
+    const gloss = colour['Base color'] === token ? family : (named?.[1] ?? family);
+    return { gloss, lexicon: gloss };
+  }
+  const derived = lex.morphology.lexicalised_derivations[token];
+  if (derived !== undefined) {
+    return { gloss: short(derived.split(':')[0] ?? derived), lexicon: derived };
+  }
+  for (const [prefix, meaning] of Object.entries(lex.motion_prefixes.canon)) {
+    if (!token.startsWith(prefix)) continue;
+    const verb = lexical(token.slice(prefix.length));
+    if (verb === undefined) continue;
+    const motion = shortClosed(meaning.split(' (')[0] ?? meaning).split(', ')[0] ?? '';
+    return { ...verb, gloss: `${motion}-${verb.gloss}` };
   }
   throw new Error(`song: "${token}" has no reading in the lexicon`);
 }

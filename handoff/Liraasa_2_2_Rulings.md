@@ -1,16 +1,88 @@
-# Liraasa 2.1 Reference Grammar: every ruling
+# Liraasa 2.2 Reference Grammar: every ruling
 
-Verbatim from the Liraasa 2.1 lexicon, newest edition first. Ruling ids are edition-qualified: 0.8:G7 and 1.0:G7 are different rulings.
+Verbatim from the Liraasa 2.2 lexicon, newest edition first. Ruling ids are edition-qualified: 0.8:G7 and 1.0:G7 are different rulings.
+
+## Rulings 2.2
+
+### 2.2:G60: Question-word position
+
+A ki-word may open the clause or stay where its answer would stand; the album fronts it in most questions. A yes/no question must end in ki. A question with a ki-word may end in ki or not. Embedded wh-questions may also front the ki-word and never end in ki; embedded yes/no questions use ki-oro (1.0:G2).
+
+Supersedes 2.1:G46, 0.8:G4.
+
+- *Ki-pago taivo pagopa ki?*
+- *Taivo pagopa ki-pago ki?*
+- *Ki-kasa taivo po amora maivo?*
+- *maivori ne sabesia ki-coda maivori ramura.*
+
+### 2.2:G61: Exclamatives, narrowed
+
+Only ki-modo + adjective, ki-eli + noun and ki-muya + noun make an exclamation, and only when the clause does not end in ki. Any other ki-word clause without ki is a question. A degree question (ki-modo + adjective) must end in ki.
+
+Supersedes 2.1:G47.
+
+- *Li nullo ka ki-modo vanisan!*
+- *Ki-eli nullo!*
+- *Li nullo ka ki-modo vanisan ki?*
+
+### 2.2:G62: So … that: tonsi + adjective
+
+tonsi directly before an adjective means “so”; a following fime clause gives the result. Clause-initial tonsi keeps its meaning “therefore”.
+
+Supersedes 2.1:G54.
+
+- *taivo ke tonsi corvisan fime taivo viki savalisia maivo ki?*
+- *si maivo ke tonsi lukasan, maivo futu ne salrusia.*
+
+### 2.2:G63: Hopeful purpose: fime + nosi
+
+After a main clause, a fime clause whose verb carries nosi means “in the hope that, so that perhaps”. kopisa stays the plain purpose linker.
+
+- *maivo futu donuda ito biti de lalfo, fime taivo nosi semnesia ko maivo en moluvaye.*
+
+### 2.2:G64: Headless raho
+
+raho with no noun before it means “the one who, that which”, as subject, object or complement. raho is never a question word: questions use ki-nela or ki-coda.
+
+- *Maivo lirala raho taivo amora.*
+- *saivo po farufasbifa kube saivo ramura raho maivo po ke.*
+
+### 2.2:G65: Adjective + sidu + verb
+
+An adjective may take sidu + verb for “easy to …, ready to …”. The verb’s object is what the adjective describes.
+
+- *ito ke ruli levasan sidu zeldoza trana.*
+
+### 2.2:G66: kroti and krotiapo before a clause
+
+kroti and krotiapo may introduce a clause: “before …”, “after …”. The clause inherits tense like kube (0.8:R6). Before a measure they keep 2.1:G55; before li + noun, their 2.0 meaning.
+
+- *kroti maivo lesvu taivo ke li sevusan ruhe.*
+
+### 2.2:G67: Side nouns as prepositions
+
+nazru (behind), zavme (in front of), silda (beside), cemnu (in the middle of), lizma (left of) and rizno (right of) may stand bare before a noun phrase as prepositions, or after a verb as adverbs.
+
+- *Li lavra semnesia nazru li nimu.*
+- *saivo de melonulu venreva nazru gase baba lira de ruhesonbu.*
+
+### 2.2:G68: The album as reference corpus
+
+The album (twelve songs and the alternate 05) is canon 2.0 text, read with 2.0 spellings under 2.1:G58. A construction it uses consistently is grammar. A line that departs from the grammar once is an album reading: it keeps its intended meaning, is listed with its standard form, and is not a model for new text.
 
 ## Rulings 2.1
 
 ### 2.1:G46: Questions keep every word in place
+
+**Superseded by 2.2:G60.** Kept as it was ruled; follow 2.2:G60.
 
 A question word stands where its answer would stand; every direct question ends in ki. A ki-word of time may open the clause as a frame. Embedded questions unchanged (0.8:G4, 1.0:G2). Replaces the fronted small-words examples: Taivo pagopa ki-pago ki?
 
 Refines 1.0:G22.
 
 ### 2.1:G47: Exclamatives
+
+**Superseded by 2.2:G61.** Kept as it was ruled; follow 2.2:G61.
 
 A main clause with a ki-word and no final ki is an exclamation (!). ki-modo + ADJ = how ...!; ki-eli + N = what a ...!; ki-muya + N = so many ...! Li nullo ka ki-modo vanisan!
 
@@ -43,6 +115,8 @@ After a number, quantifier, or superlative, de means of/among and G27/G32 owners
 Refines 1.2:G27, 1.2:G32.
 
 ### 2.1:G54: Result clauses
+
+**Superseded by 2.2:G62.** Kept as it was ruled; follow 2.2:G62.
 
 ola-modo + ADJ ... fime CLAUSE = so ADJ that: Taivo ke ola-modo vanisan fime li veluri lasola.
 
@@ -385,6 +459,8 @@ Everyday speech may omit a repeated subject in coordinated clauses and in answer
 
 ### 0.8:G4: Quotation and embedded questions
 
+**In part superseded by 2.2:G60:** its clause “embedded wh-word stays in place” is replaced; the rest stands.
+
 ki may close the main clause before an appended direct quotation (Taivo desida ki, fime maivo senosia: "...") as well as after it (0.7 order). Embedded wh-questions keep the wh-word in place with no ki; embedded yes/no questions use si (whether).
 
 ### 0.8:G5: Relative time in subordinate clauses
@@ -502,8 +578,9 @@ Retired and respelled roots, and what replaces them (1.0:G19). A pre-1.0 text is
 - nerpo → vuzi
 - ranbe → doza
 - velbi → vugo
-- silro → puzu
+- silro → puzu (respelling undone: silro is the word again)
 - nilvu → foji
 - vebo → faji
 - taha → kezupago
 - zirme → zayu
+- puzu → silro

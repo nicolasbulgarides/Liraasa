@@ -25,6 +25,11 @@ Written by the build. Nothing here is canon until the author says so.
 None.
 
 
+## REVIEW: album words the lexicon does not read (2.2:G68)
+
+None.
+
+
 ## DECISIONS NEEDED
 
 None.
