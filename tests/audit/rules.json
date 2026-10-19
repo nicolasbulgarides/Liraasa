@@ -1,0 +1,1117 @@
+[
+  {
+    "id": "R01",
+    "source": "grammar.clause_template",
+    "title": "clause_template",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "Clause order: [FRAME] [TOPIC hozi] SUBJECT [TENSE] [noma] [ne] [MODAL] [APPROACH] [PHASE] [EFFORT] [ASPECT] [ITERATION] [EVIDENTIAL] VERB [OBJECT] [ADJUNCTS] [fuyi] [hoyo|yasmo] [ATTITUDE] [ki].",
+    "flags": []
+  },
+  {
+    "id": "R02",
+    "source": "grammar.slots[3]",
+    "title": "slots[3]",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "The subject is obligatory except in commands, hortatives and permitted ellipsis.",
+    "flags": []
+  },
+  {
+    "id": "R03",
+    "source": "grammar.slots[4]",
+    "title": "slots[4]",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "Tense is po (past), futu (future) or pressa (present); no tense word = present.",
+    "flags": []
+  },
+  {
+    "id": "R04",
+    "source": "grammar.stacking.one_per_slot",
+    "title": "one_per_slot",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "At most one word per operator slot (one modal, one evidential, one tense…).",
+    "flags": []
+  },
+  {
+    "id": "R05",
+    "source": "grammar.stacking.exclusions",
+    "title": "exclusions",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "Excluded pairs: hiro/teki with roni/tefa; telvo/vazdi/fesmo with tefa; zoke with seye/mufe/poye/pifu; tavki with fututi; hoyo with yasmo.",
+    "flags": []
+  },
+  {
+    "id": "R06",
+    "source": "grammar.stacking.max_preverbal_operators_recommended",
+    "title": "max_preverbal_operators_recommended",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "No more than four preverbal operators are recommended.",
+    "flags": []
+  },
+  {
+    "id": "R07",
+    "source": "grammar.slots[6]",
+    "title": "slots[6]",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "ne floats: it may stand before any later operator or the verb, negating what follows.",
+    "flags": []
+  },
+  {
+    "id": "R08",
+    "source": "grammar.slots[12]",
+    "title": "slots[12]",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "reve and loki may close the clause instead of standing in the iteration slot.",
+    "flags": []
+  },
+  {
+    "id": "R09",
+    "source": "grammar.slots[1]",
+    "title": "slots[1]",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "FRAME words are clause-initial and followed by a pause (comma).",
+    "flags": []
+  },
+  {
+    "id": "R10",
+    "source": "grammar.slots[2]",
+    "title": "slots[2]",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "At most one hozi topic per clause, except paired contrastive topics in parallel clauses.",
+    "flags": []
+  },
+  {
+    "id": "R11",
+    "source": "grammar.slots[20]",
+    "title": "slots[20]",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "ki is the last word of its clause.",
+    "flags": []
+  },
+  {
+    "id": "R12",
+    "source": "grammar.slots[19]",
+    "title": "slots[19]",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "Attitude words close the clause, before ki; zoke excludes the other four.",
+    "flags": []
+  },
+  {
+    "id": "R13",
+    "source": "grammar.scope_operators",
+    "title": "scope_operators",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "ne, doli, tu, yesta, pendi, vinto stand immediately before the constituent they scope over.",
+    "flags": []
+  },
+  {
+    "id": "R14",
+    "source": "grammar.valency",
+    "title": "valency",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "CAUSER [TENSE…] vaku|lesvu|tekvu ACTOR [ne] [APPROACH] [PHASE] [EFFORT] VERB [OBJECT].",
+    "flags": []
+  },
+  {
+    "id": "R15",
+    "source": "grammar.noun_phrase",
+    "title": "noun_phrase",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "Noun phrase: [QUANTIFIER] [li|eli|ola|OWNER de] [NUMBER] [ADJECTIVES] NOUN[-ti][-ri] [de …] [raho CLAUSE].",
+    "flags": []
+  },
+  {
+    "id": "R16",
+    "source": "morphology.seven_forms",
+    "title": "seven_forms",
+    "kind": "morphology",
+    "status": "live",
+    "statement": "Every headword has seven forms: R, R+asa, R+na, VERB, R+nasan, R+san, R+asasan.",
+    "flags": []
+  },
+  {
+    "id": "R17",
+    "source": "morphology.verb_rule",
+    "title": "verb_rule",
+    "kind": "morphology",
+    "status": "live",
+    "statement": "Verb: opi→opioa; n-initial R+nia; s-initial R+sia; vowel-initial R+a; otherwise R + first consonant + a.",
+    "flags": []
+  },
+  {
+    "id": "R18",
+    "source": "morphology.suffix_order",
+    "title": "suffix_order",
+    "kind": "morphology",
+    "status": "live",
+    "statement": "ROOT + (one form OR one derivation) + -ti + -ri; -ri is always last.",
+    "flags": []
+  },
+  {
+    "id": "R19",
+    "source": "morphology.compounding",
+    "title": "compounding",
+    "kind": "morphology",
+    "status": "live",
+    "statement": "MODIFIER+HEAD written together, head rightmost; a compound's verb class follows its first letter.",
+    "flags": [
+      "STALE: the lexicon's text says components must be active 1.0 headwords. 2.0:G38 (colour bases as modifiers), 2.0:G42 (nested compounds) and every compound built on a post-1.0 headword contradict it."
+    ]
+  },
+  {
+    "id": "R20",
+    "source": "morphology.derivation_defaults",
+    "title": "derivation_defaults",
+    "kind": "morphology",
+    "status": "live",
+    "statement": "Default readings: -yo one who does/is devoted to R; -vu big or intense R; -pago place of R; -ti little or dear R; a listed derivation overrides.",
+    "flags": [
+      "STALE: morphology.suffixes still says -yo and -vu attach 'on the root'; 2.0:G41 says derivations attach to any root or compound."
+    ]
+  },
+  {
+    "id": "R21",
+    "source": "morphology.suffixes.-pago",
+    "title": "-pago",
+    "kind": "morphology",
+    "status": "live",
+    "statement": "mavo + -pago is blocked: mavopago means society only.",
+    "flags": []
+  },
+  {
+    "id": "R22",
+    "source": "motion_prefixes",
+    "title": "motion_prefixes",
+    "kind": "morphology",
+    "status": "live",
+    "statement": "Motion prefixes va- du- taro- yave- revo- are a closed, non-productive list, on motion verbs and the curated metaphors only.",
+    "flags": []
+  },
+  {
+    "id": "R23",
+    "source": "phonology.stress",
+    "title": "stress",
+    "kind": "phonology",
+    "status": "live",
+    "statement": "Stress falls on the penultimate syllable; adjacent vowels are separate syllables.",
+    "flags": []
+  },
+  {
+    "id": "R24",
+    "source": "phonology.new_root_template",
+    "title": "new_root_template",
+    "kind": "phonology",
+    "status": "live",
+    "statement": "New roots: two syllables, consonant-initial, vowel-final, inventory letters, no initial cluster but kr- tr-, no three-consonant cluster, no doubled letter, two edits from every active word.",
+    "flags": []
+  },
+  {
+    "id": "R25",
+    "source": "phonology.function_word_template",
+    "title": "function_word_template",
+    "kind": "phonology",
+    "status": "live",
+    "statement": "Function words: one to three syllables, vowel-final, no initial cluster, two edits from every active word except declared monosyllable pairs.",
+    "flags": []
+  },
+  {
+    "id": "R26",
+    "source": "0.8:R1",
+    "title": "Source of truth and name",
+    "kind": "process",
+    "status": "live",
+    "statement": "The JSON is authoritative; the workbook is generated. Language field and files are named Liraasa.",
+    "flags": []
+  },
+  {
+    "id": "R27",
+    "source": "0.8:R2",
+    "title": "Predictable unused slots",
+    "kind": "lexicon",
+    "status": "live",
+    "statement": "An unused form may receive a gloss only when its compositional meaning is predictable, approved case by case, and recorded in authorized_changes.",
+    "flags": []
+  },
+  {
+    "id": "R28",
+    "source": "0.8:R3",
+    "title": "Root Review queue",
+    "kind": "process",
+    "status": "live",
+    "statement": "Frozen for 0.8. No canonical root is respelled; the 40-root queue carries forward unchanged.",
+    "flags": []
+  },
+  {
+    "id": "R29",
+    "source": "0.8:R4",
+    "title": "Frame tense",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "A standalone tense particle opening a paragraph or turn (Po — / Futu —) sets a frame:",
+    "flags": []
+  },
+  {
+    "id": "R30",
+    "source": "0.8:R5",
+    "title": "Article omission",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "li may be omitted in everyday speech as well as verse when the referent is obvious;",
+    "flags": [
+      "INTERACTION with 1.2:G29: li may be omitted when the referent is obvious, but an adjective may stand as a noun only after a determiner. Whether li can be omitted before an adjective used as a noun is not said."
+    ]
+  },
+  {
+    "id": "R31",
+    "source": "0.8:R6",
+    "title": "sige",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "sige clauses never inherit tense; they are always marked. Tense inheritance applies to fime, raho, kube, nayo, kasa, kopisa and tuni.",
+    "flags": [
+      "UNDERSPECIFIED: tense inheritance is listed for fime, raho, kube, nayo, kasa, kopisa, tuni (and kroti/krotiapo by 2.2:G66). kureli (as soon as), sina (unless), si (if) and nevi (although) are not listed either way."
+    ]
+  },
+  {
+    "id": "R32",
+    "source": "0.8:R7",
+    "title": "Yesterday evening",
+    "kind": "reading",
+    "status": "live",
+    "statement": "deyaapo is kept as a fossil (it retains the retired past marker apo).",
+    "flags": []
+  },
+  {
+    "id": "R33",
+    "source": "0.8:R8",
+    "title": "Double -a verbs",
+    "kind": "morphology",
+    "status": "live",
+    "statement": "amorliraa, amorrinbaa and amorvulraa are correct;",
+    "flags": []
+  },
+  {
+    "id": "R34",
+    "source": "0.8:R9",
+    "title": "ki with certainty",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "A certainty marker (or zoke) precedes ki:",
+    "flags": []
+  },
+  {
+    "id": "R35",
+    "source": "0.8:R10",
+    "title": "Sacred register",
+    "kind": "register",
+    "status": "live",
+    "statement": "Registers are defined in the grammar guide.",
+    "flags": []
+  },
+  {
+    "id": "R36",
+    "source": "0.8:R11",
+    "title": "Headword target",
+    "kind": "process",
+    "status": "live",
+    "statement": "New vocabulary is sized by genuine gaps, not by the 120-150 target.",
+    "flags": []
+  },
+  {
+    "id": "R37",
+    "source": "0.8:R12",
+    "title": "-ti on names",
+    "kind": "morphology",
+    "status": "live",
+    "statement": "The diminutive -ti may attach to personal names as an affectionate or teasing form (Dorinti).",
+    "flags": []
+  },
+  {
+    "id": "R38",
+    "source": "0.8:G1",
+    "title": "Demonstratives as pronouns",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "eli/ola (and eliri/olari) stand alone for things, situations and discourse (ola = what was just said;",
+    "flags": []
+  },
+  {
+    "id": "R39",
+    "source": "0.8:G2",
+    "title": "Negation scope",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "ne precedes what it negates: verb or modal (after tense), copula (ne ka), noun phrase or fragment (Ne eli), or a contrasted constituent (ne X, nara Y). Negation is compositional: ne + nuna- is a positive (avoid).",
+    "flags": []
+  },
+  {
+    "id": "R40",
+    "source": "0.8:G3",
+    "title": "Ellipsis",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "Everyday speech may omit a repeated subject in coordinated clauses and in answers, omit a repeated predicate after a contrasting subject (Dorin, ne.), answer with tense + verb (Po sapusia.), and echo a word with ki.",
+    "flags": []
+  },
+  {
+    "id": "R41",
+    "source": "0.8:G4",
+    "title": "Quotation and embedded questions",
+    "kind": "grammar",
+    "status": "in part superseded by 2.2:G60",
+    "statement": "ki may close the main clause before an appended direct quotation (Taivo desida ki, fime maivo senosia:",
+    "flags": [
+      "CONTRADICTION: the clause left standing after 2.2:G60's partial supersession says embedded yes/no questions use si (whether). 1.0:G2 says si means only 'if' and 'whether' is ki-oro, and 2.2:G60 itself says embedded yes/no questions use ki-oro. The supersession marked only the wh-word clause."
+    ]
+  },
+  {
+    "id": "R42",
+    "source": "0.8:G5",
+    "title": "Relative time in subordinate clauses",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "Inside an inheriting clause: tefa marks prior action, nayo/roni simultaneous, futu subsequent (future-in-past), sahi habitual.",
+    "flags": []
+  },
+  {
+    "id": "R43",
+    "source": "0.8:G6",
+    "title": "Nominalization",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "The root (form 1) is the noun of action or thing (juba, donu, tali).",
+    "flags": []
+  },
+  {
+    "id": "R44",
+    "source": "0.8:G7",
+    "title": "Noun-phrase order",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "[toda|rada|muya|poka|somi|nuna] [li|eli|ola|OWNER de] [NUMBER] [ADJ...] NOUN[-ti][-ri] [de ...] [raho ...].",
+    "flags": []
+  },
+  {
+    "id": "R45",
+    "source": "0.8:G8",
+    "title": "Sameness, difference, similarity",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "X ka sambasan ko Y (same as); X ka sambanasan da Y (different from); gase NP alone = like NP (simile); gase ADJ gase NP = as ADJ as NP. Lotero silda, ... = on the other hand.",
+    "flags": []
+  },
+  {
+    "id": "R46",
+    "source": "1.0:G1",
+    "title": "Scope by position",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "Every preverbal operator scopes over everything to its right.",
+    "flags": []
+  },
+  {
+    "id": "R47",
+    "source": "1.0:G2",
+    "title": "si and whether",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "si means only 'if'. 'whether' is ki-oro. 0.8 texts that used si for 'whether' are read under 0.8 rules.",
+    "flags": []
+  },
+  {
+    "id": "R48",
+    "source": "1.0:G3",
+    "title": "Permission vs possibility vs ability",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "povi = ability; nosi = epistemic possibility (might); dagi = permission (may, be allowed). 0.8's double use of nosi is split.",
+    "flags": []
+  },
+  {
+    "id": "R49",
+    "source": "1.0:G4",
+    "title": "Epistemic necessity",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "'must (logically)' = inferential evidential tosu + seye;",
+    "flags": []
+  },
+  {
+    "id": "R50",
+    "source": "1.0:G5",
+    "title": "Intention",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "Intent is the verb chain 'dorvada sidu VERB' (intend to);",
+    "flags": []
+  },
+  {
+    "id": "R51",
+    "source": "1.0:G6",
+    "title": "Counterfactual",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "noma marks a clause as contrary to fact. 'should have' = po noma suvi; 'could have' = po noma povi; 'would have' = po viki (in a consequence clause) or po noma viki.",
+    "flags": []
+  },
+  {
+    "id": "R52",
+    "source": "1.0:G7",
+    "title": "Imminence",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "fututi in the approach slot means 'about to':",
+    "flags": []
+  },
+  {
+    "id": "R53",
+    "source": "1.0:G8",
+    "title": "Continuation",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "loki covers both 'still' and 'keep on'; no separate continuative is added.",
+    "flags": []
+  },
+  {
+    "id": "R54",
+    "source": "1.0:G9",
+    "title": "Quantity limits",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "Before a number or quantity, lusu = at least, mosa = at most, gase = approximately;",
+    "flags": [
+      "UNDERSPECIFIED: lusu/mosa are 'at least/at most' before a number, but the function-word table glosses them 'least'/'most' (superlatives: mosa vanisan). The two uses are not stated together."
+    ]
+  },
+  {
+    "id": "R55",
+    "source": "1.0:G10",
+    "title": "Paired conjunctions",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "oro A oro B = either A or B; ne A ne B = neither A nor B; doli si = only if; yesta si = even if; 'si …, ata doli si …' = if and only if.",
+    "flags": []
+  },
+  {
+    "id": "R56",
+    "source": "1.0:G11",
+    "title": "Despite",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "nevi + noun phrase = despite: nevi li zeldo, despite the resistance. nevi + clause = although.",
+    "flags": []
+  },
+  {
+    "id": "R57",
+    "source": "1.0:G12",
+    "title": "Benefactive",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "vobi + noun phrase = for the benefit of / on behalf of (unchanged), and combines with any operator.",
+    "flags": []
+  },
+  {
+    "id": "R58",
+    "source": "1.0:G13",
+    "title": "ata",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "ata is 'and' only; additive 'also' is tu.",
+    "flags": []
+  },
+  {
+    "id": "R59",
+    "source": "1.0:G14",
+    "title": "Valency operators",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "vaku (make), lesvu (let) and tekvu (prevent) fill the verb slot of the main clause;",
+    "flags": []
+  },
+  {
+    "id": "R60",
+    "source": "1.0:G15",
+    "title": "Negation and operators",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "ne before an operator negates the operator;",
+    "flags": []
+  },
+  {
+    "id": "R61",
+    "source": "1.0:G16",
+    "title": "Exclusions",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "At most one word per slot. hiro/teki do not combine with roni or tefa. tavki excludes fututi (same slot). The effort slot (telvo, vazdi, fesmo) excludes tefa. noma requires a tense, modal or si-clause context.",
+    "flags": []
+  },
+  {
+    "id": "R62",
+    "source": "1.0:G17",
+    "title": "Unexpectedly / previously / simultaneously",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "la vuzinasan = unexpectedly; kroti ola = previously; nayo ola = meanwhile/simultaneously; krotiapo = subsequently. No new words.",
+    "flags": []
+  },
+  {
+    "id": "R63",
+    "source": "1.0:G18",
+    "title": "Topic and focus together",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "A hozi-topic opens the clause; vinto may then mark a focus inside it. hozi and vinto never mark the same constituent.",
+    "flags": []
+  },
+  {
+    "id": "R64",
+    "source": "1.0:G19",
+    "title": "Version gating",
+    "kind": "reading",
+    "status": "live",
+    "statement": "Texts dated before 1.0 are interpreted with the 0.8 lexicon and rules.",
+    "flags": [
+      "DOC: the guide's 'Reading older texts' list (handoff/Liraasa_2_3_Rulings.md) gives replacements that later editions retired: barni → kupa (now ruko), velbi → vugo (now vizu), volda → larbopagobudi (now farvibudi), nalsi → velbivaye (now vizuvaye), zella → velbilavi (now vizulavi), yulve → yelfateyo (now bojidento), nolmu → folnimege (now folniyumli)."
+    ]
+  },
+  {
+    "id": "R65",
+    "source": "1.0:G20",
+    "title": "Lexicalised derivations",
+    "kind": "lexicon",
+    "status": "live",
+    "statement": "tisebitivu (sword), tibivu (rope), kaldopago (prison) and zeldoyo (rebel) are fixed meanings of regular derivations.",
+    "flags": []
+  },
+  {
+    "id": "R66",
+    "source": "1.0:G21",
+    "title": "Closing a relative clause",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "A raho-clause that does not end the sentence is closed by a comma in writing and a pause in speech:",
+    "flags": []
+  },
+  {
+    "id": "R67",
+    "source": "1.0:G22",
+    "title": "Attitude words are clause-final only",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "seye, mufe, poye, pifu and zoke never open a clause.",
+    "flags": []
+  },
+  {
+    "id": "R68",
+    "source": "1.0:G23",
+    "title": "Events taking place",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "venreva (come) with an event as subject means 'take place, happen':",
+    "flags": []
+  },
+  {
+    "id": "R69",
+    "source": "1.2:G24",
+    "title": "Time words: opening or closing",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "A time word or time correlative (eli-krono, deyapressa, fututi, ki-krono's answers…) may open its clause or close it.",
+    "flags": []
+  },
+  {
+    "id": "R70",
+    "source": "1.2:G25",
+    "title": "oro, alone and paired",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "A single oro joins two equal constituents, exactly as ata does:",
+    "flags": []
+  },
+  {
+    "id": "R71",
+    "source": "1.2:G26",
+    "title": "Give-type verbs: where the recipient goes",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "A verb of giving (give, lend, send, owe, sell, pay, bring, teach, show) takes VERB THEME ala RECIPIENT.",
+    "flags": [
+      "UNDERSPECIFIED: the give-type verbs are named in English only (give, lend, send, owe, sell, pay, bring, teach, show); which Liraasa verbs count is decided by the checker's overlay, not the spec."
+    ]
+  },
+  {
+    "id": "R72",
+    "source": "1.2:G27",
+    "title": "Which side of de is the owner",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "In X de Y the owner is Y, read as English \"X of Y\":",
+    "flags": []
+  },
+  {
+    "id": "R73",
+    "source": "1.2:G28",
+    "title": "-ri after a number or quantifier",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "After a number or a quantifier the plural -ri is optional:",
+    "flags": []
+  },
+  {
+    "id": "R74",
+    "source": "1.2:G29",
+    "title": "An adjective standing as a noun",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "An adjective may stand as a noun phrase on its own only after an article or determiner (li, eli, ola, baba):",
+    "flags": []
+  },
+  {
+    "id": "R75",
+    "source": "1.2:G30",
+    "title": "\"About\" is de",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "Liraasa has no word for \"about / concerning\".",
+    "flags": []
+  },
+  {
+    "id": "R76",
+    "source": "1.2:G31",
+    "title": "Commands, address and narrative present",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "A command has no subject: the clause opens at the verb (slot 3 notes), softened with fisa. A person addressed is a noun phrase set off by commas, at the start or end of the clause. In verse, once the time has been set…",
+    "flags": []
+  },
+  {
+    "id": "R77",
+    "source": "1.2:G32",
+    "title": "Possession precedence",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "When de joins two candidates for owner, the owner is decided in this order:",
+    "flags": []
+  },
+  {
+    "id": "R78",
+    "source": "1.2:G33",
+    "title": "yuta: the instrument",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "yuta + noun phrase names the instrument or means of an action:",
+    "flags": []
+  },
+  {
+    "id": "R79",
+    "source": "1.2:G34",
+    "title": "Frequency correlatives",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "A quantifier joined to krono with a hyphen gives a frequency adverbial:",
+    "flags": []
+  },
+  {
+    "id": "R80",
+    "source": "1.2:G35",
+    "title": "Two more curated motion metaphors",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "revo-sabesia (know again: recognize) and yave-donuda (give together: share) join revo-vimova and revo-lirala as curated metaphors. The motion prefixes otherwise stay non-productive.",
+    "flags": []
+  },
+  {
+    "id": "R81",
+    "source": "1.2:G36",
+    "title": "Gender in kinship",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "Kinship words are neutral: purma parent, famli sibling, linu child, purmafamli aunt or uncle. Gender is marked only when it matters, by a compound with minva (female) or tarnu (male) where the lexicon has one (minvali…",
+    "flags": []
+  },
+  {
+    "id": "R82",
+    "source": "2.0:G37",
+    "title": "Two declared one-edit pairs",
+    "kind": "phonology",
+    "status": "live",
+    "statement": "Declare devo / devi and nevi / devi as permitted one-edit pairs.",
+    "flags": []
+  },
+  {
+    "id": "R83",
+    "source": "2.0:G38",
+    "title": "Colour bases in compounds; compounds lexicalised with -ti",
+    "kind": "morphology",
+    "status": "live",
+    "statement": "Colour bases may act as the modifier in a dictionary compound, and a compound may be lexicalised with -ti.",
+    "flags": []
+  },
+  {
+    "id": "R84",
+    "source": "2.0:G39",
+    "title": "Gold and silver as headwords",
+    "kind": "lexicon",
+    "status": "live",
+    "statement": "aurumijuba and vanajuba become dictionary headwords as well as colour words.",
+    "flags": []
+  },
+  {
+    "id": "R85",
+    "source": "2.0:G40",
+    "title": "Image compounds",
+    "kind": "morphology",
+    "status": "live",
+    "statement": "Image compounds: any listed modifier + any listed head is a valid word with a predictable meaning, no 'new' flag needed (see pattern_compounds).",
+    "flags": []
+  },
+  {
+    "id": "R86",
+    "source": "2.0:G41",
+    "title": "Productive derivations",
+    "kind": "morphology",
+    "status": "live",
+    "statement": "Derivations are fully productive with default readings:",
+    "flags": []
+  },
+  {
+    "id": "R87",
+    "source": "2.0:G42",
+    "title": "Nested compounds",
+    "kind": "morphology",
+    "status": "live",
+    "statement": "A compound may take a compound as one of its two parts:",
+    "flags": []
+  },
+  {
+    "id": "R88",
+    "source": "2.0:G43",
+    "title": "Consonant values",
+    "kind": "phonology",
+    "status": "live",
+    "statement": "Vowels are pure, as in Spanish or Italian.",
+    "flags": []
+  },
+  {
+    "id": "R89",
+    "source": "2.0:G44",
+    "title": "Neighbouring vowels in song",
+    "kind": "phonology",
+    "status": "live",
+    "statement": "Every written vowel is its own syllable (0.8:R8), but in singing neighbouring vowels may glide into one note:",
+    "flags": []
+  },
+  {
+    "id": "R90",
+    "source": "2.0:G45",
+    "title": "Foreign names",
+    "kind": "lexicon",
+    "status": "live",
+    "statement": "A foreign name is not translated. It is copied as closely as Liraasa letters allow, choosing among near spellings by how the name sounds and sings.",
+    "flags": []
+  },
+  {
+    "id": "R91",
+    "source": "2.1:G46",
+    "title": "Questions keep every word in place",
+    "kind": "grammar",
+    "status": "superseded by 2.2:G60",
+    "statement": "A question word stands where its answer would stand;",
+    "flags": []
+  },
+  {
+    "id": "R92",
+    "source": "2.1:G47",
+    "title": "Exclamatives",
+    "kind": "grammar",
+    "status": "superseded by 2.2:G61",
+    "statement": "A main clause with a ki-word and no final ki is an exclamation (!).",
+    "flags": []
+  },
+  {
+    "id": "R93",
+    "source": "2.1:G48",
+    "title": "Blessings and wishes",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "pifu with any subject is the blessing form:",
+    "flags": []
+  },
+  {
+    "id": "R94",
+    "source": "2.1:G49",
+    "title": "Once and N times",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "NUMBER-krono = N times (una-krono once, dossa-krono twice);",
+    "flags": []
+  },
+  {
+    "id": "R95",
+    "source": "2.1:G50",
+    "title": "Different-subject complements",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "A second verb with its own subject goes in a fime clause:",
+    "flags": []
+  },
+  {
+    "id": "R96",
+    "source": "2.1:G51",
+    "title": "Evidentials",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "No evidential = no claim about source. Inside fime, the evidential reports the main-clause subject's evidence. In a question it asks the listener's source.",
+    "flags": []
+  },
+  {
+    "id": "R97",
+    "source": "2.1:G52",
+    "title": "Relatives on a prepositional object",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "raho opens the clause; the preposition keeps its place with a resumptive pronoun (ito/itori, saivo/saivori): Li nimu raho maivo po lirala en ito, ka vanisan.",
+    "flags": []
+  },
+  {
+    "id": "R98",
+    "source": "2.1:G53",
+    "title": "Partitive de",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "After a number, quantifier, or superlative, de means of/among and G27/G32 ownership does not apply:",
+    "flags": []
+  },
+  {
+    "id": "R99",
+    "source": "2.1:G54",
+    "title": "Result clauses",
+    "kind": "grammar",
+    "status": "superseded by 2.2:G62",
+    "statement": "ola-modo + ADJ ... fime CLAUSE = so ADJ that: Taivo ke ola-modo vanisan fime li veluri lasola.",
+    "flags": [
+      "UNDERSPECIFIED: superseded by 2.2:G62, but no ruling says whether the superseded construction (ola-modo + ADJ … fime) is now wrong or merely not preferred. The same question applies to 2.1:G46 and 2.1:G47."
+    ]
+  },
+  {
+    "id": "R100",
+    "source": "2.1:G55",
+    "title": "Duration, ago, from now",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "Bare measure after the object = duration;",
+    "flags": [
+      "UNDERSPECIFIED: 'kroti + measure (no article) = ago', but the function-word table's own example of kroti ('before') is 'kroti deya', a bare noun, which reads as 'a day ago' under G55. What counts as a measure is not defined."
+    ]
+  },
+  {
+    "id": "R101",
+    "source": "2.1:G56",
+    "title": "Prohibitions",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "ne + command, no subject; fisa softens; yava ne + verb = let us not.",
+    "flags": [
+      "UNDERSPECIFIED: 'yava ne + verb = let us not', but the clause template has no slot for yava (slot 3 only says hortatives may lack a subject)."
+    ]
+  },
+  {
+    "id": "R102",
+    "source": "2.1:G57",
+    "title": "Sound follows meaning",
+    "kind": "phonology",
+    "status": "live",
+    "statement": "Guidance for new and respelled roots: prefer CVCV; l m n r v for sacred/tender/lyrical; b d g k p t z h for bodily/everyday/harsh; playful b c p for beloved small creatures; related meanings may share a consonant fram…",
+    "flags": []
+  },
+  {
+    "id": "R103",
+    "source": "2.1:G58",
+    "title": "Respelling",
+    "kind": "lexicon",
+    "status": "live",
+    "statement": "A respelled root keeps every meaning and empty slot;",
+    "flags": []
+  },
+  {
+    "id": "R104",
+    "source": "2.1:G59",
+    "title": "Roots replaced by compounds",
+    "kind": "lexicon",
+    "status": "in part superseded by 2.3:G71",
+    "statement": "volda -> larbopagobudi (larbopago + budi);",
+    "flags": []
+  },
+  {
+    "id": "R105",
+    "source": "2.2:G60",
+    "title": "Question-word position",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "A ki-word may open the clause or stay where its answer would stand;",
+    "flags": [
+      "RESOLVED by 2.3:G76 (2026-10-19): a ki-eli / ki-muya + noun question ends in ki; without ki it is an exclamation."
+    ]
+  },
+  {
+    "id": "R106",
+    "source": "2.2:G61",
+    "title": "Exclamatives, narrowed",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "Only ki-modo + adjective, ki-eli + noun and ki-muya + noun make an exclamation, and only when the clause does not end in ki.",
+    "flags": ["See 2.3:G76."]
+  },
+  {
+    "id": "R107",
+    "source": "2.2:G62",
+    "title": "So … that: tonsi + adjective",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "tonsi directly before an adjective means “so”;",
+    "flags": []
+  },
+  {
+    "id": "R108",
+    "source": "2.2:G63",
+    "title": "Hopeful purpose: fime + nosi",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "After a main clause, a fime clause whose verb carries nosi means “in the hope that, so that perhaps”.",
+    "flags": []
+  },
+  {
+    "id": "R109",
+    "source": "2.2:G64",
+    "title": "Headless raho",
+    "kind": "grammar",
+    "status": "in part superseded by 2.3:G74",
+    "statement": "raho with no noun before it means “the one who, that which”, as subject, object or complement.",
+    "flags": []
+  },
+  {
+    "id": "R110",
+    "source": "2.2:G65",
+    "title": "Adjective + sidu + verb",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "An adjective may take sidu + verb for “easy to …, ready to …”.",
+    "flags": []
+  },
+  {
+    "id": "R111",
+    "source": "2.2:G66",
+    "title": "kroti and krotiapo before a clause",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "kroti and krotiapo may introduce a clause:",
+    "flags": []
+  },
+  {
+    "id": "R112",
+    "source": "2.2:G67",
+    "title": "Side nouns as prepositions",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "nazru (behind), zavme (in front of), silda (beside), cemnu (in the middle of), lizma (left of) and rizno (right of) may stand bare before a noun phrase as prepositions, or after a verb as adverbs.",
+    "flags": []
+  },
+  {
+    "id": "R113",
+    "source": "2.2:G68",
+    "title": "The album as reference corpus",
+    "kind": "process",
+    "status": "live",
+    "statement": "The album (twelve songs and the alternate 05) is canon 2.0 text, read with 2.0 spellings under 2.1:G58.",
+    "flags": []
+  },
+  {
+    "id": "R114",
+    "source": "2.3:G69",
+    "title": "Second respelling pass",
+    "kind": "lexicon",
+    "status": "live",
+    "statement": "Thirteen roots are respelled: lenra -> zarku; vanru -> dokra; voho -> kezdo; vabale -> tobra; teyo -> dento; mege -> yumli; kupa -> ruko; jemla -> zimzi; pesbi -> bondo; menha -> gamdo; vugo -> vizu; salye -> bapi; se…",
+    "flags": []
+  },
+  {
+    "id": "R115",
+    "source": "2.3:G70",
+    "title": "Roots for common animals",
+    "kind": "lexicon",
+    "status": "live",
+    "statement": "bumbo (bear), murmu (cow; cattle) and kerku (frog) are new roots. They replace larbopagoregna, maremirulazu and the listed derivation mirunululirayo, which are retired; kerku takes the verb kerkuka, to croak. mirunulu…",
+    "flags": [
+      "INTERACTION with 2.0:G41: G70 retires mirunululirayo, but G41 makes every R+yo a valid word with a default reading, so mirunululirayo stays buildable ('one devoted to river-song'). The ruling does not say whether a retired listed derivation is still a word."
+    ]
+  },
+  {
+    "id": "R116",
+    "source": "2.3:G71",
+    "title": "Wolf",
+    "kind": "lexicon",
+    "status": "live",
+    "statement": "larbopagobudi -> farvibudi (farvi + budi), 'wild dog', read like farvilazu (wild animal);",
+    "flags": []
+  },
+  {
+    "id": "R117",
+    "source": "2.3:G72",
+    "title": "A line that continues: ata",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "ata may open a line or clause that continues the one before, as oro may (1.2:G25):",
+    "flags": []
+  },
+  {
+    "id": "R118",
+    "source": "2.3:G73",
+    "title": "Manner with en and ko",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "en + an abstract noun names the manner or medium of an act:",
+    "flags": []
+  },
+  {
+    "id": "R119",
+    "source": "2.3:G74",
+    "title": "raho opening a question",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "A direct question may open with raho for 'who' or 'what' and ends in ki, as the album asks twice (05:22, 11:12).",
+    "flags": []
+  },
+  {
+    "id": "R120",
+    "source": "2.3:G75",
+    "title": "pagopa takes the motion prefixes",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "pagopa (to go) is a motion verb: the motion prefixes attach to it, as in taro-pagopa, to go across (album 05alt). The prefixes stay a closed list, on the motion verbs and the curated metaphors only (1.2:G35).",
+    "flags": []
+  },
+  {
+    "id": "R121",
+    "source": "2.3:G76",
+    "title": "Questions with ki-eli and ki-muya",
+    "kind": "grammar",
+    "status": "live",
+    "statement": "A question with ki-eli + noun or ki-muya + noun ends in ki;",
+    "flags": []
+  }
+]

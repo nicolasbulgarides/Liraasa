@@ -11,12 +11,21 @@
  *   a yes/no question, or a degree question, with no
  *     final ki                                        error  2.2:G60, G61
  *   a ! clause with a ki-word that cannot exclaim     warn   2.2:G61
- *   raho opening a direct question                    error  2.2:G64
+ *   a question opened by raho with no final ki        error  2.3:G74
+ *   a ki-eli / ki-muya + noun question with no ki     error  2.3:G76
  *   fime followed by a copula or tense                error  fime
  *   sidu between non-verbs (an adjective may take it,
  *     2.2:G65), after or before a copula              error  sidu
- *   a relative clause not closed by a comma           note   1.0:G21
- *   ata opening a line with a clause                  unsettled 1.2:G25
+ *   a relative clause not closed by a comma           note   1.0:G21 (the album omits it)
+ *   ne before the tense; a scope word with nothing after it   error 1.0:G1
+ *   two hozi topics                                   error  1.0:G16
+ *   noma with no tense, modal or si in its line       note   1.0:G16
+ *   vinto on the hozi topic                           error  1.0:G18
+ *   an attitude word opening a clause                 error  1.0:G22
+ *   an untensed sige clause                           warn   0.8:R6
+ *   ata between a subject and its verb ("also")       error  1.0:G13
+ *   a noun phrase out of order; a bare adjective noun error  0.8:G7, 1.2:G29
+ *   ki closing a statement (an embedded question)     error  2.2:G60
  *   a token that fits no slot; a second verb          error  slot
  */
 (function (root) {
@@ -50,7 +59,8 @@
                 ') belongs before the verb, not after it.',
             }),
           );
-        } else if (op.sameSlot) {
+        } else if (op.sameSlot && realVerb) {
+          // with no verb the words are named, not used: a list (album: Yehu, gesu, bisu, vuda —)
           out.push(
             C.diagnostic({
               ...at(op.i),
@@ -137,6 +147,106 @@
         );
       }
 
+      const tenseOps = s.ops.filter((o) => o.name === 'TENSE');
+      const hasOp = (name) => s.ops.some((o) => o.name === name);
+
+      // ne follows the tense: po ne lirala, never ne po lirala (0.8:G2; slot 6 after slot 4)
+      for (const k of s.ne) {
+        const t = tenseOps.find((o) => o.i > k);
+        if (t && !s.verbs.some((v) => v.i < t.i && v.type !== 'nonverb'))
+          out.push(
+            C.diagnostic({
+              ...at(k),
+              severity: 'error',
+              rule: '1.0:G1',
+              message:
+                'ne follows the tense (slot 6 after slot 4): “' +
+                word(t.i) +
+                ' ne …”, never “ne ' +
+                word(t.i) +
+                '” (0.8:G2).',
+            }),
+          );
+      }
+
+      // one topic per clause (slot 2); hozi and vinto never mark the same constituent (1.0:G18)
+      const topics = W.map((w, k) => (w.roles.has('topic') ? k : -1)).filter((k) => k >= 0);
+      if (topics.length > 1)
+        out.push(
+          C.diagnostic({
+            ...at(topics[1]),
+            severity: 'error',
+            rule: '1.0:G16',
+            message:
+              'Two hozi topics in one clause: a clause has at most one (slot 2), except paired contrastive topics in parallel clauses.',
+          }),
+        );
+      for (const k of topics) {
+        const v = W.findIndex((w) => w.lower === 'vinto');
+        if (v >= 0 && v < k && !W.slice(v + 1, k).some((w) => w.comma || C.verbal(w)))
+          out.push(
+            C.diagnostic({
+              ...at(v),
+              severity: 'error',
+              rule: '1.0:G18',
+              message:
+                'vinto and hozi never mark the same constituent: the topic opens the clause, and vinto may then mark a focus inside it.',
+            }),
+          );
+      }
+
+      // noma needs a tense, a modal or a si clause (1.0:G16)
+      const noma = s.ops.find((o) => o.name === 'REALITY');
+      if (
+        noma &&
+        !tenseOps.length &&
+        !hasOp('MODAL') &&
+        !(clause.linker && clause.linker.lower === 'si')
+      )
+        out.push(
+          C.diagnostic({
+            ...at(noma.i),
+            severity: 'note',
+            rule: '1.0:G16',
+            message:
+              'noma needs a tense, a modal or a si clause for its context: po noma suvi lirala, si … po noma …. If the context is in an earlier line, this is fine.',
+          }),
+        );
+
+      // a sige clause never inherits its tense: it is always marked (0.8:R6)
+      if (clause.linker && clause.linker.lower === 'sige' && realVerb && !tenseOps.length)
+        out.push(
+          C.diagnostic({
+            ...at(0),
+            severity: 'warn',
+            rule: '0.8:R6',
+            message:
+              'A sige clause never inherits the tense of its main clause: mark it (sige maivo po venreva …).',
+          }),
+        );
+
+      // a scope word scopes over what follows it, and here nothing does (1.0:G1)
+      const lastW = W[W.length - 1];
+      const after = lastW ? ctx.words[ctx.words.indexOf(lastW) + 1] : undefined;
+      if (
+        lastW &&
+        lastW.roles.has('scope') &&
+        !lastW.roles.has('ne') &&
+        W.length > 1 &&
+        !(after && (after.roles.has('subordinator') || after.roles.has('coordinator')))
+      )
+        out.push(
+          C.diagnostic({
+            ...at(W.length - 1),
+            severity: 'error',
+            rule: '1.0:G1',
+            message:
+              '“' +
+              lastW.text +
+              '” scopes over the constituent right after it, and nothing follows it here: put it before what it marks.',
+          }),
+        );
+
       // frame words: clause-initial, with a comma
       const firstContent = W.findIndex(
         (w, k) =>
@@ -170,6 +280,27 @@
           );
         }
       }
+      // an attitude word never opens a clause, comma or not ('Perhaps, …' is a closing poye: 1.0:G22)
+      const opener = W[firstContent];
+      if (
+        opener &&
+        opener.roles.has('attitude') &&
+        W.slice(firstContent + 1).some((w) => !w.roles.has('attitude')) &&
+        !reported.has(firstContent)
+      )
+        out.push(
+          C.diagnostic({
+            ...at(firstContent),
+            severity: 'error',
+            rule: '1.0:G22',
+            message:
+              '“' +
+              opener.text +
+              '” never opens a clause: an attitude word closes it (“… ' +
+              opener.text.toLowerCase() +
+              '”).',
+          }),
+        );
       for (const k of s.frames) {
         if (
           ctx.cls.frameWords.has(W[k].lower) ||
@@ -288,30 +419,40 @@
         );
       }
 
-      if (W[0] === ctx.words[0] && W[0].lower === 'ata' && s.verbs.length) {
-        out.push(
-          C.diagnostic({
-            ...at(0),
-            severity: 'unsettled',
-            rule: '1.2:G25',
-            message:
-              'ata opens the line. 1.2:G25 lets oro open a clause that continues the line before; no ruling says whether ata may (1.0:G13: ata is “and” only). Canon has line-initial ata only in “Ata X ki?”, “what about X?”.',
-          }),
-        );
-      }
-
       for (const u of s.unplaced) {
+        const w = W[u.i];
+        const prev = W[u.i - 1];
+        const numeral = Boolean(w.reading && w.reading.kind === 'numeral');
+        // a noun phrase out of order (0.8:G7), or an adjective with no article (1.2:G29)
+        const np =
+          prev && prev.roles.has('noun') && (w.roles.has('adj') || numeral)
+            ? 'a' +
+              (numeral ? ' number' : 'n adjective') +
+              ' comes before its noun: “' +
+              word(u.i) +
+              ' ' +
+              prev.text +
+              '”'
+            : prev && prev.roles.has('determiner') && w.roles.has('quantifier')
+              ? 'a quantifier comes before the article: “' + word(u.i) + ' ' + prev.text + '”'
+              : null;
+        const bareAdj = u.i === 0 && w.roles.has('adj') && !w.roles.has('noun');
         out.push(
           C.diagnostic({
             ...at(u.i),
             severity: 'error',
-            rule: 'slot',
-            message:
-              '“' +
-              word(u.i) +
-              '” cannot be placed in the clause template: expected ' +
-              u.expected +
-              '.',
+            rule: np ? '0.8:G7' : bareAdj ? '1.2:G29' : 'slot',
+            message: np
+              ? 'Noun-phrase order: ' + np + ' (0.8:G7).'
+              : bareAdj
+                ? 'An adjective stands as a noun only after an article or determiner: “li ' +
+                  word(u.i).toLowerCase() +
+                  '” (1.2:G29, 2.3:G82).'
+                : '“' +
+                  word(u.i) +
+                  '” cannot be placed in the clause template: expected ' +
+                  u.expected +
+                  '.',
           }),
         );
       }
@@ -331,6 +472,7 @@
 
       // a saying verb with su reads as "on", not "about" (1.2:G30)
       for (const v of s.verbs) {
+        // only directly after the verb: the album writes VERB OBJECT su NP (2.2:G68)
         if (ctx.cls.sayType.has(W[v.i].lower) && W[v.i + 1] && W[v.i + 1].lower === 'su') {
           out.push(
             C.diagnostic({
@@ -360,8 +502,10 @@
       const W = firstClause.clause.words;
       const k = firstClause.clause.linker ? 1 : 0;
       const w = W[k];
+      // existential miyo has no subject: it opens its clause, question or not
       if (
         w &&
+        w.lower !== 'miyo' &&
         (w.roles.has('copula') ||
           (w.roles.has('operator') && ctx.cls.slotOf.get(w.lower).name === 'TENSE'))
       ) {
@@ -378,6 +522,31 @@
         );
       }
     }
+    // ata between a subject and its verb is not "also": that is tu (1.0:G13)
+    ctx.words.forEach((w, k) => {
+      const prev = ctx.words[k - 1];
+      const next = ctx.words[k + 1];
+      if (
+        w.lower === 'ata' &&
+        prev &&
+        next &&
+        (prev.roles.has('pronoun') || prev.roles.has('noun')) &&
+        !C.verbal(prev) &&
+        (C.verbal(next) || next.roles.has('operator') || next.roles.has('ne')) &&
+        !ctx.words.slice(0, k).some((x) => C.verbal(x))
+      )
+        out.push(
+          C.diagnostic({
+            ...C.at(ctx, w),
+            severity: 'error',
+            rule: '1.0:G13',
+            message:
+              'ata is “and” only, joining equals; “also” is tu, before what it marks: “tu ' +
+              prev.text.toLowerCase() +
+              ' …”.',
+          }),
+        );
+    });
     out.push(...questionsInPlace(ctx));
     return out;
   };
@@ -423,12 +592,25 @@
    * A yes/no question ends in ki; a question with a ki-word may end in ki or
    * not, except a degree question (ki-modo + adjective), which must. Only
    * ki-modo + adjective, ki-eli + noun and ki-muya + noun make an
-   * exclamation, and only without a final ki. raho is never a question word.
+   * exclamation, and only without a final ki. raho may open a question that
+   * ends in ki (2.3:G74); a ki-eli / ki-muya + noun question ends in ki (2.3:G76).
    * An embedded question (a ki-word after the main verb) is left alone.
    */
   function questionsInPlace(ctx) {
     const out = [];
     for (const sent of sentences(ctx)) {
+      // ki ends a direct question; a statement, or a question embedded in one, takes none (2.2:G60)
+      const lastWord = sent.words[sent.words.length - 1];
+      if (sent.end && sent.end.text === '.' && lastWord && lastWord.lower === 'ki')
+        out.push(
+          C.diagnostic({
+            ...C.at(ctx, lastWord),
+            severity: 'error',
+            rule: '2.2:G60',
+            message:
+              'ki ends a direct question, and this sentence is a statement: an embedded question never ends in ki. Drop ki, or end with ?.',
+          }),
+        );
       if (!sent.end || (sent.end.text !== '?' && sent.end.text !== '!')) continue;
       const words = sent.words;
       const first = words[0];
@@ -458,20 +640,36 @@
         });
 
       if (sent.end.text === '?') {
+        // raho may open a direct question, which then ends in ki (2.3:G74, the album)
         if (first.lower === 'raho') {
-          out.push(
-            C.diagnostic({
-              ...C.at(ctx, first),
-              severity: 'error',
-              rule: '2.2:G64',
-              message:
-                'raho is never a question word: it opens a relative clause, or stands for “the one who, that which”. Ask with ki-nela (who) or ki-coda (what).',
-              fix: /^R/.test(first.text) ? 'Ki-nela' : 'ki-nela',
-            }),
-          );
+          if (!endsKi)
+            out.push(
+              addKi(
+                '2.3:G74',
+                'A question opened by raho ends in ki: “' +
+                  last.text +
+                  ' ki?”. (ki-nela and ki-coda are the ordinary question words.)',
+              ),
+            );
           continue;
         }
         if (endsKi) continue;
+        // ki-eli / ki-muya + noun without ki is an exclamation: the question ends in ki (2.3:G76)
+        if (
+          mainKis.some(
+            (j) => ['ki-eli', 'ki-muya'].includes(words[j].lower) && exclamative(words, j),
+          )
+        ) {
+          out.push(
+            addKi(
+              '2.3:G76',
+              'A question with ki-eli or ki-muya + noun ends in ki: “' +
+                last.text +
+                ' ki?”. Without ki it is an exclamation, ending in !.',
+            ),
+          );
+          continue;
+        }
         if (mainKis.some((j) => words[j].lower === 'ki-modo' && exclamative(words, j))) {
           out.push(
             addKi(

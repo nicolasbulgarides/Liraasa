@@ -6,9 +6,9 @@ module derives, and what it could not derive.
 
 ## Summary
 
-- 2108 items, 128 grammar concepts, 1269 sentences, 7 texts
-- 1768 skill-graph nodes in 189 units; 431 core roots, 1032 advanced (in no sentence)
-- gaps: 0 errors, 67 warnings, 1095 notes
+- 2108 items, 143 grammar concepts, 1287 sentences, 7 texts
+- 1783 skill-graph nodes in 189 units; 438 core roots, 1025 advanced (in no sentence)
+- gaps: 0 errors, 70 warnings, 1090 notes
 
 ## The first 20 units
 
@@ -17,21 +17,21 @@ module derives, and what it could not derive.
 3. **People**: The clause · pilo (Father) · linu (Child) · nela (Person) · yano (Unity) · famli (sibling) · rivo (Companion; fellow; company) · amor (Love) · sabe (Knowing)
 4. **Body**: Slot 15: object · lore (heart; emotional center) · vimo (sight; faculty of seeing) · manli (hand) · leni (Hearing) · havli (breath) · lomo (embrace) · savali (kiss) · valla (Voice)
 5. **Actions**: Slot 3: subject · donu (giving; transferring ownership) · kele (climb) · venre (arrival) · sulno (waiting) · tovo (possession; having) · relnu (return) · tivro (physical grasp; holding) · lisro (staying)
-6. **Nature**: Slot 4: tense · luno (moon) · velu (star) · sola (sun) · navu (sky) · lavra (bird) · miru (water) · folni (flower) · lamsa (ash)
+6. **Nature**: Slot 4: tense · velu (star) · luno (moon) · sola (sun) · navu (sky) · lavra (bird) · miru (water) · folni (flower) · lamsa (ash)
 7. **Established concepts**: Slot 14: verb · melo (Music) · juba (Gift) · coda (Thing, Concept) · mera (Mercy) · bena (Good, Moral, Helpful) · vera (Truth (not knowledge)) · devo (Faith, Trust,) · trana (Change)
 8. **Time**: Compounds · merno (morning) · nullo (night) · lornu (hour) · vesno (evening) · mambi (moment) · somu (Sleep; slumber; repose) · lavi (Joy; happiness; pleasure) · tali (Work; labor) · compounds on seno (Word; speech)
 9. **Home & objects**: The adjective form · cono (coin) · nimu (home; belonging and refuge, not necessarily a building) · solo (Stone; rock) · domlu (house; dwelling structure) · nulu (Path) · dorbi (Door) · cuza (letter) · tabu (table) · compounds on nela (Person)
 10. **Emotions**: The noun phrase · reso (Laughter; mirth) · vani (Beauty) · gilbu (guilt) · molu (Tenderness) · neme (sorrow; deep grief rather than passing disappointment; woe) · larne (anger; rage; fury) · follu (fear) · sove (peace) · compounds on krono (Time)
-11. **Emotion & song**: Slot 6: negation · milobe (smile) · rale (echo; reflected sound) · yelmi (glitter; bright sparkling) · rizi (lingering; staying beyond a moment) · nuravu (ache; dull pain) · biti (tool; implement) · cunu (count; number) · peli (Play) · compounds on biti (tool; implement)
-12. **Poetic compounds**: -ri: plural (always last) · farulavra (phoenix; firebird) · mernolumi (dawn) · somulira (lullaby) · jubalavi (small unexpected joy) · lorelumi (light in a beloved face) · devorivo (betrothed companion; spouse; husband; wife) · suma (Warmth) · dapa (price; cost; worth in coin) · compounds on miru (water)
-13. **Home, kitchen & labor**: The ascended form · kova (vessel; container) · farudomlu (oven) · manlibumre (dough) · pusa (dust; powder) · desi (want) · cilni (city) · lombi (beginning) · momvi (loss) · compounds on lira (song)
-14. **Nature**: Numbers · renli (rain) · sevu (Sea) · sado (shadow) · samni (seed) · ruhe (storm; tempest) · vaye (Wind) · monru (mountain) · vemi (world) · compounds on kova (vessel; container)
-15. **Mind & dreams**: Slot 16: adjuncts · pensa (Thought; opinion) · noru (dream) · ramu (Memory; remembrance) · lotero (other) · sapu (Eating) · patu (part; piece) · sonbu (sound) · semne (sit) · compounds on sevu (Sea)
-16. **Relationships**: Slot 20: question · pomli (promise) · silro (secret) · yomla (honey made by bees) · palvi (placement) · lalle (opening) · lazu (animal; living member of the animal kingdom) · sasva (safety) · colbi (color) · compounds on lumi (Light)
-17. **Life & states**: Slot 19: attitude · sili (Cold) · solli (Solitude) · nolsa (Newness) · vese (whisper) · divma (system; organized arrangement of interacting parts) · farla (Making) · ralno (fall) · lunopomli (moonlit promise) · compounds on solo (Stone; rock)
-18. **Actions**: -pago: place (mavo+pago blocked; mavopago = society only) · divmabiti (machine) · farvi (freedom; liberty) · helvi (hide) · lanve (law) · lenbu (lie down) · yuge (body) · germa (metal; metallic material) · serna (information; encoded or communicable content) · compounds on nulu (Path)
-19. **Society**: Slot 7: modal · sasvapago (sanctuary; refuge) · vila (village; town) · juse (justice) · vilne (eye; visual organ) · kavbi (carrying) · mudu (sickness; illness) · nami (Food) · pavma (matter; physical substance; material) · compounds on linu (Child)
-20. **Established concepts**: Slot 13: evidential · fama (Family) · opi (Hope) · apok (the End; the final ending of all) · purma (parent; parenthood independent of sex) · miga (relation; bond; connection between things or people) · demro (motion; change of spatial position) · kelesamni (yeast; leaven) · livna (Choice) · compounds on yuge (body)
+11. **Emotion & song**: Slot 6: negation · milobe (smile) · rale (echo; reflected sound) · yelmi (glitter; bright sparkling) · rizi (lingering; staying beyond a moment) · biti (tool; implement) · cunu (count; number) · peli (Play) · farulavra (phoenix; firebird) · compounds on biti (tool; implement)
+12. **Life & states**: -ri: plural (always last) · suma (Warmth) · sili (Cold) · solli (Solitude) · nolsa (Newness) · dapa (price; cost; worth in coin) · kova (vessel; container) · desi (want) · cilni (city) · compounds on miru (water)
+13. **Poetic compounds**: The ascended form · mernolumi (dawn) · somulira (lullaby) · jubalavi (small unexpected joy) · lorelumi (light in a beloved face) · devorivo (betrothed companion; spouse; husband; wife) · lombi (beginning) · momvi (loss) · renli (rain) · compounds on lira (song)
+14. **Mind & dreams**: Numbers · pensa (Thought; opinion) · noru (dream) · ramu (Memory; remembrance) · lotero (other) · sapu (Eating) · patu (part; piece) · sonbu (sound) · semne (sit) · compounds on kova (vessel; container)
+15. **Relationships**: Slot 16: adjuncts · pomli (promise) · silro (secret) · sevu (Sea) · yomla (honey made by bees) · sasva (safety) · palvi (placement) · lalle (opening) · lazu (animal; living member of the animal kingdom) · compounds on sevu (Sea)
+16. **Abstract**: Slot 20: question · colbi (color) · miga (relation; bond; connection between things or people) · dorva (intention; purpose held in mind) · vordu (cause; that which brings something about) · silda (side) · lideo (idea) · lordi (order) · kende (goal; aim; end striven for) · compounds on lumi (Light)
+17. **Actions**: Slot 19: attitude · vese (whisper) · relsi (answer; reply) · divma (system; organized arrangement of interacting parts) · farla (Making) · ralno (fall) · lunopomli (moonlit promise) · farvi (freedom; liberty) · helvi (hide) · compounds on solo (Stone; rock)
+18. **Nature**: -pago: place (mavo+pago blocked; mavopago = society only) · divmabiti (machine) · lanve (law) · sado (shadow) · samni (seed) · farudomlu (oven) · lenbu (lie down) · ruhe (storm; tempest) · vaye (Wind) · compounds on nulu (Path)
+19. **Body**: Slot 7: modal · yuge (body) · vilne (eye; visual organ) · dalu (Touch) · loresonbu (heartbeat; rhythm sounding in the heart) · fasbi (face) · timru (tear) · senru (skin) · namre (head) · compounds on linu (Child)
+20. **Materials & physics**: -yo: agent (on any root or compound, 2.0:G41) · germa (metal; metallic material) · pavma (matter; physical substance; material) · yalmu (energy; capacity to produce physical change) · serna (information; encoded or communicable content) · manlibumre (dough) · monru (mountain) · sasvapago (sanctuary; refuge) · kavbi (carrying) · compounds on yuge (body)
 
 ## Grammar concepts, in teaching order
 
@@ -54,18 +54,18 @@ module derives, and what it could not derive.
 - unit 17: Slot 19: attitude
 - unit 18: -pago: place (mavo+pago blocked; mavopago = society only)
 - unit 19: Slot 7: modal
-- unit 20: Slot 13: evidential
-- unit 21: -yo: agent (on the root)
+- unit 20: -yo: agent (on any root or compound, 2.0:G41)
+- unit 21: Slot 13: evidential
 - unit 22: The ascended adjective form
 - unit 23: The negative form
-- unit 24: Slot 12: iteration
-- unit 25: Motion prefixes
+- unit 24: Motion prefixes
+- unit 25: Slot 12: iteration
 - unit 26: The negative adjective form
 - unit 27: Slot 11: aspect
-- unit 28: -vu: augmentative (on the root)
+- unit 28: -vu: augmentative (on any root or compound, 2.0:G41)
 - unit 29: -ti: diminutive
-- unit 30: Slot 5: reality
-- unit 31: Slot 17: reciprocal
+- unit 30: Slot 17: reciprocal
+- unit 31: Slot 5: reality
 - unit 32: Slot 1: frame
 - unit 33: Slot 18: status
 - unit 34: 1.2:G33 — yuta: the instrument
@@ -85,79 +85,94 @@ module derives, and what it could not derive.
 - unit 48: 2.2:G62 — So … that: tonsi + adjective
 - unit 49: 2.2:G64 — Headless raho
 - unit 50: 2.2:G67 — Side nouns as prepositions
-- unit 51: 2.2:G63 — Hopeful purpose: fime + nosi
-- unit 52: 2.2:G65 — Adjective + sidu + verb
-- unit 53: 2.2:G66 — kroti and krotiapo before a clause
-- unit 54: 0.8:G1 — Demonstratives as pronouns
-- unit 55: 0.8:G2 — Negation scope
-- unit 56: 0.8:G3 — Ellipsis
-- unit 57: 0.8:G4 — Quotation and embedded questions
-- unit 58: 0.8:G5 — Relative time in subordinate clauses
-- unit 59: 0.8:G6 — Nominalization
-- unit 60: 0.8:G7 — Noun-phrase order
-- unit 61: 0.8:G8 — Sameness, difference, similarity
-- unit 62: 0.8:R10 — Sacred register
-- unit 63: 0.8:R12 — -ti on names
-- unit 64: 0.8:R4 — Frame tense
-- unit 65: 0.8:R5 — Article omission
-- unit 66: 0.8:R6 — sige
-- unit 67: 0.8:R7 — Yesterday evening
-- unit 68: 0.8:R8 — Double -a verbs
-- unit 69: 0.8:R9 — ki with certainty
-- unit 70: 1.0:G1 — Scope by position
-- unit 71: 1.0:G10 — Paired conjunctions
-- unit 72: 1.2:G25 — oro, alone and paired
-- unit 73: 1.0:G11 — Despite
-- unit 74: 1.0:G12 — Benefactive
-- unit 75: 1.0:G13 — ata
-- unit 76: 1.0:G14 — Valency operators
-- unit 77: 1.0:G15 — Negation and operators
-- unit 78: 1.0:G16 — Exclusions
-- unit 79: 1.0:G17 — Unexpectedly / previously / simultaneously
-- unit 80: 1.0:G18 — Topic and focus together
-- unit 81: 1.0:G2 — si and whether
-- unit 82: 1.0:G20 — Lexicalised derivations
-- unit 83: 1.0:G21 — Closing a relative clause
-- unit 84: 1.0:G22 — Attitude words are clause-final only
-- unit 85: 1.0:G23 — Events taking place
-- unit 86: 1.0:G3 — Permission vs possibility vs ability
-- unit 87: 1.0:G4 — Epistemic necessity
-- unit 88: 1.0:G5 — Intention
-- unit 89: 1.0:G6 — Counterfactual
-- unit 90: 1.0:G7 — Imminence
-- unit 91: 1.2:G27 — Which side of de is the owner
-- unit 92: 1.2:G28 — -ri after a number or quantifier
-- unit 93: 1.2:G32 — Possession precedence
-- unit 94: 1.2:G29 — An adjective standing as a noun
-- unit 95: 1.0:G8 — Continuation
-- unit 96: 1.0:G9 — Quantity limits
-- unit 97: 2.0:G37 — Two declared one-edit pairs
-- unit 98: 2.0:G38 — Colour bases in compounds; compounds lexicalised with -ti
-- unit 99: 2.0:G39 — Gold and silver as headwords
-- unit 100: 2.0:G40 — Image compounds
-- unit 101: 2.0:G41 — Productive derivations
-- unit 102: 2.0:G42 — Nested compounds
-- unit 103: 2.0:G43 — Consonant values
-- unit 104: 2.0:G44 — Neighbouring vowels in song
-- unit 105: 2.0:G45 — Foreign names
-- unit 106: 2.1:G46 — Questions keep every word in place
-- unit 107: 2.1:G47 — Exclamatives
-- unit 108: 2.1:G48 — Blessings and wishes
-- unit 109: 2.1:G49 — Once and N times
-- unit 110: 2.1:G50 — Different-subject complements
-- unit 111: 2.1:G51 — Evidentials
-- unit 112: 2.1:G52 — Relatives on a prepositional object
-- unit 113: 2.1:G53 — Partitive de
-- unit 114: 2.1:G54 — Result clauses
-- unit 115: 2.1:G55 — Duration, ago, from now
-- unit 116: 2.1:G56 — Prohibitions
-- unit 117: 2.1:G57 — Sound follows meaning
-- unit 118: 2.1:G58 — Respelling
-- unit 119: 2.1:G59 — Roots replaced by compounds
-- unit 120: 2.2:G68 — The album as reference corpus
-- unit 121: 2.3:G69 — Second respelling pass
-- unit 122: 2.3:G70 — Roots for common animals
-- unit 123: 2.3:G71 — Wolf
+- unit 51: 2.3:G73 — Manner with en and ko
+- unit 52: 2.2:G63 — Hopeful purpose: fime + nosi
+- unit 53: 2.2:G65 — Adjective + sidu + verb
+- unit 54: 2.2:G66 — kroti and krotiapo before a clause
+- unit 55: 2.3:G74 — raho opening a question
+- unit 56: 2.3:G75 — pagopa takes the motion prefixes
+- unit 57: 2.3:G76 — Questions with ki-eli and ki-muya
+- unit 58: 2.3:G77 — Embedded yes/no questions
+- unit 59: 2.3:G80 — About, after hearing and knowing
+- unit 60: 0.8:G1 — Demonstratives as pronouns
+- unit 61: 0.8:G2 — Negation scope
+- unit 62: 0.8:G3 — Ellipsis
+- unit 63: 0.8:G4 — Quotation and embedded questions
+- unit 64: 2.3:G83 — Quotations and past exclamations
+- unit 65: 0.8:G5 — Relative time in subordinate clauses
+- unit 66: 0.8:G6 — Nominalization
+- unit 67: 0.8:G7 — Noun-phrase order
+- unit 68: 0.8:G8 — Sameness, difference, similarity
+- unit 69: 0.8:R10 — Sacred register
+- unit 70: 0.8:R12 — -ti on names
+- unit 71: 0.8:R4 — Frame tense
+- unit 72: 0.8:R5 — Article omission
+- unit 73: 0.8:R6 — sige
+- unit 74: 0.8:R7 — Yesterday evening
+- unit 75: 0.8:R8 — Double -a verbs
+- unit 76: 0.8:R9 — ki with certainty
+- unit 77: 1.0:G1 — Scope by position
+- unit 78: 1.0:G10 — Paired conjunctions
+- unit 79: 1.2:G25 — oro, alone and paired
+- unit 80: 1.0:G11 — Despite
+- unit 81: 1.0:G12 — Benefactive
+- unit 82: 1.0:G13 — ata
+- unit 83: 2.3:G72 — A line that continues: ata
+- unit 84: 1.0:G14 — Valency operators
+- unit 85: 1.0:G15 — Negation and operators
+- unit 86: 1.0:G16 — Exclusions
+- unit 87: 1.0:G17 — Unexpectedly / previously / simultaneously
+- unit 88: 1.0:G18 — Topic and focus together
+- unit 89: 1.0:G2 — si and whether
+- unit 90: 1.0:G20 — Lexicalised derivations
+- unit 91: 1.0:G21 — Closing a relative clause
+- unit 92: 1.0:G22 — Attitude words are clause-final only
+- unit 93: 1.0:G23 — Events taking place
+- unit 94: 1.0:G3 — Permission vs possibility vs ability
+- unit 95: 1.0:G4 — Epistemic necessity
+- unit 96: 1.0:G5 — Intention
+- unit 97: 1.0:G6 — Counterfactual
+- unit 98: 1.0:G7 — Imminence
+- unit 99: 1.2:G27 — Which side of de is the owner
+- unit 100: 1.2:G28 — -ri after a number or quantifier
+- unit 101: 1.2:G32 — Possession precedence
+- unit 102: 1.2:G29 — An adjective standing as a noun
+- unit 103: 2.3:G82 — An adjective noun keeps its article
+- unit 104: 1.0:G8 — Continuation
+- unit 105: 1.0:G9 — Quantity limits
+- unit 106: 2.3:G81 — lusu and mosa
+- unit 107: 2.0:G37 — Two declared one-edit pairs
+- unit 108: 2.0:G38 — Colour bases in compounds; compounds lexicalised with -ti
+- unit 109: 2.0:G39 — Gold and silver as headwords
+- unit 110: 2.0:G40 — Image compounds
+- unit 111: 2.0:G41 — Productive derivations
+- unit 112: 2.0:G42 — Nested compounds
+- unit 113: 2.0:G43 — Consonant values
+- unit 114: 2.0:G44 — Neighbouring vowels in song
+- unit 115: 2.0:G45 — Foreign names
+- unit 116: 2.1:G46 — Questions keep every word in place
+- unit 117: 2.1:G47 — Exclamatives
+- unit 118: 2.1:G48 — Blessings and wishes
+- unit 119: 2.1:G49 — Once and N times
+- unit 120: 2.1:G50 — Different-subject complements
+- unit 121: 2.1:G51 — Evidentials
+- unit 122: 2.1:G52 — Relatives on a prepositional object
+- unit 123: 2.1:G53 — Partitive de
+- unit 124: 2.1:G54 — Result clauses
+- unit 125: 2.1:G55 — Duration, ago, from now
+- unit 126: 2.3:G79 — Time phrases
+- unit 127: 2.1:G56 — Prohibitions
+- unit 128: 2.3:G78 — Opening and closing a clause
+- unit 129: 2.1:G57 — Sound follows meaning
+- unit 130: 2.1:G58 — Respelling
+- unit 131: 2.1:G59 — Roots replaced by compounds
+- unit 132: 2.2:G68 — The album as reference corpus
+- unit 133: 2.3:G69 — Second respelling pass
+- unit 134: 2.3:G70 — Roots for common animals
+- unit 135: 2.3:G71 — Wolf
+- unit 136: 2.3:G84 — Superseded rulings
+- unit 137: 2.3:G85 — A retired listed derivation
+- unit 138: 2.3:G86 — Ascended forms and the sacred
 
 ## Candidate examples for rulings without sentences
 
@@ -165,7 +180,7 @@ Existing sentences that use the words each ruling names. Confirm the ones that
 truly illustrate it by copying their keys into `rulingExamples` in
 `data/lessons/overrides.json`; the ruling then gets exercises.
 
-47 of 65 rulings have candidates.
+47 of 68 rulings have candidates.
 
 ### 1.0:G1 — Scope by position
 
@@ -176,8 +191,8 @@ truly illustrate it by copying their keys into `rulingExamples` in
 - `ex:e389e880` si taivo lirala, maivo rilura — if you sing, I dance [see note]
 - `ex:9a3edd0a` Si taivo lirala, maivo rilura. — If you sing, I dance.
 - `ex:1adf4463` Poye. Si nuna-nela resora ko maivo. — Perhaps. If no one laughs with me.
-- `ex:b28d4f1a` Maivo masuma ki-oro taivo futu relnura. — I'm asking whether you will come back.
-- `ex:439eb99a` Si maivo masuma taivo, taivo viki relsira. — If I asked, you would answer.
+- `ex:b28d4f1a` Maivo masuma ki-oro taivo futu relnura. — I ask whether you will return.
+- `ex:c80c6867` Maivo ne sabesia ki-oro li lazu nurminia. — I do not know whether the animal is conscious.
 
 ### 1.0:G3 — Permission vs possibility vs ability
 
@@ -281,7 +296,7 @@ truly illustrate it by copying their keys into `rulingExamples` in
 - `ex:d0cc29e6` Maivo po ne lirala. — I did not sing.
 - `ex:0d80ee6b` Saivo po vazdi hirnaha. — They managed to escape.
 - `ex:8dd062ab` Maivo po ne ka benasan. — I was not good by nature.
-- `ex:e6a0dcbc` Maivo po ne senosia "gilbu". — I didn't say "guilt".
+- `ex:8a3169d1` Nara li devi po ne lenila. — But the goddess did not listen.
 
 ### 1.0:G16 — Exclusions
 
@@ -332,9 +347,9 @@ truly illustrate it by copying their keys into `rulingExamples` in
 
 - `ex:97ad71c2` Li foji kroti li mudu. Pilo po senosia: "Maivo desida sidu lenila Aviya." Maivo po kavbika pilo ala li cilni. Tressa lornuri. Pilo po semnesia vofa li lumibitiri, en li sado. Taivo po hiro lirala. Pilo po fesmo ne timruta. — The winter before the illness. Father said: "I want to hear Aviya." I carried father to the city. Three hours. Father sat far from the lamps, in the shadow. You began to sing. Father tried not to weep, and could not.
 - `ex:f361e483` Kroti ola, maivo po bumreba. — Earlier (before that), I baked.
+- `ex:f5f860b1` Maivo po venreva kroti dossa deya. — I came two days ago.
 - `ex:1780397a` Kroti poka deyari, Velina po relnura. — A few days ago, Velina came back.
 - `ex:16d2e7e1` Toda li bumre po farufa. — All the bread burned.
-- `ex:c9e3fcc1` Li sumamelli po tranata. — The temperature changed.
 
 ### 0.8:R4 — Frame tense
 
@@ -495,11 +510,11 @@ truly illustrate it by copying their keys into `rulingExamples` in
 
 ### 2.1:G47 — Exclamatives
 
+- `ex:6c3bc21e` Li nullo po ka ki-modo vanisan! — How beautiful the night was!
 - `ex:4232f10c` taivo lirala ki-modo ki? — how do you sing?
 - `ex:9d73ba86` Li tisebiti ka ki-pago ki? — Where is the knife?
 - `ex:691720f6` Li cemopaturi ka ki-coda ki? — What are the ingredients?
 - `ex:c73ab7b8` Li bumre ka bumre, taivo sabesia ki? — Bread is bread, you know?
-- `ex:c63fb823` Eli ka li krono. Eli nullo ka li doli krono. — This is the time. This night is the only time.
 
 ### 2.1:G48 — Blessings and wishes
 
@@ -527,7 +542,7 @@ truly illustrate it by copying their keys into `rulingExamples` in
 - `ex:049631f9` Maivo po sabesia fime taivo lirala. — I knew that you sang.
 - `ex:f589ee75` Fime taivo po relnura ka baba juba. — That you came back is a gift.
 - `ex:91f20673` Saivo senosia fime li noru ka vanisan. — They say that the dream is beautiful.
-- `ex:700cfdab` Maivo ne sabesia fime li lazu nurminia. — I do not know whether the animal is conscious.
+- `ex:d7208f77` Maivo pensapa fime li nurmi ka nosvosan. — I think that consciousness is possible.
 
 ### 2.1:G52 — Relatives on a prepositional object
 
@@ -563,11 +578,11 @@ truly illustrate it by copying their keys into `rulingExamples` in
 
 ### 2.1:G56 — Prohibitions
 
+- `ex:94c8c826` Yava ne lirala. — Let us not sing.
 - `ex:e8db5be1` Yava lomola! Ne? Kepi? Eliri famliri ka solosan. — Let's embrace! No? No? These siblings are stony.
 - `ex:7cea1529` Ne pagopa! — Don't go!
 - `ex:9391c534` Ne lirala! — Do not sing!
 - `ex:a82257aa` Ne, ne, ne. — No, no, no.
-- `ex:04fcdd0a` Ne eli. Ola. — Not this one. That one.
 
 ### 2.1:G57 — Sound follows meaning
 
@@ -603,6 +618,18 @@ truly illustrate it by copying their keys into `rulingExamples` in
 - `ex:289f170d` Li sornimodo de li kezu po tranata. — The land's climate changed.
 - `ex:cde2ca78` Li loterobiotino de li kezu ka benasan seye. — The land's biological diversity is good, certainly.
 
+### 2.3:G84 — Superseded rulings
+
+- no sentence uses the words this ruling names: it needs a new example
+
+### 2.3:G85 — A retired listed derivation
+
+- no sentence uses the words this ruling names: it needs a new example
+
+### 2.3:G86 — Ascended forms and the sacred
+
+- no sentence uses the words this ruling names: it needs a new example
+
 
 ## Gaps
 
@@ -611,7 +638,7 @@ truly illustrate it by copying their keys into `rulingExamples` in
 - `text:song_I_vorbalira`: 5 "# EN:" block(s) in data/corpus/songs_2_3/song_I_vorbalira.txt read as Liraasa, not English: probably lines mislabelled in extraction. They are taught as Liraasa lines with no translation.
 - `text:song_VI_kicoda`: 10 "# EN:" block(s) in data/corpus/songs_2_3/song_VI_kicoda.txt read as Liraasa, not English: probably lines mislabelled in extraction. They are taught as Liraasa lines with no translation.
 
-### warn: concept-no-examples (65)
+### warn: concept-no-examples (68)
 
 - `rule:1.0:G1`: 1.0:G1 — Scope by position: no example or corpus sentence exercises it, so no exercise can be drawn. Add examples to the data (a ruling's own examples are linked to it directly).
 - `rule:1.0:G2`: 1.0:G2 — si and whether: no example or corpus sentence exercises it, so no exercise can be drawn. Add examples to the data (a ruling's own examples are linked to it directly).
@@ -678,8 +705,11 @@ truly illustrate it by copying their keys into `rulingExamples` in
 - `rule:2.3:G69`: 2.3:G69 — Second respelling pass: no example or corpus sentence exercises it, so no exercise can be drawn. Add examples to the data (a ruling's own examples are linked to it directly).
 - `rule:2.3:G70`: 2.3:G70 — Roots for common animals: no example or corpus sentence exercises it, so no exercise can be drawn. Add examples to the data (a ruling's own examples are linked to it directly).
 - `rule:2.3:G71`: 2.3:G71 — Wolf: no example or corpus sentence exercises it, so no exercise can be drawn. Add examples to the data (a ruling's own examples are linked to it directly).
+- `rule:2.3:G84`: 2.3:G84 — Superseded rulings: no example or corpus sentence exercises it, so no exercise can be drawn. Add examples to the data (a ruling's own examples are linked to it directly).
+- `rule:2.3:G85`: 2.3:G85 — A retired listed derivation: no example or corpus sentence exercises it, so no exercise can be drawn. Add examples to the data (a ruling's own examples are linked to it directly).
+- `rule:2.3:G86`: 2.3:G86 — Ascended forms and the sacred: no example or corpus sentence exercises it, so no exercise can be drawn. Add examples to the data (a ruling's own examples are linked to it directly).
 
-### note: ruling-unlinked (14)
+### note: ruling-unlinked (16)
 
 - `2.0:G37`: 2.0:G37 (“Two declared one-edit pairs”) mentions no slot, closed word or suffix, so it is taught after the clause. Link it with rulingLinks to place it.
 - `2.0:G39`: 2.0:G39 (“Gold and silver as headwords”) mentions no slot, closed word or suffix, so it is taught after the clause. Link it with rulingLinks to place it.
@@ -695,6 +725,8 @@ truly illustrate it by copying their keys into `rulingExamples` in
 - `2.2:G68`: 2.2:G68 (“The album as reference corpus”) mentions no slot, closed word or suffix, so it is taught after the clause. Link it with rulingLinks to place it.
 - `2.3:G70`: 2.3:G70 (“Roots for common animals”) mentions no slot, closed word or suffix, so it is taught after the clause. Link it with rulingLinks to place it.
 - `2.3:G71`: 2.3:G71 (“Wolf”) mentions no slot, closed word or suffix, so it is taught after the clause. Link it with rulingLinks to place it.
+- `2.3:G77`: 2.3:G77 (“Embedded yes/no questions”) mentions no slot, closed word or suffix, so it is taught after the clause. Link it with rulingLinks to place it.
+- `2.3:G84`: 2.3:G84 (“Superseded rulings”) mentions no slot, closed word or suffix, so it is taught after the clause. Link it with rulingLinks to place it.
 
 ### note: corpus-english-not-line-aligned (6)
 
@@ -714,7 +746,7 @@ truly illustrate it by copying their keys into `rulingExamples` in
 - `text:song_VI_kicoda`: 48 of 48 lines in data/corpus/songs_2_3/song_VI_kicoda.txt have no English, so comprehension questions cannot be drawn from them.
 - `text:song_V_sulbaasa`: 45 of 45 lines in data/corpus/songs_2_3/song_V_sulbaasa.txt have no English, so comprehension questions cannot be drawn from them.
 
-### note: root-no-examples (1069)
+### note: root-no-examples (1062)
 
 - `lx_amorpeli_0010`: amorpeli (“flirtation; playful courtship”) is in no example or text: it gets a card and form drills, but no sentence exercises.
 - `lx_amorserbu_0015`: amorserbu (“courtship; purposeful wooing”) is in no example or text: it gets a card and form drills, but no sentence exercises.
@@ -776,5 +808,5 @@ truly illustrate it by copying their keys into `rulingExamples` in
 - `lx_furo_0144`: furo (“fruit”) is in no example or text: it gets a card and form drills, but no sentence exercises.
 - `lx_ganrenulu_0149`: ganrenulu (“garden path; a walkway through cultivated greenery”) is in no example or text: it gets a card and form drills, but no sentence exercises.
 - `lx_gonbi_0151`: gonbi (“guest”) is in no example or text: it gets a card and form drills, but no sentence exercises.
-- … and 1009 more
+- … and 1002 more
 

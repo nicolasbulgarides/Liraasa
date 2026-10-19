@@ -727,6 +727,26 @@ export function applyChangesets(
           ];
           break;
         }
+        case 'edit_text': {
+          const path = op.entry.replace(/^text:/, '').split('.');
+          const key = path.pop() ?? '';
+          let node: unknown = lex;
+          for (const k of path)
+            node = Array.isArray(node)
+              ? (node as unknown[])[Number(k)]
+              : (node as Record<string, unknown> | undefined)?.[k];
+          const obj = node as Record<string, unknown> | undefined;
+          if (
+            !op.entry.startsWith('text:') ||
+            path[0]?.startsWith('rulings_') === true ||
+            obj?.[key] !== op.from ||
+            op.to === null
+          ) {
+            throw new ApplyError(`${op.entry}: expected "${String(op.from)}"`);
+          }
+          obj[key] = op.to;
+          break;
+        }
         case 'retire_root':
         case 'merge_entries':
         case 'split_entry':

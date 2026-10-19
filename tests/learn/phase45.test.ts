@@ -388,7 +388,10 @@ describe('a new edition', () => {
         (JSON.parse(readFileSync(path, 'utf8')) as { ops: { op: string; entry: string }[] }).ops,
     ).filter((x) => x.op.startsWith('respell') || x.op === 'recompose_compound'))
       expect(ids.has(o.entry), o.entry).toBe(true);
-    expect(d.rulesAdded.map((r) => r.id)).toEqual(['rule:2.3:G69', 'rule:2.3:G70', 'rule:2.3:G71']);
+    // G69–G71 from the patch; G72–G86 from the grammar audit's decisions
+    expect(d.rulesAdded.map((r) => r.id)).toEqual(
+      Array.from({ length: 18 }, (_, i) => `rule:2.3:G${String(69 + i)}`),
+    );
   });
 });
 

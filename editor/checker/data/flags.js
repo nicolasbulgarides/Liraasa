@@ -100,7 +100,8 @@ window.LIRAASA_FLAGS = {
  },
  "subordinators_taking_a_noun_phrase": {
   "_about": "Subordinators that may also take a bare noun phrase instead of a clause.",
-  "nevi": "1.0:G11 nevi + noun phrase = despite"
+  "nevi": "1.0:G11 nevi + noun phrase = despite",
+  "tuni": "2.3:G79 tuni + a noun phrase of time = until (tuni merno)"
  },
  "correlative_role": {
   "_about": "What a correlative does in the clause, by its concept (the guide: place, time, manner and cause are adverbials; thing and person are nouns).",
@@ -176,8 +177,12 @@ window.LIRAASA_FLAGS = {
   "manlibumrema": "to knead",
   "yanoya": "to unite; to join"
  },
+ "motion_verbs": {
+  "_about": "Verbs the motion prefixes (va- du- taro- yave- revo-) attach to beyond the curated metaphors. The lexicon lists no motion verbs; each is here because a ruling names it.",
+  "pagopa": "2.3:G75"
+ },
  "noun_class": {
-  "_about": "Noun classes for the preposition rules. person, animal, thing, substance, place (anywhere or anywhen one can be in: night, darkness, shadow, a dream), abstract (qualities, feelings, sounds, a voice: the manner or means of an act). Reviewed 2026-10-17; the first 50 are the most frequent nouns in canon, the songs and the fixture, the rest are their near neighbours in canon after en and ko.",
+  "_about": "Noun classes for the preposition rules. person, animal, thing, tool (an implement: with it, the tool of an act takes yuta; 2026-10-19 grammar audit), substance, place (anywhere or anywhen one can be in: night, darkness, shadow, a dream), abstract (qualities, feelings, sounds, a voice: the manner or means of an act). Reviewed 2026-10-17; the first 50 are the most frequent nouns in canon, the songs and the fixture, the rest are their near neighbours in canon after en and ko.",
   "pilo": "person",
   "mare": "person",
   "linu": "person",
@@ -272,7 +277,16 @@ window.LIRAASA_FLAGS = {
   "opi": "abstract",
   "corvi": "abstract",
   "lomo": "abstract",
-  "savali": "abstract"
+  "savali": "abstract",
+  "biti": "tool",
+  "kemye": "tool",
+  "lumibiti": "tool",
+  "sarbibiti": "tool",
+  "tisebiti": "tool",
+  "hatabiti": "tool",
+  "tibidento": "tool",
+  "zayubiti": "tool",
+  "kelebiti": "tool"
  }
 }
 ;

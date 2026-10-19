@@ -27,6 +27,8 @@ interface Reading {
   issue: string;
   standard_form: string | null;
   note: string | null;
+  /** A ruling that made the reading's construction grammar (2.3:G74). */
+  resolved_by?: string;
 }
 
 interface CurrentLine {
@@ -77,6 +79,9 @@ function titleHtml(title: string): string {
 }
 
 function readingNote(r: Reading): string {
+  // a construction a later ruling made grammar: the line is a model again
+  if (r.resolved_by !== undefined)
+    return `<p class="v-n album-reading"><strong>${esc(r.id)}</strong> was an album reading (${esc(r.issue)}); the construction is grammar since ${md(`[[${r.resolved_by}]]`)}.</p>`;
   const standard =
     r.standard_form === null
       ? 'Standard form: the author is to supply it.'
@@ -105,11 +110,12 @@ export function albumPart(index: Index, n: string): string {
 </section>`;
     })
     .join('\n');
-  const certain = readings.filter((r) => r.confidence === 'certain').length;
+  const active = readings.filter((r) => r.resolved_by === undefined);
+  const certain = active.filter((r) => r.confidence === 'certain').length;
   return part(
     n,
     'The album',
-    `Twelve songs and the alternate 05, as recorded: canon 2.0 text, read with 2.0 spellings [[2.2:G68]] [[2.1:G58]]. A construction the album uses consistently is grammar. A word respelled since 2.0 is glossed through the migration table, and the line’s current spelling is noted beneath (“Read today”). The ${String(readings.length)} lines that depart from the grammar once are **album readings** (AR-…): each keeps its meaning and is listed with its standard form, ${String(certain)} certain and ${String(readings.length - certain)} for the author to confirm. They are not models for new text. Glosses use the labels of Part 7. No English is given yet.`,
+    `Twelve songs and the alternate 05, as recorded: canon 2.0 text, read with 2.0 spellings [[2.2:G68]] [[2.1:G58]]. A construction the album uses consistently is grammar. A word respelled since 2.0 is glossed through the migration table, and the line’s current spelling is noted beneath (“Read today”). The ${String(active.length)} lines that depart from the grammar once are **album readings** (AR-…): each keeps its meaning and is listed with its standard form, ${String(certain)} certain and ${String(active.length - certain)} for the author to confirm.${readings.length > active.length ? ` ${String(readings.length - active.length)} more became grammar [[2.3:G74]].` : ''} They are not models for new text. Glosses use the labels of Part 7. No English is given yet.`,
     tracks,
   );
 }

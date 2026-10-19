@@ -1,0 +1,42 @@
+{
+  "0.8:G4": [
+    "CONTRADICTION: the clause left standing after 2.2:G60's partial supersession says embedded yes/no questions use si (whether). 1.0:G2 says si means only 'if' and 'whether' is ki-oro, and 2.2:G60 itself says embedded yes/no questions use ki-oro. The supersession marked only the wh-word clause."
+  ],
+  "morphology.compounding": [
+    "STALE: the lexicon's text says components must be active 1.0 headwords. 2.0:G38 (colour bases as modifiers), 2.0:G42 (nested compounds) and every compound built on a post-1.0 headword contradict it."
+  ],
+  "morphology.derivation_defaults": [
+    "STALE: morphology.suffixes still says -yo and -vu attach 'on the root'; 2.0:G41 says derivations attach to any root or compound."
+  ],
+  "0.8:R6": [
+    "UNDERSPECIFIED: tense inheritance is listed for fime, raho, kube, nayo, kasa, kopisa, tuni (and kroti/krotiapo by 2.2:G66). kureli (as soon as), sina (unless), si (if) and nevi (although) are not listed either way."
+  ],
+  "2.2:G60": [
+    "RESOLVED by 2.3:G76 (2026-10-19): a ki-eli / ki-muya + noun question ends in ki; without ki it is an exclamation."
+  ],
+  "2.2:G61": ["See 2.3:G76."],
+  "2.1:G54": [
+    "UNDERSPECIFIED: superseded by 2.2:G62, but no ruling says whether the superseded construction (ola-modo + ADJ … fime) is now wrong or merely not preferred. The same question applies to 2.1:G46 and 2.1:G47."
+  ],
+  "2.1:G56": [
+    "UNDERSPECIFIED: 'yava ne + verb = let us not', but the clause template has no slot for yava (slot 3 only says hortatives may lack a subject)."
+  ],
+  "1.2:G26": [
+    "UNDERSPECIFIED: the give-type verbs are named in English only (give, lend, send, owe, sell, pay, bring, teach, show); which Liraasa verbs count is decided by the checker's overlay, not the spec."
+  ],
+  "2.1:G55": [
+    "UNDERSPECIFIED: 'kroti + measure (no article) = ago', but the function-word table's own example of kroti ('before') is 'kroti deya', a bare noun, which reads as 'a day ago' under G55. What counts as a measure is not defined."
+  ],
+  "0.8:R5": [
+    "INTERACTION with 1.2:G29: li may be omitted when the referent is obvious, but an adjective may stand as a noun only after a determiner. Whether li can be omitted before an adjective used as a noun is not said."
+  ],
+  "2.3:G70": [
+    "INTERACTION with 2.0:G41: G70 retires mirunululirayo, but G41 makes every R+yo a valid word with a default reading, so mirunululirayo stays buildable ('one devoted to river-song'). The ruling does not say whether a retired listed derivation is still a word."
+  ],
+  "1.0:G9": [
+    "UNDERSPECIFIED: lusu/mosa are 'at least/at most' before a number, but the function-word table glosses them 'least'/'most' (superlatives: mosa vanisan). The two uses are not stated together."
+  ],
+  "1.0:G19": [
+    "DOC: the guide's 'Reading older texts' list (handoff/Liraasa_2_3_Rulings.md) gives replacements that later editions retired: barni → kupa (now ruko), velbi → vugo (now vizu), volda → larbopagobudi (now farvibudi), nalsi → velbivaye (now vizuvaye), zella → velbilavi (now vizulavi), yulve → yelfateyo (now bojidento), nolmu → folnimege (now folniyumli)."
+  ]
+}

@@ -46,6 +46,7 @@ def recorded(changesets):
     rec["retired_derivations"] = {}  # spelling -> id of the headword that replaces it
     rec["added_roots"] = {}  # id -> spelling
     rec["archived"] = []  # archive_text ops, in order
+    rec["texts"] = []  # edit_text ops: a stale text of a section, corrected
     for cs in changesets:
         payload = {h["id"]: h for h in cs.get("headwords", [])}
         for op in cs["ops"]:
@@ -60,6 +61,8 @@ def recorded(changesets):
                 rec["retired_derivations"][op["from"].rsplit(": ", 1)[1].replace(" + -", "")] = op["to"]
             elif o == "archive_text":
                 rec["archived"].append(op)
+            elif o == "edit_text":
+                rec["texts"].append(op)
             elif o == "add_root" and op["entry"] in payload:
                 rec["added_roots"][op["entry"]] = op["to"]
     return rec
@@ -88,6 +91,14 @@ def expected_from(prev, data, rec, mapping):
         want["headwords"].append(copy.deepcopy(now[hid]))
     for word in rec["retired_derivations"]:
         want["morphology"]["lexicalised_derivations"].pop(word, None)
+    # stale texts corrected: the field reads the op's new text
+    for op in rec["texts"]:
+        *path, key = op["entry"][len("text:"):].split(".")
+        node = want
+        for k in path:
+            node = node[int(k)] if isinstance(node, list) else node[k]
+        assert node[key] == op["from"], op["entry"]
+        node[key] = op["to"]
     # texts archived: the field reads its new text, and the archive keeps the old whole
     heads = {h["id"]: h for h in want["headwords"]}
     for op in rec["archived"]:
@@ -213,10 +224,10 @@ def main():
         "count": len(det25),
         "details": det25[:60],
         "details_total": len(det25),
-        "note": "Compared against %s; changesets: %s; %d spellings respelled or retired; %d entries moved (%d rebuilt or made roots); %d roots added; %d derivations retired; %d rulings superseded, kept as ruled; %d texts archived." % (
+        "note": "Compared against %s; changesets: %s; %d spellings respelled or retired; %d entries moved (%d rebuilt or made roots); %d roots added; %d derivations retired; %d rulings superseded, kept as ruled; %d texts archived; %d stale texts corrected." % (
             os.path.basename(a.previous), ", ".join(c["id"] for c in changesets if c["edition"] == version),
             len(mapping), len(rec["respelled"]), len(rec["parts"]), len(rec["added_roots"]),
-            len(rec["retired_derivations"]), len(rec["superseded"]), len(rec["archived"])),
+            len(rec["retired_derivations"]), len(rec["superseded"]), len(rec["archived"]), len(rec["texts"])),
         "executed_against": "validate_2_3.py",
     })
 

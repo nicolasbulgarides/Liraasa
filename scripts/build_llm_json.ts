@@ -112,6 +112,8 @@ interface AlbumReadingRow {
   confidence: string;
   issue: string;
   standard_form: string | null;
+  /** A ruling that made the reading's construction grammar (2.3:G74): the line is a model again. */
+  resolved_by?: string;
 }
 
 /**
@@ -138,7 +140,9 @@ function albumSection(): Record<string, unknown> {
         track: s.track,
         title: s.title,
         lines: s.lines.map((l) => {
-          const r = l.reading === undefined ? undefined : readings.get(l.reading);
+          const found = l.reading === undefined ? undefined : readings.get(l.reading);
+          // a reading a later ruling made grammar is no longer a departure
+          const r = found?.resolved_by === undefined ? found : undefined;
           return {
             liraasa: l.recorded,
             ...(l.current === null ? {} : { current: l.current }),

@@ -104,7 +104,14 @@ export type ChangeOp =
    * field reads now. The field must read `from`, or already read `to` because
    * a respelling earlier in the build moved it (ADR-0019).
    */
-  | 'archive_text';
+  | 'archive_text'
+  /**
+   * A stale text in a lexicon section, corrected (the grammar audit, 2.3).
+   * `entry` is `text:` + a dotted path (`text:morphology.compounding`,
+   * `text:numbers.rules.39.Construction rule`); `from` must be what the field
+   * reads. Rulings are never edited this way: they are superseded.
+   */
+  | 'edit_text';
 
 /**
  * One recorded change.

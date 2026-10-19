@@ -44,7 +44,17 @@ is 22 PASS, 3 WARN (`npm run validate:2.3`); findings and the author's answers
 in `review/2_3_integration.md`. The answers are a hand-written review changeset
 (`…-lexicon-2-3-review.json`). Its op `archive_text` moves text that no longer
 holds into **`legacy.archived_text`**, kept whole with its reason, rather than
-deleting it. 2.2 is frozen as 2.3's baseline.
+deleting it. A third changeset (`…-lexicon-2-3-audit.json`) records the author's
+answers to the grammar audit (`review/audit-report.md`, kit in `tests/audit/`):
+the album's consistent usage is grammar (2.3:G72 line-initial `ata`, G73 manner
+with `en`/`ko`, G74 `raho` opening a question, superseding that clause of
+2.2:G64, G75 `taro-pagopa`), and G76–G86 on the editor's judgement (G77 `ki-oro`
+for "whether", superseding that clause of 0.8:G4; G78–G83 clause edges, time
+phrases, quotations; G84 superseded rulings stay grammatical; G85 retired
+derivations stay buildable). Its op **`edit_text`** rewrites a stale text field
+(never a ruling). The checker and composer fixes from the audit are listed in
+the report; rerun the kit after any change to `editor/`.
+2.2 is frozen as 2.3's baseline.
 
 **2.2** (ADR-0018): `data/lexicon/liraasa_2_2.json`, built from
 frozen 2.1 by `data/changes/2026-10-19-lexicon-2-2.json` via

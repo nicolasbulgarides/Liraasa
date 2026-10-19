@@ -2,7 +2,10 @@
  *
  *   senses(token)       every English sense its reading carries, for gloss drift
  *   backTranslate(line) a literal word-by-word gloss line, with the markers in
- *                       data/checker/english.json (PAST, FUT, NOT, Q …)
+ *                       data/checker/english.json (PAST, FUT, NOT, Q …); numbers
+ *                       by value, tonsi + adjective as "so" (2.2:G62), kroti +
+ *                       a measure as "ago" (2.1:G55), a side noun before a noun
+ *                       phrase as its preposition (2.2:G67)
  *
  * Mechanical by design: it judges nothing, and shows the first sense of each
  * gloss so drift between the Liraasa and the intended English is visible.
@@ -19,8 +22,47 @@
       .replace(/^[^:]*:\s*/, '')
       .trim()
       .toLowerCase();
-    return sense.replace(/^to (be )?/, '').trim() || sense;
+    // a gloss's own note after a question mark is not a sense: "who? preferred" → who
+    const plain = sense.replace(/\?.*$/, '').trim() || sense;
+    return plain.replace(/^to (be )?/, '').trim() || plain;
   };
+
+  /** What the next word is, from its reading (a token has no clause roles here). */
+  const readsAs = (t, test) => Boolean(t && t.reading && (t.reading.readings || []).some(test));
+  const isAdjective = (t) =>
+    readsAs(t, (x) => x.role === 'a' || x.role === 'aa' || x.role === 'na');
+  const opensNounPhrase = (t) =>
+    readsAs(
+      t,
+      (x) =>
+        /^n|^an$/.test(x.role || '') ||
+        /pronoun/.test(x.cls || '') ||
+        /article|demonstrative|quantit|determiner/.test(x.use || ''),
+    ) || Boolean(t && t.reading && t.reading.kind === 'numeral');
+  const isMeasure = (t) =>
+    Boolean(t && t.reading && t.reading.kind === 'numeral') ||
+    readsAs(t, (x) => /quantifier/.test(x.cls || '') || /quantit/.test(x.use || ''));
+
+  /** A numeral's value: una-ne → 1st, dozira-una → 21, dossa-mililumi → 2000. */
+  function numberOf(ix, word) {
+    const suffix = ix.numerals.ordinalSuffix;
+    const ordinal = Boolean(suffix && word.endsWith(suffix));
+    const body = ordinal ? word.slice(0, -suffix.length) : word;
+    let total = 0;
+    let group = 0;
+    for (const part of body.split('-')) {
+      const v = ix.numerals.words.get(part);
+      if (typeof v !== 'number') return null;
+      if (v >= 1000) {
+        total += (group || 1) * v;
+        group = 0;
+      } else group += v;
+    }
+    const n = total + group;
+    if (!ordinal) return String(n);
+    const end = n % 100 >= 11 && n % 100 <= 13 ? 'th' : ['th', 'st', 'nd', 'rd'][n % 10] || 'th';
+    return String(n) + end;
+  }
 
   /** Every gloss text a token's reading carries. */
   function glossTexts(ix, token) {
@@ -73,7 +115,19 @@
       } else if (en.markers[t.lower]) g = en.markers[t.lower];
       else if (!r) g = '?' + t.text + '?';
       else if (r.kind === 'name') g = t.text;
-      else if (r.kind === 'numeral') g = '#' + t.lower;
+      else if (r.kind === 'numeral') g = numberOf(ix, t.lower) || '#' + t.lower;
+      // tonsi before an adjective is "so" (2.2:G62); clause-initial it stays "therefore"
+      else if (t.lower === 'tonsi' && isAdjective(next)) g = 'so';
+      // kroti / krotiapo before a measure: ago, from now (2.1:G55)
+      else if ((t.lower === 'kroti' || t.lower === 'krotiapo') && isMeasure(next))
+        g = t.lower === 'kroti' ? 'ago:' : 'from-now:';
+      // a side noun before a noun phrase is a preposition (2.2:G67)
+      else if (
+        ix.flags.side_nouns_as_prepositions &&
+        typeof ix.flags.side_nouns_as_prepositions[t.lower] === 'string' &&
+        opensNounPhrase(next)
+      )
+        g = ix.flags.side_nouns_as_prepositions[t.lower];
       else if (r.kind === 'legacy') g = '(old ' + t.lower + ')';
       else if (r.kind === 'derivation')
         g = first(r.gloss) || first((ix.bound.get(r.suffix) || {}).gloss) + ':' + r.base;

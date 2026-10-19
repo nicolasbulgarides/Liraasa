@@ -68,10 +68,9 @@ describe('questions (2.2:G60, superseding 2.1:G46)', () => {
     expect(has('Taivo sabesia ki-pago maivo pagopa?', '2.2:G60')).toBe(true);
   });
 
-  it('raho is never a question word (2.2:G64, album AR-16)', () => {
-    const [d] = errors('raho povi sabesia baba kasi polvasan sove ki?');
-    expect(d?.rule).toBe('2.2:G64');
-    expect(d?.fix).toBe('ki-nela');
+  it('raho may open a question that ends in ki (2.3:G74 supersedes that clause of 2.2:G64)', () => {
+    expect(errors('raho povi sabesia baba kasi polvasan sove ki?')).toEqual([]);
+    expect(errors('raho povi sabesia baba kasi polvasan sove?')[0]?.rule).toBe('2.3:G74');
     expect(serious('ki-nela povi sabesia baba kasi polvasan sove ki?')).toEqual([]);
     expect(serious('Maivo lirala raho taivo amora.')).toEqual([]); // headless raho
   });

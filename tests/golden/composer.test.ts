@@ -165,7 +165,8 @@ describe('Song of Time', () => {
     // a question keeps statement order and adds ki
     [
       'Or am I the cold one who holds your maternal heart?',
-      'oro maivo ke li sili one raho tivrota taivo de maresan lore ki?',
+      // "one" after "the cold" is no word in Liraasa (1.2:G29)
+      'oro maivo ke li sili raho tivrota taivo de maresan lore ki?',
     ],
   ])('%s', (en, liraasa) => {
     expect(text(en)).toBe(liraasa);
@@ -182,13 +183,16 @@ describe('Song of Time', () => {
   it('shows a word with only near matches as a gap, never a guess', () => {
     for (const [en, word] of [
       ['At the beginning of time I heard your song.', 'at'],
-      ['I heard your voice once.', 'once'],
       ['The stars wrote about the fire.', 'about'],
     ] as const) {
       const row = rows(compose(en)).find((c) => c.en === word);
       expect(row?.role === 'gap' || row?.chosen === -1, en).toBe(true);
       expect(text(en)).not.toMatch(/\b(hema|kenvi|pago)\b/);
     }
+  });
+
+  it('says once as una-krono (2.1:G49)', () => {
+    expect(text('I heard your voice once.')).toBe('maivo po lenila taivo de valla una-krono.');
   });
 
   it('leaves the checker nothing but those gaps', () => {

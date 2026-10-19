@@ -94,8 +94,10 @@ describe('the rulings', () => {
   const g = (lex: RawLexicon, key: string, id: string): Record<string, unknown> | undefined =>
     (lex[key] as { id: string }[]).find((r) => r.id === id) as Record<string, unknown>;
 
-  it('adds G69–G71 and keeps every earlier ruling, renumbering none', () => {
-    expect((v23.rulings_2_3 ?? []).map((r) => r.id)).toEqual(['G69', 'G70', 'G71']);
+  it('adds G69–G86 and keeps every earlier ruling, renumbering none', () => {
+    expect((v23.rulings_2_3 ?? []).map((r) => r.id)).toEqual(
+      Array.from({ length: 18 }, (_, i) => `G${String(69 + i)}`),
+    );
     for (const key of Object.keys(v22).filter((k) => k.startsWith('rulings_')))
       expect(
         (v23[key] as { id: string }[]).map((r) => r.id),

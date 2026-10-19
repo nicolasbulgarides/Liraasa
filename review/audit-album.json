@@ -1,0 +1,21 @@
+{
+ "lines": 275,
+ "lines_with_findings": 1,
+ "findings_total": 1,
+ "on_album_readings": 1,
+ "by_rule": {
+  "sidu": 1
+ },
+ "findings": [
+  {
+   "track": "08",
+   "line": 15,
+   "text": "si maivo ke sidu daigoda, maivo kopi daigoda en saivo de varori.",
+   "reading": "AR-10",
+   "severity": "error",
+   "rule": "sidu",
+   "token": "sidu",
+   "message": "sidu never follows a copula: “ke sidu” is not grammar (whether it can mean “destined to” is an open question). Use a modal (musi) or an adjective + sidu (2.2:G65)."
+  }
+ ]
+}

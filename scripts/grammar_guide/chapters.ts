@@ -539,6 +539,11 @@ export function clausePart(index: Index): string {
   );
   const G64A = example(lex, '2.2:G64', 'Maivo lirala raho taivo amora.');
   const G64B = example(lex, '2.2:G64', 'saivo po farufasbifa kube saivo ramura raho maivo po ke.');
+  const G72 = example(lex, '2.3:G72', 'ata maivo lemula saivo de sizosan lumi.');
+  const G73 = example(lex, '2.3:G73', 'saivo po senosia en baba melosan valla.');
+  const G74 = example(lex, '2.3:G74', 'raho povi sabesia baba kasi polvasan sove ki?');
+  const G75 = example(lex, '2.3:G75', 'taivo ne taro-pagopa, nara lalfola hupi li lelde,');
+  const G76 = example(lex, '2.3:G76', 'Taivo amora ki-eli lira ki?');
   const G65 = example(lex, '2.2:G65', 'ito ke ruli levasan sidu zeldoza trana.');
   const G66 = example(lex, '2.2:G66', 'kroti maivo lesvu taivo ke li sevusan ruhe.');
   const G48A = quoted(lex, '2.1:G48', 'Li lumi tivrota taivo pifu.');
@@ -628,9 +633,12 @@ ${ul([
   `A relative on a prepositional object: \`raho\` opens the clause and the preposition keeps its place, followed by a resumptive pronoun (\`ito\`/\`itori\`, \`saivo\`/\`saivori\`): \`${G52}\` ${gl(G52, 'The home in which I sang is beautiful.', '2.1:G52')} [[2.1:G52]]`,
   'Evidentials: with none, the sentence makes no claim about its source. Inside `fime`, the evidential reports the main-clause subject’s evidence; in a question it asks for the listener’s source [[2.1:G51]].',
   `**Hopeful purpose.** After a main clause, a \`fime\` clause whose verb carries \`nosi\` means “in the hope that, so that perhaps”; \`kopisa\` stays the plain purpose linker: \`${G63}\` ${gl(G63, 'I will give it a tool of floating, so that perhaps you may sit with me in the breeze.', '2.2:G63')} [[2.2:G63]]`,
-  `**Headless relatives.** With no noun before it, \`raho\` is “the one who, that which”, as subject, object or complement: \`${G64A}\` ${gl(G64A, 'I sing what you love.', '2.2:G64')} \`${G64B}\` ${gl(G64B, 'She blushed when she remembered what I had been.', '2.2:G64')} \`raho\` is never a question word: a question uses \`ki-nela\` or \`ki-coda\` [[2.2:G64]].`,
+  `**Headless relatives.** With no noun before it, \`raho\` is “the one who, that which”, as subject, object or complement: \`${G64A}\` ${gl(G64A, 'I sing what you love.', '2.2:G64')} \`${G64B}\` ${gl(G64B, 'She blushed when she remembered what I had been.', '2.2:G64')} A direct question may also open with \`raho\`, “who, what”, and then ends in \`ki\`, as the album asks: \`${G74}\` ${gl(G74, 'Who can know a more powerful peace?', '2.3:G74')} \`ki-nela\` and \`ki-coda\` stay the ordinary question words [[2.3:G74]].`,
   `**Easy to …, ready to ….** An adjective may take \`sidu\` + verb; the verb’s object is what the adjective describes: \`${G65}\` ${gl(G65, 'It is very easy to resist change.', '2.2:G65')} [[2.2:G65]]`,
   `**Before and after a clause.** \`kroti\` and \`krotiapo\` may open a clause, “before …” and “after …”; the clause inherits tense as after \`kube\` [[0.8:R6]]: \`${G66}\` ${gl(G66, 'Before I let you be the ocean storm.', '2.2:G66')} Before a measure they keep [[2.1:G55]]; before \`li\` + a noun, their older meaning [[2.2:G66]].`,
+  `**A line that continues.** \`ata\` may open a line that carries on from the one before, “And …”, as \`oro\` may: \`${G72}\` ${gl(G72, 'And I learn his shimmering light.', '2.3:G72')} [[2.3:G72]] [[1.2:G25]]`,
+  `**Manner.** \`en\` + an abstract noun names the manner or medium of an act, and \`ko\` + a feeling the spirit in which it is done (\`ko amor\`, with love): \`${G73}\` ${gl(G73, 'She spoke in a musical voice.', '2.3:G73')} The tool or means stays \`yuta\`; with an abstract noun, choose by meaning [[2.3:G73]] [[1.2:G33]].`,
+  `**Going across.** \`pagopa\`, to go, takes the motion prefixes: \`${G75}\` ${gl(G75, 'you do not go across, but float above the edge,', '2.3:G75')} [[2.3:G75]]`,
 ])}
 ${h3('Questions, exclamations, wishes')}
 ${p('A **yes/no question** keeps statement order and must end in `ki`. A `ki-` word **may open the clause or stay where its answer would stand**; the album fronts it in most questions. A question with a `ki-` word may end in `ki` or not. An embedded wh-question may also front its `ki-` word and never ends in `ki`; an embedded yes/no question uses `ki-oro` [[2.2:G60]] [[1.0:G2]].')}
@@ -644,7 +652,7 @@ ${examples([
 ])}
 ${p('2.2 supersedes the 2.1 rulings on question-word position, exclamatives and “so … that”, and the in-place clause of the 0.8 ruling on embedded questions. They are kept as they were ruled, not deleted; follow the newer ones [[2.2:G60]] [[2.2:G61]] [[2.2:G62]].')}
 ${ul([
-  `**Exclamations.** Only \`ki-modo\` + adjective (how …!), \`ki-eli\` + noun (what a …!) and \`ki-muya\` + noun (so many …!) make an exclamation, and only when the clause does not end in \`ki\`: \`${G61A}\` ${gl(G61A, 'How beautiful the night is!', '2.2:G61')} \`${G61B}\` ${gl(G61B, 'What a night!', '2.2:G61')} Any other \`ki-\` clause without \`ki\` is a question, and a degree question must end in \`ki\`: \`${G61C}\` ${gl(G61C, 'How beautiful is the night?', '2.2:G61')} [[2.2:G61]]`,
+  `**Exclamations.** Only \`ki-modo\` + adjective (how …!), \`ki-eli\` + noun (what a …!) and \`ki-muya\` + noun (so many …!) make an exclamation, and only when the clause does not end in \`ki\`: \`${G61A}\` ${gl(G61A, 'How beautiful the night is!', '2.2:G61')} \`${G61B}\` ${gl(G61B, 'What a night!', '2.2:G61')} Any other \`ki-\` clause without \`ki\` is a question, and a degree question must end in \`ki\`: \`${G61C}\` ${gl(G61C, 'How beautiful is the night?', '2.2:G61')} [[2.2:G61]] So must a question with \`ki-eli\` or \`ki-muya\` + a noun, which without \`ki\` is an exclamation: \`${G76}\` ${gl(G76, 'Which song do you love?', '2.3:G76')} [[2.3:G76]]`,
   `**So … that.** \`tonsi\` directly before an adjective is “so”, and a \`fime\` clause after it gives the result: \`${G62A}\` ${gl(G62A, 'Are you so brave that you would kiss me?', '2.2:G62')} \`${G62B}\` ${gl(G62B, 'If I am so lucky, I will not rise.', '2.2:G62')} Opening its clause, \`tonsi\` keeps its meaning “therefore” [[2.2:G62]].`,
   `**Blessings and wishes.** \`pifu\` with any subject is the blessing form: \`${G48A}\` ${gl(G48A, 'May the Light hold you.', '2.1:G48')} With \`noma\`, it is “if only”: \`${G48B}\` ${gl(G48B, 'If only you had stayed.', '2.1:G48')} [[2.1:G48]]`,
   '**Prohibitions.** `ne` + a command, with no subject; `fisa` softens it; `yava ne` + verb is “let us not”: `Ne senobakosia maivo!` Don’t interrupt me! [[2.1:G56]]',
@@ -1070,7 +1078,9 @@ export const RULES: readonly (readonly [string, string, string])[] = [
     'a ki- clause without ki is an exclamation only with ki-modo + adjective, ki-eli + noun or ki-muya + noun; otherwise a question',
     '2.2:G61',
   ],
-  ['error', 'raho used as a question word: a question takes ki-nela or ki-coda', '2.2:G64'],
+  ['error', 'a question opened by raho that does not end in ki', '2.3:G74'],
+  ['error', 'a ki-eli or ki-muya + noun question that does not end in ki', '2.3:G76'],
+  ['note', 'ko or en + an abstract noun: the manner, or, if it is the means, yuta', '2.3:G73'],
   ['warn', 'a saying-verb + su read as “about”', '1.2:G30'],
   ['warn', 'English gloss is passive but the line has no gome', 'passive'],
   ['note', '-na direction; hema as hesitation', ''],
@@ -1085,6 +1095,7 @@ export const OPEN_QUESTIONS: readonly string[] = [
   '**“To + verb” in general:** `sidu` (same subject), `fime` (a different subject, 2.1:G50) and adjective + `sidu` (2.2:G65) cover the known cases; the general case remains open.',
   '`ke sidu` VERB **as “destined to”** (album 08): hold until a second use.',
   '**Relatives with a gap for time or place** (album 01: `krono raho` …): hold until a second use.',
+  '**Tense inheritance after** `kureli`, `sina`, `si` **and** `nevi`: 0.8:R6 lists the clauses that inherit tense, and these four are not listed either way (grammar audit, 2026-10-19: left open).',
 ];
 
 export function openQuestionsPart(no: string): string {

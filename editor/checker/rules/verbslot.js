@@ -119,7 +119,9 @@
           }),
         );
       }
-      for (const { np } of s.secondNoun) {
+      // ne A ne B with no verb: the paired negation as a fragment (1.0:G10, 0.8:G3)
+      const neitherNor = s.ne.length >= 2 && !s.verbs.some((v) => v.type !== 'nonverb');
+      for (const { np } of neitherNor ? [] : s.secondNoun) {
         const w = W[np.head];
         const v = verbFormOf(ctx.ix, w);
         out.push(

@@ -151,6 +151,10 @@
       takesNounPhrase: new Set(
         Object.keys((flags && flags.subordinators_taking_a_noun_phrase) || {}),
       ),
+      // verbs the motion prefixes attach to beyond the curated metaphors (2.3:G75)
+      motionVerbs: new Set(
+        Object.keys((flags && flags.motion_verbs) || {}).filter((k) => !k.startsWith('_')),
+      ),
     };
   }
 

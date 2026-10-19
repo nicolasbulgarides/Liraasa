@@ -236,8 +236,6 @@
   function build(ref, extra) {
     if (!ref || !ref.dictionary) fail('the reference (window.LIRAASA_REF) is not loaded');
     const dict = parseDictionary(ref);
-    // the rule-built forms of listed headwords, before the pattern's nouns join them
-    const listed = new Map(dict.headwords);
     addImageCompounds(ref, dict);
     const small = parseSmallWords(ref);
     const morph = parseMorphology(ref);
@@ -245,9 +243,11 @@
     numerals.times = parseTimes(ref);
     const order = ref.how_to_translate.how_a_reader_parses_one_word.join(' ');
     const longer = /longer than (\d+)/.exec(order);
-    // every form a headword could have by rule, listed or not (for the unused-slot warning)
+    // every form a headword or an image compound could have by rule, listed or not (for the
+    // unused-slot warning): an image compound is a word (2.0:G40), so its empty forms are
+    // unused slots, not unknown words (amorliraa, 0.8:R8)
     const possible = new Map();
-    for (const entry of listed.values()) {
+    for (const entry of dict.headwords.values()) {
       for (const [i, s] of morph.slots.entries()) {
         const code = Object.keys(ref.dictionary.role_codes)[i];
         const form = s.suffix === null ? verbOf(morph.verbRule, entry.root) : entry.root + s.suffix;

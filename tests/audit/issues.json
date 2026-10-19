@@ -1,0 +1,738 @@
+{
+  "about": "The audit's findings, classified. CODE BUG: the spec is clear and the editor is wrong. SPEC BUG: the spec contradicts itself or is stale. SPEC GAP: the author must decide (options offered, none picked). LEXICON ISSUE: the data. Evidence cites the case numbers of review/audit-results.json (#n), the myth (M n) and the album (track:line).",
+  "issues": [
+    {
+      "id": "C01",
+      "cls": "CODE BUG",
+      "sev": "high",
+      "area": "composer",
+      "title": "English progressive becomes copula + noun",
+      "rules": ["grammar.clause_template"],
+      "where": "editor/index.html MARKERS (≈2099) has no progressive entry; rewriteEnglish (2509)",
+      "evidence": "#3 'We were singing.' → 'maivori po ke lira.' (were + song); #123 'Where are you going?' → 'ki-pago ke taivo [going] ki?'; M4 'he was singing about the sea' → 'po ke lira'; M6 'Who is singing?' → 'po ke lira'.",
+      "fix": "Add a marker: BE + V-ing → roni before the verb (past: po roni). Never read -ing after a form of 'be' as a noun when the stem has a verb slot.",
+      "status": "FIXED 2026-10-19: be + V-ing is roni before the verb (po roni in the past), with no copula; ne stays before it."
+    },
+    {
+      "id": "C02",
+      "cls": "CODE BUG",
+      "sev": "high",
+      "area": "composer",
+      "title": "Number words are never composed",
+      "rules": ["1.2:G28", "1.0:G9", "2.1:G49", "2.1:G53", "2.1:G55"],
+      "where": "editor/index.html buildIndex (1854): addEn(n, …) indexes each numeral by its digit string ('2'), so the English word 'two' never matches",
+      "evidence": "#28, #66, #90, #93, #117-119: [two], [three], [one]; M3 [one], M10 [three], M12 [seven], M16 [hundred].",
+      "fix": "Index the English number words (one … ten, hundred, thousand, and compounds) against numbers.lookup_0_999.",
+      "status": "FIXED 2026-10-19: number words 0-99, hundred, ordinals (una-ne …), once/twice, N times (N-krono) and \"how many times\" (ki-muya-krono)."
+    },
+    {
+      "id": "C03",
+      "cls": "CODE BUG",
+      "sev": "high",
+      "area": "composer",
+      "title": "Listed derivations are not in the composer's index",
+      "rules": ["1.0:G20", "2.0:G41"],
+      "where": "editor/index.html buildIndex (1854) indexes headwords and closed classes only, not morphology.lexicalised_derivations",
+      "evidence": "#81 'The rebel left.' → 'li zeldo [left] po' (zeldo = resistance, not zeldoyo); M4, M9, M11, M13, M14 [singer] (lirayo); M12 [soldiers] [swords] (dokrayo, tisebitivu).",
+      "fix": "Index each listed derivation's gloss, as a headword slot is indexed.",
+      "status": "FIXED 2026-10-19: the listed derivations are indexed by their glosses (singer = lirayo)."
+    },
+    {
+      "id": "C04",
+      "cls": "CODE BUG",
+      "sev": "high",
+      "area": "composer",
+      "title": "'want X to do' uses sidu, which 2.1:G50 forbids",
+      "rules": ["2.1:G50"],
+      "where": "editor/index.html rewriteEnglish (2509): every 'to' + verb becomes to+verb → sidu",
+      "evidence": "#114 'I want you to stay.' → 'maivo desida taivo sidu lisrola.' The editor's own checker flags this draft (error, sidu).",
+      "fix": "When a noun phrase or object pronoun stands between the verb and 'to', write fime + that subject + the verb (Maivo desida fime taivo lisrola).",
+      "status": "FIXED 2026-10-19: \"want X to V\" opens a fime clause with its own subject (2.1:G50)."
+    },
+    {
+      "id": "C05",
+      "cls": "CODE BUG",
+      "sev": "medium",
+      "area": "composer",
+      "title": "Counterfactuals lose noma; 'if only' becomes 'only if'",
+      "rules": ["1.0:G6", "2.1:G48"],
+      "where": "editor/index.html MARKERS (≈2099): no entry for should/could/would have or the pluperfect of a si-clause",
+      "evidence": "#62-63 'I should have sung.' → 'maivo [have] suvi lirala.'; M13 'If the moon had not warned him, the singer would have died.' → 'si li luno po ne nengania saivo, li [singer] [have] [died] viki.' (a real condition, not a counterfactual); #111 'If only you had stayed.' → 'si doli taivo po lisrola.' (only if).",
+      "fix": "Markers: should have → po noma suvi; could have → po noma povi; would have → po viki; had + participle in an if-clause → po noma; 'if only' → noma … pifu.",
+      "status": "FIXED 2026-10-19: should have = po noma suvi, could have = po noma povi, would have = po viki; a pluperfect if-clause takes noma; \"if only\" = noma … pifu."
+    },
+    {
+      "id": "C06",
+      "cls": "CODE BUG",
+      "sev": "medium",
+      "area": "composer",
+      "title": "Blessings ('May …') become permission",
+      "rules": ["2.1:G48"],
+      "where": "editor/index.html MARKERS: 'may' → dagi only",
+      "evidence": "#110 'May the light hold you.' → 'li lumi dagi tivrota taivo.'; M20 'May their song protect you always.' → '… dagi sasvasia taivo toda-krono.' (is allowed to protect).",
+      "fix": "Sentence-initial 'May' + subject + verb → the clause with a final pifu (2.1:G48); keep dagi for 'may' after the subject.",
+      "status": "FIXED 2026-10-19: a sentence-initial \"May\" + subject is a blessing with a final pifu (2.1:G48)."
+    },
+    {
+      "id": "C07",
+      "cls": "CODE BUG",
+      "sev": "medium",
+      "area": "composer",
+      "title": "Questions with 'who' use raho; headless 'what' uses ki-coda",
+      "rules": ["2.2:G64"],
+      "where": "editor/index.html composeClause (2593) / lookupEnglish (2416)",
+      "evidence": "M6 '\"Who is singing?\"' → 'raho po ke lira masuma li devi.'; #132 'I sing what you love.' → 'maivo lirala ki-coda taivo amor.' (should be raho, and the verb amora).",
+      "fix": "In a question, who → ki-nela and what → ki-coda; in a statement, 'what' meaning 'that which' → raho (2.2:G64).",
+      "status": "FIXED 2026-10-19: a question-initial who is ki-nela, which + noun is ki-eli; a headless \"what\" in a statement is raho (except after knowing and asking verbs)."
+    },
+    {
+      "id": "C08",
+      "cls": "CODE BUG",
+      "sev": "medium",
+      "area": "composer",
+      "title": "Exclamations are composed as statements",
+      "rules": ["2.2:G61"],
+      "where": "editor/index.html composeSentence/draftText (2837, ≈2933): only '?' is kept; '!' becomes '.'; no exclamative template",
+      "evidence": "#127 'How beautiful the night is!' → 'ki-modo vanisan li nullo ke.'; #128 'What a night!' → 'ki-coda baba nullo.'; M17 → 'ki-coda baba vanisan nullo ito po ke.'; #120 'Do not go!' → 'ne pagopa.'",
+      "fix": "Keep '!'; 'How ADJ …!' → SUBJECT COPULA ki-modo ADJ!; 'What a N!' → ki-eli N!",
+      "status": "FIXED 2026-10-19: \"!\" is kept; \"How ADJ the N is!\" and \"What a (ADJ) N!\" compose with ki-modo and ki-eli (2.2:G61)."
+    },
+    {
+      "id": "C09",
+      "cls": "CODE BUG",
+      "sev": "medium",
+      "area": "composer",
+      "title": "'Let us' becomes the permissive valency operator",
+      "rules": ["2.1:G56", "grammar.slots[3]"],
+      "where": "editor/index.html MARKERS / lookupEnglish: 'let' → lesvu",
+      "evidence": "#6 'Let us sing!' → 'lesvu maivori lirala.'; #121 'Let us not sing.' → 'lesvu maivori ne lirala.'",
+      "fix": "'Let us' + verb → yava + verb, no subject; 'let us not' → yava ne.",
+      "status": "FIXED 2026-10-19: \"let us\" is yava, with no subject (2.1:G56)."
+    },
+    {
+      "id": "C10",
+      "cls": "CODE BUG",
+      "sev": "medium",
+      "area": "composer",
+      "title": "A non-pronoun recipient stands bare",
+      "rules": ["1.2:G26"],
+      "where": "editor/index.html composeClause (2593)",
+      "evidence": "M9 'She gave the singer a silver ring' → 'saivo po donuda li [singer] baba vanajubasan rinba'. Only a pronoun recipient may stand bare; any other takes ala after the theme. (#89, with 'to the child', composes correctly.)",
+      "fix": "With two bare noun phrases after a give-type verb, put the first after the second with ala unless it is a pronoun.",
+      "status": "FIXED 2026-10-19: a give-type verb with two noun phrases is reordered to THEME ala RECIPIENT (1.2:G26)."
+    },
+    {
+      "id": "C11",
+      "cls": "CODE BUG",
+      "sev": "medium",
+      "area": "composer",
+      "title": "Duration, 'ago' and 'in N days' are mistranslated",
+      "rules": ["2.1:G55"],
+      "where": "editor/index.html MARKERS: 'ago' → po (tense) only; 'for' → vobi; 'in' → en",
+      "evidence": "#118 'I came two days ago.' → 'maivo po venreva [two] deya.' (no kroti); #119 'in three days' → 'en [three] deya'; M16 'for a hundred years' → 'vobi baba [hundred] montafama' (benefactive).",
+      "fix": "'N UNIT ago' → kroti + measure; 'in N UNIT' → krotiapo + measure; 'for N UNIT' → the bare measure after the object.",
+      "status": "FIXED 2026-10-19: N UNIT ago = kroti + measure, in N UNIT = krotiapo + measure, for N UNIT = the bare measure (2.1:G55); \"long ago\" = kroti muya montafama."
+    },
+    {
+      "id": "C12",
+      "cls": "CODE BUG",
+      "sev": "medium",
+      "area": "composer",
+      "title": "'make / prevent someone do' does not use the valency operators",
+      "rules": ["1.0:G14", "grammar.valency"],
+      "where": "editor/index.html MARKERS / lookupEnglish",
+      "evidence": "M16 'made the king sleep' → 'po farlafa li tarnuregna somu' (farlafa = to create; somu = sleep, the noun); #27 'I prevented him from going.' → 'maivo [prevented] saivo da [going] po.'",
+      "fix": "make/let/prevent + object + verb → vaku/lesvu/tekvu ACTOR VERB.",
+      "status": "FIXED 2026-10-19: make / let / prevent + actor + verb use vaku / lesvu / tekvu, with the actor's verb in its verb form (1.0:G14)."
+    },
+    {
+      "id": "C13",
+      "cls": "CODE BUG",
+      "sev": "medium",
+      "area": "composer",
+      "title": "Tense placement: stranded, doubled or moved to the wrong clause",
+      "rules": ["grammar.clause_template", "1.0:G1"],
+      "where": "editor/index.html clauseLine (2862): when no verb is identified the operator stack is appended at the end",
+      "evidence": "#25 'Kipo also baked bread.' → 'tu [kipo] bumresan bumre po.'; #81 '… [left] po.'; M1 '… li vemi po po ke narvosan …' (po twice); M5 '[weep] po hiro' (operators after the verb, and a tense inside a fime clause that inherits); #55 'I ask whether you will return.' → 'maivo futu masuma ki-oro taivo relnu.' (the future moved to the main clause; relnu is the noun).",
+      "fix": "Never emit operators after the clause's last word: when no verb is found, mark the clause as needing one. Keep each tense in the clause whose English verb carries it.",
+      "status": "FIXED 2026-10-19: with no verb the operators go after the subject, never at the end; one word per slot; \"whether\" opens a ki-oro clause."
+    },
+    {
+      "id": "C14",
+      "cls": "CODE BUG",
+      "sev": "medium",
+      "area": "composer",
+      "title": "Names in the attested list are not recognised",
+      "rules": ["0.8:R12"],
+      "where": "editor/index.html: the composer's lookupEnglish ignores NAMES (1918), which only the interlinear reader uses",
+      "evidence": "#25 '[kipo]'; #42 'This is Dorin.' → 'eli ke [dorin].'; M4, M10 [dorin].",
+      "fix": "Pass a capitalised token that is in names (or not in the English index) through unchanged, as a name.",
+      "status": "FIXED 2026-10-19: the attested names pass through, capitalised."
+    },
+    {
+      "id": "C15",
+      "cls": "CODE BUG",
+      "sev": "medium",
+      "area": "composer",
+      "title": "Identity and lasting qualities get the temporary copula ke",
+      "rules": ["grammar.slots[14]", "1.2:G27"],
+      "where": "editor/index.html COPULA_EN / composeClause: 'is' → ke by default",
+      "evidence": "#42 'This is Dorin.' → 'eli ke [dorin].' (identity is ka); #29, #91, #92 'All the songs are beautiful' / 'Your song is beautiful' / '… is different from …' → ke, where the spec's own examples (1.2:G27) use ka.",
+      "fix": "Default to ka before a noun phrase (identity); offer ke and ka side by side for adjectives instead of choosing ke.",
+      "status": "NOT CHANGED: the default stays ke before a noun phrase, because the author's reviewed Song of Time drafts write \"ke baba lira\" (tests/golden/composer.test.ts pins them). ka is the second choice on every copula. An open point for the author: #42 \"This is Dorin\" composes as \"eli ke Dorin\"."
+    },
+    {
+      "id": "C16",
+      "cls": "CODE BUG",
+      "sev": "low",
+      "area": "composer",
+      "title": "Closed-class words the composer cannot find",
+      "rules": [
+        "1.0:G11",
+        "2.2:G67",
+        "1.2:G30",
+        "2.1:G49",
+        "1.0:G5",
+        "1.0:G17",
+        "1.2:G35",
+        "grammar.slots[17]"
+      ],
+      "where": "editor/index.html English index (closed classes, MARKERS)",
+      "evidence": "despite (#70) → [despite], not nevi; behind/beside (#135-136, M14) → gaps, not nazru/silda; about (#96, M11) → [about], not de; once (#112) → [once], not una-krono; 'How many times' (#113) → 'ki-modo muya kronori'; deliberately/unexpectedly (#61, #77) → gaps, not la + adjective; recognize (#103) → gap, not revo-sabesia; each other (M18) → 'rada lotero', not fuyi; 'came down' (M8) → venreva, not nevrania.",
+      "fix": "Add these to the English index: nevi, the six side nouns, de for about (with an object), NUMBER-krono / ki-muya-krono, la + ADJ for -ly adverbs, the curated motion metaphors, fuyi, phrasal verbs.",
+      "status": "FIXED 2026-10-19: despite/although = nevi, behind = nazru, beside = silda, in front of = zavme, more/less/most/least, each other = fuyi (after the adjuncts), -ly = la + adjective, -er = kasi + adjective, recognize = revo-sabesia, share = yave-donuda, come/go down = descend, reflexives = PRONOUN sela, X's = X de, \"songs about love\" = de, with + a tool or substance = yuta."
+    },
+    {
+      "id": "C17",
+      "cls": "CODE BUG",
+      "sev": "low",
+      "area": "composer",
+      "title": "Quotations, word choice and scope",
+      "rules": ["0.8:G4", "1.0:G1"],
+      "where": "editor/index.html composeSentence (2837)",
+      "evidence": "M6, M7, M9: quotation marks dropped and the quoted clause merged into the reporting clause; M7 'Only a child…' → 'doli li luno …' (doli moved onto the moon); M9 'every night' → 'toda nullo' (all night), not rada nullo; M10 'grew smaller' → 'kersoka [smaller]' (to increase).",
+      "fix": "Keep a quoted span as its own clause after the reporting verb (0.8:G4); attach only/also/even to the constituent that follows them in the English; every → rada before a singular noun.",
+      "status": "FIXED 2026-10-19: a quotation is composed separately and joined after a colon (2.3:G83), with English inversion undone; only/even stay before what they mark. The \"every → rada\" part is withdrawn: 0.8:G7 allows toda nullo."
+    },
+    {
+      "id": "K01",
+      "cls": "CODE BUG",
+      "sev": "medium",
+      "area": "checker",
+      "title": "ne before the tense is not flagged",
+      "rules": ["grammar.slots[6]", "0.8:G2"],
+      "where": "editor/checker/slots.js:166 records ne without a slot number, so rules/order.js never compares it with the tense",
+      "evidence": "#16 'Maivo ne po lirala.' passes clean. The template is [TENSE] [noma] [ne] and ne floats only rightward ('before any later operator').",
+      "fix": "Give ne slot 6 when it stands among the operators, so the order rule (1.0:G1) reports ne before the tense.",
+      "status": "FIXED 2026-10-19: ne before the tense is an error (1.0:G1)."
+    },
+    {
+      "id": "K02",
+      "cls": "CODE BUG",
+      "sev": "medium",
+      "area": "checker",
+      "title": "'Poye, …' (attitude word opening with a comma) is not flagged",
+      "rules": ["1.0:G22", "grammar.slots[19]"],
+      "where": "editor/checker/rules/order.js:113 checks only words after a final; clauses.js lets a comma after a verbless opening stand as a vocative",
+      "evidence": "#23 'Poye, maivo lirala.' passes; 'Poye maivo lirala.' is flagged. 1.0:G22 names exactly this case: 'Perhaps, …' is written with the clause-final poye.",
+      "fix": "Report an attitude word (seye, mufe, poye, pifu, zoke) that opens a line, with or without a comma, and offer the clause-final position.",
+      "status": "FIXED 2026-10-19: an attitude word opening a clause is an error (1.0:G22) when other words follow; the album's \"— seye, seye!\" stays clean."
+    },
+    {
+      "id": "K03",
+      "cls": "CODE BUG",
+      "sev": "medium",
+      "area": "checker",
+      "title": "gase opening a sentence is not flagged; gase + NP + raho is",
+      "rules": ["0.8:G8"],
+      "where": "editor/checker/clauses.js starts a 'gase' clause only after earlier material; rules/semantic.js:191 reads clause.kind",
+      "evidence": "#54 'Gase maivo lirala, taivo rilura.' passes, while 'Maivo rilura gase taivo lirala.' is flagged. Conversely album 12:14 '… revo-lirala gase raleri raho ne ravmira.' (like echoes that do not fade) is flagged though gase + NP is a simile.",
+      "fix": "Treat a line-initial gase + subject + verb as a gase clause; do not start a clause at gase when a noun phrase follows it, even if a raho clause follows the noun.",
+      "status": "FIXED 2026-10-19: gase + noun + raho reads as a simile, and a line-opening gase opens its own clause and is flagged."
+    },
+    {
+      "id": "K04",
+      "cls": "CODE BUG",
+      "sev": "medium",
+      "area": "checker",
+      "title": "Double negative caught only when ne is directly before nuna-",
+      "rules": ["0.8:G2"],
+      "where": "editor/checker/rules/negation.js:50 tests W[k + 1] only",
+      "evidence": "#44 'Maivo ne vimova nuna-coda.' passes; #45 'Maivo vimova ne nuna-coda.' is flagged.",
+      "fix": "Warn when a clause has ne and any nuna- word in its scope.",
+      "status": "FIXED 2026-10-19: ne … nuna- anywhere in the scope warns (0.8:G2). Canon \"Maivo ne sabesia nuna-coda.\" is now a known canon finding."
+    },
+    {
+      "id": "K05",
+      "cls": "CODE BUG",
+      "sev": "medium",
+      "area": "checker",
+      "title": "'su' for 'about' caught only directly after the verb",
+      "rules": ["1.2:G30"],
+      "where": "editor/checker/rules/order.js:333 tests W[v.i + 1] only",
+      "evidence": "#96 'Li veluri po sarbisia lirari su amor.' passes (with its English 'about').",
+      "fix": "After a saying verb, flag su anywhere in the clause's adjuncts, not only right after the verb.",
+      "status": "WITHDRAWN: the album writes VERB OBJECT su NP three times, which 2.2:G68 makes usage; the check stays on su directly after a saying verb."
+    },
+    {
+      "id": "K06",
+      "cls": "CODE BUG",
+      "sev": "medium",
+      "area": "checker",
+      "title": "ko with a concrete instrument is not flagged",
+      "rules": ["1.2:G33"],
+      "where": "editor/checker/rules/semantic.js:80-94 fires for substance and abstract nouns only; data/checker/lexicon_flags.json noun_class has no tool class",
+      "evidence": "#99 'Maivo lallela li dorbi ko li kemye.' (with the key) passes; #101 'ko melo' (abstract) is flagged.",
+      "fix": "Data, not code: add a tool/instrument class to the overlay's noun_class (kemye, biti, tisebiti …) and include it in the rule.",
+      "status": "FIXED 2026-10-19: ko + a substance warns, ko + a tool is a note offering yuta (1.2:G33); ko/en + an abstract noun is a note (2.3:G73)."
+    },
+    {
+      "id": "K07",
+      "cls": "CODE BUG",
+      "sev": "medium",
+      "area": "checker",
+      "title": "Rules with no check at all",
+      "rules": [
+        "0.8:R6",
+        "1.0:G6",
+        "1.0:G13",
+        "1.0:G18",
+        "grammar.slots[2]",
+        "grammar.scope_operators",
+        "2.2:G60"
+      ],
+      "where": "no rule in editor/checker/rules/*.js",
+      "evidence": "All pass clean: #38 'Sige maivo venreva, …' (sige never inherits tense); #62 'Maivo noma lirala.' (noma with no tense, modal or si); #73 'Maivo ata lirala.' (ata as 'also'); #78 'Vinto li bumre hozi, …' (hozi and vinto on one constituent); #21 two hozi topics in one clause; #25 'Kipo po bumreba doli.' (a scope operator with nothing to scope over); #126 'Maivori ne sabesia ki-coda maivori ramura ki.' (an embedded wh-question never ends in ki).",
+      "fix": "One check each; all are structural and need no English.",
+      "status": "FIXED 2026-10-19: sige without a tense warns (0.8:R6); noma with no context is a note (canon \"Maivori noma pilopa yasmo.\" has its context in an earlier line); ata between subject and verb is an error (1.0:G13); vinto on hozi and two hozi are flagged (1.0:G16, G18); a stranded scope word is an error unless a clause opener follows (1.0:G1, G10); ki closing a statement is an error (2.2:G60)."
+    },
+    {
+      "id": "K08",
+      "cls": "CODE BUG",
+      "sev": "low",
+      "area": "checker",
+      "title": "Rules that need the English and are not checked",
+      "rules": ["1.0:G2", "1.2:G28"],
+      "where": "editor/checker/rules/english.js",
+      "evidence": "#55 'Maivo masuma si taivo futu relnura.' with English 'whether' passes (si is only 'if'); #94 'Li velu lumila.' with English 'The stars shine.' passes (a plural without a number takes -ri).",
+      "fix": "With English beside the line: 'whether' + si → ki-oro; an English plural with no number or quantifier and no -ri → warn.",
+      "status": "FIXED IN PART: English \"whether\" beside a si clause is a calque (1.0:G2, 2.3:G77). The plural check (an English plural with no number and no -ri) is not implemented: #94 still passes."
+    },
+    {
+      "id": "K09",
+      "cls": "CODE BUG",
+      "sev": "medium",
+      "area": "checker",
+      "title": "False positives on fragments, word lists and existential miyo",
+      "rules": ["0.8:G3", "1.0:G10", "grammar.slots[14]"],
+      "where": "editor/checker/rules/verbslot.js, rules/order.js:155-165 and :372",
+      "evidence": "Album 06:32 'Ne codana, ne kronona — ola ka veraasa!' (neither … nor fragment) → error slot; 06:35 'Yehu, gesu, bisu, vuda — …' (the evidentials named, not used) → 3× 1.0:G16; 05alt:15 'miyo baba kasi sovesan sonbu ki?' (is there a …?) → error ki ('miyo is not moved to the front'), but existential miyo has no subject and always opens its clause.",
+      "fix": "Allow ne A ne B as a fragment (1.0:G10, 0.8:G3); do not slot words in a comma or dash list with no verb; treat miyo as clause-initial.",
+      "status": "FIXED with the album decision: ne A ne B fragments, verbless lists of operator words and existential miyo questions now read clean."
+    },
+    {
+      "id": "K10",
+      "cls": "CODE BUG",
+      "sev": "low",
+      "area": "checker",
+      "title": "Weak or generic diagnoses",
+      "rules": ["1.0:G21", "0.8:G7", "1.2:G29"],
+      "where": "editor/checker/rules/order.js:282, verbslot.js",
+      "evidence": "#82 an unclosed relative is a note, though 1.0:G21 says it 'is closed by a comma'; #28-30 noun-phrase order errors and #95 a bare adjective as subject are reported as 'cannot be placed: expected the VERB/SUBJECT', not as the noun-phrase rule they break.",
+      "fix": "Raise 1.0:G21 to a warning; name 0.8:G7 / 1.2:G29 in those messages with the reordered phrase as the fix.",
+      "status": "FIXED IN PART: the unplaced-word messages name 0.8:G7 or 1.2:G29. 1.0:G21 stays a note, because the album leaves out that comma on five lines."
+    },
+    {
+      "id": "K11",
+      "cls": "CODE BUG",
+      "sev": "low",
+      "area": "checker",
+      "title": "An attested image compound's empty form reads as 'not a word'",
+      "rules": ["0.8:R2", "2.0:G40"],
+      "where": "editor/checker/lexicon.js unlisted index (headwords only)",
+      "evidence": "#39 'amorliraa' (the verb of the attested amorlira, glossed '— (unused)') → 'error never invent: not a word of Liraasa', where a headword's empty form gives the unused-slot warning (0.8:R2).",
+      "fix": "Build the unused-slot index from image_compounds.attested too.",
+      "status": "FIXED 2026-10-19: the unused-slot index covers image compounds, so amorliraa reads as an unused slot (0.8:R2), not as \"not a word\"."
+    },
+    {
+      "id": "K12",
+      "cls": "CODE BUG",
+      "sev": "low",
+      "area": "back-translation",
+      "title": "Back-translation ignores several rulings",
+      "rules": ["2.2:G62", "2.1:G55", "2.2:G67", "1.2:G28"],
+      "where": "editor/checker/gloss.js",
+      "evidence": "M5 tonsi + adjective → 'therefore' (2.2:G62: 'so'); M1 kroti + measure → 'before many year' (2.1:G55: 'ago'); M14, M4 nazru/silda → 'rear', 'side' (2.2:G67 prepositions); numbers → '#una', '#seta', '#centa'; M6 ki-nela → 'who? preferred' (gloss text leaks).",
+      "fix": "Gloss these constructions as the rulings read them, and numbers by value.",
+      "status": "FIXED 2026-10-19: tonsi + adjective = \"so\", kroti/krotiapo + measure = \"ago\"/\"from now\", side nouns as prepositions, numbers by value, and gloss text after \"?\" no longer leaks."
+    },
+    {
+      "id": "K13",
+      "cls": "CODE BUG",
+      "sev": "medium",
+      "area": "editor",
+      "title": "A new edition's respellings never reach stored writings",
+      "rules": ["2.1:G58", "2.3:G69"],
+      "where": "editor/index.html loadStore (≈3304) returns saved text as is; the 'liraasa:lexicon-changed' handler (4793) corrects every writing only for a rename made in Learn's roots tool",
+      "evidence": "A journal written under 2.2 keeps lenra, kupa, jemla … after 2.3 loads; the checker flags each line (1.0:G19, with the fix), and nothing offers to correct the songbook at once.",
+      "fix": "Store the edition with the songbook; when the loaded lexicon is newer, offer (never silently apply) the same correctText migration the corpus gets.",
+      "status": "FIXED 2026-10-19: the songbook offers to correct its spellings retired since the edition it was written in (the \"Update spellings\" button), and records the new edition."
+    },
+    {
+      "id": "K14",
+      "cls": "CODE BUG",
+      "sev": "low",
+      "area": "editor",
+      "title": "The interlinear reader calls every old spelling 'pre-1.0'",
+      "rules": ["1.0:G19", "2.1:G58"],
+      "where": "editor/index.html glossFor (≈2003) and the reader (1985)",
+      "evidence": "'kupa' (retired in 2.3) is glossed 'pre-1.0 → ruko'; an old spelling with -ri (lenrari) is not read at all (the checker now reads both).",
+      "fix": "Show the edition that retired it (D.legacy carries it via the checker's extra data) and strip -ri/-ti as the checker does.",
+      "status": "FIXED 2026-10-19: the reader names the edition an old spelling was retired in (\"before 2.3 → …\")."
+    },
+    {
+      "id": "K15",
+      "cls": "CODE BUG",
+      "sev": "medium",
+      "area": "guide",
+      "title": "'Reading older texts' gives retired replacements",
+      "rules": ["1.0:G19"],
+      "where": "scripts/grammar_guide (rulings file and guide), built from legacy rows' old → new without following later respellings",
+      "evidence": "handoff/Liraasa_2_3_Rulings.md: barni → kupa (now ruko), velbi → vugo (now vizu), volda → larbopagobudi (now farvibudi), nalsi → velbivaye (now vizuvaye), zella → velbilavi (now vizulavi), yulve → yelfateyo (now bojidento), nolmu → folnimege (now folniyumli).",
+      "fix": "Print each old spelling with its current replacement (legacy.migration_forms already chains them).",
+      "status": "FIXED 2026-10-19: \"Reading older texts\" gives the current replacement."
+    },
+    {
+      "id": "K16",
+      "cls": "CODE BUG",
+      "sev": "low",
+      "area": "core",
+      "title": "The corrected protected-exception list keeps retired spellings",
+      "rules": ["phonology.new_root_template"],
+      "where": "src/core/config/phonology.ts (used by src/core/integrate/audit.ts)",
+      "evidence": "sulbaamor, nilvuamor, veboamor, vorbaamor and amorvorba: their roots were respelled in 2.1 (sola, foji, faji, duha).",
+      "fix": "Derive the list from the live lexicon instead of a hand list.",
+      "status": "WITHDRAWN: src/core/config/phonology.ts documents 1.0 on purpose."
+    },
+    {
+      "id": "S01",
+      "cls": "SPEC BUG",
+      "sev": "medium",
+      "title": "0.8:G4 still says embedded yes/no questions use si",
+      "rules": ["0.8:G4", "1.0:G2", "2.2:G60"],
+      "where": "rulings_0_8_carried G4 (superseded_in_part covers only the wh-word clause)",
+      "evidence": "1.0:G2: si means only 'if'; 'whether' is ki-oro. 2.2:G60: embedded yes/no questions use ki-oro. The clause of 0.8:G4 that says si is marked as standing.",
+      "fix": "Mark that clause superseded too (op supersede_ruling, by 1.0:G2 or 2.2:G60).",
+      "status": "RESOLVED 2026-10-19: 2.3:G77, embedded yes/no questions use ki-oro; 0.8:G4's si (whether) clause is marked superseded in part. Canon example 555 now reads \"Maivo ne sabesia ki-oro li lazu nurminia.\""
+    },
+    {
+      "id": "S02",
+      "cls": "SPEC BUG",
+      "sev": "medium",
+      "title": "Questions with ki-eli / ki-muya and no ki read both ways",
+      "rules": ["2.2:G60", "2.2:G61"],
+      "where": "rulings_2_2 G60, G61",
+      "evidence": "G60: a question with a ki-word may end without ki. G61: ki-eli + noun and ki-muya + noun without final ki are exclamations. 'Ki-eli lira taivo amora' is both 'which song do you love' and 'what a song you love'. G61 settles only ki-modo + adjective (must end in ki).",
+      "fix": "Decision D3.",
+      "status": "RESOLVED 2026-10-19 on the editor's judgement: 2.3:G76, a ki-eli / ki-muya + noun question ends in ki."
+    },
+    {
+      "id": "S03",
+      "cls": "SPEC BUG",
+      "sev": "medium",
+      "title": "0.8:R8's own examples are dead forms",
+      "rules": ["0.8:R8", "2.0:G40"],
+      "where": "rulings_0_8_carried R8",
+      "evidence": "amorliraa, amorrinbaa and amorvulraa are 'correct', but since 2.0 their compounds are attested image compounds whose verb slots are '— (unused)': the words have no meaning.",
+      "fix": "Mark R8 as reading older texts, or rule on glosses for the three verbs (0.8:R2).",
+      "status": "DECIDED 2026-10-19: 0.8:R8 stays as written (rulings are never reworded). The checker reads amorliraa, amorrinbaa and amorvulraa as unused slots; glossing them is the author's (0.8:R2), so none is invented."
+    },
+    {
+      "id": "S04",
+      "cls": "SPEC BUG",
+      "sev": "low",
+      "title": "Stale text in the lexicon's morphology and numbers sections",
+      "rules": [
+        "morphology.compounding",
+        "morphology.derivation_defaults",
+        "2.0:G38",
+        "2.0:G41",
+        "2.0:G42",
+        "2.1:G49",
+        "2.1:G53"
+      ],
+      "where": "morphology.compounding, morphology.suffixes, numbers.rules (group J)",
+      "evidence": "'components must be active 1.0 headwords' (2.0:G38, G42 and every post-1.0 compound contradict it); '-yo / -vu (on the root)' (2.0:G41: any root or compound); numbers rule J: 'ordinal, fractions await separate policy … avoid inventing', but 1.2:G27 and 2.1:G53 rule on fractions and 2.1:G49 uses una-ne.",
+      "fix": "Reword these three texts in the next changeset.",
+      "status": "FIXED 2026-10-19: the three texts reworded by edit_text ops in the audit changeset (morphology.compounding, the -yo/-vu suffixes, numbers rule 39)."
+    },
+    {
+      "id": "G01",
+      "cls": "SPEC GAP",
+      "sev": "high",
+      "title": "Is the album's consistent usage grammar now?",
+      "rules": ["2.2:G68", "1.2:G25", "1.2:G33", "2.2:G64", "1.2:G35"],
+      "where": "album (Phase 6)",
+      "evidence": "2.2:G68 says a construction the album uses consistently is grammar, but the checker still questions: line-initial ata (12 lines), en for manner ('en baba melosan valla', 2 lines; 1.2:G33 says the means is yuta), ko amor (1 line), raho opening a question at 05:22 (AR-16 records only 11:12), taro-pagopa (05alt:13).",
+      "options": [
+        "(a) Lock them in: each becomes a ruling (ata may continue the line before, like oro; en may mark manner; …).",
+        "(b) Record each as an album reading (AR-17 …) with its standard form."
+      ],
+      "status": "RESOLVED 2026-10-19: the album's usage is grammar, as 2.3:G72 (ata), G73 (manner with en and ko), G74 (raho question) and G75 (taro-pagopa). Line-initial nara (G07) was decided separately, as 2.3:G78."
+    },
+    {
+      "id": "G02",
+      "cls": "SPEC GAP",
+      "sev": "medium",
+      "title": "What does 'superseded' make the old construction?",
+      "rules": ["2.1:G46", "2.1:G47", "2.1:G54"],
+      "where": "supersede_ruling (2.2)",
+      "evidence": "#122 'Taivo ke ola-modo vanisan fime li veluri lasola.' (2.1:G54's result clause) passes; no ruling says whether it is now wrong or only not preferred.",
+      "options": [
+        "(a) Ungrammatical in new text: the checker flags it with the superseding ruling as the fix.",
+        "(b) Still grammatical, not preferred: a note."
+      ],
+      "status": "DECIDED 2026-10-19: 2.3:G84, a superseded construction stays grammatical; new text prefers the current ruling."
+    },
+    {
+      "id": "G03",
+      "cls": "SPEC GAP",
+      "sev": "medium",
+      "title": "What is the ascended (-asa) form: sacred, or exalted?",
+      "rules": ["0.8:R10", "morphology.seven_forms"],
+      "where": "word_building.registers: 'sacred is a property of the -asa / -asasan forms'",
+      "evidence": "93 used -asa glosses read nothing sacred: folluasa 'terror that eclipses reason', larneramuasa 'a resentment that survives generations', mirudaigoasa 'the drowning of a lost city', corviasa 'bravery before the impossible'. 23 sacred concepts have an empty -asa slot (luminela priest, lavbulira hymn, lumimiru holy water, sasvalansi guardian angel …). The checker notes every -asa form outside a sacred text (0.8:R10).",
+      "options": [
+        "(a) -asa is 'the ultimate / exalted' degree; a text is sacred by its subject, and the register note goes.",
+        "(b) -asa is sacred: review the 93 glosses and consider the 23 empty slots (0.8:R2)."
+      ],
+      "status": "DECIDED 2026-10-19: it depends on the word. No blanket rule and no data change; each ascended gloss stands on its own."
+    },
+    {
+      "id": "G04",
+      "cls": "SPEC GAP",
+      "sev": "medium",
+      "title": "Tense inheritance for kureli, sina, si, nevi",
+      "rules": ["0.8:R6", "2.2:G66"],
+      "where": "0.8:R6",
+      "evidence": "Inheritance is listed for fime, raho, kube, nayo, kasa, kopisa, tuni (and kroti/krotiapo); kureli (as soon as), sina (unless), si (if) and nevi (although) are not listed either way.",
+      "options": [
+        "(a) All subordinators inherit except sige.",
+        "(b) Only those listed inherit; the others are always marked."
+      ],
+      "status": "LEFT OPEN by the author (2026-10-19); recorded in the guide's open questions."
+    },
+    {
+      "id": "G05",
+      "cls": "SPEC GAP",
+      "sev": "medium",
+      "title": "Ordinals",
+      "rules": ["2.1:G49"],
+      "where": "numbers.rules J; 2.1:G49",
+      "evidence": "M1 'the first song' needs an ordinal. The only attested one is una-ne krono (the first time).",
+      "options": [
+        "(a) NUMBER-ne is the ordinal of any noun (una-ne lira, dossa-ne deya).",
+        "(b) Ordinals stay limited to -krono; 'first' is a word of its own."
+      ],
+      "status": "WITHDRAWN: ordinals are already settled in settled_open_questions_0_8 (NUMBER-ne)."
+    },
+    {
+      "id": "G06",
+      "cls": "SPEC GAP",
+      "sev": "low",
+      "title": "A retired listed derivation is still buildable",
+      "rules": ["2.3:G70", "2.0:G41"],
+      "where": "2.3:G70",
+      "evidence": "G70 retires mirunululirayo; G41 makes every R + yo a word with its default reading, so it still reads as 'one devoted to river-song', and the checker accepts it.",
+      "options": [
+        "(a) It stays a word with its default reading (old texts read 'frog' through the legacy table).",
+        "(b) It is retired outright: the checker flags it as an old spelling of kerku."
+      ],
+      "status": "DECIDED 2026-10-19: 2.3:G85, a retired listed derivation stays buildable by rule; it is no longer listed."
+    },
+    {
+      "id": "G07",
+      "cls": "SPEC GAP",
+      "sev": "low",
+      "title": "Line-opening nara",
+      "rules": ["1.2:G25"],
+      "where": "1.2:G25 covers oro only",
+      "evidence": "M8 'Nara li devi po ne lenila …' (But the goddess …). Same question as line-initial ata (G01).",
+      "options": [
+        "(a) nara may open a sentence that continues the one before, like oro.",
+        "(b) Sentence-initially, 'but' is narli (nevertheless)."
+      ],
+      "status": "DECIDED 2026-10-19: 2.3:G78, a line may open with nara."
+    },
+    {
+      "id": "G08",
+      "cls": "SPEC GAP",
+      "sev": "low",
+      "title": "'hear / know / think about X'",
+      "rules": ["1.2:G30"],
+      "where": "1.2:G30 covers verbs of saying",
+      "evidence": "M11 'heard about the singer' needs an object the English does not have (li telne de li lirayo, the story of the singer).",
+      "options": [
+        "(a) Extend G30: after verbs of perceiving and knowing, give the verb an object.",
+        "(b) Allow VERB de NP directly after these verbs."
+      ],
+      "status": "DECIDED 2026-10-19: 2.3:G80, after hearing and knowing verbs \"about X\" is li telne de X; the composer does this."
+    },
+    {
+      "id": "G09",
+      "cls": "SPEC GAP",
+      "sev": "low",
+      "title": "'since then'",
+      "rules": ["0.8:R6"],
+      "where": "sige takes a clause only",
+      "evidence": "M18 'Since then, …' was written 'Da ola-krono, …' (from then).",
+      "options": [
+        "(a) da + time correlative (da ola-krono).",
+        "(b) sige + time correlative (sige ola-krono)."
+      ],
+      "status": "DECIDED 2026-10-19: 2.3:G79, \"since then\" is da ola-krono; the composer does this."
+    },
+    {
+      "id": "G10",
+      "cls": "SPEC GAP",
+      "sev": "low",
+      "title": "Clause-closing order: time word and attitude word",
+      "rules": ["1.2:G24", "1.0:G22"],
+      "where": "clause template",
+      "evidence": "M20: a time word may close its clause, and an attitude word must; '… taivo toda-krono pifu' vs '… taivo pifu toda-krono' is not ruled (the myth avoids it by opening with the time word).",
+      "options": [
+        "(a) TIME before ATTITUDE before ki.",
+        "(b) A closing time word is not allowed with an attitude word."
+      ],
+      "status": "DECIDED 2026-10-19: 2.3:G78, a clause closes time → attitude → ki."
+    },
+    {
+      "id": "G11",
+      "cls": "SPEC GAP",
+      "sev": "low",
+      "title": "Smaller gaps met in the tests and the myth",
+      "rules": [
+        "2.1:G56",
+        "1.2:G26",
+        "2.1:G55",
+        "0.8:R5",
+        "1.0:G9",
+        "grammar.slots[1]",
+        "0.8:G4",
+        "2.2:G61",
+        "1.2:G35"
+      ],
+      "where": "various",
+      "evidence": "No slot for yava in the template (2.1:G56); give-type verbs named in English only (1.2:G26); 'kroti deya' (the function-word example of kroti) reads as 'a day ago' under 2.1:G55; whether li may be omitted before an adjective used as a noun (0.8:R5 vs 1.2:G29); lusu/mosa as 'at least/most' and as superlatives (1.0:G9); two time phrases in the one FRAME slot (M1); quotation punctuation (0.8:G4); a past exclamative cannot use ki-eli + noun, which has no verb (M17); tuni before a noun phrase (M14); which verbs are motion verbs for the prefixes (album 05alt:13).",
+      "options": ["(a) Rule on each.", "(b) Leave them to the guide's prose as advice."],
+      "status": "DECIDED 2026-10-19: yava opens the clause (2.3:G78); time phrases, kroti + noun and tuni + noun phrase (2.3:G79); lusu and mosa (2.3:G81); li before an adjective noun (2.3:G82); quotations and past exclamations (2.3:G83); motion verbs are listed in the checker overlay (pagopa, 2.3:G75). Give-type verbs stay named in English only (1.2:G26), and the composer reads them from a list."
+    },
+    {
+      "id": "L01",
+      "cls": "LEXICON ISSUE",
+      "sev": "medium",
+      "title": "Liraasa lines mislabelled as English keep retired spellings",
+      "rules": ["2.1:G58", "2.3:G69"],
+      "where": "data/corpus/bumrepago_2_3/bumrepago.txt:28; data/corpus/songs_2_3/song_VI_kicoda.txt:33 (and the 5 + 10 blocks the Learn report lists)",
+      "evidence": "'# EN: … toda-nela sapusia li yordo' (yordo → puku); '# EN: Daigo ka dorbi, ne vabale …' (vabale → tobra). migrate_corpus.ts skips comment lines, so they were never respelled, and Learn teaches such blocks as Liraasa lines.",
+      "fix": "Relabel the extraction errors in the 1.0 corpus, then rerun npx tsx scripts/migrate_corpus.ts.",
+      "status": "OPEN: not done in this pass. Relabelling the corpus extraction errors means editing the 1.0 corpus and rerunning migrate_corpus.ts."
+    },
+    {
+      "id": "L02",
+      "cls": "LEXICON ISSUE",
+      "sev": "low",
+      "title": "Bumrepago uses four unused slots",
+      "rules": ["0.8:R2"],
+      "where": "data/corpus/bumrepago_2_3/bumrepago.txt:54, 113, 118, 162, 164, 377, 455, 457",
+      "evidence": "bumrena ×4 ('no-bread', the play's joke), bumreasa ×2, bumreasasan ×2, tabuasa ×1: all '— (unused)' in 2.3.",
+      "fix": "Approve glosses for them (0.8:R2), or record them as the play's coinages.",
+      "status": "DECIDED 2026-10-19: recorded as the play's coinages; no gloss is invented (0.8:R2 leaves glosses to the author)."
+    },
+    {
+      "id": "L03",
+      "cls": "LEXICON ISSUE",
+      "sev": "low",
+      "title": "Near-homophones among the roots",
+      "rules": ["phonology.new_root_template", "2.1:G57"],
+      "where": "data/lexicon/liraasa_2_3.json headwords",
+      "evidence": "16 root pairs one edit apart. Closest in song: sora/sola (friend/sun, l/r). Others: foji/faji/boji/fojo (winter/spring/ice/…), sola/solo/solma/sovla, malo/mavo/melo, haza/hata, mera/vera, doza/goza, buza/cuza, desi/devi; maivo/mavo and devo/devi are declared pairs.",
+      "fix": "Author's call which matter; 2.1:G57 is not retroactive.",
+      "status": "DECIDED 2026-10-19: no change, as with the 2.3 sound pass (the author: \"its okay if a couple sounds are similar\")."
+    },
+    {
+      "id": "L04",
+      "cls": "LEXICON ISSUE",
+      "sev": "low",
+      "title": "Duplicate meanings and stray text",
+      "rules": ["0.8:R2"],
+      "where": "headwords; function_words",
+      "evidence": "kronobio 'Birth (Time of Life)' and linuvenre 'birth' share a sense (faji/mirufonte 'spring' and fonte/sernafonte 'source' are distinct senses). The function word ki-saivo is still active with the example 'Ki-saivo lirala? (historical)', English inside a Liraasa field, beside ki-nela 'who? preferred'. daigozayu's note still says 'daigozirmeyo = necromancer' (zirme is zayu since 2.1).",
+      "fix": "Narrow one 'birth' gloss; retire or mark ki-saivo; archive the stale note (archive_text).",
+      "status": "FIXED IN PART 2026-10-19: ki-saivo's example now reads \"Ki-saivo lirala?\" and daigozayu's stale note is archived (archive_text). The two \"birth\" senses are left to the author."
+    }
+  ],
+  "decisions": [],
+  "decided": [
+    {
+      "id": "D1",
+      "question": "Lock the album's consistent usage into the grammar?",
+      "answer": "Yes: rulings 2.3:G72–G75 (data/changes/2026-10-19-lexicon-2-3-audit.json); 2.3:G74 supersedes the 'raho is never a question word' clause of 2.2:G64, and album reading AR-16 is resolved."
+    },
+    {
+      "id": "D5",
+      "question": "Which subordinators inherit tense?",
+      "answer": "Undecided: left open (the guide's open questions)."
+    },
+    {
+      "id": "D3",
+      "question": "Without a final ki, is a ki-eli / ki-muya clause a question or an exclamation?",
+      "answer": "The editor's judgement, as asked: an exclamation; the question ends in ki (2.3:G76)."
+    },
+    {
+      "id": "D2",
+      "question": "Is -asa 'sacred' or 'the exalted degree'?",
+      "answer": "It depends on the word: no blanket rule, no data change."
+    },
+    {
+      "id": "D4",
+      "question": "Is a superseded construction wrong in new text, or only not preferred?",
+      "answer": "The editor's judgement, as asked: Superseded constructions stay grammatical; new text prefers the current ruling (2.3:G84)."
+    },
+    {
+      "id": "D6",
+      "question": "Confirm that 0.8:G4's 'si (whether)' clause is superseded.",
+      "answer": "The editor's judgement, as asked: Yes: 2.3:G77 supersedes the clause in part; embedded yes/no questions use ki-oro."
+    },
+    {
+      "id": "D7",
+      "question": "Ordinals: NUMBER-ne for any noun, or only -krono?",
+      "answer": "The editor's judgement, as asked: Withdrawn: ordinals were already settled (NUMBER-ne)."
+    },
+    {
+      "id": "D8",
+      "question": "0.8:R8: historical, or gloss the three verbs?",
+      "answer": "The editor's judgement, as asked: R8 stays as written; the three verbs read as unused slots until the author glosses them."
+    },
+    {
+      "id": "D9",
+      "question": "Bumrepago's unused slots: gloss them, or mark them as the play's coinages?",
+      "answer": "The editor's judgement, as asked: The play's coinages: no gloss is invented."
+    },
+    {
+      "id": "D10",
+      "question": "Is a retired listed derivation still a word?",
+      "answer": "The editor's judgement, as asked: A retired listed derivation stays buildable (2.3:G85)."
+    },
+    {
+      "id": "D11",
+      "question": "The smaller gaps, one ruling each: 'about' after perception verbs, 'since then', closing order of time and attitude words, yava's slot, the give-type verbs, kroti + noun, li before an adjective noun, lusu/mosa, two time phrases in FRAME, quotations, past exclamatives, tuni + NP, motion verbs.",
+      "answer": "The editor's judgement, as asked: One ruling each: 2.3:G78-G83."
+    },
+    {
+      "id": "D12",
+      "question": "Which near-homophones and duplicate senses to act on.",
+      "answer": "The editor's judgement, as asked: No respelling; ki-saivo's example and daigozayu's note fixed; the two \"birth\" senses left to the author."
+    }
+  ]
+}

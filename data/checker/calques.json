@@ -35,11 +35,19 @@
    "message": "The English has “with”: a tool or means takes {word}; a companion takes ko."
   },
   {
+   "id": "whether",
+   "english": "\\bwhether\\b",
+   "needs": "function:^whether",
+   "severity": "warn",
+   "ruling": "1.0:G2, 2.3:G77",
+   "message": "“whether” is {word}; si means only “if”."
+  },
+  {
    "id": "in-manner",
    "english": "\\bin an?\\s+(\\w+\\s+)?(voice|tone|manner|way|whisper|song|melody)\\b",
    "needs": "preposition:instrument",
-   "severity": "warn",
-   "ruling": "1.2:G33",
+   "severity": "note",
+   "ruling": "2.3:G73",
    "message": "“in a voice / tone / manner” is the means of the act: {word}, not en (location)."
   },
   {
