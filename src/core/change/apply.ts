@@ -25,6 +25,8 @@ export interface ChangesetRuling {
   topic: string;
   ruling: string;
   refines?: string[];
+  /** Earlier rulings, whole or in part, this one replaces (2.2, ADR-0018). */
+  supersedes?: string[];
   examples?: [string, string][];
 }
 
@@ -630,6 +632,30 @@ export function applyChangesets(
           group.roots = group.roots.filter((r) => r !== spelling);
           group.count = group.roots.length;
           if (typeof bank.count === 'number') bank.count -= 1;
+          break;
+        }
+        case 'supersede_ruling': {
+          const [edition, id] = op.entry.split(':');
+          const set = (lex as unknown as Record<string, unknown>)[
+            `rulings_${(edition ?? '').replace('.', '_')}${edition === '0.8' ? '_carried' : ''}`
+          ];
+          const old = Array.isArray(set)
+            ? (set as Row[]).find((r) => r.id === id && r.topic === op.from)
+            : undefined;
+          const [byEdition, byId] = (op.to ?? '').split(':');
+          const by = cs.rulings?.find((r) => r.id === byId);
+          if (old === undefined)
+            throw new ApplyError(`${op.entry}: no ruling "${String(op.from)}"`);
+          if (by === undefined || byEdition !== cs.edition)
+            throw new ApplyError(`${op.entry}: ${String(op.to)} is not a ruling of ${cs.id}`);
+          if (op.field === undefined) {
+            if (old.superseded_by !== undefined)
+              throw new ApplyError(`${op.entry}: superseded twice`);
+            old.superseded_by = op.to;
+          } else {
+            const parts = (old.superseded_in_part ?? []) as { clause: string; by: string }[];
+            old.superseded_in_part = [...parts, { clause: op.field, by: op.to }];
+          }
           break;
         }
         case 'retire_root':

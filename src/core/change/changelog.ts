@@ -70,7 +70,14 @@ export type ChangeOp =
    * A root of `reserved_root_bank` given a meaning: it leaves the bank.
    * `entry` is `bank:<spelling>`; `to` is the id of the headword now spelled so.
    */
-  | 'spend_bank_root';
+  | 'spend_bank_root'
+  /**
+   * An earlier ruling superseded by one this changeset adds (2.2): it is kept,
+   * never renumbered or reworded, and marked `superseded_by`. With `field`, only
+   * that clause of it is superseded (`superseded_in_part`). `entry` is the old
+   * ruling's edition-qualified id; `to` the new one's (ADR-0018).
+   */
+  | 'supersede_ruling';
 
 /**
  * One recorded change.

@@ -370,6 +370,8 @@ class Lexicon:
             for f in (r.get("old_forms") or {}).values():
                 lx.reserved[f].add(f"retired root {r['old']}")
         for r in legacy.get("respelled_roots", []):
+            if r.get("reverted"):
+                continue  # a respelling undone later (2.2: puzu → silro) reserves nothing
             for f in (r.get("old_forms") or {}).values():
                 lx.reserved[f].add(f"respelled root {r['old']} → {r['new']}")
         for r in legacy.get("retired_compounds", []):

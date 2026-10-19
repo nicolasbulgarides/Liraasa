@@ -4,7 +4,7 @@
  *
  *   npm run build:llm
  *
- * Writes handoff/liraasa_2_1_llm.json from the canonical 2.1 lexicon. It holds
+ * Writes handoff/liraasa_2_2_llm.json from the canonical 2.1 lexicon. It holds
  * every grammar rule and the full dictionary. It is shaped for a reader that
  * goes top to bottom: instructions and hard rules first, then sound, word
  * building, the clause, recipes and every ruling, then the small words, the
@@ -27,8 +27,8 @@ import { OPEN_QUESTIONS, READ_ORDER, RECIPES, RULES } from './grammar_guide/chap
 import { canonTexts, isCanonText, type Lexicon } from './grammar_guide/data';
 import { parseArgs } from './args';
 
-const LEXICON = 'data/lexicon/liraasa_2_1.json';
-const OUT = 'handoff/liraasa_2_1_llm.json';
+const LEXICON = 'data/lexicon/liraasa_2_2.json';
+const OUT = 'handoff/liraasa_2_2_llm.json';
 /** Words the prose names, by id, so a respelling carries through (CLAUDE.md). */
 const WANT = 'lx_vurlo_1061';
 const SING = 'lx_lira_0272';
@@ -72,6 +72,10 @@ interface Ruling {
   ruling: string;
   refines?: string[];
   examples?: [string, string][];
+  /** 2.2 on (ADR-0018): what replaces a ruling, whole or in part. */
+  supersedes?: string[];
+  superseded_by?: string;
+  superseded_in_part?: { clause: string; by: string }[];
 }
 interface Head {
   root: string;
@@ -93,7 +97,9 @@ const plain = (text: string): string =>
     .replace(/\*([^*]+)\*/g, '$1')
     .replace(/\[\[([^\]]+)\]\]/g, '($1)');
 
-const example = ([liraasa, english]: readonly [string, string]) => ({ liraasa, english });
+/** A ruling's example; the 2.2 rulings give none in English, and none is invented. */
+const example = ([liraasa, english]: readonly [string, string]) =>
+  english === '' ? { liraasa } : { liraasa, english };
 
 /**
  * Pretty-printed down to the level of a list of records, and each record on
@@ -147,6 +153,18 @@ function main(): void {
     topic: r.topic,
     rule: r.ruling,
     ...(r.refines !== undefined && r.refines.length > 0 ? { refines: r.refines } : {}),
+    ...(r.supersedes !== undefined ? { supersedes: r.supersedes } : {}),
+    // kept, never reworded: a superseded ruling says so, and a model must follow the newer one
+    ...(r.superseded_by !== undefined
+      ? { status: `SUPERSEDED by ${r.superseded_by}: do not follow; follow ${r.superseded_by}` }
+      : {}),
+    ...(r.superseded_in_part !== undefined
+      ? {
+          status: r.superseded_in_part
+            .map((p) => `the clause "${p.clause}" is SUPERSEDED by ${p.by}; the rest stands`)
+            .join('; '),
+        }
+      : {}),
     ...(r.examples !== undefined && r.examples.length > 0
       ? { examples: r.examples.map(example) }
       : {}),

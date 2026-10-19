@@ -245,9 +245,12 @@ function recordMigration(
   kind: string,
 ): void {
   const legacy = lex.legacy as unknown as LegacyRows;
-  for (const row of Object.values(legacy.migration_forms)) {
+  for (const [key, row] of Object.entries(legacy.migration_forms)) {
     const next = mapping[row.to];
-    if (next !== undefined) row.to = next;
+    if (next === undefined) continue;
+    // a respelling undone (2.2: puzu → silro) leads a spelling back to itself: it is live again
+    if (next === key) Reflect.deleteProperty(legacy.migration_forms, key);
+    else row.to = next;
   }
   for (const [from, to] of Object.entries(mapping)) {
     legacy.migration_forms[from] = { to, slot: slots[from] ?? 'root', via, kind };
@@ -364,6 +367,10 @@ function moveRoot(
   respellDerivations(lex, renamed, mapping, slots);
 
   const legacy = lex.legacy as unknown as LegacyRows;
+  // restoring a spelling an earlier respelling retired: that respelling no longer reserves it
+  for (const row of legacy.respelled_roots) {
+    if (row.old === spelling && row.new === old) row.reverted = true;
+  }
   legacy.respelled_roots.push({
     old,
     new: spelling,

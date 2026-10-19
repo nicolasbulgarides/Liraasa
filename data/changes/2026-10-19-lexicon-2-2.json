@@ -1,0 +1,300 @@
+{
+ "id": "2026-10-19-lexicon-2-2",
+ "edition": "2.2",
+ "created": "2026-10-19T12:00:00Z",
+ "author": "nicolas",
+ "summary": "Liraasa 2.2 added rulings 2.2:G60–G68, restored the 2.0 spelling silro (reverting the 2.1 respelling puzu), filled the forms soloasa and tarnulinusan, and added the album as the reference corpus with sixteen album readings.",
+ "rulings": [
+  {
+   "id": "G60",
+   "topic": "Question-word position",
+   "ruling": "A ki-word may open the clause or stay where its answer would stand; the album fronts it in most questions. A yes/no question must end in ki. A question with a ki-word may end in ki or not. Embedded wh-questions may also front the ki-word and never end in ki; embedded yes/no questions use ki-oro (1.0:G2).",
+   "refines": [],
+   "supersedes": [
+    "2.1:G46",
+    "0.8:G4"
+   ],
+   "examples": [
+    [
+     "Ki-pago taivo pagopa ki?",
+     ""
+    ],
+    [
+     "Taivo pagopa ki-pago ki?",
+     ""
+    ],
+    [
+     "Ki-kasa taivo po amora maivo?",
+     ""
+    ],
+    [
+     "maivori ne sabesia ki-coda maivori ramura.",
+     ""
+    ]
+   ]
+  },
+  {
+   "id": "G61",
+   "topic": "Exclamatives, narrowed",
+   "ruling": "Only ki-modo + adjective, ki-eli + noun and ki-muya + noun make an exclamation, and only when the clause does not end in ki. Any other ki-word clause without ki is a question. A degree question (ki-modo + adjective) must end in ki.",
+   "refines": [],
+   "supersedes": [
+    "2.1:G47"
+   ],
+   "examples": [
+    [
+     "Li nullo ka ki-modo vanisan!",
+     ""
+    ],
+    [
+     "Ki-eli nullo!",
+     ""
+    ],
+    [
+     "Li nullo ka ki-modo vanisan ki?",
+     ""
+    ]
+   ]
+  },
+  {
+   "id": "G62",
+   "topic": "So … that: tonsi + adjective",
+   "ruling": "tonsi directly before an adjective means “so”; a following fime clause gives the result. Clause-initial tonsi keeps its meaning “therefore”.",
+   "refines": [],
+   "supersedes": [
+    "2.1:G54"
+   ],
+   "examples": [
+    [
+     "taivo ke tonsi corvisan fime taivo viki savalisia maivo ki?",
+     ""
+    ],
+    [
+     "si maivo ke tonsi lukasan, maivo futu ne salrusia.",
+     ""
+    ]
+   ]
+  },
+  {
+   "id": "G63",
+   "topic": "Hopeful purpose: fime + nosi",
+   "ruling": "After a main clause, a fime clause whose verb carries nosi means “in the hope that, so that perhaps”. kopisa stays the plain purpose linker.",
+   "refines": [],
+   "examples": [
+    [
+     "maivo futu donuda ito biti de lalfo, fime taivo nosi semnesia ko maivo en moluvaye.",
+     ""
+    ]
+   ]
+  },
+  {
+   "id": "G64",
+   "topic": "Headless raho",
+   "ruling": "raho with no noun before it means “the one who, that which”, as subject, object or complement. raho is never a question word: questions use ki-nela or ki-coda.",
+   "refines": [],
+   "examples": [
+    [
+     "Maivo lirala raho taivo amora.",
+     ""
+    ],
+    [
+     "saivo po farufasbifa kube saivo ramura raho maivo po ke.",
+     ""
+    ]
+   ]
+  },
+  {
+   "id": "G65",
+   "topic": "Adjective + sidu + verb",
+   "ruling": "An adjective may take sidu + verb for “easy to …, ready to …”. The verb’s object is what the adjective describes.",
+   "refines": [],
+   "examples": [
+    [
+     "ito ke ruli levasan sidu zeldoza trana.",
+     ""
+    ]
+   ]
+  },
+  {
+   "id": "G66",
+   "topic": "kroti and krotiapo before a clause",
+   "ruling": "kroti and krotiapo may introduce a clause: “before …”, “after …”. The clause inherits tense like kube (0.8:R6). Before a measure they keep 2.1:G55; before li + noun, their 2.0 meaning.",
+   "refines": [],
+   "examples": [
+    [
+     "kroti maivo lesvu taivo ke li sevusan ruhe.",
+     ""
+    ]
+   ]
+  },
+  {
+   "id": "G67",
+   "topic": "Side nouns as prepositions",
+   "ruling": "nazru (behind), zavme (in front of), silda (beside), cemnu (in the middle of), lizma (left of) and rizno (right of) may stand bare before a noun phrase as prepositions, or after a verb as adverbs.",
+   "refines": [],
+   "examples": [
+    [
+     "Li lavra semnesia nazru li nimu.",
+     ""
+    ],
+    [
+     "saivo de melonulu venreva nazru gase baba lira de ruhesonbu.",
+     ""
+    ]
+   ]
+  },
+  {
+   "id": "G68",
+   "topic": "The album as reference corpus",
+   "ruling": "The album (twelve songs and the alternate 05) is canon 2.0 text, read with 2.0 spellings under 2.1:G58. A construction it uses consistently is grammar. A line that departs from the grammar once is an album reading: it keeps its intended meaning, is listed with its standard form, and is not a model for new text.",
+   "refines": [],
+   "examples": []
+  }
+ ],
+ "ops": [
+  {
+   "entry": "2.2:G60",
+   "op": "add_ruling",
+   "from": null,
+   "to": "Question-word position",
+   "ruling": "2.2:G60",
+   "reason": "Liraasa 2.2 patch, rulings: Question-word position.",
+   "addedIn": "2.2",
+   "at": "2026-10-19T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "2.2:G61",
+   "op": "add_ruling",
+   "from": null,
+   "to": "Exclamatives, narrowed",
+   "ruling": "2.2:G61",
+   "reason": "Liraasa 2.2 patch, rulings: Exclamatives, narrowed.",
+   "addedIn": "2.2",
+   "at": "2026-10-19T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "2.2:G62",
+   "op": "add_ruling",
+   "from": null,
+   "to": "So … that: tonsi + adjective",
+   "ruling": "2.2:G62",
+   "reason": "Liraasa 2.2 patch, rulings: So … that: tonsi + adjective.",
+   "addedIn": "2.2",
+   "at": "2026-10-19T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "2.2:G63",
+   "op": "add_ruling",
+   "from": null,
+   "to": "Hopeful purpose: fime + nosi",
+   "ruling": "2.2:G63",
+   "reason": "Liraasa 2.2 patch, rulings: Hopeful purpose: fime + nosi.",
+   "addedIn": "2.2",
+   "at": "2026-10-19T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "2.2:G64",
+   "op": "add_ruling",
+   "from": null,
+   "to": "Headless raho",
+   "ruling": "2.2:G64",
+   "reason": "Liraasa 2.2 patch, rulings: Headless raho.",
+   "addedIn": "2.2",
+   "at": "2026-10-19T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "2.2:G65",
+   "op": "add_ruling",
+   "from": null,
+   "to": "Adjective + sidu + verb",
+   "ruling": "2.2:G65",
+   "reason": "Liraasa 2.2 patch, rulings: Adjective + sidu + verb.",
+   "addedIn": "2.2",
+   "at": "2026-10-19T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "2.2:G66",
+   "op": "add_ruling",
+   "from": null,
+   "to": "kroti and krotiapo before a clause",
+   "ruling": "2.2:G66",
+   "reason": "Liraasa 2.2 patch, rulings: kroti and krotiapo before a clause.",
+   "addedIn": "2.2",
+   "at": "2026-10-19T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "2.2:G67",
+   "op": "add_ruling",
+   "from": null,
+   "to": "Side nouns as prepositions",
+   "ruling": "2.2:G67",
+   "reason": "Liraasa 2.2 patch, rulings: Side nouns as prepositions.",
+   "addedIn": "2.2",
+   "at": "2026-10-19T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "2.2:G68",
+   "op": "add_ruling",
+   "from": null,
+   "to": "The album as reference corpus",
+   "ruling": "2.2:G68",
+   "reason": "Liraasa 2.2 patch, rulings: The album as reference corpus.",
+   "addedIn": "2.2",
+   "at": "2026-10-19T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "2.1:G46",
+   "op": "supersede_ruling",
+   "from": "Questions keep every word in place",
+   "to": "2.2:G60",
+   "ruling": "2.2:G60",
+   "reason": "Liraasa 2.2 patch: 2.2:G60 supersedes 2.1:G46; the ruling is kept and marked, never reworded.",
+   "addedIn": "2.2",
+   "at": "2026-10-19T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "2.1:G47",
+   "op": "supersede_ruling",
+   "from": "Exclamatives",
+   "to": "2.2:G61",
+   "ruling": "2.2:G61",
+   "reason": "Liraasa 2.2 patch: 2.2:G61 supersedes 2.1:G47; the ruling is kept and marked, never reworded.",
+   "addedIn": "2.2",
+   "at": "2026-10-19T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "2.1:G54",
+   "op": "supersede_ruling",
+   "from": "Result clauses",
+   "to": "2.2:G62",
+   "ruling": "2.2:G62",
+   "reason": "Liraasa 2.2 patch: 2.2:G62 supersedes 2.1:G54; the ruling is kept and marked, never reworded.",
+   "addedIn": "2.2",
+   "at": "2026-10-19T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "0.8:G4",
+   "op": "supersede_ruling",
+   "field": "embedded wh-word stays in place",
+   "from": "Quotation and embedded questions",
+   "to": "2.2:G60",
+   "ruling": "2.2:G60",
+   "reason": "Liraasa 2.2 patch: 2.2:G60 supersedes only the clause of 0.8:G4 that an embedded wh-word stays in place; its quotation clause stands.",
+   "addedIn": "2.2",
+   "at": "2026-10-19T12:00:00Z",
+   "author": "nicolas"
+  }
+ ]
+}

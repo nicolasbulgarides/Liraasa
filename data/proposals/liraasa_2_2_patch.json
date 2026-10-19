@@ -1,0 +1,572 @@
+{
+ "patch": "Liraasa 2.2",
+ "base": "Liraasa 2.1",
+ "date": "2026-10-19",
+ "rulings": [
+  {
+   "id": "2.2:G60",
+   "topic": "Question-word position",
+   "status": "supersedes 2.1:G46; supersedes the in-place clause of 0.8:G4",
+   "rule": "A ki-word may open the clause or stay where its answer would stand; the album fronts it in most questions. A yes/no question must end in ki. A question with a ki-word may end in ki or not. Embedded wh-questions may also front the ki-word and never end in ki; embedded yes/no questions use ki-oro (1.0:G2).",
+   "examples": [
+    "Ki-pago taivo pagopa ki?",
+    "Taivo pagopa ki-pago ki?",
+    "Ki-kasa taivo po amora maivo?",
+    "maivori ne sabesia ki-coda maivori ramura."
+   ]
+  },
+  {
+   "id": "2.2:G61",
+   "topic": "Exclamatives, narrowed",
+   "status": "supersedes 2.1:G47",
+   "rule": "Only ki-modo + adjective, ki-eli + noun and ki-muya + noun make an exclamation, and only when the clause does not end in ki. Any other ki-word clause without ki is a question. A degree question (ki-modo + adjective) must end in ki.",
+   "examples": [
+    "Li nullo ka ki-modo vanisan!",
+    "Ki-eli nullo!",
+    "Li nullo ka ki-modo vanisan ki?"
+   ]
+  },
+  {
+   "id": "2.2:G62",
+   "topic": "So … that: tonsi + adjective",
+   "status": "supersedes 2.1:G54",
+   "rule": "tonsi directly before an adjective means “so”; a following fime clause gives the result. Clause-initial tonsi keeps its meaning “therefore”.",
+   "examples": [
+    "taivo ke tonsi corvisan fime taivo viki savalisia maivo ki?",
+    "si maivo ke tonsi lukasan, maivo futu ne salrusia."
+   ]
+  },
+  {
+   "id": "2.2:G63",
+   "topic": "Hopeful purpose: fime + nosi",
+   "status": "new",
+   "rule": "After a main clause, a fime clause whose verb carries nosi means “in the hope that, so that perhaps”. kopisa stays the plain purpose linker.",
+   "examples": [
+    "maivo futu donuda ito biti de lalfo, fime taivo nosi semnesia ko maivo en moluvaye."
+   ]
+  },
+  {
+   "id": "2.2:G64",
+   "topic": "Headless raho",
+   "status": "new",
+   "rule": "raho with no noun before it means “the one who, that which”, as subject, object or complement. raho is never a question word: questions use ki-nela or ki-coda.",
+   "examples": [
+    "Maivo lirala raho taivo amora.",
+    "saivo po farufasbifa kube saivo ramura raho maivo po ke."
+   ]
+  },
+  {
+   "id": "2.2:G65",
+   "topic": "Adjective + sidu + verb",
+   "status": "new; partly closes “to + verb”",
+   "rule": "An adjective may take sidu + verb for “easy to …, ready to …”. The verb’s object is what the adjective describes.",
+   "examples": [
+    "ito ke ruli levasan sidu zeldoza trana."
+   ]
+  },
+  {
+   "id": "2.2:G66",
+   "topic": "kroti and krotiapo before a clause",
+   "status": "new",
+   "rule": "kroti and krotiapo may introduce a clause: “before …”, “after …”. The clause inherits tense like kube (0.8:R6). Before a measure they keep 2.1:G55; before li + noun, their 2.0 meaning.",
+   "examples": [
+    "kroti maivo lesvu taivo ke li sevusan ruhe."
+   ]
+  },
+  {
+   "id": "2.2:G67",
+   "topic": "Side nouns as prepositions",
+   "status": "new",
+   "rule": "nazru (behind), zavme (in front of), silda (beside), cemnu (in the middle of), lizma (left of) and rizno (right of) may stand bare before a noun phrase as prepositions, or after a verb as adverbs.",
+   "examples": [
+    "Li lavra semnesia nazru li nimu.",
+    "saivo de melonulu venreva nazru gase baba lira de ruhesonbu."
+   ]
+  },
+  {
+   "id": "2.2:G68",
+   "topic": "The album as reference corpus",
+   "status": "new",
+   "rule": "The album (twelve songs and the alternate 05) is canon 2.0 text, read with 2.0 spellings under 2.1:G58. A construction it uses consistently is grammar. A line that departs from the grammar once is an album reading: it keeps its intended meaning, is listed with its standard form, and is not a model for new text.",
+   "examples": []
+  }
+ ],
+ "superseded": {
+  "2.1:G46": "2.2:G60",
+  "2.1:G47": "2.2:G61",
+  "2.1:G54": "2.2:G62",
+  "0.8:G4 (embedded wh-word stays in place)": "2.2:G60"
+ },
+ "lexicon": {
+  "fill_slots": [
+   {
+    "headword": "solo",
+    "role": "an",
+    "form": "soloasa",
+    "gloss": "the living stone; a jewel of countless faces",
+    "source": "album 09 line 7",
+    "confirm_with_author": true
+   },
+   {
+    "headword": "tarnulinu",
+    "role": "a",
+    "form": "tarnulinusan",
+    "gloss": "boyish; like a son",
+    "source": "album 09 line 9",
+    "confirm_with_author": true
+   }
+  ],
+  "revert_silro": {
+   "root": {
+    "from_2_1": "puzu",
+    "restore_2_0": "silro",
+    "meaning": "secret",
+    "forms": [
+     {
+      "role": "n",
+      "from_2_1": "puzu",
+      "restore": "silro"
+     },
+     {
+      "role": "an",
+      "from_2_1": "puzuasa",
+      "restore": "silroasa"
+     },
+     {
+      "role": "nn",
+      "from_2_1": "puzuna",
+      "restore": "silrona"
+     },
+     {
+      "role": "v",
+      "from_2_1": "puzupa",
+      "restore": "silrosia"
+     },
+     {
+      "role": "na",
+      "from_2_1": "puzunasan",
+      "restore": "silronasan"
+     },
+     {
+      "role": "a",
+      "from_2_1": "puzusan",
+      "restore": "silrosan"
+     },
+     {
+      "role": "aa",
+      "from_2_1": "puzuasasan",
+      "restore": "silroasasan"
+     }
+    ]
+   },
+   "compounds": [
+    {
+     "from_2_1": "puzucono",
+     "restore": "silrocono",
+     "meaning": "bribe",
+     "forms": [
+      {
+       "role": "n",
+       "from_2_1": "puzucono",
+       "restore": "silrocono"
+      },
+      {
+       "role": "v",
+       "from_2_1": "puzuconopa",
+       "restore": "silroconosia"
+      },
+      {
+       "role": "a",
+       "from_2_1": "puzuconosan",
+       "restore": "silroconosan"
+      }
+     ]
+    },
+    {
+     "from_2_1": "puzukarko",
+     "restore": "silrokarko",
+     "meaning": "assassination",
+     "forms": [
+      {
+       "role": "n",
+       "from_2_1": "puzukarko",
+       "restore": "silrokarko"
+      },
+      {
+       "role": "v",
+       "from_2_1": "puzukarkopa",
+       "restore": "silrokarkosia"
+      }
+     ]
+    },
+    {
+     "from_2_1": "puzufolni",
+     "restore": "silrofolni",
+     "meaning": "hidden blossom; a flower sheltered from view",
+     "forms": [
+      {
+       "role": "n",
+       "from_2_1": "puzufolni",
+       "restore": "silrofolni"
+      }
+     ]
+    },
+    {
+     "from_2_1": "puzuvani",
+     "restore": "silrovani",
+     "meaning": "mysterious, profound beauty",
+     "forms": [
+      {
+       "role": "n",
+       "from_2_1": "puzuvani",
+       "restore": "silrovani"
+      },
+      {
+       "role": "a",
+       "from_2_1": "puzuvanisan",
+       "restore": "silrovanisan"
+      }
+     ]
+    },
+    {
+     "from_2_1": "puzusavali",
+     "restore": "silrosavali",
+     "meaning": "stolen kiss; a kiss exchanged in secret",
+     "forms": [
+      {
+       "role": "n",
+       "from_2_1": "puzusavali",
+       "restore": "silrosavali"
+      }
+     ]
+    },
+    {
+     "from_2_1": "puzuseno",
+     "restore": "silroseno",
+     "meaning": "gossip; rumor",
+     "forms": [
+      {
+       "role": "n",
+       "from_2_1": "puzuseno",
+       "restore": "silroseno"
+      },
+      {
+       "role": "v",
+       "from_2_1": "puzusenopa",
+       "restore": "silrosenosia"
+      }
+     ]
+    },
+    {
+     "from_2_1": "puzubelfi",
+     "restore": "silrobelfi",
+     "meaning": "suspicion",
+     "forms": [
+      {
+       "role": "n",
+       "from_2_1": "puzubelfi",
+       "restore": "silrobelfi"
+      },
+      {
+       "role": "v",
+       "from_2_1": "puzubelfipa",
+       "restore": "silrobelfisia"
+      },
+      {
+       "role": "a",
+       "from_2_1": "puzubelfisan",
+       "restore": "silrobelfisan"
+      }
+     ]
+    },
+    {
+     "from_2_1": "puzulordi",
+     "restore": "silrolordi",
+     "meaning": "conspiracy; secret plan",
+     "forms": [
+      {
+       "role": "n",
+       "from_2_1": "puzulordi",
+       "restore": "silrolordi"
+      },
+      {
+       "role": "v",
+       "from_2_1": "puzulordipa",
+       "restore": "silrolordisia"
+      },
+      {
+       "role": "a",
+       "from_2_1": "puzulordisan",
+       "restore": "silrolordisan"
+      }
+     ]
+    },
+    {
+     "from_2_1": "puzulumi",
+     "restore": "silrolumi",
+     "meaning": "clue",
+     "forms": [
+      {
+       "role": "n",
+       "from_2_1": "puzulumi",
+       "restore": "silrolumi"
+      }
+     ]
+    },
+    {
+     "from_2_1": "puzumasu",
+     "restore": "silromasu",
+     "meaning": "mystery; riddle; enigma",
+     "forms": [
+      {
+       "role": "n",
+       "from_2_1": "puzumasu",
+       "restore": "silromasu"
+      },
+      {
+       "role": "a",
+       "from_2_1": "puzumasusan",
+       "restore": "silromasusan"
+      }
+     ]
+    },
+    {
+     "from_2_1": "sernapuzu",
+     "restore": "sernasilro",
+     "meaning": "data privacy",
+     "forms": [
+      {
+       "role": "n",
+       "from_2_1": "sernapuzu",
+       "restore": "sernasilro"
+      }
+     ]
+    },
+    {
+     "from_2_1": "puzudivma",
+     "restore": "silrodivma",
+     "meaning": "cryptographic system",
+     "forms": [
+      {
+       "role": "n",
+       "from_2_1": "puzudivma",
+       "restore": "silrodivma"
+      }
+     ]
+    }
+   ],
+   "image_engine": {
+    "modifier": {
+     "from_2_1": "puzu",
+     "restore": "silro"
+    },
+    "attested": [
+     {
+      "from_2_1": "puzuamor",
+      "restore": "silroamor"
+     },
+     {
+      "from_2_1": "puzulira",
+      "restore": "silrolira"
+     },
+     {
+      "from_2_1": "puzulomo",
+      "restore": "silrolomo"
+     },
+     {
+      "from_2_1": "puzulore",
+      "restore": "silrolore"
+     },
+     {
+      "from_2_1": "puzumanli",
+      "restore": "silromanli"
+     },
+     {
+      "from_2_1": "puzupomli",
+      "restore": "silropomli"
+     },
+     {
+      "from_2_1": "puzurenli",
+      "restore": "silrorenli"
+     },
+     {
+      "from_2_1": "puzurinba",
+      "restore": "silrorinba"
+     }
+    ]
+   }
+  }
+ },
+ "album_readings": [
+  {
+   "id": "AR-01",
+   "track": "01",
+   "line": 10,
+   "recorded": "lanto, saivo po veseva fime raho saivo viki ke saivo de devorivo.",
+   "confidence": "author_confirm",
+   "issue": "fime + headless raho has no predicate for the raho-phrase.",
+   "standard_form": "lanto, saivo po veseva fime saivo viki ke saivo de devorivo.",
+   "note": "Probable intent: drop raho (“whispered that he would be her betrothed”). Confirm with the author."
+  },
+  {
+   "id": "AR-02",
+   "track": "02",
+   "line": 1,
+   "recorded": "maivo po ke baba lirasan lavra norusan.",
+   "confidence": "certain",
+   "issue": "Adjective after the noun (0.8:G7 order).",
+   "standard_form": "maivo po ke baba norusan lirasan lavra.",
+   "note": null
+  },
+  {
+   "id": "AR-03",
+   "track": "02",
+   "line": 16,
+   "recorded": "li linu raho navdinia sabesia baba bio de milno.",
+   "confidence": "certain",
+   "issue": "Relative clause not closed by a comma (1.0:G21).",
+   "standard_form": "li linu raho navdinia, sabesia baba bio de milno.",
+   "note": null
+  },
+  {
+   "id": "AR-04",
+   "track": "02",
+   "line": 8,
+   "recorded": "maivo mambivimoma ala li ata masuma lanla ata po milobema.",
+   "confidence": "author_confirm",
+   "issue": "li followed directly by ata; the phrase does not parse.",
+   "standard_form": null,
+   "note": "Author to supply the intended line."
+  },
+  {
+   "id": "AR-05",
+   "track": "05",
+   "line": 9,
+   "recorded": "kube ito futu ke salrusan maivo ata donuda ala ito baba biti vobi demro.",
+   "confidence": "author_confirm",
+   "issue": "Appears to be a draft of the next line, which says the same thing correctly.",
+   "standard_form": null,
+   "note": "Author to confirm whether the recorded vocal uses this line."
+  },
+  {
+   "id": "AR-06",
+   "track": "05",
+   "line": 20,
+   "recorded": "voyu taivo de navu maivo ne povi navdinia maivo.",
+   "confidence": "certain",
+   "issue": "Reflexive object needs sela.",
+   "standard_form": "voyu taivo de navu maivo ne povi navdinia maivo sela.",
+   "note": null
+  },
+  {
+   "id": "AR-07",
+   "track": "08",
+   "line": 1,
+   "recorded": "maivo futu senosia ala taivo de baba gargonasan colbi.",
+   "confidence": "certain",
+   "issue": "Pronoun + de reads as owner (1.2:G27): “your gentle colour”. Recipient order is VERB THEME ala RECIPIENT (1.2:G26).",
+   "standard_form": "maivo futu senosia baba gargonasan colbi ala taivo.",
+   "note": null
+  },
+  {
+   "id": "AR-08",
+   "track": "08",
+   "line": 2,
+   "recorded": "maivo futu veseva ala taivo de li vera de damruna.",
+   "confidence": "certain",
+   "issue": "Same pronoun + de issue as the line above.",
+   "standard_form": "maivo futu veseva li vera de damruna ala taivo.",
+   "note": null
+  },
+  {
+   "id": "AR-09",
+   "track": "08",
+   "line": 13,
+   "recorded": "li sabeasasan nelari raho pensapa peburalno en milno ki?",
+   "confidence": "certain",
+   "issue": "peburalno is the noun; the verb is peburalnopa. Relative needs a closing comma.",
+   "standard_form": "li sabeasasan nelari raho pensapa, peburalnopa en milno ki?",
+   "note": null
+  },
+  {
+   "id": "AR-10",
+   "track": "08",
+   "line": 15,
+   "recorded": "si maivo ke sidu daigoda, maivo kopi daigoda en saivo de varori.",
+   "confidence": "certain",
+   "issue": "sidu never follows a copula (1.0 linking rule).",
+   "standard_form": "si maivo musi daigoda, maivo kopi daigoda en saivo de varori.",
+   "note": "Held question: ke sidu VERB as “destined to” (see open_questions)."
+  },
+  {
+   "id": "AR-11",
+   "track": "10",
+   "line": 3,
+   "recorded": "maivo po silbesia saivo de vaye raho po jubaja baba nonmori.",
+   "confidence": "author_confirm",
+   "issue": "Pronoun + de reads as owner: “her wind”.",
+   "standard_form": "maivo po silbesia saivo baba vaye raho po jubaja baba nonmori.",
+   "note": "Use the standard form only if “her” was meant as the recipient."
+  },
+  {
+   "id": "AR-12",
+   "track": "10",
+   "line": 6,
+   "recorded": "tonsi maivo po silbesia saivo de baba pagonasan folni.",
+   "confidence": "certain",
+   "issue": "Pronoun + de before baba reads as owner; recipient takes VERB PRONOUN THEME (1.2:G26).",
+   "standard_form": "tonsi maivo po silbesia saivo baba pagonasan folni.",
+   "note": null
+  },
+  {
+   "id": "AR-13",
+   "track": "10",
+   "line": 13,
+   "recorded": "maivo po veseva ala saivo de li krotiata lirasarbi.",
+   "confidence": "certain",
+   "issue": "Pronoun + de reads as owner: “her next poem”.",
+   "standard_form": "maivo po veseva li krotiata lirasarbi ala saivo.",
+   "note": null
+  },
+  {
+   "id": "AR-14",
+   "track": "10",
+   "line": 15,
+   "recorded": "saivo po farufasbifa kube saivo ramusan raho maivo po ke.",
+   "confidence": "certain",
+   "issue": "ramusan is the adjective (“memorable”); the verb is ramura. Headless raho is canon from 2.2:G64.",
+   "standard_form": "saivo po farufasbifa kube saivo ramura raho maivo po ke.",
+   "note": null
+  },
+  {
+   "id": "AR-15",
+   "track": "10",
+   "line": 16,
+   "recorded": "maivo toda-krono po ke saivo de devorivo.",
+   "confidence": "certain",
+   "issue": "A time word stands first or last (1.2:G24), not between subject and tense.",
+   "standard_form": "maivo po ke saivo de devorivo toda-krono.",
+   "note": null
+  },
+  {
+   "id": "AR-16",
+   "track": "11",
+   "line": 12,
+   "recorded": "raho povi sabesia baba kasi polvasan sove ki?",
+   "confidence": "certain",
+   "issue": "raho is relative only; the question word is ki-nela.",
+   "standard_form": "ki-nela povi sabesia baba kasi polvasan sove ki?",
+   "note": null
+  }
+ ],
+ "open_questions": {
+  "add": [
+   "ke sidu VERB as “destined to” (album 08); hold until a second use.",
+   "Relatives with a gap for time or place (album 01: krono raho …); hold until a second use."
+  ],
+  "closed": {
+   "to + verb (adjective complements)": "2.2:G65"
+  }
+ },
+ "edition_note": "Liraasa 2.2 added rulings 2.2:G60–G68, restored the 2.0 spelling silro (reverting the 2.1 respelling puzu), filled the forms soloasa and tarnulinusan, and added the album as the reference corpus with sixteen album readings."
+}

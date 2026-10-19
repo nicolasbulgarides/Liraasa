@@ -358,6 +358,8 @@ export interface RawLexicon {
   rulings_2_0?: RawRuling[];
   /** 2.1 (ADR-0017): grammar rulings G46–G56 and the respelling rulings G57–G59. */
   rulings_2_1?: RawRuling[];
+  /** 2.2 (ADR-0018): rulings G60–G68, the grammar of the album. */
+  rulings_2_2?: RawRuling[];
   /** The image-compound pattern (2.0:G40, ADR-0016). */
   image_compounds?: RawImageCompounds;
   examples: RawExample[];
