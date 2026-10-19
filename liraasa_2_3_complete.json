@@ -2,7 +2,7 @@
  "language": "Liraasa",
  "version": "2.3",
  "built_utc": "2026-10-19T18:00:00Z",
- "source": "Built deterministically from liraasa_2_2.json (sha256 318d7ef9f3cb8ea63f31f04444c59644656002cf11f019b075160a2572676c77) by scripts/integrate_2_3.ts, applying the changeset 2026-10-19-lexicon-2-3 (ADR-0019). This JSON is the single source of truth for Liraasa 2.3.",
+ "source": "Built deterministically from liraasa_2_2.json (sha256 318d7ef9f3cb8ea63f31f04444c59644656002cf11f019b075160a2572676c77) by scripts/integrate_2_3.ts, applying the changeset 2026-10-19-lexicon-2-3 and 2026-10-19-lexicon-2-3-review (ADR-0019). This JSON is the single source of truth for Liraasa 2.3.",
  "snapshot_0_8": {
   "source_file": "lexicon_0_8_rc2.json",
   "source_version": "0.8-rc2",
@@ -68032,7 +68032,7 @@
    "status_2_0": "NEW",
    "since": "2.0",
    "history_0_8": null,
-   "notes": "Added in 2.0 (changeset 2026-10-18-lexicon-2-0). Tier null: Needed as the base for frog, and a lovely word in its own right..",
+   "notes": "Added in 2.0 (changeset 2026-10-18-lexicon-2-0). A lovely word in its own right.",
    "protected": true,
    "id": "lx_mirunululira_1601"
   },
@@ -74331,7 +74331,7 @@
    "status_2_0": "NEW",
    "since": "2.0",
    "history_0_8": null,
-   "notes": "Added in 2.0 (changeset 2026-10-18-lexicon-2-0). Tier null: forest-king, now built on regna as you first asked (replaces larbopagolirbu).",
+   "notes": "Added in 2.0 (changeset 2026-10-18-lexicon-2-0).",
    "protected": true,
    "id": "lx_larbopagoregna_1763"
   },
@@ -75073,7 +75073,7 @@
    "status_2_0": "NEW",
    "since": "2.0",
    "history_0_8": null,
-   "notes": "Added in 2.0 (changeset 2026-10-18-lexicon-2-0). Tier GAP: milk-animal.",
+   "notes": "Added in 2.0 (changeset 2026-10-18-lexicon-2-0).",
    "protected": true,
    "id": "lx_maremirulazu_1782"
   },
@@ -114915,6 +114915,40 @@
     "topic": "Sameness, difference, similarity",
     "ruling": "X ka sambasan ko Y (same as); X ka sambanasan da Y (different from); gase NP alone = like NP (simile); gase ADJ gase NP = as ADJ as NP. Lotero silda, ... = on the other hand."
    }
+  ],
+  "archived_text": [
+   {
+    "entry": "1.2:G28",
+    "field": "example:2",
+    "text": "Maivo po vimova muya jemlari en li folni.",
+    "now": "Maivo po vimova muya zimziri en li folni.",
+    "archived_in": "2.3",
+    "reason": "Author decision 2026-10-19: the example stays respelled (jemla is zimzi since 2.3:G69, and 2.1:G58 applies in full); its 2.2 text, which taught the retired spelling jemlari, is retired to the archive."
+   },
+   {
+    "entry": "lx_larbopagoregna_1763",
+    "field": "notes",
+    "text": "Added in 2.0 (changeset 2026-10-18-lexicon-2-0). Tier null: forest-king, now built on regna as you first asked (replaces larbopagolirbu).",
+    "now": "Added in 2.0 (changeset 2026-10-18-lexicon-2-0).",
+    "archived_in": "2.3",
+    "reason": "Author decision 2026-10-19: history that is no longer pertinent leaves the note for the archive. bear is a root since 2.3:G70; the note described it as the compound larbopagoregna (forest-king, built on regna)."
+   },
+   {
+    "entry": "lx_maremirulazu_1782",
+    "field": "notes",
+    "text": "Added in 2.0 (changeset 2026-10-18-lexicon-2-0). Tier GAP: milk-animal.",
+    "now": "Added in 2.0 (changeset 2026-10-18-lexicon-2-0).",
+    "archived_in": "2.3",
+    "reason": "Author decision 2026-10-19: history that is no longer pertinent leaves the note for the archive. cow is a root since 2.3:G70; the note described it as the compound maremirulazu (milk-animal)."
+   },
+   {
+    "entry": "lx_mirunululira_1601",
+    "field": "notes",
+    "text": "Added in 2.0 (changeset 2026-10-18-lexicon-2-0). Tier null: Needed as the base for frog, and a lovely word in its own right..",
+    "now": "Added in 2.0 (changeset 2026-10-18-lexicon-2-0). A lovely word in its own right.",
+    "archived_in": "2.3",
+    "reason": "Author decision 2026-10-19: history that is no longer pertinent leaves the note for the archive. frog is the root kerku since 2.3:G70, so mirunululira is no longer the base for frog; the rest of the note stands."
+   }
   ]
  },
  "sound_ledger": [
@@ -119463,9 +119497,15 @@
    "edition": "2.3",
    "summary": "Liraasa 2.3 (ADR-0019), from the author's sound-pass patch: rulings 2.3:G69–G71; 13 roots respelled (lenra → zarku, vanru → dokra, voho → kezdo, vabale → tobra, teyo → dento, mege → yumli, kupa → ruko, jemla → zimzi, pesbi → bondo, menha → gamdo, vugo → vizu, salye → bapi, senba → linle); bear and cow made the roots bumbo and murmu, and frog the new root kerku (mirunululirayo retired); wolf rebuilt as farvibudi (farvi + budi), superseding the wolf half of 2.1:G59; every form, compound, image compound, derivation and example sentence built on them follows.",
    "ops": 22
+  },
+  {
+   "id": "2026-10-19-lexicon-2-3-review",
+   "edition": "2.3",
+   "summary": "The 2.3 integration review (ADR-0019 addendum), from the author's answers of 2026-10-19: dento (tooth) and ruko (blood) are kept as the patch substitutes them; the respelled example of 1.2:G28 is kept and its 2.2 text retired to the new archive, legacy.archived_text; the stale history in the notes of bumbo, murmu and mirunululira moves there too; the root bank is left as it is. No rule changes.",
+   "ops": 4
   }
  ],
- "handoff_note": "Liraasa 2.3: all of 1.0, the 1.1 vocabulary supplement, the 1.2 changesets 2026-10-17-grammar-rulings and 2026-10-17-lexicon-1-2, the 2.0 changesets 2026-10-18-lexicon-2-0 and 2026-10-18-lexicon-2-0-review (word-building rulings 2.0:G37–G45, new vocabulary, the image-compound pattern), and the 2.1 changeset 2026-10-18-lexicon-2-1 and 2026-10-19-lexicon-2-1-review (rulings 2.1:G46–G59, 30 roots respelled), and the 2.2 changeset 2026-10-19-lexicon-2-2 (rulings 2.2:G60–G68, silro restored, the album), and the 2.3 changeset 2026-10-19-lexicon-2-3 (rulings 2.3:G69–G71, the sound pass: 13 roots respelled, bear, cow and frog made roots, wolf rebuilt on farvi). Revised examples keep their earlier text in liraasa_1_1 (1.2), liraasa_1_2 (2.0), liraasa_2_0 (2.1), liraasa_2_1 (2.2) or liraasa_2_2 (2.3). Ruling ids are edition-qualified: 0.8:R1, 1.0:G7, 1.2:G24, 2.0:G40, 2.1:G46, 2.2:G60, 2.3:G69. Built by scripts/build_handoff.ts from data/lexicon/liraasa_2_3.json.",
+ "handoff_note": "Liraasa 2.3: all of 1.0, the 1.1 vocabulary supplement, the 1.2 changesets 2026-10-17-grammar-rulings and 2026-10-17-lexicon-1-2, the 2.0 changesets 2026-10-18-lexicon-2-0 and 2026-10-18-lexicon-2-0-review (word-building rulings 2.0:G37–G45, new vocabulary, the image-compound pattern), and the 2.1 changeset 2026-10-18-lexicon-2-1 and 2026-10-19-lexicon-2-1-review (rulings 2.1:G46–G59, 30 roots respelled), and the 2.2 changeset 2026-10-19-lexicon-2-2 (rulings 2.2:G60–G68, silro restored, the album), and the 2.3 changeset 2026-10-19-lexicon-2-3 and 2026-10-19-lexicon-2-3-review (rulings 2.3:G69–G71, the sound pass: 13 roots respelled, bear, cow and frog made roots, wolf rebuilt on farvi). Revised examples keep their earlier text in liraasa_1_1 (1.2), liraasa_1_2 (2.0), liraasa_2_0 (2.1), liraasa_2_1 (2.2) or liraasa_2_2 (2.3). Ruling ids are edition-qualified: 0.8:R1, 1.0:G7, 1.2:G24, 2.0:G40, 2.1:G46, 2.2:G60, 2.3:G69. Built by scripts/build_handoff.ts from data/lexicon/liraasa_2_3.json.",
  "counts_1_1_to_1_2": {
   "before": {
    "headwords": 1418,
@@ -149200,6 +149240,63 @@
      "reason": "Liraasa 2.3 patch: frog is now the root kerku, so mirunululirayo leaves the listed derivations; old texts read it as kerku, and it stays buildable by the default -yo reading (2.3:G70).",
      "addedIn": "2.3",
      "at": "2026-10-19T18:00:00Z",
+     "author": "nicolas"
+    }
+   ]
+  },
+  {
+   "id": "2026-10-19-lexicon-2-3-review",
+   "edition": "2.3",
+   "created": "2026-10-19T20:00:00Z",
+   "author": "nicolas",
+   "summary": "The 2.3 integration review (ADR-0019 addendum), from the author's answers of 2026-10-19: dento (tooth) and ruko (blood) are kept as the patch substitutes them; the respelled example of 1.2:G28 is kept and its 2.2 text retired to the new archive, legacy.archived_text; the stale history in the notes of bumbo, murmu and mirunululira moves there too; the root bank is left as it is. No rule changes.",
+   "ops": [
+    {
+     "entry": "1.2:G28",
+     "op": "archive_text",
+     "field": "example:2",
+     "from": "Maivo po vimova muya jemlari en li folni.",
+     "to": "Maivo po vimova muya zimziri en li folni.",
+     "ruling": "2.3:G69",
+     "addedIn": "2.3",
+     "reason": "Author decision 2026-10-19: the example stays respelled (jemla is zimzi since 2.3:G69, and 2.1:G58 applies in full); its 2.2 text, which taught the retired spelling jemlari, is retired to the archive.",
+     "at": "2026-10-19T20:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_larbopagoregna_1763",
+     "op": "archive_text",
+     "field": "notes",
+     "from": "Added in 2.0 (changeset 2026-10-18-lexicon-2-0). Tier null: forest-king, now built on regna as you first asked (replaces larbopagolirbu).",
+     "to": "Added in 2.0 (changeset 2026-10-18-lexicon-2-0).",
+     "ruling": "2.3:G70",
+     "addedIn": "2.3",
+     "reason": "Author decision 2026-10-19: history that is no longer pertinent leaves the note for the archive. bear is a root since 2.3:G70; the note described it as the compound larbopagoregna (forest-king, built on regna).",
+     "at": "2026-10-19T20:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_maremirulazu_1782",
+     "op": "archive_text",
+     "field": "notes",
+     "from": "Added in 2.0 (changeset 2026-10-18-lexicon-2-0). Tier GAP: milk-animal.",
+     "to": "Added in 2.0 (changeset 2026-10-18-lexicon-2-0).",
+     "ruling": "2.3:G70",
+     "addedIn": "2.3",
+     "reason": "Author decision 2026-10-19: history that is no longer pertinent leaves the note for the archive. cow is a root since 2.3:G70; the note described it as the compound maremirulazu (milk-animal).",
+     "at": "2026-10-19T20:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_mirunululira_1601",
+     "op": "archive_text",
+     "field": "notes",
+     "from": "Added in 2.0 (changeset 2026-10-18-lexicon-2-0). Tier null: Needed as the base for frog, and a lovely word in its own right..",
+     "to": "Added in 2.0 (changeset 2026-10-18-lexicon-2-0). A lovely word in its own right.",
+     "ruling": "2.3:G70",
+     "addedIn": "2.3",
+     "reason": "Author decision 2026-10-19: history that is no longer pertinent leaves the note for the archive. frog is the root kerku since 2.3:G70, so mirunululira is no longer the base for frog; the rest of the note stands.",
+     "at": "2026-10-19T20:00:00Z",
      "author": "nicolas"
     }
    ]
