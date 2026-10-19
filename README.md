@@ -1,6 +1,6 @@
 # Liraasa
 
-**Liraasa** is a constructed language built for singing, created by Peter Pietri. Its name is the word for song, `lira`, raised to its highest degree: _liraasa_, “song of the first stars”. Every vowel is pure and is its own syllable, the weight always falls on the second-to-last syllable, and its vocabulary circles four images: `sulba` sun, `lore` heart, `luno` moon, `lira` song.
+**Liraasa** is a constructed language built for singing, created by Peter Pietri. Its name is the word for song, `lira`, raised to its highest degree: _liraasa_, “song of the first stars”. Every vowel is pure and is its own syllable, the weight always falls on the second-to-last syllable, and its vocabulary circles four images: `sola` sun, `lore` heart, `luno` moon, `lira` song.
 
 This repository is the **Liraasa Workbench**: the canonical lexicon, the tools that build and check it, and the documents and apps made from it.
 
