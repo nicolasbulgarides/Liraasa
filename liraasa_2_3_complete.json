@@ -1,8 +1,8 @@
 {
  "language": "Liraasa",
- "version": "2.2",
- "built_utc": "2026-10-19T12:00:00Z",
- "source": "Built deterministically from liraasa_2_1.json (sha256 3655d48bb21e8ebcc2eb56cf4dbb416e211b6a2a55037471a84179b8b4be63e9) by scripts/integrate_2_2.ts, applying the changeset 2026-10-19-lexicon-2-2 (ADR-0018). This JSON is the single source of truth for Liraasa 2.2.",
+ "version": "2.3",
+ "built_utc": "2026-10-19T18:00:00Z",
+ "source": "Built deterministically from liraasa_2_2.json (sha256 318d7ef9f3cb8ea63f31f04444c59644656002cf11f019b075160a2572676c77) by scripts/integrate_2_3.ts, applying the changeset 2026-10-19-lexicon-2-3 (ADR-0019). This JSON is the single source of truth for Liraasa 2.3.",
  "snapshot_0_8": {
   "source_file": "lexicon_0_8_rc2.json",
   "source_version": "0.8-rc2",
@@ -116,7 +116,7 @@
    "lemupago": "school (place of learning): lemu + -pago",
    "lemuyo": "student; disciple (one who learns): lemu + -yo",
    "lemudonuyo": "teacher (one who teaches): lemudonu + -yo",
-   "vanruyo": "soldier; warrior (one who wages war): vanru + -yo",
+   "dokrayo": "soldier; warrior (one who wages war): dokra + -yo",
    "marnapago": "farm (place of grain): marna + -pago",
    "marnayo": "farmer (one who grows grain): marna + -yo",
    "monruti": "hill (little mountain): monru + -ti",
@@ -152,7 +152,6 @@
    "bullipago": "library: bulli + -pago",
    "buzapago": "tavern: buza + -pago",
    "gonbipago": "inn; guesthouse: gonbi + -pago",
-   "mirunululirayo": "frog (river-singer): mirunululira + -yo",
    "hifayo": "thief (one who steals): hifa + -yo",
    "sevuhifayo": "pirate (one who does sea-theft): sevuhifa + -yo",
    "velupago": "observatory: velu + -pago",
@@ -171,7 +170,7 @@
    "helnapago": "hospital: helna + -pago",
    "cemopago": "kitchen: cemo + -pago",
    "somupago": "bedroom: somu + -pago",
-   "vanrupago": "battlefield: vanru + -pago",
+   "dokrapago": "battlefield: dokra + -pago",
    "jusepago": "courthouse: juse + -pago",
    "dorbiyo": "gatekeeper: dorbi + -yo",
    "lovuyo": "reader: lovu + -yo",
@@ -18941,17 +18940,17 @@
    "id": "lx_banu_0024"
   },
   {
-   "root": "kupa",
+   "root": "ruko",
    "type": "Primal",
    "components": null,
    "forms": {
-    "root": "kupa",
-    "ascended": "kupaasa",
-    "negative": "kupana",
-    "verb": "kupaka",
-    "negative_adjective": "kupanasan",
-    "adjective": "kupasan",
-    "ascended_adjective": "kupaasasan"
+    "root": "ruko",
+    "ascended": "rukoasa",
+    "negative": "rukona",
+    "verb": "rukora",
+    "negative_adjective": "rukonasan",
+    "adjective": "rukosan",
+    "ascended_adjective": "rukoasasan"
    },
    "glosses": {
     "root": "blood",
@@ -23174,20 +23173,20 @@
    "id": "lx_folnilombi_0134"
   },
   {
-   "root": "folnimege",
+   "root": "folniyumli",
    "type": "Compound",
    "components": [
     "folni",
-    "mege"
+    "yumli"
    ],
    "forms": {
-    "root": "folnimege",
-    "ascended": "folnimegeasa",
-    "negative": "folnimegena",
-    "verb": "folnimegefa",
-    "negative_adjective": "folnimegenasan",
-    "adjective": "folnimegesan",
-    "ascended_adjective": "folnimegeasasan"
+    "root": "folniyumli",
+    "ascended": "folniyumliasa",
+    "negative": "folniyumlina",
+    "verb": "folniyumlifa",
+    "negative_adjective": "folniyumlinasan",
+    "adjective": "folniyumlisan",
+    "ascended_adjective": "folniyumliasasan"
    },
    "glosses": {
     "root": "floral nectar",
@@ -25524,20 +25523,20 @@
    "id": "lx_kronosove_0200"
   },
   {
-   "root": "kronovabale",
+   "root": "kronotobra",
    "type": "Compound",
    "components": [
     "krono",
-    "vabale"
+    "tobra"
    ],
    "forms": {
-    "root": "kronovabale",
-    "verb": "kronovabaleka",
-    "ascended": "kronovabaleasa",
-    "negative": "kronovabalena",
-    "negative_adjective": "kronovabalenasan",
-    "adjective": "kronovabalesan",
-    "ascended_adjective": "kronovabaleasasan"
+    "root": "kronotobra",
+    "verb": "kronotobraka",
+    "ascended": "kronotobraasa",
+    "negative": "kronotobrana",
+    "negative_adjective": "kronotobranasan",
+    "adjective": "kronotobrasan",
+    "ascended_adjective": "kronotobraasasan"
    },
    "glosses": {
     "root": "deadline",
@@ -27280,17 +27279,17 @@
    "id": "lx_leni_0260"
   },
   {
-   "root": "lenra",
+   "root": "zarku",
    "type": "Primal",
    "components": null,
    "forms": {
-    "root": "lenra",
-    "ascended": "lenraasa",
-    "negative": "lenrana",
-    "verb": "lenrala",
-    "negative_adjective": "lenranasan",
-    "adjective": "lenrasan",
-    "ascended_adjective": "lenraasasan"
+    "root": "zarku",
+    "ascended": "zarkuasa",
+    "negative": "zarkuna",
+    "verb": "zarkuza",
+    "negative_adjective": "zarkunasan",
+    "adjective": "zarkusan",
+    "ascended_adjective": "zarkuasasan"
    },
    "glosses": {
     "root": "enemy; active adversary, not merely unloved; foe",
@@ -30379,17 +30378,17 @@
    "id": "lx_mebanebelfi_0366"
   },
   {
-   "root": "mege",
+   "root": "yumli",
    "type": "Primal",
    "components": null,
    "forms": {
-    "root": "mege",
-    "ascended": "megeasa",
-    "negative": "megena",
-    "verb": "megema",
-    "negative_adjective": "megenasan",
-    "adjective": "megesan",
-    "ascended_adjective": "megeasasan"
+    "root": "yumli",
+    "ascended": "yumliasa",
+    "negative": "yumlina",
+    "verb": "yumliya",
+    "negative_adjective": "yumlinasan",
+    "adjective": "yumlisan",
+    "ascended_adjective": "yumliasasan"
    },
    "glosses": {
     "root": "sweetness",
@@ -30552,17 +30551,17 @@
    "id": "lx_melva_0372"
   },
   {
-   "root": "menha",
+   "root": "gamdo",
    "type": "Primal",
    "components": null,
    "forms": {
-    "root": "menha",
-    "ascended": "menhaasa",
-    "negative": "menhana",
-    "verb": "menhama",
-    "negative_adjective": "menhanasan",
-    "adjective": "menhasan",
-    "ascended_adjective": "menhaasasan"
+    "root": "gamdo",
+    "ascended": "gamdoasa",
+    "negative": "gamdona",
+    "verb": "gamdoga",
+    "negative_adjective": "gamdonasan",
+    "adjective": "gamdosan",
+    "ascended_adjective": "gamdoasasan"
    },
    "glosses": {
     "root": "jaw",
@@ -36154,17 +36153,17 @@
    "id": "lx_peremolarne_0603"
   },
   {
-   "root": "pesbi",
+   "root": "bondo",
    "type": "Primal",
    "components": null,
    "forms": {
-    "root": "pesbi",
-    "ascended": "pesbiasa",
-    "negative": "pesbina",
-    "verb": "pesbipa",
-    "negative_adjective": "pesbinasan",
-    "adjective": "pesbisan",
-    "ascended_adjective": "pesbiasasan"
+    "root": "bondo",
+    "ascended": "bondoasa",
+    "negative": "bondona",
+    "verb": "bondoba",
+    "negative_adjective": "bondonasan",
+    "adjective": "bondosan",
+    "ascended_adjective": "bondoasasan"
    },
    "glosses": {
     "root": "weight",
@@ -39169,17 +39168,17 @@
    "id": "lx_salta_0727"
   },
   {
-   "root": "salye",
+   "root": "bapi",
    "type": "Primal",
    "components": null,
    "forms": {
-    "root": "salye",
-    "ascended": "salyeasa",
-    "negative": "salyena",
-    "verb": "salyesia",
-    "negative_adjective": "salyenasan",
-    "adjective": "salyesan",
-    "ascended_adjective": "salyeasasan"
+    "root": "bapi",
+    "ascended": "bapiasa",
+    "negative": "bapina",
+    "verb": "bapiba",
+    "negative_adjective": "bapinasan",
+    "adjective": "bapisan",
+    "ascended_adjective": "bapiasasan"
    },
    "glosses": {
     "root": "surprise",
@@ -39212,20 +39211,20 @@
    "id": "lx_salye_0728"
   },
   {
-   "root": "salyehavli",
+   "root": "bapihavli",
    "type": "Compound",
    "components": [
-    "salye",
+    "bapi",
     "havli"
    ],
    "forms": {
-    "root": "salyehavli",
-    "ascended": "salyehavliasa",
-    "negative": "salyehavlina",
-    "verb": "salyehavlisia",
-    "negative_adjective": "salyehavlinasan",
-    "adjective": "salyehavlisan",
-    "ascended_adjective": "salyehavliasasan"
+    "root": "bapihavli",
+    "ascended": "bapihavliasa",
+    "negative": "bapihavlina",
+    "verb": "bapihavliba",
+    "negative_adjective": "bapihavlinasan",
+    "adjective": "bapihavlisan",
+    "ascended_adjective": "bapihavliasasan"
    },
    "glosses": {
     "root": "gasp",
@@ -39250,20 +39249,20 @@
    "id": "lx_salyehavli_0729"
   },
   {
-   "root": "salyesemra",
+   "root": "bapisemra",
    "type": "Compound",
    "components": [
-    "salye",
+    "bapi",
     "semra"
    ],
    "forms": {
-    "root": "salyesemra",
-    "ascended": "salyesemraasa",
-    "negative": "salyesemrana",
-    "verb": "salyesemrasia",
-    "negative_adjective": "salyesemranasan",
-    "adjective": "salyesemrasan",
-    "ascended_adjective": "salyesemraasasan"
+    "root": "bapisemra",
+    "ascended": "bapisemraasa",
+    "negative": "bapisemrana",
+    "verb": "bapisemraba",
+    "negative_adjective": "bapisemranasan",
+    "adjective": "bapisemrasan",
+    "ascended_adjective": "bapisemraasasan"
    },
    "glosses": {
     "root": "embarrassment",
@@ -40248,17 +40247,17 @@
    "id": "lx_semvileto_0754"
   },
   {
-   "root": "senba",
+   "root": "linle",
    "type": "Primal",
    "components": null,
    "forms": {
-    "root": "senba",
-    "ascended": "senbaasa",
-    "negative": "senbana",
-    "verb": "senbasia",
-    "negative_adjective": "senbanasan",
-    "adjective": "senbasan",
-    "ascended_adjective": "senbaasasan"
+    "root": "linle",
+    "ascended": "linleasa",
+    "negative": "linlena",
+    "verb": "linlela",
+    "negative_adjective": "linlenasan",
+    "adjective": "linlesan",
+    "ascended_adjective": "linleasasan"
    },
    "glosses": {
     "root": "cleanliness",
@@ -40293,20 +40292,20 @@
    "id": "lx_senba_0755"
   },
   {
-   "root": "senbabiti",
+   "root": "linlebiti",
    "type": "Compound",
    "components": [
-    "senba",
+    "linle",
     "biti"
    ],
    "forms": {
-    "root": "senbabiti",
-    "verb": "senbabitisia",
-    "ascended": "senbabitiasa",
-    "negative": "senbabitina",
-    "negative_adjective": "senbabitinasan",
-    "adjective": "senbabitisan",
-    "ascended_adjective": "senbabitiasasan"
+    "root": "linlebiti",
+    "verb": "linlebitila",
+    "ascended": "linlebitiasa",
+    "negative": "linlebitina",
+    "negative_adjective": "linlebitinasan",
+    "adjective": "linlebitisan",
+    "ascended_adjective": "linlebitiasasan"
    },
    "glosses": {
     "root": "broom",
@@ -44049,17 +44048,17 @@
    "id": "lx_tevulu_0914"
   },
   {
-   "root": "teyo",
+   "root": "dento",
    "type": "Primal",
    "components": null,
    "forms": {
-    "root": "teyo",
-    "ascended": "teyoasa",
-    "negative": "teyona",
-    "verb": "teyota",
-    "negative_adjective": "teyonasan",
-    "adjective": "teyosan",
-    "ascended_adjective": "teyoasasan"
+    "root": "dento",
+    "ascended": "dentoasa",
+    "negative": "dentona",
+    "verb": "dentoda",
+    "negative_adjective": "dentonasan",
+    "adjective": "dentosan",
+    "ascended_adjective": "dentoasasan"
    },
    "glosses": {
     "root": "tooth",
@@ -44088,20 +44087,20 @@
    "id": "lx_teyo_0915"
   },
   {
-   "root": "teyonuravu",
+   "root": "dentonuravu",
    "type": "Compound",
    "components": [
-    "teyo",
+    "dento",
     "nuravu"
    ],
    "forms": {
-    "root": "teyonuravu",
-    "verb": "teyonuravuta",
-    "ascended": "teyonuravuasa",
-    "negative": "teyonuravuna",
-    "negative_adjective": "teyonuravunasan",
-    "adjective": "teyonuravusan",
-    "ascended_adjective": "teyonuravuasasan"
+    "root": "dentonuravu",
+    "verb": "dentonuravuda",
+    "ascended": "dentonuravuasa",
+    "negative": "dentonuravuna",
+    "negative_adjective": "dentonuravunasan",
+    "adjective": "dentonuravusan",
+    "ascended_adjective": "dentonuravuasasan"
    },
    "glosses": {
     "root": "toothache",
@@ -44699,17 +44698,17 @@
    "id": "lx_turna_0930"
   },
   {
-   "root": "vabale",
+   "root": "tobra",
    "type": "Primal",
    "components": null,
    "forms": {
-    "root": "vabale",
-    "ascended": "vabaleasa",
-    "negative": "vabalena",
-    "verb": "vabaleva",
-    "negative_adjective": "vabalenasan",
-    "adjective": "vabalesan",
-    "ascended_adjective": "vabaleasasan"
+    "root": "tobra",
+    "ascended": "tobraasa",
+    "negative": "tobrana",
+    "verb": "tobrata",
+    "negative_adjective": "tobranasan",
+    "adjective": "tobrasan",
+    "ascended_adjective": "tobraasasan"
    },
    "glosses": {
     "root": "wall",
@@ -45075,17 +45074,17 @@
    "id": "lx_vani_0940"
   },
   {
-   "root": "vanru",
+   "root": "dokra",
    "type": "Primal",
    "components": null,
    "forms": {
-    "root": "vanru",
-    "ascended": "vanruasa",
-    "negative": "vanruna",
-    "verb": "vanruva",
-    "negative_adjective": "vanrunasan",
-    "adjective": "vanrusan",
-    "ascended_adjective": "vanruasasan"
+    "root": "dokra",
+    "ascended": "dokraasa",
+    "negative": "dokrana",
+    "verb": "dokrada",
+    "negative_adjective": "dokranasan",
+    "adjective": "dokrasan",
+    "ascended_adjective": "dokraasasan"
    },
    "glosses": {
     "root": "war",
@@ -45121,20 +45120,20 @@
    "id": "lx_vanru_0941"
   },
   {
-   "root": "vanrudomlu",
+   "root": "dokradomlu",
    "type": "Compound",
    "components": [
-    "vanru",
+    "dokra",
     "domlu"
    ],
    "forms": {
-    "root": "vanrudomlu",
-    "ascended": "vanrudomluasa",
-    "negative": "vanrudomluna",
-    "verb": "vanrudomluva",
-    "negative_adjective": "vanrudomlunasan",
-    "adjective": "vanrudomlusan",
-    "ascended_adjective": "vanrudomluasasan"
+    "root": "dokradomlu",
+    "ascended": "dokradomluasa",
+    "negative": "dokradomluna",
+    "verb": "dokradomluda",
+    "negative_adjective": "dokradomlunasan",
+    "adjective": "dokradomlusan",
+    "ascended_adjective": "dokradomluasasan"
    },
    "glosses": {
     "root": "fortress; castle",
@@ -45466,17 +45465,17 @@
    "id": "lx_vebo_0968"
   },
   {
-   "root": "vugo",
+   "root": "vizu",
    "type": "Primal",
    "components": null,
    "forms": {
-    "root": "vugo",
-    "ascended": "vugoasa",
-    "negative": "vugona",
-    "verb": "vugova",
-    "negative_adjective": "vugonasan",
-    "adjective": "vugosan",
-    "ascended_adjective": "vugoasasan"
+    "root": "vizu",
+    "ascended": "vizuasa",
+    "negative": "vizuna",
+    "verb": "vizuva",
+    "negative_adjective": "vizunasan",
+    "adjective": "vizusan",
+    "ascended_adjective": "vizuasasan"
    },
    "glosses": {
     "root": "speed",
@@ -45508,20 +45507,20 @@
    "id": "lx_velbi_0982"
   },
   {
-   "root": "vugolavi",
+   "root": "vizulavi",
    "type": "Compound",
    "components": [
-    "vugo",
+    "vizu",
     "lavi"
    ],
    "forms": {
-    "root": "vugolavi",
-    "ascended": "vugolaviasa",
-    "negative": "vugolavina",
-    "verb": "vugolaviva",
-    "negative_adjective": "vugolavinasan",
-    "adjective": "vugolavisan",
-    "ascended_adjective": "vugolaviasasan"
+    "root": "vizulavi",
+    "ascended": "vizulaviasa",
+    "negative": "vizulavina",
+    "verb": "vizulaviva",
+    "negative_adjective": "vizulavinasan",
+    "adjective": "vizulavisan",
+    "ascended_adjective": "vizulaviasasan"
    },
    "glosses": {
     "root": "excitement",
@@ -45551,20 +45550,20 @@
    "id": "lx_velbilavi_0983"
   },
   {
-   "root": "vugorabi",
+   "root": "vizurabi",
    "type": "Compound",
    "components": [
-    "vugo",
+    "vizu",
     "rabi"
    ],
    "forms": {
-    "root": "vugorabi",
-    "ascended": "vugorabiasa",
-    "negative": "vugorabina",
-    "verb": "vugorabiva",
-    "negative_adjective": "vugorabinasan",
-    "adjective": "vugorabisan",
-    "ascended_adjective": "vugorabiasasan"
+    "root": "vizurabi",
+    "ascended": "vizurabiasa",
+    "negative": "vizurabina",
+    "verb": "vizurabiva",
+    "negative_adjective": "vizurabinasan",
+    "adjective": "vizurabisan",
+    "ascended_adjective": "vizurabiasasan"
    },
    "glosses": {
     "root": "dash; sprint; rush",
@@ -45590,20 +45589,20 @@
    "id": "lx_velbirabi_0984"
   },
   {
-   "root": "vugovalmi",
+   "root": "vizuvalmi",
    "type": "Compound",
    "components": [
-    "vugo",
+    "vizu",
     "valmi"
    ],
    "forms": {
-    "root": "vugovalmi",
-    "ascended": "vugovalmiasa",
-    "negative": "vugovalmina",
-    "verb": "vugovalmiva",
-    "negative_adjective": "vugovalminasan",
-    "adjective": "vugovalmisan",
-    "ascended_adjective": "vugovalmiasasan"
+    "root": "vizuvalmi",
+    "ascended": "vizuvalmiasa",
+    "negative": "vizuvalmina",
+    "verb": "vizuvalmiva",
+    "negative_adjective": "vizuvalminasan",
+    "adjective": "vizuvalmisan",
+    "ascended_adjective": "vizuvalmiasasan"
    },
    "glosses": {
     "root": "hurry; haste",
@@ -45629,20 +45628,20 @@
    "id": "lx_velbivalmi_0985"
   },
   {
-   "root": "vugovaye",
+   "root": "vizuvaye",
    "type": "Compound",
    "components": [
-    "vugo",
+    "vizu",
     "vaye"
    ],
    "forms": {
-    "root": "vugovaye",
-    "ascended": "vugovayeasa",
-    "negative": "vugovayena",
-    "verb": "vugovayeva",
-    "negative_adjective": "vugovayenasan",
-    "adjective": "vugovayesan",
-    "ascended_adjective": "vugovayeasasan"
+    "root": "vizuvaye",
+    "ascended": "vizuvayeasa",
+    "negative": "vizuvayena",
+    "verb": "vizuvayeva",
+    "negative_adjective": "vizuvayenasan",
+    "adjective": "vizuvayesan",
+    "ascended_adjective": "vizuvayeasasan"
    },
    "glosses": {
     "root": "gust; brief strong wind",
@@ -46686,17 +46685,17 @@
    "id": "lx_vismabalbu_1037"
   },
   {
-   "root": "voho",
+   "root": "kezdo",
    "type": "Primal",
    "components": null,
    "forms": {
-    "root": "voho",
-    "ascended": "vohoasa",
-    "negative": "vohona",
-    "verb": "vohova",
-    "negative_adjective": "vohonasan",
-    "adjective": "vohosan",
-    "ascended_adjective": "vohoasasan"
+    "root": "kezdo",
+    "ascended": "kezdoasa",
+    "negative": "kezdona",
+    "verb": "kezdoka",
+    "negative_adjective": "kezdonasan",
+    "adjective": "kezdosan",
+    "ascended_adjective": "kezdoasasan"
    },
    "glosses": {
     "root": "revenge; retaliation; vengeance",
@@ -46729,20 +46728,20 @@
    "id": "lx_voho_1038"
   },
   {
-   "root": "larbopagobudi",
+   "root": "farvibudi",
    "type": "Compound",
    "components": [
-    "larbopago",
+    "farvi",
     "budi"
    ],
    "forms": {
-    "root": "larbopagobudi",
-    "ascended": "larbopagobudiasa",
-    "negative": "larbopagobudina",
-    "verb": "larbopagobudila",
-    "negative_adjective": "larbopagobudinasan",
-    "adjective": "larbopagobudisan",
-    "ascended_adjective": "larbopagobudiasasan"
+    "root": "farvibudi",
+    "ascended": "farvibudiasa",
+    "negative": "farvibudina",
+    "verb": "farvibudifa",
+    "negative_adjective": "farvibudinasan",
+    "adjective": "farvibudisan",
+    "ascended_adjective": "farvibudiasasan"
    },
    "glosses": {
     "root": "wolf",
@@ -47620,20 +47619,20 @@
    "id": "lx_yelfasenru_1073"
   },
   {
-   "root": "bojiteyo",
+   "root": "bojidento",
    "type": "Compound",
    "components": [
     "boji",
-    "teyo"
+    "dento"
    ],
    "forms": {
-    "root": "bojiteyo",
-    "ascended": "bojiteyoasa",
-    "negative": "bojiteyona",
-    "verb": "bojiteyoba",
-    "negative_adjective": "bojiteyonasan",
-    "adjective": "bojiteyosan",
-    "ascended_adjective": "bojiteyoasasan"
+    "root": "bojidento",
+    "ascended": "bojidentoasa",
+    "negative": "bojidentona",
+    "verb": "bojidentoba",
+    "negative_adjective": "bojidentonasan",
+    "adjective": "bojidentosan",
+    "ascended_adjective": "bojidentoasasan"
    },
    "glosses": {
     "root": "icicle; hanging spear of ice",
@@ -48670,17 +48669,17 @@
    "id": "lx_lazu_1100"
   },
   {
-   "root": "jemla",
+   "root": "zimzi",
    "type": "Primal",
    "components": null,
    "forms": {
-    "root": "jemla",
-    "ascended": "jemlaasa",
-    "negative": "jemlana",
-    "verb": "jemlaja",
-    "negative_adjective": "jemlanasan",
-    "adjective": "jemlasan",
-    "ascended_adjective": "jemlaasasan"
+    "root": "zimzi",
+    "ascended": "zimziasa",
+    "negative": "zimzina",
+    "verb": "zimziza",
+    "negative_adjective": "zimzinasan",
+    "adjective": "zimzisan",
+    "ascended_adjective": "zimziasasan"
    },
    "glosses": {
     "root": "insect; six-legged arthropod in ordinary usage",
@@ -49896,20 +49895,20 @@
    "id": "lx_vamrilalni_1130"
   },
   {
-   "root": "jomruvugo",
+   "root": "jomruvizu",
    "type": "Compound",
    "components": [
     "jomru",
-    "vugo"
+    "vizu"
    ],
    "forms": {
-    "root": "jomruvugo",
-    "ascended": "jomruvugoasa",
-    "negative": "jomruvugona",
-    "verb": "jomruvugoja",
-    "negative_adjective": "jomruvugonasan",
-    "adjective": "jomruvugosan",
-    "ascended_adjective": "jomruvugoasasan"
+    "root": "jomruvizu",
+    "ascended": "jomruvizuasa",
+    "negative": "jomruvizuna",
+    "verb": "jomruvizuja",
+    "negative_adjective": "jomruvizunasan",
+    "adjective": "jomruvizusan",
+    "ascended_adjective": "jomruvizuasasan"
    },
    "glosses": {
     "root": "travel speed",
@@ -49929,7 +49928,7 @@
    "status_1_1": "NEW",
    "since": "1.1",
    "history_0_8": null,
-   "notes": "Added in 1.1 (vocabulary-only supplement). Scope: Speed during a journey. Components: jomru + vugo.",
+   "notes": "Added in 1.1 (vocabulary-only supplement). Scope: Speed during a journey. Components: jomru + vizu.",
    "protected": true,
    "id": "lx_jomruvelbi_1131"
   },
@@ -50276,20 +50275,20 @@
    "id": "lx_sevulazu_1140"
   },
   {
-   "root": "jemlatino",
+   "root": "zimzitino",
    "type": "Compound",
    "components": [
-    "jemla",
+    "zimzi",
     "tino"
    ],
    "forms": {
-    "root": "jemlatino",
-    "ascended": "jemlatinoasa",
-    "negative": "jemlatinona",
-    "verb": "jemlatinoja",
-    "negative_adjective": "jemlatinonasan",
-    "adjective": "jemlatinosan",
-    "ascended_adjective": "jemlatinoasasan"
+    "root": "zimzitino",
+    "ascended": "zimzitinoasa",
+    "negative": "zimzitinona",
+    "verb": "zimzitinoza",
+    "negative_adjective": "zimzitinonasan",
+    "adjective": "zimzitinosan",
+    "ascended_adjective": "zimzitinoasasan"
    },
    "glosses": {
     "root": "insect kind",
@@ -50309,25 +50308,25 @@
    "status_1_1": "NEW",
    "since": "1.1",
    "history_0_8": null,
-   "notes": "Added in 1.1 (vocabulary-only supplement). Scope: Taxonomic category of insect. Components: jemla + tino.",
+   "notes": "Added in 1.1 (vocabulary-only supplement). Scope: Taxonomic category of insect. Components: zimzi + tino.",
    "protected": true,
    "id": "lx_jemlatino_1141"
   },
   {
-   "root": "jemlayano",
+   "root": "zimziyano",
    "type": "Compound",
    "components": [
-    "jemla",
+    "zimzi",
     "yano"
    ],
    "forms": {
-    "root": "jemlayano",
-    "ascended": "jemlayanoasa",
-    "negative": "jemlayanona",
-    "verb": "jemlayanoja",
-    "negative_adjective": "jemlayanonasan",
-    "adjective": "jemlayanosan",
-    "ascended_adjective": "jemlayanoasasan"
+    "root": "zimziyano",
+    "ascended": "zimziyanoasa",
+    "negative": "zimziyanona",
+    "verb": "zimziyanoza",
+    "negative_adjective": "zimziyanonasan",
+    "adjective": "zimziyanosan",
+    "ascended_adjective": "zimziyanoasasan"
    },
    "glosses": {
     "root": "insect swarm",
@@ -50347,7 +50346,7 @@
    "status_1_1": "NEW",
    "since": "1.1",
    "history_0_8": null,
-   "notes": "Added in 1.1 (vocabulary-only supplement). Scope: Dense gathering of insects. Components: jemla + yano.",
+   "notes": "Added in 1.1 (vocabulary-only supplement). Scope: Dense gathering of insects. Components: zimzi + yano.",
    "protected": true,
    "id": "lx_jemlayano_1142"
   },
@@ -52231,20 +52230,20 @@
    "id": "lx_mavovulra_1191"
   },
   {
-   "root": "kuparale",
+   "root": "rukorale",
    "type": "Compound",
    "components": [
-    "kupa",
+    "ruko",
     "rale"
    ],
    "forms": {
-    "root": "kuparale",
-    "ascended": "kuparaleasa",
-    "negative": "kuparalena",
-    "verb": "kuparaleka",
-    "negative_adjective": "kuparalenasan",
-    "adjective": "kuparalesan",
-    "ascended_adjective": "kuparaleasasan"
+    "root": "rukorale",
+    "ascended": "rukoraleasa",
+    "negative": "rukoralena",
+    "verb": "rukoralera",
+    "negative_adjective": "rukoralenasan",
+    "adjective": "rukoralesan",
+    "ascended_adjective": "rukoraleasasan"
    },
    "glosses": {
     "root": "pulse",
@@ -52267,7 +52266,7 @@
    "status_2_0": "REGLOSSED",
    "since": "1.1",
    "history_0_8": null,
-   "notes": "Added in 1.1 (vocabulary-only supplement). Scope: Regular palpable blood-flow beat. Components: kupa + rale.",
+   "notes": "Added in 1.1 (vocabulary-only supplement). Scope: Regular palpable blood-flow beat. Components: ruko + rale.",
    "protected": true,
    "id": "lx_barnirale_1192"
   },
@@ -53948,20 +53947,20 @@
    "id": "lx_zarmobiti_1236"
   },
   {
-   "root": "tibiteyo",
+   "root": "tibidento",
    "type": "Compound",
    "components": [
     "tibi",
-    "teyo"
+    "dento"
    ],
    "forms": {
-    "root": "tibiteyo",
-    "ascended": "tibiteyoasa",
-    "negative": "tibiteyona",
-    "verb": "tibiteyota",
-    "negative_adjective": "tibiteyonasan",
-    "adjective": "tibiteyosan",
-    "ascended_adjective": "tibiteyoasasan"
+    "root": "tibidento",
+    "ascended": "tibidentoasa",
+    "negative": "tibidentona",
+    "verb": "tibidentota",
+    "negative_adjective": "tibidentonasan",
+    "adjective": "tibidentosan",
+    "ascended_adjective": "tibidentoasasan"
    },
    "glosses": {
     "root": "needle",
@@ -53983,7 +53982,7 @@
    "status_2_0": "REGLOSSED",
    "since": "1.1",
    "history_0_8": null,
-   "notes": "Added in 1.1 (vocabulary-only supplement). Scope: Sharp implement associated with thread. Components: tibi + teyo.",
+   "notes": "Added in 1.1 (vocabulary-only supplement). Scope: Sharp implement associated with thread. Components: tibi + dento.",
    "protected": true,
    "id": "lx_tibiteyo_1237"
   },
@@ -56038,20 +56037,20 @@
    "id": "lx_vorduyordo_1290"
   },
   {
-   "root": "pesbivordu",
+   "root": "bondovordu",
    "type": "Compound",
    "components": [
-    "pesbi",
+    "bondo",
     "vordu"
    ],
    "forms": {
-    "root": "pesbivordu",
-    "ascended": "pesbivorduasa",
-    "negative": "pesbivorduna",
-    "verb": "pesbivordupa",
-    "negative_adjective": "pesbivordunasan",
-    "adjective": "pesbivordusan",
-    "ascended_adjective": "pesbivorduasasan"
+    "root": "bondovordu",
+    "ascended": "bondovorduasa",
+    "negative": "bondovorduna",
+    "verb": "bondovorduba",
+    "negative_adjective": "bondovordunasan",
+    "adjective": "bondovordusan",
+    "ascended_adjective": "bondovorduasasan"
    },
    "glosses": {
     "root": "gravity",
@@ -56071,7 +56070,7 @@
    "status_1_1": "NEW",
    "since": "1.1",
    "history_0_8": null,
-   "notes": "Added in 1.1 (vocabulary-only supplement). Scope: Cause of gravitational weight; technical meaning lexicalized. Components: pesbi + vordu. Lexicalised metaphor: read the scope, not the parts, for its meaning.",
+   "notes": "Added in 1.1 (vocabulary-only supplement). Scope: Cause of gravitational weight; technical meaning lexicalized. Components: bondo + vordu. Lexicalised metaphor: read the scope, not the parts, for its meaning.",
    "protected": true,
    "id": "lx_pesbivordu_1291"
   },
@@ -56342,20 +56341,20 @@
    "id": "lx_sumamelli_1298"
   },
   {
-   "root": "demrovugo",
+   "root": "demrovizu",
    "type": "Compound",
    "components": [
     "demro",
-    "vugo"
+    "vizu"
    ],
    "forms": {
-    "root": "demrovugo",
-    "ascended": "demrovugoasa",
-    "negative": "demrovugona",
-    "verb": "demrovugoda",
-    "negative_adjective": "demrovugonasan",
-    "adjective": "demrovugosan",
-    "ascended_adjective": "demrovugoasasan"
+    "root": "demrovizu",
+    "ascended": "demrovizuasa",
+    "negative": "demrovizuna",
+    "verb": "demrovizuda",
+    "negative_adjective": "demrovizunasan",
+    "adjective": "demrovizusan",
+    "ascended_adjective": "demrovizuasasan"
    },
    "glosses": {
     "root": "speed of movement",
@@ -56375,7 +56374,7 @@
    "status_1_1": "NEW",
    "since": "1.1",
    "history_0_8": null,
-   "notes": "Added in 1.1 (vocabulary-only supplement). Scope: Rate of motion. Components: demro + vugo.",
+   "notes": "Added in 1.1 (vocabulary-only supplement). Scope: Rate of motion. Components: demro + vizu.",
    "protected": true,
    "id": "lx_demrovelbi_1299"
   },
@@ -59364,20 +59363,20 @@
    "id": "lx_talibena_1377"
   },
   {
-   "root": "talipesbi",
+   "root": "talibondo",
    "type": "Compound",
    "components": [
     "tali",
-    "pesbi"
+    "bondo"
    ],
    "forms": {
-    "root": "talipesbi",
-    "ascended": "talipesbiasa",
-    "negative": "talipesbina",
-    "verb": "talipesbita",
-    "negative_adjective": "talipesbinasan",
-    "adjective": "talipesbisan",
-    "ascended_adjective": "talipesbiasasan"
+    "root": "talibondo",
+    "ascended": "talibondoasa",
+    "negative": "talibondona",
+    "verb": "talibondota",
+    "negative_adjective": "talibondonasan",
+    "adjective": "talibondosan",
+    "ascended_adjective": "talibondoasasan"
    },
    "glosses": {
     "root": "workload",
@@ -59397,7 +59396,7 @@
    "status_1_1": "NEW",
    "since": "1.1",
    "history_0_8": null,
-   "notes": "Added in 1.1 (vocabulary-only supplement). Scope: Burden/weight of work. Components: tali + pesbi.",
+   "notes": "Added in 1.1 (vocabulary-only supplement). Scope: Burden/weight of work. Components: tali + bondo.",
    "protected": true,
    "id": "lx_talipesbi_1378"
   },
@@ -64534,20 +64533,20 @@
    "id": "lx_furomiru_1511"
   },
   {
-   "root": "megepusa",
+   "root": "yumlipusa",
    "type": "Compound",
    "components": [
-    "mege",
+    "yumli",
     "pusa"
    ],
    "forms": {
-    "root": "megepusa",
-    "ascended": "megepusaasa",
-    "negative": "megepusana",
-    "verb": "megepusama",
-    "negative_adjective": "megepusanasan",
-    "adjective": "megepusasan",
-    "ascended_adjective": "megepusaasasan"
+    "root": "yumlipusa",
+    "ascended": "yumlipusaasa",
+    "negative": "yumlipusana",
+    "verb": "yumlipusaya",
+    "negative_adjective": "yumlipusanasan",
+    "adjective": "yumlipusasan",
+    "ascended_adjective": "yumlipusaasasan"
    },
    "glosses": {
     "root": "sugar",
@@ -64802,20 +64801,20 @@
    "id": "lx_kaldokova_1518"
   },
   {
-   "root": "talijemla",
+   "root": "talizimzi",
    "type": "Compound",
    "components": [
     "tali",
-    "jemla"
+    "zimzi"
    ],
    "forms": {
-    "root": "talijemla",
-    "ascended": "talijemlaasa",
-    "negative": "talijemlana",
-    "verb": "talijemlata",
-    "negative_adjective": "talijemlanasan",
-    "adjective": "talijemlasan",
-    "ascended_adjective": "talijemlaasasan"
+    "root": "talizimzi",
+    "ascended": "talizimziasa",
+    "negative": "talizimzina",
+    "verb": "talizimzita",
+    "negative_adjective": "talizimzinasan",
+    "adjective": "talizimzisan",
+    "ascended_adjective": "talizimziasasan"
    },
    "glosses": {
     "root": "ant",
@@ -65150,20 +65149,20 @@
    "id": "lx_sevunela_1527"
   },
   {
-   "root": "lunolarbopagobudi",
+   "root": "lunofarvibudi",
    "type": "Compound",
    "components": [
     "luno",
-    "larbopagobudi"
+    "farvibudi"
    ],
    "forms": {
-    "root": "lunolarbopagobudi",
-    "ascended": "lunolarbopagobudiasa",
-    "negative": "lunolarbopagobudina",
-    "verb": "lunolarbopagobudila",
-    "negative_adjective": "lunolarbopagobudinasan",
-    "adjective": "lunolarbopagobudisan",
-    "ascended_adjective": "lunolarbopagobudiasasan"
+    "root": "lunofarvibudi",
+    "ascended": "lunofarvibudiasa",
+    "negative": "lunofarvibudina",
+    "verb": "lunofarvibudila",
+    "negative_adjective": "lunofarvibudinasan",
+    "adjective": "lunofarvibudisan",
+    "ascended_adjective": "lunofarvibudiasasan"
    },
    "glosses": {
     "root": "werewolf",
@@ -65188,20 +65187,20 @@
    "id": "lx_lunovolda_1528"
   },
   {
-   "root": "kupavolme",
+   "root": "rukovolme",
    "type": "Compound",
    "components": [
-    "kupa",
+    "ruko",
     "volme"
    ],
    "forms": {
-    "root": "kupavolme",
-    "ascended": "kupavolmeasa",
-    "negative": "kupavolmena",
-    "verb": "kupavolmeka",
-    "negative_adjective": "kupavolmenasan",
-    "adjective": "kupavolmesan",
-    "ascended_adjective": "kupavolmeasasan"
+    "root": "rukovolme",
+    "ascended": "rukovolmeasa",
+    "negative": "rukovolmena",
+    "verb": "rukovolmera",
+    "negative_adjective": "rukovolmenasan",
+    "adjective": "rukovolmesan",
+    "ascended_adjective": "rukovolmeasasan"
    },
    "glosses": {
     "root": "vampire",
@@ -68308,20 +68307,20 @@
    "id": "lx_loterolavi_1608"
   },
   {
-   "root": "lenralavi",
+   "root": "zarkulavi",
    "type": "Compound",
    "components": [
-    "lenra",
+    "zarku",
     "lavi"
    ],
    "forms": {
-    "root": "lenralavi",
-    "ascended": "lenralaviasa",
-    "negative": "lenralavina",
-    "verb": "lenralavila",
-    "negative_adjective": "lenralavinasan",
-    "adjective": "lenralavisan",
-    "ascended_adjective": "lenralaviasasan"
+    "root": "zarkulavi",
+    "ascended": "zarkulaviasa",
+    "negative": "zarkulavina",
+    "verb": "zarkulaviza",
+    "negative_adjective": "zarkulavinasan",
+    "adjective": "zarkulavisan",
+    "ascended_adjective": "zarkulaviasasan"
    },
    "glosses": {
     "root": "joy at an enemy’s misfortune",
@@ -68499,20 +68498,20 @@
    "id": "lx_lunosevu_1613"
   },
   {
-   "root": "farujemla",
+   "root": "faruzimzi",
    "type": "Compound",
    "components": [
     "faru",
-    "jemla"
+    "zimzi"
    ],
    "forms": {
-    "root": "farujemla",
-    "ascended": "farujemlaasa",
-    "negative": "farujemlana",
-    "verb": "farujemlafa",
-    "negative_adjective": "farujemlanasan",
-    "adjective": "farujemlasan",
-    "ascended_adjective": "farujemlaasasan"
+    "root": "faruzimzi",
+    "ascended": "faruzimziasa",
+    "negative": "faruzimzina",
+    "verb": "faruzimzifa",
+    "negative_adjective": "faruzimzinasan",
+    "adjective": "faruzimzisan",
+    "ascended_adjective": "faruzimziasasan"
    },
    "glosses": {
     "root": "firefly",
@@ -68845,20 +68844,20 @@
    "id": "lx_lansinela_1622"
   },
   {
-   "root": "vanruyano",
+   "root": "dokrayano",
    "type": "Compound",
    "components": [
-    "vanru",
+    "dokra",
     "yano"
    ],
    "forms": {
-    "root": "vanruyano",
-    "ascended": "vanruyanoasa",
-    "negative": "vanruyanona",
-    "verb": "vanruyanova",
-    "negative_adjective": "vanruyanonasan",
-    "adjective": "vanruyanosan",
-    "ascended_adjective": "vanruyanoasasan"
+    "root": "dokrayano",
+    "ascended": "dokrayanoasa",
+    "negative": "dokrayanona",
+    "verb": "dokrayanoda",
+    "negative_adjective": "dokrayanonasan",
+    "adjective": "dokrayanosan",
+    "ascended_adjective": "dokrayanoasasan"
    },
    "glosses": {
     "root": "army; host (an army)",
@@ -72640,20 +72639,20 @@
    "id": "lx_farurivla_1719"
   },
   {
-   "root": "kuparivla",
+   "root": "rukorivla",
    "type": "Compound",
    "components": [
-    "kupa",
+    "ruko",
     "rivla"
    ],
    "forms": {
-    "root": "kuparivla",
-    "ascended": "kuparivlaasa",
-    "negative": "kuparivlana",
-    "verb": "kuparivlaka",
-    "negative_adjective": "kuparivlanasan",
-    "adjective": "kuparivlasan",
-    "ascended_adjective": "kuparivlaasasan"
+    "root": "rukorivla",
+    "ascended": "rukorivlaasa",
+    "negative": "rukorivlana",
+    "verb": "rukorivlara",
+    "negative_adjective": "rukorivlanasan",
+    "adjective": "rukorivlasan",
+    "ascended_adjective": "rukorivlaasasan"
    },
    "glosses": {
     "root": "circulation; the flow of blood",
@@ -74302,20 +74301,17 @@
    "id": "lx_sevuregna_1762"
   },
   {
-   "root": "larbopagoregna",
-   "type": "Compound",
-   "components": [
-    "larbopago",
-    "regna"
-   ],
+   "root": "bumbo",
+   "type": "Primal",
+   "components": null,
    "forms": {
-    "root": "larbopagoregna",
-    "ascended": "larbopagoregnaasa",
-    "negative": "larbopagoregnana",
-    "verb": "larbopagoregnala",
-    "negative_adjective": "larbopagoregnanasan",
-    "adjective": "larbopagoregnasan",
-    "ascended_adjective": "larbopagoregnaasasan"
+    "root": "bumbo",
+    "ascended": "bumboasa",
+    "negative": "bumbona",
+    "verb": "bumboba",
+    "negative_adjective": "bumbonasan",
+    "adjective": "bumbosan",
+    "ascended_adjective": "bumboasasan"
    },
    "glosses": {
     "root": "bear",
@@ -74691,20 +74687,20 @@
    "id": "lx_botelirbu_1772"
   },
   {
-   "root": "vanrulirbu",
+   "root": "dokralirbu",
    "type": "Compound",
    "components": [
-    "vanru",
+    "dokra",
     "lirbu"
    ],
    "forms": {
-    "root": "vanrulirbu",
-    "ascended": "vanrulirbuasa",
-    "negative": "vanrulirbuna",
-    "verb": "vanrulirbuva",
-    "negative_adjective": "vanrulirbunasan",
-    "adjective": "vanrulirbusan",
-    "ascended_adjective": "vanrulirbuasasan"
+    "root": "dokralirbu",
+    "ascended": "dokralirbuasa",
+    "negative": "dokralirbuna",
+    "verb": "dokralirbuda",
+    "negative_adjective": "dokralirbunasan",
+    "adjective": "dokralirbusan",
+    "ascended_adjective": "dokralirbuasasan"
    },
    "glosses": {
     "root": "commander; officer",
@@ -75046,20 +75042,17 @@
    "id": "lx_monrulimli_1781"
   },
   {
-   "root": "maremirulazu",
-   "type": "Compound",
-   "components": [
-    "maremiru",
-    "lazu"
-   ],
+   "root": "murmu",
+   "type": "Primal",
+   "components": null,
    "forms": {
-    "root": "maremirulazu",
-    "ascended": "maremirulazuasa",
-    "negative": "maremirulazuna",
-    "verb": "maremirulazuma",
-    "negative_adjective": "maremirulazunasan",
-    "adjective": "maremirulazusan",
-    "ascended_adjective": "maremirulazuasasan"
+    "root": "murmu",
+    "ascended": "murmuasa",
+    "negative": "murmuna",
+    "verb": "murmuma",
+    "negative_adjective": "murmunasan",
+    "adjective": "murmusan",
+    "ascended_adjective": "murmuasasan"
    },
    "glosses": {
     "root": "cow; cattle",
@@ -75124,20 +75117,20 @@
    "id": "lx_garvuzogu_1783"
   },
   {
-   "root": "vanruvalmi",
+   "root": "dokravalmi",
    "type": "Compound",
    "components": [
-    "vanru",
+    "dokra",
     "valmi"
    ],
    "forms": {
-    "root": "vanruvalmi",
-    "ascended": "vanruvalmiasa",
-    "negative": "vanruvalmina",
-    "verb": "vanruvalmiva",
-    "negative_adjective": "vanruvalminasan",
-    "adjective": "vanruvalmisan",
-    "ascended_adjective": "vanruvalmiasasan"
+    "root": "dokravalmi",
+    "ascended": "dokravalmiasa",
+    "negative": "dokravalmina",
+    "verb": "dokravalmida",
+    "negative_adjective": "dokravalminasan",
+    "adjective": "dokravalmisan",
+    "ascended_adjective": "dokravalmiasasan"
    },
    "glosses": {
     "root": "march",
@@ -75398,20 +75391,20 @@
    "id": "lx_daigomudu_1790"
   },
   {
-   "root": "menhasabaye",
+   "root": "gamdosabaye",
    "type": "Compound",
    "components": [
-    "menha",
+    "gamdo",
     "sabaye"
    ],
    "forms": {
-    "root": "menhasabaye",
-    "ascended": "menhasabayeasa",
-    "negative": "menhasabayena",
-    "verb": "menhasabayema",
-    "negative_adjective": "menhasabayenasan",
-    "adjective": "menhasabayesan",
-    "ascended_adjective": "menhasabayeasasan"
+    "root": "gamdosabaye",
+    "ascended": "gamdosabayeasa",
+    "negative": "gamdosabayena",
+    "verb": "gamdosabayega",
+    "negative_adjective": "gamdosabayenasan",
+    "adjective": "gamdosabayesan",
+    "ascended_adjective": "gamdosabayeasasan"
    },
    "glosses": {
     "root": "beard",
@@ -77830,6 +77823,42 @@
    "notes": "Added in 2.0 (changeset 2026-10-18-lexicon-2-0). Tier CALLED: art-energy; Spanish duende [Spanish].",
    "protected": true,
    "id": "lx_lardayalmu_1853"
+  },
+  {
+   "root": "kerku",
+   "type": "Primal",
+   "components": null,
+   "forms": {
+    "root": "kerku",
+    "ascended": "kerkuasa",
+    "negative": "kerkuna",
+    "verb": "kerkuka",
+    "negative_adjective": "kerkunasan",
+    "adjective": "kerkusan",
+    "ascended_adjective": "kerkuasasan"
+   },
+   "glosses": {
+    "root": "frog",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "to croak",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Animals",
+   "english_synonyms": [
+    "frog",
+    "to croak"
+   ],
+   "status_1_0": "NEW",
+   "status_2_3": "NEW",
+   "since": "2.3",
+   "history_0_8": null,
+   "notes": "Added in 2.3 (changeset 2026-10-19-lexicon-2-3). Replaces the listed derivation mirunululira + -yo (frog (river-singer)), which is retired (2.3:G70).",
+   "protected": true,
+   "id": "lx_kerku_1854"
   }
  ],
  "function_words": [
@@ -82427,7 +82456,7 @@
      "You owe me two coins."
     ],
     [
-     "Maivo po vimova muya jemlari en li folni.",
+     "Maivo po vimova muya zimziri en li folni.",
      "I saw many insects on the flower."
     ],
     [
@@ -82761,7 +82790,13 @@
    "topic": "Roots replaced by compounds",
    "ruling": "volda -> larbopagobudi (larbopago + budi); taha -> kezupago (kezu + pago). Compound reading of kezupago is canon.",
    "refines": [],
-   "examples": []
+   "examples": [],
+   "superseded_in_part": [
+    {
+     "clause": "volda -> larbopagobudi (larbopago + budi)",
+     "by": "2.3:G71"
+    }
+   ]
   }
  ],
  "rulings_2_2": [
@@ -82908,6 +82943,34 @@
    "topic": "The album as reference corpus",
    "ruling": "The album (twelve songs and the alternate 05) is canon 2.0 text, read with 2.0 spellings under 2.1:G58. A construction it uses consistently is grammar. A line that departs from the grammar once is an album reading: it keeps its intended meaning, is listed with its standard form, and is not a model for new text.",
    "refines": [],
+   "examples": []
+  }
+ ],
+ "rulings_2_3": [
+  {
+   "id": "G69",
+   "topic": "Second respelling pass",
+   "ruling": "Thirteen roots are respelled: lenra -> zarku; vanru -> dokra; voho -> kezdo; vabale -> tobra; teyo -> dento; mege -> yumli; kupa -> ruko; jemla -> zimzi; pesbi -> bondo; menha -> gamdo; vugo -> vizu; salye -> bapi; senba -> linle. 2.1:G58 applies in full: a respelled root keeps every meaning and empty slot; all forms, derivations, compounds and image compounds respell with it; compound verbs follow the new first letter; 2.2 spellings retired; older texts, including the album, are read under the spellings they were written in.",
+   "refines": [
+    "2.1:G58"
+   ],
+   "examples": []
+  },
+  {
+   "id": "G70",
+   "topic": "Roots for common animals",
+   "ruling": "bumbo (bear), murmu (cow; cattle) and kerku (frog) are new roots. They replace larbopagoregna, maremirulazu and the listed derivation mirunululirayo, which are retired; kerku takes the verb kerkuka, to croak. mirunululira (river-song) stays.",
+   "refines": [],
+   "examples": []
+  },
+  {
+   "id": "G71",
+   "topic": "Wolf",
+   "ruling": "larbopagobudi -> farvibudi (farvi + budi), 'wild dog', read like farvilazu (wild animal); lunolarbopagobudi -> lunofarvibudi. Supersedes the wolf half of 2.1:G59; its taha -> kezupago half stands.",
+   "refines": [],
+   "supersedes": [
+    "2.1:G59"
+   ],
    "examples": []
   }
  ],
@@ -85630,9 +85693,9 @@
    "source": "0.8 grammar examples"
   },
   {
-   "liraasa": "Li kronovabale ka deyafutu.",
+   "liraasa": "Li kronotobra ka deyafutu.",
    "english": "The deadline is tomorrow.",
-   "feature": "vocab:kronovabale",
+   "feature": "vocab:kronotobra",
    "status": "CARRIED",
    "changes": [],
    "source": "0.8 grammar examples"
@@ -85744,7 +85807,7 @@
    "source": "0.8 grammar examples"
   },
   {
-   "liraasa": "Eli-krono, la vugosan!",
+   "liraasa": "Eli-krono, la vizusan!",
    "english": "Now, quickly! (immediately)",
    "feature": "construction:immediately",
    "status": "CARRIED",
@@ -85985,9 +86048,9 @@
    "source": "0.8 grammar examples"
   },
   {
-   "liraasa": "Senbabitisia li teru!",
+   "liraasa": "Linlebitila li teru!",
    "english": "Sweep the floor!",
-   "feature": "vocab:senbabiti",
+   "feature": "vocab:linlebiti",
    "status": "CARRIED",
    "changes": [],
    "source": "0.8 grammar examples"
@@ -86073,9 +86136,9 @@
    "source": "0.8 grammar examples"
   },
   {
-   "liraasa": "Velina de teyonuravu ka ruli lasona.",
+   "liraasa": "Velina de dentonuravu ka ruli lasona.",
    "english": "Velina's toothache is very noisy.",
-   "feature": "vocab:teyonuravu",
+   "feature": "vocab:dentonuravu",
    "status": "CARRIED",
    "changes": [],
    "source": "0.8 grammar examples"
@@ -86574,14 +86637,14 @@
    "source": "1.1 vocabulary examples (everyday)"
   },
   {
-   "liraasa": "Li jemla ka baba lazu.",
+   "liraasa": "Li zimzi ka baba lazu.",
    "english": "An insect is an animal.",
    "feature": "jemla, lazu; ka for an essential class",
    "status": "NEW",
    "source": "1.1 vocabulary examples (everyday)"
   },
   {
-   "liraasa": "Maivo po vimova muya jemlari en li folni.",
+   "liraasa": "Maivo po vimova muya zimziri en li folni.",
    "english": "I saw many insects on the flower.",
    "feature": "jemla with -ri plural",
    "status": "NEW",
@@ -86742,7 +86805,7 @@
    "source": "1.1 vocabulary examples (everyday)"
   },
   {
-   "liraasa": "Li tibiteyo ke germasan.",
+   "liraasa": "Li tibidento ke germasan.",
    "english": "The needle is metallic.",
    "feature": "tibiteyo; germa adjective",
    "status": "NEW",
@@ -86777,7 +86840,7 @@
    "source": "1.1 vocabulary examples (natural world)"
   },
   {
-   "liraasa": "Li demro de li miru ke vugosan.",
+   "liraasa": "Li demro de li miru ke vizusan.",
    "english": "The motion of the water is quick.",
    "feature": "demro as noun",
    "status": "NEW",
@@ -86840,7 +86903,7 @@
    "source": "1.1 vocabulary examples (natural world)"
   },
   {
-   "liraasa": "Li pesbivordu po demroda li solo.",
+   "liraasa": "Li bondovordu po demroda li solo.",
    "english": "Gravity moved the stone.",
    "feature": "pesbivordu, demro verb",
    "status": "NEW",
@@ -86861,7 +86924,7 @@
    "source": "1.1 vocabulary examples (natural world)"
   },
   {
-   "liraasa": "Maivo po lenila li jemla en li nullo.",
+   "liraasa": "Maivo po lenila li zimzi en li nullo.",
    "english": "I heard the insect in the night.",
    "feature": "jemla",
    "status": "NEW",
@@ -86903,7 +86966,7 @@
    "source": "1.1 vocabulary examples (natural world)"
   },
   {
-   "liraasa": "Li jemla po demroda ala li folni.",
+   "liraasa": "Li zimzi po demroda ala li folni.",
    "english": "The insect moved to the flower.",
    "feature": "jemla, demro",
    "status": "NEW",
@@ -87193,7 +87256,7 @@
    "source": "1.1 vocabulary examples (philosophical)"
   },
   {
-   "liraasa": "Li pesbivordu ka baba vordu de li demro.",
+   "liraasa": "Li bondovordu ka baba vordu de li demro.",
    "english": "Gravity is a cause of motion.",
    "feature": "pesbivordu, demro",
    "status": "NEW",
@@ -87333,7 +87396,7 @@
    "source": "1.1 vocabulary examples (technological)"
   },
   {
-   "liraasa": "Li farvisimvodivmabiti demroda la vugosan.",
+   "liraasa": "Li farvisimvodivmabiti demroda la vizusan.",
    "english": "The robot moves quickly.",
    "feature": "farvisimvodivmabiti, demro",
    "status": "NEW",
@@ -87608,14 +87671,14 @@
   {
    "ending": "almi",
    "members": [
+    "dokravalmi",
     "helvivalmi",
     "jomruvalmi",
     "kezuvalmi",
     "noruvalmi",
     "pebuvalmi",
     "valmi",
-    "vanruvalmi",
-    "vugovalmi",
+    "vizuvalmi",
     "vulravalmi"
    ],
    "count": 9
@@ -87707,13 +87770,6 @@
    "count": 2
   },
   {
-   "ending": "alye",
-   "members": [
-    "salye"
-   ],
-   "count": 1
-  },
-  {
    "ending": "alyu",
    "members": [
     "valyu"
@@ -87737,6 +87793,13 @@
     "mambi"
    ],
    "count": 2
+  },
+  {
+   "ending": "amdo",
+   "members": [
+    "gamdo"
+   ],
+   "count": 1
   },
   {
    "ending": "amdu",
@@ -87872,13 +87935,6 @@
    "count": 3
   },
   {
-   "ending": "anru",
-   "members": [
-    "vanru"
-   ],
-   "count": 1
-  },
-  {
    "ending": "ansa",
    "members": [
     "bansa"
@@ -87969,6 +88025,13 @@
     "silrokarko"
    ],
    "count": 2
+  },
+  {
+   "ending": "arku",
+   "members": [
+    "zarku"
+   ],
+   "count": 1
   },
   {
    "ending": "arla",
@@ -88117,9 +88180,9 @@
   {
    "ending": "avli",
    "members": [
+    "bapihavli",
     "havli",
     "moluhavli",
-    "salyehavli",
     "timruhavli"
    ],
    "count": 4
@@ -88231,14 +88294,6 @@
    "count": 6
   },
   {
-   "ending": "bale",
-   "members": [
-    "kronovabale",
-    "vabale"
-   ],
-   "count": 2
-  },
-  {
    "ending": "bane",
    "members": [
     "mebane"
@@ -88254,9 +88309,16 @@
    "count": 2
   },
   {
+   "ending": "bapi",
+   "members": [
+    "bapi"
+   ],
+   "count": 1
+  },
+  {
    "ending": "baye",
    "members": [
-    "menhasabaye",
+    "gamdosabaye",
     "sabaye"
    ],
    "count": 2
@@ -88321,6 +88383,7 @@
     "kurnomelobiti",
     "lansimelobiti",
     "lenibiti",
+    "linlebiti",
     "lumibiti",
     "melobiti",
     "mudusomubiti",
@@ -88334,7 +88397,6 @@
     "sarbibiti",
     "sasvabiti",
     "semnebiti",
-    "senbabiti",
     "senobiti",
     "sevulumibiti",
     "somubiti",
@@ -88370,8 +88432,8 @@
    "ending": "budi",
    "members": [
     "budi",
-    "larbopagobudi",
-    "lunolarbopagobudi"
+    "farvibudi",
+    "lunofarvibudi"
    ],
    "count": 3
   },
@@ -88560,7 +88622,6 @@
   {
    "ending": "egna",
    "members": [
-    "larbopagoregna",
     "maloregna",
     "minvaregna",
     "nimuregna",
@@ -88568,7 +88629,7 @@
     "sevuregna",
     "tarnuregna"
    ],
-   "count": 7
+   "count": 6
   },
   {
    "ending": "ekla",
@@ -88833,15 +88894,6 @@
    "count": 3
   },
   {
-   "ending": "emla",
-   "members": [
-    "farujemla",
-    "jemla",
-    "talijemla"
-   ],
-   "count": 3
-  },
-  {
    "ending": "emlu",
    "members": [
     "folluhemlu",
@@ -88876,7 +88928,7 @@
   {
    "ending": "emra",
    "members": [
-    "salyesemra",
+    "bapisemra",
     "semra"
    ],
    "count": 2
@@ -88929,13 +88981,6 @@
    "count": 2
   },
   {
-   "ending": "enba",
-   "members": [
-    "senba"
-   ],
-   "count": 1
-  },
-  {
    "ending": "enbu",
    "members": [
     "lenbu"
@@ -88973,23 +89018,9 @@
    "count": 1
   },
   {
-   "ending": "enha",
-   "members": [
-    "menha"
-   ],
-   "count": 1
-  },
-  {
    "ending": "enli",
    "members": [
     "renli"
-   ],
-   "count": 1
-  },
-  {
-   "ending": "enra",
-   "members": [
-    "lenra"
    ],
    "count": 1
   },
@@ -89033,6 +89064,15 @@
     "menso"
    ],
    "count": 1
+  },
+  {
+   "ending": "ento",
+   "members": [
+    "bojidento",
+    "dento",
+    "tibidento"
+   ],
+   "count": 3
   },
   {
    "ending": "enva",
@@ -89094,6 +89134,13 @@
    "ending": "ergu",
    "members": [
     "mergu"
+   ],
+   "count": 1
+  },
+  {
+   "ending": "erku",
+   "members": [
+    "kerku"
    ],
    "count": 1
   },
@@ -89160,14 +89207,6 @@
    "count": 2
   },
   {
-   "ending": "esbi",
-   "members": [
-    "pesbi",
-    "talipesbi"
-   ],
-   "count": 2
-  },
-  {
    "ending": "esma",
    "members": [
     "lesma"
@@ -89198,6 +89237,13 @@
     "vilnesevre"
    ],
    "count": 3
+  },
+  {
+   "ending": "ezdo",
+   "members": [
+    "kezdo"
+   ],
+   "count": 1
   },
   {
    "ending": "faji",
@@ -89512,6 +89558,15 @@
    "count": 6
   },
   {
+   "ending": "imzi",
+   "members": [
+    "faruzimzi",
+    "talizimzi",
+    "zimzi"
+   ],
+   "count": 3
+  },
+  {
    "ending": "inba",
    "members": [
     "devorinba",
@@ -89528,6 +89583,13 @@
     "zayurinba"
    ],
    "count": 12
+  },
+  {
+   "ending": "inle",
+   "members": [
+    "linle"
+   ],
+   "count": 1
   },
   {
    "ending": "insa",
@@ -89550,10 +89612,10 @@
    "ending": "irbu",
    "members": [
     "botelirbu",
+    "dokralirbu",
     "lirbu",
     "marelirbu",
-    "talilirbu",
-    "vanrulirbu"
+    "talilirbu"
    ],
    "count": 5
   },
@@ -89651,9 +89713,9 @@
     "conorivla",
     "farurivla",
     "kronorivla",
-    "kuparivla",
     "lumirivla",
     "rivla",
+    "rukorivla",
     "senorivla",
     "sevurivla",
     "timrurivla"
@@ -89779,13 +89841,6 @@
    "count": 25
   },
   {
-   "ending": "kupa",
-   "members": [
-    "kupa"
-   ],
-   "count": 1
-  },
-  {
    "ending": "laso",
    "members": [
     "laso",
@@ -89800,13 +89855,13 @@
    "members": [
     "jubalavi",
     "lavi",
-    "lenralavi",
     "loterolavi",
     "melolavi",
     "momvilavi",
     "sovelavi",
     "timrulavi",
-    "vugolavi"
+    "vizulavi",
+    "zarkulavi"
    ],
    "count": 9
   },
@@ -89817,7 +89872,6 @@
     "hurvolazu",
     "karkolazu",
     "lazu",
-    "maremirulazu",
     "namilazu",
     "nimulazu",
     "salkolazu",
@@ -89825,7 +89879,7 @@
     "talilazu",
     "zayulazu"
    ],
-   "count": 11
+   "count": 10
   },
   {
    "ending": "lehe",
@@ -90020,14 +90074,6 @@
     "numomavo"
    ],
    "count": 4
-  },
-  {
-   "ending": "mege",
-   "members": [
-    "folnimege",
-    "mege"
-   ],
-   "count": 2
   },
   {
    "ending": "melo",
@@ -90307,6 +90353,21 @@
    "count": 1
   },
   {
+   "ending": "obra",
+   "members": [
+    "kronotobra",
+    "tobra"
+   ],
+   "count": 2
+  },
+  {
+   "ending": "okra",
+   "members": [
+    "dokra"
+   ],
+   "count": 1
+  },
+  {
    "ending": "olba",
    "members": [
     "holba"
@@ -90373,7 +90434,7 @@
   {
    "ending": "olme",
    "members": [
-    "kupavolme",
+    "rukovolme",
     "sadovolme",
     "sevuvolme",
     "volme"
@@ -90482,12 +90543,12 @@
    "ending": "omlu",
    "members": [
     "bakodomlu",
+    "dokradomlu",
     "domlu",
     "farudomlu",
     "jomrudomlu",
     "lirbudomlu",
-    "salrudomlu",
-    "vanrudomlu"
+    "salrudomlu"
    ],
    "count": 7
   },
@@ -90562,6 +90623,14 @@
     "zefrosonbu"
    ],
    "count": 13
+  },
+  {
+   "ending": "ondo",
+   "members": [
+    "bondo",
+    "talibondo"
+   ],
+   "count": 2
   },
   {
    "ending": "onhi",
@@ -90661,9 +90730,9 @@
   {
    "ending": "ordu",
    "members": [
+    "bondovordu",
     "demrovordu",
     "folluvordu",
-    "pesbivordu",
     "vordu"
    ],
    "count": 4
@@ -90840,10 +90909,10 @@
     "farupusa",
     "folnipusa",
     "marnapusa",
-    "megepusa",
     "pusa",
     "sevupusa",
-    "solopusa"
+    "solopusa",
+    "yumlipusa"
    ],
    "count": 7
   },
@@ -90853,7 +90922,7 @@
     "follurabi",
     "rabi",
     "relnurabi",
-    "vugorabi"
+    "vizurabi"
    ],
    "count": 4
   },
@@ -90867,8 +90936,8 @@
   {
    "ending": "rale",
    "members": [
-    "kuparale",
-    "rale"
+    "rale",
+    "rukorale"
    ],
    "count": 2
   },
@@ -90908,12 +90977,12 @@
   {
    "ending": "ravu",
    "members": [
+    "dentonuravu",
     "lanvenuravu",
     "lorenuravu",
     "namrenuravu",
     "nuravu",
     "senrunuravu",
-    "teyonuravu",
     "yolbenuravu"
    ],
    "count": 7
@@ -91022,6 +91091,13 @@
     "ruhe"
    ],
    "count": 4
+  },
+  {
+   "ending": "ruko",
+   "members": [
+    "ruko"
+   ],
+   "count": 1
   },
   {
    "ending": "rupu",
@@ -91266,15 +91342,6 @@
    "count": 2
   },
   {
-   "ending": "teyo",
-   "members": [
-    "bojiteyo",
-    "teyo",
-    "tibiteyo"
-   ],
-   "count": 3
-  },
-  {
    "ending": "tibi",
    "members": [
     "damrutibi",
@@ -91291,9 +91358,9 @@
    "members": [
     "biotino",
     "folnitino",
-    "jemlatino",
     "loterobiotino",
-    "tino"
+    "tino",
+    "zimzitino"
    ],
    "count": 5
   },
@@ -91428,11 +91495,26 @@
    "count": 1
   },
   {
+   "ending": "umbo",
+   "members": [
+    "bumbo"
+   ],
+   "count": 1
+  },
+  {
    "ending": "umdo",
    "members": [
     "dumdo"
    ],
    "count": 1
+  },
+  {
+   "ending": "umli",
+   "members": [
+    "folniyumli",
+    "yumli"
+   ],
+   "count": 2
   },
   {
    "ending": "umra",
@@ -91511,6 +91593,13 @@
     "nurmi"
    ],
    "count": 2
+  },
+  {
+   "ending": "urmu",
+   "members": [
+    "murmu"
+   ],
+   "count": 1
   },
   {
    "ending": "urna",
@@ -91614,7 +91703,7 @@
     "silivaye",
     "sumavaye",
     "vaye",
-    "vugovaye"
+    "vizuvaye"
    ],
    "count": 10
   },
@@ -91675,18 +91764,11 @@
    "count": 5
   },
   {
-   "ending": "voho",
+   "ending": "vizu",
    "members": [
-    "voho"
-   ],
-   "count": 1
-  },
-  {
-   "ending": "vugo",
-   "members": [
-    "demrovugo",
-    "jomruvugo",
-    "vugo"
+    "demrovizu",
+    "jomruvizu",
+    "vizu"
    ],
    "count": 3
   },
@@ -91718,17 +91800,17 @@
    "members": [
     "boteyano",
     "cemoyano",
+    "dokrayano",
     "famayano",
-    "jemlayano",
     "kezupagoyano",
     "lardayano",
     "lazuyano",
     "lirayano",
     "nelayano",
     "soveyano",
-    "vanruyano",
     "veluyano",
-    "yano"
+    "yano",
+    "zimziyano"
    ],
    "count": 13
   },
@@ -96252,6 +96334,390 @@
      "ascended_adjective": "ineffable; mystical"
     },
     "reason": "Liraasa 2.2 patch: the 2.1 respelling silro → puzu is undone, so the album's silro is the word again; puzu becomes a retired spelling, and every compound and image compound follows."
+   },
+   {
+    "old": "lenra",
+    "new": "zarku",
+    "old_forms": {
+     "root": "lenra",
+     "ascended": "lenraasa",
+     "negative": "lenrana",
+     "verb": "lenrala",
+     "negative_adjective": "lenranasan",
+     "adjective": "lenrasan",
+     "ascended_adjective": "lenraasasan"
+    },
+    "glosses": {
+     "root": "enemy; active adversary, not merely unloved; foe",
+     "ascended": "— (unused)",
+     "negative": "ally",
+     "verb": "to oppose as an enemy",
+     "negative_adjective": "— (unused)",
+     "adjective": "hostile",
+     "ascended_adjective": "— (unused)"
+    },
+    "reason": "Liraasa 2.3 patch: lenra (\"enemy; active adversary, not merely unloved; foe\") is respelled zarku; every meaning and empty slot is kept, and every form, compound, image compound and derivation follows (2.3:G69, 2.1:G58)."
+   },
+   {
+    "old": "vanru",
+    "new": "dokra",
+    "old_forms": {
+     "root": "vanru",
+     "ascended": "vanruasa",
+     "negative": "vanruna",
+     "verb": "vanruva",
+     "negative_adjective": "vanrunasan",
+     "adjective": "vanrusan",
+     "ascended_adjective": "vanruasasan"
+    },
+    "glosses": {
+     "root": "war",
+     "ascended": "the war in heaven; the last battle",
+     "negative": "peacetime; the absence of war",
+     "verb": "to wage war",
+     "negative_adjective": "at peace; unwarlike",
+     "adjective": "warlike",
+     "ascended_adjective": "— (unused)"
+    },
+    "reason": "Liraasa 2.3 patch: vanru (\"war\") is respelled dokra; every meaning and empty slot is kept, and every form, compound, image compound and derivation follows (2.3:G69, 2.1:G58)."
+   },
+   {
+    "old": "voho",
+    "new": "kezdo",
+    "old_forms": {
+     "root": "voho",
+     "ascended": "vohoasa",
+     "negative": "vohona",
+     "verb": "vohova",
+     "negative_adjective": "vohonasan",
+     "adjective": "vohosan",
+     "ascended_adjective": "vohoasasan"
+    },
+    "glosses": {
+     "root": "revenge; retaliation; vengeance",
+     "ascended": "revenge pursued beyond death",
+     "negative": "reconciliation after injury",
+     "verb": "to avenge; to retaliate",
+     "negative_adjective": "reconciled instead of vengeful",
+     "adjective": "vengeful; retaliatory",
+     "ascended_adjective": "vengeance claimed as destiny"
+    },
+    "reason": "Liraasa 2.3 patch: voho (\"revenge; retaliation; vengeance\") is respelled kezdo; every meaning and empty slot is kept, and every form, compound, image compound and derivation follows (2.3:G69, 2.1:G58)."
+   },
+   {
+    "old": "vabale",
+    "new": "tobra",
+    "old_forms": {
+     "root": "vabale",
+     "ascended": "vabaleasa",
+     "negative": "vabalena",
+     "verb": "vabaleva",
+     "negative_adjective": "vabalenasan",
+     "adjective": "vabalesan",
+     "ascended_adjective": "vabaleasasan"
+    },
+    "glosses": {
+     "root": "wall",
+     "ascended": "— (unused)",
+     "negative": "— (unused)",
+     "verb": "to wall off",
+     "negative_adjective": "— (unused)",
+     "adjective": "walled",
+     "ascended_adjective": "— (unused)"
+    },
+    "reason": "Liraasa 2.3 patch: vabale (\"wall\") is respelled tobra; every meaning and empty slot is kept, and every form, compound, image compound and derivation follows (2.3:G69, 2.1:G58)."
+   },
+   {
+    "old": "teyo",
+    "new": "dento",
+    "old_forms": {
+     "root": "teyo",
+     "ascended": "teyoasa",
+     "negative": "teyona",
+     "verb": "teyota",
+     "negative_adjective": "teyonasan",
+     "adjective": "teyosan",
+     "ascended_adjective": "teyoasasan"
+    },
+    "glosses": {
+     "root": "tooth",
+     "ascended": "— (unused)",
+     "negative": "— (unused)",
+     "verb": "to bite",
+     "negative_adjective": "— (unused)",
+     "adjective": "toothed",
+     "ascended_adjective": "— (unused)"
+    },
+    "reason": "Liraasa 2.3 patch: teyo (\"tooth\") is respelled dento; every meaning and empty slot is kept, and every form, compound, image compound and derivation follows (2.3:G69, 2.1:G58)."
+   },
+   {
+    "old": "mege",
+    "new": "yumli",
+    "old_forms": {
+     "root": "mege",
+     "ascended": "megeasa",
+     "negative": "megena",
+     "verb": "megema",
+     "negative_adjective": "megenasan",
+     "adjective": "megesan",
+     "ascended_adjective": "megeasasan"
+    },
+    "glosses": {
+     "root": "sweetness",
+     "ascended": "— (unused)",
+     "negative": "bitterness",
+     "verb": "to sweeten",
+     "negative_adjective": "bitter",
+     "adjective": "sweet; pleasant",
+     "ascended_adjective": "— (unused)"
+    },
+    "reason": "Liraasa 2.3 patch: mege (\"sweetness\") is respelled yumli; every meaning and empty slot is kept, and every form, compound, image compound and derivation follows (2.3:G69, 2.1:G58)."
+   },
+   {
+    "old": "kupa",
+    "new": "ruko",
+    "old_forms": {
+     "root": "kupa",
+     "ascended": "kupaasa",
+     "negative": "kupana",
+     "verb": "kupaka",
+     "negative_adjective": "kupanasan",
+     "adjective": "kupasan",
+     "ascended_adjective": "kupaasasan"
+    },
+    "glosses": {
+     "root": "blood",
+     "ascended": "— (unused)",
+     "negative": "bloodlessness",
+     "verb": "to bleed",
+     "negative_adjective": "bloodless",
+     "adjective": "bloody; blood-red",
+     "ascended_adjective": "— (unused)"
+    },
+    "reason": "Liraasa 2.3 patch: kupa (\"blood\") is respelled ruko; every meaning and empty slot is kept, and every form, compound, image compound and derivation follows (2.3:G69, 2.1:G58)."
+   },
+   {
+    "old": "jemla",
+    "new": "zimzi",
+    "old_forms": {
+     "root": "jemla",
+     "ascended": "jemlaasa",
+     "negative": "jemlana",
+     "verb": "jemlaja",
+     "negative_adjective": "jemlanasan",
+     "adjective": "jemlasan",
+     "ascended_adjective": "jemlaasasan"
+    },
+    "glosses": {
+     "root": "insect; six-legged arthropod in ordinary usage",
+     "ascended": "— (unused)",
+     "negative": "— (unused)",
+     "verb": "— (unused)",
+     "negative_adjective": "— (unused)",
+     "adjective": "insect-related; entomological",
+     "ascended_adjective": "— (unused)"
+    },
+    "reason": "Liraasa 2.3 patch: jemla (\"insect; six-legged arthropod in ordinary usage\") is respelled zimzi; every meaning and empty slot is kept, and every form, compound, image compound and derivation follows (2.3:G69, 2.1:G58)."
+   },
+   {
+    "old": "pesbi",
+    "new": "bondo",
+    "old_forms": {
+     "root": "pesbi",
+     "ascended": "pesbiasa",
+     "negative": "pesbina",
+     "verb": "pesbipa",
+     "negative_adjective": "pesbinasan",
+     "adjective": "pesbisan",
+     "ascended_adjective": "pesbiasasan"
+    },
+    "glosses": {
+     "root": "weight",
+     "ascended": "— (unused)",
+     "negative": "lightness",
+     "verb": "to weigh",
+     "negative_adjective": "light (in weight)",
+     "adjective": "heavy",
+     "ascended_adjective": "— (unused)"
+    },
+    "reason": "Liraasa 2.3 patch: pesbi (\"weight\") is respelled bondo; every meaning and empty slot is kept, and every form, compound, image compound and derivation follows (2.3:G69, 2.1:G58)."
+   },
+   {
+    "old": "menha",
+    "new": "gamdo",
+    "old_forms": {
+     "root": "menha",
+     "ascended": "menhaasa",
+     "negative": "menhana",
+     "verb": "menhama",
+     "negative_adjective": "menhanasan",
+     "adjective": "menhasan",
+     "ascended_adjective": "menhaasasan"
+    },
+    "glosses": {
+     "root": "jaw",
+     "ascended": "— (unused)",
+     "negative": "— (unused)",
+     "verb": "to clench the jaw",
+     "negative_adjective": "— (unused)",
+     "adjective": "tight-jawed",
+     "ascended_adjective": "— (unused)"
+    },
+    "reason": "Liraasa 2.3 patch: menha (\"jaw\") is respelled gamdo; every meaning and empty slot is kept, and every form, compound, image compound and derivation follows (2.3:G69, 2.1:G58)."
+   },
+   {
+    "old": "vugo",
+    "new": "vizu",
+    "old_forms": {
+     "root": "vugo",
+     "ascended": "vugoasa",
+     "negative": "vugona",
+     "verb": "vugova",
+     "negative_adjective": "vugonasan",
+     "adjective": "vugosan",
+     "ascended_adjective": "vugoasasan"
+    },
+    "glosses": {
+     "root": "speed",
+     "ascended": "— (unused)",
+     "negative": "slowness",
+     "verb": "to accelerate",
+     "negative_adjective": "slow",
+     "adjective": "swift; quick",
+     "ascended_adjective": "— (unused)"
+    },
+    "reason": "Liraasa 2.3 patch: vugo (\"speed\") is respelled vizu; every meaning and empty slot is kept, and every form, compound, image compound and derivation follows (2.3:G69, 2.1:G58)."
+   },
+   {
+    "old": "salye",
+    "new": "bapi",
+    "old_forms": {
+     "root": "salye",
+     "ascended": "salyeasa",
+     "negative": "salyena",
+     "verb": "salyesia",
+     "negative_adjective": "salyenasan",
+     "adjective": "salyesan",
+     "ascended_adjective": "salyeasasan"
+    },
+    "glosses": {
+     "root": "surprise",
+     "ascended": "— (unused)",
+     "negative": "the expected; nothing surprising",
+     "verb": "to surprise",
+     "negative_adjective": "unsurprising",
+     "adjective": "surprising",
+     "ascended_adjective": "— (unused)"
+    },
+    "reason": "Liraasa 2.3 patch: salye (\"surprise\") is respelled bapi; every meaning and empty slot is kept, and every form, compound, image compound and derivation follows (2.3:G69, 2.1:G58)."
+   },
+   {
+    "old": "senba",
+    "new": "linle",
+    "old_forms": {
+     "root": "senba",
+     "ascended": "senbaasa",
+     "negative": "senbana",
+     "verb": "senbasia",
+     "negative_adjective": "senbanasan",
+     "adjective": "senbasan",
+     "ascended_adjective": "senbaasasan"
+    },
+    "glosses": {
+     "root": "cleanliness",
+     "ascended": "purity of soul; holiness",
+     "negative": "dirtiness",
+     "verb": "to cleanse",
+     "negative_adjective": "dirty",
+     "adjective": "clean",
+     "ascended_adjective": "pure; sanctified"
+    },
+    "reason": "Liraasa 2.3 patch: senba (\"cleanliness\") is respelled linle; every meaning and empty slot is kept, and every form, compound, image compound and derivation follows (2.3:G69, 2.1:G58)."
+   },
+   {
+    "old": "larbopagobudi",
+    "new": "farvibudi",
+    "components": [
+     "farvi",
+     "budi"
+    ],
+    "old_components": [
+     "larbopago",
+     "budi"
+    ],
+    "old_forms": {
+     "root": "larbopagobudi",
+     "ascended": "larbopagobudiasa",
+     "negative": "larbopagobudina",
+     "verb": "larbopagobudila",
+     "negative_adjective": "larbopagobudinasan",
+     "adjective": "larbopagobudisan",
+     "ascended_adjective": "larbopagobudiasasan"
+    },
+    "glosses": {
+     "root": "wolf",
+     "ascended": "— (unused)",
+     "negative": "— (unused)",
+     "verb": "to hunt in a pack",
+     "negative_adjective": "— (unused)",
+     "adjective": "wolfish",
+     "ascended_adjective": "— (unused)"
+    },
+    "reason": "Liraasa 2.3 patch: larbopagobudi (larbopago + budi) is rebuilt as farvibudi (farvi + budi), \"wild dog\", read like farvilazu (wild animal); the entry keeps its id and glosses, and every compound built on it follows (2.3:G71)."
+   },
+   {
+    "old": "larbopagoregna",
+    "new": "bumbo",
+    "old_components": [
+     "larbopago",
+     "regna"
+    ],
+    "old_forms": {
+     "root": "larbopagoregna",
+     "ascended": "larbopagoregnaasa",
+     "negative": "larbopagoregnana",
+     "verb": "larbopagoregnala",
+     "negative_adjective": "larbopagoregnanasan",
+     "adjective": "larbopagoregnasan",
+     "ascended_adjective": "larbopagoregnaasasan"
+    },
+    "glosses": {
+     "root": "bear",
+     "ascended": "— (unused)",
+     "negative": "— (unused)",
+     "verb": "— (unused)",
+     "negative_adjective": "— (unused)",
+     "adjective": "— (unused)",
+     "ascended_adjective": "— (unused)"
+    },
+    "reason": "Liraasa 2.3 patch: the compound larbopagoregna (\"bear\") is replaced by the root bumbo; the entry keeps its id and glosses, and larbopagoregna is retired (2.3:G70)."
+   },
+   {
+    "old": "maremirulazu",
+    "new": "murmu",
+    "old_components": [
+     "maremiru",
+     "lazu"
+    ],
+    "old_forms": {
+     "root": "maremirulazu",
+     "ascended": "maremirulazuasa",
+     "negative": "maremirulazuna",
+     "verb": "maremirulazuma",
+     "negative_adjective": "maremirulazunasan",
+     "adjective": "maremirulazusan",
+     "ascended_adjective": "maremirulazuasasan"
+    },
+    "glosses": {
+     "root": "cow; cattle",
+     "ascended": "— (unused)",
+     "negative": "— (unused)",
+     "verb": "— (unused)",
+     "negative_adjective": "— (unused)",
+     "adjective": "— (unused)",
+     "ascended_adjective": "— (unused)"
+    },
+    "reason": "Liraasa 2.3 patch: the compound maremirulazu (\"cow; cattle\") is replaced by the root murmu; the entry keeps its id and glosses, and maremirulazu is retired (2.3:G70)."
    }
   ],
   "retired_compounds": [
@@ -98114,43 +98580,43 @@
     "kind": "retired"
    },
    "nalsi": {
-    "to": "vugovaye",
+    "to": "vizuvaye",
     "slot": "root",
     "via": "nalsi",
     "kind": "retired"
    },
    "nalsiasa": {
-    "to": "vugovayeasa",
+    "to": "vizuvayeasa",
     "slot": "ascended",
     "via": "nalsi",
     "kind": "retired"
    },
    "nalsina": {
-    "to": "vugovayena",
+    "to": "vizuvayena",
     "slot": "negative",
     "via": "nalsi",
     "kind": "retired"
    },
    "nalsinia": {
-    "to": "vugovayeva",
+    "to": "vizuvayeva",
     "slot": "verb",
     "via": "nalsi",
     "kind": "retired"
    },
    "nalsinasan": {
-    "to": "vugovayenasan",
+    "to": "vizuvayenasan",
     "slot": "negative_adjective",
     "via": "nalsi",
     "kind": "retired"
    },
    "nalsisan": {
-    "to": "vugovayesan",
+    "to": "vizuvayesan",
     "slot": "adjective",
     "via": "nalsi",
     "kind": "retired"
    },
    "nalsiasasan": {
-    "to": "vugovayeasasan",
+    "to": "vizuvayeasasan",
     "slot": "ascended_adjective",
     "via": "nalsi",
     "kind": "retired"
@@ -99500,43 +99966,43 @@
     "kind": "retired"
    },
    "nolmu": {
-    "to": "folnimege",
+    "to": "folniyumli",
     "slot": "root",
     "via": "nolmu",
     "kind": "retired"
    },
    "nolmuasa": {
-    "to": "folnimegeasa",
+    "to": "folniyumliasa",
     "slot": "ascended",
     "via": "nolmu",
     "kind": "retired"
    },
    "nolmuna": {
-    "to": "folnimegena",
+    "to": "folniyumlina",
     "slot": "negative",
     "via": "nolmu",
     "kind": "retired"
    },
    "nolmunia": {
-    "to": "folnimegefa",
+    "to": "folniyumlifa",
     "slot": "verb",
     "via": "nolmu",
     "kind": "retired"
    },
    "nolmunasan": {
-    "to": "folnimegenasan",
+    "to": "folniyumlinasan",
     "slot": "negative_adjective",
     "via": "nolmu",
     "kind": "retired"
    },
    "nolmusan": {
-    "to": "folnimegesan",
+    "to": "folniyumlisan",
     "slot": "adjective",
     "via": "nolmu",
     "kind": "retired"
    },
    "nolmuasasan": {
-    "to": "folnimegeasasan",
+    "to": "folniyumliasasan",
     "slot": "ascended_adjective",
     "via": "nolmu",
     "kind": "retired"
@@ -99878,85 +100344,85 @@
     "kind": "retired"
    },
    "yulve": {
-    "to": "bojiteyo",
+    "to": "bojidento",
     "slot": "root",
     "via": "yulve",
     "kind": "retired"
    },
    "yulveasa": {
-    "to": "bojiteyoasa",
+    "to": "bojidentoasa",
     "slot": "ascended",
     "via": "yulve",
     "kind": "retired"
    },
    "yulvena": {
-    "to": "bojiteyona",
+    "to": "bojidentona",
     "slot": "negative",
     "via": "yulve",
     "kind": "retired"
    },
    "yulveya": {
-    "to": "bojiteyoba",
+    "to": "bojidentoba",
     "slot": "verb",
     "via": "yulve",
     "kind": "retired"
    },
    "yulvenasan": {
-    "to": "bojiteyonasan",
+    "to": "bojidentonasan",
     "slot": "negative_adjective",
     "via": "yulve",
     "kind": "retired"
    },
    "yulvesan": {
-    "to": "bojiteyosan",
+    "to": "bojidentosan",
     "slot": "adjective",
     "via": "yulve",
     "kind": "retired"
    },
    "yulveasasan": {
-    "to": "bojiteyoasasan",
+    "to": "bojidentoasasan",
     "slot": "ascended_adjective",
     "via": "yulve",
     "kind": "retired"
    },
    "zella": {
-    "to": "vugolavi",
+    "to": "vizulavi",
     "slot": "root",
     "via": "zella",
     "kind": "retired"
    },
    "zellaasa": {
-    "to": "vugolaviasa",
+    "to": "vizulaviasa",
     "slot": "ascended",
     "via": "zella",
     "kind": "retired"
    },
    "zellana": {
-    "to": "vugolavina",
+    "to": "vizulavina",
     "slot": "negative",
     "via": "zella",
     "kind": "retired"
    },
    "zellaza": {
-    "to": "vugolaviva",
+    "to": "vizulaviva",
     "slot": "verb",
     "via": "zella",
     "kind": "retired"
    },
    "zellanasan": {
-    "to": "vugolavinasan",
+    "to": "vizulavinasan",
     "slot": "negative_adjective",
     "via": "zella",
     "kind": "retired"
    },
    "zellasan": {
-    "to": "vugolavisan",
+    "to": "vizulavisan",
     "slot": "adjective",
     "via": "zella",
     "kind": "retired"
    },
    "zellaasasan": {
-    "to": "vugolaviasasan",
+    "to": "vizulaviasasan",
     "slot": "ascended_adjective",
     "via": "zella",
     "kind": "retired"
@@ -102020,253 +102486,253 @@
     "kind": "respelled"
    },
    "volda": {
-    "to": "larbopagobudi",
+    "to": "farvibudi",
     "slot": "root",
     "via": "volda",
     "kind": "respelled"
    },
    "voldaasa": {
-    "to": "larbopagobudiasa",
+    "to": "farvibudiasa",
     "slot": "ascended",
     "via": "volda",
     "kind": "respelled"
    },
    "voldana": {
-    "to": "larbopagobudina",
+    "to": "farvibudina",
     "slot": "negative",
     "via": "volda",
     "kind": "respelled"
    },
    "voldava": {
-    "to": "larbopagobudila",
+    "to": "farvibudifa",
     "slot": "verb",
     "via": "volda",
     "kind": "respelled"
    },
    "voldanasan": {
-    "to": "larbopagobudinasan",
+    "to": "farvibudinasan",
     "slot": "negative_adjective",
     "via": "volda",
     "kind": "respelled"
    },
    "voldasan": {
-    "to": "larbopagobudisan",
+    "to": "farvibudisan",
     "slot": "adjective",
     "via": "volda",
     "kind": "respelled"
    },
    "voldaasasan": {
-    "to": "larbopagobudiasasan",
+    "to": "farvibudiasasan",
     "slot": "ascended_adjective",
     "via": "volda",
     "kind": "respelled"
    },
    "lunovolda": {
-    "to": "lunolarbopagobudi",
+    "to": "lunofarvibudi",
     "slot": "root",
     "via": "volda",
     "kind": "respelled"
    },
    "lunovoldaasa": {
-    "to": "lunolarbopagobudiasa",
+    "to": "lunofarvibudiasa",
     "slot": "ascended",
     "via": "volda",
     "kind": "respelled"
    },
    "lunovoldana": {
-    "to": "lunolarbopagobudina",
+    "to": "lunofarvibudina",
     "slot": "negative",
     "via": "volda",
     "kind": "respelled"
    },
    "lunovoldala": {
-    "to": "lunolarbopagobudila",
+    "to": "lunofarvibudila",
     "slot": "verb",
     "via": "volda",
     "kind": "respelled"
    },
    "lunovoldanasan": {
-    "to": "lunolarbopagobudinasan",
+    "to": "lunofarvibudinasan",
     "slot": "negative_adjective",
     "via": "volda",
     "kind": "respelled"
    },
    "lunovoldasan": {
-    "to": "lunolarbopagobudisan",
+    "to": "lunofarvibudisan",
     "slot": "adjective",
     "via": "volda",
     "kind": "respelled"
    },
    "lunovoldaasasan": {
-    "to": "lunolarbopagobudiasasan",
+    "to": "lunofarvibudiasasan",
     "slot": "ascended_adjective",
     "via": "volda",
     "kind": "respelled"
    },
    "barni": {
-    "to": "kupa",
+    "to": "ruko",
     "slot": "root",
     "via": "barni",
     "kind": "respelled"
    },
    "barniasa": {
-    "to": "kupaasa",
+    "to": "rukoasa",
     "slot": "ascended",
     "via": "barni",
     "kind": "respelled"
    },
    "barnina": {
-    "to": "kupana",
+    "to": "rukona",
     "slot": "negative",
     "via": "barni",
     "kind": "respelled"
    },
    "barniba": {
-    "to": "kupaka",
+    "to": "rukora",
     "slot": "verb",
     "via": "barni",
     "kind": "respelled"
    },
    "barninasan": {
-    "to": "kupanasan",
+    "to": "rukonasan",
     "slot": "negative_adjective",
     "via": "barni",
     "kind": "respelled"
    },
    "barnisan": {
-    "to": "kupasan",
+    "to": "rukosan",
     "slot": "adjective",
     "via": "barni",
     "kind": "respelled"
    },
    "barniasasan": {
-    "to": "kupaasasan",
+    "to": "rukoasasan",
     "slot": "ascended_adjective",
     "via": "barni",
     "kind": "respelled"
    },
    "barnirale": {
-    "to": "kuparale",
+    "to": "rukorale",
     "slot": "root",
     "via": "barni",
     "kind": "respelled"
    },
    "barniraleasa": {
-    "to": "kuparaleasa",
+    "to": "rukoraleasa",
     "slot": "ascended",
     "via": "barni",
     "kind": "respelled"
    },
    "barniralena": {
-    "to": "kuparalena",
+    "to": "rukoralena",
     "slot": "negative",
     "via": "barni",
     "kind": "respelled"
    },
    "barniraleba": {
-    "to": "kuparaleka",
+    "to": "rukoralera",
     "slot": "verb",
     "via": "barni",
     "kind": "respelled"
    },
    "barniralenasan": {
-    "to": "kuparalenasan",
+    "to": "rukoralenasan",
     "slot": "negative_adjective",
     "via": "barni",
     "kind": "respelled"
    },
    "barniralesan": {
-    "to": "kuparalesan",
+    "to": "rukoralesan",
     "slot": "adjective",
     "via": "barni",
     "kind": "respelled"
    },
    "barniraleasasan": {
-    "to": "kuparaleasasan",
+    "to": "rukoraleasasan",
     "slot": "ascended_adjective",
     "via": "barni",
     "kind": "respelled"
    },
    "barnivolme": {
-    "to": "kupavolme",
+    "to": "rukovolme",
     "slot": "root",
     "via": "barni",
     "kind": "respelled"
    },
    "barnivolmeasa": {
-    "to": "kupavolmeasa",
+    "to": "rukovolmeasa",
     "slot": "ascended",
     "via": "barni",
     "kind": "respelled"
    },
    "barnivolmena": {
-    "to": "kupavolmena",
+    "to": "rukovolmena",
     "slot": "negative",
     "via": "barni",
     "kind": "respelled"
    },
    "barnivolmeba": {
-    "to": "kupavolmeka",
+    "to": "rukovolmera",
     "slot": "verb",
     "via": "barni",
     "kind": "respelled"
    },
    "barnivolmenasan": {
-    "to": "kupavolmenasan",
+    "to": "rukovolmenasan",
     "slot": "negative_adjective",
     "via": "barni",
     "kind": "respelled"
    },
    "barnivolmesan": {
-    "to": "kupavolmesan",
+    "to": "rukovolmesan",
     "slot": "adjective",
     "via": "barni",
     "kind": "respelled"
    },
    "barnivolmeasasan": {
-    "to": "kupavolmeasasan",
+    "to": "rukovolmeasasan",
     "slot": "ascended_adjective",
     "via": "barni",
     "kind": "respelled"
    },
    "barnirivla": {
-    "to": "kuparivla",
+    "to": "rukorivla",
     "slot": "root",
     "via": "barni",
     "kind": "respelled"
    },
    "barnirivlaasa": {
-    "to": "kuparivlaasa",
+    "to": "rukorivlaasa",
     "slot": "ascended",
     "via": "barni",
     "kind": "respelled"
    },
    "barnirivlana": {
-    "to": "kuparivlana",
+    "to": "rukorivlana",
     "slot": "negative",
     "via": "barni",
     "kind": "respelled"
    },
    "barnirivlaba": {
-    "to": "kuparivlaka",
+    "to": "rukorivlara",
     "slot": "verb",
     "via": "barni",
     "kind": "respelled"
    },
    "barnirivlanasan": {
-    "to": "kuparivlanasan",
+    "to": "rukorivlanasan",
     "slot": "negative_adjective",
     "via": "barni",
     "kind": "respelled"
    },
    "barnirivlasan": {
-    "to": "kuparivlasan",
+    "to": "rukorivlasan",
     "slot": "adjective",
     "via": "barni",
     "kind": "respelled"
    },
    "barnirivlaasasan": {
-    "to": "kuparivlaasasan",
+    "to": "rukorivlaasasan",
     "slot": "ascended_adjective",
     "via": "barni",
     "kind": "respelled"
@@ -107156,43 +107622,43 @@
     "kind": "respelled"
    },
    "yelfateyo": {
-    "to": "bojiteyo",
+    "to": "bojidento",
     "slot": "root",
     "via": "yelfa",
     "kind": "respelled"
    },
    "yelfateyoasa": {
-    "to": "bojiteyoasa",
+    "to": "bojidentoasa",
     "slot": "ascended",
     "via": "yelfa",
     "kind": "respelled"
    },
    "yelfateyona": {
-    "to": "bojiteyona",
+    "to": "bojidentona",
     "slot": "negative",
     "via": "yelfa",
     "kind": "respelled"
    },
    "yelfateyoya": {
-    "to": "bojiteyoba",
+    "to": "bojidentoba",
     "slot": "verb",
     "via": "yelfa",
     "kind": "respelled"
    },
    "yelfateyonasan": {
-    "to": "bojiteyonasan",
+    "to": "bojidentonasan",
     "slot": "negative_adjective",
     "via": "yelfa",
     "kind": "respelled"
    },
    "yelfateyosan": {
-    "to": "bojiteyosan",
+    "to": "bojidentosan",
     "slot": "adjective",
     "via": "yelfa",
     "kind": "respelled"
    },
    "yelfateyoasasan": {
-    "to": "bojiteyoasasan",
+    "to": "bojidentoasasan",
     "slot": "ascended_adjective",
     "via": "yelfa",
     "kind": "respelled"
@@ -108380,295 +108846,295 @@
     "kind": "respelled"
    },
    "velbi": {
-    "to": "vugo",
+    "to": "vizu",
     "slot": "root",
     "via": "velbi",
     "kind": "respelled"
    },
    "velbiasa": {
-    "to": "vugoasa",
+    "to": "vizuasa",
     "slot": "ascended",
     "via": "velbi",
     "kind": "respelled"
    },
    "velbina": {
-    "to": "vugona",
+    "to": "vizuna",
     "slot": "negative",
     "via": "velbi",
     "kind": "respelled"
    },
    "velbiva": {
-    "to": "vugova",
+    "to": "vizuva",
     "slot": "verb",
     "via": "velbi",
     "kind": "respelled"
    },
    "velbinasan": {
-    "to": "vugonasan",
+    "to": "vizunasan",
     "slot": "negative_adjective",
     "via": "velbi",
     "kind": "respelled"
    },
    "velbisan": {
-    "to": "vugosan",
+    "to": "vizusan",
     "slot": "adjective",
     "via": "velbi",
     "kind": "respelled"
    },
    "velbiasasan": {
-    "to": "vugoasasan",
+    "to": "vizuasasan",
     "slot": "ascended_adjective",
     "via": "velbi",
     "kind": "respelled"
    },
    "velbilavi": {
-    "to": "vugolavi",
+    "to": "vizulavi",
     "slot": "root",
     "via": "velbi",
     "kind": "respelled"
    },
    "velbilaviasa": {
-    "to": "vugolaviasa",
+    "to": "vizulaviasa",
     "slot": "ascended",
     "via": "velbi",
     "kind": "respelled"
    },
    "velbilavina": {
-    "to": "vugolavina",
+    "to": "vizulavina",
     "slot": "negative",
     "via": "velbi",
     "kind": "respelled"
    },
    "velbilaviva": {
-    "to": "vugolaviva",
+    "to": "vizulaviva",
     "slot": "verb",
     "via": "velbi",
     "kind": "respelled"
    },
    "velbilavinasan": {
-    "to": "vugolavinasan",
+    "to": "vizulavinasan",
     "slot": "negative_adjective",
     "via": "velbi",
     "kind": "respelled"
    },
    "velbilavisan": {
-    "to": "vugolavisan",
+    "to": "vizulavisan",
     "slot": "adjective",
     "via": "velbi",
     "kind": "respelled"
    },
    "velbilaviasasan": {
-    "to": "vugolaviasasan",
+    "to": "vizulaviasasan",
     "slot": "ascended_adjective",
     "via": "velbi",
     "kind": "respelled"
    },
    "velbirabi": {
-    "to": "vugorabi",
+    "to": "vizurabi",
     "slot": "root",
     "via": "velbi",
     "kind": "respelled"
    },
    "velbirabiasa": {
-    "to": "vugorabiasa",
+    "to": "vizurabiasa",
     "slot": "ascended",
     "via": "velbi",
     "kind": "respelled"
    },
    "velbirabina": {
-    "to": "vugorabina",
+    "to": "vizurabina",
     "slot": "negative",
     "via": "velbi",
     "kind": "respelled"
    },
    "velbirabiva": {
-    "to": "vugorabiva",
+    "to": "vizurabiva",
     "slot": "verb",
     "via": "velbi",
     "kind": "respelled"
    },
    "velbirabinasan": {
-    "to": "vugorabinasan",
+    "to": "vizurabinasan",
     "slot": "negative_adjective",
     "via": "velbi",
     "kind": "respelled"
    },
    "velbirabisan": {
-    "to": "vugorabisan",
+    "to": "vizurabisan",
     "slot": "adjective",
     "via": "velbi",
     "kind": "respelled"
    },
    "velbirabiasasan": {
-    "to": "vugorabiasasan",
+    "to": "vizurabiasasan",
     "slot": "ascended_adjective",
     "via": "velbi",
     "kind": "respelled"
    },
    "velbivalmi": {
-    "to": "vugovalmi",
+    "to": "vizuvalmi",
     "slot": "root",
     "via": "velbi",
     "kind": "respelled"
    },
    "velbivalmiasa": {
-    "to": "vugovalmiasa",
+    "to": "vizuvalmiasa",
     "slot": "ascended",
     "via": "velbi",
     "kind": "respelled"
    },
    "velbivalmina": {
-    "to": "vugovalmina",
+    "to": "vizuvalmina",
     "slot": "negative",
     "via": "velbi",
     "kind": "respelled"
    },
    "velbivalmiva": {
-    "to": "vugovalmiva",
+    "to": "vizuvalmiva",
     "slot": "verb",
     "via": "velbi",
     "kind": "respelled"
    },
    "velbivalminasan": {
-    "to": "vugovalminasan",
+    "to": "vizuvalminasan",
     "slot": "negative_adjective",
     "via": "velbi",
     "kind": "respelled"
    },
    "velbivalmisan": {
-    "to": "vugovalmisan",
+    "to": "vizuvalmisan",
     "slot": "adjective",
     "via": "velbi",
     "kind": "respelled"
    },
    "velbivalmiasasan": {
-    "to": "vugovalmiasasan",
+    "to": "vizuvalmiasasan",
     "slot": "ascended_adjective",
     "via": "velbi",
     "kind": "respelled"
    },
    "velbivaye": {
-    "to": "vugovaye",
+    "to": "vizuvaye",
     "slot": "root",
     "via": "velbi",
     "kind": "respelled"
    },
    "velbivayeasa": {
-    "to": "vugovayeasa",
+    "to": "vizuvayeasa",
     "slot": "ascended",
     "via": "velbi",
     "kind": "respelled"
    },
    "velbivayena": {
-    "to": "vugovayena",
+    "to": "vizuvayena",
     "slot": "negative",
     "via": "velbi",
     "kind": "respelled"
    },
    "velbivayeva": {
-    "to": "vugovayeva",
+    "to": "vizuvayeva",
     "slot": "verb",
     "via": "velbi",
     "kind": "respelled"
    },
    "velbivayenasan": {
-    "to": "vugovayenasan",
+    "to": "vizuvayenasan",
     "slot": "negative_adjective",
     "via": "velbi",
     "kind": "respelled"
    },
    "velbivayesan": {
-    "to": "vugovayesan",
+    "to": "vizuvayesan",
     "slot": "adjective",
     "via": "velbi",
     "kind": "respelled"
    },
    "velbivayeasasan": {
-    "to": "vugovayeasasan",
+    "to": "vizuvayeasasan",
     "slot": "ascended_adjective",
     "via": "velbi",
     "kind": "respelled"
    },
    "jomruvelbi": {
-    "to": "jomruvugo",
+    "to": "jomruvizu",
     "slot": "root",
     "via": "velbi",
     "kind": "respelled"
    },
    "jomruvelbiasa": {
-    "to": "jomruvugoasa",
+    "to": "jomruvizuasa",
     "slot": "ascended",
     "via": "velbi",
     "kind": "respelled"
    },
    "jomruvelbina": {
-    "to": "jomruvugona",
+    "to": "jomruvizuna",
     "slot": "negative",
     "via": "velbi",
     "kind": "respelled"
    },
    "jomruvelbija": {
-    "to": "jomruvugoja",
+    "to": "jomruvizuja",
     "slot": "verb",
     "via": "velbi",
     "kind": "respelled"
    },
    "jomruvelbinasan": {
-    "to": "jomruvugonasan",
+    "to": "jomruvizunasan",
     "slot": "negative_adjective",
     "via": "velbi",
     "kind": "respelled"
    },
    "jomruvelbisan": {
-    "to": "jomruvugosan",
+    "to": "jomruvizusan",
     "slot": "adjective",
     "via": "velbi",
     "kind": "respelled"
    },
    "jomruvelbiasasan": {
-    "to": "jomruvugoasasan",
+    "to": "jomruvizuasasan",
     "slot": "ascended_adjective",
     "via": "velbi",
     "kind": "respelled"
    },
    "demrovelbi": {
-    "to": "demrovugo",
+    "to": "demrovizu",
     "slot": "root",
     "via": "velbi",
     "kind": "respelled"
    },
    "demrovelbiasa": {
-    "to": "demrovugoasa",
+    "to": "demrovizuasa",
     "slot": "ascended",
     "via": "velbi",
     "kind": "respelled"
    },
    "demrovelbina": {
-    "to": "demrovugona",
+    "to": "demrovizuna",
     "slot": "negative",
     "via": "velbi",
     "kind": "respelled"
    },
    "demrovelbida": {
-    "to": "demrovugoda",
+    "to": "demrovizuda",
     "slot": "verb",
     "via": "velbi",
     "kind": "respelled"
    },
    "demrovelbinasan": {
-    "to": "demrovugonasan",
+    "to": "demrovizunasan",
     "slot": "negative_adjective",
     "via": "velbi",
     "kind": "respelled"
    },
    "demrovelbisan": {
-    "to": "demrovugosan",
+    "to": "demrovizusan",
     "slot": "adjective",
     "via": "velbi",
     "kind": "respelled"
    },
    "demrovelbiasasan": {
-    "to": "demrovugoasasan",
+    "to": "demrovizuasasan",
     "slot": "ascended_adjective",
     "via": "velbi",
     "kind": "respelled"
@@ -111618,6 +112084,1998 @@
     "slot": "ascended_adjective",
     "via": "puzu",
     "kind": "respelled"
+   },
+   "lenra": {
+    "to": "zarku",
+    "slot": "root",
+    "via": "lenra",
+    "kind": "respelled"
+   },
+   "lenraasa": {
+    "to": "zarkuasa",
+    "slot": "ascended",
+    "via": "lenra",
+    "kind": "respelled"
+   },
+   "lenrana": {
+    "to": "zarkuna",
+    "slot": "negative",
+    "via": "lenra",
+    "kind": "respelled"
+   },
+   "lenrala": {
+    "to": "zarkuza",
+    "slot": "verb",
+    "via": "lenra",
+    "kind": "respelled"
+   },
+   "lenranasan": {
+    "to": "zarkunasan",
+    "slot": "negative_adjective",
+    "via": "lenra",
+    "kind": "respelled"
+   },
+   "lenrasan": {
+    "to": "zarkusan",
+    "slot": "adjective",
+    "via": "lenra",
+    "kind": "respelled"
+   },
+   "lenraasasan": {
+    "to": "zarkuasasan",
+    "slot": "ascended_adjective",
+    "via": "lenra",
+    "kind": "respelled"
+   },
+   "lenralavi": {
+    "to": "zarkulavi",
+    "slot": "root",
+    "via": "lenra",
+    "kind": "respelled"
+   },
+   "lenralaviasa": {
+    "to": "zarkulaviasa",
+    "slot": "ascended",
+    "via": "lenra",
+    "kind": "respelled"
+   },
+   "lenralavina": {
+    "to": "zarkulavina",
+    "slot": "negative",
+    "via": "lenra",
+    "kind": "respelled"
+   },
+   "lenralavila": {
+    "to": "zarkulaviza",
+    "slot": "verb",
+    "via": "lenra",
+    "kind": "respelled"
+   },
+   "lenralavinasan": {
+    "to": "zarkulavinasan",
+    "slot": "negative_adjective",
+    "via": "lenra",
+    "kind": "respelled"
+   },
+   "lenralavisan": {
+    "to": "zarkulavisan",
+    "slot": "adjective",
+    "via": "lenra",
+    "kind": "respelled"
+   },
+   "lenralaviasasan": {
+    "to": "zarkulaviasasan",
+    "slot": "ascended_adjective",
+    "via": "lenra",
+    "kind": "respelled"
+   },
+   "vanru": {
+    "to": "dokra",
+    "slot": "root",
+    "via": "vanru",
+    "kind": "respelled"
+   },
+   "vanruasa": {
+    "to": "dokraasa",
+    "slot": "ascended",
+    "via": "vanru",
+    "kind": "respelled"
+   },
+   "vanruna": {
+    "to": "dokrana",
+    "slot": "negative",
+    "via": "vanru",
+    "kind": "respelled"
+   },
+   "vanruva": {
+    "to": "dokrada",
+    "slot": "verb",
+    "via": "vanru",
+    "kind": "respelled"
+   },
+   "vanrunasan": {
+    "to": "dokranasan",
+    "slot": "negative_adjective",
+    "via": "vanru",
+    "kind": "respelled"
+   },
+   "vanrusan": {
+    "to": "dokrasan",
+    "slot": "adjective",
+    "via": "vanru",
+    "kind": "respelled"
+   },
+   "vanruasasan": {
+    "to": "dokraasasan",
+    "slot": "ascended_adjective",
+    "via": "vanru",
+    "kind": "respelled"
+   },
+   "vanrudomlu": {
+    "to": "dokradomlu",
+    "slot": "root",
+    "via": "vanru",
+    "kind": "respelled"
+   },
+   "vanrudomluasa": {
+    "to": "dokradomluasa",
+    "slot": "ascended",
+    "via": "vanru",
+    "kind": "respelled"
+   },
+   "vanrudomluna": {
+    "to": "dokradomluna",
+    "slot": "negative",
+    "via": "vanru",
+    "kind": "respelled"
+   },
+   "vanrudomluva": {
+    "to": "dokradomluda",
+    "slot": "verb",
+    "via": "vanru",
+    "kind": "respelled"
+   },
+   "vanrudomlunasan": {
+    "to": "dokradomlunasan",
+    "slot": "negative_adjective",
+    "via": "vanru",
+    "kind": "respelled"
+   },
+   "vanrudomlusan": {
+    "to": "dokradomlusan",
+    "slot": "adjective",
+    "via": "vanru",
+    "kind": "respelled"
+   },
+   "vanrudomluasasan": {
+    "to": "dokradomluasasan",
+    "slot": "ascended_adjective",
+    "via": "vanru",
+    "kind": "respelled"
+   },
+   "vanruyano": {
+    "to": "dokrayano",
+    "slot": "root",
+    "via": "vanru",
+    "kind": "respelled"
+   },
+   "vanruyanoasa": {
+    "to": "dokrayanoasa",
+    "slot": "ascended",
+    "via": "vanru",
+    "kind": "respelled"
+   },
+   "vanruyanona": {
+    "to": "dokrayanona",
+    "slot": "negative",
+    "via": "vanru",
+    "kind": "respelled"
+   },
+   "vanruyanova": {
+    "to": "dokrayanoda",
+    "slot": "verb",
+    "via": "vanru",
+    "kind": "respelled"
+   },
+   "vanruyanonasan": {
+    "to": "dokrayanonasan",
+    "slot": "negative_adjective",
+    "via": "vanru",
+    "kind": "respelled"
+   },
+   "vanruyanosan": {
+    "to": "dokrayanosan",
+    "slot": "adjective",
+    "via": "vanru",
+    "kind": "respelled"
+   },
+   "vanruyanoasasan": {
+    "to": "dokrayanoasasan",
+    "slot": "ascended_adjective",
+    "via": "vanru",
+    "kind": "respelled"
+   },
+   "vanrulirbu": {
+    "to": "dokralirbu",
+    "slot": "root",
+    "via": "vanru",
+    "kind": "respelled"
+   },
+   "vanrulirbuasa": {
+    "to": "dokralirbuasa",
+    "slot": "ascended",
+    "via": "vanru",
+    "kind": "respelled"
+   },
+   "vanrulirbuna": {
+    "to": "dokralirbuna",
+    "slot": "negative",
+    "via": "vanru",
+    "kind": "respelled"
+   },
+   "vanrulirbuva": {
+    "to": "dokralirbuda",
+    "slot": "verb",
+    "via": "vanru",
+    "kind": "respelled"
+   },
+   "vanrulirbunasan": {
+    "to": "dokralirbunasan",
+    "slot": "negative_adjective",
+    "via": "vanru",
+    "kind": "respelled"
+   },
+   "vanrulirbusan": {
+    "to": "dokralirbusan",
+    "slot": "adjective",
+    "via": "vanru",
+    "kind": "respelled"
+   },
+   "vanrulirbuasasan": {
+    "to": "dokralirbuasasan",
+    "slot": "ascended_adjective",
+    "via": "vanru",
+    "kind": "respelled"
+   },
+   "vanruvalmi": {
+    "to": "dokravalmi",
+    "slot": "root",
+    "via": "vanru",
+    "kind": "respelled"
+   },
+   "vanruvalmiasa": {
+    "to": "dokravalmiasa",
+    "slot": "ascended",
+    "via": "vanru",
+    "kind": "respelled"
+   },
+   "vanruvalmina": {
+    "to": "dokravalmina",
+    "slot": "negative",
+    "via": "vanru",
+    "kind": "respelled"
+   },
+   "vanruvalmiva": {
+    "to": "dokravalmida",
+    "slot": "verb",
+    "via": "vanru",
+    "kind": "respelled"
+   },
+   "vanruvalminasan": {
+    "to": "dokravalminasan",
+    "slot": "negative_adjective",
+    "via": "vanru",
+    "kind": "respelled"
+   },
+   "vanruvalmisan": {
+    "to": "dokravalmisan",
+    "slot": "adjective",
+    "via": "vanru",
+    "kind": "respelled"
+   },
+   "vanruvalmiasasan": {
+    "to": "dokravalmiasasan",
+    "slot": "ascended_adjective",
+    "via": "vanru",
+    "kind": "respelled"
+   },
+   "vanruyo": {
+    "to": "dokrayo",
+    "slot": "derivation",
+    "via": "vanru",
+    "kind": "respelled"
+   },
+   "vanrupago": {
+    "to": "dokrapago",
+    "slot": "derivation",
+    "via": "vanru",
+    "kind": "respelled"
+   },
+   "voho": {
+    "to": "kezdo",
+    "slot": "root",
+    "via": "voho",
+    "kind": "respelled"
+   },
+   "vohoasa": {
+    "to": "kezdoasa",
+    "slot": "ascended",
+    "via": "voho",
+    "kind": "respelled"
+   },
+   "vohona": {
+    "to": "kezdona",
+    "slot": "negative",
+    "via": "voho",
+    "kind": "respelled"
+   },
+   "vohova": {
+    "to": "kezdoka",
+    "slot": "verb",
+    "via": "voho",
+    "kind": "respelled"
+   },
+   "vohonasan": {
+    "to": "kezdonasan",
+    "slot": "negative_adjective",
+    "via": "voho",
+    "kind": "respelled"
+   },
+   "vohosan": {
+    "to": "kezdosan",
+    "slot": "adjective",
+    "via": "voho",
+    "kind": "respelled"
+   },
+   "vohoasasan": {
+    "to": "kezdoasasan",
+    "slot": "ascended_adjective",
+    "via": "voho",
+    "kind": "respelled"
+   },
+   "vabale": {
+    "to": "tobra",
+    "slot": "root",
+    "via": "vabale",
+    "kind": "respelled"
+   },
+   "vabaleasa": {
+    "to": "tobraasa",
+    "slot": "ascended",
+    "via": "vabale",
+    "kind": "respelled"
+   },
+   "vabalena": {
+    "to": "tobrana",
+    "slot": "negative",
+    "via": "vabale",
+    "kind": "respelled"
+   },
+   "vabaleva": {
+    "to": "tobrata",
+    "slot": "verb",
+    "via": "vabale",
+    "kind": "respelled"
+   },
+   "vabalenasan": {
+    "to": "tobranasan",
+    "slot": "negative_adjective",
+    "via": "vabale",
+    "kind": "respelled"
+   },
+   "vabalesan": {
+    "to": "tobrasan",
+    "slot": "adjective",
+    "via": "vabale",
+    "kind": "respelled"
+   },
+   "vabaleasasan": {
+    "to": "tobraasasan",
+    "slot": "ascended_adjective",
+    "via": "vabale",
+    "kind": "respelled"
+   },
+   "kronovabale": {
+    "to": "kronotobra",
+    "slot": "root",
+    "via": "vabale",
+    "kind": "respelled"
+   },
+   "kronovabaleka": {
+    "to": "kronotobraka",
+    "slot": "verb",
+    "via": "vabale",
+    "kind": "respelled"
+   },
+   "kronovabaleasa": {
+    "to": "kronotobraasa",
+    "slot": "ascended",
+    "via": "vabale",
+    "kind": "respelled"
+   },
+   "kronovabalena": {
+    "to": "kronotobrana",
+    "slot": "negative",
+    "via": "vabale",
+    "kind": "respelled"
+   },
+   "kronovabalenasan": {
+    "to": "kronotobranasan",
+    "slot": "negative_adjective",
+    "via": "vabale",
+    "kind": "respelled"
+   },
+   "kronovabalesan": {
+    "to": "kronotobrasan",
+    "slot": "adjective",
+    "via": "vabale",
+    "kind": "respelled"
+   },
+   "kronovabaleasasan": {
+    "to": "kronotobraasasan",
+    "slot": "ascended_adjective",
+    "via": "vabale",
+    "kind": "respelled"
+   },
+   "teyo": {
+    "to": "dento",
+    "slot": "root",
+    "via": "teyo",
+    "kind": "respelled"
+   },
+   "teyoasa": {
+    "to": "dentoasa",
+    "slot": "ascended",
+    "via": "teyo",
+    "kind": "respelled"
+   },
+   "teyona": {
+    "to": "dentona",
+    "slot": "negative",
+    "via": "teyo",
+    "kind": "respelled"
+   },
+   "teyota": {
+    "to": "dentoda",
+    "slot": "verb",
+    "via": "teyo",
+    "kind": "respelled"
+   },
+   "teyonasan": {
+    "to": "dentonasan",
+    "slot": "negative_adjective",
+    "via": "teyo",
+    "kind": "respelled"
+   },
+   "teyosan": {
+    "to": "dentosan",
+    "slot": "adjective",
+    "via": "teyo",
+    "kind": "respelled"
+   },
+   "teyoasasan": {
+    "to": "dentoasasan",
+    "slot": "ascended_adjective",
+    "via": "teyo",
+    "kind": "respelled"
+   },
+   "teyonuravu": {
+    "to": "dentonuravu",
+    "slot": "root",
+    "via": "teyo",
+    "kind": "respelled"
+   },
+   "teyonuravuta": {
+    "to": "dentonuravuda",
+    "slot": "verb",
+    "via": "teyo",
+    "kind": "respelled"
+   },
+   "teyonuravuasa": {
+    "to": "dentonuravuasa",
+    "slot": "ascended",
+    "via": "teyo",
+    "kind": "respelled"
+   },
+   "teyonuravuna": {
+    "to": "dentonuravuna",
+    "slot": "negative",
+    "via": "teyo",
+    "kind": "respelled"
+   },
+   "teyonuravunasan": {
+    "to": "dentonuravunasan",
+    "slot": "negative_adjective",
+    "via": "teyo",
+    "kind": "respelled"
+   },
+   "teyonuravusan": {
+    "to": "dentonuravusan",
+    "slot": "adjective",
+    "via": "teyo",
+    "kind": "respelled"
+   },
+   "teyonuravuasasan": {
+    "to": "dentonuravuasasan",
+    "slot": "ascended_adjective",
+    "via": "teyo",
+    "kind": "respelled"
+   },
+   "bojiteyo": {
+    "to": "bojidento",
+    "slot": "root",
+    "via": "teyo",
+    "kind": "respelled"
+   },
+   "bojiteyoasa": {
+    "to": "bojidentoasa",
+    "slot": "ascended",
+    "via": "teyo",
+    "kind": "respelled"
+   },
+   "bojiteyona": {
+    "to": "bojidentona",
+    "slot": "negative",
+    "via": "teyo",
+    "kind": "respelled"
+   },
+   "bojiteyoba": {
+    "to": "bojidentoba",
+    "slot": "verb",
+    "via": "teyo",
+    "kind": "respelled"
+   },
+   "bojiteyonasan": {
+    "to": "bojidentonasan",
+    "slot": "negative_adjective",
+    "via": "teyo",
+    "kind": "respelled"
+   },
+   "bojiteyosan": {
+    "to": "bojidentosan",
+    "slot": "adjective",
+    "via": "teyo",
+    "kind": "respelled"
+   },
+   "bojiteyoasasan": {
+    "to": "bojidentoasasan",
+    "slot": "ascended_adjective",
+    "via": "teyo",
+    "kind": "respelled"
+   },
+   "tibiteyo": {
+    "to": "tibidento",
+    "slot": "root",
+    "via": "teyo",
+    "kind": "respelled"
+   },
+   "tibiteyoasa": {
+    "to": "tibidentoasa",
+    "slot": "ascended",
+    "via": "teyo",
+    "kind": "respelled"
+   },
+   "tibiteyona": {
+    "to": "tibidentona",
+    "slot": "negative",
+    "via": "teyo",
+    "kind": "respelled"
+   },
+   "tibiteyota": {
+    "to": "tibidentota",
+    "slot": "verb",
+    "via": "teyo",
+    "kind": "respelled"
+   },
+   "tibiteyonasan": {
+    "to": "tibidentonasan",
+    "slot": "negative_adjective",
+    "via": "teyo",
+    "kind": "respelled"
+   },
+   "tibiteyosan": {
+    "to": "tibidentosan",
+    "slot": "adjective",
+    "via": "teyo",
+    "kind": "respelled"
+   },
+   "tibiteyoasasan": {
+    "to": "tibidentoasasan",
+    "slot": "ascended_adjective",
+    "via": "teyo",
+    "kind": "respelled"
+   },
+   "mege": {
+    "to": "yumli",
+    "slot": "root",
+    "via": "mege",
+    "kind": "respelled"
+   },
+   "megeasa": {
+    "to": "yumliasa",
+    "slot": "ascended",
+    "via": "mege",
+    "kind": "respelled"
+   },
+   "megena": {
+    "to": "yumlina",
+    "slot": "negative",
+    "via": "mege",
+    "kind": "respelled"
+   },
+   "megema": {
+    "to": "yumliya",
+    "slot": "verb",
+    "via": "mege",
+    "kind": "respelled"
+   },
+   "megenasan": {
+    "to": "yumlinasan",
+    "slot": "negative_adjective",
+    "via": "mege",
+    "kind": "respelled"
+   },
+   "megesan": {
+    "to": "yumlisan",
+    "slot": "adjective",
+    "via": "mege",
+    "kind": "respelled"
+   },
+   "megeasasan": {
+    "to": "yumliasasan",
+    "slot": "ascended_adjective",
+    "via": "mege",
+    "kind": "respelled"
+   },
+   "folnimege": {
+    "to": "folniyumli",
+    "slot": "root",
+    "via": "mege",
+    "kind": "respelled"
+   },
+   "folnimegeasa": {
+    "to": "folniyumliasa",
+    "slot": "ascended",
+    "via": "mege",
+    "kind": "respelled"
+   },
+   "folnimegena": {
+    "to": "folniyumlina",
+    "slot": "negative",
+    "via": "mege",
+    "kind": "respelled"
+   },
+   "folnimegefa": {
+    "to": "folniyumlifa",
+    "slot": "verb",
+    "via": "mege",
+    "kind": "respelled"
+   },
+   "folnimegenasan": {
+    "to": "folniyumlinasan",
+    "slot": "negative_adjective",
+    "via": "mege",
+    "kind": "respelled"
+   },
+   "folnimegesan": {
+    "to": "folniyumlisan",
+    "slot": "adjective",
+    "via": "mege",
+    "kind": "respelled"
+   },
+   "folnimegeasasan": {
+    "to": "folniyumliasasan",
+    "slot": "ascended_adjective",
+    "via": "mege",
+    "kind": "respelled"
+   },
+   "megepusa": {
+    "to": "yumlipusa",
+    "slot": "root",
+    "via": "mege",
+    "kind": "respelled"
+   },
+   "megepusaasa": {
+    "to": "yumlipusaasa",
+    "slot": "ascended",
+    "via": "mege",
+    "kind": "respelled"
+   },
+   "megepusana": {
+    "to": "yumlipusana",
+    "slot": "negative",
+    "via": "mege",
+    "kind": "respelled"
+   },
+   "megepusama": {
+    "to": "yumlipusaya",
+    "slot": "verb",
+    "via": "mege",
+    "kind": "respelled"
+   },
+   "megepusanasan": {
+    "to": "yumlipusanasan",
+    "slot": "negative_adjective",
+    "via": "mege",
+    "kind": "respelled"
+   },
+   "megepusasan": {
+    "to": "yumlipusasan",
+    "slot": "adjective",
+    "via": "mege",
+    "kind": "respelled"
+   },
+   "megepusaasasan": {
+    "to": "yumlipusaasasan",
+    "slot": "ascended_adjective",
+    "via": "mege",
+    "kind": "respelled"
+   },
+   "kupa": {
+    "to": "ruko",
+    "slot": "root",
+    "via": "kupa",
+    "kind": "respelled"
+   },
+   "kupaasa": {
+    "to": "rukoasa",
+    "slot": "ascended",
+    "via": "kupa",
+    "kind": "respelled"
+   },
+   "kupana": {
+    "to": "rukona",
+    "slot": "negative",
+    "via": "kupa",
+    "kind": "respelled"
+   },
+   "kupaka": {
+    "to": "rukora",
+    "slot": "verb",
+    "via": "kupa",
+    "kind": "respelled"
+   },
+   "kupanasan": {
+    "to": "rukonasan",
+    "slot": "negative_adjective",
+    "via": "kupa",
+    "kind": "respelled"
+   },
+   "kupasan": {
+    "to": "rukosan",
+    "slot": "adjective",
+    "via": "kupa",
+    "kind": "respelled"
+   },
+   "kupaasasan": {
+    "to": "rukoasasan",
+    "slot": "ascended_adjective",
+    "via": "kupa",
+    "kind": "respelled"
+   },
+   "kuparale": {
+    "to": "rukorale",
+    "slot": "root",
+    "via": "kupa",
+    "kind": "respelled"
+   },
+   "kuparaleasa": {
+    "to": "rukoraleasa",
+    "slot": "ascended",
+    "via": "kupa",
+    "kind": "respelled"
+   },
+   "kuparalena": {
+    "to": "rukoralena",
+    "slot": "negative",
+    "via": "kupa",
+    "kind": "respelled"
+   },
+   "kuparaleka": {
+    "to": "rukoralera",
+    "slot": "verb",
+    "via": "kupa",
+    "kind": "respelled"
+   },
+   "kuparalenasan": {
+    "to": "rukoralenasan",
+    "slot": "negative_adjective",
+    "via": "kupa",
+    "kind": "respelled"
+   },
+   "kuparalesan": {
+    "to": "rukoralesan",
+    "slot": "adjective",
+    "via": "kupa",
+    "kind": "respelled"
+   },
+   "kuparaleasasan": {
+    "to": "rukoraleasasan",
+    "slot": "ascended_adjective",
+    "via": "kupa",
+    "kind": "respelled"
+   },
+   "kupavolme": {
+    "to": "rukovolme",
+    "slot": "root",
+    "via": "kupa",
+    "kind": "respelled"
+   },
+   "kupavolmeasa": {
+    "to": "rukovolmeasa",
+    "slot": "ascended",
+    "via": "kupa",
+    "kind": "respelled"
+   },
+   "kupavolmena": {
+    "to": "rukovolmena",
+    "slot": "negative",
+    "via": "kupa",
+    "kind": "respelled"
+   },
+   "kupavolmeka": {
+    "to": "rukovolmera",
+    "slot": "verb",
+    "via": "kupa",
+    "kind": "respelled"
+   },
+   "kupavolmenasan": {
+    "to": "rukovolmenasan",
+    "slot": "negative_adjective",
+    "via": "kupa",
+    "kind": "respelled"
+   },
+   "kupavolmesan": {
+    "to": "rukovolmesan",
+    "slot": "adjective",
+    "via": "kupa",
+    "kind": "respelled"
+   },
+   "kupavolmeasasan": {
+    "to": "rukovolmeasasan",
+    "slot": "ascended_adjective",
+    "via": "kupa",
+    "kind": "respelled"
+   },
+   "kuparivla": {
+    "to": "rukorivla",
+    "slot": "root",
+    "via": "kupa",
+    "kind": "respelled"
+   },
+   "kuparivlaasa": {
+    "to": "rukorivlaasa",
+    "slot": "ascended",
+    "via": "kupa",
+    "kind": "respelled"
+   },
+   "kuparivlana": {
+    "to": "rukorivlana",
+    "slot": "negative",
+    "via": "kupa",
+    "kind": "respelled"
+   },
+   "kuparivlaka": {
+    "to": "rukorivlara",
+    "slot": "verb",
+    "via": "kupa",
+    "kind": "respelled"
+   },
+   "kuparivlanasan": {
+    "to": "rukorivlanasan",
+    "slot": "negative_adjective",
+    "via": "kupa",
+    "kind": "respelled"
+   },
+   "kuparivlasan": {
+    "to": "rukorivlasan",
+    "slot": "adjective",
+    "via": "kupa",
+    "kind": "respelled"
+   },
+   "kuparivlaasasan": {
+    "to": "rukorivlaasasan",
+    "slot": "ascended_adjective",
+    "via": "kupa",
+    "kind": "respelled"
+   },
+   "jemla": {
+    "to": "zimzi",
+    "slot": "root",
+    "via": "jemla",
+    "kind": "respelled"
+   },
+   "jemlaasa": {
+    "to": "zimziasa",
+    "slot": "ascended",
+    "via": "jemla",
+    "kind": "respelled"
+   },
+   "jemlana": {
+    "to": "zimzina",
+    "slot": "negative",
+    "via": "jemla",
+    "kind": "respelled"
+   },
+   "jemlaja": {
+    "to": "zimziza",
+    "slot": "verb",
+    "via": "jemla",
+    "kind": "respelled"
+   },
+   "jemlanasan": {
+    "to": "zimzinasan",
+    "slot": "negative_adjective",
+    "via": "jemla",
+    "kind": "respelled"
+   },
+   "jemlasan": {
+    "to": "zimzisan",
+    "slot": "adjective",
+    "via": "jemla",
+    "kind": "respelled"
+   },
+   "jemlaasasan": {
+    "to": "zimziasasan",
+    "slot": "ascended_adjective",
+    "via": "jemla",
+    "kind": "respelled"
+   },
+   "jemlatino": {
+    "to": "zimzitino",
+    "slot": "root",
+    "via": "jemla",
+    "kind": "respelled"
+   },
+   "jemlatinoasa": {
+    "to": "zimzitinoasa",
+    "slot": "ascended",
+    "via": "jemla",
+    "kind": "respelled"
+   },
+   "jemlatinona": {
+    "to": "zimzitinona",
+    "slot": "negative",
+    "via": "jemla",
+    "kind": "respelled"
+   },
+   "jemlatinoja": {
+    "to": "zimzitinoza",
+    "slot": "verb",
+    "via": "jemla",
+    "kind": "respelled"
+   },
+   "jemlatinonasan": {
+    "to": "zimzitinonasan",
+    "slot": "negative_adjective",
+    "via": "jemla",
+    "kind": "respelled"
+   },
+   "jemlatinosan": {
+    "to": "zimzitinosan",
+    "slot": "adjective",
+    "via": "jemla",
+    "kind": "respelled"
+   },
+   "jemlatinoasasan": {
+    "to": "zimzitinoasasan",
+    "slot": "ascended_adjective",
+    "via": "jemla",
+    "kind": "respelled"
+   },
+   "jemlayano": {
+    "to": "zimziyano",
+    "slot": "root",
+    "via": "jemla",
+    "kind": "respelled"
+   },
+   "jemlayanoasa": {
+    "to": "zimziyanoasa",
+    "slot": "ascended",
+    "via": "jemla",
+    "kind": "respelled"
+   },
+   "jemlayanona": {
+    "to": "zimziyanona",
+    "slot": "negative",
+    "via": "jemla",
+    "kind": "respelled"
+   },
+   "jemlayanoja": {
+    "to": "zimziyanoza",
+    "slot": "verb",
+    "via": "jemla",
+    "kind": "respelled"
+   },
+   "jemlayanonasan": {
+    "to": "zimziyanonasan",
+    "slot": "negative_adjective",
+    "via": "jemla",
+    "kind": "respelled"
+   },
+   "jemlayanosan": {
+    "to": "zimziyanosan",
+    "slot": "adjective",
+    "via": "jemla",
+    "kind": "respelled"
+   },
+   "jemlayanoasasan": {
+    "to": "zimziyanoasasan",
+    "slot": "ascended_adjective",
+    "via": "jemla",
+    "kind": "respelled"
+   },
+   "talijemla": {
+    "to": "talizimzi",
+    "slot": "root",
+    "via": "jemla",
+    "kind": "respelled"
+   },
+   "talijemlaasa": {
+    "to": "talizimziasa",
+    "slot": "ascended",
+    "via": "jemla",
+    "kind": "respelled"
+   },
+   "talijemlana": {
+    "to": "talizimzina",
+    "slot": "negative",
+    "via": "jemla",
+    "kind": "respelled"
+   },
+   "talijemlata": {
+    "to": "talizimzita",
+    "slot": "verb",
+    "via": "jemla",
+    "kind": "respelled"
+   },
+   "talijemlanasan": {
+    "to": "talizimzinasan",
+    "slot": "negative_adjective",
+    "via": "jemla",
+    "kind": "respelled"
+   },
+   "talijemlasan": {
+    "to": "talizimzisan",
+    "slot": "adjective",
+    "via": "jemla",
+    "kind": "respelled"
+   },
+   "talijemlaasasan": {
+    "to": "talizimziasasan",
+    "slot": "ascended_adjective",
+    "via": "jemla",
+    "kind": "respelled"
+   },
+   "farujemla": {
+    "to": "faruzimzi",
+    "slot": "root",
+    "via": "jemla",
+    "kind": "respelled"
+   },
+   "farujemlaasa": {
+    "to": "faruzimziasa",
+    "slot": "ascended",
+    "via": "jemla",
+    "kind": "respelled"
+   },
+   "farujemlana": {
+    "to": "faruzimzina",
+    "slot": "negative",
+    "via": "jemla",
+    "kind": "respelled"
+   },
+   "farujemlafa": {
+    "to": "faruzimzifa",
+    "slot": "verb",
+    "via": "jemla",
+    "kind": "respelled"
+   },
+   "farujemlanasan": {
+    "to": "faruzimzinasan",
+    "slot": "negative_adjective",
+    "via": "jemla",
+    "kind": "respelled"
+   },
+   "farujemlasan": {
+    "to": "faruzimzisan",
+    "slot": "adjective",
+    "via": "jemla",
+    "kind": "respelled"
+   },
+   "farujemlaasasan": {
+    "to": "faruzimziasasan",
+    "slot": "ascended_adjective",
+    "via": "jemla",
+    "kind": "respelled"
+   },
+   "pesbi": {
+    "to": "bondo",
+    "slot": "root",
+    "via": "pesbi",
+    "kind": "respelled"
+   },
+   "pesbiasa": {
+    "to": "bondoasa",
+    "slot": "ascended",
+    "via": "pesbi",
+    "kind": "respelled"
+   },
+   "pesbina": {
+    "to": "bondona",
+    "slot": "negative",
+    "via": "pesbi",
+    "kind": "respelled"
+   },
+   "pesbipa": {
+    "to": "bondoba",
+    "slot": "verb",
+    "via": "pesbi",
+    "kind": "respelled"
+   },
+   "pesbinasan": {
+    "to": "bondonasan",
+    "slot": "negative_adjective",
+    "via": "pesbi",
+    "kind": "respelled"
+   },
+   "pesbisan": {
+    "to": "bondosan",
+    "slot": "adjective",
+    "via": "pesbi",
+    "kind": "respelled"
+   },
+   "pesbiasasan": {
+    "to": "bondoasasan",
+    "slot": "ascended_adjective",
+    "via": "pesbi",
+    "kind": "respelled"
+   },
+   "pesbivordu": {
+    "to": "bondovordu",
+    "slot": "root",
+    "via": "pesbi",
+    "kind": "respelled"
+   },
+   "pesbivorduasa": {
+    "to": "bondovorduasa",
+    "slot": "ascended",
+    "via": "pesbi",
+    "kind": "respelled"
+   },
+   "pesbivorduna": {
+    "to": "bondovorduna",
+    "slot": "negative",
+    "via": "pesbi",
+    "kind": "respelled"
+   },
+   "pesbivordupa": {
+    "to": "bondovorduba",
+    "slot": "verb",
+    "via": "pesbi",
+    "kind": "respelled"
+   },
+   "pesbivordunasan": {
+    "to": "bondovordunasan",
+    "slot": "negative_adjective",
+    "via": "pesbi",
+    "kind": "respelled"
+   },
+   "pesbivordusan": {
+    "to": "bondovordusan",
+    "slot": "adjective",
+    "via": "pesbi",
+    "kind": "respelled"
+   },
+   "pesbivorduasasan": {
+    "to": "bondovorduasasan",
+    "slot": "ascended_adjective",
+    "via": "pesbi",
+    "kind": "respelled"
+   },
+   "talipesbi": {
+    "to": "talibondo",
+    "slot": "root",
+    "via": "pesbi",
+    "kind": "respelled"
+   },
+   "talipesbiasa": {
+    "to": "talibondoasa",
+    "slot": "ascended",
+    "via": "pesbi",
+    "kind": "respelled"
+   },
+   "talipesbina": {
+    "to": "talibondona",
+    "slot": "negative",
+    "via": "pesbi",
+    "kind": "respelled"
+   },
+   "talipesbita": {
+    "to": "talibondota",
+    "slot": "verb",
+    "via": "pesbi",
+    "kind": "respelled"
+   },
+   "talipesbinasan": {
+    "to": "talibondonasan",
+    "slot": "negative_adjective",
+    "via": "pesbi",
+    "kind": "respelled"
+   },
+   "talipesbisan": {
+    "to": "talibondosan",
+    "slot": "adjective",
+    "via": "pesbi",
+    "kind": "respelled"
+   },
+   "talipesbiasasan": {
+    "to": "talibondoasasan",
+    "slot": "ascended_adjective",
+    "via": "pesbi",
+    "kind": "respelled"
+   },
+   "menha": {
+    "to": "gamdo",
+    "slot": "root",
+    "via": "menha",
+    "kind": "respelled"
+   },
+   "menhaasa": {
+    "to": "gamdoasa",
+    "slot": "ascended",
+    "via": "menha",
+    "kind": "respelled"
+   },
+   "menhana": {
+    "to": "gamdona",
+    "slot": "negative",
+    "via": "menha",
+    "kind": "respelled"
+   },
+   "menhama": {
+    "to": "gamdoga",
+    "slot": "verb",
+    "via": "menha",
+    "kind": "respelled"
+   },
+   "menhanasan": {
+    "to": "gamdonasan",
+    "slot": "negative_adjective",
+    "via": "menha",
+    "kind": "respelled"
+   },
+   "menhasan": {
+    "to": "gamdosan",
+    "slot": "adjective",
+    "via": "menha",
+    "kind": "respelled"
+   },
+   "menhaasasan": {
+    "to": "gamdoasasan",
+    "slot": "ascended_adjective",
+    "via": "menha",
+    "kind": "respelled"
+   },
+   "menhasabaye": {
+    "to": "gamdosabaye",
+    "slot": "root",
+    "via": "menha",
+    "kind": "respelled"
+   },
+   "menhasabayeasa": {
+    "to": "gamdosabayeasa",
+    "slot": "ascended",
+    "via": "menha",
+    "kind": "respelled"
+   },
+   "menhasabayena": {
+    "to": "gamdosabayena",
+    "slot": "negative",
+    "via": "menha",
+    "kind": "respelled"
+   },
+   "menhasabayema": {
+    "to": "gamdosabayega",
+    "slot": "verb",
+    "via": "menha",
+    "kind": "respelled"
+   },
+   "menhasabayenasan": {
+    "to": "gamdosabayenasan",
+    "slot": "negative_adjective",
+    "via": "menha",
+    "kind": "respelled"
+   },
+   "menhasabayesan": {
+    "to": "gamdosabayesan",
+    "slot": "adjective",
+    "via": "menha",
+    "kind": "respelled"
+   },
+   "menhasabayeasasan": {
+    "to": "gamdosabayeasasan",
+    "slot": "ascended_adjective",
+    "via": "menha",
+    "kind": "respelled"
+   },
+   "vugo": {
+    "to": "vizu",
+    "slot": "root",
+    "via": "vugo",
+    "kind": "respelled"
+   },
+   "vugoasa": {
+    "to": "vizuasa",
+    "slot": "ascended",
+    "via": "vugo",
+    "kind": "respelled"
+   },
+   "vugona": {
+    "to": "vizuna",
+    "slot": "negative",
+    "via": "vugo",
+    "kind": "respelled"
+   },
+   "vugova": {
+    "to": "vizuva",
+    "slot": "verb",
+    "via": "vugo",
+    "kind": "respelled"
+   },
+   "vugonasan": {
+    "to": "vizunasan",
+    "slot": "negative_adjective",
+    "via": "vugo",
+    "kind": "respelled"
+   },
+   "vugosan": {
+    "to": "vizusan",
+    "slot": "adjective",
+    "via": "vugo",
+    "kind": "respelled"
+   },
+   "vugoasasan": {
+    "to": "vizuasasan",
+    "slot": "ascended_adjective",
+    "via": "vugo",
+    "kind": "respelled"
+   },
+   "vugolavi": {
+    "to": "vizulavi",
+    "slot": "root",
+    "via": "vugo",
+    "kind": "respelled"
+   },
+   "vugolaviasa": {
+    "to": "vizulaviasa",
+    "slot": "ascended",
+    "via": "vugo",
+    "kind": "respelled"
+   },
+   "vugolavina": {
+    "to": "vizulavina",
+    "slot": "negative",
+    "via": "vugo",
+    "kind": "respelled"
+   },
+   "vugolaviva": {
+    "to": "vizulaviva",
+    "slot": "verb",
+    "via": "vugo",
+    "kind": "respelled"
+   },
+   "vugolavinasan": {
+    "to": "vizulavinasan",
+    "slot": "negative_adjective",
+    "via": "vugo",
+    "kind": "respelled"
+   },
+   "vugolavisan": {
+    "to": "vizulavisan",
+    "slot": "adjective",
+    "via": "vugo",
+    "kind": "respelled"
+   },
+   "vugolaviasasan": {
+    "to": "vizulaviasasan",
+    "slot": "ascended_adjective",
+    "via": "vugo",
+    "kind": "respelled"
+   },
+   "vugorabi": {
+    "to": "vizurabi",
+    "slot": "root",
+    "via": "vugo",
+    "kind": "respelled"
+   },
+   "vugorabiasa": {
+    "to": "vizurabiasa",
+    "slot": "ascended",
+    "via": "vugo",
+    "kind": "respelled"
+   },
+   "vugorabina": {
+    "to": "vizurabina",
+    "slot": "negative",
+    "via": "vugo",
+    "kind": "respelled"
+   },
+   "vugorabiva": {
+    "to": "vizurabiva",
+    "slot": "verb",
+    "via": "vugo",
+    "kind": "respelled"
+   },
+   "vugorabinasan": {
+    "to": "vizurabinasan",
+    "slot": "negative_adjective",
+    "via": "vugo",
+    "kind": "respelled"
+   },
+   "vugorabisan": {
+    "to": "vizurabisan",
+    "slot": "adjective",
+    "via": "vugo",
+    "kind": "respelled"
+   },
+   "vugorabiasasan": {
+    "to": "vizurabiasasan",
+    "slot": "ascended_adjective",
+    "via": "vugo",
+    "kind": "respelled"
+   },
+   "vugovalmi": {
+    "to": "vizuvalmi",
+    "slot": "root",
+    "via": "vugo",
+    "kind": "respelled"
+   },
+   "vugovalmiasa": {
+    "to": "vizuvalmiasa",
+    "slot": "ascended",
+    "via": "vugo",
+    "kind": "respelled"
+   },
+   "vugovalmina": {
+    "to": "vizuvalmina",
+    "slot": "negative",
+    "via": "vugo",
+    "kind": "respelled"
+   },
+   "vugovalmiva": {
+    "to": "vizuvalmiva",
+    "slot": "verb",
+    "via": "vugo",
+    "kind": "respelled"
+   },
+   "vugovalminasan": {
+    "to": "vizuvalminasan",
+    "slot": "negative_adjective",
+    "via": "vugo",
+    "kind": "respelled"
+   },
+   "vugovalmisan": {
+    "to": "vizuvalmisan",
+    "slot": "adjective",
+    "via": "vugo",
+    "kind": "respelled"
+   },
+   "vugovalmiasasan": {
+    "to": "vizuvalmiasasan",
+    "slot": "ascended_adjective",
+    "via": "vugo",
+    "kind": "respelled"
+   },
+   "vugovaye": {
+    "to": "vizuvaye",
+    "slot": "root",
+    "via": "vugo",
+    "kind": "respelled"
+   },
+   "vugovayeasa": {
+    "to": "vizuvayeasa",
+    "slot": "ascended",
+    "via": "vugo",
+    "kind": "respelled"
+   },
+   "vugovayena": {
+    "to": "vizuvayena",
+    "slot": "negative",
+    "via": "vugo",
+    "kind": "respelled"
+   },
+   "vugovayeva": {
+    "to": "vizuvayeva",
+    "slot": "verb",
+    "via": "vugo",
+    "kind": "respelled"
+   },
+   "vugovayenasan": {
+    "to": "vizuvayenasan",
+    "slot": "negative_adjective",
+    "via": "vugo",
+    "kind": "respelled"
+   },
+   "vugovayesan": {
+    "to": "vizuvayesan",
+    "slot": "adjective",
+    "via": "vugo",
+    "kind": "respelled"
+   },
+   "vugovayeasasan": {
+    "to": "vizuvayeasasan",
+    "slot": "ascended_adjective",
+    "via": "vugo",
+    "kind": "respelled"
+   },
+   "jomruvugo": {
+    "to": "jomruvizu",
+    "slot": "root",
+    "via": "vugo",
+    "kind": "respelled"
+   },
+   "jomruvugoasa": {
+    "to": "jomruvizuasa",
+    "slot": "ascended",
+    "via": "vugo",
+    "kind": "respelled"
+   },
+   "jomruvugona": {
+    "to": "jomruvizuna",
+    "slot": "negative",
+    "via": "vugo",
+    "kind": "respelled"
+   },
+   "jomruvugoja": {
+    "to": "jomruvizuja",
+    "slot": "verb",
+    "via": "vugo",
+    "kind": "respelled"
+   },
+   "jomruvugonasan": {
+    "to": "jomruvizunasan",
+    "slot": "negative_adjective",
+    "via": "vugo",
+    "kind": "respelled"
+   },
+   "jomruvugosan": {
+    "to": "jomruvizusan",
+    "slot": "adjective",
+    "via": "vugo",
+    "kind": "respelled"
+   },
+   "jomruvugoasasan": {
+    "to": "jomruvizuasasan",
+    "slot": "ascended_adjective",
+    "via": "vugo",
+    "kind": "respelled"
+   },
+   "demrovugo": {
+    "to": "demrovizu",
+    "slot": "root",
+    "via": "vugo",
+    "kind": "respelled"
+   },
+   "demrovugoasa": {
+    "to": "demrovizuasa",
+    "slot": "ascended",
+    "via": "vugo",
+    "kind": "respelled"
+   },
+   "demrovugona": {
+    "to": "demrovizuna",
+    "slot": "negative",
+    "via": "vugo",
+    "kind": "respelled"
+   },
+   "demrovugoda": {
+    "to": "demrovizuda",
+    "slot": "verb",
+    "via": "vugo",
+    "kind": "respelled"
+   },
+   "demrovugonasan": {
+    "to": "demrovizunasan",
+    "slot": "negative_adjective",
+    "via": "vugo",
+    "kind": "respelled"
+   },
+   "demrovugosan": {
+    "to": "demrovizusan",
+    "slot": "adjective",
+    "via": "vugo",
+    "kind": "respelled"
+   },
+   "demrovugoasasan": {
+    "to": "demrovizuasasan",
+    "slot": "ascended_adjective",
+    "via": "vugo",
+    "kind": "respelled"
+   },
+   "salye": {
+    "to": "bapi",
+    "slot": "root",
+    "via": "salye",
+    "kind": "respelled"
+   },
+   "salyeasa": {
+    "to": "bapiasa",
+    "slot": "ascended",
+    "via": "salye",
+    "kind": "respelled"
+   },
+   "salyena": {
+    "to": "bapina",
+    "slot": "negative",
+    "via": "salye",
+    "kind": "respelled"
+   },
+   "salyesia": {
+    "to": "bapiba",
+    "slot": "verb",
+    "via": "salye",
+    "kind": "respelled"
+   },
+   "salyenasan": {
+    "to": "bapinasan",
+    "slot": "negative_adjective",
+    "via": "salye",
+    "kind": "respelled"
+   },
+   "salyesan": {
+    "to": "bapisan",
+    "slot": "adjective",
+    "via": "salye",
+    "kind": "respelled"
+   },
+   "salyeasasan": {
+    "to": "bapiasasan",
+    "slot": "ascended_adjective",
+    "via": "salye",
+    "kind": "respelled"
+   },
+   "salyehavli": {
+    "to": "bapihavli",
+    "slot": "root",
+    "via": "salye",
+    "kind": "respelled"
+   },
+   "salyehavliasa": {
+    "to": "bapihavliasa",
+    "slot": "ascended",
+    "via": "salye",
+    "kind": "respelled"
+   },
+   "salyehavlina": {
+    "to": "bapihavlina",
+    "slot": "negative",
+    "via": "salye",
+    "kind": "respelled"
+   },
+   "salyehavlisia": {
+    "to": "bapihavliba",
+    "slot": "verb",
+    "via": "salye",
+    "kind": "respelled"
+   },
+   "salyehavlinasan": {
+    "to": "bapihavlinasan",
+    "slot": "negative_adjective",
+    "via": "salye",
+    "kind": "respelled"
+   },
+   "salyehavlisan": {
+    "to": "bapihavlisan",
+    "slot": "adjective",
+    "via": "salye",
+    "kind": "respelled"
+   },
+   "salyehavliasasan": {
+    "to": "bapihavliasasan",
+    "slot": "ascended_adjective",
+    "via": "salye",
+    "kind": "respelled"
+   },
+   "salyesemra": {
+    "to": "bapisemra",
+    "slot": "root",
+    "via": "salye",
+    "kind": "respelled"
+   },
+   "salyesemraasa": {
+    "to": "bapisemraasa",
+    "slot": "ascended",
+    "via": "salye",
+    "kind": "respelled"
+   },
+   "salyesemrana": {
+    "to": "bapisemrana",
+    "slot": "negative",
+    "via": "salye",
+    "kind": "respelled"
+   },
+   "salyesemrasia": {
+    "to": "bapisemraba",
+    "slot": "verb",
+    "via": "salye",
+    "kind": "respelled"
+   },
+   "salyesemranasan": {
+    "to": "bapisemranasan",
+    "slot": "negative_adjective",
+    "via": "salye",
+    "kind": "respelled"
+   },
+   "salyesemrasan": {
+    "to": "bapisemrasan",
+    "slot": "adjective",
+    "via": "salye",
+    "kind": "respelled"
+   },
+   "salyesemraasasan": {
+    "to": "bapisemraasasan",
+    "slot": "ascended_adjective",
+    "via": "salye",
+    "kind": "respelled"
+   },
+   "senba": {
+    "to": "linle",
+    "slot": "root",
+    "via": "senba",
+    "kind": "respelled"
+   },
+   "senbaasa": {
+    "to": "linleasa",
+    "slot": "ascended",
+    "via": "senba",
+    "kind": "respelled"
+   },
+   "senbana": {
+    "to": "linlena",
+    "slot": "negative",
+    "via": "senba",
+    "kind": "respelled"
+   },
+   "senbasia": {
+    "to": "linlela",
+    "slot": "verb",
+    "via": "senba",
+    "kind": "respelled"
+   },
+   "senbanasan": {
+    "to": "linlenasan",
+    "slot": "negative_adjective",
+    "via": "senba",
+    "kind": "respelled"
+   },
+   "senbasan": {
+    "to": "linlesan",
+    "slot": "adjective",
+    "via": "senba",
+    "kind": "respelled"
+   },
+   "senbaasasan": {
+    "to": "linleasasan",
+    "slot": "ascended_adjective",
+    "via": "senba",
+    "kind": "respelled"
+   },
+   "senbabiti": {
+    "to": "linlebiti",
+    "slot": "root",
+    "via": "senba",
+    "kind": "respelled"
+   },
+   "senbabitisia": {
+    "to": "linlebitila",
+    "slot": "verb",
+    "via": "senba",
+    "kind": "respelled"
+   },
+   "senbabitiasa": {
+    "to": "linlebitiasa",
+    "slot": "ascended",
+    "via": "senba",
+    "kind": "respelled"
+   },
+   "senbabitina": {
+    "to": "linlebitina",
+    "slot": "negative",
+    "via": "senba",
+    "kind": "respelled"
+   },
+   "senbabitinasan": {
+    "to": "linlebitinasan",
+    "slot": "negative_adjective",
+    "via": "senba",
+    "kind": "respelled"
+   },
+   "senbabitisan": {
+    "to": "linlebitisan",
+    "slot": "adjective",
+    "via": "senba",
+    "kind": "respelled"
+   },
+   "senbabitiasasan": {
+    "to": "linlebitiasasan",
+    "slot": "ascended_adjective",
+    "via": "senba",
+    "kind": "respelled"
+   },
+   "larbopagobudi": {
+    "to": "farvibudi",
+    "slot": "root",
+    "via": "larbopagobudi",
+    "kind": "respelled"
+   },
+   "larbopagobudiasa": {
+    "to": "farvibudiasa",
+    "slot": "ascended",
+    "via": "larbopagobudi",
+    "kind": "respelled"
+   },
+   "larbopagobudina": {
+    "to": "farvibudina",
+    "slot": "negative",
+    "via": "larbopagobudi",
+    "kind": "respelled"
+   },
+   "larbopagobudila": {
+    "to": "farvibudifa",
+    "slot": "verb",
+    "via": "larbopagobudi",
+    "kind": "respelled"
+   },
+   "larbopagobudinasan": {
+    "to": "farvibudinasan",
+    "slot": "negative_adjective",
+    "via": "larbopagobudi",
+    "kind": "respelled"
+   },
+   "larbopagobudisan": {
+    "to": "farvibudisan",
+    "slot": "adjective",
+    "via": "larbopagobudi",
+    "kind": "respelled"
+   },
+   "larbopagobudiasasan": {
+    "to": "farvibudiasasan",
+    "slot": "ascended_adjective",
+    "via": "larbopagobudi",
+    "kind": "respelled"
+   },
+   "lunolarbopagobudi": {
+    "to": "lunofarvibudi",
+    "slot": "root",
+    "via": "larbopagobudi",
+    "kind": "respelled"
+   },
+   "lunolarbopagobudiasa": {
+    "to": "lunofarvibudiasa",
+    "slot": "ascended",
+    "via": "larbopagobudi",
+    "kind": "respelled"
+   },
+   "lunolarbopagobudina": {
+    "to": "lunofarvibudina",
+    "slot": "negative",
+    "via": "larbopagobudi",
+    "kind": "respelled"
+   },
+   "lunolarbopagobudila": {
+    "to": "lunofarvibudila",
+    "slot": "verb",
+    "via": "larbopagobudi",
+    "kind": "respelled"
+   },
+   "lunolarbopagobudinasan": {
+    "to": "lunofarvibudinasan",
+    "slot": "negative_adjective",
+    "via": "larbopagobudi",
+    "kind": "respelled"
+   },
+   "lunolarbopagobudisan": {
+    "to": "lunofarvibudisan",
+    "slot": "adjective",
+    "via": "larbopagobudi",
+    "kind": "respelled"
+   },
+   "lunolarbopagobudiasasan": {
+    "to": "lunofarvibudiasasan",
+    "slot": "ascended_adjective",
+    "via": "larbopagobudi",
+    "kind": "respelled"
+   },
+   "larbopagoregna": {
+    "to": "bumbo",
+    "slot": "root",
+    "via": "larbopagoregna",
+    "kind": "respelled"
+   },
+   "larbopagoregnaasa": {
+    "to": "bumboasa",
+    "slot": "ascended",
+    "via": "larbopagoregna",
+    "kind": "respelled"
+   },
+   "larbopagoregnana": {
+    "to": "bumbona",
+    "slot": "negative",
+    "via": "larbopagoregna",
+    "kind": "respelled"
+   },
+   "larbopagoregnala": {
+    "to": "bumboba",
+    "slot": "verb",
+    "via": "larbopagoregna",
+    "kind": "respelled"
+   },
+   "larbopagoregnanasan": {
+    "to": "bumbonasan",
+    "slot": "negative_adjective",
+    "via": "larbopagoregna",
+    "kind": "respelled"
+   },
+   "larbopagoregnasan": {
+    "to": "bumbosan",
+    "slot": "adjective",
+    "via": "larbopagoregna",
+    "kind": "respelled"
+   },
+   "larbopagoregnaasasan": {
+    "to": "bumboasasan",
+    "slot": "ascended_adjective",
+    "via": "larbopagoregna",
+    "kind": "respelled"
+   },
+   "maremirulazu": {
+    "to": "murmu",
+    "slot": "root",
+    "via": "maremirulazu",
+    "kind": "respelled"
+   },
+   "maremirulazuasa": {
+    "to": "murmuasa",
+    "slot": "ascended",
+    "via": "maremirulazu",
+    "kind": "respelled"
+   },
+   "maremirulazuna": {
+    "to": "murmuna",
+    "slot": "negative",
+    "via": "maremirulazu",
+    "kind": "respelled"
+   },
+   "maremirulazuma": {
+    "to": "murmuma",
+    "slot": "verb",
+    "via": "maremirulazu",
+    "kind": "respelled"
+   },
+   "maremirulazunasan": {
+    "to": "murmunasan",
+    "slot": "negative_adjective",
+    "via": "maremirulazu",
+    "kind": "respelled"
+   },
+   "maremirulazusan": {
+    "to": "murmusan",
+    "slot": "adjective",
+    "via": "maremirulazu",
+    "kind": "respelled"
+   },
+   "maremirulazuasasan": {
+    "to": "murmuasasan",
+    "slot": "ascended_adjective",
+    "via": "maremirulazu",
+    "kind": "respelled"
+   },
+   "mirunululirayo": {
+    "to": "kerku",
+    "slot": "derivation",
+    "via": "mirunululirayo",
+    "kind": "retired"
    }
   },
   "editorial_notes_0_7": [
@@ -116999,7 +119457,15 @@
    "ops": 16
   }
  ],
- "handoff_note": "Liraasa 2.2: all of 1.0, the 1.1 vocabulary supplement, the 1.2 changesets 2026-10-17-grammar-rulings and 2026-10-17-lexicon-1-2, the 2.0 changesets 2026-10-18-lexicon-2-0 and 2026-10-18-lexicon-2-0-review (word-building rulings 2.0:G37–G45, new vocabulary, the image-compound pattern), and the 2.1 changeset 2026-10-18-lexicon-2-1 and 2026-10-19-lexicon-2-1-review (rulings 2.1:G46–G59, 30 roots respelled), and the 2.2 changeset 2026-10-19-lexicon-2-2 (rulings 2.2:G60–G68, silro restored, the album). Revised examples keep their earlier text in liraasa_1_1 (1.2), liraasa_1_2 (2.0), liraasa_2_0 (2.1) or liraasa_2_1 (2.2). Ruling ids are edition-qualified: 0.8:R1, 1.0:G7, 1.2:G24, 2.0:G40, 2.1:G46, 2.2:G60. Built by scripts/build_handoff.ts from data/lexicon/liraasa_2_2.json.",
+ "changesets_2_3": [
+  {
+   "id": "2026-10-19-lexicon-2-3",
+   "edition": "2.3",
+   "summary": "Liraasa 2.3 (ADR-0019), from the author's sound-pass patch: rulings 2.3:G69–G71; 13 roots respelled (lenra → zarku, vanru → dokra, voho → kezdo, vabale → tobra, teyo → dento, mege → yumli, kupa → ruko, jemla → zimzi, pesbi → bondo, menha → gamdo, vugo → vizu, salye → bapi, senba → linle); bear and cow made the roots bumbo and murmu, and frog the new root kerku (mirunululirayo retired); wolf rebuilt as farvibudi (farvi + budi), superseding the wolf half of 2.1:G59; every form, compound, image compound, derivation and example sentence built on them follows.",
+   "ops": 22
+  }
+ ],
+ "handoff_note": "Liraasa 2.3: all of 1.0, the 1.1 vocabulary supplement, the 1.2 changesets 2026-10-17-grammar-rulings and 2026-10-17-lexicon-1-2, the 2.0 changesets 2026-10-18-lexicon-2-0 and 2026-10-18-lexicon-2-0-review (word-building rulings 2.0:G37–G45, new vocabulary, the image-compound pattern), and the 2.1 changeset 2026-10-18-lexicon-2-1 and 2026-10-19-lexicon-2-1-review (rulings 2.1:G46–G59, 30 roots respelled), and the 2.2 changeset 2026-10-19-lexicon-2-2 (rulings 2.2:G60–G68, silro restored, the album), and the 2.3 changeset 2026-10-19-lexicon-2-3 (rulings 2.3:G69–G71, the sound pass: 13 roots respelled, bear, cow and frog made roots, wolf rebuilt on farvi). Revised examples keep their earlier text in liraasa_1_1 (1.2), liraasa_1_2 (2.0), liraasa_2_0 (2.1), liraasa_2_1 (2.2) or liraasa_2_2 (2.3). Ruling ids are edition-qualified: 0.8:R1, 1.0:G7, 1.2:G24, 2.0:G40, 2.1:G46, 2.2:G60, 2.3:G69. Built by scripts/build_handoff.ts from data/lexicon/liraasa_2_3.json.",
  "counts_1_1_to_1_2": {
   "before": {
    "headwords": 1418,
@@ -146391,6 +148857,349 @@
      "reason": "Liraasa 2.2 patch: tarnulinusan is sung on the album (album 09 line 9); the gloss is the patch's, confirmed by the author on 2026-10-19.",
      "addedIn": "2.2",
      "at": "2026-10-19T12:00:00Z",
+     "author": "nicolas"
+    }
+   ]
+  }
+ ],
+ "counts_2_2_to_2_3": {
+  "before": {
+   "headwords": 1462,
+   "primalRoots": 472,
+   "compounds": 990,
+   "forms": 10234,
+   "distinctForms": 10234,
+   "functionWords": 151,
+   "correlatives": 39,
+   "lexicalisedDerivations": 106,
+   "rhymeFamilies": 475
+  },
+  "after": {
+   "headwords": 1463,
+   "primalRoots": 475,
+   "compounds": 988,
+   "forms": 10241,
+   "distinctForms": 10241,
+   "functionWords": 151,
+   "correlatives": 39,
+   "lexicalisedDerivations": 105,
+   "rhymeFamilies": 478
+  },
+  "imageCompoundsAttested": 391
+ },
+ "changesets_2_3_full": [
+  {
+   "id": "2026-10-19-lexicon-2-3",
+   "edition": "2.3",
+   "created": "2026-10-19T18:00:00Z",
+   "author": "nicolas",
+   "summary": "Liraasa 2.3 (ADR-0019), from the author's sound-pass patch: rulings 2.3:G69–G71; 13 roots respelled (lenra → zarku, vanru → dokra, voho → kezdo, vabale → tobra, teyo → dento, mege → yumli, kupa → ruko, jemla → zimzi, pesbi → bondo, menha → gamdo, vugo → vizu, salye → bapi, senba → linle); bear and cow made the roots bumbo and murmu, and frog the new root kerku (mirunululirayo retired); wolf rebuilt as farvibudi (farvi + budi), superseding the wolf half of 2.1:G59; every form, compound, image compound, derivation and example sentence built on them follows.",
+   "rulings": [
+    {
+     "id": "G69",
+     "topic": "Second respelling pass",
+     "ruling": "Thirteen roots are respelled: lenra -> zarku; vanru -> dokra; voho -> kezdo; vabale -> tobra; teyo -> dento; mege -> yumli; kupa -> ruko; jemla -> zimzi; pesbi -> bondo; menha -> gamdo; vugo -> vizu; salye -> bapi; senba -> linle. 2.1:G58 applies in full: a respelled root keeps every meaning and empty slot; all forms, derivations, compounds and image compounds respell with it; compound verbs follow the new first letter; 2.2 spellings retired; older texts, including the album, are read under the spellings they were written in.",
+     "refines": [
+      "2.1:G58"
+     ],
+     "examples": []
+    },
+    {
+     "id": "G70",
+     "topic": "Roots for common animals",
+     "ruling": "bumbo (bear), murmu (cow; cattle) and kerku (frog) are new roots. They replace larbopagoregna, maremirulazu and the listed derivation mirunululirayo, which are retired; kerku takes the verb kerkuka, to croak. mirunululira (river-song) stays.",
+     "refines": [],
+     "examples": []
+    },
+    {
+     "id": "G71",
+     "topic": "Wolf",
+     "ruling": "larbopagobudi -> farvibudi (farvi + budi), 'wild dog', read like farvilazu (wild animal); lunolarbopagobudi -> lunofarvibudi. Supersedes the wolf half of 2.1:G59; its taha -> kezupago half stands.",
+     "refines": [],
+     "supersedes": [
+      "2.1:G59"
+     ],
+     "examples": []
+    }
+   ],
+   "headwords": [
+    {
+     "id": "lx_kerku_1854",
+     "root": "kerku",
+     "type": "Primal",
+     "components": null,
+     "glosses": {
+      "root": "frog",
+      "verb": "to croak"
+     },
+     "register": "everyday",
+     "domain": "Animals",
+     "english_synonyms": [
+      "frog",
+      "to croak"
+     ],
+     "notes": "Added in 2.3 (changeset 2026-10-19-lexicon-2-3). Replaces the listed derivation mirunululira + -yo (frog (river-singer)), which is retired (2.3:G70)."
+    }
+   ],
+   "ops": [
+    {
+     "entry": "2.3:G69",
+     "op": "add_ruling",
+     "from": null,
+     "to": "Second respelling pass",
+     "ruling": "2.3:G69",
+     "reason": "Liraasa 2.3 sound-pass patch, draft ruling G69: Second respelling pass.",
+     "addedIn": "2.3",
+     "at": "2026-10-19T18:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "2.3:G70",
+     "op": "add_ruling",
+     "from": null,
+     "to": "Roots for common animals",
+     "ruling": "2.3:G70",
+     "reason": "Liraasa 2.3 sound-pass patch, draft ruling G70: Roots for common animals.",
+     "addedIn": "2.3",
+     "at": "2026-10-19T18:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "2.3:G71",
+     "op": "add_ruling",
+     "from": null,
+     "to": "Wolf",
+     "ruling": "2.3:G71",
+     "reason": "Liraasa 2.3 sound-pass patch, draft ruling G71: Wolf.",
+     "addedIn": "2.3",
+     "at": "2026-10-19T18:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "2.1:G59",
+     "op": "supersede_ruling",
+     "field": "volda -> larbopagobudi (larbopago + budi)",
+     "from": "Roots replaced by compounds",
+     "to": "2.3:G71",
+     "ruling": "2.3:G71",
+     "reason": "Liraasa 2.3 patch: 2.3:G71 rebuilds wolf on farvi and supersedes the wolf half of 2.1:G59; its taha -> kezupago half stands. The ruling is kept as ruled, never reworded.",
+     "addedIn": "2.3",
+     "at": "2026-10-19T18:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_lenra_0261",
+     "op": "respell_root",
+     "slot": "root",
+     "from": "lenra",
+     "to": "zarku",
+     "ruling": "2.3:G69",
+     "reason": "Liraasa 2.3 patch: lenra (\"enemy; active adversary, not merely unloved; foe\") is respelled zarku; every meaning and empty slot is kept, and every form, compound, image compound and derivation follows (2.3:G69, 2.1:G58).",
+     "addedIn": "2.3",
+     "at": "2026-10-19T18:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_vanru_0941",
+     "op": "respell_root",
+     "slot": "root",
+     "from": "vanru",
+     "to": "dokra",
+     "ruling": "2.3:G69",
+     "reason": "Liraasa 2.3 patch: vanru (\"war\") is respelled dokra; every meaning and empty slot is kept, and every form, compound, image compound and derivation follows (2.3:G69, 2.1:G58).",
+     "addedIn": "2.3",
+     "at": "2026-10-19T18:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_voho_1038",
+     "op": "respell_root",
+     "slot": "root",
+     "from": "voho",
+     "to": "kezdo",
+     "ruling": "2.3:G69",
+     "reason": "Liraasa 2.3 patch: voho (\"revenge; retaliation; vengeance\") is respelled kezdo; every meaning and empty slot is kept, and every form, compound, image compound and derivation follows (2.3:G69, 2.1:G58).",
+     "addedIn": "2.3",
+     "at": "2026-10-19T18:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_vabale_0931",
+     "op": "respell_root",
+     "slot": "root",
+     "from": "vabale",
+     "to": "tobra",
+     "ruling": "2.3:G69",
+     "reason": "Liraasa 2.3 patch: vabale (\"wall\") is respelled tobra; every meaning and empty slot is kept, and every form, compound, image compound and derivation follows (2.3:G69, 2.1:G58).",
+     "addedIn": "2.3",
+     "at": "2026-10-19T18:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_teyo_0915",
+     "op": "respell_root",
+     "slot": "root",
+     "from": "teyo",
+     "to": "dento",
+     "ruling": "2.3:G69",
+     "reason": "Liraasa 2.3 patch: teyo (\"tooth\") is respelled dento; every meaning and empty slot is kept, and every form, compound, image compound and derivation follows (2.3:G69, 2.1:G58).",
+     "addedIn": "2.3",
+     "at": "2026-10-19T18:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_mege_0367",
+     "op": "respell_root",
+     "slot": "root",
+     "from": "mege",
+     "to": "yumli",
+     "ruling": "2.3:G69",
+     "reason": "Liraasa 2.3 patch: mege (\"sweetness\") is respelled yumli; every meaning and empty slot is kept, and every form, compound, image compound and derivation follows (2.3:G69, 2.1:G58).",
+     "addedIn": "2.3",
+     "at": "2026-10-19T18:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_barni_0025",
+     "op": "respell_root",
+     "slot": "root",
+     "from": "kupa",
+     "to": "ruko",
+     "ruling": "2.3:G69",
+     "reason": "Liraasa 2.3 patch: kupa (\"blood\") is respelled ruko; every meaning and empty slot is kept, and every form, compound, image compound and derivation follows (2.3:G69, 2.1:G58).",
+     "addedIn": "2.3",
+     "at": "2026-10-19T18:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_jemla_1101",
+     "op": "respell_root",
+     "slot": "root",
+     "from": "jemla",
+     "to": "zimzi",
+     "ruling": "2.3:G69",
+     "reason": "Liraasa 2.3 patch: jemla (\"insect; six-legged arthropod in ordinary usage\") is respelled zimzi; every meaning and empty slot is kept, and every form, compound, image compound and derivation follows (2.3:G69, 2.1:G58).",
+     "addedIn": "2.3",
+     "at": "2026-10-19T18:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_pesbi_0604",
+     "op": "respell_root",
+     "slot": "root",
+     "from": "pesbi",
+     "to": "bondo",
+     "ruling": "2.3:G69",
+     "reason": "Liraasa 2.3 patch: pesbi (\"weight\") is respelled bondo; every meaning and empty slot is kept, and every form, compound, image compound and derivation follows (2.3:G69, 2.1:G58).",
+     "addedIn": "2.3",
+     "at": "2026-10-19T18:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_menha_0373",
+     "op": "respell_root",
+     "slot": "root",
+     "from": "menha",
+     "to": "gamdo",
+     "ruling": "2.3:G69",
+     "reason": "Liraasa 2.3 patch: menha (\"jaw\") is respelled gamdo; every meaning and empty slot is kept, and every form, compound, image compound and derivation follows (2.3:G69, 2.1:G58).",
+     "addedIn": "2.3",
+     "at": "2026-10-19T18:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_velbi_0982",
+     "op": "respell_root",
+     "slot": "root",
+     "from": "vugo",
+     "to": "vizu",
+     "ruling": "2.3:G69",
+     "reason": "Liraasa 2.3 patch: vugo (\"speed\") is respelled vizu; every meaning and empty slot is kept, and every form, compound, image compound and derivation follows (2.3:G69, 2.1:G58).",
+     "addedIn": "2.3",
+     "at": "2026-10-19T18:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_salye_0728",
+     "op": "respell_root",
+     "slot": "root",
+     "from": "salye",
+     "to": "bapi",
+     "ruling": "2.3:G69",
+     "reason": "Liraasa 2.3 patch: salye (\"surprise\") is respelled bapi; every meaning and empty slot is kept, and every form, compound, image compound and derivation follows (2.3:G69, 2.1:G58).",
+     "addedIn": "2.3",
+     "at": "2026-10-19T18:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_senba_0755",
+     "op": "respell_root",
+     "slot": "root",
+     "from": "senba",
+     "to": "linle",
+     "ruling": "2.3:G69",
+     "reason": "Liraasa 2.3 patch: senba (\"cleanliness\") is respelled linle; every meaning and empty slot is kept, and every form, compound, image compound and derivation follows (2.3:G69, 2.1:G58).",
+     "addedIn": "2.3",
+     "at": "2026-10-19T18:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_volda_1039",
+     "op": "recompose_compound",
+     "slot": "root",
+     "from": "larbopagobudi",
+     "to": "farvi+budi",
+     "ruling": "2.3:G71",
+     "reason": "Liraasa 2.3 patch: larbopagobudi (larbopago + budi) is rebuilt as farvibudi (farvi + budi), \"wild dog\", read like farvilazu (wild animal); the entry keeps its id and glosses, and every compound built on it follows (2.3:G71).",
+     "addedIn": "2.3",
+     "at": "2026-10-19T18:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_larbopagoregna_1763",
+     "op": "respell_compound_as_root",
+     "slot": "root",
+     "from": "larbopagoregna",
+     "to": "bumbo",
+     "ruling": "2.3:G70",
+     "reason": "Liraasa 2.3 patch: the compound larbopagoregna (\"bear\") is replaced by the root bumbo; the entry keeps its id and glosses, and larbopagoregna is retired (2.3:G70).",
+     "addedIn": "2.3",
+     "at": "2026-10-19T18:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_maremirulazu_1782",
+     "op": "respell_compound_as_root",
+     "slot": "root",
+     "from": "maremirulazu",
+     "to": "murmu",
+     "ruling": "2.3:G70",
+     "reason": "Liraasa 2.3 patch: the compound maremirulazu (\"cow; cattle\") is replaced by the root murmu; the entry keeps its id and glosses, and maremirulazu is retired (2.3:G70).",
+     "addedIn": "2.3",
+     "at": "2026-10-19T18:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_kerku_1854",
+     "op": "add_root",
+     "slot": "root",
+     "from": null,
+     "to": "kerku",
+     "ruling": "2.3:G70",
+     "reason": "Liraasa 2.3 patch: kerku (\"frog\") is a new root, with the verb kerkuka \"to croak\" (2.3:G70).",
+     "addedIn": "2.3",
+     "at": "2026-10-19T18:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "derivation:lx_mirunululira_1601:-yo",
+     "op": "retire_derivation",
+     "from": "frog (river-singer): mirunululira + -yo",
+     "to": "lx_kerku_1854",
+     "ruling": "2.3:G70",
+     "reason": "Liraasa 2.3 patch: frog is now the root kerku, so mirunululirayo leaves the listed derivations; old texts read it as kerku, and it stays buildable by the default -yo reading (2.3:G70).",
+     "addedIn": "2.3",
+     "at": "2026-10-19T18:00:00Z",
      "author": "nicolas"
     }
    ]

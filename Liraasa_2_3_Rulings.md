@@ -1,6 +1,24 @@
-# Liraasa 2.2 Reference Grammar: every ruling
+# Liraasa 2.3 Reference Grammar: every ruling
 
-Verbatim from the Liraasa 2.2 lexicon, newest edition first. Ruling ids are edition-qualified: 0.8:G7 and 1.0:G7 are different rulings.
+Verbatim from the Liraasa 2.3 lexicon, newest edition first. Ruling ids are edition-qualified: 0.8:G7 and 1.0:G7 are different rulings.
+
+## Rulings 2.3
+
+### 2.3:G69: Second respelling pass
+
+Thirteen roots are respelled: lenra -> zarku; vanru -> dokra; voho -> kezdo; vabale -> tobra; teyo -> dento; mege -> yumli; kupa -> ruko; jemla -> zimzi; pesbi -> bondo; menha -> gamdo; vugo -> vizu; salye -> bapi; senba -> linle. 2.1:G58 applies in full: a respelled root keeps every meaning and empty slot; all forms, derivations, compounds and image compounds respell with it; compound verbs follow the new first letter; 2.2 spellings retired; older texts, including the album, are read under the spellings they were written in.
+
+Refines 2.1:G58.
+
+### 2.3:G70: Roots for common animals
+
+bumbo (bear), murmu (cow; cattle) and kerku (frog) are new roots. They replace larbopagoregna, maremirulazu and the listed derivation mirunululirayo, which are retired; kerku takes the verb kerkuka, to croak. mirunululira (river-song) stays.
+
+### 2.3:G71: Wolf
+
+larbopagobudi -> farvibudi (farvi + budi), 'wild dog', read like farvilazu (wild animal); lunolarbopagobudi -> lunofarvibudi. Supersedes the wolf half of 2.1:G59; its taha -> kezupago half stands.
+
+Supersedes 2.1:G59.
 
 ## Rulings 2.2
 
@@ -140,6 +158,8 @@ A respelled root keeps every meaning and empty slot; all forms, derivations, com
 
 ### 2.1:G59: Roots replaced by compounds
 
+**In part superseded by 2.3:G71:** its clause “volda -> larbopagobudi (larbopago + budi)” is replaced; the rest stands.
+
 volda -> larbopagobudi (larbopago + budi); taha -> kezupago (kezu + pago). Compound reading of kezupago is canon.
 
 ## Rulings 2.0
@@ -231,7 +251,7 @@ Refines 1.0:G7.
 
 - *Li dossa veluri lumila.* — The two stars shine.
 - *Taivo guraga maivo dossa cono.* — You owe me two coins.
-- *Maivo po vimova muya jemlari en li folni.* — I saw many insects on the flower.
+- *Maivo po vimova muya zimziri en li folni.* — I saw many insects on the flower.
 - *Li vila tovota muya marna.* — The village has much grain.
 
 ### 1.2:G29: An adjective standing as a noun
@@ -584,3 +604,19 @@ Retired and respelled roots, and what replaces them (1.0:G19). A pre-1.0 text is
 - taha → kezupago
 - zirme → zayu
 - puzu → silro
+- lenra → zarku
+- vanru → dokra
+- voho → kezdo
+- vabale → tobra
+- teyo → dento
+- mege → yumli
+- kupa → ruko
+- jemla → zimzi
+- pesbi → bondo
+- menha → gamdo
+- vugo → vizu
+- salye → bapi
+- senba → linle
+- larbopagobudi → farvibudi
+- larbopagoregna → bumbo
+- maremirulazu → murmu
