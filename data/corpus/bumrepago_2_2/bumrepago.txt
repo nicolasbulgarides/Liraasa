@@ -261,7 +261,7 @@ Taivo desida fime maivo senosia: "Benasan, Aviya! Pagopa, lirala! Maivo futu tal
 # EN: want?
 Maivo po desida fime taivo senosia ala maivo. Doli ola-coda. Somi-coda. Maivo larnela kasa taivo po helviha ito!
 # EN: I wanted you to speak to me. Only that. Something. I'm angry because you hid it!
-Maivo po ne helviha. Maivo po puzupa.
+Maivo po ne helviha. Maivo po silrosia.
 # EN: I didn't hide it. I kept a secret.
 Ola ka una coda.
 # EN: That's one thing.
@@ -296,7 +296,7 @@ Ola ne ka toda li vera.
 # EN: That is not the whole truth.
 # EN: Kipo.
 # EN: Kipo.
-Taivo po puzupa vobi taivo sela, Dorin. Ne vobi maivo. Taivo po ne desida fime Aviya masuma: "Ata taivo? Ki-pago taivo futu pagopa?"
+Taivo po silrosia vobi taivo sela, Dorin. Ne vobi maivo. Taivo po ne desida fime Aviya masuma: "Ata taivo? Ki-pago taivo futu pagopa?"
 # EN: You kept the secret for yourself, Dorin. Not for me. You didn't want Aviya to ask: "And you?
 # EN: Where will you go?"
 Ki-coda? Dorin. Ki-pago taivo futu pagopa?
@@ -305,7 +305,7 @@ Eli ne ka li krono.
 # EN: This is not the time.
 Eli ka li krono. Eli nullo ka li doli krono.
 # EN: This is the time. This night is the only time.
-Ne senosia ala maivo ki-coda ka li krono! Taivo po masuma li puzu. Taivo! Ata eli- krono taivo palvipa ito su maivo.
+Ne senosia ala maivo ki-coda ka li krono! Taivo po masuma li silro. Taivo! Ata eli- krono taivo palvipa ito su maivo.
 # EN: Don't tell me what the time is! You asked for the secret. You! And now you put it on me.
 # EN: other. AVIYA rounds on KIPO, quiet now, which is worse.]
 Taivo po sapusia ko maivori. Taivo po somusia en eli-pago kube li ruhe po ruhera. Pilo po jubaja li bumre de rada merno ala taivo. Ata eli-krono taivo ka li lanvetovoyo. Taivo kapoki li taliyo. Eli-krono taivo ka li pilo ki?

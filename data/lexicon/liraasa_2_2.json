@@ -2862,20 +2862,20 @@
     "id": "lx_silisenru_0787"
    },
    {
-    "root": "puzumanli",
+    "root": "silromanli",
     "type": "Compound",
     "components": [
-     "puzu",
+     "silro",
      "manli"
     ],
     "forms": {
-     "root": "puzumanli",
-     "ascended": "puzumanliasa",
-     "negative": "puzumanlina",
-     "verb": "puzumanlipa",
-     "negative_adjective": "puzumanlinasan",
-     "adjective": "puzumanlisan",
-     "ascended_adjective": "puzumanliasasan"
+     "root": "silromanli",
+     "ascended": "silromanliasa",
+     "negative": "silromanlina",
+     "verb": "silromanlisia",
+     "negative_adjective": "silromanlinasan",
+     "adjective": "silromanlisan",
+     "ascended_adjective": "silromanliasasan"
     },
     "glosses": {
      "root": "secret hands; hands marked by a shared secret",
@@ -9992,20 +9992,20 @@
     "id": "lx_renlisavali_0677"
    },
    {
-    "root": "puzuamor",
+    "root": "silroamor",
     "type": "Compound",
     "components": [
-     "puzu",
+     "silro",
      "amor"
     ],
     "forms": {
-     "root": "puzuamor",
-     "ascended": "puzuamorasa",
-     "negative": "puzuamorna",
-     "verb": "puzuamorpa",
-     "negative_adjective": "puzuamornasan",
-     "adjective": "puzuamorsan",
-     "ascended_adjective": "puzuamorasasan"
+     "root": "silroamor",
+     "ascended": "silroamorasa",
+     "negative": "silroamorna",
+     "verb": "silroamorsia",
+     "negative_adjective": "silroamornasan",
+     "adjective": "silroamorsan",
+     "ascended_adjective": "silroamorasasan"
     },
     "glosses": {
      "root": "secret love; a kind of love that carries a shared secret",
@@ -10038,20 +10038,20 @@
     "id": "lx_silroamor_0790"
    },
    {
-    "root": "puzulira",
+    "root": "silrolira",
     "type": "Compound",
     "components": [
-     "puzu",
+     "silro",
      "lira"
     ],
     "forms": {
-     "root": "puzulira",
-     "ascended": "puzuliraasa",
-     "negative": "puzulirana",
-     "verb": "puzulirapa",
-     "negative_adjective": "puzuliranasan",
-     "adjective": "puzulirasan",
-     "ascended_adjective": "puzuliraasasan"
+     "root": "silrolira",
+     "ascended": "silroliraasa",
+     "negative": "silrolirana",
+     "verb": "silrolirasia",
+     "negative_adjective": "silroliranasan",
+     "adjective": "silrolirasan",
+     "ascended_adjective": "silroliraasasan"
     },
     "glosses": {
      "root": "secret song; a melody given the color of a shared secret",
@@ -10084,20 +10084,20 @@
     "id": "lx_silrolira_0794"
    },
    {
-    "root": "puzulomo",
+    "root": "silrolomo",
     "type": "Compound",
     "components": [
-     "puzu",
+     "silro",
      "lomo"
     ],
     "forms": {
-     "root": "puzulomo",
-     "ascended": "puzulomoasa",
-     "negative": "puzulomona",
-     "verb": "puzulomopa",
-     "negative_adjective": "puzulomonasan",
-     "adjective": "puzulomosan",
-     "ascended_adjective": "puzulomoasasan"
+     "root": "silrolomo",
+     "ascended": "silrolomoasa",
+     "negative": "silrolomona",
+     "verb": "silrolomosia",
+     "negative_adjective": "silrolomonasan",
+     "adjective": "silrolomosan",
+     "ascended_adjective": "silrolomoasasan"
     },
     "glosses": {
      "root": "secret embrace; a held moment filled with a shared secret",
@@ -10130,20 +10130,20 @@
     "id": "lx_silrolomo_0795"
    },
    {
-    "root": "puzulore",
+    "root": "silrolore",
     "type": "Compound",
     "components": [
-     "puzu",
+     "silro",
      "lore"
     ],
     "forms": {
-     "root": "puzulore",
-     "ascended": "puzuloreasa",
-     "negative": "puzulorena",
-     "verb": "puzulorepa",
-     "negative_adjective": "puzulorenasan",
-     "adjective": "puzuloresan",
-     "ascended_adjective": "puzuloreasasan"
+     "root": "silrolore",
+     "ascended": "silroloreasa",
+     "negative": "silrolorena",
+     "verb": "silroloresia",
+     "negative_adjective": "silrolorenasan",
+     "adjective": "silroloresan",
+     "ascended_adjective": "silroloreasasan"
     },
     "glosses": {
      "root": "secret heart; a heart changed by a shared secret",
@@ -10176,20 +10176,20 @@
     "id": "lx_silrolore_0797"
    },
    {
-    "root": "puzupomli",
+    "root": "silropomli",
     "type": "Compound",
     "components": [
-     "puzu",
+     "silro",
      "pomli"
     ],
     "forms": {
-     "root": "puzupomli",
-     "ascended": "puzupomliasa",
-     "negative": "puzupomlina",
-     "verb": "puzupomlipa",
-     "negative_adjective": "puzupomlinasan",
-     "adjective": "puzupomlisan",
-     "ascended_adjective": "puzupomliasasan"
+     "root": "silropomli",
+     "ascended": "silropomliasa",
+     "negative": "silropomlina",
+     "verb": "silropomlisia",
+     "negative_adjective": "silropomlinasan",
+     "adjective": "silropomlisan",
+     "ascended_adjective": "silropomliasasan"
     },
     "glosses": {
      "root": "secret promise; a vow entrusted to a shared secret",
@@ -10222,20 +10222,20 @@
     "id": "lx_silropomli_0801"
    },
    {
-    "root": "puzurinba",
+    "root": "silrorinba",
     "type": "Compound",
     "components": [
-     "puzu",
+     "silro",
      "rinba"
     ],
     "forms": {
-     "root": "puzurinba",
-     "ascended": "puzurinbaasa",
-     "negative": "puzurinbana",
-     "verb": "puzurinbapa",
-     "negative_adjective": "puzurinbanasan",
-     "adjective": "puzurinbasan",
-     "ascended_adjective": "puzurinbaasasan"
+     "root": "silrorinba",
+     "ascended": "silrorinbaasa",
+     "negative": "silrorinbana",
+     "verb": "silrorinbasia",
+     "negative_adjective": "silrorinbanasan",
+     "adjective": "silrorinbasan",
+     "ascended_adjective": "silrorinbaasasan"
     },
     "glosses": {
      "root": "secret ring; a small circular pledge of a shared secret",
@@ -14638,20 +14638,20 @@
     "id": "lx_sevuruhe_0775"
    },
    {
-    "root": "puzurenli",
+    "root": "silrorenli",
     "type": "Compound",
     "components": [
-     "puzu",
+     "silro",
      "renli"
     ],
     "forms": {
-     "root": "puzurenli",
-     "ascended": "puzurenliasa",
-     "negative": "puzurenlina",
-     "verb": "puzurenlipa",
-     "negative_adjective": "puzurenlinasan",
-     "adjective": "puzurenlisan",
-     "ascended_adjective": "puzurenliasasan"
+     "root": "silrorenli",
+     "ascended": "silrorenliasa",
+     "negative": "silrorenlina",
+     "verb": "silrorenlisia",
+     "negative_adjective": "silrorenlinasan",
+     "adjective": "silrorenlisan",
+     "ascended_adjective": "silrorenliasasan"
     },
     "glosses": {
      "root": "secret rain; rain arriving with a shared secret",
@@ -41330,17 +41330,17 @@
    "id": "lx_silivaye_0788"
   },
   {
-   "root": "puzu",
+   "root": "silro",
    "type": "Primal",
    "components": null,
    "forms": {
-    "root": "puzu",
-    "ascended": "puzuasa",
-    "negative": "puzuna",
-    "verb": "puzupa",
-    "negative_adjective": "puzunasan",
-    "adjective": "puzusan",
-    "ascended_adjective": "puzuasasan"
+    "root": "silro",
+    "ascended": "silroasa",
+    "negative": "silrona",
+    "verb": "silrosia",
+    "negative_adjective": "silronasan",
+    "adjective": "silrosan",
+    "ascended_adjective": "silroasasan"
    },
    "glosses": {
     "root": "secret",
@@ -41377,20 +41377,20 @@
    "id": "lx_silro_0789"
   },
   {
-   "root": "puzubelfi",
+   "root": "silrobelfi",
    "type": "Compound",
    "components": [
-    "puzu",
+    "silro",
     "belfi"
    ],
    "forms": {
-    "root": "puzubelfi",
-    "ascended": "puzubelfiasa",
-    "negative": "puzubelfina",
-    "verb": "puzubelfipa",
-    "negative_adjective": "puzubelfinasan",
-    "adjective": "puzubelfisan",
-    "ascended_adjective": "puzubelfiasasan"
+    "root": "silrobelfi",
+    "ascended": "silrobelfiasa",
+    "negative": "silrobelfina",
+    "verb": "silrobelfisia",
+    "negative_adjective": "silrobelfinasan",
+    "adjective": "silrobelfisan",
+    "ascended_adjective": "silrobelfiasasan"
    },
    "glosses": {
     "root": "suspicion",
@@ -41415,20 +41415,20 @@
    "id": "lx_silrobelfi_0791"
   },
   {
-   "root": "puzucono",
+   "root": "silrocono",
    "type": "Compound",
    "components": [
-    "puzu",
+    "silro",
     "cono"
    ],
    "forms": {
-    "root": "puzucono",
-    "verb": "puzuconopa",
-    "ascended": "puzuconoasa",
-    "negative": "puzuconona",
-    "negative_adjective": "puzucononasan",
-    "adjective": "puzuconosan",
-    "ascended_adjective": "puzuconoasasan"
+    "root": "silrocono",
+    "verb": "silroconosia",
+    "ascended": "silroconoasa",
+    "negative": "silroconona",
+    "negative_adjective": "silrocononasan",
+    "adjective": "silroconosan",
+    "ascended_adjective": "silroconoasasan"
    },
    "glosses": {
     "root": "bribe",
@@ -41460,20 +41460,20 @@
    "id": "lx_silrocono_0792"
   },
   {
-   "root": "puzufolni",
+   "root": "silrofolni",
    "type": "Compound",
    "components": [
-    "puzu",
+    "silro",
     "folni"
    ],
    "forms": {
-    "root": "puzufolni",
-    "ascended": "puzufolniasa",
-    "negative": "puzufolnina",
-    "verb": "puzufolnipa",
-    "negative_adjective": "puzufolninasan",
-    "adjective": "puzufolnisan",
-    "ascended_adjective": "puzufolniasasan"
+    "root": "silrofolni",
+    "ascended": "silrofolniasa",
+    "negative": "silrofolnina",
+    "verb": "silrofolnisia",
+    "negative_adjective": "silrofolninasan",
+    "adjective": "silrofolnisan",
+    "ascended_adjective": "silrofolniasasan"
    },
    "glosses": {
     "root": "hidden blossom; a flower sheltered from view",
@@ -41507,20 +41507,20 @@
    "id": "lx_silrofolni_0793"
   },
   {
-   "root": "puzulordi",
+   "root": "silrolordi",
    "type": "Compound",
    "components": [
-    "puzu",
+    "silro",
     "lordi"
    ],
    "forms": {
-    "root": "puzulordi",
-    "ascended": "puzulordiasa",
-    "negative": "puzulordina",
-    "verb": "puzulordipa",
-    "negative_adjective": "puzulordinasan",
-    "adjective": "puzulordisan",
-    "ascended_adjective": "puzulordiasasan"
+    "root": "silrolordi",
+    "ascended": "silrolordiasa",
+    "negative": "silrolordina",
+    "verb": "silrolordisia",
+    "negative_adjective": "silrolordinasan",
+    "adjective": "silrolordisan",
+    "ascended_adjective": "silrolordiasasan"
    },
    "glosses": {
     "root": "conspiracy; secret plan",
@@ -41546,20 +41546,20 @@
    "id": "lx_silrolordi_0796"
   },
   {
-   "root": "puzulumi",
+   "root": "silrolumi",
    "type": "Compound",
    "components": [
-    "puzu",
+    "silro",
     "lumi"
    ],
    "forms": {
-    "root": "puzulumi",
-    "ascended": "puzulumiasa",
-    "negative": "puzulumina",
-    "verb": "puzulumipa",
-    "negative_adjective": "puzuluminasan",
-    "adjective": "puzulumisan",
-    "ascended_adjective": "puzulumiasasan"
+    "root": "silrolumi",
+    "ascended": "silrolumiasa",
+    "negative": "silrolumina",
+    "verb": "silrolumisia",
+    "negative_adjective": "silroluminasan",
+    "adjective": "silrolumisan",
+    "ascended_adjective": "silrolumiasasan"
    },
    "glosses": {
     "root": "clue",
@@ -41585,20 +41585,20 @@
    "id": "lx_silrolumi_0798"
   },
   {
-   "root": "puzumasu",
+   "root": "silromasu",
    "type": "Compound",
    "components": [
-    "puzu",
+    "silro",
     "masu"
    ],
    "forms": {
-    "root": "puzumasu",
-    "ascended": "puzumasuasa",
-    "negative": "puzumasuna",
-    "verb": "puzumasupa",
-    "negative_adjective": "puzumasunasan",
-    "adjective": "puzumasusan",
-    "ascended_adjective": "puzumasuasasan"
+    "root": "silromasu",
+    "ascended": "silromasuasa",
+    "negative": "silromasuna",
+    "verb": "silromasusia",
+    "negative_adjective": "silromasunasan",
+    "adjective": "silromasusan",
+    "ascended_adjective": "silromasuasasan"
    },
    "glosses": {
     "root": "mystery; riddle; enigma",
@@ -41625,20 +41625,20 @@
    "id": "lx_silromasu_0800"
   },
   {
-   "root": "puzusavali",
+   "root": "silrosavali",
    "type": "Compound",
    "components": [
-    "puzu",
+    "silro",
     "savali"
    ],
    "forms": {
-    "root": "puzusavali",
-    "ascended": "puzusavaliasa",
-    "negative": "puzusavalina",
-    "verb": "puzusavalipa",
-    "negative_adjective": "puzusavalinasan",
-    "adjective": "puzusavalisan",
-    "ascended_adjective": "puzusavaliasasan"
+    "root": "silrosavali",
+    "ascended": "silrosavaliasa",
+    "negative": "silrosavalina",
+    "verb": "silrosavalisia",
+    "negative_adjective": "silrosavalinasan",
+    "adjective": "silrosavalisan",
+    "ascended_adjective": "silrosavaliasasan"
    },
    "glosses": {
     "root": "stolen kiss; a kiss exchanged in secret",
@@ -41672,20 +41672,20 @@
    "id": "lx_silrosavali_0804"
   },
   {
-   "root": "puzuseno",
+   "root": "silroseno",
    "type": "Compound",
    "components": [
-    "puzu",
+    "silro",
     "seno"
    ],
    "forms": {
-    "root": "puzuseno",
-    "verb": "puzusenopa",
-    "ascended": "puzusenoasa",
-    "negative": "puzusenona",
-    "negative_adjective": "puzusenonasan",
-    "adjective": "puzusenosan",
-    "ascended_adjective": "puzusenoasasan"
+    "root": "silroseno",
+    "verb": "silrosenosia",
+    "ascended": "silrosenoasa",
+    "negative": "silrosenona",
+    "negative_adjective": "silrosenonasan",
+    "adjective": "silrosenosan",
+    "ascended_adjective": "silrosenoasasan"
    },
    "glosses": {
     "root": "gossip; rumor",
@@ -41979,7 +41979,7 @@
    },
    "glosses": {
     "root": "Stone; rock",
-    "ascended": "— (unused)",
+    "ascended": "the living stone; a jewel of countless faces",
     "negative": "— (unused)",
     "verb": "to petrify; to make firm",
     "negative_adjective": "unsteady; not steadfast",
@@ -41996,10 +41996,13 @@
     "Stone",
     "rock",
     "unsteady",
-    "not steadfast"
+    "not steadfast",
+    "the living stone",
+    "a jewel of countless faces"
    ],
    "status_1_0": "CARRIED",
    "status_2_0": "REGLOSSED",
+   "status_2_2": "REGLOSSED",
    "since": "≤0.7",
    "history_0_8": {
     "status": "CHANGED",
@@ -54985,7 +54988,7 @@
    "status_1_1": "NEW",
    "since": "1.1",
    "history_0_8": null,
-   "notes": "Added in 1.1 (vocabulary-only supplement). Scope: Path taken by a story. Components: telne + nulu. Gloss narrowed on integration: Bare \"plot\" is a synonym of puzulordi, \"conspiracy; secret plan\". Qualified to the narrative sense.",
+   "notes": "Added in 1.1 (vocabulary-only supplement). Scope: Path taken by a story. Components: telne + nulu. Gloss narrowed on integration: Bare \"plot\" is a synonym of silrolordi, \"conspiracy; secret plan\". Qualified to the narrative sense.",
    "protected": true,
    "id": "lx_telnenulu_1263"
   },
@@ -57483,20 +57486,20 @@
    "id": "lx_kemyeseno_1328"
   },
   {
-   "root": "puzudivma",
+   "root": "silrodivma",
    "type": "Compound",
    "components": [
-    "puzu",
+    "silro",
     "divma"
    ],
    "forms": {
-    "root": "puzudivma",
-    "ascended": "puzudivmaasa",
-    "negative": "puzudivmana",
-    "verb": "puzudivmapa",
-    "negative_adjective": "puzudivmanasan",
-    "adjective": "puzudivmasan",
-    "ascended_adjective": "puzudivmaasasan"
+    "root": "silrodivma",
+    "ascended": "silrodivmaasa",
+    "negative": "silrodivmana",
+    "verb": "silrodivmasia",
+    "negative_adjective": "silrodivmanasan",
+    "adjective": "silrodivmasan",
+    "ascended_adjective": "silrodivmaasasan"
    },
    "glosses": {
     "root": "cryptographic system",
@@ -57516,7 +57519,7 @@
    "status_1_1": "NEW",
    "since": "1.1",
    "history_0_8": null,
-   "notes": "Added in 1.1 (vocabulary-only supplement). Scope: System for protecting communication through secrecy. Components: puzu + divma.",
+   "notes": "Added in 1.1 (vocabulary-only supplement). Scope: System for protecting communication through secrecy. Components: silro + divma.",
    "protected": true,
    "id": "lx_silrodivma_1329"
   },
@@ -58015,20 +58018,20 @@
    "id": "lx_lemulordinulu_1342"
   },
   {
-   "root": "sernapuzu",
+   "root": "sernasilro",
    "type": "Compound",
    "components": [
     "serna",
-    "puzu"
+    "silro"
    ],
    "forms": {
-    "root": "sernapuzu",
-    "ascended": "sernapuzuasa",
-    "negative": "sernapuzuna",
-    "verb": "sernapuzusia",
-    "negative_adjective": "sernapuzunasan",
-    "adjective": "sernapuzusan",
-    "ascended_adjective": "sernapuzuasasan"
+    "root": "sernasilro",
+    "ascended": "sernasilroasa",
+    "negative": "sernasilrona",
+    "verb": "sernasilrosia",
+    "negative_adjective": "sernasilronasan",
+    "adjective": "sernasilrosan",
+    "ascended_adjective": "sernasilroasasan"
    },
    "glosses": {
     "root": "data privacy",
@@ -58048,7 +58051,7 @@
    "status_1_1": "NEW",
    "since": "1.1",
    "history_0_8": null,
-   "notes": "Added in 1.1 (vocabulary-only supplement). Scope: Confidentiality of information. Components: serna + puzu.",
+   "notes": "Added in 1.1 (vocabulary-only supplement). Scope: Confidentiality of information. Components: serna + silro.",
    "protected": true,
    "id": "lx_sernasilro_1343"
   },
@@ -63193,7 +63196,7 @@
     "negative": "— (unused)",
     "verb": "— (unused)",
     "negative_adjective": "— (unused)",
-    "adjective": "— (unused)",
+    "adjective": "boyish; like a son",
     "ascended_adjective": "— (unused)"
    },
    "register": "everyday",
@@ -63201,11 +63204,14 @@
    "english_synonyms": [
     "son",
     "boy",
-    "lad"
+    "lad",
+    "boyish",
+    "like a son"
    ],
    "status_1_0": "NEW",
    "status_1_2": "NEW",
    "status_2_0": "REGLOSSED",
+   "status_2_2": "REGLOSSED",
    "since": "1.2",
    "history_0_8": null,
    "notes": "Added in 1.2 (lexicon update, changeset 2026-10-17-lexicon-1-2). tarnu + linu.",
@@ -66194,20 +66200,20 @@
    "id": "lx_daigovelu_1554"
   },
   {
-   "root": "puzukarko",
+   "root": "silrokarko",
    "type": "Compound",
    "components": [
-    "puzu",
+    "silro",
     "karko"
    ],
    "forms": {
-    "root": "puzukarko",
-    "ascended": "puzukarkoasa",
-    "negative": "puzukarkona",
-    "verb": "puzukarkopa",
-    "negative_adjective": "puzukarkonasan",
-    "adjective": "puzukarkosan",
-    "ascended_adjective": "puzukarkoasasan"
+    "root": "silrokarko",
+    "ascended": "silrokarkoasa",
+    "negative": "silrokarkona",
+    "verb": "silrokarkosia",
+    "negative_adjective": "silrokarkonasan",
+    "adjective": "silrokarkosan",
+    "ascended_adjective": "silrokarkoasasan"
    },
    "glosses": {
     "root": "assassination",
@@ -77133,20 +77139,20 @@
    "id": "lx_biokende_1835"
   },
   {
-   "root": "puzuvani",
+   "root": "silrovani",
    "type": "Compound",
    "components": [
-    "puzu",
+    "silro",
     "vani"
    ],
    "forms": {
-    "root": "puzuvani",
-    "ascended": "puzuvaniasa",
-    "negative": "puzuvanina",
-    "verb": "puzuvanipa",
-    "negative_adjective": "puzuvaninasan",
-    "adjective": "puzuvanisan",
-    "ascended_adjective": "puzuvaniasasan"
+    "root": "silrovani",
+    "ascended": "silrovaniasa",
+    "negative": "silrovanina",
+    "verb": "silrovanisia",
+    "negative_adjective": "silrovaninasan",
+    "adjective": "silrovanisan",
+    "ascended_adjective": "silrovaniasasan"
    },
    "glosses": {
     "root": "mysterious, profound beauty",
@@ -85565,9 +85571,9 @@
    "source": "0.8 grammar examples"
   },
   {
-   "liraasa": "Saivo po puzuconopa li loteronela.",
+   "liraasa": "Saivo po silroconosia li loteronela.",
    "english": "They bribed the stranger.",
-   "feature": "vocab:puzucono",
+   "feature": "vocab:silrocono",
    "status": "MIGRATED",
    "changes": [
     "sanlu → loteronela"
@@ -86195,9 +86201,9 @@
    "source": "0.8 grammar examples"
   },
   {
-   "liraasa": "Velina puzusenopa toda-krono.",
+   "liraasa": "Velina silrosenosia toda-krono.",
    "english": "Velina always gossips.",
-   "feature": "vocab:puzuseno",
+   "feature": "vocab:silroseno",
    "status": "CARRIED",
    "changes": [],
    "source": "0.8 grammar examples"
@@ -87915,7 +87921,7 @@
    "ending": "arko",
    "members": [
     "karko",
-    "puzukarko"
+    "silrokarko"
    ],
    "count": 2
   },
@@ -88373,7 +88379,7 @@
     "cono",
     "domlucono",
     "lanvecono",
-    "puzucono",
+    "silrocono",
     "talicono"
    ],
    "count": 5
@@ -88605,7 +88611,7 @@
     "belfi",
     "corvibelfi",
     "mebanebelfi",
-    "puzubelfi"
+    "silrobelfi"
    ],
    "count": 4
   },
@@ -89396,6 +89402,14 @@
    "count": 1
   },
   {
+   "ending": "ilro",
+   "members": [
+    "sernasilro",
+    "silro"
+   ],
+   "count": 2
+  },
+  {
    "ending": "ilse",
    "members": [
     "filse"
@@ -89612,8 +89626,8 @@
     "lideodivma",
     "mavopagodivma",
     "migadivma",
-    "puzudivma",
     "sernadivma",
+    "silrodivma",
     "taradadivma"
    ],
    "count": 11
@@ -89904,8 +89918,8 @@
     "mavolumi",
     "mernolumi",
     "mirulumi",
-    "puzulumi",
     "sevulumi",
+    "silrolumi",
     "solalumi",
     "vesnolumi",
     "vilnelumi",
@@ -89948,7 +89962,7 @@
    "members": [
     "masu",
     "nedumasu",
-    "puzumasu"
+    "silromasu"
    ],
    "count": 3
   },
@@ -90341,8 +90355,8 @@
     "folni",
     "lunofolni",
     "nullofolni",
-    "puzufolni",
     "renlifolni",
+    "silrofolni",
     "solafolni",
     "yolbefolni"
    ],
@@ -90593,7 +90607,7 @@
     "lideolordi",
     "lordi",
     "melolordi",
-    "puzulordi",
+    "silrolordi",
     "talilordi",
     "vuzilordi"
    ],
@@ -90787,14 +90801,6 @@
     "solopusa"
    ],
    "count": 7
-  },
-  {
-   "ending": "puzu",
-   "members": [
-    "puzu",
-    "sernapuzu"
-   ],
-   "count": 2
   },
   {
    "ending": "rabi",
@@ -91053,7 +91059,6 @@
     "noruseno",
     "peliseno",
     "pukuseno",
-    "puzuseno",
     "raleseno",
     "regnaseno",
     "remniseno",
@@ -91061,6 +91066,7 @@
     "sambaseno",
     "seno",
     "silbeseno",
+    "silroseno",
     "sudeseno",
     "veraseno",
     "zayuseno"
@@ -91529,8 +91535,8 @@
    "ending": "vali",
    "members": [
     "nullosavali",
-    "puzusavali",
     "savali",
+    "silrosavali",
     "vesnosavali"
    ],
    "count": 4
@@ -91539,7 +91545,7 @@
    "ending": "vani",
    "members": [
     "bakovani",
-    "puzuvani",
+    "silrovani",
     "vani"
    ],
    "count": 3
@@ -96080,7 +96086,8 @@
      "adjective": "secret; hidden from others",
      "ascended_adjective": "ineffable; mystical"
     },
-    "reason": "Liraasa 2.1 patch: silro (\"secret\") is respelled puzu; every meaning and empty slot is kept, and every form, compound, image compound and derivation follows (2.1:G58)."
+    "reason": "Liraasa 2.1 patch: silro (\"secret\") is respelled puzu; every meaning and empty slot is kept, and every form, compound, image compound and derivation follows (2.1:G58).",
+    "reverted": true
    },
    {
     "old": "nilvu",
@@ -96177,6 +96184,29 @@
      "ascended_adjective": "miraculous"
     },
     "reason": "Liraasa 2.1 patch: zirme (\"magic; charm\") is respelled zayu; every meaning and empty slot is kept, and every form, compound, image compound and derivation follows (2.1:G58)."
+   },
+   {
+    "old": "puzu",
+    "new": "silro",
+    "old_forms": {
+     "root": "puzu",
+     "ascended": "puzuasa",
+     "negative": "puzuna",
+     "verb": "puzupa",
+     "negative_adjective": "puzunasan",
+     "adjective": "puzusan",
+     "ascended_adjective": "puzuasasan"
+    },
+    "glosses": {
+     "root": "secret",
+     "ascended": "the sacred mystery; what is hidden in the divine",
+     "negative": "disclosure",
+     "verb": "to conceal a secret",
+     "negative_adjective": "disclosed; no longer secret",
+     "adjective": "secret; hidden from others",
+     "ascended_adjective": "ineffable; mystical"
+    },
+    "reason": "Liraasa 2.2 patch: the 2.1 respelling silro → puzu is undone, so the album's silro is the word again; puzu becomes a retired spelling, and every compound and image compound follows."
    }
   ],
   "retired_compounds": [
@@ -108598,888 +108628,6 @@
     "via": "velbi",
     "kind": "respelled"
    },
-   "silro": {
-    "to": "puzu",
-    "slot": "root",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silroasa": {
-    "to": "puzuasa",
-    "slot": "ascended",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrona": {
-    "to": "puzuna",
-    "slot": "negative",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrosia": {
-    "to": "puzupa",
-    "slot": "verb",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silronasan": {
-    "to": "puzunasan",
-    "slot": "negative_adjective",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrosan": {
-    "to": "puzusan",
-    "slot": "adjective",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silroasasan": {
-    "to": "puzuasasan",
-    "slot": "ascended_adjective",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrobelfi": {
-    "to": "puzubelfi",
-    "slot": "root",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrobelfiasa": {
-    "to": "puzubelfiasa",
-    "slot": "ascended",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrobelfina": {
-    "to": "puzubelfina",
-    "slot": "negative",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrobelfisia": {
-    "to": "puzubelfipa",
-    "slot": "verb",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrobelfinasan": {
-    "to": "puzubelfinasan",
-    "slot": "negative_adjective",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrobelfisan": {
-    "to": "puzubelfisan",
-    "slot": "adjective",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrobelfiasasan": {
-    "to": "puzubelfiasasan",
-    "slot": "ascended_adjective",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrocono": {
-    "to": "puzucono",
-    "slot": "root",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silroconosia": {
-    "to": "puzuconopa",
-    "slot": "verb",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silroconoasa": {
-    "to": "puzuconoasa",
-    "slot": "ascended",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silroconona": {
-    "to": "puzuconona",
-    "slot": "negative",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrocononasan": {
-    "to": "puzucononasan",
-    "slot": "negative_adjective",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silroconosan": {
-    "to": "puzuconosan",
-    "slot": "adjective",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silroconoasasan": {
-    "to": "puzuconoasasan",
-    "slot": "ascended_adjective",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrofolni": {
-    "to": "puzufolni",
-    "slot": "root",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrofolniasa": {
-    "to": "puzufolniasa",
-    "slot": "ascended",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrofolnina": {
-    "to": "puzufolnina",
-    "slot": "negative",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrofolnisia": {
-    "to": "puzufolnipa",
-    "slot": "verb",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrofolninasan": {
-    "to": "puzufolninasan",
-    "slot": "negative_adjective",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrofolnisan": {
-    "to": "puzufolnisan",
-    "slot": "adjective",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrofolniasasan": {
-    "to": "puzufolniasasan",
-    "slot": "ascended_adjective",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrolordi": {
-    "to": "puzulordi",
-    "slot": "root",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrolordiasa": {
-    "to": "puzulordiasa",
-    "slot": "ascended",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrolordina": {
-    "to": "puzulordina",
-    "slot": "negative",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrolordisia": {
-    "to": "puzulordipa",
-    "slot": "verb",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrolordinasan": {
-    "to": "puzulordinasan",
-    "slot": "negative_adjective",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrolordisan": {
-    "to": "puzulordisan",
-    "slot": "adjective",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrolordiasasan": {
-    "to": "puzulordiasasan",
-    "slot": "ascended_adjective",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrolumi": {
-    "to": "puzulumi",
-    "slot": "root",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrolumiasa": {
-    "to": "puzulumiasa",
-    "slot": "ascended",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrolumina": {
-    "to": "puzulumina",
-    "slot": "negative",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrolumisia": {
-    "to": "puzulumipa",
-    "slot": "verb",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silroluminasan": {
-    "to": "puzuluminasan",
-    "slot": "negative_adjective",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrolumisan": {
-    "to": "puzulumisan",
-    "slot": "adjective",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrolumiasasan": {
-    "to": "puzulumiasasan",
-    "slot": "ascended_adjective",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silromasu": {
-    "to": "puzumasu",
-    "slot": "root",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silromasuasa": {
-    "to": "puzumasuasa",
-    "slot": "ascended",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silromasuna": {
-    "to": "puzumasuna",
-    "slot": "negative",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silromasusia": {
-    "to": "puzumasupa",
-    "slot": "verb",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silromasunasan": {
-    "to": "puzumasunasan",
-    "slot": "negative_adjective",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silromasusan": {
-    "to": "puzumasusan",
-    "slot": "adjective",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silromasuasasan": {
-    "to": "puzumasuasasan",
-    "slot": "ascended_adjective",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrosavali": {
-    "to": "puzusavali",
-    "slot": "root",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrosavaliasa": {
-    "to": "puzusavaliasa",
-    "slot": "ascended",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrosavalina": {
-    "to": "puzusavalina",
-    "slot": "negative",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrosavalisia": {
-    "to": "puzusavalipa",
-    "slot": "verb",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrosavalinasan": {
-    "to": "puzusavalinasan",
-    "slot": "negative_adjective",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrosavalisan": {
-    "to": "puzusavalisan",
-    "slot": "adjective",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrosavaliasasan": {
-    "to": "puzusavaliasasan",
-    "slot": "ascended_adjective",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silroseno": {
-    "to": "puzuseno",
-    "slot": "root",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrosenosia": {
-    "to": "puzusenopa",
-    "slot": "verb",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrosenoasa": {
-    "to": "puzusenoasa",
-    "slot": "ascended",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrosenona": {
-    "to": "puzusenona",
-    "slot": "negative",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrosenonasan": {
-    "to": "puzusenonasan",
-    "slot": "negative_adjective",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrosenosan": {
-    "to": "puzusenosan",
-    "slot": "adjective",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrosenoasasan": {
-    "to": "puzusenoasasan",
-    "slot": "ascended_adjective",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrodivma": {
-    "to": "puzudivma",
-    "slot": "root",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrodivmaasa": {
-    "to": "puzudivmaasa",
-    "slot": "ascended",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrodivmana": {
-    "to": "puzudivmana",
-    "slot": "negative",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrodivmasia": {
-    "to": "puzudivmapa",
-    "slot": "verb",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrodivmanasan": {
-    "to": "puzudivmanasan",
-    "slot": "negative_adjective",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrodivmasan": {
-    "to": "puzudivmasan",
-    "slot": "adjective",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrodivmaasasan": {
-    "to": "puzudivmaasasan",
-    "slot": "ascended_adjective",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "sernasilro": {
-    "to": "sernapuzu",
-    "slot": "root",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "sernasilroasa": {
-    "to": "sernapuzuasa",
-    "slot": "ascended",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "sernasilrona": {
-    "to": "sernapuzuna",
-    "slot": "negative",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "sernasilrosia": {
-    "to": "sernapuzusia",
-    "slot": "verb",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "sernasilronasan": {
-    "to": "sernapuzunasan",
-    "slot": "negative_adjective",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "sernasilrosan": {
-    "to": "sernapuzusan",
-    "slot": "adjective",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "sernasilroasasan": {
-    "to": "sernapuzuasasan",
-    "slot": "ascended_adjective",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrokarko": {
-    "to": "puzukarko",
-    "slot": "root",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrokarkoasa": {
-    "to": "puzukarkoasa",
-    "slot": "ascended",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrokarkona": {
-    "to": "puzukarkona",
-    "slot": "negative",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrokarkosia": {
-    "to": "puzukarkopa",
-    "slot": "verb",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrokarkonasan": {
-    "to": "puzukarkonasan",
-    "slot": "negative_adjective",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrokarkosan": {
-    "to": "puzukarkosan",
-    "slot": "adjective",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrokarkoasasan": {
-    "to": "puzukarkoasasan",
-    "slot": "ascended_adjective",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrovani": {
-    "to": "puzuvani",
-    "slot": "root",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrovaniasa": {
-    "to": "puzuvaniasa",
-    "slot": "ascended",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrovanina": {
-    "to": "puzuvanina",
-    "slot": "negative",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrovanisia": {
-    "to": "puzuvanipa",
-    "slot": "verb",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrovaninasan": {
-    "to": "puzuvaninasan",
-    "slot": "negative_adjective",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrovanisan": {
-    "to": "puzuvanisan",
-    "slot": "adjective",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrovaniasasan": {
-    "to": "puzuvaniasasan",
-    "slot": "ascended_adjective",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silromanli": {
-    "to": "puzumanli",
-    "slot": "root",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silromanliasa": {
-    "to": "puzumanliasa",
-    "slot": "ascended",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silromanlina": {
-    "to": "puzumanlina",
-    "slot": "negative",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silromanlisia": {
-    "to": "puzumanlipa",
-    "slot": "verb",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silromanlinasan": {
-    "to": "puzumanlinasan",
-    "slot": "negative_adjective",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silromanlisan": {
-    "to": "puzumanlisan",
-    "slot": "adjective",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silromanliasasan": {
-    "to": "puzumanliasasan",
-    "slot": "ascended_adjective",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silroamor": {
-    "to": "puzuamor",
-    "slot": "root",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silroamorasa": {
-    "to": "puzuamorasa",
-    "slot": "ascended",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silroamorna": {
-    "to": "puzuamorna",
-    "slot": "negative",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silroamorsia": {
-    "to": "puzuamorpa",
-    "slot": "verb",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silroamornasan": {
-    "to": "puzuamornasan",
-    "slot": "negative_adjective",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silroamorsan": {
-    "to": "puzuamorsan",
-    "slot": "adjective",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silroamorasasan": {
-    "to": "puzuamorasasan",
-    "slot": "ascended_adjective",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrolira": {
-    "to": "puzulira",
-    "slot": "root",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silroliraasa": {
-    "to": "puzuliraasa",
-    "slot": "ascended",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrolirana": {
-    "to": "puzulirana",
-    "slot": "negative",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrolirasia": {
-    "to": "puzulirapa",
-    "slot": "verb",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silroliranasan": {
-    "to": "puzuliranasan",
-    "slot": "negative_adjective",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrolirasan": {
-    "to": "puzulirasan",
-    "slot": "adjective",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silroliraasasan": {
-    "to": "puzuliraasasan",
-    "slot": "ascended_adjective",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrolomo": {
-    "to": "puzulomo",
-    "slot": "root",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrolomoasa": {
-    "to": "puzulomoasa",
-    "slot": "ascended",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrolomona": {
-    "to": "puzulomona",
-    "slot": "negative",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrolomosia": {
-    "to": "puzulomopa",
-    "slot": "verb",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrolomonasan": {
-    "to": "puzulomonasan",
-    "slot": "negative_adjective",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrolomosan": {
-    "to": "puzulomosan",
-    "slot": "adjective",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrolomoasasan": {
-    "to": "puzulomoasasan",
-    "slot": "ascended_adjective",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrolore": {
-    "to": "puzulore",
-    "slot": "root",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silroloreasa": {
-    "to": "puzuloreasa",
-    "slot": "ascended",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrolorena": {
-    "to": "puzulorena",
-    "slot": "negative",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silroloresia": {
-    "to": "puzulorepa",
-    "slot": "verb",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrolorenasan": {
-    "to": "puzulorenasan",
-    "slot": "negative_adjective",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silroloresan": {
-    "to": "puzuloresan",
-    "slot": "adjective",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silroloreasasan": {
-    "to": "puzuloreasasan",
-    "slot": "ascended_adjective",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silropomli": {
-    "to": "puzupomli",
-    "slot": "root",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silropomliasa": {
-    "to": "puzupomliasa",
-    "slot": "ascended",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silropomlina": {
-    "to": "puzupomlina",
-    "slot": "negative",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silropomlisia": {
-    "to": "puzupomlipa",
-    "slot": "verb",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silropomlinasan": {
-    "to": "puzupomlinasan",
-    "slot": "negative_adjective",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silropomlisan": {
-    "to": "puzupomlisan",
-    "slot": "adjective",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silropomliasasan": {
-    "to": "puzupomliasasan",
-    "slot": "ascended_adjective",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrorinba": {
-    "to": "puzurinba",
-    "slot": "root",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrorinbaasa": {
-    "to": "puzurinbaasa",
-    "slot": "ascended",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrorinbana": {
-    "to": "puzurinbana",
-    "slot": "negative",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrorinbasia": {
-    "to": "puzurinbapa",
-    "slot": "verb",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrorinbanasan": {
-    "to": "puzurinbanasan",
-    "slot": "negative_adjective",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrorinbasan": {
-    "to": "puzurinbasan",
-    "slot": "adjective",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrorinbaasasan": {
-    "to": "puzurinbaasasan",
-    "slot": "ascended_adjective",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrorenli": {
-    "to": "puzurenli",
-    "slot": "root",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrorenliasa": {
-    "to": "puzurenliasa",
-    "slot": "ascended",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrorenlina": {
-    "to": "puzurenlina",
-    "slot": "negative",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrorenlisia": {
-    "to": "puzurenlipa",
-    "slot": "verb",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrorenlinasan": {
-    "to": "puzurenlinasan",
-    "slot": "negative_adjective",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrorenlisan": {
-    "to": "puzurenlisan",
-    "slot": "adjective",
-    "via": "silro",
-    "kind": "respelled"
-   },
-   "silrorenliasasan": {
-    "to": "puzurenliasasan",
-    "slot": "ascended_adjective",
-    "via": "silro",
-    "kind": "respelled"
-   },
    "nilvu": {
     "to": "foji",
     "slot": "root",
@@ -111542,6 +110690,888 @@
     "to": "zayuyo",
     "slot": "derivation",
     "via": "zirme",
+    "kind": "respelled"
+   },
+   "puzu": {
+    "to": "silro",
+    "slot": "root",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzuasa": {
+    "to": "silroasa",
+    "slot": "ascended",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzuna": {
+    "to": "silrona",
+    "slot": "negative",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzupa": {
+    "to": "silrosia",
+    "slot": "verb",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzunasan": {
+    "to": "silronasan",
+    "slot": "negative_adjective",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzusan": {
+    "to": "silrosan",
+    "slot": "adjective",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzuasasan": {
+    "to": "silroasasan",
+    "slot": "ascended_adjective",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzubelfi": {
+    "to": "silrobelfi",
+    "slot": "root",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzubelfiasa": {
+    "to": "silrobelfiasa",
+    "slot": "ascended",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzubelfina": {
+    "to": "silrobelfina",
+    "slot": "negative",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzubelfipa": {
+    "to": "silrobelfisia",
+    "slot": "verb",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzubelfinasan": {
+    "to": "silrobelfinasan",
+    "slot": "negative_adjective",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzubelfisan": {
+    "to": "silrobelfisan",
+    "slot": "adjective",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzubelfiasasan": {
+    "to": "silrobelfiasasan",
+    "slot": "ascended_adjective",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzucono": {
+    "to": "silrocono",
+    "slot": "root",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzuconopa": {
+    "to": "silroconosia",
+    "slot": "verb",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzuconoasa": {
+    "to": "silroconoasa",
+    "slot": "ascended",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzuconona": {
+    "to": "silroconona",
+    "slot": "negative",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzucononasan": {
+    "to": "silrocononasan",
+    "slot": "negative_adjective",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzuconosan": {
+    "to": "silroconosan",
+    "slot": "adjective",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzuconoasasan": {
+    "to": "silroconoasasan",
+    "slot": "ascended_adjective",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzufolni": {
+    "to": "silrofolni",
+    "slot": "root",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzufolniasa": {
+    "to": "silrofolniasa",
+    "slot": "ascended",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzufolnina": {
+    "to": "silrofolnina",
+    "slot": "negative",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzufolnipa": {
+    "to": "silrofolnisia",
+    "slot": "verb",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzufolninasan": {
+    "to": "silrofolninasan",
+    "slot": "negative_adjective",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzufolnisan": {
+    "to": "silrofolnisan",
+    "slot": "adjective",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzufolniasasan": {
+    "to": "silrofolniasasan",
+    "slot": "ascended_adjective",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzulordi": {
+    "to": "silrolordi",
+    "slot": "root",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzulordiasa": {
+    "to": "silrolordiasa",
+    "slot": "ascended",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzulordina": {
+    "to": "silrolordina",
+    "slot": "negative",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzulordipa": {
+    "to": "silrolordisia",
+    "slot": "verb",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzulordinasan": {
+    "to": "silrolordinasan",
+    "slot": "negative_adjective",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzulordisan": {
+    "to": "silrolordisan",
+    "slot": "adjective",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzulordiasasan": {
+    "to": "silrolordiasasan",
+    "slot": "ascended_adjective",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzulumi": {
+    "to": "silrolumi",
+    "slot": "root",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzulumiasa": {
+    "to": "silrolumiasa",
+    "slot": "ascended",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzulumina": {
+    "to": "silrolumina",
+    "slot": "negative",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzulumipa": {
+    "to": "silrolumisia",
+    "slot": "verb",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzuluminasan": {
+    "to": "silroluminasan",
+    "slot": "negative_adjective",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzulumisan": {
+    "to": "silrolumisan",
+    "slot": "adjective",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzulumiasasan": {
+    "to": "silrolumiasasan",
+    "slot": "ascended_adjective",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzumasu": {
+    "to": "silromasu",
+    "slot": "root",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzumasuasa": {
+    "to": "silromasuasa",
+    "slot": "ascended",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzumasuna": {
+    "to": "silromasuna",
+    "slot": "negative",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzumasupa": {
+    "to": "silromasusia",
+    "slot": "verb",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzumasunasan": {
+    "to": "silromasunasan",
+    "slot": "negative_adjective",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzumasusan": {
+    "to": "silromasusan",
+    "slot": "adjective",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzumasuasasan": {
+    "to": "silromasuasasan",
+    "slot": "ascended_adjective",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzusavali": {
+    "to": "silrosavali",
+    "slot": "root",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzusavaliasa": {
+    "to": "silrosavaliasa",
+    "slot": "ascended",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzusavalina": {
+    "to": "silrosavalina",
+    "slot": "negative",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzusavalipa": {
+    "to": "silrosavalisia",
+    "slot": "verb",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzusavalinasan": {
+    "to": "silrosavalinasan",
+    "slot": "negative_adjective",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzusavalisan": {
+    "to": "silrosavalisan",
+    "slot": "adjective",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzusavaliasasan": {
+    "to": "silrosavaliasasan",
+    "slot": "ascended_adjective",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzuseno": {
+    "to": "silroseno",
+    "slot": "root",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzusenopa": {
+    "to": "silrosenosia",
+    "slot": "verb",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzusenoasa": {
+    "to": "silrosenoasa",
+    "slot": "ascended",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzusenona": {
+    "to": "silrosenona",
+    "slot": "negative",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzusenonasan": {
+    "to": "silrosenonasan",
+    "slot": "negative_adjective",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzusenosan": {
+    "to": "silrosenosan",
+    "slot": "adjective",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzusenoasasan": {
+    "to": "silrosenoasasan",
+    "slot": "ascended_adjective",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzudivma": {
+    "to": "silrodivma",
+    "slot": "root",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzudivmaasa": {
+    "to": "silrodivmaasa",
+    "slot": "ascended",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzudivmana": {
+    "to": "silrodivmana",
+    "slot": "negative",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzudivmapa": {
+    "to": "silrodivmasia",
+    "slot": "verb",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzudivmanasan": {
+    "to": "silrodivmanasan",
+    "slot": "negative_adjective",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzudivmasan": {
+    "to": "silrodivmasan",
+    "slot": "adjective",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzudivmaasasan": {
+    "to": "silrodivmaasasan",
+    "slot": "ascended_adjective",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "sernapuzu": {
+    "to": "sernasilro",
+    "slot": "root",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "sernapuzuasa": {
+    "to": "sernasilroasa",
+    "slot": "ascended",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "sernapuzuna": {
+    "to": "sernasilrona",
+    "slot": "negative",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "sernapuzusia": {
+    "to": "sernasilrosia",
+    "slot": "verb",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "sernapuzunasan": {
+    "to": "sernasilronasan",
+    "slot": "negative_adjective",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "sernapuzusan": {
+    "to": "sernasilrosan",
+    "slot": "adjective",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "sernapuzuasasan": {
+    "to": "sernasilroasasan",
+    "slot": "ascended_adjective",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzukarko": {
+    "to": "silrokarko",
+    "slot": "root",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzukarkoasa": {
+    "to": "silrokarkoasa",
+    "slot": "ascended",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzukarkona": {
+    "to": "silrokarkona",
+    "slot": "negative",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzukarkopa": {
+    "to": "silrokarkosia",
+    "slot": "verb",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzukarkonasan": {
+    "to": "silrokarkonasan",
+    "slot": "negative_adjective",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzukarkosan": {
+    "to": "silrokarkosan",
+    "slot": "adjective",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzukarkoasasan": {
+    "to": "silrokarkoasasan",
+    "slot": "ascended_adjective",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzuvani": {
+    "to": "silrovani",
+    "slot": "root",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzuvaniasa": {
+    "to": "silrovaniasa",
+    "slot": "ascended",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzuvanina": {
+    "to": "silrovanina",
+    "slot": "negative",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzuvanipa": {
+    "to": "silrovanisia",
+    "slot": "verb",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzuvaninasan": {
+    "to": "silrovaninasan",
+    "slot": "negative_adjective",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzuvanisan": {
+    "to": "silrovanisan",
+    "slot": "adjective",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzuvaniasasan": {
+    "to": "silrovaniasasan",
+    "slot": "ascended_adjective",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzumanli": {
+    "to": "silromanli",
+    "slot": "root",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzumanliasa": {
+    "to": "silromanliasa",
+    "slot": "ascended",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzumanlina": {
+    "to": "silromanlina",
+    "slot": "negative",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzumanlipa": {
+    "to": "silromanlisia",
+    "slot": "verb",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzumanlinasan": {
+    "to": "silromanlinasan",
+    "slot": "negative_adjective",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzumanlisan": {
+    "to": "silromanlisan",
+    "slot": "adjective",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzumanliasasan": {
+    "to": "silromanliasasan",
+    "slot": "ascended_adjective",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzuamor": {
+    "to": "silroamor",
+    "slot": "root",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzuamorasa": {
+    "to": "silroamorasa",
+    "slot": "ascended",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzuamorna": {
+    "to": "silroamorna",
+    "slot": "negative",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzuamorpa": {
+    "to": "silroamorsia",
+    "slot": "verb",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzuamornasan": {
+    "to": "silroamornasan",
+    "slot": "negative_adjective",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzuamorsan": {
+    "to": "silroamorsan",
+    "slot": "adjective",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzuamorasasan": {
+    "to": "silroamorasasan",
+    "slot": "ascended_adjective",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzulira": {
+    "to": "silrolira",
+    "slot": "root",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzuliraasa": {
+    "to": "silroliraasa",
+    "slot": "ascended",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzulirana": {
+    "to": "silrolirana",
+    "slot": "negative",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzulirapa": {
+    "to": "silrolirasia",
+    "slot": "verb",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzuliranasan": {
+    "to": "silroliranasan",
+    "slot": "negative_adjective",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzulirasan": {
+    "to": "silrolirasan",
+    "slot": "adjective",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzuliraasasan": {
+    "to": "silroliraasasan",
+    "slot": "ascended_adjective",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzulomo": {
+    "to": "silrolomo",
+    "slot": "root",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzulomoasa": {
+    "to": "silrolomoasa",
+    "slot": "ascended",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzulomona": {
+    "to": "silrolomona",
+    "slot": "negative",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzulomopa": {
+    "to": "silrolomosia",
+    "slot": "verb",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzulomonasan": {
+    "to": "silrolomonasan",
+    "slot": "negative_adjective",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzulomosan": {
+    "to": "silrolomosan",
+    "slot": "adjective",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzulomoasasan": {
+    "to": "silrolomoasasan",
+    "slot": "ascended_adjective",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzulore": {
+    "to": "silrolore",
+    "slot": "root",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzuloreasa": {
+    "to": "silroloreasa",
+    "slot": "ascended",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzulorena": {
+    "to": "silrolorena",
+    "slot": "negative",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzulorepa": {
+    "to": "silroloresia",
+    "slot": "verb",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzulorenasan": {
+    "to": "silrolorenasan",
+    "slot": "negative_adjective",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzuloresan": {
+    "to": "silroloresan",
+    "slot": "adjective",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzuloreasasan": {
+    "to": "silroloreasasan",
+    "slot": "ascended_adjective",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzupomli": {
+    "to": "silropomli",
+    "slot": "root",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzupomliasa": {
+    "to": "silropomliasa",
+    "slot": "ascended",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzupomlina": {
+    "to": "silropomlina",
+    "slot": "negative",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzupomlipa": {
+    "to": "silropomlisia",
+    "slot": "verb",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzupomlinasan": {
+    "to": "silropomlinasan",
+    "slot": "negative_adjective",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzupomlisan": {
+    "to": "silropomlisan",
+    "slot": "adjective",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzupomliasasan": {
+    "to": "silropomliasasan",
+    "slot": "ascended_adjective",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzurinba": {
+    "to": "silrorinba",
+    "slot": "root",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzurinbaasa": {
+    "to": "silrorinbaasa",
+    "slot": "ascended",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzurinbana": {
+    "to": "silrorinbana",
+    "slot": "negative",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzurinbapa": {
+    "to": "silrorinbasia",
+    "slot": "verb",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzurinbanasan": {
+    "to": "silrorinbanasan",
+    "slot": "negative_adjective",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzurinbasan": {
+    "to": "silrorinbasan",
+    "slot": "adjective",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzurinbaasasan": {
+    "to": "silrorinbaasasan",
+    "slot": "ascended_adjective",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzurenli": {
+    "to": "silrorenli",
+    "slot": "root",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzurenliasa": {
+    "to": "silrorenliasa",
+    "slot": "ascended",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzurenlina": {
+    "to": "silrorenlina",
+    "slot": "negative",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzurenlipa": {
+    "to": "silrorenlisia",
+    "slot": "verb",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzurenlinasan": {
+    "to": "silrorenlinasan",
+    "slot": "negative_adjective",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzurenlisan": {
+    "to": "silrorenlisan",
+    "slot": "adjective",
+    "via": "puzu",
+    "kind": "respelled"
+   },
+   "puzurenliasasan": {
+    "to": "silrorenliasasan",
+    "slot": "ascended_adjective",
+    "via": "puzu",
     "kind": "respelled"
    }
   },
@@ -116921,7 +116951,7 @@
    "id": "2026-10-19-lexicon-2-2",
    "edition": "2.2",
    "summary": "Liraasa 2.2 added rulings 2.2:G60–G68, restored the 2.0 spelling silro (reverting the 2.1 respelling puzu), filled the forms soloasa and tarnulinusan, and added the album as the reference corpus with sixteen album readings.",
-   "ops": 13
+   "ops": 16
   }
  ]
 }

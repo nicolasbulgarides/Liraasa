@@ -295,6 +295,42 @@
    "addedIn": "2.2",
    "at": "2026-10-19T12:00:00Z",
    "author": "nicolas"
+  },
+  {
+   "entry": "lx_silro_0789",
+   "op": "respell_root",
+   "slot": "root",
+   "from": "puzu",
+   "to": "silro",
+   "ruling": "2.2:G68",
+   "reason": "Liraasa 2.2 patch: the 2.1 respelling silro → puzu is undone, so the album's silro is the word again; puzu becomes a retired spelling, and every compound and image compound follows.",
+   "addedIn": "2.2",
+   "at": "2026-10-19T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_solo_0813",
+   "op": "activate_slot",
+   "slot": "ascended",
+   "from": "— (unused)",
+   "to": "the living stone; a jewel of countless faces",
+   "ruling": "2.2:G68",
+   "reason": "Liraasa 2.2 patch: soloasa is sung on the album (album 09 line 7); the gloss is the patch's, confirmed by the author on 2026-10-19.",
+   "addedIn": "2.2",
+   "at": "2026-10-19T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_tarnulinu_1477",
+   "op": "activate_slot",
+   "slot": "adjective",
+   "from": "— (unused)",
+   "to": "boyish; like a son",
+   "ruling": "2.2:G68",
+   "reason": "Liraasa 2.2 patch: tarnulinusan is sung on the album (album 09 line 9); the gloss is the patch's, confirmed by the author on 2026-10-19.",
+   "addedIn": "2.2",
+   "at": "2026-10-19T12:00:00Z",
+   "author": "nicolas"
   }
  ]
 }

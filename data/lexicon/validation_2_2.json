@@ -7,11 +7,11 @@
    "primal_roots": 472,
    "compounds": 990,
    "forms": 10234,
-   "unused_forms": 6202,
+   "unused_forms": 6200,
    "function_words": 151,
    "new_function_words_1_0": 29,
-   "respelled_in_2_2": 0,
-   "spellings_respelled": 0,
+   "respelled_in_2_2": 1,
+   "spellings_respelled": 147,
    "image_compounds_attested": 391,
    "lexicalised_derivations": 106
   },
@@ -30,7 +30,7 @@
    "details": [],
    "details_total": 0,
    "note": "",
-   "executed_against": "validate.py, unmodified, on the lexicon less its reverted respelling rows ()"
+   "executed_against": "validate.py, unmodified, on the lexicon less its reverted respelling rows (silro → puzu)"
   },
   {
    "id": 2,
@@ -40,7 +40,7 @@
    "details": [],
    "details_total": 0,
    "note": "",
-   "executed_against": "validate.py, unmodified, on the lexicon less its reverted respelling rows ()"
+   "executed_against": "validate.py, unmodified, on the lexicon less its reverted respelling rows (silro → puzu)"
   },
   {
    "id": 3,
@@ -60,7 +60,7 @@
    "details": [],
    "details_total": 0,
    "note": "maivo (pronoun) = maivo (root) is a declared overlap.",
-   "executed_against": "validate.py, unmodified, on the lexicon less its reverted respelling rows ()"
+   "executed_against": "validate.py, unmodified, on the lexicon less its reverted respelling rows (silro → puzu)"
   },
   {
    "id": 5,
@@ -80,7 +80,7 @@
    "details": [],
    "details_total": 0,
    "note": "Stress is penultimate by rule; with hiatus every vowel is a syllable.",
-   "executed_against": "validate.py, unmodified, on the lexicon less its reverted respelling rows ()"
+   "executed_against": "validate.py, unmodified, on the lexicon less its reverted respelling rows (silro → puzu)"
   },
   {
    "id": 7,
@@ -100,7 +100,7 @@
    "details": [],
    "details_total": 0,
    "note": "",
-   "executed_against": "validate.py, unmodified, on the lexicon less its reverted respelling rows ()"
+   "executed_against": "validate.py, unmodified, on the lexicon less its reverted respelling rows (silro → puzu)"
   },
   {
    "id": 9,
@@ -120,7 +120,7 @@
    "details": [],
    "details_total": 0,
    "note": "",
-   "executed_against": "validate.py, unmodified, on the lexicon less its reverted respelling rows ()"
+   "executed_against": "validate.py, unmodified, on the lexicon less its reverted respelling rows (silro → puzu)"
   },
   {
    "id": 11,
@@ -130,7 +130,7 @@
    "details": [],
    "details_total": 0,
    "note": "",
-   "executed_against": "validate.py, unmodified, on the lexicon less its reverted respelling rows ()"
+   "executed_against": "validate.py, unmodified, on the lexicon less its reverted respelling rows (silro → puzu)"
   },
   {
    "id": 12,
@@ -139,7 +139,7 @@
    "count": 0,
    "details": [],
    "details_total": 0,
-   "note": "0.8 headwords compared; 189 with recorded gloss changes; 295 in the image-compound pattern; 144 found by id under a later spelling (2.1:G58)",
+   "note": "0.8 headwords compared; 190 with recorded gloss changes; 303 in the image-compound pattern; 131 found by id under a later spelling (2.1:G58)",
    "executed_against": "validate_2_2.py, with the 2.0–2.2 rulings applied"
   },
   {
@@ -149,7 +149,7 @@
    "count": 0,
    "details": [],
    "details_total": 0,
-   "note": "6 forms reused under the sound ledger's own terms; reverted respellings reserve nothing ()",
+   "note": "6 forms reused under the sound ledger's own terms; reverted respellings reserve nothing (silro → puzu)",
    "executed_against": "validate_2_2.py, with the 2.0–2.2 rulings applied"
   },
   {
@@ -160,7 +160,7 @@
    "details": [],
    "details_total": 0,
    "note": "581 example sentences, 0 corpus lines checked.",
-   "executed_against": "validate.py, unmodified, on the lexicon less its reverted respelling rows ()"
+   "executed_against": "validate.py, unmodified, on the lexicon less its reverted respelling rows (silro → puzu)"
   },
   {
    "id": 15,
@@ -170,7 +170,7 @@
    "details": [],
    "details_total": 0,
    "note": "",
-   "executed_against": "validate.py, unmodified, on the lexicon less its reverted respelling rows ()"
+   "executed_against": "validate.py, unmodified, on the lexicon less its reverted respelling rows (silro → puzu)"
   },
   {
    "id": 16,
@@ -180,7 +180,7 @@
    "details": [],
    "details_total": 0,
    "note": "Same gloss on different headwords: true synonyms, deliberate shades, or an editing slip.",
-   "executed_against": "validate.py, unmodified, on the lexicon less its reverted respelling rows ()"
+   "executed_against": "validate.py, unmodified, on the lexicon less its reverted respelling rows (silro → puzu)"
   },
   {
    "id": 17,
@@ -196,7 +196,7 @@
    ],
    "details_total": 5,
    "note": "Not an error when the lexicon records the intended split; listed for parsers.",
-   "executed_against": "validate.py, unmodified, on the lexicon less its reverted respelling rows ()"
+   "executed_against": "validate.py, unmodified, on the lexicon less its reverted respelling rows (silro → puzu)"
   },
   {
    "id": 18,
@@ -205,7 +205,7 @@
    "count": 0,
    "details": [],
    "details_total": 0,
-   "note": "0 roots respelled in 2.2 checked against every active and reserved spelling: none within one edit",
+   "note": "1 roots respelled in 2.2 checked against every active and reserved spelling: none within one edit",
    "executed_against": "validate_2_2.py, with the 2.0–2.2 rulings applied"
   },
   {
@@ -216,7 +216,7 @@
    "details": [],
    "details_total": 0,
    "note": "monosyllables: da de en ka ke ki ko la li ne po si su tu ∅",
-   "executed_against": "validate.py, unmodified, on the lexicon less its reverted respelling rows ()"
+   "executed_against": "validate.py, unmodified, on the lexicon less its reverted respelling rows (silro → puzu)"
   },
   {
    "id": 20,
@@ -226,7 +226,7 @@
    "details": [],
    "details_total": 0,
    "note": "",
-   "executed_against": "validate.py, unmodified, on the lexicon less its reverted respelling rows ()"
+   "executed_against": "validate.py, unmodified, on the lexicon less its reverted respelling rows (silro → puzu)"
   },
   {
    "id": 21,
@@ -236,7 +236,7 @@
    "details": [],
    "details_total": 0,
    "note": "581 sentences checked (legacy 0.8 texts are exempt).",
-   "executed_against": "validate.py, unmodified, on the lexicon less its reverted respelling rows ()"
+   "executed_against": "validate.py, unmodified, on the lexicon less its reverted respelling rows (silro → puzu)"
   },
   {
    "id": 22,
@@ -246,7 +246,7 @@
    "details": [],
    "details_total": 0,
    "note": "{\"retirement_candidates\": 182, \"storytelling\": 150, \"root_review\": 40, \"unresolved_compounds\": 3}",
-   "executed_against": "validate.py, unmodified, on the lexicon less its reverted respelling rows ()"
+   "executed_against": "validate.py, unmodified, on the lexicon less its reverted respelling rows (silro → puzu)"
   },
   {
    "id": 23,
@@ -256,7 +256,7 @@
    "details": [],
    "details_total": 0,
    "note": "2412 legacy spellings mapped.",
-   "executed_against": "validate.py, unmodified, on the lexicon less its reverted respelling rows ()"
+   "executed_against": "validate.py, unmodified, on the lexicon less its reverted respelling rows (silro → puzu)"
   },
   {
    "id": 24,
@@ -275,7 +275,7 @@
    "count": 0,
    "details": [],
    "details_total": 0,
-   "note": "Compared against liraasa_2_1.json; changesets: 2026-10-19-lexicon-2-2; 0 spellings respelled; 4 rulings superseded; 0 slots filled.",
+   "note": "Compared against liraasa_2_1.json; changesets: 2026-10-19-lexicon-2-2; 147 spellings respelled; 4 rulings superseded; 2 slots filled.",
    "executed_against": "validate_2_2.py"
   }
  ]
