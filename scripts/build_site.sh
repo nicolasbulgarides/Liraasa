@@ -29,8 +29,8 @@ sed '1a <base href="editor/">' editor/index.html > "$out/index.html"
 
 # the documents and the lexicon, under codex/
 for f in handoff/Liraasa_Invitation.html handoff/Liraasa_Invitation.pdf \
-         handoff/Liraasa_2_1_Reference_Grammar.html handoff/Liraasa_2_1_Reference_Grammar.pdf \
-         handoff/liraasa_2_1_llm.json; do
+         handoff/Liraasa_2_2_Reference_Grammar.html handoff/Liraasa_2_2_Reference_Grammar.pdf \
+         handoff/liraasa_2_2_llm.json; do
   [ -f "$f" ] && cp "$f" "$out/codex/"
 done
 

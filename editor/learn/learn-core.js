@@ -5407,9 +5407,11 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
   }
   function recordMigration(lex, mapping, slots, via, kind) {
     const legacy = lex.legacy;
-    for (const row of Object.values(legacy.migration_forms)) {
+    for (const [key, row] of Object.entries(legacy.migration_forms)) {
       const next = mapping[row.to];
-      if (next !== void 0) row.to = next;
+      if (next === void 0) continue;
+      if (next === key) Reflect.deleteProperty(legacy.migration_forms, key);
+      else row.to = next;
     }
     for (const [from, to] of Object.entries(mapping)) {
       legacy.migration_forms[from] = { to, slot: slots[from] ?? "root", via, kind };
@@ -5482,6 +5484,9 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }
     respellDerivations(lex, renamed, mapping, slots);
     const legacy = lex.legacy;
+    for (const row of legacy.respelled_roots) {
+      if (row.old === spelling && row.new === old) row.reverted = true;
+    }
     legacy.respelled_roots.push({
       old,
       new: spelling,

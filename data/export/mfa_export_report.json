@@ -1,7 +1,7 @@
 {
  "report": "Liraasa MFA dictionary export",
- "lexicon": "C:/Users/nicol/Desktop/Liraasa-workbench/data/lexicon/liraasa_2_1.json",
- "version": "2.1",
+ "lexicon": "C:/Users/nicol/Desktop/Liraasa-workbench/data/lexicon/liraasa_2_2.json",
+ "version": "2.2",
  "words": 51009,
  "by_source": {
   "closed class": 251,
