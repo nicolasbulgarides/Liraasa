@@ -26,6 +26,7 @@ import {
   badge,
   calloutHtml,
   cell,
+  composedGloss,
   esc,
   forReview,
   examples,
@@ -253,6 +254,8 @@ ${ul([
   `${narrative} [[1.2:G31]]`,
   'After a number or quantifier the plural `-ri` is optional: choose by sound and meter [[1.2:G28]].',
 ])}
+${h3('Sound follows meaning')}
+${p(`For new and respelled roots: ${rulingText(lex, '2.1:G57').replace(/^Guidance for new and respelled roots: /, '')} [[2.1:G57]]`)}
 ${h3('Names')}
 ${p(`${rulingText(lex, '2.0:G45')} [[2.0:G45]] A name may take the affectionate \`-ti\` [[0.8:R12]].`)}
 <p>${GUIDE.names.map(([en, li]) => `${esc(en)} becomes ${lir(li, 'name')}`).join('; ')}.</p>`,
@@ -344,7 +347,8 @@ export function wordsPart(index: Index): string {
     { cls: 'compact' },
   );
 
-  const soulbond = headword(index, 'mavolumitilma');
+  const soulbond = index.byId.get('lx_mavolumitilma_1591');
+  if (soulbond === undefined) throw new Error('lx_mavolumitilma_1591 is gone');
   const [sbA, sbB] = soulbond.components ?? ['', ''];
   const motion = Object.entries(lex.motion_prefixes.canon)
     .map(([k, v]) => `\`${k}\` ${v}`)
@@ -461,6 +465,8 @@ ${h3('Correlatives: determiner + concept')}
 ${grid}
 ${p(`Beside the grid: ${wordList(lex, ['ki-eli', 'ki-muya', 'ki-oro'])}.`)}
 ${p('Place, time, manner and cause (`-pago`, `-krono`, `-modo`, `-kasa`) work as adverbials; thing and person (`-coda`, `-nela`) as nouns. `muya-krono` often, `poka-krono` rarely, `rada-krono` each time [[1.2:G34]].')}
+${p('A number joined to `krono` counts the times: `una-krono` once, `dossa-krono` twice; `ki-muya-krono` how many times; `una-ne krono` the first time. `una-krono` never means “formerly”: that is `somi-krono` [[2.1:G49]].')}
+${p('A bare measure after the object is a duration; `kroti` + a measure, with no article, is “ago”; `krotiapo` + a measure is “in, after”. With `li` + a noun, `kroti` and `krotiapo` are “before” and “after” it [[2.1:G55]].')}
 ${h3('Numbers')}
 <p class="chips">${digits}</p>
 ${p('Ten is `unzira`; 11–19 add the unit with a hyphen: `unzira-una`, 11. Tens 20–50 contract (`dozira`, `trezira`, `cuazira`, `penzira`); from 60 they are the digit + `zira`: `sesazira`, `nivazira`. Hundreds are the digit + `centa`, and the rest joins with hyphens: `dossacenta-unzira-penta`, 215. `centa` is one hundred, `mililumi` a thousand. Ordinals take `-ne` (`una-ne`, first); fractions are N `de` N (`tressa de cuara`). A `ne` after a number is never negation.')}
@@ -486,9 +492,26 @@ ${table(
 
 // ---------------------------------------------------------------- 5. Clause
 
+/** A sentence quoted from a ruling's own text; the build fails if the ruling no longer has it. */
+function quoted(lex: Lexicon, id: string, sentence: string): string {
+  if (!rulingText(lex, id).includes(sentence))
+    throw new Error(`${id} no longer quotes "${sentence}"`);
+  return sentence;
+}
+
 export function clausePart(index: Index): string {
   const lex = index.lex;
   const g = lex.grammar;
+  // the 2.1 rulings' own sentences; their English is the guide's, awaiting the author
+  const G47 = quoted(lex, '2.1:G47', 'Li nullo ka ki-modo vanisan!');
+  const G48A = quoted(lex, '2.1:G48', 'Li lumi tivrota taivo pifu.');
+  const G48B = quoted(lex, '2.1:G48', 'Taivo po noma lisrola pifu.');
+  const G50 = quoted(lex, '2.1:G50', 'Maivo desida fime taivo lisrola.');
+  const G52 = quoted(lex, '2.1:G52', 'Li nimu raho maivo po lirala en ito, ka vanisan.');
+  const G53 = quoted(lex, '2.1:G53', 'Una de maivori futu relnura.');
+  const G54 = quoted(lex, '2.1:G54', 'Taivo ke ola-modo vanisan fime li veluri lasola.');
+  const gl = (l: string, english: string, id: string): string =>
+    composedGloss(l, english, `Reference, The clause: ${id}`);
 
   const slotTable = table(
     ['#', 'Slot', 'Words', 'Notes'],
@@ -535,6 +558,7 @@ ${h3('The noun phrase')}
 <pre class="template"><code>${esc(g.noun_phrase)}</code></pre>
 ${p('Adjectives before the noun; a noun never modifies a noun [[0.8:G7]]. `toda` N is every N; `toda li` N is all the N.')}
 ${p(`${liRule} [[0.8:R5]]`)}
+${p(`**Partitive \`de\`.** After a number, a quantifier or a superlative, \`de\` means of / among, and the ownership rules do not apply: \`${G53}\` ${gl(G53, 'One of us will return.', '2.1:G53')} Fractions are the same construction [[2.1:G53]].`)}
 ${h3('Linking clauses')}
 ${p(
   wordList(lex, [
@@ -560,9 +584,28 @@ ${p('A clause with its own verb needs a linker. `fime` opens “that …” (the
 ${examples([
   ['Maivo sabesia fime taivo lirala.', 'I know that you sing.'],
   ['Li nela raho lirala ka benasan.', 'The person who sings is good.'],
-  ['Maivo vurlova sidu lirala.', 'I want to sing.'],
+  ['Maivo desida sidu lirala.', 'I want to sing.'],
+  [G50, gl(G50, 'I want you to stay.', '2.1:G50')],
 ])}
-${p('Questions keep statement order and end in `ki`; question words are `ki-` correlatives left in place; an embedded yes/no question uses `ki-oro` [[0.8:G4]] [[1.0:G2]].')}
+${ul([
+  '`sidu` keeps one subject; a second verb with **its own subject** goes in a `fime` clause, which inherits the tense [[2.1:G50]] [[0.8:R6]].',
+  `A relative on a prepositional object: \`raho\` opens the clause and the preposition keeps its place, followed by a resumptive pronoun (\`ito\`/\`itori\`, \`saivo\`/\`saivori\`): \`${G52}\` ${gl(G52, 'The home in which I sang is beautiful.', '2.1:G52')} [[2.1:G52]]`,
+  `**So … that**: \`ola-modo\` ADJ … \`fime\` CLAUSE: \`${G54}\` ${gl(G54, 'You are so beautiful that the stars fall silent.', '2.1:G54')} [[2.1:G54]]`,
+  'Evidentials: with none, the sentence makes no claim about its source. Inside `fime`, the evidential reports the main-clause subject’s evidence; in a question it asks for the listener’s source [[2.1:G51]].',
+])}
+${h3('Questions, exclamations, wishes')}
+${p('A question keeps statement order: **the question word stands where its answer would stand**, and **every direct question ends in `ki`**. A `ki-` word of time may open the clause as a frame. An embedded question keeps the word in place with no `ki`; an embedded yes/no question uses `ki-oro` [[2.1:G46]] [[0.8:G4]] [[1.0:G2]].')}
+${examples([
+  ['Taivo pagopa ki-pago ki?', 'Where are you going?'],
+  ['Ki-nela lirala ki?', 'Who sings?'],
+  ['Taivo amora ki-eli lira ki?', 'Which song do you love?'],
+  ['Maivo ne sabesia ki-pago taivo futu pagopa.', 'I don’t know where you will go.'],
+])}
+${ul([
+  `**Exclamations.** A main clause with a \`ki-\` word and no final \`ki\` is an exclamation: \`ki-modo\` ADJ, how …!; \`ki-eli\` N, what a …!; \`ki-muya\` N, so many …! \`${G47}\` ${gl(G47, 'How beautiful the night is!', '2.1:G47')} [[2.1:G47]]`,
+  `**Blessings and wishes.** \`pifu\` with any subject is the blessing form: \`${G48A}\` ${gl(G48A, 'May the Light hold you.', '2.1:G48')} With \`noma\`, it is “if only”: \`${G48B}\` ${gl(G48B, 'If only you had stayed.', '2.1:G48')} [[2.1:G48]]`,
+  '**Prohibitions.** `ne` + a command, with no subject; `fisa` softens it; `yava ne` + verb is “let us not”: `Ne senobakosia maivo!` Don’t interrupt me! [[2.1:G56]]',
+])}
 ${h3('Reference: all twenty slots')}
 ${slotTable}`,
   );
@@ -597,6 +640,34 @@ export const RECIPES: readonly (readonly [string, string, string, string, string
   ],
   ['do you …?', 'statement order, `ki` last', 'Taivo lirala ki?', 'Do you sing?', '1.0:G2'],
   [
+    'where / who / which …?',
+    'the question word in its answer’s place, `ki` last',
+    'Taivo pagopa ki-pago ki?',
+    'Where are you going?',
+    '2.1:G46',
+  ],
+  [
+    'how …!',
+    '`ki-modo` ADJ, no final `ki`',
+    'Li nullo ka ki-modo vanisan!',
+    'How beautiful the night is!',
+    '2.1:G47',
+  ],
+  [
+    'may … / bless …',
+    'clause + `pifu`',
+    'Li lumi tivrota taivo pifu.',
+    'May the Light hold you.',
+    '2.1:G48',
+  ],
+  [
+    'if only …',
+    '`noma` … `pifu`',
+    'Taivo po noma lisrola pifu.',
+    'If only you had stayed.',
+    '2.1:G48',
+  ],
+  [
     'yes / no',
     '`zabo` / `kepi`, or tense + verb',
     'Taivo po sapusia ki? — Zabo. / Po sapusia. / Zabo, maivo po sapusia.',
@@ -605,6 +676,13 @@ export const RECIPES: readonly (readonly [string, string, string, string, string
   ],
   ["let's", '`yava` + verb', 'Yava lirala!', 'Let us sing!', ''],
   ['command', 'no subject; `fisa` = please', 'Fisa, lisrola.', 'Please stay.', '1.2:G31'],
+  [
+    "don't …",
+    '`ne` + command; `yava ne` = let us not',
+    'Ne senobakosia maivo!',
+    'Don’t interrupt me!',
+    '2.1:G56',
+  ],
   [
     'addressing someone',
     'set off by commas',
@@ -630,7 +708,7 @@ export const RECIPES: readonly (readonly [string, string, string, string, string
   [
     'this / that, standing alone',
     '`eli` / `ola` as pronouns; `eli-nela` for a person',
-    'Maivo vurlova eli, ne ola.',
+    'Maivo desida eli, ne ola.',
     'I want this, not that.',
     '0.8:G1',
   ],
@@ -686,6 +764,7 @@ export const RECIPES: readonly (readonly [string, string, string, string, string
     '1.0:G9',
   ],
   ['often / rarely', 'quantifier-`krono`', 'Maivo lirala muya-krono.', 'I sing often.', '1.2:G34'],
+  ['twice', 'NUMBER-`krono`', 'dossa-krono', 'twice', '2.1:G49'],
   ['now I sing', 'time word first or last', 'Eli-krono, maivo lirala.', 'Now I sing.', '1.2:G24'],
   [
     'suddenly, …',
@@ -748,7 +827,35 @@ export const RECIPES: readonly (readonly [string, string, string, string, string
     'The person who sings is good.',
     '1.0:G21',
   ],
-  ['want to sing', 'VERB `sidu` VERB', 'Maivo vurlova sidu lirala.', 'I want to sing.', '0.8:G6'],
+  ['want to sing', 'VERB `sidu` VERB', 'Maivo desida sidu lirala.', 'I want to sing.', '0.8:G6'],
+  [
+    'want you to stay',
+    'VERB `fime` SUBJECT VERB',
+    'Maivo desida fime taivo lisrola.',
+    'I want you to stay.',
+    '2.1:G50',
+  ],
+  [
+    'the home in which …',
+    '`raho` … preposition + resumptive pronoun',
+    'Li nimu raho maivo po lirala en ito, ka vanisan.',
+    'The home in which I sang is beautiful.',
+    '2.1:G52',
+  ],
+  [
+    'one of us',
+    'NUMBER `de` PRONOUN (partitive)',
+    'Una de maivori futu relnura.',
+    'One of us will return.',
+    '2.1:G53',
+  ],
+  [
+    'so … that …',
+    '`ola-modo` ADJ … `fime` CLAUSE',
+    'Taivo ke ola-modo vanisan fime li veluri lasola.',
+    'You are so beautiful that the stars fall silent.',
+    '2.1:G54',
+  ],
   [
     'perhaps …',
     'attitude word at the clause end',
@@ -818,6 +925,13 @@ export function recipesPart(index: Index): string {
       RECIPES.map(([en, pat, l, gloss, id]) => {
         const review = !isCanonText(canon, l);
         if (review) forReview(l, gloss, `Reference, Patterns: ${en}`);
+        // a 2.1 ruling's sentence comes without English: the gloss is the guide's
+        else if (
+          id.startsWith('2.1:') &&
+          /[.!?]$/.test(l) &&
+          !liveExamples(index.lex).some((e) => e.liraasa === l)
+        )
+          composedGloss(l, gloss, `Reference, Patterns: ${en}`);
         return [
           cell(esc(en)),
           cell(md(pat)),
@@ -868,6 +982,12 @@ export const RULES: readonly (readonly [string, string, string])[] = [
   ['error', 'excluded pairs in one clause; two evidentials', '1.0:G16'],
   ['error', 'ki not last; attitude words not clause-final', '1.0:G22'],
   ['error', 'a question with the copula or tense moved to the front', 'ki'],
+  [
+    'error',
+    'a direct question that does not end in ki, or a question word moved out of its answer’s place (a ki- word of time may open the clause)',
+    '2.1:G46',
+  ],
+  ['note', 'a main clause with a ki- word and no final ki reads as an exclamation', '2.1:G47'],
   ['warn', 'a saying-verb + su read as “about”', '1.2:G30'],
   ['warn', 'English gloss is passive but the line has no gome', 'passive'],
   ['note', '-na direction; hema as hesitation', ''],
@@ -877,10 +997,8 @@ export const RULES: readonly (readonly [string, string, string])[] = [
 
 /** Not decided: presented as open, resolved nowhere (SPEC §14). Language only. */
 export const OPEN_QUESTIONS: readonly string[] = [
-  '**“Once”, “N times”:** no construction yet.',
-  '**“To + verb”:** a general complement beyond `sidu` (shared subject) and `kopisa` (purpose).',
-  '**Evidentials:** the meaning when absent, whose evidence counts inside a `fime` clause, and the meaning in a question.',
-  '**Relative clauses on a prepositional object:** “the house in which …”.',
+  '**Chains of `de`:** how X `de` Y `de` Z resolves when owners of different ranks mix.',
+  '**A vocative particle for verse.**',
 ];
 
 export function openQuestionsPart(no: string): string {
@@ -905,6 +1023,10 @@ export interface EditionCounts {
   v12: number;
   v20: number;
   attested: number;
+  /** 2.1 respells and replaces roots; it adds and removes no headword (2.1:G58, G59). */
+  v21: number;
+  respelled: number;
+  becameCompounds: number;
 }
 
 /**
@@ -962,6 +1084,7 @@ ${h3('C. Time words')}
 <p class="chips">${time}</p>
 ${h3('D. Editions and rulings')}
 ${p(`Liraasa 1.0 (${n(counts.v10)} headwords) is the frozen base. 1.1 added vocabulary (${n(counts.v11)}); 1.2 added rulings 1.2:G24–G36 and words (${n(counts.v12)}). 2.0 added ${n(added)} headwords and moved ${n(counts.attested)} pattern-built compounds out of the dictionary into the image-compound pattern, hence ${n(counts.v12)} − ${n(counts.attested)} + ${n(added)} = ${n(counts.v20)}. The ${n(counts.attested)} keep their glosses as attested image compounds and are **not** counted in the ${n(counts.v20)}.`)}
+${p(`2.1 added rulings 2.1:G46–G59 and respelled ${n(counts.respelled)} roots, ${n(counts.becameCompounds)} of them replaced by compounds, with every form, compound, image compound and derivation built on them; the headword count stays ${n(counts.v21)}. ${rulingText(lex, '2.1:G58')} [[2.1:G58]] ${rulingText(lex, '2.1:G59')} [[2.1:G59]]`)}
 ${rulingIndex}
 </section>`;
 }

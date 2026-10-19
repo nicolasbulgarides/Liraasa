@@ -116,6 +116,7 @@ export interface Lexicon {
   rulings_0_8_carried: Ruling[];
   rulings_1_2: Ruling[];
   rulings_2_0?: Ruling[];
+  rulings_2_1?: Ruling[];
   /** 2.0: the image-compound pattern, with the attested pairs whole (ADR-0016). */
   image_compounds?: {
     rule: string;
@@ -129,7 +130,19 @@ export interface Lexicon {
   legacy: {
     retired_roots: { old: string; replacement: string }[];
     respelled_roots: { old: string; new: string }[];
+    /** Every retired or respelled spelling, with the form that replaces it. */
+    migration_forms: Record<string, { to: string; slot: string; via: string; kind: string }>;
   };
+}
+
+/**
+ * The current spelling of a word an older text spells otherwise (2.1:G58: a
+ * 2.0 text is read under its 2.0 spellings). Only respellings: a retired
+ * word has a replacement, not a new spelling.
+ */
+export function respelledAs(lex: Lexicon, word: string): string | undefined {
+  const m = lex.legacy.migration_forms[word];
+  return m?.kind === 'respelled' ? m.to : undefined;
 }
 
 export function loadLexicon(path: string): Lexicon {
@@ -190,6 +203,7 @@ export function normGloss(gloss: string): string {
 export function rulingById(lex: Lexicon, id: string): Ruling | undefined {
   const [edition, rid] = id.split(':');
   const sets: Record<string, readonly Ruling[] | undefined> = {
+    '2.1': lex.rulings_2_1,
     '2.0': lex.rulings_2_0,
     '1.2': lex.rulings_1_2,
     '1.0': lex.rulings_1_0,
@@ -308,6 +322,8 @@ export class Index {
         ...lex.rulings_1_0,
         ...lex.rulings_1_2,
         ...(lex.rulings_2_0 ?? []),
+        ...(lex.rulings_2_1 ?? []),
+        ...(lex.rulings_2_1 ?? []),
         ...lex.rulings_0_8_carried,
       ].flatMap((r) => (r.examples ?? []).map(([l]) => l)),
       ...lex.discourse_particles.flatMap((p) => p.examples.map((e) => e.liraasa)),
@@ -352,6 +368,12 @@ export class Index {
     const parts = token.split('-');
     if (parts.length > 1 && parts.every((p) => this.closed.has(p) || p === 'ne' || p === 'de')) {
       return true;
+    }
+    // N times: a number, or ki-muya, joined to krono (2.1:G49)
+    if (token.endsWith('-krono') && rulingById(this.lex, '2.1:G49') !== undefined) {
+      const count = token.slice(0, -'-krono'.length);
+      if (count === 'ki-muya' || Object.values(this.lex.numbers.lookup_0_999).includes(count))
+        return true;
     }
     return false;
   }
@@ -439,6 +461,7 @@ export function canonTexts(lex: Lexicon): string[] {
     ...lex.rulings_1_0,
     ...lex.rulings_1_2,
     ...(lex.rulings_2_0 ?? []),
+    ...(lex.rulings_2_1 ?? []),
     ...lex.rulings_0_8_carried,
   ];
   return [

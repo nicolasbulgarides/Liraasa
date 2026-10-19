@@ -1,0 +1,102 @@
+# Migrated from 0.8 to 1.0+ by migrate_text.py (ruling 1.0:G19).
+# Source: song_III_somulira.txt
+# song_III_somulira - extracted from the 0.8 Grammar Guide and Codex.
+# Liraasa lines unprefixed; English on "# EN:" comment lines.
+
+# EN: Somulira ala Lunaria — A Lullaby to Lunaria
+# EN: A nighttime devotional in which the singer asks Lunaria to sing them to sleep. Somulira is the
+# EN: lexicon's own word for lullaby.
+# EN: Lunaria… Lunaria…
+Li sola po vesnolumiva,
+Ata li navu nullonia la molusan.
+Taivo lunola hupi li sevu,
+Ata li vabeveri lasola.
+Li huvu huvuha su li lunobanu,
+Li moberi mobema taivo,
+Li lunofolniri lallela vobi taivo,
+Ata toda-coda roni lenbula.
+Lasola, maivo de lore,
+Li nullo ke sasvapagosan.
+Lunaria, Lunaria, li lunoasasan,
+Somulirasia maivo, fisa.
+Tivrota maivo en taivo de lunolumi
+Tuni li mernolumi venreva.
+Somuliraasa… lunopomliasa… tivroasa…
+Maivo lenbula su li galsa
+Ata navulalvunia.
+Maivo lunopomlila ala taivo:
+Kube maivo somusia, maivo futu lorenorula taivo.
+Lasola, maivo de lore,
+Li nullo ke sasvapagosan.
+Lunaria, Lunaria, li lunoasasan,
+Somulirasia maivo, fisa.
+Tivrota maivo en taivo de lunolumi
+Tuni li mernolumi venreva.
+Somuliraasa… lunopomliasa… tivroasa…
+Si li numori helviha taivo,
+Maivo loki sabesia fime taivo ke eli-pago,
+Kasa miyo taivo de lumi intra maivo de lore.
+Lunaria, Lunaria, li lunoasasan,
+Somulirasia maivo, fisa.
+Tivrota maivo en taivo de lunolumi
+Tuni li mernolumi venreva.
+Somuliraasa… lunopomliasa… tivroasa…
+Nullosavali ala taivo, Lunaria.
+Maivo somusia…
+Li sola po vesnolumiva,
+# EN: The sun has faded into dusk,
+Ata li navu nullonia la molusan.
+# EN: And the sky gently darkens into night.
+Taivo lunola hupi li sevu,
+# EN: You glow with moonlight above the sea,
+Ata li vabeveri lasola.
+# EN: And the waves fall quiet.
+Li huvu huvuha su li lunobanu,
+# EN: The owl keeps watch on the moonlit branch,
+# EN: THE DEVOTIONALS AND SONGS
+Li moberi mobema taivo,
+# EN: The moths circle your light,
+Li lunofolniri lallela vobi taivo,
+# EN: The moonflowers open for you,
+Ata toda-coda roni lenbula.
+# EN: And everything is lying down to rest.
+Lasola, maivo de lore,
+# EN: Hush, my heart,
+Li nullo ke sasvapagosan.
+# EN: The night is a sanctuary.
+Lunaria, Lunaria, li lunoasasan,
+# EN: Lunaria, Lunaria, moon-blessed one,
+Somulirasia maivo, fisa.
+# EN: Sing me to sleep, please.
+Tivrota maivo en taivo de lunolumi
+# EN: Hold me in your moonlight
+Tuni li mernolumi venreva.
+# EN: Until the dawn comes.
+Somuliraasa… lunopomliasa… tivroasa…
+# EN: A lullaby that quiets the world… a vow beneath the
+# EN: eternal moon… an embrace that never loosens…
+Maivo lenbula su li galsa
+# EN: I lie down on the grass
+Ata navulalvunia.
+# EN: And marvel beneath the stars.
+Maivo lunopomlila ala taivo:
+# EN: I make you a moonlit promise:
+Kube maivo somusia, maivo futu lorenorula
+taivo.
+# EN: When I sleep, I will dream of you with love.
+Si li numori helviha taivo,
+# EN: If the clouds hide you,
+Maivo loki sabesia fime taivo ke eli-pago,
+# EN: I still know that you are here,
+Kasa miyo taivo de lumi intra maivo de lore.
+# EN: Because your light lives within my heart.
+Nullosavali ala taivo, Lunaria.
+# EN: A goodnight kiss to you, Lunaria.
+Maivo somusia…
+# EN: I sleep…
+# EN: dawn. huvuha (to watch at night) and mobema (to circle a light) let the owl and moths act out their nature,
+# EN: quietly casting Lunaria as the light. Her title is li lunoasasan, avoiding lunoasa, "moon of the forgotten."
+# EN: Style prompt: devotional lullaby, solo veena with soft harp and music-box bells, gentle low strings, breathy
+# EN: intimate vocal, 60 BPM, 6/8 rocking feel, hummed intro, slows and fades to a whisper.
+# EN: THE DEVOTIONALS AND SONGS
+# EN: SONG IV

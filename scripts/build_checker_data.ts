@@ -7,30 +7,52 @@
  * JSON file, so each data file is written as a script that assigns it to a
  * global. The content is the JSON itself, unchanged:
  *
- *   editor/checker/data/reference.js  window.LIRAASA_REF          handoff/liraasa_2_0_llm.json
+ *   editor/checker/data/reference.js  window.LIRAASA_REF          handoff/liraasa_2_1_llm.json
  *   editor/checker/data/extra.js      window.LIRAASA_CHECKER_EXTRA legacy spellings + names
  *   editor/checker/data/flags.js      window.LIRAASA_FLAGS        data/checker/lexicon_flags.json
  *   editor/checker/data/english.js    window.LIRAASA_ENGLISH      data/checker/english.json + calques.json
  *
  * The LLM JSON is the source of truth for words and rules. Two things the
  * checker's reader needs are not in it and come from the lexicon instead:
- * the pre-1.0 spellings (reader step "a legacy spelling → warn") and the
- * attested personal names (data/checker/names.json).
+ * the older spellings (reader step "a legacy spelling → warn"), each with the
+ * edition that retired it when a changeset in data/changes records that
+ * (2.1:G58; none recorded means pre-1.0), and the attested personal names
+ * (data/checker/names.json).
  */
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 
-const REFERENCE = 'handoff/liraasa_2_0_llm.json';
-const LEXICON = 'data/lexicon/liraasa_2_0.json';
+const REFERENCE = 'handoff/liraasa_2_1_llm.json';
+const LEXICON = 'data/lexicon/liraasa_2_1.json';
 const NAMES = 'data/checker/names.json';
 const FLAGS = 'data/checker/lexicon_flags.json';
 const ENGLISH = 'data/checker/english.json';
 const CALQUES = 'data/checker/calques.json';
 const OUT_DIR = 'editor/checker/data';
+const CHANGES = 'data/changes';
 
 interface Migration {
   to: string;
   kind: string;
+  via?: string;
+}
+
+/** The edition each root was respelled in, by its old spelling, from the changesets' ops. */
+function respelledIn(): Map<string, string> {
+  const out = new Map<string, string>();
+  for (const f of readdirSync(resolve(CHANGES))
+    .filter((x) => x.endsWith('.json'))
+    .sort()) {
+    const cs = JSON.parse(readFileSync(resolve(CHANGES, f), 'utf8')) as {
+      edition?: string;
+      ops?: { op: string; from: string | null }[];
+    };
+    for (const op of cs.ops ?? []) {
+      if ((op.op === 'respell_root' || op.op === 'respell_as_compound') && op.from !== null)
+        out.set(op.from, cs.edition ?? '');
+    }
+  }
+  return out;
 }
 
 function wrap(global: string, source: string, json: string): string {
@@ -53,13 +75,14 @@ function main(): void {
     legacy: { migration_forms: Record<string, Migration> };
   };
   const names = (JSON.parse(readFileSync(resolve(NAMES), 'utf8')) as { names: string[] }).names;
+  const editions = respelledIn();
   const extra = {
     version: lex.version,
     legacy: Object.fromEntries(
-      Object.entries(lex.legacy.migration_forms).map(([old, m]) => [
-        old,
-        { to: m.to, kind: m.kind },
-      ]),
+      Object.entries(lex.legacy.migration_forms).map(([old, m]) => {
+        const edition = editions.get(m.via ?? '');
+        return [old, { to: m.to, kind: m.kind, ...(edition ? { edition } : {}) }];
+      }),
     ),
     names,
   };

@@ -21,7 +21,7 @@
  * Ids never change: progress, overrides and lessons keyed by id follow.
  */
 import { FORM_SLOTS, SLOT_RAW_KEY, type FormSlot } from '../config/slots';
-import type { RawHeadword, RawLexicon } from '../model/raw';
+import type { RawHeadword, RawLexicon, RawRuling } from '../model/raw';
 import { sevenForms, verbClassOf } from '../morphology/sevenForms';
 import { rhymeFamilies } from './apply';
 
@@ -175,7 +175,13 @@ export function correctText(
   return { text: out, changed };
 }
 
-/** Rewrite the lexicon's own sentences: examples, ruling examples, function-word examples. */
+/**
+ * Rewrite the lexicon's own living text: example sentences, every edition's
+ * rulings (text and examples), function-word and particle examples, headword
+ * notes, the curated motion metaphors and the image-compound notes. Historical
+ * records (`history_0_8`, `legacy`, the 0.8 snapshot, the 1.0 changelog) keep
+ * the spellings of their time.
+ */
 function migrateExamples(
   lex: RawLexicon,
   mapping: Readonly<Record<string, string>>,
@@ -186,8 +192,16 @@ function migrateExamples(
     if (r.changed > 0) changes.push({ from: s, to: r.text });
     return r.text;
   };
-  for (const e of lex.examples) e.liraasa = fix(e.liraasa);
-  for (const r of lex.rulings_1_2 ?? []) {
+  for (const e of lex.examples) {
+    e.liraasa = fix(e.liraasa);
+    // a vocabulary tag names the word it shows: `vocab:pomlileto`
+    if (e.feature.startsWith('vocab:')) e.feature = correctText(e.feature, mapping).text;
+  }
+  const rulings = Object.entries(lex)
+    .filter(([k]) => k.startsWith('rulings_'))
+    .flatMap(([, v]) => (Array.isArray(v) ? (v as RawRuling[]) : []));
+  for (const r of rulings) {
+    r.ruling = fix(r.ruling);
     const ex = r.examples;
     if (Array.isArray(ex))
       r.examples = ex.map((pair: unknown) =>
@@ -204,6 +218,15 @@ function migrateExamples(
   for (const d of lex.discourse_particles as unknown as { examples?: { liraasa: string }[] }[]) {
     for (const e of d.examples ?? []) e.liraasa = fix(e.liraasa);
   }
+  const notes = [
+    ...(lex.headwords as unknown as { notes?: unknown }[]),
+    ...((lex.image_compounds?.attested ?? []) as unknown as { notes?: unknown }[]),
+  ];
+  for (const h of notes) if (typeof h.notes === 'string') h.notes = fix(h.notes);
+  const canon = lex.motion_prefixes.canon;
+  for (const k of Object.keys(canon)) canon[k] = fix(canon[k] ?? '');
+  const kept = lex.image_compounds?.kept_as_headwords ?? {};
+  for (const k of Object.keys(kept)) kept[k] = fix(kept[k] ?? '');
   return changes;
 }
 
@@ -233,23 +256,75 @@ function recordMigration(
 
 /* ------------------------------------------------------------ respell */
 
-/** Respell a primal root in place. Throws on a problem; use `respellRoot` for checked use. */
-export function respellRootInPlace(
+/** A compound's spelling: its parts joined, then its lexicalising suffix if any (2.0:G38). */
+const spellingOf = (c: Head & { suffix?: string }): string =>
+  (c.components ?? []).join('') + (c.suffix ?? '');
+
+/**
+ * Lexicalised derivations whose base moved: the key is respelled in place
+ * (the table keeps its order) and the base in its gloss line, which ends
+ * `: <base> + -<suffix>`, follows (2.1:G58).
+ */
+function respellDerivations(
+  lex: RawLexicon,
+  renamed: ReadonlyMap<string, string>,
+  mapping: Record<string, string>,
+  slots: Record<string, string>,
+): void {
+  const table = lex.morphology.lexicalised_derivations;
+  let moved = false;
+  const next: Record<string, string> = {};
+  for (const [word, gloss] of Object.entries(table)) {
+    const m = /^(.*): ([a-z]+) \+ -([a-z]+)$/.exec(gloss);
+    const base = m?.[2] ?? '';
+    const to = renamed.get(base);
+    if (m === null || to === undefined || word !== base + (m[3] ?? '')) {
+      next[word] = gloss;
+      continue;
+    }
+    const spelling = to + (m[3] ?? '');
+    next[spelling] = `${m[1] ?? ''}: ${to} + -${m[3] ?? ''}`;
+    mapping[word] = spelling;
+    slots[word] = 'derivation';
+    moved = true;
+  }
+  if (moved) lex.morphology.lexicalised_derivations = next;
+}
+
+/**
+ * Move a primal root to a new spelling, or into a compound of two existing
+ * headwords, and carry every compound, attested image compound and listed
+ * derivation built on it (2.1:G58). Ids never change.
+ */
+function moveRoot(
   lex: RawLexicon,
   id: string,
   spelling: string,
+  components: [string, string] | null,
   reason: string,
 ): RespellImpact {
   const heads = lex.headwords as unknown as Head[];
   const h = heads.find((x) => String(x.id) === id);
   if (h === undefined) throw new Error(`${id}: no headword has this id`);
   if (h.components !== null) throw new Error(`${h.root} is a compound: respell its parts`);
+  if (components !== null) {
+    if (components.join('') !== spelling)
+      throw new Error(`${spelling} is not ${components.join(' + ')} joined`);
+    for (const part of components) {
+      if (part === h.root || !heads.some((x) => x.root === part))
+        throw new Error(`${spelling}: component ${part} is not a headword`);
+    }
+  }
   const old = h.root;
   const oldForms = { ...h.forms };
   const mapping: Record<string, string> = {};
   const slots: Record<string, string> = {};
 
   h.root = spelling;
+  if (components !== null) {
+    h.type = 'Compound';
+    h.components = [...components];
+  }
   regenerate(h);
   for (const [k, f] of Object.entries(oldForms)) {
     const next = h.forms[k];
@@ -259,18 +334,19 @@ export function respellRootInPlace(
     }
   }
 
-  // every compound built on it, to any depth
+  // every compound built on it, to any depth, and the attested image compounds
+  const attested = (lex.image_compounds?.attested ?? []) as unknown as Head[];
   const compounds: RespellImpact['compounds'] = [];
   const renamed = new Map([[old, spelling]]);
   let moved = true;
   while (moved) {
     moved = false;
-    for (const c of heads) {
+    for (const c of [...heads, ...attested]) {
       if (!c.components?.some((p) => renamed.has(p))) continue;
       const before = c.root;
       const beforeForms = { ...c.forms };
       c.components = c.components.map((p) => renamed.get(p) ?? p);
-      c.root = c.components.join('');
+      c.root = spellingOf(c);
       if (c.root === before) continue;
       regenerate(c);
       renamed.set(before, c.root);
@@ -285,11 +361,13 @@ export function respellRootInPlace(
       moved = true;
     }
   }
+  respellDerivations(lex, renamed, mapping, slots);
 
   const legacy = lex.legacy as unknown as LegacyRows;
   legacy.respelled_roots.push({
     old,
     new: spelling,
+    ...(components !== null ? { components: [...components] } : {}),
     old_forms: oldForms,
     glosses: h.glosses,
     reason,
@@ -300,6 +378,30 @@ export function respellRootInPlace(
   const from = verbClassOf(old);
   const to = verbClassOf(spelling);
   return { forms: mapping, compounds, verbClass: from === to ? null : { from, to }, examples };
+}
+
+/** Respell a primal root in place. Throws on a problem; use `respellRoot` for checked use. */
+export function respellRootInPlace(
+  lex: RawLexicon,
+  id: string,
+  spelling: string,
+  reason: string,
+): RespellImpact {
+  return moveRoot(lex, id, spelling, null, reason);
+}
+
+/**
+ * Replace a primal root by a compound of two existing headwords, in place
+ * (2.1:G59): the entry keeps its id, glosses and every empty slot, and
+ * becomes that compound; its forms and everything built on it follow.
+ */
+export function respellAsCompoundInPlace(
+  lex: RawLexicon,
+  id: string,
+  components: [string, string],
+  reason: string,
+): RespellImpact {
+  return moveRoot(lex, id, components.join(''), components, reason);
 }
 
 /** Check, then respell, on a copy. The original lexicon is never touched. */

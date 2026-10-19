@@ -55,7 +55,10 @@ function main(): void {
   const editions = lex as unknown as {
     counts_1_1_to_1_2?: { before: { headwords: number }; after: { headwords: number } };
     counts_1_2_to_2_0?: { after: { headwords: number }; imageCompoundsAttested: number };
+    counts_2_0_to_2_1?: { after: { headwords: number } };
+    changesets_2_1_full?: { ops: { op: string }[] }[];
   };
+  const ops21 = (editions.changesets_2_1_full ?? []).flatMap((c) => c.ops);
   const v10 = (
     JSON.parse(readFileSync(resolve(GUIDE.lexicon10), 'utf8')) as { headwords: unknown[] }
   ).headwords.length;
@@ -90,8 +93,12 @@ function main(): void {
         v10,
         v11: editions.counts_1_1_to_1_2?.before.headwords ?? 0,
         v12: editions.counts_1_1_to_1_2?.after.headwords ?? 0,
-        v20: editions.counts_1_2_to_2_0?.after.headwords ?? lex.headwords.length,
+        v20: editions.counts_1_2_to_2_0?.after.headwords ?? 0,
         attested: editions.counts_1_2_to_2_0?.imageCompoundsAttested ?? 0,
+        v21: editions.counts_2_0_to_2_1?.after.headwords ?? lex.headwords.length,
+        respelled: ops21.filter((o) => o.op === 'respell_root' || o.op === 'respell_as_compound')
+          .length,
+        becameCompounds: ops21.filter((o) => o.op === 'respell_as_compound').length,
       },
       rulingIndex(lex, rendered, rulingsFile),
     ),
@@ -122,7 +129,7 @@ function main(): void {
 ${starfield()}${rosette()}${corner('tl')}${corner('tr')}${corner('bl')}${corner('br')}
 <div class="cover-inner">
 ${emblem()}
-<p class="motif">${GUIDE.coverMotif.map(([w]) => lir(w)).join('<span class="sep" aria-hidden="true"> · </span>')}<span class="motif-en">${GUIDE.coverMotif.map(([, e]) => esc(e)).join(' · ')}</span></p>
+<p class="motif">${GUIDE.coverMotif.map(([id]) => lir(index.byId.get(id)?.root ?? id)).join('<span class="sep" aria-hidden="true"> · </span>')}<span class="motif-en">${GUIDE.coverMotif.map(([, e]) => esc(e)).join(' · ')}</span></p>
 <p class="eyebrow">The grammar of</p>
 <h1>${lir('Liraasa')}<span class="visually-hidden"> </span>${esc(lex.version)} Reference Grammar</h1>
 <p class="sub">${esc(GUIDE.subtitle)}</p>

@@ -3301,17 +3301,17 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
         if (out.length >= options.length) break;
       }
     }
-    for (let i = 1; i < out.length; i += 1) {
-      if (out[i]?.target !== out[i - 1]?.target) continue;
-      const j = out.findIndex((e, k) => k > i && e.target !== out[i - 1]?.target);
-      if (j < 0) break;
-      const a = out[i];
-      const b = out[j];
-      if (a === void 0 || b === void 0) break;
-      out[i] = b;
-      out[j] = a;
+    const spread = [];
+    const left = [...out];
+    while (left.length > 0) {
+      const prev = spread[spread.length - 1]?.target;
+      const counts = /* @__PURE__ */ new Map();
+      for (const e of left) counts.set(e.target, (counts.get(e.target) ?? 0) + 1);
+      const crowded = [...counts].find(([t, n]) => t !== prev && n * 2 > left.length)?.[0];
+      const at = crowded !== void 0 ? left.findIndex((e) => e.target === crowded) : left.findIndex((e) => e.target !== prev);
+      spread.push(...left.splice(Math.max(at, 0), 1));
     }
-    return out;
+    return spread;
   }
   function typedText(ex, response) {
     if (ex.answer.kind !== "typed" || ex.answer.lang !== "liraasa") return null;
@@ -5371,8 +5371,13 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       if (r.changed > 0) changes.push({ from: s, to: r.text });
       return r.text;
     };
-    for (const e of lex.examples) e.liraasa = fix(e.liraasa);
-    for (const r of lex.rulings_1_2 ?? []) {
+    for (const e of lex.examples) {
+      e.liraasa = fix(e.liraasa);
+      if (e.feature.startsWith("vocab:")) e.feature = correctText(e.feature, mapping).text;
+    }
+    const rulings = Object.entries(lex).filter(([k]) => k.startsWith("rulings_")).flatMap(([, v]) => Array.isArray(v) ? v : []);
+    for (const r of rulings) {
+      r.ruling = fix(r.ruling);
       const ex = r.examples;
       if (Array.isArray(ex))
         r.examples = ex.map(
@@ -5389,6 +5394,15 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     for (const d of lex.discourse_particles) {
       for (const e of d.examples ?? []) e.liraasa = fix(e.liraasa);
     }
+    const notes = [
+      ...lex.headwords,
+      ...lex.image_compounds?.attested ?? []
+    ];
+    for (const h of notes) if (typeof h.notes === "string") h.notes = fix(h.notes);
+    const canon = lex.motion_prefixes.canon;
+    for (const k of Object.keys(canon)) canon[k] = fix(canon[k] ?? "");
+    const kept = lex.image_compounds?.kept_as_headwords ?? {};
+    for (const k of Object.keys(kept)) kept[k] = fix(kept[k] ?? "");
     return changes;
   }
   function recordMigration(lex, mapping, slots, via, kind) {
@@ -5401,7 +5415,28 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       legacy.migration_forms[from] = { to, slot: slots[from] ?? "root", via, kind };
     }
   }
-  function respellRootInPlace(lex, id, spelling, reason) {
+  const spellingOf = (c) => (c.components ?? []).join("") + (c.suffix ?? "");
+  function respellDerivations(lex, renamed, mapping, slots) {
+    const table = lex.morphology.lexicalised_derivations;
+    let moved = false;
+    const next = {};
+    for (const [word, gloss] of Object.entries(table)) {
+      const m = /^(.*): ([a-z]+) \+ -([a-z]+)$/.exec(gloss);
+      const base = m?.[2] ?? "";
+      const to = renamed.get(base);
+      if (m === null || to === void 0 || word !== base + (m[3] ?? "")) {
+        next[word] = gloss;
+        continue;
+      }
+      const spelling = to + (m[3] ?? "");
+      next[spelling] = `${m[1] ?? ""}: ${to} + -${m[3] ?? ""}`;
+      mapping[word] = spelling;
+      slots[word] = "derivation";
+      moved = true;
+    }
+    if (moved) lex.morphology.lexicalised_derivations = next;
+  }
+  function moveRoot(lex, id, spelling, components, reason) {
     const heads = lex.headwords;
     const h = heads.find((x) => String(x.id) === id);
     if (h === void 0) throw new Error(`${id}: no headword has this id`);
@@ -5419,17 +5454,18 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
         slots[f2] = k;
       }
     }
+    const attested = lex.image_compounds?.attested ?? [];
     const compounds = [];
     const renamed = /* @__PURE__ */ new Map([[old, spelling]]);
     let moved = true;
     while (moved) {
       moved = false;
-      for (const c of heads) {
+      for (const c of [...heads, ...attested]) {
         if (!c.components?.some((p) => renamed.has(p))) continue;
         const before = c.root;
         const beforeForms = { ...c.forms };
         c.components = c.components.map((p) => renamed.get(p) ?? p);
-        c.root = c.components.join("");
+        c.root = spellingOf(c);
         if (c.root === before) continue;
         regenerate(c);
         renamed.set(before, c.root);
@@ -5444,10 +5480,12 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
         moved = true;
       }
     }
+    respellDerivations(lex, renamed, mapping, slots);
     const legacy = lex.legacy;
     legacy.respelled_roots.push({
       old,
       new: spelling,
+      ...{},
       old_forms: oldForms,
       glosses: h.glosses,
       reason
@@ -5458,6 +5496,9 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     const from = verbClassOf(old);
     const to = verbClassOf(spelling);
     return { forms: mapping, compounds, verbClass: from === to ? null : { from, to }, examples };
+  }
+  function respellRootInPlace(lex, id, spelling, reason) {
+    return moveRoot(lex, id, spelling, null, reason);
   }
   function respellRoot(raw, id, spelling, reason) {
     const s = spelling.trim().toLowerCase();

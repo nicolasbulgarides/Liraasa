@@ -1,0 +1,4240 @@
+{
+ "patch": "Liraasa 2.1",
+ "base": "Liraasa 2.0 (liraasa_2_0_llm.json)",
+ "date": "2026-10-18",
+ "summary": {
+  "roots_respelled": 28,
+  "roots_replaced_by_compounds": 2,
+  "compounds_respelled": 145,
+  "listed_derivations_respelled": 6,
+  "attested_image_compounds_respelled": 96,
+  "headwords_after": 1462,
+  "roots_after": 472,
+  "compounds_after": 990,
+  "new_rulings": "2.1:G46-G59"
+ },
+ "rule": "2.1:G58: every form, derivation, compound and image compound respells with its root; a compound's verb follows its new first letter; 2.0 spellings are retired.",
+ "roots": [
+  {
+   "old": "tilma",
+   "new": "miga",
+   "meaning": "relation; bond; connection between things or people",
+   "becomes_compound": null,
+   "forms": [
+    {
+     "role": "n",
+     "old": "tilma",
+     "new": "miga"
+    },
+    {
+     "role": "an",
+     "old": "tilmaasa",
+     "new": "migaasa"
+    },
+    {
+     "role": "nn",
+     "old": "tilmana",
+     "new": "migana"
+    },
+    {
+     "role": "v",
+     "old": "tilmata",
+     "new": "migama"
+    },
+    {
+     "role": "na",
+     "old": "tilmanasan",
+     "new": "miganasan"
+    },
+    {
+     "role": "a",
+     "old": "tilmasan",
+     "new": "migasan"
+    }
+   ]
+  },
+  {
+   "old": "yordo",
+   "new": "puku",
+   "meaning": "consequence; result; effect",
+   "becomes_compound": null,
+   "forms": [
+    {
+     "role": "n",
+     "old": "yordo",
+     "new": "puku"
+    },
+    {
+     "role": "nn",
+     "old": "yordona",
+     "new": "pukuna"
+    },
+    {
+     "role": "v",
+     "old": "yordoya",
+     "new": "pukupa"
+    },
+    {
+     "role": "na",
+     "old": "yordonasan",
+     "new": "pukunasan"
+    },
+    {
+     "role": "a",
+     "old": "yordosan",
+     "new": "pukusan"
+    }
+   ]
+  },
+  {
+   "old": "balbu",
+   "new": "bako",
+   "meaning": "break",
+   "becomes_compound": null,
+   "forms": [
+    {
+     "role": "n",
+     "old": "balbu",
+     "new": "bako"
+    },
+    {
+     "role": "v",
+     "old": "balbuba",
+     "new": "bakoba"
+    },
+    {
+     "role": "a",
+     "old": "balbusan",
+     "new": "bakosan"
+    }
+   ]
+  },
+  {
+   "old": "buvo",
+   "new": "buza",
+   "meaning": "Drinking",
+   "becomes_compound": null,
+   "forms": [
+    {
+     "role": "n",
+     "old": "buvo",
+     "new": "buza"
+    },
+    {
+     "role": "nn",
+     "old": "buvona",
+     "new": "buzana"
+    },
+    {
+     "role": "v",
+     "old": "buvoba",
+     "new": "buzaba"
+    },
+    {
+     "role": "na",
+     "old": "buvonasan",
+     "new": "buzanasan"
+    },
+    {
+     "role": "a",
+     "old": "buvosan",
+     "new": "buzasan"
+    }
+   ]
+  },
+  {
+   "old": "vaga",
+   "new": "diyi",
+   "meaning": "fly",
+   "becomes_compound": null,
+   "forms": [
+    {
+     "role": "n",
+     "old": "vaga",
+     "new": "diyi"
+    },
+    {
+     "role": "v",
+     "old": "vagava",
+     "new": "diyida"
+    },
+    {
+     "role": "a",
+     "old": "vagasan",
+     "new": "diyisan"
+    }
+   ]
+  },
+  {
+   "old": "vurlo",
+   "new": "desi",
+   "meaning": "want",
+   "becomes_compound": null,
+   "forms": [
+    {
+     "role": "n",
+     "old": "vurlo",
+     "new": "desi"
+    },
+    {
+     "role": "nn",
+     "old": "vurlona",
+     "new": "desina"
+    },
+    {
+     "role": "v",
+     "old": "vurlova",
+     "new": "desida"
+    },
+    {
+     "role": "a",
+     "old": "vurlosan",
+     "new": "desisan"
+    }
+   ]
+  },
+  {
+   "old": "zarmo",
+   "new": "hata",
+   "meaning": "strike; impact; physical blow/contact with force",
+   "becomes_compound": null,
+   "forms": [
+    {
+     "role": "n",
+     "old": "zarmo",
+     "new": "hata"
+    },
+    {
+     "role": "v",
+     "old": "zarmoza",
+     "new": "hataha"
+    },
+    {
+     "role": "a",
+     "old": "zarmosan",
+     "new": "hatasan"
+    }
+   ]
+  },
+  {
+   "old": "danvu",
+   "new": "budi",
+   "meaning": "dog",
+   "becomes_compound": null,
+   "forms": [
+    {
+     "role": "n",
+     "old": "danvu",
+     "new": "budi"
+    },
+    {
+     "role": "v",
+     "old": "danvuda",
+     "new": "budiba"
+    },
+    {
+     "role": "a",
+     "old": "danvusan",
+     "new": "budisan"
+    }
+   ]
+  },
+  {
+   "old": "milyu",
+   "new": "cibu",
+   "meaning": "cat",
+   "becomes_compound": null,
+   "forms": [
+    {
+     "role": "n",
+     "old": "milyu",
+     "new": "cibu"
+    },
+    {
+     "role": "v",
+     "old": "milyuma",
+     "new": "cibuca"
+    },
+    {
+     "role": "a",
+     "old": "milyusan",
+     "new": "cibusan"
+    }
+   ]
+  },
+  {
+   "old": "volda",
+   "new": "larbopagobudi",
+   "meaning": "wolf",
+   "becomes_compound": "larbopago+budi",
+   "forms": [
+    {
+     "role": "n",
+     "old": "volda",
+     "new": "larbopagobudi"
+    },
+    {
+     "role": "v",
+     "old": "voldava",
+     "new": "larbopagobudila"
+    },
+    {
+     "role": "a",
+     "old": "voldasan",
+     "new": "larbopagobudisan"
+    }
+   ]
+  },
+  {
+   "old": "barni",
+   "new": "kupa",
+   "meaning": "blood",
+   "becomes_compound": null,
+   "forms": [
+    {
+     "role": "n",
+     "old": "barni",
+     "new": "kupa"
+    },
+    {
+     "role": "nn",
+     "old": "barnina",
+     "new": "kupana"
+    },
+    {
+     "role": "v",
+     "old": "barniba",
+     "new": "kupaka"
+    },
+    {
+     "role": "na",
+     "old": "barninasan",
+     "new": "kupanasan"
+    },
+    {
+     "role": "a",
+     "old": "barnisan",
+     "new": "kupasan"
+    }
+   ]
+  },
+  {
+   "old": "menme",
+   "new": "haza",
+   "meaning": "perspiration; bodily sweat",
+   "becomes_compound": null,
+   "forms": [
+    {
+     "role": "n",
+     "old": "menme",
+     "new": "haza"
+    },
+    {
+     "role": "v",
+     "old": "menmema",
+     "new": "hazaha"
+    },
+    {
+     "role": "a",
+     "old": "menmesan",
+     "new": "hazasan"
+    }
+   ]
+  },
+  {
+   "old": "supo",
+   "new": "goza",
+   "meaning": "mockery; ridicule",
+   "becomes_compound": null,
+   "forms": [
+    {
+     "role": "n",
+     "old": "supo",
+     "new": "goza"
+    },
+    {
+     "role": "an",
+     "old": "supoasa",
+     "new": "gozaasa"
+    },
+    {
+     "role": "nn",
+     "old": "supona",
+     "new": "gozana"
+    },
+    {
+     "role": "v",
+     "old": "suposia",
+     "new": "gozaga"
+    },
+    {
+     "role": "na",
+     "old": "suponasan",
+     "new": "gozanasan"
+    },
+    {
+     "role": "a",
+     "old": "suposan",
+     "new": "gozasan"
+    },
+    {
+     "role": "aa",
+     "old": "supoasasan",
+     "new": "gozaasasan"
+    }
+   ]
+  },
+  {
+   "old": "vorba",
+   "new": "duha",
+   "meaning": "Longing",
+   "becomes_compound": null,
+   "forms": [
+    {
+     "role": "n",
+     "old": "vorba",
+     "new": "duha"
+    },
+    {
+     "role": "an",
+     "old": "vorbaasa",
+     "new": "duhaasa"
+    },
+    {
+     "role": "nn",
+     "old": "vorbana",
+     "new": "duhana"
+    },
+    {
+     "role": "v",
+     "old": "vorbava",
+     "new": "duhada"
+    },
+    {
+     "role": "a",
+     "old": "vorbasan",
+     "new": "duhasan"
+    },
+    {
+     "role": "aa",
+     "old": "vorbaasasan",
+     "new": "duhaasasan"
+    }
+   ]
+  },
+  {
+   "old": "tilnu",
+   "new": "rupu",
+   "meaning": "waste; refuse; discarded output",
+   "becomes_compound": null,
+   "forms": [
+    {
+     "role": "n",
+     "old": "tilnu",
+     "new": "rupu"
+    },
+    {
+     "role": "v",
+     "old": "tilnuta",
+     "new": "rupura"
+    },
+    {
+     "role": "a",
+     "old": "tilnusan",
+     "new": "rupusan"
+    }
+   ]
+  },
+  {
+   "old": "leto",
+   "new": "cuza",
+   "meaning": "letter",
+   "becomes_compound": null,
+   "forms": [
+    {
+     "role": "n",
+     "old": "leto",
+     "new": "cuza"
+    },
+    {
+     "role": "v",
+     "old": "letola",
+     "new": "cuzaca"
+    },
+    {
+     "role": "a",
+     "old": "letosan",
+     "new": "cuzasan"
+    }
+   ]
+  },
+  {
+   "old": "rumne",
+   "new": "zupa",
+   "meaning": "room",
+   "becomes_compound": null,
+   "forms": [
+    {
+     "role": "n",
+     "old": "rumne",
+     "new": "zupa"
+    },
+    {
+     "role": "v",
+     "old": "rumnera",
+     "new": "zupaza"
+    },
+    {
+     "role": "a",
+     "old": "rumnesan",
+     "new": "zupasan"
+    }
+   ]
+  },
+  {
+   "old": "salta",
+   "new": "bezi",
+   "meaning": "salt",
+   "becomes_compound": null,
+   "forms": [
+    {
+     "role": "n",
+     "old": "salta",
+     "new": "bezi"
+    },
+    {
+     "role": "nn",
+     "old": "saltana",
+     "new": "bezina"
+    },
+    {
+     "role": "v",
+     "old": "saltasia",
+     "new": "beziba"
+    },
+    {
+     "role": "na",
+     "old": "saltanasan",
+     "new": "bezinasan"
+    },
+    {
+     "role": "a",
+     "old": "saltasan",
+     "new": "bezisan"
+    }
+   ]
+  },
+  {
+   "old": "nevlo",
+   "new": "fojo",
+   "meaning": "snow",
+   "becomes_compound": null,
+   "forms": [
+    {
+     "role": "n",
+     "old": "nevlo",
+     "new": "fojo"
+    },
+    {
+     "role": "an",
+     "old": "nevloasa",
+     "new": "fojoasa"
+    },
+    {
+     "role": "nn",
+     "old": "nevlona",
+     "new": "fojona"
+    },
+    {
+     "role": "v",
+     "old": "nevlonia",
+     "new": "fojofa"
+    },
+    {
+     "role": "na",
+     "old": "nevlonasan",
+     "new": "fojonasan"
+    },
+    {
+     "role": "a",
+     "old": "nevlosan",
+     "new": "fojosan"
+    },
+    {
+     "role": "aa",
+     "old": "nevloasasan",
+     "new": "fojoasasan"
+    }
+   ]
+  },
+  {
+   "old": "sulba",
+   "new": "sola",
+   "meaning": "sun",
+   "becomes_compound": null,
+   "forms": [
+    {
+     "role": "n",
+     "old": "sulba",
+     "new": "sola"
+    },
+    {
+     "role": "an",
+     "old": "sulbaasa",
+     "new": "solaasa"
+    },
+    {
+     "role": "nn",
+     "old": "sulbana",
+     "new": "solana"
+    },
+    {
+     "role": "v",
+     "old": "sulbasia",
+     "new": "solasia"
+    },
+    {
+     "role": "na",
+     "old": "sulbanasan",
+     "new": "solanasan"
+    },
+    {
+     "role": "a",
+     "old": "sulbasan",
+     "new": "solasan"
+    },
+    {
+     "role": "aa",
+     "old": "sulbaasasan",
+     "new": "solaasasan"
+    }
+   ]
+  },
+  {
+   "old": "tamra",
+   "new": "kezu",
+   "meaning": "land",
+   "becomes_compound": null,
+   "forms": [
+    {
+     "role": "n",
+     "old": "tamra",
+     "new": "kezu"
+    },
+    {
+     "role": "v",
+     "old": "tamrata",
+     "new": "kezuka"
+    },
+    {
+     "role": "a",
+     "old": "tamrasan",
+     "new": "kezusan"
+    }
+   ]
+  },
+  {
+   "old": "yelfa",
+   "new": "boji",
+   "meaning": "ice",
+   "becomes_compound": null,
+   "forms": [
+    {
+     "role": "n",
+     "old": "yelfa",
+     "new": "boji"
+    },
+    {
+     "role": "an",
+     "old": "yelfaasa",
+     "new": "bojiasa"
+    },
+    {
+     "role": "nn",
+     "old": "yelfana",
+     "new": "bojina"
+    },
+    {
+     "role": "v",
+     "old": "yelfaya",
+     "new": "bojiba"
+    },
+    {
+     "role": "na",
+     "old": "yelfanasan",
+     "new": "bojinasan"
+    },
+    {
+     "role": "a",
+     "old": "yelfasan",
+     "new": "bojisan"
+    },
+    {
+     "role": "aa",
+     "old": "yelfaasasan",
+     "new": "bojiasasan"
+    }
+   ]
+  },
+  {
+   "old": "nerpo",
+   "new": "vuzi",
+   "meaning": "expectation; anticipation",
+   "becomes_compound": null,
+   "forms": [
+    {
+     "role": "n",
+     "old": "nerpo",
+     "new": "vuzi"
+    },
+    {
+     "role": "nn",
+     "old": "nerpona",
+     "new": "vuzina"
+    },
+    {
+     "role": "v",
+     "old": "nerponia",
+     "new": "vuziva"
+    },
+    {
+     "role": "na",
+     "old": "nerponasan",
+     "new": "vuzinasan"
+    },
+    {
+     "role": "a",
+     "old": "nerposan",
+     "new": "vuzisan"
+    }
+   ]
+  },
+  {
+   "old": "ranbe",
+   "new": "doza",
+   "meaning": "strength",
+   "becomes_compound": null,
+   "forms": [
+    {
+     "role": "n",
+     "old": "ranbe",
+     "new": "doza"
+    },
+    {
+     "role": "an",
+     "old": "ranbeasa",
+     "new": "dozaasa"
+    },
+    {
+     "role": "nn",
+     "old": "ranbena",
+     "new": "dozana"
+    },
+    {
+     "role": "v",
+     "old": "ranbera",
+     "new": "dozada"
+    },
+    {
+     "role": "na",
+     "old": "ranbenasan",
+     "new": "dozanasan"
+    },
+    {
+     "role": "a",
+     "old": "ranbesan",
+     "new": "dozasan"
+    },
+    {
+     "role": "aa",
+     "old": "ranbeasasan",
+     "new": "dozaasasan"
+    }
+   ]
+  },
+  {
+   "old": "velbi",
+   "new": "vugo",
+   "meaning": "speed",
+   "becomes_compound": null,
+   "forms": [
+    {
+     "role": "n",
+     "old": "velbi",
+     "new": "vugo"
+    },
+    {
+     "role": "nn",
+     "old": "velbina",
+     "new": "vugona"
+    },
+    {
+     "role": "v",
+     "old": "velbiva",
+     "new": "vugova"
+    },
+    {
+     "role": "na",
+     "old": "velbinasan",
+     "new": "vugonasan"
+    },
+    {
+     "role": "a",
+     "old": "velbisan",
+     "new": "vugosan"
+    }
+   ]
+  },
+  {
+   "old": "silro",
+   "new": "puzu",
+   "meaning": "secret",
+   "becomes_compound": null,
+   "forms": [
+    {
+     "role": "n",
+     "old": "silro",
+     "new": "puzu"
+    },
+    {
+     "role": "an",
+     "old": "silroasa",
+     "new": "puzuasa"
+    },
+    {
+     "role": "nn",
+     "old": "silrona",
+     "new": "puzuna"
+    },
+    {
+     "role": "v",
+     "old": "silrosia",
+     "new": "puzupa"
+    },
+    {
+     "role": "na",
+     "old": "silronasan",
+     "new": "puzunasan"
+    },
+    {
+     "role": "a",
+     "old": "silrosan",
+     "new": "puzusan"
+    },
+    {
+     "role": "aa",
+     "old": "silroasasan",
+     "new": "puzuasasan"
+    }
+   ]
+  },
+  {
+   "old": "nilvu",
+   "new": "foji",
+   "meaning": "winter",
+   "becomes_compound": null,
+   "forms": [
+    {
+     "role": "n",
+     "old": "nilvu",
+     "new": "foji"
+    },
+    {
+     "role": "an",
+     "old": "nilvuasa",
+     "new": "fojiasa"
+    },
+    {
+     "role": "nn",
+     "old": "nilvuna",
+     "new": "fojina"
+    },
+    {
+     "role": "v",
+     "old": "nilvunia",
+     "new": "fojifa"
+    },
+    {
+     "role": "a",
+     "old": "nilvusan",
+     "new": "fojisan"
+    },
+    {
+     "role": "aa",
+     "old": "nilvuasasan",
+     "new": "fojiasasan"
+    }
+   ]
+  },
+  {
+   "old": "vebo",
+   "new": "faji",
+   "meaning": "spring",
+   "becomes_compound": null,
+   "forms": [
+    {
+     "role": "n",
+     "old": "vebo",
+     "new": "faji"
+    },
+    {
+     "role": "an",
+     "old": "veboasa",
+     "new": "fajiasa"
+    },
+    {
+     "role": "nn",
+     "old": "vebona",
+     "new": "fajina"
+    },
+    {
+     "role": "v",
+     "old": "vebova",
+     "new": "fajifa"
+    },
+    {
+     "role": "a",
+     "old": "vebosan",
+     "new": "fajisan"
+    },
+    {
+     "role": "aa",
+     "old": "veboasasan",
+     "new": "fajiasasan"
+    }
+   ]
+  },
+  {
+   "old": "taha",
+   "new": "kezupago",
+   "meaning": "country",
+   "becomes_compound": "kezu+pago",
+   "forms": [
+    {
+     "role": "n",
+     "old": "taha",
+     "new": "kezupago"
+    },
+    {
+     "role": "v",
+     "old": "tahata",
+     "new": "kezupagoka"
+    },
+    {
+     "role": "a",
+     "old": "tahasan",
+     "new": "kezupagosan"
+    }
+   ]
+  },
+  {
+   "old": "zirme",
+   "new": "zayu",
+   "meaning": "magic; charm",
+   "becomes_compound": null,
+   "forms": [
+    {
+     "role": "n",
+     "old": "zirme",
+     "new": "zayu"
+    },
+    {
+     "role": "an",
+     "old": "zirmeasa",
+     "new": "zayuasa"
+    },
+    {
+     "role": "v",
+     "old": "zirmeza",
+     "new": "zayuza"
+    },
+    {
+     "role": "a",
+     "old": "zirmesan",
+     "new": "zayusan"
+    },
+    {
+     "role": "aa",
+     "old": "zirmeasasan",
+     "new": "zayuasasan"
+    }
+   ]
+  }
+ ],
+ "compounds": [
+  {
+   "old": "famatilma",
+   "new": "famamiga",
+   "meaning": "kinship; family relation",
+   "old_parts": "fama+tilma",
+   "forms": [
+    {
+     "role": "n",
+     "old": "famatilma",
+     "new": "famamiga"
+    },
+    {
+     "role": "a",
+     "old": "famatilmasan",
+     "new": "famamigasan"
+    }
+   ]
+  },
+  {
+   "old": "semvileto",
+   "new": "semvicuza",
+   "meaning": "licence; written permit",
+   "old_parts": "semvi+leto",
+   "forms": [
+    {
+     "role": "n",
+     "old": "semvileto",
+     "new": "semvicuza"
+    }
+   ]
+  },
+  {
+   "old": "yordoseno",
+   "new": "pukuseno",
+   "meaning": "conclusion (of an argument)",
+   "old_parts": "yordo+seno",
+   "forms": [
+    {
+     "role": "n",
+     "old": "yordoseno",
+     "new": "pukuseno"
+    },
+    {
+     "role": "v",
+     "old": "yordosenoya",
+     "new": "pukusenopa"
+    },
+    {
+     "role": "a",
+     "old": "yordosenosan",
+     "new": "pukusenosan"
+    }
+   ]
+  },
+  {
+   "old": "yelfasenru",
+   "new": "bojisenru",
+   "meaning": "frost on skin; cold crystals against the body",
+   "old_parts": "yelfa+senru",
+   "forms": [
+    {
+     "role": "n",
+     "old": "yelfasenru",
+     "new": "bojisenru"
+    }
+   ]
+  },
+  {
+   "old": "conoleto",
+   "new": "conocuza",
+   "meaning": "account book; ledger",
+   "old_parts": "cono+leto",
+   "forms": [
+    {
+     "role": "n",
+     "old": "conoleto",
+     "new": "conocuza"
+    },
+    {
+     "role": "v",
+     "old": "conoletoca",
+     "new": "conocuzaca"
+    }
+   ]
+  },
+  {
+   "old": "pomlileto",
+   "new": "pomlicuza",
+   "meaning": "contract; written agreement",
+   "old_parts": "pomli+leto",
+   "forms": [
+    {
+     "role": "n",
+     "old": "pomlileto",
+     "new": "pomlicuza"
+    },
+    {
+     "role": "an",
+     "old": "pomliletoasa",
+     "new": "pomlicuzaasa"
+    },
+    {
+     "role": "v",
+     "old": "pomliletopa",
+     "new": "pomlicuzapa"
+    },
+    {
+     "role": "a",
+     "old": "pomliletosan",
+     "new": "pomlicuzasan"
+    }
+   ]
+  },
+  {
+   "old": "silrocono",
+   "new": "puzucono",
+   "meaning": "bribe",
+   "old_parts": "silro+cono",
+   "forms": [
+    {
+     "role": "n",
+     "old": "silrocono",
+     "new": "puzucono"
+    },
+    {
+     "role": "v",
+     "old": "silroconosia",
+     "new": "puzuconopa"
+    },
+    {
+     "role": "a",
+     "old": "silroconosan",
+     "new": "puzuconosan"
+    }
+   ]
+  },
+  {
+   "old": "zirmelumi",
+   "new": "zayulumi",
+   "meaning": "witchlight; a light made by magic",
+   "old_parts": "zirme+lumi",
+   "forms": [
+    {
+     "role": "n",
+     "old": "zirmelumi",
+     "new": "zayulumi"
+    }
+   ]
+  },
+  {
+   "old": "harmavurlo",
+   "new": "harmadesi",
+   "meaning": "temptation",
+   "old_parts": "harma+vurlo",
+   "forms": [
+    {
+     "role": "n",
+     "old": "harmavurlo",
+     "new": "harmadesi"
+    },
+    {
+     "role": "v",
+     "old": "harmavurloha",
+     "new": "harmadesiha"
+    }
+   ]
+  },
+  {
+   "old": "nilvunullo",
+   "new": "fojinullo",
+   "meaning": "the longest night; midwinter",
+   "old_parts": "nilvu+nullo",
+   "forms": [
+    {
+     "role": "n",
+     "old": "nilvunullo",
+     "new": "fojinullo"
+    }
+   ]
+  },
+  {
+   "old": "tahalira",
+   "new": "kezupagolira",
+   "meaning": "anthem",
+   "old_parts": "taha+lira",
+   "forms": [
+    {
+     "role": "n",
+     "old": "tahalira",
+     "new": "kezupagolira"
+    }
+   ]
+  },
+  {
+   "old": "loterovurlo",
+   "new": "loterodesi",
+   "meaning": "envy",
+   "old_parts": "lotero+vurlo",
+   "forms": [
+    {
+     "role": "n",
+     "old": "loterovurlo",
+     "new": "loterodesi"
+    },
+    {
+     "role": "nn",
+     "old": "loterovurlona",
+     "new": "loterodesina"
+    },
+    {
+     "role": "v",
+     "old": "loterovurlola",
+     "new": "loterodesila"
+    },
+    {
+     "role": "na",
+     "old": "loterovurlonasan",
+     "new": "loterodesinasan"
+    },
+    {
+     "role": "a",
+     "old": "loterovurlosan",
+     "new": "loterodesisan"
+    }
+   ]
+  },
+  {
+   "old": "velbilavi",
+   "new": "vugolavi",
+   "meaning": "excitement",
+   "old_parts": "velbi+lavi",
+   "forms": [
+    {
+     "role": "n",
+     "old": "velbilavi",
+     "new": "vugolavi"
+    },
+    {
+     "role": "nn",
+     "old": "velbilavina",
+     "new": "vugolavina"
+    },
+    {
+     "role": "v",
+     "old": "velbilaviva",
+     "new": "vugolaviva"
+    },
+    {
+     "role": "a",
+     "old": "velbilavisan",
+     "new": "vugolavisan"
+    }
+   ]
+  },
+  {
+   "old": "loterovorba",
+   "new": "loteroduha",
+   "meaning": "social envy",
+   "old_parts": "lotero+vorba",
+   "forms": [
+    {
+     "role": "n",
+     "old": "loterovorba",
+     "new": "loteroduha"
+    }
+   ]
+  },
+  {
+   "old": "surutilma",
+   "new": "surumiga",
+   "meaning": "empathy; sympathy",
+   "old_parts": "suru+tilma",
+   "forms": [
+    {
+     "role": "n",
+     "old": "surutilma",
+     "new": "surumiga"
+    },
+    {
+     "role": "a",
+     "old": "surutilmasan",
+     "new": "surumigasan"
+    }
+   ]
+  },
+  {
+   "old": "vulraranbe",
+   "new": "vulradoza",
+   "meaning": "resilience",
+   "old_parts": "vulra+ranbe",
+   "forms": [
+    {
+     "role": "n",
+     "old": "vulraranbe",
+     "new": "vulradoza"
+    },
+    {
+     "role": "a",
+     "old": "vulraranbesan",
+     "new": "vulradozasan"
+    }
+   ]
+  },
+  {
+   "old": "barnirivla",
+   "new": "kuparivla",
+   "meaning": "circulation; the flow of blood",
+   "old_parts": "barni+rivla",
+   "forms": [
+    {
+     "role": "n",
+     "old": "barnirivla",
+     "new": "kuparivla"
+    }
+   ]
+  },
+  {
+   "old": "vorbasolli",
+   "new": "duhasolli",
+   "meaning": "loneliness; solitude that longs",
+   "old_parts": "vorba+solli",
+   "forms": [
+    {
+     "role": "n",
+     "old": "vorbasolli",
+     "new": "duhasolli"
+    }
+   ]
+  },
+  {
+   "old": "tilnukova",
+   "new": "rupukova",
+   "meaning": "waste bin",
+   "old_parts": "tilnu+kova",
+   "forms": [
+    {
+     "role": "n",
+     "old": "tilnukova",
+     "new": "rupukova"
+    }
+   ]
+  },
+  {
+   "old": "tilnupago",
+   "new": "rupupago",
+   "meaning": "rubbish dump",
+   "old_parts": "tilnu+pago",
+   "forms": [
+    {
+     "role": "n",
+     "old": "tilnupago",
+     "new": "rupupago"
+    }
+   ]
+  },
+  {
+   "old": "yugetilnu",
+   "new": "yugerupu",
+   "meaning": "body waste",
+   "old_parts": "yuge+tilnu",
+   "forms": [
+    {
+     "role": "n",
+     "old": "yugetilnu",
+     "new": "yugerupu"
+    }
+   ]
+  },
+  {
+   "old": "yugetilnubiti",
+   "new": "yugerupubiti",
+   "meaning": "toilet fixture",
+   "old_parts": "yugetilnu+biti",
+   "forms": [
+    {
+     "role": "n",
+     "old": "yugetilnubiti",
+     "new": "yugerupubiti"
+    }
+   ]
+  },
+  {
+   "old": "zarmobiti",
+   "new": "hatabiti",
+   "meaning": "hammer",
+   "old_parts": "zarmo+biti",
+   "forms": [
+    {
+     "role": "n",
+     "old": "zarmobiti",
+     "new": "hatabiti"
+    }
+   ]
+  },
+  {
+   "old": "devotilma",
+   "new": "devomiga",
+   "meaning": "mutual trust",
+   "old_parts": "devo+tilma",
+   "forms": [
+    {
+     "role": "n",
+     "old": "devotilma",
+     "new": "devomiga"
+    }
+   ]
+  },
+  {
+   "old": "maretilma",
+   "new": "maremiga",
+   "meaning": "motherhood",
+   "old_parts": "mare+tilma",
+   "forms": [
+    {
+     "role": "n",
+     "old": "maretilma",
+     "new": "maremiga"
+    }
+   ]
+  },
+  {
+   "old": "pilotilma",
+   "new": "pilomiga",
+   "meaning": "fatherhood",
+   "old_parts": "pilo+tilma",
+   "forms": [
+    {
+     "role": "n",
+     "old": "pilotilma",
+     "new": "pilomiga"
+    }
+   ]
+  },
+  {
+   "old": "soratilma",
+   "new": "soramiga",
+   "meaning": "friendship",
+   "old_parts": "sora+tilma",
+   "forms": [
+    {
+     "role": "n",
+     "old": "soratilma",
+     "new": "soramiga"
+    }
+   ]
+  },
+  {
+   "old": "barnivolme",
+   "new": "kupavolme",
+   "meaning": "vampire",
+   "old_parts": "barni+volme",
+   "forms": [
+    {
+     "role": "n",
+     "old": "barnivolme",
+     "new": "kupavolme"
+    }
+   ]
+  },
+  {
+   "old": "daigozirme",
+   "new": "daigozayu",
+   "meaning": "necromancy",
+   "old_parts": "daigo+zirme",
+   "forms": [
+    {
+     "role": "n",
+     "old": "daigozirme",
+     "new": "daigozayu"
+    }
+   ]
+  },
+  {
+   "old": "lunovolda",
+   "new": "lunolarbopagobudi",
+   "meaning": "werewolf",
+   "old_parts": "luno+volda",
+   "forms": [
+    {
+     "role": "n",
+     "old": "lunovolda",
+     "new": "lunolarbopagobudi"
+    }
+   ]
+  },
+  {
+   "old": "narvozirme",
+   "new": "narvozayu",
+   "meaning": "dark magic; sorcery",
+   "old_parts": "narvo+zirme",
+   "forms": [
+    {
+     "role": "n",
+     "old": "narvozirme",
+     "new": "narvozayu"
+    },
+    {
+     "role": "a",
+     "old": "narvozirmesan",
+     "new": "narvozayusan"
+    }
+   ]
+  },
+  {
+   "old": "noruzirme",
+   "new": "noruzayu",
+   "meaning": "illusion; dream-magic",
+   "old_parts": "noru+zirme",
+   "forms": [
+    {
+     "role": "n",
+     "old": "noruzirme",
+     "new": "noruzayu"
+    }
+   ]
+  },
+  {
+   "old": "sadotamra",
+   "new": "sadokezu",
+   "meaning": "the shadowlands",
+   "old_parts": "sado+tamra",
+   "forms": [
+    {
+     "role": "n",
+     "old": "sadotamra",
+     "new": "sadokezu"
+    }
+   ]
+  },
+  {
+   "old": "zirmebiti",
+   "new": "zayubiti",
+   "meaning": "wand; staff",
+   "old_parts": "zirme+biti",
+   "forms": [
+    {
+     "role": "n",
+     "old": "zirmebiti",
+     "new": "zayubiti"
+    }
+   ]
+  },
+  {
+   "old": "zirmebulli",
+   "new": "zayubulli",
+   "meaning": "spellbook; grimoire",
+   "old_parts": "zirme+bulli",
+   "forms": [
+    {
+     "role": "n",
+     "old": "zirmebulli",
+     "new": "zayubulli"
+    }
+   ]
+  },
+  {
+   "old": "zirmeherba",
+   "new": "zayuherba",
+   "meaning": "enchanted herb; mandrake",
+   "old_parts": "zirme+herba",
+   "forms": [
+    {
+     "role": "n",
+     "old": "zirmeherba",
+     "new": "zayuherba"
+    }
+   ]
+  },
+  {
+   "old": "zirmelazu",
+   "new": "zayulazu",
+   "meaning": "familiar; a spirit-animal companion",
+   "old_parts": "zirme+lazu",
+   "forms": [
+    {
+     "role": "n",
+     "old": "zirmelazu",
+     "new": "zayulazu"
+    }
+   ]
+  },
+  {
+   "old": "zirmelira",
+   "new": "zayulira",
+   "meaning": "spellsong; enchantment sung aloud",
+   "old_parts": "zirme+lira",
+   "forms": [
+    {
+     "role": "n",
+     "old": "zirmelira",
+     "new": "zayulira"
+    },
+    {
+     "role": "v",
+     "old": "zirmeliraza",
+     "new": "zayuliraza"
+    }
+   ]
+  },
+  {
+   "old": "zirmemiru",
+   "new": "zayumiru",
+   "meaning": "potion; elixir",
+   "old_parts": "zirme+miru",
+   "forms": [
+    {
+     "role": "n",
+     "old": "zirmemiru",
+     "new": "zayumiru"
+    }
+   ]
+  },
+  {
+   "old": "zirmerinba",
+   "new": "zayurinba",
+   "meaning": "magic ring",
+   "old_parts": "zirme+rinba",
+   "forms": [
+    {
+     "role": "n",
+     "old": "zirmerinba",
+     "new": "zayurinba"
+    }
+   ]
+  },
+  {
+   "old": "zirmeseno",
+   "new": "zayuseno",
+   "meaning": "spell; incantation",
+   "old_parts": "zirme+seno",
+   "forms": [
+    {
+     "role": "n",
+     "old": "zirmeseno",
+     "new": "zayuseno"
+    }
+   ]
+  },
+  {
+   "old": "zirmesolo",
+   "new": "zayusolo",
+   "meaning": "philosopher’s stone; a stone of power",
+   "old_parts": "zirme+solo",
+   "forms": [
+    {
+     "role": "n",
+     "old": "zirmesolo",
+     "new": "zayusolo"
+    }
+   ]
+  },
+  {
+   "old": "zirmetelne",
+   "new": "zayutelne",
+   "meaning": "fairy tale",
+   "old_parts": "zirme+telne",
+   "forms": [
+    {
+     "role": "n",
+     "old": "zirmetelne",
+     "new": "zayutelne"
+    }
+   ]
+  },
+  {
+   "old": "balbudomlu",
+   "new": "bakodomlu",
+   "meaning": "ruins",
+   "old_parts": "balbu+domlu",
+   "forms": [
+    {
+     "role": "n",
+     "old": "balbudomlu",
+     "new": "bakodomlu"
+    }
+   ]
+  },
+  {
+   "old": "kaldorumne",
+   "new": "kaldozupa",
+   "meaning": "dungeon; cell",
+   "old_parts": "kaldo+rumne",
+   "forms": [
+    {
+     "role": "n",
+     "old": "kaldorumne",
+     "new": "kaldozupa"
+    }
+   ]
+  },
+  {
+   "old": "polvataha",
+   "new": "polvakezupago",
+   "meaning": "empire",
+   "old_parts": "polva+taha",
+   "forms": [
+    {
+     "role": "n",
+     "old": "polvataha",
+     "new": "polvakezupago"
+    },
+    {
+     "role": "a",
+     "old": "polvatahasan",
+     "new": "polvakezupagosan"
+    }
+   ]
+  },
+  {
+   "old": "silrokarko",
+   "new": "puzukarko",
+   "meaning": "assassination",
+   "old_parts": "silro+karko",
+   "forms": [
+    {
+     "role": "n",
+     "old": "silrokarko",
+     "new": "puzukarko"
+    },
+    {
+     "role": "v",
+     "old": "silrokarkosia",
+     "new": "puzukarkopa"
+    }
+   ]
+  },
+  {
+   "old": "tomnurumne",
+   "new": "tomnuzupa",
+   "meaning": "crypt",
+   "old_parts": "tomnu+rumne",
+   "forms": [
+    {
+     "role": "n",
+     "old": "tomnurumne",
+     "new": "tomnuzupa"
+    }
+   ]
+  },
+  {
+   "old": "vayeleto",
+   "new": "vayecuza",
+   "meaning": "banner; flag",
+   "old_parts": "vaye+leto",
+   "forms": [
+    {
+     "role": "n",
+     "old": "vayeleto",
+     "new": "vayecuza"
+    }
+   ]
+  },
+  {
+   "old": "yebaleto",
+   "new": "yebacuza",
+   "meaning": "treaty; pact",
+   "old_parts": "yeba+leto",
+   "forms": [
+    {
+     "role": "n",
+     "old": "yebaleto",
+     "new": "yebacuza"
+    }
+   ]
+  },
+  {
+   "old": "silrofolni",
+   "new": "puzufolni",
+   "meaning": "hidden blossom; a flower sheltered from view",
+   "old_parts": "silro+folni",
+   "forms": [
+    {
+     "role": "n",
+     "old": "silrofolni",
+     "new": "puzufolni"
+    }
+   ]
+  },
+  {
+   "old": "sulbafolni",
+   "new": "solafolni",
+   "meaning": "sunflower; bright blossom turning toward sunlight",
+   "old_parts": "sulba+folni",
+   "forms": [
+    {
+     "role": "n",
+     "old": "sulbafolni",
+     "new": "solafolni"
+    }
+   ]
+  },
+  {
+   "old": "tamrasenru",
+   "new": "kezusenru",
+   "meaning": "moss; soft ground growth",
+   "old_parts": "tamra+senru",
+   "forms": [
+    {
+     "role": "n",
+     "old": "tamrasenru",
+     "new": "kezusenru"
+    },
+    {
+     "role": "v",
+     "old": "tamrasenruta",
+     "new": "kezusenruka"
+    },
+    {
+     "role": "a",
+     "old": "tamrasenrusan",
+     "new": "kezusenrusan"
+    }
+   ]
+  },
+  {
+   "old": "barnirale",
+   "new": "kuparale",
+   "meaning": "pulse",
+   "old_parts": "barni+rale",
+   "forms": [
+    {
+     "role": "n",
+     "old": "barnirale",
+     "new": "kuparale"
+    },
+    {
+     "role": "v",
+     "old": "barniraleba",
+     "new": "kuparaleka"
+    }
+   ]
+  },
+  {
+   "old": "ranbeyuge",
+   "new": "dozayuge",
+   "meaning": "muscle",
+   "old_parts": "ranbe+yuge",
+   "forms": [
+    {
+     "role": "n",
+     "old": "ranbeyuge",
+     "new": "dozayuge"
+    }
+   ]
+  },
+  {
+   "old": "havlibalbu",
+   "new": "havlibako",
+   "meaning": "cough",
+   "old_parts": "havli+balbu",
+   "forms": [
+    {
+     "role": "n",
+     "old": "havlibalbu",
+     "new": "havlibako"
+    },
+    {
+     "role": "v",
+     "old": "havlibalbuha",
+     "new": "havlibakoha"
+    }
+   ]
+  },
+  {
+   "old": "kendevurlo",
+   "new": "kendedesi",
+   "meaning": "ambition",
+   "old_parts": "kende+vurlo",
+   "forms": [
+    {
+     "role": "n",
+     "old": "kendevurlo",
+     "new": "kendedesi"
+    },
+    {
+     "role": "a",
+     "old": "kendevurlosan",
+     "new": "kendedesisan"
+    }
+   ]
+  },
+  {
+   "old": "yugevurlo",
+   "new": "yugedesi",
+   "meaning": "lust; desire of the body",
+   "old_parts": "yuge+vurlo",
+   "forms": [
+    {
+     "role": "n",
+     "old": "yugevurlo",
+     "new": "yugedesi"
+    }
+   ]
+  },
+  {
+   "old": "buvokova",
+   "new": "buzakova",
+   "meaning": "cup; drinking vessel",
+   "old_parts": "buvo+kova",
+   "forms": [
+    {
+     "role": "n",
+     "old": "buvokova",
+     "new": "buzakova"
+    },
+    {
+     "role": "v",
+     "old": "buvokovaba",
+     "new": "buzakovaba"
+    },
+    {
+     "role": "a",
+     "old": "buvokovasan",
+     "new": "buzakovasan"
+    }
+   ]
+  },
+  {
+   "old": "cemoleto",
+   "new": "cemocuza",
+   "meaning": "recipe",
+   "old_parts": "cemo+leto",
+   "forms": [
+    {
+     "role": "n",
+     "old": "cemoleto",
+     "new": "cemocuza"
+    },
+    {
+     "role": "v",
+     "old": "cemoletoca",
+     "new": "cemocuzaca"
+    }
+   ]
+  },
+  {
+   "old": "ranbegerma",
+   "new": "dozagerma",
+   "meaning": "iron",
+   "old_parts": "ranbe+germa",
+   "forms": [
+    {
+     "role": "n",
+     "old": "ranbegerma",
+     "new": "dozagerma"
+    },
+    {
+     "role": "a",
+     "old": "ranbegermasan",
+     "new": "dozagermasan"
+    }
+   ]
+  },
+  {
+   "old": "biotamra",
+   "new": "biokezu",
+   "meaning": "soil",
+   "old_parts": "bio+tamra",
+   "forms": [
+    {
+     "role": "n",
+     "old": "biotamra",
+     "new": "biokezu"
+    }
+   ]
+  },
+  {
+   "old": "mirutamra",
+   "new": "mirukezu",
+   "meaning": "mud",
+   "old_parts": "miru+tamra",
+   "forms": [
+    {
+     "role": "n",
+     "old": "mirutamra",
+     "new": "mirukezu"
+    }
+   ]
+  },
+  {
+   "old": "senotilma",
+   "new": "senomiga",
+   "meaning": "spoken dialogue; conversation",
+   "old_parts": "seno+tilma",
+   "forms": [
+    {
+     "role": "n",
+     "old": "senotilma",
+     "new": "senomiga"
+    }
+   ]
+  },
+  {
+   "old": "nerpolordi",
+   "new": "vuzilordi",
+   "meaning": "preparation",
+   "old_parts": "nerpo+lordi",
+   "forms": [
+    {
+     "role": "n",
+     "old": "nerpolordi",
+     "new": "vuzilordi"
+    },
+    {
+     "role": "v",
+     "old": "nerpolordinia",
+     "new": "vuzilordiva"
+    },
+    {
+     "role": "a",
+     "old": "nerpolordisan",
+     "new": "vuzilordisan"
+    }
+   ]
+  },
+  {
+   "old": "tamralalle",
+   "new": "kezulalle",
+   "meaning": "hole; pit",
+   "old_parts": "tamra+lalle",
+   "forms": [
+    {
+     "role": "n",
+     "old": "tamralalle",
+     "new": "kezulalle"
+    }
+   ]
+  },
+  {
+   "old": "farvitamra",
+   "new": "farvikezu",
+   "meaning": "wilderness",
+   "old_parts": "farvi+tamra",
+   "forms": [
+    {
+     "role": "n",
+     "old": "farvitamra",
+     "new": "farvikezu"
+    },
+    {
+     "role": "a",
+     "old": "farvitamrasan",
+     "new": "farvikezusan"
+    }
+   ]
+  },
+  {
+   "old": "monrurumne",
+   "new": "monruzupa",
+   "meaning": "cave",
+   "old_parts": "monru+rumne",
+   "forms": [
+    {
+     "role": "n",
+     "old": "monrurumne",
+     "new": "monruzupa"
+    },
+    {
+     "role": "v",
+     "old": "monrurumnema",
+     "new": "monruzupama"
+    },
+    {
+     "role": "a",
+     "old": "monrurumnesan",
+     "new": "monruzupasan"
+    }
+   ]
+  },
+  {
+   "old": "nevlosonbu",
+   "new": "fojosonbu",
+   "meaning": "the hush of falling snow",
+   "old_parts": "nevlo+sonbu",
+   "forms": [
+    {
+     "role": "n",
+     "old": "nevlosonbu",
+     "new": "fojosonbu"
+    }
+   ]
+  },
+  {
+   "old": "sevutamra",
+   "new": "sevukezu",
+   "meaning": "island; isle",
+   "old_parts": "sevu+tamra",
+   "forms": [
+    {
+     "role": "n",
+     "old": "sevutamra",
+     "new": "sevukezu"
+    },
+    {
+     "role": "v",
+     "old": "sevutamrasia",
+     "new": "sevukezusia"
+    },
+    {
+     "role": "a",
+     "old": "sevutamrasan",
+     "new": "sevukezusan"
+    }
+   ]
+  },
+  {
+   "old": "tilnuherba",
+   "new": "rupuherba",
+   "meaning": "weed",
+   "old_parts": "tilnu+herba",
+   "forms": [
+    {
+     "role": "n",
+     "old": "tilnuherba",
+     "new": "rupuherba"
+    }
+   ]
+  },
+  {
+   "old": "yelfamirunulu",
+   "new": "bojimirunulu",
+   "meaning": "glacier",
+   "old_parts": "yelfa+mirunulu",
+   "forms": [
+    {
+     "role": "n",
+     "old": "yelfamirunulu",
+     "new": "bojimirunulu"
+    }
+   ]
+  },
+  {
+   "old": "yelfamonru",
+   "new": "bojimonru",
+   "meaning": "iceberg",
+   "old_parts": "yelfa+monru",
+   "forms": [
+    {
+     "role": "n",
+     "old": "yelfamonru",
+     "new": "bojimonru"
+    }
+   ]
+  },
+  {
+   "old": "sulbasado",
+   "new": "solasado",
+   "meaning": "solar eclipse",
+   "old_parts": "sulba+sado",
+   "forms": [
+    {
+     "role": "n",
+     "old": "sulbasado",
+     "new": "solasado"
+    }
+   ]
+  },
+  {
+   "old": "tamralelde",
+   "new": "kezulelde",
+   "meaning": "cliff",
+   "old_parts": "tamra+lelde",
+   "forms": [
+    {
+     "role": "n",
+     "old": "tamralelde",
+     "new": "kezulelde"
+    }
+   ]
+  },
+  {
+   "old": "tamramiru",
+   "new": "kezumiru",
+   "meaning": "lake",
+   "old_parts": "tamra+miru",
+   "forms": [
+    {
+     "role": "n",
+     "old": "tamramiru",
+     "new": "kezumiru"
+    }
+   ]
+  },
+  {
+   "old": "tamrasovla",
+   "new": "kezusovla",
+   "meaning": "landscape",
+   "old_parts": "tamra+sovla",
+   "forms": [
+    {
+     "role": "n",
+     "old": "tamrasovla",
+     "new": "kezusovla"
+    }
+   ]
+  },
+  {
+   "old": "sulbalumra",
+   "new": "solalumra",
+   "meaning": "sunrise",
+   "old_parts": "sulba+lumra",
+   "forms": [
+    {
+     "role": "n",
+     "old": "sulbalumra",
+     "new": "solalumra"
+    }
+   ]
+  },
+  {
+   "old": "sulbanevra",
+   "new": "solanevra",
+   "meaning": "sunset",
+   "old_parts": "sulba+nevra",
+   "forms": [
+    {
+     "role": "n",
+     "old": "sulbanevra",
+     "new": "solanevra"
+    }
+   ]
+  },
+  {
+   "old": "jubarumne",
+   "new": "jubazupa",
+   "meaning": "treasure chamber; gift-room",
+   "old_parts": "juba+rumne",
+   "forms": [
+    {
+     "role": "n",
+     "old": "jubarumne",
+     "new": "jubazupa"
+    },
+    {
+     "role": "an",
+     "old": "jubarumneasa",
+     "new": "jubazupaasa"
+    },
+    {
+     "role": "nn",
+     "old": "jubarumnena",
+     "new": "jubazupana"
+    },
+    {
+     "role": "v",
+     "old": "jubarumneja",
+     "new": "jubazupaja"
+    },
+    {
+     "role": "na",
+     "old": "jubarumnenasan",
+     "new": "jubazupanasan"
+    },
+    {
+     "role": "a",
+     "old": "jubarumnesan",
+     "new": "jubazupasan"
+    },
+    {
+     "role": "aa",
+     "old": "jubarumneasasan",
+     "new": "jubazupaasasan"
+    }
+   ]
+  },
+  {
+   "old": "nevlosolo",
+   "new": "fojosolo",
+   "meaning": "snowball; a packed lump of snow",
+   "old_parts": "nevlo+solo",
+   "forms": [
+    {
+     "role": "n",
+     "old": "nevlosolo",
+     "new": "fojosolo"
+    },
+    {
+     "role": "v",
+     "old": "nevlosolonia",
+     "new": "fojosolofa"
+    },
+    {
+     "role": "a",
+     "old": "nevlosolosan",
+     "new": "fojosolosan"
+    }
+   ]
+  },
+  {
+   "old": "nimuvorba",
+   "new": "nimuduha",
+   "meaning": "homesickness",
+   "old_parts": "nimu+vorba",
+   "forms": [
+    {
+     "role": "n",
+     "old": "nimuvorba",
+     "new": "nimuduha"
+    },
+    {
+     "role": "an",
+     "old": "nimuvorbaasa",
+     "new": "nimuduhaasa"
+    },
+    {
+     "role": "nn",
+     "old": "nimuvorbana",
+     "new": "nimuduhana"
+    },
+    {
+     "role": "v",
+     "old": "nimuvorbania",
+     "new": "nimuduhania"
+    },
+    {
+     "role": "na",
+     "old": "nimuvorbanasan",
+     "new": "nimuduhanasan"
+    },
+    {
+     "role": "a",
+     "old": "nimuvorbasan",
+     "new": "nimuduhasan"
+    },
+    {
+     "role": "aa",
+     "old": "nimuvorbaasasan",
+     "new": "nimuduhaasasan"
+    }
+   ]
+  },
+  {
+   "old": "nuluvorba",
+   "new": "nuluduha",
+   "meaning": "wanderlust",
+   "old_parts": "nulu+vorba",
+   "forms": [
+    {
+     "role": "n",
+     "old": "nuluvorba",
+     "new": "nuluduha"
+    },
+    {
+     "role": "an",
+     "old": "nuluvorbaasa",
+     "new": "nuluduhaasa"
+    },
+    {
+     "role": "nn",
+     "old": "nuluvorbana",
+     "new": "nuluduhana"
+    },
+    {
+     "role": "v",
+     "old": "nuluvorbania",
+     "new": "nuluduhania"
+    },
+    {
+     "role": "na",
+     "old": "nuluvorbanasan",
+     "new": "nuluduhanasan"
+    },
+    {
+     "role": "a",
+     "old": "nuluvorbasan",
+     "new": "nuluduhasan"
+    },
+    {
+     "role": "aa",
+     "old": "nuluvorbaasasan",
+     "new": "nuluduhaasasan"
+    }
+   ]
+  },
+  {
+   "old": "sollivorba",
+   "new": "solliduha",
+   "meaning": "missing someone",
+   "old_parts": "solli+vorba",
+   "forms": [
+    {
+     "role": "n",
+     "old": "sollivorba",
+     "new": "solliduha"
+    },
+    {
+     "role": "an",
+     "old": "sollivorbaasa",
+     "new": "solliduhaasa"
+    },
+    {
+     "role": "nn",
+     "old": "sollivorbana",
+     "new": "solliduhana"
+    },
+    {
+     "role": "v",
+     "old": "sollivorbasia",
+     "new": "solliduhasia"
+    },
+    {
+     "role": "na",
+     "old": "sollivorbanasan",
+     "new": "solliduhanasan"
+    },
+    {
+     "role": "a",
+     "old": "sollivorbasan",
+     "new": "solliduhasan"
+    },
+    {
+     "role": "aa",
+     "old": "sollivorbaasasan",
+     "new": "solliduhaasasan"
+    }
+   ]
+  },
+  {
+   "old": "yelfaruhe",
+   "new": "bojiruhe",
+   "meaning": "hailstorm; ice-storm",
+   "old_parts": "yelfa+ruhe",
+   "forms": [
+    {
+     "role": "n",
+     "old": "yelfaruhe",
+     "new": "bojiruhe"
+    },
+    {
+     "role": "an",
+     "old": "yelfaruheasa",
+     "new": "bojiruheasa"
+    },
+    {
+     "role": "nn",
+     "old": "yelfaruhena",
+     "new": "bojiruhena"
+    },
+    {
+     "role": "v",
+     "old": "yelfaruheya",
+     "new": "bojiruheba"
+    },
+    {
+     "role": "na",
+     "old": "yelfaruhenasan",
+     "new": "bojiruhenasan"
+    },
+    {
+     "role": "a",
+     "old": "yelfaruhesan",
+     "new": "bojiruhesan"
+    },
+    {
+     "role": "aa",
+     "old": "yelfaruheasasan",
+     "new": "bojiruheasasan"
+    }
+   ]
+  },
+  {
+   "old": "balbuvani",
+   "new": "bakovani",
+   "meaning": "the beauty of broken and imperfect things",
+   "old_parts": "balbu+vani",
+   "forms": [
+    {
+     "role": "n",
+     "old": "balbuvani",
+     "new": "bakovani"
+    },
+    {
+     "role": "a",
+     "old": "balbuvanisan",
+     "new": "bakovanisan"
+    }
+   ]
+  },
+  {
+   "old": "fatotilma",
+   "new": "fatomiga",
+   "meaning": "a fated bond between people",
+   "old_parts": "fato+tilma",
+   "forms": [
+    {
+     "role": "n",
+     "old": "fatotilma",
+     "new": "fatomiga"
+    }
+   ]
+  },
+  {
+   "old": "gonbinerpo",
+   "new": "gonbivuzi",
+   "meaning": "restless waiting for a visitor",
+   "old_parts": "gonbi+nerpo",
+   "forms": [
+    {
+     "role": "n",
+     "old": "gonbinerpo",
+     "new": "gonbivuzi"
+    }
+   ]
+  },
+  {
+   "old": "lorenerpo",
+   "new": "lorevuzi",
+   "meaning": "the sense that one is about to fall in love",
+   "old_parts": "lore+nerpo",
+   "forms": [
+    {
+     "role": "n",
+     "old": "lorenerpo",
+     "new": "lorevuzi"
+    }
+   ]
+  },
+  {
+   "old": "loreranbe",
+   "new": "loredoza",
+   "meaning": "grit; strength of heart in hardship",
+   "old_parts": "lore+ranbe",
+   "forms": [
+    {
+     "role": "n",
+     "old": "loreranbe",
+     "new": "loredoza"
+    }
+   ]
+  },
+  {
+   "old": "ramuvorba",
+   "new": "ramuduha",
+   "meaning": "longing for what is gone",
+   "old_parts": "ramu+vorba",
+   "forms": [
+    {
+     "role": "n",
+     "old": "ramuvorba",
+     "new": "ramuduha"
+    }
+   ]
+  },
+  {
+   "old": "silrovani",
+   "new": "puzuvani",
+   "meaning": "mysterious, profound beauty",
+   "old_parts": "silro+vani",
+   "forms": [
+    {
+     "role": "n",
+     "old": "silrovani",
+     "new": "puzuvani"
+    },
+    {
+     "role": "a",
+     "old": "silrovanisan",
+     "new": "puzuvanisan"
+    }
+   ]
+  },
+  {
+   "old": "sulbatekla",
+   "new": "solatekla",
+   "meaning": "solstice",
+   "old_parts": "sulba+tekla",
+   "forms": [
+    {
+     "role": "n",
+     "old": "sulbatekla",
+     "new": "solatekla"
+    }
+   ]
+  },
+  {
+   "old": "tamranela",
+   "new": "kezunela",
+   "meaning": "peasant; commoner",
+   "old_parts": "tamra+nela",
+   "forms": [
+    {
+     "role": "n",
+     "old": "tamranela",
+     "new": "kezunela"
+    }
+   ]
+  },
+  {
+   "old": "amorvorba",
+   "new": "amorduha",
+   "meaning": "romantic attraction; being drawn to another",
+   "old_parts": "amor+vorba",
+   "forms": [
+    {
+     "role": "n",
+     "old": "amorvorba",
+     "new": "amorduha"
+    },
+    {
+     "role": "nn",
+     "old": "amorvorbana",
+     "new": "amorduhana"
+    },
+    {
+     "role": "v",
+     "old": "amorvorbaa",
+     "new": "amorduhaa"
+    },
+    {
+     "role": "a",
+     "old": "amorvorbasan",
+     "new": "amorduhasan"
+    }
+   ]
+  },
+  {
+   "old": "silrosavali",
+   "new": "puzusavali",
+   "meaning": "stolen kiss; a kiss exchanged in secret",
+   "old_parts": "silro+savali",
+   "forms": [
+    {
+     "role": "n",
+     "old": "silrosavali",
+     "new": "puzusavali"
+    }
+   ]
+  },
+  {
+   "old": "vorbalira",
+   "new": "duhalira",
+   "meaning": "serenade; song offered to an absent beloved",
+   "old_parts": "vorba+lira",
+   "forms": [
+    {
+     "role": "n",
+     "old": "vorbalira",
+     "new": "duhalira"
+    }
+   ]
+  },
+  {
+   "old": "biotilma",
+   "new": "biomiga",
+   "meaning": "ecological relations",
+   "old_parts": "bio+tilma",
+   "forms": [
+    {
+     "role": "n",
+     "old": "biotilma",
+     "new": "biomiga"
+    }
+   ]
+  },
+  {
+   "old": "demrovelbi",
+   "new": "demrovugo",
+   "meaning": "speed of movement",
+   "old_parts": "demro+velbi",
+   "forms": [
+    {
+     "role": "n",
+     "old": "demrovelbi",
+     "new": "demrovugo"
+    }
+   ]
+  },
+  {
+   "old": "vorduyordo",
+   "new": "vordupuku",
+   "meaning": "causal outcome",
+   "old_parts": "vordu+yordo",
+   "forms": [
+    {
+     "role": "n",
+     "old": "vorduyordo",
+     "new": "vordupuku"
+    }
+   ]
+  },
+  {
+   "old": "pelisupo",
+   "new": "peligoza",
+   "meaning": "teasing",
+   "old_parts": "peli+supo",
+   "forms": [
+    {
+     "role": "n",
+     "old": "pelisupo",
+     "new": "peligoza"
+    },
+    {
+     "role": "v",
+     "old": "pelisupopa",
+     "new": "peligozapa"
+    },
+    {
+     "role": "a",
+     "old": "pelisuposan",
+     "new": "peligozasan"
+    }
+   ]
+  },
+  {
+   "old": "senobalbu",
+   "new": "senobako",
+   "meaning": "interruption",
+   "old_parts": "seno+balbu",
+   "forms": [
+    {
+     "role": "n",
+     "old": "senobalbu",
+     "new": "senobako"
+    },
+    {
+     "role": "v",
+     "old": "senobalbusia",
+     "new": "senobakosia"
+    },
+    {
+     "role": "a",
+     "old": "senobalbusan",
+     "new": "senobakosan"
+    }
+   ]
+  },
+  {
+   "old": "silroseno",
+   "new": "puzuseno",
+   "meaning": "gossip; rumor",
+   "old_parts": "silro+seno",
+   "forms": [
+    {
+     "role": "n",
+     "old": "silroseno",
+     "new": "puzuseno"
+    },
+    {
+     "role": "v",
+     "old": "silrosenosia",
+     "new": "puzusenopa"
+    }
+   ]
+  },
+  {
+   "old": "cilnitilma",
+   "new": "cilnimiga",
+   "meaning": "citizenship",
+   "old_parts": "cilni+tilma",
+   "forms": [
+    {
+     "role": "n",
+     "old": "cilnitilma",
+     "new": "cilnimiga"
+    }
+   ]
+  },
+  {
+   "old": "mavopagosenotilma",
+   "new": "mavopagosenomiga",
+   "meaning": "civic debate",
+   "old_parts": "mavopago+senotilma",
+   "forms": [
+    {
+     "role": "n",
+     "old": "mavopagosenotilma",
+     "new": "mavopagosenomiga"
+    }
+   ]
+  },
+  {
+   "old": "tahalelde",
+   "new": "kezupagolelde",
+   "meaning": "a national border",
+   "old_parts": "taha+lelde",
+   "forms": [
+    {
+     "role": "n",
+     "old": "tahalelde",
+     "new": "kezupagolelde"
+    }
+   ]
+  },
+  {
+   "old": "tahatilma",
+   "new": "kezupagomiga",
+   "meaning": "international relations",
+   "old_parts": "taha+tilma",
+   "forms": [
+    {
+     "role": "n",
+     "old": "tahatilma",
+     "new": "kezupagomiga"
+    }
+   ]
+  },
+  {
+   "old": "tahayano",
+   "new": "kezupagoyano",
+   "meaning": "nation",
+   "old_parts": "taha+yano",
+   "forms": [
+    {
+     "role": "n",
+     "old": "tahayano",
+     "new": "kezupagoyano"
+    }
+   ]
+  },
+  {
+   "old": "jomruvelbi",
+   "new": "jomruvugo",
+   "meaning": "travel speed",
+   "old_parts": "jomru+velbi",
+   "forms": [
+    {
+     "role": "n",
+     "old": "jomruvelbi",
+     "new": "jomruvugo"
+    }
+   ]
+  },
+  {
+   "old": "nulutilma",
+   "new": "nulumiga",
+   "meaning": "intersection",
+   "old_parts": "nulu+tilma",
+   "forms": [
+    {
+     "role": "n",
+     "old": "nulutilma",
+     "new": "nulumiga"
+    }
+   ]
+  },
+  {
+   "old": "sulbadarno",
+   "new": "soladarno",
+   "meaning": "south; toward the noon sun",
+   "old_parts": "sulba+darno",
+   "forms": [
+    {
+     "role": "n",
+     "old": "sulbadarno",
+     "new": "soladarno"
+    },
+    {
+     "role": "a",
+     "old": "sulbadarnosan",
+     "new": "soladarnosan"
+    }
+   ]
+  },
+  {
+   "old": "juseyordo",
+   "new": "jusepuku",
+   "meaning": "karma; the consequence one has earned",
+   "old_parts": "juse+yordo",
+   "forms": [
+    {
+     "role": "n",
+     "old": "juseyordo",
+     "new": "jusepuku"
+    }
+   ]
+  },
+  {
+   "old": "mavolumitilma",
+   "new": "mavolumimiga",
+   "meaning": "soulbond",
+   "old_parts": "mavolumi+tilma",
+   "forms": [
+    {
+     "role": "n",
+     "old": "mavolumitilma",
+     "new": "mavolumimiga"
+    },
+    {
+     "role": "a",
+     "old": "mavolumitilmasan",
+     "new": "mavolumimigasan"
+    }
+   ]
+  },
+  {
+   "old": "balbuseno",
+   "new": "bakoseno",
+   "meaning": "mumbling; muttering",
+   "old_parts": "balbu+seno",
+   "forms": [
+    {
+     "role": "n",
+     "old": "balbuseno",
+     "new": "bakoseno"
+    },
+    {
+     "role": "v",
+     "old": "balbusenoba",
+     "new": "bakosenoba"
+    },
+    {
+     "role": "a",
+     "old": "balbusenosan",
+     "new": "bakosenosan"
+    }
+   ]
+  },
+  {
+   "old": "devobalbu",
+   "new": "devobako",
+   "meaning": "betrayal",
+   "old_parts": "devo+balbu",
+   "forms": [
+    {
+     "role": "n",
+     "old": "devobalbu",
+     "new": "devobako"
+    },
+    {
+     "role": "v",
+     "old": "devobalbuda",
+     "new": "devobakoda"
+    },
+    {
+     "role": "a",
+     "old": "devobalbusan",
+     "new": "devobakosan"
+    }
+   ]
+  },
+  {
+   "old": "domlutamra",
+   "new": "domlukezu",
+   "meaning": "floor",
+   "old_parts": "domlu+tamra",
+   "forms": [
+    {
+     "role": "n",
+     "old": "domlutamra",
+     "new": "domlukezu"
+    },
+    {
+     "role": "v",
+     "old": "domlutamrada",
+     "new": "domlukezuda"
+    },
+    {
+     "role": "a",
+     "old": "domlutamrasan",
+     "new": "domlukezusan"
+    }
+   ]
+  },
+  {
+   "old": "lideobalbu",
+   "new": "lideobako",
+   "meaning": "mistake; error of judgement",
+   "old_parts": "lideo+balbu",
+   "forms": [
+    {
+     "role": "n",
+     "old": "lideobalbu",
+     "new": "lideobako"
+    },
+    {
+     "role": "v",
+     "old": "lideobalbula",
+     "new": "lideobakola"
+    },
+    {
+     "role": "a",
+     "old": "lideobalbusan",
+     "new": "lideobakosan"
+    }
+   ]
+  },
+  {
+   "old": "mambileto",
+   "new": "mambicuza",
+   "meaning": "note; short written message",
+   "old_parts": "mambi+leto",
+   "forms": [
+    {
+     "role": "n",
+     "old": "mambileto",
+     "new": "mambicuza"
+    }
+   ]
+  },
+  {
+   "old": "rumnenulu",
+   "new": "zupanulu",
+   "meaning": "hallway; corridor",
+   "old_parts": "rumne+nulu",
+   "forms": [
+    {
+     "role": "n",
+     "old": "rumnenulu",
+     "new": "zupanulu"
+    }
+   ]
+  },
+  {
+   "old": "rumnerofe",
+   "new": "zuparofe",
+   "meaning": "ceiling",
+   "old_parts": "rumne+rofe",
+   "forms": [
+    {
+     "role": "n",
+     "old": "rumnerofe",
+     "new": "zuparofe"
+    }
+   ]
+  },
+  {
+   "old": "silrobelfi",
+   "new": "puzubelfi",
+   "meaning": "suspicion",
+   "old_parts": "silro+belfi",
+   "forms": [
+    {
+     "role": "n",
+     "old": "silrobelfi",
+     "new": "puzubelfi"
+    },
+    {
+     "role": "v",
+     "old": "silrobelfisia",
+     "new": "puzubelfipa"
+    },
+    {
+     "role": "a",
+     "old": "silrobelfisan",
+     "new": "puzubelfisan"
+    }
+   ]
+  },
+  {
+   "old": "silrolordi",
+   "new": "puzulordi",
+   "meaning": "conspiracy; secret plan",
+   "old_parts": "silro+lordi",
+   "forms": [
+    {
+     "role": "n",
+     "old": "silrolordi",
+     "new": "puzulordi"
+    },
+    {
+     "role": "v",
+     "old": "silrolordisia",
+     "new": "puzulordipa"
+    },
+    {
+     "role": "a",
+     "old": "silrolordisan",
+     "new": "puzulordisan"
+    }
+   ]
+  },
+  {
+   "old": "silrolumi",
+   "new": "puzulumi",
+   "meaning": "clue",
+   "old_parts": "silro+lumi",
+   "forms": [
+    {
+     "role": "n",
+     "old": "silrolumi",
+     "new": "puzulumi"
+    }
+   ]
+  },
+  {
+   "old": "silromasu",
+   "new": "puzumasu",
+   "meaning": "mystery; riddle; enigma",
+   "old_parts": "silro+masu",
+   "forms": [
+    {
+     "role": "n",
+     "old": "silromasu",
+     "new": "puzumasu"
+    },
+    {
+     "role": "a",
+     "old": "silromasusan",
+     "new": "puzumasusan"
+    }
+   ]
+  },
+  {
+   "old": "tamrapave",
+   "new": "kezupave",
+   "meaning": "dragging",
+   "old_parts": "tamra+pave",
+   "forms": [
+    {
+     "role": "n",
+     "old": "tamrapave",
+     "new": "kezupave"
+    },
+    {
+     "role": "v",
+     "old": "tamrapaveta",
+     "new": "kezupaveka"
+    },
+    {
+     "role": "a",
+     "old": "tamrapavesan",
+     "new": "kezupavesan"
+    }
+   ]
+  },
+  {
+   "old": "tamravalmi",
+   "new": "kezuvalmi",
+   "meaning": "crawl; moving along the ground",
+   "old_parts": "tamra+valmi",
+   "forms": [
+    {
+     "role": "n",
+     "old": "tamravalmi",
+     "new": "kezuvalmi"
+    },
+    {
+     "role": "v",
+     "old": "tamravalmita",
+     "new": "kezuvalmika"
+    },
+    {
+     "role": "a",
+     "old": "tamravalmisan",
+     "new": "kezuvalmisan"
+    }
+   ]
+  },
+  {
+   "old": "tamravenre",
+   "new": "kezuvenre",
+   "meaning": "landing; touchdown",
+   "old_parts": "tamra+venre",
+   "forms": [
+    {
+     "role": "n",
+     "old": "tamravenre",
+     "new": "kezuvenre"
+    },
+    {
+     "role": "v",
+     "old": "tamravenreta",
+     "new": "kezuvenreka"
+    },
+    {
+     "role": "a",
+     "old": "tamravenresan",
+     "new": "kezuvenresan"
+    }
+   ]
+  },
+  {
+   "old": "velbirabi",
+   "new": "vugorabi",
+   "meaning": "dash; sprint; rush",
+   "old_parts": "velbi+rabi",
+   "forms": [
+    {
+     "role": "n",
+     "old": "velbirabi",
+     "new": "vugorabi"
+    },
+    {
+     "role": "v",
+     "old": "velbirabiva",
+     "new": "vugorabiva"
+    },
+    {
+     "role": "a",
+     "old": "velbirabisan",
+     "new": "vugorabisan"
+    }
+   ]
+  },
+  {
+   "old": "velbivalmi",
+   "new": "vugovalmi",
+   "meaning": "hurry; haste",
+   "old_parts": "velbi+valmi",
+   "forms": [
+    {
+     "role": "n",
+     "old": "velbivalmi",
+     "new": "vugovalmi"
+    },
+    {
+     "role": "v",
+     "old": "velbivalmiva",
+     "new": "vugovalmiva"
+    },
+    {
+     "role": "a",
+     "old": "velbivalmisan",
+     "new": "vugovalmisan"
+    }
+   ]
+  },
+  {
+   "old": "vismabalbu",
+   "new": "vismabako",
+   "meaning": "distraction; broken attention",
+   "old_parts": "visma+balbu",
+   "forms": [
+    {
+     "role": "n",
+     "old": "vismabalbu",
+     "new": "vismabako"
+    },
+    {
+     "role": "v",
+     "old": "vismabalbuva",
+     "new": "vismabakova"
+    },
+    {
+     "role": "a",
+     "old": "vismabalbusan",
+     "new": "vismabakosan"
+    }
+   ]
+  },
+  {
+   "old": "favrotilma",
+   "new": "favromiga",
+   "meaning": "communication",
+   "old_parts": "favro+tilma",
+   "forms": [
+    {
+     "role": "n",
+     "old": "favrotilma",
+     "new": "favromiga"
+    }
+   ]
+  },
+  {
+   "old": "sernasilro",
+   "new": "sernapuzu",
+   "meaning": "data privacy",
+   "old_parts": "serna+silro",
+   "forms": [
+    {
+     "role": "n",
+     "old": "sernasilro",
+     "new": "sernapuzu"
+    }
+   ]
+  },
+  {
+   "old": "silrodivma",
+   "new": "puzudivma",
+   "meaning": "cryptographic system",
+   "old_parts": "silro+divma",
+   "forms": [
+    {
+     "role": "n",
+     "old": "silrodivma",
+     "new": "puzudivma"
+    }
+   ]
+  },
+  {
+   "old": "tilmadivma",
+   "new": "migadivma",
+   "meaning": "network",
+   "old_parts": "tilma+divma",
+   "forms": [
+    {
+     "role": "n",
+     "old": "tilmadivma",
+     "new": "migadivma"
+    }
+   ]
+  },
+  {
+   "old": "tilmadivmapatu",
+   "new": "migadivmapatu",
+   "meaning": "network node",
+   "old_parts": "tilmadivma+patu",
+   "forms": [
+    {
+     "role": "n",
+     "old": "tilmadivmapatu",
+     "new": "migadivmapatu"
+    }
+   ]
+  },
+  {
+   "old": "sulbacemnu",
+   "new": "solacemnu",
+   "meaning": "noon; midday",
+   "old_parts": "sulba+cemnu",
+   "forms": [
+    {
+     "role": "n",
+     "old": "sulbacemnu",
+     "new": "solacemnu"
+    }
+   ]
+  },
+  {
+   "old": "kronoleto",
+   "new": "kronocuza",
+   "meaning": "schedule; timetable",
+   "old_parts": "krono+leto",
+   "forms": [
+    {
+     "role": "n",
+     "old": "kronoleto",
+     "new": "kronocuza"
+    },
+    {
+     "role": "v",
+     "old": "kronoletoka",
+     "new": "kronocuzaka"
+    },
+    {
+     "role": "a",
+     "old": "kronoletosan",
+     "new": "kronocuzasan"
+    }
+   ]
+  },
+  {
+   "old": "divmaranbe",
+   "new": "divmadoza",
+   "meaning": "operational capacity",
+   "old_parts": "divma+ranbe",
+   "forms": [
+    {
+     "role": "n",
+     "old": "divmaranbe",
+     "new": "divmadoza"
+    }
+   ]
+  },
+  {
+   "old": "nevloganre",
+   "new": "fojoganre",
+   "meaning": "snow-covered garden after the first fall",
+   "old_parts": "nevlo+ganre",
+   "forms": [
+    {
+     "role": "n",
+     "old": "nevloganre",
+     "new": "fojoganre"
+    }
+   ]
+  },
+  {
+   "old": "nevlosulba",
+   "new": "fojosola",
+   "meaning": "snowmelt at sunrise; first thaw of a bright morning",
+   "old_parts": "nevlo+sulba",
+   "forms": [
+    {
+     "role": "n",
+     "old": "nevlosulba",
+     "new": "fojosola"
+    }
+   ]
+  },
+  {
+   "old": "renlisulba",
+   "new": "renlisola",
+   "meaning": "sunshower; rainfall falling through sunshine",
+   "old_parts": "renli+sulba",
+   "forms": [
+    {
+     "role": "n",
+     "old": "renlisulba",
+     "new": "renlisola"
+    }
+   ]
+  },
+  {
+   "old": "sulbalumi",
+   "new": "solalumi",
+   "meaning": "sun-warmed light; a light that reveals sunshine; sunlight",
+   "old_parts": "sulba+lumi",
+   "forms": [
+    {
+     "role": "n",
+     "old": "sulbalumi",
+     "new": "solalumi"
+    }
+   ]
+  },
+  {
+   "old": "yelfateyo",
+   "new": "bojiteyo",
+   "meaning": "icicle; hanging spear of ice",
+   "old_parts": "yelfa+teyo",
+   "forms": [
+    {
+     "role": "n",
+     "old": "yelfateyo",
+     "new": "bojiteyo"
+    },
+    {
+     "role": "v",
+     "old": "yelfateyoya",
+     "new": "bojiteyoba"
+    },
+    {
+     "role": "a",
+     "old": "yelfateyosan",
+     "new": "bojiteyosan"
+    }
+   ]
+  },
+  {
+   "old": "ranbevaye",
+   "new": "dozavaye",
+   "meaning": "gale; prolonged high wind",
+   "old_parts": "ranbe+vaye",
+   "forms": [
+    {
+     "role": "n",
+     "old": "ranbevaye",
+     "new": "dozavaye"
+    },
+    {
+     "role": "v",
+     "old": "ranbevayera",
+     "new": "dozavayeda"
+    },
+    {
+     "role": "a",
+     "old": "ranbevayesan",
+     "new": "dozavayesan"
+    }
+   ]
+  },
+  {
+   "old": "velbivaye",
+   "new": "vugovaye",
+   "meaning": "gust; brief strong wind",
+   "old_parts": "velbi+vaye",
+   "forms": [
+    {
+     "role": "n",
+     "old": "velbivaye",
+     "new": "vugovaye"
+    },
+    {
+     "role": "v",
+     "old": "velbivayeva",
+     "new": "vugovayeva"
+    },
+    {
+     "role": "a",
+     "old": "velbivayesan",
+     "new": "vugovayesan"
+    }
+   ]
+  }
+ ],
+ "listed_derivations": [
+  {
+   "old": "devobalbuyo",
+   "new": "devobakoyo",
+   "entry_2_0": "traitor (one who betrays): devobalbu + -yo"
+  },
+  {
+   "old": "mambiletoyo",
+   "new": "mambicuzayo",
+   "entry_2_0": "messenger (one who carries notes): mambileto + -yo"
+  },
+  {
+   "old": "tamramiruti",
+   "new": "kezumiruti",
+   "entry_2_0": "pond; pool (little lake): tamramiru + -ti"
+  },
+  {
+   "old": "zirmeyo",
+   "new": "zayuyo",
+   "entry_2_0": "mage; sorcerer; witch; magician; wizard: zirme + -yo"
+  },
+  {
+   "old": "buvopago",
+   "new": "buzapago",
+   "entry_2_0": "tavern: buvo + -pago"
+  },
+  {
+   "old": "ranbepago",
+   "new": "dozapago",
+   "entry_2_0": "a place where one's strength returns: ranbe + -pago"
+  }
+ ],
+ "image_engine": {
+  "modifiers_renamed": {
+   "nevlo": "fojo",
+   "nilvu": "foji",
+   "silro": "puzu",
+   "sulba": "sola",
+   "vebo": "faji",
+   "vorba": "duha",
+   "yelfa": "boji"
+  },
+  "heads_renamed": {
+   "nevlo": "fojo",
+   "sulba": "sola",
+   "yelfa": "boji"
+  },
+  "attested_renamed": [
+   {
+    "old": "folninevlo",
+    "new": "folnifojo",
+    "gloss": "flower-soft snow; snow under the influence of flowers"
+   },
+   {
+    "old": "luminevlo",
+    "new": "lumifojo",
+    "gloss": "luminous snow; snow under the influence of light"
+   },
+   {
+    "old": "lunonevlo",
+    "new": "lunofojo",
+    "gloss": "moonlit snow; snow under the influence of moonlight"
+   },
+   {
+    "old": "lunosulba",
+    "new": "lunosola",
+    "gloss": "moonlit sun; the sun as felt through moonlight"
+   },
+   {
+    "old": "lunoyelfa",
+    "new": "lunoboji",
+    "gloss": "moonlit ice; ice holding an image of moonlight"
+   },
+   {
+    "old": "mirunevlo",
+    "new": "mirufojo",
+    "gloss": "water-clear snow; snow under the influence of water"
+   },
+   {
+    "old": "monrunevlo",
+    "new": "monrufojo",
+    "gloss": "mountain-high snow; snow under the influence of mountains"
+   },
+   {
+    "old": "monruyelfa",
+    "new": "monruboji",
+    "gloss": "mountain-high ice; ice holding an image of mountains"
+   },
+   {
+    "old": "nevlofolni",
+    "new": "fojofolni",
+    "gloss": "snow-softened blossom; a flower that evokes falling snow"
+   },
+   {
+    "old": "nevlolore",
+    "new": "fojolore",
+    "gloss": "snow-softened heart; a heart changed by falling snow"
+   },
+   {
+    "old": "nevlolumi",
+    "new": "fojolumi",
+    "gloss": "snow-softened light; a light that reveals falling snow"
+   },
+   {
+    "old": "nevlonavu",
+    "new": "fojonavu",
+    "gloss": "snow-softened sky; the sky colored by falling snow"
+   },
+   {
+    "old": "nevloruhe",
+    "new": "fojoruhe",
+    "gloss": "snow-softened storm; a storm carrying falling snow"
+   },
+   {
+    "old": "nevlosenru",
+    "new": "fojosenru",
+    "gloss": "snow-softened skin; the sensation of falling snow upon skin"
+   },
+   {
+    "old": "nevlovaye",
+    "new": "fojovaye",
+    "gloss": "snow-softened wind; air moving with the character of falling snow"
+   },
+   {
+    "old": "nevloyelfa",
+    "new": "fojoboji",
+    "gloss": "snow-softened ice; ice holding an image of falling snow"
+   },
+   {
+    "old": "nilvuamor",
+    "new": "fojiamor",
+    "gloss": "wintering love; a kind of love that carries winter"
+   },
+   {
+    "old": "nilvubanu",
+    "new": "fojibanu",
+    "gloss": "wintering branch; a branch bearing traces of winter"
+   },
+   {
+    "old": "nilvufolni",
+    "new": "fojifolni",
+    "gloss": "wintering blossom; a flower that evokes winter"
+   },
+   {
+    "old": "nilvuganre",
+    "new": "fojiganre",
+    "gloss": "wintering garden; a planted refuge for winter"
+   },
+   {
+    "old": "nilvuhavli",
+    "new": "fojihavli",
+    "gloss": "wintering breath; a breath filled with winter"
+   },
+   {
+    "old": "nilvulavlo",
+    "new": "fojilavlo",
+    "gloss": "wintering leaf; a leaf colored or moved by winter"
+   },
+   {
+    "old": "nilvulira",
+    "new": "fojilira",
+    "gloss": "wintering song; a melody given the color of winter"
+   },
+   {
+    "old": "nilvulomo",
+    "new": "fojilomo",
+    "gloss": "wintering embrace; a held moment filled with winter"
+   },
+   {
+    "old": "nilvulore",
+    "new": "fojilore",
+    "gloss": "wintering heart; a heart changed by winter"
+   },
+   {
+    "old": "nilvunavu",
+    "new": "fojinavu",
+    "gloss": "wintering sky; the sky colored by winter"
+   },
+   {
+    "old": "nilvunevlo",
+    "new": "fojifojo",
+    "gloss": "wintering snow; snow under the influence of winter"
+   },
+   {
+    "old": "nilvurenli",
+    "new": "fojirenli",
+    "gloss": "wintering rain; rain arriving with winter"
+   },
+   {
+    "old": "nilvuruhe",
+    "new": "fojiruhe",
+    "gloss": "wintering storm; a storm carrying winter"
+   },
+   {
+    "old": "nilvusavali",
+    "new": "fojisavali",
+    "gloss": "wintering kiss; an intimate kiss recalling winter"
+   },
+   {
+    "old": "nilvuvaye",
+    "new": "fojivaye",
+    "gloss": "wintering wind; air moving with the character of winter"
+   },
+   {
+    "old": "nilvuvelma",
+    "new": "fojivelma",
+    "gloss": "wintering garment; fabric transformed by winter"
+   },
+   {
+    "old": "nilvuyelfa",
+    "new": "fojiboji",
+    "gloss": "wintering ice; ice holding an image of winter"
+   },
+   {
+    "old": "norunevlo",
+    "new": "norufojo",
+    "gloss": "dream-born snow; snow under the influence of dreams"
+   },
+   {
+    "old": "renlinevlo",
+    "new": "renlifojo",
+    "gloss": "rain-washed snow; snow under the influence of rain"
+   },
+   {
+    "old": "renliyelfa",
+    "new": "renliboji",
+    "gloss": "rain-washed ice; ice holding an image of rain"
+   },
+   {
+    "old": "ruhenevlo",
+    "new": "ruhefojo",
+    "gloss": "storm-tossed snow; snow under the influence of a storm"
+   },
+   {
+    "old": "ruhesulba",
+    "new": "ruhesola",
+    "gloss": "storm-tossed sun; the sun as felt through a storm"
+   },
+   {
+    "old": "ruheyelfa",
+    "new": "ruheboji",
+    "gloss": "storm-tossed ice; ice holding an image of a storm"
+   },
+   {
+    "old": "sadonevlo",
+    "new": "sadofojo",
+    "gloss": "shadow-veiled snow; snow under the influence of shadows"
+   },
+   {
+    "old": "sadoyelfa",
+    "new": "sadoboji",
+    "gloss": "shadow-veiled ice; ice holding an image of shadows"
+   },
+   {
+    "old": "senruyelfa",
+    "new": "senruboji",
+    "gloss": "skin-close ice; ice holding an image of skin"
+   },
+   {
+    "old": "silroamor",
+    "new": "puzuamor",
+    "gloss": "secret love; a kind of love that carries a shared secret"
+   },
+   {
+    "old": "silrolira",
+    "new": "puzulira",
+    "gloss": "secret song; a melody given the color of a shared secret"
+   },
+   {
+    "old": "silrolomo",
+    "new": "puzulomo",
+    "gloss": "secret embrace; a held moment filled with a shared secret"
+   },
+   {
+    "old": "silrolore",
+    "new": "puzulore",
+    "gloss": "secret heart; a heart changed by a shared secret"
+   },
+   {
+    "old": "silromanli",
+    "new": "puzumanli",
+    "gloss": "secret hands; hands marked by a shared secret"
+   },
+   {
+    "old": "silropomli",
+    "new": "puzupomli",
+    "gloss": "secret promise; a vow entrusted to a shared secret"
+   },
+   {
+    "old": "silrorenli",
+    "new": "puzurenli",
+    "gloss": "secret rain; rain arriving with a shared secret"
+   },
+   {
+    "old": "silrorinba",
+    "new": "puzurinba",
+    "gloss": "secret ring; a small circular pledge of a shared secret"
+   },
+   {
+    "old": "sovenevlo",
+    "new": "sovefojo",
+    "gloss": "peaceful snow; snow under the influence of peace"
+   },
+   {
+    "old": "sovesulba",
+    "new": "sovesola",
+    "gloss": "peaceful sun; the sun as felt through peace"
+   },
+   {
+    "old": "soveyelfa",
+    "new": "soveboji",
+    "gloss": "peaceful ice; ice holding an image of peace"
+   },
+   {
+    "old": "sulbaamor",
+    "new": "solaamor",
+    "gloss": "sun-warmed love; a kind of love that carries sunshine"
+   },
+   {
+    "old": "sulbabanu",
+    "new": "solabanu",
+    "gloss": "sun-warmed branch; a branch bearing traces of sunshine"
+   },
+   {
+    "old": "sulbafasbi",
+    "new": "solafasbi",
+    "gloss": "sun-warmed face; the expression on a face touched by sunshine"
+   },
+   {
+    "old": "sulbaganre",
+    "new": "solaganre",
+    "gloss": "sun-warmed garden; a planted refuge for sunshine"
+   },
+   {
+    "old": "sulbalore",
+    "new": "solalore",
+    "gloss": "sun-warmed heart; a heart changed by sunshine"
+   },
+   {
+    "old": "sulbanavu",
+    "new": "solanavu",
+    "gloss": "sun-warmed sky; the sky colored by sunshine"
+   },
+   {
+    "old": "sulbanevlo",
+    "new": "solafojo",
+    "gloss": "sun-warmed snow; snow under the influence of sunshine"
+   },
+   {
+    "old": "sulbarenli",
+    "new": "solarenli",
+    "gloss": "sun-warmed rain; rain arriving with sunshine"
+   },
+   {
+    "old": "sulbaruhe",
+    "new": "solaruhe",
+    "gloss": "sun-warmed storm; a storm carrying sunshine"
+   },
+   {
+    "old": "sulbasamni",
+    "new": "solasamni",
+    "gloss": "sun-warmed seed; a seed entrusted to sunshine"
+   },
+   {
+    "old": "sulbasavali",
+    "new": "solasavali",
+    "gloss": "sun-warmed kiss; an intimate kiss recalling sunshine"
+   },
+   {
+    "old": "sulbasenru",
+    "new": "solasenru",
+    "gloss": "sun-warmed skin; the sensation of sunshine upon skin"
+   },
+   {
+    "old": "sulbavaye",
+    "new": "solavaye",
+    "gloss": "sun-warmed wind; air moving with the character of sunshine"
+   },
+   {
+    "old": "sulbavilne",
+    "new": "solavilne",
+    "gloss": "sun-warmed eyes; eyes brightened or clouded by sunshine"
+   },
+   {
+    "old": "sulbayelfa",
+    "new": "solaboji",
+    "gloss": "sun-warmed ice; ice holding an image of sunshine"
+   },
+   {
+    "old": "vayenevlo",
+    "new": "vayefojo",
+    "gloss": "wind-carried snow; snow under the influence of wind"
+   },
+   {
+    "old": "vayeyelfa",
+    "new": "vayeboji",
+    "gloss": "wind-carried ice; ice holding an image of wind"
+   },
+   {
+    "old": "veboamor",
+    "new": "fajiamor",
+    "gloss": "spring-awakened love; a kind of love that carries spring"
+   },
+   {
+    "old": "vebofolni",
+    "new": "fajifolni",
+    "gloss": "spring-awakened blossom; a flower that evokes spring"
+   },
+   {
+    "old": "veboganre",
+    "new": "fajiganre",
+    "gloss": "spring-awakened garden; a planted refuge for spring"
+   },
+   {
+    "old": "vebolira",
+    "new": "fajilira",
+    "gloss": "spring-awakened song; a melody given the color of spring"
+   },
+   {
+    "old": "vebolomo",
+    "new": "fajilomo",
+    "gloss": "spring-awakened embrace; a held moment filled with spring"
+   },
+   {
+    "old": "vebolumi",
+    "new": "fajilumi",
+    "gloss": "spring-awakened light; a light that reveals spring"
+   },
+   {
+    "old": "vebonavu",
+    "new": "fajinavu",
+    "gloss": "spring-awakened sky; the sky colored by spring"
+   },
+   {
+    "old": "vebonevlo",
+    "new": "fajifojo",
+    "gloss": "spring-awakened snow; snow under the influence of spring"
+   },
+   {
+    "old": "veborenli",
+    "new": "fajirenli",
+    "gloss": "spring-awakened rain; rain arriving with spring"
+   },
+   {
+    "old": "veboruhe",
+    "new": "fajiruhe",
+    "gloss": "spring-awakened storm; a storm carrying spring"
+   },
+   {
+    "old": "vebosavali",
+    "new": "fajisavali",
+    "gloss": "spring-awakened kiss; an intimate kiss recalling spring"
+   },
+   {
+    "old": "vebosulba",
+    "new": "fajisola",
+    "gloss": "spring-awakened sun; the sun as felt through spring"
+   },
+   {
+    "old": "vebovaye",
+    "new": "fajivaye",
+    "gloss": "spring-awakened wind; air moving with the character of spring"
+   },
+   {
+    "old": "velunevlo",
+    "new": "velufojo",
+    "gloss": "starlit snow; snow under the influence of distant stars"
+   },
+   {
+    "old": "velusulba",
+    "new": "velusola",
+    "gloss": "starlit sun; the sun as felt through distant stars"
+   },
+   {
+    "old": "veluyelfa",
+    "new": "veluboji",
+    "gloss": "starlit ice; ice holding an image of distant stars"
+   },
+   {
+    "old": "vesnosulba",
+    "new": "vesnosola",
+    "gloss": "twilight-soft sun; the sun as felt through evening"
+   },
+   {
+    "old": "vorbaamor",
+    "new": "duhaamor",
+    "gloss": "yearning love; a kind of love that carries longing"
+   },
+   {
+    "old": "vorbahavli",
+    "new": "duhahavli",
+    "gloss": "yearning breath; a breath filled with longing"
+   },
+   {
+    "old": "vorbajomru",
+    "new": "duhajomru",
+    "gloss": "yearning journey; a journey undertaken for longing"
+   },
+   {
+    "old": "vorbalore",
+    "new": "duhalore",
+    "gloss": "yearning heart; a heart changed by longing"
+   },
+   {
+    "old": "yelfafolni",
+    "new": "bojifolni",
+    "gloss": "ice-bright blossom; a flower that evokes ice"
+   },
+   {
+    "old": "yelfalore",
+    "new": "bojilore",
+    "gloss": "ice-bright heart; a heart changed by ice"
+   },
+   {
+    "old": "yelfalumi",
+    "new": "bojilumi",
+    "gloss": "ice-bright light; a light that reveals ice"
+   },
+   {
+    "old": "yelfanavu",
+    "new": "bojinavu",
+    "gloss": "ice-bright sky; the sky colored by ice"
+   },
+   {
+    "old": "yelfavaye",
+    "new": "bojivaye",
+    "gloss": "ice-bright wind; air moving with the character of ice"
+   }
+  ]
+ },
+ "example_sentences_respelled": [
+  {
+   "old": "Maivo buvoba miru.",
+   "new": "Maivo buzaba miru.",
+   "english": "I drink water."
+  },
+  {
+   "old": "Maivo vurlova sidu lirala.",
+   "new": "Maivo desida sidu lirala.",
+   "english": "I want to sing."
+  },
+  {
+   "old": "Kube li sulba sulbasia, li larbo larbola.",
+   "new": "Kube li sola solasia, li larbo larbola.",
+   "english": "When the sun shines, the tree grows."
+  },
+  {
+   "old": "Kureli li sulba sulbasia, maivori pelipa.",
+   "new": "Kureli li sola solasia, maivori pelipa.",
+   "english": "As soon as the sun shines, we play."
+  },
+  {
+   "old": "Maivo vurlova, hema, baba buvokova de miru.",
+   "new": "Maivo desida, hema, baba buzakova de miru.",
+   "english": "I'd like, um, a cup of water."
+  },
+  {
+   "old": "Maivo vurlova eli, ne ola.",
+   "new": "Maivo desida eli, ne ola.",
+   "english": "I want this, not that."
+  },
+  {
+   "old": "Taivo vurlova fime maivo senosia: \"Pagopa, lirala!\" ki?",
+   "new": "Taivo desida fime maivo senosia: \"Pagopa, lirala!\" ki?",
+   "english": "You want me to say \"Go, sing!\"? (0.7 order, still valid)"
+  },
+  {
+   "old": "Taivo vurlova ki, fime maivo senosia: \"Pagopa, lirala!\"",
+   "new": "Taivo desida ki, fime maivo senosia: \"Pagopa, lirala!\"",
+   "english": "Do you want me to say \"Go, sing!\"? (0.8 alternative)"
+  },
+  {
+   "old": "Li pomlileto ne senosia ola-coda.",
+   "new": "Li pomlicuza ne senosia ola-coda.",
+   "english": "The contract doesn't say that."
+  },
+  {
+   "old": "Maivo ne gurameraga. Maivo vurlova li cono.",
+   "new": "Maivo ne gurameraga. Maivo desida li cono.",
+   "english": "I won't forgive the debt. I want the coins."
+  },
+  {
+   "old": "Saivo po silroconosia li loteronela.",
+   "new": "Saivo po puzuconopa li loteronela.",
+   "english": "They bribed the stranger."
+  },
+  {
+   "old": "Dorin sahi lovula li conoleto.",
+   "new": "Dorin sahi lovula li conocuza.",
+   "english": "Dorin always reads the ledger."
+  },
+  {
+   "old": "Li kronoleto de li bumrepago ka su li tabu.",
+   "new": "Li kronocuza de li bumrepago ka su li tabu.",
+   "english": "The bakery's schedule is on the table."
+  },
+  {
+   "old": "Eli-krono, la velbisan!",
+   "new": "Eli-krono, la vugosan!",
+   "english": "Now, quickly! (immediately)"
+  },
+  {
+   "old": "Li bumre ka saltanasan. Ki-pago ka li salta?",
+   "new": "Li bumre ka bezinasan. Ki-pago ka li bezi?",
+   "english": "The bread is unsalted. Where is the salt?"
+  },
+  {
+   "old": "Pilo de cemoleto ka helvisan.",
+   "new": "Pilo de cemocuza ka helvisan.",
+   "english": "Father's recipe is hidden."
+  },
+  {
+   "old": "Saivo po havlibalbuha toda li nullo.",
+   "new": "Saivo po havlibakoha toda li nullo.",
+   "english": "They coughed all night."
+  },
+  {
+   "old": "Ne senobalbusia maivo!",
+   "new": "Ne senobakosia maivo!",
+   "english": "Don't interrupt me!"
+  },
+  {
+   "old": "Kipo pelisupopa Dorin toda-krono.",
+   "new": "Kipo peligozapa Dorin toda-krono.",
+   "english": "Kipo teases Dorin all the time."
+  },
+  {
+   "old": "Velina silrosenosia toda-krono.",
+   "new": "Velina puzusenopa toda-krono.",
+   "english": "Velina always gossips."
+  },
+  {
+   "old": "Ola ka baba mebanena. Maivo po ne vurlova sidu senosia ola-coda.",
+   "new": "Ola ka baba mebanena. Maivo po ne desida sidu senosia ola-coda.",
+   "english": "That's a misunderstanding. I didn't mean to say that."
+  },
+  {
+   "old": "Li tilnu ke en li tilnupago.",
+   "new": "Li rupu ke en li rupupago.",
+   "english": "The waste is in the rubbish dump."
+  },
+  {
+   "old": "Maivo futu tilnuta li tilnu.",
+   "new": "Maivo futu rupura li rupu.",
+   "english": "I will discard the waste."
+  },
+  {
+   "old": "Maivo po zarmoza li dorbi.",
+   "new": "Maivo po hataha li dorbi.",
+   "english": "I struck the door."
+  },
+  {
+   "old": "Li zarmo po vorduva baba vulrasado.",
+   "new": "Li hata po vorduva baba vulrasado.",
+   "english": "The blow caused a bruise."
+  },
+  {
+   "old": "Li demro de li miru ke velbisan.",
+   "new": "Li demro de li miru ke vugosan.",
+   "english": "The motion of the water is quick."
+  },
+  {
+   "old": "Li loterobiotino de li tamra ka benasan seye.",
+   "new": "Li loterobiotino de li kezu ka benasan seye.",
+   "english": "The land's biological diversity is good, certainly."
+  },
+  {
+   "old": "Maivo ne vurlova li biotinosolma de li lazu.",
+   "new": "Maivo ne desida li biotinosolma de li lazu.",
+   "english": "I do not want the extinction of the animal."
+  },
+  {
+   "old": "Li sornimodo de li tamra po tranata.",
+   "new": "Li sornimodo de li kezu po tranata.",
+   "english": "The land's climate changed."
+  },
+  {
+   "old": "Li nevlo po tranata ala li miru.",
+   "new": "Li fojo po tranata ala li miru.",
+   "english": "The snow changed into water."
+  },
+  {
+   "old": "Li germa ke en li tamra.",
+   "new": "Li germa ke en li kezu.",
+   "english": "The metal is in the land."
+  },
+  {
+   "old": "Li tali po yordoya baba fulepari.",
+   "new": "Li tali po pukupa baba fulepari.",
+   "english": "The work resulted in a surplus."
+  },
+  {
+   "old": "Li tilma de li purma ata li linu ka benasan.",
+   "new": "Li miga de li purma ata li linu ka benasan.",
+   "english": "The bond of parent and child is good."
+  },
+  {
+   "old": "Li lermi de li tamra po tranata.",
+   "new": "Li lermi de li kezu po tranata.",
+   "english": "The land's language changed."
+  },
+  {
+   "old": "Li pavma ata li yalmu ka tilmasan.",
+   "new": "Li pavma ata li yalmu ka migasan.",
+   "english": "Matter and energy are related."
+  },
+  {
+   "old": "Li vamri ata li krono ka tilmasan seye.",
+   "new": "Li vamri ata li krono ka migasan seye.",
+   "english": "Space and time are related, certainly."
+  },
+  {
+   "old": "Li farvisimvodivmabiti demroda la velbisan.",
+   "new": "Li farvisimvodivmabiti demroda la vugosan.",
+   "english": "The robot moves quickly."
+  },
+  {
+   "old": "Li divmabiti po zarmoza li germa.",
+   "new": "Li divmabiti po hataha li germa.",
+   "english": "The machine struck the metal."
+  },
+  {
+   "old": "Li tilnu de li divmabiti ke pavmasan.",
+   "new": "Li rupu de li divmabiti ke pavmasan.",
+   "english": "The machine's waste is material."
+  }
+ ],
+ "rulings": [
+  {
+   "id": "2.1:G46",
+   "topic": "Questions keep every word in place",
+   "rule": "A question word stands where its answer would stand; every direct question ends in ki. A ki-word of time may open the clause as a frame. Embedded questions unchanged (0.8:G4, 1.0:G2). Replaces the fronted small-words examples: Taivo pagopa ki-pago ki?"
+  },
+  {
+   "id": "2.1:G47",
+   "topic": "Exclamatives",
+   "rule": "A main clause with a ki-word and no final ki is an exclamation (!). ki-modo + ADJ = how ...!; ki-eli + N = what a ...!; ki-muya + N = so many ...! Li nullo ka ki-modo vanisan!"
+  },
+  {
+   "id": "2.1:G48",
+   "topic": "Blessings and wishes",
+   "rule": "pifu with any subject is the blessing form: Li lumi tivrota taivo pifu. noma + pifu = if only: Taivo po noma lisrola pifu."
+  },
+  {
+   "id": "2.1:G49",
+   "topic": "Once and N times",
+   "rule": "NUMBER-krono = N times (una-krono once, dossa-krono twice); ki-muya-krono = how many times; una-ne krono = the first time; una-krono never means formerly (somi-krono)."
+  },
+  {
+   "id": "2.1:G50",
+   "topic": "Different-subject complements",
+   "rule": "A second verb with its own subject goes in a fime clause: Maivo desida fime taivo lisrola. sidu stays same-subject; fime inherits tense (0.8:R6)."
+  },
+  {
+   "id": "2.1:G51",
+   "topic": "Evidentials",
+   "rule": "No evidential = no claim about source. Inside fime, the evidential reports the main-clause subject's evidence. In a question it asks the listener's source."
+  },
+  {
+   "id": "2.1:G52",
+   "topic": "Relatives on a prepositional object",
+   "rule": "raho opens the clause; the preposition keeps its place with a resumptive pronoun (ito/itori, saivo/saivori): Li nimu raho maivo po lirala en ito, ka vanisan."
+  },
+  {
+   "id": "2.1:G53",
+   "topic": "Partitive de",
+   "rule": "After a number, quantifier, or superlative, de means of/among and G27/G32 ownership does not apply: Una de maivori futu relnura. Fractions are the same construction."
+  },
+  {
+   "id": "2.1:G54",
+   "topic": "Result clauses",
+   "rule": "ola-modo + ADJ ... fime CLAUSE = so ADJ that: Taivo ke ola-modo vanisan fime li veluri lasola."
+  },
+  {
+   "id": "2.1:G55",
+   "topic": "Duration, ago, from now",
+   "rule": "Bare measure after the object = duration; kroti + measure (no article) = ago; krotiapo + measure = in/after. kroti/krotiapo + li + noun = before/after it."
+  },
+  {
+   "id": "2.1:G56",
+   "topic": "Prohibitions",
+   "rule": "ne + command, no subject; fisa softens; yava ne + verb = let us not."
+  },
+  {
+   "id": "2.1:G57",
+   "topic": "Sound follows meaning",
+   "rule": "Guidance for new and respelled roots: prefer CVCV; l m n r v for sacred/tender/lyrical; b d g k p t z h for bodily/everyday/harsh; playful b c p for beloved small creatures; related meanings may share a consonant frame; no suffix-look-alike endings (-ti -ri -na -vu -yo -asa); at least two letters from every root and small word except deliberate families. Not retroactive."
+  },
+  {
+   "id": "2.1:G58",
+   "topic": "Respelling",
+   "rule": "A respelled root keeps every meaning and empty slot; all forms, derivations, compounds and image compounds respell with it; compound verbs follow the new first letter; 2.0 spellings retired, 2.0 texts read under 2.0 spellings; overrides protected for these 30 roots; new spellings protected."
+  },
+  {
+   "id": "2.1:G59",
+   "topic": "Roots replaced by compounds",
+   "rule": "volda -> larbopagobudi (larbopago + budi); taha -> kezupago (kezu + pago). Compound reading of kezupago is canon."
+  }
+ ],
+ "open_questions": [
+  "Chains of de: how X de Y de Z resolves when owners of different ranks mix.",
+  "A vocative particle for verse."
+ ],
+ "closed_open_questions": {
+  "once / N times": "2.1:G49",
+  "to + verb": "2.1:G50",
+  "evidentials": "2.1:G51",
+  "relatives on a prepositional object": "2.1:G52"
+ }
+}

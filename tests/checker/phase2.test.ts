@@ -115,15 +115,15 @@ describe('the self_check rules', () => {
   });
 
   it('a stranded preposition; ala is never the infinitive (noun phrase)', () => {
-    expect(hits('maivo vurlova ala lirala.', 'noun phrase')[0]?.message).toMatch(
+    expect(hits('maivo desida ala lirala.', 'noun phrase')[0]?.message).toMatch(
       /never the infinitive/,
     );
     expect(hits('maivo lirala en.', 'noun phrase', 'error')).toHaveLength(1);
   });
 
   it('sidu joins two verbs, never a copula (sidu)', () => {
-    expect(serious('Maivo vurlova sidu lirala.')).toEqual([]);
-    expect(hits('maivo vurlova sidu ka benasan.', 'sidu', 'error')).toHaveLength(1);
+    expect(serious('Maivo desida sidu lirala.')).toEqual([]);
+    expect(hits('maivo desida sidu ka benasan.', 'sidu', 'error')).toHaveLength(1);
   });
 
   it('fime is followed by its clause’s subject (fime)', () => {
@@ -211,7 +211,7 @@ describe('rule ids and the overlay', () => {
         'maivo lirala po.',
         'taivo lirala ki poye.',
         'Ka taivo benasan ki?',
-        'maivo vurlova sidu ka benasan.',
+        'maivo desida sidu ka benasan.',
         'maivo sabesia fime ka vera.',
         'maivo blorpa.',
         'taivo ke baba farulavra.',

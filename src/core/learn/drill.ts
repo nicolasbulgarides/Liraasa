@@ -238,18 +238,23 @@ export function starsDrill(
       if (out.length >= options.length) break;
     }
   }
-  // spread the words: swap an exercise forward when it repeats the previous one's word
-  for (let i = 1; i < out.length; i += 1) {
-    if (out[i]?.target !== out[i - 1]?.target) continue;
-    const j = out.findIndex((e, k) => k > i && e.target !== out[i - 1]?.target);
-    if (j < 0) break;
-    const a = out[i];
-    const b = out[j];
-    if (a === undefined || b === undefined) break;
-    out[i] = b;
-    out[j] = a;
+  // spread the words: keep the order, but never put a word twice in a row while another is
+  // left, and bring a word that holds more than half of what is left forward before it can
+  // only end in a run
+  const spread: Exercise[] = [];
+  const left = [...out];
+  while (left.length > 0) {
+    const prev = spread[spread.length - 1]?.target;
+    const counts = new Map<string, number>();
+    for (const e of left) counts.set(e.target, (counts.get(e.target) ?? 0) + 1);
+    const crowded = [...counts].find(([t, n]) => t !== prev && n * 2 > left.length)?.[0];
+    const at =
+      crowded !== undefined
+        ? left.findIndex((e) => e.target === crowded)
+        : left.findIndex((e) => e.target !== prev);
+    spread.push(...left.splice(Math.max(at, 0), 1));
   }
-  return out;
+  return spread;
 }
 
 /* -------------------------------------------------------------- grading */

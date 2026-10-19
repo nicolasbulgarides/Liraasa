@@ -8,6 +8,8 @@
  *   … or without its comma                            warn   slot 1
  *   a time word opening a clause with no comma        note   1.2:G24
  *   a question with the copula or tense in front      error  ki
+ *   a direct question with no final ki, or a fronted
+ *     question word that is not of time or the subject error 2.1:G46
  *   fime followed by a copula or tense                error  fime
  *   sidu between non-verbs, or before a copula        error  sidu
  *   a relative clause not closed by a comma           note   1.0:G21
@@ -330,7 +332,13 @@
     // must not open with the copula or a tense (… raho … ki? still counts)
     const last = ctx.words[ctx.words.length - 1];
     const firstClause = ctx.parsed[0];
-    if (last && last.roles.has('question') && firstClause) {
+    // (a clause opened by a ki-word is 2.1:G46's, below)
+    if (
+      last &&
+      last.roles.has('question') &&
+      firstClause &&
+      firstClause.clause.kind !== 'question'
+    ) {
       const W = firstClause.clause.words;
       const k = firstClause.clause.linker ? 1 : 0;
       const w = W[k];
@@ -352,6 +360,86 @@
         );
       }
     }
+    out.push(...questionsInPlace(ctx));
     return out;
   };
+
+  /** The sentences of a line: its words, split after . ! ?, with the mark that ends each. */
+  function sentences(ctx) {
+    const out = [];
+    let cur = [];
+    for (const w of ctx.words) {
+      cur.push(w);
+      let end = null;
+      for (let k = w.k + 1; k < ctx.tokens.length && ctx.tokens[k].type === 'punct'; k += 1) {
+        if (/[.!?]/.test(ctx.tokens[k].text)) {
+          end = ctx.tokens[k];
+          break;
+        }
+      }
+      if (end) {
+        out.push({ words: cur, end });
+        cur = [];
+      }
+    }
+    if (cur.length) out.push({ words: cur, end: null });
+    return out;
+  }
+
+  /**
+   * 2.1:G46: a question word stands where its answer would stand, and every
+   * direct question ends in ki. A ki-word of time may open the clause as a
+   * frame; a ki-word that is the subject is already in place. A clause with a
+   * ki-word and no final ki that ends in ! is an exclamation (2.1:G47), and
+   * an embedded question keeps no ki, so only sentences ending in ? are read.
+   */
+  function questionsInPlace(ctx) {
+    const out = [];
+    for (const sent of sentences(ctx)) {
+      if (!sent.end || sent.end.text !== '?') continue;
+      const first = sent.words[0];
+      const last = sent.words[sent.words.length - 1];
+      const hasKi = sent.words.some((w) => w.roles.has('question'));
+      const main = ctx.parsed.find((p) => p.clause.words[0] === first);
+      const verbs = ctx.parsed.some(
+        (p) => sent.words.includes(p.clause.words[0]) && p.s.verbs.length > 0,
+      );
+      // a fronted question word: not of time, not the subject, not a linker (ki-oro)
+      const R = first.roles;
+      const fronted =
+        main &&
+        main.clause.kind === 'question' &&
+        !R.has('time') &&
+        !R.has('subordinator') &&
+        (R.has('adverb') || main.s.subject !== null);
+      if (fronted) {
+        out.push(
+          C.diagnostic({
+            ...C.at(ctx, first),
+            severity: 'error',
+            rule: '2.1:G46',
+            message:
+              'A question word stands where its answer would stand, and the question ends in ki: say it in statement order with “' +
+              first.text.toLowerCase() +
+              '” in the answer’s place (Taivo pagopa ki-pago ki?, where are you going?). Only a ki-word of time may open the clause.',
+          }),
+        );
+      } else if (!hasKi && verbs) {
+        out.push(
+          C.diagnostic({
+            ...C.at(ctx, last),
+            severity: 'error',
+            rule: '2.1:G46',
+            message:
+              'Every direct question ends in ki: “' +
+              last.text +
+              ' ki?”. A ki-word with no final ki makes an exclamation, ending in ! (2.1:G47).',
+            fix: last.text + ' ki',
+            autoFix: true,
+          }),
+        );
+      }
+    }
+    return out;
+  }
 })(typeof window !== 'undefined' ? window : globalThis);

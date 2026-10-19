@@ -157,8 +157,9 @@ describe('must pass: Lira de Kronoasa', () => {
 
 describe('advisories', () => {
   it('shows a mechanical back-translation beside the gloss', () => {
-    // 2.0 differentiated letosan: "lettered; set down in a letter" (it was "written")
-    expect(checker.backTranslate('maivo de letosan nimu').text).toBe('my lettered home');
+    // 2.0 differentiated letosan: "lettered; set down in a letter" (it was "written");
+    // 2.1 respelled leto as cuza (2.1:G58), so the adjective is cuzasan
+    expect(checker.backTranslate('maivo de cuzasan nimu').text).toBe('my lettered home');
   });
 
   it('warns that there is no "about" after a communication verb with su (1.2:G30)', () => {
@@ -196,15 +197,20 @@ function guideCorpus(): string[] {
      frozen, so the finding stays pinned here.
    - "lira + yo = lirayo" and its siblings are morphology formulas, not sentences.
    - Taivo futu yugemeyiya fututi, which the old checker flagged, is correct:
-     fututi is also a time word, and a time word may close its clause (1.2:G24). */
+     fututi is also a time word, and a time word may close its clause (1.2:G24).
+   - 2.1 adds two kinds of finding the frozen text cannot avoid, counted rather
+     than listed: a spelling 2.1 respelled (1.0:G19, naming its 2.1 spelling),
+     and a fronted or ki-less question (2.1:G46). "Miyo baba sola" and "Li sola
+     loya benasan" are no longer flagged: 2.1 made sola a word (sun, respelled
+     from sulba), so they now read "there is a sun", against their English
+     ("solitude"). Reported to the author. */
+const SINCE_2_1 = { respelled: 28, questions: 18 };
 const GUIDE_FINDINGS = [
   'Ki-saivo lirala? (historical) :: never invent :: historical',
-  'Li sola loya benasan. :: never invent :: sola',
   'Lotero silda, li cilni ka lasona. :: ADR-0011 :: Lotero silda',
   'Maivo melo bena opioa lumi :: ADR-0011 :: melo bena',
   'Maivo melo bena opioa lumi :: slot :: melo',
   'Maivo vurlova, hema, baba cupa de miru. :: 1.0:G19 :: cupa',
-  'Miyo baba sola. :: never invent :: sola',
   'Ola ka li bumreasasan, zoke. :: 0.8:R2 :: bumreasasan',
   'Taivo ka ruli pamlonasan, zoke. — Ne zoke. Vera. :: 1.0:G19 :: pamlonasan',
   'lemu + pago = lemupago :: ADR-0011 :: lemu pago',
@@ -215,13 +221,28 @@ const GUIDE_FINDINGS = [
   'lira + yo = lirayo :: slot :: yo',
 ];
 
+/** What 2.1 adds to the frozen text: its respellings and its question rule. */
+function since2_1(d: Diagnostic): boolean {
+  const legacy = checker.index.legacy as Map<string, { edition?: string }>;
+  return (
+    d.rule === '2.1:G46' ||
+    (d.rule === '1.0:G19' && legacy.get(String(d.token).toLowerCase())?.edition === '2.1')
+  );
+}
+
 describe('must pass: the 1.0 grammar guide', () => {
   it('flags no guide example beyond the ones reported to the author', () => {
+    const all = guideCorpus().flatMap((line) => serious(line).map((d) => ({ line, d })));
     const found = new Set(
-      guideCorpus().flatMap((line) =>
-        serious(line).map((d) => `${line} :: ${d.rule} :: ${String(d.token)}`),
-      ),
+      all
+        .filter(({ d }) => !since2_1(d))
+        .map(({ line, d }) => `${line} :: ${d.rule} :: ${String(d.token)}`),
     );
     expect([...found].sort()).toEqual(GUIDE_FINDINGS);
+    const added = all.filter(({ d }) => since2_1(d));
+    expect({
+      respelled: added.filter(({ d }) => d.rule === '1.0:G19').length,
+      questions: added.filter(({ d }) => d.rule === '2.1:G46').length,
+    }).toEqual(SINCE_2_1);
   });
 });

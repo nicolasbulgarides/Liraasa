@@ -23,6 +23,7 @@ import {
   isCanonText,
   isUsed,
   normGloss,
+  respelledAs,
   tokenize,
   type Headword,
   type Index,
@@ -148,7 +149,10 @@ function lamentLine(c: Ctx, word: string, note = ''): string {
   return sentence(c, liraasa, english, note, `The Lament, line ${String(at)}`);
 }
 
-/** “`sulbanevra`, sun + descent, is sunset”, read from the lexicon. */
+/** The four motif words, sun, heart, moon and song, by id: a respelling carries through. */
+const MOTIF = ['lx_sulba_0853', 'lx_lore_0286', 'lx_luno_0310', 'lx_lira_0272'] as const;
+
+/** “`solanevra`, sun + descent, is sunset”, read from the lexicon. */
 function compoundNote(index: Index, root: string): string {
   const h = index.byRoot.get(root);
   if (h?.components === undefined || h.components === null) {
@@ -161,10 +165,9 @@ function compoundNote(index: Index, root: string): string {
 // ------------------------------------------------------------------ pages
 
 function cover(index: Index, emblemSvg: string): string {
-  const motif = (['sulba', 'lore', 'luno', 'lira'] as const).map((w) => {
-    const h = index.byRoot.get(w);
-    if (h === undefined) throw new Error(`${w} is not a headword`);
-    return [w, firstSense(glossOf(h, 'root')).toLowerCase()] as const;
+  const motif = MOTIF.map((id) => {
+    const h = byId(index, id);
+    return [h.root, firstSense(glossOf(h, 'root')).toLowerCase()] as const;
   });
   return `<header class="cover">
 <div class="cover-inner">
@@ -191,7 +194,7 @@ function opening(c: Ctx): string {
   const verse = ['lunosavali', 'velumelo']
     .map((w) => {
       const { liraasa, english } = songLine(w);
-      return `<p class="big-line">${lir(liraasa)}<span class="big-en">${esc(english)}</span></p>`;
+      return `<p class="big-line">${lir(liraasa, 'older')}<span class="big-en">${esc(english)}</span></p>`;
     })
     .join('\n');
   return page(
@@ -201,7 +204,14 @@ function opening(c: Ctx): string {
 ${p('These two lines come from *Nemelira de devi*, The Goddess’s Lament. A goddess sings to the one she loves, who fell from the sky and became mortal. By the end of this booklet you will read the whole song, word by word.')}
 <h3>The name</h3>
 <p class="name-line">${lir(formOf(lira, 'ascended'))} <span class="name-gloss">“${esc(glossOf(lira, 'ascended'))}”</span></p>
-${p(`The word for song is \`lira\`. Raised to its highest degree it becomes \`${formOf(lira, 'ascended')}\`, ${glossOf(lira, 'ascended')}, and that is the language’s name. Four words carry most of its imagery: \`sulba\` sun, \`lore\` heart, \`luno\` moon, \`lira\` song.`)}
+${p(
+  `The word for song is \`lira\`. Raised to its highest degree it becomes \`${formOf(lira, 'ascended')}\`, ${glossOf(lira, 'ascended')}, and that is the language’s name. Four words carry most of its imagery: ${MOTIF.map(
+    (id) => {
+      const h = byId(c.index, id);
+      return `\`${h.root}\` ${firstSense(glossOf(h, 'root')).toLowerCase()}`;
+    },
+  ).join(', ')}.`,
+)}
 ${p('Liraasa is a language centred on a goddess, and it was built for singing. Its vowels are pure, most of its words end on an open vowel, and every word leans on the same syllable, so a melody always knows where to land.')}
 <aside class="listen"><p class="listen-head">Listen first</p>
 ${album(`<p>The album <em>${esc(INVITATION.album)}</em> sets Liraasa to music. Hear a song before you read about one.</p>`)}</aside>`,
@@ -367,9 +377,10 @@ function compounds(c: Ctx): string {
   const { index } = c;
   const lunolumi = index.patterns.get('lunolumi');
   if (lunolumi === undefined) throw new Error('lunolumi is no longer a word of the pattern');
+  // the song's own words; a word 2.1 respelled is shown in its 2.1 spelling (2.1:G58)
   const fromSong = ['sulbanevra', 'kronorivla', 'velumelo', 'ramuvorba', 'velusolo']
     .map((w) => {
-      const h = index.byRoot.get(w);
+      const h = index.byRoot.get(respelledAs(index.lex, w) ?? w);
       if (h?.components === undefined || h.components === null) {
         throw new Error(`${w} is not a compound headword`);
       }
@@ -378,9 +389,9 @@ function compounds(c: Ctx): string {
     })
     .join('');
   const soul = index.byRoot.get('mavolumi');
-  const bond = index.byRoot.get('mavolumitilma');
+  const bond = index.byId.get('lx_mavolumitilma_1591');
   if (soul === undefined || bond === undefined) {
-    throw new Error('mavolumi or mavolumitilma is gone');
+    throw new Error('mavolumi or the soulbond (lx_mavolumitilma_1591) is gone');
   }
   const [m1, m2] = soul.components ?? ['', ''];
   const [, b2] = bond.components ?? ['', ''];
@@ -504,7 +515,7 @@ function lyricSheet(): string {
   const rows = lines
     .map(
       (l, i) =>
-        `<tr><td class="ly-n" aria-hidden="true">${String(i + 1)}</td><td class="ly-l">${lir(l.liraasa)}</td><td class="ly-e">${esc(l.english)}</td></tr>`,
+        `<tr><td class="ly-n" aria-hidden="true">${String(i + 1)}</td><td class="ly-l">${lir(l.liraasa, 'older')}</td><td class="ly-e">${esc(l.english)}</td></tr>`,
     )
     .join('\n');
   return page(
@@ -541,7 +552,7 @@ function lamentNotes(index: Index): readonly Note[] {
     ['vemineme', `${compoundNote(index, 'lorenuravu')}; ${compoundNote(index, 'vemineme')}.`],
     [
       'sulbanevra',
-      '`vobi`, for, and `hupi`, above, come before what they govern. `sulbanevra`, sun + going down, is sunset.',
+      '`vobi`, for, and `hupi`, above, come before what they govern. `solanevra`, sun + going down, is sunset; the song, written before the word was respelled, spells it sulbanevra.',
     ],
     ['povi', '`ne povi`: cannot.'],
     ['sulnosia', '`lumiasa`: Her Divine Light, the Goddess’s own light.'],
@@ -582,7 +593,7 @@ function nextSteps(index: Index): string {
     'next',
     'Where to go next',
     `<ul class="next">
-<li><strong>The Liraasa 2.0 Reference Grammar.</strong> Everything this booklet left out: every rule, how to say almost anything from English, the numbers and colours, and a treasury of words for songwriters. ${link(codexUrl(CODEX.stable.reference))}</li>
+<li><strong>The Liraasa ${esc(lex.version)} Reference Grammar.</strong> Everything this booklet left out: every rule, how to say almost anything from English, the numbers and colours, and a treasury of words for songwriters. ${link(codexUrl(CODEX.stable.reference))}</li>
 <li>${album(`<p><strong>The album, <em>${esc(INVITATION.album)}</em>.</strong> Listen on Apple Music.</p>`)}</li>
 <li><strong>The Liraasa lexicon.</strong> ${n(lex.headwords.length)} words${ic === undefined ? '' : `, and the image engine’s ${n(ic.capacity)} more`}, each in its seven shapes, with the whole grammar, in one file built for reading and for language tools. ${link(codexUrl(CODEX.stable.lexicon))}</li>
 </ul>

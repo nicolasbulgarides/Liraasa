@@ -23,6 +23,7 @@ import {
   glossOf,
   isUsed,
   normGloss,
+  respelledAs,
   tokenize,
   type Headword,
   type Index,
@@ -68,7 +69,7 @@ export const REFERENCE_NOTES: readonly Note[] = [
   ],
   [
     'sulbanevra',
-    '`vobi` (for) and `hupi` (above) are prepositions after the verb. `sulbanevra` is sun + descent: a compound is two headwords written as one word, the head last.',
+    '`vobi` (for) and `hupi` (above) are prepositions after the verb. `solanevra`, written sulbanevra in 2.0, is sun + descent: a compound is two headwords written as one word, the head last [[2.1:G58]].',
   ],
   [
     'povi',
@@ -171,6 +172,8 @@ interface Gloss {
   headword?: Headword;
   /** The lexicon's own words for this reading, before any shortening. */
   lexicon: string;
+  /** The current spelling, when the text spells the word as an earlier edition did (2.1:G58). */
+  now?: string;
 }
 
 /**
@@ -223,6 +226,12 @@ function lexiconGloss(index: Index, token: string, style: GlossStyle): Gloss {
   };
   const whole = lexical(token);
   if (whole !== undefined) return whole;
+  // a 2.0 text keeps its 2.0 spellings; it is read through the migration table (2.1:G58)
+  const now = respelledAs(lex, token);
+  if (now !== undefined) {
+    const g = lexiconGloss(index, now, style);
+    return { ...g, now };
+  }
   for (const [suffix, mark] of [
     ['tiri', 'DIM-PL'],
     ['ri', 'PL'],
@@ -252,6 +261,9 @@ export function interlinear(
       if (token === undefined) return '';
       const g = glossToken(index, token, style);
       if (g.headword?.components) compounds.set(g.headword.root, g.headword);
+      if (g.now !== undefined) {
+        return `<span class="w">${lir(raw, 'older')}<span class="g">${esc(g.gloss)}</span><span class="g now">now ${lir(g.now)}</span></span>`;
+      }
       return `<span class="w">${lir(raw)}<span class="g">${esc(g.gloss)}</span></span>`;
     })
     .join(' ');
@@ -336,7 +348,7 @@ export function songPart(index: Index, n: string): string {
   return part(
     n,
     `${title}: ${englishTitle}`,
-    'A whole song, one line at a time: the Liraasa, a gloss under each word, the English, and the grammar the line shows. Glosses are read from the lexicon; a changed form is glossed by its root and a label (`navuasa`, sky-ASC). Labels: PST past, FUT future, NEG negation or negative form, Q question, PL plural, DIM diminutive, ASC ascended form, 1SG / 2SG I / you, COP.NOW `ke` (so now), COP.NAT `ka` (so by nature), DREAM.EVID `vuda` (seen in a dream).',
+    'A whole song, one line at a time: the Liraasa, a gloss under each word, the English, and the grammar the line shows. The song was written in 2.0 and is shown as written; a word 2.1 respelled is read under its 2.0 spelling and shows its 2.1 spelling beneath (“now …”) [[2.1:G58]]. Glosses are read from the lexicon; a changed form is glossed by its root and a label (`navuasa`, sky-ASC). Labels: PST past, FUT future, NEG negation or negative form, Q question, PL plural, DIM diminutive, ASC ascended form, 1SG / 2SG I / you, COP.NOW `ke` (so now), COP.NAT `ka` (so by nature), DREAM.EVID `vuda` (seen in a dream).',
     songVerses(index, REFERENCE_STYLE, REFERENCE_NOTES, 'The compounds of the song'),
   );
 }

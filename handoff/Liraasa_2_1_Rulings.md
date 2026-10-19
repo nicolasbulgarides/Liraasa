@@ -1,6 +1,72 @@
-# Liraasa 2.0 Reference Grammar: every ruling
+# Liraasa 2.1 Reference Grammar: every ruling
 
-Verbatim from the Liraasa 2.0 lexicon, newest edition first. Ruling ids are edition-qualified: 0.8:G7 and 1.0:G7 are different rulings.
+Verbatim from the Liraasa 2.1 lexicon, newest edition first. Ruling ids are edition-qualified: 0.8:G7 and 1.0:G7 are different rulings.
+
+## Rulings 2.1
+
+### 2.1:G46: Questions keep every word in place
+
+A question word stands where its answer would stand; every direct question ends in ki. A ki-word of time may open the clause as a frame. Embedded questions unchanged (0.8:G4, 1.0:G2). Replaces the fronted small-words examples: Taivo pagopa ki-pago ki?
+
+Refines 1.0:G22.
+
+### 2.1:G47: Exclamatives
+
+A main clause with a ki-word and no final ki is an exclamation (!). ki-modo + ADJ = how ...!; ki-eli + N = what a ...!; ki-muya + N = so many ...! Li nullo ka ki-modo vanisan!
+
+### 2.1:G48: Blessings and wishes
+
+pifu with any subject is the blessing form: Li lumi tivrota taivo pifu. noma + pifu = if only: Taivo po noma lisrola pifu.
+
+### 2.1:G49: Once and N times
+
+NUMBER-krono = N times (una-krono once, dossa-krono twice); ki-muya-krono = how many times; una-ne krono = the first time; una-krono never means formerly (somi-krono).
+
+### 2.1:G50: Different-subject complements
+
+A second verb with its own subject goes in a fime clause: Maivo desida fime taivo lisrola. sidu stays same-subject; fime inherits tense (0.8:R6).
+
+Refines 0.8:R6.
+
+### 2.1:G51: Evidentials
+
+No evidential = no claim about source. Inside fime, the evidential reports the main-clause subject's evidence. In a question it asks the listener's source.
+
+### 2.1:G52: Relatives on a prepositional object
+
+raho opens the clause; the preposition keeps its place with a resumptive pronoun (ito/itori, saivo/saivori): Li nimu raho maivo po lirala en ito, ka vanisan.
+
+### 2.1:G53: Partitive de
+
+After a number, quantifier, or superlative, de means of/among and G27/G32 ownership does not apply: Una de maivori futu relnura. Fractions are the same construction.
+
+Refines 1.2:G27, 1.2:G32.
+
+### 2.1:G54: Result clauses
+
+ola-modo + ADJ ... fime CLAUSE = so ADJ that: Taivo ke ola-modo vanisan fime li veluri lasola.
+
+### 2.1:G55: Duration, ago, from now
+
+Bare measure after the object = duration; kroti + measure (no article) = ago; krotiapo + measure = in/after. kroti/krotiapo + li + noun = before/after it.
+
+### 2.1:G56: Prohibitions
+
+ne + command, no subject; fisa softens; yava ne + verb = let us not.
+
+Refines 1.2:G31.
+
+### 2.1:G57: Sound follows meaning
+
+Guidance for new and respelled roots: prefer CVCV; l m n r v for sacred/tender/lyrical; b d g k p t z h for bodily/everyday/harsh; playful b c p for beloved small creatures; related meanings may share a consonant frame; no suffix-look-alike endings (-ti -ri -na -vu -yo -asa); at least two letters from every root and small word except deliberate families. Not retroactive.
+
+### 2.1:G58: Respelling
+
+A respelled root keeps every meaning and empty slot; all forms, derivations, compounds and image compounds respell with it; compound verbs follow the new first letter; 2.0 spellings retired, 2.0 texts read under 2.0 spellings; overrides protected for these 30 roots; new spellings protected.
+
+### 2.1:G59: Roots replaced by compounds
+
+volda -> larbopagobudi (larbopago + budi); taha -> kezupago (kezu + pago). Compound reading of kezupago is canon.
 
 ## Rulings 2.0
 
@@ -22,7 +88,7 @@ Image compounds: any listed modifier + any listed head is a valid word with a pr
 
 ### 2.0:G41: Productive derivations
 
-Derivations are fully productive with default readings: R+yo = one who does R, or one devoted to R; R+vu = a big or intense R; R+pago = the place of R; R+ti = a little or dear R. They attach to any root or compound (as lemudonuyo and mambiletoyo already do). Listed derivations keep their fixed meanings and override the default.
+Derivations are fully productive with default readings: R+yo = one who does R, or one devoted to R; R+vu = a big or intense R; R+pago = the place of R; R+ti = a little or dear R. They attach to any root or compound (as lemudonuyo and mambicuzayo already do). Listed derivations keep their fixed meanings and override the default.
 
 ### 2.0:G42: Nested compounds
 
@@ -229,7 +295,7 @@ At most one word per slot. hiro/teki do not combine with roni or tefa. tavki exc
 
 ### 1.0:G17: Unexpectedly / previously / simultaneously
 
-la nerponasan = unexpectedly; kroti ola = previously; nayo ola = meanwhile/simultaneously; krotiapo = subsequently. No new words.
+la vuzinasan = unexpectedly; kroti ola = previously; nayo ola = meanwhile/simultaneously; krotiapo = subsequently. No new words.
 
 ### 1.0:G18: Topic and focus together
 
@@ -253,7 +319,7 @@ seye, mufe, poye, pifu and zoke never open a clause. 'Perhaps, …' at the start
 
 ### 1.0:G23: Events taking place
 
-venreva (come) with an event as subject means 'take place, happen': Li dapadonu po venreva kroti li nilvu, the sale took place before winter.
+venreva (come) with an event as subject means 'take place, happen': Li dapadonu po venreva kroti li foji, the sale took place before winter.
 
 ## Rulings 0.8
 
@@ -319,7 +385,7 @@ Everyday speech may omit a repeated subject in coordinated clauses and in answer
 
 ### 0.8:G4: Quotation and embedded questions
 
-ki may close the main clause before an appended direct quotation (Taivo vurlova ki, fime maivo senosia: "...") as well as after it (0.7 order). Embedded wh-questions keep the wh-word in place with no ki; embedded yes/no questions use si (whether).
+ki may close the main clause before an appended direct quotation (Taivo desida ki, fime maivo senosia: "...") as well as after it (0.7 order). Embedded wh-questions keep the wh-word in place with no ki; embedded yes/no questions use si (whether).
 
 ### 0.8:G5: Relative time in subordinate clauses
 
@@ -411,3 +477,33 @@ Retired and respelled roots, and what replaces them (1.0:G19). A pre-1.0 text is
 - deyu → feyu
 - desa → lesma
 - molta → molfa
+- tilma → miga
+- yordo → puku
+- balbu → bako
+- buvo → buza
+- vaga → diyi
+- vurlo → desi
+- zarmo → hata
+- danvu → budi
+- milyu → cibu
+- volda → larbopagobudi
+- barni → kupa
+- menme → haza
+- supo → goza
+- vorba → duha
+- tilnu → rupu
+- leto → cuza
+- rumne → zupa
+- salta → bezi
+- nevlo → fojo
+- sulba → sola
+- tamra → kezu
+- yelfa → boji
+- nerpo → vuzi
+- ranbe → doza
+- velbi → vugo
+- silro → puzu
+- nilvu → foji
+- vebo → faji
+- taha → kezupago
+- zirme → zayu

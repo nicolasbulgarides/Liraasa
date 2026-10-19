@@ -4,7 +4,7 @@
  *
  *   npm run build:llm
  *
- * Writes handoff/liraasa_2_0_llm.json from the canonical 2.0 lexicon. It holds
+ * Writes handoff/liraasa_2_1_llm.json from the canonical 2.1 lexicon. It holds
  * every grammar rule and the full dictionary. It is shaped for a reader that
  * goes top to bottom: instructions and hard rules first, then sound, word
  * building, the clause, recipes and every ruling, then the small words, the
@@ -27,8 +27,11 @@ import { OPEN_QUESTIONS, READ_ORDER, RECIPES, RULES } from './grammar_guide/chap
 import { canonTexts, isCanonText, type Lexicon } from './grammar_guide/data';
 import { parseArgs } from './args';
 
-const LEXICON = 'data/lexicon/liraasa_2_0.json';
-const OUT = 'handoff/liraasa_2_0_llm.json';
+const LEXICON = 'data/lexicon/liraasa_2_1.json';
+const OUT = 'handoff/liraasa_2_1_llm.json';
+/** Words the prose names, by id, so a respelling carries through (CLAUDE.md). */
+const WANT = 'lx_vurlo_1061';
+const SING = 'lx_lira_0272';
 /** Every build also lands here, beside the published guide. */
 const LATEST_DIR = 'LirasaCodexLatest';
 
@@ -158,6 +161,13 @@ function main(): void {
     examples: [{ liraasa: 'lirasan lavra', english: 'songbird' }],
   });
 
+  // a headword respelled in an earlier edition: its old root, for reading older texts
+  const formerly = new Map<string, string[]>();
+  for (const [old, m] of Object.entries(lex.legacy.migration_forms)) {
+    if (m.slot === 'root' && m.kind === 'respelled') {
+      formerly.set(m.to, [...(formerly.get(m.to) ?? []), old]);
+    }
+  }
   const dictionary = heads
     .slice()
     .sort((a, b) => (a.root < b.root ? -1 : a.root > b.root ? 1 : 0))
@@ -174,6 +184,7 @@ function main(): void {
       const flags = [
         ...(h.register === 'poetic' ? ['poetic'] : []),
         ...(h.since === lex.version ? [`new in ${lex.version}`] : []),
+        ...(formerly.has(h.root) ? [`formerly ${(formerly.get(h.root) ?? []).join(', ')}`] : []),
       ];
       const line =
         h.root +
@@ -211,6 +222,8 @@ function main(): void {
   const defaults = (lex.morphology as unknown as { derivation_defaults?: Record<string, string> })
     .derivation_defaults;
   const has = (ref: string): boolean => rulings.some((r) => r.id === ref);
+  const verbOf = (id: string): string =>
+    heads.find((h) => (h as unknown as { id: string }).id === id)?.forms.verb ?? id;
   const live = lex.examples.filter((e) => e.status !== 'HISTORICAL');
   const numbers = lex.numbers.lookup_0_999;
 
@@ -315,9 +328,8 @@ function main(): void {
       copulas:
         'ke = is (temporary state or location now); ka = is (permanent quality or identity). A predicate adjective may also stand bare: lira benasan.',
       questions:
-        'Keep statement order and put ki at the end of the clause. Question words are ki- correlatives (ki-coda what, ki-nela who, ki-pago where, ki-krono when, ki-kasa why, ki-modo how) and stay in place.',
-      linking:
-        'fime = "that" introducing a clause; ola = the demonstrative "that". raho opens a relative clause, closed by a comma if the sentence continues. sidu joins two verbs with one subject (want to sing = vurlova sidu lirala). ala means toward, never the infinitive "to".',
+        'Keep statement order: a question word stands where its answer would stand, and every direct question ends in ki (Taivo pagopa ki-pago ki? where are you going?). Question words are ki- correlatives (ki-coda what, ki-nela who, ki-pago where, ki-krono when, ki-kasa why, ki-modo how). A ki-word of time may open the clause as a frame. Embedded questions keep the word in place with no ki. A main clause with a ki-word and no final ki is an exclamation (2.1:G46, 2.1:G47).',
+      linking: `fime = "that" introducing a clause; ola = the demonstrative "that". raho opens a relative clause, closed by a comma if the sentence continues. sidu joins two verbs with one subject (want to sing = ${verbOf(WANT)} sidu ${verbOf(SING)}); a second verb with its own subject goes in a fime clause (2.1:G50). ala means toward, never the infinitive "to".`,
     },
     recipes: RECIPES.map(([english, pattern, liraasa, gloss, ruling]) => ({
       english,

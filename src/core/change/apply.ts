@@ -18,7 +18,7 @@ import { IdAssigner, type IdKind, type IdMapFile } from '../model/ids';
 import type { RawLexicon, RawSlots } from '../model/raw';
 import { sevenForms } from '../morphology/sevenForms';
 import { type ChangeRecord, type Changeset, validateChangeset } from './changelog';
-import { respellRootInPlace, retireRootInPlace } from './respell';
+import { respellAsCompoundInPlace, respellRootInPlace, retireRootInPlace } from './respell';
 
 export interface ChangesetRuling {
   id: string;
@@ -556,17 +556,66 @@ export function applyChangesets(
           break;
         }
         case 'respell_root':
+        case 'respell_as_compound':
         case 'retire_and_replace': {
           // the same code the editor's rename tool runs (respell.ts)
           if (op.to === null) throw new ApplyError(`${op.entry}: ${op.op} needs a "to"`);
-          if (op.op === 'respell_root') respellRootInPlace(lex, op.entry, op.to, op.reason);
-          else retireRootInPlace(lex, op.entry, op.to, op.reason);
+          const h = headword(op);
+          if (op.from !== null && h.root !== op.from) {
+            throw new ApplyError(`${op.entry}: expected ${op.from}, found ${h.root}`);
+          }
+          try {
+            if (op.op === 'respell_root') respellRootInPlace(lex, op.entry, op.to, op.reason);
+            else if (op.op === 'respell_as_compound') {
+              const parts = op.to.split('+');
+              if (parts.length !== 2 || parts.some((x) => x === ''))
+                throw new ApplyError(`${op.entry}: "to" must be MODIFIER+HEAD`);
+              if (!rules.nesting && parts.some((x) => byRoot.get(x)?.type === 'Compound'))
+                throw new ApplyError(`${op.entry}: ${op.to} would nest`);
+              respellAsCompoundInPlace(lex, op.entry, parts as [string, string], op.reason);
+            } else retireRootInPlace(lex, op.entry, op.to, op.reason);
+          } catch (e) {
+            if (e instanceof ApplyError) throw e;
+            throw new ApplyError(`${op.entry}: ${(e as Error).message}`);
+          }
           byId.clear();
           byRoot.clear();
           for (const h of heads) {
             byId.set(String(h.id), h);
             byRoot.set(h.root, h);
           }
+          break;
+        }
+        case 'edit_function_word': {
+          const fw = (lex.function_words as unknown as Row[]).find((f) => f.id === op.entry);
+          const field = op.field ?? '';
+          if (field !== 'example' || fw === undefined || fw[field] !== op.from || op.to === null) {
+            throw new ApplyError(`${op.entry}: expected ${field} "${String(op.from)}"`);
+          }
+          fw[field] = op.to;
+          break;
+        }
+        case 'spend_bank_root': {
+          const spelling = op.entry.replace(/^bank:/, '');
+          const bank = (lex as unknown as { reserved_root_bank?: Record<string, unknown> })
+            .reserved_root_bank;
+          const group = Object.values(bank ?? {}).find(
+            (g): g is { count: number; roots: string[] } =>
+              typeof g === 'object' &&
+              g !== null &&
+              Array.isArray((g as { roots?: unknown }).roots) &&
+              (g as { roots: string[] }).roots.includes(spelling),
+          );
+          const owner = byId.get(op.to ?? '');
+          if (bank === undefined || group === undefined || op.from !== spelling) {
+            throw new ApplyError(`${op.entry}: not in reserved_root_bank`);
+          }
+          if (owner?.root !== spelling) {
+            throw new ApplyError(`${op.entry}: ${String(op.to)} is not spelled ${spelling}`);
+          }
+          group.roots = group.roots.filter((r) => r !== spelling);
+          group.count = group.roots.length;
+          if (typeof bank.count === 'number') bank.count -= 1;
           break;
         }
         case 'retire_root':

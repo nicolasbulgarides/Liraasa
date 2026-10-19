@@ -20,6 +20,11 @@ Written by the build. Nothing here is canon until the author says so.
 - *gase* — shown as “as”; the lexicon has “as (comparison)” (Invitation, gloss)
 - *raho* — shown as “which”; the lexicon has “who / that / which (relative)” (Invitation, gloss)
 
+## REVIEW: English the guide composed for canon ruling sentences
+
+None.
+
+
 ## DECISIONS NEEDED
 
 None.

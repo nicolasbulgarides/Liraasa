@@ -2,7 +2,7 @@
  *
  *   unknown word        error  "never invent"  not a word of Liraasa
  *   unused slot         warn   0.8:R2          a rule-built form with no meaning
- *   pre-1.0 spelling    warn   1.0:G19         names the 1.0 replacement
+ *   older spelling      warn   1.0:G19         names its replacement (and the edition that respelled it)
  *   motion prefix       unsettled 1.2:G35      a prefix on a verb that is not
  *                                              a curated metaphor: the JSON
  *                                              does not list the motion verbs
@@ -82,14 +82,26 @@
             ...at,
             severity: 'warn',
             rule: '1.0:G19',
-            message:
-              '“' +
-              t.text +
-              '” is a pre-1.0 spelling (' +
-              r.migration +
-              '); 1.0 reads it as “' +
-              r.to +
-              '”.',
+            // an edition named: a spelling that edition respelled (2.1:G58); else pre-1.0
+            message: r.edition
+              ? '“' +
+                t.text +
+                '” is the spelling before ' +
+                r.edition +
+                ' (' +
+                r.migration +
+                '); ' +
+                r.edition +
+                ' spells it “' +
+                r.to +
+                '”.'
+              : '“' +
+                t.text +
+                '” is a pre-1.0 spelling (' +
+                r.migration +
+                '); 1.0 reads it as “' +
+                r.to +
+                '”.',
             fix: r.to,
             autoFix: !r.to.includes(' '),
           }),

@@ -54,7 +54,20 @@ export type ChangeOp =
    */
   | 'add_section'
   /** A sound-ledger row's state. `entry` is `ledger:<spelling>`. */
-  | 'edit_ledger';
+  | 'edit_ledger'
+  /**
+   * A primal root becomes a compound of two existing headwords, keeping its
+   * id and glosses (2.1:G59). `entry` is its id; `to` is the two parts joined
+   * with `+`, e.g. `kezu+pago` (ADR-0017).
+   */
+  | 'respell_as_compound'
+  /** A function word's example. `entry` is its `fw_` id; `field` is `example` (ADR-0017). */
+  | 'edit_function_word'
+  /**
+   * A root of `reserved_root_bank` given a meaning: it leaves the bank.
+   * `entry` is `bank:<spelling>`; `to` is the id of the headword now spelled so.
+   */
+  | 'spend_bank_root';
 
 /**
  * One recorded change.

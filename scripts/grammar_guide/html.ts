@@ -17,7 +17,8 @@ export function esc(text: string): string {
 
 /** How a recorded Liraasa string is to be checked. */
 /** `name`: a foreign name copied into Liraasa letters (2.0:G45), not a word of the lexicon. */
-export type WordUse = 'text' | 'unused-slot' | 'retired' | 'morpheme' | 'name';
+/** `older`: a respelled word as an older text spells it (2.1:G58), checked against the migration table. */
+export type WordUse = 'text' | 'unused-slot' | 'retired' | 'morpheme' | 'name' | 'older';
 
 export const recorded: { text: string; use: WordUse }[] = [];
 
@@ -61,15 +62,17 @@ export function md(text: string): string {
 export function badge(id: string): string {
   const edition = id.split(':')[0] ?? '';
   const cls =
-    edition === '2.0'
-      ? 'b20'
-      : edition === '1.2'
-        ? 'b12'
-        : edition === '1.0'
-          ? 'b10'
-          : edition === '0.8'
-            ? 'b08'
-            : 'badr';
+    edition === '2.1'
+      ? 'b21'
+      : edition === '2.0'
+        ? 'b20'
+        : edition === '1.2'
+          ? 'b12'
+          : edition === '1.0'
+            ? 'b10'
+            : edition === '0.8'
+              ? 'b08'
+              : 'badr';
   return `<span class="badge ${cls}" title="Ruling ${esc(id)}">${esc(id)}</span>`;
 }
 
@@ -214,6 +217,18 @@ ${body}
  * them is: they wait for the author's review, and each build lists them.
  */
 export const awaitingReview: { liraasa: string; english: string; where: string }[] = [];
+
+/**
+ * Canon sentences quoted from a ruling that gives no English: the guide's
+ * gloss is composed from the lexicon's glosses and waits for the author.
+ */
+export const composedGlosses: { liraasa: string; english: string; where: string }[] = [];
+
+/** Register a composed English gloss for a canon sentence; returns the gloss unchanged. */
+export function composedGloss(liraasa: string, english: string, where: string): string {
+  composedGlosses.push({ liraasa, english, where });
+  return english;
+}
 
 /** Decisions only the author can make, each shown on the page as a placeholder. */
 export const decisionsNeeded: { what: string; where: string }[] = [];

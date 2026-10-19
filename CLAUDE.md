@@ -24,7 +24,25 @@ made from the frozen 1.1 by the two changesets in `data/changes/` via
 151 function words, rulings 1.2:G24–G36, and 25 of 25 validator checks passing
 (`npm run validate:1.2`). 1.2 is now frozen as 2.0's baseline.
 
-**2.0 is current** (ADR-0016): `data/lexicon/liraasa_2_0.json`, built from
+**2.1 is current** (ADR-0017): `data/lexicon/liraasa_2_1.json`, built from
+frozen 2.0 by `data/changes/2026-10-18-lexicon-2-1.json` via
+`npm run integrate:2.1` (changeset made from the author's patch by
+`scripts/make_changeset_2_1.ts`, which halts unless every pair the patch lists
+builds as listed). It respells 28 roots and turns `taha`/`volda` into the
+compounds `kezupago`/`larbopagobudi` **keeping every id**; every form,
+compound, image compound, listed derivation and the lexicon's living prose
+follow (2.1:G58). Rulings 2.1:G46–G56 are grammar (questions in place with a
+final `ki`, exclamatives, blessings, N times, `fime` complements, evidentials,
+prepositional relatives, partitive `de`, result clauses, duration,
+prohibitions), G57 sound guidance, G58–G59 the respelling; the `grammar`
+section itself is byte-identical to 2.0. Validation is 22 PASS, 3 WARN
+(`npm run validate:2.1`): the kept 2.0 ambiguities, the new `kezupagolelde`
+split, and 35 one-edit neighbours among the author's new spellings, listed
+in `review/2_1_integration.md` for the author. Learn's corpus is the 1.0
+corpus carried into 2.1 spelling (`data/corpus/*_2_1`). 2.0 is frozen as 2.1's
+baseline. **A further 2.1 change is a new changeset op, then a rebuild.**
+
+**2.0** (ADR-0016): `data/lexicon/liraasa_2_0.json`, built from
 frozen 1.2 by `data/changes/2026-10-18-lexicon-2-0.json` via
 `npm run integrate:2.0`. It is a vocabulary release: grammar is byte-identical
 to 1.2, and rulings 2.0:G37–G42 cover word-building only, and G43–G45 (sound values, vowels in song, foreign names) come from the guide review. 2.0 has 1462
@@ -41,7 +59,7 @@ first. Also shipped: the MFA phonetic export (`npm run export:mfa`) and the
 standalone writing tool in `editor/` — a journal with collections, an
 English-to-Liraasa assisted composer, MFA export, and a grammar checker
 (`editor/checker/`, ADR-0014) that underlines each finding with its rule and
-fix. The checker reads the 2.0 LLM reference; what the JSON does not say is
+fix. The checker reads the 2.1 LLM reference; what the JSON does not say is
 data in `data/checker/`, never code. **Learn** (ADR-0015) is the editor's
 training program: a pure core in `src/core/learn/`, bundled into
 `editor/learn/` by `npm run build:learn`, progress in IndexedDB, author
@@ -53,7 +71,7 @@ home (`editor/learn/hall.js`, `strings.js`, `hall.css`; forms engine
 `data/audio/manifest.json` (ships empty; `build:learn` bundles the files that
 exist, D35); Learn never synthesises speech. The grammar guide is compact by
 design: it teaches, reads the author's song `data/songs/Nemelira de devi.txt` word by word,
-and leaves the full changelogs to the handoff JSON and every ruling, verbatim, to `handoff/Liraasa_2_0_Rulings.md`. Phase 2 is the TypeScript
+and leaves the full changelogs to the handoff JSON and every ruling, verbatim, to `handoff/Liraasa_2_1_Rulings.md`. Phase 2 is the TypeScript
 validator and parser.
 
 ---
@@ -93,16 +111,18 @@ validator and parser.
 | `npm run validate:1.2`     | validate.py unmodified plus the edition-aware checks 5/9/12/18/25 → `data/lexicon/validation_1_2.json`.                                                                                                                                                                       | **working** |
 | `npm run integrate:2.0`    | Build 2.0 from frozen 1.2 plus the 2.0 changeset (sha-checked baseline). `-- --check` writes nothing (ADR-0016).                                                                                                                                                              | **working** |
 | `npm run validate:2.0`     | validate.py unmodified plus checks 3/7/12/13/18/24/25 re-run under the 2.0 rulings → `data/lexicon/validation_2_0.json`.                                                                                                                                                      | **working** |
-| `npm run check:sounds`     | Sound-collision audit of 2.0 (`--candidates FILE` vets proposed spellings: template, collision, distance, parse, singability). Python stdlib.                                                                                                                                 | **working** |
+| `npm run integrate:2.1`    | Build 2.1 from frozen 2.0 plus the 2.1 changeset (sha-checked baseline). `-- --check` writes nothing (ADR-0017).                                                                                                                                                              | **working** |
+| `npm run validate:2.1`     | validate.py unmodified plus checks 3/7/12/13/18/24 under the 2.0 and 2.1 rulings, and a respelling-aware 25 → `data/lexicon/validation_2_1.json`.                                                                                                                             | **working** |
+| `npm run check:sounds`     | Sound-collision audit of 2.1 (`--candidates FILE` vets proposed spellings: template, collision, distance, parse, singability). Python stdlib.                                                                                                                                 | **working** |
 | `npm run integrate`        | Build 1.1 from the frozen 1.0 plus a vocabulary proposal. `-- --check` audits and writes nothing (ADR-0009).                                                                                                                                                                  | **working** |
 | `npm run report:1.1`       | Regenerate the 1.1 changelog, LLM quickstart and compare report from the integration data.                                                                                                                                                                                    | **working** |
 | `npm run export:mfa`       | Montreal Forced Aligner dictionary, phone inventory and syllable sheet into `data/export/`.                                                                                                                                                                                   | **working** |
-| `npm run build:llm`        | The whole language in one JSON for language models → `handoff/liraasa_2_0_llm.json` (also published to `LirasaCodexLatest/`). Only meaningful forms.                                                                                                                          | **working** |
+| `npm run build:llm`        | The whole language in one JSON for language models → `handoff/liraasa_2_1_llm.json` (also published to `LirasaCodexLatest/`). Only meaningful forms.                                                                                                                          | **working** |
 | `npm run build:checker`    | Wrap the LLM reference and `data/checker/*.json` as the scripts `editor/checker/` loads. Run by `build:llm`.                                                                                                                                                                  | **working** |
 | `npm run build:learn`      | Bundle `src/core/learn` and its data (lexicon, corpus, overrides, previous edition) into `editor/learn/`. Run after any data change.                                                                                                                                          | **working** |
 | `npm run learn:report`     | The Learn curriculum and every gap → `review/learn_report.md`.                                                                                                                                                                                                                | **working** |
 | `npm run build:editor`     | Rebuild the data bundle that `editor/index.html` loads.                                                                                                                                                                                                                       | **working** |
-| `npm run build:guide`      | Rebuild the handoff JSON, then the 2.0 Reference Grammar and _Liraasa: An Invitation_ into `handoff/` (`-- --pdf` also prints them). Song, treasury and Invitation words in `scripts/grammar_guide/config.ts`; non-canon sentences and open decisions → `review/*_review.md`. | **working** |
+| `npm run build:guide`      | Rebuild the handoff JSON, then the 2.1 Reference Grammar and _Liraasa: An Invitation_ into `handoff/` (`-- --pdf` also prints them). Song, treasury and Invitation words in `scripts/grammar_guide/config.ts`; non-canon sentences and open decisions → `review/*_review.md`. | **working** |
 | `npm run build:invitation` | The Invitation alone. Fails on a non-canon word, or on a grammar term or ruling id it leaves to the Reference.                                                                                                                                                                | **working** |
 | `npm run publish:guide`    | The Stop hook: rebuild if any input changed, copy to `LirasaCodexLatest/`, then commit the documents and the lexicon JSON to the `codex-latest` branch and push it (the Invitation links there). Never touches the working branch.                                            | **working** |
 

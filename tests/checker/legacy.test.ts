@@ -239,7 +239,8 @@ describe('Song of Time, round 2', () => {
     'lumiasasan lumi po sarbisia lirari kopisa li yanbasan veluri de vera lenila itori.',
     'ata li veluri po sarbisia lirari de li namina de li faru de maivori de farulavrasan amor.',
     'oro maivo ke li suma raho tivrota taivo de maresan lore ki?',
-    'maivo po lenila taivo de yomlasan valla, ata eli po ke maivo de leto de nimu.',
+    // in 2.1 spelling: leto (letter) is cuza (2.1:G58)
+    'maivo po lenila taivo de yomlasan valla, ata eli po ke maivo de cuza de nimu.',
   ])('passes the corrected song: %s', (line) => {
     expect(serious(line).filter((d) => d.severity === 'error' || d.severity === 'warn')).toEqual(
       [],

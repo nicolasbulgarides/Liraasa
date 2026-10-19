@@ -21,7 +21,7 @@ import type { RawLexicon } from '../src/core/model/raw';
 import { loadLearnInput } from './learn_inputs';
 
 /** The edition before the current one, for the "What changed" lesson. */
-const PREVIOUS = 'data/lexicon/liraasa_1_2.json';
+const PREVIOUS = 'data/lexicon/liraasa_2_0.json';
 const IDS = 'data/lexicon/ids.json';
 const AUDIO_MANIFEST = `${AUDIO_DIR}/manifest.json`;
 

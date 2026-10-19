@@ -10,6 +10,7 @@ import { badge, esc, h3, p } from './html';
 /** Every ruling set the lexicon carries, newest first, with its edition. */
 export function rulingSets(lex: Lexicon): [string, readonly Ruling[]][] {
   return [
+    ['2.1', lex.rulings_2_1 ?? []],
     ['2.0', lex.rulings_2_0 ?? []],
     ['1.2', lex.rulings_1_2],
     ['1.0', lex.rulings_1_0],

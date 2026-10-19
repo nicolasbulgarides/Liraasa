@@ -3,6 +3,7 @@ import { fileURLToPath, URL } from 'node:url';
 import { beforeAll, describe, expect, it } from 'vitest';
 import { applyChangesets, auditBuild, type LexiconChangeset } from '../../src/core/change/apply';
 import { validateChangeset } from '../../src/core/change/changelog';
+import { correctText } from '../../src/core/change/respell';
 import type { RawLexicon } from '../../src/core/model/raw';
 import { WORD_BUILDING_2_0, build2_0, idsAfter } from '../../scripts/integrate_2_0';
 import { readCorpusFiles } from '../../scripts/learn_inputs';
@@ -194,8 +195,15 @@ describe('the patch, as the author decided it', () => {
 
 describe('read by the checker', () => {
   it('the mended canon examples read clean', () => {
+    // the checker reads the current edition: a 2.0 sentence is read in 2.1 spelling (2.1:G58)
+    const v21 = json('../../data/lexicon/liraasa_2_1.json') as RawLexicon;
+    const to21 = Object.fromEntries(
+      Object.entries(v21.legacy.migration_forms).map(([old, m]) => [old, m.to]),
+    );
     const serious = (line: string) =>
-      checker.checkLine(line, 1).filter((d) => d.severity === 'error' || d.severity === 'warn');
+      checker
+        .checkLine(correctText(line, to21).text, 1)
+        .filter((d) => d.severity === 'error' || d.severity === 'warn');
     for (const line of [
       'Ola ka bumresan, zoke.',
       'Maivo vurlova, hema, baba buvokova de miru.',

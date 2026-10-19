@@ -108,6 +108,15 @@
         case 'numeral':
           add('num');
           break;
+        case 'legacy': {
+          // an older spelling plays the part of the form it now maps to (1.0:G19)
+          const now = ix.forms.get(read.to) || [];
+          for (const x of now) {
+            add(x.role === 'v' ? 'verb' : ['n', 'an', 'nn'].includes(x.role) ? 'noun' : 'adj');
+          }
+          if (!now.length) add('noun');
+          break;
+        }
         case 'closed':
           break;
         default:

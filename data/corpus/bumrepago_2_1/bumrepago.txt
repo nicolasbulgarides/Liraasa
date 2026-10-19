@@ -1,0 +1,541 @@
+# Bumrepago - Liraasa 1.0 revised edition, from the supplied PDF.
+# Liraasa lines unprefixed; English on "# EN:" comment lines.
+
+# EN: edition)
+# EN: Oct 16, 2026  ·  @Nicolas Peter Bularides
+# EN: About this edition
+# EN: Beneath the play now sits one question: what can be sold, what can only be given, and
+# EN: what can only be let go? The bakery changes hands by sale, the bread by gift, the song by
+# EN: being heard, and the father, it turns out, by letting his daughter leave. Liraasa 1.0 has a
+# EN: separate word or operator for each of those acts, so the play can finally argue about them
+# EN: in its own language.
+# EN: The story, the three voices and the shape of the night are unchanged. 165 of the 231 turns
+# EN: are word for word the original play; 66 are new or rewritten, including the 18 lines the plain
+# EN: 1.0 edition already changed. Each turn below gives the Liraasa with the English beneath it;
+# EN: marks a line that differs from the original.
+# EN: Four ideas carry the subtext, and each is built into the grammar:
+# EN: 1. Owning is three things. lanvetovo (owned by law), tovo (held) and nimu (belonging,
+# EN: home). Kipo becomes the legal owner; the bakery stays Aviya's home. Her question
+# EN: Maivo dagi lisrola ki? ("Am I allowed to stay?") turns on the 1.0 permission modal, and
+# EN: Kipo's answer separates the law from the home.
+# EN: 2. Giving is three things, then four. juba (gift), donu (handing-over) and dapadonu (sale).
+# EN: Kipo, who counts everything, names three; Aviya adds a fourth he never counted,
+# EN: tivromomvi (letting go). That is what the father gave.
+# EN: 3. Love as permission, not cause. 1.0's vaku / lesvu / tekvu (make / let / prevent) let Dorin
+# EN: say the play's revelation exactly: father did not make Aviya leave; he let her, and he
+# EN: prevented the telling.
+# EN: 4. The invisible cause. In Movement I, Kipo jokes that no one sees the yeast work: Nuna-
+# EN: nela vimova li vordu; toda-nela sapusia li yordo ("No one sees the cause; everyone eats
+# EN: the effect"). At the climax Aviya answers it: Pilo ka li kelesamni ("Father is the yeast").
+# EN: The play also runs on three ways of knowing, marked by evidentials: Dorin knew by
+# EN: sight (yehu), Kipo by report (buyu), and Aviya, at last, by inference (tosu).
+# EN: And one refusal of regret: Aviya says Maivo po noma suvi relnura ("I should have come
+# EN: back"), and Kipo answers that what would have happened is bumrena, no-bread, his
+# EN: Movement I joke turned into the play's quietest argument: counterfactuals do not rise.
+# EN: Movement I — Ordinary Life
+# EN: flour, a bowl of dough, an oven glowing at the back. Rain on the window. DORIN, sleeves
+# EN: rolled, kneads with slow, steady hands. KIPO sits on the table, eating yesterday's bread.]
+Dorin. Dorin. Li bumre ne keleka.
+# EN: Dorin. Dorin. The bread isn't climbing.
+Ito futu keleka.
+# EN: It will climb.
+Taivo senosia eli-coda rada nullo.
+# EN: You say this every night.
+Ata rada nullo, ito keleka.
+# EN: And every night, it climbs.
+Bumreti, keleka! Fisa! Dorin larnela!
+# EN: Little bread, climb! Please! Dorin is angry!
+Maivo ne larnela.
+# EN: I'm not angry.
+Taivo ne milobema. Ola ka una coda.
+# EN: You're not smiling. That's one thing.
+Palvipa li manlibumre en li farudomlu.
+# EN: Put the dough in the oven.
+Ki-coda manlibumre? Eli-coda ka bumrena. Eli-coda ka li sulnona de li bumre.
+# EN: What dough? This is no-bread. This is the impatience of bread.
+# EN: Kipo.
+# EN: Kipo.
+Zabo, zabo. Maivo nolenia ito. Ito ka solosan, ito ne milobema, ito ne keleka. Maivo nolenia ito Dorinti.
+# EN: Yes, yes. I'm naming it. It's stony, it doesn't smile, it doesn't climb. I name it Little Dorin.
+Ne nolenia li bumre.
+# EN: Don't name the bread.
+Dorinti, ne larnela. Ki-kasa taivo ne keleka? Li kelesamni ka intra taivo. Maivo po palvipa ito la dorvasan!
+# EN: Little Dorin, don't be angry. Why don't you climb? The yeast is inside you. I put it there on
+# EN: purpose!
+Li kelesamni ne milobema. Ito talita.
+# EN: Yeast doesn't smile. It works.
+Ata nuna-nela vimova li tali de ito. Nuna-nela vimova li vordu; toda-nela sapusia li puku.
+# EN: And no one sees its work. No one sees the cause; everyone eats the effect.
+Ola ka baba bumre de pensa. Palvipa ito en li farudomlu.
+# EN: That's a bread made of thinking. Put it in the oven.
+# EN: moment.]
+Li lumibiti de pilo loki lumila.
+# EN: Father's lamp still shines.
+Aviya! Taivo relnura! Ata taivo ke ruli renlisan!
+# EN: Aviya! You've come back! And you're very rainy!
+Li renli po kavbika maivo transa toda li vila, la molusan, la nimusan, ata po palvipa maivo eli-pago.
+# EN: The rain carried me through the whole village, gently, homely, and placed me here.
+Taivo ke renlisan. Semnesia ligo li faru.
+# EN: You're rainy. Sit near the fire.
+Yeko, Dorin.
+# EN: Hello, Dorin.
+Yeko.
+# EN: Hello.
+Yava lomola! Ne? Kepi? Eliri famliri ka solosan.
+# EN: Let's embrace! No? No? These siblings are stony.
+Dorin ne lomola. Dorin bumreba.
+# EN: Dorin doesn't embrace. Dorin bakes.
+Maivo bumreba kasa li merno venreva.
+# EN: I bake because the morning is coming.
+Ata li merno ne sulnosia vobi lomori. Aviya, taivo po sapusia ki? Miyo bumre de deyaapo. Ito ka solosan, nara ito ka bumre.
+# EN: And the morning doesn't wait for embraces. Aviya, have you eaten? There's bread from
+# EN: yesterday. It's stony, but it's bread.
+Ito ka ruli solosan.
+# EN: It's very stony.
+Ito ka Dorin de bumre.
+# EN: It's Dorin's bread.
+Ito ka taivo de bumre, Kipo. Taivo po bumreba ito.
+# EN: It's your bread, Kipo. You baked it.
+Zabo. Ne senosia ala li vila.
+# EN: Yes. Don't tell the village.
+Li vila futu venreva kube li merno lombila. Toda li vila. Kasa ola ka li apok.
+# EN: The village will come when the morning begins. The whole village. Because this is the end.
+Ata Velina futu masuma vobi li bumre de yomla, ata Velina futu senosia fime ito ka menu megesan tamo pilo de bumre. Velina senosia eli-coda rada merno yasmo, sige maivo po ke linuti.
+# EN: And Velina will ask for the honey bread, and Velina will say that it's less sweet than father's
+# EN: bread. Velina says it every morning, as we all know, since I was a little child.
+Velina loki bioba ki?
+# EN: Velina is still living?
+Velina ka kasi solosan tamo li bumre de deyaapo.
+# EN: Velina is stonier than yesterday's bread.
+Toda-coda loki ke eli-pago, sabri pilo. Li tabu. Li buzakovari. Li faru raho po sumasia maivo de manliri kube maivo po ke linuti, ata maivo po somusia su li bumre.
+# EN: Everything is still here, except father. The table. The cups. The fire that warmed my hands
+# EN: when I was little, and I slept on the bread.
+Aviya senosia la lirasan! Li faru ka faruasa! Li tabu ka tabuasa! Li bumre de deyaapo ka bumreasa!
+# EN: Aviya speaks lyrically! The fire is the ascended fire! The table is the ascended table!
+# EN: Yesterday's bread is ascended bread!
+Ne pelipa ko maivo de senori.
+# EN: Don't play with my words.
+Maivo pelipa ko toda-coda. Ata ki-krono li bumre ka bumreasasan? Kube Dorin milobema. Tonsi: nuna-krono!
+# EN: I play with everything. And when is bread divinely bready? When Dorin smiles. Therefore:
+# EN: never!
+Li farudomlu ka nolsasan.
+# EN: The oven is new.
+Ki-coda?
+# EN: What?
+Li lotero farudomlu po bakoba. Maivo po talvata baba bumre ala ito. Ito po talvata baba bumre ala maivo.
+# EN: The other oven broke. I threw a bread at it. It threw a bread at me.
+Ito po ne talvata. Kipo po ralnora. Kipo po vaku ito bakoba, la dorvanasan.
+# EN: It didn't throw. Kipo fell. Kipo broke it, by accident.
+Ne la dorvanasan! Ito po zeldoza.
+# EN: Not by accident! It resisted.
+Maivo po nimuduhania vobi eli reso. En li cilni, nuna-nela resora la verasan.
+# EN: I was homesick for this laughter. In the city, no one laughs truthfully.
+En li cilni, taivo po lirala.
+# EN: In the city, you sang.
+Zabo.
+# EN: Yes.
+Ata?
+# EN: And?
+Ata li cilni ka lasona. Muya lirari. Poka leniyori.
+# EN: And the city is noise. Many songs. Few listeners.
+Ata eli-pago, Dorin po milobema una krono. Maivo buyu sabesia ito.
+# EN: And here, Dorin smiled once. I know it by report.
+Taivo ne yehu vimova ito ki?
+# EN: You didn't see it with your own eyes?
+Nuna-nela yehu vimova ito. Ito ka baba noru de li vila.
+# EN: No one saw it with their own eyes. It's a dream of the village.
+Maivo milobema.
+# EN: I smile.
+Ki-krono?
+# EN: When?
+Kube li bumre keleka.
+# EN: When the bread climbs.
+Tonsi li bumre ne keleka!
+# EN: Therefore the bread doesn't climb!
+En li cilni, li lumibitiri ne narvonia. Li nullo ka gase lumisan gase li merno, ata li nelari valmiva, valmiva, valmiva, ata nuna-nela vilneva li veluri.
+# EN: In the city, the lamps don't darken. The night is as bright as the morning, and the people
+# EN: walk, walk, walk, and no one looks at the stars.
+Ata li bumre?
+# EN: And the bread?
+Li bumre en li cilni ka vanisan. Ata ito ne ka bumre.
+# EN: The bread in the city is beautiful. And it isn't bread.
+Bumrena!
+# EN: No-bread!
+Bumrena.
+# EN: No-bread.
+Taivo de lirari ka ruli benasan. Maivo buyu sabesia ito.
+# EN: Your songs are very good. I know it by report.
+Buyu? Ki-nela po senosia ala taivo?
+# EN: By report? Who told you?
+Somi-nela.
+# EN: Someone.
+Baba vaye.
+# EN: A wind.
+# EN: Kipo.
+# EN: Kipo.
+Ata krotiapo eli nullo, Kipo? Krotiapo li merno? Ki-pago taivo futu talita?
+# EN: And after this night, Kipo? After the morning? Where will you work?
+Eli-pago. Maivo futu talita vobi li nolsasan nela de li bumrepago.
+# EN: Here. I will work for the new person of the bakery.
+Ki-nela ka saivo?
+# EN: Who are they?
+Saivo? Saivo ka ruli silisan. Saivo ne resora. Saivo ne pelipa. Saivo sabesia doli cono, cono, cono. Maivo follufa saivo seye.
+# EN: Them? They're very cold. They don't laugh. They don't play. They know only coins, coins,
+# EN: coins. I fear them, certainly.
+Ata saivo futu lesvu taivo resora ki?
+# EN: And will they let you laugh?
+Ito ka mufranasan.
+# EN: It's unlikely.
+Li manlibumre keleka. Kipo, li farudomlu.
+# EN: The dough is rising. Kipo, the oven.
+Zabo, zabo.
+# EN: Yes, yes.
+Dorin. Ki-kasa taivo po donuda li bumrepago?
+# EN: Dorin. Why did you hand over the bakery?
+# EN: Movement II — Fracture
+Maivo po donuda ito. Ola-coda ka toda-coda.
+# EN: I handed it over. That is everything.
+Taivo po donuda li famadonu de pilo. Vobi nuna-coda?
+# EN: You handed over father's inheritance. For nothing?
+Ne vobi nuna-coda.
+# EN: Not for nothing.
+Taivo po jubaja ito ala baba loteronela.
+# EN: You gave it as a gift to a stranger.
+Maivo po ne senosia "jubaja". Maivo po senosia "donuda".
+# EN: I didn't say "gave as a gift". I said "handed over".
+Ola ka una coda!
+# EN: That's one thing!
+Ola ka dossa coda. Maivo po cunuca.
+# EN: That's two things. I counted.
+Ne pelipa, Kipo.
+# EN: Don't play, Kipo.
+Maivo ne pelipa. Maivo cunuca. Ola ka talita. Baba juba ne tovota dapa. Baba dapadonu tovota dapa. Ata baba donu? Donu ne senosia.
+# EN: I'm not playing. I'm counting. That's work. A gift has no price. A sale has a price. And a
+# EN: handing-over? A handing-over doesn't say.
+Ata taivo, Dorin? Taivo po dapadonuda ito ki?
+# EN: And you, Dorin? Did you sell it?
+Maivo po donuda ito.
+# EN: I handed it over.
+Ola ne ka relsi.
+# EN: That's not an answer.
+# EN: Li bumrepago po guraga muya cono. Pilo po ne povi talita. Ata maivo po ne povi—
+# EN: The bakery owed many coins. Father couldn't work. And I couldn't—
+# EN: Pilo de lore ka eli-pago! Eli-pago ka pilo de bumre, pilo de lumibiti, pilo de—
+# EN: Father's heart is this place! This place is father's bread, father's lamp, father's—
+Pilo po muduma tressa montari. Taivo po ne ke eli-pago.
+# EN: Father was sick three months. You were not here.
+Maivo po cuzaca rada deyafama.
+# EN: I wrote every week.
+Cuzari. Cuzari ne bumreba. Cuzari ne melvama pilo sidu sapusia.
+# EN: Letters. Letters don't bake. Letters don't help father eat.
+Ata taivo po cuzaca ala maivo ki? Una cuza? Una?
+# EN: And did you write to me? One letter? One?
+Maivo po talita.
+# EN: I worked.
+Taivo sahi talita. Taivo talita kopisa taivo ne senosia.
+# EN: You always work. You work so that you don't speak.
+Ata taivo lirala kopisa taivo ne lisrola.
+# EN: And you sing so that you don't stay.
+# EN: Ata maivo sapusia kopisa maivo ne—
+# EN: And I eat so that I don't—
+# EN: Kipo!
+# EN: Kipo!
+# EN: Kipo!
+# EN: Kipo!
+…sapusia la lasosan.
+# EN: …eat quietly.
+# EN: climbing.]
+Taivo po donuda li nimu de maivori, ata taivo po ne masuma maivo. Maivo ka taivo de famli, Dorin. Maivo loki ka taivo de famli ki?
+# EN: You handed over our home, and you didn't ask me. I am your sibling, Dorin. Am I still your
+# EN: sibling?
+Taivo po livnala li cilni. Maivo po livnala li bumre. Eli-krono maivo livnala reve, ata taivo larnela ki?
+# EN: You chose the city. I chose the bread. Now I choose again, and you're angry?
+Maivo po livnala lira. Ola ne ka gilbu.
+# EN: I chose song. That is not guilt.
+Maivo po ne senosia "gilbu".
+# EN: I didn't say "guilt".
+Taivo senosia ito ko toda taivo de vilneri. Rada montafama. Rada cuza raho taivo po ne cuzaca.
+# EN: You say it with all your eyes. Every year. Every letter that you didn't write.
+Taivo desida fime maivo senosia: "Benasan, Aviya! Pagopa, lirala! Maivo futu talita vobi dossa!" zoke ki?
+# EN: You want me to say: "Good, Aviya! Go, sing! I will work for two!" — sure, that's what you
+# EN: want?
+Maivo po desida fime taivo senosia ala maivo. Doli ola-coda. Somi-coda. Maivo larnela kasa taivo po helviha ito!
+# EN: I wanted you to speak to me. Only that. Something. I'm angry because you hid it!
+Maivo po ne helviha. Maivo po puzupa.
+# EN: I didn't hide it. I kept a secret.
+Ola ka una coda.
+# EN: That's one thing.
+Ne ka una coda!
+# EN: It's not one thing!
+Ola ka una coda kube taivo senosia ito, ata dossa coda kube Aviya senosia ito. Maivo cunuca toda-krono.
+# EN: It's one thing when you say it, and two things when Aviya says it. I count always.
+Li bumrepago hozi, taivo po donuda ito. Pilo hozi, taivo po senosia nuna-coda. Ata eli-krono: ki-nela po dapatovoda li famadonu de pilo? Senosia li nole.
+# EN: The bakery: you handed it over. Father: you said nothing. And now: who bought father's
+# EN: inheritance? Say the name.
+# EN: bread.]
+Maivo.
+# EN: Me.
+Taivo.
+# EN: You.
+Maivo ka li nolsasan nela. Li silisan. Raho ne resora. Raho sabesia doli cono.
+# EN: I am the new person. The cold one. Who doesn't laugh. Who knows only coins.
+# EN: Taivo po pelipa ko maivo. Taivo po vilneva maivo, ata taivo po senosia—
+# EN: You played with me. You looked at me, and you said—
+Maivo po verava. Doli la resosan. Maivo po dapatovoda li bumrepago ko toda maivo de cono, ata kube maivo po conodonuca, maivo po tavki loya saivo. Maivo bisu sabesia ito.
+# EN: I spoke truth. Only laughingly. I bought the bakery with all my coins, and when I paid, I
+# EN: almost became them. I know it; I felt it.
+Ata taivo, Dorin. Taivo po sabesia. Taivo po desida fime maivo ne sabesia.
+# EN: And you, Dorin. You knew. You wanted me not to know.
+Kipo po masuma. Ata maivo po follufa.
+# EN: Kipo asked. And I was afraid.
+Ki-coda taivo po follufa?
+# EN: What were you afraid of?
+Taivo.
+# EN: You.
+Ola ne ka toda li vera.
+# EN: That is not the whole truth.
+# EN: Kipo.
+# EN: Kipo.
+Taivo po puzupa vobi taivo sela, Dorin. Ne vobi maivo. Taivo po ne desida fime Aviya masuma: "Ata taivo? Ki-pago taivo futu pagopa?"
+# EN: You kept the secret for yourself, Dorin. Not for me. You didn't want Aviya to ask: "And you?
+# EN: Where will you go?"
+Ki-coda? Dorin. Ki-pago taivo futu pagopa?
+# EN: What? Dorin. Where will you go?
+Eli ne ka li krono.
+# EN: This is not the time.
+Eli ka li krono. Eli nullo ka li doli krono.
+# EN: This is the time. This night is the only time.
+Ne senosia ala maivo ki-coda ka li krono! Taivo po masuma li puzu. Taivo! Ata eli- krono taivo palvipa ito su maivo.
+# EN: Don't tell me what the time is! You asked for the secret. You! And now you put it on me.
+# EN: other. AVIYA rounds on KIPO, quiet now, which is worse.]
+Taivo po sapusia ko maivori. Taivo po somusia en eli-pago kube li ruhe po ruhera. Pilo po jubaja li bumre de rada merno ala taivo. Ata eli-krono taivo ka li lanvetovoyo. Taivo kapoki li taliyo. Eli-krono taivo ka li pilo ki?
+# EN: You ate with us. You slept in this place when the storm stormed. Father gave you the bread
+# EN: of every morning as a gift. And now you are the legal owner. You used to be the worker.
+# EN: Now you are the father?
+# EN: Aviya.
+# EN: Aviya.
+Ne, Dorin. Maivo senosia eli-krono. Maivo po talita eli-pago pendi unzira-dossa montafamari. Maivo ne ka famli. Maivo ka doli Kipo. Maivo po donuda toda maivo de cono. Toda. Maivo ne kavbika ito, Aviya. Maivo lisrola ko ito.
+# EN: No, Dorin. I speak now. I worked in this place exactly twelve years. I'm not family. I'm only
+# EN: Kipo. I handed over all my coins. All. I'm not carrying it off, Aviya. I'm staying with it.
+# EN: Taivo ne ka famli. Zabo. Taivo ne ka—
+# EN: You're not family. Yes. You're not—
+Ne famli. Nara famamiga ne ka doli kupa. Pilo po nolenia maivo "linu". Una krono. Taivo po ne ke eli-pago. Maivo loki ramura ito.
+# EN: Not family. But kinship is not only blood. Father named me "child". One time. You were not
+# EN: here. I still remember it.
+Taivo ka li lanvetovoyo, Kipo. Nara eli-pago ka maivo de nimu. Maivo dagi lisrola ki?
+# EN: You're the legal owner, Kipo. But this place is my home. Am I allowed to stay?
+# EN: AVIYA turns to the empty room.]
+Pilo po ne lenila maivo de lirari. Pilo po senosia fime lira ka lasona, ata bumre ka nami. Pilo po ne desida fime maivo pagopa. Ata eli-krono pilo de bumrepago ka taivo de bumrepago, ata maivo ka baba loteronela en maivo de nimu.
+# EN: Father didn't listen to my songs. Father said that song is noise, and bread is food. Father
+# EN: didn't want me to go. And now father's bakery is your bakery, and I am a stranger in my
+# EN: home.
+Pilo po lenila taivo.
+# EN: Father heard you.
+Kepi.
+# EN: No.
+Pilo po lenila taivo.
+# EN: Father heard you.
+# EN: Movement III — Resonance
+Li foji kroti li mudu. Pilo po senosia: "Maivo desida sidu lenila Aviya." Maivo po kavbika pilo ala li cilni. Tressa lornuri. Pilo po semnesia vofa li lumibitiri, en li sado. Taivo po hiro lirala. Pilo po fesmo ne timruta.
+# EN: The winter before the illness. Father said: "I want to hear Aviya." I carried father to the city.
+# EN: Three hours. Father sat far from the lamps, in the shadow. You began to sing. Father tried
+# EN: not to weep, and could not.
+Kepi.
+# EN: No.
+Ki-coda maivo po lirala?
+# EN: What did I sing?
+Maivo ne sabesia li nole. Baba lira de foji. Pilo po senosia fime li lira ka gase sumasan gase li faru.
+# EN: I don't know the name. A song of winter. Father said that the song was as warm as the fire.
+Pilo po senosia ola-coda ki?
+# EN: Father said that?
+Pilo po senosia doli ola-coda. Pilo po ne senosia muya senori. Krotiapo, pilo po senosia: "Ne senosia ala saivo. Si saivo sabesia, saivo futu relnura vobi maivo. Saivo suvi lirala."
+# EN: Father said only that. Father didn't say many words. Afterward, father said: "Don't tell her.
+# EN: If she knows, she will come back for me. She should sing."
+Si maivo po noma sabesia, maivo po viki relnura.
+# EN: If I had known, I would have come back.
+Zabo. Tonsi pilo po tekvu maivo senosia ala taivo.
+# EN: Yes. Therefore father prevented me from telling you.
+Pilo po ne vaku maivo pagopa.
+# EN: Father didn't make me leave.
+Kepi. Pilo po lesvu taivo pagopa.
+# EN: No. Father let you leave.
+Ata maivo po pensapa fime saivo po ne lenila.
+# EN: And I thought he didn't listen.
+Tivromomvi ka li mosa solosan juba. Ito ne milobema. Ito talita gase li kelesamni.
+# EN: Letting go is the stoniest gift. It doesn't smile. It works like yeast.
+Baba vaye.
+# EN: A wind.
+Baba vaye. Yade.
+# EN: A wind. Sorry.
+Pilo po semnesia en li sado. Ata maivo po lirala ala li lumiri, ala li nelari, ala nuna- nela. Ata pilo po ke ola-pago. Ola-pago. Ola-pago.
+# EN: Father sat in the shadow. And I sang to the lights, to the people, to no one. And father was
+# EN: there. There. There.
+Maivo po noma suvi relnura.
+# EN: I should have come back.
+Kepi. Taivo po suvi lirala. Pilo po senosia ola.
+# EN: No. You were meant to sing. Father said so.
+Li codari raho po noma venreva, ka bumrena. Itori ne keleka.
+# EN: The things that would have happened are no-bread. They don't rise.
+# EN: of her. He kneels beside her.]
+Manlima.
+# EN: Use your hands.
+Maivo ne sabesia ola-modo.
+# EN: I don't know that way.
+Taivo de manliri sabesia. Ne la vanisan. La sumasan.
+# EN: Your hands know. Not beautifully. Warmly.
+# EN: oven, then quietly joins, a third pair of hands at the bowl. The rhythm of the kneading
+# EN: becomes the rhythm of the speech. What follows is spoken, not sung, but each line falls on
+# EN: the push of the dough.]
+Una.
+# EN: One.
+Dossa.
+# EN: Two.
+Tressa.
+# EN: Three.
+Miru.
+# EN: Water.
+Bumre.
+# EN: Bread.
+Manliri.
+# EN: Hands.
+Palvipa. Manlima. Sulnosia.
+# EN: Place. Use your hands. Wait.
+Sulnosia, sulnosia. Li bumre ne milobema.
+# EN: Wait, wait. The bread isn't smiling.
+Li bumre sulnosia la sumasan. Pilo po sulnosia la sumasan.
+# EN: The bread waits warmly. Father waited warmly.
+Pilo po sulnosia en li sado.
+# EN: Father waited in the shadow.
+Pilo po sulnosia ligo li faru.
+# EN: Father waited near the fire.
+# EN: Pilo po sulnosia, ata maivo po lirala vofa, vofa, vofa—
+# EN: Father waited, and I sang far, far, far—
+Ata maivo po bumreba.
+# EN: And I baked.
+Ata maivo po resora.
+# EN: And I laughed.
+Ata nuna-nela po senosia.
+# EN: And no one spoke.
+Una. Maivo po sulnosia vobi baba famli.
+# EN: One. I waited for a family.
+Dossa. Maivo po sulnosia vobi li farvi.
+# EN: Two. I waited for freedom.
+Tressa. Maivo po sulnosia vobi baba leniyo.
+# EN: Three. I waited for a listener.
+Ata li leniyo po semnesia en li sado.
+# EN: And the listener sat in the shadow.
+Ata li famli po semnesia ligo li faru.
+# EN: And the family sat near the fire.
+Ata li farvi po sulnosia ultra li dorbi.
+# EN: And the freedom waited beyond the door.
+Una.
+# EN: One.
+Dossa.
+# EN: Two.
+Tressa. Ata nuna-nela po senosia, ata toda-nela po sabesia.
+# EN: Three. And no one spoke, and everyone knew.
+Maivo po yehu sabesia.
+# EN: I knew: I saw.
+Maivo po buyu sabesia.
+# EN: I knew by report.
+Maivo po ne sabesia. Eli-krono maivo tosu sabesia.
+# EN: I didn't know. Now I know by what it left behind.
+Tressa sabe, una pilo.
+# EN: Three knowings, one father.
+Taivo po lirala. Pilo po lenila. Ola ka una coda.
+# EN: You sang. Father heard. That's one thing.
+Ola ka una coda.
+# EN: That's one thing.
+Ola ka una coda.
+# EN: That's one thing.
+Finra! Li bumre keleka!
+# EN: At last! The bread is climbing!
+Li bumre keleka.
+# EN: The bread is climbing.
+Dorin milobema hoyo! Maivo yehu vimova ito! Ola ka bumreasasan!
+# EN: Dorin is smiling, who knew! I see it with my own eyes! That is divinely bready!
+Bumre. Bumreasa. Ne li bumre de li veluri. Li bumre de pilo de manliri. Pilo ka li kelesamni.
+# EN: Bread. Ascended bread. Not the bread of the stars. The bread of father's hands. Father is
+# EN: the yeast.
+Li manlibumre suvi semnesia. Ne tressa lornuri. Una lornu.
+# EN: The dough should sit. Not three hours. One hour.
+Li bumre ka gase somusan gase Dorin.
+# EN: The bread is as sleepy as Dorin.
+Kipo. Eli-pago ka taivo de bumrepago.
+# EN: Kipo. This place is your bakery.
+Zabo. Nara ne maivo de nimu. Ne bodu.
+# EN: Yes. But not my home. Not yet.
+Ata taivo futu ka silisan ki?
+# EN: And will you be cold?
+Poye. Si nuna-nela resora ko maivo.
+# EN: Perhaps. If no one laughs with me.
+Li bumrepago nedunia baba lirayo. Rada merno. Kube li dorbi lallela. Maivo ne povi donuda muya cono. Maivo povi donuda li bumre de rada merno.
+# EN: The bakery needs a singer. Every morning. When the door opens. I can't hand over many
+# EN: coins. I can hand over the bread of every morning.
+Taivo masuma maivo sidu lisrola ki?
+# EN: You ask me to stay?
+Maivo masuma. Taivo dagi lisrola, Aviya. Ne kasa maivo ka li lanvetovoyo. Kasa eli- pago ka taivo de nimu. Maivo ne sabesia ki-oro taivo futu lisrola.
+# EN: I ask. You may stay, Aviya. Not because I am the legal owner. Because this place is your
+# EN: home. I don't know whether you will stay.
+# EN: Dorin?
+# EN: Dorin?
+Maivo futu pagopa.
+# EN: I will go.
+Ki-pago?
+# EN: Where?
+Maivo ne sabesia. Ola ka li farvi.
+# EN: I don't know. That is the freedom.
+Taivo futu pagopa la kendenasan ki?
+# EN: You'll go without an aim?
+Zabo. La dorvasan.
+# EN: Yes. On purpose.
+Taivo po donuda li bumrepago vobi li cono. Ata vobi li farvi.
+# EN: You handed over the bakery for the coins. And for the freedom.
+Zabo. Korsi li bumrepago, maivo tovota li nulu.
+# EN: Yes. Instead of the bakery, I have the road.
+Taivo po ne senosia ola-coda.
+# EN: You didn't say that.
+Taivo po ne masuma.
+# EN: You didn't ask.
+Dorin. Taivo po kavbika pilo ala li cilni. Tressa lornuri. Ata tressa lornuri reve. Narli, taivo po lisrola.
+# EN: Dorin. You carried father to the city. Three hours. And three hours again. And still, you
+# EN: stayed.
+Maivo po lisrola kasa li musva. Ata kasa li amor poye.
+# EN: I stayed out of duty. And out of love, perhaps.
+Lorejuba.
+# EN: Thank you.
+Ne jubaja. Donuda.
+# EN: Not giving a gift. Handing over.
+Ola ka una coda.
+# EN: That's one thing.
+Ola ka dossa coda.
+# EN: That's two things.
+Maivo po cunuca. Juba, donu, dapadonu: tressa coda.
+# EN: I counted. Gift, handing-over, sale: three things.
+Ata tivromomvi.
+# EN: And letting go.
+Ola ka cuara coda hoyo. Maivo po ne cunuca ola.
+# EN: That's four things. I never counted that one.
+# EN: The first customer.]
+Li merno.
+# EN: The morning.
+Una merno. Doli una.
+# EN: One morning. Only one.
+Dorin. Taivo futu relnura ki?
+# EN: Dorin. Will you come back?
+Poye.
+# EN: Perhaps.
+Maivo futu lisrola ki?
+# EN: Will I stay?
+Poye.
+# EN: Perhaps.
+Ola ka nosvosan.
+# EN: That is possible.
+# EN: the wood. Behind her, DORIN buttons his coat; KIPO lifts the first loaf from the oven. She
+# EN: does not open the door yet.]
+Li bumre ka sumasan.
+# EN: The bread is warm.
+Li bumre ka sumasan.
+# EN: The bread is warm.
+Lombila.
+# EN: Begin.

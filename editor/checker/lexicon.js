@@ -163,6 +163,21 @@
     return { words, ordinalSuffix: ordinal ? ordinal[1] : null };
   }
 
+  /**
+   * "N times" adverbials, read from the ruling that makes them (2.1:G49):
+   * "NUMBER-krono = N times …; ki-muya-krono = how many times". Any numeral
+   * joined to that head is a frequency adverbial; so is the question word.
+   */
+  function parseTimes(ref) {
+    for (const r of ref.rulings) {
+      const head = /\bNUMBER-([a-z]+) = N times/.exec(r.rule || '');
+      if (!head) continue;
+      const question = new RegExp('\\b(ki-[a-z]+)-' + head[1] + ' = how many times').exec(r.rule);
+      return { head: head[1], question: question ? question[1] : null, ruling: r.id };
+    }
+    return null;
+  }
+
   /** Suffixes, derivations and the verb rule, from word_building. */
   function parseMorphology(ref) {
     const wb = ref.word_building;
@@ -227,6 +242,7 @@
     const small = parseSmallWords(ref);
     const morph = parseMorphology(ref);
     const numerals = parseNumerals(ref);
+    numerals.times = parseTimes(ref);
     const order = ref.how_to_translate.how_a_reader_parses_one_word.join(' ');
     const longer = /longer than (\d+)/.exec(order);
     // every form a headword could have by rule, listed or not (for the unused-slot warning)

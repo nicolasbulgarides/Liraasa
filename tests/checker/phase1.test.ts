@@ -193,9 +193,11 @@ describe('the fixture song and canon', () => {
    */
   // 2.0's canon fixes (ADR-0016) mended five: cupa → buvokova, pamlonasan →
   // sulnosovenasan, lallesan and vaniasasan listed, the bumreasasan example rewritten.
+  // 2.1 made sola a word (sun, respelled from sulba), so the miyo and loya examples
+  // ("Miyo baba sola.", "Li sola loya benasan.", glossed "solitude") are no longer
+  // flagged: they now read "sun", against their English. Reported to the author.
   const KNOWN_CANON_FINDINGS = [
-    'Miyo baba sola. :: never invent :: sola', // miyo example: sola is no headword
-    'Li sola loya benasan. :: never invent :: sola', // loya example
+    'Ki-saivo lirala? :: 2.1:G46 :: lirala', // the historical ki-saivo example, kept as written
     'Maivo po helnaha li linu ko li helna. :: 1.2:G33 :: ko', // instrumental ko, written before yuta existed
   ];
 

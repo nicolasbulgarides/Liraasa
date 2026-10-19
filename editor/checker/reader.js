@@ -32,6 +32,10 @@
     const num = readNumeral(ix, w);
     if (num) return num;
 
+    // 3b NUMBER-krono, N times; ki-muya-krono, how many times (2.1:G49)
+    const times = readTimes(ix, w);
+    if (times) return times;
+
     // 4 derivation
     const deriv = readDerivation(ix, w);
     if (deriv) return deriv;
@@ -58,6 +62,7 @@
         word: w,
         to: legacy.to,
         migration: legacy.kind,
+        edition: legacy.edition || null,
         readings: [],
         suffixes: [],
       };
@@ -96,6 +101,22 @@
       return { kind: 'numeral', word: w, ordinal, readings: [], suffixes: [] };
     }
     return null;
+  }
+
+  /** A frequency adverbial: read as a correlative of its head, so it fills the same slots. */
+  function readTimes(ix, w) {
+    const t = ix.numerals.times;
+    if (!t || !w.endsWith('-' + t.head)) return null;
+    const left = w.slice(0, -t.head.length - 1);
+    const question = left === t.question;
+    if (!question && !readNumeral(ix, left)) return null;
+    const gloss = question ? 'how many times' : left + ' times';
+    return {
+      kind: 'closed',
+      word: w,
+      readings: [{ cls: 'correlative', form: w, use: left + ' + ' + t.head, gloss }],
+      suffixes: [],
+    };
   }
 
   function readDerivation(ix, w) {

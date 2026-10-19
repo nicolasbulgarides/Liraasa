@@ -16,13 +16,13 @@ export interface Theme {
 
 export const GUIDE = {
   /** Read only. Rebuilt by `npm run build:handoff`. */
-  lexicon: 'handoff/liraasa_2_0_complete.json',
+  lexicon: 'handoff/liraasa_2_1_complete.json',
   /** The frozen 1.0, read only for its headword count in the edition note. */
   lexicon10: 'data/lexicon/liraasa_1_0.json',
   outDir: 'handoff',
   /** The file stem; `.html` and `.pdf` are added. */
-  outName: 'Liraasa_2_0_Reference_Grammar',
-  title: 'Liraasa 2.0 Reference Grammar',
+  outName: 'Liraasa_2_1_Reference_Grammar',
+  title: 'Liraasa 2.1 Reference Grammar',
   subtitle: 'A language built for singing',
 
   /**
@@ -47,13 +47,13 @@ export const GUIDE = {
 
   /**
    * The four words under the cover emblem, one per motif: sun, heart, moon,
-   * song. Each must be a canon spelling; the build's word check enforces it.
+   * song, by id, so a respelling carries through (sun is `sola` from 2.1).
    */
   coverMotif: [
-    ['sulba', 'sun'],
-    ['lore', 'heart'],
-    ['luno', 'moon'],
-    ['lira', 'song'],
+    ['lx_sulba_0853', 'sun'],
+    ['lx_lore_0286', 'heart'],
+    ['lx_luno_0310', 'moon'],
+    ['lx_lira_0272', 'song'],
   ] as const,
 
   /** Foreign names as Liraasa copies them (2.0:G45): [the name, its Liraasa spelling]. */

@@ -1,4 +1,5 @@
 import { CHANGESETS_2_0 } from '../../scripts/changesets_2_0';
+import { CHANGESETS_2_1 } from '../../scripts/changesets_2_1';
 import { readFileSync } from 'node:fs';
 import { beforeAll, describe, expect, it } from 'vitest';
 import {
@@ -268,16 +269,20 @@ describe('a new edition', () => {
     expect(d.removed).toEqual([]);
   });
 
-  it('ACCEPTANCE: the 1.2 → 2.0 diff lesson is the 2.0 changeset, op by op', () => {
-    const at12 = buildLearnSource({
+  const atEdition = (file: string): LearnSource =>
+    buildLearnSource({
       ...input,
-      lexicon: JSON.parse(readFileSync('data/lexicon/liraasa_1_2.json', 'utf8')) as RawLexicon,
+      lexicon: JSON.parse(readFileSync(file, 'utf8')) as RawLexicon,
       corpus: [],
     });
+
+  it('ACCEPTANCE: the 1.2 → 2.0 diff lesson is the 2.0 changeset, op by op', () => {
+    const at12 = atEdition('data/lexicon/liraasa_1_2.json');
+    const at20 = atEdition('data/lexicon/liraasa_2_0.json');
     const d = diffSnapshots(
       snapshotEdition(at12.data),
-      snapshotEdition(source.data),
-      source.replacementFor,
+      snapshotEdition(at20.data),
+      at20.replacementFor,
     );
     expect([d.from, d.to]).toEqual(['1.2', '2.0']);
     const ops = CHANGESETS_2_0.flatMap(
@@ -298,7 +303,36 @@ describe('a new edition', () => {
     expect(d.removed).toEqual([]);
     const moved = ops.filter((o) => o.op === 'move_to_pattern').map((o) => o.entry);
     expect(moved).toHaveLength(391);
-    for (const id of moved) expect(source.data.items.get(id)?.kind, id).toBe('imageCompound');
+    for (const id of moved) expect(at20.data.items.get(id)?.kind, id).toBe('imageCompound');
+  });
+
+  it('ACCEPTANCE: the 2.0 → 2.1 diff lesson is the 2.1 respelling, id by id', () => {
+    const at20 = atEdition('data/lexicon/liraasa_2_0.json');
+    const d = diffSnapshots(
+      snapshotEdition(at20.data),
+      snapshotEdition(source.data),
+      source.replacementFor,
+    );
+    expect([d.from, d.to]).toEqual(['2.0', '2.1']);
+    const ops = CHANGESETS_2_1.flatMap(
+      (path) =>
+        (JSON.parse(readFileSync(path, 'utf8')) as { ops: { op: string; entry: string }[] }).ops,
+    );
+    // nothing added, removed or reglossed: a respelling keeps every id and meaning (2.1:G58)
+    expect(d.added).toEqual([]);
+    expect(d.removed).toEqual([]);
+    expect(d.reglossed).toEqual([]);
+    // 30 roots, the 145 compounds and 96 image compounds built on them (the patch's counts)
+    expect(d.renamed).toHaveLength(30 + 145 + 96);
+    const renamed = new Set(d.renamed.map((r) => r.id));
+    for (const o of ops.filter((x) => x.op === 'respell_root' || x.op === 'respell_as_compound'))
+      expect(renamed.has(o.entry), o.entry).toBe(true);
+    // every rename is the one the legacy table records
+    const migration = input.lexicon.legacy.migration_forms;
+    for (const r of d.renamed) expect(migration[r.from]?.to, r.from).toBe(r.to);
+    expect(d.rulesAdded.map((r) => r.id)).toEqual(
+      Array.from({ length: 14 }, (_, i) => `rule:2.1:G${String(46 + i)}`),
+    );
   });
 });
 

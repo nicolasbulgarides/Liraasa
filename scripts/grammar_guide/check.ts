@@ -9,8 +9,8 @@
 import { execFileSync } from 'node:child_process';
 import { existsSync, readFileSync } from 'node:fs';
 import { pathToFileURL } from 'node:url';
-import { tokenize, type Index } from './data';
-import { awaitingReview, decisionsNeeded, recorded } from './html';
+import { respelledAs, tokenize, type Index } from './data';
+import { awaitingReview, composedGlosses, decisionsNeeded, recorded } from './html';
 
 const MORPHEME = /^[-+]|[-+]$|\+|^R\b|^VERB$/;
 
@@ -39,8 +39,9 @@ export function checkWords(index: Index): string[] {
     }
     for (const token of tokenize(text)) {
       if (use === 'retired') continue;
+      if (use === 'older' && respelledAs(index.lex, token) !== undefined) continue;
       if (!index.isWord(token)) problems.add(`"${token}" (in "${text}") is not a word of Liraasa`);
-      if (use === 'text' && index.unusedReadings(token).length > 0) {
+      if ((use === 'text' || use === 'older') && index.unusedReadings(token).length > 0) {
         problems.add(`"${token}" is an unused slot shown as live text`);
       }
     }
@@ -97,6 +98,15 @@ export function reviewMarkdown(title: string): string {
   lines.push('## REVIEW: sentences that are not canon examples', '');
   if (awaitingReview.length === 0) lines.push('None.', '');
   for (const r of awaitingReview) lines.push(`- *${r.liraasa}* — ${r.english} (${r.where})`);
+  lines.push('', '## REVIEW: English the guide composed for canon ruling sentences', '');
+  if (composedGlosses.length === 0) lines.push('None.', '');
+  const composed = new Map<string, { english: string; where: string[] }>();
+  for (const r of composedGlosses) {
+    const seen = composed.get(r.liraasa) ?? { english: r.english, where: [] };
+    seen.where.push(r.where);
+    composed.set(r.liraasa, seen);
+  }
+  for (const [l, r] of composed) lines.push(`- *${l}* — ${r.english} (${r.where.join('; ')})`);
   lines.push('', '## DECISIONS NEEDED', '');
   if (decisionsNeeded.length === 0) lines.push('None.', '');
   for (const d of decisionsNeeded) lines.push(`- ${d.what} (${d.where})`);

@@ -23,11 +23,13 @@ point.
 | [0014](0014-grammar-checker.md)               | The editor's grammar checker: data-driven, rule-cited diagnostics  | accepted | 1.2   |
 | [0015](0015-learn-module.md)                  | The learning module: pure core, editor UI, id-keyed progress       | accepted | 1.2   |
 | [0016](0016-lexicon-2-0.md)                   | Liraasa 2.0: the lexicon expansion, built from frozen 1.2          | accepted | 2.0   |
+| [0017](0017-lexicon-2-1.md)                   | Liraasa 2.1: thirty roots respelled, grammar rulings G46–G59       | accepted | 2.1   |
 
 ADR-0007 and ADR-0008 record decisions the author made in answer to the Phase 0
 report; the questions and answers are summarised in each. ADR-0009 and ADR-0010
 come out of the 1.0 → 1.1 vocabulary integration. ADR-0016 records the
-author's four decisions on the 2.0 patch.
+author's four decisions on the 2.0 patch; ADR-0017 records how the 2.1 respelling
+is carried through every tool.
 
 Expected in later phases: the parser's ranking rules (Phase 2), the scheduler
 choice between FSRS and SM-2 (Phase 7), and Tauri packaging (Phase 8, per
