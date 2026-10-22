@@ -2,7 +2,7 @@
  "language": "Liraasa",
  "version": "2.5",
  "built_utc": "2026-10-22T18:00:00Z",
- "source": "Built deterministically from liraasa_2_3.json (sha256 631b9ca45e1fcfbc62f89df4100c7c8d7e7e9c5e9fc1e7656a02ed3b27d6acd5) by scripts/integrate_2_5.ts, applying the changeset 2026-10-22-lexicon-2-5-album and 2026-10-22-lexicon-2-5 (ADR-0020). This JSON is the single source of truth for Liraasa 2.5.",
+ "source": "Built deterministically from liraasa_2_3.json (sha256 631b9ca45e1fcfbc62f89df4100c7c8d7e7e9c5e9fc1e7656a02ed3b27d6acd5) by scripts/integrate_2_5.ts, applying the changeset 2026-10-22-lexicon-2-5-album and 2026-10-22-lexicon-2-5 and 2026-10-22-lexicon-2-5-housekeeping (ADR-0020). This JSON is the single source of truth for Liraasa 2.5.",
  "snapshot_0_8": {
   "source_file": "lexicon_0_8_rc2.json",
   "source_version": "0.8-rc2",
@@ -77992,7 +77992,7 @@
   {
    "form": "ne",
    "meaning": "not (sentence/action)",
-   "position": "put immediately before scope of negation",
+   "position": "a preverbal ne scopes over everything to its right up to the verb; a ne elsewhere scopes over the single constituent that follows it (I-33)",
    "example": "maivo ne lirala",
    "example_gloss": "I do not sing",
    "class": null,
@@ -78531,7 +78531,8 @@
    "class": null,
    "status_1_0": "CARRIED",
    "since": "≤0.8",
-   "id": "fw_kisaivo_0058"
+   "id": "fw_kisaivo_0058",
+   "table": "historical_and_formulae"
   },
   {
    "form": "ki-modo",
@@ -79104,7 +79105,8 @@
    "class": null,
    "status_1_0": "CARRIED",
    "since": "≤0.8",
-   "id": "fw_lorejubaalataivo_0110"
+   "id": "fw_lorejubaalataivo_0110",
+   "table": "historical_and_formulae"
   },
   {
    "form": "reve",
@@ -79196,7 +79198,7 @@
   },
   {
    "form": "seye",
-   "meaning": "final certainty: certain",
+   "meaning": "attitude: certain",
    "position": "Sentence-final, before punctuation / after predicate",
    "example": "Maivo lirala seye.",
    "example_gloss": "I sing, certainly.",
@@ -79207,7 +79209,7 @@
   },
   {
    "form": "mufe",
-   "meaning": "final certainty: probable",
+   "meaning": "attitude: probable",
    "position": "Sentence-final, before punctuation / after predicate",
    "example": "Maivo lirala mufe.",
    "example_gloss": "I probably sing.",
@@ -79218,7 +79220,7 @@
   },
   {
    "form": "poye",
-   "meaning": "final certainty: maybe",
+   "meaning": "attitude: maybe",
    "position": "Sentence-final, before punctuation / after predicate",
    "example": "Maivo lirala poye.",
    "example_gloss": "Perhaps I sing.",
@@ -79229,7 +79231,7 @@
   },
   {
    "form": "pifu",
-   "meaning": "final certainty: wish / hope",
+   "meaning": "attitude: wish / hope",
    "position": "Sentence-final, before punctuation / after predicate",
    "example": "Maivo futu lirala pifu.",
    "example_gloss": "May I sing in the future / I hope so.",
@@ -80205,7 +80207,7 @@
     "Liraasa": "seta",
     "Construction rule": "fixed base form",
     "English interpretation": "seven",
-    "Usage / comment": "Restored in 0.7: no longer a homograph of the reflexive particle; matches setazira / setacenta."
+    "Usage / comment": "Ten is unzira, not una-zira."
    },
    {
     "Group": "Digit",
@@ -80221,7 +80223,7 @@
     "Liraasa": "niva",
     "Construction rule": "fixed base form",
     "English interpretation": "nine",
-    "Usage / comment": "Restored in 0.7: no longer a homograph of \"while\"; matches nivazira / nivacenta."
+    "Usage / comment": "Ten is unzira, not una-zira."
    },
    {
     "Group": "Decade",
@@ -81471,217 +81473,260 @@
   {
    "form": "futu",
    "english": "Future",
-   "id": "tw_futu_0001"
+   "id": "tw_futu_0001",
+   "time_class": "operator"
   },
   {
    "form": "po",
    "english": "Past",
-   "id": "tw_po_0002"
+   "id": "tw_po_0002",
+   "time_class": "operator"
   },
   {
    "form": "pressa",
    "english": "Present",
-   "id": "tw_pressa_0003"
+   "id": "tw_pressa_0003",
+   "time_class": "operator"
   },
   {
    "form": "seca",
    "english": "Second",
-   "id": "tw_seca_0004"
+   "id": "tw_seca_0004",
+   "time_class": "noun"
   },
   {
    "form": "minota",
    "english": "Minute",
-   "id": "tw_minota_0005"
+   "id": "tw_minota_0005",
+   "time_class": "noun"
   },
   {
    "form": "deya",
    "english": "Day",
-   "id": "tw_deya_0006"
+   "id": "tw_deya_0006",
+   "time_class": "noun"
   },
   {
    "form": "deyafama",
    "english": "Week",
-   "id": "tw_deyafama_0007"
+   "id": "tw_deyafama_0007",
+   "time_class": "noun"
   },
   {
    "form": "monta",
    "english": "Month",
-   "id": "tw_monta_0008"
+   "id": "tw_monta_0008",
+   "time_class": "noun"
   },
   {
    "form": "montafama",
    "english": "Year",
-   "id": "tw_montafama_0009"
+   "id": "tw_montafama_0009",
+   "time_class": "noun"
   },
   {
    "form": "codamontafama",
    "english": "Calendar",
-   "id": "tw_codamontafama_0010"
+   "id": "tw_codamontafama_0010",
+   "time_class": "noun"
   },
   {
    "form": "kronopago",
    "english": "Anniversary",
-   "id": "tw_kronopago_0011"
+   "id": "tw_kronopago_0011",
+   "time_class": "noun"
   },
   {
    "form": "deyapressa",
    "english": "Today",
-   "id": "tw_deyapressa_0012"
+   "id": "tw_deyapressa_0012",
+   "time_class": "adverbial"
   },
   {
    "form": "deyaapo",
    "english": "Yesterday",
-   "id": "tw_deyaapo_0013"
+   "id": "tw_deyaapo_0013",
+   "time_class": "adverbial"
   },
   {
    "form": "deyafutu",
    "english": "Tomorrow",
-   "id": "tw_deyafutu_0014"
+   "id": "tw_deyafutu_0014",
+   "time_class": "adverbial"
   },
   {
    "form": "fututi",
    "english": "Soon",
-   "id": "tw_fututi_0015"
+   "id": "tw_fututi_0015",
+   "time_class": "adverbial"
   },
   {
    "form": "futupago",
    "english": "Sometime in future",
-   "id": "tw_futupago_0016"
+   "id": "tw_futupago_0016",
+   "time_class": "adverbial"
   },
   {
    "form": "kroti",
    "english": "Before",
-   "id": "tw_kroti_0017"
+   "id": "tw_kroti_0017",
+   "time_class": "operator"
   },
   {
    "form": "krotiapo",
    "english": "After",
-   "id": "tw_krotiapo_0018"
+   "id": "tw_krotiapo_0018",
+   "time_class": "operator"
   },
   {
    "form": "nullo",
    "english": "Night",
-   "id": "tw_nullo_0019"
+   "id": "tw_nullo_0019",
+   "time_class": "noun"
   },
   {
    "form": "merno",
    "english": "Morning",
-   "id": "tw_merno_0020"
+   "id": "tw_merno_0020",
+   "time_class": "noun"
   },
   {
    "form": "vesno",
    "english": "Evening",
-   "id": "tw_vesno_0021"
+   "id": "tw_vesno_0021",
+   "time_class": "noun"
   },
   {
    "form": "eli-krono",
    "english": "Now",
-   "id": "tw_elikrono_0022"
+   "id": "tw_elikrono_0022",
+   "time_class": "adverbial"
   },
   {
    "form": "eli-pago",
    "english": "Here",
-   "id": "tw_elipago_0023"
+   "id": "tw_elipago_0023",
+   "time_class": "place_adverbial"
   },
   {
    "form": "ola-pago",
    "english": "There",
-   "id": "tw_olapago_0024"
+   "id": "tw_olapago_0024",
+   "time_class": "place_adverbial"
   },
   {
    "form": "toda-krono",
    "english": "Always",
-   "id": "tw_todakrono_0025"
+   "id": "tw_todakrono_0025",
+   "time_class": "adverbial"
   },
   {
    "form": "nuna-krono",
    "english": "Never",
-   "id": "tw_nunakrono_0026"
+   "id": "tw_nunakrono_0026",
+   "time_class": "adverbial"
   },
   {
    "form": "reve",
    "english": "Again",
-   "id": "tw_reve_0027"
+   "id": "tw_reve_0027",
+   "time_class": "operator"
   },
   {
    "form": "loki",
    "english": "Still",
-   "id": "tw_loki_0028"
+   "id": "tw_loki_0028",
+   "time_class": "operator"
   },
   {
    "form": "bodu",
    "english": "Already",
-   "id": "tw_bodu_0029"
+   "id": "tw_bodu_0029",
+   "time_class": "operator"
   },
   {
    "form": "mambi",
    "english": "Moment",
-   "id": "tw_mambi_0030"
+   "id": "tw_mambi_0030",
+   "time_class": "noun"
   },
   {
    "form": "lornu",
    "english": "Hour",
-   "id": "tw_lornu_0031"
+   "id": "tw_lornu_0031",
+   "time_class": "noun"
   },
   {
    "form": "eli-krono",
    "english": "now",
-   "id": "tw_elikrononow_0032"
+   "id": "tw_elikrononow_0032",
+   "time_class": "duplicate"
   },
   {
    "form": "ola-krono",
    "english": "then",
-   "id": "tw_olakrono_0033"
+   "id": "tw_olakrono_0033",
+   "time_class": "adverbial"
   },
   {
    "form": "toda-krono",
    "english": "always",
-   "id": "tw_todakronoalways_0034"
+   "id": "tw_todakronoalways_0034",
+   "time_class": "duplicate"
   },
   {
    "form": "nuna-krono",
    "english": "never",
-   "id": "tw_nunakrononever_0035"
+   "id": "tw_nunakrononever_0035",
+   "time_class": "duplicate"
   },
   {
    "form": "somi-krono",
    "english": "sometime",
-   "id": "tw_somikrono_0036"
+   "id": "tw_somikrono_0036",
+   "time_class": "adverbial"
   },
   {
    "form": "ki-krono",
    "english": "when?",
-   "id": "tw_kikrono_0037"
+   "id": "tw_kikrono_0037",
+   "time_class": "adverbial"
   },
   {
    "form": "mernopressa",
    "english": "This morning",
-   "id": "tw_mernopressa_0038"
+   "id": "tw_mernopressa_0038",
+   "time_class": "adverbial"
   },
   {
    "form": "vesnopressa",
    "english": "This evening",
-   "id": "tw_vesnopressa_0039"
+   "id": "tw_vesnopressa_0039",
+   "time_class": "adverbial"
   },
   {
    "form": "nullopressa",
    "english": "Tonight",
-   "id": "tw_nullopressa_0040"
+   "id": "tw_nullopressa_0040",
+   "time_class": "adverbial"
   },
   {
    "form": "mernofutu",
    "english": "Tomorrow morning",
-   "id": "tw_mernofutu_0041"
+   "id": "tw_mernofutu_0041",
+   "time_class": "adverbial"
   },
   {
    "form": "vesnofutu",
    "english": "Tomorrow evening",
-   "id": "tw_vesnofutu_0042"
+   "id": "tw_vesnofutu_0042",
+   "time_class": "adverbial"
   },
   {
    "form": "nullofutu",
    "english": "Tomorrow night",
-   "id": "tw_nullofutu_0043"
+   "id": "tw_nullofutu_0043",
+   "time_class": "adverbial"
   }
  ],
  "colors": [
@@ -81940,7 +81985,7 @@
     "words": [
      "ne"
     ],
-    "notes": "floats: may also stand before any later operator or the verb, negating what follows"
+    "notes": "may also stand before any later operator or the verb; a preverbal ne scopes over everything to its right up to the verb; a ne elsewhere scopes over the single constituent that follows it (I-33)"
    },
    {
     "n": 7,
@@ -82154,7 +82199,7 @@
     ]
    ],
    "max_preverbal_operators_recommended": 4,
-   "scope": "left scopes over right (G1); ne negates everything to its right up to the verb"
+   "scope": "left scopes over right (G1); a preverbal ne scopes over everything to its right up to the verb; a ne elsewhere scopes over the single constituent that follows it"
   },
   "valency": {
    "vaku": "make (causative)",
@@ -83235,7 +83280,7 @@
      "She spoke in a musical voice."
     ],
     [
-     "ata li veluri po sarbisia ko bapi su li doza de farulavrasan amor.",
+     "Maivo lirala ko amor.",
      "And the stars wrote in surprise on the strength of phoenix-like love."
     ]
    ],
@@ -85154,7 +85199,8 @@
    "feature": "Agent noun • 1",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "lemudonuyo",
@@ -85164,7 +85210,8 @@
    "changes": [
     "torliyo → lemudonuyo"
    ],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "lemupago",
@@ -85172,7 +85219,8 @@
    "feature": "Place noun • 1",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "pelipago",
@@ -85180,7 +85228,8 @@
    "feature": "Place noun • 2",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "liravu",
@@ -85188,7 +85237,8 @@
    "feature": "Augmentative • 1",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "larbovu",
@@ -85196,7 +85246,8 @@
    "feature": "Augmentative • 2",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "Eli-krono maivo lirala.",
@@ -85268,7 +85319,8 @@
    "feature": "Agent -yo / source lira",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "lemudonuyo",
@@ -85278,7 +85330,8 @@
    "changes": [
     "torliyo → lemudonuyo"
    ],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "noruyo",
@@ -85286,7 +85339,8 @@
    "feature": "Agent -yo / source noru",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "melvayo",
@@ -85294,7 +85348,8 @@
    "feature": "Agent -yo / source melva",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "senoyo",
@@ -85302,7 +85357,8 @@
    "feature": "Agent -yo / source seno",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "sarbiyo",
@@ -85310,7 +85366,8 @@
    "feature": "Agent -yo / source sarbi",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "lemuyo",
@@ -85318,7 +85375,8 @@
    "feature": "Agent -yo / source lemu",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "resoyo",
@@ -85326,7 +85384,8 @@
    "feature": "Agent -yo / source reso",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "peliyo",
@@ -85334,7 +85393,8 @@
    "feature": "Agent -yo / source peli",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "valmiyo",
@@ -85342,7 +85402,8 @@
    "feature": "Agent -yo / source valmi",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "lemupago",
@@ -85350,7 +85411,8 @@
    "feature": "Place -pago / source lemu",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "melopago",
@@ -85358,7 +85420,8 @@
    "feature": "Place -pago / source melo",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "resopago",
@@ -85366,7 +85429,8 @@
    "feature": "Place -pago / source reso",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "folnipago",
@@ -85374,7 +85438,8 @@
    "feature": "Place -pago / source folni",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "senopago",
@@ -85382,7 +85447,8 @@
    "feature": "Place -pago / source seno",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "sarbipago",
@@ -85390,7 +85456,8 @@
    "feature": "Place -pago / source sarbi",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "pelipago",
@@ -85398,7 +85465,8 @@
    "feature": "Place -pago / source peli",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "somupago",
@@ -85406,7 +85474,8 @@
    "feature": "Place -pago / source somu",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "namipago",
@@ -85414,7 +85483,8 @@
    "feature": "Place -pago / source nami",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "jubapago",
@@ -85422,7 +85492,8 @@
    "feature": "Place -pago / source juba",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "liravu",
@@ -85430,7 +85501,8 @@
    "feature": "Augmentative -vu / source lira",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "lorevu",
@@ -85438,7 +85510,8 @@
    "feature": "Augmentative -vu / source lore",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "melovu",
@@ -85446,7 +85519,8 @@
    "feature": "Augmentative -vu / source melo",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "larbovu",
@@ -85454,7 +85528,8 @@
    "feature": "Augmentative -vu / source larbo",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "monruvu",
@@ -85462,7 +85537,8 @@
    "feature": "Augmentative -vu / source monru",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "soravu",
@@ -85470,7 +85546,8 @@
    "feature": "Augmentative -vu / source sora",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "nullovu",
@@ -85478,7 +85555,8 @@
    "feature": "Augmentative -vu / source nullo",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "noruvu",
@@ -85486,7 +85564,8 @@
    "feature": "Augmentative -vu / source noru",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "renlivu",
@@ -85494,7 +85573,8 @@
    "feature": "Augmentative -vu / source renli",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "resovu",
@@ -85502,7 +85582,8 @@
    "feature": "Augmentative -vu / source reso",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "lirayo",
@@ -85510,7 +85591,8 @@
    "feature": "lira + -yo",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "lemudonuyo",
@@ -85520,7 +85602,8 @@
    "changes": [
     "torliyo → lemudonuyo"
    ],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "noruyo",
@@ -85528,7 +85611,8 @@
    "feature": "noru + -yo",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "lemuyo",
@@ -85536,7 +85620,8 @@
    "feature": "lemu + -yo",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "sorayo",
@@ -85544,7 +85629,8 @@
    "feature": "sora + -yo",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "sarbiyo",
@@ -85552,7 +85638,8 @@
    "feature": "sarbi + -yo",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "riluyo",
@@ -85560,7 +85647,8 @@
    "feature": "rilu + -yo",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "sabeyo",
@@ -85568,7 +85656,8 @@
    "feature": "sabe + -yo",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "farlayo",
@@ -85576,7 +85665,8 @@
    "feature": "farla + -yo",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "nuluyo",
@@ -85584,7 +85674,8 @@
    "feature": "nulu + -yo",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "liravu",
@@ -85592,7 +85683,8 @@
    "feature": "lira + -vu",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "nimuvu",
@@ -85600,7 +85692,8 @@
    "feature": "nimu + -vu",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "soravu",
@@ -85608,7 +85701,8 @@
    "feature": "sora + -vu",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "lorevu",
@@ -85616,7 +85710,8 @@
    "feature": "lore + -vu",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "lumivu",
@@ -85624,7 +85719,8 @@
    "feature": "lumi + -vu",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "veluvu",
@@ -85632,7 +85728,8 @@
    "feature": "velu + -vu",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "miruvu",
@@ -85640,7 +85737,8 @@
    "feature": "miru + -vu",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "lunovu",
@@ -85648,7 +85746,8 @@
    "feature": "luno + -vu",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "noruvu",
@@ -85656,7 +85755,8 @@
    "feature": "noru + -vu",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "jubavu",
@@ -85664,7 +85764,8 @@
    "feature": "juba + -vu",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "lirapago",
@@ -85672,7 +85773,8 @@
    "feature": "lira + -pago",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "lemupago",
@@ -85680,7 +85782,8 @@
    "feature": "lemu + -pago",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "sorapago",
@@ -85688,7 +85791,8 @@
    "feature": "sora + -pago",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "nimupago",
@@ -85696,7 +85800,8 @@
    "feature": "nimu + -pago",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "farupago",
@@ -85704,7 +85809,8 @@
    "feature": "faru + -pago",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "sabepago",
@@ -85712,7 +85818,8 @@
    "feature": "sabe + -pago",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "sorapago",
@@ -85720,7 +85827,8 @@
    "feature": "sora + -pago",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "somupago",
@@ -85728,7 +85836,8 @@
    "feature": "somu + -pago",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "melopago",
@@ -85736,7 +85845,8 @@
    "feature": "melo + -pago",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "ramupago",
@@ -85744,7 +85854,8 @@
    "feature": "ramu + -pago",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "ki-coda",
@@ -85752,7 +85863,8 @@
    "feature": "ki- + coda",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "ki-pago",
@@ -85760,7 +85872,8 @@
    "feature": "ki- + pago",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "ki-krono",
@@ -85768,7 +85881,8 @@
    "feature": "ki- + krono",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "ki-nela",
@@ -85776,7 +85890,8 @@
    "feature": "ki- + nela",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "ki-modo",
@@ -85784,7 +85899,8 @@
    "feature": "ki- + modo",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "ki-kasa",
@@ -85792,7 +85908,8 @@
    "feature": "ki- + kasa",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "eli-coda",
@@ -85800,7 +85917,8 @@
    "feature": "eli- + coda",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "eli-pago",
@@ -85808,7 +85926,8 @@
    "feature": "eli- + pago",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "eli-krono",
@@ -85816,7 +85935,8 @@
    "feature": "eli- + krono",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "eli-nela",
@@ -85824,7 +85944,8 @@
    "feature": "eli- + nela",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "eli-modo",
@@ -85832,7 +85953,8 @@
    "feature": "eli- + modo",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "eli-kasa",
@@ -85840,7 +85962,8 @@
    "feature": "eli- + kasa",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "nuna-coda",
@@ -85848,7 +85971,8 @@
    "feature": "nuna- + coda",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "nuna-pago",
@@ -85856,7 +85980,8 @@
    "feature": "nuna- + pago",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "nuna-krono",
@@ -85864,7 +85989,8 @@
    "feature": "nuna- + krono",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "nuna-nela",
@@ -85872,7 +85998,8 @@
    "feature": "nuna- + nela",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "nuna-modo",
@@ -85880,7 +86007,8 @@
    "feature": "nuna- + modo",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "nuna-kasa",
@@ -85888,7 +86016,8 @@
    "feature": "nuna- + kasa",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "va-pagopa",
@@ -85896,7 +86025,8 @@
    "feature": "pagopa: go + toward",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "du-pagopa",
@@ -85904,7 +86034,8 @@
    "feature": "pagopa: go + away",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "mi-pagopa",
@@ -85932,7 +86063,8 @@
    "feature": "pagopa: go + across",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "yave-pagopa",
@@ -85940,7 +86072,8 @@
    "feature": "pagopa: go + together",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "revo-pagopa",
@@ -85948,7 +86081,8 @@
    "feature": "pagopa: go + back",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "lu-pagopa",
@@ -85976,7 +86110,8 @@
    "feature": "lira + va-",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "revo-lirala",
@@ -85984,7 +86119,8 @@
    "feature": "lira + revo-",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "va-miruma",
@@ -85992,7 +86128,8 @@
    "feature": "miru + va-",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "revo-miruma",
@@ -86000,7 +86137,8 @@
    "feature": "miru + revo-",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "va-rivora",
@@ -86008,7 +86146,8 @@
    "feature": "rivo + va-",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "revo-rivora",
@@ -86016,7 +86155,8 @@
    "feature": "rivo + revo-",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "va-vimova",
@@ -86024,7 +86164,8 @@
    "feature": "vimo + va-",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "revo-vimova",
@@ -86032,7 +86173,8 @@
    "feature": "vimo + revo-",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "va-nulunia",
@@ -86040,7 +86182,8 @@
    "feature": "nulu + va-",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "revo-nulunia",
@@ -86048,7 +86191,8 @@
    "feature": "nulu + revo-",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "Li nela ke vanisan.",
@@ -86138,7 +86282,8 @@
    "changes": [
     "mi- retired; turna (enter) replaces it"
    ],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "Li nela ke vanisan. → Nela vanisan.",
@@ -86146,7 +86291,8 @@
    "feature": "Poetic ellipsis [PROPOSAL]",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "li amorsan; li lumiasasan",
@@ -86154,7 +86300,8 @@
    "feature": "Adjective as noun [PROPOSAL]",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "Renlira.",
@@ -86178,7 +86325,8 @@
    "feature": "Ordinals [PROPOSAL]",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "una-de-dossa; tressa de cuara",
@@ -86186,7 +86334,8 @@
    "feature": "Fractions and half [PROPOSAL]",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "Maivo nuna-krono lirala.",
@@ -86210,28 +86359,32 @@
    "feature": "Blocked place derivation",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "lira + yo = lirayo",
    "english": "singer",
    "feature": "Agent noun suffix",
    "status": "FORMULA",
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "lira + vu = liravu",
    "english": "grand song",
    "feature": "Augmentative suffix",
    "status": "FORMULA",
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "lemu + pago = lemupago",
    "english": "school",
    "feature": "Place suffix",
    "status": "FORMULA",
-   "source": "0.8 examples"
+   "source": "0.8 examples",
+   "kind": "illustration"
   },
   {
    "liraasa": "Maivo yehu lirala.",
@@ -86751,7 +86904,8 @@
    "feature": "negation",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 grammar examples"
+   "source": "0.8 grammar examples",
+   "kind": "contrast"
   },
   {
    "liraasa": "Nuna-nela ne lirala.",
@@ -86847,7 +87001,8 @@
    "feature": "quotation",
    "status": "CARRIED",
    "changes": [],
-   "source": "0.8 grammar examples"
+   "source": "0.8 grammar examples",
+   "kind": "contrast"
   },
   {
    "liraasa": "Maivo ne sabesia ki-pago taivo futu pagopa.",
@@ -116475,6 +116630,30 @@
     "now": "Li bitiri de pilo ke su li tabu.",
     "archived_in": "2.5",
     "reason": "I-04 + I-10, 2.5:G93: the example's gloss is a present location, which takes ke; the ruling is kept, its old example archived"
+   },
+   {
+    "entry": "2.3:G73",
+    "field": "example:1",
+    "text": "ata li veluri po sarbisia ko bapi su li doza de farulavrasan amor.",
+    "now": "Maivo lirala ko amor.",
+    "archived_in": "2.5",
+    "reason": "Housekeeping I-26 (the author approved all): the example used su after a writing verb, against 1.2:G30; replaced by 2.5:G104's ko + feeling example"
+   },
+   {
+    "entry": "text:numbers.rules.7.Usage / comment",
+    "field": "text",
+    "text": "Restored in 0.7: no longer a homograph of the reflexive particle; matches setazira / setacenta.",
+    "now": "Ten is unzira, not una-zira.",
+    "archived_in": "2.5",
+    "reason": "Housekeeping I-44 (the author approved all): an obsolete 0.7 digit comment, archived; the row reads as every other digit row"
+   },
+   {
+    "entry": "text:numbers.rules.9.Usage / comment",
+    "field": "text",
+    "text": "Restored in 0.7: no longer a homograph of \"while\"; matches nivazira / nivacenta.",
+    "now": "Ten is unzira, not una-zira.",
+    "archived_in": "2.5",
+    "reason": "Housekeeping I-44 (the author approved all): an obsolete 0.7 digit comment, archived; the row reads as every other digit row"
    }
   ]
  },
@@ -121050,6 +121229,12 @@
    "edition": "2.5",
    "summary": "Liraasa 2.5, step 2: the author's decisions on the 2.3 grammar audit (review/grammar_spec_2_3.md), rulings 2.5:G88-G128 in the patch's order. Amended rulings are marked amended_by, superseded ones superseded_by; a ruling example that no longer holds is archived. Function-word rows, slot notes, the clause and noun-phrase templates, the valency pattern and the motion-prefix rule follow; antizi is added; the -ti items leave the derivations; examples fixed by the patch's audits (commands, po viki, tonsi, ka for present location).",
    "ops": 116
+  },
+  {
+   "id": "2026-10-22-lexicon-2-5-housekeeping",
+   "edition": "2.5",
+   "summary": "Liraasa 2.5, step 3: the housekeeping the author approved: I-26 (2.3:G73's album example archived), I-27 (time words classed, duplicates marked), I-33 (one wording for ne's scope), I-40 (examples classed as canonical, illustration or contrast), I-41 (ATTITUDE words), I-44 (historical and formulae rows; obsolete digit comments archived). I-02 and I-52 are summaries, changed in the build scripts.",
+   "ops": 165
   }
  ]
 }

@@ -202,7 +202,7 @@ def main():
                 print("         " + d)
     print(summary["status_counts"])
     if a.out:
-        with open(a.out, "w", encoding="utf-8") as f:
+        with open(a.out, "w", encoding="utf-8", newline="\n") as f:
             json.dump({"summary": summary, "checks": checks}, f, ensure_ascii=False, indent=1)
     sys.exit(1 if any(c["status"] == "FAIL" for c in checks) else 0)
 

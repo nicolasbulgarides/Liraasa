@@ -275,7 +275,7 @@
    "count": 0,
    "details": [],
    "details_total": 0,
-   "note": "Compared against liraasa_2_3.json with every 2.5 op re-applied independently; changesets: 2026-10-22-lexicon-2-5-album, 2026-10-22-lexicon-2-5; 42 rulings added, 3 superseded, 23 amended, 1 covered; 9 texts and 6 values edited; 1 texts archived; 16 examples edited; 10 function-word fields edited; 1 function words added.",
+   "note": "Compared against liraasa_2_3.json with every 2.5 op re-applied independently; changesets: 2026-10-22-lexicon-2-5-album, 2026-10-22-lexicon-2-5, 2026-10-22-lexicon-2-5-housekeeping; 42 rulings added, 3 superseded, 23 amended, 1 covered; 11 texts and 161 values edited; 4 texts archived; 16 examples edited; 15 function-word fields edited; 1 function words added.",
    "executed_against": "validate_2_5.py"
   }
  ]

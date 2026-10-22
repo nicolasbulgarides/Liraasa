@@ -15,12 +15,17 @@
    "file": "data/changes/2026-10-22-lexicon-2-5.json",
    "id": "2026-10-22-lexicon-2-5",
    "sha256": "06d2293924fe34bf5c96781c6be4e222b5f46b4786450ce92ecf9ec40dd0b5ea"
+  },
+  {
+   "file": "data/changes/2026-10-22-lexicon-2-5-housekeeping.json",
+   "id": "2026-10-22-lexicon-2-5-housekeeping",
+   "sha256": "bf42faa990974bb44947c91cb2b4ce3a04bbb322ebb573803ca0238effe7b0e1"
   }
  ],
  "output": {
   "file": "liraasa_2_5.json",
-  "sha256": "e2b36ecd1c477d3e4e4269e308d02baaad14b84d1ca8e1dcff9f0c988f8dc34f",
-  "bytes": 3076886
+  "sha256": "28b8756e7233f1bd52e4c0fbbe227a105873427b15a4b9be808da6644d73c271",
+  "bytes": 3082968
  },
  "counts": {
   "before": {
