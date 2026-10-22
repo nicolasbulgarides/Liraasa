@@ -6,4 +6,6 @@
 export const CHANGESETS_2_5 = [
   // D-00: 2.5:G87, the album is not grammar canon
   'data/changes/2026-10-22-lexicon-2-5-album.json',
+  // the author's decisions on the 2.3 audit: rulings 2.5:G88-G128, in the patch's order
+  'data/changes/2026-10-22-lexicon-2-5.json',
 ] as const;

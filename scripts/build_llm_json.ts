@@ -23,7 +23,13 @@ import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { basename, resolve } from 'node:path';
 import { FORM_SLOTS, SLOT_RAW_KEY, isUnusedGloss, type FormSlot } from '../src/core/config/slots';
 import type { RawLexicon } from '../src/core/model/raw';
-import { OPEN_QUESTIONS, READ_ORDER, RECIPES, RULES } from './grammar_guide/chapters';
+import {
+  OPEN_QUESTIONS,
+  READ_ORDER,
+  RECIPES,
+  RULED_RECIPES,
+  RULES,
+} from './grammar_guide/chapters';
 import { canonTexts, isCanonText, type Lexicon } from './grammar_guide/data';
 import { parseArgs } from './args';
 
@@ -321,7 +327,9 @@ function main(): void {
           rule: pattern.rule,
           why: pattern.why,
           how_to_use:
-            'Any modifier + any head below, written as one word, is a valid noun with a predictable meaning: "<modifier as_modifier> <head>". It needs no "new" flag. The attested ones have a canonical reading; prefer it. Its verb class follows its first letter, as for every compound.',
+            'Any modifier + any head below, written as one word, is a valid noun with a predictable meaning: "<modifier as_modifier> <head>". It needs no "new" flag. Image compounds have all seven forms, built by the ordinary form rules (2.5:G124), the one exception to hard_rules[1]. Prefer the attested ones and their readings; use a predicted form only when no listed word fits, and flag it. Its verb class follows its first letter, as for every compound.',
+          form_meanings_awaiting_author:
+            'Proposed, not yet approved (2.5:G124, derived): noun = the image; -asa = the image at its highest or sacred degree; -na = the absence or opposite of the image; verb = to make, do or bring about the image; -san = having the quality of the image; -asasan = supremely so; -nasan = lacking the image.',
           modifiers: Object.fromEntries(
             Object.entries(pattern.modifiers).map(([id, m]) => [ids.get(id) ?? id, m]),
           ),
@@ -350,10 +358,10 @@ function main(): void {
     ],
     hard_rules: [
       'Never invent a word. A word is valid only if it appears in this file or is built by a rule stated in word_building.',
-      `Every headword has seven possible forms, but only the forms listed on its dictionary line exist. A form not listed has no meaning and must never be used (${String(heads.length * 7 - usedForms)} such slots are deliberately left out).`,
-      'Word order is fixed: SUBJECT, then preverbal operators, then VERB, then OBJECT, then adjuncts (see clause.template). Adjectives come before the noun.',
+      `Every headword has seven possible forms, but only the forms listed on its dictionary line exist. A form not listed has no meaning and must never be used (${String(heads.length * 7 - usedForms)} such slots are deliberately left out). The one exception: an image compound (word_building.image_compounds) has all seven forms, built by the ordinary rules (2.5:G124).`,
+      'Every word has the form its slot needs: a noun form where a noun stands (subject, object, after a preposition or an article), a verb form in the verb slot, an adjective form before a noun or as a predicate. An adjective stands as a noun only after a determiner (li benasan, the good one). Word order is fixed: SUBJECT, then preverbal operators, then VERB, then OBJECT, then adjuncts (see clause.template and clause.edges). Adjectives come before the noun.',
       'A noun never modifies a noun directly. Turn the first noun into its adjective, use a compound from the dictionary, or use a de phrase (rule ADR-0011).',
-      'Questions keep statement order and end with ki. Negation is ne, placed immediately before what it negates.',
+      'A question keeps statement order and ends in ki; only a content question whose ki-word is the first word of the sentence may leave ki out (2.5:G88). A preverbal ne scopes over everything to its right up to the verb; a ne elsewhere scopes over the single constituent that follows it.',
       'Spelling is phonetic and stress is always on the second-to-last syllable; every vowel is its own syllable.',
     ],
     how_to_translate: {
@@ -361,8 +369,8 @@ function main(): void {
         'Identify each clause and its verb. One verb per clause; join clauses with a linker word (small_words.function_words, e.g. ata "and", nara "but", kasa "because", fime "that", raho "who/which").',
         'Find each content word in the dictionary by its English gloss. Pick the form whose role matches the job in the sentence (noun, verb, adjective).',
         'Place tense (po past, futu future; present needs none) after the subject and before the verb.',
-        'Build noun phrases in the order of clause.noun_phrase: quantifier, article or owner, number, adjectives, noun, then de-phrase, then raho clause.',
-        'Add -ri for a plural noun (optional after a number), -ti for a diminutive.',
+        'Build noun phrases in the order of clause.noun_phrase: quantifier, determiner (li, baba, eli, ola, eliri, olari, ki-eli, or a pronoun or personal name + de), ordinal, number, (degree word +) adjectives, noun, then de-phrase, then raho clause (2.5:G98).',
+        'Add -ri for a plural noun (optional after any count word: a number, a quantifier, eliri, olari; never after eli or ola) and -ti for a diminutive (2.5:G101, 2.5:G122).',
         'Look for a matching pattern in recipes, and obey every ruling.',
         'Check the line against self_check.',
       ],
@@ -414,6 +422,15 @@ function main(): void {
               )}. ${defaults.constraints ?? ''} The lexicalised derivations below keep their fixed meanings and override the default.`,
       ...(defaults === undefined ? {} : { derivation_defaults: defaults }),
       lexicalised_derivations: lex.morphology.lexicalised_derivations,
+      // 2.5:G122: -ti is an inflection, and its lexicalised words are a list of their own
+      ...((lex.morphology as unknown as { lexicalised_diminutives?: Record<string, string> })
+        .lexicalised_diminutives === undefined
+        ? {}
+        : {
+            lexicalised_diminutives: (
+              lex.morphology as unknown as { lexicalised_diminutives: Record<string, string> }
+            ).lexicalised_diminutives,
+          }),
       compounding:
         `${lex.morphology.compounding}. A compound is written as one word, modifier first and head last: lunolumi = moon-light. Use compounds listed in the dictionary; a new compound must join exactly two existing headwords and must be flagged as new.` +
         (has('2.0:G38')
@@ -431,17 +448,20 @@ function main(): void {
     clause: {
       template: lex.grammar.clause_template,
       explanation:
-        'Twenty slots in fixed order. Only SUBJECT and VERB are required (a command has no subject). Bracketed slots are optional. One word per slot.',
+        'Twenty core slots in fixed order, with edge positions before and after the clause (edges, 2.5:G126). The minimal clause is SUBJECT + VERB, except commands, hortatives, permitted ellipsis, existential miyo clauses (no subject) and bare adjective predicates (SUBJECT ADJECTIVE, present only, no operators; anything more needs ke or ka) (2.5:G128). Bracketed slots are optional. One word per operator slot.',
+      edges: (lex.grammar as unknown as { edges?: unknown }).edges,
       slots: lex.grammar.slots,
       noun_phrase: lex.grammar.noun_phrase,
       scope_operators: lex.grammar.scope_operators,
       stacking: lex.grammar.stacking,
       valency_operators: lex.grammar.valency,
       copulas:
-        'ke = is (temporary state or location now); ka = is (permanent quality or identity). A predicate adjective may also stand bare: lira benasan.',
+        'ke and ka mark one contrast for every predicate (adjective, noun phrase or location): ke = holds now, or for a time (Li kavbikova ke su li tabu. The basket is on the table); ka = lasting, defining, by nature (Maivo ka lirayo. I am a singer) (2.5:G93). po ke = was, at that time; po ka = was (lasting), no claim about now; kapoki = was, and no longer is (2.5:G94). A bare adjective predicate (Nela vanisan.) is allowed only in the present with no operators, and carries no ke / ka contrast (2.5:G128).',
       questions:
-        'Keep statement order: a question word stands where its answer would stand, and every direct question ends in ki (Taivo pagopa ki-pago ki? where are you going?). Question words are ki- correlatives (ki-coda what, ki-nela who, ki-pago where, ki-krono when, ki-kasa why, ki-modo how). A ki-word of time may open the clause as a frame. Embedded questions keep the word in place with no ki. A main clause with a ki-word and no final ki is an exclamation (2.1:G46, 2.1:G47).',
-      linking: `fime = "that" introducing a clause; ola = the demonstrative "that". raho opens a relative clause, closed by a comma if the sentence continues. sidu joins two verbs with one subject (want to sing = ${verbOf(WANT)} sidu ${verbOf(SING)}); a second verb with its own subject goes in a fime clause (2.1:G50). ala means toward, never the infinitive "to".`,
+        "A yes/no question keeps statement order and ends in ki (Taivo lirala ki?). A content question ends in ki unless its ki-word is the first word of the sentence (Ki-kasa taivo po amora maivo? or … maivo ki?); a ki-word left in its answer's place requires the final ki (Taivo pagopa ki-pago ki?). The fronting exception covers ki-coda, ki-pago, ki-krono, ki-nela, ki-nela de, ki-kasa, manner ki-modo and ki-muya-krono only; questions with ki-eli + noun, ki-muya + noun and degree ki-modo + adjective always end in ki, and without ki those three are exclamations (Ki-eli nullo!) (2.5:G88, 2.2:G61, 2.3:G76). A question may open with raho and then ends in ki (2.3:G74). A fragment question ends in ki (Ata ki?, 2.5:G91); echo ki follows a single word or bare noun phrase only (Lira ki?, 2.5:G92). A final ki or attitude word belongs to the main clause, and ki is the last word except for a comma-set vocative (2.5:G89). Embedded questions never take ki; an embedded yes/no question uses ki-oro (2.3:G77). A ki-word in place in a clause without final ki is an embedded question or part of a statement, never a direct question.",
+      commands:
+        'A command is marked: in writing it ends in ! or contains fisa; in speech fisa or command intonation marks it. A subjectless, tenseless clause with neither mark is an elliptical statement (2.5:G90). ne + command forbids (2.1:G56).',
+      linking: `fime = "that" introducing a content clause; ola = the demonstrative "that". raho opens a relative clause; one that does not end the sentence is closed by a comma when it contains its own object or adjunct (2.5:G115); a relative on a preposition, a possessor, a time or a place keeps a resumptive pronoun in place (2.1:G52, 2.5:G120). sidu joins two verbs with one subject (want to sing = ${verbOf(WANT)} sidu ${verbOf(SING)}); a second verb with its own subject goes in a fime clause (2.1:G50). Purpose always uses kopisa: kopisa + bare verb phrase with the same subject, kopisa + clause with a different one, and kopisa + a clause with nosi for hopeful purpose (2.5:G113, 2.5:G116). An unmarked subordinate clause takes the main clause\'s tense; sige clauses mark their own (2.5:G118). ala means toward, never the infinitive "to".`,
     },
     recipes: RECIPES.map(([english, pattern, liraasa, gloss, ruling]) => ({
       english,
@@ -450,7 +470,9 @@ function main(): void {
       meaning: gloss,
       ...(ruling === '' ? {} : { ruling }),
       // a sentence canon does not hold, though its words are canon: not yet approved
-      ...(isCanonText(canon, liraasa) ? {} : { status: 'awaiting author review' }),
+      ...(isCanonText(canon, liraasa) || RULED_RECIPES.has(liraasa)
+        ? {}
+        : { status: 'awaiting author review' }),
     })),
     rulings,
     settled_questions: lex.settled_open_questions_0_8,

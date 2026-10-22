@@ -1,0 +1,2404 @@
+{
+ "id": "2026-10-22-lexicon-2-5",
+ "edition": "2.5",
+ "created": "2026-10-22T18:00:00Z",
+ "author": "nicolas",
+ "summary": "Liraasa 2.5, step 2: the author's decisions on the 2.3 grammar audit (review/grammar_spec_2_3.md), rulings 2.5:G88-G128 in the patch's order. Amended rulings are marked amended_by, superseded ones superseded_by; a ruling example that no longer holds is archived. Function-word rows, slot notes, the clause and noun-phrase templates, the valency pattern and the motion-prefix rule follow; antizi is added; the -ti items leave the derivations; examples fixed by the patch's audits (commands, po viki, tonsi, ka for present location).",
+ "ops": [
+  {
+   "entry": "2.5:G88",
+   "op": "add_ruling",
+   "from": null,
+   "to": "Questions end in ki; a fronted ki-word may drop it",
+   "ruling": "2.5:G88",
+   "reason": "The author's 2.5 decision on I-01 + I-02 (option B).",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "2.2:G60",
+   "op": "amend_ruling",
+   "field": "2.2:G60",
+   "from": "Question-word position",
+   "to": "2.5:G88",
+   "ruling": "2.5:G88",
+   "reason": "The author's 2.5 decision on I-01 + I-02 (option B). 2.2:G60 is kept as ruled; where the two differ, 2.5:G88 is followed.",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "2.5:G89",
+   "op": "add_ruling",
+   "from": null,
+   "to": "Which clause a final ki or attitude word belongs to",
+   "ruling": "2.5:G89",
+   "reason": "The author's 2.5 decision on I-50 (option A).",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "1.0:G22",
+   "op": "amend_ruling",
+   "field": "1.0:G22",
+   "from": "Attitude words are clause-final only",
+   "to": "2.5:G89",
+   "ruling": "2.5:G89",
+   "reason": "The author's 2.5 decision on I-50 (option A). 1.0:G22 is kept as ruled; where the two differ, 2.5:G89 is followed.",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "text:grammar.slots.19.notes",
+   "op": "edit_text",
+   "from": "last word of its clause",
+   "to": "last word of the sentence, and it belongs to the main clause; only a vocative set off by a comma may follow it (2.5:G89)",
+   "ruling": "2.5:G89",
+   "reason": "I-50, 2.5:G89: clause.slots[19] amended",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "2.5:G126",
+   "op": "add_ruling",
+   "from": null,
+   "to": "The clause's closing order and its edge positions",
+   "ruling": "2.5:G126",
+   "reason": "The author's 2.5 decision on I-23 + I-03 (option A).",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "2.3:G78",
+   "op": "amend_ruling",
+   "field": "2.3:G78 (closing order only; its other clauses stand)",
+   "from": "Opening and closing a clause",
+   "to": "2.5:G126",
+   "ruling": "2.5:G126",
+   "reason": "The author's 2.5 decision on I-23 + I-03 (option A). 2.3:G78 is kept as ruled; where the two differ, 2.5:G126 is followed.",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "2.1:G55",
+   "op": "amend_ruling",
+   "field": "2.1:G55 (position of a duration)",
+   "from": "Duration, ago, from now",
+   "to": "2.5:G126",
+   "ruling": "2.5:G126",
+   "reason": "The author's 2.5 decision on I-23 + I-03 (option A). 2.1:G55 is kept as ruled; where the two differ, 2.5:G126 is followed.",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "text:grammar.clause_template",
+   "op": "edit_text",
+   "from": "[FRAME] [TOPIC hozi] SUBJECT [TENSE] [noma] [ne] [MODAL] [APPROACH] [PHASE] [EFFORT] [ASPECT] [ITERATION] [EVIDENTIAL] VERB [OBJECT] [ADJUNCTS] [fuyi] [hoyo|yasmo] [ATTITUDE] [ki]",
+   "to": "[LINKER] [FRAME,] [TOPIC hozi,] [ki-WORD] SUBJECT [TENSE] [noma] [ne] [MODAL] [APPROACH] [PHASE] [EFFORT] [ASPECT] [ITERATION] [EVIDENTIAL] VERB [OBJECT] [ADJUNCTS] [fuyi] [hoyo|yasmo] [ATTITUDE] [ki] [, VOCATIVE]",
+   "ruling": "2.5:G126",
+   "reason": "I-23 + I-03, 2.5:G126: the template gains the edge positions",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:grammar.edges",
+   "op": "edit_value",
+   "from": null,
+   "to": "{\"before_the_clause\":[{\"position\":\"LINKER\",\"words\":[\"ata\",\"oro\",\"nara\"],\"notes\":\"a line or clause that continues the one before (1.2:G25, 2.3:G72)\"},{\"position\":\"FRAME\",\"words\":[\"see slot 1\"],\"notes\":\"set off by a comma (2.5:G127)\"},{\"position\":\"TOPIC\",\"words\":[\"NP + hozi\"],\"notes\":\"set off by a comma (2.5:G119)\"},{\"position\":\"ki-WORD\",\"words\":[\"a fronted ki-word\"],\"notes\":\"the question may then end without ki (2.5:G88)\"}],\"after_the_clause\":[{\"position\":\"VOCATIVE\",\"words\":[\"a noun phrase or name\"],\"notes\":\"set off by a comma; may follow ki (2.5:G89)\"}],\"closing_order\":\"VERB [OBJECT] [ADJUNCTS] [fuyi] [STATUS: hoyo | yasmo] [ATTITUDE] [ki]; closing time words, durations and clause-final reve / loki stand among the ADJUNCTS, before fuyi (2.5:G126)\",\"ruling\":\"2.5:G126\"}",
+   "ruling": "2.5:G126",
+   "reason": "I-23 + I-03, 2.5:G126: the edge positions, in order",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "text:grammar.slots.11.notes",
+   "op": "edit_text",
+   "from": "already / again / still; reve and loki may instead close the clause",
+   "to": "already / again / still; reve and loki may instead close the clause, among the adjuncts before fuyi (2.5:G126)",
+   "ruling": "2.5:G126",
+   "reason": "I-23 + I-03, 2.5:G126: clause.slots[11].notes amended",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "2.5:G127",
+   "op": "add_ruling",
+   "from": null,
+   "to": "What may stand in FRAME",
+   "ruling": "2.5:G127",
+   "reason": "The author's 2.5 decision on I-27 (option A).",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "1.2:G24",
+   "op": "amend_ruling",
+   "field": "1.2:G24",
+   "from": "Time words: opening or closing",
+   "to": "2.5:G127",
+   "ruling": "2.5:G127",
+   "reason": "The author's 2.5 decision on I-27 (option A). 1.2:G24 is kept as ruled; where the two differ, 2.5:G127 is followed.",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:grammar.slots.0.words",
+   "op": "edit_value",
+   "from": "[\"time words\",\"correlatives of time\",\"zafra\",\"finra\",\"lanto\",\"kenvi\"]",
+   "to": "[\"time adverbials (time_and_dates rows with time_class adverbial)\",\"correlatives of time and place (eli-krono, eli-pago, ola-pago …)\",\"prepositional phrases of place (En li nimu, …)\",\"zafra\",\"finra\",\"lanto\",\"kenvi\"]",
+   "ruling": "2.5:G127",
+   "reason": "I-27, 2.5:G127: FRAME holds a time or a place adverbial",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "text:grammar.slots.0.notes",
+   "op": "edit_text",
+   "from": "clause-initial; followed by a pause",
+   "to": "clause-initial, set off by a comma; a time or place adverbial, never a tense word (po, futu, pressa) or an iteration word (reve, loki, bodu) (2.5:G127)",
+   "ruling": "2.5:G127",
+   "reason": "I-27, 2.5:G127: clause.slots[0] amended",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "2.5:G90",
+   "op": "add_ruling",
+   "from": null,
+   "to": "A command is marked",
+   "ruling": "2.5:G90",
+   "reason": "The author's 2.5 decision on I-20 (option A).",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "1.2:G31",
+   "op": "amend_ruling",
+   "field": "1.2:G31",
+   "from": "Commands, address and narrative present",
+   "to": "2.5:G90",
+   "ruling": "2.5:G90",
+   "reason": "The author's 2.5 decision on I-20 (option A). 1.2:G31 is kept as ruled; where the two differ, 2.5:G90 is followed.",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "2.1:G56",
+   "op": "amend_ruling",
+   "field": "2.1:G56",
+   "from": "Prohibitions",
+   "to": "2.5:G90",
+   "ruling": "2.5:G90",
+   "reason": "The author's 2.5 decision on I-20 (option A). 2.1:G56 is kept as ruled; where the two differ, 2.5:G90 is followed.",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "example:356",
+   "op": "edit_example",
+   "from": "Palvipa li miru en li kova.",
+   "to": "Palvipa li miru en li kova!",
+   "ruling": "2.5:G90",
+   "reason": "I-20, 2.5:G90: a command written without ! or fisa: ! added (audit)",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "example:366",
+   "op": "edit_example",
+   "from": "Palvipa li bumre su li namikova.",
+   "to": "Palvipa li bumre su li namikova!",
+   "ruling": "2.5:G90",
+   "reason": "I-20, 2.5:G90: a command written without ! or fisa: ! added (audit)",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "example:372",
+   "op": "edit_example",
+   "from": "Cemoyanoca li marnapusa ko li miru.",
+   "to": "Cemoyanoca li marnapusa ko li miru!",
+   "ruling": "2.5:G90",
+   "reason": "I-20, 2.5:G90: a command written without ! or fisa: ! added (audit)",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "example:392",
+   "op": "edit_example",
+   "from": "Ne kulpaka Kipo. Maivo po livnala.",
+   "to": "Ne kulpaka Kipo! Maivo po livnala.",
+   "ruling": "2.5:G90",
+   "reason": "I-20, 2.5:G90: a command written without ! or fisa: ! added (audit)",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "example:394",
+   "op": "edit_example",
+   "from": "Ne kulpahelvika. Lenila.",
+   "to": "Ne kulpahelvika! Lenila!",
+   "ruling": "2.5:G90",
+   "reason": "I-20, 2.5:G90: a command written without ! or fisa: ! added (audit)",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "2.5:G91",
+   "op": "add_ruling",
+   "from": null,
+   "to": "Fragment questions",
+   "ruling": "2.5:G91",
+   "reason": "The author's 2.5 decision on I-31 (option A).",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "example:241",
+   "op": "edit_example",
+   "from": "Ata?",
+   "to": "Ata ki?",
+   "ruling": "2.5:G91",
+   "reason": "I-31, 2.5:G91: examples.sentences[236] replaced",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "example:241",
+   "op": "edit_example",
+   "field": "english",
+   "from": "So?",
+   "to": "And?",
+   "ruling": "2.5:G91",
+   "reason": "I-31, 2.5:G91: examples.sentences[236] replaced",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "2.5:G92",
+   "op": "add_ruling",
+   "from": null,
+   "to": "Echo ki",
+   "ruling": "2.5:G92",
+   "reason": "The author's 2.5 decision on I-49 (option A).",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "0.8:G3",
+   "op": "amend_ruling",
+   "field": "0.8:G3 (echo with ki)",
+   "from": "Ellipsis",
+   "to": "2.5:G92",
+   "ruling": "2.5:G92",
+   "reason": "The author's 2.5 decision on I-49 (option A). 0.8:G3 is kept as ruled; where the two differ, 2.5:G92 is followed.",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "2.5:G93",
+   "op": "add_ruling",
+   "from": null,
+   "to": "ke and ka: one contrast for every predicate",
+   "ruling": "2.5:G93",
+   "reason": "The author's 2.5 decision on I-04 + I-10 (option B).",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "fw_ke_0011",
+   "op": "edit_function_word",
+   "field": "meaning",
+   "from": "temporary is / are",
+   "to": "is / are: holds now, or for a time",
+   "ruling": "2.5:G93",
+   "reason": "I-04 + I-10, 2.5:G93: the ke row follows the one contrast",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "fw_ke_0011",
+   "op": "edit_function_word",
+   "field": "position",
+   "from": "copula for state or location now",
+   "to": "copula for any predicate (adjective, noun phrase or location) that holds now or for a time (2.5:G93)",
+   "ruling": "2.5:G93",
+   "reason": "I-04 + I-10, 2.5:G93: the ke row follows the one contrast",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "fw_ka_0012",
+   "op": "edit_function_word",
+   "field": "meaning",
+   "from": "enduring is / are",
+   "to": "is / are: lasting, defining, by nature",
+   "ruling": "2.5:G93",
+   "reason": "I-04 + I-10, 2.5:G93: the ka row follows the one contrast",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "fw_ka_0012",
+   "op": "edit_function_word",
+   "field": "position",
+   "from": "copula for stable quality",
+   "to": "copula for any predicate (adjective, noun phrase or location) that is lasting, defining or by nature (2.5:G93)",
+   "ruling": "2.5:G93",
+   "reason": "I-04 + I-10, 2.5:G93: the ka row follows the one contrast",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "example:333",
+   "op": "edit_example",
+   "from": "Li kronocuza de li bumrepago ka su li tabu.",
+   "to": "Li kronocuza de li bumrepago ke su li tabu.",
+   "ruling": "2.5:G93",
+   "reason": "I-04 + I-10, 2.5:G93: a present location takes ke",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "example:358",
+   "op": "edit_example",
+   "from": "Li marnapusa ka en li kova.",
+   "to": "Li marnapusa ke en li kova.",
+   "ruling": "2.5:G93",
+   "reason": "I-04 + I-10, 2.5:G93: a present location takes ke",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "example:369",
+   "op": "edit_example",
+   "from": "Li kavbikova ka su li tabu.",
+   "to": "Li kavbikova ke su li tabu.",
+   "ruling": "2.5:G93",
+   "reason": "I-04 + I-10, 2.5:G93: a present location takes ke",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "example:357",
+   "op": "edit_example",
+   "from": "Li bitiri de pilo ka su li tabu.",
+   "to": "Li bitiri de pilo ke su li tabu.",
+   "ruling": "2.5:G93",
+   "reason": "I-04 + I-10, 2.5:G93: a present location takes ke",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "1.2:G27",
+   "op": "archive_text",
+   "field": "example:1",
+   "from": "Li bitiri de pilo ka su li tabu.",
+   "to": "Li bitiri de pilo ke su li tabu.",
+   "ruling": "2.5:G93",
+   "reason": "I-04 + I-10, 2.5:G93: the example's gloss is a present location, which takes ke; the ruling is kept, its old example archived",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "2.5:G128",
+   "op": "add_ruling",
+   "from": null,
+   "to": "The minimal clause",
+   "ruling": "2.5:G128",
+   "reason": "The author's 2.5 decision on I-09 (option A).",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "text:grammar.slots.2.notes",
+   "op": "edit_text",
+   "from": "obligatory except in commands, hortatives and permitted ellipsis",
+   "to": "obligatory except in commands, hortatives, permitted ellipsis and existential miyo clauses; a bare adjective predicate (SUBJECT ADJECTIVE) only in the present with no operators (2.5:G128)",
+   "ruling": "2.5:G128",
+   "reason": "I-09, 2.5:G128: clause.slots[2].notes amended",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "2.5:G94",
+   "op": "add_ruling",
+   "from": null,
+   "to": "po ka and kapoki",
+   "ruling": "2.5:G94",
+   "reason": "The author's 2.5 decision on I-11 (option A).",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "fw_kapoki_0013",
+   "op": "edit_function_word",
+   "field": "meaning",
+   "from": "previously was",
+   "to": "previously was, no longer is; contrasts with po ka (was, no claim about now)",
+   "ruling": "2.5:G94",
+   "reason": "I-11, 2.5:G94: the patch gives the row",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "fw_po_0014",
+   "op": "edit_function_word",
+   "field": "position",
+   "from": "Preverbal tense. po ka = was as a trait; kapoki = no longer is.",
+   "to": "Preverbal tense. po ka = was (lasting), with no claim about now; po ke = was, at that time; kapoki = was, and no longer is (2.5:G94).",
+   "ruling": "2.5:G94",
+   "reason": "I-11, 2.5:G94: aligned with 2.5:G94",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "2.5:G95",
+   "op": "add_ruling",
+   "from": null,
+   "to": "Kinship nouns are not names for possession",
+   "ruling": "2.5:G95",
+   "reason": "The author's 2.5 decision on I-12 + I-14 (option C).",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "1.2:G27",
+   "op": "amend_ruling",
+   "field": "1.2:G27",
+   "from": "Which side of de is the owner",
+   "to": "2.5:G95",
+   "ruling": "2.5:G95",
+   "reason": "The author's 2.5 decision on I-12 + I-14 (option C). 1.2:G27 is kept as ruled; where the two differ, 2.5:G95 is followed.",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "1.2:G32",
+   "op": "amend_ruling",
+   "field": "1.2:G32",
+   "from": "Possession precedence",
+   "to": "2.5:G95",
+   "ruling": "2.5:G95",
+   "reason": "The author's 2.5 decision on I-12 + I-14 (option C). 1.2:G32 is kept as ruled; where the two differ, 2.5:G95 is followed.",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "fw_de_0007",
+   "op": "edit_function_word",
+   "field": "position",
+   "from": "owner + de + possessed noun",
+   "to": "a pronoun or a personal name before de owns (taivo de lira, your song); otherwise the noun after de owns (li bumre de li cilni, the bread of the city); kinship nouns are not names (2.5:G95)",
+   "ruling": "2.5:G95",
+   "reason": "I-12 + I-14, 2.5:G95: the row states both directions",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "2.5:G96",
+   "op": "add_ruling",
+   "from": null,
+   "to": "Chains of de",
+   "ruling": "2.5:G96",
+   "reason": "The author's 2.5 decision on I-13 (option B).",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "2.5:G97",
+   "op": "add_ruling",
+   "from": null,
+   "to": "NUMBER de NUMBER",
+   "ruling": "2.5:G97",
+   "reason": "The author's 2.5 decision on I-15 (option C).",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "2.5:G98",
+   "op": "add_ruling",
+   "from": null,
+   "to": "Noun-phrase order",
+   "ruling": "2.5:G98",
+   "reason": "The author's 2.5 decision on I-28 (option A).",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "2.5:G99",
+   "op": "add_ruling",
+   "from": null,
+   "to": "li after a side noun",
+   "ruling": "2.5:G99",
+   "reason": "The author's 2.5 decision on I-53 (option A).",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "2.5:G100",
+   "op": "add_ruling",
+   "from": null,
+   "to": "maivo: I and Self",
+   "ruling": "2.5:G100",
+   "reason": "The author's 2.5 decision on I-16 (option B).",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "2.5:G101",
+   "op": "add_ruling",
+   "from": null,
+   "to": "Which words take -ri, and plural agreement",
+   "ruling": "2.5:G101",
+   "reason": "The author's 2.5 decision on I-29 (option A + B).",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "1.2:G28",
+   "op": "amend_ruling",
+   "field": "1.2:G28",
+   "from": "-ri after a number or quantifier",
+   "to": "2.5:G101",
+   "ruling": "2.5:G101",
+   "reason": "The author's 2.5 decision on I-29 (option A + B). 1.2:G28 is kept as ruled; where the two differ, 2.5:G101 is followed.",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "text:numbers.rules.38.Usage / comment",
+   "op": "edit_text",
+   "from": "Plural -ri recommended above 1; numeral identifies count.",
+   "to": "Plural -ri is optional after a number; choose by sound and meter (1.2:G28, 2.5:G101).",
+   "ruling": "2.5:G101",
+   "reason": "I-29, 2.5:G101: small_words.numbers.rules row I rewritten",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "2.5:G102",
+   "op": "add_ruling",
+   "from": null,
+   "to": "Pronouns for animals",
+   "ruling": "2.5:G102",
+   "reason": "The author's 2.5 decision on I-37 (option C).",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "2.5:G103",
+   "op": "add_ruling",
+   "from": null,
+   "to": "Time nouns as \"when\"",
+   "ruling": "2.5:G103",
+   "reason": "The author's 2.5 decision on I-17 (option A + B).",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "2.5:G104",
+   "op": "add_ruling",
+   "from": null,
+   "to": "yuta, en, ko and la: one test per word",
+   "ruling": "2.5:G104",
+   "reason": "The author's 2.5 decision on I-25 (option A).",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "1.2:G33",
+   "op": "amend_ruling",
+   "field": "1.2:G33",
+   "from": "yuta: the instrument",
+   "to": "2.5:G104",
+   "ruling": "2.5:G104",
+   "reason": "The author's 2.5 decision on I-25 (option A). 1.2:G33 is kept as ruled; where the two differ, 2.5:G104 is followed.",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "2.3:G73",
+   "op": "amend_ruling",
+   "field": "2.3:G73",
+   "from": "Manner with en and ko",
+   "to": "2.5:G104",
+   "ruling": "2.5:G104",
+   "reason": "The author's 2.5 decision on I-25 (option A). 2.3:G73 is kept as ruled; where the two differ, 2.5:G104 is followed.",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "example:475",
+   "op": "edit_example",
+   "from": "Maivo po helnaha li linu ko li helna.",
+   "to": "Maivo po helnaha li linu yuta li helna.",
+   "ruling": "2.5:G104",
+   "reason": "I-25, 2.5:G104: medicine is a substance used: yuta",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "2.5:G105",
+   "op": "add_ruling",
+   "from": null,
+   "to": "Where la + adjective stands",
+   "ruling": "2.5:G105",
+   "reason": "The author's 2.5 decision on I-46 (option A).",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "2.5:G106",
+   "op": "add_ruling",
+   "from": null,
+   "to": "Comparing amounts and manner",
+   "ruling": "2.5:G106",
+   "reason": "The author's 2.5 decision on I-43 (option A).",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "2.5:G107",
+   "op": "add_ruling",
+   "from": null,
+   "to": "gase + a number",
+   "ruling": "2.5:G107",
+   "reason": "The author's 2.5 decision on I-47 (option B).",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "2.5:G108",
+   "op": "add_ruling",
+   "from": null,
+   "to": "Measures with kroti and krotiapo",
+   "ruling": "2.5:G108",
+   "reason": "The author's 2.5 decision on I-48 (option B).",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "2.5:G109",
+   "op": "add_ruling",
+   "from": null,
+   "to": "Valency operators: the full pattern",
+   "ruling": "2.5:G109",
+   "reason": "The author's 2.5 decision on I-21 (option A).",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "1.0:G14",
+   "op": "amend_ruling",
+   "field": "1.0:G14",
+   "from": "Valency operators",
+   "to": "2.5:G109",
+   "ruling": "2.5:G109",
+   "reason": "The author's 2.5 decision on I-21 (option A). 1.0:G14 is kept as ruled; where the two differ, 2.5:G109 is followed.",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "fw_vaku_0097",
+   "op": "edit_function_word",
+   "field": "position",
+   "from": "Approved productive causative. CAUSER + vaku + ACTOR/PATIENT + intransitive VERB; patient/actor retains position after vaku.",
+   "to": "CAUSER [TENSE] [noma] [ne] [MODAL] … [EVIDENTIAL] vaku ACTOR [ne] [APPROACH] [PHASE] [EFFORT] VERB [OBJECT]; the embedded verb may take an object (2.5:G109).",
+   "ruling": "2.5:G109",
+   "reason": "I-21, 2.5:G109: 'intransitive VERB' removed; the 2.5:G109 pattern stated",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "text:grammar.valency.pattern",
+   "op": "edit_text",
+   "from": "CAUSER [TENSE…] OP ACTOR [ne] [APPROACH] [PHASE] [EFFORT] VERB [OBJECT]",
+   "to": "CAUSER [TENSE] [noma] [ne] [MODAL] … [EVIDENTIAL] OP ACTOR [ne] [APPROACH] [PHASE] [EFFORT] VERB [OBJECT] (2.5:G109)",
+   "ruling": "2.5:G109",
+   "reason": "I-21, 2.5:G109: clause.valency_operators.pattern matches 2.5:G109",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "2.5:G110",
+   "op": "add_ruling",
+   "from": null,
+   "to": "Passives, and change-of-state verbs",
+   "ruling": "2.5:G110",
+   "reason": "The author's 2.5 decision on I-22 (option A + C).",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "fw_gome_0098",
+   "op": "edit_function_word",
+   "field": "position",
+   "from": "PATIENT + [TENSE] + gome + TRANSITIVE VERB + [gagu AGENT]",
+   "to": "PATIENT + [TENSE] + gome + VERB + [gagu AGENT]; any verb attested with an object anywhere in the data may take gome (2.5:G110)",
+   "ruling": "2.5:G110",
+   "reason": "I-22, 2.5:G110: the gome row amended",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:settled_open_questions_0_8.4.amended_by",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"2.5:G110\"",
+   "ruling": "2.5:G110",
+   "reason": "I-22, 2.5:G110: settled question 5 is amended; the settled answer is kept as written and marked",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "2.5:G111",
+   "op": "add_ruling",
+   "from": null,
+   "to": "Adjective + sidu + verb: no dummy ito",
+   "ruling": "2.5:G111",
+   "reason": "The author's 2.5 decision on I-24 (option A).",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "2.2:G65",
+   "op": "amend_ruling",
+   "field": "2.2:G65 (example)",
+   "from": "Adjective + sidu + verb",
+   "to": "2.5:G111",
+   "ruling": "2.5:G111",
+   "reason": "The author's 2.5 decision on I-24 (option A). 2.2:G65 is kept as ruled; where the two differ, 2.5:G111 is followed.",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "2.5:G112",
+   "op": "add_ruling",
+   "from": null,
+   "to": "A bare pronoun recipient",
+   "ruling": "2.5:G112",
+   "reason": "The author's 2.5 decision on I-38 (option B).",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "1.2:G26",
+   "op": "amend_ruling",
+   "field": "1.2:G26",
+   "from": "Give-type verbs: where the recipient goes",
+   "to": "2.5:G112",
+   "ruling": "2.5:G112",
+   "reason": "The author's 2.5 decision on I-38 (option B). 1.2:G26 is kept as ruled; where the two differ, 2.5:G112 is followed.",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "2.5:G113",
+   "op": "add_ruling",
+   "from": null,
+   "to": "Purpose always uses kopisa",
+   "ruling": "2.5:G113",
+   "reason": "The author's 2.5 decision on I-55 (option A).",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "2.5:G114",
+   "op": "add_ruling",
+   "from": null,
+   "to": "\"Would have\" is po noma viki",
+   "ruling": "2.5:G114",
+   "reason": "The author's 2.5 decision on I-39 (option C).",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "1.0:G6",
+   "op": "amend_ruling",
+   "field": "1.0:G6",
+   "from": "Counterfactual",
+   "to": "2.5:G114",
+   "ruling": "2.5:G114",
+   "reason": "The author's 2.5 decision on I-39 (option C). 1.0:G6 is kept as ruled; where the two differ, 2.5:G114 is followed.",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "example:220",
+   "op": "edit_example",
+   "from": "Si maivo po noma masuma, taivo po viki relsira.",
+   "to": "Si maivo po noma masuma, taivo po noma viki relsira.",
+   "ruling": "2.5:G114",
+   "reason": "I-39, 2.5:G114: 'would have' is po noma viki (audit)",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "example:435",
+   "op": "edit_example",
+   "from": "Si taivo po noma masuma, maivo po viki relsira.",
+   "to": "Si taivo po noma masuma, maivo po noma viki relsira.",
+   "ruling": "2.5:G114",
+   "reason": "I-39, 2.5:G114: 'would have' is po noma viki (audit)",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "2.5:G115",
+   "op": "add_ruling",
+   "from": null,
+   "to": "The comma that closes a raho clause",
+   "ruling": "2.5:G115",
+   "reason": "The author's 2.5 decision on I-08 (option B).",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "1.0:G21",
+   "op": "amend_ruling",
+   "field": "1.0:G21",
+   "from": "Closing a relative clause",
+   "to": "2.5:G115",
+   "ruling": "2.5:G115",
+   "reason": "The author's 2.5 decision on I-08 (option B). 1.0:G21 is kept as ruled; where the two differ, 2.5:G115 is followed.",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "2.5:G116",
+   "op": "add_ruling",
+   "from": null,
+   "to": "Hopeful purpose: kopisa + nosi",
+   "ruling": "2.5:G116",
+   "reason": "The author's 2.5 decision on I-18 (option C).",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "2.2:G63",
+   "op": "supersede_ruling",
+   "from": "Hopeful purpose: fime + nosi",
+   "to": "2.5:G116",
+   "ruling": "2.5:G116",
+   "reason": "The author's 2.5 decision on I-18 (option C). 2.2:G63 is kept as ruled, never reworded; it is superseded by 2.5:G116.",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "2.5:G117",
+   "op": "add_ruling",
+   "from": null,
+   "to": "tonsi: therefore, and so",
+   "ruling": "2.5:G117",
+   "reason": "The author's 2.5 decision on I-19 (option A + C).",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "2.2:G62",
+   "op": "amend_ruling",
+   "field": "2.2:G62",
+   "from": "So … that: tonsi + adjective",
+   "to": "2.5:G117",
+   "ruling": "2.5:G117",
+   "reason": "The author's 2.5 decision on I-19 (option A + C). 2.2:G62 is kept as ruled; where the two differ, 2.5:G117 is followed.",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "example:510",
+   "op": "edit_example",
+   "from": "Li lanve po tranata, tonsi maivo po lemula ito.",
+   "to": "Li lanve po tranata, tonsi, maivo po lemula ito.",
+   "ruling": "2.5:G117",
+   "reason": "I-19, 2.5:G117: clause-initial tonsi takes a comma (audit)",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "2.5:G118",
+   "op": "add_ruling",
+   "from": null,
+   "to": "Tense in subordinate clauses",
+   "ruling": "2.5:G118",
+   "reason": "The author's 2.5 decision on I-32 (option A).",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "0.8:R6",
+   "op": "amend_ruling",
+   "field": "0.8:R6",
+   "from": "sige",
+   "to": "2.5:G118",
+   "ruling": "2.5:G118",
+   "reason": "The author's 2.5 decision on I-32 (option A). 0.8:R6 is kept as ruled; where the two differ, 2.5:G118 is followed.",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "2.5:G119",
+   "op": "add_ruling",
+   "from": null,
+   "to": "Picking up a hozi topic",
+   "ruling": "2.5:G119",
+   "reason": "The author's 2.5 decision on I-51 (option C).",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "fw_hozi_0127",
+   "op": "edit_function_word",
+   "field": "position",
+   "from": "after a clause-initial noun phrase, followed by a pause",
+   "to": "after a clause-initial noun phrase, followed by a pause; a subject topic is picked up by a pronoun, a non-subject topic may be picked up or left as a gap read as the object (2.5:G119)",
+   "ruling": "2.5:G119",
+   "reason": "I-51, 2.5:G119: the hozi row states 2.5:G119",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "2.5:G120",
+   "op": "add_ruling",
+   "from": null,
+   "to": "Relatives on a possessor, a time or a place",
+   "ruling": "2.5:G120",
+   "reason": "The author's 2.5 decision on I-54 (option A).",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "2.1:G52",
+   "op": "amend_ruling",
+   "field": "2.1:G52",
+   "from": "Relatives on a prepositional object",
+   "to": "2.5:G120",
+   "ruling": "2.5:G120",
+   "reason": "The author's 2.5 decision on I-54 (option A). 2.1:G52 is kept as ruled; where the two differ, 2.5:G120 is followed.",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "example:215",
+   "op": "edit_example",
+   "from": "Maivo po vimova raho taivo pagopa.",
+   "to": "Maivo po vimova fime taivo pagopa.",
+   "ruling": "",
+   "reason": "I-07, no new ruling: fime is \"that\"",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "2.5:G121",
+   "op": "add_ruling",
+   "from": null,
+   "to": "The motion prefixes are productive",
+   "ruling": "2.5:G121",
+   "reason": "The author's 2.5 decision on I-05 + I-06 (option B).",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "1.2:G35",
+   "op": "supersede_ruling",
+   "field": "the closed-list part",
+   "from": "Two more curated motion metaphors",
+   "to": "2.5:G121",
+   "ruling": "2.5:G121",
+   "reason": "The author's 2.5 decision on I-05 + I-06 (option B). 1.2:G35 is kept as ruled, never reworded; the closed-list part is superseded by 2.5:G121.",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "text:motion_prefixes.rule",
+   "op": "edit_text",
+   "from": "closed list; only on motion verbs and the listed metaphors; not productive",
+   "to": "productive on any verb, with compositional meanings; a listed meaning (the curated metaphors) overrides the compositional one; lu-, nu-, mi-, so- stay retired (2.5:G121)",
+   "ruling": "2.5:G121",
+   "reason": "I-05 + I-06, 2.5:G121: word_building.motion_prefixes.rule superseded",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:settled_open_questions_0_8.6.amended_by",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"2.5:G121\"",
+   "ruling": "2.5:G121",
+   "reason": "I-05 + I-06, 2.5:G121: settled question 7 is superseded in its closed-list part; the answer is kept as written and marked",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "2.3:G75",
+   "op": "mark_ruling_covered",
+   "from": "pagopa takes the motion prefixes",
+   "to": "2.5:G121",
+   "ruling": "2.5:G121",
+   "reason": "I-05 + I-06, 2.5:G121: pagopa no longer needs to be ruled a motion verb; the ruling is kept",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "2.5:G122",
+   "op": "add_ruling",
+   "from": null,
+   "to": "-ti is an inflection",
+   "ruling": "2.5:G122",
+   "reason": "The author's 2.5 decision on I-30 (option A).",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "2.0:G41",
+   "op": "amend_ruling",
+   "field": "2.0:G41 (which lists R+ti among derivations)",
+   "from": "Productive derivations",
+   "to": "2.5:G122",
+   "ruling": "2.5:G122",
+   "reason": "The author's 2.5 decision on I-30 (option A). 2.0:G41 is kept as ruled; where the two differ, 2.5:G122 is followed.",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:morphology.lexicalised_derivations",
+   "op": "edit_value",
+   "from": "{\"tisebitivu\":\"sword (big knife): tisebiti + -vu\",\"tibivu\":\"rope (big thread): tibi + -vu\",\"kaldopago\":\"prison (place of confinement): kaldo + -pago\",\"zeldoyo\":\"rebel; resister: zeldo + -yo\",\"kronopago\":\"anniversary (0.8 canon time word): krono + -pago\",\"lemupago\":\"school (place of learning): lemu + -pago\",\"lemuyo\":\"student; disciple (one who learns): lemu + -yo\",\"lemudonuyo\":\"teacher (one who teaches): lemudonu + -yo\",\"dokrayo\":\"soldier; warrior (one who wages war): dokra + -yo\",\"marnapago\":\"farm (place of grain): marna + -pago\",\"marnayo\":\"farmer (one who grows grain): marna + -yo\",\"monruti\":\"hill (little mountain): monru + -ti\",\"yugemeyiyo\":\"healer; doctor (one who heals): yugemeyi + -yo\",\"dapadonuyo\":\"merchant (one who sells): dapadonu + -yo\",\"juseyo\":\"judge (one who renders justice): juse + -yo\",\"devobakoyo\":\"traitor (one who betrays): devobako + -yo\",\"sevuyo\":\"sailor (one who sails): sevu + -yo\",\"mambicuzayo\":\"messenger (one who carries notes): mambicuza + -yo\",\"filseyo\":\"fisher (one who fishes): filse + -yo\",\"helviyo\":\"spy (one who hides): helvi + -yo\",\"lavbupago\":\"temple; church (place of prayer): lavbu + -pago\",\"mirunuluti\":\"stream; brook (little river): mirunulu + -ti\",\"kezumiruti\":\"pond; pool (little lake): kezumiru + -ti\",\"soloti\":\"pebble (little stone): solo + -ti\",\"solovu\":\"boulder (big stone): solo + -vu\",\"corviyo\":\"hero (one of courage): corvi + -yo\",\"karkoyo\":\"killer (one who kills): karko + -yo\",\"merviyo\":\"servant (one who serves): mervi + -yo\",\"tomnupago\":\"graveyard; cemetery (place of graves): tomnu + -pago\",\"narvopago\":\"hell; the underworld: narvo + -pago\",\"taradapago\":\"market; marketplace: tarada + -pago\",\"botevu\":\"ship: bote + -vu\",\"lirayo\":\"singer: lira + -yo\",\"riluyo\":\"dancer: rilu + -yo\",\"sarbiyo\":\"writer; author: sarbi + -yo\",\"telneyo\":\"storyteller: telne + -yo\",\"meloyo\":\"musician: melo + -yo\",\"nelavu\":\"giant: nela + -vu\",\"zayuyo\":\"mage; sorcerer; witch; magician; wizard: zayu + -yo\",\"halrayo\":\"rider; knight; horseman: halra + -yo\",\"maloyo\":\"villain; evildoer: malo + -yo\",\"bullipago\":\"library: bulli + -pago\",\"buzapago\":\"tavern: buza + -pago\",\"gonbipago\":\"inn; guesthouse: gonbi + -pago\",\"hifayo\":\"thief (one who steals): hifa + -yo\",\"sevuhifayo\":\"pirate (one who does sea-theft): sevuhifa + -yo\",\"velupago\":\"observatory: velu + -pago\",\"furopago\":\"orchard: furo + -pago\",\"norupago\":\"dreamland: noru + -pago\",\"ramupago\":\"memory palace; where memories are kept: ramu + -pago\",\"lasopago\":\"a place of silence; a retreat: laso + -pago\",\"sollipago\":\"hermitage: solli + -pago\",\"lumipago\":\"sanctum; the holy of holies: lumi + -pago\",\"lumiyo\":\"lightbearer; one who brings light: lumi + -yo\",\"devoyo\":\"believer; one of the faithful: devo + -yo\",\"sabeyo\":\"sage: sabe + -yo\",\"volmepago\":\"haunted place: volme + -pago\",\"lardapago\":\"museum; gallery: larda + -pago\",\"melopago\":\"concert hall: melo + -pago\",\"helnapago\":\"hospital: helna + -pago\",\"cemopago\":\"kitchen: cemo + -pago\",\"somupago\":\"bedroom: somu + -pago\",\"dokrapago\":\"battlefield: dokra + -pago\",\"jusepago\":\"courthouse: juse + -pago\",\"dorbiyo\":\"gatekeeper: dorbi + -yo\",\"lovuyo\":\"reader: lovu + -yo\",\"cemoyo\":\"cook: cemo + -yo\",\"bimneyo\":\"builder: bimne + -yo\",\"ganreyo\":\"gardener: ganre + -yo\",\"jomruyo\":\"traveler: jomru + -yo\",\"serbuyo\":\"seeker: serbu + -yo\",\"botepago\":\"harbor: bote + -pago\",\"farubitivu\":\"torch: farubiti + -vu\",\"sevulirayo\":\"siren: sevulira + -yo\",\"masuyo\":\"beggar: masu + -yo\",\"sasvayo\":\"guard; guardian: sasva + -yo\",\"limliyo\":\"shepherd: limli + -yo\",\"tenvayo\":\"weaver: tenva + -yo\",\"germayo\":\"smith; metalworker: germa + -yo\",\"bumreyo\":\"baker: bumre + -yo\",\"kertiyo\":\"sculptor; carver: kerti + -yo\",\"liralardayo\":\"poet: liralarda + -yo\",\"telnelirayo\":\"bard; minstrel: telnelira + -yo\",\"colbilardayo\":\"painter: colbilarda + -yo\",\"kersopago\":\"nursery; a place where young things grow: kerso + -pago\",\"herbapago\":\"greenhouse: herba + -pago\",\"herbayo\":\"herbalist: herba + -yo\",\"lektapago\":\"meeting place; assembly hall: lekta + -pago\",\"lektayo\":\"collector: lekta + -yo\",\"regnapago\":\"kingdom; realm; dominion: regna + -pago\",\"regnavu\":\"emperor; empress: regna + -vu\",\"nimuyo\":\"inhabitant; resident: nimu + -yo\",\"limlivu\":\"sheep: limli + -vu\",\"jomrupago\":\"camp: jomru + -pago\",\"devodaigoyo\":\"martyr: devodaigo + -yo\",\"harmayo\":\"sinner: harma + -yo\",\"lavbuyo\":\"worshipper: lavbu + -yo\",\"lavbusolliyo\":\"monk; nun: lavbusolli + -yo\",\"vazrayo\":\"victor; champion: vazra + -yo\",\"talvabitiyo\":\"archer: talvabiti + -yo\",\"sabeserbuyo\":\"scholar: sabeserbu + -yo\",\"larbopagoti\":\"grove: larbopago + -ti\",\"lavbupagoti\":\"chapel: lavbupago + -ti\",\"faruvu\":\"blaze; inferno: faru + -vu\",\"dozapago\":\"a place where one's strength returns: doza + -pago\"}",
+   "to": "{\"tisebitivu\":\"sword (big knife): tisebiti + -vu\",\"tibivu\":\"rope (big thread): tibi + -vu\",\"kaldopago\":\"prison (place of confinement): kaldo + -pago\",\"zeldoyo\":\"rebel; resister: zeldo + -yo\",\"kronopago\":\"anniversary (0.8 canon time word): krono + -pago\",\"lemupago\":\"school (place of learning): lemu + -pago\",\"lemuyo\":\"student; disciple (one who learns): lemu + -yo\",\"lemudonuyo\":\"teacher (one who teaches): lemudonu + -yo\",\"dokrayo\":\"soldier; warrior (one who wages war): dokra + -yo\",\"marnapago\":\"farm (place of grain): marna + -pago\",\"marnayo\":\"farmer (one who grows grain): marna + -yo\",\"yugemeyiyo\":\"healer; doctor (one who heals): yugemeyi + -yo\",\"dapadonuyo\":\"merchant (one who sells): dapadonu + -yo\",\"juseyo\":\"judge (one who renders justice): juse + -yo\",\"devobakoyo\":\"traitor (one who betrays): devobako + -yo\",\"sevuyo\":\"sailor (one who sails): sevu + -yo\",\"mambicuzayo\":\"messenger (one who carries notes): mambicuza + -yo\",\"filseyo\":\"fisher (one who fishes): filse + -yo\",\"helviyo\":\"spy (one who hides): helvi + -yo\",\"lavbupago\":\"temple; church (place of prayer): lavbu + -pago\",\"solovu\":\"boulder (big stone): solo + -vu\",\"corviyo\":\"hero (one of courage): corvi + -yo\",\"karkoyo\":\"killer (one who kills): karko + -yo\",\"merviyo\":\"servant (one who serves): mervi + -yo\",\"tomnupago\":\"graveyard; cemetery (place of graves): tomnu + -pago\",\"narvopago\":\"hell; the underworld: narvo + -pago\",\"taradapago\":\"market; marketplace: tarada + -pago\",\"botevu\":\"ship: bote + -vu\",\"lirayo\":\"singer: lira + -yo\",\"riluyo\":\"dancer: rilu + -yo\",\"sarbiyo\":\"writer; author: sarbi + -yo\",\"telneyo\":\"storyteller: telne + -yo\",\"meloyo\":\"musician: melo + -yo\",\"nelavu\":\"giant: nela + -vu\",\"zayuyo\":\"mage; sorcerer; witch; magician; wizard: zayu + -yo\",\"halrayo\":\"rider; knight; horseman: halra + -yo\",\"maloyo\":\"villain; evildoer: malo + -yo\",\"bullipago\":\"library: bulli + -pago\",\"buzapago\":\"tavern: buza + -pago\",\"gonbipago\":\"inn; guesthouse: gonbi + -pago\",\"hifayo\":\"thief (one who steals): hifa + -yo\",\"sevuhifayo\":\"pirate (one who does sea-theft): sevuhifa + -yo\",\"velupago\":\"observatory: velu + -pago\",\"furopago\":\"orchard: furo + -pago\",\"norupago\":\"dreamland: noru + -pago\",\"ramupago\":\"memory palace; where memories are kept: ramu + -pago\",\"lasopago\":\"a place of silence; a retreat: laso + -pago\",\"sollipago\":\"hermitage: solli + -pago\",\"lumipago\":\"sanctum; the holy of holies: lumi + -pago\",\"lumiyo\":\"lightbearer; one who brings light: lumi + -yo\",\"devoyo\":\"believer; one of the faithful: devo + -yo\",\"sabeyo\":\"sage: sabe + -yo\",\"volmepago\":\"haunted place: volme + -pago\",\"lardapago\":\"museum; gallery: larda + -pago\",\"melopago\":\"concert hall: melo + -pago\",\"helnapago\":\"hospital: helna + -pago\",\"cemopago\":\"kitchen: cemo + -pago\",\"somupago\":\"bedroom: somu + -pago\",\"dokrapago\":\"battlefield: dokra + -pago\",\"jusepago\":\"courthouse: juse + -pago\",\"dorbiyo\":\"gatekeeper: dorbi + -yo\",\"lovuyo\":\"reader: lovu + -yo\",\"cemoyo\":\"cook: cemo + -yo\",\"bimneyo\":\"builder: bimne + -yo\",\"ganreyo\":\"gardener: ganre + -yo\",\"jomruyo\":\"traveler: jomru + -yo\",\"serbuyo\":\"seeker: serbu + -yo\",\"botepago\":\"harbor: bote + -pago\",\"farubitivu\":\"torch: farubiti + -vu\",\"sevulirayo\":\"siren: sevulira + -yo\",\"masuyo\":\"beggar: masu + -yo\",\"sasvayo\":\"guard; guardian: sasva + -yo\",\"limliyo\":\"shepherd: limli + -yo\",\"tenvayo\":\"weaver: tenva + -yo\",\"germayo\":\"smith; metalworker: germa + -yo\",\"bumreyo\":\"baker: bumre + -yo\",\"kertiyo\":\"sculptor; carver: kerti + -yo\",\"liralardayo\":\"poet: liralarda + -yo\",\"telnelirayo\":\"bard; minstrel: telnelira + -yo\",\"colbilardayo\":\"painter: colbilarda + -yo\",\"kersopago\":\"nursery; a place where young things grow: kerso + -pago\",\"herbapago\":\"greenhouse: herba + -pago\",\"herbayo\":\"herbalist: herba + -yo\",\"lektapago\":\"meeting place; assembly hall: lekta + -pago\",\"lektayo\":\"collector: lekta + -yo\",\"regnapago\":\"kingdom; realm; dominion: regna + -pago\",\"regnavu\":\"emperor; empress: regna + -vu\",\"nimuyo\":\"inhabitant; resident: nimu + -yo\",\"limlivu\":\"sheep: limli + -vu\",\"jomrupago\":\"camp: jomru + -pago\",\"devodaigoyo\":\"martyr: devodaigo + -yo\",\"harmayo\":\"sinner: harma + -yo\",\"lavbuyo\":\"worshipper: lavbu + -yo\",\"lavbusolliyo\":\"monk; nun: lavbusolli + -yo\",\"vazrayo\":\"victor; champion: vazra + -yo\",\"talvabitiyo\":\"archer: talvabiti + -yo\",\"sabeserbuyo\":\"scholar: sabeserbu + -yo\",\"faruvu\":\"blaze; inferno: faru + -vu\",\"dozapago\":\"a place where one's strength returns: doza + -pago\"}",
+   "ruling": "2.5:G122",
+   "reason": "I-30, 2.5:G122: the -ti items leave the derivations",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:morphology.lexicalised_diminutives",
+   "op": "edit_value",
+   "from": null,
+   "to": "{\"monruti\":\"hill (little mountain): monru + -ti\",\"mirunuluti\":\"stream; brook (little river): mirunulu + -ti\",\"kezumiruti\":\"pond; pool (little lake): kezumiru + -ti\",\"soloti\":\"pebble (little stone): solo + -ti\",\"larbopagoti\":\"grove: larbopago + -ti\",\"lavbupagoti\":\"chapel: lavbupago + -ti\"}",
+   "ruling": "2.5:G122",
+   "reason": "I-30, 2.5:G122: the -ti items, kept whole, in a 'lexicalised diminutives' list",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "2.5:G123",
+   "op": "add_ruling",
+   "from": null,
+   "to": "Words ending in pago",
+   "ruling": "2.5:G123",
+   "reason": "The author's 2.5 decision on I-35 (option C).",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "2.1:G59",
+   "op": "amend_ruling",
+   "field": "2.1:G59",
+   "from": "Roots replaced by compounds",
+   "to": "2.5:G123",
+   "ruling": "2.5:G123",
+   "reason": "The author's 2.5 decision on I-35 (option C). 2.1:G59 is kept as ruled; where the two differ, 2.5:G123 is followed.",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "2.5:G124",
+   "op": "add_ruling",
+   "from": null,
+   "to": "Image compounds have all seven forms",
+   "ruling": "2.5:G124",
+   "reason": "The author's 2.5 decision on I-36 (option B).",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "2.5:G125",
+   "op": "add_ruling",
+   "from": null,
+   "to": "Negative numbers: antizi",
+   "ruling": "2.5:G125",
+   "reason": "The author's 2.5 decision on I-45 (option A).",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "fw_antizi_0152",
+   "op": "add_function_word",
+   "from": null,
+   "to": "antizi",
+   "ruling": "2.5:G125",
+   "reason": "I-45, 2.5:G125: antizi, a new function word (passes the function-word template)",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "text:numbers.rules.39.Construction rule",
+   "op": "edit_text",
+   "from": "ordinals: NUMBER-ne before the noun (una-ne, first); fractions: NUMBER de NUMBER (tressa de cuara); negative and decimal numbers await separate policy",
+   "to": "ordinals: NUMBER-ne before the noun (una-ne, first); fractions: NUMBER de NUMBER (tressa de cuara); negative numbers: antizi + NUMBER (antizi dossa, minus two; 2.5:G125); decimal numbers await separate policy",
+   "ruling": "2.5:G125",
+   "reason": "I-45, 2.5:G125: the numbers table states the negative rule",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "phonology.declared_distance_1_pairs",
+   "op": "edit_metadata",
+   "from": null,
+   "to": "[\"li\",\"si\"]",
+   "ruling": "",
+   "reason": "I-34, no new ruling: li/si declared: a position check shows they never compete (li opens a noun phrase; si opens a clause)",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "phonology.declared_distance_1_pairs",
+   "op": "edit_metadata",
+   "from": null,
+   "to": "[\"li\",\"ki\"]",
+   "ruling": "",
+   "reason": "I-34, no new ruling: li/ki declared: a position check shows they never compete (li opens a noun phrase; ki closes a sentence)",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "phonology.declared_distance_1_pairs",
+   "op": "edit_metadata",
+   "from": null,
+   "to": "[\"ke\",\"ki\"]",
+   "ruling": "",
+   "reason": "I-34, no new ruling: ke/ki declared: a position check shows they never compete (ke stands in the verb slot; ki only at the end of a sentence)",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "phonology.declared_distance_1_pairs",
+   "op": "edit_metadata",
+   "from": null,
+   "to": "[\"si\",\"ki\"]",
+   "ruling": "",
+   "reason": "I-34, no new ruling: si/ki declared: a position check shows they never compete (si opens a clause; ki closes a sentence)",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "phonology.declared_distance_1_pairs",
+   "op": "edit_metadata",
+   "from": null,
+   "to": "[\"ko\",\"ki\"]",
+   "ruling": "",
+   "reason": "I-34, no new ruling: ko/ki declared: a position check shows they never compete (ko opens a noun phrase; ki is the last word of a sentence and is never followed by a noun phrase except a comma-set vocative)",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "phonology.declared_distance_1_pairs",
+   "op": "edit_metadata",
+   "from": null,
+   "to": "[\"da\",\"la\"]",
+   "ruling": "",
+   "reason": "I-34, no new ruling: da/la declared: a position check shows they never compete (da precedes a noun phrase; la precedes an adjective)",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  }
+ ],
+ "rulings": [
+  {
+   "id": "G88",
+   "topic": "Questions end in ki; a fronted ki-word may drop it",
+   "ruling": "A yes/no question ends in ki. A content question ends in ki unless its ki-word is the first word of the sentence; a ki-word left in its answer's place requires the final ki. This exception covers ki-coda, ki-pago, ki-krono, ki-nela, ki-nela de, ki-kasa, manner ki-modo and ki-muya-krono only. Questions with ki-eli + noun, ki-muya + noun and degree ki-modo + adjective always end in ki (2.3:G76, 2.2:G61 stand), and the same three without ki remain exclamations. Embedded questions never take ki (2.3:G77 stands). A ki-word in its answer's place in a clause without final ki is an embedded question or part of a statement, never a direct question.",
+   "refines": [
+    "2.2:G60"
+   ],
+   "examples": [
+    [
+     "Ki-kasa taivo po amora maivo?",
+     "Why did you love me?"
+    ],
+    [
+     "Ki-kasa taivo po amora maivo ki?",
+     "Why did you love me?"
+    ],
+    [
+     "Taivo pagopa ki-pago ki?",
+     "Where are you going?"
+    ],
+    [
+     "Maivo po masuma li talirivo ki-kasa.",
+     "I asked my colleague why. (statement)"
+    ],
+    [
+     "Ki-eli nullo!",
+     "What a night! (exclamation)"
+    ]
+   ],
+   "issue": "I-01 + I-02",
+   "amends": [
+    "2.2:G60"
+   ],
+   "examples_ungrammatical": [
+    [
+     "Taivo pagopa ki-pago?",
+     "ki-word in place without final ki is not a question"
+    ],
+    [
+     "Ki-eli lira taivo desida?",
+     "ki-eli + noun questions always end in ki"
+    ]
+   ],
+   "notes": "This also resolves I-02 (three live statements of the question rule)."
+  },
+  {
+   "id": "G89",
+   "topic": "Which clause a final ki or attitude word belongs to",
+   "ruling": "A ki or attitude word (seye, mufe, poye, pifu, zoke) at the end of a sentence belongs to the main clause, even when a subordinate clause follows it. Doubt inside a trailing subordinate clause is expressed with a modal (nosi); an embedded yes/no question uses ki-oro. ki is the last word of the sentence, except that a vocative set off by a comma may follow it.",
+   "refines": [
+    "1.0:G22"
+   ],
+   "examples": [
+    [
+     "Taivo sabesia fime maivo lirala poye.",
+     "Perhaps you know that I sing."
+    ],
+    [
+     "Taivo sabesia fime maivo nosi lirala.",
+     "You know that I might sing."
+    ],
+    [
+     "Taivo sabesia fime maivo lirala ki?",
+     "Do you know that I sing?"
+    ]
+   ],
+   "issue": "I-50",
+   "amends": [
+    "clause.slots[19] ('last word of its clause')",
+    "1.0:G22"
+   ],
+   "notes": "0.8:G4 (ki may also close the main clause before an appended direct quotation) stands."
+  },
+  {
+   "id": "G126",
+   "topic": "The clause's closing order and its edge positions",
+   "ruling": "A clause closes in this order: … VERB [OBJECT] [ADJUNCTS] [fuyi] [STATUS: hoyo | yasmo] [ATTITUDE] [ki]. Closing time words, durations and clause-final reve / loki stand among the adjuncts, before fuyi. Outside the core slots, a clause has edge positions. Before it, in order: a line linker (ata, oro, nara), FRAME, TOPIC, then a fronted ki-word (2.5:G88). After it: a vocative set off by a comma, which may follow ki.",
+   "refines": [
+    "2.3:G78",
+    "2.1:G55"
+   ],
+   "examples": [
+    [
+     "Maivori lirala toda-krono fuyi pifu.",
+     "May we always sing to each other."
+    ],
+    [
+     "Ki-pago taivo pagopa?",
+     "Where are you going? (fronted ki-word)"
+    ],
+    [
+     "Taivo viki pagopa ligo maivo ki, maivo de amor?",
+     "Would you come near me, my love?"
+    ]
+   ],
+   "issue": "I-23 + I-03",
+   "amends": [
+    "2.3:G78 (closing order only; its other clauses stand)",
+    "clause.template",
+    "clause.slots[11].notes (reve / loki)",
+    "2.1:G55 (position of a duration)"
+   ],
+   "examples_ungrammatical": [
+    [
+     "Maivori lirala fuyi toda-krono pifu.",
+     "closing time word after fuyi"
+    ]
+   ],
+   "derived": [
+    "The edge positions (line linker, FRAME, TOPIC, fronted ki-word; vocative after the clause) were part of the lean, not option A itself. They are needed to make 2.5:G88 and the existing line-initial ata / vocative rulings fit the template. Confirm.",
+    "Durations and clause-final reve / loki sit among the adjuncts, like closing time words. Confirm."
+   ],
+   "notes": "This also resolves I-03 (constructions the rulings allow but the template had no slot for)."
+  },
+  {
+   "id": "G127",
+   "topic": "What may stand in FRAME",
+   "ruling": "FRAME, the clause-opening slot set off by a comma, holds a time adverbial or a place adverbial. Tense words (po, futu, pressa) and iteration words (reve, loki, bodu) are not frame words and are never closing time words.",
+   "refines": [
+    "1.2:G24"
+   ],
+   "examples": [
+    [
+     "Eli-pago, maivo lirala.",
+     "Here, I sing."
+    ],
+    [
+     "Deyaapo, maivo po lirala.",
+     "Yesterday, I sang."
+    ]
+   ],
+   "issue": "I-27",
+   "amends": [
+    "clause.slots[0]",
+    "1.2:G24"
+   ],
+   "examples_ungrammatical": [
+    [
+     "Maivo lirala po.",
+     "po is a tense word, not a closing time word"
+    ]
+   ],
+   "derived": [
+    "'Place adverbial' covers place correlatives (eli-pago, ola-pago, toda-pago …) and prepositional phrases of place (En li nimu, …). Confirm."
+   ]
+  },
+  {
+   "id": "G90",
+   "topic": "A command is marked",
+   "ruling": "A command is marked. In writing it ends in '!' or contains fisa; in speech, fisa or command intonation marks it. A subjectless, tenseless clause with neither mark is an elliptical statement, not a command.",
+   "refines": [
+    "1.2:G31",
+    "2.1:G56"
+   ],
+   "examples": [
+    [
+     "Ne lirala!",
+     "Don't sing!"
+    ],
+    [
+     "Fisa, ne lirala.",
+     "Please don't sing."
+    ],
+    [
+     "Fisa, lisrola.",
+     "Please stay."
+    ],
+    [
+     "Taivo lirala ki? — Ne lirala.",
+     "Do you sing? — (I) don't sing."
+    ]
+   ],
+   "issue": "I-20",
+   "amends": [
+    "1.2:G31",
+    "2.1:G56"
+   ],
+   "derived": [
+    "In speech, command intonation stands in for the written '!'. Confirm."
+   ],
+   "notes": "I-42 (which operators a command may carry; yava's position with a FRAME) was not decided. See author_inputs_needed."
+  },
+  {
+   "id": "G91",
+   "topic": "Fragment questions",
+   "ruling": "A fragment question follows the ki rule: it ends in ki.",
+   "examples": [
+    [
+     "Ata ki?",
+     "And?"
+    ]
+   ],
+   "issue": "I-31",
+   "examples_ungrammatical": [
+    [
+     "Ata?",
+     "not a question without ki"
+    ]
+   ]
+  },
+  {
+   "id": "G92",
+   "topic": "Echo ki",
+   "ruling": "Echo ki attaches only to a single word or a bare noun phrase. raho + clause + ki is therefore always a direct question (2.3:G74 stands).",
+   "refines": [
+    "0.8:G3"
+   ],
+   "examples": [
+    [
+     "Raho lirala ki?",
+     "Who sings?"
+    ],
+    [
+     "Ki-nela lirala ki?",
+     "Who sings?"
+    ],
+    [
+     "Lira ki?",
+     "A song? (echo)"
+    ]
+   ],
+   "issue": "I-49",
+   "amends": [
+    "0.8:G3 (echo with ki)"
+   ]
+  },
+  {
+   "id": "G93",
+   "topic": "ke and ka: one contrast for every predicate",
+   "ruling": "ke and ka mark one contrast for every kind of predicate (adjective, noun phrase or location): ke = holds now, or for a time; ka = lasting, defining, by nature.",
+   "supersedes": [
+    "clause.copulas definitions of ke and ka",
+    "function_words rows ke, ka (definitions)"
+   ],
+   "examples": [
+    [
+     "Li kavbikova ke su li tabu.",
+     "The basket is on the table (right now)."
+    ],
+    [
+     "Li nimu ka ligo li cilni.",
+     "The home is near the city (it always has been)."
+    ],
+    [
+     "Maivo po ke linuti.",
+     "I was a little child (back then)."
+    ],
+    [
+     "Maivo ka lirayo.",
+     "I am a singer (it's who I am)."
+    ],
+    [
+     "Li nela ke benasan.",
+     "The person is good at the moment."
+    ],
+    [
+     "Li sora ka benasan.",
+     "The friend is good by nature."
+    ]
+   ],
+   "issue": "I-04 + I-10"
+  },
+  {
+   "id": "G128",
+   "topic": "The minimal clause",
+   "ruling": "The minimal clause is SUBJECT + VERB, with these exceptions: commands, hortatives, permitted ellipsis, existential miyo clauses (which have no subject), and bare adjective predicates. A bare adjective predicate (SUBJECT ADJECTIVE, no copula) is allowed only in the present with no operators; anything more needs ke or ka.",
+   "examples": [
+    [
+     "Nela vanisan.",
+     "The person is beautiful."
+    ],
+    [
+     "Li nela po ke vanisan.",
+     "The person was beautiful."
+    ],
+    [
+     "Miyo baba sora en li nimu.",
+     "There is a friend in the home."
+    ]
+   ],
+   "issue": "I-09",
+   "amends": [
+    "clause.explanation",
+    "clause.slots[2].notes",
+    "clause.copulas (bare predicate sentence)",
+    "self_check[6]"
+   ],
+   "examples_ungrammatical": [
+    [
+     "Li nela po vanisan.",
+     "a bare adjective predicate takes no operators"
+    ],
+    [
+     "Nela ne vanisan.",
+     "a bare adjective predicate takes no operators"
+    ]
+   ],
+   "notes": "A bare predicate carries no ke / ka contrast (2.5:G93); use a copula when that contrast matters."
+  },
+  {
+   "id": "G94",
+   "topic": "po ka and kapoki",
+   "ruling": "po ka = was (lasting), with no claim about now. kapoki = was, and no longer is. (With 2.5:G93, po ke = was, at that time.)",
+   "examples": [
+    [
+     "Saivo po ka benasan.",
+     "They were good (no claim about now)."
+    ],
+    [
+     "Saivo kapoki benasan.",
+     "They were good, and no longer are."
+    ]
+   ],
+   "issue": "I-11"
+  },
+  {
+   "id": "G95",
+   "topic": "Kinship nouns are not names for possession",
+   "ruling": "Kinship nouns (pilo, mare and the rest) are never treated as names for possession. Only a pronoun, or a personal name standing before de, is the owner; otherwise X de Y = 'X of Y' (Y owns). When both sides are personal names, the left one owns.",
+   "refines": [
+    "1.2:G27",
+    "1.2:G32"
+   ],
+   "examples": [
+    [
+     "li bumre de pilo",
+     "father's bread"
+    ],
+    [
+     "pilo de bumre",
+     "the father of the bread"
+    ],
+    [
+     "Kipo de Dorin",
+     "Kipo's Dorin"
+    ],
+    [
+     "maivo de lira",
+     "my song"
+    ]
+   ],
+   "issue": "I-12 + I-14",
+   "amends": [
+    "1.2:G27",
+    "1.2:G32"
+   ],
+   "derived": [
+    "Two names: the left one owns. The author chose C; this follows from 1.2:G27 (a name before de owns) and is listed for confirmation."
+   ]
+  },
+  {
+   "id": "G96",
+   "topic": "Chains of de",
+   "ruling": "Chains of de group from the left: X de Y de Z = (X de Y) de Z. The ownership rules apply first to X de Y, then to that whole phrase de Z.",
+   "examples": [
+    [
+     "li suma de maivo de yuge",
+     "my warmth, of the body  [(li suma de maivo) de yuge]"
+    ]
+   ],
+   "issue": "I-13",
+   "settles_open_questions": [
+    "open_questions_do_not_resolve[0] (chains of de)"
+   ],
+   "translator_preference": "When the intended meaning groups from the right ('the warmth of my body'), do not produce a three-part chain. Rephrase, for example with an adjective form or a second sentence."
+  },
+  {
+   "id": "G97",
+   "topic": "NUMBER de NUMBER",
+   "ruling": "NUMBER de NUMBER may be a fraction or a partitive; context decides. Fractions are written with spaces (tressa de cuara), never hyphenated.",
+   "examples": [
+    [
+     "tressa de cuara",
+     "three quarters"
+    ],
+    [
+     "Una de dossa futu relnura.",
+     "One of the two will return / One half will return."
+    ]
+   ],
+   "issue": "I-15",
+   "translator_preference": "For a partitive, prefer an article (una de li dossa) so the output is not ambiguous."
+  },
+  {
+   "id": "G98",
+   "topic": "Noun-phrase order",
+   "ruling": "Noun-phrase order: [QUANTIFIER] [DETERMINER: li | baba | eli | ola | eliri | olari | ki-eli | OWNER de] [ORDINAL] [NUMBER] {[DEGREE WORD] ADJECTIVE} NOUN[-ti][-ri] [de NP] [raho CLAUSE]. The ordinal stands right after the determiner, before the adjectives. Degree words (ruli, kasi, menu, mosa, lusu, gase, diba) stand directly before the adjective they modify. ki-muya fills the QUANTIFIER slot. OWNER de takes only a pronoun or a personal name (2.5:G95).",
+   "supersedes": [
+    "clause.noun_phrase template"
+   ],
+   "examples": [
+    [
+     "li una-ne ruli vanisan lira",
+     "the first very beautiful song"
+    ],
+    [
+     "baba ruli vanisan lira",
+     "a very beautiful song"
+    ],
+    [
+     "eliri lirari",
+     "these songs"
+    ]
+   ],
+   "issue": "I-28",
+   "derived": [
+    "ORDINAL before NUMBER (li una-ne dossa lirari, 'the first two songs'), following English order. Confirm."
+   ],
+   "notes": "The order of two or more adjectives (A4.22) is still undecided. See author_inputs_needed."
+  },
+  {
+   "id": "G99",
+   "topic": "li after a side noun",
+   "ruling": "li may not be dropped after a side noun (nazru, zavme, silda, cemnu, lizma, rizno) used as a preposition.",
+   "examples": [
+    [
+     "Li lavra semnesia nazru li nimu.",
+     "The bird sits behind the home."
+    ]
+   ],
+   "issue": "I-53",
+   "examples_ungrammatical": [
+    [
+     "Li lavra semnesia nazru nimu.",
+     "li dropped after a side noun"
+    ]
+   ]
+  },
+  {
+   "id": "G100",
+   "topic": "maivo: I and Self",
+   "ruling": "maivo is deliberately both the pronoun 'I' and the noun 'Self'. Context decides.",
+   "examples": [
+    [
+     "Maivo ka vanisan.",
+     "I am beautiful. / The Self is beautiful."
+    ]
+   ],
+   "issue": "I-16",
+   "translator_preference": "Always write the noun as li maivo, so translator output is never ambiguous."
+  },
+  {
+   "id": "G101",
+   "topic": "Which words take -ri, and plural agreement",
+   "ruling": "-ri attaches to nouns, pronouns, demonstratives, and an adjective used as a noun after a determiner; never to a bare adjective or a verb. After any count word (a number, a quantifier, eliri or olari), -ri on the noun is optional, chosen by sound and meter. A singular demonstrative (eli, ola) takes a singular noun.",
+   "refines": [
+    "1.2:G28"
+   ],
+   "examples": [
+    [
+     "li benasanri",
+     "the good ones"
+    ],
+    [
+     "eliri lira",
+     "these songs"
+    ],
+    [
+     "eliri lirari",
+     "these songs"
+    ],
+    [
+     "dossa lira",
+     "two songs"
+    ]
+   ],
+   "issue": "I-29",
+   "amends": [
+    "1.2:G28",
+    "small_words.numbers.rules row I ('Plural -ri recommended above 1')"
+   ],
+   "examples_ungrammatical": [
+    [
+     "benasanri",
+     "-ri on a bare adjective"
+    ],
+    [
+     "eli lirari",
+     "singular demonstrative with a plural noun"
+    ]
+   ],
+   "derived": [
+    "'A singular demonstrative takes a singular noun' makes the ✗ example of option B explicit. Confirm."
+   ]
+  },
+  {
+   "id": "G102",
+   "topic": "Pronouns for animals",
+   "ruling": "An animal is referred to with ito by default. A named animal takes saivo.",
+   "examples": [
+    [
+     "Li lavra lirala; ito ka vanisan.",
+     "The bird sings; it is beautiful."
+    ],
+    [
+     "Nilo lirala; saivo ka vanisan.",
+     "Nilo (the bird) sings; she is beautiful."
+    ]
+   ],
+   "issue": "I-37",
+   "notes": "sela (reflexive only, or also emphatic) and whether maivori includes the listener were not decided. See author_inputs_needed."
+  },
+  {
+   "id": "G103",
+   "topic": "Time nouns as \"when\"",
+   "ruling": "Only listed time adverbials stand bare as 'when': entries in the time-adverbial table, -krono correlatives, and day compounds (deyapressa, deyaapo, deyafutu). A plain time noun (merno, nullo, vesno, mambi, lornu …) used as 'when' takes en. A bare plain noun after a verb is its object.",
+   "examples": [
+    [
+     "Maivo vimova en merno.",
+     "I see in the morning."
+    ],
+    [
+     "Maivo vimova merno.",
+     "I see the morning."
+    ],
+    [
+     "Maivo lirala deyapressa.",
+     "I sing today."
+    ],
+    [
+     "Maivo lirala toda-krono.",
+     "I always sing."
+    ]
+   ],
+   "issue": "I-17",
+   "notes": "Duration ('for two days', 2.1:G55 bare measure after the object) still collides with an object reading. See author_inputs_needed."
+  },
+  {
+   "id": "G104",
+   "topic": "yuta, en, ko and la: one test per word",
+   "ruling": "One test per word. yuta = a tool, means or substance handled or used up. en = a medium or state one is in, including a manner seen as a medium. ko = a companion, or an emotion that accompanies the act. la + adjective = the quality of the action.",
+   "refines": [
+    "1.2:G33",
+    "2.3:G73"
+   ],
+   "examples": [
+    [
+     "Maivo lallela li dorbi yuta li kemye.",
+     "I open the door with the key."
+    ],
+    [
+     "Saivo po senosia en baba melosan valla.",
+     "She spoke in a musical voice."
+    ],
+    [
+     "Maivo lirala ko amor.",
+     "I sing with love."
+    ],
+    [
+     "Maivo lirala ko saivo.",
+     "I sing with him."
+    ],
+    [
+     "Maivo lirala la molusan.",
+     "I sing gently."
+    ]
+   ],
+   "issue": "I-25",
+   "amends": [
+    "1.2:G33",
+    "2.3:G73"
+   ],
+   "notes": "The en/intra and transa/taro- overlaps named in I-25 were not decided."
+  },
+  {
+   "id": "G105",
+   "topic": "Where la + adjective stands",
+   "ruling": "la + adjective stands only among the adjuncts, after the verb and object. A degree word goes between la and the adjective: la ruli molusan.",
+   "examples": [
+    [
+     "Maivo lirala la ruli molusan.",
+     "I sing very gently."
+    ]
+   ],
+   "issue": "I-46",
+   "examples_ungrammatical": [
+    [
+     "Maivo la molusan lirala.",
+     "adverb before the verb"
+    ],
+    [
+     "Maivo lirala ruli la molusan.",
+     "degree word outside la"
+    ]
+   ]
+  },
+  {
+   "id": "G106",
+   "topic": "Comparing amounts and manner",
+   "ruling": "Amounts: kasi or menu + noun … tamo NP. Manner: la kasi (or la menu) + adjective … tamo NP.",
+   "examples": [
+    [
+     "Maivo tovota kasi lirari tamo taivo.",
+     "I have more songs than you."
+    ],
+    [
+     "Maivo lirala la kasi molusan tamo taivo.",
+     "I sing more gently than you."
+    ]
+   ],
+   "issue": "I-43",
+   "examples_ungrammatical": [
+    [
+     "Maivo lirala kasi tamo taivo.",
+     "bare kasi after the verb is not licensed (option B was not chosen)"
+    ]
+   ],
+   "notes": "Comparing an action with no manner adjective ('I sing more than you', 'I love you more than …') still has no form. See author_inputs_needed."
+  },
+  {
+   "id": "G107",
+   "topic": "gase + a number",
+   "ruling": "gase + a number may mean 'about' or 'like'; context decides.",
+   "examples": [
+    [
+     "Maivo tovota gase dossa cono.",
+     "I have about two coins. / … something like two coins."
+    ]
+   ],
+   "issue": "I-47",
+   "translator_preference": "For 'about N' write gase N; for a simile write gase li N (with the article), so output is unambiguous."
+  },
+  {
+   "id": "G108",
+   "topic": "Measures with kroti and krotiapo",
+   "ruling": "A measure (for kroti 'ago' and krotiapo 'from now') is NUMBER + unit, or a listed quantifier + unit. Listed quantifiers: AUTHOR INPUT NEEDED.",
+   "examples": [
+    [
+     "Maivo po venreva kroti dossa deya.",
+     "I came two days ago."
+    ]
+   ],
+   "issue": "I-48",
+   "notes": "Do not invent the list. Until the author supplies it, treat only NUMBER + unit as a measure and report kroti + quantifier + noun as unresolved."
+  },
+  {
+   "id": "G109",
+   "topic": "Valency operators: the full pattern",
+   "ruling": "Valency operators vaku (make), lesvu (let) and tekvu (prevent): CAUSER [TENSE] [noma] [ne] [MODAL] … [EVIDENTIAL] OP ACTOR [ne] [APPROACH] [PHASE] [EFFORT] VERB [OBJECT]. Tense, modal and evidential belong to the main clause; the actor's own negation, approach, phase and effort follow the actor. The embedded verb may take an object.",
+   "refines": [
+    "1.0:G14"
+   ],
+   "examples": [
+    [
+     "Maivo vaku saivo sapusia li nami.",
+     "I make him eat the food."
+    ],
+    [
+     "Taivo vaku maivo lirala.",
+     "You make me sing."
+    ],
+    [
+     "Maivo po lesvu saivo pagopa.",
+     "I let them leave."
+    ]
+   ],
+   "issue": "I-21",
+   "amends": [
+    "1.0:G14"
+   ]
+  },
+  {
+   "id": "G110",
+   "topic": "Passives, and change-of-state verbs",
+   "ruling": "gome may passivise any verb that is attested with an object anywhere in the data. Without gome, the subject is the doer, except for the listed change-of-state verbs, whose subject may be the thing that changes (an anticausative reading).",
+   "examples": [
+    [
+     "Li lira gome sarbisia gagu maivo.",
+     "The song is written by me."
+    ],
+    [
+     "Zafra, li dorbi po lallela.",
+     "Suddenly the door opened."
+    ],
+    [
+     "Zafra, li dorbi po gome lallela.",
+     "Suddenly the door was opened."
+    ]
+   ],
+   "issue": "I-22",
+   "amends": [
+    "settled_questions[4]",
+    "function_words row gome"
+   ]
+  },
+  {
+   "id": "G111",
+   "topic": "Adjective + sidu + verb: no dummy ito",
+   "ruling": "In ADJECTIVE + sidu + VERB, the thing the adjective describes is the subject of the clause and the understood object of the verb. There is no dummy ito.",
+   "refines": [
+    "2.2:G65"
+   ],
+   "examples": [
+    [
+     "Trana ke ruli levasan sidu zeldoza.",
+     "Change is very easy to resist."
+    ]
+   ],
+   "issue": "I-24",
+   "amends": [
+    "2.2:G65 (example)"
+   ],
+   "examples_ungrammatical": [
+    [
+     "Ito ke ruli levasan sidu zeldoza trana.",
+     "dummy ito with an overt object"
+    ]
+   ]
+  },
+  {
+   "id": "G112",
+   "topic": "A bare pronoun recipient",
+   "ruling": "A pronoun recipient may stand bare right after any verb whose meaning has a recipient (giving, lending, sending, owing, paying, bringing, teaching, showing, telling, singing to …). Otherwise, and always for a non-pronoun recipient, the recipient takes ala after the theme.",
+   "refines": [
+    "1.2:G26"
+   ],
+   "examples": [
+    [
+     "Taivo guraga maivo dossa cono.",
+     "You owe me two coins."
+    ],
+    [
+     "Maivo lirala taivo baba lira.",
+     "I sing you a song."
+    ],
+    [
+     "Maivo lirala baba lira ala taivo.",
+     "I sing a song to you."
+    ]
+   ],
+   "issue": "I-38",
+   "amends": [
+    "1.2:G26"
+   ]
+  },
+  {
+   "id": "G113",
+   "topic": "Purpose always uses kopisa",
+   "ruling": "Purpose always uses kopisa. With the same subject, kopisa + bare verb phrase (no subject); with a different subject, kopisa + clause. sidu stays for verb chains (desida sidu lirala).",
+   "examples": [
+    [
+     "Maivo po venreva eli-pago kopisa lirala.",
+     "I came here to sing."
+    ],
+    [
+     "Maivo lirala kopisa taivo rilura.",
+     "I sing so that you dance."
+    ]
+   ],
+   "issue": "I-55",
+   "examples_ungrammatical": [
+    [
+     "Maivo po venreva eli-pago sidu lirala.",
+     "sidu is not used for purpose"
+    ]
+   ],
+   "settles_open_questions": [
+    "open_questions_do_not_resolve[2] (to + verb), for purpose only"
+   ],
+   "notes": "ke sidu ('destined to', open_questions_do_not_resolve[3]) stays open."
+  },
+  {
+   "id": "G114",
+   "topic": "\"Would have\" is po noma viki",
+   "ruling": "'Would have' is always po noma viki. po viki without noma is not a form.",
+   "refines": [
+    "1.0:G6"
+   ],
+   "examples": [
+    [
+     "Si maivo po noma masuma, taivo po noma viki relsira.",
+     "If I had asked, you would have answered."
+    ]
+   ],
+   "issue": "I-39",
+   "amends": [
+    "1.0:G6"
+   ],
+   "examples_ungrammatical": [
+    [
+     "Taivo po viki relsira.",
+     "'would have' requires noma"
+    ]
+   ]
+  },
+  {
+   "id": "G115",
+   "topic": "The comma that closes a raho clause",
+   "ruling": "A raho clause that does not end the sentence is closed by a comma (a pause in speech) when it contains its own object or adjunct. A raho clause of only a verb (and its operators) needs no comma.",
+   "refines": [
+    "1.0:G21"
+   ],
+   "examples": [
+    [
+     "Li nela raho lirala ka benasan.",
+     "The person who sings is good."
+    ],
+    [
+     "Li sabeyo raho vismava eli, ne yehu vimova li vordu.",
+     "The sage who studies this did not witness the word."
+    ]
+   ],
+   "issue": "I-08",
+   "amends": [
+    "1.0:G21"
+   ],
+   "examples_ungrammatical": [
+    [
+     "Li sabeyo raho vismava eli ne yehu vimova li vordu.",
+     "relative clause with an object, not closed by a comma"
+    ]
+   ]
+  },
+  {
+   "id": "G116",
+   "topic": "Hopeful purpose: kopisa + nosi",
+   "ruling": "Hopeful purpose ('so that perhaps', 'in the hope that') is kopisa + a clause whose verb carries nosi. fime always introduces a content clause ('that').",
+   "supersedes": [
+    "2.2:G63"
+   ],
+   "examples": [
+    [
+     "Maivo lirala, kopisa taivo nosi rilura.",
+     "I sing, so that perhaps you'll dance."
+    ],
+    [
+     "Maivo sabesia fime taivo nosi lirala.",
+     "I know that you might sing."
+    ]
+   ],
+   "issue": "I-18"
+  },
+  {
+   "id": "G117",
+   "topic": "tonsi: therefore, and so",
+   "ruling": "Clause-initial tonsi means 'therefore' and is followed by a comma. tonsi meaning 'so' (degree) stands only before a predicate adjective, after a copula.",
+   "refines": [
+    "2.2:G62"
+   ],
+   "examples": [
+    [
+     "Tonsi, corvisan nela lirala.",
+     "Therefore a brave person sings."
+    ],
+    [
+     "Taivo ke tonsi corvisan fime taivo viki savalisia maivo ki?",
+     "Are you so brave that you would kiss me?"
+    ]
+   ],
+   "issue": "I-19",
+   "amends": [
+    "2.2:G62"
+   ],
+   "examples_ungrammatical": [
+    [
+     "Tonsi corvisan nela lirala.",
+     "clause-initial tonsi without a comma"
+    ],
+    [
+     "Tonsi corvisan nela, lirala.",
+     "'so' tonsi outside a predicate"
+    ]
+   ]
+  },
+  {
+   "id": "G118",
+   "topic": "Tense in subordinate clauses",
+   "ruling": "An unmarked subordinate clause takes the main clause's tense, whatever its linker. sige clauses are the exception and always mark their own tense. A subordinate clause with its own tense word keeps it.",
+   "refines": [
+    "0.8:R6"
+   ],
+   "examples": [
+    [
+     "Kureli taivo venreva, maivo po lirala.",
+     "As soon as you came, I sang."
+    ],
+    [
+     "Maivo po masuma ki-oro taivo relnura.",
+     "I asked whether you returned."
+    ]
+   ],
+   "issue": "I-32",
+   "amends": [
+    "0.8:R6"
+   ],
+   "settles_open_questions": [
+    "open_questions_do_not_resolve[5] (tense after kureli, sina, si, nevi)"
+   ],
+   "notes": "Clauses opened by clause adverbs (tonsi, narli, korsi, krotiata) and coordinated ata / nara clauses are main clauses, not subordinate, and are outside this rule."
+  },
+  {
+   "id": "G119",
+   "topic": "Picking up a hozi topic",
+   "ruling": "A topic that is the subject of its clause must be picked up by a pronoun. A non-subject topic may be picked up or left as a gap; a gap is read as the verb's object.",
+   "examples": [
+    [
+     "Kipo hozi, saivo lirala.",
+     "As for Kipo, they sing."
+    ],
+    [
+     "Li bumre hozi, Kipo po bumreba.",
+     "As for the bread, Kipo baked it."
+    ],
+    [
+     "Li bumre hozi, Kipo po bumreba ito.",
+     "As for the bread, Kipo baked it."
+    ]
+   ],
+   "issue": "I-51",
+   "examples_ungrammatical": [
+    [
+     "Kipo hozi, lirala.",
+     "subject topic not picked up"
+    ]
+   ],
+   "derived": [
+    "'A gap is read as the verb's object' resolves the remaining ambiguity of option C. Confirm."
+   ]
+  },
+  {
+   "id": "G120",
+   "topic": "Relatives on a possessor, a time or a place",
+   "ruling": "Relative clauses on a possessor, a time or a place use a resumptive pronoun in place, as 2.1:G52 does for prepositions: possessor → PRONOUN de NOUN; time or place → the needed preposition + ito.",
+   "refines": [
+    "2.1:G52"
+   ],
+   "examples": [
+    [
+     "li lirayo raho maivo amora saivo de lira",
+     "the singer whose song I love"
+    ],
+    [
+     "li krono raho maivo po lirala en ito",
+     "the time when I sang"
+    ],
+    [
+     "li pago raho maivo po venreva da ito",
+     "the place I came from"
+    ]
+   ],
+   "issue": "I-54",
+   "amends": [
+    "2.1:G52"
+   ],
+   "settles_open_questions": [
+    "open_questions_do_not_resolve[4] (time and place relatives)"
+   ]
+  },
+  {
+   "id": "G121",
+   "topic": "The motion prefixes are productive",
+   "ruling": "The motion prefixes are productive on any verb, with compositional meanings: va- = toward the speaker, here; du- = away, giving away; taro- = across, through; yave- = together, to meet; revo- = back, again. A listed meaning (the four curated phrases and any listed prefixed verb) overrides the compositional one. 'Motion verb' is no longer a category the grammar needs. lu-, nu-, mi-, so- stay retired.",
+   "supersedes": [
+    "the closed-list part of 1.2:G35",
+    "settled_questions[6]",
+    "word_building.motion_prefixes.rule"
+   ],
+   "examples": [
+    [
+     "va-lirala",
+     "come toward (me) while singing"
+    ],
+    [
+     "revo-lirala",
+     "sing back, sing again"
+    ],
+    [
+     "du-vimova",
+     "look away"
+    ],
+    [
+     "taro-pagopa",
+     "go across"
+    ],
+    [
+     "Maivo revo-sabesia taivo.",
+     "I recognize you. (listed meaning)"
+    ]
+   ],
+   "issue": "I-05 + I-06",
+   "notes": "This also resolves I-06 (the undefined class of motion verbs)."
+  },
+  {
+   "id": "G122",
+   "topic": "-ti is an inflection",
+   "ruling": "-ti is an inflection-like suffix, not one of the derivations. Word ::= ROOT + (one form OR one derivation) + -ti + -ri; -ti may follow any form or derivation.",
+   "refines": [
+    "2.0:G41"
+   ],
+   "examples": [
+    [
+     "lirayoti",
+     "little singer"
+    ],
+    [
+     "lirati",
+     "little song"
+    ],
+    [
+     "liratiri",
+     "little songs"
+    ]
+   ],
+   "issue": "I-30",
+   "amends": [
+    "2.0:G41 (which lists R+ti among derivations)"
+   ]
+  },
+  {
+   "id": "G123",
+   "topic": "Words ending in pago",
+   "ruling": "A word ending in pago is the same word whether read as ROOT + -pago or as a compound with the root pago. It is a noun with no further forms unless its dictionary line lists them.",
+   "refines": [
+    "2.1:G59"
+   ],
+   "examples": [
+    [
+     "lemupago",
+     "school"
+    ]
+   ],
+   "issue": "I-35",
+   "amends": [
+    "2.1:G59"
+   ]
+  },
+  {
+   "id": "G124",
+   "topic": "Image compounds have all seven forms",
+   "ruling": "Image compounds have all seven forms, built by the ordinary form rules, with predictable meanings. This is an explicit exception to hard_rules[1] ('only listed forms exist'), which still governs every other headword.",
+   "examples": [
+    [
+     "lunosavali",
+     "moonlit kiss"
+    ],
+    [
+     "lunosavalila",
+     "to kiss by moonlight"
+    ],
+    [
+     "lunosavalisan",
+     "like a moonlit kiss"
+    ]
+   ],
+   "issue": "I-36",
+   "amends": [
+    "word_building.image_compounds.how_to_use",
+    "hard_rules[1] (add the exception)"
+   ],
+   "derived": [
+    "Proposed meaning templates, for confirmation: noun = the image; -asa = the image at its highest or sacred degree; -na = the absence or opposite of the image; verb = to make, do or bring about the image; -san = having the quality of the image; -asasan = supremely so; -nasan = lacking the image."
+   ],
+   "translator_preference": "Prefer attested image compounds and their attested readings; use a predicted form only when no listed word fits, and flag it in the output."
+  },
+  {
+   "id": "G125",
+   "topic": "Negative numbers: antizi",
+   "ruling": "Negative numbers: antizi + NUMBER (antizi dossa = minus two). antizi is a new function word.",
+   "examples": [
+    [
+     "antizi dossa",
+     "minus two"
+    ]
+   ],
+   "issue": "I-45",
+   "notes": "Decimals were not decided and remain outside the language."
+  }
+ ],
+ "function_words": [
+  {
+   "form": "antizi",
+   "meaning": "minus (a negative number)",
+   "position": "number sign: directly before a number",
+   "example": "antizi dossa",
+   "example_gloss": "minus two",
+   "class": "number sign",
+   "status_1_0": "NEW",
+   "status_2_5": "NEW",
+   "since": "2.5",
+   "id": "fw_antizi_0152"
+  }
+ ]
+}

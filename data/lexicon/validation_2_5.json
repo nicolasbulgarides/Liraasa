@@ -8,12 +8,12 @@
    "compounds": 988,
    "forms": 10241,
    "unused_forms": 6205,
-   "function_words": 151,
-   "new_function_words_1_0": 29,
+   "function_words": 152,
+   "new_function_words_1_0": 30,
    "respelled_in_2_5": 0,
    "spellings_respelled": 0,
    "image_compounds_attested": 391,
-   "lexicalised_derivations": 105
+   "lexicalised_derivations": 99
   },
   "status_counts": {
    "PASS": 23,
@@ -69,7 +69,7 @@
    "count": 0,
    "details": [],
    "details_total": 0,
-   "note": "0 new roots and 0 new function words checked.",
+   "note": "0 new roots and 1 new function words checked.",
    "executed_against": "entries with since == '2.5' (validate_1_1 supplement) (validate_2_5.py: 2.5 respells nothing)"
   },
   {
@@ -275,7 +275,7 @@
    "count": 0,
    "details": [],
    "details_total": 0,
-   "note": "Compared against liraasa_2_3.json with every 2.5 op re-applied independently; changesets: 2026-10-22-lexicon-2-5-album; 1 rulings added, 1 superseded, 0 amended, 0 covered; 0 texts and 0 values edited; 0 texts archived; 0 examples edited; 0 function-word fields edited; 0 function words added.",
+   "note": "Compared against liraasa_2_3.json with every 2.5 op re-applied independently; changesets: 2026-10-22-lexicon-2-5-album, 2026-10-22-lexicon-2-5; 42 rulings added, 3 superseded, 23 amended, 1 covered; 9 texts and 6 values edited; 1 texts archived; 16 examples edited; 10 function-word fields edited; 1 function words added.",
    "executed_against": "validate_2_5.py"
   }
  ]

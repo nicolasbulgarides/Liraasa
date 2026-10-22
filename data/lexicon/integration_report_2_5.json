@@ -10,12 +10,17 @@
    "file": "data/changes/2026-10-22-lexicon-2-5-album.json",
    "id": "2026-10-22-lexicon-2-5-album",
    "sha256": "748cc4eef4f5dd09991d7ec5c9415b5137136ec1d7d58d26cc27f780ffca2611"
+  },
+  {
+   "file": "data/changes/2026-10-22-lexicon-2-5.json",
+   "id": "2026-10-22-lexicon-2-5",
+   "sha256": "06d2293924fe34bf5c96781c6be4e222b5f46b4786450ce92ecf9ec40dd0b5ea"
   }
  ],
  "output": {
   "file": "liraasa_2_5.json",
-  "sha256": "540bc16f685ce7122f65a4da316ae80ebb27f2677d8ce6b6ac4feb0a2c7b87f3",
-  "bytes": 3039304
+  "sha256": "e2b36ecd1c477d3e4e4269e308d02baaad14b84d1ca8e1dcff9f0c988f8dc34f",
+  "bytes": 3076886
  },
  "counts": {
   "before": {
@@ -35,9 +40,9 @@
    "compounds": 988,
    "forms": 10241,
    "distinctForms": 10241,
-   "functionWords": 151,
+   "functionWords": 152,
    "correlatives": 39,
-   "lexicalisedDerivations": 105,
+   "lexicalisedDerivations": 99,
    "rhymeFamilies": 478
   },
   "imageCompoundsAttested": 391
