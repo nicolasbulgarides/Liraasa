@@ -1,0 +1,43 @@
+{
+ "id": "2026-10-22-lexicon-2-5-album",
+ "edition": "2.5",
+ "created": "2026-10-22T18:00:00Z",
+ "author": "nicolas",
+ "summary": "Liraasa 2.5, step 1 (D-00): 2.5:G87 retires the album as grammar canon, superseding 2.2:G68. The album stays as text, marked non-normative; its readings grant no exceptions. From the author's 2.5 patch (data/proposals/liraasa_2_5_patch.json).",
+ "ops": [
+  {
+   "entry": "2.5:G87",
+   "op": "add_ruling",
+   "from": null,
+   "to": "The album is not grammar canon",
+   "ruling": "2.5:G87",
+   "reason": "The author's 2.5 decision on D-00 (option retire album as canon).",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "2.2:G68",
+   "op": "supersede_ruling",
+   "from": "The album as reference corpus",
+   "to": "2.5:G87",
+   "ruling": "2.5:G87",
+   "reason": "The author's 2.5 decision on D-00 (option retire album as canon). 2.2:G68 is kept as ruled, never reworded; it is superseded by 2.5:G87.",
+   "addedIn": "2.5",
+   "at": "2026-10-22T18:00:00Z",
+   "author": "nicolas"
+  }
+ ],
+ "rulings": [
+  {
+   "id": "G87",
+   "topic": "The album is not grammar canon",
+   "ruling": "The album 'Liraasa: Songs of the First Stars' is not grammar canon. It stays in the data as text, marked non-normative. No album line licenses a construction, and album_reading annotations no longer grant exceptions.",
+   "supersedes": [
+    "2.2:G68"
+   ],
+   "examples": [],
+   "issue": "D-00"
+  }
+ ]
+}

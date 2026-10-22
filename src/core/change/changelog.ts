@@ -111,7 +111,25 @@ export type ChangeOp =
    * `text:numbers.rules.39.Construction rule`); `from` must be what the field
    * reads. Rulings are never edited this way: they are superseded.
    */
-  | 'edit_text';
+  | 'edit_text'
+  /**
+   * An earlier ruling amended in part by one this changeset adds (2.5). It is
+   * kept as ruled and marked `amended_by: [{by, scope}]`; where they differ the
+   * newer ruling is followed. `entry` is the old ruling's id, `from` its topic,
+   * `to` the new ruling's id, `field` what is amended.
+   */
+  | 'amend_ruling'
+  /**
+   * An earlier ruling whose content a newer one now covers (2.5:G121 covers
+   * 2.3:G75). Kept, marked `covered_by`. Same fields as `amend_ruling`.
+   */
+  | 'mark_ruling_covered'
+  /**
+   * A non-text value at `value:` + a dotted path (a slot's word list, a new
+   * field on a row). `from` and `to` are JSON; `from: null` adds a key that
+   * does not exist yet. Rulings are never edited this way (2.5).
+   */
+  | 'edit_value';
 
 /**
  * One recorded change.

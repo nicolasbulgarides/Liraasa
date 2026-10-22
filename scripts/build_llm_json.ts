@@ -29,7 +29,7 @@ import { parseArgs } from './args';
 
 const LEXICON = 'data/lexicon/liraasa_2_3.json';
 const OUT = 'handoff/liraasa_2_3_llm.json';
-/** The album, read against the live lexicon by scripts/build_album.ts (2.2:G68). */
+/** The album, read against the live lexicon by scripts/build_album.ts; non-normative (2.5:G87). */
 const ALBUM = 'data/corpus/album_2_0/album_current.json';
 const ALBUM_READINGS = 'data/corpus/album_2_0/album_readings.json';
 /** Words the prose names, by id, so a respelling carries through (CLAUDE.md). */
@@ -79,6 +79,14 @@ interface Ruling {
   supersedes?: string[];
   superseded_by?: string;
   superseded_in_part?: { clause: string; by: string }[];
+  /** 2.5 on: amended in part, or made redundant, by a later ruling; kept as ruled. */
+  amended_by?: { by: string; scope: string }[];
+  covered_by?: string;
+  issue?: string;
+  examples_ungrammatical?: [string, string][];
+  derived?: string[];
+  translator_preference?: string;
+  notes?: string;
 }
 interface Head {
   root: string;
@@ -112,15 +120,15 @@ interface AlbumReadingRow {
   confidence: string;
   issue: string;
   standard_form: string | null;
-  /** A ruling that made the reading's construction grammar (2.3:G74): the line is a model again. */
+  /** A ruling that made the reading's construction grammar (2.3:G74); since 2.5:G87 no line is a model. */
   resolved_by?: string;
 }
 
 /**
- * The album as canon example text (2.2:G68): 2.0 text with 2.0 spellings, a
- * line's current spelling beside it where it differs, and every album reading
- * flagged with its standard form, so a model imitates the standard form and
- * never the reading. No English: the author has not supplied it.
+ * The album as non-normative text (2.5:G87, superseding 2.2:G68): 2.0 text
+ * with 2.0 spellings, a line's current spelling beside it where it differs,
+ * and the album readings kept as annotations that license nothing. No
+ * English: the author has not supplied it.
  */
 function albumSection(): Record<string, unknown> {
   if (!existsSync(ALBUM)) return {};
@@ -133,16 +141,14 @@ function albumSection(): Record<string, unknown> {
   return {
     album: {
       how_to_use:
-        'The album: twelve songs and the alternate 05, canon 2.0 text written in 2.0 spellings (2.1:G58, 2.2:G68). Read it for how Liraasa is sung. ' +
-        'A line with "current" is spelled differently in this edition: write the current spelling. ' +
-        'A line with "album_reading" departs from the grammar once: it keeps its meaning, but DO NOT IMITATE it; imitate its standard_form instead (null: the author has not given one). No English is given.',
+        'Non-normative text. The album predates the 2.5 grammar and contains errors (for example adjective forms used as nouns). Read it for its content; do not imitate its grammar (2.5:G87). ' +
+        'A line with "current" is spelled differently in this edition. An "album_reading" is an annotation kept from earlier editions: it is not a licence, and a line without one is not thereby correct. No English is given.',
+      normative: false,
       tracks: album.songs.map((s) => ({
         track: s.track,
         title: s.title,
         lines: s.lines.map((l) => {
-          const found = l.reading === undefined ? undefined : readings.get(l.reading);
-          // a reading a later ruling made grammar is no longer a departure
-          const r = found?.resolved_by === undefined ? found : undefined;
+          const r = l.reading === undefined ? undefined : readings.get(l.reading);
           return {
             liraasa: l.recorded,
             ...(l.current === null ? {} : { current: l.current }),
@@ -151,9 +157,10 @@ function albumSection(): Record<string, unknown> {
               : {
                   album_reading: {
                     id: r.id,
-                    do_not_imitate: true,
+                    non_normative: true,
                     issue: r.issue,
                     standard_form: r.standard_form,
+                    ...(r.resolved_by === undefined ? {} : { formerly_resolved_by: r.resolved_by }),
                     ...(r.confidence === 'author_confirm' ? { awaiting_author: true } : {}),
                   },
                 }),
@@ -162,6 +169,20 @@ function albumSection(): Record<string, unknown> {
       })),
     },
   };
+}
+
+/** What a reader must know before following a ruling: superseded, amended or covered. */
+function rulingStatus(r: Ruling): string {
+  const parts: string[] = [];
+  if (r.superseded_by !== undefined)
+    parts.push(`SUPERSEDED by ${r.superseded_by}: do not follow; follow ${r.superseded_by}`);
+  for (const p of r.superseded_in_part ?? [])
+    parts.push(`the clause "${p.clause}" is SUPERSEDED by ${p.by}; the rest stands`);
+  for (const a of r.amended_by ?? [])
+    parts.push(`AMENDED by ${a.by} (${a.scope}): where they differ, follow ${a.by}`);
+  if (r.covered_by !== undefined)
+    parts.push(`covered by ${r.covered_by}, which states it more generally; it still stands`);
+  return parts.join('; ');
 }
 
 /** A ruling's example; the 2.2 rulings give none in English, and none is invented. */
@@ -221,20 +242,22 @@ function main(): void {
     rule: r.ruling,
     ...(r.refines !== undefined && r.refines.length > 0 ? { refines: r.refines } : {}),
     ...(r.supersedes !== undefined ? { supersedes: r.supersedes } : {}),
-    // kept, never reworded: a superseded ruling says so, and a model must follow the newer one
-    ...(r.superseded_by !== undefined
-      ? { status: `SUPERSEDED by ${r.superseded_by}: do not follow; follow ${r.superseded_by}` }
-      : {}),
-    ...(r.superseded_in_part !== undefined
-      ? {
-          status: r.superseded_in_part
-            .map((p) => `the clause "${p.clause}" is SUPERSEDED by ${p.by}; the rest stands`)
-            .join('; '),
-        }
-      : {}),
+    // kept, never reworded: a superseded or amended ruling says so, and a model must follow the newer one
+    ...(rulingStatus(r) === '' ? {} : { status: rulingStatus(r) }),
+    ...(r.issue !== undefined ? { issue: r.issue } : {}),
     ...(r.examples !== undefined && r.examples.length > 0
       ? { examples: r.examples.map(example) }
       : {}),
+    ...(r.examples_ungrammatical !== undefined
+      ? {
+          ungrammatical: r.examples_ungrammatical.map(([liraasa, why]) => ({ liraasa, why })),
+        }
+      : {}),
+    ...(r.translator_preference !== undefined
+      ? { translator_preference: r.translator_preference }
+      : {}),
+    ...(r.notes !== undefined ? { notes: r.notes } : {}),
+    ...(r.derived !== undefined ? { awaiting_author_confirmation: r.derived } : {}),
   }));
   rulings.push({
     id: 'ADR-0011',
@@ -320,7 +343,7 @@ function main(): void {
     title: `Liraasa ${lex.version}: the complete grammar and dictionary, for language models`,
     read_me_first: [
       'Liraasa is a constructed language built for singing, by one author. This file is the complete, authoritative description of it: every grammar rule and every word.',
-      'Read the sections in order: hard_rules, how_to_translate, sound, word_building, clause, recipes, rulings, small_words, dictionary, examples, album.',
+      'Read the sections in order: hard_rules, how_to_translate, sound, word_building, clause, recipes, rulings, small_words, dictionary, examples. The album at the end is non-normative text, not grammar (2.5:G87).',
       'Liraasa text in this file is always lowercase-spelled exactly as it must be written. Never change a spelling.',
       'When you write Liraasa, use only words that appear in this file (dictionary forms, small_words, numbers), or regular inflections and compounds built by the rules in word_building.',
       'After writing, check every line against self_check. If an English idea has no Liraasa word, say so instead of inventing one.',
