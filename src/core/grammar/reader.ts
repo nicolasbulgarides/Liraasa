@@ -102,9 +102,19 @@ function stem(ix: Index, s: string): Reading[] {
 export function readWord(
   ix: Index,
   text: string,
-  opts: { capital: boolean; first: boolean },
+  opts: { capital: boolean; first: boolean; quoted?: boolean },
 ): WordAnalysis {
   const w = text.toLowerCase();
+  if (opts.quoted === true)
+    return analysis(text, [
+      {
+        pos: 'noun',
+        form: w,
+        gloss: `the word “${text}”`,
+        source: 'closed',
+        detail: 'a word quoted',
+      },
+    ]);
 
   // 1, 2: exact form and closed word, every reading kept
   const exact = [...(ix.forms.get(w) ?? []), ...(ix.closed.get(w) ?? [])];
@@ -169,16 +179,38 @@ export function readWord(
     const end = suffixes.join('');
     if (end !== '' && !w.endsWith(end)) continue;
     const old = ix.source.legacy[end === '' ? w : w.slice(0, -end.length)];
-    if (old !== undefined && !(end !== '' && old.to.includes(' ')))
-      return analysis(text, [], {
+    if (old !== undefined && !(end !== '' && old.to.includes(' '))) {
+      // read with the shape of the word it became, so the clause still parses
+      const now = old.to.includes(' ')
+        ? []
+        : [...(ix.forms.get(old.to) ?? []), ...(ix.closed.get(old.to) ?? [])];
+      return analysis(text, now, {
         suffixes,
         problem: { kind: 'legacy', to: old.to + end, edition: old.edition ?? null },
       });
+    }
   }
 
-  // a form the rules would build and the dictionary leaves unlisted
+  // a form the rules would build and the dictionary leaves unlisted: its slot gives it a shape, not a meaning
   const unused = ix.unlisted.get(w);
-  if (unused !== undefined) return analysis(text, [], { problem: { kind: 'unused', ...unused } });
+  if (unused !== undefined) {
+    const pos =
+      unused.role === 'v' ? 'verb' : ['n', 'an', 'nn'].includes(unused.role) ? 'noun' : 'adj';
+    return analysis(
+      text,
+      [
+        {
+          pos,
+          form: w,
+          root: unused.root,
+          role: unused.role,
+          gloss: '(an unused slot: no meaning)',
+          source: 'listed',
+        },
+      ],
+      { problem: { kind: 'unused', ...unused } },
+    );
+  }
 
   // 8: a name, known or capitalised (-ti may attach to a name, 0.8:R12)
   const known = ix.names.has(w) || (w.endsWith('ti') && ix.names.has(w.slice(0, -2)));

@@ -486,7 +486,7 @@ function grammarTwo(c: Ctx): string {
   const ownerRows: readonly (readonly [string, string])[] = [
     ['maivo de lira', 'my song'],
     ['taivo de lira', 'your song'],
-    ['pilo de bumre', 'father’s bread'],
+    ['li bumre de pilo', 'father’s bread'],
     ['li bumre de li cilni', 'the bread of the city'],
   ];
   for (const [l, e] of ownerRows) c.check(l, e, 'Invitation, “de” table');
@@ -500,7 +500,7 @@ function grammarTwo(c: Ctx): string {
 ${p('A verb never changes its ending for time. `po` before it means it happened; `futu` means it will. With neither, it is happening now.')}
 ${lamentLine(c, 'lektaasa', 'The song begins with `po`, she *descended*, and ends with `futu` twice: I *will* embrace you, the reunion *will* come.')}
 <h3>Whose is it?</h3>
-${p('`de` means *of*. Usually the owner comes second, as in English “the bread of the city”. But when the first word is a person, *I*, *you* or someone’s name, that person is the owner.')}
+${p('`de` means *of*. Usually the owner comes second, as in English “the bread of the city”. But when the first word is *I*, *you* or someone’s name, that person is the owner. A word like *father* is not a name here: father’s bread is the bread *of* father.')}
 <div class="table-wrap"><table class="owners"><thead><tr><th scope="col">Liraasa</th><th scope="col">English</th></tr></thead><tbody>${owners}</tbody></table></div>
 ${p('That is how the Lament opens: `Maivo de amor`, my love.')}
 <aside class="tryit" aria-labelledby="try2"><h3 id="try2">Try it</h3>

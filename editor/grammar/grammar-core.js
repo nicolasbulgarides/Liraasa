@@ -602,6 +602,10 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
         np.quant = this.i;
         this.i += 1;
       }
+      if (np.quant !== null && (this.is(this.i, "pron") || this.is(this.i, "name")) && this.w(this.i + 1) === "de") {
+        const owner = this.parseNPCore(opts);
+        if (owner !== null) return { ...owner, start, quant: np.quant };
+      }
       if (this.is(this.i, "det")) {
         np.det = this.i;
         this.i += 1;
@@ -1007,7 +1011,30 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
         this.parseObject(clause, ctx);
       } else if (clause.subject !== null && this.is(v, "prep") && !this.verbish(v)) {
         const pp = this.parsePP();
-        if (pp !== null) {
+        if (pp !== null && this.predicateStart(this.i)) {
+          this.find(
+            "2.5:G98",
+            `a ${this.w(v)} phrase stands between the subject and the verb: a noun phrase takes de or a raho clause after it (… raho ke ${this.w(v)} …)`,
+            [v]
+          );
+          this.roleSpan(pp.start, pp.end, "SUBJECT");
+          clause.adjuncts.push(pp);
+          this.parseOps(clause, "ops");
+          const v2 = this.i;
+          if (this.is(v2, "copula")) {
+            clause.verb = v2;
+            this.role(v2, "COPULA");
+            this.i += 1;
+            clause.predKind = "copula";
+            this.parsePredicate(clause, v2);
+          } else if (this.verbish(v2)) {
+            clause.verb = v2;
+            clause.predKind = "verb";
+            this.role(v2, "VERB");
+            this.i += 1;
+            this.parseObject(clause, ctx);
+          }
+        } else if (pp !== null) {
           this.find(
             "2.5:G128",
             `a ${this.w(v)} phrase as the predicate needs ke or ka (SUBJECT ke ${this.w(v)} …)`,
@@ -1098,7 +1125,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
         }
       }
       const onlyNe = clause.ops.length > 0 && clause.ops.every((o) => o.slot === "NEGATION");
-      if (clause.predKind === "none" && onlyNe && (this.npStart(this.i) || this.is(this.i, "attitude") || this.is(this.i, "timeAdv") || this.is(this.i, "placeAdv") || this.is(this.i, "mannerAdv") || this.adjish(this.i) || this.atEnd() || this.isPunct(this.i, ","))) {
+      if (clause.predKind === "none" && onlyNe && (this.npStart(this.i) || this.w(this.i) === "la" || this.is(this.i, "attitude") || this.is(this.i, "timeAdv") || this.is(this.i, "placeAdv") || this.is(this.i, "mannerAdv") || this.adjish(this.i) || this.atEnd() || this.isPunct(this.i, ","))) {
         if (this.npStart(this.i)) {
           const np = this.parseNP({ adverbHead: true });
           if (np !== null) {
@@ -1116,6 +1143,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
           }
         } else if (this.adjish(this.i)) this.parseAdjP(clause);
         else if (this.is(this.i, "attitude")) this.parseClosing(clause);
+        else if (this.w(this.i) === "la") this.parseAdjuncts(clause);
         else if (!this.atEnd() && !this.isPunct(this.i)) {
           this.role(this.i, "ADJUNCT");
           clause.adjuncts.push({
@@ -1408,7 +1436,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       if (this.side(k) && this.npStart(k + 1)) return;
       const first = this.parseNP();
       if (first === null) return;
-      if (this.npStart(this.i) && !this.is(this.i, "prep") && !this.is(this.i, "timeAdv") && !this.is(this.i, "placeAdv") && first.headKind !== "adj") {
+      if (this.npStart(this.i) && this.w(this.i) !== "sidu" && !this.is(this.i, "prep") && !this.is(this.i, "timeAdv") && !this.is(this.i, "placeAdv") && first.headKind !== "adj") {
         const save = this.i;
         const second = this.parseNP();
         if (second !== null) {
@@ -2159,6 +2187,16 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
             this.clauseNo -= 1;
             continue;
           }
+          if (main.object !== null && this.npStart(n2) && !this.clauseAhead(n2)) {
+            const save2 = this.i;
+            const np2 = this.parseNP();
+            if (np2 !== null && (this.isPunct(this.i, ",") || this.onlyEndPunct())) {
+              this.roleSpan(np2.start, np2.end, "OBJECT");
+              continue;
+            }
+            this.i = save2;
+            for (let x = save2; x < this.t.length; x++) this.roles.delete(x);
+          }
           if (!this.startsSubordinate(n2) && !["ata", "nara", "oro"].includes(w2) && (this.is(n2, "prep") || this.is(n2, "comparison") || this.is(n2, "timeAdv") || this.is(n2, "placeAdv") || this.is(n2, "mannerAdv") || w2 === "la") && !this.clauseAhead(n2)) {
             const before = this.i;
             const count = main.adjuncts.length;
@@ -2349,6 +2387,16 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
   }
   function readWord(ix, text, opts) {
     const w = text.toLowerCase();
+    if (opts.quoted === true)
+      return analysis(text, [
+        {
+          pos: "noun",
+          form: w,
+          gloss: `the word “${text}”`,
+          source: "closed",
+          detail: "a word quoted"
+        }
+      ]);
     const exact = [...ix.forms.get(w) ?? [], ...ix.closed.get(w) ?? []];
     if (exact.length > 0) {
       if (opts.capital && !opts.first && ix.names.has(w))
@@ -2396,14 +2444,32 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       const end = suffixes.join("");
       if (end !== "" && !w.endsWith(end)) continue;
       const old = ix.source.legacy[end === "" ? w : w.slice(0, -end.length)];
-      if (old !== void 0 && !(end !== "" && old.to.includes(" ")))
-        return analysis(text, [], {
+      if (old !== void 0 && !(end !== "" && old.to.includes(" "))) {
+        const now = old.to.includes(" ") ? [] : [...ix.forms.get(old.to) ?? [], ...ix.closed.get(old.to) ?? []];
+        return analysis(text, now, {
           suffixes,
           problem: { kind: "legacy", to: old.to + end, edition: old.edition ?? null }
         });
+      }
     }
     const unused = ix.unlisted.get(w);
-    if (unused !== void 0) return analysis(text, [], { problem: { kind: "unused", ...unused } });
+    if (unused !== void 0) {
+      const pos = unused.role === "v" ? "verb" : ["n", "an", "nn"].includes(unused.role) ? "noun" : "adj";
+      return analysis(
+        text,
+        [
+          {
+            pos,
+            form: w,
+            root: unused.root,
+            role: unused.role,
+            gloss: "(an unused slot: no meaning)",
+            source: "listed"
+          }
+        ],
+        { problem: { kind: "unused", ...unused } }
+      );
+    }
     const known = ix.names.has(w) || w.endsWith("ti") && ix.names.has(w.slice(0, -2));
     if (known || opts.capital)
       return analysis(text, [
@@ -2460,6 +2526,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       cur = [];
     };
     let afterColon = false;
+    let mention = false;
     for (const t of tokens) {
       const opening = t.kind === "punct" && (t.text === "“" || t.text === '"' && !inQuote);
       if (opening && afterColon) {
@@ -2467,7 +2534,14 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
         quote = [];
         continue;
       }
-      if (t.kind === "punct" && /^["“”]$/.test(t.text) && !inQuote) continue;
+      if (t.kind === "punct" && /^["“”]$/.test(t.text) && !inQuote) {
+        mention = !mention;
+        continue;
+      }
+      if (mention && t.kind === "word") {
+        cur.push({ ...t, quoted: true });
+        continue;
+      }
       if (inQuote) {
         if (t.kind === "punct" && (t.text === "”" || t.text === '"')) {
           inQuote = false;
@@ -2609,13 +2683,19 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
   function createChecker(source) {
     const ix = buildIndex(source);
     const p = source.rules;
+    const selfCheck = source.ref.self_check ?? [];
+    const unusedSeverity = selfCheck.find((r) => r.source === "0.8:R2")?.severity ?? "warn";
     function checkSentence(text, offset = 0, preTokens) {
       const base = preTokens ?? tokenize$1(text);
       const firstAt = base.findIndex((t) => t.kind === "word");
       const tokens = base.map((t, k) => {
         if (t.kind !== "word") return t;
         const capital = /^[A-ZÀ-Ý]/.test(t.text);
-        return { ...t, capital, word: readWord(ix, t.text, { capital, first: k === firstAt }) };
+        return {
+          ...t,
+          capital,
+          word: readWord(ix, t.text, { capital, first: k === firstAt, quoted: t.quoted === true })
+        };
       });
       const parser = new SentenceParser(ix, tokens);
       const parsed = parser.parse();
@@ -2652,8 +2732,9 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
           case "unused":
             add(
               "0.8:R2",
-              `${t.text}: the ${a.problem.role} form of ${a.problem.root} is an unused slot; only listed forms exist`,
-              [k]
+              `${t.text}: the ${a.problem.role} form of ${a.problem.root} is an unused slot; only listed forms have a meaning, and a slot is filled only by an approved change`,
+              [k],
+              unusedSeverity
             );
             break;
           case "legacy":

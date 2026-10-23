@@ -77,6 +77,7 @@ function sentencesOf(tokens: Token[]): { tokens: Token[]; quote: boolean }[] {
     cur = [];
   };
   let afterColon = false;
+  let mention = false;
   for (const t of tokens) {
     const opening = t.kind === 'punct' && (t.text === '“' || (t.text === '"' && !inQuote));
     if (opening && afterColon) {
@@ -84,8 +85,15 @@ function sentencesOf(tokens: Token[]): { tokens: Token[]; quote: boolean }[] {
       quote = [];
       continue;
     }
-    // quotation marks around a word mentioned (ne "juba", nara "donu") are read through
-    if (t.kind === 'punct' && /^["“”]$/.test(t.text) && !inQuote) continue;
+    // quotation marks around a word mentioned (ne "juba", nara "donu"): the word is a mention
+    if (t.kind === 'punct' && /^["“”]$/.test(t.text) && !inQuote) {
+      mention = !mention;
+      continue;
+    }
+    if (mention && t.kind === 'word') {
+      cur.push({ ...t, quoted: true });
+      continue;
+    }
     if (inQuote) {
       if (t.kind === 'punct' && (t.text === '”' || t.text === '"')) {
         inQuote = false;
@@ -234,6 +242,12 @@ function analysisOf(r: Reading | undefined, token: Token): string {
 export function createChecker(source: GrammarSource): Checker {
   const ix = buildIndex(source);
   const p = source.rules;
+  // the severities the reference's self_check gives (a form whose slot is unused: warn)
+  const selfCheck =
+    (source.ref as unknown as { self_check?: { severity: string; source: string }[] }).self_check ??
+    [];
+  const unusedSeverity = (selfCheck.find((r) => r.source === '0.8:R2')?.severity ??
+    'warn') as Finding['severity'];
 
   function checkSentence(text: string, offset = 0, preTokens?: Token[]): SentenceResult {
     const base = preTokens ?? tokenize(text);
@@ -241,7 +255,11 @@ export function createChecker(source: GrammarSource): Checker {
     const tokens: Token[] = base.map((t, k) => {
       if (t.kind !== 'word') return t;
       const capital = /^[A-ZÀ-Ý]/.test(t.text);
-      return { ...t, capital, word: readWord(ix, t.text, { capital, first: k === firstAt }) };
+      return {
+        ...t,
+        capital,
+        word: readWord(ix, t.text, { capital, first: k === firstAt, quoted: t.quoted === true }),
+      };
     });
     const parser = new SentenceParser(ix, tokens);
     const parsed = parser.parse();
@@ -286,8 +304,9 @@ export function createChecker(source: GrammarSource): Checker {
         case 'unused':
           add(
             '0.8:R2',
-            `${t.text}: the ${a.problem.role} form of ${a.problem.root} is an unused slot; only listed forms exist`,
+            `${t.text}: the ${a.problem.role} form of ${a.problem.root} is an unused slot; only listed forms have a meaning, and a slot is filled only by an approved change`,
             [k],
+            unusedSeverity,
           );
           break;
         case 'legacy':

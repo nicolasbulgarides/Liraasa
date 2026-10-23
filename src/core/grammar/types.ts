@@ -104,6 +104,8 @@ export interface Token {
   word?: WordAnalysis;
   /** Capitalised and not the first word of its sentence. */
   capital?: boolean;
+  /** Inside quotation marks, not after a colon: a word mentioned, not used. */
+  quoted?: boolean;
 }
 
 export type Severity = 'error' | 'warn' | 'unruled' | 'note';

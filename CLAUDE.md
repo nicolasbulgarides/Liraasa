@@ -24,7 +24,31 @@ made from the frozen 1.1 by the two changesets in `data/changes/` via
 151 function words, rulings 1.2:G24–G36, and 25 of 25 validator checks passing
 (`npm run validate:1.2`). 1.2 is now frozen as 2.0's baseline.
 
-**2.3 is current** (ADR-0019): `data/lexicon/liraasa_2_3.json`, built from
+**2.5 is current** (ADR-0020): `data/lexicon/liraasa_2_5.json`, built from
+frozen 2.3 by three changesets via `npm run integrate:2.5` (made by
+`scripts/make_changeset_2_5.ts` from the author's grammar patch
+`data/proposals/liraasa_2_5_patch.json` and its README `LIRAASA_2_5_README.md`):
+rulings 2.5:G87–G128, the author's decisions on the 2.3 audit. **2.5:G87: the
+album is not grammar canon** (2.2:G68 superseded); it stays as text and licenses
+nothing. An amended ruling is kept as ruled and marked `amended_by` (op
+`amend_ruling`); new ops `mark_ruling_covered`, `edit_value`. The one new word
+is `antizi` (minus); no spelling changed. Validation 23 PASS, 2 WARN
+(`npm run validate:2.5`, with `PYTHONUTF8=1` on Windows). **The strict checker**
+is `src/core/grammar`: every word read, every sentence parsed against the 2.5
+clause template with its edges (G126) and the noun-phrase template (G98), each
+word's form checked against its slot, every finding with its rule id, what is
+not ruled reported as `unruled`; its word lists and rule parameters are data
+(`data/checker/rules_2_5.json`). **The translator** is `src/core/translate`:
+English → meaning frame → Liraasa by the rulings → the strict checker →
+back-translation, with an interlinear gloss; its English side is data
+(`data/translate/english_2_5.json`). Both are bundled into `editor/grammar/` by
+`npm run build:grammar`; the editor takes grammar only from them (the 2.3
+checker in `editor/checker/` reads the frozen 2.3 reference and keeps the English
+pairing check, calques and register notes). There is no approve button: the
+editor records a **proposed ruling** instead. Open questions and drafts for the
+author: `review/questions_2_5.md`. 2.3 is frozen as 2.5's baseline.
+
+**2.3** (ADR-0019): `data/lexicon/liraasa_2_3.json`, built from
 frozen 2.2 by `data/changes/2026-10-19-lexicon-2-3.json` via
 `npm run integrate:2.3` (made by `scripts/make_changeset_2_3.ts` from the
 author's sound-pass patch `data/proposals/liraasa_2_3_patch.json`; the
@@ -108,7 +132,7 @@ first. Also shipped: the MFA phonetic export (`npm run export:mfa`) and the
 standalone writing tool in `editor/` — a journal with collections, an
 English-to-Liraasa assisted composer, MFA export, and a grammar checker
 (`editor/checker/`, ADR-0014) that underlines each finding with its rule and
-fix. The checker reads the 2.3 LLM reference; what the JSON does not say is
+fix. The strict checker reads the 2.5 LLM reference; what the JSON does not say is
 data in `data/checker/`, never code. **Learn** (ADR-0015) is the editor's
 training program: a pure core in `src/core/learn/`, bundled into
 `editor/learn/` by `npm run build:learn`, progress in IndexedDB, author
@@ -166,6 +190,11 @@ validator and parser.
 | `npm run validate:2.2`     | validate.py unmodified (on the lexicon less reverted respelling rows) plus the edition-aware re-runs → `data/lexicon/validation_2_2.json`.                                                                                                                                    | **working** |
 | `npm run integrate:2.3`    | Build 2.3 from frozen 2.2 plus the 2.3 changeset (sha-checked baseline). `-- --check` writes nothing (ADR-0019).                                                                                                                                                              |
 | `npm run validate:2.3`     | validate.py unmodified plus the edition-aware re-runs (check 18 for the new and moved roots; 25 keeps superseded rulings as ruled) → `data/lexicon/validation_2_3.json`.                                                                                                      |
+| `npm run integrate:2.5`    | Build 2.5 from frozen 2.3 plus the three 2.5 changesets (sha-checked baseline). `-- --check` writes nothing (ADR-0020).                                                                                                                                                       | **working** |
+| `npm run validate:2.5`     | validate_2_3.py for checks 1–24 (2.5 respells nothing); check 25 re-applies every 2.5 op independently → `data/lexicon/validation_2_5.json`.                                                                                                                                  | **working** |
+| `npm run build:grammar`    | The checker's derived data (`transitive_2_5.json`, the drafts) and the editor's bundle of the strict checker and translator → `editor/grammar/`. Run after `build:llm`.                                                                                                       | **working** |
+| `npm run check:line`       | Read Liraasa lines through the strict checker: the gloss and every finding with its rule.                                                                                                                                                                                     | **working** |
+| `npm run translate`        | English → Liraasa through the 2.5 pipeline, with the gloss, the back-translation and every flag.                                                                                                                                                                              | **working** |
 | `npm run build:album`      | Read the album against the live lexicon → `data/corpus/album_2_0/album_current.json`. Run by `build:llm`.                                                                                                                                                                     | **working** |
 | `npm run check:sounds`     | Sound-collision audit of 2.3 (`--candidates FILE` vets proposed spellings: template, collision, distance, parse, singability). Python stdlib.                                                                                                                                 | **working** |
 | `npm run integrate`        | Build 1.1 from the frozen 1.0 plus a vocabulary proposal. `-- --check` audits and writes nothing (ADR-0009).                                                                                                                                                                  | **working** |

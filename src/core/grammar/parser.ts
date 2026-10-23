@@ -359,6 +359,15 @@ export class SentenceParser {
       np.quant = this.i;
       this.i += 1;
     }
+    // a quantifier before a pronoun or a name that owns: toda maivo de cono
+    if (
+      np.quant !== null &&
+      (this.is(this.i, 'pron') || this.is(this.i, 'name')) &&
+      this.w(this.i + 1) === 'de'
+    ) {
+      const owner = this.parseNPCore(opts);
+      if (owner !== null) return { ...owner, start, quant: np.quant };
+    }
     // [DETERMINER]
     if (this.is(this.i, 'det')) {
       np.det = this.i;
@@ -861,7 +870,31 @@ export class SentenceParser {
     } else if (clause.subject !== null && this.is(v, 'prep') && !this.verbish(v)) {
       // a place or other prepositional predicate needs a copula (2.5:G128)
       const pp = this.parsePP();
-      if (pp !== null) {
+      if (pp !== null && this.predicateStart(this.i)) {
+        // the subject's noun phrase takes de or a raho clause, not a prepositional phrase (2.5:G98)
+        this.find(
+          '2.5:G98',
+          `a ${this.w(v)} phrase stands between the subject and the verb: a noun phrase takes de or a raho clause after it (… raho ke ${this.w(v)} …)`,
+          [v],
+        );
+        this.roleSpan(pp.start, pp.end, 'SUBJECT');
+        clause.adjuncts.push(pp);
+        this.parseOps(clause, 'ops');
+        const v2 = this.i;
+        if (this.is(v2, 'copula')) {
+          clause.verb = v2;
+          this.role(v2, 'COPULA');
+          this.i += 1;
+          clause.predKind = 'copula';
+          this.parsePredicate(clause, v2);
+        } else if (this.verbish(v2)) {
+          clause.verb = v2;
+          clause.predKind = 'verb';
+          this.role(v2, 'VERB');
+          this.i += 1;
+          this.parseObject(clause, ctx);
+        }
+      } else if (pp !== null) {
         this.find(
           '2.5:G128',
           `a ${this.w(v)} phrase as the predicate needs ke or ka (SUBJECT ke ${this.w(v)} …)`,
@@ -973,6 +1006,7 @@ export class SentenceParser {
       clause.predKind === 'none' &&
       onlyNe &&
       (this.npStart(this.i) ||
+        this.w(this.i) === 'la' ||
         this.is(this.i, 'attitude') ||
         this.is(this.i, 'timeAdv') ||
         this.is(this.i, 'placeAdv') ||
@@ -999,6 +1033,7 @@ export class SentenceParser {
         }
       } else if (this.adjish(this.i)) this.parseAdjP(clause);
       else if (this.is(this.i, 'attitude')) this.parseClosing(clause);
+      else if (this.w(this.i) === 'la') this.parseAdjuncts(clause);
       else if (!this.atEnd() && !this.isPunct(this.i)) {
         this.role(this.i, 'ADJUNCT');
         clause.adjuncts.push({
@@ -1329,6 +1364,7 @@ export class SentenceParser {
     // a second bare noun phrase: a recipient pronoun + the theme (2.5:G112)
     if (
       this.npStart(this.i) &&
+      this.w(this.i) !== 'sidu' &&
       !this.is(this.i, 'prep') &&
       !this.is(this.i, 'timeAdv') &&
       !this.is(this.i, 'placeAdv') &&
@@ -2252,6 +2288,17 @@ export class SentenceParser {
           main.subordinates.push(c);
           this.clauseNo -= 1;
           continue;
+        }
+        // a list: another noun phrase after a comma (… doli cono, cono, cono)
+        if (main.object !== null && this.npStart(n2) && !this.clauseAhead(n2)) {
+          const save2 = this.i;
+          const np2 = this.parseNP();
+          if (np2 !== null && (this.isPunct(this.i, ',') || this.onlyEndPunct())) {
+            this.roleSpan(np2.start, np2.end, 'OBJECT');
+            continue;
+          }
+          this.i = save2;
+          for (let x = save2; x < this.t.length; x++) this.roles.delete(x);
         }
         // an adjunct set off by a comma: , gase Dorin / , kroti li merno / , eli-pago
         if (
