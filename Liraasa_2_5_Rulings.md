@@ -1,6 +1,369 @@
-# Liraasa 2.3 Reference Grammar: every ruling
+# Liraasa 2.5 Reference Grammar: every ruling
 
-Verbatim from the Liraasa 2.3 lexicon, newest edition first. Ruling ids are edition-qualified: 0.8:G7 and 1.0:G7 are different rulings.
+Verbatim from the Liraasa 2.5 lexicon, newest edition first. Ruling ids are edition-qualified: 0.8:G7 and 1.0:G7 are different rulings.
+
+## Rulings 2.5
+
+### 2.5:G87: The album is not grammar canon
+
+The album 'Liraasa: Songs of the First Stars' is not grammar canon. It stays in the data as text, marked non-normative. No album line licenses a construction, and album_reading annotations no longer grant exceptions.
+
+Supersedes 2.2:G68.
+
+### 2.5:G88: Questions end in ki; a fronted ki-word may drop it
+
+A yes/no question ends in ki. A content question ends in ki unless its ki-word is the first word of the sentence; a ki-word left in its answer's place requires the final ki. This exception covers ki-coda, ki-pago, ki-krono, ki-nela, ki-nela de, ki-kasa, manner ki-modo and ki-muya-krono only. Questions with ki-eli + noun, ki-muya + noun and degree ki-modo + adjective always end in ki (2.3:G76, 2.2:G61 stand), and the same three without ki remain exclamations. Embedded questions never take ki (2.3:G77 stands). A ki-word in its answer's place in a clause without final ki is an embedded question or part of a statement, never a direct question.
+
+Refines 2.2:G60.
+
+- *Ki-kasa taivo po amora maivo?* — Why did you love me?
+- *Ki-kasa taivo po amora maivo ki?* — Why did you love me?
+- *Taivo pagopa ki-pago ki?* — Where are you going?
+- *Maivo po masuma li talirivo ki-kasa.* — I asked my colleague why. (statement)
+- *Ki-eli nullo!* — What a night! (exclamation)
+
+### 2.5:G89: Which clause a final ki or attitude word belongs to
+
+A ki or attitude word (seye, mufe, poye, pifu, zoke) at the end of a sentence belongs to the main clause, even when a subordinate clause follows it. Doubt inside a trailing subordinate clause is expressed with a modal (nosi); an embedded yes/no question uses ki-oro. ki is the last word of the sentence, except that a vocative set off by a comma may follow it.
+
+Refines 1.0:G22.
+
+- *Taivo sabesia fime maivo lirala poye.* — Perhaps you know that I sing.
+- *Taivo sabesia fime maivo nosi lirala.* — You know that I might sing.
+- *Taivo sabesia fime maivo lirala ki?* — Do you know that I sing?
+
+### 2.5:G126: The clause's closing order and its edge positions
+
+A clause closes in this order: … VERB [OBJECT] [ADJUNCTS] [fuyi] [STATUS: hoyo | yasmo] [ATTITUDE] [ki]. Closing time words, durations and clause-final reve / loki stand among the adjuncts, before fuyi. Outside the core slots, a clause has edge positions. Before it, in order: a line linker (ata, oro, nara), FRAME, TOPIC, then a fronted ki-word (2.5:G88). After it: a vocative set off by a comma, which may follow ki.
+
+Refines 2.3:G78, 2.1:G55.
+
+- *Maivori lirala toda-krono fuyi pifu.* — May we always sing to each other.
+- *Ki-pago taivo pagopa?* — Where are you going? (fronted ki-word)
+- *Taivo viki pagopa ligo maivo ki, maivo de amor?* — Would you come near me, my love?
+
+### 2.5:G127: What may stand in FRAME
+
+FRAME, the clause-opening slot set off by a comma, holds a time adverbial or a place adverbial. Tense words (po, futu, pressa) and iteration words (reve, loki, bodu) are not frame words and are never closing time words.
+
+Refines 1.2:G24.
+
+- *Eli-pago, maivo lirala.* — Here, I sing.
+- *Deyaapo, maivo po lirala.* — Yesterday, I sang.
+
+### 2.5:G90: A command is marked
+
+A command is marked. In writing it ends in '!' or contains fisa; in speech, fisa or command intonation marks it. A subjectless, tenseless clause with neither mark is an elliptical statement, not a command.
+
+Refines 1.2:G31, 2.1:G56.
+
+- *Ne lirala!* — Don't sing!
+- *Fisa, ne lirala.* — Please don't sing.
+- *Fisa, lisrola.* — Please stay.
+- *Taivo lirala ki? — Ne lirala.* — Do you sing? — (I) don't sing.
+
+### 2.5:G91: Fragment questions
+
+A fragment question follows the ki rule: it ends in ki.
+
+- *Ata ki?* — And?
+
+### 2.5:G92: Echo ki
+
+Echo ki attaches only to a single word or a bare noun phrase. raho + clause + ki is therefore always a direct question (2.3:G74 stands).
+
+Refines 0.8:G3.
+
+- *Raho lirala ki?* — Who sings?
+- *Ki-nela lirala ki?* — Who sings?
+- *Lira ki?* — A song? (echo)
+
+### 2.5:G93: ke and ka: one contrast for every predicate
+
+ke and ka mark one contrast for every kind of predicate (adjective, noun phrase or location): ke = holds now, or for a time; ka = lasting, defining, by nature.
+
+Supersedes clause.copulas definitions of ke and ka, function_words rows ke, ka (definitions).
+
+- *Li kavbikova ke su li tabu.* — The basket is on the table (right now).
+- *Li nimu ka ligo li cilni.* — The home is near the city (it always has been).
+- *Maivo po ke linuti.* — I was a little child (back then).
+- *Maivo ka lirayo.* — I am a singer (it's who I am).
+- *Li nela ke benasan.* — The person is good at the moment.
+- *Li sora ka benasan.* — The friend is good by nature.
+
+### 2.5:G128: The minimal clause
+
+The minimal clause is SUBJECT + VERB, with these exceptions: commands, hortatives, permitted ellipsis, existential miyo clauses (which have no subject), and bare adjective predicates. A bare adjective predicate (SUBJECT ADJECTIVE, no copula) is allowed only in the present with no operators; anything more needs ke or ka.
+
+- *Nela vanisan.* — The person is beautiful.
+- *Li nela po ke vanisan.* — The person was beautiful.
+- *Miyo baba sora en li nimu.* — There is a friend in the home.
+
+### 2.5:G94: po ka and kapoki
+
+po ka = was (lasting), with no claim about now. kapoki = was, and no longer is. (With 2.5:G93, po ke = was, at that time.)
+
+- *Saivo po ka benasan.* — They were good (no claim about now).
+- *Saivo kapoki benasan.* — They were good, and no longer are.
+
+### 2.5:G95: Kinship nouns are not names for possession
+
+Kinship nouns (pilo, mare and the rest) are never treated as names for possession. Only a pronoun, or a personal name standing before de, is the owner; otherwise X de Y = 'X of Y' (Y owns). When both sides are personal names, the left one owns.
+
+Refines 1.2:G27, 1.2:G32.
+
+- *li bumre de pilo* — father's bread
+- *pilo de bumre* — the father of the bread
+- *Kipo de Dorin* — Kipo's Dorin
+- *maivo de lira* — my song
+
+### 2.5:G96: Chains of de
+
+Chains of de group from the left: X de Y de Z = (X de Y) de Z. The ownership rules apply first to X de Y, then to that whole phrase de Z.
+
+- *li suma de maivo de yuge* — my warmth, of the body  [(li suma de maivo) de yuge]
+
+### 2.5:G97: NUMBER de NUMBER
+
+NUMBER de NUMBER may be a fraction or a partitive; context decides. Fractions are written with spaces (tressa de cuara), never hyphenated.
+
+- *tressa de cuara* — three quarters
+- *Una de dossa futu relnura.* — One of the two will return / One half will return.
+
+### 2.5:G98: Noun-phrase order
+
+Noun-phrase order: [QUANTIFIER] [DETERMINER: li | baba | eli | ola | eliri | olari | ki-eli | OWNER de] [ORDINAL] [NUMBER] {[DEGREE WORD] ADJECTIVE} NOUN[-ti][-ri] [de NP] [raho CLAUSE]. The ordinal stands right after the determiner, before the adjectives. Degree words (ruli, kasi, menu, mosa, lusu, gase, diba) stand directly before the adjective they modify. ki-muya fills the QUANTIFIER slot. OWNER de takes only a pronoun or a personal name (2.5:G95).
+
+Supersedes clause.noun_phrase template.
+
+- *li una-ne ruli vanisan lira* — the first very beautiful song
+- *baba ruli vanisan lira* — a very beautiful song
+- *eliri lirari* — these songs
+
+### 2.5:G99: li after a side noun
+
+li may not be dropped after a side noun (nazru, zavme, silda, cemnu, lizma, rizno) used as a preposition.
+
+- *Li lavra semnesia nazru li nimu.* — The bird sits behind the home.
+
+### 2.5:G100: maivo: I and Self
+
+maivo is deliberately both the pronoun 'I' and the noun 'Self'. Context decides.
+
+- *Maivo ka vanisan.* — I am beautiful. / The Self is beautiful.
+
+### 2.5:G101: Which words take -ri, and plural agreement
+
+-ri attaches to nouns, pronouns, demonstratives, and an adjective used as a noun after a determiner; never to a bare adjective or a verb. After any count word (a number, a quantifier, eliri or olari), -ri on the noun is optional, chosen by sound and meter. A singular demonstrative (eli, ola) takes a singular noun.
+
+Refines 1.2:G28.
+
+- *li benasanri* — the good ones
+- *eliri lira* — these songs
+- *eliri lirari* — these songs
+- *dossa lira* — two songs
+
+### 2.5:G102: Pronouns for animals
+
+An animal is referred to with ito by default. A named animal takes saivo.
+
+- *Li lavra lirala; ito ka vanisan.* — The bird sings; it is beautiful.
+- *Nilo lirala; saivo ka vanisan.* — Nilo (the bird) sings; she is beautiful.
+
+### 2.5:G103: Time nouns as "when"
+
+Only listed time adverbials stand bare as 'when': entries in the time-adverbial table, -krono correlatives, and day compounds (deyapressa, deyaapo, deyafutu). A plain time noun (merno, nullo, vesno, mambi, lornu …) used as 'when' takes en. A bare plain noun after a verb is its object.
+
+- *Maivo vimova en merno.* — I see in the morning.
+- *Maivo vimova merno.* — I see the morning.
+- *Maivo lirala deyapressa.* — I sing today.
+- *Maivo lirala toda-krono.* — I always sing.
+
+### 2.5:G104: yuta, en, ko and la: one test per word
+
+One test per word. yuta = a tool, means or substance handled or used up. en = a medium or state one is in, including a manner seen as a medium. ko = a companion, or an emotion that accompanies the act. la + adjective = the quality of the action.
+
+Refines 1.2:G33, 2.3:G73.
+
+- *Maivo lallela li dorbi yuta li kemye.* — I open the door with the key.
+- *Saivo po senosia en baba melosan valla.* — She spoke in a musical voice.
+- *Maivo lirala ko amor.* — I sing with love.
+- *Maivo lirala ko saivo.* — I sing with him.
+- *Maivo lirala la molusan.* — I sing gently.
+
+### 2.5:G105: Where la + adjective stands
+
+la + adjective stands only among the adjuncts, after the verb and object. A degree word goes between la and the adjective: la ruli molusan.
+
+- *Maivo lirala la ruli molusan.* — I sing very gently.
+
+### 2.5:G106: Comparing amounts and manner
+
+Amounts: kasi or menu + noun … tamo NP. Manner: la kasi (or la menu) + adjective … tamo NP.
+
+- *Maivo tovota kasi lirari tamo taivo.* — I have more songs than you.
+- *Maivo lirala la kasi molusan tamo taivo.* — I sing more gently than you.
+
+### 2.5:G107: gase + a number
+
+gase + a number may mean 'about' or 'like'; context decides.
+
+- *Maivo tovota gase dossa cono.* — I have about two coins. / … something like two coins.
+
+### 2.5:G108: Measures with kroti and krotiapo
+
+A measure (for kroti 'ago' and krotiapo 'from now') is NUMBER + unit, or a listed quantifier + unit. Listed quantifiers: AUTHOR INPUT NEEDED.
+
+- *Maivo po venreva kroti dossa deya.* — I came two days ago.
+
+### 2.5:G109: Valency operators: the full pattern
+
+Valency operators vaku (make), lesvu (let) and tekvu (prevent): CAUSER [TENSE] [noma] [ne] [MODAL] … [EVIDENTIAL] OP ACTOR [ne] [APPROACH] [PHASE] [EFFORT] VERB [OBJECT]. Tense, modal and evidential belong to the main clause; the actor's own negation, approach, phase and effort follow the actor. The embedded verb may take an object.
+
+Refines 1.0:G14.
+
+- *Maivo vaku saivo sapusia li nami.* — I make him eat the food.
+- *Taivo vaku maivo lirala.* — You make me sing.
+- *Maivo po lesvu saivo pagopa.* — I let them leave.
+
+### 2.5:G110: Passives, and change-of-state verbs
+
+gome may passivise any verb that is attested with an object anywhere in the data. Without gome, the subject is the doer, except for the listed change-of-state verbs, whose subject may be the thing that changes (an anticausative reading).
+
+- *Li lira gome sarbisia gagu maivo.* — The song is written by me.
+- *Zafra, li dorbi po lallela.* — Suddenly the door opened.
+- *Zafra, li dorbi po gome lallela.* — Suddenly the door was opened.
+
+### 2.5:G111: Adjective + sidu + verb: no dummy ito
+
+In ADJECTIVE + sidu + VERB, the thing the adjective describes is the subject of the clause and the understood object of the verb. There is no dummy ito.
+
+Refines 2.2:G65.
+
+- *Trana ke ruli levasan sidu zeldoza.* — Change is very easy to resist.
+
+### 2.5:G112: A bare pronoun recipient
+
+A pronoun recipient may stand bare right after any verb whose meaning has a recipient (giving, lending, sending, owing, paying, bringing, teaching, showing, telling, singing to …). Otherwise, and always for a non-pronoun recipient, the recipient takes ala after the theme.
+
+Refines 1.2:G26.
+
+- *Taivo guraga maivo dossa cono.* — You owe me two coins.
+- *Maivo lirala taivo baba lira.* — I sing you a song.
+- *Maivo lirala baba lira ala taivo.* — I sing a song to you.
+
+### 2.5:G113: Purpose always uses kopisa
+
+Purpose always uses kopisa. With the same subject, kopisa + bare verb phrase (no subject); with a different subject, kopisa + clause. sidu stays for verb chains (desida sidu lirala).
+
+- *Maivo po venreva eli-pago kopisa lirala.* — I came here to sing.
+- *Maivo lirala kopisa taivo rilura.* — I sing so that you dance.
+
+### 2.5:G114: "Would have" is po noma viki
+
+'Would have' is always po noma viki. po viki without noma is not a form.
+
+Refines 1.0:G6.
+
+- *Si maivo po noma masuma, taivo po noma viki relsira.* — If I had asked, you would have answered.
+
+### 2.5:G115: The comma that closes a raho clause
+
+A raho clause that does not end the sentence is closed by a comma (a pause in speech) when it contains its own object or adjunct. A raho clause of only a verb (and its operators) needs no comma.
+
+Refines 1.0:G21.
+
+- *Li nela raho lirala ka benasan.* — The person who sings is good.
+- *Li sabeyo raho vismava eli, ne yehu vimova li vordu.* — The sage who studies this did not witness the word.
+
+### 2.5:G116: Hopeful purpose: kopisa + nosi
+
+Hopeful purpose ('so that perhaps', 'in the hope that') is kopisa + a clause whose verb carries nosi. fime always introduces a content clause ('that').
+
+Supersedes 2.2:G63.
+
+- *Maivo lirala, kopisa taivo nosi rilura.* — I sing, so that perhaps you'll dance.
+- *Maivo sabesia fime taivo nosi lirala.* — I know that you might sing.
+
+### 2.5:G117: tonsi: therefore, and so
+
+Clause-initial tonsi means 'therefore' and is followed by a comma. tonsi meaning 'so' (degree) stands only before a predicate adjective, after a copula.
+
+Refines 2.2:G62.
+
+- *Tonsi, corvisan nela lirala.* — Therefore a brave person sings.
+- *Taivo ke tonsi corvisan fime taivo viki savalisia maivo ki?* — Are you so brave that you would kiss me?
+
+### 2.5:G118: Tense in subordinate clauses
+
+An unmarked subordinate clause takes the main clause's tense, whatever its linker. sige clauses are the exception and always mark their own tense. A subordinate clause with its own tense word keeps it.
+
+Refines 0.8:R6.
+
+- *Kureli taivo venreva, maivo po lirala.* — As soon as you came, I sang.
+- *Maivo po masuma ki-oro taivo relnura.* — I asked whether you returned.
+
+### 2.5:G119: Picking up a hozi topic
+
+A topic that is the subject of its clause must be picked up by a pronoun. A non-subject topic may be picked up or left as a gap; a gap is read as the verb's object.
+
+- *Kipo hozi, saivo lirala.* — As for Kipo, they sing.
+- *Li bumre hozi, Kipo po bumreba.* — As for the bread, Kipo baked it.
+- *Li bumre hozi, Kipo po bumreba ito.* — As for the bread, Kipo baked it.
+
+### 2.5:G120: Relatives on a possessor, a time or a place
+
+Relative clauses on a possessor, a time or a place use a resumptive pronoun in place, as 2.1:G52 does for prepositions: possessor → PRONOUN de NOUN; time or place → the needed preposition + ito.
+
+Refines 2.1:G52.
+
+- *li lirayo raho maivo amora saivo de lira* — the singer whose song I love
+- *li krono raho maivo po lirala en ito* — the time when I sang
+- *li pago raho maivo po venreva da ito* — the place I came from
+
+### 2.5:G121: The motion prefixes are productive
+
+The motion prefixes are productive on any verb, with compositional meanings: va- = toward the speaker, here; du- = away, giving away; taro- = across, through; yave- = together, to meet; revo- = back, again. A listed meaning (the four curated phrases and any listed prefixed verb) overrides the compositional one. 'Motion verb' is no longer a category the grammar needs. lu-, nu-, mi-, so- stay retired.
+
+Supersedes the closed-list part of 1.2:G35, settled_questions[6], word_building.motion_prefixes.rule.
+
+- *va-lirala* — come toward (me) while singing
+- *revo-lirala* — sing back, sing again
+- *du-vimova* — look away
+- *taro-pagopa* — go across
+- *Maivo revo-sabesia taivo.* — I recognize you. (listed meaning)
+
+### 2.5:G122: -ti is an inflection
+
+-ti is an inflection-like suffix, not one of the derivations. Word ::= ROOT + (one form OR one derivation) + -ti + -ri; -ti may follow any form or derivation.
+
+Refines 2.0:G41.
+
+- *lirayoti* — little singer
+- *lirati* — little song
+- *liratiri* — little songs
+
+### 2.5:G123: Words ending in pago
+
+A word ending in pago is the same word whether read as ROOT + -pago or as a compound with the root pago. It is a noun with no further forms unless its dictionary line lists them.
+
+Refines 2.1:G59.
+
+- *lemupago* — school
+
+### 2.5:G124: Image compounds have all seven forms
+
+Image compounds have all seven forms, built by the ordinary form rules, with predictable meanings. This is an explicit exception to hard_rules[1] ('only listed forms exist'), which still governs every other headword.
+
+- *lunosavali* — moonlit kiss
+- *lunosavalila* — to kiss by moonlight
+- *lunosavalisan* — like a moonlit kiss
+
+### 2.5:G125: Negative numbers: antizi
+
+Negative numbers: antizi + NUMBER (antizi dossa = minus two). antizi is a new function word.
+
+- *antizi dossa* — minus two
 
 ## Rulings 2.3
 
@@ -36,7 +399,7 @@ en + an abstract noun names the manner or medium of an act: en baba melosan vall
 Refines 1.2:G33.
 
 - *saivo po senosia en baba melosan valla.* — She spoke in a musical voice.
-- *ata li veluri po sarbisia ko bapi su li doza de farulavrasan amor.* — And the stars wrote in surprise on the strength of phoenix-like love.
+- *Maivo lirala ko amor.* — And the stars wrote in surprise on the strength of phoenix-like love.
 
 ### 2.3:G74: raho opening a question
 
@@ -174,6 +537,8 @@ Supersedes 2.1:G54.
 
 ### 2.2:G63: Hopeful purpose: fime + nosi
 
+**Superseded by 2.5:G116.** Kept as it was ruled; follow 2.5:G116.
+
 After a main clause, a fime clause whose verb carries nosi means “in the hope that, so that perhaps”. kopisa stays the plain purpose linker.
 
 - *maivo futu donuda ito biti de lalfo, fime taivo nosi semnesia ko maivo en moluvaye.*
@@ -207,6 +572,8 @@ nazru (behind), zavme (in front of), silda (beside), cemnu (in the middle of), l
 - *saivo de melonulu venreva nazru gase baba lira de ruhesonbu.*
 
 ### 2.2:G68: The album as reference corpus
+
+**Superseded by 2.5:G87.** Kept as it was ruled; follow 2.5:G87.
 
 The album (twelve songs and the alternate 05) is canon 2.0 text, read with 2.0 spellings under 2.1:G58. A construction it uses consistently is grammar. A line that departs from the grammar once is an album reading: it keeps its intended meaning, is listed with its standard form, and is not a model for new text.
 
@@ -360,7 +727,7 @@ In X de Y the owner is Y, read as English "X of Y": li bumre de li cilni, the br
 Refines 1.0:G7.
 
 - *Taivo de lira ka vanisan.* — Your song is beautiful.
-- *Li bitiri de pilo ka su li tabu.* — Father's tools are on the table.
+- *Li bitiri de pilo ke su li tabu.* — Father's tools are on the table.
 - *Eli bumre ka sambasan ko pilo de bumre.* — This bread is the same as father's bread.
 - *Li bumre de li cilni ka sambanasan da eli bumre.* — City bread is different from this bread.
 - *Nullo de deyaapo, maivo po ne somusia.* — Last night, I didn't sleep.
@@ -426,6 +793,8 @@ Refines 1.2:G24.
 - *Rada-krono, li veluri lumila.* — Each time, the stars shine.
 
 ### 1.2:G35: Two more curated motion metaphors
+
+**In part superseded by 2.5:G121:** its clause “the closed-list part” is replaced; the rest stands.
 
 revo-sabesia (know again: recognize) and yave-donuda (give together: share) join revo-vimova and revo-lirala as curated metaphors. The motion prefixes otherwise stay non-productive.
 
