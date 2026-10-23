@@ -1384,6 +1384,7 @@
           ['hall', S.hall],
           ['stars', S.stars],
           ['loom', S.loom],
+          ['course', S.course],
           ['observatory', S.observatory],
           ['review', S.review, due],
           ['hallSettings', S.settings],

@@ -1,6 +1,6 @@
 /**
  * CLI and Claude Code Stop hook: keep LirasaCodexLatest/ holding the current
- * Reference Grammar and the Invitation.
+ * Reference Grammar, the Invitation and The Grammar in Lessons.
  *
  *   npm run publish:guide             # rebuild only if an input changed
  *   npm run publish:guide -- --force  # rebuild regardless
@@ -42,6 +42,8 @@ import { CODEX, GUIDE, INVITATION, codexUrl } from './grammar_guide/config';
 const PUBLISH_DIR = 'LirasaCodexLatest';
 const STAMP = join(PUBLISH_DIR, '.build-stamp.json');
 const LLM_FILE = 'liraasa_2_5_llm.json';
+/** The Grammar in Lessons, built by `npm run build:lessons -- --pdf` (file stem in handoff/). */
+const LESSONS = 'Liraasa_2_5_Lessons';
 
 /** What the guide is built from. A change to any of these means a rebuild. */
 const INPUTS = [
@@ -70,6 +72,12 @@ const INPUTS = [
   'data/corpus/album_2_0',
   'scripts/build_grammar_guide.ts',
   'scripts/build_invitation.ts',
+  'scripts/build_lessons.ts',
+  'scripts/lessons',
+  'src/core/grammar',
+  'data/checker/rules_2_5.json',
+  'data/checker/transitive_2_5.json',
+  'data/checker/drafts_2_5.json',
   'scripts/build_llm_json.ts',
   'scripts/grammar_guide',
   'src/core/config',
@@ -139,6 +147,8 @@ function codexFiles(version: string): Record<string, string> {
     [CODEX.stable.reference]: at(`${GUIDE.outName}.pdf`),
     [`${INVITATION.outName}.html`]: at(`${INVITATION.outName}.html`),
     [`${INVITATION.outName}.pdf`]: at(`${INVITATION.outName}.pdf`),
+    [`${LESSONS}.html`]: at(`${LESSONS}.html`),
+    [`${LESSONS}.pdf`]: at(`${LESSONS}.pdf`),
     [LLM_FILE]: at(LLM_FILE),
     [CODEX.stable.lexicon]: at(LLM_FILE),
     [`liraasa_${ed}_complete.json`]: at(`liraasa_${ed}_complete.json`),
@@ -156,6 +166,7 @@ function codexReadme(version: string, files: readonly string[]): string {
     `- **${CODEX.stable.lexicon}**: the whole language in one JSON, lexicon and grammar, for reading and for language tools (the same file as liraasa_${ed}_llm.json).`,
     `- **${CODEX.stable.reference}**: the Reference Grammar (also as HTML).`,
     `- **${INVITATION.outName}.pdf**: *${INVITATION.title}*, a short introduction.`,
+    `- **${LESSONS}.pdf**: *The Grammar in Lessons*, twenty short lessons to study the grammar a little each day (also as HTML).`,
     `- **liraasa_${ed}_complete.json**: the complete lexicon, every form and every ruling.`,
     '',
     `The names without an edition number stay the same from edition to edition, so links to them keep working: ${codexUrl(CODEX.stable.lexicon)}`,
@@ -222,7 +233,7 @@ function lexiconVersion(): string {
 function main(): void {
   const force = process.argv.includes('--force');
   const hook = hookInput();
-  const guide = [GUIDE.outName, INVITATION.outName].flatMap((name) =>
+  const guide = [GUIDE.outName, INVITATION.outName, LESSONS].flatMap((name) =>
     ['html', 'pdf'].map((ext) => `${name}.${ext}`),
   );
   // The one-file reference for language models, built beside the guide.
@@ -244,6 +255,7 @@ function main(): void {
 
   try {
     execSync('npm run build:guide -- --pdf', { stdio: 'pipe', encoding: 'utf8' });
+    execSync('npm run build:lessons -- --pdf', { stdio: 'pipe', encoding: 'utf8' });
   } catch (e) {
     const err = e as { stdout?: string; stderr?: string };
     const detail = `${err.stderr ?? ''}\n${err.stdout ?? ''}`
@@ -270,7 +282,7 @@ function main(): void {
   // Only the current edition is published: an older edition's guide stays in handoff/.
   for (const f of readdirSync(PUBLISH_DIR)) {
     if (
-      /^(Liraasa_.*_(Grammar_Guide|Reference_Grammar)\.(html|pdf)|Liraasa_Invitation\.(html|pdf)|liraasa_.*_llm\.json)$/.test(
+      /^(Liraasa_.*_(Grammar_Guide|Reference_Grammar)\.(html|pdf)|Liraasa_Invitation\.(html|pdf)|Liraasa_.*_Lessons\.(html|pdf)|liraasa_.*_llm\.json)$/.test(
         f,
       ) &&
       !outputs.includes(f)

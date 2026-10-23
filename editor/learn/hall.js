@@ -99,6 +99,32 @@
         [8, 9],
       ],
     ),
+    // a stair of points, each a step up: lessons that build
+    course: constellation(
+      [
+        [10, 50],
+        [26, 50, 2.2],
+        [26, 40],
+        [44, 40, 2.2],
+        [44, 30],
+        [62, 30, 2.4],
+        [62, 20],
+        [82, 20, 2.4],
+        [82, 10],
+        [108, 10, 2.8],
+      ],
+      [
+        [0, 1],
+        [1, 2],
+        [2, 3],
+        [3, 4],
+        [4, 5],
+        [5, 6],
+        [6, 7],
+        [7, 8],
+        [8, 9],
+      ],
+    ),
     // a wide field of faint points: the sky
     observatory: constellation(
       [
@@ -162,6 +188,7 @@
       '<ul class="wings" role="list">' +
       wing('stars') +
       wing('loom') +
+      wing('course') +
       wing('observatory') +
       '</ul>' +
       '<div class="hall-due"><p>' +

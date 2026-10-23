@@ -63,6 +63,8 @@ export interface HallState {
   stars?: unknown;
   /** Retired words the learner has been told about (the Observatory). */
   retiredSeen?: unknown;
+  /** The Grammar in Lessons: the lessons marked studied, read by `courseStudied`. */
+  courseStudied?: unknown;
 }
 
 export class HallError extends Error {}

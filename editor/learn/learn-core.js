@@ -1065,7 +1065,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
   const ORDINAL_MARK = spellOrdinal(1).slice(spellNumber(1).length);
   const FRACTION_JOIN = spellFraction(1, 2).slice(spellNumber(1).length, -spellNumber(2).length);
   const WORD$1 = /[A-Za-z]+(?:-[A-Za-z]+)*/g;
-  function words(text) {
+  function words$1(text) {
     const masked = text.replace(/\([^)]*\)|\[[^\]]*\]/g, (m) => " ".repeat(m.length));
     return [...masked.matchAll(WORD$1)].map((m) => ({
       text: m[0],
@@ -1143,7 +1143,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     return { kind: "unknown" };
   }
   function linkLine(ctx, text) {
-    return words(text).map((w) => ({ ...w, link: linkWord(ctx, w.text) }));
+    return words$1(text).map((w) => ({ ...w, link: linkWord(ctx, w.text) }));
   }
   function idsOf(tokens) {
     const out = [];
@@ -1760,72 +1760,6 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       (a, b) => b.matched.length - a.matched.length || a.example.liraasa.length - b.example.liraasa.length || (a.example.key < b.example.key ? -1 : 1)
     ).slice(0, limit);
   }
-  function snapshotEdition(data) {
-    const items = {};
-    for (const i of data.items.values())
-      items[i.id] = [i.spelling, i.meaning, i.kind, i.forms.map((f2) => f2.gloss)];
-    const concepts = {};
-    for (const c of data.concepts.values()) concepts[c.id] = [c.title, c.description];
-    return { edition: data.edition, items, concepts };
-  }
-  function diffSnapshots(prev, curr, replacementFor = () => void 0) {
-    const d = {
-      from: prev.edition,
-      to: curr.edition,
-      renamed: [],
-      reglossed: [],
-      added: [],
-      removed: [],
-      rulesAdded: [],
-      rulesChanged: [],
-      rulesRemoved: []
-    };
-    const byId = (a, b) => a < b ? -1 : a > b ? 1 : 0;
-    for (const id of Object.keys(curr.items).sort(byId)) {
-      const now = curr.items[id];
-      const was = prev.items[id];
-      if (now === void 0) continue;
-      if (was === void 0) {
-        d.added.push({ id, spelling: now[0], meaning: now[1], kind: now[2] });
-        continue;
-      }
-      if (was[0] !== now[0]) {
-        d.renamed.push({ id, from: was[0], to: now[0], meaning: now[1] });
-        continue;
-      }
-      const slots = now[3].map((to, slot) => ({ slot, from: was[3][slot] ?? "", to })).filter((x) => x.from !== x.to);
-      if (was[1] !== now[1] || slots.length > 0) {
-        d.reglossed.push({ id, spelling: now[0], from: was[1], to: now[1], slots });
-      }
-    }
-    for (const id of Object.keys(prev.items).sort(byId)) {
-      const was = prev.items[id];
-      if (was === void 0 || curr.items[id] !== void 0) continue;
-      const replacement = replacementFor(was[0]);
-      d.removed.push({
-        id,
-        spelling: was[0],
-        meaning: was[1],
-        ...replacement !== void 0 ? { replacement } : {}
-      });
-    }
-    const rule = (id) => id.startsWith("rule:");
-    for (const id of Object.keys(curr.concepts).filter(rule).sort(byId)) {
-      const now = curr.concepts[id];
-      const was = prev.concepts[id];
-      if (now === void 0) continue;
-      if (was === void 0) d.rulesAdded.push({ id, title: now[0] });
-      else if (was[1] !== now[1])
-        d.rulesChanged.push({ id, title: now[0], from: was[1], to: now[1] });
-    }
-    for (const id of Object.keys(prev.concepts).filter(rule).sort(byId)) {
-      const was = prev.concepts[id];
-      if (was !== void 0 && curr.concepts[id] === void 0)
-        d.rulesRemoved.push({ id, title: was[0] });
-    }
-    return d;
-  }
-  const diffIsEmpty = (d) => d.renamed.length + d.reglossed.length + d.added.length + d.removed.length + d.rulesAdded.length + d.rulesChanged.length + d.rulesRemoved.length === 0;
   const PREFER = ["pronoun", "functionWord", "correlative", "discourseParticle", "timeWord", "color"];
   function glossToken(data, token) {
     const base = { text: token.text, start: token.start, end: token.end };
@@ -2485,903 +2419,6 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       if (ex !== null) return { ...ex, card };
     }
     return null;
-  }
-  const VERB_CLASSES = ["n-initial", "s-initial", "vowel-initial", "otherwise"];
-  const CLASS_LETTER = { "n-initial": "n", "s-initial": "s" };
-  function suffixOf(pattern) {
-    const m = /^R(?:\s*\+\s*([a-z]+))?$/.exec(pattern.trim());
-    return m === null ? null : m[1] ?? "";
-  }
-  function vowelsOf(phonology) {
-    const raw = phonology?.vowels;
-    if (typeof raw !== "string") return null;
-    const letters = (raw.split("(")[0] ?? "").match(/\b[a-z]\b/g);
-    return letters === null ? null : letters.join("");
-  }
-  function readFormRules(morphology, edition, phonology) {
-    const gaps = [];
-    const gap = (code, ref, message) => {
-      gaps.push({ severity: "error", code, ref, message });
-    };
-    const patterns = morphology.seven_forms;
-    if (patterns.length !== FORM_SLOTS.length) {
-      gap(
-        "forms-rule-shape",
-        "morphology.seven_forms",
-        `seven_forms lists ${String(patterns.length)} patterns; the engine reads them in the order ${FORM_SLOTS.join(", ")}.`
-      );
-    }
-    const slots = FORM_SLOTS.map((slot, i) => {
-      const pattern = patterns[i] ?? "";
-      if (pattern.trim() === "VERB") return { slot, pattern, kind: "verb" };
-      const suffix = suffixOf(pattern);
-      if (suffix !== null) return { slot, pattern, kind: "suffix", suffix };
-      gap(
-        "forms-rule-unreadable",
-        `form:${slot}`,
-        `The ${slot} pattern "${pattern}" is not R, R+suffix or VERB.`
-      );
-      return { slot, pattern, kind: "unknown" };
-    });
-    const verb = [];
-    const irregularVerbs = {};
-    const known = new Set(VERB_CLASSES);
-    for (const [key, value] of Object.entries(morphology.verb_rule)) {
-      if (!known.has(key)) {
-        irregularVerbs[key] = value;
-        continue;
-      }
-      const cls = key;
-      const ending = cls === "otherwise" ? /^R\s*\+\s*first consonant\s*\+\s*([a-z]+)$/.exec(value.trim())?.[1] : suffixOf(value) ?? void 0;
-      if (ending === void 0) {
-        gap(
-          "verb-rule-unreadable",
-          `verb_rule.${key}`,
-          `The verb rule "${key}: ${value}" cannot be read.`
-        );
-        continue;
-      }
-      const letter = CLASS_LETTER[cls];
-      verb.push({ cls, pattern: value, ending, ...letter !== void 0 ? { letter } : {} });
-    }
-    verb.sort((a, b) => VERB_CLASSES.indexOf(a.cls) - VERB_CLASSES.indexOf(b.cls));
-    for (const cls of VERB_CLASSES) {
-      if (!verb.some((v) => v.cls === cls)) {
-        gap("verb-rule-missing", `verb_rule.${cls}`, `verb_rule has no "${cls}" class.`);
-      }
-    }
-    const vowels = vowelsOf(phonology);
-    if (vowels === null && phonology !== void 0) {
-      gaps.push({
-        severity: "warn",
-        code: "vowels-unreadable",
-        ref: "phonology.vowels",
-        message: `phonology.vowels could not be read; using ${VOWELS}.`
-      });
-    }
-    const lexicalised = [];
-    for (const [spelling, text] of Object.entries({
-      ...morphology.lexicalised_derivations,
-      ...morphology.lexicalised_diminutives ?? {}
-    })) {
-      const cut = text.lastIndexOf(": ");
-      const m = /^([a-z]+)\s*\+\s*-([a-z]+)$/.exec(cut < 0 ? "" : text.slice(cut + 2).trim());
-      const base = m?.[1];
-      const suffix = m?.[2];
-      if (base === void 0 || suffix === void 0 || base + suffix !== spelling) {
-        gaps.push({
-          severity: "warn",
-          code: "lexicalised-unreadable",
-          ref: spelling,
-          message: `lexicalised_derivations.${spelling} ("${text}") is not "gloss: base + -suffix" spelling ${spelling}.`
-        });
-        continue;
-      }
-      lexicalised.push({ spelling, base, suffix, gloss: text.slice(0, cut).trim() });
-    }
-    return {
-      rules: {
-        edition,
-        slots,
-        verb,
-        irregularVerbs,
-        vowels: vowels ?? VOWELS,
-        lexicalised,
-        suffixes: Object.entries(morphology.suffixes).map(([key, meaning]) => ({
-          spelling: key.replace(/^-/, ""),
-          meaning
-        }))
-      },
-      gaps
-    };
-  }
-  function verbClassFor(rules, spelling) {
-    const first = spelling[0] ?? "";
-    return rules.verb.find(
-      (v) => v.letter !== void 0 ? first === v.letter : v.cls === "vowel-initial" ? rules.vowels.includes(first) : v.cls === "otherwise"
-    );
-  }
-  function ruleForm(rules, spelling, slot) {
-    const rule = rules.slots.find((s) => s.slot === slot);
-    if (rule === void 0 || rule.kind === "unknown") {
-      return { form: null, parts: [{ text: spelling, role: "root" }], pattern: rule?.pattern ?? "" };
-    }
-    const root = { text: spelling, role: "root" };
-    if (rule.kind === "suffix") {
-      const parts = rule.suffix === "" ? [root] : [root, { text: rule.suffix, role: "marker" }];
-      return { form: spelling + rule.suffix, parts, pattern: rule.pattern };
-    }
-    const cls = verbClassFor(rules, spelling);
-    if (cls === void 0) return { form: null, parts: [root], pattern: rule.pattern };
-    const ending = cls.cls === "otherwise" ? (spelling[0] ?? "") + cls.ending : cls.ending;
-    return {
-      form: spelling + ending,
-      parts: [root, { text: ending, role: "marker" }],
-      pattern: cls.pattern,
-      verbClass: cls.cls
-    };
-  }
-  const SOURCE_ORDER = {
-    corpus: 0,
-    examples: 1,
-    ruling: 2,
-    functionWord: 3,
-    particle: 4
-  };
-  function createFormsEngine(input) {
-    const { data } = input;
-    const read = readFormRules(input.morphology, data.edition, input.phonology);
-    const { rules } = read;
-    const notes = input.overrides?.formNotes ?? {};
-    const bySpelling = /* @__PURE__ */ new Map();
-    for (const item of data.items.values()) {
-      if (item.forms.length > 0) bySpelling.set(item.spelling, item.id);
-    }
-    const verdict = (spelling, slot, stored) => {
-      const rule = ruleForm(rules, spelling, slot);
-      if (rule.form === null || rule.form === stored) return { rule, reason: null };
-      const listed = slot === "verb" && rules.irregularVerbs[spelling] === stored;
-      return { rule, reason: listed ? "listed" : "unexplained" };
-    };
-    const irregular = /* @__PURE__ */ new Set();
-    const unexplained = /* @__PURE__ */ new Map();
-    for (const item of data.items.values()) {
-      for (const f2 of item.forms) {
-        const { reason } = verdict(item.spelling, f2.slot, f2.form);
-        if (reason === null) continue;
-        irregular.add(item.id);
-        if (reason === "unexplained") {
-          const list = unexplained.get(f2.slot) ?? [];
-          list.push(item.id);
-          unexplained.set(f2.slot, list);
-        }
-      }
-    }
-    for (const [word, form] of Object.entries(rules.irregularVerbs)) {
-      const id = bySpelling.get(word);
-      const stored = id === void 0 ? void 0 : data.items.get(id)?.forms.find((f2) => f2.slot === "verb");
-      if (stored === void 0 || stored.form !== form) {
-        read.gaps.push({
-          severity: "error",
-          code: "irregular-unmatched",
-          ref: `verb_rule.${word}`,
-          message: stored === void 0 ? `verb_rule lists ${word} → ${form}, but ${word} is no headword in ${data.edition}.` : `verb_rule lists ${word} → ${form}, but the stored verb is ${stored.form}.`
-        });
-      }
-    }
-    for (const [slot, ids] of unexplained) {
-      read.gaps.push({
-        severity: "error",
-        code: "form-off-rule",
-        ref: formConcept(slot),
-        message: `${String(ids.length)} stored ${slot} forms differ from the rule ${rules.slots.find((s) => s.slot === slot)?.pattern ?? ""} and the data does not list them as irregular: ${ids.slice(0, 12).join(", ")}${ids.length > 12 ? ", …" : ""}. If the rule changed, the forms need a changeset; if the forms are right, the rule needs one.`
-      });
-    }
-    const ref = (id) => {
-      const i = data.items.get(id);
-      return i === void 0 ? null : { id, spelling: i.spelling, meaning: i.meaning };
-    };
-    const derivationsOf = /* @__PURE__ */ new Map();
-    const lexicalisedBySpelling = new Map(rules.lexicalised.map((d) => [d.spelling, d]));
-    const rootOf = (base, seen = /* @__PURE__ */ new Set()) => {
-      const inner = lexicalisedBySpelling.get(base);
-      if (bySpelling.has(base) || inner === void 0 || seen.has(base)) return base;
-      seen.add(base);
-      return rootOf(inner.base, seen);
-    };
-    for (const d of rules.lexicalised) {
-      const home = rootOf(d.base);
-      if (!bySpelling.has(home)) {
-        read.gaps.push({
-          severity: "warn",
-          code: "lexicalised-no-base",
-          ref: d.spelling,
-          message: `The lexicalised derivation ${d.spelling} is built on ${d.base}, which is no headword in ${data.edition}; no study card shows it.`
-        });
-      }
-      const list = derivationsOf.get(home) ?? [];
-      list.push(d);
-      derivationsOf.set(home, list);
-    }
-    const getForms = (id, options = {}) => {
-      const item = data.items.get(id);
-      if (item === void 0) return null;
-      const was = options.previous?.items[id];
-      const head = item.components !== null ? data.items.get(item.components[1]) : void 0;
-      const forms = [];
-      const unused = [];
-      for (const [i, f2] of item.forms.entries()) {
-        if (!f2.meaningful && options.includeUnused !== true) {
-          unused.push(f2.slot);
-          continue;
-        }
-        const { rule, reason } = verdict(item.spelling, f2.slot, f2.form);
-        const off = reason !== null;
-        const note = notes[`${id}|${f2.slot}`];
-        const verbClass = f2.slot !== "verb" ? void 0 : reason === "listed" ? "listed" : rule.verbClass;
-        const headClass = f2.slot === "verb" && head !== void 0 && rule.verbClass !== void 0 ? verbClassFor(rules, head.spelling)?.cls : void 0;
-        const glossWas = was?.[3][i];
-        forms.push({
-          category: f2.slot,
-          form: f2.form,
-          gloss: f2.gloss,
-          meaningful: f2.meaningful,
-          ruleId: formConcept(f2.slot),
-          pattern: rule.pattern,
-          parts: off ? [{ text: f2.form, role: "whole" }] : rule.parts,
-          irregular: off,
-          irregularReason: reason,
-          irregularNote: note ?? null,
-          regularWouldBe: off ? rule.form : null,
-          ...verbClass !== void 0 ? { verbClass } : {},
-          ...headClass !== void 0 && headClass !== rule.verbClass && !off ? { classFromModifier: { headClass } } : {},
-          ...glossWas !== void 0 && glossWas !== f2.gloss ? { glossWas } : {}
-        });
-      }
-      const root = item.forms.find((f2) => f2.slot === "root");
-      const senses = (root?.meaningful === true ? root.gloss : item.meaning).split(";").map((s) => s.trim()).filter((s) => s !== "");
-      const alt = new Set(senses.slice(1));
-      alt.delete(item.meaning);
-      const limit = options.examples ?? 3;
-      const examples = data.examples.filter((e) => e.ids.includes(id)).sort((a, b) => SOURCE_ORDER[a.source] - SOURCE_ORDER[b.source]).slice(0, limit).map((e) => {
-        const slots = /* @__PURE__ */ new Set();
-        for (const t of e.tokens) {
-          if (t.link.kind !== "entry") continue;
-          for (const r of t.link.refs) if (r.id === id && r.slot !== void 0) slots.add(r.slot);
-        }
-        return {
-          key: e.key,
-          liraasa: e.liraasa,
-          english: e.english,
-          source: e.source,
-          ...e.where !== void 0 ? { where: e.where } : {},
-          slots: FORM_SLOTS.filter((s) => slots.has(s)),
-          gloss: glossLine(data, e.tokens)
-        };
-      });
-      return {
-        root: {
-          id,
-          kind: item.kind,
-          spelling: item.spelling,
-          gloss: item.meaning,
-          sense: alt.size > 0 ? senses[0] ?? item.meaning : item.meaning,
-          altMeanings: [...alt],
-          theme: item.theme,
-          register: item.register,
-          version: item.since,
-          status: item.status,
-          ...was !== void 0 && was[0] !== item.spelling ? { spellingWas: was[0] } : {},
-          parts: item.components === null ? null : item.components.map(ref).filter((r) => r !== null)
-        },
-        forms,
-        unused,
-        compounds: item.usedIn.map(ref).filter((r) => r !== null),
-        derivations: (derivationsOf.get(item.spelling) ?? []).map((d) => ({
-          ...d,
-          ruleId: suffixConcept(d.suffix)
-        })),
-        examples,
-        hasIrregular: irregular.has(id)
-      };
-    };
-    let surprising = null;
-    const surprisingIds = () => {
-      if (surprising !== null) return surprising;
-      const out = new Set(irregular);
-      for (const item of data.items.values()) {
-        if (item.forms.length === 0) continue;
-        const w = getForms(item.id, { examples: 0 });
-        if (w === null) continue;
-        if (w.derivations.length > 0) out.add(item.id);
-        if (w.forms.some((f2) => f2.classFromModifier !== void 0)) out.add(item.id);
-      }
-      surprising = [...out];
-      return surprising;
-    };
-    return {
-      rules,
-      getForms,
-      isIrregular: (id) => irregular.has(id),
-      irregularIds: () => [...irregular],
-      surprisingIds,
-      gaps: read.gaps
-    };
-  }
-  const PARTICLE = /* @__PURE__ */ new Set(["functionWord", "correlative", "discourseParticle", "timeWord"]);
-  const rating = (verdict, fast) => verdict === "wrong" ? 1 : verdict === "almost" ? 2 : fast ? 4 : 3;
-  function grade(verdict, score, expected, diagnoses, fast) {
-    return { verdict, score, expected, diagnoses, rating: rating(verdict, fast) };
-  }
-  const itemLink = (id) => ({ kind: "item", id });
-  const conceptLink = (id) => ({ kind: "concept", id });
-  function meaningOf(data, link) {
-    if (link.kind !== "entry") return "";
-    const ref = link.refs[0];
-    const item = ref === void 0 ? void 0 : data.items.get(ref.id);
-    if (item === void 0) return "";
-    const form = item.forms.find((f2) => f2.slot === ref?.slot);
-    return form?.meaningful === true ? form.gloss : item.meaning;
-  }
-  function diagnoseWord(ctx, got, expected) {
-    const g = normalize(got);
-    const e = normalize(expected);
-    if (g === e) return null;
-    const want = linkWord(ctx.link, e);
-    const have = linkWord(ctx.link, g);
-    const wantRef = want.kind === "entry" ? want.refs[0] : void 0;
-    const wantId = wantRef?.id;
-    if (have.kind === "entry") {
-      const ids = have.refs.map((r) => r.id);
-      if (have.via === "legacy" && wantId !== void 0 && ids.includes(wantId)) {
-        return {
-          kind: "old-spelling",
-          message: `“${got}” is the pre-1.0 spelling; it is now “${expected}”.`,
-          expected,
-          got,
-          link: itemLink(wantId)
-        };
-      }
-      if (wantId !== void 0 && ids.includes(wantId)) {
-        const slot = have.refs.find((r) => r.id === wantId)?.slot;
-        const wantSlot = wantRef?.slot;
-        const what = slot !== void 0 && wantSlot !== void 0 && slot !== wantSlot ? `the ${humanize(slot)} form; this needs the ${humanize(wantSlot)} form` : "the right word with the wrong ending";
-        return {
-          kind: "wrong-form",
-          message: `“${got}” is ${what}: “${expected}”.`,
-          expected,
-          got,
-          link: wantSlot !== void 0 ? conceptLink(`form:${wantSlot}`) : itemLink(wantId)
-        };
-      }
-      return {
-        kind: "wrong-root",
-        message: `“${got}” is a different word (“${meaningOf(ctx.data, have)}”). The answer is “${expected}”${wantId !== void 0 ? ` (“${meaningOf(ctx.data, want)}”)` : ""}.`,
-        expected,
-        got,
-        ...wantId !== void 0 ? { link: itemLink(wantId) } : {}
-      };
-    }
-    if (editDistance(g, e, typoBudget(e.length)) <= typoBudget(e.length)) {
-      return {
-        kind: "typo",
-        message: `Almost: check the spelling. It is “${expected}”.`,
-        expected,
-        got,
-        ...wantId !== void 0 ? { link: itemLink(wantId) } : {}
-      };
-    }
-    return {
-      kind: "not-a-word",
-      message: `“${got}” is not a word of Liraasa. The answer is “${expected}”.`,
-      expected,
-      got,
-      ...wantId !== void 0 ? { link: itemLink(wantId) } : {}
-    };
-  }
-  function gradeWord(ctx, typed, accepted, fast) {
-    const first = accepted[0] ?? "";
-    if (accepted.some((a) => normalize(a) === normalize(typed)))
-      return grade("correct", 1, first, [], fast);
-    const best = [...accepted].sort(
-      (a, b) => editDistance(normalize(typed), normalize(a)) - editDistance(normalize(typed), normalize(b))
-    )[0];
-    const d = diagnoseWord(ctx, typed, best ?? first);
-    const soft = d !== null && (d.kind === "typo" || d.kind === "old-spelling");
-    return grade(
-      soft ? "almost" : "wrong",
-      soft ? 0.8 : 0,
-      best ?? first,
-      d === null ? [] : [d],
-      false
-    );
-  }
-  function lcs(a, b) {
-    const t = Array.from({ length: a.length + 1 }, () => new Array(b.length + 1).fill(0));
-    for (let i2 = a.length - 1; i2 >= 0; i2 -= 1) {
-      for (let j2 = b.length - 1; j2 >= 0; j2 -= 1) {
-        const row = t[i2];
-        if (row === void 0) continue;
-        row[j2] = a[i2] === b[j2] ? (t[i2 + 1]?.[j2 + 1] ?? 0) + 1 : Math.max(t[i2 + 1]?.[j2] ?? 0, row[j2 + 1] ?? 0);
-      }
-    }
-    const out = [];
-    let i = 0;
-    let j = 0;
-    while (i < a.length && j < b.length) {
-      if (a[i] === b[j]) {
-        out.push([i, j]);
-        i += 1;
-        j += 1;
-      } else if ((t[i + 1]?.[j] ?? 0) >= (t[i]?.[j + 1] ?? 0)) i += 1;
-      else j += 1;
-    }
-    return out;
-  }
-  function gradeSentence(ctx, typed, expected, fast = false) {
-    const got = words(typed).map((w2) => w2.text);
-    const want = words(expected).map((w2) => w2.text);
-    const g = got.map(normalize);
-    const w = want.map(normalize);
-    if (g.join(" ") === w.join(" ")) return grade("correct", 1, expected, [], fast);
-    const diagnoses = [];
-    const sorted = (x) => [...x].sort().join(" ");
-    if (sorted(g) === sorted(w)) {
-      diagnoses.push({
-        kind: "wrong-order",
-        message: "All the right words, in the wrong order. Liraasa order is fixed by the clause template.",
-        expected,
-        got: typed,
-        link: conceptLink("clause")
-      });
-      return grade("wrong", 0.5, expected, diagnoses, false);
-    }
-    const matched = lcs(g, w);
-    const usedG = new Set(matched.map(([i]) => i));
-    const usedW = new Set(matched.map(([, j]) => j));
-    const restG = g.map((x, i) => ({ x, i, raw: got[i] ?? x })).filter(({ i }) => !usedG.has(i));
-    let soft = true;
-    for (const [j, e] of w.entries()) {
-      if (usedW.has(j)) continue;
-      let best;
-      let bestScore = Infinity;
-      for (const r of restG) {
-        const sameEntry = (() => {
-          const a = linkWord(ctx.link, r.x);
-          const b = linkWord(ctx.link, e);
-          if (a.kind !== "entry" || b.kind !== "entry") return false;
-          return a.refs.some((x) => b.refs.some((y) => y.id === x.id));
-        })();
-        const score2 = sameEntry ? 0 : editDistance(r.x, e, 4);
-        if (score2 < bestScore) {
-          bestScore = score2;
-          best = r;
-        }
-      }
-      if (best !== void 0 && bestScore <= Math.max(2, typoBudget(e.length))) {
-        restG.splice(restG.indexOf(best), 1);
-        const d = diagnoseWord(ctx, best.raw, want[j] ?? e);
-        if (d !== null) {
-          diagnoses.push(d);
-          if (d.kind !== "typo" && d.kind !== "old-spelling") soft = false;
-        }
-        continue;
-      }
-      soft = false;
-      const link = linkWord(ctx.link, e);
-      const ref = link.kind === "entry" ? link.refs[0] : void 0;
-      const particle = ref !== void 0 && PARTICLE.has(ref.namespace);
-      diagnoses.push({
-        kind: particle ? "missing-particle" : "missing-word",
-        message: `Missing ${particle ? "the particle" : "the word"} “${want[j] ?? e}”${ref !== void 0 ? ` (“${meaningOf(ctx.data, link)}”)` : ""}.`,
-        expected: want[j] ?? e,
-        ...ref !== void 0 ? { link: itemLink(ref.id) } : {}
-      });
-    }
-    for (const r of restG) {
-      soft = false;
-      const link = linkWord(ctx.link, r.x);
-      diagnoses.push({
-        kind: link.kind === "unknown" ? "not-a-word" : "extra-word",
-        message: link.kind === "unknown" ? `“${r.raw}” is not a word of Liraasa.` : `“${r.raw}” does not belong in this sentence.`,
-        got: r.raw
-      });
-    }
-    const score = matched.length / Math.max(1, w.length);
-    return grade(soft ? "almost" : "wrong", score, expected, diagnoses, false);
-  }
-  function synonymsFor(data, ids) {
-    const groups = /* @__PURE__ */ new Map();
-    for (const id of ids) {
-      const item = data.items.get(id);
-      if (item === void 0) continue;
-      const words2 = new Set(
-        [
-          item.meaning,
-          ...item.synonyms,
-          ...item.forms.filter((f2) => f2.meaningful).map((f2) => f2.gloss)
-        ].flatMap(englishContent)
-      );
-      for (const w of words2) groups.set(w, /* @__PURE__ */ new Set([...groups.get(w) ?? [], ...words2]));
-    }
-    return groups;
-  }
-  function gradeEnglish(data, typed, accepted, itemIds, fast = false) {
-    const expected = accepted[0] ?? "";
-    const want = englishContent(expected);
-    const got = new Set(englishContent(typed));
-    if (want.length === 0)
-      return grade(
-        normalize(typed) === normalize(expected) ? "correct" : "wrong",
-        1,
-        expected,
-        [],
-        fast
-      );
-    const syn = synonymsFor(data, itemIds);
-    const missed = [];
-    for (const w of want) {
-      const ok = got.has(w) || [...syn.get(w) ?? []].some((s) => got.has(s));
-      if (!ok) missed.push(w);
-    }
-    const score = 1 - missed.length / want.length;
-    const verdict = score >= 0.75 ? "correct" : score >= 0.45 ? "almost" : "wrong";
-    const diagnoses = missed.length === 0 || verdict === "correct" ? [] : [
-      {
-        kind: "meaning-missing",
-        message: `Your translation misses: ${missed.join(", ")}. A full answer: “${expected}”.`,
-        expected,
-        got: typed
-      }
-    ];
-    return grade(verdict, score, expected, diagnoses, fast && verdict === "correct");
-  }
-  function gradeExercise(ctx, ex, response, ms = Infinity) {
-    const fast = ms < 6e3;
-    const a = ex.answer;
-    if (a.kind === "choice") {
-      const expected2 = ex.choices?.find((c) => c.id === a.correct)?.text ?? a.correct;
-      if (response.kind !== "choice") return grade("wrong", 0, expected2, [], false);
-      if (response.id === a.correct) return grade("correct", 1, expected2, [], fast);
-      const chosen = ex.choices?.find((c) => c.id === response.id);
-      const item = ctx.data.items.get(response.id);
-      const message = ex.type === "formIdentify" ? `That is not the ${chosen?.text ?? response.id} form: it is the ${expected2} form.` : item !== void 0 ? `“${chosen?.text ?? ""}” is what “${item.spelling}” means. The answer is “${expected2}”.` : `The answer is “${expected2}”.`;
-      return grade(
-        "wrong",
-        0,
-        expected2,
-        [
-          {
-            kind: "wrong-choice",
-            message,
-            expected: expected2,
-            ...chosen !== void 0 ? { got: chosen.text } : {},
-            link: ex.type === "formIdentify" ? conceptLink(`form:${a.correct}`) : itemLink(item !== void 0 ? item.id : ex.target)
-          }
-        ],
-        false
-      );
-    }
-    if (a.kind === "typed") {
-      const text = response.kind === "typed" ? response.text : response.kind === "choice" ? ex.choices?.find((c) => c.id === response.id)?.text ?? "" : "";
-      if (a.lang === "english") return gradeEnglish(ctx.data, text, a.accepted, ex.items, fast);
-      const multi = a.accepted.some((x) => words(x).length > 1);
-      if (multi) {
-        const best = [...a.accepted].map((x) => gradeSentence(ctx, text, x, fast)).sort((p, q) => q.score - p.score);
-        return best[0] ?? gradeSentence(ctx, text, a.accepted[0] ?? "", fast);
-      }
-      const g = gradeWord(ctx, text, a.accepted, fast);
-      return g;
-    }
-    if (a.kind === "order") {
-      const textOf = (id) => a.tiles.find((t) => t.id === id)?.text ?? id;
-      const want = a.correct.map(textOf);
-      const expected2 = ex.type === "assemble" ? want.join(" ") : want.join(" + ");
-      if (response.kind !== "order") return grade("wrong", 0, expected2, [], false);
-      const got = response.ids.map(textOf);
-      if (got.map(normalize).join(" ") === want.map(normalize).join(" ")) {
-        return grade("correct", 1, expected2, [], fast);
-      }
-      if (ex.type === "assemble") {
-        const g = gradeSentence(ctx, got.join(" "), want.join(" "));
-        return { ...g, expected: expected2 };
-      }
-      const diagnoses2 = [];
-      if ([...got].sort().join() === [...want].sort().join()) {
-        diagnoses2.push({
-          kind: "wrong-order",
-          message: "The right parts, the wrong way round: the modifier comes first, the head last.",
-          expected: expected2,
-          link: conceptLink("compound")
-        });
-      } else {
-        for (const id of response.ids) {
-          if (a.correct.includes(id)) continue;
-          const item = ctx.data.items.get(id);
-          diagnoses2.push({
-            kind: "wrong-part",
-            message: `“${textOf(id)}” means “${item?.meaning ?? ""}”, which is not part of this word.`,
-            got: textOf(id),
-            link: itemLink(id)
-          });
-        }
-      }
-      const right2 = response.ids.filter((id, i) => a.correct[i] === id).length;
-      return grade("wrong", right2 / a.correct.length, expected2, diagnoses2, false);
-    }
-    if (a.kind === "multi") {
-      const text = (id) => ex.choices?.find((c) => c.id === id)?.text ?? id;
-      const expected2 = a.correct.map(text).join(", ");
-      if (response.kind !== "multi") return grade("wrong", 0, expected2, [], false);
-      const want = new Set(a.correct);
-      const got = new Set(response.ids);
-      const hits = [...got].filter((id) => want.has(id)).length;
-      const extra = [...got].filter((id) => !want.has(id));
-      const missed = a.correct.filter((id) => !got.has(id));
-      if (extra.length === 0 && missed.length === 0) return grade("correct", 1, expected2, [], fast);
-      const diagnoses2 = [
-        ...extra.map(
-          (id) => ({
-            kind: "wrong-choice",
-            message: `“${text(id)}” does not fit.`,
-            got: text(id)
-          })
-        ),
-        ...missed.map(
-          (id) => ({
-            kind: "missed-choice",
-            message: `“${text(id)}” fits too.`,
-            expected: text(id)
-          })
-        )
-      ];
-      const score2 = Math.max(0, (hits - extra.length) / want.size);
-      const verdict2 = extra.length + missed.length === 1 ? "almost" : "wrong";
-      return grade(verdict2, score2, expected2, diagnoses2, false);
-    }
-    const expected = a.left.map((l) => `${l.text} = ${a.right.find((r) => r.id === a.pairs[l.id])?.text ?? ""}`).join("; ");
-    if (response.kind !== "pairs") return grade("wrong", 0, expected, [], false);
-    const diagnoses = [];
-    let right = 0;
-    for (const l of a.left) {
-      if (response.pairs[l.id] === a.pairs[l.id]) {
-        right += 1;
-        continue;
-      }
-      const item = ctx.data.items.get(l.id);
-      const partner = a.right.find((r) => r.id === a.pairs[l.id])?.text ?? "";
-      diagnoses.push(
-        item !== void 0 ? {
-          kind: "wrong-choice",
-          message: `“${l.text}” means “${item.meaning}”.`,
-          expected: item.meaning,
-          link: itemLink(l.id)
-        } : {
-          // a pair that is not a word, e.g. a form and its name (Form Match)
-          kind: "wrong-choice",
-          message: `“${l.text}” goes with “${partner}”.`,
-          expected: partner
-        }
-      );
-    }
-    const score = right / a.left.length;
-    const verdict = score === 1 ? "correct" : a.left.length - right <= 1 ? "almost" : "wrong";
-    return grade(verdict, score, expected, diagnoses, fast && verdict === "correct");
-  }
-  const DRILL_MODES = [
-    "recognize",
-    "recall",
-    "forge",
-    "pattern",
-    "match",
-    "listen",
-    "slot"
-  ];
-  const meaningfulForms = (forms, id) => forms.getForms(id, { examples: 0 })?.forms ?? [];
-  function spotPattern(ctx, ids, rng, ask) {
-    const { data } = ctx.exercise;
-    const verbOf2 = (id) => meaningfulForms(ctx.forms, id).find((f2) => f2.category === "verb");
-    const drawn = ids.filter((id) => verbOf2(id) !== void 0);
-    if (drawn.length === 0) return null;
-    const others = rng.shuffle(
-      [...data.items.values()].filter((i) => (i.kind === "root" || i.kind === "compound") && !ids.includes(i.id)).filter((i) => i.forms.some((f2) => f2.slot === "verb" && f2.meaningful)).map((i) => i.id)
-    );
-    const grid = rng.shuffle(
-      [.../* @__PURE__ */ new Set([...rng.shuffle(drawn).slice(0, 4), ...others.slice(0, 6)])].slice(0, 6)
-    );
-    const classOf = (id) => verbOf2(id)?.verbClass;
-    const irregular = grid.filter((id) => verbOf2(id)?.irregular === true);
-    const present = VERB_CLASSES.filter((c) => grid.some((id) => classOf(id) === c));
-    const target = ask ?? (irregular.length > 0 && rng.next() < 0.5 ? "irregular" : rng.pick(present.filter((c) => grid.some((id) => classOf(id) !== c))));
-    if (target === void 0) return null;
-    const correct = target === "irregular" ? irregular : grid.filter((id) => classOf(id) === target);
-    if (correct.length === 0 || correct.length === grid.length) return null;
-    const pattern = ctx.forms.rules.verb.find((v) => v.cls === target)?.pattern ?? "";
-    const choices = grid.map((id) => ({
-      id,
-      text: verbOf2(id)?.form ?? "",
-      liraasa: true
-    }));
-    const first = correct.find((id) => ids.includes(id)) ?? drawn[0] ?? "";
-    return {
-      id: `spotPattern:${target}:${grid.join(",")}`,
-      type: "spotPattern",
-      skill: "morphology",
-      direction: "recognize",
-      card: cardId(first, "morphology", "recognize"),
-      target: first,
-      items: grid,
-      concepts: ["form:verb"],
-      instruction: target === "irregular" ? "Which of these verbs go their own way, not the rule?" : `Which of these verbs follow the pattern “${pattern}”?`,
-      prompt: {},
-      choices,
-      answer: { kind: "multi", correct }
-    };
-  }
-  function formMatch(ctx, id, rng) {
-    const forms = meaningfulForms(ctx.forms, id);
-    if (forms.length < 3) return null;
-    const chosen = rng.shuffle(forms).slice(0, 4);
-    const left = chosen.map((f2) => ({ id: `f:${f2.category}`, text: f2.form, liraasa: true }));
-    const right = rng.shuffle(
-      chosen.map((f2) => ({ id: `n:${f2.category}`, text: humanize(f2.category), liraasa: false }))
-    );
-    return {
-      id: `formMatch:${id}:${chosen.map((f2) => f2.category).join(",")}`,
-      type: "formMatch",
-      skill: "morphology",
-      direction: "recognize",
-      card: cardId(id, "morphology", "recognize"),
-      target: id,
-      items: [id],
-      concepts: chosen.map((f2) => f2.ruleId),
-      instruction: "Match each form to its name.",
-      prompt: {},
-      answer: {
-        kind: "pairs",
-        left,
-        right,
-        pairs: Object.fromEntries(chosen.map((f2) => [`f:${f2.category}`, `n:${f2.category}`]))
-      }
-    };
-  }
-  function starsDrill(ctx, ids, rng, options) {
-    const ex = ctx.exercise;
-    const modes = new Set(options.modes);
-    const buckets = /* @__PURE__ */ new Map();
-    const add = (mode, e) => {
-      if (e === null || !modes.has(mode)) return;
-      buckets.set(mode, [...buckets.get(mode) ?? [], e]);
-    };
-    for (const id of ids) {
-      const forms = meaningfulForms(ctx.forms, id);
-      const slots = forms.map((f2) => f2.category).filter((s) => s !== "root");
-      add("recognize", recognition(ex, id, rng));
-      for (const s of slots) add("recognize", recognition(ex, id, rng, s));
-      add("recall", recall(ex, id));
-      for (const s of slots) add("forge", formBuild(ex, id, rng, s));
-      add("match", formMatch(ctx, id, rng));
-      add("listen", listen(ex, id, rng));
-      const sentences = ex.data.examples.filter((e) => e.ids.includes(id));
-      for (const e of rng.shuffle(sentences).slice(0, 2))
-        add("slot", cloze(ex, e, rng, { item: id }));
-    }
-    if (ids.length >= 3) add("match", matching(ex, rng.shuffle(ids), rng));
-    if (modes.has("pattern")) {
-      const grids = /* @__PURE__ */ new Set();
-      for (let k = 0; k < 24 && grids.size < 6; k += 1) {
-        const e = spotPattern(ctx, ids, rng, VERB_CLASSES[k % VERB_CLASSES.length]);
-        if (e === null || grids.has(e.id)) continue;
-        grids.add(e.id);
-        add("pattern", e);
-      }
-    }
-    if (ids.some((id) => ctx.forms.isIrregular(id)))
-      add("pattern", spotPattern(ctx, ids, rng, "irregular"));
-    const queues = rng.shuffle([...buckets.values()].map((list) => rng.shuffle(list)));
-    const out = [];
-    const seen = /* @__PURE__ */ new Set();
-    let turn = 0;
-    for (const id of rng.shuffle(ids)) {
-      if (out.length >= options.length) break;
-      for (let k = 0; k < queues.length; k += 1) {
-        const q = queues[(turn + k) % queues.length] ?? [];
-        const at = q.findIndex((e) => e.target === id && !seen.has(e.id));
-        const next = at < 0 ? void 0 : q.splice(at, 1)[0];
-        if (next === void 0) continue;
-        seen.add(next.id);
-        out.push(next);
-        turn = (turn + k + 1) % queues.length;
-        break;
-      }
-    }
-    while (out.length < options.length && queues.some((q) => q.length > 0)) {
-      for (const q of queues) {
-        const next = q.shift();
-        if (next === void 0 || seen.has(next.id)) continue;
-        seen.add(next.id);
-        out.push(next);
-        if (out.length >= options.length) break;
-      }
-    }
-    const spread = [];
-    const left = [...out];
-    while (left.length > 0) {
-      const prev = spread[spread.length - 1]?.target;
-      const counts = /* @__PURE__ */ new Map();
-      for (const e of left) counts.set(e.target, (counts.get(e.target) ?? 0) + 1);
-      const crowded = [...counts].find(([t, n]) => t !== prev && n * 2 > left.length)?.[0];
-      const at = crowded !== void 0 ? left.findIndex((e) => e.target === crowded) : left.findIndex((e) => e.target !== prev);
-      spread.push(...left.splice(Math.max(at, 0), 1));
-    }
-    return spread;
-  }
-  function typedText(ex, response) {
-    if (ex.answer.kind !== "typed" || ex.answer.lang !== "liraasa") return null;
-    if (response.kind === "typed") return response.text;
-    if (response.kind === "choice")
-      return ex.choices?.find((c) => c.id === response.id)?.text ?? null;
-    return null;
-  }
-  const askedSlot = (ex) => FORM_SLOTS.find((s) => ex.concepts.includes(`form:${s}`));
-  function gradeStars(gctx, forms, ex, response, ms, leniency) {
-    const g = gradeExercise(gctx, ex, response, ms);
-    if (g.verdict === "correct") return g;
-    const typed = typedText(ex, response);
-    if (typed === null || ex.answer.kind !== "typed") return g;
-    const got = normalize(typed);
-    const slot = ex.type === "formBuild" ? askedSlot(ex) : void 0;
-    if (slot !== void 0) {
-      const f2 = forms.getForms(ex.target, { includeUnused: true, examples: 0 })?.forms.find((x) => x.category === slot);
-      if (f2?.irregular === true && f2.regularWouldBe !== null && normalize(f2.regularWouldBe) === got) {
-        return {
-          ...g,
-          verdict: "almost",
-          score: 0.5,
-          rating: 2,
-          diagnoses: [
-            {
-              kind: "rule-for-irregular",
-              message: `The rule (${f2.pattern}) makes “${f2.regularWouldBe}”, and this word goes its own way: “${f2.form}”.`,
-              expected: f2.form,
-              got: typed,
-              link: { kind: "concept", id: f2.ruleId }
-            }
-          ]
-        };
-      }
-    }
-    if (leniency === "lenient") {
-      const vowels = forms.rules.vowels;
-      const squeeze = (s) => [...s].filter((ch, i) => !(vowels.includes(ch) && s[i - 1] === ch)).join("");
-      const match = ex.answer.accepted.find((a) => squeeze(normalize(a)) === squeeze(got));
-      if (match !== void 0) {
-        return {
-          verdict: "correct",
-          score: 1,
-          expected: match,
-          rating: 3,
-          diagnoses: [
-            {
-              kind: "vowel-length",
-              message: `Forgiven: the exact spelling is “${match}”.`,
-              expected: match,
-              got: typed
-            }
-          ]
-        };
-      }
-    }
-    return g;
-  }
-  function drillResults(ids, results) {
-    const worth = { correct: 1, almost: 0.5, wrong: 0 };
-    return ids.map((id) => {
-      const mine = results.filter((r) => r.ex.target === id);
-      const right = mine.filter((r) => r.grade.verdict === "correct").length;
-      const score = mine.length === 0 ? 0 : mine.reduce((sum, r) => sum + worth[r.grade.verdict], 0) / mine.length;
-      return { id, asked: mine.length, right, score };
-    });
   }
   const PATTERN_MIN = 4;
   const DEFAULT_GRAPH_OPTIONS = {
@@ -4118,6 +3155,1014 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       daysThisWeek: days.size,
       due
     };
+  }
+  function courseLessons(course) {
+    const out = [];
+    course.parts.forEach((p, part) => {
+      for (const lesson of p.lessons)
+        out.push({ n: out.length + 1, part: part + 1, partTitle: p.title, lesson });
+    });
+    return out;
+  }
+  function courseStudied(profile) {
+    const raw = hallOf(profile).courseStudied;
+    if (!Array.isArray(raw)) return [];
+    return [...new Set(raw.filter((x) => Number.isInteger(x) && x > 0))].sort(
+      (a, b) => a - b
+    );
+  }
+  function setCourseStudied(profile, n, studied) {
+    const now = new Set(courseStudied(profile));
+    if (studied) now.add(n);
+    else now.delete(n);
+    setHall(profile, { ...hallOf(profile), courseStudied: [...now].sort((a, b) => a - b) });
+  }
+  function courseNext(course, profile) {
+    const done = new Set(courseStudied(profile));
+    return courseLessons(course).find((l) => !done.has(l.n))?.n ?? null;
+  }
+  const words = (s) => s.toLowerCase().replace(/[.,!?;:“”"’‘()]/g, " ").split(/\s+/).filter((w) => w !== "");
+  function checkCourseAnswer(given, answer) {
+    const g = words(given);
+    const a = words(answer);
+    const left = [...g];
+    const missing = [];
+    for (const w of a) {
+      const i = left.indexOf(w);
+      if (i === -1) missing.push(w);
+      else left.splice(i, 1);
+    }
+    const extra = left;
+    if (missing.length === 0 && extra.length === 0)
+      return { verdict: g.join(" ") === a.join(" ") ? "right" : "order", missing, extra };
+    return {
+      verdict: missing.length <= 1 && extra.length <= 1 ? "close" : "different",
+      missing,
+      extra
+    };
+  }
+  function snapshotEdition(data) {
+    const items = {};
+    for (const i of data.items.values())
+      items[i.id] = [i.spelling, i.meaning, i.kind, i.forms.map((f2) => f2.gloss)];
+    const concepts = {};
+    for (const c of data.concepts.values()) concepts[c.id] = [c.title, c.description];
+    return { edition: data.edition, items, concepts };
+  }
+  function diffSnapshots(prev, curr, replacementFor = () => void 0) {
+    const d = {
+      from: prev.edition,
+      to: curr.edition,
+      renamed: [],
+      reglossed: [],
+      added: [],
+      removed: [],
+      rulesAdded: [],
+      rulesChanged: [],
+      rulesRemoved: []
+    };
+    const byId = (a, b) => a < b ? -1 : a > b ? 1 : 0;
+    for (const id of Object.keys(curr.items).sort(byId)) {
+      const now = curr.items[id];
+      const was = prev.items[id];
+      if (now === void 0) continue;
+      if (was === void 0) {
+        d.added.push({ id, spelling: now[0], meaning: now[1], kind: now[2] });
+        continue;
+      }
+      if (was[0] !== now[0]) {
+        d.renamed.push({ id, from: was[0], to: now[0], meaning: now[1] });
+        continue;
+      }
+      const slots = now[3].map((to, slot) => ({ slot, from: was[3][slot] ?? "", to })).filter((x) => x.from !== x.to);
+      if (was[1] !== now[1] || slots.length > 0) {
+        d.reglossed.push({ id, spelling: now[0], from: was[1], to: now[1], slots });
+      }
+    }
+    for (const id of Object.keys(prev.items).sort(byId)) {
+      const was = prev.items[id];
+      if (was === void 0 || curr.items[id] !== void 0) continue;
+      const replacement = replacementFor(was[0]);
+      d.removed.push({
+        id,
+        spelling: was[0],
+        meaning: was[1],
+        ...replacement !== void 0 ? { replacement } : {}
+      });
+    }
+    const rule = (id) => id.startsWith("rule:");
+    for (const id of Object.keys(curr.concepts).filter(rule).sort(byId)) {
+      const now = curr.concepts[id];
+      const was = prev.concepts[id];
+      if (now === void 0) continue;
+      if (was === void 0) d.rulesAdded.push({ id, title: now[0] });
+      else if (was[1] !== now[1])
+        d.rulesChanged.push({ id, title: now[0], from: was[1], to: now[1] });
+    }
+    for (const id of Object.keys(prev.concepts).filter(rule).sort(byId)) {
+      const was = prev.concepts[id];
+      if (was !== void 0 && curr.concepts[id] === void 0)
+        d.rulesRemoved.push({ id, title: was[0] });
+    }
+    return d;
+  }
+  const diffIsEmpty = (d) => d.renamed.length + d.reglossed.length + d.added.length + d.removed.length + d.rulesAdded.length + d.rulesChanged.length + d.rulesRemoved.length === 0;
+  const VERB_CLASSES = ["n-initial", "s-initial", "vowel-initial", "otherwise"];
+  const CLASS_LETTER = { "n-initial": "n", "s-initial": "s" };
+  function suffixOf(pattern) {
+    const m = /^R(?:\s*\+\s*([a-z]+))?$/.exec(pattern.trim());
+    return m === null ? null : m[1] ?? "";
+  }
+  function vowelsOf(phonology) {
+    const raw = phonology?.vowels;
+    if (typeof raw !== "string") return null;
+    const letters = (raw.split("(")[0] ?? "").match(/\b[a-z]\b/g);
+    return letters === null ? null : letters.join("");
+  }
+  function readFormRules(morphology, edition, phonology) {
+    const gaps = [];
+    const gap = (code, ref, message) => {
+      gaps.push({ severity: "error", code, ref, message });
+    };
+    const patterns = morphology.seven_forms;
+    if (patterns.length !== FORM_SLOTS.length) {
+      gap(
+        "forms-rule-shape",
+        "morphology.seven_forms",
+        `seven_forms lists ${String(patterns.length)} patterns; the engine reads them in the order ${FORM_SLOTS.join(", ")}.`
+      );
+    }
+    const slots = FORM_SLOTS.map((slot, i) => {
+      const pattern = patterns[i] ?? "";
+      if (pattern.trim() === "VERB") return { slot, pattern, kind: "verb" };
+      const suffix = suffixOf(pattern);
+      if (suffix !== null) return { slot, pattern, kind: "suffix", suffix };
+      gap(
+        "forms-rule-unreadable",
+        `form:${slot}`,
+        `The ${slot} pattern "${pattern}" is not R, R+suffix or VERB.`
+      );
+      return { slot, pattern, kind: "unknown" };
+    });
+    const verb = [];
+    const irregularVerbs = {};
+    const known = new Set(VERB_CLASSES);
+    for (const [key, value] of Object.entries(morphology.verb_rule)) {
+      if (!known.has(key)) {
+        irregularVerbs[key] = value;
+        continue;
+      }
+      const cls = key;
+      const ending = cls === "otherwise" ? /^R\s*\+\s*first consonant\s*\+\s*([a-z]+)$/.exec(value.trim())?.[1] : suffixOf(value) ?? void 0;
+      if (ending === void 0) {
+        gap(
+          "verb-rule-unreadable",
+          `verb_rule.${key}`,
+          `The verb rule "${key}: ${value}" cannot be read.`
+        );
+        continue;
+      }
+      const letter = CLASS_LETTER[cls];
+      verb.push({ cls, pattern: value, ending, ...letter !== void 0 ? { letter } : {} });
+    }
+    verb.sort((a, b) => VERB_CLASSES.indexOf(a.cls) - VERB_CLASSES.indexOf(b.cls));
+    for (const cls of VERB_CLASSES) {
+      if (!verb.some((v) => v.cls === cls)) {
+        gap("verb-rule-missing", `verb_rule.${cls}`, `verb_rule has no "${cls}" class.`);
+      }
+    }
+    const vowels = vowelsOf(phonology);
+    if (vowels === null && phonology !== void 0) {
+      gaps.push({
+        severity: "warn",
+        code: "vowels-unreadable",
+        ref: "phonology.vowels",
+        message: `phonology.vowels could not be read; using ${VOWELS}.`
+      });
+    }
+    const lexicalised = [];
+    for (const [spelling, text] of Object.entries({
+      ...morphology.lexicalised_derivations,
+      ...morphology.lexicalised_diminutives ?? {}
+    })) {
+      const cut = text.lastIndexOf(": ");
+      const m = /^([a-z]+)\s*\+\s*-([a-z]+)$/.exec(cut < 0 ? "" : text.slice(cut + 2).trim());
+      const base = m?.[1];
+      const suffix = m?.[2];
+      if (base === void 0 || suffix === void 0 || base + suffix !== spelling) {
+        gaps.push({
+          severity: "warn",
+          code: "lexicalised-unreadable",
+          ref: spelling,
+          message: `lexicalised_derivations.${spelling} ("${text}") is not "gloss: base + -suffix" spelling ${spelling}.`
+        });
+        continue;
+      }
+      lexicalised.push({ spelling, base, suffix, gloss: text.slice(0, cut).trim() });
+    }
+    return {
+      rules: {
+        edition,
+        slots,
+        verb,
+        irregularVerbs,
+        vowels: vowels ?? VOWELS,
+        lexicalised,
+        suffixes: Object.entries(morphology.suffixes).map(([key, meaning]) => ({
+          spelling: key.replace(/^-/, ""),
+          meaning
+        }))
+      },
+      gaps
+    };
+  }
+  function verbClassFor(rules, spelling) {
+    const first = spelling[0] ?? "";
+    return rules.verb.find(
+      (v) => v.letter !== void 0 ? first === v.letter : v.cls === "vowel-initial" ? rules.vowels.includes(first) : v.cls === "otherwise"
+    );
+  }
+  function ruleForm(rules, spelling, slot) {
+    const rule = rules.slots.find((s) => s.slot === slot);
+    if (rule === void 0 || rule.kind === "unknown") {
+      return { form: null, parts: [{ text: spelling, role: "root" }], pattern: rule?.pattern ?? "" };
+    }
+    const root = { text: spelling, role: "root" };
+    if (rule.kind === "suffix") {
+      const parts = rule.suffix === "" ? [root] : [root, { text: rule.suffix, role: "marker" }];
+      return { form: spelling + rule.suffix, parts, pattern: rule.pattern };
+    }
+    const cls = verbClassFor(rules, spelling);
+    if (cls === void 0) return { form: null, parts: [root], pattern: rule.pattern };
+    const ending = cls.cls === "otherwise" ? (spelling[0] ?? "") + cls.ending : cls.ending;
+    return {
+      form: spelling + ending,
+      parts: [root, { text: ending, role: "marker" }],
+      pattern: cls.pattern,
+      verbClass: cls.cls
+    };
+  }
+  const SOURCE_ORDER = {
+    corpus: 0,
+    examples: 1,
+    ruling: 2,
+    functionWord: 3,
+    particle: 4
+  };
+  function createFormsEngine(input) {
+    const { data } = input;
+    const read = readFormRules(input.morphology, data.edition, input.phonology);
+    const { rules } = read;
+    const notes = input.overrides?.formNotes ?? {};
+    const bySpelling = /* @__PURE__ */ new Map();
+    for (const item of data.items.values()) {
+      if (item.forms.length > 0) bySpelling.set(item.spelling, item.id);
+    }
+    const verdict = (spelling, slot, stored) => {
+      const rule = ruleForm(rules, spelling, slot);
+      if (rule.form === null || rule.form === stored) return { rule, reason: null };
+      const listed = slot === "verb" && rules.irregularVerbs[spelling] === stored;
+      return { rule, reason: listed ? "listed" : "unexplained" };
+    };
+    const irregular = /* @__PURE__ */ new Set();
+    const unexplained = /* @__PURE__ */ new Map();
+    for (const item of data.items.values()) {
+      for (const f2 of item.forms) {
+        const { reason } = verdict(item.spelling, f2.slot, f2.form);
+        if (reason === null) continue;
+        irregular.add(item.id);
+        if (reason === "unexplained") {
+          const list = unexplained.get(f2.slot) ?? [];
+          list.push(item.id);
+          unexplained.set(f2.slot, list);
+        }
+      }
+    }
+    for (const [word, form] of Object.entries(rules.irregularVerbs)) {
+      const id = bySpelling.get(word);
+      const stored = id === void 0 ? void 0 : data.items.get(id)?.forms.find((f2) => f2.slot === "verb");
+      if (stored === void 0 || stored.form !== form) {
+        read.gaps.push({
+          severity: "error",
+          code: "irregular-unmatched",
+          ref: `verb_rule.${word}`,
+          message: stored === void 0 ? `verb_rule lists ${word} → ${form}, but ${word} is no headword in ${data.edition}.` : `verb_rule lists ${word} → ${form}, but the stored verb is ${stored.form}.`
+        });
+      }
+    }
+    for (const [slot, ids] of unexplained) {
+      read.gaps.push({
+        severity: "error",
+        code: "form-off-rule",
+        ref: formConcept(slot),
+        message: `${String(ids.length)} stored ${slot} forms differ from the rule ${rules.slots.find((s) => s.slot === slot)?.pattern ?? ""} and the data does not list them as irregular: ${ids.slice(0, 12).join(", ")}${ids.length > 12 ? ", …" : ""}. If the rule changed, the forms need a changeset; if the forms are right, the rule needs one.`
+      });
+    }
+    const ref = (id) => {
+      const i = data.items.get(id);
+      return i === void 0 ? null : { id, spelling: i.spelling, meaning: i.meaning };
+    };
+    const derivationsOf = /* @__PURE__ */ new Map();
+    const lexicalisedBySpelling = new Map(rules.lexicalised.map((d) => [d.spelling, d]));
+    const rootOf = (base, seen = /* @__PURE__ */ new Set()) => {
+      const inner = lexicalisedBySpelling.get(base);
+      if (bySpelling.has(base) || inner === void 0 || seen.has(base)) return base;
+      seen.add(base);
+      return rootOf(inner.base, seen);
+    };
+    for (const d of rules.lexicalised) {
+      const home = rootOf(d.base);
+      if (!bySpelling.has(home)) {
+        read.gaps.push({
+          severity: "warn",
+          code: "lexicalised-no-base",
+          ref: d.spelling,
+          message: `The lexicalised derivation ${d.spelling} is built on ${d.base}, which is no headword in ${data.edition}; no study card shows it.`
+        });
+      }
+      const list = derivationsOf.get(home) ?? [];
+      list.push(d);
+      derivationsOf.set(home, list);
+    }
+    const getForms = (id, options = {}) => {
+      const item = data.items.get(id);
+      if (item === void 0) return null;
+      const was = options.previous?.items[id];
+      const head = item.components !== null ? data.items.get(item.components[1]) : void 0;
+      const forms = [];
+      const unused = [];
+      for (const [i, f2] of item.forms.entries()) {
+        if (!f2.meaningful && options.includeUnused !== true) {
+          unused.push(f2.slot);
+          continue;
+        }
+        const { rule, reason } = verdict(item.spelling, f2.slot, f2.form);
+        const off = reason !== null;
+        const note = notes[`${id}|${f2.slot}`];
+        const verbClass = f2.slot !== "verb" ? void 0 : reason === "listed" ? "listed" : rule.verbClass;
+        const headClass = f2.slot === "verb" && head !== void 0 && rule.verbClass !== void 0 ? verbClassFor(rules, head.spelling)?.cls : void 0;
+        const glossWas = was?.[3][i];
+        forms.push({
+          category: f2.slot,
+          form: f2.form,
+          gloss: f2.gloss,
+          meaningful: f2.meaningful,
+          ruleId: formConcept(f2.slot),
+          pattern: rule.pattern,
+          parts: off ? [{ text: f2.form, role: "whole" }] : rule.parts,
+          irregular: off,
+          irregularReason: reason,
+          irregularNote: note ?? null,
+          regularWouldBe: off ? rule.form : null,
+          ...verbClass !== void 0 ? { verbClass } : {},
+          ...headClass !== void 0 && headClass !== rule.verbClass && !off ? { classFromModifier: { headClass } } : {},
+          ...glossWas !== void 0 && glossWas !== f2.gloss ? { glossWas } : {}
+        });
+      }
+      const root = item.forms.find((f2) => f2.slot === "root");
+      const senses = (root?.meaningful === true ? root.gloss : item.meaning).split(";").map((s) => s.trim()).filter((s) => s !== "");
+      const alt = new Set(senses.slice(1));
+      alt.delete(item.meaning);
+      const limit = options.examples ?? 3;
+      const examples = data.examples.filter((e) => e.ids.includes(id)).sort((a, b) => SOURCE_ORDER[a.source] - SOURCE_ORDER[b.source]).slice(0, limit).map((e) => {
+        const slots = /* @__PURE__ */ new Set();
+        for (const t of e.tokens) {
+          if (t.link.kind !== "entry") continue;
+          for (const r of t.link.refs) if (r.id === id && r.slot !== void 0) slots.add(r.slot);
+        }
+        return {
+          key: e.key,
+          liraasa: e.liraasa,
+          english: e.english,
+          source: e.source,
+          ...e.where !== void 0 ? { where: e.where } : {},
+          slots: FORM_SLOTS.filter((s) => slots.has(s)),
+          gloss: glossLine(data, e.tokens)
+        };
+      });
+      return {
+        root: {
+          id,
+          kind: item.kind,
+          spelling: item.spelling,
+          gloss: item.meaning,
+          sense: alt.size > 0 ? senses[0] ?? item.meaning : item.meaning,
+          altMeanings: [...alt],
+          theme: item.theme,
+          register: item.register,
+          version: item.since,
+          status: item.status,
+          ...was !== void 0 && was[0] !== item.spelling ? { spellingWas: was[0] } : {},
+          parts: item.components === null ? null : item.components.map(ref).filter((r) => r !== null)
+        },
+        forms,
+        unused,
+        compounds: item.usedIn.map(ref).filter((r) => r !== null),
+        derivations: (derivationsOf.get(item.spelling) ?? []).map((d) => ({
+          ...d,
+          ruleId: suffixConcept(d.suffix)
+        })),
+        examples,
+        hasIrregular: irregular.has(id)
+      };
+    };
+    let surprising = null;
+    const surprisingIds = () => {
+      if (surprising !== null) return surprising;
+      const out = new Set(irregular);
+      for (const item of data.items.values()) {
+        if (item.forms.length === 0) continue;
+        const w = getForms(item.id, { examples: 0 });
+        if (w === null) continue;
+        if (w.derivations.length > 0) out.add(item.id);
+        if (w.forms.some((f2) => f2.classFromModifier !== void 0)) out.add(item.id);
+      }
+      surprising = [...out];
+      return surprising;
+    };
+    return {
+      rules,
+      getForms,
+      isIrregular: (id) => irregular.has(id),
+      irregularIds: () => [...irregular],
+      surprisingIds,
+      gaps: read.gaps
+    };
+  }
+  const PARTICLE = /* @__PURE__ */ new Set(["functionWord", "correlative", "discourseParticle", "timeWord"]);
+  const rating = (verdict, fast) => verdict === "wrong" ? 1 : verdict === "almost" ? 2 : fast ? 4 : 3;
+  function grade(verdict, score, expected, diagnoses, fast) {
+    return { verdict, score, expected, diagnoses, rating: rating(verdict, fast) };
+  }
+  const itemLink = (id) => ({ kind: "item", id });
+  const conceptLink = (id) => ({ kind: "concept", id });
+  function meaningOf(data, link) {
+    if (link.kind !== "entry") return "";
+    const ref = link.refs[0];
+    const item = ref === void 0 ? void 0 : data.items.get(ref.id);
+    if (item === void 0) return "";
+    const form = item.forms.find((f2) => f2.slot === ref?.slot);
+    return form?.meaningful === true ? form.gloss : item.meaning;
+  }
+  function diagnoseWord(ctx, got, expected) {
+    const g = normalize(got);
+    const e = normalize(expected);
+    if (g === e) return null;
+    const want = linkWord(ctx.link, e);
+    const have = linkWord(ctx.link, g);
+    const wantRef = want.kind === "entry" ? want.refs[0] : void 0;
+    const wantId = wantRef?.id;
+    if (have.kind === "entry") {
+      const ids = have.refs.map((r) => r.id);
+      if (have.via === "legacy" && wantId !== void 0 && ids.includes(wantId)) {
+        return {
+          kind: "old-spelling",
+          message: `“${got}” is the pre-1.0 spelling; it is now “${expected}”.`,
+          expected,
+          got,
+          link: itemLink(wantId)
+        };
+      }
+      if (wantId !== void 0 && ids.includes(wantId)) {
+        const slot = have.refs.find((r) => r.id === wantId)?.slot;
+        const wantSlot = wantRef?.slot;
+        const what = slot !== void 0 && wantSlot !== void 0 && slot !== wantSlot ? `the ${humanize(slot)} form; this needs the ${humanize(wantSlot)} form` : "the right word with the wrong ending";
+        return {
+          kind: "wrong-form",
+          message: `“${got}” is ${what}: “${expected}”.`,
+          expected,
+          got,
+          link: wantSlot !== void 0 ? conceptLink(`form:${wantSlot}`) : itemLink(wantId)
+        };
+      }
+      return {
+        kind: "wrong-root",
+        message: `“${got}” is a different word (“${meaningOf(ctx.data, have)}”). The answer is “${expected}”${wantId !== void 0 ? ` (“${meaningOf(ctx.data, want)}”)` : ""}.`,
+        expected,
+        got,
+        ...wantId !== void 0 ? { link: itemLink(wantId) } : {}
+      };
+    }
+    if (editDistance(g, e, typoBudget(e.length)) <= typoBudget(e.length)) {
+      return {
+        kind: "typo",
+        message: `Almost: check the spelling. It is “${expected}”.`,
+        expected,
+        got,
+        ...wantId !== void 0 ? { link: itemLink(wantId) } : {}
+      };
+    }
+    return {
+      kind: "not-a-word",
+      message: `“${got}” is not a word of Liraasa. The answer is “${expected}”.`,
+      expected,
+      got,
+      ...wantId !== void 0 ? { link: itemLink(wantId) } : {}
+    };
+  }
+  function gradeWord(ctx, typed, accepted, fast) {
+    const first = accepted[0] ?? "";
+    if (accepted.some((a) => normalize(a) === normalize(typed)))
+      return grade("correct", 1, first, [], fast);
+    const best = [...accepted].sort(
+      (a, b) => editDistance(normalize(typed), normalize(a)) - editDistance(normalize(typed), normalize(b))
+    )[0];
+    const d = diagnoseWord(ctx, typed, best ?? first);
+    const soft = d !== null && (d.kind === "typo" || d.kind === "old-spelling");
+    return grade(
+      soft ? "almost" : "wrong",
+      soft ? 0.8 : 0,
+      best ?? first,
+      d === null ? [] : [d],
+      false
+    );
+  }
+  function lcs(a, b) {
+    const t = Array.from({ length: a.length + 1 }, () => new Array(b.length + 1).fill(0));
+    for (let i2 = a.length - 1; i2 >= 0; i2 -= 1) {
+      for (let j2 = b.length - 1; j2 >= 0; j2 -= 1) {
+        const row = t[i2];
+        if (row === void 0) continue;
+        row[j2] = a[i2] === b[j2] ? (t[i2 + 1]?.[j2 + 1] ?? 0) + 1 : Math.max(t[i2 + 1]?.[j2] ?? 0, row[j2 + 1] ?? 0);
+      }
+    }
+    const out = [];
+    let i = 0;
+    let j = 0;
+    while (i < a.length && j < b.length) {
+      if (a[i] === b[j]) {
+        out.push([i, j]);
+        i += 1;
+        j += 1;
+      } else if ((t[i + 1]?.[j] ?? 0) >= (t[i]?.[j + 1] ?? 0)) i += 1;
+      else j += 1;
+    }
+    return out;
+  }
+  function gradeSentence(ctx, typed, expected, fast = false) {
+    const got = words$1(typed).map((w2) => w2.text);
+    const want = words$1(expected).map((w2) => w2.text);
+    const g = got.map(normalize);
+    const w = want.map(normalize);
+    if (g.join(" ") === w.join(" ")) return grade("correct", 1, expected, [], fast);
+    const diagnoses = [];
+    const sorted = (x) => [...x].sort().join(" ");
+    if (sorted(g) === sorted(w)) {
+      diagnoses.push({
+        kind: "wrong-order",
+        message: "All the right words, in the wrong order. Liraasa order is fixed by the clause template.",
+        expected,
+        got: typed,
+        link: conceptLink("clause")
+      });
+      return grade("wrong", 0.5, expected, diagnoses, false);
+    }
+    const matched = lcs(g, w);
+    const usedG = new Set(matched.map(([i]) => i));
+    const usedW = new Set(matched.map(([, j]) => j));
+    const restG = g.map((x, i) => ({ x, i, raw: got[i] ?? x })).filter(({ i }) => !usedG.has(i));
+    let soft = true;
+    for (const [j, e] of w.entries()) {
+      if (usedW.has(j)) continue;
+      let best;
+      let bestScore = Infinity;
+      for (const r of restG) {
+        const sameEntry = (() => {
+          const a = linkWord(ctx.link, r.x);
+          const b = linkWord(ctx.link, e);
+          if (a.kind !== "entry" || b.kind !== "entry") return false;
+          return a.refs.some((x) => b.refs.some((y) => y.id === x.id));
+        })();
+        const score2 = sameEntry ? 0 : editDistance(r.x, e, 4);
+        if (score2 < bestScore) {
+          bestScore = score2;
+          best = r;
+        }
+      }
+      if (best !== void 0 && bestScore <= Math.max(2, typoBudget(e.length))) {
+        restG.splice(restG.indexOf(best), 1);
+        const d = diagnoseWord(ctx, best.raw, want[j] ?? e);
+        if (d !== null) {
+          diagnoses.push(d);
+          if (d.kind !== "typo" && d.kind !== "old-spelling") soft = false;
+        }
+        continue;
+      }
+      soft = false;
+      const link = linkWord(ctx.link, e);
+      const ref = link.kind === "entry" ? link.refs[0] : void 0;
+      const particle = ref !== void 0 && PARTICLE.has(ref.namespace);
+      diagnoses.push({
+        kind: particle ? "missing-particle" : "missing-word",
+        message: `Missing ${particle ? "the particle" : "the word"} “${want[j] ?? e}”${ref !== void 0 ? ` (“${meaningOf(ctx.data, link)}”)` : ""}.`,
+        expected: want[j] ?? e,
+        ...ref !== void 0 ? { link: itemLink(ref.id) } : {}
+      });
+    }
+    for (const r of restG) {
+      soft = false;
+      const link = linkWord(ctx.link, r.x);
+      diagnoses.push({
+        kind: link.kind === "unknown" ? "not-a-word" : "extra-word",
+        message: link.kind === "unknown" ? `“${r.raw}” is not a word of Liraasa.` : `“${r.raw}” does not belong in this sentence.`,
+        got: r.raw
+      });
+    }
+    const score = matched.length / Math.max(1, w.length);
+    return grade(soft ? "almost" : "wrong", score, expected, diagnoses, false);
+  }
+  function synonymsFor(data, ids) {
+    const groups = /* @__PURE__ */ new Map();
+    for (const id of ids) {
+      const item = data.items.get(id);
+      if (item === void 0) continue;
+      const words2 = new Set(
+        [
+          item.meaning,
+          ...item.synonyms,
+          ...item.forms.filter((f2) => f2.meaningful).map((f2) => f2.gloss)
+        ].flatMap(englishContent)
+      );
+      for (const w of words2) groups.set(w, /* @__PURE__ */ new Set([...groups.get(w) ?? [], ...words2]));
+    }
+    return groups;
+  }
+  function gradeEnglish(data, typed, accepted, itemIds, fast = false) {
+    const expected = accepted[0] ?? "";
+    const want = englishContent(expected);
+    const got = new Set(englishContent(typed));
+    if (want.length === 0)
+      return grade(
+        normalize(typed) === normalize(expected) ? "correct" : "wrong",
+        1,
+        expected,
+        [],
+        fast
+      );
+    const syn = synonymsFor(data, itemIds);
+    const missed = [];
+    for (const w of want) {
+      const ok = got.has(w) || [...syn.get(w) ?? []].some((s) => got.has(s));
+      if (!ok) missed.push(w);
+    }
+    const score = 1 - missed.length / want.length;
+    const verdict = score >= 0.75 ? "correct" : score >= 0.45 ? "almost" : "wrong";
+    const diagnoses = missed.length === 0 || verdict === "correct" ? [] : [
+      {
+        kind: "meaning-missing",
+        message: `Your translation misses: ${missed.join(", ")}. A full answer: “${expected}”.`,
+        expected,
+        got: typed
+      }
+    ];
+    return grade(verdict, score, expected, diagnoses, fast && verdict === "correct");
+  }
+  function gradeExercise(ctx, ex, response, ms = Infinity) {
+    const fast = ms < 6e3;
+    const a = ex.answer;
+    if (a.kind === "choice") {
+      const expected2 = ex.choices?.find((c) => c.id === a.correct)?.text ?? a.correct;
+      if (response.kind !== "choice") return grade("wrong", 0, expected2, [], false);
+      if (response.id === a.correct) return grade("correct", 1, expected2, [], fast);
+      const chosen = ex.choices?.find((c) => c.id === response.id);
+      const item = ctx.data.items.get(response.id);
+      const message = ex.type === "formIdentify" ? `That is not the ${chosen?.text ?? response.id} form: it is the ${expected2} form.` : item !== void 0 ? `“${chosen?.text ?? ""}” is what “${item.spelling}” means. The answer is “${expected2}”.` : `The answer is “${expected2}”.`;
+      return grade(
+        "wrong",
+        0,
+        expected2,
+        [
+          {
+            kind: "wrong-choice",
+            message,
+            expected: expected2,
+            ...chosen !== void 0 ? { got: chosen.text } : {},
+            link: ex.type === "formIdentify" ? conceptLink(`form:${a.correct}`) : itemLink(item !== void 0 ? item.id : ex.target)
+          }
+        ],
+        false
+      );
+    }
+    if (a.kind === "typed") {
+      const text = response.kind === "typed" ? response.text : response.kind === "choice" ? ex.choices?.find((c) => c.id === response.id)?.text ?? "" : "";
+      if (a.lang === "english") return gradeEnglish(ctx.data, text, a.accepted, ex.items, fast);
+      const multi = a.accepted.some((x) => words$1(x).length > 1);
+      if (multi) {
+        const best = [...a.accepted].map((x) => gradeSentence(ctx, text, x, fast)).sort((p, q) => q.score - p.score);
+        return best[0] ?? gradeSentence(ctx, text, a.accepted[0] ?? "", fast);
+      }
+      const g = gradeWord(ctx, text, a.accepted, fast);
+      return g;
+    }
+    if (a.kind === "order") {
+      const textOf = (id) => a.tiles.find((t) => t.id === id)?.text ?? id;
+      const want = a.correct.map(textOf);
+      const expected2 = ex.type === "assemble" ? want.join(" ") : want.join(" + ");
+      if (response.kind !== "order") return grade("wrong", 0, expected2, [], false);
+      const got = response.ids.map(textOf);
+      if (got.map(normalize).join(" ") === want.map(normalize).join(" ")) {
+        return grade("correct", 1, expected2, [], fast);
+      }
+      if (ex.type === "assemble") {
+        const g = gradeSentence(ctx, got.join(" "), want.join(" "));
+        return { ...g, expected: expected2 };
+      }
+      const diagnoses2 = [];
+      if ([...got].sort().join() === [...want].sort().join()) {
+        diagnoses2.push({
+          kind: "wrong-order",
+          message: "The right parts, the wrong way round: the modifier comes first, the head last.",
+          expected: expected2,
+          link: conceptLink("compound")
+        });
+      } else {
+        for (const id of response.ids) {
+          if (a.correct.includes(id)) continue;
+          const item = ctx.data.items.get(id);
+          diagnoses2.push({
+            kind: "wrong-part",
+            message: `“${textOf(id)}” means “${item?.meaning ?? ""}”, which is not part of this word.`,
+            got: textOf(id),
+            link: itemLink(id)
+          });
+        }
+      }
+      const right2 = response.ids.filter((id, i) => a.correct[i] === id).length;
+      return grade("wrong", right2 / a.correct.length, expected2, diagnoses2, false);
+    }
+    if (a.kind === "multi") {
+      const text = (id) => ex.choices?.find((c) => c.id === id)?.text ?? id;
+      const expected2 = a.correct.map(text).join(", ");
+      if (response.kind !== "multi") return grade("wrong", 0, expected2, [], false);
+      const want = new Set(a.correct);
+      const got = new Set(response.ids);
+      const hits = [...got].filter((id) => want.has(id)).length;
+      const extra = [...got].filter((id) => !want.has(id));
+      const missed = a.correct.filter((id) => !got.has(id));
+      if (extra.length === 0 && missed.length === 0) return grade("correct", 1, expected2, [], fast);
+      const diagnoses2 = [
+        ...extra.map(
+          (id) => ({
+            kind: "wrong-choice",
+            message: `“${text(id)}” does not fit.`,
+            got: text(id)
+          })
+        ),
+        ...missed.map(
+          (id) => ({
+            kind: "missed-choice",
+            message: `“${text(id)}” fits too.`,
+            expected: text(id)
+          })
+        )
+      ];
+      const score2 = Math.max(0, (hits - extra.length) / want.size);
+      const verdict2 = extra.length + missed.length === 1 ? "almost" : "wrong";
+      return grade(verdict2, score2, expected2, diagnoses2, false);
+    }
+    const expected = a.left.map((l) => `${l.text} = ${a.right.find((r) => r.id === a.pairs[l.id])?.text ?? ""}`).join("; ");
+    if (response.kind !== "pairs") return grade("wrong", 0, expected, [], false);
+    const diagnoses = [];
+    let right = 0;
+    for (const l of a.left) {
+      if (response.pairs[l.id] === a.pairs[l.id]) {
+        right += 1;
+        continue;
+      }
+      const item = ctx.data.items.get(l.id);
+      const partner = a.right.find((r) => r.id === a.pairs[l.id])?.text ?? "";
+      diagnoses.push(
+        item !== void 0 ? {
+          kind: "wrong-choice",
+          message: `“${l.text}” means “${item.meaning}”.`,
+          expected: item.meaning,
+          link: itemLink(l.id)
+        } : {
+          // a pair that is not a word, e.g. a form and its name (Form Match)
+          kind: "wrong-choice",
+          message: `“${l.text}” goes with “${partner}”.`,
+          expected: partner
+        }
+      );
+    }
+    const score = right / a.left.length;
+    const verdict = score === 1 ? "correct" : a.left.length - right <= 1 ? "almost" : "wrong";
+    return grade(verdict, score, expected, diagnoses, fast && verdict === "correct");
+  }
+  const DRILL_MODES = [
+    "recognize",
+    "recall",
+    "forge",
+    "pattern",
+    "match",
+    "listen",
+    "slot"
+  ];
+  const meaningfulForms = (forms, id) => forms.getForms(id, { examples: 0 })?.forms ?? [];
+  function spotPattern(ctx, ids, rng, ask) {
+    const { data } = ctx.exercise;
+    const verbOf2 = (id) => meaningfulForms(ctx.forms, id).find((f2) => f2.category === "verb");
+    const drawn = ids.filter((id) => verbOf2(id) !== void 0);
+    if (drawn.length === 0) return null;
+    const others = rng.shuffle(
+      [...data.items.values()].filter((i) => (i.kind === "root" || i.kind === "compound") && !ids.includes(i.id)).filter((i) => i.forms.some((f2) => f2.slot === "verb" && f2.meaningful)).map((i) => i.id)
+    );
+    const grid = rng.shuffle(
+      [.../* @__PURE__ */ new Set([...rng.shuffle(drawn).slice(0, 4), ...others.slice(0, 6)])].slice(0, 6)
+    );
+    const classOf = (id) => verbOf2(id)?.verbClass;
+    const irregular = grid.filter((id) => verbOf2(id)?.irregular === true);
+    const present = VERB_CLASSES.filter((c) => grid.some((id) => classOf(id) === c));
+    const target = ask ?? (irregular.length > 0 && rng.next() < 0.5 ? "irregular" : rng.pick(present.filter((c) => grid.some((id) => classOf(id) !== c))));
+    if (target === void 0) return null;
+    const correct = target === "irregular" ? irregular : grid.filter((id) => classOf(id) === target);
+    if (correct.length === 0 || correct.length === grid.length) return null;
+    const pattern = ctx.forms.rules.verb.find((v) => v.cls === target)?.pattern ?? "";
+    const choices = grid.map((id) => ({
+      id,
+      text: verbOf2(id)?.form ?? "",
+      liraasa: true
+    }));
+    const first = correct.find((id) => ids.includes(id)) ?? drawn[0] ?? "";
+    return {
+      id: `spotPattern:${target}:${grid.join(",")}`,
+      type: "spotPattern",
+      skill: "morphology",
+      direction: "recognize",
+      card: cardId(first, "morphology", "recognize"),
+      target: first,
+      items: grid,
+      concepts: ["form:verb"],
+      instruction: target === "irregular" ? "Which of these verbs go their own way, not the rule?" : `Which of these verbs follow the pattern “${pattern}”?`,
+      prompt: {},
+      choices,
+      answer: { kind: "multi", correct }
+    };
+  }
+  function formMatch(ctx, id, rng) {
+    const forms = meaningfulForms(ctx.forms, id);
+    if (forms.length < 3) return null;
+    const chosen = rng.shuffle(forms).slice(0, 4);
+    const left = chosen.map((f2) => ({ id: `f:${f2.category}`, text: f2.form, liraasa: true }));
+    const right = rng.shuffle(
+      chosen.map((f2) => ({ id: `n:${f2.category}`, text: humanize(f2.category), liraasa: false }))
+    );
+    return {
+      id: `formMatch:${id}:${chosen.map((f2) => f2.category).join(",")}`,
+      type: "formMatch",
+      skill: "morphology",
+      direction: "recognize",
+      card: cardId(id, "morphology", "recognize"),
+      target: id,
+      items: [id],
+      concepts: chosen.map((f2) => f2.ruleId),
+      instruction: "Match each form to its name.",
+      prompt: {},
+      answer: {
+        kind: "pairs",
+        left,
+        right,
+        pairs: Object.fromEntries(chosen.map((f2) => [`f:${f2.category}`, `n:${f2.category}`]))
+      }
+    };
+  }
+  function starsDrill(ctx, ids, rng, options) {
+    const ex = ctx.exercise;
+    const modes = new Set(options.modes);
+    const buckets = /* @__PURE__ */ new Map();
+    const add = (mode, e) => {
+      if (e === null || !modes.has(mode)) return;
+      buckets.set(mode, [...buckets.get(mode) ?? [], e]);
+    };
+    for (const id of ids) {
+      const forms = meaningfulForms(ctx.forms, id);
+      const slots = forms.map((f2) => f2.category).filter((s) => s !== "root");
+      add("recognize", recognition(ex, id, rng));
+      for (const s of slots) add("recognize", recognition(ex, id, rng, s));
+      add("recall", recall(ex, id));
+      for (const s of slots) add("forge", formBuild(ex, id, rng, s));
+      add("match", formMatch(ctx, id, rng));
+      add("listen", listen(ex, id, rng));
+      const sentences = ex.data.examples.filter((e) => e.ids.includes(id));
+      for (const e of rng.shuffle(sentences).slice(0, 2))
+        add("slot", cloze(ex, e, rng, { item: id }));
+    }
+    if (ids.length >= 3) add("match", matching(ex, rng.shuffle(ids), rng));
+    if (modes.has("pattern")) {
+      const grids = /* @__PURE__ */ new Set();
+      for (let k = 0; k < 24 && grids.size < 6; k += 1) {
+        const e = spotPattern(ctx, ids, rng, VERB_CLASSES[k % VERB_CLASSES.length]);
+        if (e === null || grids.has(e.id)) continue;
+        grids.add(e.id);
+        add("pattern", e);
+      }
+    }
+    if (ids.some((id) => ctx.forms.isIrregular(id)))
+      add("pattern", spotPattern(ctx, ids, rng, "irregular"));
+    const queues = rng.shuffle([...buckets.values()].map((list) => rng.shuffle(list)));
+    const out = [];
+    const seen = /* @__PURE__ */ new Set();
+    let turn = 0;
+    for (const id of rng.shuffle(ids)) {
+      if (out.length >= options.length) break;
+      for (let k = 0; k < queues.length; k += 1) {
+        const q = queues[(turn + k) % queues.length] ?? [];
+        const at = q.findIndex((e) => e.target === id && !seen.has(e.id));
+        const next = at < 0 ? void 0 : q.splice(at, 1)[0];
+        if (next === void 0) continue;
+        seen.add(next.id);
+        out.push(next);
+        turn = (turn + k + 1) % queues.length;
+        break;
+      }
+    }
+    while (out.length < options.length && queues.some((q) => q.length > 0)) {
+      for (const q of queues) {
+        const next = q.shift();
+        if (next === void 0 || seen.has(next.id)) continue;
+        seen.add(next.id);
+        out.push(next);
+        if (out.length >= options.length) break;
+      }
+    }
+    const spread = [];
+    const left = [...out];
+    while (left.length > 0) {
+      const prev = spread[spread.length - 1]?.target;
+      const counts = /* @__PURE__ */ new Map();
+      for (const e of left) counts.set(e.target, (counts.get(e.target) ?? 0) + 1);
+      const crowded = [...counts].find(([t, n]) => t !== prev && n * 2 > left.length)?.[0];
+      const at = crowded !== void 0 ? left.findIndex((e) => e.target === crowded) : left.findIndex((e) => e.target !== prev);
+      spread.push(...left.splice(Math.max(at, 0), 1));
+    }
+    return spread;
+  }
+  function typedText(ex, response) {
+    if (ex.answer.kind !== "typed" || ex.answer.lang !== "liraasa") return null;
+    if (response.kind === "typed") return response.text;
+    if (response.kind === "choice")
+      return ex.choices?.find((c) => c.id === response.id)?.text ?? null;
+    return null;
+  }
+  const askedSlot = (ex) => FORM_SLOTS.find((s) => ex.concepts.includes(`form:${s}`));
+  function gradeStars(gctx, forms, ex, response, ms, leniency) {
+    const g = gradeExercise(gctx, ex, response, ms);
+    if (g.verdict === "correct") return g;
+    const typed = typedText(ex, response);
+    if (typed === null || ex.answer.kind !== "typed") return g;
+    const got = normalize(typed);
+    const slot = ex.type === "formBuild" ? askedSlot(ex) : void 0;
+    if (slot !== void 0) {
+      const f2 = forms.getForms(ex.target, { includeUnused: true, examples: 0 })?.forms.find((x) => x.category === slot);
+      if (f2?.irregular === true && f2.regularWouldBe !== null && normalize(f2.regularWouldBe) === got) {
+        return {
+          ...g,
+          verdict: "almost",
+          score: 0.5,
+          rating: 2,
+          diagnoses: [
+            {
+              kind: "rule-for-irregular",
+              message: `The rule (${f2.pattern}) makes “${f2.regularWouldBe}”, and this word goes its own way: “${f2.form}”.`,
+              expected: f2.form,
+              got: typed,
+              link: { kind: "concept", id: f2.ruleId }
+            }
+          ]
+        };
+      }
+    }
+    if (leniency === "lenient") {
+      const vowels = forms.rules.vowels;
+      const squeeze = (s) => [...s].filter((ch, i) => !(vowels.includes(ch) && s[i - 1] === ch)).join("");
+      const match = ex.answer.accepted.find((a) => squeeze(normalize(a)) === squeeze(got));
+      if (match !== void 0) {
+        return {
+          verdict: "correct",
+          score: 1,
+          expected: match,
+          rating: 3,
+          diagnoses: [
+            {
+              kind: "vowel-length",
+              message: `Forgiven: the exact spelling is “${match}”.`,
+              expected: match,
+              got: typed
+            }
+          ]
+        };
+      }
+    }
+    return g;
+  }
+  function drillResults(ids, results) {
+    const worth = { correct: 1, almost: 0.5, wrong: 0 };
+    return ids.map((id) => {
+      const mine = results.filter((r) => r.ex.target === id);
+      const right = mine.filter((r) => r.grade.verdict === "correct").length;
+      const score = mine.length === 0 ? 0 : mine.reduce((sum, r) => sum + worth[r.grade.verdict], 0) / mine.length;
+      return { id, asked: mine.length, right, score };
+    });
   }
   const SERIOUS = /* @__PURE__ */ new Set(["error", "warn"]);
   const seriousProblems = (ps) => ps.filter((p) => SERIOUS.has(p.severity));
@@ -5645,11 +5690,15 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
   exports.cardsForNode = cardsForNode;
   exports.changedCards = changedCards;
   exports.changesFor = changesFor;
+  exports.checkCourseAnswer = checkCourseAnswer;
   exports.choose = choose;
   exports.cloze = cloze;
   exports.compoundBuild = compoundBuild;
   exports.conceptNode = conceptNode;
   exports.correctText = correctText;
+  exports.courseLessons = courseLessons;
+  exports.courseNext = courseNext;
+  exports.courseStudied = courseStudied;
   exports.createFormsEngine = createFormsEngine;
   exports.createProfile = createProfile;
   exports.createRng = createRng;
@@ -5745,6 +5794,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
   exports.schedulerFor = schedulerFor;
   exports.seedOf = seedOf;
   exports.seriousProblems = seriousProblems;
+  exports.setCourseStudied = setCourseStudied;
   exports.setHall = setHall;
   exports.setStars = setStars;
   exports.skyOf = skyOf;
@@ -5772,7 +5822,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
   exports.verbClassFor = verbClassFor;
   exports.weakest = weakest;
   exports.withPrereqs = withPrereqs;
-  exports.words = words;
+  exports.words = words$1;
   exports.writingNodes = writingNodes;
   exports.writingToCorpusFile = writingToCorpusFile;
   Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
