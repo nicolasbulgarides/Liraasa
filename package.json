@@ -18,6 +18,7 @@
     "build:learn": "tsx scripts/build_learn.ts",
     "build:guide": "npm run build:handoff && npm run build:llm && tsx scripts/build_grammar_guide.ts",
     "build:invitation": "tsx scripts/build_invitation.ts",
+    "build:lessons": "tsx scripts/build_lessons.ts",
     "publish:guide": "tsx scripts/publish_guide.ts",
     "preview": "vite preview",
     "typecheck": "tsc -b --noEmit",
