@@ -1,7 +1,8 @@
 /**
  * CLI: build Liraasa 2.5: The Grammar in Lessons → handoff/Liraasa_2_5_Lessons.html
  *
- *   npm run build:lessons
+ *   npm run build:lessons            # the HTML
+ *   npm run build:lessons -- --pdf   # also the PDF (Edge or Chrome), both copied to LirasaCodexLatest/
  *
  * The content is scripts/lessons/lessons_2_5.ts. The build refuses to write
  * the page unless, under the 2.5 strict checker (src/core/grammar):
@@ -10,12 +11,17 @@
  *   - every Liraasa word in the prose is a word of Liraasa;
  *   - every rule cited exists in the 2.5 reference.
  */
-import { readFileSync, writeFileSync } from 'node:fs';
+import { copyFileSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { resolve } from 'node:path';
+import { pdfPages, printPdf } from './grammar_guide/check';
 import { createChecker } from '../src/core/grammar';
 import { loadGrammarSource } from './grammar_source';
 import { INTRO, MAP, OPEN, PARTS } from './lessons/lessons_2_5';
 
 const OUT = 'handoff/Liraasa_2_5_Lessons.html';
+const PDF = 'handoff/Liraasa_2_5_Lessons.pdf';
+/** With --pdf, the HTML and the PDF also land here, beside the published guide. */
+const LATEST_DIR = 'LirasaCodexLatest';
 const ck = createChecker(loadGrammarSource());
 const ref = JSON.parse(readFileSync('handoff/liraasa_2_5_llm.json', 'utf8')) as {
   rulings: { id: string }[];
@@ -197,3 +203,15 @@ ${MAP.lines.map((l) => `<code>${esc(l)}</code>`).join('')}
 `;
 writeFileSync(OUT, html, 'utf8');
 console.log(`wrote ${OUT}: ${String(n)} lessons, every example checked`);
+
+if (process.argv.includes('--pdf')) {
+  // on paper every answer is shown: the print copy opens each practice line
+  const printCopy = 'handoff/.Liraasa_2_5_Lessons.print.html';
+  writeFileSync(printCopy, html.replace(/<details>/g, '<details open>'), 'utf8');
+  printPdf(resolve(printCopy), resolve(PDF));
+  rmSync(printCopy);
+  console.log(`wrote ${PDF} (${String(pdfPages(PDF))} pages)`);
+  mkdirSync(LATEST_DIR, { recursive: true });
+  for (const f of [OUT, PDF]) copyFileSync(f, `${LATEST_DIR}/${f.split('/').pop() ?? f}`);
+  console.log(`copied both to ${LATEST_DIR}/`);
+}
