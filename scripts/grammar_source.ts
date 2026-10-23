@@ -7,6 +7,7 @@
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import type { Flags, GrammarSource, Reference, RuleParams } from '../src/core/grammar/lexicon';
+import type { EnglishData, TranslateSource } from '../src/core/translate';
 
 export const GRAMMAR_FILES = {
   reference: 'handoff/liraasa_2_5_llm.json',
@@ -40,5 +41,19 @@ export function loadGrammarSource(): GrammarSource {
     ),
     names: (read(GRAMMAR_FILES.names) as { names: string[] }).names,
     transitive,
+  };
+}
+
+/** The translator's sources: the grammar, the English data, the numerals and the synonyms. */
+export function loadTranslateSource(): TranslateSource {
+  const lex = read(GRAMMAR_FILES.lexicon) as {
+    numbers: { lookup_0_999: Record<string, string> };
+    headwords: { root: string; english_synonyms: string[] }[];
+  };
+  return {
+    grammar: loadGrammarSource(),
+    english: read('data/translate/english_2_5.json') as EnglishData,
+    numerals: lex.numbers.lookup_0_999,
+    synonyms: Object.fromEntries(lex.headwords.map((h) => [h.root, h.english_synonyms])),
   };
 }

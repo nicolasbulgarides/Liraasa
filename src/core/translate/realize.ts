@@ -110,7 +110,7 @@ function realizeAdjunct(a: LAdjunct): string[] {
 }
 
 /** The clause from its subject to its closing words (no edges, no linker). */
-export function realizeClauseBody(c: LClause): string[] {
+export function realizeClauseBody(c: LClause, deferClosing = false): string[] {
   const out: string[] = [];
   if (c.kiFront !== undefined) out.push(word(c.kiFront));
   if (c.subject === 'hortative') out.push('yava');
@@ -151,6 +151,12 @@ export function realizeClauseBody(c: LClause): string[] {
     if (a.commaBefore === true) comma(out);
     out.push(...realizeAdjunct(a));
   }
+  if (!deferClosing) closingOf(c, out);
+  return out;
+}
+
+/** fuyi, the status and attitude words and ki, and an interjection set off at the end. */
+function closingOf(c: LClause, out: string[]): void {
   if (c.closingComma === true && (c.closing.length > 0 || c.ki)) comma(out);
   for (const w of c.closing) out.push(word(w));
   if (c.ki) out.push('ki');
@@ -158,7 +164,6 @@ export function realizeClauseBody(c: LClause): string[] {
     comma(out);
     out.push(word(w));
   }
-  return out;
 }
 
 /** A whole clause: its linker, edges, body, and the clauses after it. */
@@ -185,12 +190,15 @@ export function realizeClause(c: LClause): string[] {
     comma(part);
     out.push(...part);
   }
-  out.push(...realizeClauseBody(c));
+  // with clauses after it, the main clause's closing words wait for the end of the sentence (2.5:G89)
+  const defer = c.after.length > 0;
+  out.push(...realizeClauseBody(c, defer));
   for (const a of c.after) {
     const part = realizeClause(a.clause);
     if (a.comma) comma(out, a.punct ?? ',');
     out.push(...part);
   }
+  if (defer) closingOf(c, out);
   if (c.vocative !== undefined) {
     comma(out);
     out.push(...realizeNP(c.vocative));

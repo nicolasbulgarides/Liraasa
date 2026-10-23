@@ -376,6 +376,29 @@ export function fromParse(s: SentenceResult): LSentence {
     out.main.interjections.push({ word: lw(k), comma: isPunct(k + 1, ',') });
   }
   const last = [...t].reverse().find((x) => x.kind === 'punct' && /[.!?]/.test(x.text));
+  // ki and the attitude words at the end of the sentence belong to the main clause (2.5:G89)
+  // the clause that ends the sentence: the last joined clause, or the object clause, all the way down
+  const endClause = (c: LClause): LClause => {
+    const a = c.after[c.after.length - 1]?.clause;
+    if (a !== undefined) return endClause(a);
+    if (c.objectClause !== undefined && c.adjuncts.length === 0 && c.closing.length === 0 && !c.ki)
+      return endClause(c.objectClause);
+    return c;
+  };
+  const tail = endClause(out.main);
+  if (
+    tail !== out.main &&
+    (tail.ki || tail.closing.length > 0) &&
+    !out.main.ki &&
+    out.main.closing.length === 0
+  ) {
+    out.main.ki = tail.ki;
+    out.main.closing = tail.closing;
+    if (tail.closingComma === true) out.main.closingComma = true;
+    tail.ki = false;
+    tail.closing = [];
+    delete tail.closingComma;
+  }
   const lastAny = [...t].reverse().find((x) => x.kind === 'punct' && /[.!?…]/.test(x.text));
   out.end =
     lastAny === undefined

@@ -1,0 +1,1250 @@
+{
+ "about": "English → Liraasa: the English side of the translator (src/core/translate). What an English word means for the 2.5 grammar, with the ruling each mapping follows. Liraasa words here are function words, pronouns and correlatives of the 2.5 reference; content words come only from the dictionary. Edit here, never in code.",
+ "pronouns": {
+  "i": {
+   "form": "maivo",
+   "case": "subject"
+  },
+  "me": {
+   "form": "maivo",
+   "case": "object"
+  },
+  "my": {
+   "form": "maivo",
+   "case": "owner"
+  },
+  "mine": {
+   "form": "maivo",
+   "case": "owner"
+  },
+  "myself": {
+   "form": "maivo",
+   "case": "reflexive"
+  },
+  "you": {
+   "form": "taivo",
+   "case": "any"
+  },
+  "your": {
+   "form": "taivo",
+   "case": "owner"
+  },
+  "yours": {
+   "form": "taivo",
+   "case": "owner"
+  },
+  "yourself": {
+   "form": "taivo",
+   "case": "reflexive"
+  },
+  "he": {
+   "form": "saivo",
+   "case": "subject"
+  },
+  "him": {
+   "form": "saivo",
+   "case": "object"
+  },
+  "his": {
+   "form": "saivo",
+   "case": "owner"
+  },
+  "himself": {
+   "form": "saivo",
+   "case": "reflexive"
+  },
+  "she": {
+   "form": "saivo",
+   "case": "subject"
+  },
+  "her": {
+   "form": "saivo",
+   "case": "object-or-owner"
+  },
+  "hers": {
+   "form": "saivo",
+   "case": "owner"
+  },
+  "herself": {
+   "form": "saivo",
+   "case": "reflexive"
+  },
+  "it": {
+   "form": "ito",
+   "case": "any"
+  },
+  "its": {
+   "form": "ito",
+   "case": "owner"
+  },
+  "itself": {
+   "form": "ito",
+   "case": "reflexive"
+  },
+  "we": {
+   "form": "maivori",
+   "case": "subject"
+  },
+  "us": {
+   "form": "maivori",
+   "case": "object"
+  },
+  "our": {
+   "form": "maivori",
+   "case": "owner"
+  },
+  "ourselves": {
+   "form": "maivori",
+   "case": "reflexive"
+  },
+  "they": {
+   "form": "saivori",
+   "case": "subject",
+   "inanimate": "itori"
+  },
+  "them": {
+   "form": "saivori",
+   "case": "object",
+   "inanimate": "itori"
+  },
+  "their": {
+   "form": "saivori",
+   "case": "owner"
+  },
+  "themselves": {
+   "form": "saivori",
+   "case": "reflexive"
+  }
+ },
+ "reflexive": {
+  "word": "sela"
+ },
+ "determiners": {
+  "the": "li",
+  "a": "baba",
+  "an": "baba",
+  "this": "eli",
+  "that": "ola",
+  "these": "eliri",
+  "those": "olari",
+  "which": "ki-eli",
+  "what": "ki-eli"
+ },
+ "quantifiers": {
+  "all": "toda",
+  "every": "toda",
+  "some": "somi",
+  "no": "nuna",
+  "many": "muya",
+  "much": "muya",
+  "few": "poka",
+  "each": "rada",
+  "how many": "ki-muya"
+ },
+ "degree": {
+  "very": "ruli",
+  "more": "kasi",
+  "less": "menu",
+  "most": "mosa",
+  "least": "lusu",
+  "too": "diba",
+  "so": "tonsi",
+  "as": "gase"
+ },
+ "irregular_comparatives": {
+  "better": [
+   "good",
+   "kasi"
+  ],
+  "best": [
+   "good",
+   "mosa"
+  ],
+  "worse": [
+   "bad",
+   "kasi"
+  ],
+  "worst": [
+   "bad",
+   "mosa"
+  ],
+  "more": [
+   "many",
+   "kasi"
+  ],
+  "most": [
+   "many",
+   "mosa"
+  ],
+  "less": [
+   "little",
+   "menu"
+  ],
+  "least": [
+   "little",
+   "lusu"
+  ]
+ },
+ "prepositions": {
+  "in": {
+   "word": "en",
+   "sense": "place or medium",
+   "ruling": "2.5:G104"
+  },
+  "inside": {
+   "word": "en",
+   "sense": "place"
+  },
+  "into": {
+   "word": "en",
+   "sense": "place"
+  },
+  "on": {
+   "word": "su",
+   "sense": "surface"
+  },
+  "upon": {
+   "word": "su",
+   "sense": "surface"
+  },
+  "onto": {
+   "word": "su",
+   "sense": "surface"
+  },
+  "to": {
+   "word": "ala",
+   "sense": "goal"
+  },
+  "toward": {
+   "word": "ala",
+   "sense": "goal"
+  },
+  "towards": {
+   "word": "ala",
+   "sense": "goal"
+  },
+  "from": {
+   "word": "da",
+   "sense": "source"
+  },
+  "with": {
+   "word": "ko",
+   "sense": "companion, or a feeling with the act; a tool or substance takes yuta (2.5:G104)",
+   "ruling": "2.5:G104",
+   "tool": "yuta"
+  },
+  "using": {
+   "word": "yuta",
+   "sense": "means",
+   "ruling": "2.5:G104"
+  },
+  "by means of": {
+   "word": "yuta",
+   "sense": "means",
+   "ruling": "2.5:G104"
+  },
+  "for": {
+   "word": "vobi",
+   "sense": "on behalf of"
+  },
+  "without": {
+   "word": "voyu",
+   "sense": "without"
+  },
+  "near": {
+   "word": "ligo",
+   "sense": "near"
+  },
+  "far from": {
+   "word": "vofa",
+   "sense": "far from"
+  },
+  "above": {
+   "word": "hupi",
+   "sense": "above"
+  },
+  "over": {
+   "word": "hupi",
+   "sense": "above"
+  },
+  "below": {
+   "word": "tula",
+   "sense": "below"
+  },
+  "under": {
+   "word": "tula",
+   "sense": "below"
+  },
+  "beneath": {
+   "word": "tula",
+   "sense": "below"
+  },
+  "through": {
+   "word": "transa",
+   "sense": "through"
+  },
+  "across": {
+   "word": "transa",
+   "sense": "across"
+  },
+  "between": {
+   "word": "entre",
+   "sense": "between"
+  },
+  "within": {
+   "word": "intra",
+   "sense": "within"
+  },
+  "beyond": {
+   "word": "ultra",
+   "sense": "beyond"
+  },
+  "behind": {
+   "word": "nazru",
+   "sense": "side noun",
+   "ruling": "2.5:G99",
+   "article": true
+  },
+  "in front of": {
+   "word": "zavme",
+   "sense": "side noun",
+   "ruling": "2.5:G99",
+   "article": true
+  },
+  "beside": {
+   "word": "silda",
+   "sense": "side noun",
+   "ruling": "2.5:G99",
+   "article": true
+  },
+  "next to": {
+   "word": "silda",
+   "sense": "side noun",
+   "ruling": "2.5:G99",
+   "article": true
+  },
+  "in the middle of": {
+   "word": "cemnu",
+   "sense": "side noun",
+   "ruling": "2.5:G99",
+   "article": true
+  },
+  "left of": {
+   "word": "lizma",
+   "sense": "side noun",
+   "ruling": "2.5:G99",
+   "article": true
+  },
+  "right of": {
+   "word": "rizno",
+   "sense": "side noun",
+   "ruling": "2.5:G99",
+   "article": true
+  },
+  "until": {
+   "word": "tuni",
+   "sense": "until"
+  },
+  "despite": {
+   "word": "nevi",
+   "sense": "despite",
+   "ruling": "1.0:G11"
+  },
+  "except": {
+   "word": "sabri",
+   "sense": "except"
+  },
+  "instead of": {
+   "word": "korsi",
+   "sense": "instead of"
+  },
+  "before": {
+   "word": "kroti",
+   "sense": "before"
+  },
+  "after": {
+   "word": "krotiapo",
+   "sense": "after"
+  },
+  "of": {
+   "word": "de",
+   "sense": "of"
+  },
+  "about": {
+   "word": "de",
+   "sense": "about is de (1.2:G30, 2.3:G80)",
+   "ruling": "1.2:G30"
+  },
+  "like": {
+   "word": "gase",
+   "sense": "simile: gase li … (2.5:G107)",
+   "ruling": "2.5:G107"
+  },
+  "by": {
+   "word": "gagu",
+   "sense": "the agent of a passive"
+  }
+ },
+ "tool_classes": [
+  "tool",
+  "substance"
+ ],
+ "modals": {
+  "can": "povi",
+  "could": "povi",
+  "able to": "povi",
+  "might": "nosi",
+  "may": "dagi",
+  "allowed to": "dagi",
+  "must": "musi",
+  "have to": "musi",
+  "has to": "musi",
+  "had to": "musi",
+  "need to": "musi",
+  "should": "suvi",
+  "would": "viki",
+  "hope to": "kopi"
+ },
+ "operators": {
+  "tense": {
+   "past": "po",
+   "future": "futu"
+  },
+  "counterfactual": "noma",
+  "negation": "ne",
+  "aspect": {
+   "progressive": "roni",
+   "completed": "tefa",
+   "habitual": "sahi"
+  },
+  "approach": {
+   "almost": "tavki",
+   "nearly": "tavki",
+   "about to": "fututi"
+  },
+  "phase": {
+   "begin": "hiro",
+   "start": "hiro",
+   "stop": "teki",
+   "cease": "teki"
+  },
+  "effort": {
+   "try": "telvo",
+   "manage": "vazdi",
+   "fail": "fesmo"
+  },
+  "iteration": {
+   "again": "reve",
+   "still": "loki",
+   "already": "bodu"
+  },
+  "would_have": {
+   "ruling": "2.5:G114",
+   "words": [
+    "po",
+    "noma",
+    "viki"
+   ]
+  },
+  "should_have": {
+   "ruling": "1.0:G6",
+   "words": [
+    "po",
+    "noma",
+    "suvi"
+   ]
+  },
+  "could_have": {
+   "ruling": "1.0:G6",
+   "words": [
+    "po",
+    "noma",
+    "povi"
+   ]
+  }
+ },
+ "frame_words": {
+  "suddenly": "zafra",
+  "finally": "finra",
+  "at last": "finra",
+  "eventually": "lanto",
+  "immediately": "kenvi",
+  "at once": "kenvi"
+ },
+ "attitude": {
+  "certainly": "seye",
+  "surely": "seye",
+  "indeed": "seye",
+  "probably": "mufe",
+  "perhaps": "poye",
+  "maybe": "poye"
+ },
+ "scope": {
+  "also": "tu",
+  "too": "tu",
+  "even": "yesta",
+  "only": "doli",
+  "exactly": "pendi",
+  "precisely": "pendi"
+ },
+ "reciprocal": {
+  "each other": "fuyi",
+  "one another": "fuyi"
+ },
+ "time_adverbs": {
+  "now": "eli-krono",
+  "then": "ola-krono",
+  "always": "toda-krono",
+  "never": "nuna-krono",
+  "sometimes": "somi-krono",
+  "sometime": "somi-krono",
+  "often": "muya-krono",
+  "rarely": "poka-krono",
+  "seldom": "poka-krono",
+  "each time": "rada-krono",
+  "today": "deyapressa",
+  "yesterday": "deyaapo",
+  "tomorrow": "deyafutu",
+  "soon": "fututi",
+  "this morning": "mernopressa",
+  "this evening": "vesnopressa",
+  "tonight": "nullopressa",
+  "tomorrow morning": "mernofutu",
+  "tomorrow evening": "vesnofutu",
+  "tomorrow night": "nullofutu",
+  "once": "una-krono",
+  "twice": "dossa-krono"
+ },
+ "place_adverbs": {
+  "here": "eli-pago",
+  "there": "ola-pago",
+  "everywhere": "toda-pago",
+  "nowhere": "nuna-pago",
+  "somewhere": "somi-pago"
+ },
+ "manner_adverbs": {
+  "thus": "eli-modo",
+  "so": "eli-modo",
+  "somehow": "somi-modo"
+ },
+ "pronoun_words": {
+  "something": "somi-coda",
+  "everything": "toda-coda",
+  "nothing": "nuna-coda",
+  "someone": "somi-nela",
+  "somebody": "somi-nela",
+  "everyone": "toda-nela",
+  "everybody": "toda-nela",
+  "no one": "nuna-nela",
+  "nobody": "nuna-nela",
+  "this": "eli",
+  "that": "ola",
+  "these": "eliri",
+  "those": "olari"
+ },
+ "question_words": {
+  "what": {
+   "word": "ki-coda",
+   "role": "thing"
+  },
+  "who": {
+   "word": "ki-nela",
+   "role": "person"
+  },
+  "whom": {
+   "word": "ki-nela",
+   "role": "person"
+  },
+  "where": {
+   "word": "ki-pago",
+   "role": "place"
+  },
+  "when": {
+   "word": "ki-krono",
+   "role": "time"
+  },
+  "why": {
+   "word": "ki-kasa",
+   "role": "cause"
+  },
+  "how": {
+   "word": "ki-modo",
+   "role": "manner"
+  },
+  "which": {
+   "word": "ki-eli",
+   "role": "determiner"
+  },
+  "whose": {
+   "word": "ki-nela de",
+   "role": "owner"
+  },
+  "how many": {
+   "word": "ki-muya",
+   "role": "quantity"
+  },
+  "how many times": {
+   "word": "ki-muya-krono",
+   "role": "frequency"
+  }
+ },
+ "subordinators": {
+  "if": {
+   "word": "si",
+   "link": "condition"
+  },
+  "unless": {
+   "word": "sina",
+   "link": "unless"
+  },
+  "because": {
+   "word": "kasa",
+   "link": "cause"
+  },
+  "since": {
+   "word": "sige",
+   "link": "since",
+   "own_tense": true
+  },
+  "so that": {
+   "word": "kopisa",
+   "link": "purpose",
+   "ruling": "2.5:G113"
+  },
+  "in order to": {
+   "word": "kopisa",
+   "link": "purpose",
+   "ruling": "2.5:G113"
+  },
+  "in order that": {
+   "word": "kopisa",
+   "link": "purpose"
+  },
+  "although": {
+   "word": "nevi",
+   "link": "although"
+  },
+  "though": {
+   "word": "nevi",
+   "link": "although"
+  },
+  "even though": {
+   "word": "nevi",
+   "link": "although"
+  },
+  "when": {
+   "word": "kube",
+   "link": "when"
+  },
+  "while": {
+   "word": "nayo",
+   "link": "while"
+  },
+  "until": {
+   "word": "tuni",
+   "link": "until"
+  },
+  "as soon as": {
+   "word": "kureli",
+   "link": "as soon as"
+  },
+  "before": {
+   "word": "kroti",
+   "link": "before"
+  },
+  "after": {
+   "word": "krotiapo",
+   "link": "after"
+  },
+  "that": {
+   "word": "fime",
+   "link": "that"
+  },
+  "whether": {
+   "word": "ki-oro",
+   "link": "whether",
+   "ruling": "2.3:G77"
+  }
+ },
+ "coordinators": {
+  "and": "ata",
+  "but": "nara",
+  "or": "oro",
+  "therefore": "tonsi",
+  "so": "tonsi",
+  "nevertheless": "narli",
+  "then": "krotiata"
+ },
+ "relativizers": [
+  "who",
+  "whom",
+  "which",
+  "that",
+  "whose",
+  "where",
+  "when"
+ ],
+ "interjections": {
+  "please": "fisa",
+  "yes": "zabo",
+  "no": "kepi",
+  "sorry": "yade",
+  "hello": "yeko",
+  "goodbye": "voge",
+  "thank you": "lorejuba",
+  "thanks": "lorejuba"
+ },
+ "causatives": {
+  "make": "vaku",
+  "let": "lesvu",
+  "prevent": "tekvu",
+  "stop": "tekvu"
+ },
+ "copula": {
+  "be": [
+   "am",
+   "is",
+   "are",
+   "was",
+   "were",
+   "be",
+   "been",
+   "being"
+  ],
+  "become": [
+   "become",
+   "becomes",
+   "became",
+   "becoming"
+  ]
+ },
+ "have": [
+  "have",
+  "has",
+  "had",
+  "having"
+ ],
+ "do": [
+  "do",
+  "does",
+  "did"
+ ],
+ "state_adjectives": {
+  "about": "Adjectives that name a state that holds now or for a time: the copula is ke (2.5:G93). Any other adjective is read as lasting (ka), and the choice is flagged.",
+  "words": [
+   "tired",
+   "happy",
+   "sad",
+   "angry",
+   "hungry",
+   "thirsty",
+   "sick",
+   "ill",
+   "cold",
+   "hot",
+   "warm",
+   "wet",
+   "dry",
+   "open",
+   "closed",
+   "shut",
+   "ready",
+   "busy",
+   "afraid",
+   "scared",
+   "sleepy",
+   "awake",
+   "asleep",
+   "alone",
+   "lost",
+   "full",
+   "empty",
+   "late",
+   "early",
+   "quiet",
+   "calm",
+   "glad",
+   "sorry",
+   "well",
+   "free",
+   "drunk",
+   "dead",
+   "alive",
+   "silent",
+   "lonely",
+   "worried",
+   "surprised"
+  ]
+ },
+ "numbers": {
+  "zero": 0,
+  "one": 1,
+  "two": 2,
+  "three": 3,
+  "four": 4,
+  "five": 5,
+  "six": 6,
+  "seven": 7,
+  "eight": 8,
+  "nine": 9,
+  "ten": 10,
+  "eleven": 11,
+  "twelve": 12,
+  "thirteen": 13,
+  "fourteen": 14,
+  "fifteen": 15,
+  "sixteen": 16,
+  "seventeen": 17,
+  "eighteen": 18,
+  "nineteen": 19,
+  "twenty": 20,
+  "thirty": 30,
+  "forty": 40,
+  "fifty": 50,
+  "sixty": 60,
+  "seventy": 70,
+  "eighty": 80,
+  "ninety": 90,
+  "hundred": 100,
+  "a hundred": 100
+ },
+ "ordinals": {
+  "first": 1,
+  "second": 2,
+  "third": 3,
+  "fourth": 4,
+  "fifth": 5,
+  "sixth": 6,
+  "seventh": 7,
+  "eighth": 8,
+  "ninth": 9,
+  "tenth": 10
+ },
+ "fractions": {
+  "half": [
+   1,
+   2
+  ],
+  "halves": [
+   1,
+   2
+  ],
+  "third": [
+   1,
+   3
+  ],
+  "thirds": [
+   1,
+   3
+  ],
+  "quarter": [
+   1,
+   4
+  ],
+  "quarters": [
+   1,
+   4
+  ]
+ },
+ "negative_number": {
+  "words": [
+   "minus",
+   "negative"
+  ],
+  "ruling": "2.5:G125"
+ },
+ "approximately": {
+  "words": [
+   "about",
+   "around",
+   "approximately",
+   "roughly"
+  ],
+  "ruling": "2.5:G107"
+ },
+ "ago": {
+  "word": "kroti",
+  "ruling": "2.5:G108"
+ },
+ "from_now": {
+  "word": "krotiapo",
+  "ruling": "2.5:G108"
+ },
+ "irregular_verbs": {
+  "am": "be",
+  "is": "be",
+  "are": "be",
+  "was": "be",
+  "were": "be",
+  "been": "be",
+  "being": "be",
+  "has": "have",
+  "had": "have",
+  "having": "have",
+  "does": "do",
+  "did": "do",
+  "done": "do",
+  "came": "come",
+  "went": "go",
+  "gone": "go",
+  "saw": "see",
+  "seen": "see",
+  "sang": "sing",
+  "sung": "sing",
+  "began": "begin",
+  "begun": "begin",
+  "said": "say",
+  "made": "make",
+  "took": "take",
+  "taken": "take",
+  "gave": "give",
+  "given": "give",
+  "knew": "know",
+  "known": "know",
+  "felt": "feel",
+  "told": "tell",
+  "left": "leave",
+  "found": "find",
+  "heard": "hear",
+  "held": "hold",
+  "kept": "keep",
+  "slept": "sleep",
+  "spoke": "speak",
+  "spoken": "speak",
+  "stood": "stand",
+  "understood": "understand",
+  "wrote": "write",
+  "written": "write",
+  "ate": "eat",
+  "eaten": "eat",
+  "fell": "fall",
+  "fallen": "fall",
+  "ran": "run",
+  "sat": "sit",
+  "lost": "lose",
+  "won": "win",
+  "brought": "bring",
+  "bought": "buy",
+  "thought": "think",
+  "caught": "catch",
+  "taught": "teach",
+  "built": "build",
+  "sent": "send",
+  "spent": "spend",
+  "rose": "rise",
+  "risen": "rise",
+  "grew": "grow",
+  "grown": "grow",
+  "drew": "draw",
+  "drawn": "draw",
+  "threw": "throw",
+  "thrown": "throw",
+  "wore": "wear",
+  "worn": "wear",
+  "broke": "break",
+  "broken": "break",
+  "chose": "choose",
+  "chosen": "choose",
+  "shone": "shine",
+  "became": "become",
+  "lay": "lie",
+  "lain": "lie",
+  "hid": "hide",
+  "hidden": "hide",
+  "flew": "fly",
+  "flown": "fly",
+  "swam": "swim",
+  "swum": "swim",
+  "drank": "drink",
+  "drunk": "drink",
+  "sank": "sink",
+  "sunk": "sink",
+  "met": "meet",
+  "paid": "pay",
+  "lent": "lend",
+  "led": "lead",
+  "fed": "feed",
+  "fought": "fight",
+  "forgot": "forget",
+  "forgotten": "forget",
+  "forgave": "forgive",
+  "forgiven": "forgive",
+  "got": "get",
+  "gotten": "get",
+  "hung": "hang",
+  "hit": "hit",
+  "hurt": "hurt",
+  "let": "let",
+  "put": "put",
+  "read": "read",
+  "rode": "ride",
+  "ridden": "ride",
+  "rang": "ring",
+  "rung": "ring",
+  "sold": "sell",
+  "shook": "shake",
+  "shaken": "shake",
+  "shot": "shoot",
+  "shut": "shut",
+  "slid": "slide",
+  "sought": "seek",
+  "spun": "spin",
+  "stole": "steal",
+  "stolen": "steal",
+  "struck": "strike",
+  "swore": "swear",
+  "sworn": "swear",
+  "swept": "sweep",
+  "tore": "tear",
+  "torn": "tear",
+  "woke": "wake",
+  "woken": "wake",
+  "wept": "weep",
+  "wound": "wind",
+  "dug": "dig",
+  "dove": "dive",
+  "dived": "dive",
+  "dreamt": "dream",
+  "dreamed": "dream",
+  "froze": "freeze",
+  "frozen": "freeze",
+  "bent": "bend",
+  "bled": "bleed",
+  "blew": "blow",
+  "blown": "blow",
+  "bore": "bear",
+  "born": "bear",
+  "bit": "bite",
+  "bitten": "bite",
+  "cast": "cast",
+  "cost": "cost",
+  "crept": "creep",
+  "cut": "cut",
+  "dealt": "deal",
+  "drove": "drive",
+  "driven": "drive",
+  "fled": "flee",
+  "flung": "fling",
+  "knelt": "kneel",
+  "laid": "lay",
+  "leapt": "leap",
+  "meant": "mean",
+  "quit": "quit",
+  "set": "set",
+  "sewed": "sew",
+  "sewn": "sew",
+  "shrank": "shrink",
+  "sprang": "spring",
+  "sprung": "spring",
+  "stung": "sting",
+  "stank": "stink",
+  "strove": "strive",
+  "swung": "swing",
+  "thrust": "thrust",
+  "trod": "tread",
+  "wove": "weave",
+  "woven": "weave",
+  "wrung": "wring",
+  "died": "die",
+  "lied": "lie",
+  "tied": "tie",
+  "dying": "die",
+  "lying": "lie",
+  "tying": "tie"
+ },
+ "irregular_plurals": {
+  "men": "man",
+  "women": "woman",
+  "children": "child",
+  "feet": "foot",
+  "teeth": "tooth",
+  "mice": "mouse",
+  "geese": "goose",
+  "people": "person",
+  "oxen": "ox",
+  "leaves": "leaf",
+  "lives": "life",
+  "knives": "knife",
+  "wives": "wife",
+  "wolves": "wolf",
+  "halves": "half",
+  "selves": "self",
+  "loaves": "loaf",
+  "thieves": "thief",
+  "shelves": "shelf",
+  "fish": "fish",
+  "sheep": "sheep",
+  "deer": "deer",
+  "stars": "star"
+ },
+ "not_plural": [
+  "glass",
+  "grass",
+  "class",
+  "bus",
+  "kiss",
+  "moss",
+  "dress",
+  "chess",
+  "less",
+  "this",
+  "is",
+  "was",
+  "has",
+  "its",
+  "his",
+  "hers",
+  "yes",
+  "us",
+  "always",
+  "perhaps",
+  "news",
+  "lens"
+ ],
+ "chain_verbs": {
+  "about": "English verbs that take a second verb with the same subject: VERB sidu VERB (0.8:G6). After any other verb, to + verb is purpose: kopisa (2.5:G113). With a different subject, want you to stay is fime + clause (2.1:G50).",
+  "words": [
+   "want",
+   "wish",
+   "like",
+   "love",
+   "hope",
+   "need",
+   "plan",
+   "decide",
+   "learn",
+   "forget",
+   "remember",
+   "prefer",
+   "refuse",
+   "promise",
+   "agree",
+   "choose",
+   "dare",
+   "desire",
+   "long",
+   "yearn",
+   "wait",
+   "intend",
+   "mean",
+   "seem",
+   "pretend",
+   "offer",
+   "ask",
+   "fear",
+   "hate",
+   "enjoy",
+   "keep"
+  ]
+ },
+ "say_verbs": {
+  "about": "Verbs after which that + clause is a content clause, and a ki-word in place is an embedded question (2.3:G77).",
+  "words": [
+   "say",
+   "tell",
+   "know",
+   "think",
+   "believe",
+   "see",
+   "hear",
+   "feel",
+   "ask",
+   "wonder",
+   "understand",
+   "remember",
+   "forget",
+   "learn",
+   "dream",
+   "doubt",
+   "show",
+   "prove",
+   "notice",
+   "find",
+   "decide",
+   "whisper",
+   "explain",
+   "announce",
+   "promise",
+   "agree",
+   "realize",
+   "imagine",
+   "guess",
+   "suspect"
+  ]
+ },
+ "aliases": {
+  "about": "English lemmas the dictionary glosses with another word: have → possess (tovota). Content, not grammar: the dictionary still decides the word.",
+  "verb": {
+   "have": "possess",
+   "got": "possess",
+   "own": "possess",
+   "witness": "see",
+   "look": "see",
+   "watch": "observe",
+   "talk": "speak",
+   "chat": "speak",
+   "shout": "shout"
+  },
+  "noun": {
+   "self": "self"
+  },
+  "adj": {}
+ },
+ "now_cues": {
+  "about": "Phrases that say a state holds now or for a time: the copula is ke (2.5:G93). They add no word.",
+  "phrases": [
+   "at the moment",
+   "right now",
+   "for now",
+   "for the moment",
+   "at present",
+   "back then",
+   "at that time"
+  ]
+ },
+ "no_longer": {
+  "about": "was, and no longer is: kapoki (2.5:G94)",
+  "phrases": [
+   "no longer",
+   "not any more",
+   "not anymore",
+   "any longer"
+  ]
+ },
+ "always_cues": {
+  "about": "Phrases that say a state is lasting: the copula is ka (2.5:G93). They add no word.",
+  "phrases": [
+   "by nature",
+   "always has been",
+   "it's who i am",
+   "as always"
+  ]
+ },
+ "phrasal_verbs": {
+  "about": "English verb + particle → the lemma the dictionary glosses (come back → return).",
+  "come back": "return",
+  "go back": "return",
+  "get back": "return",
+  "come in": "enter",
+  "go in": "enter",
+  "go out": "exit",
+  "get out": "exit",
+  "wake up": "wake",
+  "get up": "rise",
+  "stand up": "stand",
+  "sit down": "sit",
+  "lie down": "lie",
+  "give up": "surrender",
+  "look at": "see",
+  "listen to": "listen",
+  "look for": "seek",
+  "find out": "discover",
+  "pick up": "lift",
+  "put down": "set",
+  "turn around": "turn",
+  "fall asleep": "sleep",
+  "climb up": "climb",
+  "go up": "rise",
+  "go down": "descend"
+ }
+}

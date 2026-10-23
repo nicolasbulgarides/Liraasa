@@ -1,0 +1,564 @@
+{
+  "about": "English → Liraasa cases for the 2.5 translator, one or more per 2.5 ruling and per function-word family. expect is derived from the rulings (null: no listed word, the gap is reported); equivalents are other renderings the rulings allow, the patch's own wording among them; review marks an expectation for the author to confirm (review/questions_2_5.md). The translator must produce expect or an equivalent, and every rendering must pass the strict checker and back-translate to its frame.",
+  "cases": [
+    {
+      "english": "I sing.",
+      "ruling": "clause.template",
+      "expect": "Maivo lirala."
+    },
+    {
+      "english": "I sang a song.",
+      "ruling": "slot 4",
+      "expect": "Maivo po lirala baba lira."
+    },
+    {
+      "english": "We will sing.",
+      "ruling": "slot 4",
+      "expect": "Maivori futu lirala."
+    },
+    {
+      "english": "You did not sleep.",
+      "ruling": "1.0:G1",
+      "expect": "Taivo po ne somusia."
+    },
+    {
+      "english": "Do you sing?",
+      "ruling": "2.5:G88",
+      "expect": "Taivo lirala ki?"
+    },
+    {
+      "english": "What do you want?",
+      "ruling": "2.5:G88",
+      "expect": "Taivo desida ki-coda ki?"
+    },
+    {
+      "english": "Who sings?",
+      "ruling": "2.5:G92",
+      "expect": "Ki-nela lirala ki?",
+      "equivalents": ["Raho lirala ki?"]
+    },
+    {
+      "english": "Where do you live?",
+      "ruling": "2.5:G88",
+      "expect": "Ki-pago taivo bioba ki?"
+    },
+    {
+      "english": "When will you come back?",
+      "ruling": "2.5:G88",
+      "expect": "Ki-krono taivo futu relnura ki?"
+    },
+    {
+      "english": "Why did you love me?",
+      "ruling": "2.5:G88",
+      "expect": "Ki-kasa taivo po amora maivo ki?"
+    },
+    {
+      "english": "How do you sing?",
+      "ruling": "2.5:G88",
+      "expect": "Ki-modo taivo lirala ki?"
+    },
+    {
+      "english": "Which song do you love?",
+      "ruling": "2.3:G76",
+      "expect": "Taivo amora ki-eli lira ki?"
+    },
+    {
+      "english": "How many songs do you have?",
+      "ruling": "2.3:G76",
+      "expect": "Taivo tovota ki-muya lirari ki?"
+    },
+    {
+      "english": "Whose song is this?",
+      "ruling": "2.5:G88",
+      "expect": "Eli ka ki-nela de lira ki?"
+    },
+    {
+      "english": "Where are you going?",
+      "ruling": "2.5:G88",
+      "expect": "Ki-pago taivo roni pagopa ki?",
+      "equivalents": [
+        "Taivo pagopa ki-pago ki?",
+        "Ki-pago taivo pagopa?",
+        "Ki-pago taivo pagopa ki?"
+      ],
+      "review": "English \"are going\" gives the progressive roni; the patch writes the plain present. Both are grammatical: should the translator drop roni for a present progressive?"
+    },
+    {
+      "english": "Do you know that I sing?",
+      "ruling": "2.5:G89",
+      "expect": "Taivo sabesia fime maivo lirala ki?"
+    },
+    {
+      "english": "Perhaps you know that I sing.",
+      "ruling": "2.5:G89",
+      "expect": "Taivo sabesia fime maivo lirala poye."
+    },
+    {
+      "english": "And?",
+      "ruling": "2.5:G91",
+      "expect": "Ata ki?"
+    },
+    {
+      "english": "A song?",
+      "ruling": "2.5:G92",
+      "expect": "Baba lira ki?",
+      "equivalents": ["Lira ki?"]
+    },
+    {
+      "english": "The bread is on the table.",
+      "ruling": "2.5:G93",
+      "expect": "Li bumre ke su li tabu."
+    },
+    {
+      "english": "I am a singer.",
+      "ruling": "2.5:G93",
+      "expect": "Maivo ka baba lirayo.",
+      "equivalents": ["Maivo ka lirayo."],
+      "review": "English \"a\" gives baba; the patch writes the predicate noun bare. 0.8:R5 lets baba drop only in verse."
+    },
+    {
+      "english": "I was a little child.",
+      "ruling": "2.5:G93",
+      "expect": "Maivo po ke baba mellinasan linu.",
+      "equivalents": ["Maivo po ke linuti."],
+      "review": "\"little child\": the translator writes the adjective (mellinasan); the patch writes the diminutive linuti. Should \"little\" + noun prefer -ti?"
+    },
+    {
+      "english": "I am tired.",
+      "ruling": "2.5:G93",
+      "expect": "Maivo ke lemvosan."
+    },
+    {
+      "english": "The person is beautiful.",
+      "ruling": "2.5:G128",
+      "expect": "Li nela ka vanisan.",
+      "equivalents": ["Nela vanisan.", "Li nela ke vanisan."]
+    },
+    {
+      "english": "They were good, and no longer are.",
+      "ruling": "2.5:G94",
+      "expect": "Saivori kapoki benasan.",
+      "equivalents": ["Saivo kapoki benasan."],
+      "review": "\"they\" → saivori (plural); the patch reads it as singular saivo."
+    },
+    {
+      "english": "The night became peaceful.",
+      "ruling": "loya",
+      "expect": "Li nullo po loya sovesan."
+    },
+    {
+      "english": "There is a friend in the home.",
+      "ruling": "2.5:G128",
+      "expect": "Miyo baba sora en li nimu."
+    },
+    {
+      "english": "My song is beautiful.",
+      "ruling": "2.5:G95",
+      "expect": "Maivo de lira ka vanisan."
+    },
+    {
+      "english": "Father's bread is good.",
+      "ruling": "2.5:G95",
+      "expect": "Li bumre de pilo ka benasan."
+    },
+    {
+      "english": "The song of the bird is beautiful.",
+      "ruling": "2.5:G95",
+      "expect": "Li lira de li lavra ka vanisan."
+    },
+    {
+      "english": "Three quarters.",
+      "ruling": "2.5:G97",
+      "expect": "Tressa de cuara."
+    },
+    {
+      "english": "One of the two will return.",
+      "ruling": "2.5:G97",
+      "expect": "Una de li dossa futu relnura.",
+      "equivalents": ["Una de dossa futu relnura."]
+    },
+    {
+      "english": "These songs are beautiful.",
+      "ruling": "2.5:G101",
+      "expect": "Eliri lirari ka vanisan.",
+      "equivalents": ["Eliri lira ka vanisan."]
+    },
+    {
+      "english": "Two songs.",
+      "ruling": "2.5:G101",
+      "expect": "Dossa lira.",
+      "equivalents": ["Dossa lirari."]
+    },
+    {
+      "english": "The bird sits behind the home.",
+      "ruling": "2.5:G99",
+      "expect": "Li lavra semnesia nazru li nimu."
+    },
+    {
+      "english": "The bird sings; it is beautiful.",
+      "ruling": "2.5:G102",
+      "expect": "Li lavra lirala; ito ka vanisan."
+    },
+    {
+      "english": "I sing today.",
+      "ruling": "2.5:G103",
+      "expect": "Maivo lirala deyapressa."
+    },
+    {
+      "english": "I sing in the morning.",
+      "ruling": "2.5:G103",
+      "expect": "Maivo lirala en merno."
+    },
+    {
+      "english": "I always sing.",
+      "ruling": "2.5:G103",
+      "expect": "Maivo lirala toda-krono."
+    },
+    {
+      "english": "I open the door with the key.",
+      "ruling": "2.5:G104",
+      "expect": "Maivo lallela li dorbi yuta li kemye."
+    },
+    {
+      "english": "She spoke in a musical voice.",
+      "ruling": "2.5:G104",
+      "expect": "Saivo po senosia en baba melosan valla."
+    },
+    {
+      "english": "I sing with love.",
+      "ruling": "2.5:G104",
+      "expect": "Maivo lirala ko amor."
+    },
+    {
+      "english": "I sing with you.",
+      "ruling": "2.5:G104",
+      "expect": "Maivo lirala ko taivo."
+    },
+    {
+      "english": "I sing gently.",
+      "ruling": "2.5:G105",
+      "expect": "Maivo lirala la molusan."
+    },
+    {
+      "english": "I sing very gently.",
+      "ruling": "2.5:G105",
+      "expect": "Maivo lirala la ruli molusan."
+    },
+    {
+      "english": "I sing more gently than you.",
+      "ruling": "2.5:G106",
+      "expect": "Maivo lirala la kasi molusan tamo taivo."
+    },
+    {
+      "english": "I have more songs than you.",
+      "ruling": "2.5:G106",
+      "expect": "Maivo tovota kasi lirari tamo taivo."
+    },
+    {
+      "english": "The song is more beautiful than the speech.",
+      "ruling": "0.8:G8",
+      "expect": "Li lira ka kasi vanisan tamo li seno."
+    },
+    {
+      "english": "I have about two coins.",
+      "ruling": "2.5:G107",
+      "expect": "Maivo tovota gase dossa cono."
+    },
+    {
+      "english": "You sing like a bird.",
+      "ruling": "2.5:G107",
+      "expect": "Taivo lirala gase baba lavra."
+    },
+    {
+      "english": "I came two days ago.",
+      "ruling": "2.5:G108",
+      "expect": "Maivo po venreva kroti dossa deya."
+    },
+    {
+      "english": "I make him eat the food.",
+      "ruling": "2.5:G109",
+      "expect": "Maivo vaku saivo sapusia li nami."
+    },
+    {
+      "english": "You make me sing.",
+      "ruling": "2.5:G109",
+      "expect": "Taivo vaku maivo lirala."
+    },
+    {
+      "english": "I let them leave.",
+      "ruling": "2.5:G109",
+      "expect": "Maivo po lesvu saivori tevuluta.",
+      "equivalents": ["Maivo po lesvu saivo pagopa.", "Maivo po lesvu saivori pagopa."],
+      "review": "\"leave\" is tevuluta by its first gloss; the patch writes pagopa (go)."
+    },
+    {
+      "english": "The song is written by me.",
+      "ruling": "2.5:G110",
+      "expect": "Li lira gome sarbisia gagu maivo."
+    },
+    {
+      "english": "Suddenly the door opened.",
+      "ruling": "2.5:G110",
+      "expect": "Zafra, li dorbi po lallela."
+    },
+    {
+      "english": "Change is very easy to resist.",
+      "ruling": "2.5:G111",
+      "expect": "Trana ka ruli levasan sidu zeldoza.",
+      "equivalents": ["Trana ke ruli levasan sidu zeldoza."],
+      "review": "ke or ka for \"easy\" (2.5:G93): the translator reads it as lasting (ka) and flags it; the patch writes ke."
+    },
+    {
+      "english": "You owe me two coins.",
+      "ruling": "2.5:G112",
+      "expect": "Taivo guraga maivo dossa cono."
+    },
+    {
+      "english": "I gave the bread to my father.",
+      "ruling": "2.5:G112",
+      "expect": "Maivo po donuda li bumre ala maivo de pilo."
+    },
+    {
+      "english": "Give me the bread.",
+      "ruling": "2.5:G112",
+      "expect": "Donuda maivo li bumre!"
+    },
+    {
+      "english": "I came here to sing.",
+      "ruling": "2.5:G113",
+      "expect": "Maivo po venreva eli-pago kopisa lirala."
+    },
+    {
+      "english": "I sing so that you dance.",
+      "ruling": "2.5:G113",
+      "expect": "Maivo lirala kopisa taivo rilura."
+    },
+    {
+      "english": "I want to sing.",
+      "ruling": "0.8:G6",
+      "expect": "Maivo desida sidu lirala."
+    },
+    {
+      "english": "I want you to stay.",
+      "ruling": "2.1:G50",
+      "expect": "Maivo desida fime taivo lisrola."
+    },
+    {
+      "english": "If I had asked, you would have answered.",
+      "ruling": "2.5:G114",
+      "expect": "Si maivo po noma masuma, taivo po noma viki relsira."
+    },
+    {
+      "english": "I should have sung.",
+      "ruling": "1.0:G6",
+      "expect": "Maivo po noma suvi lirala."
+    },
+    {
+      "english": "The person who sings is good.",
+      "ruling": "2.5:G115",
+      "expect": "Li nela raho lirala ka benasan."
+    },
+    {
+      "english": "The sage who studies this did not see the word.",
+      "ruling": "2.5:G115",
+      "expect": "Li sabeyo raho lemula eli, po ne vimova li seno.",
+      "equivalents": ["Li sabeyo raho vismava eli, ne yehu vimova li vordu."],
+      "review": "word choice: study → lemula (learn) by gloss, word → seno; the patch uses vismava, vordu and the evidential yehu."
+    },
+    {
+      "english": "I sing, so that perhaps you will dance.",
+      "ruling": "2.5:G116",
+      "expect": "Maivo lirala, kopisa taivo nosi rilura."
+    },
+    {
+      "english": "I know that you might sing.",
+      "ruling": "2.5:G116",
+      "expect": "Maivo sabesia fime taivo nosi lirala."
+    },
+    {
+      "english": "Therefore, I sing.",
+      "ruling": "2.5:G117",
+      "expect": "Tonsi, maivo lirala."
+    },
+    {
+      "english": "Are you so brave that you would kiss me?",
+      "ruling": "2.5:G117",
+      "expect": "Taivo ka tonsi corvisan fime taivo viki savalisia maivo ki?",
+      "equivalents": ["Taivo ke tonsi corvisan fime taivo viki savalisia maivo ki?"],
+      "review": "ke or ka for \"brave\" (2.5:G93); the patch writes ke."
+    },
+    {
+      "english": "As soon as you came, I sang.",
+      "ruling": "2.5:G118",
+      "expect": "Kureli taivo venreva, maivo po lirala."
+    },
+    {
+      "english": "I asked whether you returned.",
+      "ruling": "2.5:G118",
+      "expect": "Maivo po masuma ki-oro taivo relnura."
+    },
+    {
+      "english": "As for Kipo, they sing.",
+      "ruling": "2.5:G119",
+      "expect": "Kipo hozi, saivori lirala.",
+      "equivalents": ["Kipo hozi, saivo lirala."],
+      "review": "\"they\" for one named person → saivori; the patch writes saivo."
+    },
+    {
+      "english": "As for the bread, Kipo baked it.",
+      "ruling": "2.5:G119",
+      "expect": "Li bumre hozi, Kipo po bumreba ito."
+    },
+    {
+      "english": "The singer whose song I love is here.",
+      "ruling": "2.5:G120",
+      "expect": "Li lirayo raho maivo amora saivo de lira, ke eli-pago."
+    },
+    {
+      "english": "The time when I sang.",
+      "ruling": "2.5:G120",
+      "expect": "Li krono raho maivo po lirala en ito."
+    },
+    {
+      "english": "The place I came from.",
+      "ruling": "2.5:G120",
+      "expect": "Li pago raho maivo po venreva da ito."
+    },
+    {
+      "english": "Minus two.",
+      "ruling": "2.5:G125",
+      "expect": "Antizi dossa."
+    },
+    {
+      "english": "Please stay.",
+      "ruling": "2.5:G90",
+      "expect": "Fisa, lisrola."
+    },
+    {
+      "english": "Don't sing!",
+      "ruling": "2.5:G90",
+      "expect": "Ne lirala!"
+    },
+    {
+      "english": "Let's sing!",
+      "ruling": "2.1:G56",
+      "expect": "Yava lirala!"
+    },
+    {
+      "english": "Sing!",
+      "ruling": "2.5:G90",
+      "expect": "Lirala!"
+    },
+    {
+      "english": "What a night!",
+      "ruling": "2.2:G61",
+      "expect": "Ki-eli nullo!"
+    },
+    {
+      "english": "How beautiful the night is!",
+      "ruling": "2.2:G61",
+      "expect": "Li nullo ka ki-modo vanisan!"
+    },
+    {
+      "english": "May the light hold you.",
+      "ruling": "2.1:G48",
+      "expect": "Li lumi tivrota taivo pifu."
+    },
+    {
+      "english": "We love each other.",
+      "ruling": "2.5:G126",
+      "expect": "Maivori amora fuyi."
+    },
+    {
+      "english": "Perhaps I sing.",
+      "ruling": "1.0:G22",
+      "expect": "Maivo lirala poye."
+    },
+    {
+      "english": "Although you sing, I sleep.",
+      "ruling": "1.0:G11",
+      "expect": "Nevi taivo lirala, maivo somusia."
+    },
+    {
+      "english": "I sing because you dance.",
+      "ruling": "kasa",
+      "expect": "Maivo lirala kasa taivo rilura."
+    },
+    {
+      "english": "I know that you sing.",
+      "ruling": "fime",
+      "expect": "Maivo sabesia fime taivo lirala."
+    },
+    {
+      "english": "I don't know where you will go.",
+      "ruling": "2.3:G77",
+      "expect": "Maivo ne sabesia ki-pago taivo futu pagopa."
+    },
+    {
+      "english": "I sing what you love.",
+      "ruling": "2.2:G64",
+      "expect": "Maivo lirala raho taivo amora."
+    },
+    {
+      "english": "I was singing.",
+      "ruling": "aspect",
+      "expect": "Maivo po roni lirala."
+    },
+    {
+      "english": "I have eaten.",
+      "ruling": "aspect",
+      "expect": "Maivo tefa sapusia."
+    },
+    {
+      "english": "She can sing.",
+      "ruling": "1.0:G3",
+      "expect": "Saivo povi lirala."
+    },
+    {
+      "english": "You might sing.",
+      "ruling": "1.0:G3",
+      "expect": "Taivo nosi lirala."
+    },
+    {
+      "english": "You must go.",
+      "ruling": "1.0:G4",
+      "expect": "Taivo musi pagopa."
+    },
+    {
+      "english": "I almost sang.",
+      "ruling": "approach",
+      "expect": "Maivo po tavki lirala."
+    },
+    {
+      "english": "I began to sing.",
+      "ruling": "phase",
+      "expect": "Maivo po hiro lirala."
+    },
+    {
+      "english": "I stopped singing.",
+      "ruling": "phase",
+      "expect": "Maivo po teki lirala."
+    },
+    {
+      "english": "I tried to sing.",
+      "ruling": "effort",
+      "expect": "Maivo po telvo lirala."
+    },
+    {
+      "english": "I sing again.",
+      "ruling": "iteration",
+      "expect": "Maivo reve lirala."
+    },
+    {
+      "english": "I still sing.",
+      "ruling": "iteration",
+      "expect": "Maivo loki lirala."
+    },
+    {
+      "english": "I recognize you.",
+      "ruling": "2.5:G121",
+      "expect": null,
+      "review": "No listed word: revo-sabesia means \"recognize\" in a canonical example, but its gloss is not in the data. The translator reports the gap instead of guessing; add the meaning to the curated metaphor and it will be found."
+    }
+  ]
+}

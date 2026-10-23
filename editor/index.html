@@ -1037,6 +1037,21 @@
     resize: vertical;
   }
 
+  /* the strict checker's gloss and the translator's flags (2.5, ADR-0020) */
+  .strict-gloss {
+    margin-top: var(--s2);
+    font-size: 0.85em;
+  }
+  .strict-gloss td,
+  .strict-gloss th {
+    padding: 2px 6px;
+    vertical-align: top;
+  }
+  ul.flags,
+  ul.tried {
+    margin: var(--s2) 0 0;
+    padding-left: 1.2em;
+  }
   .draft {
     margin-top: var(--s3);
     padding: var(--s3);
@@ -1672,6 +1687,9 @@
 <script src="checker/gloss.js"></script>
 <script src="checker/rules/english.js"></script>
 <script src="checker/index.js"></script>
+<!-- The 2.5 strict checker and the translator (src/core/grammar, src/core/translate; ADR-0020) -->
+<script src="grammar/grammar-data.js"></script>
+<script src="grammar/grammar-core.js"></script>
 <!-- Learn: its engine (learn-core.js) and data (learn-data.js) load on first use -->
 <script src="learn/strings.js"></script>
 <script src="learn/store.js"></script>
@@ -1714,6 +1732,108 @@
      JSON). The page still opens if it failed to load, and says so. */
   const CK = (window.LiraasaChecker && window.LiraasaChecker.default) || null;
   const CK_ERROR = (window.LiraasaChecker && window.LiraasaChecker.loadError) || null;
+
+  /* The 2.5 strict checker and translator (ADR-0020). Grammar findings come
+     from it alone, with their rule ids, and nothing exempts a sentence. The
+     2.3 checker (CK) still gives what the strict one does not: the English
+     pairing check, calques and register notes. */
+  let STRICT = null;
+  let STRICT_ERROR = null;
+  try {
+    STRICT =
+      window.LiraasaGrammar && window.LIRAASA_GRAMMAR
+        ? window.LiraasaGrammar.createTranslator(window.LIRAASA_GRAMMAR)
+        : null;
+  } catch (e) {
+    STRICT_ERROR = e;
+  }
+  const CK_KEEP = new Set(['gloss drift', 'tense', 'passive', 'calque', '0.8:R10', '-na', 'hema']);
+
+  /** Every finding of a page: the strict checker's grammar, the 2.3 checker's English and register notes. */
+  function checkAll(lines, englishLines, opts) {
+    const out = [];
+    if (STRICT) {
+      lines.forEach((line, i) => {
+        if (!line.trim()) return;
+        for (const f of STRICT.checker.checkLine(line).findings) {
+          const severity = f.severity === 'unruled' ? 'unsettled' : f.severity;
+          out.push({
+            line: i + 1,
+            start: f.start,
+            end: f.end,
+            token: line.slice(f.start, f.end),
+            severity,
+            rule: f.rule,
+            message:
+              (f.severity === 'unruled' ? 'Not ruled yet: ' : '') +
+              f.message +
+              (f.fix ? ' (try: ' + f.fix + ')' : ''),
+            fix: null,
+            fixStart: null,
+            fixEnd: null,
+            autoFix: false,
+          });
+        }
+      });
+    }
+    if (CK) {
+      for (const f of CK.check(lines, englishLines, opts)) {
+        if (!STRICT || CK_KEEP.has(f.rule)) out.push(f);
+      }
+    }
+    return out;
+  }
+
+  /** The strict checker's gloss of one line: each word's form, slot and rules. */
+  const strictGloss = (line) =>
+    STRICT && line.trim() ? STRICT.checker.checkLine(line).sentences.flatMap((s) => s.gloss) : [];
+  /** A plain English reading of a line, word by word, from the strict gloss. */
+  const strictBack = (line) =>
+    strictGloss(line)
+      .map((g) => (g.gloss.split(/[;(]/)[0] || g.word).trim())
+      .filter(Boolean)
+      .join(' ');
+
+  /* Proposed rulings (README 2.5, 2d): there is no approve button. A writer who
+     believes a rejected sentence is grammatical records a proposal; the
+     sentence stays failing until the grammar changes. Proposals download as
+     review/proposed_rulings.md. */
+  const PROPOSALS_KEY = 'liraasa-proposed-rulings';
+  function proposals() {
+    try {
+      return JSON.parse(localStorage.getItem(PROPOSALS_KEY) || '[]');
+    } catch (e) {
+      return [];
+    }
+  }
+  function saveProposals(list) {
+    try {
+      localStorage.setItem(PROPOSALS_KEY, JSON.stringify(list));
+    } catch (e) {
+      /* storage blocked: kept for this session only */
+    }
+  }
+  function proposalsMarkdown(list) {
+    return (
+      '# Proposed rulings\n\nRecorded in the editor: sentences the writer believes are grammatical, with the rule each one conflicts with. Each stays failing until the grammar changes (2.5:G87).\n\n' +
+      list
+        .map(
+          (p, i) =>
+            '## ' +
+            (i + 1) +
+            '. ' +
+            p.rule +
+            '\n\n- Sentence: `' +
+            p.sentence +
+            '`\n- Finding: ' +
+            p.message +
+            '\n- Recorded: ' +
+            p.at +
+            '\n- Proposed ruling: _(to write)_\n',
+        )
+        .join('\n')
+    );
+  }
   const SEV_RANK = { error: 0, warn: 1, note: 2, unsettled: 3 };
   const SEV_LABEL = { error: 'Error', warn: 'Warning', note: 'Note', unsettled: 'Unsettled' };
   const VOWELS = 'aeiou';
@@ -3558,6 +3678,150 @@
 
   let drafts = [];
 
+  /* Compose (2.5, ADR-0020): English → a meaning frame → Liraasa by the
+     rulings → the strict checker → a back-translation. A line is offered only
+     when it passes the checker and reads back to its frame; otherwise the
+     reasons are shown, never broken Liraasa. The 2.3 word-by-word composer is
+     still one click away. */
+  let translations = [];
+
+  function runTranslate() {
+    const src = els.englishIn.value.trim();
+    if (!STRICT) {
+      runCompose();
+      return;
+    }
+    if (!src) {
+      els.composeOut.innerHTML =
+        '<p class="empty" style="margin-top:var(--s3)">Write English and press Compose. Every Liraasa line offered passes the 2.5 grammar checker and reads back to what you wrote; where Liraasa has no word, it says so rather than inventing one.</p>';
+      return;
+    }
+    translations = src
+      .split(/\n+/)
+      .map((l) => l.trim())
+      .filter(Boolean)
+      .flatMap((l) => STRICT.translate(l));
+    renderTranslations();
+  }
+
+  function renderTranslations() {
+    els.composeOut.innerHTML =
+      translations
+        .map((t, ti) => {
+          const head = '<div class="label">' + esc(t.english) + '</div>';
+          if (!t.ok) {
+            const why = t.tried.length
+              ? t.tried
+                  .slice(0, 2)
+                  .map(
+                    (x) =>
+                      '<li><span class="liraasa">' +
+                      esc(x.liraasa) +
+                      '</span><br /><span class="label">' +
+                      esc(x.failures.join(' · ')) +
+                      '</span></li>',
+                  )
+                  .join('')
+              : '';
+            const gaps = t.gaps.length
+              ? '<p class="nomatch">No listed word for ' +
+                t.gaps
+                  .map(
+                    (g) =>
+                      '“' +
+                      esc(g.english) +
+                      '”' +
+                      (g.nearest.length
+                        ? ' (nearest: ' +
+                          g.nearest
+                            .map(
+                              (w) =>
+                                '<span class="liraasa">' +
+                                esc(w.form) +
+                                '</span> ' +
+                                esc(w.gloss || ''),
+                            )
+                            .join(', ') +
+                          ')'
+                        : ''),
+                  )
+                  .join('; ') +
+                '. Choose a listed word, rephrase, or propose a compound for the author.</p>'
+              : '';
+            return (
+              '<div class="draft">' +
+              head +
+              '<div class="out" style="margin-top:4px">No rendering passes the checker.</div>' +
+              gaps +
+              (why ? '<ul class="tried">' + why + '</ul>' : '') +
+              flagsHtml(t.flags) +
+              '</div>'
+            );
+          }
+          const alts = Object.entries(t.alternatives)
+            .map(
+              ([en, ws]) =>
+                '<span class="cnote">' +
+                esc(en) +
+                ': ' +
+                ws.map((w) => '<span class="liraasa">' + esc(w.form) + '</span>').join(', ') +
+                '</span>',
+            )
+            .join(' ');
+          return (
+            '<div class="draft">' +
+            head +
+            '<div class="out liraasa" style="margin-top:4px">' +
+            esc(t.liraasa) +
+            '</div>' +
+            translationGlossHtml(t.gloss) +
+            '<p class="gl-back"><span class="label">reads back</span> ' +
+            esc(t.backTranslation.english) +
+            '</p>' +
+            flagsHtml(t.flags) +
+            (alts ? '<p class="label">Other listed words: ' + alts + '</p>' : '') +
+            '<button class="btn" type="button" data-insert-translation="' +
+            ti +
+            '" style="margin-top:var(--s2)">Insert this line</button>' +
+            '</div>'
+          );
+        })
+        .join('') +
+      '<p style="margin-top:var(--s3)"><button class="btn btn-quiet" type="button" id="oldComposeBtn">Word-by-word options (the 2.3 composer)</button></p>';
+  }
+
+  function flagsHtml(flags) {
+    return flags.length
+      ? '<ul class="flags">' +
+          flags.map((f) => '<li class="label">' + esc(f) + '</li>').join('') +
+          '</ul>'
+      : '';
+  }
+
+  function translationGlossHtml(rows) {
+    return (
+      '<table class="tbl strict-gloss"><thead><tr><th>Word</th><th>Form</th><th>Slot</th><th>Meaning</th><th>Rules</th></tr></thead><tbody>' +
+      rows
+        .map(
+          (g) =>
+            '<tr><td class="liraasa">' +
+            esc(g.word) +
+            '</td><td>' +
+            esc(g.analysis) +
+            '</td><td>' +
+            esc(g.role || '—') +
+            '</td><td>' +
+            esc(g.gloss) +
+            (g.flags.length ? ' <span class="label">' + esc(g.flags.join(', ')) + '</span>' : '') +
+            '</td><td>' +
+            esc(g.rules.join(' ')) +
+            '</td></tr>',
+        )
+        .join('') +
+      '</tbody></table>'
+    );
+  }
+
   function runCompose() {
     const src = els.englishIn.value.trim();
     if (!src) {
@@ -4040,7 +4304,7 @@
     const all = [];
 
     const text = els.text.value.split('\n');
-    const checked = CK ? CK.check(text, activePiece().englishLines || [], { register }) : [];
+    const checked = checkAll(text, activePiece().englishLines || [], { register });
     checked.forEach((f, k) => (f.index = k));
     text.forEach((line, i) => {
       const toks = tokenize(line);
@@ -4332,8 +4596,10 @@
           '<div class="il-row"><div>' +
           esc(english[i] || '') +
           '</div>' +
-          (glossOn() && CK && l.text.trim()
-            ? '<div class="il-gl">' + esc(CK.backTranslate(l.text).text) + '</div>'
+          (glossOn() && l.text.trim()
+            ? '<div class="il-gl">' +
+              esc(STRICT ? strictBack(l.text) : CK ? CK.backTranslate(l.text).text : '') +
+              '</div>'
             : '') +
           '</div>',
       )
@@ -4360,11 +4626,16 @@
         '<p class="empty">An empty page. Write a line and it is checked as you type.</p>';
       return;
     }
-    const findings = CK
-      ? diagnosticsHtml(f)
-      : '<p class="empty">The grammar checker did not load' +
-        (CK_ERROR ? ': ' + esc(String(CK_ERROR.message || CK_ERROR)) : '') +
-        '.</p>';
+    const findings =
+      STRICT || CK
+        ? diagnosticsHtml(f) + proposalsHtml()
+        : '<p class="empty">The grammar checker did not load' +
+          (STRICT_ERROR
+            ? ': ' + esc(String(STRICT_ERROR.message || STRICT_ERROR))
+            : CK_ERROR
+              ? ': ' + esc(String(CK_ERROR.message || CK_ERROR))
+              : '') +
+          '.</p>';
 
     const rows = live
       .map((l) => {
@@ -4451,7 +4722,25 @@
           x.index +
           '">Apply fix</button></span>'
         : '') +
+      (x.severity === 'error' || x.severity === 'warn'
+        ? '<span><button class="btn btn-quiet" type="button" data-propose="' +
+          x.index +
+          '" title="Record that you believe this sentence is grammatical. It stays failing until the grammar changes.">Propose a ruling</button></span>'
+        : '') +
       '</div></div>'
+    );
+  }
+
+  function proposalsHtml() {
+    const list = proposals();
+    if (!list.length) return '';
+    return (
+      '<div class="diag-tools" style="margin-top:var(--s3)"><span class="label">' +
+      list.length +
+      ' proposed ruling' +
+      (list.length === 1 ? '' : 's') +
+      ' recorded</span><button class="btn btn-quiet" type="button" data-proposals-download>Download proposed_rulings.md</button>' +
+      '<button class="btn btn-quiet" type="button" data-proposals-clear>Clear</button></div>'
     );
   }
 
@@ -4517,6 +4806,33 @@
     );
   }
 
+  /** The strict gloss of a line: each word, its form, its slot and the rules that touch it. */
+  function strictGlossHtml(line) {
+    const rows = strictGloss(line);
+    if (!rows.length) return '';
+    return (
+      '<table class="tbl strict-gloss"><thead><tr><th>Word</th><th>Form</th><th>Slot</th><th>Meaning</th><th>Rules</th></tr></thead><tbody>' +
+      rows
+        .map(
+          (g) =>
+            '<tr><td class="liraasa">' +
+            esc(g.word) +
+            '</td><td>' +
+            esc(g.analysis) +
+            '</td><td>' +
+            esc(g.role || '—') +
+            '</td><td>' +
+            esc(g.gloss) +
+            (g.flags.length ? ' <span class="label">' + esc(g.flags.join(', ')) + '</span>' : '') +
+            '</td><td>' +
+            esc(g.rules.join(' ')) +
+            '</td></tr>',
+        )
+        .join('') +
+      '</tbody></table>'
+    );
+  }
+
   function renderGloss() {
     const panel = document.getElementById('panel-gloss');
     const english = activePiece().englishLines || [];
@@ -4553,8 +4869,10 @@
               );
             })
             .join('') +
-          '</div><div class="gl-back"><span class="label">reads</span> ' +
-          esc(CK ? CK.backTranslate(l.text).text : '') +
+          '</div>' +
+          strictGlossHtml(l.text) +
+          '<div class="gl-back"><span class="label">reads</span> ' +
+          esc(STRICT ? strictBack(l.text) : CK ? CK.backTranslate(l.text).text : '') +
           (english[l.no - 1]
             ? '<br /><span class="label">your English</span> ' + esc(english[l.no - 1])
             : '') +
@@ -5314,17 +5632,32 @@
     root.setAttribute('data-theme', dark ? 'light' : 'dark');
   });
 
-  document.getElementById('composeBtn').addEventListener('click', runCompose);
+  document.getElementById('composeBtn').addEventListener('click', runTranslate);
   els.englishIn.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter' && (e.metaKey || e.ctrlKey)) runCompose();
+    if (e.key === 'Enter' && (e.metaKey || e.ctrlKey)) runTranslate();
   });
 
   document.getElementById('appendBtn').addEventListener('click', () => {
+    if (STRICT) {
+      if (!translations.length) runTranslate();
+      for (const t of translations) if (t.ok) appendLine(t.liraasa, t.english);
+      return;
+    }
     if (!drafts.length) runCompose();
     for (const d of drafts) appendLine(draftText(d), d.raw);
   });
 
   els.composeOut.addEventListener('click', (e) => {
+    const tr = e.target.closest('[data-insert-translation]');
+    if (tr) {
+      const t = translations[+tr.dataset.insertTranslation];
+      if (t && t.ok) appendLine(t.liraasa, t.english);
+      return;
+    }
+    if (e.target.closest('#oldComposeBtn')) {
+      runCompose();
+      return;
+    }
     const opt = e.target.closest('.opt');
     if (opt) {
       drafts[+opt.dataset.d].clauses[+opt.dataset.k].chunks[+opt.dataset.c].chosen = +opt.dataset.o;
@@ -5335,6 +5668,37 @@
     if (ins) {
       const d = drafts[+ins.dataset.insertDraft];
       appendLine(draftText(d), d.raw);
+    }
+  });
+
+  document.getElementById('panel-check').addEventListener('click', (e) => {
+    const p = e.target.closest('[data-propose]');
+    if (p) {
+      const f = analysis.findings.find((x) => x.index === +p.dataset.propose);
+      if (!f) return;
+      const list = proposals();
+      list.push({
+        sentence: (analysis.lines[f.line - 1] || {}).text || '',
+        rule: f.rule,
+        message: f.message,
+        at: new Date().toISOString(),
+      });
+      saveProposals(list);
+      renderCheck();
+      return;
+    }
+    if (e.target.closest('[data-proposals-download]')) {
+      const blob = new Blob([proposalsMarkdown(proposals())], { type: 'text/markdown' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'proposed_rulings.md';
+      a.click();
+      URL.revokeObjectURL(a.href);
+      return;
+    }
+    if (e.target.closest('[data-proposals-clear]')) {
+      saveProposals([]);
+      renderCheck();
     }
   });
 

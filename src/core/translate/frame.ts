@@ -277,5 +277,9 @@ export interface MeaningClause {
   vocative?: MeaningNP;
   topic?: MeaningNP;
   please?: boolean;
+  /** was, and no longer is: kapoki (2.5:G94) */
+  noLonger?: boolean;
+  /** joined by a semicolon */
+  semicolon?: boolean;
   subordinates: MeaningClause[];
 }
