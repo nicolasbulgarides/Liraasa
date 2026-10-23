@@ -74,7 +74,11 @@ export const MOTION: ConceptId = 'motion';
 function slotWords(indexes: LexiconIndexes, descriptions: readonly string[]): string[] {
   const out: string[] = [];
   for (const d of descriptions) {
-    for (const w of d.toLowerCase().match(/[a-z]+(?:-[a-z]+)*/g) ?? []) {
+    // a parenthesis gives examples (2.5: "prepositional phrases of place (En li nimu, …)"), not the slot's words
+    for (const w of d
+      .toLowerCase()
+      .replace(/\([^)]*\)/g, ' ')
+      .match(/[a-z]+(?:-[a-z]+)*/g) ?? []) {
       for (const r of resolveSpelling(indexes, w).refs) {
         if (CLOSED.has(r.namespace) && !out.includes(r.entryId)) out.push(r.entryId);
       }

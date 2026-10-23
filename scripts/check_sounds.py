@@ -220,6 +220,12 @@ def root_template(word: str, audit: bool = False) -> list[str]:
     return shape_problems(word, 2, 2, True, allow_grandfathered=audit, any_doubled=not audit)
 
 
+def lexicalised_all(raw: dict) -> dict:
+    """The lexicalised derivations and, from 2.5 (2.5:G122), the lexicalised -ti words."""
+    m = raw["morphology"]
+    return {**m.get("lexicalised_derivations", {}), **m.get("lexicalised_diminutives", {})}
+
+
 def function_word_template(word: str) -> list[str]:
     """phonology.function_word_template; hyphenated particles part by part."""
     parts = [p for p in word.split("-") if p] if "-" in word else [word]
@@ -307,7 +313,7 @@ class Lexicon:
         lx.motion_prefixes = [p.rstrip("-") for p in raw.get("motion_prefixes", {}).get("canon", {})]
         for h in raw["headwords"]:
             lx.add_headword(h["root"], h["forms"], h.get("type", "Primal"), h.get("components"), h.get("domain"))
-        for spelling, gloss in raw["morphology"].get("lexicalised_derivations", {}).items():
+        for spelling, gloss in lexicalised_all(raw).items():
             lx.active[spelling].add(f"lexicalised derivation ({gloss.split(':')[0]})")
 
         def closed(form: str, kind: str) -> None:
@@ -583,7 +589,7 @@ def resolve_derivation(c: Candidate, lx: Lexicon, others: list[Candidate]) -> li
     elif c.base.endswith(DERIVATIONS) and c.suffix == "ti":
         findings.append(Finding(4, "INFO", f"{c.base!r} is itself a derivation; ROOT + derivation + -ti is in order"))
     else:
-        if c.base not in lx.raw["morphology"].get("lexicalised_derivations", {}):
+        if c.base not in lexicalised_all(lx.raw):
             findings.append(Finding(4, "ERROR", f"base {c.base!r} is not a headword"))
     return findings
 
@@ -777,7 +783,7 @@ def audit(lx: Lexicon) -> dict:
         "distance_1_forms": [],
     }
     near = NearIndex(lx.active)
-    lexicalised = dict(lx.raw["morphology"].get("lexicalised_derivations", {}))
+    lexicalised = lexicalised_all(lx.raw)
     for root, h in sorted(lx.heads.items()):
         if h["type"] != "Primal":
             continue

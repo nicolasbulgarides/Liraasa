@@ -1,0 +1,81 @@
+{
+ "about": "Parameters of the 2.5 strict checker (src/core/grammar), lifted from the ruling texts so that no grammar lives in code. Each entry names the ruling it comes from; a list a ruling leaves to the author (author_inputs_needed) is marked draft and its findings are reported as unruled, never as pass or fail. Edit here, never in code.",
+ "question": {
+  "ruling": "2.5:G88",
+  "fronted_may_drop_ki": ["ki-coda", "ki-pago", "ki-krono", "ki-nela", "ki-nela de", "ki-kasa", "ki-modo", "ki-muya-krono"],
+  "always_ki": { "ruling": "2.3:G76", "determiners": ["ki-eli", "ki-muya"], "degree": "ki-modo" },
+  "exclamation_without_ki": { "ruling": "2.2:G61", "words": ["ki-eli", "ki-muya", "ki-modo"] },
+  "raho_question": "2.3:G74",
+  "fragment": "2.5:G91",
+  "echo": "2.5:G92",
+  "embedded_yes_no": { "word": "ki-oro", "ruling": "2.3:G77" }
+ },
+ "sentence_end": {
+  "ruling": "2.5:G89",
+  "final_words": ["ki"],
+  "may_follow_ki": "a vocative set off by a comma"
+ },
+ "edges": {
+  "ruling": "2.5:G126",
+  "line_linkers": ["ata", "oro", "nara"],
+  "clause_adverbs": { "ruling": "2.5:G117", "words": ["tonsi", "narli", "krotiata", "korsi"], "comma_required": ["tonsi"] },
+  "frame_words": { "ruling": "2.5:G127", "words": ["zafra", "finra", "lanto", "kenvi"] },
+  "vocative_after_ki": true
+ },
+ "closing_order": {
+  "ruling": "2.5:G126",
+  "order": ["ADJUNCTS", "RECIPROCAL", "STATUS", "ATTITUDE", "QUESTION"],
+  "iteration_may_close": ["reve", "loki"],
+  "never_closing": { "ruling": "2.5:G127", "words": ["po", "futu", "pressa", "bodu"] }
+ },
+ "command": {
+  "ruling": "2.5:G90",
+  "marks": ["!", "fisa"],
+  "operators_unruled": { "item": "I-42", "allowed_without_question": ["ne"] },
+  "hortative": "yava"
+ },
+ "bare_predicate": { "ruling": "2.5:G128", "copulas": ["ke", "ka"] },
+ "possession": { "ruling": "2.5:G95", "kinship_nouns_are_not_names": true, "chains": "2.5:G96" },
+ "fraction": { "ruling": "2.5:G97", "hyphenated_is_error": true },
+ "noun_phrase": {
+  "ruling": "2.5:G98",
+  "degree_words": ["ruli", "kasi", "menu", "mosa", "lusu", "gase", "diba"],
+  "quantifier_extra": ["ki-muya"],
+  "owner_takes": "a pronoun or a personal name",
+  "adjective_order": { "item": "A4.22 / I-28", "status": "unruled" }
+ },
+ "side_nouns": { "ruling": "2.5:G99", "article_required": true },
+ "plural": { "ruling": "2.5:G101", "singular_demonstratives": ["eli", "ola"], "count_words_optional_ri": true },
+ "time_when": { "ruling": "2.5:G103", "preposition_for_time_nouns": "en" },
+ "means": { "ruling": "2.5:G104", "instrument": "yuta", "medium": "en", "companion": "ko", "manner": "la", "tool_classes": ["tool", "substance"] },
+ "adverb": { "ruling": "2.5:G105", "particle": "la" },
+ "comparison": { "ruling": "2.5:G106", "than": "tamo", "amount_words": ["kasi", "menu"] },
+ "measure": { "ruling": "2.5:G108", "heads": ["kroti", "krotiapo"], "listed_quantifiers": null, "quantifier_status": "unruled" },
+ "valency": {
+  "ruling": "2.5:G109",
+  "operators": ["vaku", "lesvu", "tekvu"],
+  "actor_slots": ["NEGATION", "APPROACH", "PHASE", "EFFORT"],
+  "main_clause_slots": ["TENSE", "REALITY", "MODAL", "EVIDENTIAL"]
+ },
+ "passive": {
+  "ruling": "2.5:G110",
+  "word": "gome",
+  "agent": "gagu",
+  "change_of_state_verbs": { "status": "draft", "item": "I-22", "verbs": [] }
+ },
+ "adjective_sidu": { "ruling": "2.5:G111", "dummy": "ito" },
+ "recipient": {
+  "ruling": "2.5:G112",
+  "approved_verbs": "give_type",
+  "draft_tags": { "status": "draft", "item": "I-38", "verbs": [] }
+ },
+ "purpose": { "ruling": "2.5:G113", "linker": "kopisa", "chain": "sidu" },
+ "would_have": { "ruling": "2.5:G114", "form": ["po", "noma", "viki"] },
+ "relative_comma": { "ruling": "2.5:G115", "word": "raho" },
+ "hopeful_purpose": { "ruling": "2.5:G116", "linker": "kopisa", "modal": "nosi", "complementizer": "fime" },
+ "tense": { "ruling": "2.5:G118", "own_tense": ["sige"] },
+ "topic": { "ruling": "2.5:G119", "word": "hozi" },
+ "motion": { "ruling": "2.5:G121" },
+ "image_compound_predicted": { "ruling": "2.5:G124", "severity": "note" },
+ "negative_number": { "ruling": "2.5:G125", "word": "antizi" }
+}

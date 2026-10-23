@@ -18,7 +18,7 @@ import { readFileSync, writeFileSync } from 'node:fs';
 import { correctText } from '../src/core/change/respell';
 import type { RawLexicon } from '../src/core/model/raw';
 
-const LEXICON = 'data/lexicon/liraasa_2_3.json';
+const LEXICON = 'data/lexicon/liraasa_2_5.json';
 const PATCH_2_3 = 'data/proposals/liraasa_2_3_patch.json';
 const BEFORE = 'data/lexicon/liraasa_2_0.json';
 const CORPUS = 'data/corpus/album_2_0/liraasa_album_corpus.json';

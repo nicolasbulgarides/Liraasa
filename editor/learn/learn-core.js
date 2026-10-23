@@ -789,7 +789,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
   function slotWords(indexes, descriptions) {
     const out = [];
     for (const d of descriptions) {
-      for (const w of d.toLowerCase().match(/[a-z]+(?:-[a-z]+)*/g) ?? []) {
+      for (const w of d.toLowerCase().replace(/\([^)]*\)/g, " ").match(/[a-z]+(?:-[a-z]+)*/g) ?? []) {
         for (const r of resolveSpelling(indexes, w).refs) {
           if (CLOSED$1.has(r.namespace) && !out.includes(r.entryId)) out.push(r.entryId);
         }
@@ -2560,7 +2560,10 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       });
     }
     const lexicalised = [];
-    for (const [spelling, text] of Object.entries(morphology.lexicalised_derivations)) {
+    for (const [spelling, text] of Object.entries({
+      ...morphology.lexicalised_derivations,
+      ...morphology.lexicalised_diminutives ?? {}
+    })) {
       const cut = text.lastIndexOf(": ");
       const m = /^([a-z]+)\s*\+\s*-([a-z]+)$/.exec(cut < 0 ? "" : text.slice(cut + 2).trim());
       const base = m?.[1];
@@ -4773,7 +4776,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     };
   }
   const PHRASE_SLOTS = /* @__PURE__ */ new Set(["SUBJECT", "VERB", "OBJECT", "ADJUNCTS", "TOPIC"]);
-  const PAUSE = /followed by a pause/i;
+  const PAUSE = /followed by a pause|set off by a comma/i;
   const formGloss = (item, slot) => {
     const f2 = item.forms.find((x) => x.slot === slot);
     return f2?.meaningful === true ? f2.gloss : null;

@@ -1,0 +1,86 @@
+{
+  "about": "Canon (canonical sentences, recipes, living ruling examples) that the 2.5 strict checker rejects or warns on: findings for the author (review/stored_writings_2_5.md), pinned so a change is noticed. Not exemptions: each stays failing until the grammar or the text changes.",
+  "canon": {
+    "examples.sentences: Li dorbi gome sevresia gagu li sora.": ["warn 2.5:G110"],
+    "examples.sentences: Eli-krono maivo lirala.": ["warn 2.5:G127"],
+    "examples.sentences: Eli-pago maivori pelipa.": ["warn 2.5:G127"],
+    "examples.sentences: Maivo nuna-krono lirala.": ["error 2.5:G126"],
+    "examples.sentences: La vera, maivo po bumreba ito.": ["error 2.5:G105"],
+    "examples.sentences: Velina de dentonuravu ka ruli lasona.": ["error 2.5:G98"],
+    "examples.sentences: Taivo maskama fime taivo ne lemvosan, nara maivo vimova taivo de vilneri.": [
+      "error 2.5:G128"
+    ],
+    "rulings[2.2:G65]: ito ke ruli levasan sidu zeldoza trana.": ["error 2.5:G111"],
+    "rulings[1.2:G24]: Eli-krono maivo lirala.": ["warn 2.5:G127"]
+  },
+  "album": {
+    "01:6 en larne li narvo po hataha saivo de yuge.": ["warn 2.5:G127"],
+    "01:10 lanto, saivo po veseva fime raho saivo viki ke saivo de devorivo.": ["error 2.5:G126"],
+    "01:15 saivo po lirala ala saivo baba lumiasasan seno.": ["error 2.5:G112"],
+    "02:1 maivo po ke baba lirasan lavra norusan.": ["error 2.5:G98"],
+    "02:3 li lanlasan kronovimo ala mavopagoasa.": ["error 2.5:G128"],
+    "02:5 ki-pago taivo da hurvosan lirasan lavra ki?": ["error 2.5:G128"],
+    "02:8 maivo mambivimoma ala li ata masuma lanla ata po milobema.": ["error 0.8:G7"],
+    "02:11 ito ke vera maivo ata ke li rivo de maresan mavopagoasa.": ["error 2.5:G126"],
+    "02:13 si taivo futu masuma ko benamolu maivo ata donuda taivo baba pulmi.": ["error 2.5:G126"],
+    "02:14 en veraasa taivo ke baba lukasan nela.": ["warn 2.5:G127"],
+    "02:15 li teru ke juba baba pagonasan pulmi.": ["error 2.5:G126"],
+    "04:1 ola-pago saivo ke yeko vanisan tarnu.": [
+      "error 2.5:G126",
+      "error 2.5:G93",
+      "warn 2.5:G127"
+    ],
+    "04:8 ola-pago saivo po ke saivo ata farlafa baba corviasasan livna.": ["warn 2.5:G127"],
+    "04:13 saivo po duhada vobi damruna tonsi maivo donuda maivo de yuge ala saivo.": [
+      "error 2.5:G117"
+    ],
+    "05:3 si maivo po ke sili ata corvisan ata po valmiva transa li lelde.": ["error 1.2:G29"],
+    "05:5 si ito po fatofa kopisa ola-pago ke.": ["error 2.5:G93"],
+    "05:6 baba pagolelde entre taivo ata maivo.": ["error 2.5:G128"],
+    "05:7 maivo viki teruta su li pagolelde baba fama de furori.": ["error 2.5:G126"],
+    "05:9 kube ito futu ke salrusan maivo ata donuda ala ito baba biti vobi demro.": [
+      "error 2.5:G112"
+    ],
+    "05:10 kube salrusan, maivo futu donuda ala ito baba biti vobi demro.": [
+      "error 2.5:G112",
+      "error 2.5:G128"
+    ],
+    "05:12 hupi li pagolelde maivori po farlafa.": ["warn 2.5:G127"],
+    "05:14 ola-pago povi ke baba kasi dokranasan sonbu ki?": ["warn 2.5:G127"],
+    "05:16 maivo en li krotiata bio viki vazrava taivo vobi kronoasa ki?": [
+      "error 0.8:G7",
+      "error 2.5:G128"
+    ],
+    "05:19 ki-coda baba navusan lavra oro baba farulavra povi ke ki?": ["error 2.5:G126"],
+    "05:20 voyu taivo de navu maivo ne povi navdinia maivo.": [
+      "warn 2.5:G127",
+      "warn function_words:sela"
+    ],
+    "05:22 raho maivo suvi kulpaka vobi maivo de loresan nedu taivo de kemye ki?": [
+      "error 2.5:G126"
+    ],
+    "05:23 ki-coda maivo povi ke nara lavisan ata sulnosovesia.": ["error 2.5:G126"],
+    "05:27 yuta maivo de farulavrasan faru ito ke ruli levasan.": ["warn 2.5:G127"],
+    "05:29 sonhisan ata ko amorjomru maivo viki sulnosia kopisa kronoasa apoka.": [
+      "error 2.5:G126"
+    ],
+    "06:30 Ki-kasa taivo loki tivrota maivo de manli — ki-kasa?": ["error 2.5:G91"],
+    "06:35 Yehu, gesu, bisu, vuda — maivo de sabe ka veraasa:": ["error 2.5:G126"],
+    "07:4 maivo po ke baba melosan lavra taivo de vallasan vordusan lavi.": ["error 2.5:G126"],
+    "09:1 ola-pago ke sambanasan noleri vobi colbiri de azuri.": ["error 1.2:G29"],
+    "09:8 maivo de sonbusambari ke saivori vardesan jubari ki?": ["error 2.5:G126"],
+    "09:12 ito ke vobi eli seca vera fime maivo tivrota opi.": ["error ADR-0011"],
+    "10:6 tonsi maivo po silbesia saivo de baba pagonasan folni.": ["error 2.5:G117"],
+    "10:13 maivo po veseva ala saivo de li krotiata lirasarbi.": ["error 0.8:G7"],
+    "10:15 saivo po farufasbifa kube saivo ramusan raho maivo po ke.": ["error 2.5:G126"],
+    "10:16 maivo toda-krono po ke saivo de devorivo.": ["error 2.5:G126"],
+    "11:2 yeko lunoasasan lumi marema.": ["error 2.5:G126"],
+    "11:6 maivo povi lovula taivo de kronovimo de vio ki?": ["error 1.2:G29"],
+    "11:8 taivo povi lirala vobi maivo baba lunosan somulira.": ["error 2.5:G126"],
+    "11:9 maivo po povi ke li linu tivrosan intra taivo de lomo ki?": ["error 2.5:G98"],
+    "12:7 eli-krono maivori bioba ata ruhesonbura,": ["warn 2.5:G127"],
+    "12:21 eli-krono maivori bisu surusia fime li germa lirala,": ["warn 2.5:G127"],
+    "05alt:23 baba lavrati ko zirkiti vobi taivo,": ["error 2.5:G128"],
+    "05alt:31 tonsi maivo sulnosia gase solo, nido, gase solovu.": ["error 2.5:G117"]
+  }
+}

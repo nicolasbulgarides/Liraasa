@@ -4,7 +4,7 @@
  *
  *   npm run build:llm
  *
- * Writes handoff/liraasa_2_3_llm.json from the canonical 2.3 lexicon. It holds
+ * Writes handoff/liraasa_2_5_llm.json from the canonical 2.5 lexicon. It holds
  * every grammar rule and the full dictionary. It is shaped for a reader that
  * goes top to bottom: instructions and hard rules first, then sound, word
  * building, the clause, recipes and every ruling, then the small words, the
@@ -33,8 +33,8 @@ import {
 import { canonTexts, isCanonText, type Lexicon } from './grammar_guide/data';
 import { parseArgs } from './args';
 
-const LEXICON = 'data/lexicon/liraasa_2_3.json';
-const OUT = 'handoff/liraasa_2_3_llm.json';
+const LEXICON = 'data/lexicon/liraasa_2_5.json';
+const OUT = 'handoff/liraasa_2_5_llm.json';
 /** The album, read against the live lexicon by scripts/build_album.ts; non-normative (2.5:G87). */
 const ALBUM = 'data/corpus/album_2_0/album_current.json';
 const ALBUM_READINGS = 'data/corpus/album_2_0/album_readings.json';
@@ -473,7 +473,7 @@ function main(): void {
         "A yes/no question keeps statement order and ends in ki (Taivo lirala ki?). A content question ends in ki unless its ki-word is the first word of the sentence (Ki-kasa taivo po amora maivo? or … maivo ki?); a ki-word left in its answer's place requires the final ki (Taivo pagopa ki-pago ki?). The fronting exception covers ki-coda, ki-pago, ki-krono, ki-nela, ki-nela de, ki-kasa, manner ki-modo and ki-muya-krono only; questions with ki-eli + noun, ki-muya + noun and degree ki-modo + adjective always end in ki, and without ki those three are exclamations (Ki-eli nullo!) (2.5:G88, 2.2:G61, 2.3:G76). A question may open with raho and then ends in ki (2.3:G74). A fragment question ends in ki (Ata ki?, 2.5:G91); echo ki follows a single word or bare noun phrase only (Lira ki?, 2.5:G92). A final ki or attitude word belongs to the main clause, and ki is the last word except for a comma-set vocative (2.5:G89). Embedded questions never take ki; an embedded yes/no question uses ki-oro (2.3:G77). A ki-word in place in a clause without final ki is an embedded question or part of a statement, never a direct question.",
       commands:
         'A command is marked: in writing it ends in ! or contains fisa; in speech fisa or command intonation marks it. A subjectless, tenseless clause with neither mark is an elliptical statement (2.5:G90). ne + command forbids (2.1:G56).',
-      linking: `fime = "that" introducing a content clause; ola = the demonstrative "that". raho opens a relative clause; one that does not end the sentence is closed by a comma when it contains its own object or adjunct (2.5:G115); a relative on a preposition, a possessor, a time or a place keeps a resumptive pronoun in place (2.1:G52, 2.5:G120). sidu joins two verbs with one subject (want to sing = ${verbOf(WANT)} sidu ${verbOf(SING)}); a second verb with its own subject goes in a fime clause (2.1:G50). Purpose always uses kopisa: kopisa + bare verb phrase with the same subject, kopisa + clause with a different one, and kopisa + a clause with nosi for hopeful purpose (2.5:G113, 2.5:G116). An unmarked subordinate clause takes the main clause\'s tense; sige clauses mark their own (2.5:G118). ala means toward, never the infinitive "to".`,
+      linking: `fime = "that" introducing a content clause; ola = the demonstrative "that". raho opens a relative clause; one that does not end the sentence is closed by a comma when it contains its own object or adjunct (2.5:G115); a relative on a preposition, a possessor, a time or a place keeps a resumptive pronoun in place (2.1:G52, 2.5:G120). sidu joins two verbs with one subject (want to sing = ${verbOf(WANT)} sidu ${verbOf(SING)}); a second verb with its own subject goes in a fime clause (2.1:G50). Purpose always uses kopisa: kopisa + bare verb phrase with the same subject, kopisa + clause with a different one, and kopisa + a clause with nosi for hopeful purpose (2.5:G113, 2.5:G116). An unmarked subordinate clause takes the main clause's tense; sige clauses mark their own (2.5:G118). ala means toward, never the infinitive "to".`,
     },
     recipes: RECIPES.map(([english, pattern, liraasa, gloss, ruling]) => ({
       english,
@@ -553,7 +553,18 @@ function main(): void {
       // I-27: nouns, adverbials and place adverbials apart; the tense, iteration and
       // relation operators live in clause.slots; duplicate rows and ki-krono (a correlative) left out
       time_words: {
-        columns: ['form', 'meaning'],
+        columns: ['form', 'meaning', 'class'],
+        // every row once, with its class (the tables below are the same rows, split)
+        rows: lex.time_and_dates
+          .filter((t) => {
+            const cls = (t as unknown as { time_class?: string }).time_class;
+            return cls !== 'duplicate' && t.form !== 'ki-krono';
+          })
+          .map((t) => [
+            t.form,
+            t.english,
+            (t as unknown as { time_class?: string }).time_class ?? '',
+          ]),
         time_adverbials: {
           note: 'Stand bare as "when", and may open a clause as its FRAME (2.5:G103, 2.5:G127).',
           rows: timeRows('adverbial'),

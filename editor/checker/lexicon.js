@@ -191,7 +191,9 @@
         blocked.add(m[1] + m[2]);
     }
     const lexicalised = new Map();
-    for (const [word, text] of Object.entries(wb.lexicalised_derivations)) {
+    // 2.5:G122: the lexicalised -ti words are their own list, read the same way
+    const listed = { ...wb.lexicalised_derivations, ...(wb.lexicalised_diminutives || {}) };
+    for (const [word, text] of Object.entries(listed)) {
       const m = /^(.*): ([a-z]+) \+ -([a-z]+)$/.exec(text);
       if (m) lexicalised.set(word, { gloss: m[1], base: m[2], suffix: m[3] });
     }

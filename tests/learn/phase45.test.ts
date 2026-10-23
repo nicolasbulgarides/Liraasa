@@ -365,10 +365,11 @@ describe('a new edition', () => {
 
   it('ACCEPTANCE: the 2.2 → 2.3 diff lesson is the sound pass, id by id, and frog', () => {
     const at22 = atEdition('data/lexicon/liraasa_2_2.json');
+    const at23 = atEdition('data/lexicon/liraasa_2_3.json');
     const d = diffSnapshots(
       snapshotEdition(at22.data),
-      snapshotEdition(source.data),
-      source.replacementFor,
+      snapshotEdition(at23.data),
+      at23.replacementFor,
     );
     expect([d.from, d.to]).toEqual(['2.2', '2.3']);
     // frog is a new root (2.3:G70); bear, cow and wolf keep their ids, so nothing is removed
@@ -391,6 +392,43 @@ describe('a new edition', () => {
     // G69–G71 from the patch; G72–G86 from the grammar audit's decisions
     expect(d.rulesAdded.map((r) => r.id)).toEqual(
       Array.from({ length: 18 }, (_, i) => `rule:2.3:G${String(69 + i)}`),
+    );
+  });
+});
+
+describe('the 2.3 → 2.5 diff lesson', () => {
+  it('ACCEPTANCE: a grammar release: no word renamed or removed; the reglossed function words; every 2.5 ruling', () => {
+    const at23 = buildLearnSource({
+      ...input,
+      lexicon: JSON.parse(readFileSync('data/lexicon/liraasa_2_3.json', 'utf8')) as RawLexicon,
+      corpus: [],
+    });
+    const d = diffSnapshots(
+      snapshotEdition(at23.data),
+      snapshotEdition(source.data),
+      source.replacementFor,
+    );
+    expect([d.from, d.to]).toEqual(['2.3', '2.5']);
+    expect(d.renamed).toEqual([]);
+    expect(d.removed).toEqual([]);
+    // the function words whose meaning the patch rewrote: ke, ka (2.5:G93), kapoki (G94), the attitude words (I-41)
+    expect(d.reglossed.map((r) => (r as unknown as { spelling: string }).spelling).sort()).toEqual([
+      'ka',
+      'kapoki',
+      'ke',
+      'mufe',
+      'pifu',
+      'poye',
+      'seye',
+    ]);
+    const patch = JSON.parse(readFileSync('data/proposals/liraasa_2_5_patch.json', 'utf8')) as {
+      decisions: { ruling_id: string | null }[];
+    };
+    expect(d.rulesAdded.map((r) => r.id).sort()).toEqual(
+      patch.decisions
+        .filter((x) => x.ruling_id !== null)
+        .map((x) => `rule:${String(x.ruling_id)}`)
+        .sort(),
     );
   });
 });

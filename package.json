@@ -12,6 +12,8 @@
     "build:llm": "tsx scripts/build_album.ts && tsx scripts/build_llm_json.ts && tsx scripts/build_checker_data.ts",
     "build:album": "tsx scripts/build_album.ts",
     "build:checker": "tsx scripts/build_checker_data.ts",
+    "build:grammar": "tsx scripts/build_grammar_data.ts",
+    "check:line": "tsx scripts/check_line.ts",
     "build:learn": "tsx scripts/build_learn.ts",
     "build:guide": "npm run build:handoff && npm run build:llm && tsx scripts/build_grammar_guide.ts",
     "build:invitation": "tsx scripts/build_invitation.ts",
@@ -45,7 +47,7 @@
     "report:1.1": "tsx scripts/report_1_1.ts",
     "export:mfa": "tsx scripts/export_mfa.ts",
     "learn:report": "tsx scripts/learn_report.ts",
-    "check:sounds": "python scripts/check_sounds.py data/lexicon/liraasa_2_3.json --audit --json review/sound_audit_2_3.json",
+    "check:sounds": "python scripts/check_sounds.py data/lexicon/liraasa_2_5.json --audit --json review/sound_audit_2_5.json",
     "test:sounds": "python -m unittest scripts/test_check_sounds.py",
     "check": "npm run typecheck && npm run lint && npm run format:check && npm run test"
   },

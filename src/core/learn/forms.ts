@@ -167,7 +167,11 @@ export function readFormRules(
   }
 
   const lexicalised: LexicalisedDerivation[] = [];
-  for (const [spelling, text] of Object.entries(morphology.lexicalised_derivations)) {
+  // 2.5:G122: the lexicalised -ti words are read with the derivations
+  for (const [spelling, text] of Object.entries({
+    ...morphology.lexicalised_derivations,
+    ...(morphology.lexicalised_diminutives ?? {}),
+  })) {
     const cut = text.lastIndexOf(': ');
     const m = /^([a-z]+)\s*\+\s*-([a-z]+)$/.exec(cut < 0 ? '' : text.slice(cut + 2).trim());
     const base = m?.[1];

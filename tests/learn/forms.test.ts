@@ -93,7 +93,14 @@ describe('reading the rules from the data', () => {
 
   it('reads every lexicalised derivation as base + suffix with its fixed gloss', () => {
     const { rules } = engine;
-    const stored = Object.keys(input.lexicon.morphology.lexicalised_derivations);
+    // 2.5:G122: the lexicalised -ti words are a list of their own, read the same way
+    const m = input.lexicon.morphology as unknown as {
+      lexicalised_diminutives?: Record<string, string>;
+    };
+    const stored = [
+      ...Object.keys(input.lexicon.morphology.lexicalised_derivations),
+      ...Object.keys(m.lexicalised_diminutives ?? {}),
+    ];
     expect(rules.lexicalised.map((d) => d.spelling).sort()).toEqual([...stored].sort());
     for (const d of rules.lexicalised) {
       expect(d.base + d.suffix).toBe(d.spelling);
