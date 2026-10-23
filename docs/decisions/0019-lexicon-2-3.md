@@ -137,3 +137,130 @@ applies after the patch's changeset. `CHANGESETS_2_3` lists both.
     `mirunululira`.
 - **Validation.** Check 25 accepts exactly these changes.
 - **The checker.** `bumbo`, `murmu` and `kerku` join its animal class.
+
+## Addendum: the grammar audit's decisions (2026-10-19)
+
+A grammar audit of the editor against 2.3 (`review/audit-report.md`, with a
+rerunnable kit in `tests/audit/`) raised four questions for the author. A
+third 2.3 changeset, `data/changes/2026-10-19-lexicon-2-3-audit.json`, records
+the answers.
+
+- **The album's consistent usage is grammar** (2.2:G68). It becomes four
+  rulings, each with album lines as its examples and no invented English:
+  - **2.3:G72:** `ata` may open a line that continues the one before, as `oro`
+    may (1.2:G25).
+  - **2.3:G73:** `en` + an abstract noun names the manner, and `ko` + a
+    feeling the spirit in which the act is done. `yuta` stays the means (1.2:G33).
+  - **2.3:G74:** `raho` may open a direct question, which ends in `ki`. It
+    supersedes the clause of 2.2:G64 that says `raho` is never a question word
+    (`supersede_ruling`, in part). Album reading AR-16 is marked
+    `resolved_by: "2.3:G74"` and is no longer shown as "do not imitate".
+  - **2.3:G75:** `pagopa` takes the motion prefixes (`taro-pagopa`).
+- **2.3:G76, the editor's judgement, as asked:** a question with `ki-eli` or
+  `ki-muya` + a noun ends in `ki`, and without `ki` the clause is an
+  exclamation. This keeps 2.2:G61 exact and extends its own rule for degree
+  questions.
+- **Left open:** tense inheritance after `kureli`, `sina`, `si` and `nevi`,
+  now in the guide's open questions.
+- **No rule:** whether an ascended (`-asa`) form is sacred depends on the
+  word.
+
+What changed in the checker:
+
+- Line-initial `ata` is no longer questioned.
+- `en`/`ko` + an abstract noun is a note offering `yuta`; a substance with
+  `ko` still warns.
+- A `raho` question without `ki` is an error (2.3:G74), and so is a
+  `ki-eli`/`ki-muya` question without `ki` (2.3:G76).
+- `motion_verbs` in `data/checker/lexicon_flags.json` names `pagopa`.
+- Three misreadings of album lines are fixed: `gase` + noun + `raho` (a
+  simile), `ne A ne B` with no verb (a fragment), and a verbless list of
+  operator words.
+- Existential `miyo` may open a question.
+
+The album now reads with one finding, AR-10, which departs once.
+
+The author's 1.2-era fix table had corrected album line 03:3 from `en baba
+melosan valla` to `yuta baba melosan valla`. Under 2.3:G73 both are grammar,
+and the corrected line stays the canonical one in `tests/checker/fixtures/song.json`.
+
+## Addendum: the rest of the audit, on the editor's judgement (2026-10-19)
+
+The author left the remaining decisions to the editor's judgement. The same
+audit changeset carries them:
+
+- **2.3:G77:** an embedded yes/no question uses `ki-oro`. It supersedes in
+  part the clause of 0.8:G4 that has `si` mean "whether". Canon example 555
+  was corrected accordingly (`edit_example`): "Maivo ne sabesia ki-oro li
+  lazu nurminia."
+- **2.3:G78:** opening and closing a clause. A line may open with `nara`,
+  `yava` opens its clause, a clause may carry several frames, and a clause
+  closes time → attitude → `ki`.
+- **2.3:G79:** time phrases: a measure, `da ola-krono` ("since then") and
+  `tuni` + a noun phrase.
+- **2.3:G80:** after hearing and knowing verbs, "about X" is `li telne de X`.
+- **2.3:G81:** `lusu` and `mosa`.
+- **2.3:G82:** an adjective used as a noun keeps `li`.
+- **2.3:G83:** quotations follow a colon, and a past exclamation is written
+  with `ki-modo`.
+- **2.3:G84:** a superseded construction stays grammatical; new text prefers
+  the current ruling.
+- **2.3:G85:** a retired listed derivation stays buildable by rule.
+- **2.3:G86:** whether an ascended form is sacred depends on the word.
+
+The changeset adds one op, **`edit_text`**. It replaces a text field at a
+dotted path whose current value must equal `from`, and it refuses `rulings_*`
+paths, so a ruling is still never reworded. It corrects three stale texts:
+
+- `morphology.compounding`;
+- the `-yo`/`-vu` suffix notes;
+- numbers rule 39.
+
+The same changeset also gives `ki-saivo` the example "Ki-saivo lirala?" and
+archives `daigozayu`'s stale note.
+
+Changes to the checker:
+
+- New checks:
+  - ne before the tense;
+  - two `hozi`, and `vinto` on `hozi`;
+  - a stranded scope word;
+  - `ata` between a subject and its verb;
+  - `ki` closing a statement;
+  - an attitude word opening a clause;
+  - `ne … nuna-` anywhere in its scope;
+  - `ko` with a substance (warning) or a tool (note);
+  - untensed `sige`;
+  - "whether" written as `si` (a calque).
+- `noma` with no context is a note, because a canon example has its context in
+  the line before.
+- Image compounds' unused slots read as unused slots.
+- The back-translation follows G55, G62 and G67.
+
+The songbook offers to correct spellings retired since the edition it was
+written in.
+
+Changes to the composer:
+
+- **Grammar:**
+  - the progressive (`roni`);
+  - counterfactuals;
+  - blessings, `yava` and `fime` complements;
+  - exclamations, quotations and wh-questions;
+  - recipients with `ala`;
+  - the valency operators.
+- **Words and phrases:**
+  - number words, ordinals and N times;
+  - listed derivations;
+  - time measures with `kroti`/`krotiapo`;
+  - names;
+  - comparatives and `-ly` adverbs;
+  - reflexives;
+  - `yuta` for tools.
+
+The composer's copula default stays `ke` before a noun phrase, as the author's
+reviewed Song of Time drafts write it. Whether identity wants `ka` there is left
+to the author.
+
+Still open: two Liraasa lines in the corpus are labelled as English (L01), and
+the two "birth" senses (L04).

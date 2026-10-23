@@ -7,7 +7,7 @@
  * JSON file, so each data file is written as a script that assigns it to a
  * global. The content is the JSON itself, unchanged:
  *
- *   editor/checker/data/reference.js  window.LIRAASA_REF          handoff/liraasa_2_3_llm.json
+ *   editor/checker/data/reference.js  window.LIRAASA_REF          handoff/liraasa_2_5_llm.json
  *   editor/checker/data/extra.js      window.LIRAASA_CHECKER_EXTRA legacy spellings + names
  *   editor/checker/data/flags.js      window.LIRAASA_FLAGS        data/checker/lexicon_flags.json
  *   editor/checker/data/english.js    window.LIRAASA_ENGLISH      data/checker/english.json + calques.json
@@ -22,6 +22,7 @@
 import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 
+/** The 2.3 checker reads the frozen 2.3 reference: grammar is the 2.5 strict checker's (src/core/grammar, ADR-0020). */
 const REFERENCE = 'handoff/liraasa_2_3_llm.json';
 const LEXICON = 'data/lexicon/liraasa_2_3.json';
 const NAMES = 'data/checker/names.json';

@@ -1,0 +1,263 @@
+{
+  "title": "The Goddess and the Singer",
+  "about": "A test myth for the grammar audit (Phase 5), written to exercise as many rules as one short story can. `spec` is a translation made by hand from the 2.3 spec alone, every choice cited; `gaps` names what the spec does not cover. Run: npx tsx tests/audit/myth.ts",
+  "sentences": [
+    {
+      "en": "Long ago, before the first song, the world was dark and silent.",
+      "spec": "Kroti muya montafama, kroti li una-ne lira, li vemi po ka narvosan ata lasosan.",
+      "cites": [
+        "2.1:G55 kroti + measure, no article = ago (muya montafama, many years ago)",
+        "1.2:G28 no -ri needed after a quantifier",
+        "1.2:G24 a time phrase opens the clause, comma",
+        "2.2:G66 / 2.1:G55 kroti + li + noun = before it",
+        "2.1:G49 una-ne for 'first' (extrapolated from una-ne krono)",
+        "grammar.clause_template SUBJECT TENSE VERB",
+        "copula ka: an enduring state",
+        "1.0:G13 ata = and"
+      ],
+      "gaps": [
+        "Ordinals: numbers rule J says ordinals 'await separate policy', but 2.1:G49 uses una-ne krono; una-ne lira extends that one example.",
+        "Two time phrases open the clause; FRAME is one slot and 1.0:G16 says one word per slot."
+      ],
+      "alts": [
+        "Kroti muya montafama kroti li una-ne lira li vemi po ke narvosan ata lasosan.",
+        "Kroti muya montafama, kroti li una-ne lira, li vemi po ke narvosan ata lasosan."
+      ]
+    },
+    {
+      "en": "The goddess of light lived beyond the stars, and she was very lonely.",
+      "spec": "Li devi de lumi po bioba ultra li veluri, ata saivo po ke ruli pagonasan.",
+      "cites": [
+        "1.2:G27 X de Y: the goddess of light",
+        "grammar.slots[16] ADJUNCTS: ultra + NP",
+        "1.0:G13 ata joins two clauses",
+        "copula ke: a temporary state",
+        "ruli = very"
+      ],
+      "gaps": [
+        "'lonely' has no exact word: pagonasan is glossed 'without a place, homeless, family-less, lonely'."
+      ]
+    },
+    {
+      "en": "One night she saw a small fire on a mountain.",
+      "spec": "Una nullo, saivo po vimova baba mellinasan faru su baba monru.",
+      "cites": [
+        "1.2:G27 example 'Nullo de deyaapo, maivo po ne somusia': a noun phrase of time may open the clause",
+        "1.2:G24 comma after an opening time phrase",
+        "0.8:G7 ADJ before NOUN",
+        "su = on"
+      ],
+      "gaps": [],
+      "alts": ["Una nullo saivo po vimova baba mellinasan faru su baba monru."]
+    },
+    {
+      "en": "Beside the fire sat a young singer named Dorin, and he was singing about the sea.",
+      "spec": "Baba yanbanasan lirayo raho gome nolenia Dorin, po semnesia silda li faru, ata saivo po roni lirala lirari de li sevu.",
+      "cites": [
+        "0.8:G7 NP [ADJ] NOUN [raho CLAUSE]",
+        "1.0:G21 a raho clause that does not end the sentence is closed by a comma",
+        "grammar.slots[14] gome (+ verb): passive, 'who is named'",
+        "0.8:R6 raho inherits the main tense",
+        "2.2:G67 silda as a bare preposition",
+        "grammar.slots[11] roni: progressive",
+        "1.2:G30 'about' is de, with an object after the verb (lirari de li sevu)"
+      ],
+      "gaps": [
+        "English locative inversion ('Beside the fire sat …') has no Liraasa counterpart; the clause keeps SUBJECT … VERB order."
+      ]
+    },
+    {
+      "en": "His song was so beautiful that the stars began to weep.",
+      "spec": "Saivo de lira po ka tonsi vanisan fime li veluri hiro timruta.",
+      "cites": [
+        "1.2:G27 a pronoun before de is the owner",
+        "2.2:G62 tonsi + adjective … fime clause = so … that",
+        "0.8:R6 fime inherits the tense: no po",
+        "grammar.slots[9] hiro: begin"
+      ],
+      "gaps": []
+    },
+    {
+      "en": "\"Who is singing?\" asked the goddess.",
+      "spec": "Li devi po masuma: “Ki-nela roni lirala ki?”",
+      "cites": [
+        "0.8:G4 an appended direct quotation",
+        "2.2:G60 a ki-word may open the question; it may end in ki",
+        "2.2:G64 questions use ki-nela (who)",
+        "grammar.slots[11] roni"
+      ],
+      "gaps": [
+        "How a quotation is punctuated (colon, quotation marks) is shown in 0.8:G4's example but not stated."
+      ]
+    },
+    {
+      "en": "The moon answered, \"Only a child of the village; do not go to him.\"",
+      "spec": "Li luno po relsira: “Doli baba linu de li vila. Ne pagopa ala saivo!”",
+      "cites": [
+        "0.8:G4 quotation",
+        "0.8:G3 an answer may be a fragment",
+        "1.0:G1 doli scopes over the constituent that follows",
+        "1.2:G27 de",
+        "2.1:G56 prohibition: ne + command, no subject",
+        "ala = to"
+      ],
+      "gaps": [],
+      "alts": ["Li luno po relsira: “Doli baba linu de li vila. Ne pagopa ala saivo.”"]
+    },
+    {
+      "en": "But the goddess did not listen, and she came down to the mountain.",
+      "spec": "Nara li devi po ne lenila, ata saivo po nevrania ala li monru.",
+      "cites": ["nara = but", "0.8:G2 ne after the tense, before the verb", "1.0:G13 ata"],
+      "gaps": [
+        "Can nara open a sentence that continues the one before? 1.2:G25 settles this only for oro (and the checker asks the same of ata). Options: (a) allow nara, like oro; (b) require narli (nevertheless) sentence-initially."
+      ]
+    },
+    {
+      "en": "She gave the singer a silver ring and said, \"Sing for me every night.\"",
+      "spec": "Saivo po donuda baba vanajubasan rinba ala li lirayo ata po senosia: “Lirala vobi maivo rada nullo.”",
+      "cites": [
+        "1.2:G26 give: VERB THEME ala RECIPIENT",
+        "0.8:G3 a repeated subject may be omitted in coordinated clauses",
+        "1.2:G31 a command has no subject",
+        "1.0:G12 vobi = for the benefit of",
+        "rada = each (quantifier) before a noun",
+        "2.0:G39 vanajuba is a headword: its adjective vanajubasan"
+      ],
+      "gaps": [],
+      "alts": [
+        "Saivo po donuda baba vanajubasan rinba ala li lirayo ata po senosia: “Lirala vobi maivo toda nullo.”"
+      ]
+    },
+    {
+      "en": "Dorin sang for her three times, and each time the darkness grew smaller.",
+      "spec": "Dorin po lirala vobi saivo tressa-krono, ata rada-krono li narvo po loya kasi mellinasan.",
+      "cites": [
+        "2.1:G49 NUMBER-krono = N times",
+        "1.2:G34 rada-krono = each time; it may open its clause",
+        "grammar.slots[14] loya: become",
+        "kasi + adjective = more …"
+      ],
+      "gaps": []
+    },
+    {
+      "en": "The king of the city heard about the singer and wanted the ring for himself.",
+      "spec": "Li tarnuregna de li cilni po lenila li telne de li lirayo ata po desida li rinba vobi saivo sela.",
+      "cites": [
+        "1.2:G27 de",
+        "1.2:G30 'about' is de with an object after the verb",
+        "0.8:G3 subject omitted",
+        "1.0:G12 vobi",
+        "pronouns: saivo sela = himself"
+      ],
+      "gaps": [
+        "'hear about X' needs an object noun the English does not have (telne, story, is supplied). 1.2:G30 covers verbs of saying only. Options: (a) extend G30 to verbs of perceiving and knowing (hear, know, think) with a stock object; (b) allow VERB de NP directly after these verbs."
+      ]
+    },
+    {
+      "en": "He sent seven soldiers with swords to the mountain.",
+      "spec": "Saivo po silbesia seta dokrayori ko tisebitivuri ala li monru.",
+      "cites": [
+        "1.2:G28 -ri optional after a number (kept here)",
+        "1.0:G20 tisebitivu (sword) is a listed derivation; dokrayo (soldier) is listed (2.3)",
+        "1.2:G33 ko = accompaniment, not the instrument",
+        "ala = toward (a place, not a recipient: 1.2:G26 does not apply)"
+      ],
+      "gaps": []
+    },
+    {
+      "en": "If the moon had not warned him, the singer would have died.",
+      "spec": "Si li luno po noma ne nengania saivo, li lirayo po viki daigoda.",
+      "cites": [
+        "1.0:G6 noma = contrary to fact; 'would have' = po viki in a consequence clause",
+        "grammar.clause_template TENSE noma ne VERB",
+        "1.0:G16 noma has its tense context"
+      ],
+      "gaps": []
+    },
+    {
+      "en": "The singer hid behind a great tree and waited until morning.",
+      "spec": "Li lirayo po helviha nazru baba mellisan larbo ata po sulnosia tuni li merno venreva.",
+      "cites": [
+        "2.2:G67 nazru as a bare preposition",
+        "0.8:G3 subject omitted",
+        "0.8:R6 tuni inherits the tense",
+        "tuni + clause ('until the morning came')"
+      ],
+      "gaps": [
+        "tuni is shown only before a clause; whether 'tuni li merno' (until morning) is grammar is not said."
+      ]
+    },
+    {
+      "en": "The soldiers could not find him, because the forest protected him.",
+      "spec": "Li dokrayori po ne povi navdinia saivo, kasa li larbopago sasvasia saivo.",
+      "cites": [
+        "0.8:G2 / 1.0:G15 ne before the modal negates the ability",
+        "1.0:G3 povi = ability",
+        "0.8:R6 kasa inherits the tense: no po"
+      ],
+      "gaps": []
+    },
+    {
+      "en": "Then the goddess made the king sleep for a hundred years.",
+      "spec": "Krotiata li devi po vaku li tarnuregna somusia centa montafama.",
+      "cites": [
+        "krotiata = then, next",
+        "1.0:G14 vaku ACTOR VERB; tense belongs to the main clause only",
+        "2.1:G55 a bare measure after the object = duration",
+        "1.2:G28 -ri optional after a number"
+      ],
+      "gaps": []
+    },
+    {
+      "en": "What a beautiful night it was!",
+      "spec": "Li nullo po ka ki-modo vanisan!",
+      "cites": [
+        "2.2:G61 ki-modo + adjective without final ki = an exclamation",
+        "copula ka with po keeps the past tense"
+      ],
+      "gaps": [
+        "2.2:G61's ki-eli + noun ('Ki-eli vanisan nullo!', what a beautiful night) has no verb, so it cannot carry 'it was': past exclamatives must use ki-modo with a copula."
+      ],
+      "alts": ["Li nullo po ke ki-modo vanisan!"]
+    },
+    {
+      "en": "Since then, the singer and the goddess sing to each other across the sky.",
+      "spec": "Da ola-krono, li lirayo ata li devi lirala transa li navu fuyi.",
+      "cites": [
+        "da = from, before the correlative ola-krono (then)",
+        "grammar.clause_template [ADJUNCTS] [fuyi]: the reciprocal follows the adjuncts",
+        "1.0:G13 ata joins the two subjects"
+      ],
+      "gaps": [
+        "'since then': sige (since) takes only a clause, and no ruling gives 'since + time word'. Options: (a) da + correlative (from then), as used here; (b) sige + correlative (sige ola-krono)."
+      ],
+      "alts": ["Da ola-krono li lirayo ata li devi lirala transa li navu fuyi."]
+    },
+    {
+      "en": "Perhaps you can hear them when the moon is full.",
+      "spec": "Kube li luno ke fulesan, taivo povi lenila saivori poye.",
+      "cites": [
+        "kube = when (subordinate), opening with a comma",
+        "1.0:G3 povi",
+        "1.0:G22 'Perhaps, …' is written with the clause-final poye",
+        "copula ke: the full moon is a passing state"
+      ],
+      "gaps": [],
+      "alts": ["Taivo povi lenila saivori poye kube li luno ke fulesan."]
+    },
+    {
+      "en": "May their song protect you always.",
+      "spec": "Toda-krono, saivori de lira sasvasia taivo pifu.",
+      "cites": [
+        "2.1:G48 pifu with any subject is the blessing form",
+        "1.2:G24 a time correlative opens its clause",
+        "1.2:G27 a pronoun before de is the owner",
+        "1.0:G22 pifu is clause-final"
+      ],
+      "gaps": [
+        "A time word may close its clause (1.2:G24) and an attitude word must close it (1.0:G22): their order when both close a clause ('… taivo toda-krono pifu') is not stated."
+      ],
+      "alts": ["Saivori de lira sasvasia taivo toda-krono pifu."]
+    }
+  ]
+}

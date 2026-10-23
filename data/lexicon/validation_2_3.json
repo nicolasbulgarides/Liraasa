@@ -278,7 +278,7 @@
    "count": 0,
    "details": [],
    "details_total": 0,
-   "note": "Compared against liraasa_2_2.json; changesets: 2026-10-19-lexicon-2-3, 2026-10-19-lexicon-2-3-review; 332 spellings respelled or retired; 16 entries moved (3 rebuilt or made roots); 1 roots added; 1 derivations retired; 1 rulings superseded, kept as ruled; 4 texts archived.",
+   "note": "Compared against liraasa_2_2.json; changesets: 2026-10-19-lexicon-2-3, 2026-10-19-lexicon-2-3-review, 2026-10-19-lexicon-2-3-audit; 332 spellings respelled or retired; 16 entries moved (3 rebuilt or made roots); 1 roots added; 1 derivations retired; 3 rulings superseded, kept as ruled; 5 texts archived; 6 stale texts corrected.",
    "executed_against": "validate_2_3.py"
   }
  ]

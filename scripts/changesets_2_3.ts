@@ -7,4 +7,6 @@ export const CHANGESETS_2_3 = [
   'data/changes/2026-10-19-lexicon-2-3.json',
   // the author's answers to the 2.3 integration review: a ruling example and three notes archived
   'data/changes/2026-10-19-lexicon-2-3-review.json',
+  // the author's decisions on the grammar audit: rulings 2.3:G72–G76
+  'data/changes/2026-10-19-lexicon-2-3-audit.json',
 ] as const;

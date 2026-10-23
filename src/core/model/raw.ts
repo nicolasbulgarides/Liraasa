@@ -286,6 +286,8 @@ export interface RawMorphology {
   suffixes: Record<string, string>;
   compounding: string;
   lexicalised_derivations: Record<string, string>;
+  /** 2.5:G122: the lexicalised -ti words, out of the derivations. */
+  lexicalised_diminutives?: Record<string, string>;
   [key: string]: unknown;
 }
 
@@ -375,6 +377,8 @@ export interface RawLexicon {
   /** 2.2 (ADR-0018): rulings G60–G68, the grammar of the album. */
   rulings_2_2?: RawRuling[];
   rulings_2_3?: RawRuling[];
+  /** 2.5 (ADR-0020): rulings G87–G128, the author's decisions on the 2.3 audit. */
+  rulings_2_5?: RawRuling[];
   /** The image-compound pattern (2.0:G40, ADR-0016). */
   image_compounds?: RawImageCompounds;
   examples: RawExample[];

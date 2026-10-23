@@ -3,7 +3,7 @@
  *   ne with nothing after it in its clause    error  0.8:G2
  *     ne precedes what it negates. The fix moves it before the verb; for
  *     "never", the time correlative glossed "never" is offered.
- *   ne + nuna-… (a double negative reads positive)  warn  0.8:G2
+ *   ne … nuna-… in its scope (a double negative reads positive)  warn  0.8:G2
  */
 (function (root) {
   'use strict';
@@ -47,14 +47,16 @@
               autoFix: false,
             }),
           );
-        } else if (W[k + 1] && /^nuna(-|$)/.test(W[k + 1].lower)) {
+        } else if (rest.some((w) => /^nuna(-|$)/.test(w.lower))) {
+          // anywhere ne scopes over: ne vimova nuna-coda is as positive as ne nuna-coda (0.8:G2)
+          const nuna = rest.find((w) => /^nuna(-|$)/.test(w.lower));
           out.push(
             C.diagnostic({
               ...C.at(ctx, W[k]),
               severity: 'warn',
               rule: '0.8:G2',
               message:
-                'ne + ' + W[k + 1].text + ' is a double negative and reads as a positive; drop ne.',
+                'ne with ' + nuna.text + ' is a double negative and reads as a positive; drop ne.',
             }),
           );
         }

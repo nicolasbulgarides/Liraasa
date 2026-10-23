@@ -200,6 +200,9 @@ describe('the fixture song and canon', () => {
     // 'Ki-saivo lirala?', the historical ki-saivo example, was a 2.1:G46 finding: under 2.2:G60
     // a question with a ki-word may end without ki, so it now reads clean
     'Maivo po helnaha li linu ko li helna. :: 1.2:G33 :: ko', // instrumental ko, written before yuta existed
+    // canon's own example of the double negative to avoid ("It isn't true that I know
+    // nothing … avoid"): the grammar audit's check of ne … nuna- across the verb reads it so
+    'Maivo ne sabesia nuna-coda. :: 0.8:G2 :: ne',
   ];
 
   it('every canon sentence in the reference reads word by word', () => {

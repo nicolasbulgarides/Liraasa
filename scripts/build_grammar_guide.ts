@@ -7,7 +7,7 @@
  * Then builds the Invitation (scripts/build_invitation.ts) with the same flags.
  *
  * Writes handoff/<name>.html (and .pdf). Every table, count, ruling and
- * example is read from handoff/liraasa_2_3_complete.json; the teaching prose
+ * example is read from handoff/liraasa_2_5_complete.json; the teaching prose
  * lives in scripts/grammar_guide/chapters.ts; the song, the treasury words
  * and the image-compound samples are set in scripts/grammar_guide/config.ts.
  *
@@ -161,12 +161,17 @@ ${body}
   const htmlPath = resolve(outDir, `${GUIDE.outName}.html`);
   writeFileSync(htmlPath, html, 'utf8');
   console.log(`wrote ${htmlPath}`);
+  // each old spelling with what it reads as today: the migration table follows later
+  // respellings (barni → kupa in 2.1, → ruko in 2.3), where a legacy row names its own edition's
+  const today = (old: string, then: string): string => lex.legacy.migration_forms[old]?.to ?? then;
   const legacy = [
-    ...lex.legacy.retired_roots,
+    ...lex.legacy.retired_roots.map((r) => ({ ...r, replacement: today(r.old, r.replacement) })),
     ...lex.legacy.respelled_roots.map((r) => ({
       old: r.old,
       replacement:
-        r.reverted === true ? `${r.new} (respelling undone: ${r.old} is the word again)` : r.new,
+        r.reverted === true
+          ? `${r.new} (respelling undone: ${r.old} is the word again)`
+          : today(r.old, r.new),
     })),
   ];
   writeFileSync(resolve(outDir, rulingsFile), rulingsMarkdown(lex, GUIDE.title, legacy), 'utf8');

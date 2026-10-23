@@ -521,7 +521,6 @@ export function clausePart(index: Index): string {
   const g = lex.grammar;
   // the 2.1 and 2.2 rulings' own sentences; their English is the guide's, awaiting the author
   const G60A = example(lex, '2.2:G60', 'Ki-pago taivo pagopa ki?');
-  const G60B = example(lex, '2.2:G60', 'Ki-kasa taivo po amora maivo?');
   const G60C = example(lex, '2.2:G60', 'maivori ne sabesia ki-coda maivori ramura.');
   const G61A = example(lex, '2.2:G61', 'Li nullo ka ki-modo vanisan!');
   const G61B = example(lex, '2.2:G61', 'Ki-eli nullo!');
@@ -532,14 +531,27 @@ export function clausePart(index: Index): string {
     'taivo ke tonsi corvisan fime taivo viki savalisia maivo ki?',
   );
   const G62B = example(lex, '2.2:G62', 'si maivo ke tonsi lukasan, maivo futu ne salrusia.');
-  const G63 = example(
-    lex,
-    '2.2:G63',
-    'maivo futu donuda ito biti de lalfo, fime taivo nosi semnesia ko maivo en moluvaye.',
-  );
+  const G116 = example(lex, '2.5:G116', 'Maivo lirala, kopisa taivo nosi rilura.');
+  const G113A = example(lex, '2.5:G113', 'Maivo po venreva eli-pago kopisa lirala.');
+  const G113B = example(lex, '2.5:G113', 'Maivo lirala kopisa taivo rilura.');
+  const G88A = example(lex, '2.5:G88', 'Ki-kasa taivo po amora maivo?');
+  const G88B = example(lex, '2.5:G88', 'Taivo pagopa ki-pago ki?');
+  const G93A = example(lex, '2.5:G93', 'Li kavbikova ke su li tabu.');
+  const G93B = example(lex, '2.5:G93', 'Maivo ka lirayo.');
+  const G94 = example(lex, '2.5:G94', 'Saivo kapoki benasan.');
+  const G128 = example(lex, '2.5:G128', 'Nela vanisan.');
+  const G90 = example(lex, '2.5:G90', 'Fisa, ne lirala.');
+  const G115 = example(lex, '2.5:G115', 'Li sabeyo raho vismava eli, ne yehu vimova li vordu.');
+  const G120 = example(lex, '2.5:G120', 'li krono raho maivo po lirala en ito');
+  const G121 = example(lex, '2.5:G121', 'Maivo revo-sabesia taivo.');
   const G64A = example(lex, '2.2:G64', 'Maivo lirala raho taivo amora.');
   const G64B = example(lex, '2.2:G64', 'saivo po farufasbifa kube saivo ramura raho maivo po ke.');
-  const G65 = example(lex, '2.2:G65', 'ito ke ruli levasan sidu zeldoza trana.');
+  const G72 = example(lex, '2.3:G72', 'ata maivo lemula saivo de sizosan lumi.');
+  const G73 = example(lex, '2.3:G73', 'saivo po senosia en baba melosan valla.');
+  const G74 = example(lex, '2.3:G74', 'raho povi sabesia baba kasi polvasan sove ki?');
+  const G75 = example(lex, '2.3:G75', 'taivo ne taro-pagopa, nara lalfola hupi li lelde,');
+  const G76 = example(lex, '2.3:G76', 'Taivo amora ki-eli lira ki?');
+  const G111 = example(lex, '2.5:G111', 'Trana ke ruli levasan sidu zeldoza.');
   const G66 = example(lex, '2.2:G66', 'kroti maivo lesvu taivo ke li sevusan ruhe.');
   const G48A = quoted(lex, '2.1:G48', 'Li lumi tivrota taivo pifu.');
   const G48B = quoted(lex, '2.1:G48', 'Taivo po noma lisrola pifu.');
@@ -584,12 +596,13 @@ ${ul([
 ${calloutHtml(
   'caution',
   p(
-    'In X `de` Y, **Y owns X**: `li bumre de li cilni`, the bread of the city. **But a pronoun or a personal name on the left is the owner**: `taivo de lira`, your song; `pilo de bumre`, father’s bread [[1.2:G27]]. A pronoun outranks a name: `Pilo de maivo po lirala.` My father sang [[1.2:G32]].',
+    'In X `de` Y, **Y owns X**: `li bumre de li cilni`, the bread of the city. **But a pronoun or a personal name on the left is the owner**: `taivo de lira`, your song [[1.2:G27]]. A kinship noun (`pilo`, `mare` …) is never a name for this: father’s bread is `li bumre de pilo` [[2.5:G95]]. A pronoun owns wherever it stands: `Pilo de maivo po lirala.` My father sang [[1.2:G32]]. With two names, the left one owns. Chains group from the left: X `de` Y `de` Z is (X `de` Y) `de` Z [[2.5:G96]].',
   ),
 )}
 ${h3('Copulas')}
 ${p(wordList(lex, ['ke', 'ka', 'kapoki', 'loya', 'miyo']))}
-${p('A predicate adjective may stand bare: `lira benasan`. Transitivity is usage-based: `gome` passivises any verb used with an object. Valency: CAUSER [TENSE…] `vaku`/`lesvu`/`tekvu` ACTOR [ne] VERB [OBJECT] [[1.0:G14]].')}
+${p(`\`ke\` and \`ka\` mark one contrast for every kind of predicate, adjective, noun phrase or place: \`ke\` holds now or for a time, \`ka\` is lasting, defining, by nature: \`${G93A}\` ${gl(G93A, 'The basket is on the table (right now).', '2.5:G93')} \`${G93B}\` ${gl(G93B, 'I am a singer (it’s who I am).', '2.5:G93')} [[2.5:G93]] \`po ke\` is “was, at that time”, \`po ka\` “was”, with no claim about now, and \`kapoki\` “was, and no longer is”: \`${G94}\` ${gl(G94, 'They were good, and no longer are.', '2.5:G94')} [[2.5:G94]]`)}
+${p(`A predicate adjective may stand bare, with no copula, only in the present and with no operators: \`${G128}\` ${gl(G128, 'The person is beautiful.', '2.5:G128')} Anything more needs \`ke\` or \`ka\` [[2.5:G128]]. \`gome\` passivises any verb attested with an object; without it the subject is the doer, except for the listed change-of-state verbs [[2.5:G110]]. Valency: CAUSER [TENSE] [noma] [ne] [MODAL] … \`vaku\`/\`lesvu\`/\`tekvu\` ACTOR [ne] [APPROACH] [PHASE] [EFFORT] VERB [OBJECT] [[2.5:G109]].`)}
 ${h3('The noun phrase')}
 <pre class="template"><code>${esc(g.noun_phrase)}</code></pre>
 ${p('Adjectives before the noun; a noun never modifies a noun [[0.8:G7]]. `toda` N is every N; `toda li` N is all the N.')}
@@ -616,7 +629,7 @@ ${p(
     'kureli',
   ]),
 )}
-${p('A clause with its own verb needs a linker. `fime` opens “that …” (the demonstrative is `ola`); `raho` opens a relative, closed by a comma unless it ends the sentence [[1.0:G21]]; `sidu` joins two verbs sharing a subject and never takes a copula; `ala` is toward, **never** the infinitive “to”.')}
+${p(`A clause with its own verb needs a linker. \`fime\` opens “that …” (the demonstrative is \`ola\`); \`raho\` opens a relative, and one that does not end the sentence is closed by a comma when it has its own object or adjunct: \`${G115}\` ${gl(G115, 'The sage who studies this did not witness the word.', '2.5:G115')} [[2.5:G115]] \`sidu\` joins two verbs sharing a subject and never takes a copula; purpose is always \`kopisa\` [[2.5:G113]]; \`ala\` is toward, **never** the infinitive “to”.`)}
 ${examples([
   ['Maivo sabesia fime taivo lirala.', 'I know that you sing.'],
   ['Li nela raho lirala ka benasan.', 'The person who sings is good.'],
@@ -624,30 +637,34 @@ ${examples([
   [G50, gl(G50, 'I want you to stay.', '2.1:G50')],
 ])}
 ${ul([
-  '`sidu` keeps one subject; a second verb with **its own subject** goes in a `fime` clause, which inherits the tense [[2.1:G50]] [[0.8:R6]].',
-  `A relative on a prepositional object: \`raho\` opens the clause and the preposition keeps its place, followed by a resumptive pronoun (\`ito\`/\`itori\`, \`saivo\`/\`saivori\`): \`${G52}\` ${gl(G52, 'The home in which I sang is beautiful.', '2.1:G52')} [[2.1:G52]]`,
+  '`sidu` keeps one subject; a second verb with **its own subject** goes in a `fime` clause [[2.1:G50]]. An unmarked subordinate clause takes the main clause’s tense, whatever its linker; `sige` clauses always mark their own [[2.5:G118]].',
+  `**Purpose.** \`kopisa\` + a bare verb phrase with the same subject, + a clause with a different one: \`${G113A}\` ${gl(G113A, 'I came here to sing.', '2.5:G113')} \`${G113B}\` ${gl(G113B, 'I sing so that you dance.', '2.5:G113')} [[2.5:G113]]`,
+  `A relative on a prepositional object: \`raho\` opens the clause and the preposition keeps its place, followed by a resumptive pronoun (\`ito\`/\`itori\`, \`saivo\`/\`saivori\`): \`${G52}\` ${gl(G52, 'The home in which I sang is beautiful.', '2.1:G52')} [[2.1:G52]] So for a possessor (PRONOUN \`de\` NOUN) and a time or place (the preposition + \`ito\`): \`${G120}\` ${gl(G120, 'the time when I sang', '2.5:G120')} [[2.5:G120]]`,
   'Evidentials: with none, the sentence makes no claim about its source. Inside `fime`, the evidential reports the main-clause subject’s evidence; in a question it asks for the listener’s source [[2.1:G51]].',
-  `**Hopeful purpose.** After a main clause, a \`fime\` clause whose verb carries \`nosi\` means “in the hope that, so that perhaps”; \`kopisa\` stays the plain purpose linker: \`${G63}\` ${gl(G63, 'I will give it a tool of floating, so that perhaps you may sit with me in the breeze.', '2.2:G63')} [[2.2:G63]]`,
-  `**Headless relatives.** With no noun before it, \`raho\` is “the one who, that which”, as subject, object or complement: \`${G64A}\` ${gl(G64A, 'I sing what you love.', '2.2:G64')} \`${G64B}\` ${gl(G64B, 'She blushed when she remembered what I had been.', '2.2:G64')} \`raho\` is never a question word: a question uses \`ki-nela\` or \`ki-coda\` [[2.2:G64]].`,
-  `**Easy to …, ready to ….** An adjective may take \`sidu\` + verb; the verb’s object is what the adjective describes: \`${G65}\` ${gl(G65, 'It is very easy to resist change.', '2.2:G65')} [[2.2:G65]]`,
+  `**Hopeful purpose.** \`kopisa\` + a clause whose verb carries \`nosi\`: \`${G116}\` ${gl(G116, 'I sing, so that perhaps you’ll dance.', '2.5:G116')} \`fime\` always introduces a content clause, “that” [[2.5:G116]].`,
+  `**Headless relatives.** With no noun before it, \`raho\` is “the one who, that which”, as subject, object or complement: \`${G64A}\` ${gl(G64A, 'I sing what you love.', '2.2:G64')} \`${G64B}\` ${gl(G64B, 'She blushed when she remembered what I had been.', '2.2:G64')} A direct question may also open with \`raho\`, “who, what”, and then ends in \`ki\`, as the album asks: \`${G74}\` ${gl(G74, 'Who can know a more powerful peace?', '2.3:G74')} \`ki-nela\` and \`ki-coda\` stay the ordinary question words [[2.3:G74]].`,
+  `**Easy to …, ready to ….** An adjective may take \`sidu\` + verb; the thing the adjective describes is the subject of the clause and the verb’s understood object, with no dummy \`ito\`: \`${G111}\` ${gl(G111, 'Change is very easy to resist.', '2.5:G111')} [[2.5:G111]]`,
   `**Before and after a clause.** \`kroti\` and \`krotiapo\` may open a clause, “before …” and “after …”; the clause inherits tense as after \`kube\` [[0.8:R6]]: \`${G66}\` ${gl(G66, 'Before I let you be the ocean storm.', '2.2:G66')} Before a measure they keep [[2.1:G55]]; before \`li\` + a noun, their older meaning [[2.2:G66]].`,
+  `**A line that continues.** \`ata\` may open a line that carries on from the one before, “And …”, as \`oro\` may: \`${G72}\` ${gl(G72, 'And I learn his shimmering light.', '2.3:G72')} [[2.3:G72]] [[1.2:G25]]`,
+  `**Means, medium, company, manner.** One test per word: \`yuta\` a tool, means or substance handled or used up; \`en\` a medium or state one is in (a manner seen as a medium): \`${G73}\` ${gl(G73, 'She spoke in a musical voice.', '2.3:G73')} \`ko\` a companion, or a feeling that goes with the act (\`ko amor\`, with love); \`la\` + adjective the quality of the action, after the verb and object [[2.5:G104]] [[2.5:G105]].`,
+  `**Motion prefixes.** \`va-\`, \`du-\`, \`taro-\`, \`yave-\` and \`revo-\` go on any verb, with compositional meanings; a listed meaning wins: \`${G121}\` ${gl(G121, 'I recognize you.', '2.5:G121')} So \`pagopa\` takes them too: \`${G75}\` ${gl(G75, 'you do not go across, but float above the edge,', '2.3:G75')} [[2.5:G121]]`,
 ])}
 ${h3('Questions, exclamations, wishes')}
-${p('A **yes/no question** keeps statement order and must end in `ki`. A `ki-` word **may open the clause or stay where its answer would stand**; the album fronts it in most questions. A question with a `ki-` word may end in `ki` or not. An embedded wh-question may also front its `ki-` word and never ends in `ki`; an embedded yes/no question uses `ki-oro` [[2.2:G60]] [[1.0:G2]].')}
+${p('A **yes/no question** keeps statement order and ends in `ki`. A **content question** ends in `ki` unless its `ki-` word is the first word of the sentence; a `ki-` word left where its answer would stand needs the final `ki`. The fronting exception covers `ki-coda`, `ki-pago`, `ki-krono`, `ki-nela`, `ki-nela de`, `ki-kasa`, `ki-modo` of manner and `ki-muya-krono` only. A `ki-` word in place in a clause without `ki` is an embedded question or part of a statement, never a direct question. Embedded questions never take `ki`; an embedded yes/no question uses `ki-oro` [[2.5:G88]] [[2.3:G77]]. A final `ki` belongs to the main clause and is the last word, but for a vocative set off by a comma [[2.5:G89]]. A fragment question ends in `ki` too: `Ata ki?` And? [[2.5:G91]]')}
 ${examples([
   ['Taivo lirala ki?', 'Do you sing?'],
   [G60A, gl(G60A, 'Where are you going?', '2.2:G60')],
-  ['Taivo pagopa ki-pago ki?', 'Where are you going?'],
-  [G60B, gl(G60B, 'Why did you love me?', '2.2:G60')],
+  [G88B, gl(G88B, 'Where are you going?', '2.5:G88')],
+  [G88A, gl(G88A, 'Why did you love me?', '2.5:G88')],
   ['Maivo ne sabesia ki-pago taivo futu pagopa.', 'I don’t know where you will go.'],
   [G60C, gl(G60C, 'We do not know what we remember.', '2.2:G60')],
 ])}
-${p('2.2 supersedes the 2.1 rulings on question-word position, exclamatives and “so … that”, and the in-place clause of the 0.8 ruling on embedded questions. They are kept as they were ruled, not deleted; follow the newer ones [[2.2:G60]] [[2.2:G61]] [[2.2:G62]].')}
+${p('Earlier rulings on questions are kept as they were ruled, not deleted; 2.5:G88 amends 2.2:G60, and the 2.1 rulings it overtook were superseded in 2.2 [[2.5:G88]] [[2.2:G61]].')}
 ${ul([
-  `**Exclamations.** Only \`ki-modo\` + adjective (how …!), \`ki-eli\` + noun (what a …!) and \`ki-muya\` + noun (so many …!) make an exclamation, and only when the clause does not end in \`ki\`: \`${G61A}\` ${gl(G61A, 'How beautiful the night is!', '2.2:G61')} \`${G61B}\` ${gl(G61B, 'What a night!', '2.2:G61')} Any other \`ki-\` clause without \`ki\` is a question, and a degree question must end in \`ki\`: \`${G61C}\` ${gl(G61C, 'How beautiful is the night?', '2.2:G61')} [[2.2:G61]]`,
-  `**So … that.** \`tonsi\` directly before an adjective is “so”, and a \`fime\` clause after it gives the result: \`${G62A}\` ${gl(G62A, 'Are you so brave that you would kiss me?', '2.2:G62')} \`${G62B}\` ${gl(G62B, 'If I am so lucky, I will not rise.', '2.2:G62')} Opening its clause, \`tonsi\` keeps its meaning “therefore” [[2.2:G62]].`,
+  `**Exclamations.** Only \`ki-modo\` + adjective (how …!), \`ki-eli\` + noun (what a …!) and \`ki-muya\` + noun (so many …!) make an exclamation, and only when the clause does not end in \`ki\`: \`${G61A}\` ${gl(G61A, 'How beautiful the night is!', '2.2:G61')} \`${G61B}\` ${gl(G61B, 'What a night!', '2.2:G61')} Any other \`ki-\` clause without \`ki\` is a question, and a degree question must end in \`ki\`: \`${G61C}\` ${gl(G61C, 'How beautiful is the night?', '2.2:G61')} [[2.2:G61]] So must a question with \`ki-eli\` or \`ki-muya\` + a noun, which without \`ki\` is an exclamation: \`${G76}\` ${gl(G76, 'Which song do you love?', '2.3:G76')} [[2.3:G76]]`,
+  `**So … that.** \`tonsi\` meaning “so” stands only before a predicate adjective, after a copula, and a \`fime\` clause after it gives the result: \`${G62A}\` ${gl(G62A, 'Are you so brave that you would kiss me?', '2.2:G62')} \`${G62B}\` ${gl(G62B, 'If I am so lucky, I will not rise.', '2.2:G62')} Opening its clause, \`tonsi\` means “therefore” and takes a comma [[2.5:G117]].`,
   `**Blessings and wishes.** \`pifu\` with any subject is the blessing form: \`${G48A}\` ${gl(G48A, 'May the Light hold you.', '2.1:G48')} With \`noma\`, it is “if only”: \`${G48B}\` ${gl(G48B, 'If only you had stayed.', '2.1:G48')} [[2.1:G48]]`,
-  '**Prohibitions.** `ne` + a command, with no subject; `fisa` softens it; `yava ne` + verb is “let us not”: `Ne senobakosia maivo!` Don’t interrupt me! [[2.1:G56]]',
+  `**Commands and prohibitions.** A command is marked: it ends in \`!\` or contains \`fisa\` (in speech, \`fisa\` or command intonation); a subjectless, tenseless clause with neither is an elliptical statement. \`ne\` + a command forbids; \`yava ne\` + verb is “let us not”: \`Ne senobakosia maivo!\` Don’t interrupt me! \`${G90}\` ${gl(G90, 'Please don’t sing.', '2.5:G90')} [[2.5:G90]] [[2.1:G56]]`,
 ])}
 ${h3('Reference: all twenty slots')}
 ${slotTable}`,
@@ -663,6 +680,17 @@ ${slotTable}`,
  * Every example is a canon example, a canon function-word example or a
  * phrase quoted in its ruling; the build tags any other for review.
  */
+/**
+ * Recipe sentences the author has ruled on that are not canon examples: the
+ * 2.5 patch writes recipes[61] itself (2.5:G116), and clears the review status
+ * of recipes[24] (ADR-0011) and recipes[68] (vaku, 2.5:G109) (I-52).
+ */
+export const RULED_RECIPES: ReadonlySet<string> = new Set([
+  'maivo futu donuda ito biti de lalfo, kopisa taivo nosi semnesia ko maivo en moluvaye.',
+  'lirasan lavra',
+  'Taivo vaku maivo lirala.',
+]);
+
 export const RECIPES: readonly (readonly [string, string, string, string, string])[] = [
   ['did / -ed', '`po` + verb', 'maivo po lirala', 'I sang', 'slot 4'],
   ['will', '`futu` + verb', 'Taivo futu relnura ki?', 'Will you come back?', 'slot 4'],
@@ -681,13 +709,13 @@ export const RECIPES: readonly (readonly [string, string, string, string, string
     'the person is good right now',
     'copulas',
   ],
-  ['do you …?', 'statement order, `ki` last', 'Taivo lirala ki?', 'Do you sing?', '1.0:G2'],
+  ['do you …?', 'statement order, `ki` last', 'Taivo lirala ki?', 'Do you sing?', '2.5:G88'],
   [
     'where / who / which …?',
-    'the question word first or in its answer’s place; `ki` last is optional',
+    'the question word first, `ki` last optional; or in its answer’s place, `ki` last required',
     'Ki-pago taivo pagopa ki?',
     'Where are you going?',
-    '2.2:G60',
+    '2.5:G88',
   ],
   [
     'how …!',
@@ -718,7 +746,13 @@ export const RECIPES: readonly (readonly [string, string, string, string, string
     '0.8:G3',
   ],
   ["let's", '`yava` + verb', 'Yava lirala!', 'Let us sing!', ''],
-  ['command', 'no subject; `fisa` = please', 'Fisa, lisrola.', 'Please stay.', '1.2:G31'],
+  [
+    'command',
+    'no subject; marked by `!` or `fisa` (please)',
+    'Fisa, lisrola.',
+    'Please stay.',
+    '2.5:G90',
+  ],
   [
     "don't …",
     '`ne` + command; `yava ne` = let us not',
@@ -756,7 +790,13 @@ export const RECIPES: readonly (readonly [string, string, string, string, string
     '0.8:G1',
   ],
   ['my / your X', 'PRONOUN `de` X', 'taivo de lira', 'your song', '1.2:G27'],
-  ["Father's X", 'NAME `de` X', 'pilo de bumre', "father's bread", '1.2:G27'],
+  [
+    "Father's X",
+    'X `de` NOUN: the noun after `de` owns (a kinship noun is not a name)',
+    'li bumre de pilo',
+    "father's bread",
+    '2.5:G95',
+  ],
   [
     'the X of the Y',
     '`li` X `de` `li` Y',
@@ -776,7 +816,13 @@ export const RECIPES: readonly (readonly [string, string, string, string, string
   ['the forgotten', 'article + adjective', 'li ramumomvisan', 'the forgotten', '1.2:G29'],
   ['my daughter', 'FEMALE + `linu`', 'Maivo de minvalinu lirala.', 'My daughter sings.', '1.2:G36'],
   ['aunt', 'gender adjective + neutral noun', 'minvasan purmafamli', 'aunt', '1.2:G36'],
-  ['-ly (adverb)', '`la` + adjective', 'Maivo lirala la molusan.', 'I sing gently.', ''],
+  [
+    '-ly (adverb)',
+    '`la` + adjective, after the verb and object',
+    'Maivo lirala la molusan.',
+    'I sing gently.',
+    '2.5:G105',
+  ],
   ['very X', '`ruli` ADJ', 'ruli vanisan', 'very beautiful', ''],
   ['less X', '`menu` ADJ', 'menu vanisan', 'less beautiful', ''],
   ['the most X', '`mosa` ADJ', 'mosa vanisan', 'most beautiful', ''],
@@ -808,7 +854,13 @@ export const RECIPES: readonly (readonly [string, string, string, string, string
   ],
   ['often / rarely', 'quantifier-`krono`', 'Maivo lirala muya-krono.', 'I sing often.', '1.2:G34'],
   ['twice', 'NUMBER-`krono`', 'dossa-krono', 'twice', '2.1:G49'],
-  ['now I sing', 'time word first or last', 'Eli-krono, maivo lirala.', 'Now I sing.', '1.2:G24'],
+  [
+    'now I sing',
+    'time word first (a FRAME, with its comma) or among the closing adjuncts',
+    'Eli-krono, maivo lirala.',
+    'Now I sing.',
+    '2.5:G127',
+  ],
   [
     'suddenly, …',
     'frame word first, with a comma',
@@ -836,10 +888,10 @@ export const RECIPES: readonly (readonly [string, string, string, string, string
   ],
   [
     'if … would have',
-    '`si` … `po noma` …, … `po viki` …',
-    'Si maivo po noma masuma, taivo po viki relsira.',
+    '`si` … `po noma` …, … `po noma viki` …',
+    'Si maivo po noma masuma, taivo po noma viki relsira.',
     'If I had asked, you would have answered.',
-    '1.0:G6',
+    '2.5:G114',
   ],
   ['water or food', 'A `oro` B', 'miru oro nami', 'water or food', '1.2:G25'],
   [
@@ -901,10 +953,10 @@ export const RECIPES: readonly (readonly [string, string, string, string, string
   ],
   [
     'so that perhaps …',
-    'main clause, `fime` … `nosi` VERB',
-    'maivo futu donuda ito biti de lalfo, fime taivo nosi semnesia ko maivo en moluvaye.',
+    'main clause, `kopisa` … `nosi` VERB',
+    'maivo futu donuda ito biti de lalfo, kopisa taivo nosi semnesia ko maivo en moluvaye.',
     'I will give it a tool of floating, so that perhaps you may sit with me in the breeze.',
-    '2.2:G63',
+    '2.5:G116',
   ],
   [
     'what you love',
@@ -915,10 +967,10 @@ export const RECIPES: readonly (readonly [string, string, string, string, string
   ],
   [
     'easy to …',
-    'ADJ `sidu` VERB',
-    'ito ke ruli levasan sidu zeldoza trana.',
-    'It is very easy to resist change.',
-    '2.2:G65',
+    'THING `ke` ADJ `sidu` VERB: the thing is the verb’s understood object',
+    'Trana ke ruli levasan sidu zeldoza.',
+    'Change is very easy to resist.',
+    '2.5:G111',
   ],
   [
     'before / after I …',
@@ -950,24 +1002,24 @@ export const RECIPES: readonly (readonly [string, string, string, string, string
   ],
   [
     'make someone do',
-    '`vaku` ACTOR VERB',
+    'CAUSER `vaku` ACTOR VERB [OBJECT]',
     'Taivo vaku maivo lirala.',
     'You make me sing.',
-    '1.0:G14',
+    '2.5:G109',
   ],
   [
     'owe me two coins',
-    'VERB PRONOUN THEME',
+    'VERB PRONOUN THEME (a bare recipient is a pronoun)',
     'guraga maivo dossa cono',
     'owe me two coins',
-    '1.2:G26',
+    '2.5:G112',
   ],
   [
     'lend three coins to me',
     'VERB THEME `ala` RECIPIENT',
     'rimara tressa cono ala maivo',
     'lend three coins to me',
-    '1.2:G26',
+    '2.5:G112',
   ],
   [
     'open it with a key',
@@ -978,10 +1030,10 @@ export const RECIPES: readonly (readonly [string, string, string, string, string
   ],
   [
     'recognize',
-    'curated motion metaphor',
+    'a listed motion-prefix meaning',
     'Maivo revo-sabesia taivo.',
     'I recognize you.',
-    '1.2:G35',
+    '2.5:G121',
   ],
   [
     'a tense for a whole passage',
@@ -1001,7 +1053,7 @@ export function recipesPart(index: Index): string {
     table(
       ['English', 'Pattern', 'Example', 'Ruling'],
       RECIPES.map(([en, pat, l, gloss, id]) => {
-        const review = !isCanonText(canon, l);
+        const review = !isCanonText(canon, l) && !RULED_RECIPES.has(l);
         if (review) forReview(l, gloss, `Reference, Patterns: ${en}`);
         // a 2.1 or 2.2 ruling's sentence comes without English: the gloss is the guide's
         else if (
@@ -1031,9 +1083,9 @@ export const READ_ORDER = [
   'A closed-class word → its class.',
   'A numeral, plain or hyphenated, optionally with `-ne` (ordinal).',
   'A derivation (`-yo`, `-vu`, `-pago`).',
-  'Suffix stripping (word longer than 4): strip `-ri`, then `-ti` if what remains is not known. The stem must be a known form, derivation or closed word.',
-  'A motion prefix (`va-`, `du-`, `taro-`, `yave-`, `revo-`) on a **verb** form.',
-  'A fraction, N-de-N.',
+  'Suffix stripping (word longer than 4): strip `-ri`, then `-ti` if what remains is not known. The stem must be a known form, derivation or closed word; `-ti` may follow any form or derivation (2.5:G122).',
+  'A motion prefix (`va-`, `du-`, `taro-`, `yave-`, `revo-`) on **any verb** form; a listed meaning overrides the compositional one (2.5:G121).',
+  'A fraction is three words, NUMBER `de` NUMBER, written with spaces (`tressa de cuara`); there is no hyphenated fraction (2.5:G97).',
   'A legacy spelling → warn, naming the replacement.',
   'A name: capitalised, or in the known-name list.',
   'Otherwise: **“not a word of Liraasa”**, an error. Never guess a meaning.',
@@ -1046,7 +1098,11 @@ export const RULES: readonly (readonly [string, string, string])[] = [
   ['error', 'a token that cannot be placed in the slot template', 'slot'],
   ['error', 'a non-verb in the verb slot (with a hint naming its verb form)', 'slot'],
   ['error', 'a second verb in one clause with no linker', 'slot'],
-  ['error', 'a second noun phrase but the clause has no verb or copula', 'slot'],
+  [
+    'error',
+    'a verbless clause, other than a bare adjective predicate in the present with no operators',
+    '2.5:G128',
+  ],
   ['warn', 'a give-type verb with a bare non-pronoun recipient', '1.2:G26'],
   ['error', 'two bare nouns side by side → adjective, compound or de phrase', 'ADR-0011'],
   ['error', 'de after a verb or adjective; de with nothing after it', 'noun phrase'],
@@ -1055,22 +1111,32 @@ export const RULES: readonly (readonly [string, string, string])[] = [
   ['error', 'fime followed by a copula or tense (the demonstrative “that” is ola)', 'fime'],
   ['error', 'zafra / finra / lanto / kenvi not opening its clause', 'slot 1'],
   ['warn', 'one of those four frame words without its comma', 'slot 1'],
-  ['note', 'a time word opening a clause: the comma is optional', '1.2:G24'],
+  ['warn', 'a FRAME (time or place adverbial) opening a clause without its comma', '2.5:G127'],
   ['error', 'a tense or operator out of slot order, or after the verb', '1.0:G1'],
   ['error', 'excluded pairs in one clause; two evidentials', '1.0:G16'],
-  ['error', 'ki not last; attitude words not clause-final', '1.0:G22'],
+  [
+    'error',
+    'ki not the last word (only a comma-set vocative may follow); attitude words not clause-final',
+    '2.5:G89',
+  ],
   ['error', 'a question with the copula or tense moved to the front', 'ki'],
   [
     'error',
-    'a yes/no question that does not end in ki (a ki- word may open the clause)',
-    '2.2:G60',
+    'a question that does not end in ki, unless its ki-word is the first word of the sentence',
+    '2.5:G88',
   ],
   [
     'note',
     'a ki- clause without ki is an exclamation only with ki-modo + adjective, ki-eli + noun or ki-muya + noun; otherwise a question',
     '2.2:G61',
   ],
-  ['error', 'raho used as a question word: a question takes ki-nela or ki-coda', '2.2:G64'],
+  ['error', 'a question opened by raho that does not end in ki', '2.3:G74'],
+  ['error', 'a ki-eli or ki-muya + noun question that does not end in ki', '2.3:G76'],
+  [
+    'note',
+    'yuta = a tool or substance used; en = a medium or state; ko = a companion or accompanying feeling',
+    '2.5:G104',
+  ],
   ['warn', 'a saying-verb + su read as “about”', '1.2:G30'],
   ['warn', 'English gloss is passive but the line has no gome', 'passive'],
   ['note', '-na direction; hema as hesitation', ''],
@@ -1080,11 +1146,16 @@ export const RULES: readonly (readonly [string, string, string])[] = [
 
 /** Not decided: presented as open, resolved nowhere (SPEC §14). Language only. */
 export const OPEN_QUESTIONS: readonly string[] = [
-  '**Chains of** `de`: how X `de` Y `de` Z resolves when owners of different ranks mix.',
   '**A vocative particle for verse.**',
-  '**“To + verb” in general:** `sidu` (same subject), `fime` (a different subject, 2.1:G50) and adjective + `sidu` (2.2:G65) cover the known cases; the general case remains open.',
+  '**“To + verb” beyond purpose:** purpose is `kopisa` (2.5:G113); `sidu` (same subject), `fime` (a different subject, 2.1:G50) and adjective + `sidu` (2.5:G111) cover the other known cases; the general case remains open.',
   '`ke sidu` VERB **as “destined to”** (album 08): hold until a second use.',
-  '**Relatives with a gap for time or place** (album 01: `krono raho` …): hold until a second use.',
+  '**The order of two or more adjectives** before one noun.',
+  '**Which operators a command may carry**, and whether `yava` stands after a FRAME or always first.',
+  '`sela`: reflexive object only, or also emphatic (“I myself”); whether `maivori` includes the listener.',
+  '**Which quantifiers form a measure** with `kroti` and `krotiapo` (2.5:G108): until ruled, only NUMBER + unit.',
+  '**Comparing an action with no manner adjective** (“I sing more than you”).',
+  '**A duration** (“for two days”), now that a bare noun after a verb is its object (2.5:G103).',
+  '**Decimals**: outside the language until ruled (2.5:G125).',
 ];
 
 export function openQuestionsPart(no: string): string {

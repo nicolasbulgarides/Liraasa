@@ -5,27 +5,28 @@ later reversed gets a new ADR and the old one's status changes to
 `superseded by ADR-NNNN`; the old file stays, because the reasoning is the
 point.
 
-| #                                             | Decision                                                           | Status   | Phase |
-| --------------------------------------------- | ------------------------------------------------------------------ | -------- | ----- |
-| [0001](0001-build-against-lexicon-1-0.md)     | Build against lexicon 1.0, and the 18 corrections to SPEC §3       | accepted | 0     |
-| [0002](0002-lossless-round-trip.md)           | One field map drives both import and export                        | accepted | 0     |
-| [0003](0003-pure-core-enforced-boundaries.md) | A pure core, with the boundary enforced by lint                    | accepted | 0     |
-| [0004](0004-edition-qualified-ruling-ids.md)  | Ruling ids are edition-qualified                                   | accepted | 0     |
-| [0005](0005-stack-and-tooling.md)             | Stack, pinned versions and the test gate                           | accepted | 0     |
-| [0006](0006-stable-ids-and-untrusted-text.md) | Stable ids are the only reference, and generated text is untrusted | accepted | 0     |
-| [0007](0007-app-owns-the-json.md)             | The app owns the canonical JSON                                    | accepted | 1     |
-| [0008](0008-editions-and-id-placement.md)     | 1.0 is frozen; ids go to a sidecar until 1.1                       | accepted | 1     |
-| [0009](0009-vocabulary-only-supplements.md)   | How a vocabulary-only supplement is integrated                     | accepted | 1.1   |
-| [0010](0010-reconstructed-python-modules.md)  | `liraasa_core.py` and `liraasa_lexicon.py`, reconstructed          | accepted | 1.1   |
-| [0011](0011-noun-does-not-modify-noun.md)     | A noun does not modify a noun: the first becomes its adjective     | accepted | 1.1   |
-| [0012](0012-grammar-rulings-1-2.md)           | Grammar rulings G24–G31: time words, oro, give-type, de, -ri, …    | accepted | 1.1   |
-| [0013](0013-lexicon-1-2.md)                   | The 1.2 lexicon update, and how 1.2 is built from 1.1              | accepted | 1.2   |
-| [0014](0014-grammar-checker.md)               | The editor's grammar checker: data-driven, rule-cited diagnostics  | accepted | 1.2   |
-| [0015](0015-learn-module.md)                  | The learning module: pure core, editor UI, id-keyed progress       | accepted | 1.2   |
-| [0016](0016-lexicon-2-0.md)                   | Liraasa 2.0: the lexicon expansion, built from frozen 1.2          | accepted | 2.0   |
-| [0017](0017-lexicon-2-1.md)                   | Liraasa 2.1: thirty roots respelled, grammar rulings G46–G59       | accepted | 2.1   |
-| [0018](0018-lexicon-2-2.md)                   | Liraasa 2.2: the grammar of the album, silro restored              | accepted | 2.2   |
-| [0019](0019-lexicon-2-3.md)                   | Liraasa 2.3: the sound pass, bear, cow and frog made roots         | accepted | 2.3   |
+| #                                             | Decision                                                                       | Status   | Phase |
+| --------------------------------------------- | ------------------------------------------------------------------------------ | -------- | ----- |
+| [0001](0001-build-against-lexicon-1-0.md)     | Build against lexicon 1.0, and the 18 corrections to SPEC §3                   | accepted | 0     |
+| [0002](0002-lossless-round-trip.md)           | One field map drives both import and export                                    | accepted | 0     |
+| [0003](0003-pure-core-enforced-boundaries.md) | A pure core, with the boundary enforced by lint                                | accepted | 0     |
+| [0004](0004-edition-qualified-ruling-ids.md)  | Ruling ids are edition-qualified                                               | accepted | 0     |
+| [0005](0005-stack-and-tooling.md)             | Stack, pinned versions and the test gate                                       | accepted | 0     |
+| [0006](0006-stable-ids-and-untrusted-text.md) | Stable ids are the only reference, and generated text is untrusted             | accepted | 0     |
+| [0007](0007-app-owns-the-json.md)             | The app owns the canonical JSON                                                | accepted | 1     |
+| [0008](0008-editions-and-id-placement.md)     | 1.0 is frozen; ids go to a sidecar until 1.1                                   | accepted | 1     |
+| [0009](0009-vocabulary-only-supplements.md)   | How a vocabulary-only supplement is integrated                                 | accepted | 1.1   |
+| [0010](0010-reconstructed-python-modules.md)  | `liraasa_core.py` and `liraasa_lexicon.py`, reconstructed                      | accepted | 1.1   |
+| [0011](0011-noun-does-not-modify-noun.md)     | A noun does not modify a noun: the first becomes its adjective                 | accepted | 1.1   |
+| [0012](0012-grammar-rulings-1-2.md)           | Grammar rulings G24–G31: time words, oro, give-type, de, -ri, …                | accepted | 1.1   |
+| [0013](0013-lexicon-1-2.md)                   | The 1.2 lexicon update, and how 1.2 is built from 1.1                          | accepted | 1.2   |
+| [0014](0014-grammar-checker.md)               | The editor's grammar checker: data-driven, rule-cited diagnostics              | accepted | 1.2   |
+| [0015](0015-learn-module.md)                  | The learning module: pure core, editor UI, id-keyed progress                   | accepted | 1.2   |
+| [0016](0016-lexicon-2-0.md)                   | Liraasa 2.0: the lexicon expansion, built from frozen 1.2                      | accepted | 2.0   |
+| [0017](0017-lexicon-2-1.md)                   | Liraasa 2.1: thirty roots respelled, grammar rulings G46–G59                   | accepted | 2.1   |
+| [0018](0018-lexicon-2-2.md)                   | Liraasa 2.2: the grammar of the album, silro restored                          | accepted | 2.2   |
+| [0019](0019-lexicon-2-3.md)                   | Liraasa 2.3: the sound pass, bear, cow and frog made roots                     | accepted | 2.3   |
+| [0020](0020-lexicon-2-5.md)                   | Liraasa 2.5: the author's grammar decisions, a strict checker and a translator | accepted | 2.5   |
 
 ADR-0007 and ADR-0008 record decisions the author made in answer to the Phase 0
 report; the questions and answers are summarised in each. ADR-0009 and ADR-0010

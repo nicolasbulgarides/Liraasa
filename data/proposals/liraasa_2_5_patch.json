@@ -1,0 +1,1444 @@
+{
+  "patch": {
+    "name": "Liraasa 2.5 grammar patch",
+    "version_from": "2.3",
+    "version_to": "2.5",
+    "date": "2026-10-22",
+    "source": "Author decisions on the 2.3 audit (review/grammar_spec_2_3.md), recorded in the doc 'Liraasa 2.4 grammar decisions'. The release is numbered 2.5.",
+    "format_note": "This is a semantic patch, not an RFC 6902 JSON Patch. Target paths are the paths the 2.3 audit cites; resolve each one against the canonical JSON before editing, and report any path that does not exist.",
+    "ruling_ids": "New rulings are numbered from 2.5:G87, assuming 2.3:G86 is the highest existing ruling. If a higher number exists, renumber this patch's rulings in order from the next free number and update every cross-reference."
+  },
+  "interpretation_notes": [
+    {
+      "id": "S-MARK",
+      "issues": [
+        "I-23 + I-03",
+        "I-27",
+        "I-09"
+      ],
+      "note": "The author's 'S' on these three was a typo for 'A'. They are applied as A (2.5:G126 to 2.5:G128). Their ids come after G125 so that no earlier id changes."
+    },
+    {
+      "id": "DERIVED",
+      "note": "Entries with \"derived\": true state a consequence the patch had to spell out to make the chosen option unambiguous. They are listed in author_inputs_needed for confirmation; apply them, but report each one."
+    }
+  ],
+  "decisions": [
+    {
+      "ruling_id": "2.5:G87",
+      "issue": "D-00",
+      "author_choice": "retire album as canon",
+      "status": "apply",
+      "text": "The album 'Liraasa: Songs of the First Stars' is not grammar canon. It stays in the data as text, marked non-normative. No album line licenses a construction, and album_reading annotations no longer grant exceptions.",
+      "supersedes": [
+        "2.2:G68"
+      ],
+      "edits": [
+        {
+          "target": "album.how_to_use",
+          "action": "rewrite",
+          "to": "Non-normative text. The album predates the 2.5 grammar and contains errors (for example adjective forms used as nouns). Read it for its content; do not imitate its grammar."
+        },
+        {
+          "target": "album.tracks[*].lines[*].album_reading",
+          "action": "mark_non_normative",
+          "note": "Keep the text of each annotation; stop treating it as a licence."
+        },
+        {
+          "target": "read_me_first / any summary that cites 2.2:G68 or calls the album canon",
+          "action": "rewrite",
+          "note": "Remove the canon claim."
+        }
+      ]
+    },
+    {
+      "ruling_id": "2.5:G88",
+      "issue": "I-01 + I-02",
+      "author_choice": "B",
+      "status": "apply",
+      "text": "A yes/no question ends in ki. A content question ends in ki unless its ki-word is the first word of the sentence; a ki-word left in its answer's place requires the final ki. This exception covers ki-coda, ki-pago, ki-krono, ki-nela, ki-nela de, ki-kasa, manner ki-modo and ki-muya-krono only. Questions with ki-eli + noun, ki-muya + noun and degree ki-modo + adjective always end in ki (2.3:G76, 2.2:G61 stand), and the same three without ki remain exclamations. Embedded questions never take ki (2.3:G77 stands). A ki-word in its answer's place in a clause without final ki is an embedded question or part of a statement, never a direct question.",
+      "amends": [
+        "2.2:G60"
+      ],
+      "examples_grammatical": [
+        {
+          "liraasa": "Ki-kasa taivo po amora maivo?",
+          "english": "Why did you love me?"
+        },
+        {
+          "liraasa": "Ki-kasa taivo po amora maivo ki?",
+          "english": "Why did you love me?"
+        },
+        {
+          "liraasa": "Taivo pagopa ki-pago ki?",
+          "english": "Where are you going?"
+        },
+        {
+          "liraasa": "Maivo po masuma li talirivo ki-kasa.",
+          "english": "I asked my colleague why. (statement)"
+        },
+        {
+          "liraasa": "Ki-eli nullo!",
+          "english": "What a night! (exclamation)"
+        }
+      ],
+      "examples_ungrammatical": [
+        {
+          "liraasa": "Taivo pagopa ki-pago?",
+          "why": "ki-word in place without final ki is not a question"
+        },
+        {
+          "liraasa": "Ki-eli lira taivo desida?",
+          "why": "ki-eli + noun questions always end in ki"
+        }
+      ],
+      "edits": [
+        {
+          "target": "hard_rules[4]",
+          "action": "rewrite",
+          "note": "State 2.5:G88 in one or two sentences."
+        },
+        {
+          "target": "clause.questions",
+          "action": "rewrite",
+          "note": "Remove the superseded 2.1:G46 / 2.1:G47 / 0.8:G4 wording; restate from 2.5:G88, 2.2:G61, 2.3:G74, 2.3:G76, 2.3:G77."
+        },
+        {
+          "target": "recipes[6]",
+          "action": "rewrite",
+          "note": "Match 2.5:G88."
+        },
+        {
+          "target": "recipes[5]",
+          "action": "fix_citation",
+          "from": "1.0:G2",
+          "to": "2.5:G88"
+        }
+      ],
+      "notes": "This also resolves I-02 (three live statements of the question rule)."
+    },
+    {
+      "ruling_id": "2.5:G89",
+      "issue": "I-50",
+      "author_choice": "A",
+      "status": "apply",
+      "text": "A ki or attitude word (seye, mufe, poye, pifu, zoke) at the end of a sentence belongs to the main clause, even when a subordinate clause follows it. Doubt inside a trailing subordinate clause is expressed with a modal (nosi); an embedded yes/no question uses ki-oro. ki is the last word of the sentence, except that a vocative set off by a comma may follow it.",
+      "amends": [
+        "clause.slots[19] ('last word of its clause')",
+        "1.0:G22"
+      ],
+      "examples_grammatical": [
+        {
+          "liraasa": "Taivo sabesia fime maivo lirala poye.",
+          "english": "Perhaps you know that I sing."
+        },
+        {
+          "liraasa": "Taivo sabesia fime maivo nosi lirala.",
+          "english": "You know that I might sing."
+        },
+        {
+          "liraasa": "Taivo sabesia fime maivo lirala ki?",
+          "english": "Do you know that I sing?"
+        }
+      ],
+      "notes": "0.8:G4 (ki may also close the main clause before an appended direct quotation) stands."
+    },
+    {
+      "ruling_id": "2.5:G126",
+      "issue": "I-23 + I-03",
+      "author_choice": "A",
+      "status": "apply",
+      "text": "A clause closes in this order: … VERB [OBJECT] [ADJUNCTS] [fuyi] [STATUS: hoyo | yasmo] [ATTITUDE] [ki]. Closing time words, durations and clause-final reve / loki stand among the adjuncts, before fuyi. Outside the core slots, a clause has edge positions. Before it, in order: a line linker (ata, oro, nara), FRAME, TOPIC, then a fronted ki-word (2.5:G88). After it: a vocative set off by a comma, which may follow ki.",
+      "amends": [
+        "2.3:G78 (closing order only; its other clauses stand)",
+        "clause.template",
+        "clause.slots[11].notes (reve / loki)",
+        "2.1:G55 (position of a duration)"
+      ],
+      "examples_grammatical": [
+        {
+          "liraasa": "Maivori lirala toda-krono fuyi pifu.",
+          "english": "May we always sing to each other."
+        },
+        {
+          "liraasa": "Ki-pago taivo pagopa?",
+          "english": "Where are you going? (fronted ki-word)"
+        },
+        {
+          "liraasa": "Taivo viki pagopa ligo maivo ki, maivo de amor?",
+          "english": "Would you come near me, my love?"
+        }
+      ],
+      "examples_ungrammatical": [
+        {
+          "liraasa": "Maivori lirala fuyi toda-krono pifu.",
+          "why": "closing time word after fuyi"
+        }
+      ],
+      "derived": [
+        "The edge positions (line linker, FRAME, TOPIC, fronted ki-word; vocative after the clause) were part of the lean, not option A itself. They are needed to make 2.5:G88 and the existing line-initial ata / vocative rulings fit the template. Confirm.",
+        "Durations and clause-final reve / loki sit among the adjuncts, like closing time words. Confirm."
+      ],
+      "notes": "This also resolves I-03 (constructions the rulings allow but the template had no slot for)."
+    },
+    {
+      "ruling_id": "2.5:G127",
+      "issue": "I-27",
+      "author_choice": "A",
+      "status": "apply",
+      "text": "FRAME, the clause-opening slot set off by a comma, holds a time adverbial or a place adverbial. Tense words (po, futu, pressa) and iteration words (reve, loki, bodu) are not frame words and are never closing time words.",
+      "amends": [
+        "clause.slots[0]",
+        "1.2:G24"
+      ],
+      "examples_grammatical": [
+        {
+          "liraasa": "Eli-pago, maivo lirala.",
+          "english": "Here, I sing."
+        },
+        {
+          "liraasa": "Deyaapo, maivo po lirala.",
+          "english": "Yesterday, I sang."
+        }
+      ],
+      "examples_ungrammatical": [
+        {
+          "liraasa": "Maivo lirala po.",
+          "why": "po is a tense word, not a closing time word"
+        }
+      ],
+      "derived": [
+        "'Place adverbial' covers place correlatives (eli-pago, ola-pago, toda-pago …) and prepositional phrases of place (En li nimu, …). Confirm."
+      ]
+    },
+    {
+      "ruling_id": "2.5:G90",
+      "issue": "I-20",
+      "author_choice": "A",
+      "status": "apply",
+      "text": "A command is marked. In writing it ends in '!' or contains fisa; in speech, fisa or command intonation marks it. A subjectless, tenseless clause with neither mark is an elliptical statement, not a command.",
+      "amends": [
+        "1.2:G31",
+        "2.1:G56"
+      ],
+      "examples_grammatical": [
+        {
+          "liraasa": "Ne lirala!",
+          "english": "Don't sing!"
+        },
+        {
+          "liraasa": "Fisa, ne lirala.",
+          "english": "Please don't sing."
+        },
+        {
+          "liraasa": "Fisa, lisrola.",
+          "english": "Please stay."
+        },
+        {
+          "liraasa": "Taivo lirala ki? — Ne lirala.",
+          "english": "Do you sing? — (I) don't sing."
+        }
+      ],
+      "edits": [
+        {
+          "target": "examples, recipes",
+          "action": "audit",
+          "note": "Every command written without '!' or fisa: add '!' and report each change."
+        }
+      ],
+      "derived": [
+        "In speech, command intonation stands in for the written '!'. Confirm."
+      ],
+      "notes": "I-42 (which operators a command may carry; yava's position with a FRAME) was not decided. See author_inputs_needed."
+    },
+    {
+      "ruling_id": "2.5:G91",
+      "issue": "I-31",
+      "author_choice": "A",
+      "status": "apply",
+      "text": "A fragment question follows the ki rule: it ends in ki.",
+      "examples_grammatical": [
+        {
+          "liraasa": "Ata ki?",
+          "english": "And?"
+        }
+      ],
+      "examples_ungrammatical": [
+        {
+          "liraasa": "Ata?",
+          "why": "not a question without ki"
+        }
+      ],
+      "edits": [
+        {
+          "target": "examples.sentences[236]",
+          "action": "replace",
+          "from": "Ata? — \"So?\"",
+          "to": "Ata ki? — \"And?\""
+        }
+      ]
+    },
+    {
+      "ruling_id": "2.5:G92",
+      "issue": "I-49",
+      "author_choice": "A",
+      "status": "apply",
+      "text": "Echo ki attaches only to a single word or a bare noun phrase. raho + clause + ki is therefore always a direct question (2.3:G74 stands).",
+      "amends": [
+        "0.8:G3 (echo with ki)"
+      ],
+      "examples_grammatical": [
+        {
+          "liraasa": "Raho lirala ki?",
+          "english": "Who sings?"
+        },
+        {
+          "liraasa": "Ki-nela lirala ki?",
+          "english": "Who sings?"
+        },
+        {
+          "liraasa": "Lira ki?",
+          "english": "A song? (echo)"
+        }
+      ]
+    },
+    {
+      "ruling_id": "2.5:G93",
+      "issue": "I-04 + I-10",
+      "author_choice": "B",
+      "status": "apply",
+      "text": "ke and ka mark one contrast for every kind of predicate (adjective, noun phrase or location): ke = holds now, or for a time; ka = lasting, defining, by nature.",
+      "supersedes": [
+        "clause.copulas definitions of ke and ka",
+        "function_words rows ke, ka (definitions)"
+      ],
+      "examples_grammatical": [
+        {
+          "liraasa": "Li kavbikova ke su li tabu.",
+          "english": "The basket is on the table (right now)."
+        },
+        {
+          "liraasa": "Li nimu ka ligo li cilni.",
+          "english": "The home is near the city (it always has been)."
+        },
+        {
+          "liraasa": "Maivo po ke linuti.",
+          "english": "I was a little child (back then)."
+        },
+        {
+          "liraasa": "Maivo ka lirayo.",
+          "english": "I am a singer (it's who I am)."
+        },
+        {
+          "liraasa": "Li nela ke benasan.",
+          "english": "The person is good at the moment."
+        },
+        {
+          "liraasa": "Li sora ka benasan.",
+          "english": "The friend is good by nature."
+        }
+      ],
+      "edits": [
+        {
+          "target": "rulings[1.2:G27].examples[1], examples.sentences[328], [352], [353], [364]",
+          "action": "review",
+          "note": "These use ka for an ordinary present location. Change ka to ke where the English gloss is a present location, and report each change. If a gloss is meant as a lasting place, keep ka and add '(always)' to the gloss."
+        }
+      ]
+    },
+    {
+      "ruling_id": "2.5:G128",
+      "issue": "I-09",
+      "author_choice": "A",
+      "status": "apply",
+      "text": "The minimal clause is SUBJECT + VERB, with these exceptions: commands, hortatives, permitted ellipsis, existential miyo clauses (which have no subject), and bare adjective predicates. A bare adjective predicate (SUBJECT ADJECTIVE, no copula) is allowed only in the present with no operators; anything more needs ke or ka.",
+      "amends": [
+        "clause.explanation",
+        "clause.slots[2].notes",
+        "clause.copulas (bare predicate sentence)",
+        "self_check[6]"
+      ],
+      "examples_grammatical": [
+        {
+          "liraasa": "Nela vanisan.",
+          "english": "The person is beautiful."
+        },
+        {
+          "liraasa": "Li nela po ke vanisan.",
+          "english": "The person was beautiful."
+        },
+        {
+          "liraasa": "Miyo baba sora en li nimu.",
+          "english": "There is a friend in the home."
+        }
+      ],
+      "examples_ungrammatical": [
+        {
+          "liraasa": "Li nela po vanisan.",
+          "why": "a bare adjective predicate takes no operators"
+        },
+        {
+          "liraasa": "Nela ne vanisan.",
+          "why": "a bare adjective predicate takes no operators"
+        }
+      ],
+      "notes": "A bare predicate carries no ke / ka contrast (2.5:G93); use a copula when that contrast matters."
+    },
+    {
+      "ruling_id": "2.5:G94",
+      "issue": "I-11",
+      "author_choice": "A",
+      "status": "apply",
+      "text": "po ka = was (lasting), with no claim about now. kapoki = was, and no longer is. (With 2.5:G93, po ke = was, at that time.)",
+      "examples_grammatical": [
+        {
+          "liraasa": "Saivo po ka benasan.",
+          "english": "They were good (no claim about now)."
+        },
+        {
+          "liraasa": "Saivo kapoki benasan.",
+          "english": "They were good, and no longer are."
+        }
+      ],
+      "edits": [
+        {
+          "target": "function_words row kapoki",
+          "action": "rewrite",
+          "to": "previously was, no longer is; contrasts with po ka (was, no claim about now)"
+        },
+        {
+          "target": "function_words row po",
+          "action": "rewrite",
+          "note": "Keep 'po ka = was as a trait; kapoki = no longer is', aligned with 2.5:G94."
+        }
+      ]
+    },
+    {
+      "ruling_id": "2.5:G95",
+      "issue": "I-12 + I-14",
+      "author_choice": "C",
+      "status": "apply",
+      "text": "Kinship nouns (pilo, mare and the rest) are never treated as names for possession. Only a pronoun, or a personal name standing before de, is the owner; otherwise X de Y = 'X of Y' (Y owns). When both sides are personal names, the left one owns.",
+      "amends": [
+        "1.2:G27",
+        "1.2:G32"
+      ],
+      "examples_grammatical": [
+        {
+          "liraasa": "li bumre de pilo",
+          "english": "father's bread"
+        },
+        {
+          "liraasa": "pilo de bumre",
+          "english": "the father of the bread"
+        },
+        {
+          "liraasa": "Kipo de Dorin",
+          "english": "Kipo's Dorin"
+        },
+        {
+          "liraasa": "maivo de lira",
+          "english": "my song"
+        }
+      ],
+      "edits": [
+        {
+          "target": "recipes[20]",
+          "action": "replace",
+          "from": "pilo de bumre (father's bread)",
+          "to": "li bumre de pilo (father's bread)"
+        },
+        {
+          "target": "rulings[1.2:G32].examples (Pilo de maivo po lirala.)",
+          "action": "keep",
+          "note": "Still correct: a pronoun is the owner wherever it stands. Gloss 'My father sang.'"
+        },
+        {
+          "target": "function_words row de",
+          "action": "rewrite",
+          "note": "State both directions: a pronoun or personal name before de owns (taivo de lira); otherwise the noun after de owns (li bumre de li cilni)."
+        }
+      ],
+      "derived": [
+        "Two names: the left one owns. The author chose C; this follows from 1.2:G27 (a name before de owns) and is listed for confirmation."
+      ]
+    },
+    {
+      "ruling_id": "2.5:G96",
+      "issue": "I-13",
+      "author_choice": "B",
+      "status": "apply",
+      "text": "Chains of de group from the left: X de Y de Z = (X de Y) de Z. The ownership rules apply first to X de Y, then to that whole phrase de Z.",
+      "settles_open_questions": [
+        "open_questions_do_not_resolve[0] (chains of de)"
+      ],
+      "examples_grammatical": [
+        {
+          "liraasa": "li suma de maivo de yuge",
+          "english": "my warmth, of the body  [(li suma de maivo) de yuge]"
+        }
+      ],
+      "translator_preference": "When the intended meaning groups from the right ('the warmth of my body'), do not produce a three-part chain. Rephrase, for example with an adjective form or a second sentence."
+    },
+    {
+      "ruling_id": "2.5:G97",
+      "issue": "I-15",
+      "author_choice": "C",
+      "status": "apply",
+      "text": "NUMBER de NUMBER may be a fraction or a partitive; context decides. Fractions are written with spaces (tressa de cuara), never hyphenated.",
+      "examples_grammatical": [
+        {
+          "liraasa": "tressa de cuara",
+          "english": "three quarters"
+        },
+        {
+          "liraasa": "Una de dossa futu relnura.",
+          "english": "One of the two will return / One half will return."
+        }
+      ],
+      "edits": [
+        {
+          "target": "how_to_translate.how_a_reader_parses_one_word[6] (fraction N-de-N)",
+          "action": "rewrite",
+          "note": "The reader recognises spaced fractions; remove the hyphenated form."
+        }
+      ],
+      "translator_preference": "For a partitive, prefer an article (una de li dossa) so the output is not ambiguous."
+    },
+    {
+      "ruling_id": "2.5:G98",
+      "issue": "I-28",
+      "author_choice": "A",
+      "status": "apply",
+      "text": "Noun-phrase order: [QUANTIFIER] [DETERMINER: li | baba | eli | ola | eliri | olari | ki-eli | OWNER de] [ORDINAL] [NUMBER] {[DEGREE WORD] ADJECTIVE} NOUN[-ti][-ri] [de NP] [raho CLAUSE]. The ordinal stands right after the determiner, before the adjectives. Degree words (ruli, kasi, menu, mosa, lusu, gase, diba) stand directly before the adjective they modify. ki-muya fills the QUANTIFIER slot. OWNER de takes only a pronoun or a personal name (2.5:G95).",
+      "supersedes": [
+        "clause.noun_phrase template"
+      ],
+      "examples_grammatical": [
+        {
+          "liraasa": "li una-ne ruli vanisan lira",
+          "english": "the first very beautiful song"
+        },
+        {
+          "liraasa": "baba ruli vanisan lira",
+          "english": "a very beautiful song"
+        },
+        {
+          "liraasa": "eliri lirari",
+          "english": "these songs"
+        }
+      ],
+      "derived": [
+        "ORDINAL before NUMBER (li una-ne dossa lirari, 'the first two songs'), following English order. Confirm."
+      ],
+      "notes": "The order of two or more adjectives (A4.22) is still undecided. See author_inputs_needed."
+    },
+    {
+      "ruling_id": "2.5:G99",
+      "issue": "I-53",
+      "author_choice": "A",
+      "status": "apply",
+      "text": "li may not be dropped after a side noun (nazru, zavme, silda, cemnu, lizma, rizno) used as a preposition.",
+      "examples_grammatical": [
+        {
+          "liraasa": "Li lavra semnesia nazru li nimu.",
+          "english": "The bird sits behind the home."
+        }
+      ],
+      "examples_ungrammatical": [
+        {
+          "liraasa": "Li lavra semnesia nazru nimu.",
+          "why": "li dropped after a side noun"
+        }
+      ]
+    },
+    {
+      "ruling_id": "2.5:G100",
+      "issue": "I-16",
+      "author_choice": "B",
+      "status": "apply",
+      "text": "maivo is deliberately both the pronoun 'I' and the noun 'Self'. Context decides.",
+      "examples_grammatical": [
+        {
+          "liraasa": "Maivo ka vanisan.",
+          "english": "I am beautiful. / The Self is beautiful."
+        }
+      ],
+      "translator_preference": "Always write the noun as li maivo, so translator output is never ambiguous."
+    },
+    {
+      "ruling_id": "2.5:G101",
+      "issue": "I-29",
+      "author_choice": "A + B",
+      "status": "apply",
+      "text": "-ri attaches to nouns, pronouns, demonstratives, and an adjective used as a noun after a determiner; never to a bare adjective or a verb. After any count word (a number, a quantifier, eliri or olari), -ri on the noun is optional, chosen by sound and meter. A singular demonstrative (eli, ola) takes a singular noun.",
+      "amends": [
+        "1.2:G28",
+        "small_words.numbers.rules row I ('Plural -ri recommended above 1')"
+      ],
+      "examples_grammatical": [
+        {
+          "liraasa": "li benasanri",
+          "english": "the good ones"
+        },
+        {
+          "liraasa": "eliri lira",
+          "english": "these songs"
+        },
+        {
+          "liraasa": "eliri lirari",
+          "english": "these songs"
+        },
+        {
+          "liraasa": "dossa lira",
+          "english": "two songs"
+        }
+      ],
+      "examples_ungrammatical": [
+        {
+          "liraasa": "benasanri",
+          "why": "-ri on a bare adjective"
+        },
+        {
+          "liraasa": "eli lirari",
+          "why": "singular demonstrative with a plural noun"
+        }
+      ],
+      "edits": [
+        {
+          "target": "small_words.numbers.rules row I",
+          "action": "rewrite",
+          "to": "Plural -ri is optional after a number; choose by sound and meter (1.2:G28, 2.5:G101)."
+        }
+      ],
+      "derived": [
+        "'A singular demonstrative takes a singular noun' makes the ✗ example of option B explicit. Confirm."
+      ]
+    },
+    {
+      "ruling_id": "2.5:G102",
+      "issue": "I-37",
+      "author_choice": "C",
+      "status": "apply",
+      "text": "An animal is referred to with ito by default. A named animal takes saivo.",
+      "examples_grammatical": [
+        {
+          "liraasa": "Li lavra lirala; ito ka vanisan.",
+          "english": "The bird sings; it is beautiful."
+        },
+        {
+          "liraasa": "Nilo lirala; saivo ka vanisan.",
+          "english": "Nilo (the bird) sings; she is beautiful."
+        }
+      ],
+      "notes": "sela (reflexive only, or also emphatic) and whether maivori includes the listener were not decided. See author_inputs_needed."
+    },
+    {
+      "ruling_id": "2.5:G103",
+      "issue": "I-17",
+      "author_choice": "A + B",
+      "status": "apply",
+      "text": "Only listed time adverbials stand bare as 'when': entries in the time-adverbial table, -krono correlatives, and day compounds (deyapressa, deyaapo, deyafutu). A plain time noun (merno, nullo, vesno, mambi, lornu …) used as 'when' takes en. A bare plain noun after a verb is its object.",
+      "examples_grammatical": [
+        {
+          "liraasa": "Maivo vimova en merno.",
+          "english": "I see in the morning."
+        },
+        {
+          "liraasa": "Maivo vimova merno.",
+          "english": "I see the morning."
+        },
+        {
+          "liraasa": "Maivo lirala deyapressa.",
+          "english": "I sing today."
+        },
+        {
+          "liraasa": "Maivo lirala toda-krono.",
+          "english": "I always sing."
+        }
+      ],
+      "notes": "Duration ('for two days', 2.1:G55 bare measure after the object) still collides with an object reading. See author_inputs_needed."
+    },
+    {
+      "ruling_id": "2.5:G104",
+      "issue": "I-25",
+      "author_choice": "A",
+      "status": "apply",
+      "text": "One test per word. yuta = a tool, means or substance handled or used up. en = a medium or state one is in, including a manner seen as a medium. ko = a companion, or an emotion that accompanies the act. la + adjective = the quality of the action.",
+      "amends": [
+        "1.2:G33",
+        "2.3:G73"
+      ],
+      "examples_grammatical": [
+        {
+          "liraasa": "Maivo lallela li dorbi yuta li kemye.",
+          "english": "I open the door with the key."
+        },
+        {
+          "liraasa": "Saivo po senosia en baba melosan valla.",
+          "english": "She spoke in a musical voice."
+        },
+        {
+          "liraasa": "Maivo lirala ko amor.",
+          "english": "I sing with love."
+        },
+        {
+          "liraasa": "Maivo lirala ko saivo.",
+          "english": "I sing with him."
+        },
+        {
+          "liraasa": "Maivo lirala la molusan.",
+          "english": "I sing gently."
+        }
+      ],
+      "edits": [
+        {
+          "target": "examples.sentences[470]",
+          "action": "replace",
+          "from": "Maivo po helnaha li linu ko li helna.",
+          "to": "Maivo po helnaha li linu yuta li helna."
+        }
+      ],
+      "notes": "The en/intra and transa/taro- overlaps named in I-25 were not decided."
+    },
+    {
+      "ruling_id": "2.5:G105",
+      "issue": "I-46",
+      "author_choice": "A",
+      "status": "apply",
+      "text": "la + adjective stands only among the adjuncts, after the verb and object. A degree word goes between la and the adjective: la ruli molusan.",
+      "examples_grammatical": [
+        {
+          "liraasa": "Maivo lirala la ruli molusan.",
+          "english": "I sing very gently."
+        }
+      ],
+      "examples_ungrammatical": [
+        {
+          "liraasa": "Maivo la molusan lirala.",
+          "why": "adverb before the verb"
+        },
+        {
+          "liraasa": "Maivo lirala ruli la molusan.",
+          "why": "degree word outside la"
+        }
+      ]
+    },
+    {
+      "ruling_id": "2.5:G106",
+      "issue": "I-43",
+      "author_choice": "A",
+      "status": "apply",
+      "text": "Amounts: kasi or menu + noun … tamo NP. Manner: la kasi (or la menu) + adjective … tamo NP.",
+      "examples_grammatical": [
+        {
+          "liraasa": "Maivo tovota kasi lirari tamo taivo.",
+          "english": "I have more songs than you."
+        },
+        {
+          "liraasa": "Maivo lirala la kasi molusan tamo taivo.",
+          "english": "I sing more gently than you."
+        }
+      ],
+      "examples_ungrammatical": [
+        {
+          "liraasa": "Maivo lirala kasi tamo taivo.",
+          "why": "bare kasi after the verb is not licensed (option B was not chosen)"
+        }
+      ],
+      "notes": "Comparing an action with no manner adjective ('I sing more than you', 'I love you more than …') still has no form. See author_inputs_needed."
+    },
+    {
+      "ruling_id": "2.5:G107",
+      "issue": "I-47",
+      "author_choice": "B",
+      "status": "apply",
+      "text": "gase + a number may mean 'about' or 'like'; context decides.",
+      "examples_grammatical": [
+        {
+          "liraasa": "Maivo tovota gase dossa cono.",
+          "english": "I have about two coins. / … something like two coins."
+        }
+      ],
+      "translator_preference": "For 'about N' write gase N; for a simile write gase li N (with the article), so output is unambiguous."
+    },
+    {
+      "ruling_id": "2.5:G108",
+      "issue": "I-48",
+      "author_choice": "B",
+      "status": "apply",
+      "text": "A measure (for kroti 'ago' and krotiapo 'from now') is NUMBER + unit, or a listed quantifier + unit. Listed quantifiers: AUTHOR INPUT NEEDED.",
+      "examples_grammatical": [
+        {
+          "liraasa": "Maivo po venreva kroti dossa deya.",
+          "english": "I came two days ago."
+        }
+      ],
+      "notes": "Do not invent the list. Until the author supplies it, treat only NUMBER + unit as a measure and report kroti + quantifier + noun as unresolved."
+    },
+    {
+      "ruling_id": "2.5:G109",
+      "issue": "I-21",
+      "author_choice": "A",
+      "status": "apply",
+      "text": "Valency operators vaku (make), lesvu (let) and tekvu (prevent): CAUSER [TENSE] [noma] [ne] [MODAL] … [EVIDENTIAL] OP ACTOR [ne] [APPROACH] [PHASE] [EFFORT] VERB [OBJECT]. Tense, modal and evidential belong to the main clause; the actor's own negation, approach, phase and effort follow the actor. The embedded verb may take an object.",
+      "amends": [
+        "1.0:G14"
+      ],
+      "examples_grammatical": [
+        {
+          "liraasa": "Maivo vaku saivo sapusia li nami.",
+          "english": "I make him eat the food."
+        },
+        {
+          "liraasa": "Taivo vaku maivo lirala.",
+          "english": "You make me sing."
+        },
+        {
+          "liraasa": "Maivo po lesvu saivo pagopa.",
+          "english": "I let them leave."
+        }
+      ],
+      "edits": [
+        {
+          "target": "function_words row vaku",
+          "action": "rewrite",
+          "note": "Remove 'intransitive VERB'; state the 2.5:G109 pattern."
+        },
+        {
+          "target": "clause.valency_operators.pattern",
+          "action": "rewrite",
+          "note": "Match 2.5:G109."
+        },
+        {
+          "target": "recipes[68]",
+          "action": "clear_status",
+          "note": "Remove 'awaiting author review'; the author has ruled."
+        }
+      ]
+    },
+    {
+      "ruling_id": "2.5:G110",
+      "issue": "I-22",
+      "author_choice": "A + C",
+      "status": "apply",
+      "text": "gome may passivise any verb that is attested with an object anywhere in the data. Without gome, the subject is the doer, except for the listed change-of-state verbs, whose subject may be the thing that changes (an anticausative reading).",
+      "amends": [
+        "settled_questions[4]",
+        "function_words row gome"
+      ],
+      "examples_grammatical": [
+        {
+          "liraasa": "Li lira gome sarbisia gagu maivo.",
+          "english": "The song is written by me."
+        },
+        {
+          "liraasa": "Zafra, li dorbi po lallela.",
+          "english": "Suddenly the door opened."
+        },
+        {
+          "liraasa": "Zafra, li dorbi po gome lallela.",
+          "english": "Suddenly the door was opened."
+        }
+      ],
+      "edits": [
+        {
+          "target": "word_building or clause (new list: change_of_state_verbs)",
+          "action": "create",
+          "note": "Draft the list from the dictionary (verbs meaning open, close, break, lose, fill, melt, burn, grow, change and the like). Include lallela and momvima. Present the draft to the author for approval before treating it as final."
+        }
+      ]
+    },
+    {
+      "ruling_id": "2.5:G111",
+      "issue": "I-24",
+      "author_choice": "A",
+      "status": "apply",
+      "text": "In ADJECTIVE + sidu + VERB, the thing the adjective describes is the subject of the clause and the understood object of the verb. There is no dummy ito.",
+      "amends": [
+        "2.2:G65 (example)"
+      ],
+      "examples_grammatical": [
+        {
+          "liraasa": "Trana ke ruli levasan sidu zeldoza.",
+          "english": "Change is very easy to resist."
+        }
+      ],
+      "examples_ungrammatical": [
+        {
+          "liraasa": "Ito ke ruli levasan sidu zeldoza trana.",
+          "why": "dummy ito with an overt object"
+        }
+      ],
+      "edits": [
+        {
+          "target": "recipes[63]",
+          "action": "replace",
+          "from": "ito ke ruli levasan sidu zeldoza trana.",
+          "to": "Trana ke ruli levasan sidu zeldoza."
+        }
+      ]
+    },
+    {
+      "ruling_id": "2.5:G112",
+      "issue": "I-38",
+      "author_choice": "B",
+      "status": "apply",
+      "text": "A pronoun recipient may stand bare right after any verb whose meaning has a recipient (giving, lending, sending, owing, paying, bringing, teaching, showing, telling, singing to …). Otherwise, and always for a non-pronoun recipient, the recipient takes ala after the theme.",
+      "amends": [
+        "1.2:G26"
+      ],
+      "examples_grammatical": [
+        {
+          "liraasa": "Taivo guraga maivo dossa cono.",
+          "english": "You owe me two coins."
+        },
+        {
+          "liraasa": "Maivo lirala taivo baba lira.",
+          "english": "I sing you a song."
+        },
+        {
+          "liraasa": "Maivo lirala baba lira ala taivo.",
+          "english": "I sing a song to you."
+        }
+      ],
+      "edits": [
+        {
+          "target": "dictionary (verbs)",
+          "action": "tag",
+          "note": "For the checker, tag verbs whose meaning has a recipient. Draft the tags and present them to the author for approval."
+        }
+      ]
+    },
+    {
+      "ruling_id": "2.5:G113",
+      "issue": "I-55",
+      "author_choice": "A",
+      "status": "apply",
+      "text": "Purpose always uses kopisa. With the same subject, kopisa + bare verb phrase (no subject); with a different subject, kopisa + clause. sidu stays for verb chains (desida sidu lirala).",
+      "settles_open_questions": [
+        "open_questions_do_not_resolve[2] (to + verb), for purpose only"
+      ],
+      "examples_grammatical": [
+        {
+          "liraasa": "Maivo po venreva eli-pago kopisa lirala.",
+          "english": "I came here to sing."
+        },
+        {
+          "liraasa": "Maivo lirala kopisa taivo rilura.",
+          "english": "I sing so that you dance."
+        }
+      ],
+      "examples_ungrammatical": [
+        {
+          "liraasa": "Maivo po venreva eli-pago sidu lirala.",
+          "why": "sidu is not used for purpose"
+        }
+      ],
+      "notes": "ke sidu ('destined to', open_questions_do_not_resolve[3]) stays open."
+    },
+    {
+      "ruling_id": "2.5:G114",
+      "issue": "I-39",
+      "author_choice": "C",
+      "status": "apply",
+      "text": "'Would have' is always po noma viki. po viki without noma is not a form.",
+      "amends": [
+        "1.0:G6"
+      ],
+      "examples_grammatical": [
+        {
+          "liraasa": "Si maivo po noma masuma, taivo po noma viki relsira.",
+          "english": "If I had asked, you would have answered."
+        }
+      ],
+      "examples_ungrammatical": [
+        {
+          "liraasa": "Taivo po viki relsira.",
+          "why": "'would have' requires noma"
+        }
+      ],
+      "edits": [
+        {
+          "target": "recipes[50]",
+          "action": "replace",
+          "from": "taivo po viki relsira",
+          "to": "taivo po noma viki relsira"
+        },
+        {
+          "target": "examples, recipes, rulings",
+          "action": "audit",
+          "note": "Change every 'po viki' meaning 'would have' to 'po noma viki' and report each."
+        }
+      ]
+    },
+    {
+      "ruling_id": "2.5:G115",
+      "issue": "I-08",
+      "author_choice": "B",
+      "status": "apply",
+      "text": "A raho clause that does not end the sentence is closed by a comma (a pause in speech) when it contains its own object or adjunct. A raho clause of only a verb (and its operators) needs no comma.",
+      "amends": [
+        "1.0:G21"
+      ],
+      "examples_grammatical": [
+        {
+          "liraasa": "Li nela raho lirala ka benasan.",
+          "english": "The person who sings is good."
+        },
+        {
+          "liraasa": "Li sabeyo raho vismava eli, ne yehu vimova li vordu.",
+          "english": "The sage who studies this did not witness the word."
+        }
+      ],
+      "examples_ungrammatical": [
+        {
+          "liraasa": "Li sabeyo raho vismava eli ne yehu vimova li vordu.",
+          "why": "relative clause with an object, not closed by a comma"
+        }
+      ]
+    },
+    {
+      "ruling_id": "2.5:G116",
+      "issue": "I-18",
+      "author_choice": "C",
+      "status": "apply",
+      "text": "Hopeful purpose ('so that perhaps', 'in the hope that') is kopisa + a clause whose verb carries nosi. fime always introduces a content clause ('that').",
+      "supersedes": [
+        "2.2:G63"
+      ],
+      "examples_grammatical": [
+        {
+          "liraasa": "Maivo lirala, kopisa taivo nosi rilura.",
+          "english": "I sing, so that perhaps you'll dance."
+        },
+        {
+          "liraasa": "Maivo sabesia fime taivo nosi lirala.",
+          "english": "I know that you might sing."
+        }
+      ],
+      "edits": [
+        {
+          "target": "recipes[61]",
+          "action": "replace",
+          "from": ", fime taivo nosi semnesia ko maivo en moluvaye.",
+          "to": ", kopisa taivo nosi semnesia ko maivo en moluvaye."
+        }
+      ]
+    },
+    {
+      "ruling_id": "2.5:G117",
+      "issue": "I-19",
+      "author_choice": "A + C",
+      "status": "apply",
+      "text": "Clause-initial tonsi means 'therefore' and is followed by a comma. tonsi meaning 'so' (degree) stands only before a predicate adjective, after a copula.",
+      "amends": [
+        "2.2:G62"
+      ],
+      "examples_grammatical": [
+        {
+          "liraasa": "Tonsi, corvisan nela lirala.",
+          "english": "Therefore a brave person sings."
+        },
+        {
+          "liraasa": "Taivo ke tonsi corvisan fime taivo viki savalisia maivo ki?",
+          "english": "Are you so brave that you would kiss me?"
+        }
+      ],
+      "examples_ungrammatical": [
+        {
+          "liraasa": "Tonsi corvisan nela lirala.",
+          "why": "clause-initial tonsi without a comma"
+        },
+        {
+          "liraasa": "Tonsi corvisan nela, lirala.",
+          "why": "'so' tonsi outside a predicate"
+        }
+      ],
+      "edits": [
+        {
+          "target": "examples, recipes",
+          "action": "audit",
+          "note": "Add the comma after every clause-initial tonsi and report each."
+        }
+      ]
+    },
+    {
+      "ruling_id": "2.5:G118",
+      "issue": "I-32",
+      "author_choice": "A",
+      "status": "apply",
+      "text": "An unmarked subordinate clause takes the main clause's tense, whatever its linker. sige clauses are the exception and always mark their own tense. A subordinate clause with its own tense word keeps it.",
+      "amends": [
+        "0.8:R6"
+      ],
+      "settles_open_questions": [
+        "open_questions_do_not_resolve[5] (tense after kureli, sina, si, nevi)"
+      ],
+      "examples_grammatical": [
+        {
+          "liraasa": "Kureli taivo venreva, maivo po lirala.",
+          "english": "As soon as you came, I sang."
+        },
+        {
+          "liraasa": "Maivo po masuma ki-oro taivo relnura.",
+          "english": "I asked whether you returned."
+        }
+      ],
+      "notes": "Clauses opened by clause adverbs (tonsi, narli, korsi, krotiata) and coordinated ata / nara clauses are main clauses, not subordinate, and are outside this rule."
+    },
+    {
+      "ruling_id": "2.5:G119",
+      "issue": "I-51",
+      "author_choice": "C",
+      "status": "apply",
+      "text": "A topic that is the subject of its clause must be picked up by a pronoun. A non-subject topic may be picked up or left as a gap; a gap is read as the verb's object.",
+      "examples_grammatical": [
+        {
+          "liraasa": "Kipo hozi, saivo lirala.",
+          "english": "As for Kipo, they sing."
+        },
+        {
+          "liraasa": "Li bumre hozi, Kipo po bumreba.",
+          "english": "As for the bread, Kipo baked it."
+        },
+        {
+          "liraasa": "Li bumre hozi, Kipo po bumreba ito.",
+          "english": "As for the bread, Kipo baked it."
+        }
+      ],
+      "examples_ungrammatical": [
+        {
+          "liraasa": "Kipo hozi, lirala.",
+          "why": "subject topic not picked up"
+        }
+      ],
+      "edits": [
+        {
+          "target": "function_words row hozi",
+          "action": "rewrite",
+          "note": "State 2.5:G119."
+        }
+      ],
+      "derived": [
+        "'A gap is read as the verb's object' resolves the remaining ambiguity of option C. Confirm."
+      ]
+    },
+    {
+      "ruling_id": "2.5:G120",
+      "issue": "I-54",
+      "author_choice": "A",
+      "status": "apply",
+      "text": "Relative clauses on a possessor, a time or a place use a resumptive pronoun in place, as 2.1:G52 does for prepositions: possessor → PRONOUN de NOUN; time or place → the needed preposition + ito.",
+      "amends": [
+        "2.1:G52"
+      ],
+      "settles_open_questions": [
+        "open_questions_do_not_resolve[4] (time and place relatives)"
+      ],
+      "examples_grammatical": [
+        {
+          "liraasa": "li lirayo raho maivo amora saivo de lira",
+          "english": "the singer whose song I love"
+        },
+        {
+          "liraasa": "li krono raho maivo po lirala en ito",
+          "english": "the time when I sang"
+        },
+        {
+          "liraasa": "li pago raho maivo po venreva da ito",
+          "english": "the place I came from"
+        }
+      ]
+    },
+    {
+      "ruling_id": null,
+      "issue": "I-07",
+      "author_choice": "A",
+      "status": "apply",
+      "text": "No grammar change: fime is 'that', raho is relative. Fix the example.",
+      "edits": [
+        {
+          "target": "examples.sentences[210]",
+          "action": "replace",
+          "from": "Maivo po vimova raho taivo pagopa.",
+          "to": "Maivo po vimova fime taivo pagopa."
+        }
+      ]
+    },
+    {
+      "ruling_id": "2.5:G121",
+      "issue": "I-05 + I-06",
+      "author_choice": "B",
+      "status": "apply",
+      "text": "The motion prefixes are productive on any verb, with compositional meanings: va- = toward the speaker, here; du- = away, giving away; taro- = across, through; yave- = together, to meet; revo- = back, again. A listed meaning (the four curated phrases and any listed prefixed verb) overrides the compositional one. 'Motion verb' is no longer a category the grammar needs. lu-, nu-, mi-, so- stay retired.",
+      "supersedes": [
+        "the closed-list part of 1.2:G35",
+        "settled_questions[6]",
+        "word_building.motion_prefixes.rule"
+      ],
+      "examples_grammatical": [
+        {
+          "liraasa": "va-lirala",
+          "english": "come toward (me) while singing"
+        },
+        {
+          "liraasa": "revo-lirala",
+          "english": "sing back, sing again"
+        },
+        {
+          "liraasa": "du-vimova",
+          "english": "look away"
+        },
+        {
+          "liraasa": "taro-pagopa",
+          "english": "go across"
+        },
+        {
+          "liraasa": "Maivo revo-sabesia taivo.",
+          "english": "I recognize you. (listed meaning)"
+        }
+      ],
+      "edits": [
+        {
+          "target": "how_to_translate.how_a_reader_parses_one_word[5] (motion prefix on a verb form)",
+          "action": "rewrite",
+          "note": "Any verb form."
+        },
+        {
+          "target": "rulings[2.3:G75]",
+          "action": "mark_redundant",
+          "note": "pagopa no longer needs to be ruled a motion verb; keep the ruling, note it is covered by 2.5:G121."
+        }
+      ],
+      "notes": "This also resolves I-06 (the undefined class of motion verbs)."
+    },
+    {
+      "ruling_id": "2.5:G122",
+      "issue": "I-30",
+      "author_choice": "A",
+      "status": "apply",
+      "text": "-ti is an inflection-like suffix, not one of the derivations. Word ::= ROOT + (one form OR one derivation) + -ti + -ri; -ti may follow any form or derivation.",
+      "amends": [
+        "2.0:G41 (which lists R+ti among derivations)"
+      ],
+      "examples_grammatical": [
+        {
+          "liraasa": "lirayoti",
+          "english": "little singer"
+        },
+        {
+          "liraasa": "lirati",
+          "english": "little song"
+        },
+        {
+          "liraasa": "liratiri",
+          "english": "little songs"
+        }
+      ],
+      "edits": [
+        {
+          "target": "word_building.lexicalised_derivations",
+          "action": "split",
+          "note": "Move the -ti items (monruti, mirunuluti, kezumiruti, soloti, larbopagoti, lavbupagoti) to a 'lexicalised diminutives' list."
+        }
+      ]
+    },
+    {
+      "ruling_id": "2.5:G123",
+      "issue": "I-35",
+      "author_choice": "C",
+      "status": "apply",
+      "text": "A word ending in pago is the same word whether read as ROOT + -pago or as a compound with the root pago. It is a noun with no further forms unless its dictionary line lists them.",
+      "amends": [
+        "2.1:G59"
+      ],
+      "examples_grammatical": [
+        {
+          "liraasa": "lemupago",
+          "english": "school"
+        }
+      ]
+    },
+    {
+      "ruling_id": "2.5:G124",
+      "issue": "I-36",
+      "author_choice": "B",
+      "status": "apply",
+      "text": "Image compounds have all seven forms, built by the ordinary form rules, with predictable meanings. This is an explicit exception to hard_rules[1] ('only listed forms exist'), which still governs every other headword.",
+      "amends": [
+        "word_building.image_compounds.how_to_use",
+        "hard_rules[1] (add the exception)"
+      ],
+      "examples_grammatical": [
+        {
+          "liraasa": "lunosavali",
+          "english": "moonlit kiss"
+        },
+        {
+          "liraasa": "lunosavalila",
+          "english": "to kiss by moonlight"
+        },
+        {
+          "liraasa": "lunosavalisan",
+          "english": "like a moonlit kiss"
+        }
+      ],
+      "derived": [
+        "Proposed meaning templates, for confirmation: noun = the image; -asa = the image at its highest or sacred degree; -na = the absence or opposite of the image; verb = to make, do or bring about the image; -san = having the quality of the image; -asasan = supremely so; -nasan = lacking the image."
+      ],
+      "translator_preference": "Prefer attested image compounds and their attested readings; use a predicted form only when no listed word fits, and flag it in the output."
+    },
+    {
+      "ruling_id": "2.5:G125",
+      "issue": "I-45",
+      "author_choice": "A",
+      "status": "apply",
+      "text": "Negative numbers: antizi + NUMBER (antizi dossa = minus two). antizi is a new function word.",
+      "examples_grammatical": [
+        {
+          "liraasa": "antizi dossa",
+          "english": "minus two"
+        }
+      ],
+      "edits": [
+        {
+          "target": "small_words.function_words",
+          "action": "add_row",
+          "note": "Form antizi; type: number sign; position: directly before a number; function: negative ('minus')."
+        },
+        {
+          "target": "sound",
+          "action": "check",
+          "note": "Before adding antizi, check it against sound.function_word_template (two or more edits from every active word, vowel-final, no initial cluster). If it fails, stop and ask the author for another spelling."
+        }
+      ],
+      "notes": "Decimals were not decided and remain outside the language."
+    },
+    {
+      "ruling_id": null,
+      "issue": "I-34",
+      "author_choice": "A",
+      "status": "apply",
+      "text": "No grammar change. Declare the one-edit function-word pairs that occupy different syntactic positions, and audit the rest.",
+      "edits": [
+        {
+          "target": "sound.declared_one_edit_pairs",
+          "action": "extend",
+          "note": "Add each undeclared pair from I-34 (li/si, li/ki, li/la, de/ne, de/ke, ne/ke, ke/ko, ke/ki, ka/da, ka/ko, ka/la, si/ki, ko/ki, da/la) only if a position check shows the two never compete for the same slot. Report every pair that does compete, li/la first, for the author."
+        }
+      ]
+    }
+  ],
+  "housekeeping": {
+    "author_choice": "approve all",
+    "items": [
+      {
+        "issue": "I-02",
+        "action": "Rewrite hard_rules[4], clause.questions and recipes[6] from 2.5:G88 so no summary restates a superseded ruling."
+      },
+      {
+        "issue": "I-26",
+        "action": "Replace the 2.3:G73 example that uses su after a writing verb (an album line) with a new example of ko + feeling that obeys 1.2:G30."
+      },
+      {
+        "issue": "I-27",
+        "action": "Split small_words.time_words into time nouns, time adverbials, and operators (po, futu, pressa, reve, loki, bodu, kroti, krotiapo move out); remove the duplicate eli-krono, toda-krono, nuna-krono rows; keep ki-krono in one table. Move eli-pago and ola-pago to a place-adverbial list that FRAME may use (2.5:G127)."
+      },
+      {
+        "issue": "I-33",
+        "action": "One wording for ne's scope everywhere: a preverbal ne scopes over everything to its right up to the verb; a ne elsewhere scopes over the single constituent that follows it."
+      },
+      {
+        "issue": "I-40",
+        "action": "Split examples.sentences into: canonical sentences (imitate), word-building illustrations (lira + yo = lirayo …), and contrasts to avoid (Maivo ne sabesia nuna-coda.). Rewrite examples.how_to_use to match."
+      },
+      {
+        "issue": "I-41",
+        "action": "Call seye, mufe, poye, pifu and zoke ATTITUDE words everywhere (function word rows, 0.8:R9 wording, slot names)."
+      },
+      {
+        "issue": "I-44",
+        "action": "Gloss correlative bases (coda, modo …) as bound bases; move ki-saivo and lorejuba ala taivo to a 'historical and formulae' table; move the obsolete digit comments (seta, niva) to legacy.archived_text."
+      },
+      {
+        "issue": "I-52",
+        "action": "Clear 'awaiting author review' on recipes[24] (ADR-0011) and recipes[68] (vaku, settled by 2.5:G109); fix recipes[5]'s citation to 2.5:G88."
+      }
+    ]
+  },
+  "author_inputs_needed": [
+    {
+      "item": "I-23 + I-03 (derived)",
+      "question": "Confirm the edge positions (line linker, FRAME, TOPIC, fronted ki-word before the clause; vocative after it), and that durations and clause-final reve / loki sit among the adjuncts."
+    },
+    {
+      "item": "I-27 (derived)",
+      "question": "Confirm that prepositional phrases of place may open a clause as a FRAME."
+    },
+    {
+      "item": "I-42",
+      "question": "Which operators may a command carry (none, ne only, or everything except tense)? Does yava stand where the subject would (after a FRAME) or always sentence-initially?"
+    },
+    {
+      "item": "A4.22 / I-28",
+      "question": "Order of two or more adjectives before one noun."
+    },
+    {
+      "item": "I-28 (derived)",
+      "question": "Confirm ORDINAL before NUMBER: li una-ne dossa lirari = the first two songs."
+    },
+    {
+      "item": "I-37",
+      "question": "sela: reflexive object only, or also emphatic ('I myself')? maivori: unmarked for whether the listener is included?"
+    },
+    {
+      "item": "I-48",
+      "question": "Which quantifiers form a measure with kroti / krotiapo?"
+    },
+    {
+      "item": "I-22",
+      "question": "Approve the drafted change-of-state verb list."
+    },
+    {
+      "item": "I-38",
+      "question": "Approve the drafted recipient-verb tags."
+    },
+    {
+      "item": "I-36 (derived)",
+      "question": "Approve the proposed meaning templates for image-compound forms."
+    },
+    {
+      "item": "I-20 (derived)",
+      "question": "Confirm that in speech, command intonation stands in for the written '!'."
+    },
+    {
+      "item": "I-12 + I-14 (derived)",
+      "question": "Confirm that with two names the left one owns."
+    },
+    {
+      "item": "I-29 (derived)",
+      "question": "Confirm that eli / ola take a singular noun."
+    },
+    {
+      "item": "I-51 (derived)",
+      "question": "Confirm that an unresumed non-subject topic is read as the verb's object."
+    },
+    {
+      "item": "I-43",
+      "question": "How to compare an action with no manner adjective ('I sing more than you', 'I love you more than …')."
+    },
+    {
+      "item": "I-17",
+      "question": "How to say a duration ('for two days') now that bare nouns after a verb are objects."
+    },
+    {
+      "item": "I-45",
+      "question": "Decimals: keep outside the language, or add a rule?"
+    },
+    {
+      "item": "open_questions_do_not_resolve[1], [3]",
+      "question": "A vocative particle for verse; ke sidu = 'destined to'. Both remain open."
+    }
+  ]
+}

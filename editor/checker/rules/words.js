@@ -117,7 +117,7 @@
             autoFix: !r.to.includes(' '),
           }),
         );
-      } else if (r.kind === 'motion' && !r.curated) {
+      } else if (r.kind === 'motion' && !r.curated && !ctx.cls.motionVerbs.has(r.verb)) {
         out.push(
           C.diagnostic({
             ...at,

@@ -48,7 +48,8 @@ describe('the fixture song', () => {
   });
 
   it('the suggested fixes rebuild the author’s corrections', () => {
-    expect(fixed('saivo po senosia en baba melosan valla.', '1.2:G33')).toBe(
+    // en + an abstract noun may now be the manner (2.3:G73); the note still offers yuta
+    expect(fixed('saivo po senosia en baba melosan valla.', '2.3:G73')).toBe(
       'saivo po senosia yuta baba melosan valla.',
     );
     expect(fixed('ata maivo futu lisila taivo ko maivo de mavolumisan miru.', '1.2:G33')).toBe(
@@ -68,8 +69,10 @@ describe('the semantic rules', () => {
     expect(hits('maivo lirala ko saivo.', '1.2:G33')).toEqual([]);
   });
 
-  it('en + abstract is the means; en + a place or setting stays (1.2:G33)', () => {
-    expect(hits('saivo po senosia en baba melosan valla.', '1.2:G33')).toHaveLength(1);
+  it('en + abstract may be the manner, noted with yuta for the means; a place stays (2.3:G73)', () => {
+    const [d] = hits('saivo po senosia en baba melosan valla.', '2.3:G73');
+    expect(d?.severity).toBe('note');
+    expect(d?.fix).toBe('yuta');
     expect(hits('Taivo po lumila en li narvo.', '1.2:G33')).toEqual([]);
     expect(hits('li luno salrusia ata taivo somusia en maivo de varori.', '1.2:G33')).toEqual([]);
   });

@@ -1037,6 +1037,21 @@
     resize: vertical;
   }
 
+  /* the strict checker's gloss and the translator's flags (2.5, ADR-0020) */
+  .strict-gloss {
+    margin-top: var(--s2);
+    font-size: 0.85em;
+  }
+  .strict-gloss td,
+  .strict-gloss th {
+    padding: 2px 6px;
+    vertical-align: top;
+  }
+  ul.flags,
+  ul.tried {
+    margin: var(--s2) 0 0;
+    padding-left: 1.2em;
+  }
   .draft {
     margin-top: var(--s3);
     padding: var(--s3);
@@ -1485,6 +1500,13 @@
                 Literal gloss
               </button>
               <span class="label" id="stamp"></span>
+              <button
+                class="btn btn-quiet"
+                id="respellBtn"
+                type="button"
+                hidden
+                title="Spellings a newer edition retired, in your writings: correct them all, or leave them"
+              ></button>
               <button class="btn btn-quiet btn-danger" id="deleteBtn" type="button">Delete…</button>
             </div>
           </div>
@@ -1665,6 +1687,9 @@
 <script src="checker/gloss.js"></script>
 <script src="checker/rules/english.js"></script>
 <script src="checker/index.js"></script>
+<!-- The 2.5 strict checker and the translator (src/core/grammar, src/core/translate; ADR-0020) -->
+<script src="grammar/grammar-data.js"></script>
+<script src="grammar/grammar-core.js"></script>
 <!-- Learn: its engine (learn-core.js) and data (learn-data.js) load on first use -->
 <script src="learn/strings.js"></script>
 <script src="learn/store.js"></script>
@@ -1676,6 +1701,7 @@
 <script src="learn/loom.js"></script>
 <script src="learn/sandbox.js"></script>
 <script src="learn/observatory.js"></script>
+<script src="learn/course.js"></script>
 <div class="diag-tip" id="diagTip" role="tooltip" hidden></div>
 <p class="sr-only" id="caretDiag" aria-live="polite"></p>
 <script>
@@ -1707,6 +1733,108 @@
      JSON). The page still opens if it failed to load, and says so. */
   const CK = (window.LiraasaChecker && window.LiraasaChecker.default) || null;
   const CK_ERROR = (window.LiraasaChecker && window.LiraasaChecker.loadError) || null;
+
+  /* The 2.5 strict checker and translator (ADR-0020). Grammar findings come
+     from it alone, with their rule ids, and nothing exempts a sentence. The
+     2.3 checker (CK) still gives what the strict one does not: the English
+     pairing check, calques and register notes. */
+  let STRICT = null;
+  let STRICT_ERROR = null;
+  try {
+    STRICT =
+      window.LiraasaGrammar && window.LIRAASA_GRAMMAR
+        ? window.LiraasaGrammar.createTranslator(window.LIRAASA_GRAMMAR)
+        : null;
+  } catch (e) {
+    STRICT_ERROR = e;
+  }
+  const CK_KEEP = new Set(['gloss drift', 'tense', 'passive', 'calque', '0.8:R10', '-na', 'hema']);
+
+  /** Every finding of a page: the strict checker's grammar, the 2.3 checker's English and register notes. */
+  function checkAll(lines, englishLines, opts) {
+    const out = [];
+    if (STRICT) {
+      lines.forEach((line, i) => {
+        if (!line.trim()) return;
+        for (const f of STRICT.checker.checkLine(line).findings) {
+          const severity = f.severity === 'unruled' ? 'unsettled' : f.severity;
+          out.push({
+            line: i + 1,
+            start: f.start,
+            end: f.end,
+            token: line.slice(f.start, f.end),
+            severity,
+            rule: f.rule,
+            message:
+              (f.severity === 'unruled' ? 'Not ruled yet: ' : '') +
+              f.message +
+              (f.fix ? ' (try: ' + f.fix + ')' : ''),
+            fix: null,
+            fixStart: null,
+            fixEnd: null,
+            autoFix: false,
+          });
+        }
+      });
+    }
+    if (CK) {
+      for (const f of CK.check(lines, englishLines, opts)) {
+        if (!STRICT || CK_KEEP.has(f.rule)) out.push(f);
+      }
+    }
+    return out;
+  }
+
+  /** The strict checker's gloss of one line: each word's form, slot and rules. */
+  const strictGloss = (line) =>
+    STRICT && line.trim() ? STRICT.checker.checkLine(line).sentences.flatMap((s) => s.gloss) : [];
+  /** A plain English reading of a line, word by word, from the strict gloss. */
+  const strictBack = (line) =>
+    strictGloss(line)
+      .map((g) => (g.gloss.split(/[;(]/)[0] || g.word).trim())
+      .filter(Boolean)
+      .join(' ');
+
+  /* Proposed rulings (README 2.5, 2d): there is no approve button. A writer who
+     believes a rejected sentence is grammatical records a proposal; the
+     sentence stays failing until the grammar changes. Proposals download as
+     review/proposed_rulings.md. */
+  const PROPOSALS_KEY = 'liraasa-proposed-rulings';
+  function proposals() {
+    try {
+      return JSON.parse(localStorage.getItem(PROPOSALS_KEY) || '[]');
+    } catch (e) {
+      return [];
+    }
+  }
+  function saveProposals(list) {
+    try {
+      localStorage.setItem(PROPOSALS_KEY, JSON.stringify(list));
+    } catch (e) {
+      /* storage blocked: kept for this session only */
+    }
+  }
+  function proposalsMarkdown(list) {
+    return (
+      '# Proposed rulings\n\nRecorded in the editor: sentences the writer believes are grammatical, with the rule each one conflicts with. Each stays failing until the grammar changes (2.5:G87).\n\n' +
+      list
+        .map(
+          (p, i) =>
+            '## ' +
+            (i + 1) +
+            '. ' +
+            p.rule +
+            '\n\n- Sentence: `' +
+            p.sentence +
+            '`\n- Finding: ' +
+            p.message +
+            '\n- Recorded: ' +
+            p.at +
+            '\n- Proposed ruling: _(to write)_\n',
+        )
+        .join('\n')
+    );
+  }
   const SEV_RANK = { error: 0, warn: 1, note: 2, unsettled: 3 };
   const SEV_LABEL = { error: 'Error', warn: 'Warning', note: 'Note', unsettled: 'Unsettled' };
   const VOWELS = 'aeiou';
@@ -1819,6 +1947,51 @@
   /** English phrase -> candidate Liraasa words. Built for the composer. */
   const EN = new Map();
 
+  /* English number words, 0-99 and hundred, to their value. */
+  const EN_NUMBER = new Map();
+  {
+    const units =
+      'zero one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen'.split(
+        ' ',
+      );
+    const tens = [
+      '',
+      '',
+      'twenty',
+      'thirty',
+      'forty',
+      'fifty',
+      'sixty',
+      'seventy',
+      'eighty',
+      'ninety',
+    ];
+    for (let n = 0; n < 100; n += 1) {
+      const name =
+        n < 20 ? units[n] : tens[Math.floor(n / 10)] + (n % 10 ? '-' + units[n % 10] : '');
+      EN_NUMBER.set(name, n);
+    }
+    EN_NUMBER.set('hundred', 100);
+  }
+  const ORDINAL_EN = [
+    'first',
+    'second',
+    'third',
+    'fourth',
+    'fifth',
+    'sixth',
+    'seventh',
+    'eighth',
+    'ninth',
+    'tenth',
+  ];
+  /* The curated motion metaphors (1.2:G35): English, prefix, verb form. */
+  const MOTION_EN = [
+    ['recognize', 'revo-', 'sabesia'],
+    ['recognise', 'revo-', 'sabesia'],
+    ['share', 'yave-', 'donuda'],
+  ];
+
   function pushForm(sp, ref) {
     const l = FORM.get(sp);
     if (l) l.push(ref);
@@ -1913,6 +2086,26 @@
     }
     for (const v of Object.values(D.numbers)) CLOSED.set(v, { kind: 'numeral', gloss: '' });
     for (const [n, v] of Object.entries(D.numbers)) addEn(n, { word: v, kind: 'numeral' });
+    // number words, ordinals and "N times" (1.2:G28; settled: NUMBER-ne; 2.1:G49)
+    for (const [name, n] of EN_NUMBER) {
+      if (D.numbers[n]) addEn(name, { word: D.numbers[n], kind: 'numeral' });
+    }
+    ORDINAL_EN.forEach((name, i) => {
+      if (D.numbers[i + 1]) addEn(name, { word: D.numbers[i + 1] + '-ne', kind: 'numeral' });
+    });
+    addEn('once', { word: D.numbers[1] + '-krono', kind: 'numeral' });
+    addEn('twice', { word: D.numbers[2] + '-krono', kind: 'numeral' });
+    // the listed derivations: "singer" is lirayo, "sword" tisebitivu (1.0:G20, 2.0:G41)
+    for (const [word, gloss] of Object.entries(D.morphology.lexicalised_derivations || {})) {
+      for (const s of senses(String(gloss).split(':')[0])) {
+        addEn(s, { word, kind: 'derivation', slot: 0 });
+      }
+    }
+    // the curated motion metaphors, by their English (1.2:G35)
+    for (const [en, prefix, verb] of MOTION_EN) {
+      const ref = (FORM.get(verb) || []).find((r) => r.slot === 3);
+      if (ref) addEn(en, { word: prefix + verb, root: ref.root, slot: 3, kind: 'lexical' });
+    }
   })();
 
   const NAMES = new Set(D.names.map((n) => n.toLowerCase()));
@@ -1983,8 +2176,24 @@
     }
 
     if (D.legacy[w]) return { kind: 'legacy', to: D.legacy[w], stem: w, suffixes: [] };
+    // an older spelling with its ending: lenrari is the older zarkuri (2.3:G69)
+    if (sfx.length && D.legacy[stem] && !D.legacy[stem].includes(' '))
+      return {
+        kind: 'legacy',
+        to: D.legacy[stem] + sfx.join('').replace(/-/g, ''),
+        stem,
+        suffixes: sfx,
+      };
     if (NAMES.has(w) || /^[A-Z]/.test(raw)) return { kind: 'name', stem: raw, suffixes: [] };
     return null;
+  }
+
+  /* The edition that retired an older spelling, from the checker's legacy table
+     (null: before 1.0). */
+  function retiredIn(spelling) {
+    const ck = window.LiraasaChecker && window.LiraasaChecker.default;
+    const row = ck && ck.index && ck.index.legacy && ck.index.legacy.get(spelling);
+    return (row && row.edition) || null;
   }
 
   function glossFor(p) {
@@ -2000,7 +2209,10 @@
         map[p.derivation.suffix] + ' ' + (H.get(p.derivation.root).glosses[0] || p.derivation.root)
       );
     }
-    if (p.kind === 'legacy') return 'pre-1.0 → ' + p.to;
+    if (p.kind === 'legacy') {
+      const ed = retiredIn(p.stem);
+      return (ed ? 'before ' + ed : 'pre-1.0') + ' → ' + p.to;
+    }
     if (p.kind === 'name') return 'name';
     return p.gloss || p.kind;
   }
@@ -2107,6 +2319,43 @@
     { en: ['may', 'allowed to', 'permitted'], word: 'dagi', slot: 'MODAL' },
     { en: ['must', 'have to', 'has to', 'need to'], word: 'musi', slot: 'MODAL' },
     { en: ['should'], word: 'suvi', slot: 'MODAL' },
+    // counterfactuals (1.0:G6): should have = po noma suvi; could have = po noma povi;
+    // would have = po viki in a consequence clause
+    {
+      en: ['should have'],
+      words: [
+        ['po', 'TENSE'],
+        ['noma', 'REALITY'],
+        ['suvi', 'MODAL'],
+      ],
+    },
+    {
+      en: ['could have'],
+      words: [
+        ['po', 'TENSE'],
+        ['noma', 'REALITY'],
+        ['povi', 'MODAL'],
+      ],
+    },
+    {
+      en: ['would have'],
+      words: [
+        ['po', 'TENSE'],
+        ['viki', 'MODAL'],
+      ],
+    },
+    // "If only …" is a wish, not a condition: noma … pifu (2.1:G48)
+    {
+      en: ['if+only'],
+      words: [
+        ['noma', 'REALITY'],
+        ['pifu', 'ATTITUDE'],
+      ],
+    },
+    // "May the light hold you" is a blessing: the clause and a final pifu (2.1:G48)
+    { en: ['may+bless'], word: 'pifu', slot: 'ATTITUDE' },
+    // "each other" is the reciprocal, after the adjuncts (slot 17)
+    { en: ['each+other'], word: 'fuyi', slot: 'RECIPROCAL' },
     { en: ['hope to', 'hopes to', 'hoped to'], word: 'kopi', slot: 'MODAL' },
     { en: ['would'], word: 'viki', slot: 'MODAL' },
     { en: ['almost', 'nearly'], word: 'tavki', slot: 'APPROACH' },
@@ -2124,7 +2373,7 @@
     },
     { en: ['stopped', 'stop', 'ceased'], word: 'teki', slot: 'PHASE', verb: true },
     { en: ['tried to', 'try to', 'tries to'], word: 'telvo', slot: 'EFFORT' },
-    { en: ['managed to', 'succeeded'], word: 'vazdi', slot: 'EFFORT' },
+    { en: ['managed to', 'manage to', 'manages to', 'succeeded'], word: 'vazdi', slot: 'EFFORT' },
     { en: ['again'], word: 'reve', slot: 'ITERATION' },
     { en: ['still', 'keeps', 'keep on'], word: 'loki', slot: 'ITERATION' },
     { en: ['already'], word: 'bodu', slot: 'ITERATION' },
@@ -2137,7 +2386,11 @@
     { en: ['only'], word: 'doli', slot: 'SCOPE' },
     { en: ['also', 'too'], word: 'tu', slot: 'SCOPE' },
     { en: ['even'], word: 'yesta', slot: 'SCOPE' },
-  ].map((m) => ({ ...m, phrases: m.en.map((p) => p.split(' ')) }));
+  ].map((m) => ({
+    ...m,
+    phrases: m.en.map((p) => p.split(' ')),
+    words: (m.words || [[m.word, m.slot]]).map(([word, slot]) => ({ word, slot })),
+  }));
 
   /* Negative words → ne, plus the marker a contraction carries with it:
      "can't" is povi and ne, "didn't" is po and ne. */
@@ -2171,10 +2424,14 @@
     'that+obj',
     'for+to',
     'to+verb',
+    'that+comp',
+    'what+rel',
+    'what',
+    'whether',
   ]);
   /* Openers whose clause has no subject of its own: the relative's head noun,
      or the main clause's subject, fills it. */
-  const NO_SUBJECT = new Set(['who', 'which', 'that+rel', 'to+verb']);
+  const NO_SUBJECT = new Set(['who', 'which', 'that+rel', 'to+verb', 'let+us', 'who_q']);
   /* Tokens rewriteEnglish coins, shown as the English the writer typed. */
   const DISPLAY = {
     'that+rel': 'that',
@@ -2182,6 +2439,17 @@
     'that+dem': 'that',
     'for+to': 'for … to',
     'to+verb': 'to',
+    'that+comp': 'to',
+    'what+rel': 'what',
+    'what+excl': 'what',
+    who_q: 'who',
+    'let+us': 'let us',
+    'ago+': 'ago',
+    'in+time': 'in',
+    'how+many+times': 'how many times',
+    'in+front+of': 'in front of',
+    'each+time': 'each time',
+    'since+then': 'since then',
   };
 
   /* Words carried by Liraasa grammar rather than by a dictionary entry. */
@@ -2228,6 +2496,28 @@
     where: 'ki-pago',
     what: 'ki-coda',
     who_q: 'ki-nela',
+    which_q: 'ki-eli',
+    // the grammar audit (C04, C07, C08, C09, C11, C16)
+    'that+comp': 'fime', // "I want you to stay": a different subject takes fime (2.1:G50)
+    'what+rel': 'raho', // "I sing what you love": headless raho (2.2:G64)
+    'what+excl': 'ki-eli', // "What a night!" (2.2:G61)
+    'let+us': 'yava', // "Let us sing" (2.1:G56, 2.3:G78)
+    'ago+': 'kroti', // "two days ago" = kroti + the measure (2.1:G55)
+    'in+time': 'krotiapo', // "in three days" (2.1:G55)
+    'how+many+times': 'ki-muya-krono', // (2.1:G49)
+    'each+time': 'rada-krono', // (1.2:G34)
+    'since+then': 'da ola-krono', // (2.3:G79)
+    whether: 'ki-oro', // (1.0:G2, 2.3:G77)
+    despite: 'nevi', // (1.0:G11)
+    although: 'nevi',
+    behind: 'nazru', // the side nouns as prepositions (2.2:G67)
+    beside: 'silda',
+    'in+front+of': 'zavme',
+    more: 'kasi',
+    less: 'menu',
+    most: 'mosa',
+    least: 'lusu',
+    each: 'rada',
   };
 
   /* English "to be" is a copula in Liraasa, not a word to drop. `ke` is the
@@ -2307,6 +2597,15 @@
     chose: 'choose',
     chosen: 'choose',
     shone: 'shine',
+    became: 'become',
+    died: 'die',
+    lay: 'lie',
+    hid: 'hide',
+    hidden: 'hide',
+    flew: 'fly',
+    swam: 'swim',
+    drank: 'drink',
+    sank: 'sink',
   };
 
   const STOPWORDS = new Set(['do', 'does', 'own']);
@@ -2362,6 +2661,13 @@
     'shone',
     'was',
     'were',
+    'became',
+    'died',
+    'hid',
+    'flew',
+    'swam',
+    'drank',
+    'sank',
   ]);
 
   /* Words after which the next content word is a noun, never the verb. */
@@ -2398,7 +2704,8 @@
       out.push(w.slice(0, -2), w.slice(0, -1));
       if (w.length > 5 && w[w.length - 3] === w[w.length - 4]) out.push(w.slice(0, -3));
     }
-    if (w.endsWith('ing') && w.length > 5) {
+    // going → go: five letters is enough (doing, being, going)
+    if (w.endsWith('ing') && w.length > 4) {
       out.push(w.slice(0, -3), w.slice(0, -3) + 'e');
       if (w[w.length - 4] === w[w.length - 5]) out.push(w.slice(0, -4));
     }
@@ -2506,11 +2813,169 @@
   /* English word order and English function words, rewritten to the Liraasa
      structures they stand for before the clauses are split. Each rewrite is a
      token DISPLAY shows as the English typed, so the rows stay readable. */
-  function rewriteEnglish(tokens, question) {
-    const t = [...tokens];
-    // A question keeps statement order and adds ki: "am I …?" is "I am … ki".
+  const TIME_UNITS = new Set(
+    'day days night nights year years week weeks month months hour hours moment moments morning mornings evening evenings'.split(
+      ' ',
+    ),
+  );
+  const GIVE_EN = new Set(
+    'give gives gave given lend lends lent send sends sent owe owes owed sell sells sold pay pays paid bring brings brought teach teaches taught show shows showed shown'.split(
+      ' ',
+    ),
+  );
+  const KNOW_EN = new Set(
+    'know knows knew ask asks asked wonder wonders wondered understand understands understood remember remembers remembered forget forgets forgot tell tells told learn learns learned'.split(
+      ' ',
+    ),
+  );
+  const OBJECT_EN = new Set(['me', 'you', 'him', 'her', 'us', 'them', 'it']);
+  const isNumberEn = (w) => EN_NUMBER.has(w) || w === 'many' || w === 'few' || w === 'some';
+  const adjectiveFor = (w) =>
+    lookupEnglish(w).find((o) => o.kind === 'lexical' && [4, 5, 6].includes(o.slot) && !o.loose);
+
+  /* Constructions English writes with words of its own, rewritten before the
+     clause rules run (the grammar audit, C01-C17). */
+  function rewriteConstructions(tokens, question, exclaim) {
+    let t = [...tokens];
+    // exclamations (2.2:G61): "How ADJ the N is!" → the N is how ADJ;
+    // "What a (ADJ) N (it was)!" → ki-eli N, or with an adjective the N is how ADJ
+    if (exclaim && t[0] === 'what' && (t[1] === 'a' || t[1] === 'an')) {
+      const rest = t.slice(2);
+      const c = rest.findIndex((x) => COPULA_EN[x]);
+      const np = (c >= 0 ? rest.slice(0, c) : rest).filter(
+        (x) => !['it', 'that', 'this'].includes(x),
+      );
+      const cop = c >= 0 ? rest[c] : 'is';
+      const noun = np[np.length - 1];
+      const adjs = np.slice(0, -1);
+      t = adjs.length ? ['the', noun, cop, 'how', ...adjs] : ['what+excl', ...np];
+    } else if (exclaim && t[0] === 'how' && t.length > 3 && COPULA_EN[t[t.length - 1]]) {
+      t = [...t.slice(2), 'how', t[1]];
+    }
+    for (let i = 0; i + 1 < t.length; i += 1) {
+      if (t[i] === 'a' && t[i + 1] === 'hundred') t.splice(i, 1);
+      else if ((t[i] === 'each' || t[i] === 'every') && t[i + 1] === 'time')
+        t.splice(i, 2, 'each+time');
+      else if (t[i] === 'since' && t[i + 1] === 'then') t.splice(i, 2, 'since+then');
+    }
+    if (t[0] === 'may' && (SUBJECT_EN.has(t[1]) || DETERMINER_EN.has(t[1]))) t[0] = 'may+bless';
+    if (t[0] === 'if' && t[1] === 'only') t.splice(0, 2, 'if+only');
+    if (t[0] === 'let' && t[1] === 'us') t.splice(0, 2, 'let+us');
     if (question) {
       const s = ['or', 'and', 'but'].includes(t[0]) ? 1 : 0;
+      if (t[s] === 'who') t[s] = 'who_q';
+      if (t[s] === 'which') t[s] = 'which_q';
+    }
+    for (let i = 0; i + 2 < t.length; i += 1) {
+      // "the same as" is sambasan ko (0.8:G8)
+      if (t[i] === 'same' && t[i + 1] === 'as') {
+        t.splice(i, 2, 'same', 'with');
+        if (t[i - 1] === 'the') t.splice(i - 1, 1);
+      }
+      // "managed not to", "began not to": the operator, then ne (1.0:G15)
+      if (
+        /^(managed?|manages|tri(ed|es)|try|beg[ia]n|begins|start(ed|s)?|hoped?|hopes)$/.test(
+          t[i],
+        ) &&
+        t[i + 1] === 'not' &&
+        t[i + 2] === 'to'
+      ) {
+        t.splice(i, 3, t[i], 'to', 'not');
+      }
+    }
+    for (let i = 0; i < t.length; i += 1) {
+      const [prev, w, next] = [t[i - 1], t[i], t[i + 1]];
+      if (w === 'what' && i > 0 && !question && !KNOW_EN.has(prev)) t[i] = 'what+rel';
+      else if (w === 'how' && next === 'many' && (t[i + 2] === 'times' || t[i + 2] === 'time')) {
+        t.splice(i, 3, 'how+many+times');
+      } else if (w === 'each' && next === 'other') {
+        if (prev === 'to' || prev === 'with') {
+          t.splice(i - 1, 3, 'each+other');
+          i -= 1;
+        } else t.splice(i, 2, 'each+other');
+      } else if (w === 'in' && next === 'front' && t[i + 2] === 'of') t.splice(i, 3, 'in+front+of');
+      else if (w === 'a' && next === 'hundred') {
+        t.splice(i, 1);
+        i -= 1;
+      } else if (EN_NUMBER.has(w) && (next === 'times' || next === 'time') && w !== 'one') {
+        t.splice(i, 2, w + '+times');
+      } else if (w === 'ago') {
+        // N UNIT ago = kroti + the measure (2.1:G55); "long ago" = many years ago
+        if (prev === 'long') {
+          t.splice(i - 1, 1, 'ago+', 'many', 'years');
+          i += 2;
+        } else if (TIME_UNITS.has(prev) && isNumberEn(t[i - 2] || '')) {
+          t.splice(i - 2, 0, 'ago+');
+          i += 1;
+        }
+      } else if (w === 'in' && isNumberEn(next || '') && TIME_UNITS.has(t[i + 2] || '')) {
+        t[i] = 'in+time';
+      } else if (w === 'for' && isNumberEn(next || '') && TIME_UNITS.has(t[i + 2] || '')) {
+        t.splice(i, 1); // a bare measure after the object is the duration (2.1:G55)
+        i -= 1;
+      } else if (
+        w === 'down' &&
+        ['come', 'comes', 'came', 'go', 'goes', 'went'].includes(prev || '')
+      ) {
+        t.splice(i - 1, 2, ['came', 'went'].includes(prev) ? 'descended' : 'descend');
+        i -= 1;
+      } else if (
+        w === 'about' &&
+        prev &&
+        !verbish(prev) &&
+        lookupEnglish(prev).some(
+          (o) => o.kind === 'lexical' && NOUN_SLOTS.includes(o.slot) && !o.loose,
+        )
+      ) {
+        t[i] = 'of'; // "songs about love" = lirari de amor (1.2:G30)
+      } else if (w === 'about' && (KNOW_EN.has(prev) || /^hear[ds]?$/.test(prev || ''))) {
+        // "heard about X": the verb takes an object, the story of X (1.2:G30, 2.3:G80)
+        t.splice(i, 1, 'the', 'story', 'of');
+        i += 2;
+      } else if (w.length > 4 && w.endsWith('er') && !lookupEnglish(w).some((o) => !o.loose)) {
+        // a comparative: "smaller" is kasi + the adjective
+        const stems = [w.slice(0, -2), w.slice(0, -1), w.slice(0, -3), w.slice(0, -3) + 'y'];
+        const stem = stems.find((x) => x.length > 2 && adjectiveFor(x));
+        if (stem) {
+          t.splice(i, 1, 'more', stem);
+          if (['grew', 'grow', 'grows', 'got'].includes(prev || '')) t[i - 1] = 'became';
+          i += 1;
+        }
+      }
+    }
+    // a give-type verb with two noun phrases: VERB THEME ala RECIPIENT (1.2:G26)
+    for (let i = 0; i < t.length; i += 1) {
+      if (!GIVE_EN.has(t[i]) || !DETERMINER_EN.has(t[i + 1] || '')) continue;
+      const k = t.findIndex((x, j) => j > i + 2 && DETERMINER_EN.has(x));
+      if (k < 0 || t.slice(i + 1, k).some((x) => x === ',' || x === 'to' || CLAUSE_OPENERS.has(x)))
+        continue;
+      let end = t.findIndex((x, j) => j > k && (x === ',' || CLAUSE_OPENERS.has(x) || x === 'to'));
+      if (end < 0) end = t.length;
+      const recipient = t.slice(i + 1, k);
+      const theme = t.slice(k, end);
+      t.splice(i + 1, end - i - 1, ...theme, 'to', ...recipient);
+      break;
+    }
+    // a different subject before "to": I want you to stay = fime taivo lisrola (2.1:G50)
+    for (let i = 2; i < t.length; i += 1) {
+      if (t[i] !== 'to' || !verbish(t[i + 1])) continue;
+      if (OBJECT_EN.has(t[i - 1]) && verbish(t[i - 2])) {
+        t.splice(i - 1, 2, 'that+comp', t[i - 1]);
+      } else if (DETERMINER_EN.has(t[i - 2] || '') && verbish(t[i - 3])) {
+        t.splice(i - 2, 0, 'that+comp');
+        t.splice(i + 1, 1);
+      }
+    }
+    return t;
+  }
+
+  function rewriteEnglish(tokens, question, exclaim) {
+    const t = rewriteConstructions(tokens, question, exclaim);
+    // A question keeps statement order and adds ki: "am I …?" is "I am … ki".
+    if (question) {
+      let s = ['or', 'and', 'but'].includes(t[0]) ? 1 : 0;
+      // "where are you going": the question word stays first, the rest keeps statement order
+      if (['where', 'why', 'how', 'when', 'what', 'who_q', 'which'].includes(t[s])) s += 1;
       if (COPULA_EN[t[s]] && SUBJECT_EN.has(t[s + 1])) [t[s], t[s + 1]] = [t[s + 1], t[s]];
     }
     let verbSeen = false;
@@ -2601,17 +3066,117 @@
       chosen: 0,
       note: glossOf(m.word),
     });
+    // a valency operator: make / let / prevent + actor + verb (1.0:G14)
+    const VALENCY_EN = {
+      make: 'vaku',
+      makes: 'vaku',
+      made: 'vaku',
+      let: 'lesvu',
+      lets: 'lesvu',
+      prevent: 'tekvu',
+      prevents: 'tekvu',
+      prevented: 'tekvu',
+    };
 
     for (let i = 0; i < tokens.length; ) {
       const hit = markerAt(tokens, i);
       if (hit) {
-        chunks.push(markerChunk(tokens.slice(i, i + hit.len).join(' '), hit.m));
+        const en = tokens.slice(i, i + hit.len).join(' ');
+        for (const m of hit.m.words) chunks.push(markerChunk(en, { ...hit.m, ...m }));
         i += hit.len;
         continue;
       }
       const w = tokens[i];
       const afterDeterminer = i > 0 && DETERMINER_EN.has(tokens[i - 1]);
       i += 1;
+      // a gloss of several words: "hunts in a pack" is farvibudifa, "to hunt in a pack"
+      let phrase = null;
+      for (let len = 4; len >= 2 && !phrase; len -= 1) {
+        const rest = tokens.slice(i, i - 1 + len);
+        if (rest.length !== len - 1) continue;
+        for (const l of lemmas(w)) {
+          const hits = (EN.get(l + ' ' + rest.join(' ')) || []).filter(
+            (o) => o.kind === 'lexical' && o.slot === 3,
+          );
+          if (hits.length) {
+            phrase = { en: [w, ...rest].join(' '), options: hits, len };
+            break;
+          }
+        }
+      }
+      if (phrase) {
+        chunks.push({
+          en: phrase.en,
+          role: 'verb',
+          options: phrase.options,
+          chosen: 0,
+          isVerb: true,
+        });
+        i += phrase.len - 1;
+        continue;
+      }
+      // reflexives: himself = saivo sela (the pronoun table)
+      const REFLEXIVE = {
+        myself: 'maivo',
+        yourself: 'taivo',
+        himself: 'saivo',
+        herself: 'saivo',
+        itself: 'ito',
+        ourselves: 'maivori',
+        themselves: 'saivori',
+      };
+      if (REFLEXIVE[w]) {
+        chunks.push({
+          en: w,
+          role: 'pronoun',
+          options: [{ word: REFLEXIVE[w] + ' sela', kind: 'pronoun' }],
+          chosen: 0,
+        });
+        continue;
+      }
+      // "father's bread": the owner, then de (1.2:G27)
+      if (w.endsWith("'s") && w.length > 3) {
+        const owner = lookupEnglish(w.slice(0, -2)).find((o) => !o.loose);
+        if (owner) {
+          chunks.push({ en: w, role: 'possessor', options: [owner], chosen: 0, after: 'de' });
+          continue;
+        }
+      }
+      // a name passes through as written (0.8:R12)
+      if (NAMES.has(w)) {
+        chunks.push({
+          en: w,
+          role: 'name',
+          options: [{ word: w.charAt(0).toUpperCase() + w.slice(1), kind: 'name' }],
+          chosen: 0,
+        });
+        continue;
+      }
+      // "the brave one": English "one" after an adjective is no word in Liraasa (1.2:G29)
+      if (w === 'one' && i > 1 && (adjectiveFor(tokens[i - 2]) || DETERMINER_EN.has(tokens[i - 3])))
+        continue;
+      if (w.endsWith('+times') && EN_NUMBER.has(w.replace('+times', ''))) {
+        const n = EN_NUMBER.get(w.replace('+times', ''));
+        chunks.push({
+          en: w.replace('+', ' '),
+          role: 'word',
+          options: [{ word: D.numbers[n] + '-krono', kind: 'numeral' }],
+          chosen: 0,
+        });
+        continue;
+      }
+      if (VALENCY_EN[w]) {
+        chunks.push({
+          en: w,
+          role: 'verb',
+          valency: true,
+          options: [{ word: VALENCY_EN[w], kind: 'function word' }],
+          chosen: 0,
+          isVerb: true,
+          note: glossOf(VALENCY_EN[w]),
+        });
+        continue;
+      }
       if (Object.hasOwn(NEGATIVE, w)) {
         negated = true;
         chunks.push({
@@ -2627,7 +3192,13 @@
         continue;
       }
       if (STOPWORDS.has(w)) continue;
-      if (POSSESSIVE.has(w)) {
+      const nextTok = tokens[i];
+      const nounNext =
+        nextTok &&
+        !STRUCTURAL[nextTok] &&
+        !EN_NUMBER.has(nextTok) &&
+        lookupEnglish(nextTok).some((o) => o.kind === 'lexical' && NOUN_SLOTS.includes(o.slot));
+      if (POSSESSIVE.has(w) && (w !== 'her' || nounNext)) {
         const owner = PRONOUN_EN[w];
         chunks.push({
           en: w,
@@ -2652,6 +3223,26 @@
         });
         continue;
       }
+      // "with the key": a tool or a substance is the means, yuta; a companion is ko (1.2:G33)
+      if (w === 'with') {
+        const n = DETERMINER_EN.has(tokens[i]) ? tokens[i + 1] : tokens[i];
+        const o = n && lookupEnglish(n).find((x) => !x.loose);
+        const classes = (window.LIRAASA_FLAGS && window.LIRAASA_FLAGS.noun_class) || {};
+        if (o && (classes[o.word] === 'tool' || classes[o.word] === 'substance')) {
+          chunks.push({
+            en: w,
+            tok: w,
+            role: 'structure',
+            options: [
+              { word: 'yuta', kind: 'function word' },
+              { word: 'ko', kind: 'function word' },
+            ],
+            chosen: 0,
+            note: 'the tool or means of the act (1.2:G33); ko if it only comes along',
+          });
+          continue;
+        }
+      }
       if (STRUCTURAL[w]) {
         chunks.push({
           en: DISPLAY[w] || w,
@@ -2669,16 +3260,37 @@
         if (w === 'was' || w === 'were') {
           chunks.push({ ...markerChunk(w, { word: 'po', slot: 'TENSE' }), note: glossOf('po') });
         }
+        // "was able to", "was about to": the marker carries it, there is no copula
+        const after = markerAt(tokens, i);
+        if (after && ['MODAL', 'APPROACH', 'PHASE', 'EFFORT', 'ASPECT'].includes(after.m.slot))
+          continue;
+        // be + -ing is the progressive: roni before the verb, no copula (slot 11)
+        const ing = tokens[i] === 'not' || tokens[i] === 'never' ? tokens[i + 1] : tokens[i];
+        if (
+          ing &&
+          ing.endsWith('ing') &&
+          lookupEnglish(ing).some((o) => o.kind === 'lexical' && o.slot === 3 && !o.loose)
+        ) {
+          chunks.push(markerChunk(w + ' …ing', { word: 'roni', slot: 'ASPECT' }));
+          continue;
+        }
         chunks.push({
           en: w,
           role: 'copula',
           options: COPULA_ALTS.map((x) => ({ word: x, kind: 'copula' })),
-          chosen: 0,
+          chosen: 0, // ke, as the author's own drafts write it; ka is the second choice
           isVerb: true,
         });
         continue;
       }
-      const options = lookupEnglish(w);
+      let options = lookupEnglish(w);
+      // an adverb in -ly is la + its adjective: deliberately = la dorvasan (1.0:G5, G17)
+      if (!options.some((o) => !o.loose) && w.length > 5 && w.endsWith('ly')) {
+        const stem = [w.slice(0, -2), w.slice(0, -3) + 'y', w.slice(0, -2) + 'e']
+          .map((x) => adjectiveFor(x))
+          .find(Boolean);
+        if (stem) options = [{ word: 'la ' + stem.word, kind: 'adverb' }];
+      }
       const isPlural = /[a-z]{3}s$/.test(w) && !w.endsWith('ss');
       // Near matches only: offered, never chosen. The line shows the gap.
       const loose = options.length > 0 && options.every((o) => o.loose);
@@ -2731,8 +3343,21 @@
         chunks[content[0]].role === 'word' &&
         !chunks[content[0]].nounish &&
         verbish(chunks[content[0]].en);
+      const imperative =
+        ['do', "don't", 'please', 'never'].includes(tokens[0]) ||
+        (chunks[0]?.negation && content[0] !== undefined && chunks[content[0]].role === 'word') ||
+        (sole &&
+          verbish(tokens[0]) &&
+          !COPULA_EN[tokens[1]] &&
+          !verbish(tokens[1] || '') &&
+          !DETERMINER_EN.has(tokens[0]) &&
+          !PRONOUN_EN[tokens[0]] &&
+          !NAMES.has(tokens[0]));
       const subject =
-        NO_SUBJECT.has(chunks[0]?.tok) || shared || (content.length === 1 && sole && standIn < 0)
+        NO_SUBJECT.has(chunks[0]?.tok) ||
+        shared ||
+        imperative ||
+        (content.length === 1 && sole && standIn < 0)
           ? -1
           : content[0];
       // A word whose best reading is a verb wins over one that merely has a
@@ -2755,6 +3380,25 @@
         c.plural = false; // "works" is third person, not a plural
         break;
       }
+    }
+
+    // after a copula, a noun reading becomes its own adjective: "she is cold" = silisan
+    for (let i = 1; i < chunks.length; i += 1) {
+      const c = chunks[i];
+      const o = c.options[c.chosen];
+      if (chunks[i - 1].role !== 'copula' || c.role !== 'word' || o?.kind !== 'lexical') continue;
+      if (!NOUN_SLOTS.includes(o.slot) || DETERMINER_EN.has(c.en)) continue;
+      const listed = c.options.findIndex((x) => x.kind === 'lexical' && [4, 5, 6].includes(x.slot));
+      if (listed >= 0) {
+        c.chosen = listed;
+        continue;
+      }
+      const adj = adjectiveOf(o);
+      if (!adj.gloss) continue;
+      c.chosen =
+        c.options.push({ word: adj.form, root: o.root, slot: adj.slot, kind: 'lexical' }) - 1;
+      c.note =
+        o.word + ' is a noun; after a copula its adjective ' + adj.form + ' (' + adj.gloss + ')';
     }
 
     /* A noun does not modify a noun (ADR-0011): of two nouns side by side the
@@ -2812,6 +3456,34 @@
       }
     }
 
+    /* make / let / prevent + actor + verb (1.0:G14): the word after the actor
+       is the actor's verb, in its verb form; "from" before it goes. */
+    const val = chunks.findIndex((c) => c.valency);
+    if (val >= 0) {
+      let j = val + 1;
+      while (j < chunks.length && chunks[j].role === 'structure') j += 1; // the article
+      j += 1; // the actor
+      while (j < chunks.length && chunks[j].tok === 'from') chunks.splice(j, 1);
+      const c = chunks[j];
+      if (c) {
+        const lemmaVerbs = lookupEnglish(c.en).filter(
+          (o) => o.kind === 'lexical' && o.slot === 3 && !o.loose,
+        );
+        if (lemmaVerbs.length) {
+          c.options = [...lemmaVerbs, ...c.options.filter((o) => !lemmaVerbs.includes(o))];
+          c.chosen = 0;
+          c.role = 'word';
+          c.plural = false;
+        }
+      }
+    }
+    /* "If the moon had not warned him": the pluperfect of a condition is
+       contrary to fact, so it takes noma after the tense (1.0:G6). */
+    if (chunks[0]?.tok === 'if' && chunks.some((c) => c.marker?.word === 'po' && c.en === 'had')) {
+      const at = chunks.findIndex((c) => c.marker?.word === 'po');
+      chunks.splice(at + 1, 0, markerChunk('had', { word: 'noma', slot: 'REALITY' }));
+    }
+
     /* A past-tense content word puts the clause in the past, so it takes `po`
        — the author's corpus writes "Toda-nela po venreva sabri Dorin", not
        "Toda-nela venreva". Shown as its own row, beside the word that set it.
@@ -2830,20 +3502,53 @@
       }
     }
 
+    // one word per slot (1.0:G16): "long ago … was" gives po twice
+    const seenSlot = new Set();
+    for (let i = 0; i < chunks.length; i += 1) {
+      const m = chunks[i].marker;
+      if (!m || !['TENSE', 'REALITY', 'MODAL', 'ATTITUDE'].includes(m.slot)) continue;
+      if (seenSlot.has(m.slot + m.word)) chunks.splice(i--, 1);
+      else seenSlot.add(m.slot + m.word);
+    }
+
     return { chunks, negated };
   }
 
   /** Build a draft for one English sentence: one entry per clause. */
   function composeSentence(sentence) {
     const raw = sentence.trim();
+    // a direct quotation: the reporting clause, then the quote after a colon (2.3:G83)
+    const q = /^(.*?)\s*["“”]([^"“”]+)["“”]\s*(.*)$/.exec(raw);
+    if (q) {
+      const before = q[1].replace(/[,:]\s*$/, '').trim();
+      const after = q[3]
+        .replace(/^[,.]\s*/, '')
+        .replace(/[.!?]\s*$/, '')
+        .trim();
+      let report = (before + ' ' + after).trim();
+      // "… asked the goddess": English puts the verb first after a quotation
+      const rt = englishTokens(report);
+      if (!before && rt.length > 1 && isPastEn(rt[0])) report = rt.slice(1).join(' ') + ' ' + rt[0];
+      const main = composeSentence(report + '.');
+      const quote = q[2]
+        .split(/(?<=[.!?;])\s+/)
+        .map((s) => s.replace(/;$/, '.'))
+        .filter((s) => s.trim())
+        .map(composeSentence);
+      return { ...main, raw, quote };
+    }
     const question = /\?\s*$/.test(raw);
-    const split = splitEnglishClauses(rewriteEnglish(englishTokens(raw), question));
+    const exclaim = /!\s*$/.test(raw);
+    const split = splitEnglishClauses(rewriteEnglish(englishTokens(raw), question, exclaim));
     const clauses = split.map((c) => ({
       ...composeClause(c.tokens, split.length === 1),
       comma: c.comma,
     }));
-    return { raw, clauses, question };
+    return { raw, clauses, question, exclaim };
   }
+
+  /** How a draft ends: ?, ! or ., or nothing after a quotation. */
+  const draftEnd = (d) => (d.quote ? '' : d.question ? '?' : d.exclaim ? '!' : '.');
 
   const PRE_ORDER = [
     'FRAME',
@@ -2861,23 +3566,50 @@
   /** One clause's current choices as Liraasa parts. */
   function clauseLine(k) {
     const marks = k.chunks.filter((c) => c.marker).map((c) => c.marker);
+    // English "managed not to" puts not after the operator: vazdi ne (1.0:G15)
+    const negAt = k.chunks.findIndex((c) => c.negation);
+    const beforeNe = new Set(
+      negAt < 0
+        ? []
+        : k.chunks
+            .slice(0, negAt)
+            // the progressive comes from the copula, not from where English puts it
+            // only an operator English closes with "to" (managed to, began to): "could not"
+            // negates the modal itself (1.0:G15); the progressive comes from the copula
+            .filter((c) => c.marker && RANK[c.marker.word] > 5 && / to$/.test(c.en))
+            .map((c) => c.marker.word),
+    );
     const pre = marks
       .filter((m) => PRE_ORDER.includes(m.slot))
       .sort((a, b) => PRE_ORDER.indexOf(a.slot) - PRE_ORDER.indexOf(b.slot));
     const frame = pre.filter((m) => m.slot === 'FRAME').map((m) => m.word);
     const preverbal = pre.filter((m) => m.slot !== 'FRAME').map((m) => m.word);
-    const scope = marks.filter((m) => m.slot === 'SCOPE').map((m) => m.word);
+    // "only" and "even" stand where English puts them, before what they mark (1.0:G1);
+    // "also" opens the clause, as the canon example does (Tu Kipo po bumreba)
+    const scope = marks.filter((m) => m.slot === 'SCOPE' && m.word === 'tu').map((m) => m.word);
     const attitude = marks.filter((m) => m.slot === 'ATTITUDE').map((m) => m.word);
+    const reciprocal = marks.filter((m) => m.slot === 'RECIPROCAL').map((m) => m.word);
 
     /* The preverbal stack, in slot order: tense, then ne, then the rest.
        `ne` follows the tense (1.0:G1) — "Maivo po ne lirala", never
        "Maivo ne po lirala". */
     const stack = [];
     stack.push(...preverbal.filter((w) => RANK[w] === 4));
+    stack.push(...preverbal.filter((w) => RANK[w] === 5)); // noma before ne (TENSE noma ne)
+    stack.push(...preverbal.filter((w) => RANK[w] > 5 && beforeNe.has(w)));
     if (k.negated) stack.push('ne');
-    stack.push(...preverbal.filter((w) => RANK[w] !== 4));
+    stack.push(...preverbal.filter((w) => RANK[w] > 5 && !beforeNe.has(w)));
 
-    const verbAt = k.chunks.findIndex((c) => c.isVerb);
+    // no verb identified: the operators go after the subject, where the verb
+    // belongs, never after the clause's last word (the grammar audit, C13)
+    const verbFound = k.chunks.findIndex((c) => c.isVerb);
+    const subjectAt = k.chunks.findIndex((c) => !['structure', 'grammar'].includes(c.role));
+    const verbAt =
+      verbFound >= 0
+        ? verbFound
+        : subjectAt >= 0 && subjectAt + 1 < k.chunks.length
+          ? subjectAt + 1
+          : -1;
     const parts = [];
     // A clause opener (kube, kasa, si…) comes before the clause's own frame.
     const first = k.chunks[0];
@@ -2891,7 +3623,12 @@
         for (const w of stack) parts.push({ text: w });
         placed = true;
       }
-      if (c.role === 'grammar') return; // carried by the stack, frame or scope
+      if (c.role === 'grammar') {
+        // only / even mark the constituent after them, in place
+        if (c.marker && c.marker.slot === 'SCOPE' && c.marker.word !== 'tu')
+          parts.push({ text: c.marker.word });
+        return; // the rest is carried by the stack, frame or scope
+      }
       if (c.role === 'gap' || c.chosen < 0) {
         parts.push({ gap: true, text: c.en });
         return;
@@ -2913,6 +3650,7 @@
     // No verb was identified, so the operators go at the end rather than
     // disappearing; the writer can move them.
     if (!placed) for (const w of stack) parts.push({ text: w });
+    for (const t of reciprocal) parts.push({ text: t });
     for (const t of attitude) parts.push({ text: t });
     return parts;
   }
@@ -2925,6 +3663,10 @@
       if (k.comma && i < d.clauses.length - 1) parts.push({ text: ',', tight: true });
     });
     if (d.question) parts.push({ text: 'ki' });
+    if (d.quote) {
+      parts.push({ text: ':', tight: true });
+      parts.push({ text: '“' + d.quote.map((x) => draftText(x)).join(' ') + '”' });
+    }
     return parts;
   }
 
@@ -2932,10 +3674,154 @@
     draftLine(d)
       .map((p) => p.text)
       .join(' ')
-      .replace(/\s+,/g, ',')
-      .trim() + (d.question ? '?' : '.');
+      .replace(/\s+([,:])/g, '$1')
+      .trim() + draftEnd(d);
 
   let drafts = [];
+
+  /* Compose (2.5, ADR-0020): English → a meaning frame → Liraasa by the
+     rulings → the strict checker → a back-translation. A line is offered only
+     when it passes the checker and reads back to its frame; otherwise the
+     reasons are shown, never broken Liraasa. The 2.3 word-by-word composer is
+     still one click away. */
+  let translations = [];
+
+  function runTranslate() {
+    const src = els.englishIn.value.trim();
+    if (!STRICT) {
+      runCompose();
+      return;
+    }
+    if (!src) {
+      els.composeOut.innerHTML =
+        '<p class="empty" style="margin-top:var(--s3)">Write English and press Compose. Every Liraasa line offered passes the 2.5 grammar checker and reads back to what you wrote; where Liraasa has no word, it says so rather than inventing one.</p>';
+      return;
+    }
+    translations = src
+      .split(/\n+/)
+      .map((l) => l.trim())
+      .filter(Boolean)
+      .flatMap((l) => STRICT.translate(l));
+    renderTranslations();
+  }
+
+  function renderTranslations() {
+    els.composeOut.innerHTML =
+      translations
+        .map((t, ti) => {
+          const head = '<div class="label">' + esc(t.english) + '</div>';
+          if (!t.ok) {
+            const why = t.tried.length
+              ? t.tried
+                  .slice(0, 2)
+                  .map(
+                    (x) =>
+                      '<li><span class="liraasa">' +
+                      esc(x.liraasa) +
+                      '</span><br /><span class="label">' +
+                      esc(x.failures.join(' · ')) +
+                      '</span></li>',
+                  )
+                  .join('')
+              : '';
+            const gaps = t.gaps.length
+              ? '<p class="nomatch">No listed word for ' +
+                t.gaps
+                  .map(
+                    (g) =>
+                      '“' +
+                      esc(g.english) +
+                      '”' +
+                      (g.nearest.length
+                        ? ' (nearest: ' +
+                          g.nearest
+                            .map(
+                              (w) =>
+                                '<span class="liraasa">' +
+                                esc(w.form) +
+                                '</span> ' +
+                                esc(w.gloss || ''),
+                            )
+                            .join(', ') +
+                          ')'
+                        : ''),
+                  )
+                  .join('; ') +
+                '. Choose a listed word, rephrase, or propose a compound for the author.</p>'
+              : '';
+            return (
+              '<div class="draft">' +
+              head +
+              '<div class="out" style="margin-top:4px">No rendering passes the checker.</div>' +
+              gaps +
+              (why ? '<ul class="tried">' + why + '</ul>' : '') +
+              flagsHtml(t.flags) +
+              '</div>'
+            );
+          }
+          const alts = Object.entries(t.alternatives)
+            .map(
+              ([en, ws]) =>
+                '<span class="cnote">' +
+                esc(en) +
+                ': ' +
+                ws.map((w) => '<span class="liraasa">' + esc(w.form) + '</span>').join(', ') +
+                '</span>',
+            )
+            .join(' ');
+          return (
+            '<div class="draft">' +
+            head +
+            '<div class="out liraasa" style="margin-top:4px">' +
+            esc(t.liraasa) +
+            '</div>' +
+            translationGlossHtml(t.gloss) +
+            '<p class="gl-back"><span class="label">reads back</span> ' +
+            esc(t.backTranslation.english) +
+            '</p>' +
+            flagsHtml(t.flags) +
+            (alts ? '<p class="label">Other listed words: ' + alts + '</p>' : '') +
+            '<button class="btn" type="button" data-insert-translation="' +
+            ti +
+            '" style="margin-top:var(--s2)">Insert this line</button>' +
+            '</div>'
+          );
+        })
+        .join('') +
+      '<p style="margin-top:var(--s3)"><button class="btn btn-quiet" type="button" id="oldComposeBtn">Word-by-word options (the 2.3 composer)</button></p>';
+  }
+
+  function flagsHtml(flags) {
+    return flags.length
+      ? '<ul class="flags">' +
+          flags.map((f) => '<li class="label">' + esc(f) + '</li>').join('') +
+          '</ul>'
+      : '';
+  }
+
+  function translationGlossHtml(rows) {
+    return (
+      '<table class="tbl strict-gloss"><thead><tr><th>Word</th><th>Form</th><th>Slot</th><th>Meaning</th><th>Rules</th></tr></thead><tbody>' +
+      rows
+        .map(
+          (g) =>
+            '<tr><td class="liraasa">' +
+            esc(g.word) +
+            '</td><td>' +
+            esc(g.analysis) +
+            '</td><td>' +
+            esc(g.role || '—') +
+            '</td><td>' +
+            esc(g.gloss) +
+            (g.flags.length ? ' <span class="label">' + esc(g.flags.join(', ')) + '</span>' : '') +
+            '</td><td>' +
+            esc(g.rules.join(' ')) +
+            '</td></tr>',
+        )
+        .join('') +
+      '</tbody></table>'
+    );
+  }
 
   function runCompose() {
     const src = els.englishIn.value.trim();
@@ -3384,6 +4270,7 @@
     'sLex',
     'edition',
     'stamp',
+    'respellBtn',
     'exportDlg',
     'exportKind',
     'exportScope',
@@ -3418,7 +4305,7 @@
     const all = [];
 
     const text = els.text.value.split('\n');
-    const checked = CK ? CK.check(text, activePiece().englishLines || [], { register }) : [];
+    const checked = checkAll(text, activePiece().englishLines || [], { register });
     checked.forEach((f, k) => (f.index = k));
     text.forEach((line, i) => {
       const toks = tokenize(line);
@@ -3710,8 +4597,10 @@
           '<div class="il-row"><div>' +
           esc(english[i] || '') +
           '</div>' +
-          (glossOn() && CK && l.text.trim()
-            ? '<div class="il-gl">' + esc(CK.backTranslate(l.text).text) + '</div>'
+          (glossOn() && l.text.trim()
+            ? '<div class="il-gl">' +
+              esc(STRICT ? strictBack(l.text) : CK ? CK.backTranslate(l.text).text : '') +
+              '</div>'
             : '') +
           '</div>',
       )
@@ -3738,11 +4627,16 @@
         '<p class="empty">An empty page. Write a line and it is checked as you type.</p>';
       return;
     }
-    const findings = CK
-      ? diagnosticsHtml(f)
-      : '<p class="empty">The grammar checker did not load' +
-        (CK_ERROR ? ': ' + esc(String(CK_ERROR.message || CK_ERROR)) : '') +
-        '.</p>';
+    const findings =
+      STRICT || CK
+        ? diagnosticsHtml(f) + proposalsHtml()
+        : '<p class="empty">The grammar checker did not load' +
+          (STRICT_ERROR
+            ? ': ' + esc(String(STRICT_ERROR.message || STRICT_ERROR))
+            : CK_ERROR
+              ? ': ' + esc(String(CK_ERROR.message || CK_ERROR))
+              : '') +
+          '.</p>';
 
     const rows = live
       .map((l) => {
@@ -3829,7 +4723,25 @@
           x.index +
           '">Apply fix</button></span>'
         : '') +
+      (x.severity === 'error' || x.severity === 'warn'
+        ? '<span><button class="btn btn-quiet" type="button" data-propose="' +
+          x.index +
+          '" title="Record that you believe this sentence is grammatical. It stays failing until the grammar changes.">Propose a ruling</button></span>'
+        : '') +
       '</div></div>'
+    );
+  }
+
+  function proposalsHtml() {
+    const list = proposals();
+    if (!list.length) return '';
+    return (
+      '<div class="diag-tools" style="margin-top:var(--s3)"><span class="label">' +
+      list.length +
+      ' proposed ruling' +
+      (list.length === 1 ? '' : 's') +
+      ' recorded</span><button class="btn btn-quiet" type="button" data-proposals-download>Download proposed_rulings.md</button>' +
+      '<button class="btn btn-quiet" type="button" data-proposals-clear>Clear</button></div>'
     );
   }
 
@@ -3895,6 +4807,33 @@
     );
   }
 
+  /** The strict gloss of a line: each word, its form, its slot and the rules that touch it. */
+  function strictGlossHtml(line) {
+    const rows = strictGloss(line);
+    if (!rows.length) return '';
+    return (
+      '<table class="tbl strict-gloss"><thead><tr><th>Word</th><th>Form</th><th>Slot</th><th>Meaning</th><th>Rules</th></tr></thead><tbody>' +
+      rows
+        .map(
+          (g) =>
+            '<tr><td class="liraasa">' +
+            esc(g.word) +
+            '</td><td>' +
+            esc(g.analysis) +
+            '</td><td>' +
+            esc(g.role || '—') +
+            '</td><td>' +
+            esc(g.gloss) +
+            (g.flags.length ? ' <span class="label">' + esc(g.flags.join(', ')) + '</span>' : '') +
+            '</td><td>' +
+            esc(g.rules.join(' ')) +
+            '</td></tr>',
+        )
+        .join('') +
+      '</tbody></table>'
+    );
+  }
+
   function renderGloss() {
     const panel = document.getElementById('panel-gloss');
     const english = activePiece().englishLines || [];
@@ -3931,8 +4870,10 @@
               );
             })
             .join('') +
-          '</div><div class="gl-back"><span class="label">reads</span> ' +
-          esc(CK ? CK.backTranslate(l.text).text : '') +
+          '</div>' +
+          strictGlossHtml(l.text) +
+          '<div class="gl-back"><span class="label">reads</span> ' +
+          esc(STRICT ? strictBack(l.text) : CK ? CK.backTranslate(l.text).text : '') +
           (english[l.no - 1]
             ? '<br /><span class="label">your English</span> ' + esc(english[l.no - 1])
             : '') +
@@ -4692,17 +5633,32 @@
     root.setAttribute('data-theme', dark ? 'light' : 'dark');
   });
 
-  document.getElementById('composeBtn').addEventListener('click', runCompose);
+  document.getElementById('composeBtn').addEventListener('click', runTranslate);
   els.englishIn.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter' && (e.metaKey || e.ctrlKey)) runCompose();
+    if (e.key === 'Enter' && (e.metaKey || e.ctrlKey)) runTranslate();
   });
 
   document.getElementById('appendBtn').addEventListener('click', () => {
+    if (STRICT) {
+      if (!translations.length) runTranslate();
+      for (const t of translations) if (t.ok) appendLine(t.liraasa, t.english);
+      return;
+    }
     if (!drafts.length) runCompose();
     for (const d of drafts) appendLine(draftText(d), d.raw);
   });
 
   els.composeOut.addEventListener('click', (e) => {
+    const tr = e.target.closest('[data-insert-translation]');
+    if (tr) {
+      const t = translations[+tr.dataset.insertTranslation];
+      if (t && t.ok) appendLine(t.liraasa, t.english);
+      return;
+    }
+    if (e.target.closest('#oldComposeBtn')) {
+      runCompose();
+      return;
+    }
     const opt = e.target.closest('.opt');
     if (opt) {
       drafts[+opt.dataset.d].clauses[+opt.dataset.k].chunks[+opt.dataset.c].chosen = +opt.dataset.o;
@@ -4713,6 +5669,37 @@
     if (ins) {
       const d = drafts[+ins.dataset.insertDraft];
       appendLine(draftText(d), d.raw);
+    }
+  });
+
+  document.getElementById('panel-check').addEventListener('click', (e) => {
+    const p = e.target.closest('[data-propose]');
+    if (p) {
+      const f = analysis.findings.find((x) => x.index === +p.dataset.propose);
+      if (!f) return;
+      const list = proposals();
+      list.push({
+        sentence: (analysis.lines[f.line - 1] || {}).text || '',
+        rule: f.rule,
+        message: f.message,
+        at: new Date().toISOString(),
+      });
+      saveProposals(list);
+      renderCheck();
+      return;
+    }
+    if (e.target.closest('[data-proposals-download]')) {
+      const blob = new Blob([proposalsMarkdown(proposals())], { type: 'text/markdown' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'proposed_rulings.md';
+      a.click();
+      URL.revokeObjectURL(a.href);
+      return;
+    }
+    if (e.target.closest('[data-proposals-clear]')) {
+      saveProposals([]);
+      renderCheck();
     }
   });
 
@@ -4830,4 +5817,51 @@
   openPiece(store.activeId || store.pieces[0].id);
   renderHits();
   runCompose();
+
+  /* A newer edition respelled words the songbook may use (2.1:G58, 2.3:G69). The
+     songbook remembers the edition it was last kept under; the spellings retired
+     since are offered for correction in one go, never applied unasked (a writing
+     may quote an older text on purpose: an album line as recorded). */
+  function respellingsSince(edition) {
+    const ck = window.LiraasaChecker && window.LiraasaChecker.default;
+    const legacy = ck && ck.index && ck.index.legacy;
+    const mapping = {};
+    if (!legacy) return mapping;
+    for (const [old, row] of legacy) {
+      if (row.kind === 'respelled' && row.edition && (!edition || row.edition > edition))
+        mapping[old] = row.to;
+    }
+    return mapping;
+  }
+  function offerRespellings() {
+    const L = window.LiraasaLearn;
+    if (!L || !L.correctText || store.edition === D.version) return;
+    const mapping = respellingsSince(store.edition);
+    let n = 0;
+    for (const p of store.pieces) n += L.correctText(p.text || '', mapping).changed;
+    if (!n) {
+      store.edition = D.version;
+      saveStore();
+      return;
+    }
+    els.respellBtn.hidden = false;
+    els.respellBtn.textContent =
+      'Correct ' + n + ' older spelling' + (n === 1 ? '' : 's') + ' (' + D.version + ')';
+    els.respellBtn.onclick = () => {
+      capturePiece();
+      for (const p of store.pieces) {
+        const r = L.correctText(p.text || '', mapping);
+        if (r.changed > 0) {
+          p.text = r.text;
+          p.updated = new Date().toISOString();
+        }
+      }
+      store.edition = D.version;
+      els.respellBtn.hidden = true;
+      saveStore();
+      openPiece(store.activeId);
+    };
+  }
+  if (window.LiraasaLearn) offerRespellings();
+  else window.addEventListener('liraasa:learn-ready', offerRespellings, { once: true });
 </script>

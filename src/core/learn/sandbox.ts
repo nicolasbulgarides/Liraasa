@@ -118,7 +118,7 @@ export interface SandboxMenus {
 const PHRASE_SLOTS = new Set(['SUBJECT', 'VERB', 'OBJECT', 'ADJUNCTS', 'TOPIC']);
 
 /** A slot whose note in the data says its word is followed by a pause takes a comma. */
-const PAUSE = /followed by a pause/i;
+const PAUSE = /followed by a pause|set off by a comma/i;
 
 const formGloss = (item: LearnItem, slot: string): string | null => {
   const f = item.forms.find((x) => x.slot === slot);

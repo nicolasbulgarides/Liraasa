@@ -1,0 +1,1392 @@
+{
+ "lexicon": "data/lexicon/liraasa_2_3.json",
+ "texts_read": 1679,
+ "unreadable": [
+  {
+   "word": "yo",
+   "kind": "unknown",
+   "count": 1,
+   "sources": [
+    "lexicon examples[203]"
+   ]
+  },
+  {
+   "word": "vu",
+   "kind": "unknown",
+   "count": 1,
+   "sources": [
+    "lexicon examples[204]"
+   ]
+  },
+  {
+   "word": "bumrena",
+   "kind": "unused",
+   "count": 4,
+   "sources": [
+    "data/corpus/bumrepago_2_3/bumrepago.txt:54",
+    "data/corpus/bumrepago_2_3/bumrepago.txt:162",
+    "data/corpus/bumrepago_2_3/bumrepago.txt:164",
+    "data/corpus/bumrepago_2_3/bumrepago.txt:377"
+   ]
+  },
+  {
+   "word": "tabuasa",
+   "kind": "unused",
+   "count": 1,
+   "sources": [
+    "data/corpus/bumrepago_2_3/bumrepago.txt:113"
+   ]
+  },
+  {
+   "word": "bumreasa",
+   "kind": "unused",
+   "count": 2,
+   "sources": [
+    "data/corpus/bumrepago_2_3/bumrepago.txt:113",
+    "data/corpus/bumrepago_2_3/bumrepago.txt:457"
+   ]
+  },
+  {
+   "word": "bumreasasan",
+   "kind": "unused",
+   "count": 2,
+   "sources": [
+    "data/corpus/bumrepago_2_3/bumrepago.txt:118",
+    "data/corpus/bumrepago_2_3/bumrepago.txt:455"
+   ]
+  }
+ ],
+ "duplicate_roots": [],
+ "duplicate_meanings": [
+  {
+   "sense": "birth",
+   "words": [
+    "kronobio",
+    "linuvenre"
+   ]
+  },
+  {
+   "sense": "spring",
+   "words": [
+    "faji",
+    "mirufonte"
+   ]
+  },
+  {
+   "sense": "source",
+   "words": [
+    "fonte",
+    "sernafonte"
+   ]
+  }
+ ],
+ "near_homophones": {
+  "count": 16,
+  "close_sounds": 1,
+  "pairs": [
+   {
+    "a": "sora",
+    "b": "sola",
+    "kind": "close sounds (voicing, m/n or l/r)"
+   },
+   {
+    "a": "buza",
+    "b": "cuza",
+    "kind": "one edit"
+   },
+   {
+    "a": "devo",
+    "b": "devi",
+    "kind": "one edit"
+   },
+   {
+    "a": "maivo",
+    "b": "mavo",
+    "kind": "one edit"
+   },
+   {
+    "a": "malo",
+    "b": "mavo",
+    "kind": "one edit"
+   },
+   {
+    "a": "malo",
+    "b": "melo",
+    "kind": "one edit"
+   },
+   {
+    "a": "haza",
+    "b": "hata",
+    "kind": "one edit"
+   },
+   {
+    "a": "mera",
+    "b": "vera",
+    "kind": "one edit"
+   },
+   {
+    "a": "fojo",
+    "b": "foji",
+    "kind": "one edit"
+   },
+   {
+    "a": "foji",
+    "b": "faji",
+    "kind": "one edit"
+   },
+   {
+    "a": "foji",
+    "b": "boji",
+    "kind": "one edit"
+   },
+   {
+    "a": "doza",
+    "b": "goza",
+    "kind": "one edit"
+   },
+   {
+    "a": "solma",
+    "b": "sola",
+    "kind": "one edit"
+   },
+   {
+    "a": "solo",
+    "b": "sola",
+    "kind": "one edit"
+   },
+   {
+    "a": "sovla",
+    "b": "sola",
+    "kind": "one edit"
+   },
+   {
+    "a": "desi",
+    "b": "devi",
+    "kind": "one edit"
+   }
+  ]
+ },
+ "retired_spellings_in_files": [
+  {
+   "file": "editor/checker/rules/words.js",
+   "words": {
+    "puzu": 1
+   }
+  },
+  {
+   "file": "src/core/change/apply.ts",
+   "words": {
+    "tilma": 1,
+    "taha": 1
+   }
+  },
+  {
+   "file": "src/core/change/changelog.test.ts",
+   "words": {
+    "yoga": 6
+   }
+  },
+  {
+   "file": "src/core/change/respell.ts",
+   "words": {
+    "pomlileto": 1,
+    "puzu": 1
+   }
+  },
+  {
+   "file": "src/core/config/editions.ts",
+   "words": {
+    "lalma": 3,
+    "sanlu": 3,
+    "rohu": 3,
+    "sabire": 3,
+    "sonsa": 3
+   }
+  },
+  {
+   "file": "src/core/config/phonology.ts",
+   "words": {
+    "amorvorba": 2,
+    "nilvuamor": 1,
+    "sulbaamor": 1,
+    "veboamor": 1,
+    "vorbaamor": 1
+   }
+  },
+  {
+   "file": "src/core/integrate/decisions.ts",
+   "words": {
+    "tilnu": 2,
+    "tibiteyo": 2,
+    "pelisupo": 2,
+    "folninevlo": 2,
+    "tilnupago": 1
+   }
+  },
+  {
+   "file": "src/core/integrate/examples.ts",
+   "words": {
+    "jemla": 7,
+    "tilnu": 6,
+    "tilnupago": 2,
+    "tilnuta": 1,
+    "zarmoza": 2,
+    "zarmo": 4,
+    "tibiteyo": 2,
+    "velbisan": 2,
+    "tamra": 4,
+    "vurlova": 1,
+    "pesbivordu": 4,
+    "nevlo": 1,
+    "yordoya": 1,
+    "tilma": 1,
+    "tilmasan": 2
+   }
+  },
+  {
+   "file": "src/core/integrate/synonyms.ts",
+   "words": {
+    "folninevlo": 1
+   }
+  },
+  {
+   "file": "src/core/morphology/sevenForms.test.ts",
+   "words": {
+    "nerpo": 2,
+    "nerponia": 1,
+    "bede": 1,
+    "bedeba": 1
+   }
+  },
+  {
+   "file": "src/core/phonetics/g2p.test.ts",
+   "words": {
+    "mege": 1,
+    "balbu": 2
+   }
+  },
+  {
+   "file": "scripts/build_checker_data.ts",
+   "words": {
+    "puzu": 1
+   }
+  },
+  {
+   "file": "scripts/build_grammar_guide.ts",
+   "words": {
+    "barni": 1,
+    "kupa": 1
+   }
+  },
+  {
+   "file": "scripts/build_llm_json.ts",
+   "words": {
+    "mirunululirayo": 1
+   }
+  },
+  {
+   "file": "scripts/check_sounds.py",
+   "words": {
+    "puzu": 1
+   }
+  },
+  {
+   "file": "scripts/grammar_guide/config.ts",
+   "words": {
+    "renlisulba": 1,
+    "nevlosulba": 1
+   }
+  },
+  {
+   "file": "scripts/grammar_guide/data.ts",
+   "words": {
+    "puzu": 1
+   }
+  },
+  {
+   "file": "scripts/learn_inputs.ts",
+   "words": {
+    "vorbalira": 1
+   }
+  },
+  {
+   "file": "scripts/make_changeset_2_0.ts",
+   "words": {
+    "lenra": 2,
+    "pamlonasan": 1,
+    "pamlo": 1,
+    "vurlova": 2,
+    "cupa": 2,
+    "buvokova": 2
+   }
+  },
+  {
+   "file": "scripts/make_changeset_2_2.ts",
+   "words": {
+    "puzu": 6
+   }
+  },
+  {
+   "file": "scripts/make_changeset_2_3.ts",
+   "words": {
+    "taha": 2,
+    "volda": 1,
+    "larbopagobudi": 1,
+    "lunolarbopagobudi": 1,
+    "mirunululirayo": 1
+   }
+  },
+  {
+   "file": "scripts/report_1_1.ts",
+   "words": {
+    "folninevlo": 1,
+    "jemla": 1,
+    "pesbi": 1,
+    "tilnu": 1,
+    "zarmo": 1,
+    "pesbivordu": 2
+   }
+  },
+  {
+   "file": "scripts/test_check_sounds.py",
+   "words": {
+    "bede": 5,
+    "sulbacemnu": 2,
+    "sulba": 1
+   }
+  },
+  {
+   "file": "scripts/validate_2_2.py",
+   "words": {
+    "puzu": 1
+   }
+  },
+  {
+   "file": "scripts/validate_2_3.py",
+   "words": {
+    "mirunululirayo": 1
+   }
+  },
+  {
+   "file": "docs/decisions/0001-build-against-lexicon-1-0.md",
+   "words": {
+    "bede": 1
+   }
+  },
+  {
+   "file": "docs/decisions/0006-stable-ids-and-untrusted-text.md",
+   "words": {
+    "yoga": 3
+   }
+  },
+  {
+   "file": "docs/decisions/0008-editions-and-id-placement.md",
+   "words": {
+    "lalma": 3,
+    "sanlu": 3,
+    "rohu": 3,
+    "sabire": 3,
+    "sonsa": 3
+   }
+  },
+  {
+   "file": "docs/decisions/0009-vocabulary-only-supplements.md",
+   "words": {
+    "folninevlo": 1
+   }
+  },
+  {
+   "file": "docs/decisions/0011-noun-does-not-modify-noun.md",
+   "words": {
+    "leto": 1
+   }
+  },
+  {
+   "file": "docs/decisions/0013-lexicon-1-2.md",
+   "words": {
+    "sulbadarno": 1
+   }
+  },
+  {
+   "file": "docs/decisions/0016-lexicon-2-0.md",
+   "words": {
+    "lenra": 1,
+    "renlisulba": 1,
+    "nevlosulba": 1
+   }
+  },
+  {
+   "file": "docs/decisions/0017-lexicon-2-1.md",
+   "words": {
+    "volda": 1,
+    "larbopagobudi": 1,
+    "taha": 1,
+    "tilma": 1
+   }
+  },
+  {
+   "file": "docs/decisions/0018-lexicon-2-2.md",
+   "words": {
+    "puzu": 5
+   }
+  },
+  {
+   "file": "docs/decisions/0019-lexicon-2-3.md",
+   "words": {
+    "lenra": 1,
+    "vanru": 1,
+    "voho": 1,
+    "vabale": 1,
+    "teyo": 1,
+    "mege": 1,
+    "kupa": 1,
+    "jemla": 2,
+    "pesbi": 1,
+    "menha": 1,
+    "vugo": 1,
+    "salye": 1,
+    "senba": 1,
+    "larbopagoregna": 1,
+    "maremirulazu": 1,
+    "mirunululirayo": 2,
+    "volda": 1,
+    "larbopagobudi": 1,
+    "mormu": 1,
+    "vibu": 1
+   }
+  },
+  {
+   "file": "docs/recording-script/Liraasa_Phonetic_Script_transcript.txt",
+   "words": {
+    "sulba": 1,
+    "danvu": 1,
+    "danvuda": 1,
+    "milyu": 1,
+    "milyuma": 1,
+    "volda": 1,
+    "voldava": 1,
+    "menhama": 1,
+    "rumne": 1,
+    "nilvu": 1,
+    "velbisan": 1,
+    "yelfa": 1,
+    "nevlo": 1,
+    "salye": 1,
+    "velbinasan": 1,
+    "vohona": 1,
+    "voho": 1,
+    "nerponia": 2,
+    "tamra": 1,
+    "pesbi": 1,
+    "menme": 1,
+    "barni": 1
+   }
+  },
+  {
+   "file": "docs/reviews/2026-10-16-song-of-time.md",
+   "words": {
+    "buvokova": 1,
+    "leto": 3
+   }
+  },
+  {
+   "file": "docs/SCHEMA.md",
+   "words": {
+    "nonte": 2,
+    "lilturuhe": 1,
+    "liltunavu": 1,
+    "vugifasbi": 1,
+    "vugisenru": 1,
+    "relpalomo": 1,
+    "tilnupago": 1
+   }
+  },
+  {
+   "file": "docs/SPEC.md",
+   "words": {
+    "amorvorba": 1,
+    "lalma": 2,
+    "sanlu": 2,
+    "rohu": 2,
+    "sabire": 2,
+    "sonsa": 2,
+    "nevlosolo": 1
+   }
+  },
+  {
+   "file": "data/corpus/bumrepago_2_3/bumrepago.txt",
+   "words": {
+    "yordo": 1
+   }
+  },
+  {
+   "file": "data/corpus/corpus_migration_2_3.json",
+   "words": {
+    "sulba": 10,
+    "megesan": 3,
+    "sulbaasa": 3,
+    "nilvu": 3,
+    "vebo": 1,
+    "sulbasia": 1,
+    "vagava": 1,
+    "yordo": 1,
+    "balbuba": 2,
+    "nimuvorbania": 1,
+    "letola": 3,
+    "leto": 2,
+    "vurlova": 6,
+    "famatilma": 1,
+    "barni": 1
+   }
+  },
+  {
+   "file": "data/corpus/README.md",
+   "words": {
+    "rohura": 1,
+    "yoga": 1
+   }
+  },
+  {
+   "file": "data/corpus/songs_2_3/song_VI_kicoda.txt",
+   "words": {
+    "vabale": 1,
+    "sulbasia": 1,
+    "sulba": 1
+   }
+  },
+  {
+   "file": "data/corpus/songs_2_3/song_V_sulbaasa.txt",
+   "words": {
+    "sulba": 1
+   }
+  },
+  {
+   "file": "data/corpus/song_migration_report.json",
+   "words": {
+    "minema": 2,
+    "rohura": 4,
+    "sabiresan": 4,
+    "sabiresia": 3,
+    "sonsasia": 3,
+    "yoga": 3,
+    "yogaya": 5
+   }
+  },
+  {
+   "file": "handoff/HANDOFF.md",
+   "words": {
+    "vurlova": 5,
+    "nerponasan": 1,
+    "nilvu": 1,
+    "nevlosolo": 1,
+    "lalma": 1,
+    "sanlu": 1,
+    "rohu": 1,
+    "sabire": 1,
+    "sonsa": 1,
+    "sulba": 1,
+    "cupa": 1,
+    "pamlonasan": 1
+   }
+  },
+  {
+   "file": "handoff/Liraasa_2_3_Reference_Grammar.html",
+   "words": {
+    "zarmoza": 1,
+    "vanru": 3,
+    "barni": 1,
+    "vagava": 2,
+    "vurlova": 1,
+    "vanrunasan": 2,
+    "velbivalmi": 1,
+    "vorbava": 1,
+    "letosan": 1,
+    "velbi": 1,
+    "lenra": 2,
+    "vabale": 2,
+    "nilvu": 1,
+    "vebo": 2,
+    "sulbasia": 1,
+    "salye": 2,
+    "ranbe": 1,
+    "mege": 3,
+    "megesan": 1,
+    "tamralelde": 1,
+    "volda": 2,
+    "larbopagobudi": 3,
+    "taha": 2,
+    "puzu": 1,
+    "voho": 1,
+    "teyo": 1,
+    "kupa": 1,
+    "jemla": 1,
+    "pesbi": 1,
+    "menha": 1,
+    "vugo": 1,
+    "senba": 1,
+    "larbopagoregna": 1,
+    "maremirulazu": 1,
+    "mirunululirayo": 1,
+    "lunolarbopagobudi": 1
+   }
+  },
+  {
+   "file": "handoff/Liraasa_2_3_Rulings.md",
+   "words": {
+    "lenra": 2,
+    "vanru": 2,
+    "voho": 2,
+    "vabale": 2,
+    "teyo": 2,
+    "mege": 2,
+    "kupa": 3,
+    "jemla": 2,
+    "pesbi": 2,
+    "menha": 2,
+    "vugo": 3,
+    "salye": 2,
+    "senba": 2,
+    "larbopagoregna": 2,
+    "maremirulazu": 2,
+    "mirunululirayo": 1,
+    "larbopagobudi": 5,
+    "lunolarbopagobudi": 1,
+    "taha": 3,
+    "volda": 3,
+    "bede": 1,
+    "binvi": 1,
+    "biya": 1,
+    "bolre": 1,
+    "fega": 1,
+    "fesi": 1,
+    "hulo": 1,
+    "lalma": 1,
+    "lilba": 1,
+    "sevutamra": 1,
+    "lonfi": 1,
+    "lorha": 1,
+    "mabape": 1,
+    "malde": 1,
+    "melku": 1,
+    "molne": 1,
+    "mormu": 1,
+    "nalsi": 1,
+    "velbivaye": 1,
+    "nalto": 1,
+    "ranbevaye": 1,
+    "neho": 1,
+    "nelbu": 1,
+    "nonte": 1,
+    "nufi": 1,
+    "pamlo": 1,
+    "paya": 1,
+    "rarva": 1,
+    "rohu": 1,
+    "sabanu": 1,
+    "sabire": 1,
+    "selka": 1,
+    "torli": 1,
+    "valre": 1,
+    "venlo": 1,
+    "vibu": 1,
+    "yobo": 1,
+    "zuki": 1,
+    "delno": 1,
+    "liltu": 1,
+    "vugi": 1,
+    "fomre": 1,
+    "cafi": 1,
+    "camne": 1,
+    "canva": 1,
+    "monrurumne": 1,
+    "cupa": 1,
+    "buvokova": 1,
+    "duye": 1,
+    "fogi": 1,
+    "tamrasenru": 1,
+    "fumlu": 1,
+    "hene": 1,
+    "mohi": 1,
+    "folnimege": 1,
+    "relpa": 1,
+    "rogo": 1,
+    "amorvorba": 1,
+    "sanlu": 1,
+    "sarmu": 1,
+    "selmo": 1,
+    "sonsa": 1,
+    "tulhe": 1,
+    "vide": 1,
+    "loterovurlo": 1,
+    "yulve": 1,
+    "yelfateyo": 1,
+    "velbilavi": 1,
+    "zudo": 1,
+    "zuloe": 1,
+    "tulru": 1,
+    "burla": 1,
+    "yoga": 1,
+    "deyu": 1,
+    "molta": 1,
+    "tilma": 1,
+    "yordo": 1,
+    "balbu": 1,
+    "buvo": 1,
+    "vaga": 1,
+    "vurlo": 1,
+    "zarmo": 1,
+    "danvu": 1,
+    "milyu": 1,
+    "barni": 1,
+    "menme": 1,
+    "supo": 1,
+    "vorba": 1,
+    "tilnu": 1,
+    "leto": 1,
+    "rumne": 1,
+    "salta": 1,
+    "nevlo": 1,
+    "sulba": 1,
+    "tamra": 1,
+    "yelfa": 1,
+    "nerpo": 1,
+    "ranbe": 1,
+    "velbi": 1,
+    "puzu": 2,
+    "nilvu": 1,
+    "vebo": 1,
+    "zirme": 1
+   }
+  },
+  {
+   "file": "tests/checker/fixtures/song.json",
+   "words": {
+    "vagava": 1
+   }
+  },
+  {
+   "file": "tests/checker/legacy.test.ts",
+   "words": {
+    "leto": 3
+   }
+  },
+  {
+   "file": "tests/checker/phase1.test.ts",
+   "words": {
+    "bede": 2,
+    "cupa": 1,
+    "buvokova": 1,
+    "pamlonasan": 1,
+    "sulba": 1
+   }
+  },
+  {
+   "file": "tests/checker/rulings_2_1.test.ts",
+   "words": {
+    "vurlova": 1
+   }
+  },
+  {
+   "file": "tests/checker/rulings_2_2.test.ts",
+   "words": {
+    "puzucono": 1
+   }
+  },
+  {
+   "file": "tests/checker/validator.test.ts",
+   "words": {
+    "letosan": 1,
+    "leto": 1,
+    "cupa": 3,
+    "pamlonasan": 3,
+    "sulba": 1,
+    "vurlova": 1
+   }
+  },
+  {
+   "file": "tests/golden/config.test.ts",
+   "words": {
+    "amorvorba": 1,
+    "lalma": 1,
+    "sanlu": 1,
+    "rohu": 1,
+    "sabire": 1,
+    "sonsa": 1
+   }
+  },
+  {
+   "file": "tests/golden/indexes.test.ts",
+   "words": {
+    "nevlosolo": 1,
+    "yoga": 1,
+    "bede": 5,
+    "liltunavu": 1,
+    "lilturuhe": 2,
+    "relpalomo": 1,
+    "vugifasbi": 1,
+    "vugisenru": 1
+   }
+  },
+  {
+   "file": "tests/golden/lexicon_2_0.test.ts",
+   "words": {
+    "pamlonasan": 1,
+    "cupa": 1,
+    "vurlova": 1,
+    "buvokova": 1
+   }
+  },
+  {
+   "file": "tests/golden/lexicon_2_1.test.ts",
+   "words": {
+    "taha": 1,
+    "volda": 1,
+    "vurlova": 1
+   }
+  },
+  {
+   "file": "tests/golden/lexicon_2_2.test.ts",
+   "words": {
+    "puzu": 4
+   }
+  },
+  {
+   "file": "tests/golden/lexicon_2_3.test.ts",
+   "words": {
+    "volda": 3,
+    "larbopagobudi": 1,
+    "mirunululirayo": 3
+   }
+  },
+  {
+   "file": "tests/golden/roundTrip.test.ts",
+   "words": {
+    "yoga": 3
+   }
+  },
+  {
+   "file": "tests/learn/observatory.test.ts",
+   "words": {
+    "burla": 2
+   }
+  },
+  {
+   "file": "tests/learn/phase1.test.ts",
+   "words": {
+    "burla": 2
+   }
+  },
+  {
+   "file": "tests/learn/phase3.test.ts",
+   "words": {
+    "burla": 1
+   }
+  },
+  {
+   "file": "tests/learn/phase45.test.ts",
+   "words": {
+    "puzu": 2,
+    "burla": 12,
+    "burlasan": 2
+   }
+  },
+  {
+   "file": "tests/learn/stars.test.ts",
+   "words": {
+    "burla": 2
+   }
+  },
+  {
+   "file": "CLAUDE.md",
+   "words": {
+    "lenra": 1,
+    "vanru": 1,
+    "voho": 1,
+    "vabale": 1,
+    "teyo": 1,
+    "mege": 1,
+    "kupa": 1,
+    "jemla": 1,
+    "pesbi": 1,
+    "menha": 1,
+    "vugo": 1,
+    "salye": 1,
+    "senba": 1,
+    "mirunululirayo": 1,
+    "puzu": 2,
+    "taha": 1,
+    "volda": 1,
+    "larbopagobudi": 1
+   }
+  }
+ ],
+ "ascended_not_sacred": [
+  {
+   "word": "apokasa",
+   "gloss": "The end of time"
+  },
+  {
+   "word": "corviasa",
+   "gloss": "bravery before the impossible"
+  },
+  {
+   "word": "denduasa",
+   "gloss": "the abyss; the depths of being"
+  },
+  {
+   "word": "devoasa",
+   "gloss": "Marriage, Covenant"
+  },
+  {
+   "word": "devoveraasa",
+   "gloss": "an unbreakable vow"
+  },
+  {
+   "word": "donuasa",
+   "gloss": "gift without measure"
+  },
+  {
+   "word": "fatoasa",
+   "gloss": "destiny"
+  },
+  {
+   "word": "folluasa",
+   "gloss": "terror that eclipses reason"
+  },
+  {
+   "word": "folniasa",
+   "gloss": "ever-blooming flower"
+  },
+  {
+   "word": "hirnaasa",
+   "gloss": "salvation; deliverance"
+  },
+  {
+   "word": "jubazupaasa",
+   "gloss": "a treasury of priceless gifts"
+  },
+  {
+   "word": "kronoasa",
+   "gloss": "the end of time or the beginning of time"
+  },
+  {
+   "word": "kronosoraasa",
+   "gloss": "friendship untouched by mortality"
+  },
+  {
+   "word": "kronosoveasa",
+   "gloss": "peace that outlives conflict"
+  },
+  {
+   "word": "larneasa",
+   "gloss": "wrath of judgment"
+  },
+  {
+   "word": "larneramuasa",
+   "gloss": "a resentment that survives generations"
+  },
+  {
+   "word": "laviasa",
+   "gloss": "bliss; joy without end; ecstasy"
+  },
+  {
+   "word": "lavinemeasa",
+   "gloss": "joy that forgives an old grief"
+  },
+  {
+   "word": "loreasa",
+   "gloss": "heart larger than sorrow"
+  },
+  {
+   "word": "lornuasa",
+   "gloss": "the final hour"
+  },
+  {
+   "word": "loteronelaasa",
+   "gloss": "the unknown visitor"
+  },
+  {
+   "word": "lunoasa",
+   "gloss": "moon of the forgotten"
+  },
+  {
+   "word": "mareasa",
+   "gloss": "mother of generations"
+  },
+  {
+   "word": "meranemeasa",
+   "gloss": "grief entirely forgiven"
+  },
+  {
+   "word": "milobeasa",
+   "gloss": "a smile that restores hope"
+  },
+  {
+   "word": "miruasa",
+   "gloss": "waters before time"
+  },
+  {
+   "word": "mirudaigoasa",
+   "gloss": "the drowning of a lost city"
+  },
+  {
+   "word": "mirunuluasa",
+   "gloss": "the river of lives"
+  },
+  {
+   "word": "molovuasa",
+   "gloss": "the dying of a whole garden"
+  },
+  {
+   "word": "moludonuasa",
+   "gloss": "comfort offered after immense grief"
+  },
+  {
+   "word": "molulasoasa",
+   "gloss": "silence that says I love you"
+  },
+  {
+   "word": "molunemeasa",
+   "gloss": "compassion offered to all suffering"
+  },
+  {
+   "word": "momraasa",
+   "gloss": "the last rites"
+  },
+  {
+   "word": "momvilaviasa",
+   "gloss": "happiness returning after deep grief"
+  },
+  {
+   "word": "narvoasa",
+   "gloss": "Infernal Darkness, Demons"
+  },
+  {
+   "word": "navulalvuasa",
+   "gloss": "wonder at the whole night sky"
+  },
+  {
+   "word": "nedudonuasa",
+   "gloss": "boundless charity"
+  },
+  {
+   "word": "nelaasa",
+   "gloss": "humanity embodied"
+  },
+  {
+   "word": "nemeamorasa",
+   "gloss": "mourning transformed into devotion"
+  },
+  {
+   "word": "fojiasa",
+   "gloss": "winter that ends an age"
+  },
+  {
+   "word": "nimunuluasa",
+   "gloss": "the final path home"
+  },
+  {
+   "word": "nimuduhaasa",
+   "gloss": "a homesickness that follows one through every country"
+  },
+  {
+   "word": "norunimuasa",
+   "gloss": "a homeland only dreamed of"
+  },
+  {
+   "word": "nuluduhaasa",
+   "gloss": "a longing for every road"
+  },
+  {
+   "word": "nuravuasa",
+   "gloss": "pain that outlasts memory"
+  },
+  {
+   "word": "pagoasa",
+   "gloss": "Universe, Existence"
+  },
+  {
+   "word": "pensaasa",
+   "gloss": "contemplation"
+  },
+  {
+   "word": "piloasa",
+   "gloss": "father of generations"
+  },
+  {
+   "word": "raleasa",
+   "gloss": "a voice echoing through history"
+  },
+  {
+   "word": "ramuliraasa",
+   "gloss": "a song sung across generations"
+  },
+  {
+   "word": "dozaasa",
+   "gloss": "unbreakable strength"
+  },
+  {
+   "word": "ravnuasa",
+   "gloss": "the taking of a final vow"
+  },
+  {
+   "word": "sabeasa",
+   "gloss": "wisdom"
+  },
+  {
+   "word": "sabesuruasa",
+   "gloss": "complete mutual understanding"
+  },
+  {
+   "word": "sadoasa",
+   "gloss": "primeval shadow"
+  },
+  {
+   "word": "silifaruasa",
+   "gloss": "searing frostbite"
+  },
+  {
+   "word": "simvoasa",
+   "gloss": "the true self"
+  },
+  {
+   "word": "sizoasa",
+   "gloss": "the shimmer of an endless sea of stars"
+  },
+  {
+   "word": "solmaasa",
+   "gloss": "erasure from every memory"
+  },
+  {
+   "word": "soloasa",
+   "gloss": "the living stone; a jewel of countless faces"
+  },
+  {
+   "word": "soveasa",
+   "gloss": "final reconciliation"
+  },
+  {
+   "word": "soveyanoasa",
+   "gloss": "a reconciliation that heals generations"
+  },
+  {
+   "word": "sulmeasa",
+   "gloss": "the last smoke"
+  },
+  {
+   "word": "sumaramuasa",
+   "gloss": "the ache of every remembered summer"
+  },
+  {
+   "word": "sumbiasa",
+   "gloss": "endless summer"
+  },
+  {
+   "word": "gozaasa",
+   "gloss": "a humiliation that defines someone’s fate"
+  },
+  {
+   "word": "tevuluasa",
+   "gloss": "the final forsaking of a bond"
+  },
+  {
+   "word": "tivroasa",
+   "gloss": "embrace that never loosens"
+  },
+  {
+   "word": "tranaasa",
+   "gloss": "Transformation, ascension, evolution"
+  },
+  {
+   "word": "vazraasa",
+   "gloss": "triumph of good"
+  },
+  {
+   "word": "velusolliasa",
+   "gloss": "the peace of solitude beneath stars"
+  },
+  {
+   "word": "vemiasa",
+   "gloss": "the living cosmos"
+  },
+  {
+   "word": "venreasa",
+   "gloss": "the coming; advent"
+  },
+  {
+   "word": "vesnoasa",
+   "gloss": "last twilight"
+  },
+  {
+   "word": "vesnolumiasa",
+   "gloss": "last light of an age"
+  },
+  {
+   "word": "vilneasa",
+   "gloss": "an all-seeing eye"
+  },
+  {
+   "word": "vimoasa",
+   "gloss": "the vision that reveals all"
+  },
+  {
+   "word": "vulraramuasa",
+   "gloss": "a scar shared by a generation"
+  },
+  {
+   "word": "vureasa",
+   "gloss": "the final harvest"
+  },
+  {
+   "word": "bojiruheasa",
+   "gloss": "the mythic hailstorm"
+  },
+  {
+   "word": "yelmiasa",
+   "gloss": "the glitter of a thousand jewels"
+  },
+  {
+   "word": "yugemeyiasa",
+   "gloss": "a miraculous healing"
+  },
+  {
+   "word": "zegoasa",
+   "gloss": "the trembling of the whole earth"
+  },
+  {
+   "word": "zivuasa",
+   "gloss": "the contempt of an entire court"
+  },
+  {
+   "word": "nurmiasa",
+   "gloss": "enlightenment; awakened awareness"
+  },
+  {
+   "word": "vamriasa",
+   "gloss": "infinity; boundless space"
+  },
+  {
+   "word": "rildeasa",
+   "gloss": "the joining of two families"
+  },
+  {
+   "word": "lurvaasa",
+   "gloss": "outpouring"
+  },
+  {
+   "word": "tenvaasa",
+   "gloss": "the weaving of fate"
+  },
+  {
+   "word": "lansiasa",
+   "gloss": "archangel"
+  },
+  {
+   "word": "bansaasa",
+   "gloss": "abundance; plenty"
+  },
+  {
+   "word": "hurvoasa",
+   "gloss": "the uncanny"
+  },
+  {
+   "word": "salkoasa",
+   "gloss": "pearl"
+  }
+ ],
+ "sacred_without_ascended": [
+  {
+   "word": "volme",
+   "gloss": "ghost; spirit of the dead; phantom; apparition"
+  },
+  {
+   "word": "luminela",
+   "gloss": "priest; a person of light"
+  },
+  {
+   "word": "larbonela",
+   "gloss": "dryad; tree spirit"
+  },
+  {
+   "word": "zayulazu",
+   "gloss": "familiar; a spirit-animal companion"
+  },
+  {
+   "word": "lavbulira",
+   "gloss": "hymn; psalm"
+  },
+  {
+   "word": "lavbuseno",
+   "gloss": "mantra; a sacred word chanted"
+  },
+  {
+   "word": "nullolavbu",
+   "gloss": "vigil; night prayer"
+  },
+  {
+   "word": "jubaseno",
+   "gloss": "benediction; a blessing spoken aloud"
+  },
+  {
+   "word": "belfiseno",
+   "gloss": "creed; confession of faith"
+  },
+  {
+   "word": "lumitelne",
+   "gloss": "gospel; sacred story"
+  },
+  {
+   "word": "lumimiru",
+   "gloss": "holy water"
+  },
+  {
+   "word": "ralnolansi",
+   "gloss": "fallen angel; devil"
+  },
+  {
+   "word": "sasvalansi",
+   "gloss": "guardian angel"
+  },
+  {
+   "word": "lavburinba",
+   "gloss": "prayer beads; rosary"
+  },
+  {
+   "word": "lansinalfa",
+   "gloss": "angel’s wing"
+  },
+  {
+   "word": "mernolavbu",
+   "gloss": "morning prayer; matins"
+  },
+  {
+   "word": "sevuvolme",
+   "gloss": "a sea-spirit; the ghost of the drowned"
+  },
+  {
+   "word": "vesnolavbu",
+   "gloss": "evening prayer; vespers"
+  },
+  {
+   "word": "lavbusolo",
+   "gloss": "idol; a stone carved for worship"
+  },
+  {
+   "word": "zefronela",
+   "gloss": "sylph; an air spirit"
+  },
+  {
+   "word": "lardadevi",
+   "gloss": "a Muse; the goddess of an art"
+  },
+  {
+   "word": "mavolumitali",
+   "gloss": "pouring one's soul into one's work"
+  },
+  {
+   "word": "lardayalmu",
+   "gloss": "the fire in art; soul-stirring intensity"
+  }
+ ],
+ "parts_not_headwords": []
+}

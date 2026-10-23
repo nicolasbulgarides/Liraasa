@@ -35,6 +35,16 @@ export interface ChangesetRuling {
   /** Earlier rulings, whole or in part, this one replaces (2.2, ADR-0018). */
   supersedes?: string[];
   examples?: [string, string][];
+  /** 2.5 on: the audit issue the ruling answers, and what it amends, verbatim from the patch. */
+  issue?: string;
+  amends?: string[];
+  /** 2.5 on: sentences the ruling rejects, each with why. */
+  examples_ungrammatical?: [string, string][];
+  /** 2.5 on: consequences the patch spelled out, awaiting the author's confirmation. */
+  derived?: string[];
+  settles_open_questions?: string[];
+  translator_preference?: string;
+  notes?: string;
 }
 
 export interface NewHeadword {
@@ -260,6 +270,14 @@ export function applyChangesets(
     const h = byId.get(op.entry);
     if (h === undefined) throw new ApplyError(`${op.entry}: no headword has this id`);
     return h;
+  };
+  /** A ruling by its edition-qualified id (`2.2:G60`, `0.8:G4`). */
+  const rulingOf = (ref: string): Row | undefined => {
+    const [edition, id] = ref.split(':');
+    const set = (lex as unknown as Record<string, unknown>)[
+      `rulings_${(edition ?? '').replace('.', '_')}${edition === '0.8' ? '_carried' : ''}`
+    ];
+    return Array.isArray(set) ? (set as Row[]).find((r) => r.id === id) : undefined;
   };
   /**
    * `derivation:<headword id>:-<suffix>`, or `derivation:lexicalised:<spelling>:-<suffix>`
@@ -626,10 +644,12 @@ export function applyChangesets(
         }
         case 'edit_function_word': {
           const fw = (lex.function_words as unknown as Row[]).find((f) => f.id === op.entry);
-          // `to: null` deletes the example (it is kept as null, as the row's shape is fixed)
+          // `to: null` deletes the example (it is kept as null, as the row's shape is fixed);
+          // 2.5 also rewrites a row's meaning and use where a ruling changed them
           const field = op.field ?? '';
           if (
-            (field !== 'example' && field !== 'example_gloss') ||
+            !['example', 'example_gloss', 'meaning', 'position'].includes(field) ||
+            ((field === 'meaning' || field === 'position') && op.to === null) ||
             fw === undefined ||
             fw[field] !== op.from
           ) {
@@ -685,6 +705,50 @@ export function applyChangesets(
           }
           break;
         }
+        case 'amend_ruling':
+        case 'mark_ruling_covered': {
+          // 2.5: an earlier ruling a new one amends (in part) or makes redundant; it is kept as ruled
+          const old = rulingOf(op.entry);
+          const [byEdition, newId] = (op.to ?? '').split(':');
+          if (old === undefined || old.topic !== op.from)
+            throw new ApplyError(`${op.entry}: no ruling "${String(op.from)}"`);
+          if (byEdition !== cs.edition || cs.rulings?.find((r) => r.id === newId) === undefined)
+            throw new ApplyError(`${op.entry}: ${String(op.to)} is not a ruling of ${cs.id}`);
+          if (op.op === 'mark_ruling_covered') {
+            if (old.covered_by !== undefined) throw new ApplyError(`${op.entry}: covered twice`);
+            old.covered_by = op.to;
+          } else {
+            const parts = (old.amended_by ?? []) as { by: string; scope: string }[];
+            old.amended_by = [...parts, { by: op.to ?? '', scope: op.field ?? 'in part' }];
+          }
+          break;
+        }
+        case 'edit_value': {
+          // 2.5: a non-text value (a list, a row's new field) at `value:` + a dotted path;
+          // `from` and `to` are JSON, `from: null` adds a key that must not exist
+          const path = op.entry.replace(/^value:/, '').split('.');
+          const key = path.pop() ?? '';
+          let node: unknown = lex;
+          for (const k of path)
+            node = Array.isArray(node)
+              ? (node as unknown[])[Number(k)]
+              : (node as Record<string, unknown> | undefined)?.[k];
+          const obj = node as Record<string, unknown> | undefined;
+          const now = obj === undefined ? undefined : obj[key];
+          const fits =
+            op.from === null ? obj !== undefined && !(key in obj) : JSON.stringify(now) === op.from;
+          if (
+            obj === undefined ||
+            !op.entry.startsWith('value:') ||
+            path[0]?.startsWith('rulings_') === true ||
+            !fits ||
+            op.to === null
+          ) {
+            throw new ApplyError(`${op.entry}: expected ${String(op.from)}`);
+          }
+          obj[key] = JSON.parse(op.to) as unknown;
+          break;
+        }
         case 'archive_text': {
           const field = op.field ?? '';
           let read: () => unknown;
@@ -694,6 +758,22 @@ export function applyChangesets(
             read = () => h.notes;
             write = (v) => {
               h.notes = v;
+            };
+          } else if (op.entry.startsWith('text:')) {
+            // 2.5: a text field of a lexicon section (never a ruling), by dotted path
+            const path = op.entry.replace(/^text:/, '').split('.');
+            const key = path.pop() ?? '';
+            let node: unknown = lex;
+            for (const k of path)
+              node = Array.isArray(node)
+                ? (node as unknown[])[Number(k)]
+                : (node as Record<string, unknown> | undefined)?.[k];
+            const obj = node as Record<string, unknown> | undefined;
+            if (obj === undefined || path[0]?.startsWith('rulings_') === true)
+              throw new ApplyError(`${op.entry}: no text to archive`);
+            read = () => obj[key];
+            write = (v) => {
+              obj[key] = v;
             };
           } else {
             const [edition, id] = op.entry.split(':');
@@ -725,6 +805,26 @@ export function applyChangesets(
               reason: op.reason,
             },
           ];
+          break;
+        }
+        case 'edit_text': {
+          const path = op.entry.replace(/^text:/, '').split('.');
+          const key = path.pop() ?? '';
+          let node: unknown = lex;
+          for (const k of path)
+            node = Array.isArray(node)
+              ? (node as unknown[])[Number(k)]
+              : (node as Record<string, unknown> | undefined)?.[k];
+          const obj = node as Record<string, unknown> | undefined;
+          if (
+            !op.entry.startsWith('text:') ||
+            path[0]?.startsWith('rulings_') === true ||
+            obj?.[key] !== op.from ||
+            op.to === null
+          ) {
+            throw new ApplyError(`${op.entry}: expected "${String(op.from)}"`);
+          }
+          obj[key] = op.to;
           break;
         }
         case 'retire_root':

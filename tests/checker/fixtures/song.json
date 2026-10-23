@@ -37,8 +37,8 @@
       "expect": [
         {
           "phase": 3,
-          "severity": "warn",
-          "rule": "1.2:G33",
+          "severity": "note",
+          "rule": "2.3:G73",
           "token": "en"
         }
       ]
@@ -219,12 +219,6 @@
           "severity": "warn",
           "rule": "1.2:G33",
           "token": "ko"
-        },
-        {
-          "phase": 2,
-          "severity": "unsettled",
-          "rule": "1.2:G25",
-          "token": "ata"
         }
       ]
     }

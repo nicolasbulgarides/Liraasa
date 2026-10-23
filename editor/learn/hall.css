@@ -1877,3 +1877,131 @@ button.ts-point:hover,
   align-items: center;
   color: var(--ink-soft);
 }
+
+/* ------------------------------------------------- Grammar Lessons */
+.course-part {
+  margin: 1.6rem 0 0.4rem;
+  font-weight: normal;
+}
+.course-part .kicker {
+  display: block;
+}
+.course-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.4rem;
+}
+.course-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  min-height: 44px;
+  padding: 0.5rem 0.8rem;
+  text-align: left;
+  font: inherit;
+  color: var(--ink);
+  background: var(--raised);
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  cursor: pointer;
+}
+.course-item:hover {
+  border-color: var(--rule-firm);
+}
+.course-n {
+  min-width: 2rem;
+  height: 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+}
+.course-item.is-done .course-n {
+  background: var(--accent);
+  color: var(--paper);
+}
+.course-title {
+  flex: 1;
+}
+.course-done {
+  color: var(--ink-soft);
+  font-size: 0.85em;
+}
+.course-next,
+.course-map,
+.course-intro {
+  margin: 1rem 0;
+}
+.course-map code {
+  display: block;
+  white-space: pre-wrap;
+  margin: 0.35rem 0;
+}
+.course-open {
+  color: var(--ink-soft);
+  margin-top: 1.5rem;
+}
+.course-welcome {
+  color: var(--ink-soft);
+  font-style: italic;
+}
+.course-points li {
+  margin: 0.3rem 0;
+}
+.course-examples {
+  border-left: 3px solid var(--margin);
+  padding-left: 1rem;
+}
+.course-examples p {
+  margin: 0.4rem 0;
+}
+.course-examples .lw {
+  display: block;
+  font-size: 1.05em;
+}
+.course-examples .en {
+  display: block;
+}
+.course-watch {
+  border: 1px dashed var(--rule-firm);
+  border-radius: 8px;
+  padding: 0.6rem 0.8rem;
+}
+.course-tag {
+  font-size: 0.75em;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+  color: var(--margin);
+}
+.course-try {
+  margin: 0.6rem 0;
+}
+.course-try input {
+  flex: 1;
+  min-width: 12rem;
+  min-height: 44px;
+  font: inherit;
+}
+.course-verdict {
+  font-weight: 600;
+}
+.course-verdict.is-right::before {
+  content: '✓ ';
+}
+.course-rules {
+  font-size: 0.85em;
+  color: var(--ink-soft);
+}
+.course-foot,
+.course-pager {
+  margin-top: 1rem;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  align-items: center;
+}

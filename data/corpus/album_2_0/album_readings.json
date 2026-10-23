@@ -159,7 +159,9 @@
    "confidence": "certain",
    "issue": "raho is relative only; the question word is ki-nela.",
    "standard_form": "ki-nela povi sabesia baba kasi polvasan sove ki?",
-   "note": null
+   "note": null,
+   "resolved_by": "2.3:G74"
   }
- ]
+ ],
+ "resolved_note": "A reading with resolved_by is grammar since that ruling (2.2:G68 lets the album's consistent usage become grammar): it is kept as history, and the line is a model again."
 }

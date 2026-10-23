@@ -2,6 +2,7 @@ export * from './adapter';
 export * from './audio';
 export * from './candidates';
 export * from './concepts';
+export * from './course';
 export * from './corpus';
 export * from './diff';
 export * from './drill';

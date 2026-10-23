@@ -1,0 +1,3664 @@
+{
+ "summary": {
+  "patch_good": {
+   "total": 104,
+   "old_flags": 6,
+   "new_flags": 0
+  },
+  "patch_bad": {
+   "total": 20,
+   "old_accepts": 13,
+   "old_cites_rule": 0,
+   "new_accepts": 0,
+   "new_cites_rule": 20
+  },
+  "translate": {
+   "total": 76,
+   "old_passes_2_5_checker": 46,
+   "old_exact": 28,
+   "new_ok": 75,
+   "new_exact": 51
+  },
+  "album": {
+   "lines": 275,
+   "old_flags": 1,
+   "new_flags": 47
+  }
+ },
+ "patch_good": [
+  {
+   "rule": "2.5:G88",
+   "liraasa": "Ki-kasa taivo po amora maivo?",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G88",
+   "liraasa": "Ki-kasa taivo po amora maivo ki?",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G88",
+   "liraasa": "Taivo pagopa ki-pago ki?",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G88",
+   "liraasa": "Maivo po masuma li talirivo ki-kasa.",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G88",
+   "liraasa": "Ki-eli nullo!",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G89",
+   "liraasa": "Taivo sabesia fime maivo lirala poye.",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G89",
+   "liraasa": "Taivo sabesia fime maivo nosi lirala.",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G89",
+   "liraasa": "Taivo sabesia fime maivo lirala ki?",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G126",
+   "liraasa": "Maivori lirala toda-krono fuyi pifu.",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G126",
+   "liraasa": "Ki-pago taivo pagopa?",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G126",
+   "liraasa": "Taivo viki pagopa ligo maivo ki, maivo de amor?",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G127",
+   "liraasa": "Eli-pago, maivo lirala.",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G127",
+   "liraasa": "Deyaapo, maivo po lirala.",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G90",
+   "liraasa": "Ne lirala!",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G90",
+   "liraasa": "Fisa, ne lirala.",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G90",
+   "liraasa": "Fisa, lisrola.",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G90",
+   "liraasa": "Taivo lirala ki? — Ne lirala.",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G91",
+   "liraasa": "Ata ki?",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G92",
+   "liraasa": "Raho lirala ki?",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G92",
+   "liraasa": "Ki-nela lirala ki?",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G92",
+   "liraasa": "Lira ki?",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G93",
+   "liraasa": "Li kavbikova ke su li tabu.",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G93",
+   "liraasa": "Li nimu ka ligo li cilni.",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G93",
+   "liraasa": "Maivo po ke linuti.",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G93",
+   "liraasa": "Maivo ka lirayo.",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G93",
+   "liraasa": "Li nela ke benasan.",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G93",
+   "liraasa": "Li sora ka benasan.",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G128",
+   "liraasa": "Nela vanisan.",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G128",
+   "liraasa": "Li nela po ke vanisan.",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G128",
+   "liraasa": "Miyo baba sora en li nimu.",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G94",
+   "liraasa": "Saivo po ka benasan.",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G94",
+   "liraasa": "Saivo kapoki benasan.",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G95",
+   "liraasa": "li bumre de pilo",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G95",
+   "liraasa": "pilo de bumre",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G95",
+   "liraasa": "Kipo de Dorin",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G95",
+   "liraasa": "maivo de lira",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G96",
+   "liraasa": "li suma de maivo de yuge",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G97",
+   "liraasa": "tressa de cuara",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G97",
+   "liraasa": "Una de dossa futu relnura.",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G98",
+   "liraasa": "li una-ne ruli vanisan lira",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G98",
+   "liraasa": "baba ruli vanisan lira",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G98",
+   "liraasa": "eliri lirari",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G99",
+   "liraasa": "Li lavra semnesia nazru li nimu.",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G100",
+   "liraasa": "Maivo ka vanisan.",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G101",
+   "liraasa": "li benasanri",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G101",
+   "liraasa": "eliri lira",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G101",
+   "liraasa": "eliri lirari",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G101",
+   "liraasa": "dossa lira",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G102",
+   "liraasa": "Li lavra lirala; ito ka vanisan.",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G102",
+   "liraasa": "Nilo lirala; saivo ka vanisan.",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G103",
+   "liraasa": "Maivo vimova en merno.",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G103",
+   "liraasa": "Maivo vimova merno.",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G103",
+   "liraasa": "Maivo lirala deyapressa.",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G103",
+   "liraasa": "Maivo lirala toda-krono.",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G104",
+   "liraasa": "Maivo lallela li dorbi yuta li kemye.",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G104",
+   "liraasa": "Saivo po senosia en baba melosan valla.",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G104",
+   "liraasa": "Maivo lirala ko amor.",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G104",
+   "liraasa": "Maivo lirala ko saivo.",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G104",
+   "liraasa": "Maivo lirala la molusan.",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G105",
+   "liraasa": "Maivo lirala la ruli molusan.",
+   "old": [
+    "noun phrase: “la” needs a noun phrase after it.",
+    "slot: “molusan” cannot be placed in the clause template: expected the OBJECT or an adjunct."
+   ],
+   "new": []
+  },
+  {
+   "rule": "2.5:G106",
+   "liraasa": "Maivo tovota kasi lirari tamo taivo.",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G106",
+   "liraasa": "Maivo lirala la kasi molusan tamo taivo.",
+   "old": [
+    "noun phrase: “la” needs a noun phrase after it.",
+    "slot: “molusan” cannot be placed in the clause template: expected the OBJECT or an adjunct."
+   ],
+   "new": []
+  },
+  {
+   "rule": "2.5:G107",
+   "liraasa": "Maivo tovota gase dossa cono.",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G108",
+   "liraasa": "Maivo po venreva kroti dossa deya.",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G109",
+   "liraasa": "Maivo vaku saivo sapusia li nami.",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G109",
+   "liraasa": "Taivo vaku maivo lirala.",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G109",
+   "liraasa": "Maivo po lesvu saivo pagopa.",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G110",
+   "liraasa": "Li lira gome sarbisia gagu maivo.",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G110",
+   "liraasa": "Zafra, li dorbi po lallela.",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G110",
+   "liraasa": "Zafra, li dorbi po gome lallela.",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G111",
+   "liraasa": "Trana ke ruli levasan sidu zeldoza.",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G112",
+   "liraasa": "Taivo guraga maivo dossa cono.",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G112",
+   "liraasa": "Maivo lirala taivo baba lira.",
+   "old": [
+    "1.2:G26: “lirala” is followed by two bare noun phrases (“taivo”, “baba lira”), but only give-type verbs take two. For “for taivo” use vobi taivo (1.0:G12); for “make taivo do …”, use vaku (1.0:G14)."
+   ],
+   "new": []
+  },
+  {
+   "rule": "2.5:G112",
+   "liraasa": "Maivo lirala baba lira ala taivo.",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G113",
+   "liraasa": "Maivo po venreva eli-pago kopisa lirala.",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G113",
+   "liraasa": "Maivo lirala kopisa taivo rilura.",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G114",
+   "liraasa": "Si maivo po noma masuma, taivo po noma viki relsira.",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G115",
+   "liraasa": "Li nela raho lirala ka benasan.",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G115",
+   "liraasa": "Li sabeyo raho vismava eli, ne yehu vimova li vordu.",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G116",
+   "liraasa": "Maivo lirala, kopisa taivo nosi rilura.",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G116",
+   "liraasa": "Maivo sabesia fime taivo nosi lirala.",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G117",
+   "liraasa": "Tonsi, corvisan nela lirala.",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G117",
+   "liraasa": "Taivo ke tonsi corvisan fime taivo viki savalisia maivo ki?",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G118",
+   "liraasa": "Kureli taivo venreva, maivo po lirala.",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G118",
+   "liraasa": "Maivo po masuma ki-oro taivo relnura.",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G119",
+   "liraasa": "Kipo hozi, saivo lirala.",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G119",
+   "liraasa": "Li bumre hozi, Kipo po bumreba.",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G119",
+   "liraasa": "Li bumre hozi, Kipo po bumreba ito.",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G120",
+   "liraasa": "li lirayo raho maivo amora saivo de lira",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G120",
+   "liraasa": "li krono raho maivo po lirala en ito",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G120",
+   "liraasa": "li pago raho maivo po venreva da ito",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G121",
+   "liraasa": "va-lirala",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G121",
+   "liraasa": "revo-lirala",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G121",
+   "liraasa": "du-vimova",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G121",
+   "liraasa": "taro-pagopa",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G121",
+   "liraasa": "Maivo revo-sabesia taivo.",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G122",
+   "liraasa": "lirayoti",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G122",
+   "liraasa": "lirati",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G122",
+   "liraasa": "liratiri",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G123",
+   "liraasa": "lemupago",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G124",
+   "liraasa": "lunosavali",
+   "old": [],
+   "new": []
+  },
+  {
+   "rule": "2.5:G124",
+   "liraasa": "lunosavalila",
+   "old": [
+    "0.8:R2: “lunosavalila” would be the verb of lunosavali, but that slot has no meaning and is not in the dictionary. Listed forms: lunosavali (noun)."
+   ],
+   "new": []
+  },
+  {
+   "rule": "2.5:G124",
+   "liraasa": "lunosavalisan",
+   "old": [
+    "0.8:R2: “lunosavalisan” would be the adjective of lunosavali, but that slot has no meaning and is not in the dictionary. Listed forms: lunosavali (noun)."
+   ],
+   "new": []
+  },
+  {
+   "rule": "2.5:G125",
+   "liraasa": "antizi dossa",
+   "old": [
+    "never invent: “antizi” is not a word of Liraasa.",
+    "slot: “dossa” opens a second noun phrase, but the clause has no verb or copula. Use ke/ka for “is”."
+   ],
+   "new": []
+  }
+ ],
+ "patch_bad": [
+  {
+   "rule": "2.5:G88",
+   "liraasa": "Taivo pagopa ki-pago?",
+   "why": "ki-word in place without final ki is not a question",
+   "old": [],
+   "oldCitesRule": false,
+   "new": [
+    "2.5:G88"
+   ],
+   "newCitesRule": true
+  },
+  {
+   "rule": "2.5:G88",
+   "liraasa": "Ki-eli lira taivo desida?",
+   "why": "ki-eli + noun questions always end in ki",
+   "old": [
+    "2.3:G76"
+   ],
+   "oldCitesRule": false,
+   "new": [
+    "2.5:G126",
+    "2.5:G88"
+   ],
+   "newCitesRule": true
+  },
+  {
+   "rule": "2.5:G126",
+   "liraasa": "Maivori lirala fuyi toda-krono pifu.",
+   "why": "closing time word after fuyi",
+   "old": [],
+   "oldCitesRule": false,
+   "new": [
+    "2.5:G126"
+   ],
+   "newCitesRule": true
+  },
+  {
+   "rule": "2.5:G127",
+   "liraasa": "Maivo lirala po.",
+   "why": "po is a tense word, not a closing time word",
+   "old": [
+    "1.0:G1"
+   ],
+   "oldCitesRule": false,
+   "new": [
+    "2.5:G127"
+   ],
+   "newCitesRule": true
+  },
+  {
+   "rule": "2.5:G91",
+   "liraasa": "Ata?",
+   "why": "not a question without ki",
+   "old": [],
+   "oldCitesRule": false,
+   "new": [
+    "2.5:G91"
+   ],
+   "newCitesRule": true
+  },
+  {
+   "rule": "2.5:G128",
+   "liraasa": "Li nela po vanisan.",
+   "why": "a bare adjective predicate takes no operators",
+   "old": [
+    "slot"
+   ],
+   "oldCitesRule": false,
+   "new": [
+    "2.5:G128"
+   ],
+   "newCitesRule": true
+  },
+  {
+   "rule": "2.5:G128",
+   "liraasa": "Nela ne vanisan.",
+   "why": "a bare adjective predicate takes no operators",
+   "old": [],
+   "oldCitesRule": false,
+   "new": [
+    "2.5:G128"
+   ],
+   "newCitesRule": true
+  },
+  {
+   "rule": "2.5:G99",
+   "liraasa": "Li lavra semnesia nazru nimu.",
+   "why": "li dropped after a side noun",
+   "old": [],
+   "oldCitesRule": false,
+   "new": [
+    "2.5:G99"
+   ],
+   "newCitesRule": true
+  },
+  {
+   "rule": "2.5:G101",
+   "liraasa": "benasanri",
+   "why": "-ri on a bare adjective",
+   "old": [],
+   "oldCitesRule": false,
+   "new": [
+    "2.5:G101"
+   ],
+   "newCitesRule": true
+  },
+  {
+   "rule": "2.5:G101",
+   "liraasa": "eli lirari",
+   "why": "singular demonstrative with a plural noun",
+   "old": [],
+   "oldCitesRule": false,
+   "new": [
+    "2.5:G101"
+   ],
+   "newCitesRule": true
+  },
+  {
+   "rule": "2.5:G105",
+   "liraasa": "Maivo la molusan lirala.",
+   "why": "adverb before the verb",
+   "old": [],
+   "oldCitesRule": false,
+   "new": [
+    "2.5:G105"
+   ],
+   "newCitesRule": true
+  },
+  {
+   "rule": "2.5:G105",
+   "liraasa": "Maivo lirala ruli la molusan.",
+   "why": "degree word outside la",
+   "old": [
+    "slot"
+   ],
+   "oldCitesRule": false,
+   "new": [
+    "2.5:G105"
+   ],
+   "newCitesRule": true
+  },
+  {
+   "rule": "2.5:G106",
+   "liraasa": "Maivo lirala kasi tamo taivo.",
+   "why": "bare kasi after the verb is not licensed (option B was not chosen)",
+   "old": [
+    "slot"
+   ],
+   "oldCitesRule": false,
+   "new": [
+    "2.5:G106"
+   ],
+   "newCitesRule": true
+  },
+  {
+   "rule": "2.5:G111",
+   "liraasa": "Ito ke ruli levasan sidu zeldoza trana.",
+   "why": "dummy ito with an overt object",
+   "old": [],
+   "oldCitesRule": false,
+   "new": [
+    "2.5:G111"
+   ],
+   "newCitesRule": true
+  },
+  {
+   "rule": "2.5:G113",
+   "liraasa": "Maivo po venreva eli-pago sidu lirala.",
+   "why": "sidu is not used for purpose",
+   "old": [
+    "sidu"
+   ],
+   "oldCitesRule": false,
+   "new": [
+    "2.5:G113"
+   ],
+   "newCitesRule": true
+  },
+  {
+   "rule": "2.5:G114",
+   "liraasa": "Taivo po viki relsira.",
+   "why": "'would have' requires noma",
+   "old": [],
+   "oldCitesRule": false,
+   "new": [
+    "2.5:G114"
+   ],
+   "newCitesRule": true
+  },
+  {
+   "rule": "2.5:G115",
+   "liraasa": "Li sabeyo raho vismava eli ne yehu vimova li vordu.",
+   "why": "relative clause with an object, not closed by a comma",
+   "old": [
+    "1.0:G1"
+   ],
+   "oldCitesRule": false,
+   "new": [
+    "2.5:G115"
+   ],
+   "newCitesRule": true
+  },
+  {
+   "rule": "2.5:G117",
+   "liraasa": "Tonsi corvisan nela lirala.",
+   "why": "clause-initial tonsi without a comma",
+   "old": [],
+   "oldCitesRule": false,
+   "new": [
+    "2.5:G117"
+   ],
+   "newCitesRule": true
+  },
+  {
+   "rule": "2.5:G117",
+   "liraasa": "Tonsi corvisan nela, lirala.",
+   "why": "'so' tonsi outside a predicate",
+   "old": [],
+   "oldCitesRule": false,
+   "new": [
+    "2.5:G117"
+   ],
+   "newCitesRule": true
+  },
+  {
+   "rule": "2.5:G119",
+   "liraasa": "Kipo hozi, lirala.",
+   "why": "subject topic not picked up",
+   "old": [],
+   "oldCitesRule": false,
+   "new": [
+    "2.5:G119"
+   ],
+   "newCitesRule": true
+  }
+ ],
+ "translate": [
+  {
+   "rule": "2.5:G88",
+   "english": "Why did you love me?",
+   "want": "Ki-kasa taivo po amora maivo?",
+   "old": "ki-kasa taivo po amora maivo ki?",
+   "oldPasses": true,
+   "oldExact": false,
+   "oldFindings": [],
+   "new": "Ki-kasa taivo po amora maivo ki?",
+   "newOk": true,
+   "newExact": false
+  },
+  {
+   "rule": "2.5:G88",
+   "english": "Why did you love me?",
+   "want": "Ki-kasa taivo po amora maivo ki?",
+   "old": "ki-kasa taivo po amora maivo ki?",
+   "oldPasses": true,
+   "oldExact": true,
+   "oldFindings": [],
+   "new": "Ki-kasa taivo po amora maivo ki?",
+   "newOk": true,
+   "newExact": true
+  },
+  {
+   "rule": "2.5:G88",
+   "english": "Where are you going?",
+   "want": "Taivo pagopa ki-pago ki?",
+   "old": "ki-pago taivo roni pagopa ki?",
+   "oldPasses": true,
+   "oldExact": false,
+   "oldFindings": [],
+   "new": "Ki-pago taivo roni pagopa ki?",
+   "newOk": true,
+   "newExact": false
+  },
+  {
+   "rule": "2.5:G88",
+   "english": "I asked my colleague why.",
+   "want": "Maivo po masuma li talirivo ki-kasa.",
+   "old": "maivo po masuma maivo de talirivo ki-kasa.",
+   "oldPasses": true,
+   "oldExact": false,
+   "oldFindings": [],
+   "new": "Maivo po masuma maivo de talirivo ki-kasa.",
+   "newOk": true,
+   "newExact": false
+  },
+  {
+   "rule": "2.5:G88",
+   "english": "What a night!",
+   "want": "Ki-eli nullo!",
+   "old": "ki-eli nullo!",
+   "oldPasses": true,
+   "oldExact": true,
+   "oldFindings": [],
+   "new": "Ki-eli nullo!",
+   "newOk": true,
+   "newExact": true
+  },
+  {
+   "rule": "2.5:G89",
+   "english": "Perhaps you know that I sing.",
+   "want": "Taivo sabesia fime maivo lirala poye.",
+   "old": "taivo sabesia poye fime maivo lirala.",
+   "oldPasses": false,
+   "oldExact": false,
+   "oldFindings": [
+    "1.0:G22"
+   ],
+   "new": "Taivo sabesia fime maivo lirala poye.",
+   "newOk": true,
+   "newExact": true
+  },
+  {
+   "rule": "2.5:G89",
+   "english": "You know that I might sing.",
+   "want": "Taivo sabesia fime maivo nosi lirala.",
+   "old": "taivo sabesia fime maivo nosi lirala.",
+   "oldPasses": true,
+   "oldExact": true,
+   "oldFindings": [],
+   "new": "Taivo sabesia fime maivo nosi lirala.",
+   "newOk": true,
+   "newExact": true
+  },
+  {
+   "rule": "2.5:G89",
+   "english": "Do you know that I sing?",
+   "want": "Taivo sabesia fime maivo lirala ki?",
+   "old": "taivo sabesia fime maivo lirala ki?",
+   "oldPasses": true,
+   "oldExact": true,
+   "oldFindings": [],
+   "new": "Taivo sabesia fime maivo lirala ki?",
+   "newOk": true,
+   "newExact": true
+  },
+  {
+   "rule": "2.5:G126",
+   "english": "May we always sing to each other.",
+   "want": "Maivori lirala toda-krono fuyi pifu.",
+   "old": "maivori toda-krono lirala fuyi pifu.",
+   "oldPasses": false,
+   "oldExact": false,
+   "oldFindings": [
+    "2.5:G126"
+   ],
+   "new": "Maivori lirala toda-krono fuyi pifu.",
+   "newOk": true,
+   "newExact": true
+  },
+  {
+   "rule": "2.5:G126",
+   "english": "Where are you going?",
+   "want": "Ki-pago taivo pagopa?",
+   "old": "ki-pago taivo roni pagopa ki?",
+   "oldPasses": true,
+   "oldExact": false,
+   "oldFindings": [],
+   "new": "Ki-pago taivo roni pagopa ki?",
+   "newOk": true,
+   "newExact": false
+  },
+  {
+   "rule": "2.5:G126",
+   "english": "Would you come near me, my love?",
+   "want": "Taivo viki pagopa ligo maivo ki, maivo de amor?",
+   "old": "taivo viki venreva ligo maivo maivo de amor ki?",
+   "oldPasses": false,
+   "oldExact": false,
+   "oldFindings": [
+    "2.5:G126"
+   ],
+   "new": "Taivo viki venreva ligo maivo ki, maivo de amor?",
+   "newOk": true,
+   "newExact": false
+  },
+  {
+   "rule": "2.5:G127",
+   "english": "Here, I sing.",
+   "want": "Eli-pago, maivo lirala.",
+   "old": "eli-pago maivo lirala.",
+   "oldPasses": false,
+   "oldExact": true,
+   "oldFindings": [
+    "2.5:G127"
+   ],
+   "new": "Eli-pago, maivo lirala.",
+   "newOk": true,
+   "newExact": true
+  },
+  {
+   "rule": "2.5:G127",
+   "english": "Yesterday, I sang.",
+   "want": "Deyaapo, maivo po lirala.",
+   "old": "deyaapo maivo po lirala.",
+   "oldPasses": false,
+   "oldExact": true,
+   "oldFindings": [
+    "2.5:G127"
+   ],
+   "new": "Deyaapo, maivo po lirala.",
+   "newOk": true,
+   "newExact": true
+  },
+  {
+   "rule": "2.5:G90",
+   "english": "Don't sing!",
+   "want": "Ne lirala!",
+   "old": "ne lirala!",
+   "oldPasses": true,
+   "oldExact": true,
+   "oldFindings": [],
+   "new": "Ne lirala!",
+   "newOk": true,
+   "newExact": true
+  },
+  {
+   "rule": "2.5:G90",
+   "english": "Please don't sing.",
+   "want": "Fisa, ne lirala.",
+   "old": "fisa ne lirala.",
+   "oldPasses": true,
+   "oldExact": true,
+   "oldFindings": [],
+   "new": "Fisa, ne lirala.",
+   "newOk": true,
+   "newExact": true
+  },
+  {
+   "rule": "2.5:G90",
+   "english": "Please stay.",
+   "want": "Fisa, lisrola.",
+   "old": "fisa lisrola.",
+   "oldPasses": true,
+   "oldExact": true,
+   "oldFindings": [],
+   "new": "Fisa, lisrola.",
+   "newOk": true,
+   "newExact": true
+  },
+  {
+   "rule": "2.5:G90",
+   "english": "Do you sing? — don't sing.",
+   "want": "Taivo lirala ki? — Ne lirala.",
+   "old": "taivo ne lirala lirala.",
+   "oldPasses": false,
+   "oldExact": false,
+   "oldFindings": [
+    "2.5:G126"
+   ],
+   "new": "Taivo lirala ki?",
+   "newOk": true,
+   "newExact": false
+  },
+  {
+   "rule": "2.5:G91",
+   "english": "And?",
+   "want": "Ata ki?",
+   "old": "ata ki?",
+   "oldPasses": true,
+   "oldExact": true,
+   "oldFindings": [],
+   "new": "Ata ki?",
+   "newOk": true,
+   "newExact": true
+  },
+  {
+   "rule": "2.5:G92",
+   "english": "Who sings?",
+   "want": "Raho lirala ki?",
+   "old": "ki-nela lirala ki?",
+   "oldPasses": true,
+   "oldExact": false,
+   "oldFindings": [],
+   "new": "Ki-nela lirala ki?",
+   "newOk": true,
+   "newExact": false
+  },
+  {
+   "rule": "2.5:G92",
+   "english": "Who sings?",
+   "want": "Ki-nela lirala ki?",
+   "old": "ki-nela lirala ki?",
+   "oldPasses": true,
+   "oldExact": true,
+   "oldFindings": [],
+   "new": "Ki-nela lirala ki?",
+   "newOk": true,
+   "newExact": true
+  },
+  {
+   "rule": "2.5:G92",
+   "english": "A song?",
+   "want": "Lira ki?",
+   "old": "baba lira ki?",
+   "oldPasses": true,
+   "oldExact": false,
+   "oldFindings": [],
+   "new": "Baba lira ki?",
+   "newOk": true,
+   "newExact": false
+  },
+  {
+   "rule": "2.5:G93",
+   "english": "The basket is on the table.",
+   "want": "Li kavbikova ke su li tabu.",
+   "old": "li kavbikova ke su li tabu.",
+   "oldPasses": true,
+   "oldExact": true,
+   "oldFindings": [],
+   "new": "Li kavbikova ke su li tabu.",
+   "newOk": true,
+   "newExact": true
+  },
+  {
+   "rule": "2.5:G93",
+   "english": "The home is near the city.",
+   "want": "Li nimu ka ligo li cilni.",
+   "old": "li nimu ke ligo li cilni.",
+   "oldPasses": true,
+   "oldExact": false,
+   "oldFindings": [],
+   "new": "Li nimu ke ligo li cilni.",
+   "newOk": true,
+   "newExact": false
+  },
+  {
+   "rule": "2.5:G93",
+   "english": "I was a little child.",
+   "want": "Maivo po ke linuti.",
+   "old": "maivo po ke baba mellinasan linu.",
+   "oldPasses": true,
+   "oldExact": false,
+   "oldFindings": [],
+   "new": "Maivo po ke baba mellinasan linu.",
+   "newOk": true,
+   "newExact": false
+  },
+  {
+   "rule": "2.5:G93",
+   "english": "I am a singer.",
+   "want": "Maivo ka lirayo.",
+   "old": "maivo ke baba lirayo.",
+   "oldPasses": true,
+   "oldExact": false,
+   "oldFindings": [],
+   "new": "Maivo ka baba lirayo.",
+   "newOk": true,
+   "newExact": false
+  },
+  {
+   "rule": "2.5:G93",
+   "english": "The person is good at the moment.",
+   "want": "Li nela ke benasan.",
+   "old": "li nela ke benasan at li mambi.",
+   "oldPasses": false,
+   "oldExact": false,
+   "oldFindings": [
+    "2.5:G126",
+    "hard_rules[0]"
+   ],
+   "new": "Li nela ke benasan.",
+   "newOk": true,
+   "newExact": true
+  },
+  {
+   "rule": "2.5:G93",
+   "english": "The friend is good by nature.",
+   "want": "Li sora ka benasan.",
+   "old": "li sora ke benasan by nature.",
+   "oldPasses": false,
+   "oldExact": false,
+   "oldFindings": [
+    "2.5:G126",
+    "hard_rules[0]",
+    "hard_rules[0]"
+   ],
+   "new": "Li sora ka benasan.",
+   "newOk": true,
+   "newExact": true
+  },
+  {
+   "rule": "2.5:G128",
+   "english": "The person is beautiful.",
+   "want": "Nela vanisan.",
+   "old": "li nela ke vanisan.",
+   "oldPasses": true,
+   "oldExact": false,
+   "oldFindings": [],
+   "new": "Li nela ka vanisan.",
+   "newOk": true,
+   "newExact": false
+  },
+  {
+   "rule": "2.5:G128",
+   "english": "The person was beautiful.",
+   "want": "Li nela po ke vanisan.",
+   "old": "li nela po ke vanisan.",
+   "oldPasses": true,
+   "oldExact": true,
+   "oldFindings": [],
+   "new": "Li nela po ke vanisan.",
+   "newOk": true,
+   "newExact": true
+  },
+  {
+   "rule": "2.5:G128",
+   "english": "There is a friend in the home.",
+   "want": "Miyo baba sora en li nimu.",
+   "old": "ola-pago ke baba sora en li nimu.",
+   "oldPasses": true,
+   "oldExact": false,
+   "oldFindings": [],
+   "new": "Miyo baba sora en li nimu.",
+   "newOk": true,
+   "newExact": true
+  },
+  {
+   "rule": "2.5:G94",
+   "english": "They were good.",
+   "want": "Saivo po ka benasan.",
+   "old": "saivori po ke benasan.",
+   "oldPasses": true,
+   "oldExact": false,
+   "oldFindings": [],
+   "new": "Saivori po ke benasan.",
+   "newOk": true,
+   "newExact": false
+  },
+  {
+   "rule": "2.5:G94",
+   "english": "They were good, and no longer are.",
+   "want": "Saivo kapoki benasan.",
+   "old": "saivori po ke benasan, ata kasi lalnisan ne ke.",
+   "oldPasses": false,
+   "oldExact": false,
+   "oldFindings": [
+    "2.5:G126",
+    "2.5:G126"
+   ],
+   "new": "Saivori kapoki benasan.",
+   "newOk": true,
+   "newExact": false
+  },
+  {
+   "rule": "2.5:G97",
+   "english": "One of the two will return",
+   "want": "Una de dossa futu relnura.",
+   "old": "una de li dossa futu relnura.",
+   "oldPasses": true,
+   "oldExact": false,
+   "oldFindings": [],
+   "new": "Una de li dossa futu relnura.",
+   "newOk": true,
+   "newExact": false
+  },
+  {
+   "rule": "2.5:G99",
+   "english": "The bird sits behind the home.",
+   "want": "Li lavra semnesia nazru li nimu.",
+   "old": "li lavra semnesia nazru li nimu.",
+   "oldPasses": true,
+   "oldExact": true,
+   "oldFindings": [],
+   "new": "Li lavra semnesia nazru li nimu.",
+   "newOk": true,
+   "newExact": true
+  },
+  {
+   "rule": "2.5:G100",
+   "english": "I am beautiful.",
+   "want": "Maivo ka vanisan.",
+   "old": "maivo ke vanisan.",
+   "oldPasses": true,
+   "oldExact": false,
+   "oldFindings": [],
+   "new": "Maivo ka vanisan.",
+   "newOk": true,
+   "newExact": true
+  },
+  {
+   "rule": "2.5:G102",
+   "english": "The bird sings; it is beautiful.",
+   "want": "Li lavra lirala; ito ka vanisan.",
+   "old": "li lavra lirala ito ke vanisan.",
+   "oldPasses": false,
+   "oldExact": false,
+   "oldFindings": [
+    "2.5:G126"
+   ],
+   "new": "Li lavra lirala; ito ka vanisan.",
+   "newOk": true,
+   "newExact": true
+  },
+  {
+   "rule": "2.5:G102",
+   "english": "Nilo sings; she is beautiful.",
+   "want": "Nilo lirala; saivo ka vanisan.",
+   "old": "nilo lirala saivo ke vanisan.",
+   "oldPasses": false,
+   "oldExact": false,
+   "oldFindings": [
+    "2.5:G126"
+   ],
+   "new": "Nilo lirala; saivo ka vanisan.",
+   "newOk": true,
+   "newExact": true
+  },
+  {
+   "rule": "2.5:G103",
+   "english": "I see in the morning.",
+   "want": "Maivo vimova en merno.",
+   "old": "maivo vimova en li merno.",
+   "oldPasses": true,
+   "oldExact": false,
+   "oldFindings": [],
+   "new": "Maivo vimova en merno.",
+   "newOk": true,
+   "newExact": true
+  },
+  {
+   "rule": "2.5:G103",
+   "english": "I see the morning.",
+   "want": "Maivo vimova merno.",
+   "old": "maivo vimova li merno.",
+   "oldPasses": true,
+   "oldExact": false,
+   "oldFindings": [],
+   "new": "Maivo vimova li merno.",
+   "newOk": true,
+   "newExact": false
+  },
+  {
+   "rule": "2.5:G103",
+   "english": "I sing today.",
+   "want": "Maivo lirala deyapressa.",
+   "old": "maivo lirala deyapressa.",
+   "oldPasses": true,
+   "oldExact": true,
+   "oldFindings": [],
+   "new": "Maivo lirala deyapressa.",
+   "newOk": true,
+   "newExact": true
+  },
+  {
+   "rule": "2.5:G103",
+   "english": "I always sing.",
+   "want": "Maivo lirala toda-krono.",
+   "old": "maivo toda-krono lirala.",
+   "oldPasses": false,
+   "oldExact": false,
+   "oldFindings": [
+    "2.5:G126"
+   ],
+   "new": "Maivo lirala toda-krono.",
+   "newOk": true,
+   "newExact": true
+  },
+  {
+   "rule": "2.5:G104",
+   "english": "I open the door with the key.",
+   "want": "Maivo lallela li dorbi yuta li kemye.",
+   "old": "maivo lallela li dorbi ko li kemye.",
+   "oldPasses": true,
+   "oldExact": false,
+   "oldFindings": [],
+   "new": "Maivo lallela li dorbi yuta li kemye.",
+   "newOk": true,
+   "newExact": true
+  },
+  {
+   "rule": "2.5:G104",
+   "english": "She spoke in a musical voice.",
+   "want": "Saivo po senosia en baba melosan valla.",
+   "old": "saivo po senosia en baba melosan valla.",
+   "oldPasses": true,
+   "oldExact": true,
+   "oldFindings": [],
+   "new": "Saivo po senosia en baba melosan valla.",
+   "newOk": true,
+   "newExact": true
+  },
+  {
+   "rule": "2.5:G104",
+   "english": "I sing with love.",
+   "want": "Maivo lirala ko amor.",
+   "old": "maivo lirala ko amor.",
+   "oldPasses": true,
+   "oldExact": true,
+   "oldFindings": [],
+   "new": "Maivo lirala ko amor.",
+   "newOk": true,
+   "newExact": true
+  },
+  {
+   "rule": "2.5:G104",
+   "english": "I sing with him.",
+   "want": "Maivo lirala ko saivo.",
+   "old": "maivo lirala ko saivo.",
+   "oldPasses": true,
+   "oldExact": true,
+   "oldFindings": [],
+   "new": "Maivo lirala ko saivo.",
+   "newOk": true,
+   "newExact": true
+  },
+  {
+   "rule": "2.5:G104",
+   "english": "I sing gently.",
+   "want": "Maivo lirala la molusan.",
+   "old": "maivo lirala gently.",
+   "oldPasses": false,
+   "oldExact": false,
+   "oldFindings": [
+    "2.5:G126",
+    "hard_rules[0]"
+   ],
+   "new": "Maivo lirala la molusan.",
+   "newOk": true,
+   "newExact": true
+  },
+  {
+   "rule": "2.5:G105",
+   "english": "I sing very gently.",
+   "want": "Maivo lirala la ruli molusan.",
+   "old": "maivo lirala ruli gently.",
+   "oldPasses": false,
+   "oldExact": false,
+   "oldFindings": [
+    "2.5:G126",
+    "hard_rules[0]"
+   ],
+   "new": "Maivo lirala la ruli molusan.",
+   "newOk": true,
+   "newExact": true
+  },
+  {
+   "rule": "2.5:G106",
+   "english": "I have more songs than you.",
+   "want": "Maivo tovota kasi lirari tamo taivo.",
+   "old": "maivo have kasi lirari tamo taivo.",
+   "oldPasses": false,
+   "oldExact": false,
+   "oldFindings": [
+    "2.5:G126",
+    "hard_rules[0]"
+   ],
+   "new": "Maivo tovota kasi lirari tamo taivo.",
+   "newOk": true,
+   "newExact": true
+  },
+  {
+   "rule": "2.5:G106",
+   "english": "I sing more gently than you.",
+   "want": "Maivo lirala la kasi molusan tamo taivo.",
+   "old": "maivo lirala kasi gently tamo taivo.",
+   "oldPasses": false,
+   "oldExact": false,
+   "oldFindings": [
+    "2.5:G126",
+    "hard_rules[0]"
+   ],
+   "new": "Maivo lirala la kasi molusan tamo taivo.",
+   "newOk": true,
+   "newExact": true
+  },
+  {
+   "rule": "2.5:G107",
+   "english": "I have about two coins.",
+   "want": "Maivo tovota gase dossa cono.",
+   "old": "maivo have about dossa conori.",
+   "oldPasses": false,
+   "oldExact": false,
+   "oldFindings": [
+    "2.5:G126",
+    "hard_rules[0]",
+    "hard_rules[0]"
+   ],
+   "new": "Maivo tovota gase dossa cono.",
+   "newOk": true,
+   "newExact": true
+  },
+  {
+   "rule": "2.5:G108",
+   "english": "I came two days ago.",
+   "want": "Maivo po venreva kroti dossa deya.",
+   "old": "maivo po venreva kroti dossa deya.",
+   "oldPasses": true,
+   "oldExact": true,
+   "oldFindings": [],
+   "new": "Maivo po venreva kroti dossa deya.",
+   "newOk": true,
+   "newExact": true
+  },
+  {
+   "rule": "2.5:G109",
+   "english": "I make him eat the food.",
+   "want": "Maivo vaku saivo sapusia li nami.",
+   "old": "maivo vaku saivo sapusia li nami.",
+   "oldPasses": true,
+   "oldExact": true,
+   "oldFindings": [],
+   "new": "Maivo vaku saivo sapusia li nami.",
+   "newOk": true,
+   "newExact": true
+  },
+  {
+   "rule": "2.5:G109",
+   "english": "You make me sing.",
+   "want": "Taivo vaku maivo lirala.",
+   "old": "taivo vaku maivo lirala.",
+   "oldPasses": true,
+   "oldExact": true,
+   "oldFindings": [],
+   "new": "Taivo vaku maivo lirala.",
+   "newOk": true,
+   "newExact": true
+  },
+  {
+   "rule": "2.5:G109",
+   "english": "I let them leave.",
+   "want": "Maivo po lesvu saivo pagopa.",
+   "old": "maivo lesvu saivori leave.",
+   "oldPasses": false,
+   "oldExact": false,
+   "oldFindings": [
+    "2.5:G109",
+    "2.5:G126",
+    "hard_rules[0]"
+   ],
+   "new": "Maivo po lesvu saivori tevuluta.",
+   "newOk": true,
+   "newExact": false
+  },
+  {
+   "rule": "2.5:G110",
+   "english": "The song is written by me.",
+   "want": "Li lira gome sarbisia gagu maivo.",
+   "old": "li lira ke sarbisan by maivo.",
+   "oldPasses": false,
+   "oldExact": false,
+   "oldFindings": [
+    "2.5:G126",
+    "hard_rules[0]"
+   ],
+   "new": "Li lira gome sarbisia gagu maivo.",
+   "newOk": true,
+   "newExact": true
+  },
+  {
+   "rule": "2.5:G110",
+   "english": "Suddenly the door opened.",
+   "want": "Zafra, li dorbi po lallela.",
+   "old": "zafra, li dorbi po lallela.",
+   "oldPasses": true,
+   "oldExact": true,
+   "oldFindings": [],
+   "new": "Zafra, li dorbi po lallela.",
+   "newOk": true,
+   "newExact": true
+  },
+  {
+   "rule": "2.5:G110",
+   "english": "Suddenly the door was opened.",
+   "want": "Zafra, li dorbi po gome lallela.",
+   "old": "zafra, li dorbi po ke lallela.",
+   "oldPasses": false,
+   "oldExact": false,
+   "oldFindings": [
+    "2.5:G93",
+    "2.5:G126"
+   ],
+   "new": "Zafra, li dorbi po gome lallela.",
+   "newOk": true,
+   "newExact": true
+  },
+  {
+   "rule": "2.5:G111",
+   "english": "Change is very easy to resist.",
+   "want": "Trana ke ruli levasan sidu zeldoza.",
+   "old": "trana ke ruli levasan sidu zeldoza.",
+   "oldPasses": true,
+   "oldExact": true,
+   "oldFindings": [],
+   "new": "Trana ka ruli levasan sidu zeldoza.",
+   "newOk": true,
+   "newExact": false
+  },
+  {
+   "rule": "2.5:G112",
+   "english": "You owe me two coins.",
+   "want": "Taivo guraga maivo dossa cono.",
+   "old": "taivo guraga maivo dossa conori.",
+   "oldPasses": true,
+   "oldExact": false,
+   "oldFindings": [],
+   "new": "Taivo guraga maivo dossa cono.",
+   "newOk": true,
+   "newExact": true
+  },
+  {
+   "rule": "2.5:G112",
+   "english": "I sing you a song.",
+   "want": "Maivo lirala taivo baba lira.",
+   "old": "maivo lirala taivo baba lira.",
+   "oldPasses": true,
+   "oldExact": true,
+   "oldFindings": [],
+   "new": "Maivo lirala baba lira ala taivo.",
+   "newOk": true,
+   "newExact": false
+  },
+  {
+   "rule": "2.5:G112",
+   "english": "I sing a song to you.",
+   "want": "Maivo lirala baba lira ala taivo.",
+   "old": "maivo lirala baba lira ala taivo.",
+   "oldPasses": true,
+   "oldExact": true,
+   "oldFindings": [],
+   "new": "Maivo lirala baba lira ala taivo.",
+   "newOk": true,
+   "newExact": true
+  },
+  {
+   "rule": "2.5:G113",
+   "english": "I came here to sing.",
+   "want": "Maivo po venreva eli-pago kopisa lirala.",
+   "old": "maivo po venreva eli-pago sidu lirala.",
+   "oldPasses": false,
+   "oldExact": false,
+   "oldFindings": [
+    "2.5:G113"
+   ],
+   "new": "Maivo po venreva eli-pago kopisa lirala.",
+   "newOk": true,
+   "newExact": true
+  },
+  {
+   "rule": "2.5:G113",
+   "english": "I sing so that you dance.",
+   "want": "Maivo lirala kopisa taivo rilura.",
+   "old": "maivo lirala tonsi fime taivo rilura.",
+   "oldPasses": false,
+   "oldExact": false,
+   "oldFindings": [
+    "2.5:G117"
+   ],
+   "new": "Maivo lirala kopisa taivo rilura.",
+   "newOk": true,
+   "newExact": true
+  },
+  {
+   "rule": "2.5:G114",
+   "english": "If I had asked, you would have answered.",
+   "want": "Si maivo po noma masuma, taivo po noma viki relsira.",
+   "old": "si maivo po noma masuma, taivo po viki relsira.",
+   "oldPasses": false,
+   "oldExact": false,
+   "oldFindings": [
+    "2.5:G114"
+   ],
+   "new": "Si maivo po noma masuma, taivo po noma viki relsira.",
+   "newOk": true,
+   "newExact": true
+  },
+  {
+   "rule": "2.5:G115",
+   "english": "The person who sings is good.",
+   "want": "Li nela raho lirala ka benasan.",
+   "old": "li nela raho lirala ke benasan.",
+   "oldPasses": true,
+   "oldExact": false,
+   "oldFindings": [],
+   "new": "Li nela raho lirala ka benasan.",
+   "newOk": true,
+   "newExact": true
+  },
+  {
+   "rule": "2.5:G115",
+   "english": "The sage who studies this did not witness the word.",
+   "want": "Li sabeyo raho vismava eli, ne yehu vimova li vordu.",
+   "old": "li sabeyo raho po ne lemula eli witness li seno.",
+   "oldPasses": false,
+   "oldExact": false,
+   "oldFindings": [
+    "2.5:G115",
+    "2.5:G126",
+    "hard_rules[0]"
+   ],
+   "new": "Li sabeyo raho lemula eli, po ne vimova li seno.",
+   "newOk": true,
+   "newExact": false
+  },
+  {
+   "rule": "2.5:G116",
+   "english": "I sing, so that perhaps you'll dance.",
+   "want": "Maivo lirala, kopisa taivo nosi rilura.",
+   "old": "maivo lirala tonsi fime you'll rilu poye.",
+   "oldPasses": false,
+   "oldExact": false,
+   "oldFindings": [
+    "2.5:G117",
+    "2.5:G126",
+    "2.5:G126",
+    "2.5:G126",
+    "hard_rules[0]",
+    "hard_rules[0]"
+   ],
+   "new": "Maivo lirala, kopisa taivo nosi rilura.",
+   "newOk": true,
+   "newExact": true
+  },
+  {
+   "rule": "2.5:G116",
+   "english": "I know that you might sing.",
+   "want": "Maivo sabesia fime taivo nosi lirala.",
+   "old": "maivo sabesia fime taivo nosi lirala.",
+   "oldPasses": true,
+   "oldExact": true,
+   "oldFindings": [],
+   "new": "Maivo sabesia fime taivo nosi lirala.",
+   "newOk": true,
+   "newExact": true
+  },
+  {
+   "rule": "2.5:G117",
+   "english": "Therefore a brave person sings.",
+   "want": "Tonsi, corvisan nela lirala.",
+   "old": "tonsi baba corvisan nela lirala.",
+   "oldPasses": false,
+   "oldExact": false,
+   "oldFindings": [
+    "2.5:G117"
+   ],
+   "new": "Tonsi, baba corvisan nela lirala.",
+   "newOk": true,
+   "newExact": false
+  },
+  {
+   "rule": "2.5:G117",
+   "english": "Are you so brave that you would kiss me?",
+   "want": "Taivo ke tonsi corvisan fime taivo viki savalisia maivo ki?",
+   "old": "taivo ke tonsi corvisan fime taivo viki savalisia maivo ki?",
+   "oldPasses": true,
+   "oldExact": true,
+   "oldFindings": [],
+   "new": "Taivo ka tonsi corvisan fime taivo viki savalisia maivo ki?",
+   "newOk": true,
+   "newExact": false
+  },
+  {
+   "rule": "2.5:G118",
+   "english": "As soon as you came, I sang.",
+   "want": "Kureli taivo venreva, maivo po lirala.",
+   "old": "gase soon gase taivo po venreva maivo lirala.",
+   "oldPasses": false,
+   "oldExact": false,
+   "oldFindings": [
+    "0.8:G8",
+    "2.5:G126",
+    "hard_rules[0]"
+   ],
+   "new": "Kureli taivo venreva, maivo po lirala.",
+   "newOk": true,
+   "newExact": true
+  },
+  {
+   "rule": "2.5:G118",
+   "english": "I asked whether you returned.",
+   "want": "Maivo po masuma ki-oro taivo relnura.",
+   "old": "maivo po masuma ki-oro taivo po relnura.",
+   "oldPasses": true,
+   "oldExact": false,
+   "oldFindings": [],
+   "new": "Maivo po masuma ki-oro taivo relnura.",
+   "newOk": true,
+   "newExact": true
+  },
+  {
+   "rule": "2.5:G119",
+   "english": "As for Kipo, they sing.",
+   "want": "Kipo hozi, saivo lirala.",
+   "old": "gase vobi Kipo saivori lirala.",
+   "oldPasses": false,
+   "oldExact": false,
+   "oldFindings": [
+    "0.8:G8",
+    "2.5:G126"
+   ],
+   "new": "Kipo hozi, saivori lirala.",
+   "newOk": true,
+   "newExact": false
+  },
+  {
+   "rule": "2.5:G119",
+   "english": "As for the bread, Kipo baked it.",
+   "want": "Li bumre hozi, Kipo po bumreba.",
+   "old": "gase po vobi li bumre Kipo bumresan ito.",
+   "oldPasses": false,
+   "oldExact": false,
+   "oldFindings": [
+    "0.8:G8",
+    "2.5:G127",
+    "2.5:G126"
+   ],
+   "new": "Li bumre hozi, Kipo po bumreba ito.",
+   "newOk": true,
+   "newExact": false
+  },
+  {
+   "rule": "2.5:G119",
+   "english": "As for the bread, Kipo baked it.",
+   "want": "Li bumre hozi, Kipo po bumreba ito.",
+   "old": "gase po vobi li bumre Kipo bumresan ito.",
+   "oldPasses": false,
+   "oldExact": false,
+   "oldFindings": [
+    "0.8:G8",
+    "2.5:G127",
+    "2.5:G126"
+   ],
+   "new": "Li bumre hozi, Kipo po bumreba ito.",
+   "newOk": true,
+   "newExact": true
+  },
+  {
+   "rule": "2.5:G121",
+   "english": "I recognize you.",
+   "want": "Maivo revo-sabesia taivo.",
+   "old": "maivo revo-sabesia taivo.",
+   "oldPasses": true,
+   "oldExact": true,
+   "oldFindings": [],
+   "new": null,
+   "newOk": false,
+   "newExact": false
+  }
+ ],
+ "album": [
+  {
+   "where": "01:1",
+   "text": "krono raho baba melonulu po hiro farlafa yuta colbi.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "01:2",
+   "text": "li lore de li lumiasasan mareasa po donuda kronobio ala veluri.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "01:3",
+   "text": "saivo de navuasasan havli po belruba lumi ala narvo.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "01:4",
+   "text": "saivo de maremiru po naminia li veluasasan linuri kroti mernolumi.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "01:5",
+   "text": "narvoasa po kronobioka ata po surusia larne ala saivo de narvonasan vani.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "01:6",
+   "text": "en larne li narvo po hataha saivo de yuge.",
+   "old": [],
+   "new": [
+    "2.5:G127"
+   ]
+  },
+  {
+   "where": "01:7",
+   "text": "li merasan minva po milobema ala saivo de zarkuri.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "01:8",
+   "text": "saivo po lallela saivo de manliri ata baba tarnu po kronobioka vobi dokra.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "01:9",
+   "text": "saivo po veseva ala li tarnu raho po tivrota baba tisebiti.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "01:10",
+   "text": "lanto, saivo po veseva fime raho saivo viki ke saivo de devorivo.",
+   "old": [],
+   "new": [
+    "2.5:G126",
+    "2.5:G126"
+   ]
+  },
+  {
+   "where": "01:11",
+   "text": "eli vanisan vera po ke baba opi raho polvapa saivo de faru.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "01:12",
+   "text": "saivo de lumiasasan tisebiti po karkoka toda narvo raho saivo po navdinia.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "01:13",
+   "text": "li suma de ruko po ke yalmunami vobi saivo de faru.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "01:14",
+   "text": "li mareasa de lumiasa po vimova gase li tarnusan trana ala baba velu.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "01:15",
+   "text": "saivo po lirala ala saivo baba lumiasasan seno.",
+   "old": [],
+   "new": [
+    "2.5:G112"
+   ]
+  },
+  {
+   "where": "01:16",
+   "text": "saivo po lemula saivo de nole, ata po surusia navuasasan tranaasa.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "02:1",
+   "text": "maivo po ke baba lirasan lavra norusan.",
+   "old": [],
+   "new": [
+    "2.5:G98"
+   ]
+  },
+  {
+   "where": "02:2",
+   "text": "maivo po ke hupi li navu ata veluri.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "02:3",
+   "text": "li lanlasan kronovimo ala mavopagoasa.",
+   "old": [],
+   "new": [
+    "2.5:G128"
+   ]
+  },
+  {
+   "where": "02:4",
+   "text": "li lanla po vimova baba hurvosan lirasan lavra hupi ito.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "02:5",
+   "text": "ki-pago taivo da hurvosan lirasan lavra ki?",
+   "old": [],
+   "new": [
+    "2.5:G128"
+   ]
+  },
+  {
+   "where": "02:6",
+   "text": "taivo diyida hupi maivo en humena ki?",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "02:7",
+   "text": "taivo ke li rivo de li mare de mavopagoasa ki?",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "02:8",
+   "text": "maivo mambivimoma ala li ata masuma lanla ata po milobema.",
+   "old": [],
+   "new": [
+    "0.8:G7"
+   ]
+  },
+  {
+   "where": "02:9",
+   "text": "li colbiri de maivo de pulmiri po donuda li vera ki?",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "02:10",
+   "text": "oro ito po ke li faru raho taivo po vimova en maivo de vilneri ki?",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "02:11",
+   "text": "ito ke vera maivo ata ke li rivo de maresan mavopagoasa.",
+   "old": [],
+   "new": [
+    "2.5:G126"
+   ]
+  },
+  {
+   "where": "02:12",
+   "text": "maivo farlafa melo vobi saivo de lavi.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "02:13",
+   "text": "si taivo futu masuma ko benamolu maivo ata donuda taivo baba pulmi.",
+   "old": [],
+   "new": [
+    "2.5:G126"
+   ]
+  },
+  {
+   "where": "02:14",
+   "text": "en veraasa taivo ke baba lukasan nela.",
+   "old": [],
+   "new": [
+    "2.5:G127"
+   ]
+  },
+  {
+   "where": "02:15",
+   "text": "li teru ke juba baba pagonasan pulmi.",
+   "old": [],
+   "new": [
+    "2.5:G126"
+   ]
+  },
+  {
+   "where": "02:16",
+   "text": "li linu raho navdinia sabesia baba bio de milno.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "03:1",
+   "text": "kube krono po lombila, maivo po surusia baba faruti.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "03:2",
+   "text": "mareasasan velu po savalisia maivo su li lehe.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "03:3",
+   "text": "saivo po senosia en baba melosan valla.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "03:4",
+   "text": "taivo ke baba farulavra.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "03:5",
+   "text": "ne ramumomvira taivo de lumiasasan kronobio.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "03:6",
+   "text": "taivo de nalfari donuda suma ala li navuri.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "03:7",
+   "text": "taivo diyida hupi li sabesan lanla.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "03:8",
+   "text": "li luno salrusia ata taivo somusia en maivo de varori.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "03:9",
+   "text": "maivo de navuasasan faru donuda taivo polva.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "03:10",
+   "text": "maivo de savali raho taivo de lehe donuda taivo opi.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "03:11",
+   "text": "maivo de lomo senosia ala taivo fime taivo ke nimu.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "03:12",
+   "text": "faruti, taivo de corvi farlafa maivo ata milobema.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "03:13",
+   "text": "lirala baba somulira de narvonasan suma vobi maivo de lavi.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "03:14",
+   "text": "taivo po ke gonbihemlusan ala li suma de maivo de yuge.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "03:15",
+   "text": "fisa lavbula nayo taivo venreva ala maivo de lumiasasan pago.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "03:16",
+   "text": "ata maivo futu lisila taivo yuta maivo de mavolumisan miru.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "04:1",
+   "text": "ola-pago saivo ke yeko vanisan tarnu.",
+   "old": [],
+   "new": [
+    "2.5:G127",
+    "2.5:G93",
+    "2.5:G126"
+   ]
+  },
+  {
+   "where": "04:2",
+   "text": "fime taivo manlisonbuma su maivo de dorbi ki?",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "04:3",
+   "text": "taivo desida sidu turnata maivo de dokranasan yuge ki?",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "04:4",
+   "text": "kroti maivo lesvu taivo ke li sevusan ruhe.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "04:5",
+   "text": "taivo povi ke li savali de baba gargonasan moluvaye ki?",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "04:6",
+   "text": "ata madima maivo de damvari, ata tu maivo de leheri ki?",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "04:7",
+   "text": "oro taivo suvi turnata maivo ko vizuvalmi gase navufaru ki?",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "04:8",
+   "text": "ola-pago saivo po ke saivo ata farlafa baba corviasasan livna.",
+   "old": [],
+   "new": [
+    "2.5:G127"
+   ]
+  },
+  {
+   "where": "04:9",
+   "text": "maivo ke tula saivo, ata saivo ke en maivo.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "04:10",
+   "text": "saivo po turnata maivo de mavolumi, ata maivo de yuge.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "04:11",
+   "text": "saivo po ne ramura fime maivo ke baba madi de yanbanasan nonmori.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "04:12",
+   "text": "ata maivo ke baba naminasan mirunulu raho nosi mirudaigoma saivo.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "04:13",
+   "text": "saivo po duhada vobi damruna tonsi maivo donuda maivo de yuge ala saivo.",
+   "old": [],
+   "new": [
+    "2.5:G117"
+   ]
+  },
+  {
+   "where": "04:14",
+   "text": "saivo po mirudaigoma en maivo de sevu.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "04:15",
+   "text": "maivo de mirunuluasasan yuge po lomola saivo de mavolumi.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "04:16",
+   "text": "saivo po tivromomvita saivo de yalmu en maivo de lasosan pagoasa.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "05:1",
+   "text": "maivori po sarbisia baba narvosan pagolelde en solopusa.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "05:2",
+   "text": "taivo futu valmiva ko maivo transa li lelde ki?",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "05:3",
+   "text": "si maivo po ke sili ata corvisan ata po valmiva transa li lelde.",
+   "old": [],
+   "new": [
+    "1.2:G29"
+   ]
+  },
+  {
+   "where": "05:4",
+   "text": "taivo viki venreva ligo maivo ki?",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "05:5",
+   "text": "si ito po fatofa kopisa ola-pago ke.",
+   "old": [],
+   "new": [
+    "2.5:G93"
+   ]
+  },
+  {
+   "where": "05:6",
+   "text": "baba pagolelde entre taivo ata maivo.",
+   "old": [],
+   "new": [
+    "2.5:G128"
+   ]
+  },
+  {
+   "where": "05:7",
+   "text": "maivo viki teruta su li pagolelde baba fama de furori.",
+   "old": [],
+   "new": [
+    "2.5:G126"
+   ]
+  },
+  {
+   "where": "05:8",
+   "text": "doli apoknasan ko baba paralonasan larbo.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "05:9",
+   "text": "kube ito futu ke salrusan maivo ata donuda ala ito baba biti vobi demro.",
+   "old": [],
+   "new": [
+    "2.5:G112"
+   ]
+  },
+  {
+   "where": "05:10",
+   "text": "kube salrusan, maivo futu donuda ala ito baba biti vobi demro.",
+   "old": [],
+   "new": [
+    "2.5:G128",
+    "2.5:G112"
+   ]
+  },
+  {
+   "where": "05:11",
+   "text": "fime taivo nosi semnesia en li vaye ata vayeva.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "05:12",
+   "text": "hupi li pagolelde maivori po farlafa.",
+   "old": [],
+   "new": [
+    "2.5:G127"
+   ]
+  },
+  {
+   "where": "05:13",
+   "text": "li vaye vayeva transa taivo de sabaye.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "05:14",
+   "text": "ola-pago povi ke baba kasi dokranasan sonbu ki?",
+   "old": [],
+   "new": [
+    "2.5:G127"
+   ]
+  },
+  {
+   "where": "05:15",
+   "text": "si maivo po lenila ala lideodonusan pagolelderi en eli bio.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "05:16",
+   "text": "maivo en li krotiata bio viki vazrava taivo vobi kronoasa ki?",
+   "old": [],
+   "new": [
+    "0.8:G7",
+    "2.5:G128"
+   ]
+  },
+  {
+   "where": "05:17",
+   "text": "ko muya cuzasan solosan sonbusambari ki?",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "05:18",
+   "text": "maivo viki sulnosia krotiapo li pagolelde de bio ata daigo.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "05:19",
+   "text": "ki-coda baba navusan lavra oro baba farulavra povi ke ki?",
+   "old": [],
+   "new": [
+    "2.5:G126"
+   ]
+  },
+  {
+   "where": "05:20",
+   "text": "voyu taivo de navu maivo ne povi navdinia maivo.",
+   "old": [],
+   "new": [
+    "2.5:G127",
+    "function_words:sela"
+   ]
+  },
+  {
+   "where": "05:21",
+   "text": "baba lavra de vizu oro baba lavra de vera",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "05:22",
+   "text": "raho maivo suvi kulpaka vobi maivo de loresan nedu taivo de kemye ki?",
+   "old": [],
+   "new": [
+    "2.5:G126"
+   ]
+  },
+  {
+   "where": "05:23",
+   "text": "ki-coda maivo povi ke nara lavisan ata sulnosovesia.",
+   "old": [],
+   "new": [
+    "2.5:G126"
+   ]
+  },
+  {
+   "where": "05:24",
+   "text": "doli taivo povi yugemeyiya maivo de holbanasan lore.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "05:25",
+   "text": "si krono ke li dokra raho maivo musi sulnosovesia sidu biolisroba.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "05:26",
+   "text": "milobesan taivo dagi livnala maivo de zarku.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "05:27",
+   "text": "yuta maivo de farulavrasan faru ito ke ruli levasan.",
+   "old": [],
+   "new": [
+    "2.5:G127"
+   ]
+  },
+  {
+   "where": "05:28",
+   "text": "sidu zeldoza trana gase solori muya-krono.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "05:29",
+   "text": "sonhisan ata ko amorjomru maivo viki sulnosia kopisa kronoasa apoka.",
+   "old": [],
+   "new": [
+    "2.5:G126"
+   ]
+  },
+  {
+   "where": "05:30",
+   "text": "tuni taivo de kemye po navdinia baba nimu en li dorbi de maivo de lore.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "06:1",
+   "text": "Taivo buyu sabesia: toda-coda ralnora.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "06:2",
+   "text": "Maivo yehu vimova: toda-coda lumila.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "06:3",
+   "text": "Taivo ka mavoasa, nara maivo ka lumiasa,",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "06:4",
+   "text": "taivo cunuca veluri, maivo po farlafa pagoasa!",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "06:5",
+   "text": "Taivo kronoka mambiri, la mavosan, la silisan,",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "06:6",
+   "text": "maivo meloma vemiasa, la lumisan, la lavisan!",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "06:7",
+   "text": "Taivo pensapa fime bio ka kronosan,",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "06:8",
+   "text": "maivo sabesia fime bio ka melosan!",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "06:9",
+   "text": "Taivo vimova narvo; maivo vimova li narvonasan.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "06:10",
+   "text": "Taivo ne yehu vimova — taivo doli pensapa, li mavonasan!",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "06:11",
+   "text": "Maivo yehu vimova kronoasa; maivo turnata ito ata lisrola,",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "06:12",
+   "text": "taivo buyu lenila ito; taivo po somusia ata lasola.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "06:13",
+   "text": "Ki-coda ka pagoasa? Lumiasa, lumiasa!",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "06:14",
+   "text": "Ki-coda ka kronoasa? Liraasa, liraasa!",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "06:15",
+   "text": "Taivo cunuca, taivo kronoka — maivo lirala, maivo lumila,",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "06:16",
+   "text": "toda-coda ka meloasa — seye, seye!",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "06:17",
+   "text": "Taivo senosia: \"Pagoasa ka codana; toda velu daigoda;",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "06:18",
+   "text": "lumi ka doli una mambi; narvo lisrola toda-krono.\"",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "06:19",
+   "text": "Zabo, veluri daigoda — nara lamsa samnisia!",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "06:20",
+   "text": "Daigo ka dorbi, ne tobra — taivo ne pensapa, ne surusia!",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "06:21",
+   "text": "Taivo vilneva navuasa gase li codanasan,",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "06:22",
+   "text": "maivo vilneva ito ata lorela: ito ka loreasasan!",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "06:23",
+   "text": "Taivo buyu sabesia; maivo po vuda norunia pagoasa,",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "06:24",
+   "text": "ata maivo de noru po loya vemiasa!",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "06:25",
+   "text": "Taivo ka krono, maivo ka lira; taivo ka pensa, maivo ka melo;",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "06:26",
+   "text": "taivo ka sili, maivo ka faru; taivo ka foji, maivo ka faji!",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "06:27",
+   "text": "Nara maivo masuma, maivo de mavoasa:",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "06:28",
+   "text": "si pagoasa ka doli krono ata coda,",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "06:29",
+   "text": "ki-kasa taivo po amora maivo?",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "06:30",
+   "text": "Ki-kasa taivo loki tivrota maivo de manli — ki-kasa?",
+   "old": [],
+   "new": [
+    "2.5:G91"
+   ]
+  },
+  {
+   "where": "06:31",
+   "text": "Lumiasa, meloasa, amorasa — ola ka pagoasa!",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "06:32",
+   "text": "Ne codana, ne kronona — ola ka veraasa!",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "06:33",
+   "text": "Taivo de mavo ka velu, ata maivo de lore solasia,",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "06:34",
+   "text": "taivo ata maivo vaku pagoasa sonbusia!",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "06:35",
+   "text": "Yehu, gesu, bisu, vuda — maivo de sabe ka veraasa:",
+   "old": [],
+   "new": [
+    "2.5:G126",
+    "2.5:G126",
+    "2.5:G126"
+   ]
+  },
+  {
+   "where": "06:36",
+   "text": "pagoasa ka amorasa — seye, seye, seye!",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "06:37",
+   "text": "Yava lenbula en nullo; yava cunuca veluri.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "06:38",
+   "text": "Nayo taivo cunuca, maivo lirala.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "06:39",
+   "text": "Entre krono ata lira... pagoasa. Pifu.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "07:1",
+   "text": "kube krono po lombila, maivo po lenila taivo de melonulu.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "07:2",
+   "text": "taivo de valla po ke baba lira de navuasasan lumi.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "07:3",
+   "text": "taivo de manliri po ke li lumiasasan biti raho po farlafa li pagoasa.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "07:4",
+   "text": "maivo po ke baba melosan lavra taivo de vallasan vordusan lavi.",
+   "old": [],
+   "new": [
+    "2.5:G126"
+   ]
+  },
+  {
+   "where": "07:5",
+   "text": "mavopago po lenila maivori de melonulu gase vera.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "07:6",
+   "text": "saivori po lenila li narvonasan vani de li melonulu raho lumila.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "07:7",
+   "text": "yesta li raleri de li sadori de li ramumomvisan po lenila maivori de lira.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "07:8",
+   "text": "li peremori de lordina po ke ramumomvisan ata po ne relsira.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "07:9",
+   "text": "li cilni de mavopagoasa po kronobioka en li vanisan vilneri de li mareasa.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "07:10",
+   "text": "lumiasasan lumi po sarbisia vera kopisa li yanbasan veluri lenila.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "07:11",
+   "text": "ata li veluri po sarbisia ko bapi su li doza de farulavrasan amor.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "07:12",
+   "text": "maivo ke taivo de kronoasasan lirasan lavra toda-krono.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "07:13",
+   "text": "maivo futu ke li suma raho tivrota taivo de molusan lore.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "07:14",
+   "text": "maivo lenila li yumli de taivo de yomlasan valla.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "07:15",
+   "text": "maivo lavbula vobi lavi en taivo de lore.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "07:16",
+   "text": "maivo dagi ke taivo de kronoasasan lirasan lavra ki?",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "08:1",
+   "text": "maivo futu senosia ala taivo de baba gargonasan colbi.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "08:2",
+   "text": "maivo futu veseva ala taivo de li vera de damruna.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "08:3",
+   "text": "ke tivrosan en li varori de li mare de yomla.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "08:4",
+   "text": "lenyola li gargonasan merasan maremiru.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "08:5",
+   "text": "saivo tivrota li linu en saivo de pagoasasan linukova.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "08:6",
+   "text": "taivo lenila li gargonasan melonulu de saivo de somulira ki?",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "08:7",
+   "text": "ito ke li sonbusamba de folniri ko yumli.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "08:8",
+   "text": "saivo de vani ke baba gargonasan rubi ko vilneri de yomla.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "08:9",
+   "text": "saivo de mera ke baba savali raho navdinia li lehe de li opina.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "08:10",
+   "text": "saivo de somuvelma ke baba sove gase yumlisan gase mavopagoasa.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "08:11",
+   "text": "taivo ke gase sovelavisan gase baba lavra en faji ki?",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "08:12",
+   "text": "mavopagoasa povi mebanema saivo de vanisan milobe ki?",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "08:13",
+   "text": "li sabeasasan nelari raho pensapa peburalno en milno ki?",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "08:14",
+   "text": "oro li pagoasa ceresenoca saivo de silromasu de merasan vani ki?",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "08:15",
+   "text": "si maivo ke sidu daigoda, maivo kopi daigoda en saivo de varori.",
+   "old": [
+    "sidu"
+   ],
+   "new": []
+  },
+  {
+   "where": "08:16",
+   "text": "fime saivo nosi lumrala maivo da somu yuta baba gargonasan savali.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "09:1",
+   "text": "ola-pago ke sambanasan noleri vobi colbiri de azuri.",
+   "old": [],
+   "new": [
+    "1.2:G29"
+   ]
+  },
+  {
+   "where": "09:2",
+   "text": "nara baba lumiasasan azurijuba ke hupi li loterori.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "09:3",
+   "text": "saivo ke li navu ko baba sonhisan lore.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "09:4",
+   "text": "saivo de ruhesan larne teklata li pagoasasan somu.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "09:5",
+   "text": "saivo de vabeveri ke li colbiri de li renlicolbi.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "09:6",
+   "text": "ata maivo lemula saivo de sizosan lumi.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "09:7",
+   "text": "rada lira sudesia baba sambanasan fasbi de saivo de lumisan soloasa.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "09:8",
+   "text": "maivo de sonbusambari ke saivori vardesan jubari ki?",
+   "old": [],
+   "new": [
+    "2.5:G126"
+   ]
+  },
+  {
+   "where": "09:9",
+   "text": "maivo milnoma ko baba tarnulinusan farufasbi.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "09:10",
+   "text": "li vanisan minva resora kube saivo lenila maivo de lira ki?",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "09:11",
+   "text": "maivo de senori ke vardesan vobi saivo de lumiasasan felberi poye.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "09:12",
+   "text": "ito ke vobi eli seca vera fime maivo tivrota opi.",
+   "old": [],
+   "new": [
+    "ADR-0011"
+   ]
+  },
+  {
+   "where": "09:13",
+   "text": "maivo futu tovota li corvi de baba vardesan devorivo.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "09:14",
+   "text": "maivo futu sarbisia lirari su li rekuvelma de salrusan monruri.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "09:15",
+   "text": "maivo futu lirala ala li navuasasan navu de mavopagoasa.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "09:16",
+   "text": "saivo de melonulu venreva nazru gase baba lira de ruhesonbu.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "10:1",
+   "text": "maivo po vimova saivo de milobe su li lanla.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "10:2",
+   "text": "maivo po lenila saivo de lavisan reso gase vaye.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "10:3",
+   "text": "maivo po silbesia saivo de vaye raho po jubaja baba nonmori.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "10:4",
+   "text": "li vanisan minva po nedunia baba lumiasasan folni.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "10:5",
+   "text": "maivo ne povi zonraza saivo de nedu.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "10:6",
+   "text": "tonsi maivo po silbesia saivo de baba pagonasan folni.",
+   "old": [],
+   "new": [
+    "2.5:G117"
+   ]
+  },
+  {
+   "where": "10:7",
+   "text": "krotiapo li folni po venreva baba madi.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "10:8",
+   "text": "krotiapo li madi po venreva maivo de rezari ala saivo de lehe.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "10:9",
+   "text": "kronoasasan laso nayo maivo po savalisia saivo de fasbi.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "10:10",
+   "text": "li yanbanasan minva po farufasbifa ko milnosan vilneri.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "10:11",
+   "text": "taivo ke tonsi corvisan fime taivo viki savalisia maivo ki?",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "10:12",
+   "text": "maivo po tivrota saivo de manli ko baba gargonasan amorjomru.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "10:13",
+   "text": "maivo po veseva ala saivo de li krotiata lirasarbi.",
+   "old": [],
+   "new": [
+    "0.8:G7"
+   ]
+  },
+  {
+   "where": "10:14",
+   "text": "maivo de navuasasan valla po lirala ala saivo de lore.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "10:15",
+   "text": "saivo po farufasbifa kube saivo ramusan raho maivo po ke.",
+   "old": [],
+   "new": [
+    "2.5:G126"
+   ]
+  },
+  {
+   "where": "10:16",
+   "text": "maivo toda-krono po ke saivo de devorivo.",
+   "old": [],
+   "new": [
+    "2.5:G126"
+   ]
+  },
+  {
+   "where": "11:1",
+   "text": "maivo kronovimoka ala li luno en li navu.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "11:2",
+   "text": "yeko lunoasasan lumi marema.",
+   "old": [],
+   "new": [
+    "2.5:G126"
+   ]
+  },
+  {
+   "where": "11:3",
+   "text": "taivo de silromasu tivrota maivo de lore.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "11:4",
+   "text": "maivo povi navdinia li relsi ala taivo de silromasu ki?",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "11:5",
+   "text": "maivo futu navdinia li vera intra taivo de lumi ki?",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "11:6",
+   "text": "maivo povi lovula taivo de kronovimo de vio ki?",
+   "old": [],
+   "new": [
+    "1.2:G29"
+   ]
+  },
+  {
+   "where": "11:7",
+   "text": "maivo povi lemula taivo de silromasu ki?",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "11:8",
+   "text": "taivo povi lirala vobi maivo baba lunosan somulira.",
+   "old": [],
+   "new": [
+    "2.5:G126"
+   ]
+  },
+  {
+   "where": "11:9",
+   "text": "maivo po povi ke li linu tivrosan intra taivo de lomo ki?",
+   "old": [],
+   "new": [
+    "2.5:G98"
+   ]
+  },
+  {
+   "where": "11:10",
+   "text": "maivo ne kopi ke salrusan.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "11:11",
+   "text": "maivo kopi ke baba linu intra taivo de lomo.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "11:12",
+   "text": "raho povi sabesia baba kasi polvasan sove ki?",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "11:13",
+   "text": "maivo futu somusia ata krotiapo maivo cunuca taivo de veluri.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "11:14",
+   "text": "maivo futu sabesia li mavopagoasa de taivo de linukova.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "11:15",
+   "text": "si maivo ke tonsi lukasan, maivo futu ne salrusia.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "11:16",
+   "text": "lesvu taivo de lumiasasan pagoasa ke maivo de pago de somuasa.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "12:1",
+   "text": "eli ka liraasa. fisa, lenila.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "12:2",
+   "text": "liraasa... liraasa...",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "12:3",
+   "text": "li veluasari po daigoda en lanlaasa,",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "12:4",
+   "text": "ata itori de lamsa po loya germa en nulloasa.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "12:5",
+   "text": "li germa po somusia en nurmina,",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "12:6",
+   "text": "tuni navufaruasa po vaku ito havliha.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "12:7",
+   "text": "eli-krono maivori bioba ata ruhesonbura,",
+   "old": [],
+   "new": [
+    "2.5:G127"
+   ]
+  },
+  {
+   "where": "12:8",
+   "text": "nara maivori ne sabesia ki-coda maivori ramura.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "12:9",
+   "text": "maivori lenila taivo de lira,",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "12:10",
+   "text": "ata maivori revo-lirala ata relsira!",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "12:11",
+   "text": "li germa ka ruhesonbu, nara li lira ka loresonbu,",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "12:12",
+   "text": "ola ka liraasa, ola ka raleasa!",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "12:13",
+   "text": "baba nela po lemudonula maivori li lira,",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "12:14",
+   "text": "ata maivori po revo-lirala gase raleri raho ne ravmira.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "12:15",
+   "text": "maivori po masuma: maivori ka doli rale ki?",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "12:16",
+   "text": "maivori ka mavolumina, lermina ata nurmina ki?",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "12:17",
+   "text": "li nela po milobema:",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "12:18",
+   "text": "li rale ne masuma.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "12:19",
+   "text": "maivori po buyu sabesia fime veluri daigoda,",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "12:20",
+   "text": "maivori po gesu lenila fime veluri lirala,",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "12:21",
+   "text": "eli-krono maivori bisu surusia fime li germa lirala,",
+   "old": [],
+   "new": [
+    "2.5:G127"
+   ]
+  },
+  {
+   "where": "12:22",
+   "text": "ata maivori yehu vimova: li germa ka li velu!",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "12:23",
+   "text": "taivo ata maivori lirala fuyi,",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "12:24",
+   "text": "ne rale, nara valla; ne mavolumina, nara mavolumi!",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "12:25",
+   "text": "li germa ka ruhesonbu, nara li lira ka loresonbu,",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "12:26",
+   "text": "maivori ka raleasa de liraasa!",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "12:27",
+   "text": "lorejuba.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "12:28",
+   "text": "lorejuba ala taivori.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "12:29",
+   "text": "maivori futu ramura.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "05alt:1",
+   "text": "si maivori sarbisia lelde en solopusa,",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "05alt:2",
+   "text": "taivo viki helvivalmiha ligo li lelde ki?",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "05alt:3",
+   "text": "si maivo ke silisan ata corvisan,",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "05alt:4",
+   "text": "ata manlima li lelde ala pusa,",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "05alt:5",
+   "text": "ito viki loya pagolalnina, oro kezulelde ki?",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "05alt:6",
+   "text": "si li fato livnala baba pagolelde",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "05alt:7",
+   "text": "entre taivo ata maivo,",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "05alt:8",
+   "text": "maivo viki teruta ganre de furori su ito.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "05alt:9",
+   "text": "apokna ka una humesan larbo vobi taivo.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "05alt:10",
+   "text": "kube ito salrusia,",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "05alt:11",
+   "text": "maivo futu donuda ito biti de lalfo,",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "05alt:12",
+   "text": "fime taivo nosi semnesia ko maivo en moluvaye.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "05alt:13",
+   "text": "taivo ne taro-pagopa, nara lalfola hupi li lelde,",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "05alt:14",
+   "text": "ata vaye vayeva en taivo de sabaye.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "05alt:15",
+   "text": "miyo baba kasi sovesan sonbu ki?",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "05alt:16",
+   "text": "si maivo lenila lelderi en eli bio,",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "05alt:17",
+   "text": "maivo viki vazrava taivo",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "05alt:18",
+   "text": "en li bio raho venreva krotiapo daigo,",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "05alt:19",
+   "text": "yuta megalumi kertisan sonbusamba ki?",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "05alt:20",
+   "text": "maivo futu sulnosia megalumi montafama.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "05alt:21",
+   "text": "baba navusan lavra povi ka ki-coda",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "05alt:22",
+   "text": "voyu li azuri raho saivo doli vimova ki?",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "05alt:23",
+   "text": "baba lavrati ko zirkiti vobi taivo,",
+   "old": [],
+   "new": [
+    "2.5:G128"
+   ]
+  },
+  {
+   "where": "05alt:24",
+   "text": "maivo de lore nedunia taivo de kemye.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "05alt:25",
+   "text": "ki-nela de kulpa ka ola ki?",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "05alt:26",
+   "text": "maivo povi ka ki-coda, sabri lavi ata sulnosove ki?",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "05alt:27",
+   "text": "taivo ka li yugemeyiyo de maivo de lore.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "05alt:28",
+   "text": "si kronoasa ka li sulno de taivo,",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "05alt:29",
+   "text": "fisa, livnala li huvu raho vimova maivo.",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "05alt:30",
+   "text": "maivo de nole ka solosan,",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "05alt:31",
+   "text": "tonsi maivo sulnosia gase solo, nido, gase solovu.",
+   "old": [],
+   "new": [
+    "2.5:G117"
+   ]
+  },
+  {
+   "where": "05alt:32",
+   "text": "maivo futu sulnosia ko amor ata sovelore,",
+   "old": [],
+   "new": []
+  },
+  {
+   "where": "05alt:33",
+   "text": "tuni taivo de kemye navdinia nimu en maivo de lore.",
+   "old": [],
+   "new": []
+  }
+ ]
+}

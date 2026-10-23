@@ -207,13 +207,17 @@ function guideCorpus(): string[] {
    - 2.2 restores silro (2.2:G68), so its two forms in the guide are no longer
      respelled (28 → 26), and 2.2:G60 lets a ki-word open a question and end
      without ki, so none of the 18 questions 2.1:G46 flagged is flagged now.
-   - 2.3 respells thirteen more roots (2.3:G69), counted the same way as 2.1's. */
-const SINCE_2_1 = { respelled: 26, respelled23: 3, questions: 0 };
+   - 2.3 respells thirteen more roots (2.3:G69), counted the same way as 2.1's,
+     and 2.3:G76 asks a ki-eli / ki-muya question to end in ki: the frozen text's
+     three such questions (Ki-eli lira taivo amora? …; one appears twice) are counted with the others. */
+const SINCE_2_1 = { respelled: 26, respelled23: 3, questions: 4 };
 const GUIDE_FINDINGS = [
   'Ki-saivo lirala? (historical) :: never invent :: historical',
   'Lotero silda, li cilni ka lasona. :: ADR-0011 :: Lotero silda',
   'Maivo melo bena opioa lumi :: ADR-0011 :: melo bena',
   'Maivo melo bena opioa lumi :: slot :: melo',
+  // the guide's example of the double negative to avoid (0.8:G2), now caught across the verb
+  'Maivo ne sabesia nuna-coda. :: 0.8:G2 :: ne',
   'Maivo vurlova, hema, baba cupa de miru. :: 1.0:G19 :: cupa',
   'Ola ka li bumreasasan, zoke. :: 0.8:R2 :: bumreasasan',
   'Taivo ka ruli pamlonasan, zoke. — Ne zoke. Vera. :: 1.0:G19 :: pamlonasan',
@@ -234,7 +238,9 @@ function respelledIn(d: Diagnostic): string | undefined {
 /** What 2.1 to 2.3 add to the frozen text: the 2.1 and 2.3 respellings and the 2.2 question rules. */
 function since2_1(d: Diagnostic): boolean {
   const edition = respelledIn(d);
-  return d.rule === '2.2:G60' || d.rule === '2.2:G61' || edition === '2.1' || edition === '2.3';
+  return (
+    ['2.2:G60', '2.2:G61', '2.3:G76'].includes(d.rule) || edition === '2.1' || edition === '2.3'
+  );
 }
 
 describe('must pass: the 1.0 grammar guide', () => {
@@ -250,7 +256,7 @@ describe('must pass: the 1.0 grammar guide', () => {
     expect({
       respelled: added.filter(({ d }) => respelledIn(d) === '2.1').length,
       respelled23: added.filter(({ d }) => respelledIn(d) === '2.3').length,
-      questions: added.filter(({ d }) => d.rule.startsWith('2.2:G6')).length,
+      questions: added.filter(({ d }) => /^2\.[23]:G(6|76)/.test(d.rule)).length,
     }).toEqual(SINCE_2_1);
   });
 });

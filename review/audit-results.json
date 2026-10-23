@@ -1,0 +1,4008 @@
+{
+ "summary": {
+  "cases": 145,
+  "goodClean": 145,
+  "badCases": 64,
+  "badFlagged": 62,
+  "badCited": 62,
+  "composed": 89,
+  "composeMatch": 86,
+  "rules": {
+   "IMPLEMENTED": 45,
+   "PARTIAL": 0,
+   "DIVERGENT": 0,
+   "MISSING": 1,
+   "ACCEPTS": 47,
+   "SPEC GAP": 1
+  }
+ },
+ "status": [
+  {
+   "ruleId": "R01",
+   "source": "grammar.clause_template",
+   "checker": "IMPLEMENTED",
+   "composer": "4/4",
+   "cases": [
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "ruleId": "R02",
+   "source": "grammar.slots[3]",
+   "checker": "ACCEPTS",
+   "composer": "2/2",
+   "cases": [
+    5,
+    6
+   ]
+  },
+  {
+   "ruleId": "R03",
+   "source": "grammar.slots[4]",
+   "checker": "IMPLEMENTED",
+   "composer": "1/1",
+   "cases": [
+    7,
+    8
+   ]
+  },
+  {
+   "ruleId": "R04",
+   "source": "grammar.stacking.one_per_slot",
+   "checker": "IMPLEMENTED",
+   "composer": null,
+   "cases": [
+    9,
+    10
+   ]
+  },
+  {
+   "ruleId": "R05",
+   "source": "grammar.stacking.exclusions",
+   "checker": "IMPLEMENTED",
+   "composer": "1/1",
+   "cases": [
+    11,
+    12,
+    13,
+    14
+   ]
+  },
+  {
+   "ruleId": "R06",
+   "source": "grammar.stacking.max_preverbal_operators_recommended",
+   "checker": "IMPLEMENTED",
+   "composer": null,
+   "cases": [
+    15
+   ]
+  },
+  {
+   "ruleId": "R07",
+   "source": "grammar.slots[6]",
+   "checker": "IMPLEMENTED",
+   "composer": "1/1",
+   "cases": [
+    16
+   ]
+  },
+  {
+   "ruleId": "R08",
+   "source": "grammar.slots[12]",
+   "checker": "ACCEPTS",
+   "composer": "2/2",
+   "cases": [
+    17,
+    18
+   ]
+  },
+  {
+   "ruleId": "R09",
+   "source": "grammar.slots[1]",
+   "checker": "IMPLEMENTED",
+   "composer": "1/1",
+   "cases": [
+    19,
+    20
+   ]
+  },
+  {
+   "ruleId": "R10",
+   "source": "grammar.slots[2]",
+   "checker": "IMPLEMENTED",
+   "composer": null,
+   "cases": [
+    21
+   ]
+  },
+  {
+   "ruleId": "R11",
+   "source": "grammar.slots[20]",
+   "checker": "IMPLEMENTED",
+   "composer": "1/1",
+   "cases": [
+    22
+   ]
+  },
+  {
+   "ruleId": "R12",
+   "source": "grammar.slots[19]",
+   "checker": "IMPLEMENTED",
+   "composer": "1/1",
+   "cases": [
+    23
+   ]
+  },
+  {
+   "ruleId": "R13",
+   "source": "grammar.scope_operators",
+   "checker": "IMPLEMENTED",
+   "composer": "2/2",
+   "cases": [
+    24,
+    25
+   ]
+  },
+  {
+   "ruleId": "R14",
+   "source": "grammar.valency",
+   "checker": "IMPLEMENTED",
+   "composer": "2/2",
+   "cases": [
+    26,
+    27
+   ]
+  },
+  {
+   "ruleId": "R15",
+   "source": "grammar.noun_phrase",
+   "checker": "IMPLEMENTED",
+   "composer": "2/2",
+   "cases": [
+    28,
+    29,
+    30
+   ]
+  },
+  {
+   "ruleId": "R17",
+   "source": "morphology.verb_rule",
+   "checker": "IMPLEMENTED",
+   "composer": null,
+   "cases": [
+    31,
+    32
+   ]
+  },
+  {
+   "ruleId": "R18",
+   "source": "morphology.suffix_order",
+   "checker": "IMPLEMENTED",
+   "composer": "1/1",
+   "cases": [
+    33,
+    34
+   ]
+  },
+  {
+   "ruleId": "R20",
+   "source": "morphology.derivation_defaults",
+   "checker": "ACCEPTS",
+   "composer": null,
+   "cases": [
+    35
+   ]
+  },
+  {
+   "ruleId": "R22",
+   "source": "motion_prefixes",
+   "checker": "IMPLEMENTED",
+   "composer": null,
+   "cases": [
+    36
+   ]
+  },
+  {
+   "ruleId": "R27",
+   "source": "0.8:R2",
+   "checker": "IMPLEMENTED",
+   "composer": null,
+   "cases": [
+    37
+   ]
+  },
+  {
+   "ruleId": "R31",
+   "source": "0.8:R6",
+   "checker": "IMPLEMENTED",
+   "composer": null,
+   "cases": [
+    38
+   ]
+  },
+  {
+   "ruleId": "R33",
+   "source": "0.8:R8",
+   "checker": "IMPLEMENTED",
+   "composer": null,
+   "cases": [
+    39
+   ]
+  },
+  {
+   "ruleId": "R34",
+   "source": "0.8:R9",
+   "checker": "IMPLEMENTED",
+   "composer": "1/1",
+   "cases": [
+    40
+   ]
+  },
+  {
+   "ruleId": "R37",
+   "source": "0.8:R12",
+   "checker": "ACCEPTS",
+   "composer": null,
+   "cases": [
+    41
+   ]
+  },
+  {
+   "ruleId": "R38",
+   "source": "0.8:G1",
+   "checker": "ACCEPTS",
+   "composer": "1/2",
+   "cases": [
+    42,
+    43
+   ]
+  },
+  {
+   "ruleId": "R39",
+   "source": "0.8:G2",
+   "checker": "IMPLEMENTED",
+   "composer": null,
+   "cases": [
+    44,
+    45,
+    46
+   ]
+  },
+  {
+   "ruleId": "R40",
+   "source": "0.8:G3",
+   "checker": "ACCEPTS",
+   "composer": null,
+   "cases": [
+    47,
+    48
+   ]
+  },
+  {
+   "ruleId": "R41",
+   "source": "0.8:G4",
+   "checker": "ACCEPTS",
+   "composer": null,
+   "cases": [
+    49
+   ]
+  },
+  {
+   "ruleId": "R42",
+   "source": "0.8:G5",
+   "checker": "ACCEPTS",
+   "composer": null,
+   "cases": [
+    50
+   ]
+  },
+  {
+   "ruleId": "R43",
+   "source": "0.8:G6",
+   "checker": "ACCEPTS",
+   "composer": null,
+   "cases": [
+    51,
+    52
+   ]
+  },
+  {
+   "ruleId": "R45",
+   "source": "0.8:G8",
+   "checker": "IMPLEMENTED",
+   "composer": "1/1",
+   "cases": [
+    53,
+    54
+   ]
+  },
+  {
+   "ruleId": "R47",
+   "source": "1.0:G2",
+   "checker": "IMPLEMENTED",
+   "composer": "1/1",
+   "cases": [
+    55
+   ]
+  },
+  {
+   "ruleId": "R48",
+   "source": "1.0:G3",
+   "checker": "ACCEPTS",
+   "composer": "3/3",
+   "cases": [
+    56,
+    57,
+    58
+   ]
+  },
+  {
+   "ruleId": "R49",
+   "source": "1.0:G4",
+   "checker": "ACCEPTS",
+   "composer": null,
+   "cases": [
+    59
+   ]
+  },
+  {
+   "ruleId": "R50",
+   "source": "1.0:G5",
+   "checker": "ACCEPTS",
+   "composer": "2/2",
+   "cases": [
+    60,
+    61
+   ]
+  },
+  {
+   "ruleId": "R51",
+   "source": "1.0:G6",
+   "checker": "IMPLEMENTED",
+   "composer": "2/2",
+   "cases": [
+    62,
+    63
+   ]
+  },
+  {
+   "ruleId": "R52",
+   "source": "1.0:G7",
+   "checker": "IMPLEMENTED",
+   "composer": "0/1",
+   "cases": [
+    64
+   ]
+  },
+  {
+   "ruleId": "R53",
+   "source": "1.0:G8",
+   "checker": "ACCEPTS",
+   "composer": "1/1",
+   "cases": [
+    65
+   ]
+  },
+  {
+   "ruleId": "R54",
+   "source": "1.0:G9",
+   "checker": "ACCEPTS",
+   "composer": "1/1",
+   "cases": [
+    66,
+    67
+   ]
+  },
+  {
+   "ruleId": "R55",
+   "source": "1.0:G10",
+   "checker": "ACCEPTS",
+   "composer": null,
+   "cases": [
+    68,
+    69
+   ]
+  },
+  {
+   "ruleId": "R56",
+   "source": "1.0:G11",
+   "checker": "ACCEPTS",
+   "composer": "2/2",
+   "cases": [
+    70,
+    71
+   ]
+  },
+  {
+   "ruleId": "R57",
+   "source": "1.0:G12",
+   "checker": "ACCEPTS",
+   "composer": "1/1",
+   "cases": [
+    72
+   ]
+  },
+  {
+   "ruleId": "R58",
+   "source": "1.0:G13",
+   "checker": "IMPLEMENTED",
+   "composer": "1/1",
+   "cases": [
+    73
+   ]
+  },
+  {
+   "ruleId": "R59",
+   "source": "1.0:G14",
+   "checker": "IMPLEMENTED",
+   "composer": null,
+   "cases": [
+    74
+   ]
+  },
+  {
+   "ruleId": "R60",
+   "source": "1.0:G15",
+   "checker": "ACCEPTS",
+   "composer": "2/2",
+   "cases": [
+    75,
+    76
+   ]
+  },
+  {
+   "ruleId": "R62",
+   "source": "1.0:G17",
+   "checker": "ACCEPTS",
+   "composer": "1/1",
+   "cases": [
+    77
+   ]
+  },
+  {
+   "ruleId": "R63",
+   "source": "1.0:G18",
+   "checker": "IMPLEMENTED",
+   "composer": null,
+   "cases": [
+    78
+   ]
+  },
+  {
+   "ruleId": "R64",
+   "source": "1.0:G19",
+   "checker": "IMPLEMENTED",
+   "composer": "1/1",
+   "cases": [
+    79,
+    80
+   ]
+  },
+  {
+   "ruleId": "R65",
+   "source": "1.0:G20",
+   "checker": "ACCEPTS",
+   "composer": "0/1",
+   "cases": [
+    81
+   ]
+  },
+  {
+   "ruleId": "R66",
+   "source": "1.0:G21",
+   "checker": "IMPLEMENTED",
+   "composer": null,
+   "cases": [
+    82
+   ]
+  },
+  {
+   "ruleId": "R67",
+   "source": "1.0:G22",
+   "checker": "IMPLEMENTED",
+   "composer": null,
+   "cases": [
+    83
+   ]
+  },
+  {
+   "ruleId": "R68",
+   "source": "1.0:G23",
+   "checker": "ACCEPTS",
+   "composer": null,
+   "cases": [
+    84
+   ]
+  },
+  {
+   "ruleId": "R69",
+   "source": "1.2:G24",
+   "checker": "ACCEPTS",
+   "composer": "1/1",
+   "cases": [
+    85,
+    86
+   ]
+  },
+  {
+   "ruleId": "R70",
+   "source": "1.2:G25",
+   "checker": "ACCEPTS",
+   "composer": "1/1",
+   "cases": [
+    87,
+    88
+   ]
+  },
+  {
+   "ruleId": "R71",
+   "source": "1.2:G26",
+   "checker": "IMPLEMENTED",
+   "composer": "2/2",
+   "cases": [
+    89,
+    90
+   ]
+  },
+  {
+   "ruleId": "R72",
+   "source": "1.2:G27",
+   "checker": "ACCEPTS",
+   "composer": "2/2",
+   "cases": [
+    91,
+    92
+   ]
+  },
+  {
+   "ruleId": "R73",
+   "source": "1.2:G28",
+   "checker": "MISSING",
+   "composer": "2/2",
+   "cases": [
+    93,
+    94
+   ]
+  },
+  {
+   "ruleId": "R74",
+   "source": "1.2:G29",
+   "checker": "IMPLEMENTED",
+   "composer": "1/1",
+   "cases": [
+    95
+   ]
+  },
+  {
+   "ruleId": "R75",
+   "source": "1.2:G30",
+   "checker": "IMPLEMENTED",
+   "composer": "1/1",
+   "cases": [
+    96
+   ]
+  },
+  {
+   "ruleId": "R76",
+   "source": "1.2:G31",
+   "checker": "ACCEPTS",
+   "composer": null,
+   "cases": [
+    97
+   ]
+  },
+  {
+   "ruleId": "R77",
+   "source": "1.2:G32",
+   "checker": "ACCEPTS",
+   "composer": "1/1",
+   "cases": [
+    98
+   ]
+  },
+  {
+   "ruleId": "R78",
+   "source": "1.2:G33",
+   "checker": "IMPLEMENTED",
+   "composer": "3/3",
+   "cases": [
+    99,
+    100,
+    101
+   ]
+  },
+  {
+   "ruleId": "R79",
+   "source": "1.2:G34",
+   "checker": "ACCEPTS",
+   "composer": "1/1",
+   "cases": [
+    102
+   ]
+  },
+  {
+   "ruleId": "R80",
+   "source": "1.2:G35",
+   "checker": "ACCEPTS",
+   "composer": "1/1",
+   "cases": [
+    103
+   ]
+  },
+  {
+   "ruleId": "R81",
+   "source": "1.2:G36",
+   "checker": "ACCEPTS",
+   "composer": "1/1",
+   "cases": [
+    104
+   ]
+  },
+  {
+   "ruleId": "R83",
+   "source": "2.0:G38",
+   "checker": "ACCEPTS",
+   "composer": null,
+   "cases": [
+    105
+   ]
+  },
+  {
+   "ruleId": "R85",
+   "source": "2.0:G40",
+   "checker": "ACCEPTS",
+   "composer": null,
+   "cases": [
+    106,
+    107
+   ]
+  },
+  {
+   "ruleId": "R86",
+   "source": "2.0:G41",
+   "checker": "ACCEPTS",
+   "composer": null,
+   "cases": [
+    108
+   ]
+  },
+  {
+   "ruleId": "R87",
+   "source": "2.0:G42",
+   "checker": "ACCEPTS",
+   "composer": null,
+   "cases": [
+    109
+   ]
+  },
+  {
+   "ruleId": "R93",
+   "source": "2.1:G48",
+   "checker": "ACCEPTS",
+   "composer": "2/2",
+   "cases": [
+    110,
+    111
+   ]
+  },
+  {
+   "ruleId": "R94",
+   "source": "2.1:G49",
+   "checker": "ACCEPTS",
+   "composer": "2/2",
+   "cases": [
+    112,
+    113
+   ]
+  },
+  {
+   "ruleId": "R95",
+   "source": "2.1:G50",
+   "checker": "IMPLEMENTED",
+   "composer": "1/1",
+   "cases": [
+    114
+   ]
+  },
+  {
+   "ruleId": "R96",
+   "source": "2.1:G51",
+   "checker": "IMPLEMENTED",
+   "composer": null,
+   "cases": [
+    115
+   ]
+  },
+  {
+   "ruleId": "R97",
+   "source": "2.1:G52",
+   "checker": "ACCEPTS",
+   "composer": null,
+   "cases": [
+    116
+   ]
+  },
+  {
+   "ruleId": "R98",
+   "source": "2.1:G53",
+   "checker": "ACCEPTS",
+   "composer": "1/1",
+   "cases": [
+    117
+   ]
+  },
+  {
+   "ruleId": "R100",
+   "source": "2.1:G55",
+   "checker": "ACCEPTS",
+   "composer": "2/2",
+   "cases": [
+    118,
+    119
+   ]
+  },
+  {
+   "ruleId": "R101",
+   "source": "2.1:G56",
+   "checker": "ACCEPTS",
+   "composer": "2/2",
+   "cases": [
+    120,
+    121
+   ]
+  },
+  {
+   "ruleId": "R99",
+   "source": "2.1:G54",
+   "checker": "SPEC GAP",
+   "composer": null,
+   "cases": [
+    122
+   ]
+  },
+  {
+   "ruleId": "R105",
+   "source": "2.2:G60",
+   "checker": "IMPLEMENTED",
+   "composer": "3/3",
+   "cases": [
+    123,
+    124,
+    125,
+    126
+   ]
+  },
+  {
+   "ruleId": "R106",
+   "source": "2.2:G61",
+   "checker": "IMPLEMENTED",
+   "composer": "2/2",
+   "cases": [
+    127,
+    128
+   ]
+  },
+  {
+   "ruleId": "R107",
+   "source": "2.2:G62",
+   "checker": "ACCEPTS",
+   "composer": "1/1",
+   "cases": [
+    129,
+    130
+   ]
+  },
+  {
+   "ruleId": "R108",
+   "source": "2.2:G63",
+   "checker": "ACCEPTS",
+   "composer": null,
+   "cases": [
+    131
+   ]
+  },
+  {
+   "ruleId": "R109",
+   "source": "2.2:G64",
+   "checker": "IMPLEMENTED",
+   "composer": "1/1",
+   "cases": [
+    132
+   ]
+  },
+  {
+   "ruleId": "R110",
+   "source": "2.2:G65",
+   "checker": "IMPLEMENTED",
+   "composer": "1/1",
+   "cases": [
+    133
+   ]
+  },
+  {
+   "ruleId": "R111",
+   "source": "2.2:G66",
+   "checker": "ACCEPTS",
+   "composer": null,
+   "cases": [
+    134
+   ]
+  },
+  {
+   "ruleId": "R112",
+   "source": "2.2:G67",
+   "checker": "ACCEPTS",
+   "composer": "2/2",
+   "cases": [
+    135,
+    136
+   ]
+  },
+  {
+   "ruleId": "R114",
+   "source": "2.3:G69",
+   "checker": "ACCEPTS",
+   "composer": "1/1",
+   "cases": [
+    137
+   ]
+  },
+  {
+   "ruleId": "R115",
+   "source": "2.3:G70",
+   "checker": "ACCEPTS",
+   "composer": "2/2",
+   "cases": [
+    138,
+    139
+   ]
+  },
+  {
+   "ruleId": "R116",
+   "source": "2.3:G71",
+   "checker": "IMPLEMENTED",
+   "composer": "1/1",
+   "cases": [
+    140
+   ]
+  },
+  {
+   "ruleId": "R117",
+   "source": "2.3:G72",
+   "checker": "ACCEPTS",
+   "composer": null,
+   "cases": [
+    141
+   ]
+  },
+  {
+   "ruleId": "R118",
+   "source": "2.3:G73",
+   "checker": "ACCEPTS",
+   "composer": "1/1",
+   "cases": [
+    142
+   ]
+  },
+  {
+   "ruleId": "R119",
+   "source": "2.3:G74",
+   "checker": "IMPLEMENTED",
+   "composer": "1/1",
+   "cases": [
+    143
+   ]
+  },
+  {
+   "ruleId": "R120",
+   "source": "2.3:G75",
+   "checker": "IMPLEMENTED",
+   "composer": null,
+   "cases": [
+    144
+   ]
+  },
+  {
+   "ruleId": "R121",
+   "source": "2.3:G76",
+   "checker": "IMPLEMENTED",
+   "composer": "1/1",
+   "cases": [
+    145
+   ]
+  }
+ ],
+ "results": [
+  {
+   "n": 1,
+   "rule": "grammar.clause_template",
+   "ruleId": "R01",
+   "en": "I sang.",
+   "good": "Maivo po lirala.",
+   "bad": "Maivo lirala po.",
+   "expect": "1.0:G1",
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": {
+    "flagged": true,
+    "weak": false,
+    "cited": true,
+    "diagnostics": [
+     "error 1.0:G1: “po” (TENSE, slot 4) belongs before the verb, not after it."
+    ]
+   },
+   "composed": "maivo po lirala.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "I PAST sing"
+  },
+  {
+   "n": 2,
+   "rule": "grammar.clause_template",
+   "ruleId": "R01",
+   "en": "I will sing.",
+   "good": "Maivo futu lirala.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": "maivo futu lirala.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "I FUT sing"
+  },
+  {
+   "n": 3,
+   "rule": "grammar.clause_template",
+   "ruleId": "R01",
+   "en": "We were singing.",
+   "good": "Maivori po roni lirala.",
+   "bad": "Maivori po lirala roni.",
+   "expect": "1.0:G1",
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": {
+    "flagged": true,
+    "weak": false,
+    "cited": true,
+    "diagnostics": [
+     "error 1.0:G1: “roni” (ASPECT, slot 11) belongs before the verb, not after it."
+    ]
+   },
+   "composed": "maivori po roni lirala.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "we PAST PROG sing"
+  },
+  {
+   "n": 4,
+   "rule": "grammar.clause_template",
+   "ruleId": "R01",
+   "en": "I was able to sing.",
+   "good": "Maivo po povi lirala.",
+   "bad": "Maivo po roni povi lirala.",
+   "expect": "1.0:G1",
+   "gap": false,
+   "note": "aspect (slot 11) before modal (slot 7) \"I could sing\" is ambiguous in English (past ability or conditional)",
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": {
+    "flagged": true,
+    "weak": false,
+    "cited": true,
+    "diagnostics": [
+     "error 1.0:G1: “povi” (MODAL, slot 7) comes after “roni” (ASPECT, 11) but belongs before it in the template."
+    ]
+   },
+   "composed": "maivo po povi lirala.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "I PAST can sing"
+  },
+  {
+   "n": 5,
+   "rule": "grammar.slots[3]",
+   "ruleId": "R02",
+   "en": "Sing, please.",
+   "good": "Lirala, fisa.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": "a command has no subject no ruling requires the comma",
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": "lirala fisa.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "sing please"
+  },
+  {
+   "n": 6,
+   "rule": "grammar.slots[3]",
+   "ruleId": "R02",
+   "en": "Let us sing!",
+   "good": "Yava lirala!",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": "yava lirala!",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "let us sing"
+  },
+  {
+   "n": 7,
+   "rule": "grammar.slots[4]",
+   "ruleId": "R03",
+   "en": "I sing.",
+   "good": "Maivo lirala.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": "maivo lirala.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "I sing"
+  },
+  {
+   "n": 8,
+   "rule": "grammar.slots[4]",
+   "ruleId": "R03",
+   "en": null,
+   "good": "Maivo pressa lirala.",
+   "bad": "Maivo po futu lirala.",
+   "expect": "1.0:G16",
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": {
+    "flagged": true,
+    "weak": false,
+    "cited": true,
+    "diagnostics": [
+     "error 1.0:G16: Two TENSE words in one clause: one word per slot."
+    ]
+   },
+   "composed": null,
+   "composeGaps": [],
+   "composeMatch": null,
+   "backTranslation": "I PRES sing"
+  },
+  {
+   "n": 9,
+   "rule": "grammar.stacking.one_per_slot",
+   "ruleId": "R04",
+   "en": null,
+   "good": "Saivo nosi lirala.",
+   "bad": "Saivo nosi povi lirala.",
+   "expect": "1.0:G16",
+   "gap": false,
+   "note": "two modals",
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": {
+    "flagged": true,
+    "weak": false,
+    "cited": true,
+    "diagnostics": [
+     "error 1.0:G16: Two MODAL words in one clause: one word per slot."
+    ]
+   },
+   "composed": null,
+   "composeGaps": [],
+   "composeMatch": null,
+   "backTranslation": "he/she might sing"
+  },
+  {
+   "n": 10,
+   "rule": "grammar.stacking.one_per_slot",
+   "ruleId": "R04",
+   "en": null,
+   "good": "Maivo yehu lirala.",
+   "bad": "Maivo yehu gesu lirala.",
+   "expect": "1.0:G16",
+   "gap": false,
+   "note": "two evidentials (2.1:G51: one per clause)",
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": {
+    "flagged": true,
+    "weak": false,
+    "cited": true,
+    "diagnostics": [
+     "error 1.0:G16: Two EVIDENTIAL words in one clause: one word per slot."
+    ]
+   },
+   "composed": null,
+   "composeGaps": [],
+   "composeMatch": null,
+   "backTranslation": "I witnessed sing"
+  },
+  {
+   "n": 11,
+   "rule": "grammar.stacking.exclusions",
+   "ruleId": "R05",
+   "en": "I began to sing.",
+   "good": "Maivo po hiro lirala.",
+   "bad": "Maivo po hiro roni lirala.",
+   "expect": "1.0:G16",
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": {
+    "flagged": true,
+    "weak": false,
+    "cited": true,
+    "diagnostics": [
+     "error 1.0:G16: “hiro” and “roni” exclude each other in one clause."
+    ]
+   },
+   "composed": "maivo po hiro lirala.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "I PAST begin to sing"
+  },
+  {
+   "n": 12,
+   "rule": "grammar.stacking.exclusions",
+   "ruleId": "R05",
+   "en": null,
+   "good": "Maivo po vazdi lirala.",
+   "bad": "Maivo po vazdi tefa lirala.",
+   "expect": "1.0:G16",
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": {
+    "flagged": true,
+    "weak": false,
+    "cited": true,
+    "diagnostics": [
+     "error 1.0:G16: “vazdi” and “tefa” exclude each other in one clause."
+    ]
+   },
+   "composed": null,
+   "composeGaps": [],
+   "composeMatch": null,
+   "backTranslation": "I PAST manage to sing"
+  },
+  {
+   "n": 13,
+   "rule": "grammar.stacking.exclusions",
+   "ruleId": "R05",
+   "en": null,
+   "good": "Maivo lirala seye.",
+   "bad": "Maivo lirala seye zoke.",
+   "expect": "1.0:G16",
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": {
+    "flagged": true,
+    "weak": false,
+    "cited": true,
+    "diagnostics": [
+     "error 1.0:G16: “zoke” and “seye” exclude each other in one clause."
+    ]
+   },
+   "composed": null,
+   "composeGaps": [],
+   "composeMatch": null,
+   "backTranslation": "I sing certain"
+  },
+  {
+   "n": 14,
+   "rule": "grammar.stacking.exclusions",
+   "ruleId": "R05",
+   "en": null,
+   "good": "Li dorbi ke lallesan hoyo!",
+   "bad": "Li dorbi ke lallesan hoyo yasmo!",
+   "expect": "1.0:G16",
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": {
+    "flagged": true,
+    "weak": false,
+    "cited": true,
+    "diagnostics": [
+     "error 1.0:G16: “hoyo” and “yasmo” exclude each other in one clause."
+    ]
+   },
+   "composed": null,
+   "composeGaps": [],
+   "composeMatch": null,
+   "backTranslation": "the door is(now) open newly discovered or surprising to the speaker"
+  },
+  {
+   "n": 15,
+   "rule": "grammar.stacking.max_preverbal_operators_recommended",
+   "ruleId": "R06",
+   "en": null,
+   "good": "Maivo po povi lirala.",
+   "bad": "Maivo po ne povi hiro telvo reve yehu lirala.",
+   "expect": "1.0:G16",
+   "gap": false,
+   "note": "six preverbal operators: the spec only recommends four, so a note is the expected strength",
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": {
+    "flagged": true,
+    "weak": true,
+    "cited": true,
+    "diagnostics": [
+     "note 1.0:G16: 6 operators before the verb; at most 4 are recommended."
+    ]
+   },
+   "composed": null,
+   "composeGaps": [],
+   "composeMatch": null,
+   "backTranslation": "I PAST can sing"
+  },
+  {
+   "n": 16,
+   "rule": "grammar.slots[6]",
+   "ruleId": "R07",
+   "en": "I did not sing.",
+   "good": "Maivo po ne lirala.",
+   "bad": "Maivo ne po lirala.",
+   "expect": "1.0:G1",
+   "gap": false,
+   "note": "ne follows the tense (0.8:G2)",
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": {
+    "flagged": true,
+    "weak": false,
+    "cited": true,
+    "diagnostics": [
+     "error 1.0:G1: ne follows the tense (slot 6 after slot 4): “po ne …”, never “ne po” (0.8:G2)."
+    ]
+   },
+   "composed": "maivo po ne lirala.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "I PAST NOT sing"
+  },
+  {
+   "n": 17,
+   "rule": "grammar.slots[12]",
+   "ruleId": "R08",
+   "en": "I still sing.",
+   "good": "Maivo loki lirala.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": "maivo loki lirala.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "I still sing"
+  },
+  {
+   "n": 18,
+   "rule": "grammar.slots[12]",
+   "ruleId": "R08",
+   "en": "I sing again.",
+   "good": "Maivo reve lirala.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": "maivo reve lirala.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "I again sing"
+  },
+  {
+   "n": 19,
+   "rule": "grammar.slots[1]",
+   "ruleId": "R09",
+   "en": "Suddenly the door opened.",
+   "good": "Zafra, li dorbi po lallela.",
+   "bad": "Li dorbi po lallela zafra.",
+   "expect": "slot",
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": {
+    "flagged": true,
+    "weak": false,
+    "cited": true,
+    "diagnostics": [
+     "error slot 1: “zafra” is a frame word: it opens its clause, followed by a comma."
+    ]
+   },
+   "composed": "zafra, li dorbi po lallela.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "suddenly the door PAST open"
+  },
+  {
+   "n": 20,
+   "rule": "grammar.slots[1]",
+   "ruleId": "R09",
+   "en": null,
+   "good": "Finra, saivo po relnura.",
+   "bad": "Finra saivo po relnura.",
+   "expect": "slot",
+   "gap": false,
+   "note": "frame word without its comma: a warning",
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": {
+    "flagged": true,
+    "weak": false,
+    "cited": true,
+    "diagnostics": [
+     "warn slot 1: “Finra” frames the clause and is followed by a comma."
+    ]
+   },
+   "composed": null,
+   "composeGaps": [],
+   "composeMatch": null,
+   "backTranslation": "finally he/she PAST return"
+  },
+  {
+   "n": 21,
+   "rule": "grammar.slots[2]",
+   "ruleId": "R10",
+   "en": null,
+   "good": "Li bumre hozi, Kipo po bumreba ito.",
+   "bad": "Li bumre hozi, li lira hozi, Kipo po bumreba ito.",
+   "expect": "1.0:G16",
+   "gap": false,
+   "note": "two topics in one clause",
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": {
+    "flagged": true,
+    "weak": false,
+    "cited": true,
+    "diagnostics": [
+     "error 1.0:G16: Two hozi topics in one clause: a clause has at most one (slot 2), except paired contrastive topics in parallel clauses."
+    ]
+   },
+   "composed": null,
+   "composeGaps": [],
+   "composeMatch": null,
+   "backTranslation": "the bread as for x Kipo PAST bake bread it"
+  },
+  {
+   "n": 22,
+   "rule": "grammar.slots[20]",
+   "ruleId": "R11",
+   "en": "Do you sing?",
+   "good": "Taivo lirala ki?",
+   "bad": "Taivo ki lirala?",
+   "expect": "1.0:G22",
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": {
+    "flagged": true,
+    "weak": false,
+    "cited": true,
+    "diagnostics": [
+     "error 1.0:G22: ki is the last word of its clause, but “lirala” comes after it."
+    ]
+   },
+   "composed": "taivo lirala ki?",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "you sing Q"
+  },
+  {
+   "n": 23,
+   "rule": "grammar.slots[19]",
+   "ruleId": "R12",
+   "en": "Maybe I sing.",
+   "good": "Maivo lirala poye.",
+   "bad": "Poye, maivo lirala.",
+   "expect": "1.0:G22",
+   "gap": false,
+   "note": "nosi (might, 1.0:G3) and clause-final poye (1.0:G22) both render \"maybe\"",
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": {
+    "flagged": true,
+    "weak": false,
+    "cited": true,
+    "diagnostics": [
+     "error 1.0:G22: “Poye” never opens a clause: an attitude word closes it (“… poye”)."
+    ]
+   },
+   "composed": "maivo nosi lirala.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "I sing maybe"
+  },
+  {
+   "n": 24,
+   "rule": "grammar.scope_operators",
+   "ruleId": "R13",
+   "en": "Only you sing.",
+   "good": "Doli taivo lirala.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": "doli taivo lirala.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "only you sing"
+  },
+  {
+   "n": 25,
+   "rule": "grammar.scope_operators",
+   "ruleId": "R13",
+   "en": "Kipo also baked bread.",
+   "good": "Tu Kipo po bumreba.",
+   "bad": "Kipo po bumreba doli.",
+   "expect": "1.0:G1",
+   "gap": false,
+   "note": "a scope operator with nothing to scope over",
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": {
+    "flagged": true,
+    "weak": false,
+    "cited": true,
+    "diagnostics": [
+     "error 1.0:G1: “doli” scopes over the constituent right after it, and nothing follows it here: put it before what it marks."
+    ]
+   },
+   "composed": "tu Kipo po bumreba.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "also Kipo PAST bake bread"
+  },
+  {
+   "n": 26,
+   "rule": "grammar.valency",
+   "ruleId": "R14",
+   "en": "I let him go.",
+   "good": "Maivo po lesvu saivo pagopa.",
+   "bad": "Maivo po lesvu saivo po pagopa.",
+   "expect": [
+    "1.0:G14",
+    "1.0:G1"
+   ],
+   "gap": false,
+   "note": "tense belongs to the main clause only English \"let\" does not mark tense",
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": {
+    "flagged": true,
+    "weak": false,
+    "cited": true,
+    "diagnostics": [
+     "error 1.0:G1: “po” (TENSE, slot 4) belongs before the verb, not after it."
+    ]
+   },
+   "composed": "maivo lesvu saivo pagopa.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "I PAST let he/she go"
+  },
+  {
+   "n": 27,
+   "rule": "grammar.valency",
+   "ruleId": "R14",
+   "en": "I prevented him from going.",
+   "good": "Maivo po tekvu saivo pagopa.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": "maivo po tekvu saivo pagopa.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "I PAST prevent from he/she go"
+  },
+  {
+   "n": 28,
+   "rule": "grammar.noun_phrase",
+   "ruleId": "R15",
+   "en": "The two beautiful stars shine.",
+   "good": "Li dossa vanisan veluri lumila.",
+   "bad": "Li veluri vanisan lumila.",
+   "expect": [
+    "0.8:G7",
+    "slot"
+   ],
+   "gap": false,
+   "note": "adjective after the noun (album reading AR-02)",
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": {
+    "flagged": true,
+    "weak": false,
+    "cited": true,
+    "diagnostics": [
+     "error 0.8:G7: Noun-phrase order: an adjective comes before its noun: “vanisan veluri” (0.8:G7)."
+    ]
+   },
+   "composed": "li dossa vanisan veluri lumila.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "the 2 beautiful star.PL shine"
+  },
+  {
+   "n": 29,
+   "rule": "grammar.noun_phrase",
+   "ruleId": "R15",
+   "en": "All the songs are beautiful.",
+   "good": "Toda li lirari ka vanisan.",
+   "bad": "Li toda lirari ka vanisan.",
+   "expect": [
+    "0.8:G7",
+    "slot"
+   ],
+   "gap": false,
+   "note": "quantifier after the article ke and ka both fit an adjective: a passing or a lasting state (the spec does not choose)",
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": {
+    "flagged": true,
+    "weak": false,
+    "cited": true,
+    "diagnostics": [
+     "error 0.8:G7: Noun-phrase order: a quantifier comes before the article: “toda Li” (0.8:G7)."
+    ]
+   },
+   "composed": "toda li lirari ke vanisan.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "all the song.PL is beautiful"
+  },
+  {
+   "n": 30,
+   "rule": "grammar.noun_phrase",
+   "ruleId": "R15",
+   "en": null,
+   "good": "Li dossa veluri lumila.",
+   "bad": "Li veluri dossa lumila.",
+   "expect": [
+    "0.8:G7",
+    "slot"
+   ],
+   "gap": false,
+   "note": "number after the noun",
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": {
+    "flagged": true,
+    "weak": false,
+    "cited": true,
+    "diagnostics": [
+     "error 0.8:G7: Noun-phrase order: a number comes before its noun: “dossa veluri” (0.8:G7)."
+    ]
+   },
+   "composed": null,
+   "composeGaps": [],
+   "composeMatch": null,
+   "backTranslation": "the 2 star.PL shine"
+  },
+  {
+   "n": 31,
+   "rule": "morphology.verb_rule",
+   "ruleId": "R17",
+   "en": null,
+   "good": "Li navu nullonia.",
+   "bad": "Maivo lirasia.",
+   "expect": "never invent",
+   "gap": false,
+   "note": "an l-initial verb takes l + a (lirala), not -sia. (nullona, the obvious wrong verb of nullo, is itself the negative noun \"daylight\": the reason n-initial verbs take -nia.)",
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": {
+    "flagged": true,
+    "weak": false,
+    "cited": true,
+    "diagnostics": [
+     "error never invent: “lirasia” is not a word of Liraasa.",
+     "error slot: “lirasia” opens a second noun phrase, but the clause has no verb or copula. Use ke/ka for “is”."
+    ]
+   },
+   "composed": null,
+   "composeGaps": [],
+   "composeMatch": null,
+   "backTranslation": "the sky become night"
+  },
+  {
+   "n": 32,
+   "rule": "morphology.verb_rule",
+   "ruleId": "R17",
+   "en": null,
+   "good": "Maivo opioa.",
+   "bad": "Maivo opipa.",
+   "expect": "never invent",
+   "gap": false,
+   "note": "opi is the irregular",
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": {
+    "flagged": true,
+    "weak": false,
+    "cited": true,
+    "diagnostics": [
+     "error never invent: “opipa” is not a word of Liraasa. Spelled like: opina, opioa.",
+     "error slot: “opipa” opens a second noun phrase, but the clause has no verb or copula. Use ke/ka for “is”."
+    ]
+   },
+   "composed": null,
+   "composeGaps": [],
+   "composeMatch": null,
+   "backTranslation": "I hope for"
+  },
+  {
+   "n": 33,
+   "rule": "morphology.suffix_order",
+   "ruleId": "R18",
+   "en": "the little songs",
+   "good": "li liratiri",
+   "bad": "li lirariti",
+   "expect": "never invent",
+   "gap": false,
+   "note": "mellinasan (small; little) is equally valid",
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": {
+    "flagged": true,
+    "weak": false,
+    "cited": true,
+    "diagnostics": [
+     "error never invent: “lirariti” is not a word of Liraasa."
+    ]
+   },
+   "composed": "li mellinasan lirari.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "the little song.PL"
+  },
+  {
+   "n": 34,
+   "rule": "morphology.suffix_order",
+   "ruleId": "R18",
+   "en": null,
+   "good": "Li lirayo lirala.",
+   "bad": "Li liraasayo lirala.",
+   "expect": "never invent",
+   "gap": false,
+   "note": "one form or one derivation, not both",
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": {
+    "flagged": true,
+    "weak": false,
+    "cited": true,
+    "diagnostics": [
+     "error never invent: “liraasayo” is not a word of Liraasa."
+    ]
+   },
+   "composed": null,
+   "composeGaps": [],
+   "composeMatch": null,
+   "backTranslation": "the singer sing"
+  },
+  {
+   "n": 35,
+   "rule": "morphology.derivation_defaults",
+   "ruleId": "R20",
+   "en": null,
+   "good": "Li monruyo pagopa.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": "an unlisted derivation is a word (2.0:G41)",
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": null,
+   "composeGaps": [],
+   "composeMatch": null,
+   "backTranslation": "the agentive derivation:monru go"
+  },
+  {
+   "n": 36,
+   "rule": "motion_prefixes",
+   "ruleId": "R22",
+   "en": null,
+   "good": "Maivo revo-sabesia taivo.",
+   "bad": "Maivo revo-lenila taivo.",
+   "expect": "1.2:G35",
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": {
+    "flagged": true,
+    "weak": false,
+    "cited": true,
+    "diagnostics": [
+     "unsettled 1.2:G35: “revo-lenila” puts revo- on the verb lenila. Motion prefixes are a closed list for motion verbs and the curated metaphors; the lexicon does not say whether lenila is a motion verb."
+    ]
+   },
+   "composed": null,
+   "composeGaps": [],
+   "composeMatch": null,
+   "backTranslation": "I revo-know you"
+  },
+  {
+   "n": 37,
+   "rule": "0.8:R2",
+   "ruleId": "R27",
+   "en": null,
+   "good": "Li luno lumila.",
+   "bad": "Li lavraasa lirala.",
+   "expect": "0.8:R2",
+   "gap": false,
+   "note": "an unused slot",
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": {
+    "flagged": true,
+    "weak": false,
+    "cited": true,
+    "diagnostics": [
+     "warn 0.8:R2: “lavraasa” would be the ascended noun of lavra, but that slot has no meaning and is not in the dictionary. Listed forms: lavra (noun), lavrana (negative noun), lavrala (verb), lavrasan (adjective)."
+    ]
+   },
+   "composed": null,
+   "composeGaps": [],
+   "composeMatch": null,
+   "backTranslation": "the moon shine"
+  },
+  {
+   "n": 38,
+   "rule": "0.8:R6",
+   "ruleId": "R31",
+   "en": null,
+   "good": "Sige maivo po venreva, saivo ke benasan.",
+   "bad": "Sige maivo venreva, saivo ke benasan.",
+   "expect": "0.8:R6",
+   "gap": false,
+   "note": "a sige clause never inherits tense: it must be marked",
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": {
+    "flagged": true,
+    "weak": false,
+    "cited": true,
+    "diagnostics": [
+     "warn 0.8:R6: A sige clause never inherits the tense of its main clause: mark it (sige maivo po venreva …)."
+    ]
+   },
+   "composed": null,
+   "composeGaps": [],
+   "composeMatch": null,
+   "backTranslation": "since I PAST come him/her is(now) good"
+  },
+  {
+   "n": 39,
+   "rule": "0.8:R8",
+   "ruleId": "R33",
+   "en": null,
+   "good": "Li amorlira ka vanisan.",
+   "bad": "amorliraa",
+   "expect": "0.8:R2",
+   "gap": false,
+   "note": "0.8:R8's own example is an unused form since 2.0, when amorlira became an attested image compound (S03): it reads as an unused slot (K11)",
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": {
+    "flagged": true,
+    "weak": false,
+    "cited": true,
+    "diagnostics": [
+     "warn 0.8:R2: “amorliraa” would be the verb of amorlira, but that slot has no meaning and is not in the dictionary. Listed forms: amorlira (noun)."
+    ]
+   },
+   "composed": null,
+   "composeGaps": [],
+   "composeMatch": null,
+   "backTranslation": "the loving song is beautiful"
+  },
+  {
+   "n": 40,
+   "rule": "0.8:R9",
+   "ruleId": "R34",
+   "en": "Maybe you sing?",
+   "good": "Taivo lirala poye ki?",
+   "bad": "Taivo lirala ki poye?",
+   "expect": "1.0:G22",
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": {
+    "flagged": true,
+    "weak": false,
+    "cited": true,
+    "diagnostics": [
+     "error 1.0:G22: ki is the last word of its clause, but “poye” comes after it."
+    ]
+   },
+   "composed": "taivo nosi lirala ki?",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "you sing maybe Q"
+  },
+  {
+   "n": 41,
+   "rule": "0.8:R12",
+   "ruleId": "R37",
+   "en": null,
+   "good": "Dorinti lirala.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": null,
+   "composeGaps": [],
+   "composeMatch": null,
+   "backTranslation": "Dorinti sing"
+  },
+  {
+   "n": 42,
+   "rule": "0.8:G1",
+   "ruleId": "R38",
+   "en": "This is Dorin.",
+   "good": "Eli ka Dorin.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": "eli ke Dorin.",
+   "composeGaps": [],
+   "composeMatch": false,
+   "backTranslation": "this is Dorin"
+  },
+  {
+   "n": 43,
+   "rule": "0.8:G1",
+   "ruleId": "R38",
+   "en": "This person sings.",
+   "good": "Eli-nela lirala.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": "eli + nela (this person) is an ordinary noun phrase",
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": "eli nela lirala.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "this person sing"
+  },
+  {
+   "n": 44,
+   "rule": "0.8:G2",
+   "ruleId": "R39",
+   "en": null,
+   "good": "Maivo vimova nuna-coda.",
+   "bad": "Maivo ne vimova nuna-coda.",
+   "expect": "0.8:G2",
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": {
+    "flagged": true,
+    "weak": false,
+    "cited": true,
+    "diagnostics": [
+     "warn 0.8:G2: ne with nuna-coda is a double negative and reads as a positive; drop ne."
+    ]
+   },
+   "composed": null,
+   "composeGaps": [],
+   "composeMatch": null,
+   "backTranslation": "I see nothing"
+  },
+  {
+   "n": 45,
+   "rule": "0.8:G2",
+   "ruleId": "R39",
+   "en": null,
+   "good": "Maivo vimova nuna-coda.",
+   "bad": "Maivo vimova ne nuna-coda.",
+   "expect": "0.8:G2",
+   "gap": false,
+   "note": "ne directly before nuna-",
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": {
+    "flagged": true,
+    "weak": false,
+    "cited": true,
+    "diagnostics": [
+     "warn 0.8:G2: ne with nuna-coda is a double negative and reads as a positive; drop ne."
+    ]
+   },
+   "composed": null,
+   "composeGaps": [],
+   "composeMatch": null,
+   "backTranslation": "I see nothing"
+  },
+  {
+   "n": 46,
+   "rule": "0.8:G2",
+   "ruleId": "R39",
+   "en": null,
+   "good": "Maivo ne lirala.",
+   "bad": "Maivo lirala ne.",
+   "expect": "0.8:G2",
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": {
+    "flagged": true,
+    "weak": false,
+    "cited": true,
+    "diagnostics": [
+     "error 0.8:G2: ne negates what follows it, and nothing follows it in this clause. Put it before what it negates (ne lirala). For “never”, use nuna-krono."
+    ]
+   },
+   "composed": null,
+   "composeGaps": [],
+   "composeMatch": null,
+   "backTranslation": "I NOT sing"
+  },
+  {
+   "n": 47,
+   "rule": "0.8:G3",
+   "ruleId": "R40",
+   "en": null,
+   "good": "Po sapusia.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": "an answer: tense + verb",
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": null,
+   "composeGaps": [],
+   "composeMatch": null,
+   "backTranslation": "PAST eat"
+  },
+  {
+   "n": 48,
+   "rule": "0.8:G3",
+   "ruleId": "R40",
+   "en": null,
+   "good": "Dorin, ne.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": "repeated predicate omitted after a contrasting subject",
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": null,
+   "composeGaps": [],
+   "composeMatch": null,
+   "backTranslation": "Dorin NOT"
+  },
+  {
+   "n": 49,
+   "rule": "0.8:G4",
+   "ruleId": "R41",
+   "en": null,
+   "good": "Taivo desida ki, fime maivo senosia.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": "ki before an appended quotation",
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": null,
+   "composeGaps": [],
+   "composeMatch": null,
+   "backTranslation": "you want Q that I speak"
+  },
+  {
+   "n": 50,
+   "rule": "0.8:G5",
+   "ruleId": "R42",
+   "en": null,
+   "good": "Maivo po sabesia fime saivo tefa pagopa.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": "tefa in an inheriting clause: prior action",
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": null,
+   "composeGaps": [],
+   "composeMatch": null,
+   "backTranslation": "I PAST know that he/she PERF go"
+  },
+  {
+   "n": 51,
+   "rule": "0.8:G6",
+   "ruleId": "R43",
+   "en": null,
+   "good": "Sidu lisrola ka livna de taivo.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": null,
+   "composeGaps": [],
+   "composeMatch": null,
+   "backTranslation": "TO stay is choice of you"
+  },
+  {
+   "n": 52,
+   "rule": "0.8:G6",
+   "ruleId": "R43",
+   "en": null,
+   "good": "Fime taivo po relnura ka baba juba.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": null,
+   "composeGaps": [],
+   "composeMatch": null,
+   "backTranslation": "that you PAST return is a gift"
+  },
+  {
+   "n": 53,
+   "rule": "0.8:G8",
+   "ruleId": "R45",
+   "en": "This bread is the same as father's bread.",
+   "good": "Eli bumre ka sambasan ko pilo de bumre.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": "ke and ka both fit an adjective: a passing or a lasting state (the spec does not choose)",
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": "eli bumre ke sambasan ko pilo de bumre.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "this bread is same with father of bread"
+  },
+  {
+   "n": 54,
+   "rule": "0.8:G8",
+   "ruleId": "R45",
+   "en": null,
+   "good": "Saivo ke gase vanisan gase taivo.",
+   "bad": "Gase maivo lirala, taivo rilura.",
+   "expect": "0.8:G8",
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": {
+    "flagged": true,
+    "weak": false,
+    "cited": true,
+    "diagnostics": [
+     "warn 0.8:G8: “Gase” compares (as ADJ as, like NP); it does not open a clause. For “as / while” use nayo; for “when”, kube."
+    ]
+   },
+   "composed": null,
+   "composeGaps": [],
+   "composeMatch": null,
+   "backTranslation": "he/she is(now) as beautiful as you"
+  },
+  {
+   "n": 55,
+   "rule": "1.0:G2",
+   "ruleId": "R47",
+   "en": "I ask whether you will return.",
+   "good": "Maivo masuma ki-oro taivo futu relnura.",
+   "bad": "Maivo masuma si taivo futu relnura.",
+   "expect": [
+    "1.0:G2",
+    "calque"
+   ],
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": {
+    "flagged": true,
+    "weak": false,
+    "cited": true,
+    "diagnostics": [
+     "warn calque: “whether” is ki-oro; si means only “if”. (1.0:G2, 2.3:G77)"
+    ]
+   },
+   "composed": "maivo masuma ki-oro taivo futu relnura.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "I ask whether you FUT return"
+  },
+  {
+   "n": 56,
+   "rule": "1.0:G3",
+   "ruleId": "R48",
+   "en": "You may stay.",
+   "good": "Taivo dagi lisrola.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": "taivo dagi lisrola.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "you be allowed to stay"
+  },
+  {
+   "n": 57,
+   "rule": "1.0:G3",
+   "ruleId": "R48",
+   "en": "He might sing.",
+   "good": "Saivo nosi lirala.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": "saivo nosi lirala.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "he/she might sing"
+  },
+  {
+   "n": 58,
+   "rule": "1.0:G3",
+   "ruleId": "R48",
+   "en": "I can sing.",
+   "good": "Maivo povi lirala.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": "maivo povi lirala.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "I can sing"
+  },
+  {
+   "n": 59,
+   "rule": "1.0:G4",
+   "ruleId": "R49",
+   "en": null,
+   "good": "Kipo po tosu bumreba seye.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": "must (logically) = tosu + seye",
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": null,
+   "composeGaps": [],
+   "composeMatch": null,
+   "backTranslation": "Kipo PAST inferred from evidence bake bread certain"
+  },
+  {
+   "n": 60,
+   "rule": "1.0:G5",
+   "ruleId": "R50",
+   "en": "I intend to sing.",
+   "good": "Maivo dorvada sidu lirala.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": "maivo dorvada sidu lirala.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "I intend TO sing"
+  },
+  {
+   "n": 61,
+   "rule": "1.0:G5",
+   "ruleId": "R50",
+   "en": "I sang deliberately.",
+   "good": "Maivo po lirala la dorvasan.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": "maivo po lirala la dorvasan.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "I PAST sing adverbial particle deliberate"
+  },
+  {
+   "n": 62,
+   "rule": "1.0:G6",
+   "ruleId": "R51",
+   "en": "I should have sung.",
+   "good": "Maivo po noma suvi lirala.",
+   "bad": "Maivo noma lirala.",
+   "expect": "1.0:G16",
+   "gap": false,
+   "note": "a note: the context of noma may be in an earlier line (canon: Maivori noma pilopa yasmo.)",
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": {
+    "flagged": true,
+    "weak": true,
+    "cited": true,
+    "diagnostics": [
+     "note 1.0:G16: noma needs a tense, a modal or a si clause for its context: po noma suvi lirala, si … po noma …. If the context is in an earlier line, this is fine."
+    ]
+   },
+   "composed": "maivo po noma suvi lirala.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "I PAST COUNTERFACT should sing"
+  },
+  {
+   "n": 63,
+   "rule": "1.0:G6",
+   "ruleId": "R51",
+   "en": "I could have sung.",
+   "good": "Maivo po noma povi lirala.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": "maivo po noma povi lirala.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "I PAST COUNTERFACT can sing"
+  },
+  {
+   "n": 64,
+   "rule": "1.0:G7",
+   "ruleId": "R52",
+   "en": "I was about to leave.",
+   "good": "Maivo po fututi pagopa.",
+   "bad": "Maivo po tavki fututi pagopa.",
+   "expect": "1.0:G16",
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": {
+    "flagged": true,
+    "weak": false,
+    "cited": true,
+    "diagnostics": [
+     "error 1.0:G16: Two APPROACH words in one clause: one word per slot.",
+     "error 1.0:G16: “tavki” and “fututi” exclude each other in one clause."
+    ]
+   },
+   "composed": "maivo po fututi [leave].",
+   "composeGaps": [
+    "leave"
+   ],
+   "composeMatch": false,
+   "backTranslation": "I PAST soon go"
+  },
+  {
+   "n": 65,
+   "rule": "1.0:G8",
+   "ruleId": "R53",
+   "en": "I keep on singing.",
+   "good": "Maivo loki lirala.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": "maivo loki lirala.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "I still sing"
+  },
+  {
+   "n": 66,
+   "rule": "1.0:G9",
+   "ruleId": "R54",
+   "en": "You owe me exactly two coins.",
+   "good": "Taivo guraga maivo pendi dossa cono.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": "-ri is optional after a number (1.2:G28)",
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": "taivo guraga maivo pendi dossa conori.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "you owe me exactly 2 coin"
+  },
+  {
+   "n": 67,
+   "rule": "1.0:G9",
+   "ruleId": "R54",
+   "en": null,
+   "good": "Maivo po vimova gase centa veluri.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": null,
+   "composeGaps": [],
+   "composeMatch": null,
+   "backTranslation": "I PAST see as 100 star.PL"
+  },
+  {
+   "n": 68,
+   "rule": "1.0:G10",
+   "ruleId": "R55",
+   "en": null,
+   "good": "Maivo desida oro miru oro nami.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": null,
+   "composeGaps": [],
+   "composeMatch": null,
+   "backTranslation": "I want or water or food"
+  },
+  {
+   "n": 69,
+   "rule": "1.0:G10",
+   "ruleId": "R55",
+   "en": null,
+   "good": "Maivo lirala doli si taivo lirala.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": null,
+   "composeGaps": [],
+   "composeMatch": null,
+   "backTranslation": "I sing only if you sing"
+  },
+  {
+   "n": 70,
+   "rule": "1.0:G11",
+   "ruleId": "R56",
+   "en": "Despite the resistance, I sing.",
+   "good": "Nevi li zeldo, maivo lirala.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": "no ruling requires the comma",
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": "nevi li zeldo maivo lirala.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "although the resistance I sing"
+  },
+  {
+   "n": 71,
+   "rule": "1.0:G11",
+   "ruleId": "R56",
+   "en": "Although she is cold, she sings.",
+   "good": "Nevi saivo ke silisan, saivo lirala.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": "nevi saivo ke silisan saivo lirala.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "although he/she is(now) cool he/she sing"
+  },
+  {
+   "n": 72,
+   "rule": "1.0:G12",
+   "ruleId": "R57",
+   "en": "I sing for you.",
+   "good": "Maivo lirala vobi taivo.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": "maivo lirala vobi taivo.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "I sing for you"
+  },
+  {
+   "n": 73,
+   "rule": "1.0:G13",
+   "ruleId": "R58",
+   "en": "I also sing.",
+   "good": "Tu maivo lirala.",
+   "bad": "Maivo ata lirala.",
+   "expect": "1.0:G13",
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": {
+    "flagged": true,
+    "weak": false,
+    "cited": true,
+    "diagnostics": [
+     "error 1.0:G13: ata is “and” only, joining equals; “also” is tu, before what it marks: “tu maivo …”."
+    ]
+   },
+   "composed": "tu maivo lirala.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "also I sing"
+  },
+  {
+   "n": 74,
+   "rule": "1.0:G14",
+   "ruleId": "R59",
+   "en": null,
+   "good": "Maivo vaku li nela daigoda.",
+   "bad": "Maivo amora saivo pagopa.",
+   "expect": [
+    "1.0:G14",
+    "slot"
+   ],
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": {
+    "flagged": true,
+    "weak": false,
+    "cited": true,
+    "diagnostics": [
+     "error slot: “pagopa” is a second verb in one clause; open its clause with a linker (ata, fime, raho, kopisa…), or join the two verbs with sidu."
+    ]
+   },
+   "composed": null,
+   "composeGaps": [],
+   "composeMatch": null,
+   "backTranslation": "I CAUSE the person die"
+  },
+  {
+   "n": 75,
+   "rule": "1.0:G15",
+   "ruleId": "R60",
+   "en": "I didn't manage to sing.",
+   "good": "Maivo po ne vazdi lirala.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": "maivo po ne vazdi lirala.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "I PAST NOT manage to sing"
+  },
+  {
+   "n": 76,
+   "rule": "1.0:G15",
+   "ruleId": "R60",
+   "en": "I managed not to sing.",
+   "good": "Maivo po vazdi ne lirala.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": "maivo po vazdi ne lirala.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "I PAST manage to NOT sing"
+  },
+  {
+   "n": 77,
+   "rule": "1.0:G17",
+   "ruleId": "R62",
+   "en": "He came unexpectedly.",
+   "good": "Saivo po venreva la vuzinasan.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": "saivo po venreva la vuzinasan.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "he/she PAST come adverbial particle unexpected"
+  },
+  {
+   "n": 78,
+   "rule": "1.0:G18",
+   "ruleId": "R63",
+   "en": null,
+   "good": "Li bumre hozi, vinto Kipo po bumreba ito.",
+   "bad": "Vinto li bumre hozi, Kipo po bumreba ito.",
+   "expect": "1.0:G18",
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": {
+    "flagged": true,
+    "weak": false,
+    "cited": true,
+    "diagnostics": [
+     "error 1.0:G18: vinto and hozi never mark the same constituent: the topic opens the clause, and vinto may then mark a focus inside it."
+    ]
+   },
+   "composed": null,
+   "composeGaps": [],
+   "composeMatch": null,
+   "backTranslation": "the bread as for x it is x  that… Kipo PAST bake bread it"
+  },
+  {
+   "n": 79,
+   "rule": "1.0:G19",
+   "ruleId": "R64",
+   "en": "The sun shines.",
+   "good": "Li sola lumila.",
+   "bad": "Li sulba lumila.",
+   "expect": "1.0:G19",
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": {
+    "flagged": true,
+    "weak": false,
+    "cited": true,
+    "diagnostics": [
+     "warn 1.0:G19: “sulba” is the spelling before 2.1 (respelled); 2.1 spells it “sola”."
+    ]
+   },
+   "composed": "li sola lumila.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "the sun shine"
+  },
+  {
+   "n": 80,
+   "rule": "1.0:G19",
+   "ruleId": "R64",
+   "en": null,
+   "good": "Li zarku po venreva.",
+   "bad": "Li lenra po venreva.",
+   "expect": "1.0:G19",
+   "gap": false,
+   "note": "a 2.2 spelling 2.3 respelled",
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": {
+    "flagged": true,
+    "weak": false,
+    "cited": true,
+    "diagnostics": [
+     "warn 1.0:G19: “lenra” is the spelling before 2.3 (respelled); 2.3 spells it “zarku”."
+    ]
+   },
+   "composed": null,
+   "composeGaps": [],
+   "composeMatch": null,
+   "backTranslation": "the enemy PAST come"
+  },
+  {
+   "n": 81,
+   "rule": "1.0:G20",
+   "ruleId": "R65",
+   "en": "The rebel left.",
+   "good": "Li zeldoyo po pagopa.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": "li zeldoyo po [left].",
+   "composeGaps": [
+    "left"
+   ],
+   "composeMatch": false,
+   "backTranslation": "the rebel PAST go"
+  },
+  {
+   "n": 82,
+   "rule": "1.0:G21",
+   "ruleId": "R66",
+   "en": null,
+   "good": "Li sabeyo raho vismava eli, ne yehu vimova li vordu.",
+   "bad": "Li nela raho lirala ka benasan.",
+   "expect": "1.0:G21",
+   "gap": false,
+   "note": "a note: the album leaves the comma out consistently (2.2:G68)",
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": {
+    "flagged": true,
+    "weak": true,
+    "cited": true,
+    "diagnostics": [
+     "note 1.0:G21: The raho clause does not end the sentence, so a comma closes it; without the pause the main verb reads inside it."
+    ]
+   },
+   "composed": null,
+   "composeGaps": [],
+   "composeMatch": null,
+   "backTranslation": "the sage who notice this NOT witnessed see the cause"
+  },
+  {
+   "n": 83,
+   "rule": "1.0:G22",
+   "ruleId": "R67",
+   "en": null,
+   "good": "Maivo lirala mufe.",
+   "bad": "Seye maivo lirala.",
+   "expect": "1.0:G22",
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": {
+    "flagged": true,
+    "weak": false,
+    "cited": true,
+    "diagnostics": [
+     "error 1.0:G22: “Seye” (attitude) closes its clause; only ki may follow it, but “maivo” comes after it."
+    ]
+   },
+   "composed": null,
+   "composeGaps": [],
+   "composeMatch": null,
+   "backTranslation": "I sing probable"
+  },
+  {
+   "n": 84,
+   "rule": "1.0:G23",
+   "ruleId": "R68",
+   "en": null,
+   "good": "Li dapadonu po venreva kroti li foji.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": null,
+   "composeGaps": [],
+   "composeMatch": null,
+   "backTranslation": "the sale PAST come before the winter"
+  },
+  {
+   "n": 85,
+   "rule": "1.2:G24",
+   "ruleId": "R69",
+   "en": "Now I sing.",
+   "good": "Eli-krono, maivo lirala.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": "eli-krono maivo lirala.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "now I sing"
+  },
+  {
+   "n": 86,
+   "rule": "1.2:G24",
+   "ruleId": "R69",
+   "en": null,
+   "good": "Saivo po venreva pendi eli-krono.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": null,
+   "composeGaps": [],
+   "composeMatch": null,
+   "backTranslation": "he/she PAST come exactly now"
+  },
+  {
+   "n": 87,
+   "rule": "1.2:G25",
+   "ruleId": "R70",
+   "en": "Do you want water or food?",
+   "good": "Taivo desida miru oro nami ki?",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": "taivo desida miru oro nami ki?",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "you want water or food Q"
+  },
+  {
+   "n": 88,
+   "rule": "1.2:G25",
+   "ruleId": "R70",
+   "en": null,
+   "good": "Oro maivo ke li suma ki?",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": null,
+   "composeGaps": [],
+   "composeMatch": null,
+   "backTranslation": "or I is(now) the warmth Q"
+  },
+  {
+   "n": 89,
+   "rule": "1.2:G26",
+   "ruleId": "R71",
+   "en": "I give the bread to the child.",
+   "good": "Maivo donuda li bumre ala li linu.",
+   "bad": "Maivo donuda li linu li bumre.",
+   "expect": "1.2:G26",
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": {
+    "flagged": true,
+    "weak": false,
+    "cited": true,
+    "diagnostics": [
+     "warn 1.2:G26: “donuda” is a give-type verb: only a pronoun recipient stands bare after it. Otherwise VERB THEME ala RECIPIENT: donuda li bumre ala li linu."
+    ]
+   },
+   "composed": "maivo donuda li bumre ala li linu.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "I give the bread to the child"
+  },
+  {
+   "n": 90,
+   "rule": "1.2:G26",
+   "ruleId": "R71",
+   "en": "You owe me two coins.",
+   "good": "Taivo guraga maivo dossa cono.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": "-ri is optional after a number (1.2:G28)",
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": "taivo guraga maivo dossa conori.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "you owe me 2 coin"
+  },
+  {
+   "n": 91,
+   "rule": "1.2:G27",
+   "ruleId": "R72",
+   "en": "Your song is beautiful.",
+   "good": "Taivo de lira ka vanisan.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": "ke and ka both fit an adjective: a passing or a lasting state (the spec does not choose)",
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": "taivo de lira ke vanisan.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "your song is beautiful"
+  },
+  {
+   "n": 92,
+   "rule": "1.2:G27",
+   "ruleId": "R72",
+   "en": "The bread of the city is different from this bread.",
+   "good": "Li bumre de li cilni ka sambanasan da eli bumre.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": "ke and ka both fit an adjective: a passing or a lasting state (the spec does not choose)",
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": "li bumre de li cilni ke sambanasan da eli bumre.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "the bread of the city is different from this bread"
+  },
+  {
+   "n": 93,
+   "rule": "1.2:G28",
+   "ruleId": "R73",
+   "en": "The two stars shine.",
+   "good": "Li dossa veluri lumila.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": "li dossa veluri lumila.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "the 2 star.PL shine"
+  },
+  {
+   "n": 94,
+   "rule": "1.2:G28",
+   "ruleId": "R73",
+   "en": "The stars shine.",
+   "good": "Li veluri lumila.",
+   "bad": "Li velu lumila.",
+   "expect": "gloss",
+   "gap": false,
+   "note": "without a number a plural takes -ri",
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": {
+    "flagged": false,
+    "weak": false,
+    "cited": false,
+    "diagnostics": []
+   },
+   "composed": "li veluri lumila.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "the star.PL shine"
+  },
+  {
+   "n": 95,
+   "rule": "1.2:G29",
+   "ruleId": "R74",
+   "en": "The brave one sings.",
+   "good": "Li corvisan lirala.",
+   "bad": "Corvisan lirala.",
+   "expect": [
+    "1.2:G29",
+    "slot"
+   ],
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": {
+    "flagged": true,
+    "weak": false,
+    "cited": true,
+    "diagnostics": [
+     "error 1.2:G29: An adjective stands as a noun only after an article or determiner: “li corvisan” (1.2:G29, 2.3:G82)."
+    ]
+   },
+   "composed": "li corvisan lirala.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "the brave sing"
+  },
+  {
+   "n": 96,
+   "rule": "1.2:G30",
+   "ruleId": "R75",
+   "en": "The stars wrote songs about love.",
+   "good": "Li veluri po sarbisia lirari de amor.",
+   "bad": "Li veluri po sarbisia su amor.",
+   "expect": "1.2:G30",
+   "gap": false,
+   "note": "su directly after a saying verb; the album writes VERB OBJECT su NP, which 2.2:G68 makes usage",
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": {
+    "flagged": true,
+    "weak": false,
+    "cited": true,
+    "diagnostics": [
+     "note gloss drift: The English has “songs”, and no word in the line means it.",
+     "warn 1.2:G30: Liraasa has no “about”: “sarbisia su” reads as speaking on top of something. Give the verb an object with a de phrase (lirari de amor)."
+    ]
+   },
+   "composed": "li veluri po sarbisia lirari de amor.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "the star.PL PAST write song.PL of love"
+  },
+  {
+   "n": 97,
+   "rule": "1.2:G31",
+   "ruleId": "R76",
+   "en": null,
+   "good": "Taivo viki pagopa ligo maivo ki, maivo de amor?",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": null,
+   "composeGaps": [],
+   "composeMatch": null,
+   "backTranslation": "you would go near I Q my love"
+  },
+  {
+   "n": 98,
+   "rule": "1.2:G32",
+   "ruleId": "R77",
+   "en": "My father sang.",
+   "good": "Pilo de maivo po lirala.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": "maivo de pilo po lirala.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "father of me PAST sing"
+  },
+  {
+   "n": 99,
+   "rule": "1.2:G33",
+   "ruleId": "R78",
+   "en": "I open the door with the key.",
+   "good": "Maivo lallela li dorbi yuta li kemye.",
+   "bad": "Maivo lallela li dorbi ko li kemye.",
+   "expect": "1.2:G33",
+   "gap": false,
+   "note": "ko + a tool is \"alongside\" or, as here, a misused instrument: a note offering yuta",
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": {
+    "flagged": true,
+    "weak": true,
+    "cited": true,
+    "diagnostics": [
+     "note 1.2:G33: “ko kemye” is “alongside, carrying”. If “kemye” is the tool the act is done with, use yuta (1.2:G33)."
+    ]
+   },
+   "composed": "maivo lallela li dorbi yuta li kemye.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "I open the door with the key"
+  },
+  {
+   "n": 100,
+   "rule": "1.2:G33",
+   "ruleId": "R78",
+   "en": "I sing with him.",
+   "good": "Maivo lirala ko saivo.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": "maivo lirala ko saivo.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "I sing with he/she"
+  },
+  {
+   "n": 101,
+   "rule": "1.2:G33",
+   "ruleId": "R78",
+   "en": "The singer healed him with music.",
+   "good": "Li lirayo po yugemeyiya saivo yuta melo.",
+   "bad": "Li lirayo po yugemeyiya saivo ko melo.",
+   "expect": "2.3:G73",
+   "gap": false,
+   "note": "an abstract noun with ko may be the manner (2.3:G73): a note offering yuta is the expected strength ko melo is also grammar: the spirit of the act (2.3:G73)",
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": {
+    "flagged": true,
+    "weak": true,
+    "cited": true,
+    "diagnostics": [
+     "note 2.3:G73: “ko melo” names the manner or spirit of the act (2.3:G73: ko amor, with love). If “melo” is the tool or means instead, use yuta (1.2:G33)."
+    ]
+   },
+   "composed": "li lirayo po yugemeyiya saivo ko melo.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "the singer PAST heal him/her with music"
+  },
+  {
+   "n": 102,
+   "rule": "1.2:G34",
+   "ruleId": "R79",
+   "en": "I sing often.",
+   "good": "Maivo lirala muya-krono.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": "maivo lirala muya-krono.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "I sing often"
+  },
+  {
+   "n": 103,
+   "rule": "1.2:G35",
+   "ruleId": "R80",
+   "en": "I recognize you.",
+   "good": "Maivo revo-sabesia taivo.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": "maivo revo-sabesia taivo.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "I revo-know you"
+  },
+  {
+   "n": 104,
+   "rule": "1.2:G36",
+   "ruleId": "R81",
+   "en": "My daughter sings.",
+   "good": "Maivo de minvalinu lirala.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": "maivo de minvalinu lirala.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "my daughter sing"
+  },
+  {
+   "n": 105,
+   "rule": "2.0:G38",
+   "ruleId": "R83",
+   "en": null,
+   "good": "Li vanajuba ka vanisan.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": "a colour base as a headword (2.0:G39)",
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": null,
+   "composeGaps": [],
+   "composeMatch": null,
+   "backTranslation": "the silver is beautiful"
+  },
+  {
+   "n": 106,
+   "rule": "2.0:G40",
+   "ruleId": "R85",
+   "en": null,
+   "good": "Li amorlumi ka vanisan.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": "an unattested image compound (amor + lumi) is a word",
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": null,
+   "composeGaps": [],
+   "composeMatch": null,
+   "backTranslation": "the loving light is beautiful"
+  },
+  {
+   "n": 107,
+   "rule": "2.0:G40",
+   "ruleId": "R85",
+   "en": null,
+   "good": "Li amorlira ka vanisan.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": "an attested image compound",
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": null,
+   "composeGaps": [],
+   "composeMatch": null,
+   "backTranslation": "the loving song is beautiful"
+  },
+  {
+   "n": 108,
+   "rule": "2.0:G41",
+   "ruleId": "R86",
+   "en": null,
+   "good": "Li lunoyo lirala.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": "R + yo, unlisted, default reading",
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": null,
+   "composeGaps": [],
+   "composeMatch": null,
+   "backTranslation": "the agentive derivation:luno sing"
+  },
+  {
+   "n": 109,
+   "rule": "2.0:G42",
+   "ruleId": "R87",
+   "en": null,
+   "good": "Li larbopagosafa ka benasan.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": "a nested compound (larbopago + safa) is a word",
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": null,
+   "composeGaps": [],
+   "composeMatch": null,
+   "backTranslation": "the forest bathing is good"
+  },
+  {
+   "n": 110,
+   "rule": "2.1:G48",
+   "ruleId": "R93",
+   "en": "May the light hold you.",
+   "good": "Li lumi tivrota taivo pifu.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": "li lumi tivrota taivo pifu.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "the light hold you wish"
+  },
+  {
+   "n": 111,
+   "rule": "2.1:G48",
+   "ruleId": "R93",
+   "en": "If only you had stayed.",
+   "good": "Taivo po noma lisrola pifu.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": "taivo po noma lisrola pifu.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "you PAST COUNTERFACT stay wish"
+  },
+  {
+   "n": 112,
+   "rule": "2.1:G49",
+   "ruleId": "R94",
+   "en": "I sang once.",
+   "good": "Maivo po lirala una-krono.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": "maivo po lirala una-krono.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "I PAST sing una times"
+  },
+  {
+   "n": 113,
+   "rule": "2.1:G49",
+   "ruleId": "R94",
+   "en": "How many times did you sing?",
+   "good": "Taivo po lirala ki-muya-krono ki?",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": "a ki-word may open the question (2.2:G60)",
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": "ki-muya-krono taivo po lirala ki?",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "you PAST sing how many times Q"
+  },
+  {
+   "n": 114,
+   "rule": "2.1:G50",
+   "ruleId": "R95",
+   "en": "I want you to stay.",
+   "good": "Maivo desida fime taivo lisrola.",
+   "bad": "Maivo desida taivo sidu lisrola.",
+   "expect": [
+    "2.1:G50",
+    "sidu"
+   ],
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": {
+    "flagged": true,
+    "weak": false,
+    "cited": true,
+    "diagnostics": [
+     "error sidu: sidu joins two verbs, or an adjective and a verb (2.2:G65); “taivo” before it is neither."
+    ]
+   },
+   "composed": "maivo desida fime taivo lisrola.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "I want that you stay"
+  },
+  {
+   "n": 115,
+   "rule": "2.1:G51",
+   "ruleId": "R96",
+   "en": null,
+   "good": "Saivo buyu lirala.",
+   "bad": "Saivo buyu vuda lirala.",
+   "expect": "1.0:G16",
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": {
+    "flagged": true,
+    "weak": false,
+    "cited": true,
+    "diagnostics": [
+     "error 1.0:G16: Two EVIDENTIAL words in one clause: one word per slot."
+    ]
+   },
+   "composed": null,
+   "composeGaps": [],
+   "composeMatch": null,
+   "backTranslation": "he/she reported sing"
+  },
+  {
+   "n": 116,
+   "rule": "2.1:G52",
+   "ruleId": "R97",
+   "en": null,
+   "good": "Li nimu raho maivo po lirala en ito, ka vanisan.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": null,
+   "composeGaps": [],
+   "composeMatch": null,
+   "backTranslation": "the home who I PAST sing in it is beautiful"
+  },
+  {
+   "n": 117,
+   "rule": "2.1:G53",
+   "ruleId": "R98",
+   "en": "One of us will return.",
+   "good": "Una de maivori futu relnura.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": "una de maivori futu relnura.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "1 of us FUT return"
+  },
+  {
+   "n": 118,
+   "rule": "2.1:G55",
+   "ruleId": "R100",
+   "en": "I came two days ago.",
+   "good": "Maivo po venreva kroti dossa deya.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": "maivo po venreva kroti dossa deya.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "I PAST come ago: 2 day"
+  },
+  {
+   "n": 119,
+   "rule": "2.1:G55",
+   "ruleId": "R100",
+   "en": "I will come in three days.",
+   "good": "Maivo futu venreva krotiapo tressa deya.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": "maivo futu venreva krotiapo tressa deya.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "I FUT come from-now: 3 day"
+  },
+  {
+   "n": 120,
+   "rule": "2.1:G56",
+   "ruleId": "R101",
+   "en": "Do not go!",
+   "good": "Ne pagopa!",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": "ne pagopa!",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "NOT go"
+  },
+  {
+   "n": 121,
+   "rule": "2.1:G56",
+   "ruleId": "R101",
+   "en": "Let us not sing.",
+   "good": "Yava ne lirala.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": "yava ne lirala.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "let us NOT sing"
+  },
+  {
+   "n": 122,
+   "rule": "2.1:G54",
+   "ruleId": "R99",
+   "en": null,
+   "good": "Taivo ke tonsi vanisan fime li veluri lasola.",
+   "bad": "Taivo ke ola-modo vanisan fime li veluri lasola.",
+   "expect": null,
+   "gap": true,
+   "note": "SPEC GAP: 2.2:G62 supersedes 2.1:G54, but no ruling says whether the superseded construction is now wrong or only not preferred; the result is recorded, not judged",
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": {
+    "flagged": false,
+    "weak": false,
+    "cited": false,
+    "diagnostics": []
+   },
+   "composed": null,
+   "composeGaps": [],
+   "composeMatch": null,
+   "backTranslation": "you is(now) so beautiful that the star.PL hush"
+  },
+  {
+   "n": 123,
+   "rule": "2.2:G60",
+   "ruleId": "R105",
+   "en": "Where are you going?",
+   "good": "Ki-pago taivo pagopa ki?",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": "\"are going\" is also the progressive, roni",
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": "ki-pago taivo roni pagopa ki?",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "where you go Q"
+  },
+  {
+   "n": 124,
+   "rule": "2.2:G60",
+   "ruleId": "R105",
+   "en": null,
+   "good": "Ki-kasa taivo po amora maivo?",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": null,
+   "composeGaps": [],
+   "composeMatch": null,
+   "backTranslation": "why you PAST love me"
+  },
+  {
+   "n": 125,
+   "rule": "2.2:G60",
+   "ruleId": "R105",
+   "en": "Do you sing?",
+   "good": "Taivo lirala ki?",
+   "bad": "Taivo lirala?",
+   "expect": "2.2:G60",
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": {
+    "flagged": true,
+    "weak": false,
+    "cited": true,
+    "diagnostics": [
+     "error 2.2:G60: A yes/no question must end in ki: “lirala ki?”."
+    ]
+   },
+   "composed": "taivo lirala ki?",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "you sing Q"
+  },
+  {
+   "n": 126,
+   "rule": "2.2:G60",
+   "ruleId": "R105",
+   "en": "We do not know what we remember.",
+   "good": "Maivori ne sabesia ki-coda maivori ramura.",
+   "bad": "Maivori ne sabesia ki-coda maivori ramura ki.",
+   "expect": "2.2:G60",
+   "gap": false,
+   "note": "an embedded wh-question never ends in ki",
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": {
+    "flagged": true,
+    "weak": false,
+    "cited": true,
+    "diagnostics": [
+     "error 2.2:G60: ki ends a direct question, and this sentence is a statement: an embedded question never ends in ki. Drop ki, or end with ?."
+    ]
+   },
+   "composed": "maivori ne sabesia ki-coda maivori ramura.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "we NOT know what we remember"
+  },
+  {
+   "n": 127,
+   "rule": "2.2:G61",
+   "ruleId": "R106",
+   "en": "How beautiful the night is!",
+   "good": "Li nullo ka ki-modo vanisan!",
+   "bad": "Li nullo ka ki-modo vanisan?",
+   "expect": "2.2:G61",
+   "gap": false,
+   "note": "ke and ka both fit an adjective: a passing or a lasting state (the spec does not choose)",
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": {
+    "flagged": true,
+    "weak": false,
+    "cited": true,
+    "diagnostics": [
+     "error 2.2:G61: A degree question (ki-modo + adjective) must end in ki: “vanisan ki?”. Without ki it is an exclamation, ending in !."
+    ]
+   },
+   "composed": "li nullo ke ki-modo vanisan!",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "the night is how beautiful"
+  },
+  {
+   "n": 128,
+   "rule": "2.2:G61",
+   "ruleId": "R106",
+   "en": "What a night!",
+   "good": "Ki-eli nullo!",
+   "bad": "Ki-pago taivo pagopa!",
+   "expect": "2.2:G61",
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": {
+    "flagged": true,
+    "weak": false,
+    "cited": true,
+    "diagnostics": [
+     "warn 2.2:G61: Only ki-modo + adjective, ki-eli + noun and ki-muya + noun make an exclamation; a clause with “ki-pago” and no final ki is a question: end it with ?."
+    ]
+   },
+   "composed": "ki-eli nullo!",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "which night"
+  },
+  {
+   "n": 129,
+   "rule": "2.2:G62",
+   "ruleId": "R107",
+   "en": null,
+   "good": "Si maivo ke tonsi lukasan, maivo futu ne salrusia.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": null,
+   "composeGaps": [],
+   "composeMatch": null,
+   "backTranslation": "if I is(now) so lucky I FUT NOT rise"
+  },
+  {
+   "n": 130,
+   "rule": "2.2:G62",
+   "ruleId": "R107",
+   "en": "Therefore I sing.",
+   "good": "Tonsi, maivo lirala.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": "no ruling requires the comma",
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": "tonsi maivo lirala.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "therefore I sing"
+  },
+  {
+   "n": 131,
+   "rule": "2.2:G63",
+   "ruleId": "R108",
+   "en": null,
+   "good": "Maivo futu donuda ito biti de lalfo, fime taivo nosi semnesia ko maivo en moluvaye.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": null,
+   "composeGaps": [],
+   "composeMatch": null,
+   "backTranslation": "I FUT give it tool of floating that you might sit with I in breeze"
+  },
+  {
+   "n": 132,
+   "rule": "2.2:G64",
+   "ruleId": "R109",
+   "en": "I sing what you love.",
+   "good": "Maivo lirala raho taivo amora.",
+   "bad": "Raho lirala?",
+   "expect": "2.3:G74",
+   "gap": false,
+   "note": "since 2.3:G74 raho may open a question, which ends in ki",
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": {
+    "flagged": true,
+    "weak": false,
+    "cited": true,
+    "diagnostics": [
+     "error 2.3:G74: A question opened by raho ends in ki: “lirala ki?”. (ki-nela and ki-coda are the ordinary question words.)"
+    ]
+   },
+   "composed": "maivo lirala raho taivo amora.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "I sing who you love"
+  },
+  {
+   "n": 133,
+   "rule": "2.2:G65",
+   "ruleId": "R110",
+   "en": "It is very easy to resist change.",
+   "good": "Ito ke ruli levasan sidu zeldoza trana.",
+   "bad": "Ito ke sidu levasan.",
+   "expect": "sidu",
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": {
+    "flagged": true,
+    "weak": false,
+    "cited": true,
+    "diagnostics": [
+     "error sidu: sidu never follows a copula: “ke sidu” is not grammar (whether it can mean “destined to” is an open question). Use a modal (musi) or an adjective + sidu (2.2:G65).",
+     "error sidu: sidu joins two verbs; “levasan” after it is not a verb form."
+    ]
+   },
+   "composed": "ito ke ruli levasan sidu zeldoza trana.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "it is(now) very easy TO resist change"
+  },
+  {
+   "n": 134,
+   "rule": "2.2:G66",
+   "ruleId": "R111",
+   "en": null,
+   "good": "Kroti maivo lesvu taivo ke li sevusan ruhe.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": null,
+   "composeGaps": [],
+   "composeMatch": null,
+   "backTranslation": "before I let you is(now) the oceanic storm"
+  },
+  {
+   "n": 135,
+   "rule": "2.2:G67",
+   "ruleId": "R112",
+   "en": "The bird sits behind the home.",
+   "good": "Li lavra semnesia nazru li nimu.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": "semnesia is \"to sit\": the English said \"hides\" before the audit corrected its own case",
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": "li lavra semnesia nazru li nimu.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "the bird sit behind the home"
+  },
+  {
+   "n": 136,
+   "rule": "2.2:G67",
+   "ruleId": "R112",
+   "en": "He sings beside the river.",
+   "good": "Saivo lirala silda li mirunulu.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": "saivo lirala silda li mirunulu.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "he/she sing beside the river"
+  },
+  {
+   "n": 137,
+   "rule": "2.3:G69",
+   "ruleId": "R114",
+   "en": "The enemy came.",
+   "good": "Li zarku po venreva.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": "li zarku po venreva.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "the enemy PAST come"
+  },
+  {
+   "n": 138,
+   "rule": "2.3:G70",
+   "ruleId": "R115",
+   "en": "The frog croaks.",
+   "good": "Li kerku kerkuka.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": "li kerku kerkuka.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "the frog croak"
+  },
+  {
+   "n": 139,
+   "rule": "2.3:G70",
+   "ruleId": "R115",
+   "en": "The bear sleeps.",
+   "good": "Li bumbo somusia.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": "li bumbo somusia.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "the bear sleep"
+  },
+  {
+   "n": 140,
+   "rule": "2.3:G71",
+   "ruleId": "R116",
+   "en": "The wolf hunts in a pack.",
+   "good": "Li farvibudi farvibudifa.",
+   "bad": "Li larbopagobudi larbopagobudila.",
+   "expect": "1.0:G19",
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": {
+    "flagged": true,
+    "weak": false,
+    "cited": true,
+    "diagnostics": [
+     "warn 1.0:G19: “larbopagobudi” is the spelling before 2.3 (respelled); 2.3 spells it “farvibudi”.",
+     "warn 1.0:G19: “larbopagobudila” is the spelling before 2.3 (respelled); 2.3 spells it “farvibudifa”."
+    ]
+   },
+   "composed": "li farvibudi farvibudifa.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "the wolf hunt in a pack"
+  },
+  {
+   "n": 141,
+   "rule": "2.3:G72",
+   "ruleId": "R117",
+   "en": null,
+   "good": "Ata maivo lemula saivo de sizosan lumi.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": "a line that continues the one before may open with ata",
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": null,
+   "composeGaps": [],
+   "composeMatch": null,
+   "backTranslation": "and I learn his/her shimmering light"
+  },
+  {
+   "n": 142,
+   "rule": "2.3:G73",
+   "ruleId": "R118",
+   "en": "She spoke in a musical voice.",
+   "good": "Saivo po senosia en baba melosan valla.",
+   "bad": null,
+   "expect": null,
+   "gap": false,
+   "note": "en for the manner, or yuta for the means",
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": null,
+   "composed": "saivo po senosia en baba melosan valla.",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "he/she PAST speak in a musical voice"
+  },
+  {
+   "n": 143,
+   "rule": "2.3:G74",
+   "ruleId": "R119",
+   "en": "Who can know a more powerful peace?",
+   "good": "Raho povi sabesia baba kasi polvasan sove ki?",
+   "bad": "Raho povi sabesia baba kasi polvasan sove?",
+   "expect": "2.3:G74",
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": {
+    "flagged": true,
+    "weak": false,
+    "cited": true,
+    "diagnostics": [
+     "error 2.3:G74: A question opened by raho ends in ki: “sove ki?”. (ki-nela and ki-coda are the ordinary question words.)"
+    ]
+   },
+   "composed": "ki-nela povi sabesia baba kasi polvasan sove ki?",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "who can know a more powerful peace Q"
+  },
+  {
+   "n": 144,
+   "rule": "2.3:G75",
+   "ruleId": "R120",
+   "en": null,
+   "good": "Taivo ne taro-pagopa.",
+   "bad": "Maivo taro-lirala.",
+   "expect": "1.2:G35",
+   "gap": false,
+   "note": "pagopa takes the motion prefixes; other verbs still ask",
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": {
+    "flagged": true,
+    "weak": false,
+    "cited": true,
+    "diagnostics": [
+     "unsettled 1.2:G35: “taro-lirala” puts taro- on the verb lirala. Motion prefixes are a closed list for motion verbs and the curated metaphors; the lexicon does not say whether lirala is a motion verb."
+    ]
+   },
+   "composed": null,
+   "composeGaps": [],
+   "composeMatch": null,
+   "backTranslation": "you NOT taro-go"
+  },
+  {
+   "n": 145,
+   "rule": "2.3:G76",
+   "ruleId": "R121",
+   "en": "Which song do you love?",
+   "good": "Taivo amora ki-eli lira ki?",
+   "bad": "Ki-eli lira taivo amora?",
+   "expect": "2.3:G76",
+   "gap": false,
+   "note": null,
+   "goodClean": true,
+   "goodIssues": [],
+   "badResult": {
+    "flagged": true,
+    "weak": false,
+    "cited": true,
+    "diagnostics": [
+     "error 2.3:G76: A question with ki-eli or ki-muya + noun ends in ki: “amora ki?”. Without ki it is an exclamation, ending in !."
+    ]
+   },
+   "composed": "ki-eli lira taivo amora ki?",
+   "composeGaps": [],
+   "composeMatch": true,
+   "backTranslation": "you love which song Q"
+  }
+ ]
+}

@@ -1,0 +1,904 @@
+{
+  "about": "Grammar audit test cases (Phase 4). Each case names the rule it tests by its source (a ruling id or a section of the lexicon's grammar), an expected Liraasa sentence derived only from the spec (`good`, with `alts` that the spec equally allows), the English it translates (`en`, run through the editor's Compose tab), and optionally a sentence that breaks the rule (`bad`), which the checker should flag, ideally citing `expect`. `english_check` runs the checker with the English beside the line. Run: npx tsx tests/audit/run.ts",
+  "cases": [
+    {
+      "rule": "grammar.clause_template",
+      "en": "I sang.",
+      "good": "Maivo po lirala.",
+      "bad": "Maivo lirala po.",
+      "expect": "1.0:G1"
+    },
+    {
+      "rule": "grammar.clause_template",
+      "en": "I will sing.",
+      "good": "Maivo futu lirala."
+    },
+    {
+      "rule": "grammar.clause_template",
+      "en": "We were singing.",
+      "good": "Maivori po roni lirala.",
+      "bad": "Maivori po lirala roni.",
+      "expect": "1.0:G1"
+    },
+    {
+      "rule": "grammar.clause_template",
+      "en": "I was able to sing.",
+      "good": "Maivo po povi lirala.",
+      "bad": "Maivo po roni povi lirala.",
+      "expect": "1.0:G1",
+      "note": "aspect (slot 11) before modal (slot 7) \"I could sing\" is ambiguous in English (past ability or conditional)"
+    },
+    {
+      "rule": "grammar.slots[3]",
+      "en": "Sing, please.",
+      "good": "Lirala, fisa.",
+      "alts": ["Fisa, lirala.", "Lirala fisa."],
+      "note": "a command has no subject no ruling requires the comma"
+    },
+    {
+      "rule": "grammar.slots[3]",
+      "en": "Let us sing!",
+      "good": "Yava lirala!"
+    },
+    {
+      "rule": "grammar.slots[4]",
+      "en": "I sing.",
+      "good": "Maivo lirala.",
+      "alts": ["Maivo pressa lirala."]
+    },
+    {
+      "rule": "grammar.slots[4]",
+      "good": "Maivo pressa lirala.",
+      "bad": "Maivo po futu lirala.",
+      "expect": "1.0:G16"
+    },
+    {
+      "rule": "grammar.stacking.one_per_slot",
+      "good": "Saivo nosi lirala.",
+      "bad": "Saivo nosi povi lirala.",
+      "expect": "1.0:G16",
+      "note": "two modals"
+    },
+    {
+      "rule": "grammar.stacking.one_per_slot",
+      "good": "Maivo yehu lirala.",
+      "bad": "Maivo yehu gesu lirala.",
+      "expect": "1.0:G16",
+      "note": "two evidentials (2.1:G51: one per clause)"
+    },
+    {
+      "rule": "grammar.stacking.exclusions",
+      "en": "I began to sing.",
+      "good": "Maivo po hiro lirala.",
+      "bad": "Maivo po hiro roni lirala.",
+      "expect": "1.0:G16"
+    },
+    {
+      "rule": "grammar.stacking.exclusions",
+      "good": "Maivo po vazdi lirala.",
+      "bad": "Maivo po vazdi tefa lirala.",
+      "expect": "1.0:G16"
+    },
+    {
+      "rule": "grammar.stacking.exclusions",
+      "good": "Maivo lirala seye.",
+      "bad": "Maivo lirala seye zoke.",
+      "expect": "1.0:G16"
+    },
+    {
+      "rule": "grammar.stacking.exclusions",
+      "good": "Li dorbi ke lallesan hoyo!",
+      "bad": "Li dorbi ke lallesan hoyo yasmo!",
+      "expect": "1.0:G16"
+    },
+    {
+      "rule": "grammar.stacking.max_preverbal_operators_recommended",
+      "good": "Maivo po povi lirala.",
+      "bad": "Maivo po ne povi hiro telvo reve yehu lirala.",
+      "expect": "1.0:G16",
+      "note": "six preverbal operators: the spec only recommends four, so a note is the expected strength",
+      "weak_ok": true
+    },
+    {
+      "rule": "grammar.slots[6]",
+      "en": "I did not sing.",
+      "good": "Maivo po ne lirala.",
+      "bad": "Maivo ne po lirala.",
+      "expect": "1.0:G1",
+      "note": "ne follows the tense (0.8:G2)"
+    },
+    {
+      "rule": "grammar.slots[12]",
+      "en": "I still sing.",
+      "good": "Maivo loki lirala.",
+      "alts": ["Maivo lirala loki."]
+    },
+    {
+      "rule": "grammar.slots[12]",
+      "en": "I sing again.",
+      "good": "Maivo reve lirala.",
+      "alts": ["Maivo lirala reve."]
+    },
+    {
+      "rule": "grammar.slots[1]",
+      "en": "Suddenly the door opened.",
+      "good": "Zafra, li dorbi po lallela.",
+      "bad": "Li dorbi po lallela zafra.",
+      "expect": "slot"
+    },
+    {
+      "rule": "grammar.slots[1]",
+      "good": "Finra, saivo po relnura.",
+      "bad": "Finra saivo po relnura.",
+      "expect": "slot",
+      "note": "frame word without its comma: a warning"
+    },
+    {
+      "rule": "grammar.slots[2]",
+      "good": "Li bumre hozi, Kipo po bumreba ito.",
+      "bad": "Li bumre hozi, li lira hozi, Kipo po bumreba ito.",
+      "expect": "1.0:G16",
+      "note": "two topics in one clause"
+    },
+    {
+      "rule": "grammar.slots[20]",
+      "en": "Do you sing?",
+      "good": "Taivo lirala ki?",
+      "bad": "Taivo ki lirala?",
+      "expect": "1.0:G22"
+    },
+    {
+      "rule": "grammar.slots[19]",
+      "en": "Maybe I sing.",
+      "good": "Maivo lirala poye.",
+      "bad": "Poye, maivo lirala.",
+      "expect": "1.0:G22",
+      "alts": ["Maivo nosi lirala."],
+      "note": "nosi (might, 1.0:G3) and clause-final poye (1.0:G22) both render \"maybe\""
+    },
+    {
+      "rule": "grammar.scope_operators",
+      "en": "Only you sing.",
+      "good": "Doli taivo lirala."
+    },
+    {
+      "rule": "grammar.scope_operators",
+      "en": "Kipo also baked bread.",
+      "good": "Tu Kipo po bumreba.",
+      "alts": ["Tu Kipo po bumreba bumre."],
+      "bad": "Kipo po bumreba doli.",
+      "expect": "1.0:G1",
+      "note": "a scope operator with nothing to scope over"
+    },
+    {
+      "rule": "grammar.valency",
+      "en": "I let him go.",
+      "good": "Maivo po lesvu saivo pagopa.",
+      "bad": "Maivo po lesvu saivo po pagopa.",
+      "expect": ["1.0:G14", "1.0:G1"],
+      "note": "tense belongs to the main clause only English \"let\" does not mark tense",
+      "alts": ["Maivo lesvu saivo pagopa."]
+    },
+    {
+      "rule": "grammar.valency",
+      "en": "I prevented him from going.",
+      "good": "Maivo po tekvu saivo pagopa."
+    },
+    {
+      "rule": "grammar.noun_phrase",
+      "en": "The two beautiful stars shine.",
+      "good": "Li dossa vanisan veluri lumila.",
+      "alts": ["Li dossa vanisan velu lumila."],
+      "bad": "Li veluri vanisan lumila.",
+      "expect": ["0.8:G7", "slot"],
+      "note": "adjective after the noun (album reading AR-02)"
+    },
+    {
+      "rule": "grammar.noun_phrase",
+      "en": "All the songs are beautiful.",
+      "good": "Toda li lirari ka vanisan.",
+      "bad": "Li toda lirari ka vanisan.",
+      "expect": ["0.8:G7", "slot"],
+      "note": "quantifier after the article ke and ka both fit an adjective: a passing or a lasting state (the spec does not choose)",
+      "alts": ["Toda li lirari ke vanisan."]
+    },
+    {
+      "rule": "grammar.noun_phrase",
+      "good": "Li dossa veluri lumila.",
+      "bad": "Li veluri dossa lumila.",
+      "expect": ["0.8:G7", "slot"],
+      "note": "number after the noun"
+    },
+    {
+      "rule": "morphology.verb_rule",
+      "good": "Li navu nullonia.",
+      "bad": "Maivo lirasia.",
+      "expect": "never invent",
+      "note": "an l-initial verb takes l + a (lirala), not -sia. (nullona, the obvious wrong verb of nullo, is itself the negative noun \"daylight\": the reason n-initial verbs take -nia.)"
+    },
+    {
+      "rule": "morphology.verb_rule",
+      "good": "Maivo opioa.",
+      "bad": "Maivo opipa.",
+      "expect": "never invent",
+      "note": "opi is the irregular"
+    },
+    {
+      "rule": "morphology.suffix_order",
+      "en": "the little songs",
+      "good": "li liratiri",
+      "bad": "li lirariti",
+      "expect": "never invent",
+      "alts": ["li mellinasan lirari"],
+      "note": "mellinasan (small; little) is equally valid"
+    },
+    {
+      "rule": "morphology.suffix_order",
+      "good": "Li lirayo lirala.",
+      "bad": "Li liraasayo lirala.",
+      "expect": "never invent",
+      "note": "one form or one derivation, not both"
+    },
+    {
+      "rule": "morphology.derivation_defaults",
+      "good": "Li monruyo pagopa.",
+      "note": "an unlisted derivation is a word (2.0:G41)"
+    },
+    {
+      "rule": "motion_prefixes",
+      "good": "Maivo revo-sabesia taivo.",
+      "bad": "Maivo revo-lenila taivo.",
+      "expect": "1.2:G35"
+    },
+    {
+      "rule": "0.8:R2",
+      "good": "Li luno lumila.",
+      "bad": "Li lavraasa lirala.",
+      "expect": "0.8:R2",
+      "note": "an unused slot"
+    },
+    {
+      "rule": "0.8:R6",
+      "good": "Sige maivo po venreva, saivo ke benasan.",
+      "bad": "Sige maivo venreva, saivo ke benasan.",
+      "expect": "0.8:R6",
+      "note": "a sige clause never inherits tense: it must be marked"
+    },
+    {
+      "rule": "0.8:R8",
+      "good": "Li amorlira ka vanisan.",
+      "note": "0.8:R8's own example is an unused form since 2.0, when amorlira became an attested image compound (S03): it reads as an unused slot (K11)",
+      "bad": "amorliraa",
+      "expect": "0.8:R2"
+    },
+    {
+      "rule": "0.8:R9",
+      "en": "Maybe you sing?",
+      "good": "Taivo lirala poye ki?",
+      "bad": "Taivo lirala ki poye?",
+      "expect": "1.0:G22",
+      "alts": ["Taivo nosi lirala ki?"]
+    },
+    {
+      "rule": "0.8:R12",
+      "good": "Dorinti lirala."
+    },
+    {
+      "rule": "0.8:G1",
+      "en": "This is Dorin.",
+      "good": "Eli ka Dorin."
+    },
+    {
+      "rule": "0.8:G1",
+      "en": "This person sings.",
+      "good": "Eli-nela lirala.",
+      "alts": ["Eli nela lirala."],
+      "note": "eli + nela (this person) is an ordinary noun phrase"
+    },
+    {
+      "rule": "0.8:G2",
+      "good": "Maivo vimova nuna-coda.",
+      "bad": "Maivo ne vimova nuna-coda.",
+      "expect": "0.8:G2"
+    },
+    {
+      "rule": "0.8:G2",
+      "good": "Maivo vimova nuna-coda.",
+      "bad": "Maivo vimova ne nuna-coda.",
+      "expect": "0.8:G2",
+      "note": "ne directly before nuna-"
+    },
+    {
+      "rule": "0.8:G2",
+      "good": "Maivo ne lirala.",
+      "bad": "Maivo lirala ne.",
+      "expect": "0.8:G2"
+    },
+    {
+      "rule": "0.8:G3",
+      "good": "Po sapusia.",
+      "note": "an answer: tense + verb"
+    },
+    {
+      "rule": "0.8:G3",
+      "good": "Dorin, ne.",
+      "note": "repeated predicate omitted after a contrasting subject"
+    },
+    {
+      "rule": "0.8:G4",
+      "good": "Taivo desida ki, fime maivo senosia.",
+      "note": "ki before an appended quotation"
+    },
+    {
+      "rule": "0.8:G5",
+      "good": "Maivo po sabesia fime saivo tefa pagopa.",
+      "note": "tefa in an inheriting clause: prior action"
+    },
+    {
+      "rule": "0.8:G6",
+      "good": "Sidu lisrola ka livna de taivo."
+    },
+    {
+      "rule": "0.8:G6",
+      "good": "Fime taivo po relnura ka baba juba."
+    },
+    {
+      "rule": "0.8:G8",
+      "en": "This bread is the same as father's bread.",
+      "good": "Eli bumre ka sambasan ko pilo de bumre.",
+      "alts": ["Eli bumre ke sambasan ko pilo de bumre."],
+      "note": "ke and ka both fit an adjective: a passing or a lasting state (the spec does not choose)"
+    },
+    {
+      "rule": "0.8:G8",
+      "good": "Saivo ke gase vanisan gase taivo.",
+      "bad": "Gase maivo lirala, taivo rilura.",
+      "expect": "0.8:G8"
+    },
+    {
+      "rule": "1.0:G2",
+      "en": "I ask whether you will return.",
+      "good": "Maivo masuma ki-oro taivo futu relnura.",
+      "bad": "Maivo masuma si taivo futu relnura.",
+      "expect": ["1.0:G2", "calque"],
+      "english_check": "I ask whether you will return."
+    },
+    {
+      "rule": "1.0:G3",
+      "en": "You may stay.",
+      "good": "Taivo dagi lisrola."
+    },
+    {
+      "rule": "1.0:G3",
+      "en": "He might sing.",
+      "good": "Saivo nosi lirala."
+    },
+    {
+      "rule": "1.0:G3",
+      "en": "I can sing.",
+      "good": "Maivo povi lirala."
+    },
+    {
+      "rule": "1.0:G4",
+      "good": "Kipo po tosu bumreba seye.",
+      "note": "must (logically) = tosu + seye"
+    },
+    {
+      "rule": "1.0:G5",
+      "en": "I intend to sing.",
+      "good": "Maivo dorvada sidu lirala."
+    },
+    {
+      "rule": "1.0:G5",
+      "en": "I sang deliberately.",
+      "good": "Maivo po lirala la dorvasan."
+    },
+    {
+      "rule": "1.0:G6",
+      "en": "I should have sung.",
+      "good": "Maivo po noma suvi lirala.",
+      "bad": "Maivo noma lirala.",
+      "expect": "1.0:G16",
+      "note": "a note: the context of noma may be in an earlier line (canon: Maivori noma pilopa yasmo.)",
+      "weak_ok": true
+    },
+    {
+      "rule": "1.0:G6",
+      "en": "I could have sung.",
+      "good": "Maivo po noma povi lirala."
+    },
+    {
+      "rule": "1.0:G7",
+      "en": "I was about to leave.",
+      "good": "Maivo po fututi pagopa.",
+      "bad": "Maivo po tavki fututi pagopa.",
+      "expect": "1.0:G16"
+    },
+    {
+      "rule": "1.0:G8",
+      "en": "I keep on singing.",
+      "good": "Maivo loki lirala."
+    },
+    {
+      "rule": "1.0:G9",
+      "en": "You owe me exactly two coins.",
+      "good": "Taivo guraga maivo pendi dossa cono.",
+      "alts": ["Taivo guraga maivo pendi dossa conori."],
+      "note": "-ri is optional after a number (1.2:G28)"
+    },
+    {
+      "rule": "1.0:G9",
+      "good": "Maivo po vimova gase centa veluri."
+    },
+    {
+      "rule": "1.0:G10",
+      "good": "Maivo desida oro miru oro nami."
+    },
+    {
+      "rule": "1.0:G10",
+      "good": "Maivo lirala doli si taivo lirala."
+    },
+    {
+      "rule": "1.0:G11",
+      "en": "Despite the resistance, I sing.",
+      "good": "Nevi li zeldo, maivo lirala.",
+      "alts": ["Nevi li zeldo maivo lirala."],
+      "note": "no ruling requires the comma"
+    },
+    {
+      "rule": "1.0:G11",
+      "en": "Although she is cold, she sings.",
+      "good": "Nevi saivo ke silisan, saivo lirala.",
+      "alts": ["Nevi saivo ke silisan saivo lirala."]
+    },
+    {
+      "rule": "1.0:G12",
+      "en": "I sing for you.",
+      "good": "Maivo lirala vobi taivo."
+    },
+    {
+      "rule": "1.0:G13",
+      "en": "I also sing.",
+      "good": "Tu maivo lirala.",
+      "bad": "Maivo ata lirala.",
+      "expect": "1.0:G13"
+    },
+    {
+      "rule": "1.0:G14",
+      "good": "Maivo vaku li nela daigoda.",
+      "bad": "Maivo amora saivo pagopa.",
+      "expect": ["1.0:G14", "slot"]
+    },
+    {
+      "rule": "1.0:G15",
+      "en": "I didn't manage to sing.",
+      "good": "Maivo po ne vazdi lirala."
+    },
+    {
+      "rule": "1.0:G15",
+      "en": "I managed not to sing.",
+      "good": "Maivo po vazdi ne lirala."
+    },
+    {
+      "rule": "1.0:G17",
+      "en": "He came unexpectedly.",
+      "good": "Saivo po venreva la vuzinasan."
+    },
+    {
+      "rule": "1.0:G18",
+      "good": "Li bumre hozi, vinto Kipo po bumreba ito.",
+      "bad": "Vinto li bumre hozi, Kipo po bumreba ito.",
+      "expect": "1.0:G18"
+    },
+    {
+      "rule": "1.0:G19",
+      "en": "The sun shines.",
+      "good": "Li sola lumila.",
+      "bad": "Li sulba lumila.",
+      "expect": "1.0:G19"
+    },
+    {
+      "rule": "1.0:G19",
+      "good": "Li zarku po venreva.",
+      "bad": "Li lenra po venreva.",
+      "expect": "1.0:G19",
+      "note": "a 2.2 spelling 2.3 respelled"
+    },
+    {
+      "rule": "1.0:G20",
+      "en": "The rebel left.",
+      "good": "Li zeldoyo po pagopa."
+    },
+    {
+      "rule": "1.0:G21",
+      "good": "Li sabeyo raho vismava eli, ne yehu vimova li vordu.",
+      "bad": "Li nela raho lirala ka benasan.",
+      "expect": "1.0:G21",
+      "weak_ok": true,
+      "note": "a note: the album leaves the comma out consistently (2.2:G68)"
+    },
+    {
+      "rule": "1.0:G22",
+      "good": "Maivo lirala mufe.",
+      "bad": "Seye maivo lirala.",
+      "expect": "1.0:G22"
+    },
+    {
+      "rule": "1.0:G23",
+      "good": "Li dapadonu po venreva kroti li foji."
+    },
+    {
+      "rule": "1.2:G24",
+      "en": "Now I sing.",
+      "good": "Eli-krono, maivo lirala.",
+      "alts": ["Eli-krono maivo lirala."]
+    },
+    {
+      "rule": "1.2:G24",
+      "good": "Saivo po venreva pendi eli-krono."
+    },
+    {
+      "rule": "1.2:G25",
+      "en": "Do you want water or food?",
+      "good": "Taivo desida miru oro nami ki?"
+    },
+    {
+      "rule": "1.2:G25",
+      "good": "Oro maivo ke li suma ki?"
+    },
+    {
+      "rule": "1.2:G26",
+      "en": "I give the bread to the child.",
+      "good": "Maivo donuda li bumre ala li linu.",
+      "bad": "Maivo donuda li linu li bumre.",
+      "expect": "1.2:G26"
+    },
+    {
+      "rule": "1.2:G26",
+      "en": "You owe me two coins.",
+      "good": "Taivo guraga maivo dossa cono.",
+      "alts": ["Taivo guraga maivo dossa conori."],
+      "note": "-ri is optional after a number (1.2:G28)"
+    },
+    {
+      "rule": "1.2:G27",
+      "en": "Your song is beautiful.",
+      "good": "Taivo de lira ka vanisan.",
+      "alts": ["Taivo de lira ke vanisan."],
+      "note": "ke and ka both fit an adjective: a passing or a lasting state (the spec does not choose)"
+    },
+    {
+      "rule": "1.2:G27",
+      "en": "The bread of the city is different from this bread.",
+      "good": "Li bumre de li cilni ka sambanasan da eli bumre.",
+      "alts": ["Li bumre de li cilni ke sambanasan da eli bumre."],
+      "note": "ke and ka both fit an adjective: a passing or a lasting state (the spec does not choose)"
+    },
+    {
+      "rule": "1.2:G28",
+      "en": "The two stars shine.",
+      "good": "Li dossa veluri lumila.",
+      "alts": ["Li dossa velu lumila."]
+    },
+    {
+      "rule": "1.2:G28",
+      "en": "The stars shine.",
+      "good": "Li veluri lumila.",
+      "bad": "Li velu lumila.",
+      "english_check": "The stars shine.",
+      "expect": "gloss",
+      "note": "without a number a plural takes -ri"
+    },
+    {
+      "rule": "1.2:G29",
+      "en": "The brave one sings.",
+      "good": "Li corvisan lirala.",
+      "bad": "Corvisan lirala.",
+      "expect": ["1.2:G29", "slot"]
+    },
+    {
+      "rule": "1.2:G30",
+      "en": "The stars wrote songs about love.",
+      "good": "Li veluri po sarbisia lirari de amor.",
+      "bad": "Li veluri po sarbisia su amor.",
+      "expect": "1.2:G30",
+      "english_check": "The stars wrote songs about love.",
+      "note": "su directly after a saying verb; the album writes VERB OBJECT su NP, which 2.2:G68 makes usage"
+    },
+    {
+      "rule": "1.2:G31",
+      "good": "Taivo viki pagopa ligo maivo ki, maivo de amor?"
+    },
+    {
+      "rule": "1.2:G32",
+      "en": "My father sang.",
+      "good": "Pilo de maivo po lirala.",
+      "alts": ["Maivo de pilo po lirala."]
+    },
+    {
+      "rule": "1.2:G33",
+      "en": "I open the door with the key.",
+      "good": "Maivo lallela li dorbi yuta li kemye.",
+      "bad": "Maivo lallela li dorbi ko li kemye.",
+      "expect": "1.2:G33",
+      "weak_ok": true,
+      "note": "ko + a tool is \"alongside\" or, as here, a misused instrument: a note offering yuta"
+    },
+    {
+      "rule": "1.2:G33",
+      "en": "I sing with him.",
+      "good": "Maivo lirala ko saivo."
+    },
+    {
+      "rule": "1.2:G33",
+      "en": "The singer healed him with music.",
+      "good": "Li lirayo po yugemeyiya saivo yuta melo.",
+      "bad": "Li lirayo po yugemeyiya saivo ko melo.",
+      "expect": "2.3:G73",
+      "note": "an abstract noun with ko may be the manner (2.3:G73): a note offering yuta is the expected strength ko melo is also grammar: the spirit of the act (2.3:G73)",
+      "weak_ok": true,
+      "alts": ["Li lirayo po yugemeyiya saivo ko melo."]
+    },
+    {
+      "rule": "1.2:G34",
+      "en": "I sing often.",
+      "good": "Maivo lirala muya-krono.",
+      "alts": ["Muya-krono, maivo lirala.", "Muya-krono maivo lirala."]
+    },
+    {
+      "rule": "1.2:G35",
+      "en": "I recognize you.",
+      "good": "Maivo revo-sabesia taivo."
+    },
+    {
+      "rule": "1.2:G36",
+      "en": "My daughter sings.",
+      "good": "Maivo de minvalinu lirala."
+    },
+    {
+      "rule": "2.0:G38",
+      "good": "Li vanajuba ka vanisan.",
+      "note": "a colour base as a headword (2.0:G39)"
+    },
+    {
+      "rule": "2.0:G40",
+      "good": "Li amorlumi ka vanisan.",
+      "note": "an unattested image compound (amor + lumi) is a word"
+    },
+    {
+      "rule": "2.0:G40",
+      "good": "Li amorlira ka vanisan.",
+      "note": "an attested image compound"
+    },
+    {
+      "rule": "2.0:G41",
+      "good": "Li lunoyo lirala.",
+      "note": "R + yo, unlisted, default reading"
+    },
+    {
+      "rule": "2.0:G42",
+      "good": "Li larbopagosafa ka benasan.",
+      "note": "a nested compound (larbopago + safa) is a word"
+    },
+    {
+      "rule": "2.1:G48",
+      "en": "May the light hold you.",
+      "good": "Li lumi tivrota taivo pifu."
+    },
+    {
+      "rule": "2.1:G48",
+      "en": "If only you had stayed.",
+      "good": "Taivo po noma lisrola pifu."
+    },
+    {
+      "rule": "2.1:G49",
+      "en": "I sang once.",
+      "good": "Maivo po lirala una-krono."
+    },
+    {
+      "rule": "2.1:G49",
+      "en": "How many times did you sing?",
+      "good": "Taivo po lirala ki-muya-krono ki?",
+      "alts": ["Ki-muya-krono taivo po lirala ki?"],
+      "note": "a ki-word may open the question (2.2:G60)"
+    },
+    {
+      "rule": "2.1:G50",
+      "en": "I want you to stay.",
+      "good": "Maivo desida fime taivo lisrola.",
+      "bad": "Maivo desida taivo sidu lisrola.",
+      "expect": ["2.1:G50", "sidu"]
+    },
+    {
+      "rule": "2.1:G51",
+      "good": "Saivo buyu lirala.",
+      "bad": "Saivo buyu vuda lirala.",
+      "expect": "1.0:G16"
+    },
+    {
+      "rule": "2.1:G52",
+      "good": "Li nimu raho maivo po lirala en ito, ka vanisan."
+    },
+    {
+      "rule": "2.1:G53",
+      "en": "One of us will return.",
+      "good": "Una de maivori futu relnura."
+    },
+    {
+      "rule": "2.1:G55",
+      "en": "I came two days ago.",
+      "good": "Maivo po venreva kroti dossa deya."
+    },
+    {
+      "rule": "2.1:G55",
+      "en": "I will come in three days.",
+      "good": "Maivo futu venreva krotiapo tressa deya."
+    },
+    {
+      "rule": "2.1:G56",
+      "en": "Do not go!",
+      "good": "Ne pagopa!"
+    },
+    {
+      "rule": "2.1:G56",
+      "en": "Let us not sing.",
+      "good": "Yava ne lirala."
+    },
+    {
+      "rule": "2.1:G54",
+      "good": "Taivo ke tonsi vanisan fime li veluri lasola.",
+      "bad": "Taivo ke ola-modo vanisan fime li veluri lasola.",
+      "note": "SPEC GAP: 2.2:G62 supersedes 2.1:G54, but no ruling says whether the superseded construction is now wrong or only not preferred; the result is recorded, not judged",
+      "gap": true
+    },
+    {
+      "rule": "2.2:G60",
+      "en": "Where are you going?",
+      "good": "Ki-pago taivo pagopa ki?",
+      "alts": [
+        "Taivo pagopa ki-pago ki?",
+        "Ki-pago taivo pagopa?",
+        "Ki-pago taivo roni pagopa ki?",
+        "Taivo roni pagopa ki-pago ki?"
+      ],
+      "note": "\"are going\" is also the progressive, roni"
+    },
+    {
+      "rule": "2.2:G60",
+      "good": "Ki-kasa taivo po amora maivo?"
+    },
+    {
+      "rule": "2.2:G60",
+      "en": "Do you sing?",
+      "good": "Taivo lirala ki?",
+      "bad": "Taivo lirala?",
+      "expect": "2.2:G60"
+    },
+    {
+      "rule": "2.2:G60",
+      "en": "We do not know what we remember.",
+      "good": "Maivori ne sabesia ki-coda maivori ramura.",
+      "bad": "Maivori ne sabesia ki-coda maivori ramura ki.",
+      "expect": "2.2:G60",
+      "note": "an embedded wh-question never ends in ki"
+    },
+    {
+      "rule": "2.2:G61",
+      "en": "How beautiful the night is!",
+      "good": "Li nullo ka ki-modo vanisan!",
+      "bad": "Li nullo ka ki-modo vanisan?",
+      "expect": "2.2:G61",
+      "alts": ["Li nullo ke ki-modo vanisan!"],
+      "note": "ke and ka both fit an adjective: a passing or a lasting state (the spec does not choose)"
+    },
+    {
+      "rule": "2.2:G61",
+      "en": "What a night!",
+      "good": "Ki-eli nullo!",
+      "bad": "Ki-pago taivo pagopa!",
+      "expect": "2.2:G61"
+    },
+    {
+      "rule": "2.2:G62",
+      "good": "Si maivo ke tonsi lukasan, maivo futu ne salrusia."
+    },
+    {
+      "rule": "2.2:G62",
+      "en": "Therefore I sing.",
+      "good": "Tonsi, maivo lirala.",
+      "alts": ["Tonsi maivo lirala."],
+      "note": "no ruling requires the comma"
+    },
+    {
+      "rule": "2.2:G63",
+      "good": "Maivo futu donuda ito biti de lalfo, fime taivo nosi semnesia ko maivo en moluvaye."
+    },
+    {
+      "rule": "2.2:G64",
+      "en": "I sing what you love.",
+      "good": "Maivo lirala raho taivo amora.",
+      "bad": "Raho lirala?",
+      "expect": "2.3:G74",
+      "note": "since 2.3:G74 raho may open a question, which ends in ki"
+    },
+    {
+      "rule": "2.2:G65",
+      "en": "It is very easy to resist change.",
+      "good": "Ito ke ruli levasan sidu zeldoza trana.",
+      "bad": "Ito ke sidu levasan.",
+      "expect": "sidu"
+    },
+    {
+      "rule": "2.2:G66",
+      "good": "Kroti maivo lesvu taivo ke li sevusan ruhe."
+    },
+    {
+      "rule": "2.2:G67",
+      "en": "The bird sits behind the home.",
+      "good": "Li lavra semnesia nazru li nimu.",
+      "note": "semnesia is \"to sit\": the English said \"hides\" before the audit corrected its own case"
+    },
+    {
+      "rule": "2.2:G67",
+      "en": "He sings beside the river.",
+      "good": "Saivo lirala silda li mirunulu."
+    },
+    {
+      "rule": "2.3:G69",
+      "en": "The enemy came.",
+      "good": "Li zarku po venreva."
+    },
+    {
+      "rule": "2.3:G70",
+      "en": "The frog croaks.",
+      "good": "Li kerku kerkuka."
+    },
+    {
+      "rule": "2.3:G70",
+      "en": "The bear sleeps.",
+      "good": "Li bumbo somusia."
+    },
+    {
+      "rule": "2.3:G71",
+      "en": "The wolf hunts in a pack.",
+      "good": "Li farvibudi farvibudifa.",
+      "bad": "Li larbopagobudi larbopagobudila.",
+      "expect": "1.0:G19"
+    },
+    {
+      "rule": "2.3:G72",
+      "good": "Ata maivo lemula saivo de sizosan lumi.",
+      "note": "a line that continues the one before may open with ata"
+    },
+    {
+      "rule": "2.3:G73",
+      "en": "She spoke in a musical voice.",
+      "good": "Saivo po senosia en baba melosan valla.",
+      "alts": ["Saivo po senosia yuta baba melosan valla."],
+      "note": "en for the manner, or yuta for the means"
+    },
+    {
+      "rule": "2.3:G74",
+      "en": "Who can know a more powerful peace?",
+      "good": "Raho povi sabesia baba kasi polvasan sove ki?",
+      "alts": ["Ki-nela povi sabesia baba kasi polvasan sove ki?"],
+      "bad": "Raho povi sabesia baba kasi polvasan sove?",
+      "expect": "2.3:G74"
+    },
+    {
+      "rule": "2.3:G75",
+      "good": "Taivo ne taro-pagopa.",
+      "bad": "Maivo taro-lirala.",
+      "expect": "1.2:G35",
+      "note": "pagopa takes the motion prefixes; other verbs still ask"
+    },
+    {
+      "rule": "2.3:G76",
+      "en": "Which song do you love?",
+      "good": "Taivo amora ki-eli lira ki?",
+      "alts": ["Ki-eli lira taivo amora ki?"],
+      "bad": "Ki-eli lira taivo amora?",
+      "expect": "2.3:G76"
+    }
+  ]
+}

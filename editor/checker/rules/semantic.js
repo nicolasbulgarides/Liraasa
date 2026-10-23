@@ -3,10 +3,12 @@
  * The overlay (data/checker/lexicon_flags.json) gives noun classes,
  * preposition senses, verbs that are not causative, and verbs of mixing.
  *
- *   ko + a substance or abstract noun        warn  1.2:G33  the instrument is yuta
+ *   ko + a substance noun                    warn  1.2:G33  the instrument is yuta
  *     (not after a verb of mixing: mix the flour ko the water)
- *   en + an abstract noun                    warn  1.2:G33  "in a voice" is the
- *     means, yuta; en is location (en li narvo, in the darkness, stays)
+ *   ko + a tool (an implement)               note  1.2:G33  alongside, or, if it is
+ *     the tool of the act, yuta
+ *   ko / en + an abstract noun               note  2.3:G73  the manner (ko amor,
+ *     en baba melosan valla), or, if it is the means, yuta
  *   a not-causative verb + actor + verb/noun warn  1.0:G14  "make someone do" = vaku
  *   ke + a noun phrase                       note  clause.copulas  ke is a temporary
  *     state; a lasting identity is ka; a state may be the noun's adjective
@@ -74,47 +76,81 @@
       const W = clause.words;
       const mainVerb = s.verbs.find((v) => v.type === 'verb');
 
-      // ko / en and the instrument (1.2:G33)
+      // ko / en and the instrument (1.2:G33). With a substance, ko is a misused instrument;
+      // with an abstract noun ko or en may name the manner (2.3:G73: ko amor, en baba
+      // melosan valla), so the reader is shown both readings, as a note
       for (const a of s.adjuncts) {
         if (a.kind !== 'pp' || a.head === undefined || !sem.instrument) continue;
         const prep = W[a.prep];
         const cls = classOf(sem, W[a.head]);
         const noun = W[a.head].text;
         const combining = mainVerb && sem.koCombines[W[mainVerb.i].lower];
-        const ko =
-          sem.sense[prep.lower] === 'accompaniment' &&
-          (cls === 'substance' || cls === 'abstract') &&
-          !combining;
-        const en = sem.sense[prep.lower] === 'location' && cls === 'abstract';
-        if (!ko && !en) continue;
-        out.push(
-          C.diagnostic({
-            ...C.at(ctx, prep),
-            severity: 'warn',
-            rule: '1.2:G33',
-            message: ko
-              ? '“' +
+        const accompaniment = sem.sense[prep.lower] === 'accompaniment' && !combining;
+        const location = sem.sense[prep.lower] === 'location';
+        if (accompaniment && cls === 'substance') {
+          out.push(
+            C.diagnostic({
+              ...C.at(ctx, prep),
+              severity: 'warn',
+              rule: '1.2:G33',
+              message:
+                '“' +
                 prep.text +
                 '” is accompaniment (with a companion), but “' +
                 noun +
-                '” is a ' +
-                cls +
-                ': the tool or means of an act takes ' +
-                sem.instrument +
-                '.'
-              : '“' +
-                prep.text +
-                '” is location (in, inside), but “' +
-                noun +
-                '” is ' +
-                cls +
-                ': “in a voice / tone / manner” is the means of the act, ' +
+                '” is a substance: the tool or means of an act takes ' +
                 sem.instrument +
                 '.',
-            fix: sem.instrument,
-            autoFix: true,
-          }),
-        );
+              fix: sem.instrument,
+              autoFix: true,
+            }),
+          );
+        } else if (accompaniment && cls === 'tool') {
+          // ko + an implement: alongside (soldiers ko tisebitivuri), or the tool of the act (yuta)
+          out.push(
+            C.diagnostic({
+              ...C.at(ctx, prep),
+              severity: 'note',
+              rule: '1.2:G33',
+              message:
+                '“' +
+                prep.text +
+                ' ' +
+                noun +
+                '” is “alongside, carrying”. If “' +
+                noun +
+                '” is the tool the act is done with, use ' +
+                sem.instrument +
+                ' (1.2:G33).',
+              fix: sem.instrument,
+              autoFix: false,
+            }),
+          );
+        } else if ((accompaniment || location) && cls === 'abstract') {
+          out.push(
+            C.diagnostic({
+              ...C.at(ctx, prep),
+              severity: 'note',
+              rule: '2.3:G73',
+              message:
+                '“' +
+                prep.text +
+                ' ' +
+                noun +
+                '” names the manner or spirit of the act (2.3:G73: ' +
+                (accompaniment
+                  ? 'ko amor, with love'
+                  : 'en baba melosan valla, in a musical voice') +
+                '). If “' +
+                noun +
+                '” is the tool or means instead, use ' +
+                sem.instrument +
+                ' (1.2:G33).',
+              fix: sem.instrument,
+              autoFix: false,
+            }),
+          );
+        }
       }
 
       // a verb that is not causative, used as "make someone do" (1.0:G14)

@@ -94,6 +94,10 @@
         } else if (R.has('chain')) {
           cur.kind = 'nominal';
           cur.linker = w;
+        } else if (w.lower === 'gase' && clauseFollows(words, i + 1)) {
+          // gase opening a line with a subject and a verb: reported as comparison only (0.8:G8)
+          cur.kind = 'gase';
+          cur.linker = w;
         }
         cur.lineInitial = i === 0 || Boolean(prev && prev.stop);
       } else {
@@ -164,6 +168,8 @@
     let j = i;
     let noun = false;
     while (j < words.length && !verbal(words[j])) {
+      // gase NP raho …: a simile whose noun has a relative clause, not a clause (album 12:14)
+      if (noun && words[j].lower === 'raho') return false;
       if (nounish(words[j])) noun = true;
       if (words[j].comma || words[j].stop) return false;
       j += 1;

@@ -5,7 +5,7 @@ import { FORM_SLOTS, SLOT_RAW_KEY, isUnusedGloss } from '../../src/core/config/s
 import type { RawLexicon } from '../../src/core/model/raw';
 
 /**
- * handoff/liraasa_2_3_llm.json: the one-file reference for language models
+ * handoff/liraasa_2_5_llm.json: the one-file reference for language models
  * (npm run build:llm). Its dictionary is one line per headword; parsing every
  * line back must give exactly the lexicon's meaningful forms, so the compact
  * format is lossless and adds nothing.
@@ -25,9 +25,9 @@ interface Reference {
   examples: { sentences: [string, string][] };
 }
 
-const llm = read('../../handoff/liraasa_2_3_llm.json') as Reference;
-const latest = read('../../LirasaCodexLatest/liraasa_2_3_llm.json');
-const lex = read('../../data/lexicon/liraasa_2_3.json') as RawLexicon;
+const llm = read('../../handoff/liraasa_2_5_llm.json') as Reference;
+const latest = read('../../LirasaCodexLatest/liraasa_2_5_llm.json');
+const lex = read('../../data/lexicon/liraasa_2_5.json') as RawLexicon;
 const lines = Object.values(llm.dictionary.by_domain).flat();
 const CODE = ['n', 'an', 'nn', 'v', 'na', 'a', 'aa'];
 /** HEADWORD [PART+PART(+-SUFFIX)] {FLAGS}: … (a lexicalised suffix: 2.0:G38) */
@@ -116,11 +116,21 @@ describe('the LLM reference', () => {
       .filter((k) => k.startsWith('rulings_'))
       .reduce((n, k) => n + (r[k]?.length ?? 0), 0);
     expect(llm.rulings).toHaveLength(total + 1); // + ADR-0011
+    // 2.5 (I-44): the historical and formula rows are a table of their own
+    const table = (f: object): string | undefined => (f as { table?: string }).table;
+    const sw = llm.small_words as unknown as { historical_and_formulae: { rows: string[][] } };
     expect(llm.small_words.function_words.rows.map((row) => row[0])).toEqual(
-      lex.function_words.map((f) => f.form),
+      lex.function_words.filter((f) => table(f) === undefined).map((f) => f.form),
     );
+    expect(sw.historical_and_formulae.rows.map((row) => row[0])).toEqual(
+      lex.function_words.filter((f) => table(f) !== undefined).map((f) => f.form),
+    );
+    // 2.5 (I-40): canonical sentences apart from illustrations and contrasts
+    const kind = (e: object): string => (e as { kind?: string }).kind ?? 'canonical';
     const live = lex.examples.filter((e) => e.status !== 'HISTORICAL');
-    expect(llm.examples.sentences).toEqual(live.map((e) => [e.liraasa, e.english]));
+    expect(llm.examples.sentences).toEqual(
+      live.filter((e) => kind(e) === 'canonical').map((e) => [e.liraasa, e.english]),
+    );
   });
 
   it('carries the image-compound pattern with every attested pair, and the derivation defaults', () => {

@@ -15,12 +15,17 @@
    "file": "data/changes/2026-10-19-lexicon-2-3-review.json",
    "id": "2026-10-19-lexicon-2-3-review",
    "sha256": "f570965bc980e8478f72a08bf3865c48a96cda37a9139666a2a90ee166983f3a"
+  },
+  {
+   "file": "data/changes/2026-10-19-lexicon-2-3-audit.json",
+   "id": "2026-10-19-lexicon-2-3-audit",
+   "sha256": "ed25f656f385410534bc935e342ef0ba50cb167166d96563af04c53fde41abed"
   }
  ],
  "output": {
   "file": "liraasa_2_3.json",
-  "sha256": "e3cbd09da25a73ee286c7db01f770af172f84827961556f226fc9ca8d9ac5661",
-  "bytes": 3029145
+  "sha256": "631b9ca45e1fcfbc62f89df4100c7c8d7e7e9c5e9fc1e7656a02ed3b27d6acd5",
+  "bytes": 3038565
  },
  "counts": {
   "before": {

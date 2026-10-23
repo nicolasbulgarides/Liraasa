@@ -3,8 +3,8 @@
  *
  *   npm run build:handoff
  *
- * Writes handoff/liraasa_2_3_complete.json: the canonical 2.3 lexicon (built
- * from 2.2 by `npm run integrate:2.3`, ADR-0019), with what a guide needs that
+ * Writes handoff/liraasa_2_5_complete.json: the canonical 2.5 lexicon (built
+ * from 2.3 by `npm run integrate:2.5`, ADR-0020), with what a guide needs that
  * the lexicon records elsewhere:
  *
  * - each example a changeset revised keeps its earlier text beside it: the
@@ -12,7 +12,7 @@
  *   `liraasa_1_2`, the 2.1 question rewrites (2.1:G46) as `liraasa_2_0`
  *   (with `revised_in` and `revision_reason`);
  * - the changesets themselves, as `changesets_1_2_full`, `changesets_2_0_full`
- *   `changesets_2_1_full`, `changesets_2_2_full` and `changesets_2_3_full`, with each build's counts, so the guide's
+ *   `changesets_2_1_full`, `changesets_2_2_full`, `changesets_2_3_full` and `changesets_2_5_full`, with each build's counts, so the guide's
  *   changelog is generated from the record rather than written beside it.
  *
  * The canonical files are only read.
@@ -25,15 +25,17 @@ import { CHANGESETS_2_0 } from './changesets_2_0';
 import { CHANGESETS_2_1 } from './changesets_2_1';
 import { CHANGESETS_2_2 } from './changesets_2_2';
 import { CHANGESETS_2_3 } from './changesets_2_3';
+import { CHANGESETS_2_5 } from './changesets_2_5';
 
-const LEXICON = 'data/lexicon/liraasa_2_3.json';
+const LEXICON = 'data/lexicon/liraasa_2_5.json';
 const REPORT_1_2 = 'data/lexicon/integration_report_1_2.json';
 const REPORT_2_0 = 'data/lexicon/integration_report_2_0.json';
 const REPORT_2_1 = 'data/lexicon/integration_report_2_1.json';
 const REPORT_2_2 = 'data/lexicon/integration_report_2_2.json';
 const REPORT_2_3 = 'data/lexicon/integration_report_2_3.json';
+const REPORT_2_5 = 'data/lexicon/integration_report_2_5.json';
 const OUT_DIR = 'handoff';
-const OUT = 'liraasa_2_3_complete.json';
+const OUT = 'liraasa_2_5_complete.json';
 
 const load = (path: string): unknown => JSON.parse(readFileSync(resolve(path), 'utf8'));
 
@@ -52,6 +54,8 @@ function main(): void {
   const report22 = load(REPORT_2_2) as { counts: unknown };
   const v23 = CHANGESETS_2_3.map((p) => load(p) as LexiconChangeset);
   const report23 = load(REPORT_2_3) as { counts: unknown };
+  const v25 = CHANGESETS_2_5.map((p) => load(p) as LexiconChangeset);
+  const report25 = load(REPORT_2_5) as { counts: unknown };
 
   const examples = lexicon.examples.map((e) => ({ ...e }));
   let revised = 0;
@@ -62,6 +66,7 @@ function main(): void {
     [v21, 'liraasa_2_0'],
     [v22, 'liraasa_2_1'],
     [v23, 'liraasa_2_2'],
+    [v25, 'liraasa_2_3'],
   ] as const) {
     for (const cs of sets) {
       for (const op of cs.ops) {
@@ -69,7 +74,10 @@ function main(): void {
         const index = Number(op.entry.replace('example:', ''));
         const example = examples[index];
         // a later edition may have respelled the sentence since (2.1:G58)
-        if (example === undefined || (sets === v23 && example.liraasa !== op.to)) {
+        if (
+          example === undefined ||
+          ((sets === v23 || sets === v25) && example.liraasa !== op.to)
+        ) {
           throw new Error(
             `${op.entry}: expected "${String(op.to)}" in the ${String(lexicon.version)} lexicon`,
           );
@@ -88,14 +96,15 @@ function main(): void {
   const complete = {
     ...lexicon,
     handoff_note:
-      'Liraasa 2.3: all of 1.0, the 1.1 vocabulary supplement, the 1.2 changesets ' +
+      'Liraasa 2.5: all of 1.0, the 1.1 vocabulary supplement, the 1.2 changesets ' +
       `${v12.map((c) => c.id).join(' and ')}, the 2.0 changesets ${v20.map((c) => c.id).join(' and ')} ` +
       '(word-building rulings 2.0:G37–G45, new vocabulary, the image-compound pattern), and the 2.1 changeset ' +
       `${v21.map((c) => c.id).join(' and ')} (rulings 2.1:G46–G59, 30 roots respelled), and the 2.2 changeset ` +
       `${v22.map((c) => c.id).join(' and ')} (rulings 2.2:G60–G68, silro restored, the album), and the 2.3 changeset ` +
-      `${v23.map((c) => c.id).join(' and ')} (rulings 2.3:G69–G71, the sound pass: 13 roots respelled, bear, cow and frog made roots, wolf rebuilt on farvi). Revised examples keep ` +
-      'their earlier text in liraasa_1_1 (1.2), liraasa_1_2 (2.0), liraasa_2_0 (2.1), liraasa_2_1 (2.2) or liraasa_2_2 (2.3). Ruling ids are edition-qualified: ' +
-      '0.8:R1, 1.0:G7, 1.2:G24, 2.0:G40, 2.1:G46, 2.2:G60, 2.3:G69. Built by scripts/build_handoff.ts from data/lexicon/liraasa_2_3.json.',
+      `${v23.map((c) => c.id).join(' and ')} (rulings 2.3:G69–G86, the sound pass and the grammar audit), and the 2.5 changesets ` +
+      `${v25.map((c) => c.id).join(', ')} (rulings 2.5:G87–G128, the author's decisions on the 2.3 audit; the album is no longer canon). Revised examples keep ` +
+      'their earlier text in liraasa_1_1 (1.2), liraasa_1_2 (2.0), liraasa_2_0 (2.1), liraasa_2_1 (2.2), liraasa_2_2 (2.3) or liraasa_2_3 (2.5). Ruling ids are edition-qualified: ' +
+      '0.8:R1, 1.0:G7, 1.2:G24, 2.0:G40, 2.1:G46, 2.2:G60, 2.3:G69, 2.5:G88. Built by scripts/build_handoff.ts from data/lexicon/liraasa_2_5.json.',
     examples,
     counts_1_1_to_1_2: report12.counts,
     changesets_1_2_full: v12,
@@ -107,6 +116,8 @@ function main(): void {
     changesets_2_2_full: v22,
     counts_2_2_to_2_3: report23.counts,
     changesets_2_3_full: v23,
+    counts_2_3_to_2_5: report25.counts,
+    changesets_2_5_full: v25,
   };
 
   mkdirSync(resolve(OUT_DIR), { recursive: true });

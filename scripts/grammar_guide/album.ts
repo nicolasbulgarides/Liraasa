@@ -1,14 +1,14 @@
 /**
- * The album (2.2:G68): twelve songs and the alternate 05, line by line as
- * recorded, with a gloss under each word read from the lexicon by the same
- * code that reads Nemelira de devi (song.ts).
+ * The album: twelve songs and the alternate 05, line by line as recorded,
+ * with a gloss under each word read from the lexicon by the same code that
+ * reads Nemelira de devi (song.ts).
  *
- * The album is canon 2.0 text, read with 2.0 spellings (2.1:G58). Its lines
+ * Since 2.5:G87 the album is not grammar canon (2.2:G68 is superseded): it is
+ * kept as text, non-normative, read with 2.0 spellings (2.1:G58). Its lines
  * are never edited: a word respelled since 2.0 is glossed through the
- * migration table, and the line's current spelling is noted beneath it. A line
- * that departs from the grammar once is an album reading (AR-…): it keeps its
- * meaning, is listed with its standard form, and is not a model for new text.
- * The album has no English yet; nothing is translated here.
+ * migration table, and the line's current spelling is noted beneath it. The
+ * album readings (AR-…) are kept as annotations; none of them licenses
+ * anything. The album has no English yet; nothing is translated here.
  */
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
@@ -27,6 +27,8 @@ interface Reading {
   issue: string;
   standard_form: string | null;
   note: string | null;
+  /** A ruling that made the reading's construction grammar (2.3:G74). */
+  resolved_by?: string;
 }
 
 interface CurrentLine {
@@ -68,7 +70,7 @@ export function readAlbum(): { songs: CurrentSong[]; readings: Reading[] } {
 
 /**
  * "Liraasa de Leldeasa (Crossing Lines)" → the Liraasa, then the rest as plain
- * text. A title is album text as recorded (2.2:G68): a title word the lexicon
+ * text. A title is album text as recorded (2.5:G87): a title word the lexicon
  * does not read (Amorlavi) is listed for the author, never edited.
  */
 function titleHtml(title: string): string {
@@ -77,6 +79,9 @@ function titleHtml(title: string): string {
 }
 
 function readingNote(r: Reading): string {
+  // a construction a later ruling made grammar: the line is a model again
+  if (r.resolved_by !== undefined)
+    return `<p class="v-n album-reading"><strong>${esc(r.id)}</strong> was an album reading (${esc(r.issue)}); the construction is grammar since ${md(`[[${r.resolved_by}]]`)}.</p>`;
   const standard =
     r.standard_form === null
       ? 'Standard form: the author is to supply it.'
@@ -105,11 +110,12 @@ export function albumPart(index: Index, n: string): string {
 </section>`;
     })
     .join('\n');
-  const certain = readings.filter((r) => r.confidence === 'certain').length;
+  const active = readings.filter((r) => r.resolved_by === undefined);
+  const certain = active.filter((r) => r.confidence === 'certain').length;
   return part(
     n,
     'The album',
-    `Twelve songs and the alternate 05, as recorded: canon 2.0 text, read with 2.0 spellings [[2.2:G68]] [[2.1:G58]]. A construction the album uses consistently is grammar. A word respelled since 2.0 is glossed through the migration table, and the line’s current spelling is noted beneath (“Read today”). The ${String(readings.length)} lines that depart from the grammar once are **album readings** (AR-…): each keeps its meaning and is listed with its standard form, ${String(certain)} certain and ${String(readings.length - certain)} for the author to confirm. They are not models for new text. Glosses use the labels of Part 7. No English is given yet.`,
+    `Twelve songs and the alternate 05, as recorded, read with 2.0 spellings [[2.1:G58]]. **The album is not grammar canon** [[2.5:G87]]: it predates the 2.5 grammar and contains errors (adjective forms used as nouns, among others). Read it for its content; do not imitate its grammar, and no line licenses a construction. A word respelled since 2.0 is glossed through the migration table, and the line’s current spelling is noted beneath (“Read today”). The ${String(active.length)} **album readings** (AR-…) are kept as annotations, each with its standard form, ${String(certain)} certain and ${String(active.length - certain)} for the author to confirm; they grant no exceptions. Glosses use the labels of Part 7. No English is given yet.`,
     tracks,
   );
 }
