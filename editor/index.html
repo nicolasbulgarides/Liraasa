@@ -1442,6 +1442,146 @@
       grid-template-columns: 3.6rem 1fr;
     }
   }
+
+  /* ------------------------------------------------- the hymn (ADR-0022) */
+  .hymn-btn {
+    border-color: var(--gold);
+    color: var(--gold);
+    font-weight: 600;
+  }
+  body.hymn-on .hymn-btn {
+    background: var(--gold-soft);
+    box-shadow: inset 0 -2px 0 var(--gold);
+  }
+  #hymnView {
+    display: none;
+    overflow: auto;
+    background: var(--paper);
+  }
+  body.hymn-on .desk,
+  body.hymn-on #learnView {
+    display: none !important;
+  }
+  body.hymn-on #hymnView {
+    display: block;
+  }
+  .hymn {
+    max-width: 46rem;
+    margin: 0 auto;
+    padding: var(--s6) var(--s4) 4rem;
+  }
+  .hymn-kicker {
+    font: 600 11px/1.4 var(--ui);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin: 0;
+  }
+  .hymn h2 {
+    font: 600 2rem/1.15 var(--lira);
+    margin: var(--s2) 0 var(--s1);
+  }
+  .hymn h2:focus {
+    outline: none;
+  }
+  .hymn .hymn-li-title {
+    font: italic 1.25rem/1.3 var(--lira);
+    color: var(--ink-soft);
+    margin: 0 0 var(--s4);
+  }
+  .hymn-about {
+    font: 14px/1.55 var(--ui);
+    color: var(--ink-soft);
+    margin: 0 0 var(--s4);
+  }
+  .hymn-check {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--s2);
+    font: 13px/1.4 var(--ui);
+    padding: var(--s1) var(--s3);
+    border-radius: 999px;
+    background: var(--ok-soft);
+    color: var(--ok);
+    margin: 0 0 var(--s4);
+  }
+  .hymn-check.bad {
+    background: var(--error-soft);
+    color: var(--error);
+  }
+  .hymn-tools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--s2);
+    margin: 0 0 var(--s5);
+  }
+  .hymn-lines {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid var(--rule);
+  }
+  .hymn-lines li {
+    display: grid;
+    grid-template-columns: 2.4rem minmax(0, 1fr);
+    gap: 0 var(--s3);
+    padding: var(--s3) 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .hymn-n {
+    font: 12px/2 var(--mono);
+    color: var(--ink-faint);
+    text-align: right;
+  }
+  .hymn-l {
+    font: 1.2rem/1.5 var(--lira);
+    color: var(--ink);
+  }
+  .hymn-e {
+    font: 14px/1.5 var(--ui);
+    color: var(--ink-soft);
+    margin-top: 2px;
+  }
+  #hymnView[data-english='off'] .hymn-e {
+    display: none;
+  }
+  .hymn-gloss {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--s1) var(--s3);
+    margin-top: var(--s2);
+  }
+  #hymnView[data-gloss='off'] .hymn-gloss {
+    display: none;
+  }
+  .hymn-gloss span {
+    display: inline-flex;
+    flex-direction: column;
+    font: 12px/1.3 var(--ui);
+    color: var(--ink-faint);
+  }
+  .hymn-gloss b {
+    font: 600 14px/1.3 var(--lira);
+    color: var(--ink);
+  }
+  .hymn-src {
+    font: 12px/1.4 var(--ui);
+    color: var(--ink-faint);
+    margin-top: 2px;
+  }
+  .hymn-foot {
+    font: 13px/1.55 var(--ui);
+    color: var(--ink-soft);
+    margin-top: var(--s5);
+  }
+  @media (max-width: 560px) {
+    .hymn h2 {
+      font-size: 1.6rem;
+    }
+    .hymn-lines li {
+      grid-template-columns: 1.8rem minmax(0, 1fr);
+    }
+  }
 </style>
 
 <div class="app">
@@ -1449,6 +1589,15 @@
     <h1>Songbook</h1>
     <span class="ed mono" id="edition">1.1</span>
     <span class="spacer"></span>
+    <button
+      class="btn hymn-btn"
+      id="hymnBtn"
+      type="button"
+      aria-pressed="false"
+      title="The Song of the First Stars: the canon hymn"
+    >
+      <span aria-hidden="true">✦</span> The Hymn
+    </button>
     <button class="btn btn-quiet" id="learnBtn" type="button" aria-pressed="false">Learn</button>
     <button class="btn btn-quiet" id="railBtn" type="button" aria-pressed="true">Library</button>
     <button class="btn btn-quiet" id="inspBtn" type="button" aria-pressed="true">Workbench</button>
@@ -1592,6 +1741,9 @@
 
   <!-- Learn (editor/learn, ADR-0015): drawn by learn/app.js -->
   <main id="learnView" aria-label="Learn"></main>
+
+  <!-- The Song of the First Stars: the canon hymn (data/corpus/hymn, ADR-0022) -->
+  <main id="hymnView" aria-labelledby="hymnTitle"></main>
   <p class="sr-only" id="learnLive" aria-live="polite"></p>
 
   <footer class="foot">
@@ -5864,4 +6016,184 @@
   }
   if (window.LiraasaLearn) offerRespellings();
   else window.addEventListener('liraasa:learn-ready', offerRespellings, { once: true });
+
+  /* ------------------------------------------------------------ the hymn
+     The Song of the First Stars, a canon corpus text (ADR-0022), from the
+     bundle (D.hymn). Every line is read by the strict checker when the view
+     opens, so the badge reports what the grammar says now, not what it said
+     when the text was written. */
+  (function hymnView() {
+    const H = D.hymn;
+    const view = document.getElementById('hymnView');
+    const btn = document.getElementById('hymnBtn');
+    if (!H || !view || !btn) {
+      if (btn) btn.hidden = true;
+      return;
+    }
+    const lira = (s) => '<span class="liraasa" lang="x-liraasa">' + esc(s) + '</span>';
+    let drawn = false;
+
+    /** Every line through the strict checker: what is not clean, with its rules. */
+    function audit() {
+      if (!STRICT) return null;
+      const bad = [];
+      for (const l of [{ n: 0, liraasa: H.title_liraasa }, ...H.lines]) {
+        const f = STRICT.checker
+          .checkLine(l.liraasa)
+          .findings.filter((x) => x.severity === 'error' || x.severity === 'warn');
+        if (f.length) bad.push(l.n + ': ' + f.map((x) => x.rule).join(', '));
+      }
+      return bad;
+    }
+
+    /** The word-by-word gloss of one line, from the strict checker. */
+    function gloss(line) {
+      if (!STRICT) return '';
+      const words = STRICT.checker
+        .checkLine(line)
+        .sentences.flatMap((s) => s.gloss)
+        .map(
+          (g) =>
+            '<span><b lang="x-liraasa">' +
+            esc(g.word) +
+            '</b>' +
+            esc(String(g.gloss || '').split(';')[0]) +
+            '</span>',
+        );
+      return words.join('');
+    }
+
+    function draw() {
+      const bad = audit();
+      const badge =
+        bad === null
+          ? '<p class="hymn-check bad">The strict checker did not load: run npm run build:grammar.</p>'
+          : bad.length === 0
+            ? '<p class="hymn-check"><span aria-hidden="true">✓</span> All ' +
+              H.lines.length +
+              ' lines read clean under the ' +
+              esc(D.version) +
+              ' strict checker, checked just now</p>'
+            : '<p class="hymn-check bad">' +
+              bad.length +
+              ' line(s) have findings: ' +
+              esc(bad.join('; ')) +
+              '</p>';
+      view.innerHTML =
+        '<article class="hymn">' +
+        '<p class="hymn-kicker">Canon · ' +
+        esc(H.register) +
+        ' register · Liraasa ' +
+        esc(D.version) +
+        '</p>' +
+        '<h2 id="hymnTitle" tabindex="-1">' +
+        esc(H.title) +
+        '</h2>' +
+        '<p class="hymn-li-title">' +
+        lira(H.title_liraasa) +
+        '</p>' +
+        badge +
+        '<div class="hymn-tools">' +
+        '<button class="btn" type="button" data-hymn="english" aria-pressed="true">English</button>' +
+        '<button class="btn" type="button" data-hymn="gloss" aria-pressed="false">Word by word</button>' +
+        '<button class="btn" type="button" data-hymn="sources" aria-pressed="false">Sources</button>' +
+        '<button class="btn btn-primary" type="button" data-hymn="open">Open in the songbook</button>' +
+        '</div>' +
+        '<ol class="hymn-lines">' +
+        H.lines
+          .map(
+            (l) =>
+              '<li><span class="hymn-n" aria-hidden="true">' +
+              l.n +
+              '</span><div><div class="hymn-l">' +
+              lira(l.liraasa) +
+              '</div><div class="hymn-e">' +
+              esc(l.english) +
+              '</div><div class="hymn-gloss">' +
+              gloss(l.liraasa) +
+              '</div><div class="hymn-src" hidden>' +
+              esc(l.source) +
+              '</div></div></li>',
+          )
+          .join('') +
+        '</ol>' +
+        '<p class="hymn-foot">' +
+        esc(H.about) +
+        '</p></article>';
+      view.dataset.english = 'on';
+      view.dataset.gloss = 'off';
+      drawn = true;
+    }
+
+    function setHymn(on) {
+      if (on && document.body.classList.contains('learn-on') && window.LiraasaLearnUI)
+        window.LiraasaLearnUI.setLearn(false);
+      document.body.classList.toggle('hymn-on', on);
+      btn.setAttribute('aria-pressed', String(on));
+      try {
+        localStorage.setItem('liraasa-hymn-on', on ? '1' : '0');
+      } catch (e) {
+        /* a per-viewer convenience only */
+      }
+      if (on) {
+        if (!drawn) draw();
+        const h = document.getElementById('hymnTitle');
+        if (h) h.focus();
+      }
+    }
+
+    /** A copy on a "Canon" shelf, to read, sing from or print; the canon text stays as it is. */
+    function openInSongbook() {
+      capturePiece();
+      let shelf = store.collections.find((c) => c.name === 'Canon');
+      if (!shelf) {
+        shelf = { id: 'c' + uid(), name: 'Canon', created: new Date().toISOString() };
+        store.collections.push(shelf);
+      }
+      const p = blankPiece(shelf.id, H.title);
+      p.kind = H.kind;
+      p.register = H.register;
+      p.text = H.lines.map((l) => l.liraasa).join('\n');
+      p.englishLines = H.lines.map((l) => l.english);
+      store.pieces.push(p);
+      setHymn(false);
+      openPiece(p.id);
+      saveStore();
+    }
+
+    btn.addEventListener('click', () => setHymn(!document.body.classList.contains('hymn-on')));
+    // opening Learn closes the hymn
+    const learnBtn = document.getElementById('learnBtn');
+    if (learnBtn)
+      learnBtn.addEventListener('click', () => {
+        if (document.body.classList.contains('hymn-on')) setHymn(false);
+      });
+    view.addEventListener('click', (e) => {
+      const b = e.target.closest('[data-hymn]');
+      if (!b) return;
+      const what = b.dataset.hymn;
+      if (what === 'open') return openInSongbook();
+      const on = b.getAttribute('aria-pressed') !== 'true';
+      b.setAttribute('aria-pressed', String(on));
+      if (what === 'english') view.dataset.english = on ? 'on' : 'off';
+      if (what === 'gloss') view.dataset.gloss = on ? 'on' : 'off';
+      if (what === 'sources')
+        view.querySelectorAll('.hymn-src').forEach((x) => {
+          x.hidden = !on;
+        });
+    });
+    view.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        setHymn(false);
+        btn.focus();
+      }
+    });
+    let open = false;
+    try {
+      open = localStorage.getItem('liraasa-hymn-on') === '1';
+    } catch (e) {
+      open = false;
+    }
+    if (open) setHymn(true);
+  })();
 </script>

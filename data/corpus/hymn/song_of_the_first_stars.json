@@ -1,0 +1,155 @@
+{
+ "title": "The Song of the First Stars",
+ "title_liraasa": "Li lira de li una-ne veluri",
+ "edition": "3.1",
+ "register": "sacred",
+ "kind": "devotional",
+ "status": "canon",
+ "about": "The author's creation hymn, in the sacred register. Canon corpus text by the author's request (2026-10-25): a model of devotional Liraasa. Lines 1, 3, 4, 5, 9 and 19 are the 2.5 translation (data/songs/Liraasa_de_li_Vanisan_Lirayo_Translation.pdf, where the English, the interlinear and the translator's notes are); the other eighteen are the 3.0 patch's revisions (archive/patch_3_0/liraasa_3_0_patch.json, hymn_test), which use the proposed 3.0 words and rulings. Every line reads with no error or warning under the 3.1 strict checker (tests/grammar/hymn.test.ts). Nothing here is composed by a tool except line 12's one change, noted on the line.",
+ "lines": [
+  {
+   "n": 1,
+   "liraasa": "En li lombiasa, po miyo doli saivo de mavoasa,",
+   "english": "At the beginning of time, there was only her divine mind,",
+   "source": "the 2.5 translation, unchanged by 3.0"
+  },
+  {
+   "n": 2,
+   "liraasa": "kroti saivo de finipidiri sarbisia li krono ala li pagoasa.",
+   "english": "Before her fingertips wrote time into existence,",
+   "source": "the 3.0 patch (hymn_test)"
+  },
+  {
+   "n": 3,
+   "liraasa": "Saivo po semnesia nuna-pago, intra saivo de yanoasa, ata po pensapa.",
+   "english": "She sat in nowhereness within the oneness of herself and pondered,",
+   "source": "the 2.5 translation, unchanged by 3.0"
+  },
+  {
+   "n": 4,
+   "liraasa": "Saivo po pensapa ki-coda po miyo, ata ki-coda suvi miyo, ata ki-coda suvi miyo nuna-krono.",
+   "english": "She contemplated what was and what ought to be, and what ought never be,",
+   "source": "the 2.5 translation, unchanged by 3.0"
+  },
+  {
+   "n": 5,
+   "liraasa": "Saivo po lemula li modoasa de li lumiasa, ata saivo de lumina gase li sadoasa.",
+   "english": "She studied the nature of her own divine light, and her absence as shadow",
+   "source": "the 2.5 translation, unchanged by 3.0"
+  },
+  {
+   "n": 6,
+   "liraasa": "Ata saivo po lurvala saivo de velniasa ala li fulenasan pagona yuta li veraasa de li narvonasan sambalordi.",
+   "english": "And with her knowledge of flawless symmetry she imbued her essence into the empty non-universe,",
+   "source": "the 3.0 patch (hymn_test)"
+  },
+  {
+   "n": 7,
+   "liraasa": "Krotiata saivo de lumisan mavoasa po farlafa li pagoasa yuta baba patuti de lumi.",
+   "english": "Her luminous mind then brought forth existence with a point of light,",
+   "source": "the 3.0 patch (hymn_test)"
+  },
+  {
+   "n": 8,
+   "liraasa": "Li una-ne velu po navunia, ata ito sela po ka li una-ne leninela raho po lenila saivo de lumiasasan melopuku, saivo de meloasa, saivo de vallaasa.",
+   "english": "The first star arose and was itself the first to hear her divine cadence, her music, her voice",
+   "source": "the 3.0 patch (hymn_test)"
+  },
+  {
+   "n": 9,
+   "liraasa": "Ata li mareasa de li lumi po lirala ala li una-ne velu de li vemiasa.",
+   "english": "And the mother of light sang to the first star of the cosmos,",
+   "source": "the 2.5 translation, unchanged by 3.0"
+  },
+  {
+   "n": 10,
+   "liraasa": "Li una-ne velu po veluva en tranaasasan lumisirmoasa, ata po ralera saivo de liraasa.",
+   "english": "The first star shone with transcendent resplendence and echoed her song of the first stars,",
+   "source": "the 3.0 patch (hymn_test)"
+  },
+  {
+   "n": 11,
+   "liraasa": "Li mareasa de li vemiasa, li una-ne lumi raho po kronobioka li veluri, po ke lavisan kube saivo lenila saivo de liraasa gase baba yanolira.",
+   "english": "The cosmic mother, the first light who birthed stars, was pleased to hear her song as a chorus,",
+   "source": "the 3.0 patch (hymn_test)"
+  },
+  {
+   "n": 12,
+   "liraasa": "Ata una krotiapo una, velu krotiapo velu, muya loterosan patuti de sizosan lumi po gome farlafa ala li pagoasa.",
+   "english": "One by one, star by star, further points of shimmering light were brought forth into existence,",
+   "source": "the 3.0 patch (hymn_test), with \"kasi muya\" (not ruled) as \"muya loterosan\", the 2.5 translation's word for \"further\""
+  },
+  {
+   "n": 13,
+   "liraasa": "Rada velu po kronobioka kopisa sahi lirala baba lirvi en saivo de lumiasasan melonulu.",
+   "english": "Each star was born to repeatedly sing a musical note in her divine melody,",
+   "source": "the 3.0 patch (hymn_test)"
+  },
+  {
+   "n": 14,
+   "liraasa": "Ata kroti ola, saivo po lirala; korsi, saivo po bitiba saivo de vinyeasa, baba lumiasasan melobiti.",
+   "english": "And where she sang before, instead she wielded her cosmic veena, a divine instrument,",
+   "source": "the 3.0 patch (hymn_test)"
+  },
+  {
+   "n": 15,
+   "liraasa": "Rada pice de li vinye po ke baba tranaasasan lumisirmo raho po lumrala li suma de li veluri raho lenila.",
+   "english": "Each pluck of her tool was a transcendent splendor which ascended the heat of the listening stars,",
+   "source": "the 3.0 patch (hymn_test)"
+  },
+  {
+   "n": 16,
+   "liraasa": "Saivo de rinbaasasan melolekta po ka li cemnuasa, kasa toda li pagoasa po kronobioka kopisa lenila saivo de meloasa.",
+   "english": "Her unending concert was the center of the universe, as all of existence was born to hear her play,",
+   "source": "the 3.0 patch (hymn_test)"
+  },
+  {
+   "n": 17,
+   "liraasa": "Saivo de nole po ka sambasan ko li melo, ito sela, en toda lermi raho po keleka.",
+   "english": "Her name was synonymous with music itself, in every language that arose,",
+   "source": "the 3.0 patch (hymn_test)"
+  },
+  {
+   "n": 18,
+   "liraasa": "Yesta li mavopagori raho po ne lavbula ala saivo, po sabesia fime saivo miyo, yuta verasado ata kronosonbu.",
+   "english": "Even the civilizations that did not pray to her knew of her existence by implication and rhythm,",
+   "source": "the 3.0 patch (hymn_test)"
+  },
+  {
+   "n": 19,
+   "liraasa": "Baba kasi lardasan vera nosi ka li vorduasa de li pagoasa ki?",
+   "english": "Could a more artistic truth be the underlying cause of existence?",
+   "source": "the 2.5 translation, unchanged by 3.0"
+  },
+  {
+   "n": 20,
+   "liraasa": "En li mellisan vemiri, li lideoserbuyori raho tovota sonbuyebasan felberi, loki senoralkasia eli-krono.",
+   "english": "The philosophers of the great worlds with their attuned ears still debate, to this day,",
+   "source": "the 3.0 patch (hymn_test)"
+  },
+  {
+   "n": 21,
+   "liraasa": "Nara saivori senoralkasia nayo saivori pebudumdopa gase li lirviri raho saivo picepa su saivo de lumiasasan vinye.",
+   "english": "But they do so as they tap their feet in accordance with the notes plucked on her divine veena,",
+   "source": "the 3.0 patch (hymn_test)"
+  },
+  {
+   "n": 22,
+   "liraasa": "En li vemiri vofa maivori, yesta li mosa sirmosan deviserbuyori ata li luminelari ata li pensayori momvima saivori sela en li melo.",
+   "english": "Even the greatest theologians and priests and thinkers of the faraway worlds lose themselves to music,",
+   "source": "the 3.0 patch (hymn_test)"
+  },
+  {
+   "n": 23,
+   "liraasa": "Ata ola-modo po miyo, ola-modo miyo, ola-modo futu miyo.",
+   "english": "And so it was, and so it is, and so it shall be,",
+   "source": "the 3.0 patch (hymn_test)"
+  },
+  {
+   "n": 24,
+   "liraasa": "Liraasa, li lira de li una-ne veluri gagu li una-ne mareasa, vobi li una-ne linuri raho po lenila ata po lemula sidu senosia.",
+   "english": "Liraasa, the song of the first stars, by the first mother, for the first children, who listened and learned to speak",
+   "source": "the 3.0 patch (hymn_test)"
+  }
+ ]
+}

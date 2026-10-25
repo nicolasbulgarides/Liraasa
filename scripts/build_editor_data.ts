@@ -14,8 +14,9 @@ import { FORM_SLOTS, SLOT_RAW_KEY, isUnusedGloss } from '../src/core/config/slot
 import { phoneInventory } from '../src/core/phonetics/g2p';
 import type { RawLexicon } from '../src/core/model/raw';
 import { parseArgs } from './args';
+import { loadHymn } from './hymn';
 
-const DEFAULT_LEXICON = 'data/lexicon/liraasa_3_0.json';
+const DEFAULT_LEXICON = 'data/lexicon/liraasa_3_1.json';
 /**
  * Grammar rulings on top of 1.1 (ADR-0012). A 1.1 lexicon needs them applied
  * here; 1.2 already carries them as `rulings_1_2`, its examples revised
@@ -156,6 +157,8 @@ function main(): void {
       .map((e, i) => ({ ...e, liraasa: revised.get(i) ?? e.liraasa }))
       .filter((e) => e.status !== 'HISTORICAL')
       .map((e) => [e.liraasa, e.english, e.feature]),
+    // the canon hymn, for the page's Hymn view (ADR-0022)
+    hymn: loadHymn(),
   };
 
   mkdirSync(outDir, { recursive: true });

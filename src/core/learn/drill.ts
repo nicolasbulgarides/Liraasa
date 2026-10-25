@@ -83,10 +83,18 @@ export function spotPattern(
       .filter((i) => i.forms.some((f) => f.slot === 'verb' && f.meaningful))
       .map((i) => i.id),
   );
-  const grid = rng.shuffle(
+  let grid = rng.shuffle(
     [...new Set([...rng.shuffle(drawn).slice(0, 4), ...others.slice(0, 6)])].slice(0, 6),
   );
   const classOf = (id: EntryId): string | undefined => verbOf(id)?.verbClass;
+  // one class only leaves no pattern to spot: one filler gives way to a verb of another class
+  const classes = new Set(grid.map(classOf));
+  if (classes.size < 2) {
+    const other = others.find((id) => !grid.includes(id) && !classes.has(classOf(id)));
+    const filler = [...grid].reverse().find((id) => !drawn.includes(id));
+    if (other !== undefined && filler !== undefined)
+      grid = grid.map((id) => (id === filler ? other : id));
+  }
   const irregular = grid.filter((id) => verbOf(id)?.irregular === true);
 
   const present = VERB_CLASSES.filter((c) => grid.some((id) => classOf(id) === c));

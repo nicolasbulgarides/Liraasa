@@ -1167,7 +1167,8 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
         const being = this.ix.source.rules.absolute_being;
         if (clause.predKind === "existential") {
           const np = this.parseNP();
-          if (np === null && being !== void 0 && (clause.subject !== null || formula)) ;
+          const kiSubject = clause.subject === null && clause.linker !== null && this.kiNoun(clause.linker);
+          if (np === null && being !== void 0 && (clause.subject !== null || formula || kiSubject)) ;
           else if (np === null) this.find("0.8:G7", "miyo needs a noun phrase after it", [v]);
           else {
             clause.object = np;
@@ -1907,6 +1908,8 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
           });
           continue;
         }
+        if (clause.kind === "relative" && this.is(k, "op") && (this.predicateStart(k + 1) || this.verbish(k + 1)))
+          return;
         if (this.ix.source.rules.closing_order.never_closing.words.includes(w)) {
           this.find(
             "2.5:G127",
@@ -2475,6 +2478,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
                 np
               };
             } else if (!this.parseAdjP(c)) this.i += 1;
+            this.parseAdjuncts(c);
             c.end = this.i;
             main.subordinates.push(c);
             continue;

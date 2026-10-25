@@ -446,10 +446,16 @@ describe('the 2.5 → 3.0 diff lesson', () => {
       lexicon: JSON.parse(readFileSync('data/lexicon/liraasa_2_5.json', 'utf8')) as RawLexicon,
       corpus: [],
     });
+    // 3.0 is frozen as 3.1's baseline: built here from its own file
+    const at30 = buildLearnSource({
+      ...input,
+      lexicon: JSON.parse(readFileSync('data/lexicon/liraasa_3_0.json', 'utf8')) as RawLexicon,
+      corpus: [],
+    });
     const d = diffSnapshots(
       snapshotEdition(at25.data),
-      snapshotEdition(source.data),
-      source.replacementFor,
+      snapshotEdition(at30.data),
+      at30.replacementFor,
     );
     const patch = JSON.parse(readFileSync('archive/patch_3_0/liraasa_3_0_patch.json', 'utf8')) as {
       roots_add: unknown[];
@@ -482,6 +488,35 @@ describe('the 2.5 → 3.0 diff lesson', () => {
     );
     expect(d.rulesAdded.map((r) => r.id).sort()).toEqual(
       patch.rulings_add.map((r) => `rule:${r.id}`).sort(),
+    );
+  });
+});
+
+describe('the 3.0 → 3.1 diff lesson', () => {
+  it('ACCEPTANCE: vocabulary only: no word renamed or removed, no ruling; every 3.1 word and restored form', () => {
+    const at30 = buildLearnSource({
+      ...input,
+      lexicon: JSON.parse(readFileSync('data/lexicon/liraasa_3_0.json', 'utf8')) as RawLexicon,
+      corpus: [],
+    });
+    const d = diffSnapshots(
+      snapshotEdition(at30.data),
+      snapshotEdition(source.data),
+      source.replacementFor,
+    );
+    const patch = JSON.parse(readFileSync('archive/patch_3_1/liraasa_3_1_patch.json', 'utf8')) as {
+      roots_add: unknown[];
+      compounds_add: unknown[];
+      restored_forms_add: { headword: string }[];
+    };
+    expect([d.from, d.to]).toEqual(['3.0', '3.1']);
+    expect(d.renamed).toEqual([]);
+    expect(d.removed).toEqual([]);
+    expect(d.rulesAdded).toEqual([]);
+    expect(d.added).toHaveLength(patch.roots_add.length + patch.compounds_add.length);
+    const reglossed = d.reglossed.map((r) => (r as unknown as { spelling: string }).spelling);
+    expect(reglossed.sort()).toEqual(
+      [...new Set(patch.restored_forms_add.map((r) => r.headword))].sort(),
     );
   });
 });

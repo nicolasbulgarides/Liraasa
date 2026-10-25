@@ -3967,10 +3967,17 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     const others = rng.shuffle(
       [...data.items.values()].filter((i) => (i.kind === "root" || i.kind === "compound") && !ids.includes(i.id)).filter((i) => i.forms.some((f2) => f2.slot === "verb" && f2.meaningful)).map((i) => i.id)
     );
-    const grid = rng.shuffle(
+    let grid = rng.shuffle(
       [.../* @__PURE__ */ new Set([...rng.shuffle(drawn).slice(0, 4), ...others.slice(0, 6)])].slice(0, 6)
     );
     const classOf = (id) => verbOf2(id)?.verbClass;
+    const classes = new Set(grid.map(classOf));
+    if (classes.size < 2) {
+      const other = others.find((id) => !grid.includes(id) && !classes.has(classOf(id)));
+      const filler = [...grid].reverse().find((id) => !drawn.includes(id));
+      if (other !== void 0 && filler !== void 0)
+        grid = grid.map((id) => id === filler ? other : id);
+    }
     const irregular = grid.filter((id) => verbOf2(id)?.irregular === true);
     const present = VERB_CLASSES.filter((c) => grid.some((id) => classOf(id) === c));
     const target = ask ?? (irregular.length > 0 && rng.next() < 0.5 ? "irregular" : rng.pick(present.filter((c) => grid.some((id) => classOf(id) !== c))));

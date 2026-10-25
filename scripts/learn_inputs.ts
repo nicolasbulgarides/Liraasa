@@ -8,8 +8,9 @@ import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { basename, join } from 'node:path';
 import { parseOverrides, type CorpusFile, type LearnInput } from '../src/core/learn';
 import type { RawLexicon } from '../src/core/model/raw';
+import { hymnCorpusFile } from './hymn';
 
-export const LEARN_LEXICON = 'data/lexicon/liraasa_3_0.json';
+export const LEARN_LEXICON = 'data/lexicon/liraasa_3_1.json';
 export const LEARN_OVERRIDES = 'data/lessons/overrides.json';
 export const CORPUS_DIRS = ['data/corpus/songs_2_3', 'data/corpus/bumrepago_2_3'];
 const NAMES = 'data/checker/names.json';
@@ -51,5 +52,7 @@ export function loadLearnInput(lexiconPath = LEARN_LEXICON): LearnInput {
   const pronounEnglish = Object.fromEntries(
     Object.entries(english.markers ?? {}).filter(([k]) => pronouns.has(k)),
   );
-  return { lexicon, corpus: readCorpusFiles(), names, overrides, pronounEnglish };
+  // the canon hymn joins the corpus (ADR-0022)
+  const corpus = [...readCorpusFiles(), hymnCorpusFile()];
+  return { lexicon, corpus, names, overrides, pronounEnglish };
 }

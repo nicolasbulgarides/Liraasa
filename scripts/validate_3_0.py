@@ -7,7 +7,9 @@
 
 3.0 is additions only (ADR-0021): it respells nothing, so checks 1-24 are
 validate_2_3.py's, run on 3.0, as validate_2_5.py runs them. Check 25
-re-applies every 3.0 op to frozen 2.5, independently of the TypeScript build:
+re-applies every 3.0 op to frozen 2.5, independently of the TypeScript build.
+3.1 (ADR-0022) is the same kind of patch, so it runs through this file too,
+against frozen 3.0; the edition is read from the lexicon:
 validate_2_5.py's reading of the ruling, function-word, text and value ops,
 plus the ops 3.0 adds to that list:
 
@@ -186,14 +188,14 @@ def check_25(prev, data, changesets, version):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("lexicon")
-    ap.add_argument("--previous", required=True, help="the 2.5 lexicon the 3.0 changeset applies to")
+    ap.add_argument("--previous", required=True, help="the previous edition the changeset applies to (2.5 for 3.0, 3.0 for 3.1)")
     ap.add_argument("--changes", nargs="+", required=True, help="every changeset since 1.1, in order")
     ap.add_argument("--baseline", help="0.8-rc2, for check 12")
     ap.add_argument("--out")
     a = ap.parse_args()
 
     # checks 1-24: validate_2_3.py, run on 3.0 (it writes and reads only its own temp files)
-    tmp = os.path.join(ROOT, "_validate_3_0_inner.json")
+    tmp = os.path.join(ROOT, "_validate_additions_inner.json")
     # its own check 25 (replaced below) reads every slot op as one on a previous headword;
     # an entry lexicalised from the pattern was not one, so that reading skips it
     original = v22.expected_from
@@ -222,7 +224,7 @@ def main():
     version = data["version"]
     checks = [c for c in inner["checks"] if c["id"] != 25]
     for c in checks:
-        c["executed_against"] = c.get("executed_against", "") + " (validate_3_0.py: 3.0 respells nothing)"
+        c["executed_against"] = c.get("executed_against", "") + " (validate_3_0.py: %s respells nothing)" % version
     det25 = check_25(prev, data, changesets, version)
     mine = [c for c in changesets if c["edition"] == version]
     count = lambda op: sum(1 for c in mine for o in c["ops"] if o["op"] == op)
@@ -233,16 +235,16 @@ def main():
         "count": len(det25),
         "details": det25[:60],
         "details_total": len(det25),
-        "note": "Compared against %s with every 3.0 op re-applied independently; changesets: %s; %d rulings, %d roots, %d compounds, %d slots activated, %d derivations, %d function words added; %d texts and %d values edited; %d function-word fields edited." % (
-            os.path.basename(a.previous), ", ".join(c["id"] for c in mine), count("add_ruling"), count("add_root"),
+        "note": ("Compared against %s with every %s op re-applied independently; changesets: %s; %d rulings, %d roots, %d compounds, %d slots activated, %d derivations, %d function words added; %d texts and %d values edited; %d function-word fields edited." % (
+            os.path.basename(a.previous), version, ", ".join(c["id"] for c in mine), count("add_ruling"), count("add_root"),
             count("add_compound"), count("activate_slot"), count("add_derivation"), count("add_function_word"),
-            count("edit_text"), count("edit_value"), count("edit_function_word")),
+            count("edit_text"), count("edit_value"), count("edit_function_word"))),
         "executed_against": "validate_3_0.py",
     })
     summary = dict(inner["summary"])
     summary["status_counts"] = dict(collections.Counter(c["status"] for c in checks))
-    summary["wrapper"] = "validate_3_0.py: validate_2_3.py for checks 1-24 (3.0 respells nothing); 25 re-applies every 3.0 op independently (ADR-0021)"
-    print("--- 3.0 ---")
+    summary["wrapper"] = "validate_3_0.py: validate_2_3.py for checks 1-24 (%s respells nothing); 25 re-applies every %s op independently (ADR-0021, ADR-0022)" % (version, version)
+    print("--- %s ---" % version)
     for c in checks:
         print("%2d %s %s (%d)" % (c["id"], c["status"], c["check"], c["count"]))
         if c["id"] == 25 or c["status"] == "WARN":

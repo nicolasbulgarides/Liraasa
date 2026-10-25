@@ -1,3 +1,4 @@
+import { PROPOSED_EDITIONS } from '../../scripts/proposed_editions';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath, URL } from 'node:url';
 import { describe, expect, it } from 'vitest';
@@ -5,7 +6,7 @@ import { FORM_SLOTS, SLOT_RAW_KEY, isUnusedGloss } from '../../src/core/config/s
 import type { RawLexicon } from '../../src/core/model/raw';
 
 /**
- * handoff/liraasa_3_0_llm.json: the one-file reference for language models
+ * handoff/liraasa_3_1_llm.json: the one-file reference for language models
  * (npm run build:llm). Its dictionary is one line per headword; parsing every
  * line back must give exactly the lexicon's meaningful forms, so the compact
  * format is lossless and adds nothing.
@@ -25,9 +26,9 @@ interface Reference {
   examples: { sentences: [string, string][] };
 }
 
-const llm = read('../../handoff/liraasa_3_0_llm.json') as Reference;
-const latest = read('../../LirasaCodexLatest/liraasa_3_0_llm.json');
-const lex = read('../../data/lexicon/liraasa_3_0.json') as RawLexicon;
+const llm = read('../../handoff/liraasa_3_1_llm.json') as Reference;
+const latest = read('../../LirasaCodexLatest/liraasa_3_1_llm.json');
+const lex = read('../../data/lexicon/liraasa_3_1.json') as RawLexicon;
 const lines = Object.values(llm.dictionary.by_domain).flat();
 const CODE = ['n', 'an', 'nn', 'v', 'na', 'a', 'aa'];
 /** HEADWORD [PART+PART(+-SUFFIX)] {FLAGS}: … (a lexicalised suffix: 2.0:G38) */
@@ -93,7 +94,9 @@ describe('the LLM reference', () => {
       expect(e.suffix, e.word).toBe((h as unknown as { suffix?: string }).suffix ?? null);
       const flags = [
         ...(h.register === 'poetic' ? ['poetic'] : []),
-        ...(h.since === lex.version ? [`new in ${lex.version}`] : []),
+        ...(h.since === lex.version || PROPOSED_EDITIONS.includes(h.since)
+          ? [`new in ${h.since}`]
+          : []),
         // the old roots of a respelled headword, and a listed derivation it replaced (2.3:G70),
         // for reading older texts
         ...Object.entries(lex.legacy.migration_forms)

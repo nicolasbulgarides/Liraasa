@@ -1069,7 +1069,14 @@ export class SentenceParser {
       if (clause.predKind === 'existential') {
         const np = this.parseNP();
         // SUBJECT [TENSE] miyo with nothing after it: the subject exists (3.0:G132); and the formula (3.0:G133)
-        if (np === null && being !== undefined && (clause.subject !== null || formula)) {
+        // the subject may be the gap of an embedded ki-coda / ki-nela: ki-coda po miyo, what was
+        const kiSubject =
+          clause.subject === null && clause.linker !== null && this.kiNoun(clause.linker);
+        if (
+          np === null &&
+          being !== undefined &&
+          (clause.subject !== null || formula || kiSubject)
+        ) {
           /* absolute being */
         } else if (np === null) this.find('0.8:G7', 'miyo needs a noun phrase after it', [v]);
         else {
@@ -1939,6 +1946,15 @@ export class SentenceParser {
         });
         continue;
       }
+      // a relative with no object or adjunct of its own needs no closing comma (2.5:G115): a
+      // tense or operator opening a predicate after it is the main clause's (Li lira raho
+      // maivo po lirala po ke vanisan.)
+      if (
+        clause.kind === 'relative' &&
+        this.is(k, 'op') &&
+        (this.predicateStart(k + 1) || this.verbish(k + 1))
+      )
+        return;
       // a tense or iteration word is never a closing time word (2.5:G127)
       if (this.ix.source.rules.closing_order.never_closing.words.includes(w)) {
         this.find(
@@ -2661,6 +2677,8 @@ export class SentenceParser {
               np,
             };
           } else if (!this.parseAdjP(c)) this.i += 1;
+          // the contrasted constituent may carry its own adjunct: …, ata saivo de lumina gase li sadoasa
+          this.parseAdjuncts(c);
           c.end = this.i;
           main.subordinates.push(c);
           continue;

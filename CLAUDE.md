@@ -24,7 +24,22 @@ made from the frozen 1.1 by the two changesets in `data/changes/` via
 151 function words, rulings 1.2:G24–G36, and 25 of 25 validator checks passing
 (`npm run validate:1.2`). 1.2 is now frozen as 2.0's baseline.
 
-**3.0 is current, and proposed** (ADR-0021): `data/lexicon/liraasa_3_0.json`,
+**3.1 is current, and proposed** (ADR-0022): `data/lexicon/liraasa_3_1.json`,
+built from frozen 3.0 by `npm run integrate:3.1` (changeset made by
+`scripts/make_changeset_3_1.ts`, a config for 3.0's `makeAdditionsChangeset`,
+from the author's "Everyday and Fiction" patch, archived in `archive/patch_3_1/`).
+Vocabulary only: 5 roots, 69 compounds, 4 derivations, 6 diminutives, 4 restored
+forms, each with its tier; 1664 headwords, 4404 meaningful forms. Validation 22
+PASS, 3 WARN (`npm run validate:3.1`, which also runs the author's
+`validate_patch.py`). Questions in `review/questions_3_1.md`. **The canon hymn**,
+_The Song of the First Stars_, is `data/corpus/hymn/song_of_the_first_stars.json`
+(read by `scripts/hymn.ts` into Learn's corpus, the editor bundle and the LLM
+reference's `canon_texts`); `tests/grammar/hymn.test.ts` holds every line to the
+strict checker, and the editor opens it from the masthead's "✦ The Hymn". The
+editions whose words are proposed are listed in `scripts/proposed_editions.ts`.
+3.0 is frozen as 3.1's baseline.
+
+**3.0, proposed** (ADR-0021): `data/lexicon/liraasa_3_0.json`,
 built from frozen 2.5 by one changeset via `npm run integrate:3.0` (made by
 `scripts/make_changeset_3_0.ts` from the author's patch
 `archive/patch_3_0/liraasa_3_0_patch.json`, its README `LIRAASA_3_0_README.md`
@@ -214,6 +229,8 @@ validator and parser.
 | `npm run validate:2.3`     | validate.py unmodified plus the edition-aware re-runs (check 18 for the new and moved roots; 25 keeps superseded rulings as ruled) → `data/lexicon/validation_2_3.json`.                                                                                                                                          |
 | `npm run integrate:2.5`    | Build 2.5 from frozen 2.3 plus the three 2.5 changesets (sha-checked baseline). `-- --check` writes nothing (ADR-0020).                                                                                                                                                                                           | **working** |
 | `npm run integrate:3.0`    | Build 3.0 from frozen 2.5 plus the 3.0 changeset (sha-checked baseline). `-- --check` writes nothing (ADR-0021).                                                                                                                                                                                                  | **working** |
+| `npm run integrate:3.1`    | Build 3.1 from frozen 3.0 plus the 3.1 changeset (sha-checked baseline). `-- --check` writes nothing (ADR-0022).                                                                                                                                                                                                  | **working** |
+| `npm run validate:3.1`     | validate_3_0.py on 3.1 (checks 1–24 by validate_2_3.py, 25 re-applies every 3.1 op) → `data/lexicon/validation_3_1.json`; then the author's `validate_patch.py` on `handoff/liraasa_3_1_llm.json`.                                                                                                                | **working** |
 | `npm run validate:3.0`     | validate_2_3.py for checks 1–24; check 25 re-applies every 3.0 op independently → `data/lexicon/validation_3_0.json`; then the author's `validate_3_0.py` on `handoff/liraasa_3_0_llm.json` (run `build:llm` first).                                                                                              | **working** |
 | `npm run validate:2.5`     | validate_2_3.py for checks 1–24 (2.5 respells nothing); check 25 re-applies every 2.5 op independently → `data/lexicon/validation_2_5.json`.                                                                                                                                                                      | **working** |
 | `npm run build:grammar`    | The checker's derived data (`transitive_2_5.json`, the drafts) and the editor's bundle of the strict checker and translator → `editor/grammar/`. Run after `build:llm`.                                                                                                                                           | **working** |

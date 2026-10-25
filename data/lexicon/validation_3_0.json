@@ -19,7 +19,7 @@
    "PASS": 22,
    "WARN": 3
   },
-  "wrapper": "validate_3_0.py: validate_2_3.py for checks 1-24 (3.0 respells nothing); 25 re-applies every 3.0 op independently (ADR-0021)"
+  "wrapper": "validate_3_0.py: validate_2_3.py for checks 1-24 (3.0 respells nothing); 25 re-applies every 3.0 op independently (ADR-0021, ADR-0022)"
  },
  "checks": [
   {

@@ -47,7 +47,6 @@ const AUTHOR = 'nicolas';
 export const ID_3_0 = '2026-10-25-lexicon-3-0';
 export const FILE_3_0 = `data/changes/${ID_3_0}.json`;
 const UNUSED = '— (unused)';
-const PROPOSED = "Proposed in 3.0: awaiting the author's ratification.";
 
 /** The patch's slot codes are the LLM reference's (scripts/build_llm_json.ts). */
 const SLOT: Readonly<Record<string, FormSlot>> = {
@@ -68,6 +67,8 @@ interface PatchRoot {
   headword: string;
   domain: string;
   forms: Record<string, PatchForm>;
+  /** 3.1 on: 1 = ratify first, 2 = item by item. */
+  tier?: number;
 }
 interface PatchCompound extends PatchRoot {
   parts: [string, string];
@@ -75,7 +76,7 @@ interface PatchCompound extends PatchRoot {
   title: boolean;
   note: string | null;
 }
-interface Patch {
+export interface Patch {
   status: string;
   base_counts: { headwords: number; meaningful_forms: number };
   counts: Record<string, number>;
@@ -91,7 +92,7 @@ interface Patch {
   listed_derivations_add: { form: string; base: string; suffix: string; meaning: string }[];
   lexicalised_diminutives_add: { form: string; base: string; meaning: string }[];
   restored_forms_add: { headword: string; slot: string; form: string; meaning: string }[];
-  rulings_add: {
+  rulings_add?: {
     id: string;
     topic: string;
     rule: string;
@@ -109,6 +110,45 @@ interface Head {
   forms: Record<string, string>;
   glosses: Record<string, string>;
 }
+
+export interface AdditionsConfig {
+  patch: string;
+  baseline: string;
+  edition: string;
+  /** The edition the patch is built on, as reasons and notes name it. */
+  previous: string;
+  at: string;
+  id: string;
+  /** The patch's name, opening every op's reason. */
+  name: string;
+  summary: (patch: Patch, lexicalised: string[]) => string;
+  /** Ops the patch's README asks for beyond its lists (3.0: the rulings carried into the clause). */
+  extraOps?: (lex: RawLexicon) => ChangeRecord[];
+}
+
+/** A change record stamped with the config's edition and time. */
+export const recorder =
+  (cfg: { edition: string; at: string }) =>
+  (
+    op: ChangeRecord['op'],
+    entry: string,
+    from: string | null,
+    to: string | null,
+    ruling: string | undefined,
+    reason: string,
+    extra: Partial<ChangeRecord> = {},
+  ): ChangeRecord => ({
+    entry,
+    op,
+    ...extra,
+    from,
+    to,
+    ...(ruling === undefined ? {} : { ruling: ruling as NonNullable<ChangeRecord['ruling']> }),
+    reason,
+    addedIn: cfg.edition,
+    at: cfg.at,
+    author: AUTHOR,
+  });
 
 const record = (
   op: ChangeRecord['op'],
@@ -274,9 +314,18 @@ function propagationOps(lex: RawLexicon): ChangeRecord[] {
   return ops;
 }
 
-export function makeChangeset3_0(): LexiconChangeset {
-  const patch = JSON.parse(readFileSync(resolve(PATCH), 'utf8')) as Patch;
-  const lex = JSON.parse(readFileSync(resolve(BASELINE), 'utf8')) as RawLexicon;
+/**
+ * A changeset from an additions-only patch in the author's 3.x patch shape:
+ * rulings, function words, roots, compounds, restored forms, derivations and
+ * diminutives, each checked against the rules that build it. Used for 3.0 and
+ * 3.1 (scripts/make_changeset_3_1.ts).
+ */
+export function makeAdditionsChangeset(cfg: AdditionsConfig): LexiconChangeset {
+  const proposed = `Proposed in ${cfg.edition}: awaiting the author's ratification.`;
+  const rec = recorder(cfg);
+  const say = (what: string): string => `${cfg.name}: ${what}.`;
+  const patch = JSON.parse(readFileSync(resolve(cfg.patch), 'utf8')) as Patch;
+  const lex = JSON.parse(readFileSync(resolve(cfg.baseline), 'utf8')) as RawLexicon;
   const ids = idsAfter(
     lex,
     JSON.parse(readFileSync(resolve('data/lexicon/ids.json'), 'utf8')) as IdMapFile,
@@ -284,7 +333,7 @@ export function makeChangeset3_0(): LexiconChangeset {
   const heads = lex.headwords as unknown as Head[];
   if (heads.length !== patch.base_counts.headwords)
     throw new Error(
-      `the patch is for ${String(patch.base_counts.headwords)} headwords, 2.5 has ${String(heads.length)}`,
+      `the patch is for ${String(patch.base_counts.headwords)} headwords, ${cfg.previous} has ${String(heads.length)}`,
     );
   const byRoot = new Map(heads.map((h) => [h.root, h]));
   const minting = new IdAssigner(ids);
@@ -294,9 +343,9 @@ export function makeChangeset3_0(): LexiconChangeset {
   const problems: string[] = [];
 
   // 1. the rulings, first, so every op below may cite them
-  const rulings: (ChangesetRuling & { status: string })[] = patch.rulings_add.map((r) => {
+  const rulings: (ChangesetRuling & { status: string })[] = (patch.rulings_add ?? []).map((r) => {
     const [, id] = r.id.split(':');
-    const refines = [...new Set(refsIn(r.rule))].filter((x) => !x.startsWith('3.0:'));
+    const refines = [...new Set(refsIn(r.rule))].filter((x) => !x.startsWith(`${cfg.edition}:`));
     return {
       id: id ?? '',
       topic: r.topic,
@@ -311,8 +360,8 @@ export function makeChangeset3_0(): LexiconChangeset {
       status: 'proposed',
     };
   });
-  for (const r of patch.rulings_add)
-    ops.push(record('add_ruling', r.id, null, r.topic, r.id, `${why(r.topic)} ${PROPOSED}`));
+  for (const r of patch.rulings_add ?? [])
+    ops.push(rec('add_ruling', r.id, null, r.topic, r.id, `${say(r.topic)} ${proposed}`));
 
   // 2. the vocative iya (3.0:G129)
   const fwMint = new IdAssigner(ids);
@@ -326,19 +375,19 @@ export function makeChangeset3_0(): LexiconChangeset {
     example_gloss: f.example_english,
     class: 'vocative',
     status_1_0: 'NEW',
-    status_3_0: 'NEW',
-    since: EDITION,
+    [`status_${cfg.edition.replace('.', '_')}`]: 'NEW',
+    since: cfg.edition,
     id: fwMint.assign('functionWord', f.form),
   }));
   for (const f of functionWords)
     ops.push(
-      record(
+      rec(
         'add_function_word',
         f.id,
         null,
         f.form,
         '3.0:G129',
-        `${why(`${f.form}, ${f.meaning}`)} ${PROPOSED}`,
+        `${say(`${f.form}, ${f.meaning}`)} ${proposed}`,
       ),
     );
 
@@ -374,15 +423,15 @@ export function makeChangeset3_0(): LexiconChangeset {
     if (was !== undefined) {
       lexicalised.push(e.headword);
       newIds.set(e.headword, was.id);
-      const back = `${was.root}, an attested image compound of 2.5 ("${was.glosses.root ?? ''}")`;
+      const back = `${was.root}, an attested image compound of ${cfg.previous} ("${was.glosses.root ?? ''}")`;
       ops.push(
-        record(
+        rec(
           'lexicalise_from_pattern',
           was.id,
           was.root,
           was.root,
           '2.0:G40',
-          `${why(`${back}, lexicalised as a headword`)} The patch lists it as new; it keeps its 2.5 id. ${PROPOSED}`,
+          `${say(`${back}, lexicalised as a headword`)} The patch lists it as new; it keeps its ${cfg.previous} id. ${proposed}`,
         ),
       );
       for (const [raw, meaning] of Object.entries(glosses)) {
@@ -390,13 +439,13 @@ export function makeChangeset3_0(): LexiconChangeset {
         const slot = (Object.keys(SLOT_RAW_KEY) as FormSlot[]).find((s) => SLOT_RAW_KEY[s] === raw);
         if (slot === undefined) throw new Error(`${was.root}: no slot ${raw}`);
         ops.push(
-          record(
+          rec(
             from === UNUSED ? 'activate_slot' : 'edit_gloss',
             was.id,
             from,
             meaning,
             '0.8:R2',
-            `${why(`${was.forms[raw] ?? ''}, "${meaning}"`)} ${from === UNUSED ? '' : `Its 2.5 reading "${from}" is archived. `}${PROPOSED}`,
+            `${say(`${was.forms[raw] ?? ''}, "${meaning}"`)} ${from === UNUSED ? '' : `Its ${cfg.previous} reading "${from}" is archived. `}${proposed}`,
             {
               slot,
               ...(from === UNUSED ? {} : { archive: true }),
@@ -406,13 +455,13 @@ export function makeChangeset3_0(): LexiconChangeset {
       }
       if (was.domain !== e.domain)
         ops.push(
-          record(
+          rec(
             'edit_metadata',
             was.id,
             was.domain,
             e.domain,
             undefined,
-            why(`${was.root} moves to the domain ${e.domain}`),
+            say(`${was.root} moves to the domain ${e.domain}`),
             { field: 'domain' },
           ),
         );
@@ -439,20 +488,21 @@ export function makeChangeset3_0(): LexiconChangeset {
       domain: e.domain,
       english_synonyms: synonyms(glosses),
       notes:
-        `Added in 3.0 (changeset ${ID_3_0}). ${PROPOSED}` +
+        `Added in ${cfg.edition} (changeset ${cfg.id}). ${proposed}` +
         (compound === null ? '' : ` Components: ${compound.parts.join(' + ')}.`) +
-        (said.length > 0 ? ` ${said.join(' ')}` : ''),
+        (said.length > 0 ? ` ${said.join(' ')}` : '') +
+        (e.tier === undefined ? '' : ` Tier ${String(e.tier)} in the patch.`),
     });
     const ruling =
       compound?.title === true ? '3.0:G131' : e.headword === 'rinbakrono' ? '3.0:G139' : undefined;
     ops.push(
-      record(
+      rec(
         compound === null ? 'add_root' : 'add_compound',
         id,
         null,
         e.headword,
         ruling,
-        why(
+        say(
           `${glosses.root ?? ''}${compound === null ? '' : `: ${compound.parts.join(' + ')}`} (domain ${e.domain})`,
         ),
         { slot: 'root' },
@@ -467,7 +517,9 @@ export function makeChangeset3_0(): LexiconChangeset {
     const h = byRoot.get(r.headword);
     const slot = SLOT[r.slot];
     if (h === undefined || slot === undefined) {
-      problems.push(`restored ${r.form}: no 2.5 headword ${r.headword} with slot ${r.slot}`);
+      problems.push(
+        `restored ${r.form}: no ${cfg.previous} headword ${r.headword} with slot ${r.slot}`,
+      );
       continue;
     }
     const raw = SLOT_RAW_KEY[slot];
@@ -476,13 +528,13 @@ export function makeChangeset3_0(): LexiconChangeset {
     if (h.glosses[raw] !== UNUSED)
       problems.push(`restored ${r.form}: the slot is already "${String(h.glosses[raw])}"`);
     ops.push(
-      record(
+      rec(
         'activate_slot',
         h.id,
         UNUSED,
         r.meaning,
         '0.8:R2',
-        `${why(`${r.form}, "${r.meaning}", restored on ${r.headword}`)} ${PROPOSED}`,
+        `${say(`${r.form}, "${r.meaning}", restored on ${r.headword}`)} ${proposed}`,
         { slot },
       ),
     );
@@ -501,44 +553,42 @@ export function makeChangeset3_0(): LexiconChangeset {
       problems.push(`derivation ${d.form}: not ${d.base} + ${d.suffix}`);
     derivations[d.form] = `${d.meaning}: ${d.base} + ${d.suffix}`;
     ops.push(
-      record(
+      rec(
         'add_derivation',
         `derivation:${base}:${d.suffix}`,
         null,
         d.form,
         d.meaning.includes('(epithet)') ? '3.0:G130' : undefined,
-        `${why(`${d.form}, "${d.meaning}", listed`)} ${PROPOSED}`,
+        `${say(`${d.form}, "${d.meaning}", listed`)} ${proposed}`,
       ),
     );
   }
   for (const d of patch.lexicalised_diminutives_add) {
-    if (idOf(d.base) === undefined || d.base + 'ti' !== d.form)
+    // the base is a headword, or a listed derivation (taradapago, tarada + -pago)
+    const listed = d.base in lex.morphology.lexicalised_derivations;
+    if ((idOf(d.base) === undefined && !listed) || d.base + 'ti' !== d.form)
       problems.push(`diminutive ${d.form}: not ${d.base} + -ti`);
     ops.push(
-      record(
+      rec(
         'edit_value',
         `value:morphology.lexicalised_diminutives.${d.form}`,
         null,
         JSON.stringify(`${d.meaning}: ${d.base} + -ti`),
         '2.5:G122',
-        `${why(`${d.form}, "${d.meaning}", a lexicalised diminutive`)} ${PROPOSED}`,
+        `${say(`${d.form}, "${d.meaning}", a lexicalised diminutive`)} ${proposed}`,
       ),
     );
   }
 
   // 6. README step 4: the rulings carried into the clause and the rows they change
-  ops.push(...propagationOps(lex));
+  ops.push(...(cfg.extraOps?.(lex) ?? []));
 
   const changeset: LexiconChangeset = {
-    id: ID_3_0,
-    edition: EDITION,
-    created: AT,
+    id: cfg.id,
+    edition: cfg.edition,
+    created: cfg.at,
     author: AUTHOR,
-    summary:
-      `Liraasa 3.0, "Devotion, Music and Measure" (ADR-0021), from the author's 3.0 patch. PROPOSED: ${patch.status}. ` +
-      `Additions only: rulings 3.0:G129-G141; the vocative iya; ${String(patch.roots_add.length)} roots and ${String(patch.compounds_add.length)} compounds; ` +
-      `${String(patch.listed_derivations_add.length)} listed derivations and ${String(patch.lexicalised_diminutives_add.length)} lexicalised diminutive; ` +
-      `${String(patch.restored_forms_add.length)} restored forms on 2.5 headwords; the clause template, its edges and the miyo, sela and gagu rows follow the rulings. No 2.5 spelling or ruling changes. ${lexicalised.length === 0 ? '' : `${lexicalised.join(', ')} were already 2.5 words, attested image compounds: each comes back as a headword with its id and takes the patch's meaning, its 2.5 reading archived (for the author's review).`}`,
+    summary: cfg.summary(patch, lexicalised),
     rulings,
     headwords: newHeads,
     function_words: functionWords,
@@ -548,8 +598,8 @@ export function makeChangeset3_0(): LexiconChangeset {
 
   // verify: everything the patch lists, as it lists it
   const built = applyChangesets(lex, [changeset], {
-    version: EDITION,
-    builtUtc: AT,
+    version: cfg.edition,
+    builtUtc: cfg.at,
     source: '',
     ids,
     wordBuilding: WORD_BUILDING_2_0,
@@ -599,6 +649,24 @@ export function makeChangeset3_0(): LexiconChangeset {
   );
   return changeset;
 }
+
+export const CONFIG_3_0: AdditionsConfig = {
+  patch: PATCH,
+  baseline: BASELINE,
+  edition: EDITION,
+  previous: '2.5',
+  at: AT,
+  id: ID_3_0,
+  name: 'Liraasa 3.0 patch (Devotion, Music and Measure)',
+  summary: (patch, lexicalised) =>
+    `Liraasa 3.0, "Devotion, Music and Measure" (ADR-0021), from the author's 3.0 patch. PROPOSED: ${patch.status}. ` +
+    `Additions only: rulings 3.0:G129-G141; the vocative iya; ${String(patch.roots_add.length)} roots and ${String(patch.compounds_add.length)} compounds; ` +
+    `${String(patch.listed_derivations_add.length)} listed derivations and ${String(patch.lexicalised_diminutives_add.length)} lexicalised diminutive; ` +
+    `${String(patch.restored_forms_add.length)} restored forms on 2.5 headwords; the clause template, its edges and the miyo, sela and gagu rows follow the rulings. No 2.5 spelling or ruling changes. ${lexicalised.length === 0 ? '' : `${lexicalised.join(', ')} were already 2.5 words, attested image compounds: each comes back as a headword with its id and takes the patch's meaning, its 2.5 reading archived (for the author's review).`}`,
+  extraOps: propagationOps,
+};
+
+export const makeChangeset3_0 = (): LexiconChangeset => makeAdditionsChangeset(CONFIG_3_0);
 
 function main(): void {
   const { booleans } = parseArgs(process.argv.slice(2), []);

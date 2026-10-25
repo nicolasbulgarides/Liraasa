@@ -1100,6 +1100,42 @@ export const RECIPES: readonly (readonly [string, string, string, string, string
     'She will sing for ever.',
     '3.0:G139',
   ],
+  // 3.1, proposed: the recipes the 3.1 patch adds, for senses already sayable without a new word
+  [
+    'realize; suddenly become aware',
+    '`hiro sabesia` (begin to know); `zafra` or `hoyo` for suddenness or surprise',
+    'Zafra, maivo po hiro sabesia fime saivo po pagopa.',
+    'Suddenly I realized that she had gone.',
+    '',
+  ],
+  [
+    'prefer A to B',
+    '`lorelivnala` A `korsi` B',
+    'Maivo lorelivnala lavlomiru korsi miru.',
+    'I prefer tea to water.',
+    '',
+  ],
+  [
+    'favorite',
+    '`lorelivnasan` + noun; `li lorelivnasan` = the favorite',
+    'Eli ka maivo de lorelivnasan lira.',
+    'This is my favorite song.',
+    '',
+  ],
+  [
+    'not understand / misunderstand',
+    '`ne mebanema` (not understand) · `loteromebanela` (understand wrongly) · `mebanena` (a misunderstanding between people)',
+    'Maivo ne mebanema; nara saivo po loteromebanela maivo.',
+    'I don’t understand; but she misunderstood me.',
+    '',
+  ],
+  [
+    'envy / jealousy',
+    '`loterodesi` / `loterodesila` (wanting what another has) · `amorharlu` / `amorharlua` (fear of losing a bond)',
+    'Saivo amorharlua saivo de sora.',
+    'She is jealous over her friend.',
+    '',
+  ],
 ];
 
 export function recipesPart(index: Index): string {
