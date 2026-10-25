@@ -3413,7 +3413,10 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       return null;
     };
     const isPastForm = (w) => irregular[w] !== void 0 && !w.endsWith("ing") && !["am", "is", "are", "be", "being", "has", "have", "does", "do"].includes(w) || w.endsWith("ed");
+    const ruleNoun = (w) => data.rule_words?.noun[w] !== void 0;
+    const ruleAdj = (w) => data.rule_words?.adj[w] !== void 0;
     const nounLemma = (w) => {
+      if (ruleNoun(w)) return { lemma: w, plural: false };
       const ir = data.irregular_plurals[w];
       if (ir !== void 0 && lex.isNoun(ir)) return { lemma: ir, plural: ir !== w };
       if (lex.isNoun(w)) return { lemma: w, plural: false };
@@ -3434,6 +3437,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       return null;
     };
     const adjLemma = (w) => {
+      if (ruleAdj(w)) return { lemma: w };
       const ir = data.irregular_comparatives[w];
       if (ir !== void 0) return { lemma: ir[0], degree: ir[1] };
       if (lex.isAdj(w)) return { lemma: w };
@@ -3522,6 +3526,11 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
             adjectives: []
           };
           if (at() === "'s") i += 1;
+          const self = data.pronouns[at()];
+          if (out.kind === "pronoun" && self?.case === "reflexive" && self.form === pron.form && verbGroupAhead(i + 1)) {
+            out.emphatic = true;
+            i += 1;
+          }
           return out;
         }
         const pw = phrase(data.pronoun_words);
@@ -3544,6 +3553,15 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
         } else if (at() in data.determiners && !(at() === "that" && !nounStart(i + 1))) {
           np.definite = at();
           i += 1;
+        }
+        const title = data.titles?.[at()];
+        if (title !== void 0 && /^[A-Z]/.test(raw(i + 1)) && !isPunct(i + 1)) {
+          np.title = at();
+          i += 1;
+          np.head = raw().replace(/'s$/, "");
+          np.kind = "name";
+          i += 1;
+          return np;
         }
         if (np.owner === void 0 && np.definite === void 0 && raw().endsWith("'s") && nounStart(i + 1)) {
           const ownerWord = raw().replace(/'s$/, "");
@@ -3657,6 +3675,13 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
           i += 1;
           const of = readNP();
           if (of !== null) np.of = of;
+        }
+        if (at() === "by" && (data.made_works ?? []).includes(np.head) && nounStart(i + 1)) {
+          const save = i;
+          i += 1;
+          const maker = readNP({ noRelative: true });
+          if (maker !== null) np.maker = maker;
+          else i = save;
         }
         if (data.relativizers.includes(at()) && !done(i + 1) && np.kind !== "pronoun") {
           const rel = readRelative();
@@ -4090,7 +4115,11 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
             c.subject = null;
             const np = readNP();
             if (np !== null) c.object = np;
-          } else readComplement(c);
+          } else {
+            readComplement(c);
+            if (c.complement === void 0 && vg.become !== true && c.subject !== null && opts.inverted === void 0 && end !== "?" && (done() || isPunct()))
+              c.verb = { lemma: "be", kind: "exist" };
+          }
         } else if (vg.lemma !== null) {
           c.verb = { lemma: vg.lemma, kind: vg.lemma === "have" ? "have" : "action" };
           if (vg.passive === true) {
@@ -4301,8 +4330,31 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
         const front = [];
         let type = end === "?" ? "question" : "statement";
         let please = false;
+        if ((data.vocative_words ?? []).includes(at()) && raw() === raw().toUpperCase()) {
+          const save = i;
+          i += 1;
+          const v = readNP();
+          if (v !== null && (isPunct(i, ",") || done())) {
+            c.vocative = v;
+            c.vocativeIya = true;
+            if (isPunct(i, ",")) {
+              c.vocativeFirst = true;
+              i += 1;
+            }
+          } else i = save;
+        }
         for (let guard = 0; guard < 8; guard++) {
           const w = at();
+          if (!isPunct() && at(i + 1) === "by" && at(i + 2) === w && (data.numbers[w] !== void 0 || nounLemma(w) !== null)) {
+            front.push({
+              role: "distributive",
+              word: data.numbers[w] !== void 0 ? w : nounLemma(w)?.lemma ?? w,
+              fronted: true
+            });
+            i += 3;
+            if (isPunct(i, ",")) i += 1;
+            continue;
+          }
           if (w === "please") {
             please = true;
             i += 1;
@@ -4378,7 +4430,30 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
         }
         const imperative = at() === "let" && at(i + 1) === "us" || at() === "do" && at(i + 1) === "not" && verbOf(at(i + 2)) !== null || at() === "never" && verbOf(at(i + 1)) !== null || verbOf(at()) !== null && nounLemma(at()) === null && data.pronouns[at()] === void 0 && !(at() in data.determiners) && !MODALS.includes(at()) && !data.do.includes(at()) && !data.copula.be.includes(at()) && end !== "?" || verbOf(at()) !== null && (end === "!" || please) && i === 0 && !/^[A-Z]/.test(raw(i + 1)) || verbOf(at()) !== null && i === 0 && data.pronouns[at(i + 1)] !== void 0 && data.pronouns[at(i + 1)]?.case !== "subject" && !verbGroupAhead(i + 1) || verbOf(at()) !== null && i === 0 && at(i + 1) in data.determiners && !data.copula.be.includes(at());
         let main;
-        if (imperative && end !== "?") {
+        const thereBe = (k) => at(k) === "there" && at(k + 1) === "be";
+        if ((at() === "let" || at() === "may") && thereBe(i + 1)) {
+          const wish = at() === "may";
+          i += 3;
+          main = emptyClause$1();
+          main.verb = { lemma: "be", kind: "exist" };
+          const np = readNP();
+          if (np !== null) main.object = np;
+          for (let guard = 0; guard < 6 && !done() && !isPunct(); guard++) {
+            const a = readAdjunct();
+            if (a === null) break;
+            main.adjuncts.push(a);
+          }
+          main.type = wish ? "wish" : "exclamation";
+          if (wish) main.attitude = "hope";
+        } else if (end === "!" && (data.acclamations ?? []).includes(at()) && at(i + 1) === "to" && nounStart(i + 2)) {
+          const head = nounLemma(at())?.lemma ?? at();
+          i += 2;
+          main = emptyClause$1();
+          main.type = "exclamation";
+          main.subject = { head, kind: "noun", adjectives: [] };
+          const to = readNP();
+          if (to !== null) main.acclamation = to;
+        } else if (imperative && end !== "?") {
           if (at() === "let" && at(i + 1) === "us") {
             i += 2;
             type = "hortative";
@@ -4471,7 +4546,11 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
         if (main.type === "statement") main.type = type;
         if (please) main.please = true;
         if (c.topic !== void 0) main.topic = c.topic;
-        if (c.vocative !== void 0) main.vocative = c.vocative;
+        if (c.vocative !== void 0) {
+          main.vocative = c.vocative;
+          if (c.vocativeIya === true) main.vocativeIya = true;
+          if (c.vocativeFirst === true) main.vocativeFirst = true;
+        }
         if (c.attitude !== void 0 && main.attitude === void 0) main.attitude = c.attitude;
         if (c.link !== void 0) main.link = c.link;
         main.adjuncts = [...front, ...main.adjuncts];
@@ -4484,15 +4563,23 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
             const p = raw();
             i += 1;
             const save = i;
+            const o = (data.vocative_words ?? []).includes(at()) && raw() === raw().toUpperCase();
+            if (o) i += 1;
             const v = readNP();
             if (v !== null && done()) {
               main.vocative = v;
+              if (o) main.vocativeIya = true;
               continue;
             }
             i = save;
             if (p === ";") {
               const next = readClauseBody({});
               main.subordinates.push({ ...next, link: "and", semicolon: true });
+              continue;
+            }
+            if (p === "," && verbGroupAheadAfterNP(i)) {
+              const next = readClauseBody({});
+              main.subordinates.push({ ...next, link: "and", commaJoined: true });
               continue;
             }
             continue;
@@ -4615,6 +4702,9 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       }
       if (n.refl !== null) out2.refl = lw(n.refl);
       if (n.de !== null) out2.de = np(n.de);
+      if (t[n.start]?.word?.lower === "iya") out2.iya = lw(n.start);
+      if (n.title !== void 0) out2.title = lw(n.title);
+      if (n.maker !== void 0) out2.maker = { gagu: lw(n.maker.start - 1), np: np(n.maker) };
       if (n.and !== void 0) out2.and = { linker: lw(n.and.linker), np: np(n.and.np) };
       if (n.relative !== null) {
         out2.relative = clause(n.relative);
@@ -4736,6 +4826,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
         case "existential":
           if (v !== null && c.object !== null)
             out2.pred = { kind: "exist", miyo: lw(v), np: np(c.object) };
+          else if (v !== null) out2.pred = { kind: "exist", miyo: lw(v) };
           break;
         case "passive":
           if (v !== null && c.innerVerb !== null)
@@ -4811,6 +4902,13 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
           out2.frame.push({ adjunct: a2, comma: isPunct(item.end, ",") });
           continue;
         }
+        if (t[f + 1]?.word?.lower === "krotiapo" && t[f + 2]?.word?.lower === t[f]?.word?.lower) {
+          out2.frame.push({
+            adjunct: { kind: "distributive", word: lw(f) },
+            comma: isPunct(f + 3, ",")
+          });
+          continue;
+        }
         let e = f + 1;
         while (role(e) === "FRAME" && !isPunct(e)) e += 1;
         const span = e - f;
@@ -4839,6 +4937,12 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       if (c.vocative !== null && c.vocative.start < (c.subject?.start ?? c.verb ?? c.end))
         out2.vocativeBefore = np(c.vocative);
       else if (c.vocative !== null) out2.vocative = np(c.vocative);
+      const address = c.address?.[0];
+      if (address !== void 0 && out2.vocativeBefore === void 0) {
+        if (c.predKind === "none" && c.subject === null && c.verb === null)
+          out2.vocative = np(address);
+        else out2.vocativeBefore = np(address);
+      }
       for (const sub of c.subordinates) {
         if (sub.kind === "chain") continue;
         const lc = clause(sub);
@@ -4903,7 +5007,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     english,
     ...r.source === "image-predicted" ? { flags: ["predicted image-compound form (2.5:G124)"] } : {}
   });
-  function buildEnglishIndex(ix, synonyms = {}, aliases = {}) {
+  function buildEnglishIndex(ix, synonyms = {}, aliases = {}, ruleWords = {}) {
     const bySense = /* @__PURE__ */ new Map();
     const add = (sense, r, rank) => {
       const list = bySense.get(sense) ?? [];
@@ -4953,6 +5057,19 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
         (a, b) => a.rank - b.rank || order.indexOf(a.r.role ?? "n") - order.indexOf(b.r.role ?? "n") || (a.r.source === "listed" ? 0 : 1) - (b.r.source === "listed" ? 0 : 1) || a.r.form.length - b.r.form.length
       );
       const best = ranked[0];
+      const built = best === void 0 ? ruleWords[want]?.[key0] : void 0;
+      if (built !== void 0)
+        return {
+          word: {
+            form: built,
+            role: want === "adj" ? "a" : "n",
+            english: lemma,
+            gloss: lemma,
+            flags: ["built by rule or copied, not listed"]
+          },
+          alternatives: [],
+          nearest: []
+        };
       if (best !== void 0)
         return {
           word: toWord(best.r, lemma),
@@ -4983,15 +5100,18 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       out.push("sidu", ...realizeClauseBody(np.vp));
       return out;
     }
+    if (np.iya !== void 0) out.push(word(np.iya));
     for (const w of [np.degreeQuant, np.quant, np.det, np.ord, np.sign, np.degreeNum, np.num])
       if (w !== void 0) out.push(word(w));
     for (const a of np.adjectives) {
       if (a.degree !== void 0) out.push(word(a.degree));
       out.push(word(a.adj));
     }
+    if (np.title !== void 0) out.push(word(np.title));
     out.push(word(np.head));
     if (np.refl !== void 0) out.push(word(np.refl));
     if (np.de !== void 0) out.push("de", ...realizeNP(np.de));
+    if (np.maker !== void 0) out.push(word(np.maker.gagu), ...realizeNP(np.maker.np));
     if (np.relative !== void 0) {
       out.push(...realizeClause(np.relative));
       if (np.relativeComma === true) comma(out);
@@ -5064,6 +5184,8 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       case "iteration":
       case "adv":
         return a.word === void 0 ? [] : [word(a.word)];
+      case "distributive":
+        return a.word === void 0 ? [] : [word(a.word), "krotiapo", word(a.word)];
     }
   }
   function realizeClauseBody(c, deferClosing = false) {
@@ -5092,7 +5214,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
         if (p.agent !== void 0) out.push(word(p.agent.gagu), ...realizeNP(p.agent.np));
         break;
       case "exist":
-        out.push(word(p.miyo), ...realizeNP(p.np));
+        out.push(word(p.miyo), ...p.np === void 0 ? [] : realizeNP(p.np));
         break;
       case "bare-adj":
         out.push(...realizePredicate(p.predicate));
@@ -5327,7 +5449,14 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
         };
       return wrap(result, m);
     }
-    const wrap = (out, m) => {
+    const wrap = (out0, m) => {
+      let out = out0;
+      if (m.emphatic === true) out = { ...out, refl: fw("sela", "self") };
+      if (m.title !== void 0) {
+        const t = data.titles?.[m.title];
+        if (t !== void 0) out = { ...out, title: fw(t, m.title) };
+      }
+      if (m.maker !== void 0) out = { ...out, maker: { gagu: fw("gagu", "by"), np: np(m.maker) } };
       if (m.focus !== void 0) {
         const s = data.scope[m.focus] ?? (m.focus === "it is" ? "vinto" : void 0);
         if (s !== void 0) return { ...out, scope: fw(s, m.focus) };
@@ -5343,7 +5472,18 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     const withArticle = (x) => x.det === void 0 && x.kind !== "pron" ? { ...x, det: fw("li", "the") } : x;
     function adjunct(a, c) {
       switch (a.role) {
+        case "distributive": {
+          const n = data.numbers[a.word ?? ""];
+          const w = n !== void 0 ? numeral2(n) : content("noun", a.word ?? "");
+          return { kind: "distributive", word: w };
+        }
         case "time": {
+          if (a.word !== void 0 && (data.forever ?? []).includes(a.word))
+            return {
+              kind: "pp",
+              word: fw("en", "in"),
+              np: np({ head: "eternity", kind: "noun", adjectives: [] }, "pp")
+            };
           if (a.word === "in" && a.np !== void 0)
             return { kind: "measure", word: fw("krotiapo", "in"), np: np(a.np, "pp") };
           const t = data.time_adverbs[a.word ?? ""];
@@ -5512,14 +5652,15 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       else if (m.subject !== null) c.subject = np(m.subject, "subject");
       c.ops = ops(m, { inherit: opts.inherit === true });
       const v = m.verb;
-      if (v === null) {
+      if (v === null && m.acclamation !== void 0) {
+        c.pred = {
+          kind: "bare-adj",
+          predicate: { kind: "pp", prep: fw("ala", "to"), np: np(m.acclamation, "pp") }
+        };
+      } else if (v === null) {
         c.pred = { kind: "none" };
       } else if (v.kind === "exist") {
-        c.pred = {
-          kind: "exist",
-          miyo: fw("miyo", "there is"),
-          np: m.object === void 0 ? { kind: "noun", head: fw("⟨?⟩"), adjectives: [] } : np(m.object)
-        };
+        c.pred = m.object === void 0 ? { kind: "exist", miyo: fw("miyo", "exists") } : { kind: "exist", miyo: fw("miyo", "there is"), np: np(m.object) };
       } else if (v.kind === "be") {
         c.pred = { kind: "copula", cop: copula(m), predicate: predicateOf(m) };
       } else if (v.kind === "become") {
@@ -5619,11 +5760,16 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
         });
         if (shared || sameSubjectPurpose) sc.subject = null;
         sc.linker = fw(linkWord(s.link), s.link);
-        const comma2 = s.link === "purpose" && s.modal === "might" || s.semicolon === true;
-        if (s.semicolon === true) delete sc.linker;
+        const comma2 = s.link === "purpose" && s.modal === "might" || s.semicolon === true || s.commaJoined === true;
+        if (s.semicolon === true || s.commaJoined === true) delete sc.linker;
         c.after.push({ clause: sc, comma: comma2, ...s.semicolon === true ? { punct: ";" } : {} });
       }
-      if (m.vocative !== void 0) c.vocative = np(m.vocative);
+      if (m.vocative !== void 0) {
+        const v0 = np(m.vocative);
+        const voc = m.vocativeIya === true ? { ...v0, iya: fw("iya", "O") } : v0;
+        if (m.vocativeFirst === true) c.vocativeBefore = voc;
+        else c.vocative = voc;
+      }
       return c;
     }
     const linkWord = (link) => {
@@ -5637,7 +5783,8 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       return "";
     };
     const main = clause(ms.clause, { main: true });
-    const end = ms.clause.type === "command" && ms.clause.please !== true || ms.clause.type === "hortative" || ms.clause.type === "exclamation" ? "!" : ms.clause.type === "question" ? "?" : ".";
+    const end = ms.clause.type === "command" && ms.clause.please !== true || ms.clause.type === "hortative" || ms.clause.type === "exclamation" || // O Mother of Light!: an address standing alone keeps its mark (3.0:G129)
+    ms.end === "!" && ms.clause.verb === null && ms.clause.vocative !== void 0 ? "!" : ms.clause.type === "question" ? "?" : ".";
     if (ms.clause.type === "exclamation" && ms.clause.question?.role === "exclamation")
       main.ki = false;
     return { sentence: { main, end }, flags, gaps, alternatives };
@@ -5689,7 +5836,12 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
   }
   function createTranslator(src) {
     const checker = createChecker(src.grammar);
-    const en = buildEnglishIndex(checker.index, src.synonyms ?? {}, src.english.aliases);
+    const en = buildEnglishIndex(
+      checker.index,
+      src.synonyms ?? {},
+      src.english.aliases,
+      src.english.rule_words ?? {}
+    );
     const reader = createEnglishReader(src.english, {
       isVerb: (l) => en.choose("verb", l).word !== null,
       isNoun: (l) => en.choose("noun", l).word !== null,
@@ -5698,7 +5850,31 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     });
     const ctx = { ix: checker.index, en, data: src.english, numerals: src.numerals };
     const glossText = (s) => s.gloss.map((g) => (g.gloss.split(/[;(]/)[0] ?? g.word).trim()).filter((x) => x !== "").join(" ");
+    function formula(ms) {
+      const key = ms.english.toLowerCase().replace(/[^a-z\s]/g, " ").replace(/\s+/g, " ").trim();
+      const text = src.english.formulas?.[key];
+      if (text === void 0) return null;
+      const r = checker.checkLine(text);
+      const s = r.sentences[0] ?? null;
+      if (s === null || r.findings.some((f) => f.severity === "error")) return null;
+      return {
+        english: ms.english,
+        liraasa: text,
+        ok: true,
+        frame: ms,
+        structure: fromParse(s),
+        check: s,
+        gloss: s.gloss,
+        backTranslation: { english: glossText(s), matches: true, differences: [] },
+        flags: ["a fixed liturgical formula (3.0:G133)"],
+        gaps: [],
+        alternatives: {},
+        tried: []
+      };
+    }
     function one(ms) {
+      const fixed = formula(ms);
+      if (fixed !== null) return fixed;
       const tried = [];
       const variants = [
         {},

@@ -62,6 +62,8 @@ export function buildEnglishIndex(
   ix: Index,
   synonyms: Record<string, string[]> = {},
   aliases: Partial<Record<Want, Record<string, string>>> = {},
+  /** words built by rule or copied, not listed: polygons, copied names, origin adjectives (3.x) */
+  ruleWords: Partial<Record<Want, Record<string, string>>> = {},
 ): EnglishIndex {
   const bySense = new Map<string, { r: Reading; rank: number }[]>();
   const add = (sense: string, r: Reading, rank: number): void => {
@@ -126,6 +128,20 @@ export function buildEnglishIndex(
         a.r.form.length - b.r.form.length,
     );
     const best = ranked[0];
+    // nothing listed: a word the rules build or a copied name (3.2:G147, 3.5:G150, G151)
+    const built = best === undefined ? ruleWords[want]?.[key0] : undefined;
+    if (built !== undefined)
+      return {
+        word: {
+          form: built,
+          role: want === 'adj' ? 'a' : 'n',
+          english: lemma,
+          gloss: lemma,
+          flags: ['built by rule or copied, not listed'],
+        },
+        alternatives: [],
+        nearest: [],
+      };
     if (best !== undefined)
       return {
         word: toWord(best.r, lemma),

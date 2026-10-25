@@ -54,6 +54,20 @@ export interface EnglishData {
     adj: Record<string, string>;
   };
   phrasal_verbs: Record<string, string>;
+  /** 3.x (ADR-0026): O before a vocative (3.0:G129) */
+  vocative_words?: string[];
+  /** titles before a name, to their Liraasa word (3.2:G145) */
+  titles?: Record<string, string>;
+  /** nouns of made works that take by + the maker (3.0:G136) */
+  made_works?: string[];
+  /** the nouns of an acclamation, NP to NP! (3.0:G137) */
+  acclamations?: string[];
+  /** forever (3.0:G139) */
+  forever?: string[];
+  /** whole sentences with a fixed Liraasa formula (3.0:G133) */
+  formulas?: Record<string, string>;
+  /** words built by rule or copied, not listed (3.2:G147, 3.5:G150, G151) */
+  rule_words?: { noun: Record<string, string>; adj: Record<string, string> };
   now_cues: { phrases: string[] };
   no_longer: { phrases: string[] };
   always_cues: { phrases: string[] };
@@ -168,7 +182,10 @@ export function createEnglishReader(data: EnglishData, lex: EnglishLexicon) {
       !w.endsWith('ing') &&
       !['am', 'is', 'are', 'be', 'being', 'has', 'have', 'does', 'do'].includes(w)) ||
     w.endsWith('ed');
+  const ruleNoun = (w: string): boolean => data.rule_words?.noun[w] !== undefined;
+  const ruleAdj = (w: string): boolean => data.rule_words?.adj[w] !== undefined;
   const nounLemma = (w: string): { lemma: string; plural: boolean } | null => {
+    if (ruleNoun(w)) return { lemma: w, plural: false };
     const ir = data.irregular_plurals[w];
     if (ir !== undefined && lex.isNoun(ir)) return { lemma: ir, plural: ir !== w };
     if (lex.isNoun(w)) return { lemma: w, plural: false };
@@ -189,6 +206,7 @@ export function createEnglishReader(data: EnglishData, lex: EnglishLexicon) {
     return null;
   };
   const adjLemma = (w: string): { lemma: string; degree?: string } | null => {
+    if (ruleAdj(w)) return { lemma: w };
     const ir = data.irregular_comparatives[w];
     if (ir !== undefined) return { lemma: ir[0], degree: ir[1] };
     if (lex.isAdj(w)) return { lemma: w };
@@ -292,6 +310,17 @@ export function createEnglishReader(data: EnglishData, lex: EnglishLexicon) {
           adjectives: [],
         };
         if (at() === "'s") i += 1;
+        // she herself sang: the reflexive right after its pronoun is emphatic (3.0:G134)
+        const self = data.pronouns[at()];
+        if (
+          out.kind === 'pronoun' &&
+          self?.case === 'reflexive' &&
+          self.form === pron.form &&
+          verbGroupAhead(i + 1)
+        ) {
+          out.emphatic = true;
+          i += 1;
+        }
         return out;
       }
       const pw = phrase(data.pronoun_words);
@@ -324,6 +353,16 @@ export function createEnglishReader(data: EnglishData, lex: EnglishLexicon) {
       } else if (at() in data.determiners && !(at() === 'that' && !nounStart(i + 1))) {
         np.definite = at() as NonNullable<MeaningNP['definite']>;
         i += 1;
+      }
+      // Mr Peta, Father Peta: a title before a name (3.2:G145)
+      const title = data.titles?.[at()];
+      if (title !== undefined && /^[A-Z]/.test(raw(i + 1)) && !isPunct(i + 1)) {
+        np.title = at();
+        i += 1;
+        np.head = raw().replace(/'s$/, '');
+        np.kind = 'name';
+        i += 1;
+        return np;
       }
       // a name or noun with 's owns what follows: father's bread
       if (
@@ -499,6 +538,14 @@ export function createEnglishReader(data: EnglishData, lex: EnglishLexicon) {
         i += 1;
         const of = readNP();
         if (of !== null) np.of = of;
+      }
+      // the song by Peta: by + the maker after a made work (3.0:G136)
+      if (at() === 'by' && (data.made_works ?? []).includes(np.head) && nounStart(i + 1)) {
+        const save = i;
+        i += 1;
+        const maker = readNP({ noRelative: true });
+        if (maker !== null) np.maker = maker;
+        else i = save;
       }
       // a relative clause
       if (data.relativizers.includes(at()) && !done(i + 1) && np.kind !== 'pronoun') {
@@ -1109,7 +1156,19 @@ export function createEnglishReader(data: EnglishData, lex: EnglishLexicon) {
           c.subject = null;
           const np = readNP();
           if (np !== null) c.object = np;
-        } else readComplement(c);
+        } else {
+          readComplement(c);
+          // she is. / I am.: be with nothing after it is existence (3.0:G132)
+          if (
+            c.complement === undefined &&
+            vg.become !== true &&
+            c.subject !== null &&
+            opts.inverted === undefined &&
+            end !== '?' &&
+            (done() || isPunct())
+          )
+            c.verb = { lemma: 'be', kind: 'exist' };
+        }
       } else if (vg.lemma !== null) {
         c.verb = { lemma: vg.lemma, kind: vg.lemma === 'have' ? 'have' : 'action' };
         if (vg.passive === true) {
@@ -1388,9 +1447,39 @@ export function createEnglishReader(data: EnglishData, lex: EnglishLexicon) {
       const front: MeaningAdjunct[] = [];
       let type: MeaningClause['type'] = end === '?' ? 'question' : 'statement';
       let please = false;
+      // O Goddess, …: a vocative opened by O, before the clause or standing alone (3.0:G129)
+      if ((data.vocative_words ?? []).includes(at()) && raw() === raw().toUpperCase()) {
+        const save = i;
+        i += 1;
+        const v = readNP();
+        if (v !== null && (isPunct(i, ',') || done())) {
+          c.vocative = v;
+          c.vocativeIya = true;
+          if (isPunct(i, ',')) {
+            c.vocativeFirst = true;
+            i += 1;
+          }
+        } else i = save;
+      }
       // interjections, therefore, perhaps, frame words, fronted time / place, topics, preposed clauses
       for (let guard = 0; guard < 8; guard++) {
         const w = at();
+        // one by one, star by star: X by X (3.0:G140)
+        if (
+          !isPunct() &&
+          at(i + 1) === 'by' &&
+          at(i + 2) === w &&
+          (data.numbers[w] !== undefined || nounLemma(w) !== null)
+        ) {
+          front.push({
+            role: 'distributive',
+            word: data.numbers[w] !== undefined ? w : (nounLemma(w)?.lemma ?? w),
+            fronted: true,
+          });
+          i += 3;
+          if (isPunct(i, ',')) i += 1;
+          continue;
+        }
         if (w === 'please') {
           please = true;
           i += 1;
@@ -1511,7 +1600,37 @@ export function createEnglishReader(data: EnglishData, lex: EnglishLexicon) {
           at(i + 1) in data.determiners &&
           !data.copula.be.includes(at()));
       let main: MeaningClause;
-      if (imperative && end !== '?') {
+      const thereBe = (k: number): boolean => at(k) === 'there' && at(k + 1) === 'be';
+      if ((at() === 'let' || at() === 'may') && thereBe(i + 1)) {
+        // let there be light!: a fiat; may there be peace: a wish (3.0:G133)
+        const wish = at() === 'may';
+        i += 3;
+        main = emptyClause();
+        main.verb = { lemma: 'be', kind: 'exist' };
+        const np = readNP();
+        if (np !== null) main.object = np;
+        for (let guard = 0; guard < 6 && !done() && !isPunct(); guard++) {
+          const a = readAdjunct();
+          if (a === null) break;
+          main.adjuncts.push(a);
+        }
+        main.type = wish ? 'wish' : 'exclamation';
+        if (wish) main.attitude = 'hope';
+      } else if (
+        end === '!' &&
+        (data.acclamations ?? []).includes(at()) &&
+        at(i + 1) === 'to' &&
+        nounStart(i + 2)
+      ) {
+        // Glory to the Goddess!: NP ala NP (3.0:G137)
+        const head = nounLemma(at())?.lemma ?? at();
+        i += 2;
+        main = emptyClause();
+        main.type = 'exclamation';
+        main.subject = { head, kind: 'noun', adjectives: [] };
+        const to = readNP();
+        if (to !== null) main.acclamation = to;
+      } else if (imperative && end !== '?') {
         if (at() === 'let' && at(i + 1) === 'us') {
           i += 2;
           type = 'hortative';
@@ -1621,7 +1740,11 @@ export function createEnglishReader(data: EnglishData, lex: EnglishLexicon) {
       if (main.type === 'statement') main.type = type;
       if (please) main.please = true;
       if (c.topic !== undefined) main.topic = c.topic;
-      if (c.vocative !== undefined) main.vocative = c.vocative;
+      if (c.vocative !== undefined) {
+        main.vocative = c.vocative;
+        if (c.vocativeIya === true) main.vocativeIya = true;
+        if (c.vocativeFirst === true) main.vocativeFirst = true;
+      }
       if (c.attitude !== undefined && main.attitude === undefined) main.attitude = c.attitude;
       if (c.link !== undefined) main.link = c.link;
       main.adjuncts = [...front, ...main.adjuncts];
@@ -1635,17 +1758,26 @@ export function createEnglishReader(data: EnglishData, lex: EnglishLexicon) {
         if (isPunct(i, ',') || isPunct(i, ';') || isPunct(i, '—')) {
           const p = raw();
           i += 1;
-          // a vocative at the end: …, my love?
+          // a vocative at the end: …, my love? / …, O my love? (3.0:G129)
           const save = i;
+          const o = (data.vocative_words ?? []).includes(at()) && raw() === raw().toUpperCase();
+          if (o) i += 1;
           const v = readNP();
           if (v !== null && done()) {
             main.vocative = v;
+            if (o) main.vocativeIya = true;
             continue;
           }
           i = save;
           if (p === ';') {
             const next = readClauseBody({});
             main.subordinates.push({ ...next, link: 'and', semicolon: true });
+            continue;
+          }
+          // a clause after a comma alone: she was, she is, she will be
+          if (p === ',' && verbGroupAheadAfterNP(i)) {
+            const next = readClauseBody({});
+            main.subordinates.push({ ...next, link: 'and', commaJoined: true });
             continue;
           }
           continue;

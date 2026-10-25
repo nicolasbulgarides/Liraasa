@@ -1,5 +1,5 @@
 {
- "about": "English → Liraasa: the English side of the translator (src/core/translate). What an English word means for the 2.5 grammar, with the ruling each mapping follows. Liraasa words here are function words, pronouns and correlatives of the 2.5 reference; content words come only from the dictionary. Edit here, never in code.",
+ "about": "English → Liraasa: the English side of the translator (src/core/translate). What an English word means for the 2.5 grammar, with the ruling each mapping follows. Liraasa words here are function words, pronouns and correlatives of the 2.5 reference; content words come only from the dictionary. Edit here, never in code. 3.x (ADR-0026): the vocative O, titles, made works, acclamations, forever, the fixed formulas and the words built by rule or copied.",
  "pronouns": {
   "i": {
    "form": "maivo",
@@ -513,7 +513,11 @@
   "tomorrow evening": "vesnofutu",
   "tomorrow night": "nullofutu",
   "once": "una-krono",
-  "twice": "dossa-krono"
+  "twice": "dossa-krono",
+  "forever": "en rinbakrono",
+  "for ever": "en rinbakrono",
+  "for all time": "en rinbakrono",
+  "eternally": "en rinbakrono"
  },
  "place_adverbs": {
   "here": "eli-pago",
@@ -1246,5 +1250,70 @@
   "climb up": "climb",
   "go up": "rise",
   "go down": "descend"
+ },
+ "vocative_words": [
+  "o"
+ ],
+ "titles": {
+  "mr": "zilenela",
+  "mrs": "zilenela",
+  "ms": "zilenela",
+  "miss": "zilenela",
+  "sir": "zilenela",
+  "madam": "zilenela",
+  "lady": "zilenela",
+  "father": "pilo",
+  "mother": "mare"
+ },
+ "made_works": [
+  "song",
+  "hymn",
+  "poem",
+  "story",
+  "book",
+  "tale",
+  "verse",
+  "chant",
+  "psalm",
+  "work",
+  "music"
+ ],
+ "acclamations": [
+  "glory",
+  "praise",
+  "honor",
+  "honour"
+ ],
+ "forever": [
+  "forever",
+  "for ever",
+  "for all time",
+  "eternally"
+ ],
+ "formulas": {
+  "so be it": "Ola-modo pifu.",
+  "amen": "Ola-modo pifu.",
+  "so it was so it is so it shall be": "Ola-modo po miyo, ola-modo miyo, ola-modo futu miyo.",
+  "and so it was and so it is and so it shall be": "Ata ola-modo po miyo, ola-modo miyo, ola-modo futu miyo."
+ },
+ "rule_words": {
+  "noun": {
+   "triangle": "tressa-gaki",
+   "square": "cuara-gaki",
+   "pentagon": "penta-gaki",
+   "hexagon": "sesa-gaki",
+   "octagon": "ocha-gaki",
+   "pizza": "pitsa",
+   "hamburger": "hamburga"
+  },
+  "adj": {
+   "triangular": "tressa-gakisan",
+   "square": "cuara-gakisan",
+   "pentagonal": "penta-gakisan",
+   "hexagonal": "sesa-gakisan",
+   "octagonal": "ocha-gakisan",
+   "french": "Fransasan",
+   "american": "Amerikasan"
+  }
  }
 }

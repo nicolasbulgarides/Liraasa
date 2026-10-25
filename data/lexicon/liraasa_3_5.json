@@ -2,7 +2,7 @@
  "language": "Liraasa",
  "version": "3.5",
  "built_utc": "2026-10-25T22:00:00Z",
- "source": "Built deterministically from liraasa_3_4.json (sha256 67b90dfb046aae0e77c69f58f9f87340bfcb48582001bf41179732ad6716fd96) by scripts/integrate_3_5.ts, applying the changeset 2026-10-25-lexicon-3-5-ratify and 2026-10-25-lexicon-3-5 (ADR-0025). This JSON is the single source of truth for Liraasa 3.5. PROPOSED: every 3.5 addition (everything up to 3.4 is ratified) awaits the author's ratification.",
+ "source": "Built deterministically from liraasa_3_4.json (sha256 5d4ba498f747fa003bf792951570091cc8fe732c68d9d4d110359d868ad98138) by scripts/integrate_3_5.ts, applying the changeset 2026-10-25-lexicon-3-5-ratify and 2026-10-25-lexicon-3-5 and 2026-10-25-lexicon-3-5-author (ADR-0025). This JSON is the single source of truth for Liraasa 3.5. PROPOSED: every 3.5 addition (everything up to 3.4 is ratified) awaits the author's ratification.",
  "snapshot_0_8": {
   "source_file": "lexicon_0_8_rc2.json",
   "source_version": "0.8-rc2",
@@ -94542,10 +94542,10 @@
     "ascended_adjective": "navulalfoasasan"
    },
    "glosses": {
-    "root": "levitation",
+    "root": "a rise into the sky; skyward floating",
     "ascended": "— (unused)",
     "negative": "— (unused)",
-    "verb": "to levitate",
+    "verb": "to float up into the sky",
     "negative_adjective": "— (unused)",
     "adjective": "— (unused)",
     "ascended_adjective": "— (unused)"
@@ -94553,11 +94553,13 @@
    "register": "everyday",
    "domain": "Fantasy",
    "english_synonyms": [
-    "levitation",
-    "to levitate"
+    "a rise into the sky",
+    "skyward floating",
+    "to float up into the sky"
    ],
    "status_1_0": "NEW",
    "status_3_4": "NEW",
+   "status_3_5": "REGLOSSED",
    "since": "3.4",
    "history_0_8": null,
    "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-ratify). Components: navu + lalfo. Archetype: Abstract verbs. Tier 1 in the patch.",
@@ -96126,7 +96128,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: salru + patu. Archetype: essential. Tier 1 in the patch. Module core.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: salru + patu. Archetype: essential. Tier 1 in the patch. Module core.",
    "protected": true,
    "id": "lx_salrupatu_2317"
   },
@@ -96166,7 +96168,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: zarku + hata. Archetype: essential. Tier 1 in the patch. Module core.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: zarku + hata. Archetype: essential. Tier 1 in the patch. Module core.",
    "protected": true,
    "id": "lx_zarkuhata_2318"
   },
@@ -96204,7 +96206,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: regna + cilni. Archetype: essential. Tier 1 in the patch. Module core.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: regna + cilni. Archetype: essential. Tier 1 in the patch. Module core.",
    "protected": true,
    "id": "lx_regnacilni_2319"
   },
@@ -96243,7 +96245,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: farla + puku. Archetype: essential. Tier 1 in the patch. Module core.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: farla + puku. Archetype: essential. Tier 1 in the patch. Module core.",
    "protected": true,
    "id": "lx_farlapuku_2320"
   },
@@ -96281,7 +96283,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: deyafama + puku. Archetype: essential. Tier 1 in the patch. Module core.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: deyafama + puku. Archetype: essential. Tier 1 in the patch. Module core.",
    "protected": true,
    "id": "lx_deyafamapuku_2321"
   },
@@ -96320,7 +96322,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: yalmu + donu. Archetype: essential. Tier 1 in the patch. Module core.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: yalmu + donu. Archetype: essential. Tier 1 in the patch. Module core.",
    "protected": true,
    "id": "lx_yalmudonu_2322"
   },
@@ -96358,7 +96360,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: doza + peli. Archetype: essential. Tier 1 in the patch. Module core.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: doza + peli. Archetype: essential. Tier 1 in the patch. Module core.",
    "protected": true,
    "id": "lx_dozapeli_2323"
   },
@@ -96397,7 +96399,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: felra + deya. Archetype: essential. Tier 1 in the patch. Module core.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: felra + deya. Archetype: essential. Tier 1 in the patch. Module core.",
    "protected": true,
    "id": "lx_felradeya_2324"
   },
@@ -96435,7 +96437,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: telne + bulli. Archetype: essential. Tier 1 in the patch. Module core.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: telne + bulli. Archetype: essential. Tier 1 in the patch. Module core.",
    "protected": true,
    "id": "lx_telnebulli_2325"
   },
@@ -96473,7 +96475,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: vila + lirbu. Archetype: essential. Tier 1 in the patch. Module core.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: vila + lirbu. Archetype: essential. Tier 1 in the patch. Module core.",
    "protected": true,
    "id": "lx_vilalirbu_2326"
   },
@@ -96511,7 +96513,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: nami + lordi. Archetype: essential. Tier 1 in the patch. Module core.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: nami + lordi. Archetype: essential. Tier 1 in the patch. Module core.",
    "protected": true,
    "id": "lx_namilordi_2327"
   },
@@ -96550,7 +96552,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: renli + safa. Archetype: essential. Tier 1 in the patch. Module core.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: renli + safa. Archetype: essential. Tier 1 in the patch. Module core.",
    "protected": true,
    "id": "lx_renlisafa_2328"
   },
@@ -96590,7 +96592,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: helvi + kaldo. Archetype: essential. Tier 1 in the patch. Module core.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: helvi + kaldo. Archetype: essential. Tier 1 in the patch. Module core.",
    "protected": true,
    "id": "lx_helvikaldo_2329"
   },
@@ -96628,7 +96630,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: folni + tibi. Archetype: essential. Tier 1 in the patch. Module core.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: folni + tibi. Archetype: essential. Tier 1 in the patch. Module core.",
    "protected": true,
    "id": "lx_folnitibi_2330"
   },
@@ -96669,7 +96671,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: tibi + sevre. Archetype: essential. Tier 1 in the patch. Module core.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: tibi + sevre. Archetype: essential. Tier 1 in the patch. Module core.",
    "protected": true,
    "id": "lx_tibisevre_2331"
   },
@@ -96707,7 +96709,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: dento + helna. Archetype: people. Tier 2 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: dento + helna. Archetype: people. Tier 2 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_dentohelna_2332"
   },
@@ -96745,7 +96747,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: buza + donu. Archetype: people. Tier 2 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: buza + donu. Archetype: people. Tier 2 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_buzadonu_2333"
   },
@@ -96784,7 +96786,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: lemu + lirbu. Archetype: people. Tier 2 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: lemu + lirbu. Archetype: people. Tier 2 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_lemulirbu_2334"
   },
@@ -96823,7 +96825,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: nimu + turna. Archetype: events. Tier 1 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: nimu + turna. Archetype: events. Tier 1 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_nimuturna_2335"
   },
@@ -96861,7 +96863,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: vemi + sasva. Archetype: events. Tier 2 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: vemi + sasva. Archetype: events. Tier 2 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_vemisasva_2336"
   },
@@ -96900,7 +96902,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: relsi + seno. Archetype: events. Tier 1 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: relsi + seno. Archetype: events. Tier 1 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_relsiseno_2337"
   },
@@ -96940,7 +96942,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: yano + tali. Archetype: events. Tier 1 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: yano + tali. Archetype: events. Tier 1 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_yanotali_2338"
   },
@@ -96979,7 +96981,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: miga + demro. Archetype: events. Tier 2 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: miga + demro. Archetype: events. Tier 2 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_migademro_2339"
   },
@@ -97018,7 +97020,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: zarku + turna. Archetype: events. Tier 1 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: zarku + turna. Archetype: events. Tier 1 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_zarkuturna_2340"
   },
@@ -97056,7 +97058,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: follu + ralka. Archetype: events. Tier 2 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: follu + ralka. Archetype: events. Tier 2 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_folluralka_2341"
   },
@@ -97094,7 +97096,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: dapa + lekta. Archetype: events. Tier 2 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: dapa + lekta. Archetype: events. Tier 2 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_dapalekta_2342"
   },
@@ -97133,7 +97135,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: cono + palvi. Archetype: events. Tier 2 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: cono + palvi. Archetype: events. Tier 2 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_conopalvi_2343"
   },
@@ -97171,7 +97173,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: yanba + cono. Archetype: events. Tier 2 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: yanba + cono. Archetype: events. Tier 2 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_yanbacono_2344"
   },
@@ -97209,7 +97211,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: semra + seno. Archetype: events. Tier 1 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: semra + seno. Archetype: events. Tier 1 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_semraseno_2345"
   },
@@ -97247,7 +97249,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: sulno + follu. Archetype: events. Tier 1 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: sulno + follu. Archetype: events. Tier 1 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_sulnofollu_2346"
   },
@@ -97285,7 +97287,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: dalu + sovla. Archetype: events. Tier 1 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: dalu + sovla. Archetype: events. Tier 1 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_dalusovla_2347"
   },
@@ -97325,7 +97327,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: maska + peli. Archetype: events. Tier 1 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: maska + peli. Archetype: events. Tier 1 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_maskapeli_2348"
   },
@@ -97365,7 +97367,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: sasva + vimo. Archetype: events. Tier 2 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: sasva + vimo. Archetype: events. Tier 2 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_sasvavimo_2349"
   },
@@ -97404,7 +97406,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: pega + tibi. Archetype: measures. Tier 1 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: pega + tibi. Archetype: measures. Tier 1 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_pegatibi_2350"
   },
@@ -97443,7 +97445,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: kezu + tise. Archetype: measures. Tier 1 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: kezu + tise. Archetype: measures. Tier 1 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_kezutise_2351"
   },
@@ -97481,7 +97483,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: gudo + semne. Archetype: measures. Tier 1 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: gudo + semne. Archetype: measures. Tier 1 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_gudosemne_2352"
   },
@@ -97519,7 +97521,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: vopra + biti. Archetype: measures. Tier 2 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: vopra + biti. Archetype: measures. Tier 2 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_voprabiti_2353"
   },
@@ -97558,7 +97560,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: vani + pusa. Archetype: measures. Tier 1 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: vani + pusa. Archetype: measures. Tier 1 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_vanipusa_2354"
   },
@@ -97596,7 +97598,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: sonbu + tabu. Archetype: tools. Tier 1 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: sonbu + tabu. Archetype: tools. Tier 1 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_sonbutabu_2355"
   },
@@ -97635,7 +97637,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: linle + kova. Archetype: tools. Tier 2 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: linle + kova. Archetype: tools. Tier 2 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_linlekova_2356"
   },
@@ -97674,7 +97676,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: valmi + biti. Archetype: tools. Tier 1 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: valmi + biti. Archetype: tools. Tier 1 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_valmibiti_2357"
   },
@@ -97713,7 +97715,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: molu + pavma. Archetype: tools. Tier 1 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: molu + pavma. Archetype: tools. Tier 1 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_molupavma_2358"
   },
@@ -97751,7 +97753,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: sulme + nulu. Archetype: tools. Tier 1 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: sulme + nulu. Archetype: tools. Tier 1 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_sulmenulu_2359"
   },
@@ -97789,7 +97791,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: zile + semne. Archetype: tools. Tier 2 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: zile + semne. Archetype: tools. Tier 2 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_zilesemne_2360"
   },
@@ -97828,7 +97830,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: halra + tibi. Archetype: tools. Tier 2 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: halra + tibi. Archetype: tools. Tier 2 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_halratibi_2361"
   },
@@ -97867,7 +97869,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: kadu + kaldo. Archetype: tools. Tier 1 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: kadu + kaldo. Archetype: tools. Tier 1 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_kadukaldo_2362"
   },
@@ -97953,7 +97955,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: bote + salru. Archetype: tools. Tier 2 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: bote + salru. Archetype: tools. Tier 2 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_botesalru_2363"
   },
@@ -97992,7 +97994,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: lekta + mambi. Archetype: media. Tier 1 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: lekta + mambi. Archetype: media. Tier 1 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_lektamambi_2364"
   },
@@ -98031,7 +98033,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: serna + sovla. Archetype: media. Tier 1 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: serna + sovla. Archetype: media. Tier 1 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_sernasovla_2365"
   },
@@ -98070,7 +98072,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: vera + telne. Archetype: media. Tier 2 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: vera + telne. Archetype: media. Tier 2 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_veratelne_2366"
   },
@@ -98108,7 +98110,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: fasbi + larda. Archetype: media. Tier 1 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: fasbi + larda. Archetype: media. Tier 1 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_fasbilarda_2367"
   },
@@ -98147,7 +98149,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: cuza + namre. Archetype: media. Tier 2 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: cuza + namre. Archetype: media. Tier 2 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_cuzanamre_2368"
   },
@@ -98186,7 +98188,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: ramu + favro. Archetype: media. Tier 1 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: ramu + favro. Archetype: media. Tier 1 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_ramufavro_2369"
   },
@@ -98225,7 +98227,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: nole + favro. Archetype: media. Tier 2 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: nole + favro. Archetype: media. Tier 2 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_nolefavro_2370"
   },
@@ -98264,7 +98266,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: jurevi + sonbu. Also a modifier + head of the image-compound pattern (2.0:G40), lexicalised with the meanings listed. Archetype: media. Tier 1 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: jurevi + sonbu. Also a modifier + head of the image-compound pattern (2.0:G40), lexicalised with the meanings listed. Archetype: media. Tier 1 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_jurevisonbu_2371"
   },
@@ -98303,7 +98305,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: telne + lideo. Archetype: media. Tier 2 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: telne + lideo. Archetype: media. Tier 2 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_telnelideo_2372"
   },
@@ -98342,7 +98344,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: simvo + favro. Archetype: media. Tier 2 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: simvo + favro. Archetype: media. Tier 2 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_simvofavro_2373"
   },
@@ -98380,7 +98382,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: lazu + ganre. Archetype: places. Tier 2 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: lazu + ganre. Archetype: places. Tier 2 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_lazuganre_2374"
   },
@@ -98419,7 +98421,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: tovo + domlu. Archetype: places. Tier 1 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: tovo + domlu. Archetype: places. Tier 1 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_tovodomlu_2375"
   },
@@ -98458,7 +98460,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: leni + zupa. Archetype: places. Tier 2 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: leni + zupa. Archetype: places. Tier 2 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_lenizupa_2376"
   },
@@ -98497,7 +98499,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: nami + zupa. Archetype: places. Tier 1 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: nami + zupa. Archetype: places. Tier 1 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_namizupa_2377"
   },
@@ -98535,7 +98537,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: herba + tobra. Archetype: places. Tier 2 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: herba + tobra. Archetype: places. Tier 2 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_herbatobra_2378"
   },
@@ -98573,7 +98575,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: farla + pavma. Archetype: materials. Tier 1 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: farla + pavma. Archetype: materials. Tier 1 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_farlapavma_2379"
   },
@@ -98611,7 +98613,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: rubi + germa. Archetype: materials. Tier 1 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: rubi + germa. Archetype: materials. Tier 1 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_rubigerma_2380"
   },
@@ -98649,7 +98651,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: erta + germa. Archetype: materials. Tier 2 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: erta + germa. Archetype: materials. Tier 2 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_ertagerma_2381"
   },
@@ -98687,7 +98689,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: sulme + herba. Archetype: materials. Tier 1 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: sulme + herba. Archetype: materials. Tier 1 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_sulmeherba_2382"
   },
@@ -98725,7 +98727,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: limli + tibi. Archetype: materials. Tier 1 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: limli + tibi. Archetype: materials. Tier 1 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_limlitibi_2383"
   },
@@ -98763,7 +98765,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: herba + tibi. Archetype: materials. Tier 2 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: herba + tibi. Archetype: materials. Tier 2 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_herbatibi_2384"
   },
@@ -98801,7 +98803,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: larbo + lamsa. Archetype: materials. Tier 2 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: larbo + lamsa. Archetype: materials. Tier 2 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_larbolamsa_2385"
   },
@@ -98839,7 +98841,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: rupu + miru. Archetype: materials. Tier 2 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: rupu + miru. Archetype: materials. Tier 2 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_rupumiru_2386"
   },
@@ -98878,7 +98880,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: helna + patu. Archetype: materials. Tier 1 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: helna + patu. Archetype: materials. Tier 1 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_helnapatu_2387"
   },
@@ -98917,7 +98919,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: miru + nibe. Archetype: materials. Tier 2 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: miru + nibe. Archetype: materials. Tier 2 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_mirunibe_2388"
   },
@@ -98956,7 +98958,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: larbo + lisi. Archetype: materials. Tier 2 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: larbo + lisi. Archetype: materials. Tier 2 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_larbolisi_2389"
   },
@@ -98994,7 +98996,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: nullo + lazu. Archetype: animals. Tier 1 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: nullo + lazu. Archetype: animals. Tier 1 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_nullolazu_2390"
   },
@@ -99032,7 +99034,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: sevu + budi. Archetype: animals. Tier 1 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: sevu + budi. Archetype: animals. Tier 1 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_sevubudi_2391"
   },
@@ -99070,7 +99072,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: nulva + lazu. Archetype: animals. Tier 1 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: nulva + lazu. Archetype: animals. Tier 1 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_nulvalazu_2392"
   },
@@ -99108,7 +99110,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: cilni + lavra. Archetype: animals. Tier 1 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: cilni + lavra. Archetype: animals. Tier 1 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_cilnilavra_2393"
   },
@@ -99146,7 +99148,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: rubi + lavra. Archetype: animals. Tier 2 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: rubi + lavra. Archetype: animals. Tier 2 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_rubilavra_2394"
   },
@@ -99184,7 +99186,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: zile + lavra. Archetype: animals. Tier 2 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: zile + lavra. Archetype: animals. Tier 2 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_zilelavra_2395"
   },
@@ -99222,7 +99224,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: doza + yelmi. Archetype: clothing. Tier 1 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: doza + yelmi. Archetype: clothing. Tier 1 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_dozayelmi_2396"
   },
@@ -99260,7 +99262,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: cemo + velma. Archetype: clothing. Tier 2 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: cemo + velma. Archetype: clothing. Tier 2 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_cemovelma_2397"
   },
@@ -99299,7 +99301,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: nullo + velma. Also a modifier + head of the image-compound pattern (2.0:G40), lexicalised with the meanings listed. Archetype: clothing. Tier 1 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: nullo + velma. Also a modifier + head of the image-compound pattern (2.0:G40), lexicalised with the meanings listed. Archetype: clothing. Tier 1 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_nullovelma_2398"
   },
@@ -99337,7 +99339,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: reza + sabaye. Archetype: clothing. Tier 1 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: reza + sabaye. Archetype: clothing. Tier 1 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_rezasabaye_2399"
   },
@@ -99375,7 +99377,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: reza + colbi. Archetype: clothing. Tier 2 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: reza + colbi. Archetype: clothing. Tier 2 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_rezacolbi_2400"
   },
@@ -99414,7 +99416,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: pebu + tibi. Archetype: clothing. Tier 1 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: pebu + tibi. Archetype: clothing. Tier 1 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_pebutibi_2401"
   },
@@ -99453,7 +99455,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: cilni + cemnu. Archetype: land. Tier 1 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: cilni + cemnu. Archetype: land. Tier 1 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_cilnicemnu_2402"
   },
@@ -99492,7 +99494,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: kezu + pidi. Archetype: land. Tier 2 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: kezu + pidi. Archetype: land. Tier 2 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_kezupidi_2403"
   },
@@ -99531,7 +99533,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: monru + tise. Archetype: land. Tier 1 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: monru + tise. Archetype: land. Tier 1 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_monrutise_2404"
   },
@@ -99570,7 +99572,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: cilni + lelde. Archetype: land. Tier 1 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: cilni + lelde. Archetype: land. Tier 1 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_cilnilelde_2405"
   },
@@ -99609,7 +99611,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: vemi + patu. Archetype: land. Tier 2 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: vemi + patu. Archetype: land. Tier 2 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_vemipatu_2406"
   },
@@ -99649,7 +99651,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: salru + lenda. Archetype: land. Tier 1 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: salru + lenda. Archetype: land. Tier 1 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_salrulenda_2407"
   },
@@ -99688,7 +99690,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: zile + lekta. Archetype: groups. Tier 2 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: zile + lekta. Archetype: groups. Tier 2 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_zilelekta_2408"
   },
@@ -99727,7 +99729,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: yano + lekta. Archetype: groups. Tier 2 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: yano + lekta. Archetype: groups. Tier 2 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_yanolekta_2409"
   },
@@ -99766,7 +99768,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: yano + regna. Archetype: groups. Tier 2 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: yano + regna. Archetype: groups. Tier 2 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_yanoregna_2410"
   },
@@ -99805,7 +99807,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: lideo + kaldo. Archetype: ideas. Tier 1 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: lideo + kaldo. Archetype: ideas. Tier 1 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_lideokaldo_2411"
   },
@@ -99843,7 +99845,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: lideo + devo. Archetype: ideas. Tier 2 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: lideo + devo. Archetype: ideas. Tier 2 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_lideodevo_2412"
   },
@@ -99881,7 +99883,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: livna + ruhe. Archetype: ideas. Tier 1 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: livna + ruhe. Archetype: ideas. Tier 1 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_livnaruhe_2413"
   },
@@ -99921,7 +99923,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: gudo + rivla. Archetype: ideas. Tier 2 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: gudo + rivla. Archetype: ideas. Tier 2 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_gudorivla_2414"
   },
@@ -99959,7 +99961,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: damva + zavme. Archetype: body. Tier 2 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: damva + zavme. Archetype: body. Tier 2 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_damvazavme_2415"
   },
@@ -99997,7 +99999,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: lehe + solo. Archetype: body. Tier 2 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: lehe + solo. Archetype: body. Tier 2 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_lehesolo_2416"
   },
@@ -100035,7 +100037,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: larbo + pidi. Archetype: body. Tier 2 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: larbo + pidi. Archetype: body. Tier 2 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_larbopidi_2417"
   },
@@ -100074,7 +100076,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: bako + patu. Archetype: body. Tier 1 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: bako + patu. Archetype: body. Tier 1 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_bakopatu_2418"
   },
@@ -100113,7 +100115,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: gubu + patu. Archetype: food. Tier 2 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: gubu + patu. Archetype: food. Tier 2 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_gubupatu_2419"
   },
@@ -100151,7 +100153,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: molovu + galsa. Archetype: food. Tier 2 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: molovu + galsa. Archetype: food. Tier 2 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_molovugalsa_2420"
   },
@@ -100190,7 +100192,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: pega + sevre. Archetype: verbs. Tier 1 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: pega + sevre. Archetype: verbs. Tier 1 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_pegasevre_2421"
   },
@@ -100229,7 +100231,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: yendo + sonbu. Archetype: verbs. Tier 1 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: yendo + sonbu. Archetype: verbs. Tier 1 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_yendosonbu_2422"
   },
@@ -100268,7 +100270,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: dento + tise. Archetype: verbs. Tier 2 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: dento + tise. Archetype: verbs. Tier 2 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_dentotise_2423"
   },
@@ -100307,7 +100309,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: vizu + duvla. Archetype: verbs. Tier 1 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: vizu + duvla. Archetype: verbs. Tier 1 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_vizuduvla_2424"
   },
@@ -100346,7 +100348,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: pusa + bako. Archetype: verbs. Tier 1 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: pusa + bako. Archetype: verbs. Tier 1 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_pusabako_2425"
   },
@@ -100385,7 +100387,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: neme + valla. Archetype: verbs. Tier 1 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: neme + valla. Archetype: verbs. Tier 1 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_nemevalla_2426"
   },
@@ -100424,7 +100426,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: halra + valmi. Archetype: verbs. Tier 2 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: halra + valmi. Archetype: verbs. Tier 2 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_halravalmi_2427"
   },
@@ -100463,7 +100465,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: lavra + nevra. Archetype: verbs. Tier 2 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: lavra + nevra. Archetype: verbs. Tier 2 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_lavranevra_2428"
   },
@@ -100502,7 +100504,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: larne + valla. Archetype: verbs. Tier 1 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: larne + valla. Archetype: verbs. Tier 1 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_larnevalla_2429"
   },
@@ -100542,7 +100544,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: germa + sonbu. Archetype: verbs. Tier 2 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: germa + sonbu. Archetype: verbs. Tier 2 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_germasonbu_2430"
   },
@@ -100581,7 +100583,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: favro + sonbu. Archetype: verbs. Tier 2 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: favro + sonbu. Archetype: verbs. Tier 2 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_favrosonbu_2431"
   },
@@ -100619,7 +100621,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: kezu + nulu. Archetype: ways. Tier 1 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: kezu + nulu. Archetype: ways. Tier 1 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_kezunulu_2432"
   },
@@ -100658,7 +100660,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: bio + nulu. Archetype: ways. Tier 1 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: bio + nulu. Archetype: ways. Tier 1 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_bionulu_2433"
   },
@@ -100696,7 +100698,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: zile + valminulu. Archetype: ways. Tier 2 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: zile + valminulu. Archetype: ways. Tier 2 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_zilevalminulu_2434"
   },
@@ -100735,7 +100737,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: larbo + kova. Archetype: containers. Tier 1 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: larbo + kova. Archetype: containers. Tier 1 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_larbokova_2435"
   },
@@ -100773,7 +100775,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: sevu + kadu. Archetype: vehicles. Tier 2 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: sevu + kadu. Archetype: vehicles. Tier 2 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_sevukadu_2436"
   },
@@ -100811,7 +100813,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: sasva + bote. Archetype: vehicles. Tier 2 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: sasva + bote. Archetype: vehicles. Tier 2 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_sasvabote_2437"
   },
@@ -100850,7 +100852,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: sili + larbo. Archetype: plants. Tier 2 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: sili + larbo. Archetype: plants. Tier 2 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_sililarbo_2438"
   },
@@ -100889,7 +100891,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: folni + samni. Also a modifier + head of the image-compound pattern (2.0:G40), lexicalised with the meanings listed. Archetype: plants. Tier 2 in the patch. Module archetypes.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: folni + samni. Also a modifier + head of the image-compound pattern (2.0:G40), lexicalised with the meanings listed. Archetype: plants. Tier 2 in the patch. Module archetypes.",
    "protected": true,
    "id": "lx_folnisamni_2439"
   },
@@ -100929,7 +100931,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: milno + varde. Archetype: worthy-of (X + varde). Tier 1 in the patch. Module qualities.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: milno + varde. Archetype: worthy-of (X + varde). Tier 1 in the patch. Module qualities.",
    "protected": true,
    "id": "lx_milnovarde_2440"
   },
@@ -100968,7 +100970,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: rilli + varde. Archetype: worthy-of (X + varde). Tier 2 in the patch. Module qualities.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: rilli + varde. Archetype: worthy-of (X + varde). Tier 2 in the patch. Module qualities.",
    "protected": true,
    "id": "lx_rillivarde_2441"
   },
@@ -101008,7 +101010,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: lore + follu. Archetype: heart + feeling. Tier 1 in the patch. Module qualities.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: lore + follu. Archetype: heart + feeling. Tier 1 in the patch. Module qualities.",
    "protected": true,
    "id": "lx_lorefollu_2442"
   },
@@ -101047,7 +101049,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: zeldo + lore. Archetype: heart + feeling. Tier 1 in the patch. Module qualities.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: zeldo + lore. Archetype: heart + feeling. Tier 1 in the patch. Module qualities.",
    "protected": true,
    "id": "lx_zeldolore_2443"
   },
@@ -101086,7 +101088,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: vemi + favro. online = vemifavrosan (3.3:G148) Archetype: tech. Tier 1 in the patch. Module pack.tech.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: vemi + favro. online = vemifavrosan (3.3:G148) Archetype: tech. Tier 1 in the patch. Module pack.tech.",
    "protected": true,
    "id": "lx_vemifavro_2444"
   },
@@ -101126,7 +101128,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: favro + cuza. Archetype: tech. Tier 1 in the patch. Module pack.tech.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: favro + cuza. Archetype: tech. Tier 1 in the patch. Module pack.tech.",
    "protected": true,
    "id": "lx_favrocuza_2445"
   },
@@ -101165,7 +101167,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: divma + seno. Archetype: tech. Tier 1 in the patch. Module pack.tech.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: divma + seno. Archetype: tech. Tier 1 in the patch. Module pack.tech.",
    "protected": true,
    "id": "lx_divmaseno_2446"
   },
@@ -101204,7 +101206,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: pidi + sonbu. Archetype: tech. Tier 1 in the patch. Module pack.tech.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: pidi + sonbu. Archetype: tech. Tier 1 in the patch. Module pack.tech.",
    "protected": true,
    "id": "lx_pidisonbu_2447"
   },
@@ -101243,7 +101245,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: serna + momvi. Archetype: tech. Tier 2 in the patch. Module pack.tech.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: serna + momvi. Archetype: tech. Tier 2 in the patch. Module pack.tech.",
    "protected": true,
    "id": "lx_sernamomvi_2448"
   },
@@ -101282,7 +101284,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: pebu + peli. Archetype: sport. Tier 1 in the patch. Module pack.sport.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: pebu + peli. Archetype: sport. Tier 1 in the patch. Module pack.sport.",
    "protected": true,
    "id": "lx_pebupeli_2449"
   },
@@ -101320,7 +101322,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: kova + peli. Archetype: sport. Tier 2 in the patch. Module pack.sport.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: kova + peli. Archetype: sport. Tier 2 in the patch. Module pack.sport.",
    "protected": true,
    "id": "lx_kovapeli_2450"
   },
@@ -101359,7 +101361,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: hata + peli. Archetype: sport. Tier 2 in the patch. Module pack.sport.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: hata + peli. Archetype: sport. Tier 2 in the patch. Module pack.sport.",
    "protected": true,
    "id": "lx_hatapeli_2451"
   },
@@ -101398,7 +101400,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: vazra + lekta. Archetype: sport. Tier 1 in the patch. Module pack.sport.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: vazra + lekta. Archetype: sport. Tier 1 in the patch. Module pack.sport.",
    "protected": true,
    "id": "lx_vazralekta_2452"
   },
@@ -101438,7 +101440,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: luka + dapa. Archetype: sport. Tier 1 in the patch. Module pack.sport.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: luka + dapa. Archetype: sport. Tier 1 in the patch. Module pack.sport.",
    "protected": true,
    "id": "lx_lukadapa_2453"
   },
@@ -101477,7 +101479,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: cuza + peli. Archetype: sport. Tier 2 in the patch. Module pack.sport.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: cuza + peli. Archetype: sport. Tier 2 in the patch. Module pack.sport.",
    "protected": true,
    "id": "lx_cuzapeli_2454"
   },
@@ -101516,7 +101518,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: peli + lirbu. Archetype: sport. Tier 1 in the patch. Module pack.sport.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: peli + lirbu. Archetype: sport. Tier 1 in the patch. Module pack.sport.",
    "protected": true,
    "id": "lx_pelilirbu_2455"
   },
@@ -101554,7 +101556,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: vazra + cunu. Archetype: sport. Tier 1 in the patch. Module pack.sport.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: vazra + cunu. Archetype: sport. Tier 1 in the patch. Module pack.sport.",
    "protected": true,
    "id": "lx_vazracunu_2456"
   },
@@ -101592,7 +101594,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: kezupatu + lirbu. Archetype: civic. Tier 1 in the patch. Module pack.civic.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: kezupatu + lirbu. Archetype: civic. Tier 1 in the patch. Module pack.civic.",
    "protected": true,
    "id": "lx_kezupatulirbu_2457"
   },
@@ -101631,7 +101633,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: lanve + farla. Archetype: civic. Tier 1 in the patch. Module pack.civic.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: lanve + farla. Archetype: civic. Tier 1 in the patch. Module pack.civic.",
    "protected": true,
    "id": "lx_lanvefarla_2458"
   },
@@ -101669,7 +101671,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: juse + lekta. Archetype: civic. Tier 1 in the patch. Module pack.civic.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: juse + lekta. Archetype: civic. Tier 1 in the patch. Module pack.civic.",
    "protected": true,
    "id": "lx_juselekta_2459"
   },
@@ -101708,7 +101710,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: livna + serbu. Archetype: civic. Tier 2 in the patch. Module pack.civic.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: livna + serbu. Archetype: civic. Tier 2 in the patch. Module pack.civic.",
    "protected": true,
    "id": "lx_livnaserbu_2460"
   },
@@ -101747,7 +101749,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: juse + masu. Archetype: civic. Tier 1 in the patch. Module pack.civic.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: juse + masu. Archetype: civic. Tier 1 in the patch. Module pack.civic.",
    "protected": true,
    "id": "lx_jusemasu_2461"
   },
@@ -101785,7 +101787,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: lanve + trana. Archetype: civic. Tier 2 in the patch. Module pack.civic.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: lanve + trana. Archetype: civic. Tier 2 in the patch. Module pack.civic.",
    "protected": true,
    "id": "lx_lanvetrana_2462"
   },
@@ -101824,7 +101826,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: farla + divma. industrial = farladivmasan (3.3:G148) Archetype: business. Tier 1 in the patch. Module pack.business.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: farla + divma. industrial = farladivmasan (3.3:G148) Archetype: business. Tier 1 in the patch. Module pack.business.",
    "protected": true,
    "id": "lx_farladivma_2463"
   },
@@ -101863,7 +101865,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: cono + samni. Archetype: business. Tier 1 in the patch. Module pack.business.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: cono + samni. Archetype: business. Tier 1 in the patch. Module pack.business.",
    "protected": true,
    "id": "lx_conosamni_2464"
   },
@@ -101902,7 +101904,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: cono + relnu. Archetype: business. Tier 2 in the patch. Module pack.business.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: cono + relnu. Archetype: business. Tier 2 in the patch. Module pack.business.",
    "protected": true,
    "id": "lx_conorelnu_2465"
   },
@@ -101940,7 +101942,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: domlu + gura. Archetype: business. Tier 2 in the patch. Module pack.business.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: domlu + gura. Archetype: business. Tier 2 in the patch. Module pack.business.",
    "protected": true,
    "id": "lx_domlugura_2466"
   },
@@ -101979,7 +101981,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: dapa + nevra. Archetype: business. Tier 2 in the patch. Module pack.business.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: dapa + nevra. Archetype: business. Tier 2 in the patch. Module pack.business.",
    "protected": true,
    "id": "lx_dapanevra_2467"
   },
@@ -102017,7 +102019,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: tali + juba. Archetype: business. Tier 2 in the patch. Module pack.business.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: tali + juba. Archetype: business. Tier 2 in the patch. Module pack.business.",
    "protected": true,
    "id": "lx_talijuba_2468"
   },
@@ -102055,7 +102057,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: tali + miga. Archetype: business. Tier 2 in the patch. Module pack.business.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: tali + miga. Archetype: business. Tier 2 in the patch. Module pack.business.",
    "protected": true,
    "id": "lx_talimiga_2469"
   },
@@ -102094,7 +102096,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: mudu + kerso. Archetype: health. Tier 1 in the patch. Module pack.health.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: mudu + kerso. Archetype: health. Tier 1 in the patch. Module pack.health.",
    "protected": true,
    "id": "lx_mudukerso_2470"
   },
@@ -102132,7 +102134,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: mudu + samni. Archetype: health. Tier 1 in the patch. Module pack.health.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: mudu + samni. Archetype: health. Tier 1 in the patch. Module pack.health.",
    "protected": true,
    "id": "lx_mudusamni_2471"
   },
@@ -102171,7 +102173,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: mudu + sabe. Archetype: health. Tier 1 in the patch. Module pack.health.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: mudu + sabe. Archetype: health. Tier 1 in the patch. Module pack.health.",
    "protected": true,
    "id": "lx_mudusabe_2472"
   },
@@ -102209,7 +102211,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: mudu + favro. Archetype: health. Tier 1 in the patch. Module pack.health.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: mudu + favro. Archetype: health. Tier 1 in the patch. Module pack.health.",
    "protected": true,
    "id": "lx_mudufavro_2473"
   },
@@ -102247,7 +102249,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: bio + cuza. Archetype: health. Tier 2 in the patch. Module pack.health.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: bio + cuza. Archetype: health. Tier 2 in the patch. Module pack.health.",
    "protected": true,
    "id": "lx_biocuza_2474"
   },
@@ -102285,7 +102287,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: helna + mervi. Archetype: health. Tier 2 in the patch. Module pack.health.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: helna + mervi. Archetype: health. Tier 2 in the patch. Module pack.health.",
    "protected": true,
    "id": "lx_helnamervi_2475"
   },
@@ -102324,7 +102326,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: patu + serbu. Archetype: science. Tier 1 in the patch. Module pack.science.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: patu + serbu. Archetype: science. Tier 1 in the patch. Module pack.science.",
    "protected": true,
    "id": "lx_patuserbu_2476"
   },
@@ -102362,7 +102364,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: cunu + sabe. Archetype: science. Tier 1 in the patch. Module pack.science.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: cunu + sabe. Archetype: science. Tier 1 in the patch. Module pack.science.",
    "protected": true,
    "id": "lx_cunusabe_2477"
   },
@@ -102400,7 +102402,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: navufaru + yalmu. Archetype: science. Tier 1 in the patch. Module pack.science.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: navufaru + yalmu. Archetype: science. Tier 1 in the patch. Module pack.science.",
    "protected": true,
    "id": "lx_navufaruyalmu_2478"
   },
@@ -102438,7 +102440,7 @@
    "status_3_5": "NEW",
    "since": "3.5",
    "history_0_8": null,
-   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Proposed in 3.5: awaiting the author's ratification. Components: cono + sabe. Archetype: science. Tier 2 in the patch. Module pack.science.",
+   "notes": "Added in 3.5 (changeset 2026-10-25-lexicon-3-5). Ratified by the author on 2026-10-25 (changeset 2026-10-25-lexicon-3-5-author). Components: cono + sabe. Archetype: science. Tier 2 in the patch. Module pack.science.",
    "protected": true,
    "id": "lx_conosabe_2479"
   }
@@ -109648,7 +109650,7 @@
     ],
     [
      "li lira de Amerika",
-     "Peta from America"
+     "a song from America"
     ]
    ],
    "status": "ratified",
@@ -109712,7 +109714,8 @@
      "The table is square."
     ]
    ],
-   "status": "proposed"
+   "status": "ratified",
+   "ratified_in": "3.5"
   },
   {
    "id": "G151",
@@ -109727,7 +109730,32 @@
      "pizza · hamburger"
     ]
    ],
-   "status": "proposed"
+   "status": "ratified",
+   "ratified_in": "3.5"
+  },
+  {
+   "id": "G152",
+   "topic": "maivori: we, with or without the listener",
+   "ruling": "maivori is the first person plural, we. Whether it includes the listener (you and I) or not (they and I) is left to the context: Liraasa has no separate inclusive and exclusive forms. Where the difference matters, name who is meant: maivo ata taivo, you and I; maivori ata taivo, we and you.",
+   "examples": [
+    [
+     "Maivori lirala.",
+     "We sing (with or without you, as the context shows)."
+    ],
+    [
+     "Maivo ata taivo lirala.",
+     "You and I sing."
+    ],
+    [
+     "Maivori ata taivo futu pagopa.",
+     "We and you will go."
+    ]
+   ],
+   "settles_open_questions": [
+    "Whether maivori includes the listener."
+   ],
+   "notes": "The author's decision (2026-10-25): make it context specific.",
+   "status": "ratified"
   }
  ],
  "examples": [
@@ -125284,6 +125312,20 @@
     "archived_in": "3.5",
     "replaced_by": "chandelier; ring of lights",
     "note": "Liraasa 3.5 patch (Essentials, archetypes and domain packs): lumirinba, \"chandelier; ring of lights\". Its 3.4 reading \"luminous ring; a small circular pledge of light\" is archived. Proposed in 3.5: awaiting the author's ratification."
+   },
+   {
+    "word": "navulalfo",
+    "gloss_1_1": "levitation",
+    "archived_in": "3.5",
+    "replaced_by": "a rise into the sky; skyward floating",
+    "note": "The author keeps zefrolalfo as \"levitation\" (2026-10-25); navulalfo (navu + lalfo, sky + floating) takes a meaning of its own. Its old gloss \"levitation\" is archived."
+   },
+   {
+    "word": "navulalfonia",
+    "gloss_1_1": "to levitate",
+    "archived_in": "3.5",
+    "replaced_by": "to float up into the sky",
+    "note": "The author keeps zefrolalfo as \"levitation\" (2026-10-25); navulalfo (navu + lalfo, sky + floating) takes a meaning of its own. Its old gloss \"to levitate\" is archived."
    }
   ],
   "migration_forms": {
@@ -142670,6 +142712,14 @@
     "now": "li lira de Amerika",
     "archived_in": "3.4",
     "reason": "The author left this to the editor (2026-10-25). 3.2:G147 says \"de + the name means from the place\", and a noun phrase takes de, not a prepositional phrase, after it (2.5:G98): \"a song from America\" is li lira de Amerika. Peta da Amerika had neither a verb nor a place for its da phrase. For a person, Peta ka da Amerika (Peta is from America) also reads clean."
+   },
+   {
+    "entry": "3.2:G147",
+    "field": "example:1:english",
+    "text": "Peta from America",
+    "now": "a song from America",
+    "archived_in": "3.4",
+    "reason": "The English of the example above, to match its Liraasa: li lira de Amerika is \"a song from America\"."
    }
   ]
  },
@@ -147294,7 +147344,7 @@
    "id": "2026-10-25-lexicon-3-4-decisions",
    "edition": "3.4",
    "summary": "The editor's decisions on the four 3.3 sentences that broke an earlier ruling, which the author left to best judgement (2026-10-25, review/questions_3_3.md). In the lexicon, one: 3.2:G147's example \"Peta da Amerika\" reads \"li lira de Amerika\", as the ruling's text gives it; the old example is archived.",
-   "ops": 1
+   "ops": 2
   }
  ],
  "changesets_3_5": [
@@ -147309,6 +147359,12 @@
    "edition": "3.5",
    "summary": "Liraasa 3.5, \"Essentials, archetypes and optional domain packs\" (ADR-0025), from the author's 3.5 patch, every module installed. PROPOSED: PROPOSED: ratify tier 1 first; tier 2 may be ratified, deferred or dropped item by item. Additions only, no new roots: rulings 3.5:G150-G151; 164 compounds, 20 listed derivations, 11 lexicalised diminutives, 2 restored forms and 150 English aliases, each entry noted with its tier and module. No 3.4 word, spelling or ruling changes.",
    "ops": 351
+  },
+  {
+   "id": "2026-10-25-lexicon-3-5-author",
+   "edition": "3.5",
+   "summary": "The author’s decisions of 2026-10-25 after the 3.5 build: 3.5 is ratified (rulings 3.5:G150-G151 and every 3.5 headword’s note); ruling 3.5:G152, maivori includes or excludes the listener by context; zefrolalfo keeps \"levitation\", and navulalfo becomes \"a rise into the sky\". With this, every edition is canon.",
+   "ops": 168
   }
  ],
  "english_aliases": {

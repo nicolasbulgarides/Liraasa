@@ -3,7 +3,7 @@
  "built_utc": "2026-10-25T22:00:00Z",
  "baseline": {
   "file": "liraasa_3_4.json",
-  "sha256": "67b90dfb046aae0e77c69f58f9f87340bfcb48582001bf41179732ad6716fd96"
+  "sha256": "5d4ba498f747fa003bf792951570091cc8fe732c68d9d4d110359d868ad98138"
  },
  "changesets": [
   {
@@ -15,12 +15,17 @@
    "file": "data/changes/2026-10-25-lexicon-3-5.json",
    "id": "2026-10-25-lexicon-3-5",
    "sha256": "c12621c036d5c652ffb76bf38bf6642921224ad93ec599239cedd3481ace8c08"
+  },
+  {
+   "file": "data/changes/2026-10-25-lexicon-3-5-author.json",
+   "id": "2026-10-25-lexicon-3-5-author",
+   "sha256": "cad1092f25e69ac00118c2e05caeb2fa8e6d8a15c0cef7a0a0f6c4f1deb08c33"
   }
  ],
  "output": {
   "file": "liraasa_3_5.json",
-  "sha256": "49e40bf1af556dc4428deaa3a3f955c5ffdbf6ccd5fe35d84d24fd5cdbbee9cf",
-  "bytes": 3829676
+  "sha256": "d9da6d94ad5e13bad95e519e81a858271cfced5419615217792dd7b869839304",
+  "bytes": 3836491
  },
  "counts": {
   "before": {

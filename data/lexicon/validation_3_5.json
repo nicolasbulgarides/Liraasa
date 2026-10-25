@@ -16,8 +16,8 @@
    "lexicalised_derivations": 201
   },
   "status_counts": {
-   "PASS": 22,
-   "WARN": 3
+   "PASS": 23,
+   "WARN": 2
   },
   "wrapper": "validate_3_0.py: validate_2_3.py for checks 1-24 (3.5 respells nothing); 25 re-applies every 3.5 op independently (ADR-0021, ADR-0022)"
  },
@@ -175,12 +175,10 @@
   {
    "id": 16,
    "check": "Duplicate root glosses (editorial review)",
-   "status": "WARN",
-   "count": 1,
-   "details": [
-    "'levitation': ['zefrolalfo', 'navulalfo']"
-   ],
-   "details_total": 1,
+   "status": "PASS",
+   "count": 0,
+   "details": [],
+   "details_total": 0,
    "note": "Same gloss on different headwords: true synonyms, deliberate shades, or an editing slip.",
    "executed_against": "validate.py, unmodified, on the lexicon less its reverted respelling rows (silro → puzu) (validate_3_0.py: 3.5 respells nothing)"
   },
@@ -279,7 +277,7 @@
    "count": 0,
    "details": [],
    "details_total": 0,
-   "note": "Compared against liraasa_3_4.json with every 3.5 op re-applied independently; changesets: 2026-10-25-lexicon-3-5-ratify, 2026-10-25-lexicon-3-5; 2 rulings, 0 roots, 163 compounds, 2 slots activated, 20 derivations, 0 function words added; 0 texts and 161 values edited; 0 function-word fields edited.",
+   "note": "Compared against liraasa_3_4.json with every 3.5 op re-applied independently; changesets: 2026-10-25-lexicon-3-5-ratify, 2026-10-25-lexicon-3-5, 2026-10-25-lexicon-3-5-author; 3 rulings, 0 roots, 163 compounds, 2 slots activated, 20 derivations, 0 function words added; 0 texts and 161 values edited; 0 function-word fields edited.",
    "executed_against": "validate_3_0.py"
   }
  ]

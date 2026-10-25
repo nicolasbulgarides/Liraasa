@@ -91,7 +91,12 @@ export function createTranslator(src: TranslateSource): {
   translate(english: string): SentenceTranslation[];
 } {
   const checker = createChecker(src.grammar);
-  const en = buildEnglishIndex(checker.index, src.synonyms ?? {}, src.english.aliases);
+  const en = buildEnglishIndex(
+    checker.index,
+    src.synonyms ?? {},
+    src.english.aliases,
+    src.english.rule_words ?? {},
+  );
   const reader = createEnglishReader(src.english, {
     isVerb: (l) => en.choose('verb', l).word !== null,
     isNoun: (l) => en.choose('noun', l).word !== null,
@@ -106,7 +111,37 @@ export function createTranslator(src: TranslateSource): {
       .filter((x) => x !== '')
       .join(' ');
 
+  /** A whole sentence with a fixed Liraasa formula (3.0:G133): So be it. → Ola-modo pifu. */
+  function formula(ms: MeaningSentence): SentenceTranslation | null {
+    const key = ms.english
+      .toLowerCase()
+      .replace(/[^a-z\s]/g, ' ')
+      .replace(/\s+/g, ' ')
+      .trim();
+    const text = src.english.formulas?.[key];
+    if (text === undefined) return null;
+    const r = checker.checkLine(text);
+    const s = r.sentences[0] ?? null;
+    if (s === null || r.findings.some((f) => f.severity === 'error')) return null;
+    return {
+      english: ms.english,
+      liraasa: text,
+      ok: true,
+      frame: ms,
+      structure: fromParse(s),
+      check: s,
+      gloss: s.gloss,
+      backTranslation: { english: glossText(s), matches: true, differences: [] },
+      flags: ['a fixed liturgical formula (3.0:G133)'],
+      gaps: [],
+      alternatives: {},
+      tried: [],
+    };
+  }
+
   function one(ms: MeaningSentence): SentenceTranslation {
+    const fixed = formula(ms);
+    if (fixed !== null) return fixed;
     const tried: SentenceTranslation['tried'] = [];
     // the renderings to try, the preferred first
     const variants: { lasting?: boolean; recipientAla?: boolean }[] = [

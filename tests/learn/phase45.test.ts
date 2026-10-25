@@ -637,11 +637,15 @@ describe('the 3.4 → 3.5 diff lesson', () => {
     const lexicalised = ['lumirinba'];
     expect(d.added).toHaveLength(patch.compounds_add.length - lexicalised.length);
     const reglossed = d.reglossed.map((r) => (r as unknown as { spelling: string }).spelling);
+    // navulalfo: the author's regloss, so zefrolalfo alone is levitation (ADR-0026)
+    const author = ['navulalfo'];
     expect(reglossed.sort()).toEqual(
-      [...new Set([...patch.restored_forms_add.map((r) => r.headword), ...lexicalised])].sort(),
+      [
+        ...new Set([...patch.restored_forms_add.map((r) => r.headword), ...lexicalised, ...author]),
+      ].sort(),
     );
     expect(d.rulesAdded.map((r) => r.id).sort()).toEqual(
-      patch.rulings_add.map((r) => `rule:${r.id}`).sort(),
+      [...patch.rulings_add.map((r) => `rule:${r.id}`), 'rule:3.5:G152'].sort(),
     );
   });
 });

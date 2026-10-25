@@ -106,7 +106,9 @@ def expected(prev, changesets, version):
             elif o == "ratify_ruling":
                 # 3.5: a proposed ruling is ratified; its status only, never its text
                 ed, rid = entry.split(":")
-                r = next((x for x in want.get(v25.ruling_key(entry), []) if x["id"] == rid), None)
+                key = v25.ruling_key(entry)
+                # a ruling of an earlier edition, or one an earlier changeset of this build added
+                r = next((x for x in want.get(key, []) + list(added.get(key, [])) if x["id"] == rid), None)
                 if r is None or r.get("status") != "proposed" or op["to"] != "ratified":
                     det.append("%s: not a proposed ruling" % entry)
                     continue

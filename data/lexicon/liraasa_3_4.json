@@ -103287,7 +103287,7 @@
     ],
     [
      "li lira de Amerika",
-     "Peta from America"
+     "a song from America"
     ]
    ],
    "status": "proposed"
@@ -136096,6 +136096,14 @@
     "now": "li lira de Amerika",
     "archived_in": "3.4",
     "reason": "The author left this to the editor (2026-10-25). 3.2:G147 says \"de + the name means from the place\", and a noun phrase takes de, not a prepositional phrase, after it (2.5:G98): \"a song from America\" is li lira de Amerika. Peta da Amerika had neither a verb nor a place for its da phrase. For a person, Peta ka da Amerika (Peta is from America) also reads clean."
+   },
+   {
+    "entry": "3.2:G147",
+    "field": "example:1:english",
+    "text": "Peta from America",
+    "now": "a song from America",
+    "archived_in": "3.4",
+    "reason": "The English of the example above, to match its Liraasa: li lira de Amerika is \"a song from America\"."
    }
   ]
  },
@@ -140720,7 +140728,7 @@
    "id": "2026-10-25-lexicon-3-4-decisions",
    "edition": "3.4",
    "summary": "The editor's decisions on the four 3.3 sentences that broke an earlier ruling, which the author left to best judgement (2026-10-25, review/questions_3_3.md). In the lexicon, one: 3.2:G147's example \"Peta da Amerika\" reads \"li lira de Amerika\", as the ruling's text gives it; the old example is archived.",
-   "ops": 1
+   "ops": 2
   }
  ],
  "english_aliases": {

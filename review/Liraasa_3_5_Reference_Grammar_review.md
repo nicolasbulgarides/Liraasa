@@ -4,27 +4,8 @@ Written by the build. Nothing here is canon until the author says so.
 
 ## REVIEW: sentences that are not canon examples
 
-- *Maivo po rillira baba cuza.* — I got a letter. (Reference, Patterns: get (receive))
-- *Li deya loya narvosan.* — It is getting dark. (Reference, Patterns: get (become))
-- *Saivo po venreva ala li nimu.* — She got home. (Reference, Patterns: get (arrive))
-- *Taivo navdinia li mirukova!* — Get the bucket! (Reference, Patterns: get (fetch, obtain))
-- *Li mirunami ka ruli benasan.* — The soup is excellent. (Reference, Patterns: excellent · super · awesome)
-- *Maivo po sapusia una de dossa de li zilebumre.* — I ate half of the cake. (Reference, Patterns: half · double · triple)
-- *Ola ka li una-ne nulu.* — That is the main road. (Reference, Patterns: main · primary · prime)
-- *Saivo lirala rada deya.* — She sings daily. (Reference, Patterns: daily · weekly · yearly)
-- *Maivo po lisrola unzira montafama.* — I stayed a decade. (Reference, Patterns: decade · century)
-- *Li gura ka musvasan.* — The debt is due. (Reference, Patterns: due · due to)
-- *Ola ka baba kronopatusan nimupago.* — That is a temporary residence. (Reference, Patterns: temporary)
-- *Saivo du-vimova li verana.* — She overlooks the lie. (Reference, Patterns: overlook · behold · blur)
-- *Saivo vaku li tise loya pidisan.* — She sharpens the knife. (Reference, Patterns: sharpen · flatten · tighten · dwindle)
-- *Maivo desida kasi lavlomiru.* — I want extra tea. (Reference, Patterns: additional · extra · numerous · widespread)
-- *Saivo ke en li bote.* — She is aboard. (Reference, Patterns: internal · external · overhead · aboard)
-- *Saivo po pagopa mufe.* — Presumably she left. (Reference, Patterns: moreover · simultaneously · presumably · undoubtedly)
-- *Saivo po senosia la lorefollusan.* — She spoke shyly. (Reference, Patterns: any -ly adverb (tightly, shyly, noisily))
-- *Li zayuyo ne povi gome vimova.* — The wizard is invisible. (Reference, Patterns: invisible)
-- *Maivo ne lirala loki.* — I don’t sing anymore. (Reference, Patterns: anymore · whatever · thus · regardless)
-- *Sina taivo lirala, maivori futu pagopa.* — Unless you sing, we will go. (Reference, Patterns: literally · overall · otherwise · nearby)
-- *Eho, maivo venreva.* — Alright, I’m coming. (Reference, Patterns: alright · okay)
+None.
+
 
 ## REVIEW: English the guide composed for canon ruling sentences
 

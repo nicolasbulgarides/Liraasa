@@ -1,5 +1,5 @@
 {
-  "about": "English → Liraasa cases for the 2.5 translator, one or more per 2.5 ruling and per function-word family. expect is derived from the rulings (null: no listed word, the gap is reported); equivalents are other renderings the rulings allow, the patch's own wording among them; review marks an expectation for the author to confirm (review/questions_2_5.md). The translator must produce expect or an equivalent, and every rendering must pass the strict checker and back-translate to its frame.",
+  "about": "English → Liraasa cases for the 2.5 translator, one or more per 2.5 ruling and per function-word family. expect is derived from the rulings (null: no listed word, the gap is reported); equivalents are other renderings the rulings allow, the patch's own wording among them; review marks an expectation for the author to confirm (review/questions_2_5.md). The translator must produce expect or an equivalent, and every rendering must pass the strict checker and back-translate to its frame. 3.x cases (ADR-0026): one or more per 3.x construction the translator renders.",
   "cases": [
     {
       "english": "I sing.",
@@ -559,6 +559,96 @@
       "ruling": "2.5:G121",
       "expect": null,
       "review": "No listed word: revo-sabesia means \"recognize\" in a canonical example, but its gloss is not in the data. The translator reports the gap instead of guessing; add the meaning to the curated metaphor and it will be found."
+    },
+    {
+      "english": "O Goddess, hear me!",
+      "ruling": "3.0:G129",
+      "expect": "Iya devi, lenila maivo!"
+    },
+    {
+      "english": "O Mother of Light!",
+      "ruling": "3.0:G129",
+      "expect": "Iya mare de lumi!"
+    },
+    {
+      "english": "Would you come near me, O my love?",
+      "ruling": "3.0:G129",
+      "expect": "Taivo viki venreva ligo maivo ki, iya maivo de amor?"
+    },
+    {
+      "english": "She is.",
+      "ruling": "3.0:G132",
+      "expect": "Saivo miyo."
+    },
+    {
+      "english": "I am.",
+      "ruling": "3.0:G132",
+      "expect": "Maivo miyo."
+    },
+    {
+      "english": "She was, she is, she will be.",
+      "ruling": "3.0:G132",
+      "expect": "Saivo po miyo, saivo miyo, saivo futu miyo."
+    },
+    {
+      "english": "Let there be light!",
+      "ruling": "3.0:G133",
+      "expect": "Miyo lumi!"
+    },
+    {
+      "english": "May there be peace in the home.",
+      "ruling": "3.0:G133",
+      "expect": "Miyo sove en li nimu pifu."
+    },
+    {
+      "english": "So be it.",
+      "ruling": "3.0:G133",
+      "expect": "Ola-modo pifu."
+    },
+    {
+      "english": "So it was, so it is, so it shall be.",
+      "ruling": "3.0:G133",
+      "expect": "Ola-modo po miyo, ola-modo miyo, ola-modo futu miyo."
+    },
+    {
+      "english": "She herself sang.",
+      "ruling": "3.0:G134",
+      "expect": "Saivo sela po lirala."
+    },
+    {
+      "english": "The song by Peta is beautiful.",
+      "ruling": "3.0:G136",
+      "expect": "Li lira gagu Peta ka vanisan."
+    },
+    {
+      "english": "Glory to the Goddess!",
+      "ruling": "3.0:G137",
+      "expect": "Lumisirmo ala li devi!"
+    },
+    {
+      "english": "She will sing forever.",
+      "ruling": "3.0:G139",
+      "expect": "Saivo futu lirala en rinbakrono."
+    },
+    {
+      "english": "One by one, the stars sang.",
+      "ruling": "3.0:G140",
+      "expect": "Una krotiapo una, li veluri po lirala."
+    },
+    {
+      "english": "Mr Peta sings.",
+      "ruling": "3.2:G145",
+      "expect": "Zilenela Peta lirala."
+    },
+    {
+      "english": "The table is square.",
+      "ruling": "3.5:G150",
+      "expect": "Li tabu ka cuara-gakisan."
+    },
+    {
+      "english": "I eat pizza.",
+      "ruling": "3.5:G151",
+      "expect": "Maivo sapusia pitsa."
     }
   ]
 }

@@ -111,8 +111,13 @@ def expected(prev, changesets, version):
                     node[key] = op["to"]
                 else:
                     r = next(x for x in want[ruling_key(entry)] if x["id"] == entry.split(":")[1])
-                    i = int(op["field"].split(":")[1])
-                    r["examples"][i] = [op["to"], r["examples"][i][1]]
+                    # example:N is the Liraasa, example:N:english the English (3.4)
+                    parts = op["field"].split(":")
+                    i = int(parts[1])
+                    if len(parts) > 2 and parts[2] == "english":
+                        r["examples"][i] = [r["examples"][i][0], op["to"]]
+                    else:
+                        r["examples"][i] = [op["to"], r["examples"][i][1]]
                 want["legacy"].setdefault("archived_text", []).append({
                     "entry": entry, "field": op["field"], "text": op["from"], "now": op["to"],
                     "archived_in": version, "reason": op["reason"]})

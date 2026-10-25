@@ -24,6 +24,7 @@ import {
 import { GUIDE } from './config';
 import {
   badge,
+  callout,
   calloutHtml,
   cell,
   composedGloss,
@@ -375,7 +376,7 @@ ${h3('Compounds')}
 ${ul([
   'MODIFIER + HEAD, written as one word, head last; the spelling is the two joined. A compound is one word, never two nouns side by side.',
   `Either part may itself be a compound [[2.0:G42]]: \`${soulbond.root}\` = \`${sbA}\` ${index.senseOf(sbA)} + \`${sbB}\` ${index.senseOf(sbB)}, ${normGloss(glossOf(soulbond, 'root'))}. A colour base may be the modifier, and a compound may be lexicalised with \`-ti\` [[2.0:G38]].`,
-  'Image compounds are a pattern, not a list: any listed modifier with any listed head [[2.0:G40]] (Part 9).',
+  'Image compounds are a pattern, not a list: any listed modifier with any listed head [[2.0:G40]] (Part 10).',
 ])}
 ${h3('Motion prefixes')}
 ${p(`Written with a hyphen before the verb: \`revo-sabesia\`, recognize [[1.2:G35]]. A ${lex.motion_prefixes.rule}: ${motion}.`)}
@@ -714,6 +715,28 @@ export const RULED_RECIPES: ReadonlySet<string> = new Set([
   'Li corvinasan po pagopa.',
   'Saivo ka baba loterokezusan nela.',
   'Eli lira ka sambanasan da ola lira.',
+  // the 3.5 recipes, ratified by the author with the rest of 3.5 (2026-10-25)
+  'Maivo po rillira baba cuza.',
+  'Li deya loya narvosan.',
+  'Saivo po venreva ala li nimu.',
+  'Taivo navdinia li mirukova!',
+  'Li mirunami ka ruli benasan.',
+  'Maivo po sapusia una de dossa de li zilebumre.',
+  'Ola ka li una-ne nulu.',
+  'Saivo lirala rada deya.',
+  'Maivo po lisrola unzira montafama.',
+  'Li gura ka musvasan.',
+  'Ola ka baba kronopatusan nimupago.',
+  'Saivo du-vimova li verana.',
+  'Saivo vaku li tise loya pidisan.',
+  'Maivo desida kasi lavlomiru.',
+  'Saivo ke en li bote.',
+  'Saivo po pagopa mufe.',
+  'Saivo po senosia la lorefollusan.',
+  'Li zayuyo ne povi gome vimova.',
+  'Maivo ne lirala loki.',
+  'Sina taivo lirala, maivori futu pagopa.',
+  'Eho, maivo venreva.',
 ]);
 
 export const RECIPES: readonly (readonly [string, string, string, string, string])[] = [
@@ -1292,7 +1315,7 @@ export const RECIPES: readonly (readonly [string, string, string, string, string
     'This song differs from that one.',
     '',
   ],
-  // 3.5, proposed: the recipes the 3.5 patch adds, every module; three that broke an earlier
+  // 3.5, ratified (2026-10-25): the recipes the 3.5 patch adds, every module; three that broke an earlier
   // ruling are given in a form that keeps it (the editor's judgement, ADR-0025)
   ['get (receive)', 'rillira', 'Maivo po rillira baba cuza.', 'I got a letter.', ''],
   ['get (become)', 'loya + adjective', 'Li deya loya narvosan.', 'It is getting dark.', ''],
@@ -1419,6 +1442,106 @@ export const RECIPES: readonly (readonly [string, string, string, string, string
   ['alright · okay', 'eho (3.2)', 'Eho, maivo venreva.', 'Alright, I’m coming.', ''],
 ];
 
+// ---------------------------------------------------------------- 7. The 3.x grammar
+
+/** Devotion, music and measure (3.0), then word families, names and shapes (3.2 to 3.5). */
+export function threePart(index: Index): string {
+  const lex = index.lex;
+  const ex = (id: string, l: string, e: string): [string, string] => [example(lex, id, l), e];
+  return part(
+    '7',
+    'Devotion, families and shapes',
+    'What 3.0 to 3.5 add: how to address, praise and bless; how a few roots name whole families; and the adjectives, titles, shapes and copied names that come by rule. Every example is a ruling’s own.',
+    `${h3('Address and praise')}
+${examples([
+  ex('3.0:G129', 'Iya Deviasa, lenila maivo!', 'O Great Goddess, hear me!'),
+  ex(
+    '3.0:G129',
+    'Taivo viki pagopa ligo maivo ki, iya maivo de amor?',
+    'Would you come near me, O my love?',
+  ),
+  ex('3.0:G137', 'Lumisirmo ala Deviasa!', 'Glory to the Great Goddess!'),
+  ex('3.0:G137', 'Benaseno ala taivo, iya Lumimare!', 'Praise to you, O Mother of Light!'),
+])}
+${ul([
+  '`iya` opens a vocative, before the clause or after it, or standing alone [[3.0:G129]].',
+  'An epithet follows its name between commas: `Deviasa, li mare de li veluri, lirala.` [[3.0:G130]] A divine name owns as a name does [[3.0:G131]].',
+  'An acclamation is NP `ala` NP, with no verb: a liturgical fragment, as an exclamation is [[3.0:G137]].',
+  'A divine pronoun is capitalised in devotional text: `Maivo amora Taivo.` [[3.0:G138]]',
+])}
+${h3('Being, blessing and the formulas')}
+${examples([
+  ex('3.0:G132', 'Saivo miyo.', 'She is. (She exists.)'),
+  ex('3.0:G132', 'Saivo po miyo, saivo miyo, saivo futu miyo.', 'She was, she is, she will be.'),
+  ex('3.0:G133', 'Miyo lumi!', 'Let there be light!'),
+  ex('3.0:G133', 'Miyo sove en li nimu pifu.', 'May there be peace in the home.'),
+])}
+${ul([
+  'A subject + `miyo` with nothing after it is existence [[3.0:G132]].',
+  '`miyo` + NP with `!` is a fiat; with `pifu` a blessing; as a plain statement, there is [[3.0:G133]].',
+  'The fixed formulas are listed in 3.0:G133 and read as they stand: `Ola-modo pifu.` So be it.',
+])}
+${h3('Self, commands, authorship, time')}
+${examples([
+  ex('3.0:G134', 'Saivo sela po lirala.', 'She herself sang.'),
+  ex('3.0:G135', 'Reve lirala!', 'Sing again!'),
+  ex('3.0:G136', 'li lira gagu Peta', 'the song by Peta'),
+  ex('3.0:G139', 'Saivo futu lirala en rinbakrono.', 'She will sing for ever.'),
+  ex(
+    '3.0:G140',
+    'Una krotiapo una, li veluri po hiro lirala.',
+    'One by one, the stars began to sing.',
+  ),
+])}
+${ul([
+  '`sela` right after its noun phrase is emphatic, she herself; as an object it is the reflexive [[3.0:G134]].',
+  'A command takes `ne`, `reve` and `loki` only, with no tense, modal or evidential; `yava` is let us [[3.0:G135]].',
+  '`gagu` + the maker follows a made work [[3.0:G136]].',
+  '`en rinbakrono` is for ever [[3.0:G139]]; X `krotiapo` X is one after another [[3.0:G140]].',
+])}
+${callout('singing', 'Restraint is the devotional register: one plain line can carry what three ornaments would bury [[3.0:G141]].')}
+${h3('Families of words')}
+${examples([
+  ex('3.2:G143', 'Maivo sapusia gubu.', 'I eat pork.'),
+  ex('3.2:G143', 'Li murmu ka sumasan.', 'The beef is warm.'),
+])}
+${ul([
+  'An archetype modifier before a head names a kind: `gudopocu` chicken, `zilepocu` duck; `gudokadu` wagon, `yalmukadu` car. A listed meaning is the meaning [[3.2:G142]].',
+  'Fruit takes its colour (`rubifuro` apple, `ojofuro` orange); jewellery its place on the body (`seldirinba` necklace) [[3.2:G146]].',
+  'An animal names its meat when it is eaten [[3.2:G143]].',
+  'Length is told in the body and the league: `dossa pebu`, two feet; `tressa valmilornu`, three leagues [[3.2:G144]].',
+])}
+${h3('Adjectives and qualities by rule')}
+${examples([
+  ex('3.3:G148', 'Li cilni ka pagolalnisan.', 'The city is distant.'),
+  ex(
+    '3.4:G149',
+    'Li lordidozasan lemudonuyo po ne merama li linu.',
+    'The strict teacher did not forgive the child.',
+  ),
+])}
+${ul([
+  'The `-san` form of any compound or listed derivation is an adjective by rule: `kadulendasan`, railway; `resotelnesan`, comic [[3.3:G148]].',
+  'The bare compound names the quality, its `-san` what has it: `tibilekta` complexity, `tibilektasan` complex [[3.4:G149]].',
+  'A root keeps only its listed forms, as always.',
+])}
+${h3('Titles, origins, shapes and copied names')}
+${examples([
+  ex('3.2:G145', 'Iya zilenela, fisa, lisrola.', 'Please stay, sir.'),
+  ex('3.2:G147', 'Fransasan lira', 'a French song'),
+  ex('3.5:G150', 'Li tabu ka cuara-gakisan.', 'The table is square.'),
+  ex('3.5:G152', 'Maivo ata taivo lirala.', 'You and I sing.'),
+])}
+${ul([
+  '`zilenela` before a name is Mr or Mrs; `iya zilenela` is sir or madam [[3.2:G145]].',
+  'A copied place name + `-san` is an adjective of origin; a thing from a place takes `de`: `li lira de Amerika` [[3.2:G147]].',
+  'A numeral joined to `gaki` names a polygon: `tressa-gaki` triangle, `cuara-gaki` square [[3.5:G150]].',
+  'Foreign dishes are copied like names, in lower case: `pitsa`, `hamburga` [[3.5:G151]].',
+  '`maivori` is we, with or without the listener, as the context shows; name who is meant when it matters: `maivo ata taivo` [[3.5:G152]].',
+])}`,
+  );
+}
+
 export function recipesPart(index: Index): string {
   const canon = canonTexts(index.lex);
   return part(
@@ -1529,7 +1652,6 @@ export const OPEN_QUESTIONS: readonly string[] = [
   '**“To + verb” beyond purpose:** purpose is `kopisa` (2.5:G113); `sidu` (same subject), `fime` (a different subject, 2.1:G50) and adjective + `sidu` (2.5:G111) cover the other known cases; the general case remains open.',
   '`ke sidu` VERB **as “destined to”** (album 08): hold until a second use.',
   '**The order of two or more adjectives** before one noun.',
-  'Whether `maivori` includes the listener.',
   '**Which quantifiers form a measure** with `kroti` and `krotiapo` (2.5:G108): until ruled, only NUMBER + unit.',
   '**Comparing an action with no manner adjective** (“I sing more than you”).',
   '**A duration** (“for two days”) in general, now that a bare noun after a verb is its object (2.5:G103); `en rinbakrono` covers only “for ever” (3.0:G139).',

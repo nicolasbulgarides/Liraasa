@@ -87,6 +87,15 @@ export function decisions3_4(): LexiconChangeset {
         'The author left this to the editor (2026-10-25). 3.2:G147 says "de + the name means from the place", and a noun phrase takes de, not a prepositional phrase, after it (2.5:G98): "a song from America" is li lira de Amerika. Peta da Amerika had neither a verb nor a place for its da phrase. For a person, Peta ka da Amerika (Peta is from America) also reads clean.',
         { field: `example:${String(i)}` },
       ),
+      rec(
+        'archive_text',
+        '3.2:G147',
+        'Peta from America',
+        'a song from America',
+        '3.2:G147',
+        'The English of the example above, to match its Liraasa: li lira de Amerika is "a song from America".',
+        { field: `example:${String(i)}:english` },
+      ),
     ],
   };
 }

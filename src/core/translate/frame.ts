@@ -57,6 +57,12 @@ export interface LNP {
   and?: { linker: LWord; np: LNP };
   /** sidu + a verb phrase (0.8:G6). */
   vp?: LClause;
+  /** iya opening a vocative noun phrase (3.0:G129). */
+  iya?: LWord;
+  /** a title before a name: zilenela Peta (3.2:G145). */
+  title?: LWord;
+  /** gagu + the maker, after a made work (3.0:G136). */
+  maker?: { gagu: LWord; np: LNP };
 }
 
 export interface LAdjunct {
@@ -70,7 +76,9 @@ export interface LAdjunct {
     | 'measure'
     | 'kiword'
     | 'iteration'
-    | 'scope';
+    | 'scope'
+    /** X krotiapo X: one after another (3.0:G140) */
+    | 'distributive';
   commaBefore?: boolean;
   word?: LWord;
   np?: LNP | null;
@@ -125,7 +133,8 @@ export interface LClause {
         predicate?: LPredicate;
       }
     | { kind: 'passive'; gome: LWord; verb: LWord; agent?: { gagu: LWord; np: LNP } }
-    | { kind: 'exist'; miyo: LWord; np: LNP }
+    /** miyo + a noun phrase (there is), or with no noun phrase after a subject: it exists (3.0:G132) */
+    | { kind: 'exist'; miyo: LWord; np?: LNP }
     | { kind: 'bare-adj'; predicate: LPredicate }
     | { kind: 'none' };
   recipient?: LNP;
@@ -193,6 +202,12 @@ export interface MeaningNP {
   focus?: 'also' | 'even' | 'only' | 'exactly' | 'it is';
   negated?: boolean;
   and?: { linker: 'and' | 'or'; np: MeaningNP };
+  /** she herself: emphatic sela (3.0:G134) */
+  emphatic?: boolean;
+  /** Mr, Father … before a name (3.2:G145) */
+  title?: string;
+  /** by + the maker, after a made work (3.0:G136) */
+  maker?: MeaningNP;
 }
 
 export interface MeaningAdjunct {
@@ -212,7 +227,9 @@ export interface MeaningAdjunct {
     | 'frequency'
     | 'ago'
     | 'duration'
-    | 'question';
+    | 'question'
+    /** one by one, star by star (3.0:G140) */
+    | 'distributive';
   /** a preposition, an adverb, a time word (English) */
   word?: string;
   np?: MeaningNP;
@@ -275,11 +292,19 @@ export interface MeaningClause {
   attitude?: 'certainly' | 'probably' | 'perhaps' | 'hope' | 'irony';
   reciprocal?: boolean;
   vocative?: MeaningNP;
+  /** the vocative is opened by O: iya (3.0:G129) */
+  vocativeIya?: boolean;
+  /** the vocative comes first, before the clause */
+  vocativeFirst?: boolean;
+  /** NP to NP!: an acclamation, the second noun phrase (3.0:G137) */
+  acclamation?: MeaningNP;
   topic?: MeaningNP;
   please?: boolean;
   /** was, and no longer is: kapoki (2.5:G94) */
   noLonger?: boolean;
   /** joined by a semicolon */
   semicolon?: boolean;
+  /** joined by a comma alone: she was, she is, she will be (3.0:G132) */
+  commaJoined?: boolean;
   subordinates: MeaningClause[];
 }

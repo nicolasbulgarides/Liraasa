@@ -20,16 +20,20 @@ export function realizeNP(np: LNP): string[] {
     out.push('sidu', ...realizeClauseBody(np.vp));
     return out;
   }
+  if (np.iya !== undefined) out.push(word(np.iya));
   for (const w of [np.degreeQuant, np.quant, np.det, np.ord, np.sign, np.degreeNum, np.num])
     if (w !== undefined) out.push(word(w));
   for (const a of np.adjectives) {
     if (a.degree !== undefined) out.push(word(a.degree));
     out.push(word(a.adj));
   }
+  // a title before its name (3.2:G145)
+  if (np.title !== undefined) out.push(word(np.title));
   // a number or a demonstrative standing alone is its own head
   out.push(word(np.head));
   if (np.refl !== undefined) out.push(word(np.refl));
   if (np.de !== undefined) out.push('de', ...realizeNP(np.de));
+  if (np.maker !== undefined) out.push(word(np.maker.gagu), ...realizeNP(np.maker.np));
   if (np.relative !== undefined) {
     out.push(...realizeClause(np.relative));
     if (np.relativeComma === true) comma(out);
@@ -106,6 +110,8 @@ function realizeAdjunct(a: LAdjunct): string[] {
     case 'iteration':
     case 'adv':
       return a.word === undefined ? [] : [word(a.word)];
+    case 'distributive':
+      return a.word === undefined ? [] : [word(a.word), 'krotiapo', word(a.word)];
   }
 }
 
@@ -136,7 +142,7 @@ export function realizeClauseBody(c: LClause, deferClosing = false): string[] {
       if (p.agent !== undefined) out.push(word(p.agent.gagu), ...realizeNP(p.agent.np));
       break;
     case 'exist':
-      out.push(word(p.miyo), ...realizeNP(p.np));
+      out.push(word(p.miyo), ...(p.np === undefined ? [] : realizeNP(p.np)));
       break;
     case 'bare-adj':
       out.push(...realizePredicate(p.predicate));

@@ -115,7 +115,7 @@ export function albumPart(index: Index, n: string): string {
   return part(
     n,
     'The album',
-    `Twelve songs and the alternate 05, as recorded, read with 2.0 spellings [[2.1:G58]]. **The album is not grammar canon** [[2.5:G87]]: it predates the 2.5 grammar and contains errors (adjective forms used as nouns, among others). Read it for its content; do not imitate its grammar, and no line licenses a construction. A word respelled since 2.0 is glossed through the migration table, and the line’s current spelling is noted beneath (“Read today”). The ${String(active.length)} **album readings** (AR-…) are kept as annotations, each with its standard form, ${String(certain)} certain and ${String(active.length - certain)} for the author to confirm; they grant no exceptions. Glosses use the labels of Part 7. No English is given yet.`,
+    `Twelve songs and the alternate 05, as recorded, read with 2.0 spellings [[2.1:G58]]. **The album is not grammar canon** [[2.5:G87]]: it predates the 2.5 grammar and contains errors (adjective forms used as nouns, among others). Read it for its content; do not imitate its grammar, and no line licenses a construction. A word respelled since 2.0 is glossed through the migration table, and the line’s current spelling is noted beneath (“Read today”). The ${String(active.length)} **album readings** (AR-…) are kept as annotations, each with its standard form, ${String(certain)} certain and ${String(active.length - certain)} for the author to confirm; they grant no exceptions. Glosses use the labels of Part 8. No English is given yet.`,
     tracks,
   );
 }

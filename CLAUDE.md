@@ -32,9 +32,15 @@ the 2.5 erratum _pilo de bumre_ is corrected to _li bumre de pilo_), then the
 modular 3.5 patch with **every module** (bundle archived in
 `archive/patch_3_5/`): 164 compounds, rulings 3.5:G150 (polygons, NUMERAL-gaki)
 and G151 (copied names: pitsa), 150 aliases; 2094 headwords, 4951 meaningful
-forms. **Everything up to 3.4 is canon; only 3.5 is proposed**
-(`scripts/proposed_editions.ts`). From 3.5 a time noun may be a compound's
-head (`felradeya`, `WordBuilding.timeHeads`). Validation 22 PASS, 3 WARN
+forms. **3.5 is ratified too** (ADR-0026): a third changeset, the author's,
+ratifies G150–G151, rules **3.5:G152** (`maivori` is we with or without the
+listener, by context) and re-glosses `navulalfo` so `zefrolalfo` alone is
+levitation. Nothing is proposed (`scripts/proposed_editions.ts` is empty).
+Every open question is in `review/open_questions.md`. The translator renders
+the 3.x constructions (iya, miyo, fiat, formulas, sela, gagu, acclamations,
+krotiapo, titles, rule-built words); Lessons and the Reference each gained a
+Part 7 on 3.x. From 3.5 a time noun may be a compound's
+head (`felradeya`, `WordBuilding.timeHeads`). Validation 23 PASS, 2 WARN
 (`npm run validate:3.5`). Five 3.5 sentences that broke an earlier ruling were
 settled by the editor, as for 3.3 (`tests/grammar/patch_3_5.test.ts`). 3.4 is
 frozen as 3.5's baseline.

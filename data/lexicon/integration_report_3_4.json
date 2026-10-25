@@ -14,13 +14,13 @@
   {
    "file": "data/changes/2026-10-25-lexicon-3-4-decisions.json",
    "id": "2026-10-25-lexicon-3-4-decisions",
-   "sha256": "157be449e9018f0b89f317a2f65aa5bc08a8ad733dd70dfa6a45cfc09981a56d"
+   "sha256": "41b7a68df2463079f3bc8906bf5d6f5cecd109ba309ac2f2eb832afe7da973a8"
   }
  ],
  "output": {
   "file": "liraasa_3_4.json",
-  "sha256": "67b90dfb046aae0e77c69f58f9f87340bfcb48582001bf41179732ad6716fd96",
-  "bytes": 3630078
+  "sha256": "5d4ba498f747fa003bf792951570091cc8fe732c68d9d4d110359d868ad98138",
+  "bytes": 3630362
  },
  "counts": {
   "before": {

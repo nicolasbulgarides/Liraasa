@@ -23,7 +23,7 @@ import { WORD_BUILDING_3_5 } from './make_changeset_3_5';
 import { idsAfter } from './integrate_2_0';
 
 const BASELINE = 'data/lexicon/liraasa_3_4.json';
-const EXPECTED_SHA = '67b90dfb046aae0e77c69f58f9f87340bfcb48582001bf41179732ad6716fd96';
+const EXPECTED_SHA = '5d4ba498f747fa003bf792951570091cc8fe732c68d9d4d110359d868ad98138';
 const IDS = 'data/lexicon/ids.json';
 /** Fixed so repeated runs are byte-identical. */
 const BUILT_UTC = '2026-10-25T22:00:00Z';

@@ -256,7 +256,17 @@ export function buildLSentence(
       };
     return wrap(result, m);
   }
-  const wrap = (out: LNP, m: MeaningNP): LNP => {
+  const wrap = (out0: LNP, m: MeaningNP): LNP => {
+    let out = out0;
+    // she herself: emphatic sela (3.0:G134)
+    if (m.emphatic === true) out = { ...out, refl: fw('sela', 'self') };
+    // Mr Peta: a title before the name (3.2:G145)
+    if (m.title !== undefined) {
+      const t = data.titles?.[m.title];
+      if (t !== undefined) out = { ...out, title: fw(t, m.title) };
+    }
+    // the song by Peta: gagu + the maker after a made work (3.0:G136)
+    if (m.maker !== undefined) out = { ...out, maker: { gagu: fw('gagu', 'by'), np: np(m.maker) } };
     if (m.focus !== undefined) {
       const s = data.scope[m.focus] ?? (m.focus === 'it is' ? 'vinto' : undefined);
       if (s !== undefined) return { ...out, scope: fw(s, m.focus) };
@@ -276,7 +286,20 @@ export function buildLSentence(
   // ------------------------------------------------------------ adjuncts
   function adjunct(a: MeaningAdjunct, c: MeaningClause): LAdjunct | null {
     switch (a.role) {
+      case 'distributive': {
+        // one by one, star by star: X krotiapo X (3.0:G140)
+        const n = data.numbers[a.word ?? ''];
+        const w = n !== undefined ? numeral(n) : content('noun', a.word ?? '');
+        return { kind: 'distributive', word: w };
+      }
       case 'time': {
+        // forever: en rinbakrono, in eternity (3.0:G139)
+        if (a.word !== undefined && (data.forever ?? []).includes(a.word))
+          return {
+            kind: 'pp',
+            word: fw('en', 'in'),
+            np: np({ head: 'eternity', kind: 'noun', adjectives: [] }, 'pp'),
+          };
         if (a.word === 'in' && a.np !== undefined)
           return { kind: 'measure', word: fw('krotiapo', 'in'), np: np(a.np, 'pp') };
         const t = data.time_adverbs[a.word ?? ''];
@@ -481,15 +504,20 @@ export function buildLSentence(
     c.ops = ops(m, { inherit: opts.inherit === true });
     // the predicate
     const v = m.verb;
-    if (v === null) {
+    if (v === null && m.acclamation !== undefined) {
+      // NP ala NP!: an acclamation, a liturgical fragment (3.0:G137)
+      c.pred = {
+        kind: 'bare-adj',
+        predicate: { kind: 'pp', prep: fw('ala', 'to'), np: np(m.acclamation, 'pp') },
+      };
+    } else if (v === null) {
       c.pred = { kind: 'none' };
     } else if (v.kind === 'exist') {
-      c.pred = {
-        kind: 'exist',
-        miyo: fw('miyo', 'there is'),
-        np:
-          m.object === undefined ? { kind: 'noun', head: fw('⟨?⟩'), adjectives: [] } : np(m.object),
-      };
+      // with a subject and nothing after it: the subject exists (3.0:G132)
+      c.pred =
+        m.object === undefined
+          ? { kind: 'exist', miyo: fw('miyo', 'exists') }
+          : { kind: 'exist', miyo: fw('miyo', 'there is'), np: np(m.object) };
     } else if (v.kind === 'be') {
       c.pred = { kind: 'copula', cop: copula(m), predicate: predicateOf(m) };
     } else if (v.kind === 'become') {
@@ -637,11 +665,20 @@ export function buildLSentence(
       if (shared || sameSubjectPurpose) sc.subject = null;
       sc.linker = fw(linkWord(s.link), s.link);
       // hopeful purpose (2.5:G116) after a comma, as canon writes it; a semicolon keeps its place
-      const comma = (s.link === 'purpose' && s.modal === 'might') || s.semicolon === true;
-      if (s.semicolon === true) delete sc.linker;
+      const comma =
+        (s.link === 'purpose' && s.modal === 'might') ||
+        s.semicolon === true ||
+        s.commaJoined === true;
+      if (s.semicolon === true || s.commaJoined === true) delete sc.linker;
       c.after.push({ clause: sc, comma, ...(s.semicolon === true ? { punct: ';' } : {}) });
     }
-    if (m.vocative !== undefined) c.vocative = np(m.vocative);
+    if (m.vocative !== undefined) {
+      const v0 = np(m.vocative);
+      // O …: iya opens the vocative (3.0:G129)
+      const voc = m.vocativeIya === true ? { ...v0, iya: fw('iya', 'O') } : v0;
+      if (m.vocativeFirst === true) c.vocativeBefore = voc;
+      else c.vocative = voc;
+    }
     return c;
   }
 
@@ -662,7 +699,9 @@ export function buildLSentence(
   const end: LSentence['end'] =
     (ms.clause.type === 'command' && ms.clause.please !== true) ||
     ms.clause.type === 'hortative' ||
-    ms.clause.type === 'exclamation'
+    ms.clause.type === 'exclamation' ||
+    // O Mother of Light!: an address standing alone keeps its mark (3.0:G129)
+    (ms.end === '!' && ms.clause.verb === null && ms.clause.vocative !== undefined)
       ? '!'
       : ms.clause.type === 'question'
         ? '?'

@@ -746,7 +746,11 @@ export function applyChangesets(
           break;
         }
         case 'ratify_ruling': {
-          const r = rulingOf(op.entry);
+          // a ruling of an earlier edition, or one an earlier changeset of this build added
+          const [rEdition, rId] = op.entry.split(':');
+          const r =
+            rulingOf(op.entry) ??
+            (rulingsByEdition.get(rEdition ?? '')?.find((x) => x.id === rId) as Row | undefined);
           if (r === undefined || r.status !== op.from || op.to !== 'ratified')
             throw new ApplyError(`${op.entry}: not a ${String(op.from)} ruling`);
           r.status = 'ratified';
@@ -829,12 +833,15 @@ export function applyChangesets(
               `rulings_${(edition ?? '').replace('.', '_')}${edition === '0.8' ? '_carried' : ''}`
             ];
             const r = Array.isArray(set) ? (set as Row[]).find((x) => x.id === id) : undefined;
-            const i = Number(/^example:(\d+)$/.exec(field)?.[1] ?? NaN);
+            // example:N is the Liraasa of a ruling's example, example:N:english its English (3.4)
+            const m = /^example:(\d+)(:english)?$/.exec(field);
+            const i = Number(m?.[1] ?? NaN);
+            const side = m?.[2] === undefined ? 0 : 1;
             const pair = (r?.examples as [string, string][] | undefined)?.[i];
             if (pair === undefined) throw new ApplyError(`${op.entry}: no ${field} to archive`);
-            read = () => pair[0];
+            read = () => pair[side];
             write = (v) => {
-              pair[0] = v;
+              pair[side] = v;
             };
           }
           const now = read();

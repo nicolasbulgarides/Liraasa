@@ -16,11 +16,11 @@ export type { Lesson, Part };
 export const INTRO = [
   'Liraasa is a language built for singing: every vowel rings, every word ends open, and the grammar keeps a fixed, calm order so the words can be sung without tripping.',
   'These lessons take you through the whole grammar, one small idea at a time. Each takes about ten minutes. Read the idea, say the examples aloud, then try the practice lines before you open the answers. Each lesson uses only what came before it.',
-  'Every Liraasa sentence here has been checked against the 3.5 grammar, so you can trust it as a model. The last part, on devotion, music and measure, teaches the 3.0 rulings, which are **proposed**: the author has not yet ratified them. The rule numbers at the foot of each lesson (2.5:G88, 3.0:G129 and so on) point into the Reference Grammar.',
+  'Every Liraasa sentence here has been checked against the 3.5 grammar, so you can trust it as a model. Parts 6 and 7 teach the 3.x rulings: devotion, music and measure (3.0), then word families, names and shapes (3.2 to 3.5). The rule numbers at the foot of each lesson (2.5:G88, 3.0:G129 and so on) point into the Reference Grammar.',
 ];
 
 const DEVOTION: Part = {
-  title: 'Devotion, music and measure (proposed in 3.0)',
+  title: 'Devotion, music and measure (3.0)',
   lessons: [
     {
       title: 'Calling on someone: iya, names and titles',
@@ -138,7 +138,93 @@ const DEVOTION: Part = {
   ],
 };
 
-export const PARTS: Part[] = [...PARTS_2_5, DEVOTION];
+const FAMILIES: Part = {
+  title: 'Word families, names and shapes (3.2 to 3.5)',
+  lessons: [
+    {
+      title: 'Families of words',
+      welcome:
+        'A few short roots now name whole families of things. Learn the pattern once and you can read a hundred everyday words.',
+      points: [
+        'An **archetype** modifier before a head names a kind: `gudo` the common sort, `zile` the fine sort. `gudopocu` is chicken, `zilepocu` duck; `gudokadu` a wagon, `yalmukadu` a car. A listed meaning is the meaning: `gudopocu` is chicken, not any common bird.',
+        '`-vu` makes it big and `-ti` small, as usual: `pocuvu`, a turkey; `pocuti`, a chick.',
+        'Fruit takes its colour: `rubifuro` an apple, `aurumifuro` a lemon, `ojofuro` an orange.',
+        'An animal also names its meat when it is eaten: `Maivo sapusia gubu.` I eat pork.',
+        'A time word can build a word too: `deyanole`, a date; `felradeya`, a holiday.',
+      ],
+      examples: [
+        ['Maivo sapusia gubu.', 'I eat pork.'],
+        ['Li murmu ka sumasan.', 'The beef is warm.'],
+        ['Li minvasan gudopocu po lavrasamnila.', 'The hen laid an egg.'],
+        ['Hoyo! Li yalmukadu ka zilesan!', 'Wow! The car is fancy!'],
+      ],
+      practice: [
+        ['“I eat pork.”', 'Maivo sapusia gubu.'],
+        ['“The beef is warm.”', 'Li murmu ka sumasan.'],
+      ],
+      rules: ['3.2:G142', '3.2:G143', '3.2:G146'],
+    },
+    {
+      title: 'Qualities and relations, by rule',
+      welcome:
+        'English needs -ness, -ity, -al and -ic to talk about qualities. Liraasa needs one ending, and it is already yours.',
+      points: [
+        'The `-san` form of any **compound** or listed derivation is an adjective by rule: of, relating to or marked by it. `kadulendasan` is railway (as in a railway station); `resotelnesan`, comic.',
+        'The bare compound names the **quality**, and its `-san` describes what has it: `tibilekta`, complexity; `tibilektasan`, complex. No -ness ending is needed.',
+        'A person known by a quality is `li` + the adjective: `li corvinasan`, the coward.',
+        'For a root, only the listed forms exist, as always.',
+      ],
+      examples: [
+        ['Li cilni ka pagolalnisan.', 'The city is distant.'],
+        [
+          'Li lordidozasan lemudonuyo po ne merama li linu.',
+          'The strict teacher did not forgive the child.',
+        ],
+        ['Li corvinasan po pagopa.', 'The coward left.'],
+        ['Saivo ka baba loterokezusan nela.', 'She is a foreign person.'],
+      ],
+      practice: [
+        ['“The city is distant.”', 'Li cilni ka pagolalnisan.'],
+        ['“The coward left.”', 'Li corvinasan po pagopa.'],
+      ],
+      rules: ['3.3:G148', '3.4:G149', '1.2:G29'],
+    },
+    {
+      title: 'People, places and shapes',
+      welcome:
+        'How to address someone politely, say where a thing comes from, name a shape, and order a pizza.',
+      points: [
+        '`zilenela` directly before a name is a title, Mr or Mrs: `zilenela Peta`. As an address, `iya zilenela` is sir or madam.',
+        '`maivori` is we, with or without the listener, as the context shows. When it matters, name who is meant: `maivo ata taivo`, you and I.',
+        'A copied place name + `-san` is an adjective of origin: `Fransasan lira`, a French song. A thing from a place takes `de`: `li lira de Amerika`, a song from America.',
+        'A numeral joined to `gaki` names a polygon: `tressa-gaki` a triangle, `cuara-gaki` a square; its `-san` is the shape: `cuara-gakisan`, square.',
+        'Foreign dishes are copied like names, in lower case: `pitsa`, `hamburga`.',
+        'Distance is told in the body and the league: `dossa pebu`, two feet; `tressa valmilornu`, three leagues.',
+      ],
+      examples: [
+        ['Iya zilenela, fisa, lisrola.', 'Please stay, sir.'],
+        ['Maivo ata taivo lirala.', 'You and I sing.'],
+        ['Fransasan lira', 'a French song'],
+        ['Li tabu ka cuara-gakisan.', 'The table is square.'],
+        ['Li nimu ka vofa dossa valmilornu.', 'The home is two leagues away.'],
+      ],
+      watch: [
+        [
+          'Peta da Amerika',
+          'A thing from a place takes de after it; a da phrase needs its verb: `Peta ka da Amerika.`',
+          '2.5:G128',
+        ],
+      ],
+      practice: [
+        ['“Please stay, sir.”', 'Iya zilenela, fisa, lisrola.'],
+        ['“The table is square.”', 'Li tabu ka cuara-gakisan.'],
+      ],
+      rules: ['3.2:G145', '3.5:G152', '3.2:G147', '3.5:G150', '3.5:G151', '3.2:G144'],
+    },
+  ],
+};
+
+export const PARTS: Part[] = [...PARTS_2_5, DEVOTION, FAMILIES];
 
 /** The whole clause on one page, for review after the last lesson. */
 export const MAP = {

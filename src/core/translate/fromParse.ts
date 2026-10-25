@@ -87,6 +87,10 @@ export function fromParse(s: SentenceResult): LSentence {
     // adjectives after the noun (an error the checker reports) stay where they were
     if (n.refl !== null) out.refl = lw(n.refl);
     if (n.de !== null) out.de = np(n.de);
+    // 3.x: iya opening a vocative (3.0:G129), a title (3.2:G145), gagu + the maker (3.0:G136)
+    if (t[n.start]?.word?.lower === 'iya') out.iya = lw(n.start);
+    if (n.title !== undefined) out.title = lw(n.title);
+    if (n.maker !== undefined) out.maker = { gagu: lw(n.maker.start - 1), np: np(n.maker) };
     if (n.and !== undefined) out.and = { linker: lw(n.and.linker), np: np(n.and.np) };
     if (n.relative !== null) {
       out.relative = clause(n.relative);
@@ -222,6 +226,8 @@ export function fromParse(s: SentenceResult): LSentence {
       case 'existential':
         if (v !== null && c.object !== null)
           out.pred = { kind: 'exist', miyo: lw(v), np: np(c.object) };
+        // a subject and miyo with nothing after it: it exists (3.0:G132)
+        else if (v !== null) out.pred = { kind: 'exist', miyo: lw(v) };
         break;
       case 'passive':
         if (v !== null && c.innerVerb !== null)
@@ -310,6 +316,14 @@ export function fromParse(s: SentenceResult): LSentence {
         out.frame.push({ adjunct: a, comma: isPunct(item.end, ',') });
         continue;
       }
+      // X krotiapo X: one after another (3.0:G140)
+      if (t[f + 1]?.word?.lower === 'krotiapo' && t[f + 2]?.word?.lower === t[f]?.word?.lower) {
+        out.frame.push({
+          adjunct: { kind: 'distributive', word: lw(f) },
+          comma: isPunct(f + 3, ','),
+        });
+        continue;
+      }
       let e = f + 1;
       while (role(e) === 'FRAME' && !isPunct(e)) e += 1;
       const span = e - f;
@@ -344,6 +358,14 @@ export function fromParse(s: SentenceResult): LSentence {
     if (c.vocative !== null && c.vocative.start < (c.subject?.start ?? c.verb ?? c.end))
       out.vocativeBefore = np(c.vocative);
     else if (c.vocative !== null) out.vocative = np(c.vocative);
+    // iya + a noun phrase opening the sentence (3.0:G129)
+    const address = c.address?.[0];
+    if (address !== undefined && out.vocativeBefore === undefined) {
+      // standing alone (Iya Lumimare!), it is the sentence's vocative
+      if (c.predKind === 'none' && c.subject === null && c.verb === null)
+        out.vocative = np(address);
+      else out.vocativeBefore = np(address);
+    }
     for (const sub of c.subordinates) {
       if (sub.kind === 'chain') continue;
       const lc = clause(sub);

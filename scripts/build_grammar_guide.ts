@@ -23,6 +23,7 @@ import {
   clausePart,
   openQuestionsPart,
   recipesPart,
+  threePart,
   smallWordsPart,
   soundPart,
   welcome,
@@ -74,10 +75,11 @@ function main(): void {
     smallWordsPart(index),
     clausePart(index),
     recipesPart(index),
-    songPart(index, '7'),
-    albumPart(index, '8'),
-    treasuryPart(index, '9'),
-    openQuestionsPart('10'),
+    threePart(index),
+    songPart(index, '8'),
+    albumPart(index, '9'),
+    treasuryPart(index, '10'),
+    openQuestionsPart('11'),
   ];
   // every Liraasa word and phrase shown so far: Appendix A lists only the function words not among them
   const shownTexts = recorded.filter((r) => r.use !== 'morpheme').map((r) => r.text.toLowerCase());

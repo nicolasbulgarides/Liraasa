@@ -34,9 +34,11 @@ import { WORD_BUILDING_3_3 } from './make_changeset_3_3';
 
 export const ID_RATIFY_3_5 = '2026-10-25-lexicon-3-5-ratify';
 export const ID_3_5 = '2026-10-25-lexicon-3-5';
+export const ID_AUTHOR_3_5 = '2026-10-25-lexicon-3-5-author';
 export const FILES_3_5 = [
   `data/changes/${ID_RATIFY_3_5}.json`,
   `data/changes/${ID_3_5}.json`,
+  `data/changes/${ID_AUTHOR_3_5}.json`,
 ] as const;
 const BASELINE = 'data/lexicon/liraasa_3_4.json';
 
@@ -135,10 +137,113 @@ export const CONFIG_3_5: AdditionsConfig = {
     'No 3.4 word, spelling or ruling changes.',
 };
 
-export const makeChangesets3_5 = (): LexiconChangeset[] => [
-  ratify3_5(),
-  makeAdditionsChangeset(CONFIG_3_5),
-];
+/**
+ * The author's decisions after 3.5 was built (2026-10-25): ratify 3.5; maivori
+ * includes or excludes the listener by context (a new ruling, 3.5:G152); and
+ * zefrolalfo keeps "levitation", so navulalfo takes a meaning of its own.
+ */
+export function author3_5(additions: LexiconChangeset): LexiconChangeset {
+  const lex = JSON.parse(readFileSync(resolve(BASELINE), 'utf8')) as RawLexicon;
+  const rec = recorder({ edition: EDITION, at: AT });
+  const ops: ChangeRecord[] = [];
+  const ratified = 'The author ratified 3.5 on 2026-10-25.';
+  // 1. the new ruling, as the author decided it (2026-10-25)
+  const g152 = {
+    id: 'G152',
+    topic: 'maivori: we, with or without the listener',
+    ruling:
+      'maivori is the first person plural, we. Whether it includes the listener (you and I) or not (they and I) is left to the context: Liraasa has no separate inclusive and exclusive forms. Where the difference matters, name who is meant: maivo ata taivo, you and I; maivori ata taivo, we and you.',
+    examples: [
+      ['Maivori lirala.', 'We sing (with or without you, as the context shows).'],
+      ['Maivo ata taivo lirala.', 'You and I sing.'],
+      ['Maivori ata taivo futu pagopa.', 'We and you will go.'],
+    ] as [string, string][],
+    settles_open_questions: ['Whether maivori includes the listener.'],
+    notes: "The author's decision (2026-10-25): make it context specific.",
+    status: 'ratified',
+  };
+  ops.push(
+    rec(
+      'add_ruling',
+      '3.5:G152',
+      null,
+      g152.topic,
+      '3.5:G152',
+      `The author decided on 2026-10-25 that maivori is context specific. ${g152.notes}`,
+    ),
+  );
+  // 2. 3.5 ratified: its rulings and its headwords' notes
+  for (const r of ['3.5:G150', '3.5:G151'])
+    ops.push(
+      rec(
+        'ratify_ruling',
+        r,
+        'proposed',
+        'ratified',
+        r,
+        `${ratified} The ruling's text and examples do not change.`,
+      ),
+    );
+  for (const h of additions.headwords ?? []) {
+    const marker = "Proposed in 3.5: awaiting the author's ratification.";
+    if (!h.notes.includes(marker)) continue;
+    ops.push(
+      rec(
+        'edit_metadata',
+        h.id,
+        h.notes,
+        h.notes.replace(
+          marker,
+          `Ratified by the author on 2026-10-25 (changeset ${ID_AUTHOR_3_5}).`,
+        ),
+        undefined,
+        `${ratified} ${h.root} is canon.`,
+        { field: 'notes' },
+      ),
+    );
+  }
+  // 3. navulalfo takes a meaning of its own; zefrolalfo keeps levitation
+  const heads = lex.headwords as unknown as {
+    id: string;
+    root: string;
+    glosses: Record<string, string>;
+  }[];
+  const nav = heads.find((h) => h.root === 'navulalfo');
+  if (nav === undefined) throw new Error('navulalfo is not a headword');
+  const glosses: [string, 'root' | 'verb', string][] = [
+    ['root', 'root', 'a rise into the sky; skyward floating'],
+    ['verb', 'verb', 'to float up into the sky'],
+  ];
+  for (const [raw, slot, to] of glosses) {
+    const from = nav.glosses[raw] ?? '';
+    ops.push(
+      rec(
+        'edit_gloss',
+        nav.id,
+        from,
+        to,
+        '0.8:R2',
+        `The author keeps zefrolalfo as "levitation" (2026-10-25); navulalfo (navu + lalfo, sky + floating) takes a meaning of its own. Its old gloss "${from}" is archived.`,
+        { slot, archive: true },
+      ),
+    );
+  }
+  return {
+    id: ID_AUTHOR_3_5,
+    edition: EDITION,
+    created: AT,
+    author: 'nicolas',
+    summary:
+      'The author’s decisions of 2026-10-25 after the 3.5 build: 3.5 is ratified (rulings 3.5:G150-G151 and every 3.5 headword’s note); ruling 3.5:G152, maivori includes or excludes the listener by context; zefrolalfo keeps "levitation", and navulalfo becomes "a rise into the sky". With this, every edition is canon.',
+    rulings: [g152],
+    ops,
+  };
+}
+
+export function makeChangesets3_5(): LexiconChangeset[] {
+  const additions = makeAdditionsChangeset(CONFIG_3_5);
+  return [ratify3_5(), additions, author3_5(additions)];
+}
 
 function main(): void {
   const { booleans } = parseArgs(process.argv.slice(2), []);
