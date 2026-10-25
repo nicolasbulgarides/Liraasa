@@ -1,6 +1,6 @@
 {
  "title": "Liraasa 3.5: the complete grammar and dictionary, for language models",
- "edition_status": "PROPOSED: the 3.5 additions (rulings 3.5:G150–G151, and every dictionary line flagged \"new in 3.5\") await the author's ratification. Everything else is canon, 3.1 included (ratified 2026-10-25).",
+ "edition_status": "PROPOSED: the 3.5 additions (rulings 3.5:G150–G151, and every dictionary line flagged \"new in 3.5\") await the author's ratification. Everything else is canon: the author ratified everything up to 3.4 on 2026-10-25.",
  "read_me_first": [
   "Liraasa is a constructed language built for singing, by one author. This file is the complete, authoritative description of it: every grammar rule and every word.",
   "Read the sections in order: hard_rules, how_to_translate, sound, word_building, clause, recipes, rulings, small_words, dictionary, examples, canon_texts. The album at the end is non-normative text, not grammar (2.5:G87).",
