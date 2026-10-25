@@ -10,8 +10,8 @@ import type { Flags, GrammarSource, Reference, RuleParams } from '../src/core/gr
 import type { EnglishData, TranslateSource } from '../src/core/translate';
 
 export const GRAMMAR_FILES = {
-  reference: 'handoff/liraasa_3_1_llm.json',
-  lexicon: 'data/lexicon/liraasa_3_1.json',
+  reference: 'handoff/liraasa_3_3_llm.json',
+  lexicon: 'data/lexicon/liraasa_3_3.json',
   flags: 'data/checker/lexicon_flags.json',
   rules: 'data/checker/rules_3_0.json',
   names: 'data/checker/names.json',
@@ -48,12 +48,24 @@ export function loadGrammarSource(): GrammarSource {
 export function loadTranslateSource(): TranslateSource {
   const lex = read(GRAMMAR_FILES.lexicon) as {
     numbers: { lookup_0_999: Record<string, string> };
-    headwords: { root: string; english_synonyms: string[] }[];
+    headwords: { root: string; english_synonyms: string[]; forms: Record<string, string> }[];
+    english_aliases?: Record<string, string>;
   };
+  // 3.3: an English alias of a headword's form is one more name to find the headword by
+  const synonyms = Object.fromEntries(
+    lex.headwords.map((h) => [h.root, [...h.english_synonyms]] as [string, string[]]),
+  );
+  for (const [form, english] of Object.entries(lex.english_aliases ?? {})) {
+    const h = lex.headwords.find((x) => Object.values(x.forms).includes(form));
+    const list = h === undefined ? undefined : synonyms[h.root];
+    if (list === undefined) continue;
+    for (const e of english.split(';').map((x) => x.trim()))
+      if (e !== '' && !list.includes(e)) list.push(e);
+  }
   return {
     grammar: loadGrammarSource(),
     english: read('data/translate/english_2_5.json') as EnglishData,
     numerals: lex.numbers.lookup_0_999,
-    synonyms: Object.fromEntries(lex.headwords.map((h) => [h.root, h.english_synonyms])),
+    synonyms,
   };
 }

@@ -90,6 +90,8 @@ export interface WordBuilding {
   nesting: boolean;
   /** A colour base (the colour table's "Base color") may be a compound's modifier (2.0:G38). */
   colourModifiers: boolean;
+  /** A time noun (time_and_dates, class noun) may be a compound's modifier (3.2:G142): deya + nole. */
+  timeModifiers?: boolean;
 }
 
 export const STRICT_WORD_BUILDING: WordBuilding = { nesting: false, colourModifiers: false };
@@ -233,6 +235,14 @@ const SECTION_AFTER: Readonly<Record<string, string>> = {
 };
 
 /** The colour bases a compound's modifier may be (2.0:G38). */
+/** The time nouns a compound's modifier may be (3.2:G142). */
+const timeNouns = (lex: RawLexicon): Set<string> =>
+  new Set(
+    (lex.time_and_dates as unknown as Row[])
+      .filter((t) => t.time_class === 'noun')
+      .map((t) => String(t.form)),
+  );
+
 const colourBases = (lex: RawLexicon): Set<string> =>
   new Set(
     (lex.colors as unknown as Row[])
@@ -249,6 +259,7 @@ export function applyChangesets(
   const lex = JSON.parse(JSON.stringify(baseline)) as RawLexicon;
   const sectionInserts: [string, string, unknown][] = [];
   const bases = colourBases(lex);
+  const times = timeNouns(lex);
   const assigner = new IdAssigner(options.ids);
   assignSectionIds(lex, assigner);
 
@@ -362,6 +373,7 @@ export function applyChangesets(
               if (part === undefined) {
                 // only the modifier may be a colour base, and only under 2.0:G38
                 if (i === 0 && rules.colourModifiers && bases.has(c)) return;
+                if (i === 0 && rules.timeModifiers === true && times.has(c)) return;
                 throw new ApplyError(`${p.root}: component ${c} is not a headword`);
               }
               if (part.type === 'Compound' && !rules.nesting)
@@ -601,11 +613,12 @@ export function applyChangesets(
               throw new ApplyError(`${op.entry}: synonyms are not ${String(op.from)}`);
             }
             h.english_synonyms = JSON.parse(op.to) as string[];
-          } else if (op.field === 'domain') {
+          } else if (op.field === 'domain' || op.field === 'notes') {
+            // 3.0: a lexicalised image compound's domain; 3.3: a note, when the author ratifies an entry
             const h = headword(op);
-            if (h.domain !== op.from || op.to === null)
-              throw new ApplyError(`${op.entry}: domain is not ${String(op.from)}`);
-            h.domain = op.to;
+            if (h[op.field] !== op.from || op.to === null)
+              throw new ApplyError(`${op.entry}: ${op.field} is not ${String(op.from)}`);
+            h[op.field] = op.to;
           } else if (op.entry === 'phonology.declared_distance_1_pairs') {
             const pairs = lex.phonology.declared_distance_1_pairs as string[][];
             const pair = op.to === null ? null : (JSON.parse(op.to) as string[]);
@@ -922,6 +935,7 @@ export function auditBuild(
   const heads = lex.headwords as unknown as Headword[];
   const roots = new Set(heads.map((h) => h.root));
   const bases = colourBases(lex);
+  const times = timeNouns(lex);
   const forms: string[] = [];
   for (const h of heads) {
     const want = rawForms(h.root);
@@ -938,7 +952,10 @@ export function auditBuild(
       if (parts.join('') + (h.suffix ?? '') !== h.root)
         findings.push(`${h.root}: not its components joined`);
       parts.forEach((c, i) => {
-        const colour = i === 0 && rules.colourModifiers && bases.has(c);
+        const colour =
+          i === 0 &&
+          ((rules.colourModifiers && bases.has(c)) ||
+            (rules.timeModifiers === true && times.has(c)));
         if (!roots.has(c) && !colour) findings.push(`${h.root}: component ${c} is not a headword`);
       });
     }

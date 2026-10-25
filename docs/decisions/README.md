@@ -29,6 +29,7 @@ point.
 | [0020](0020-lexicon-2-5.md)                   | Liraasa 2.5: the author's grammar decisions, a strict checker and a translator | accepted | 2.5   |
 | [0021](0021-lexicon-3-0.md)                   | Liraasa 3.0: Devotion, Music and Measure (proposed)                            | accepted | 3.0   |
 | [0022](0022-lexicon-3-1.md)                   | Liraasa 3.1: Everyday and Fiction (proposed), and the canon hymn               | accepted | 3.1   |
+| [0023](0023-lexicon-3-3.md)                   | Liraasa 3.3: the ratification of 3.1, Archetypes and the top 2,000 (proposed)  | accepted | 3.3   |
 
 ADR-0007 and ADR-0008 record decisions the author made in answer to the Phase 0
 report; the questions and answers are summarised in each. ADR-0009 and ADR-0010

@@ -77,7 +77,9 @@ export interface Reading {
     | 'closed'
     | 'numeral'
     | 'correlative'
-    | 'name';
+    | 'name'
+    /** 3.3:G148: the -san of a compound or listed derivation, by rule. */
+    | 'relational';
   /** A correlative's concept, a function word's class … */
   detail?: string;
 }
@@ -206,6 +208,8 @@ export interface NounPhrase {
   and?: { linker: number; np: NounPhrase };
   /** gagu + the maker, after a noun naming a made work (3.0:G136). */
   maker?: NounPhrase;
+  /** A title before a name: zilenela Peta (3.2:G145). */
+  title?: number;
 }
 
 export interface Adjunct {

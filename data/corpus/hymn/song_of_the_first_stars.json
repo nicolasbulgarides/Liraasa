@@ -5,7 +5,7 @@
  "register": "sacred",
  "kind": "devotional",
  "status": "canon",
- "about": "The author's creation hymn, in the sacred register. Canon corpus text by the author's request (2026-10-25): a model of devotional Liraasa. Lines 1, 3, 4, 5, 9 and 19 are the 2.5 translation (data/songs/Liraasa_de_li_Vanisan_Lirayo_Translation.pdf, where the English, the interlinear and the translator's notes are); the other eighteen are the 3.0 patch's revisions (archive/patch_3_0/liraasa_3_0_patch.json, hymn_test), which use the proposed 3.0 words and rulings. Every line reads with no error or warning under the 3.1 strict checker (tests/grammar/hymn.test.ts). Nothing here is composed by a tool except line 12's one change, noted on the line.",
+ "about": "The author's creation hymn, in the sacred register. Canon corpus text by the author's request (2026-10-25): a model of devotional Liraasa. Lines 1, 3, 4, 5, 9 and 19 are the 2.5 translation (data/songs/Liraasa_de_li_Vanisan_Lirayo_Translation.pdf, where the English, the interlinear and the translator's notes are); the other eighteen are the 3.0 patch's revisions (archive/patch_3_0/liraasa_3_0_patch.json, hymn_test), which use the proposed 3.0 words and rulings. Every line reads with no error or warning under the strict checker (tests/grammar/hymn.test.ts), in 3.1 and in 3.3. Nothing here is composed by a tool except line 12's one change, noted on the line, which the author kept (2026-10-25).",
  "lines": [
   {
    "n": 1,
@@ -77,7 +77,7 @@
    "n": 12,
    "liraasa": "Ata una krotiapo una, velu krotiapo velu, muya loterosan patuti de sizosan lumi po gome farlafa ala li pagoasa.",
    "english": "One by one, star by star, further points of shimmering light were brought forth into existence,",
-   "source": "the 3.0 patch (hymn_test), with \"kasi muya\" (not ruled) as \"muya loterosan\", the 2.5 translation's word for \"further\""
+   "source": "the 3.0 patch (hymn_test), with \"kasi muya\" (not ruled) as \"muya loterosan\", the 2.5 translation's word for \"further\"; the author kept this wording (2026-10-25)"
   },
   {
    "n": 13,
@@ -95,7 +95,7 @@
    "n": 15,
    "liraasa": "Rada pice de li vinye po ke baba tranaasasan lumisirmo raho po lumrala li suma de li veluri raho lenila.",
    "english": "Each pluck of her tool was a transcendent splendor which ascended the heat of the listening stars,",
-   "source": "the 3.0 patch (hymn_test)"
+   "source": "the 3.0 patch (hymn_test); \"heat\" (suma) is as the author meant it, not \"heart\" (2026-10-25)"
   },
   {
    "n": 16,

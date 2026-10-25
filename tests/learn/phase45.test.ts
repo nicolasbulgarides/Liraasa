@@ -499,10 +499,16 @@ describe('the 3.0 → 3.1 diff lesson', () => {
       lexicon: JSON.parse(readFileSync('data/lexicon/liraasa_3_0.json', 'utf8')) as RawLexicon,
       corpus: [],
     });
+    // 3.1 is frozen as 3.3's baseline: built here from its own file
+    const at31 = buildLearnSource({
+      ...input,
+      lexicon: JSON.parse(readFileSync('data/lexicon/liraasa_3_1.json', 'utf8')) as RawLexicon,
+      corpus: [],
+    });
     const d = diffSnapshots(
       snapshotEdition(at30.data),
-      snapshotEdition(source.data),
-      source.replacementFor,
+      snapshotEdition(at31.data),
+      at31.replacementFor,
     );
     const patch = JSON.parse(readFileSync('archive/patch_3_1/liraasa_3_1_patch.json', 'utf8')) as {
       roots_add: unknown[];
@@ -517,6 +523,43 @@ describe('the 3.0 → 3.1 diff lesson', () => {
     const reglossed = d.reglossed.map((r) => (r as unknown as { spelling: string }).spelling);
     expect(reglossed.sort()).toEqual(
       [...new Set(patch.restored_forms_add.map((r) => r.headword))].sort(),
+    );
+  });
+});
+
+describe('the 3.1 → 3.3 diff lesson', () => {
+  it('ACCEPTANCE: additions only: no word renamed or removed; every 3.3 word, restored form and ruling', () => {
+    const at31 = buildLearnSource({
+      ...input,
+      lexicon: JSON.parse(readFileSync('data/lexicon/liraasa_3_1.json', 'utf8')) as RawLexicon,
+      corpus: [],
+    });
+    const d = diffSnapshots(
+      snapshotEdition(at31.data),
+      snapshotEdition(source.data),
+      source.replacementFor,
+    );
+    const patch = JSON.parse(
+      readFileSync('archive/patch_3_3/patches/liraasa_3_3_patch.json', 'utf8'),
+    ) as {
+      roots_add: unknown[];
+      compounds_add: unknown[];
+      function_words_add: unknown[];
+      restored_forms_add: { headword: string }[];
+      rulings_add: { id: string }[];
+    };
+    expect([d.from, d.to]).toEqual(['3.1', '3.3']);
+    expect(d.renamed).toEqual([]);
+    expect(d.removed).toEqual([]);
+    expect(d.added).toHaveLength(
+      patch.roots_add.length + patch.compounds_add.length + patch.function_words_add.length,
+    );
+    const reglossed = d.reglossed.map((r) => (r as unknown as { spelling: string }).spelling);
+    expect(reglossed.sort()).toEqual(
+      [...new Set(patch.restored_forms_add.map((r) => r.headword))].sort(),
+    );
+    expect(d.rulesAdded.map((r) => r.id).sort()).toEqual(
+      patch.rulings_add.map((r) => `rule:${r.id}`).sort(),
     );
   });
 });

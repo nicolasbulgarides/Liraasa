@@ -65,11 +65,13 @@ def expected(prev, changesets, version):
     known = [dict(c, ops=[o for o in c["ops"] if o["op"] not in HEADWORD_OPS]) for c in mine]
     want, added, det = v25.expected(prev, known, version)
     tag = "status_" + version.replace(".", "_")
+    modifier_bases = {c["Base color"] for c in want["colors"]} | {
+        t["form"] for t in want["time_and_dates"] if t.get("time_class") == "noun"}
     heads = want["headwords"]
     by_id = {h["id"]: h for h in heads}
     by_root = {h["root"]: h for h in heads}
     for cs in mine:
-        if any(o["op"] == "edit_metadata" and o.get("field") != "domain" for o in cs["ops"]):
+        if any(o["op"] == "edit_metadata" and o.get("field") not in ("domain", "notes") for o in cs["ops"]):
             det.append("%s: an edit_metadata 3.0 does not use" % cs["id"])
         payload = {h["id"]: h for h in cs.get("headwords", [])}
         for op in cs["ops"]:
@@ -83,8 +85,9 @@ def expected(prev, changesets, version):
                     det.append("%s: %s with type %s" % (entry, o, p["type"]))
                 if o == "add_compound" and "".join(p["components"]) != p["root"]:
                     det.append("%s: not its components joined" % entry)
-                for c in p["components"] or []:
-                    if c not in by_root:
+                for i, c in enumerate(p["components"] or []):
+                    # the modifier may be a colour base (2.0:G38) or a time noun (3.2:G142)
+                    if c not in by_root and not (i == 0 and c in modifier_bases):
                         det.append("%s: component %s is not a headword" % (entry, c))
                 h = {
                     "root": p["root"], "type": p["type"], "components": p["components"],
@@ -123,12 +126,13 @@ def expected(prev, changesets, version):
                 if tag not in h:
                     # apply.ts writes the mark just before `since`; key order does not matter here
                     h[tag] = "REGLOSSED"
-            elif o == "edit_metadata" and op.get("field") == "domain":
+            elif o == "edit_metadata" and op.get("field") in ("domain", "notes"):
+                field = op["field"]
                 h = by_id.get(entry)
-                if h is None or h["domain"] != op["from"]:
-                    det.append("%s: domain is not %s" % (entry, op["from"]))
+                if h is None or h[field] != op["from"]:
+                    det.append("%s: %s is not %s" % (entry, field, op["from"]))
                     continue
-                h["domain"] = op["to"]
+                h[field] = op["to"]
             elif o == "add_derivation":
                 base_id, suffix = entry[len("derivation:"):].rsplit(":", 1)
                 base = by_id.get(base_id)
@@ -225,6 +229,17 @@ def main():
     checks = [c for c in inner["checks"] if c["id"] != 25]
     for c in checks:
         c["executed_against"] = c.get("executed_against", "") + " (validate_3_0.py: %s respells nothing)" % version
+    # 3.2:G142 (in 3.3): a time noun may be a compound's modifier, as a colour base may (2.0:G38)
+    if any(r["id"] == "G142" for r in data.get("rulings_3_2", [])):
+        bases = {c["Base color"] for c in data["colors"]} | {
+            t["form"] for t in data["time_and_dates"] if t.get("time_class") == "noun"}
+        det7 = v20.check_7(data, bases)
+        for c in checks:
+            if c["id"] == 7:
+                c.update(status="FAIL" if det7 else "PASS", count=len(det7), details=det7[:60],
+                         details_total=len(det7),
+                         note="compound well-formedness with 2.0:G38 and 3.2:G142: a colour base or a time noun may be the modifier",
+                         executed_against="validate_3_0.py (re-run under 3.2:G142)")
     det25 = check_25(prev, data, changesets, version)
     mine = [c for c in changesets if c["edition"] == version]
     count = lambda op: sum(1 for c in mine for o in c["ops"] if o["op"] == op)

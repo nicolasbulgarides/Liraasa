@@ -119,6 +119,10 @@ export interface RuleParams {
   authorship?: { ruling: string; word: string; work_nouns: string[] };
   acclamation?: { ruling: string; preposition: string; mark: string };
   distributive?: { ruling: string; word: string };
+  /** 3.2 / 3.3 (proposed, ADR-0023). */
+  honorific?: { ruling: string; titles: string[]; noun_classes: string[] };
+  nationality?: { ruling: string };
+  relational_adjectives?: { ruling: string };
   adjective_sidu: { dummy: string };
   negative_number: { word: string };
   [key: string]: unknown;

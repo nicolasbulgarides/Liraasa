@@ -600,7 +600,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
         np.end = this.i;
         return np;
       }
-      if (this.is(i0, "name") && !this.is(i0, "noun")) {
+      if (this.is(i0, "name") && !this.is(i0, "noun") && !(this.adjish(i0) && this.nounish(i0 + 1))) {
         np.head = i0;
         np.headKind = "name";
         this.i += 1;
@@ -675,7 +675,8 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
           this.i += 2;
           continue;
         }
-        if (this.adjish(k) && !this.nounish(k) && this.isWord(k)) {
+        const originAdj = this.is(k, "name") && !this.is(k, "noun") && !this.is(k, "pron") && this.nounish(k + 1);
+        if (this.adjish(k) && (!this.nounish(k) || originAdj) && this.isWord(k)) {
           np.adjectives.push(k);
           this.i += 1;
           continue;
@@ -687,6 +688,13 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
         np.head = h;
         np.headKind = this.is(h, "noun") ? "noun" : this.is(h, "name") ? "name" : this.is(h, "pron") ? "pron" : "kiword";
         this.i += 1;
+        const hon = this.ix.source.rules.honorific;
+        if (hon !== void 0 && this.is(this.i, "name") && !this.is(this.i, "noun") && (hon.titles.includes(this.w(h)) || hon.noun_classes.includes(this.ix.source.flags.noun_class[this.w(h)] ?? ""))) {
+          np.title = h;
+          np.head = this.i;
+          np.headKind = "name";
+          this.i += 1;
+        }
         const n2 = this.i;
         if (this.only(n2, "noun") && !this.is(n2, "name") && this.t[n2]?.word?.problem === void 0) {
           const adj = this.adjectiveOf(h);
@@ -1060,13 +1068,17 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
           this.i += 1;
         } else if (this.w(this.i) === "ne" && this.npStart(this.i + 1) && !this.is(this.i + 1, "op") && !this.verbish(this.i + 1)) {
           const neAt = this.i;
+          const mark = this.findings.length;
           this.i += 1;
           const subj = this.parseNP();
           if (subj !== null && this.predicateStart(this.i)) {
             this.role(neAt, "NEGATION");
             clause.subject = { ...subj, start: neAt };
             this.roleSpan(subj.start, subj.end, "SUBJECT");
-          } else this.i = neAt;
+          } else {
+            this.findings.length = mark;
+            this.i = neAt;
+          }
         } else if ((this.is(this.i, "timeAdv") || this.is(this.i, "placeAdv")) && this.is(this.i + 1, "copula")) {
           const a = this.i;
           clause.subject = {
@@ -1336,7 +1348,9 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       }
       const onlyNe = clause.ops.length > 0 && clause.ops.every((o) => o.slot === "NEGATION");
       if (clause.predKind === "none" && onlyNe && (this.npStart(this.i) || this.w(this.i) === "la" || this.is(this.i, "attitude") || this.is(this.i, "timeAdv") || this.is(this.i, "placeAdv") || this.is(this.i, "mannerAdv") || this.adjish(this.i) || this.atEnd() || this.isPunct(this.i, ","))) {
-        if (this.npStart(this.i)) {
+        const bareAdj = this.adjish(this.i) && !this.nounish(this.i) && !this.nounish(this.i + 1) && !this.adjish(this.i + 1);
+        if (bareAdj) this.parseAdjP(clause);
+        else if (this.npStart(this.i)) {
           const np = this.parseNP({ adverbHead: true });
           if (np !== null) {
             this.roleSpan(np.start, np.end, clause.subject === null ? "PREDICATE" : "OBJECT");
@@ -2647,6 +2661,24 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }
     return null;
   }
+  function relational(ix, w) {
+    const rule = ix.source.rules.relational_adjectives;
+    if (rule === void 0 || !w.endsWith("san") || w.length < 6) return null;
+    const base = w.slice(0, -3);
+    const h = ix.headwords.get(base);
+    const listed = ix.lexicalised.get(base);
+    if ((h?.parts ?? null) === null && listed === void 0) return null;
+    const sense = (h?.roles.n?.gloss ?? listed?.gloss ?? base).split(/[;(:]/)[0]?.trim() ?? base;
+    return {
+      pos: "adj",
+      form: w,
+      root: h?.root ?? listed?.base ?? base,
+      role: "a",
+      gloss: `of, relating to or marked by ${sense}`,
+      source: "relational",
+      detail: rule.ruling
+    };
+  }
   function stem(ix, s) {
     const out = [...ix.forms.get(s) ?? []];
     const d = derivation(ix, s);
@@ -2723,6 +2755,8 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
         });
       }
     }
+    const rel = relational(ix, w);
+    if (rel !== null) return analysis(text, [rel]);
     const unused = ix.unlisted.get(w);
     if (unused !== void 0) {
       const pos = unused.role === "v" ? "verb" : ["n", "an", "nn"].includes(unused.role) ? "noun" : "adj";
@@ -2742,6 +2776,18 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       );
     }
     const known = ix.names.has(w) || w.endsWith("ti") && ix.names.has(w.slice(0, -2));
+    const origin = ix.source.rules.nationality;
+    if (origin !== void 0 && opts.capital && !known && w.endsWith("san") && w.length > 5)
+      return analysis(text, [
+        {
+          pos: "adj",
+          form: text,
+          gloss: `of ${text.slice(0, -3)}, by origin`,
+          source: "name",
+          detail: origin.ruling
+        },
+        { pos: "name", form: text, gloss: "name", source: "name" }
+      ]);
     if (known || opts.capital)
       return analysis(text, [
         {

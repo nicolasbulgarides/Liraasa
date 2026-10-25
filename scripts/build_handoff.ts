@@ -3,8 +3,8 @@
  *
  *   npm run build:handoff
  *
- * Writes handoff/liraasa_3_1_complete.json: the canonical 3.1 lexicon (built
- * from 3.0 by `npm run integrate:3.1`, ADR-0022; 3.0 and 3.1 proposed), with what a guide needs that
+ * Writes handoff/liraasa_3_3_complete.json: the canonical 3.3 lexicon (built
+ * from 3.1 by `npm run integrate:3.3`, ADR-0023; 3.0 and 3.3 proposed, 3.1 ratified), with what a guide needs that
  * the lexicon records elsewhere:
  *
  * - each example a changeset revised keeps its earlier text beside it: the
@@ -28,8 +28,9 @@ import { CHANGESETS_2_3 } from './changesets_2_3';
 import { CHANGESETS_2_5 } from './changesets_2_5';
 import { CHANGESETS_3_0 } from './changesets_3_0';
 import { CHANGESETS_3_1 } from './changesets_3_1';
+import { CHANGESETS_3_3 } from './changesets_3_3';
 
-const LEXICON = 'data/lexicon/liraasa_3_1.json';
+const LEXICON = 'data/lexicon/liraasa_3_3.json';
 const REPORT_1_2 = 'data/lexicon/integration_report_1_2.json';
 const REPORT_2_0 = 'data/lexicon/integration_report_2_0.json';
 const REPORT_2_1 = 'data/lexicon/integration_report_2_1.json';
@@ -38,8 +39,9 @@ const REPORT_2_3 = 'data/lexicon/integration_report_2_3.json';
 const REPORT_2_5 = 'data/lexicon/integration_report_2_5.json';
 const REPORT_3_0 = 'data/lexicon/integration_report_3_0.json';
 const REPORT_3_1 = 'data/lexicon/integration_report_3_1.json';
+const REPORT_3_3 = 'data/lexicon/integration_report_3_3.json';
 const OUT_DIR = 'handoff';
-const OUT = 'liraasa_3_1_complete.json';
+const OUT = 'liraasa_3_3_complete.json';
 
 const load = (path: string): unknown => JSON.parse(readFileSync(resolve(path), 'utf8'));
 
@@ -64,6 +66,8 @@ function main(): void {
   const report30 = load(REPORT_3_0) as { counts: unknown };
   const v31 = CHANGESETS_3_1.map((p) => load(p) as LexiconChangeset);
   const report31 = load(REPORT_3_1) as { counts: unknown };
+  const v33 = CHANGESETS_3_3.map((p) => load(p) as LexiconChangeset);
+  const report33 = load(REPORT_3_3) as { counts: unknown };
 
   const examples = lexicon.examples.map((e) => ({ ...e }));
   let revised = 0;
@@ -104,7 +108,7 @@ function main(): void {
   const complete = {
     ...lexicon,
     handoff_note:
-      'Liraasa 3.1 (3.0 and 3.1 proposed): all of 1.0, the 1.1 vocabulary supplement, the 1.2 changesets ' +
+      'Liraasa 3.3 (3.0 and 3.3 proposed, 3.1 ratified): all of 1.0, the 1.1 vocabulary supplement, the 1.2 changesets ' +
       `${v12.map((c) => c.id).join(' and ')}, the 2.0 changesets ${v20.map((c) => c.id).join(' and ')} ` +
       '(word-building rulings 2.0:G37–G45, new vocabulary, the image-compound pattern), and the 2.1 changeset ' +
       `${v21.map((c) => c.id).join(' and ')} (rulings 2.1:G46–G59, 30 roots respelled), and the 2.2 changeset ` +
@@ -112,9 +116,10 @@ function main(): void {
       `${v23.map((c) => c.id).join(' and ')} (rulings 2.3:G69–G86, the sound pass and the grammar audit), and the 2.5 changesets ` +
       `${v25.map((c) => c.id).join(', ')} (rulings 2.5:G87–G128, the author's decisions on the 2.3 audit; the album is no longer canon), and the 3.0 changeset ` +
       `${v30.map((c) => c.id).join(', ')} (rulings 3.0:G129–G141, Devotion, Music and Measure), and the 3.1 changeset ` +
-      `${v31.map((c) => c.id).join(', ')} (Everyday and Fiction, vocabulary only); 3.0 and 3.1 are proposed, awaiting the author's ratification. Revised examples keep ` +
+      `${v31.map((c) => c.id).join(', ')} (Everyday and Fiction, vocabulary only, ratified 2026-10-25), and the 3.3 changesets ` +
+      `${v33.map((c) => c.id).join(', ')} (the ratification of 3.1, then Archetypes and the top 2,000: rulings 3.2:G142–G147 and 3.3:G148); 3.0 and 3.3 are proposed, awaiting the author's ratification. Revised examples keep ` +
       'their earlier text in liraasa_1_1 (1.2), liraasa_1_2 (2.0), liraasa_2_0 (2.1), liraasa_2_1 (2.2), liraasa_2_2 (2.3) or liraasa_2_3 (2.5). Ruling ids are edition-qualified: ' +
-      '0.8:R1, 1.0:G7, 1.2:G24, 2.0:G40, 2.1:G46, 2.2:G60, 2.3:G69, 2.5:G88, 3.0:G129. Built by scripts/build_handoff.ts from data/lexicon/liraasa_3_1.json.',
+      '0.8:R1, 1.0:G7, 1.2:G24, 2.0:G40, 2.1:G46, 2.2:G60, 2.3:G69, 2.5:G88, 3.0:G129, 3.2:G142, 3.3:G148. Built by scripts/build_handoff.ts from data/lexicon/liraasa_3_3.json.',
     examples,
     counts_1_1_to_1_2: report12.counts,
     changesets_1_2_full: v12,
@@ -132,6 +137,8 @@ function main(): void {
     changesets_3_0_full: v30,
     counts_3_0_to_3_1: report31.counts,
     changesets_3_1_full: v31,
+    counts_3_1_to_3_3: report33.counts,
+    changesets_3_3_full: v33,
   };
 
   mkdirSync(resolve(OUT_DIR), { recursive: true });

@@ -1421,7 +1421,9 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
         spelling: t.form,
         meaning: t.english,
         theme: "Time words",
-        since: ""
+        since: "",
+        // a time noun may be a compound's modifier (3.2:G142): deya + nole
+        usedIn: (indexes.byComponent.get(t.form) ?? []).map((u) => u.entryId)
       })),
       ...lexicon.colors.map((c) => ({
         ...base,
@@ -1492,7 +1494,10 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     );
     const context = { indexes, numbers, names, motionPrefixes };
     const items = /* @__PURE__ */ new Map();
-    const colourIds = new Map(lexicon.colors.map((c) => [c.base, c.id]));
+    const colourIds = new Map([
+      ...lexicon.timeWords.map((t) => [t.form, t.id]),
+      ...lexicon.colors.map((c) => [c.base, c.id])
+    ]);
     for (const h of lexicon.headwords)
       items.set(h.id, headwordItem(h, indexes, edition, gaps, colourIds));
     for (const h of lexicon.imageCompounds?.attested ?? []) {

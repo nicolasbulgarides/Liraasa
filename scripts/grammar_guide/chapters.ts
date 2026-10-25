@@ -689,6 +689,12 @@ export const RULED_RECIPES: ReadonlySet<string> = new Set([
   'maivo futu donuda ito biti de lalfo, kopisa taivo nosi semnesia ko maivo en moluvaye.',
   'lirasan lavra',
   'Taivo vaku maivo lirala.',
+  // the 3.1 recipes, ratified by the author with the rest of 3.1 (2026-10-25)
+  'Zafra, maivo po hiro sabesia fime saivo po pagopa.',
+  'Maivo lorelivnala lavlomiru korsi miru.',
+  'Eli ka maivo de lorelivnasan lira.',
+  'Maivo ne mebanema; nara saivo po loteromebanela maivo.',
+  'Saivo amorharlua saivo de sora.',
 ]);
 
 export const RECIPES: readonly (readonly [string, string, string, string, string])[] = [
@@ -1134,6 +1140,78 @@ export const RECIPES: readonly (readonly [string, string, string, string, string
     '`loterodesi` / `loterodesila` (wanting what another has) · `amorharlu` / `amorharlua` (fear of losing a bond)',
     'Saivo amorharlua saivo de sora.',
     'She is jealous over her friend.',
+    '',
+  ],
+  // 3.3, proposed: the recipes the 3.3 patch adds that read clean (two that break an earlier ruling
+  // are put to the author, review/questions_3_3.md)
+  [
+    'hen / rooster',
+    'minvasan / tarnusan + gudopocu (gender adjective, 1.2:G36)',
+    'Li minvasan gudopocu po lavrasamnila.',
+    'The hen laid an egg.',
+    '1.2:G36',
+  ],
+  [
+    'chicken (meat), pork, beef',
+    'an animal noun also names its meat when it is eaten (3.2:G143)',
+    'Maivo sapusia gubu.',
+    'I eat pork.',
+    '3.2:G143',
+  ],
+  [
+    'a mile, a foot, an inch',
+    'valmilornu (an hour’s walk) and body parts as units: pebu (foot), fini (finger-width), varo (arm-length) (3.2:G144)',
+    'Li nimu ka vofa dossa valmilornu.',
+    'The home is two leagues away.',
+    '3.2:G144',
+  ],
+  [
+    'wow! · hey! · whatever · just kidding',
+    'Hoyo! · Iya! · Yori. · Peliseno!',
+    'Hoyo! Li yalmukadu ka zilesan!',
+    'Wow! The car is fancy!',
+    '',
+  ],
+  [
+    'busy · strange/weird · smart · sad · expensive',
+    'talisan · hurvosan · ravmisan · nemesan · dapasan (already in the lexicon)',
+    'Saivo ke talisan deyapressa.',
+    'She is busy today.',
+    '',
+  ],
+  [
+    'dozen · quarter · century',
+    'unzira-dossa · una de cuara · centa montafama',
+    'Maivo tovota unzira-dossa lavrasamni.',
+    'I have a dozen eggs.',
+    '',
+  ],
+  [
+    'frighten · remind · upset · straighten',
+    'vaku + actor + verb (2.5:G109)',
+    'Li ruhe vaku li linu follufa.',
+    'The storm frightens the child.',
+    '2.5:G109',
+  ],
+  [
+    'resemble · discuss · huddle',
+    'ka sambasan ko · senosia ko · yave-semnesia',
+    'Saivori yave-semnesia ligo li faru.',
+    'They huddle by the fire.',
+    '',
+  ],
+  [
+    'various · enormous · damp',
+    'muya loterosan · ruli mellisan · menu mulyisan',
+    'Li monru ka ruli mellisan.',
+    'The mountain is enormous.',
+    '',
+  ],
+  [
+    'upstairs',
+    'en li salruzupa (in the upper room)',
+    'Saivo ke en li salruzupa.',
+    'She is upstairs.',
     '',
   ],
 ];

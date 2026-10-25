@@ -354,7 +354,8 @@ export class SentenceParser {
       np.end = this.i;
       return np;
     }
-    if (this.is(i0, 'name') && !this.is(i0, 'noun')) {
+    // a name, unless it is an adjective of origin before its noun (Fransasan lira, 3.2:G147)
+    if (this.is(i0, 'name') && !this.is(i0, 'noun') && !(this.adjish(i0) && this.nounish(i0 + 1))) {
       np.head = i0;
       np.headKind = 'name';
       this.i += 1;
@@ -448,7 +449,10 @@ export class SentenceParser {
         this.i += 2;
         continue;
       }
-      if (this.adjish(k) && !this.nounish(k) && this.isWord(k)) {
+      // an adjective; one that could also be a name only before its noun (Fransasan lira, 3.2:G147)
+      const originAdj =
+        this.is(k, 'name') && !this.is(k, 'noun') && !this.is(k, 'pron') && this.nounish(k + 1);
+      if (this.adjish(k) && (!this.nounish(k) || originAdj) && this.isWord(k)) {
         np.adjectives.push(k);
         this.i += 1;
         continue;
@@ -468,6 +472,20 @@ export class SentenceParser {
             ? 'pron'
             : 'kiword';
       this.i += 1;
+      // a title directly before a name, with no comma: zilenela Peta, pilo Peta (3.2:G145)
+      const hon = this.ix.source.rules.honorific;
+      if (
+        hon !== undefined &&
+        this.is(this.i, 'name') &&
+        !this.is(this.i, 'noun') &&
+        (hon.titles.includes(this.w(h)) ||
+          hon.noun_classes.includes(this.ix.source.flags.noun_class[this.w(h)] ?? ''))
+      ) {
+        np.title = h;
+        np.head = this.i;
+        np.headKind = 'name';
+        this.i += 1;
+      }
       // a second bare noun right after: a noun does not modify a noun (ADR-0011)
       const n2 = this.i;
       if (
@@ -938,13 +956,18 @@ export class SentenceParser {
         !this.verbish(this.i + 1)
       ) {
         const neAt = this.i;
+        const mark = this.findings.length;
         this.i += 1;
         const subj = this.parseNP();
         if (subj !== null && this.predicateStart(this.i)) {
           this.role(neAt, 'NEGATION');
           clause.subject = { ...subj, start: neAt };
           this.roleSpan(subj.start, subj.end, 'SUBJECT');
-        } else this.i = neAt;
+        } else {
+          // not a negated subject: what the trial read found does not stand
+          this.findings.length = mark;
+          this.i = neAt;
+        }
       } else if (
         (this.is(this.i, 'timeAdv') || this.is(this.i, 'placeAdv')) &&
         this.is(this.i + 1, 'copula')
@@ -1284,8 +1307,15 @@ export class SentenceParser {
         this.atEnd() ||
         this.isPunct(this.i, ','))
     ) {
-      // ne before a contrasted constituent or a fragment (0.8:G2)
-      if (this.npStart(this.i)) {
+      // ne before a contrasted constituent or a fragment (0.8:G2); a bare adjective stays an
+      // adjective (…, ne gudosan: not ordinary), never a noun
+      const bareAdj =
+        this.adjish(this.i) &&
+        !this.nounish(this.i) &&
+        !this.nounish(this.i + 1) &&
+        !this.adjish(this.i + 1);
+      if (bareAdj) this.parseAdjP(clause);
+      else if (this.npStart(this.i)) {
         const np = this.parseNP({ adverbHead: true });
         if (np !== null) {
           this.roleSpan(np.start, np.end, clause.subject === null ? 'PREDICATE' : 'OBJECT');

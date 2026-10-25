@@ -1,0 +1,3436 @@
+{
+ "patch": "Liraasa 3.0 — Devotion, Music and Measure",
+ "base_version": "2.5",
+ "target_version": "3.0",
+ "status": "PROPOSED: every entry requires the author's ratification before it becomes canon",
+ "base_file": "liraasa_2_5_llm.json",
+ "base_counts": {
+  "headwords": 1463,
+  "meaningful_forms": 4036
+ },
+ "counts": {
+  "new_roots": 15,
+  "new_root_forms": 48,
+  "new_compounds": 112,
+  "new_compound_forms": 143,
+  "image_compounds_lexicalized": 7,
+  "new_listed_derivations": 17,
+  "new_lexicalised_diminutives": 1,
+  "restored_forms": 33,
+  "new_function_words": 1,
+  "new_rulings": 13,
+  "headwords_after": 1590,
+  "meaningful_forms_after": 4260
+ },
+ "principles": [
+  "Additions only: no 2.5 word, spelling or meaning is changed or removed.",
+  "Every new root obeys the root template (two syllables, consonant-initial, vowel-final, no doubled letter, no suffix-look-alike ending) and is at least two edits from every active word.",
+  "Every compound joins two existing (or newly added) headwords, head last; its verb takes the class of its first letter.",
+  "Only listed forms exist: each new headword lists the slots that carry meaning; the rest stay empty.",
+  "Restored forms fill an empty slot of a 2.5 headword only where the meaning is genuinely needed; ascended meanings are lexicalized, never mechanical."
+ ],
+ "function_words_add": [
+  {
+   "form": "iya",
+   "meaning": "vocative: O (solemn or reverent address)",
+   "use": "Opens a vocative noun phrase: iya + NP, set off by a comma; may also close a clause after ki. Optional in everyday address, expected in prayer, invocation and litany (3.0:G129).",
+   "example_liraasa": "Iya Deviasa, lenila maivo!",
+   "example_english": "O Great Goddess, hear me!",
+   "min_edit_distance": ">=2"
+  }
+ ],
+ "roots_add": [
+  {
+   "headword": "lirvi",
+   "domain": "Music & story",
+   "sound_class": "lyrical (l r v), shares the l-r frame of lira",
+   "min_edit_distance_to_active_words": 2,
+   "forms": {
+    "n": {
+     "form": "lirvi",
+     "meaning": "note; a single musical tone"
+    },
+    "an": {
+     "form": "lirviasa",
+     "meaning": "the keynote; the tone to which all music returns"
+    },
+    "v": {
+     "form": "lirvila",
+     "meaning": "to sound a note"
+    },
+    "a": {
+     "form": "lirvisan",
+     "meaning": "tonal; sounding as a note"
+    }
+   },
+   "dictionary_line": "lirvi {new in 3.0}: (n) note; a single musical tone | lirviasa (an) the keynote; the tone to which all music returns | lirvila (v) to sound a note | lirvisan (a) tonal; sounding as a note"
+  },
+  {
+   "headword": "vinye",
+   "domain": "Music & story",
+   "sound_class": "lyrical (v n); echoes 'veena'",
+   "min_edit_distance_to_active_words": 2,
+   "forms": {
+    "n": {
+     "form": "vinye",
+     "meaning": "lute; veena; a long-necked plucked string instrument"
+    },
+    "an": {
+     "form": "vinyeasa",
+     "meaning": "the Goddess’s veena; the lute on which creation is played"
+    },
+    "v": {
+     "form": "vinyeva",
+     "meaning": "to play the lute or veena"
+    }
+   },
+   "dictionary_line": "vinye {new in 3.0}: (n) lute; veena; a long-necked plucked string instrument | vinyeasa (an) the Goddess’s veena; the lute on which creation is played | vinyeva (v) to play the lute or veena"
+  },
+  {
+   "headword": "dobo",
+   "domain": "Music & story",
+   "sound_class": "bodily (d b): a struck sound",
+   "min_edit_distance_to_active_words": 2,
+   "forms": {
+    "n": {
+     "form": "dobo",
+     "meaning": "beat; the pulse of music; one stroke of time"
+    },
+    "v": {
+     "form": "doboda",
+     "meaning": "to keep the beat"
+    },
+    "a": {
+     "form": "dobosan",
+     "meaning": "on the beat; in time"
+    }
+   },
+   "dictionary_line": "dobo {new in 3.0}: (n) beat; the pulse of music; one stroke of time | doboda (v) to keep the beat | dobosan (a) on the beat; in time"
+  },
+  {
+   "headword": "pice",
+   "domain": "Music & story",
+   "sound_class": "playful (p c): a light, plucked sound",
+   "min_edit_distance_to_active_words": 2,
+   "forms": {
+    "n": {
+     "form": "pice",
+     "meaning": "a pluck; one plucked sounding of a string"
+    },
+    "v": {
+     "form": "picepa",
+     "meaning": "to pluck (a string)"
+    }
+   },
+   "dictionary_line": "pice {new in 3.0}: (n) a pluck; one plucked sounding of a string | picepa (v) to pluck (a string)"
+  },
+  {
+   "headword": "monve",
+   "domain": "Music & story",
+   "sound_class": "lyrical (m n v): a held hum",
+   "min_edit_distance_to_active_words": 2,
+   "forms": {
+    "n": {
+     "form": "monve",
+     "meaning": "drone; a tone held beneath a melody"
+    },
+    "an": {
+     "form": "monveasa",
+     "meaning": "the eternal drone; the hum beneath all creation"
+    },
+    "v": {
+     "form": "monvema",
+     "meaning": "to drone; to hold a tone"
+    }
+   },
+   "dictionary_line": "monve {new in 3.0}: (n) drone; a tone held beneath a melody | monveasa (an) the eternal drone; the hum beneath all creation | monvema (v) to drone; to hold a tone"
+  },
+  {
+   "headword": "mumbe",
+   "domain": "Devotional",
+   "sound_class": "lyrical (m b): a closed-mouth hum",
+   "min_edit_distance_to_active_words": 2,
+   "forms": {
+    "n": {
+     "form": "mumbe",
+     "meaning": "the sacred syllable; the hum sung before prayer"
+    },
+    "v": {
+     "form": "mumbema",
+     "meaning": "to intone the sacred syllable"
+    }
+   },
+   "dictionary_line": "mumbe {new in 3.0}: (n) the sacred syllable; the hum sung before prayer | mumbema (v) to intone the sacred syllable"
+  },
+  {
+   "headword": "rumbu",
+   "domain": "Devotional",
+   "sound_class": "resonant (r m b)",
+   "min_edit_distance_to_active_words": 2,
+   "forms": {
+    "n": {
+     "form": "rumbu",
+     "meaning": "conch; a shell sounded to call to worship"
+    },
+    "v": {
+     "form": "rumbura",
+     "meaning": "to sound the conch"
+    }
+   },
+   "dictionary_line": "rumbu {new in 3.0}: (n) conch; a shell sounded to call to worship | rumbura (v) to sound the conch"
+  },
+  {
+   "headword": "dipo",
+   "domain": "Devotional",
+   "sound_class": "small, bright (d p)",
+   "min_edit_distance_to_active_words": 2,
+   "forms": {
+    "n": {
+     "form": "dipo",
+     "meaning": "lamp; a small oil lamp kept in devotion"
+    },
+    "an": {
+     "form": "dipoasa",
+     "meaning": "the lamp that never goes out"
+    },
+    "v": {
+     "form": "dipoda",
+     "meaning": "to light a lamp in devotion"
+    },
+    "a": {
+     "form": "diposan",
+     "meaning": "lamplit"
+    }
+   },
+   "dictionary_line": "dipo {new in 3.0}: (n) lamp; a small oil lamp kept in devotion | dipoasa (an) the lamp that never goes out | dipoda (v) to light a lamp in devotion | diposan (a) lamplit"
+  },
+  {
+   "headword": "lilya",
+   "domain": "Devotional",
+   "sound_class": "lyrical (l y)",
+   "min_edit_distance_to_active_words": 2,
+   "forms": {
+    "n": {
+     "form": "lilya",
+     "meaning": "ornament; adornment; (music) a grace note"
+    },
+    "v": {
+     "form": "lilyala",
+     "meaning": "to adorn"
+    },
+    "a": {
+     "form": "lilyasan",
+     "meaning": "adorned; ornamented"
+    },
+    "na": {
+     "form": "lilyanasan",
+     "meaning": "unadorned; plain"
+    }
+   },
+   "dictionary_line": "lilya {new in 3.0}: (n) ornament; adornment; (music) a grace note | lilyala (v) to adorn | lilyanasan (na) unadorned; plain | lilyasan (a) adorned; ornamented"
+  },
+  {
+   "headword": "velni",
+   "domain": "Devotional",
+   "sound_class": "lyrical (v l n)",
+   "min_edit_distance_to_active_words": 2,
+   "forms": {
+    "n": {
+     "form": "velni",
+     "meaning": "essence; the inmost nature of a thing"
+    },
+    "an": {
+     "form": "velniasa",
+     "meaning": "the divine essence; the essence of the Goddess"
+    },
+    "a": {
+     "form": "velnisan",
+     "meaning": "essential"
+    },
+    "nn": {
+     "form": "velnina",
+     "meaning": "hollowness; the lack of an essence"
+    },
+    "na": {
+     "form": "velninasan",
+     "meaning": "hollow; inessential"
+    }
+   },
+   "dictionary_line": "velni {new in 3.0}: (n) essence; the inmost nature of a thing | velniasa (an) the divine essence; the essence of the Goddess | velnina (nn) hollowness; the lack of an essence | velninasan (na) hollow; inessential | velnisan (a) essential"
+  },
+  {
+   "headword": "nelmo",
+   "domain": "Mind & philosophy",
+   "sound_class": "lyrical (n l m)",
+   "min_edit_distance_to_active_words": 2,
+   "forms": {
+    "n": {
+     "form": "nelmo",
+     "meaning": "symbol; a sign that stands for more than itself"
+    },
+    "an": {
+     "form": "nelmoasa",
+     "meaning": "sacrament; a sign that holds what it signifies"
+    },
+    "v": {
+     "form": "nelmonia",
+     "meaning": "to symbolize"
+    },
+    "a": {
+     "form": "nelmosan",
+     "meaning": "symbolic"
+    }
+   },
+   "dictionary_line": "nelmo {new in 3.0}: (n) symbol; a sign that stands for more than itself | nelmoasa (an) sacrament; a sign that holds what it signifies | nelmonia (v) to symbolize | nelmosan (a) symbolic"
+  },
+  {
+   "headword": "lenda",
+   "domain": "Space & orientation",
+   "sound_class": "lyrical (l n d)",
+   "min_edit_distance_to_active_words": 2,
+   "forms": {
+    "n": {
+     "form": "lenda",
+     "meaning": "line; stroke"
+    },
+    "v": {
+     "form": "lendala",
+     "meaning": "to draw a line"
+    },
+    "a": {
+     "form": "lendasan",
+     "meaning": "linear; straight"
+    }
+   },
+   "dictionary_line": "lenda {new in 3.0}: (n) line; stroke | lendala (v) to draw a line | lendasan (a) linear; straight"
+  },
+  {
+   "headword": "gaki",
+   "domain": "Space & orientation",
+   "sound_class": "angular (g k)",
+   "min_edit_distance_to_active_words": 2,
+   "forms": {
+    "n": {
+     "form": "gaki",
+     "meaning": "angle; corner"
+    },
+    "a": {
+     "form": "gakisan",
+     "meaning": "angular"
+    }
+   },
+   "dictionary_line": "gaki {new in 3.0}: (n) angle; corner | gakisan (a) angular"
+  },
+  {
+   "headword": "pidi",
+   "domain": "Space & orientation",
+   "sound_class": "small (p d)",
+   "min_edit_distance_to_active_words": 2,
+   "forms": {
+    "n": {
+     "form": "pidi",
+     "meaning": "tip; the very end or point of a thing"
+    },
+    "a": {
+     "form": "pidisan",
+     "meaning": "pointed; tipped"
+    }
+   },
+   "dictionary_line": "pidi {new in 3.0}: (n) tip; the very end or point of a thing | pidisan (a) pointed; tipped"
+  },
+  {
+   "headword": "tiku",
+   "domain": "Time, quantity & work",
+   "sound_class": "crisp (t k)",
+   "min_edit_distance_to_active_words": 2,
+   "forms": {
+    "n": {
+     "form": "tiku",
+     "meaning": "precision; exactness"
+    },
+    "v": {
+     "form": "tikuta",
+     "meaning": "to make exact; to calibrate"
+    },
+    "a": {
+     "form": "tikusan",
+     "meaning": "precise; exact"
+    },
+    "nn": {
+     "form": "tikuna",
+     "meaning": "imprecision"
+    },
+    "na": {
+     "form": "tikunasan",
+     "meaning": "imprecise; approximate"
+    }
+   },
+   "dictionary_line": "tiku {new in 3.0}: (n) precision; exactness | tikuna (nn) imprecision | tikuta (v) to make exact; to calibrate | tikunasan (na) imprecise; approximate | tikusan (a) precise; exact"
+  }
+ ],
+ "compounds_add": [
+  {
+   "headword": "melopuku",
+   "parts": [
+    "melo",
+    "puku"
+   ],
+   "domain": "Music & story",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "melopuku",
+     "meaning": "cadence; the close of a musical phrase"
+    },
+    "v": {
+     "form": "melopukuma",
+     "meaning": "to bring a phrase to rest"
+    }
+   },
+   "note": null,
+   "dictionary_line": "melopuku [melo+puku] {new in 3.0}: (n) cadence; the close of a musical phrase | melopukuma (v) to bring a phrase to rest"
+  },
+  {
+   "headword": "sonbunulu",
+   "parts": [
+    "sonbu",
+    "nulu"
+   ],
+   "domain": "Music & story",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "sonbunulu",
+     "meaning": "scale; a path of tones"
+    }
+   },
+   "note": "sonbu is an image-compound head but not a modifier: ordinary compound",
+   "dictionary_line": "sonbunulu [sonbu+nulu] {new in 3.0}: (n) scale; a path of tones"
+  },
+  {
+   "headword": "sonbulekta",
+   "parts": [
+    "sonbu",
+    "lekta"
+   ],
+   "domain": "Music & story",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "sonbulekta",
+     "meaning": "chord; tones sounded together"
+    },
+    "v": {
+     "form": "sonbulektasia",
+     "meaning": "to sound a chord"
+    }
+   },
+   "note": null,
+   "dictionary_line": "sonbulekta [sonbu+lekta] {new in 3.0}: (n) chord; tones sounded together | sonbulektasia (v) to sound a chord"
+  },
+  {
+   "headword": "sonbusalru",
+   "parts": [
+    "sonbu",
+    "salru"
+   ],
+   "domain": "Music & story",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "sonbusalru",
+     "meaning": "pitch; the height of a sound"
+    },
+    "a": {
+     "form": "sonbusalrusan",
+     "meaning": "high-pitched"
+    },
+    "na": {
+     "form": "sonbusalrunasan",
+     "meaning": "low-pitched"
+    }
+   },
+   "note": null,
+   "dictionary_line": "sonbusalru [sonbu+salru] {new in 3.0}: (n) pitch; the height of a sound | sonbusalrunasan (na) low-pitched | sonbusalrusan (a) high-pitched"
+  },
+  {
+   "headword": "sonbumelli",
+   "parts": [
+    "sonbu",
+    "melli"
+   ],
+   "domain": "Music & story",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "sonbumelli",
+     "meaning": "loudness; the volume of a sound"
+    }
+   },
+   "note": null,
+   "dictionary_line": "sonbumelli [sonbu+melli] {new in 3.0}: (n) loudness; the volume of a sound"
+  },
+  {
+   "headword": "kronovizu",
+   "parts": [
+    "krono",
+    "vizu"
+   ],
+   "domain": "Music & story",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "kronovizu",
+     "meaning": "tempo; the speed of music"
+    }
+   },
+   "note": null,
+   "dictionary_line": "kronovizu [krono+vizu] {new in 3.0}: (n) tempo; the speed of music"
+  },
+  {
+   "headword": "melopatu",
+   "parts": [
+    "melo",
+    "patu"
+   ],
+   "domain": "Music & story",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "melopatu",
+     "meaning": "bar; a measure of music"
+    }
+   },
+   "note": null,
+   "dictionary_line": "melopatu [melo+patu] {new in 3.0}: (n) bar; a measure of music"
+  },
+  {
+   "headword": "melolekta",
+   "parts": [
+    "melo",
+    "lekta"
+   ],
+   "domain": "Music & story",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "melolekta",
+     "meaning": "concert; a gathering to hear music"
+    }
+   },
+   "note": null,
+   "dictionary_line": "melolekta [melo+lekta] {new in 3.0}: (n) concert; a gathering to hear music"
+  },
+  {
+   "headword": "melofarla",
+   "parts": [
+    "melo",
+    "farla"
+   ],
+   "domain": "Music & story",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "melofarla",
+     "meaning": "musical composition; a work of music"
+    },
+    "v": {
+     "form": "melofarlama",
+     "meaning": "to compose music"
+    }
+   },
+   "note": null,
+   "dictionary_line": "melofarla [melo+farla] {new in 3.0}: (n) musical composition; a work of music | melofarlama (v) to compose music"
+  },
+  {
+   "headword": "lavbumelo",
+   "parts": [
+    "lavbu",
+    "melo"
+   ],
+   "domain": "Music & story",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lavbumelo",
+     "meaning": "sacred music; music made as prayer"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lavbumelo [lavbu+melo] {new in 3.0}: (n) sacred music; music made as prayer"
+  },
+  {
+   "headword": "sirmolira",
+   "parts": [
+    "sirmo",
+    "lira"
+   ],
+   "domain": "Music & story",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "sirmolira",
+     "meaning": "doxology; a hymn of glory"
+    }
+   },
+   "note": null,
+   "dictionary_line": "sirmolira [sirmo+lira] {new in 3.0}: (n) doxology; a hymn of glory"
+  },
+  {
+   "headword": "jurevilira",
+   "parts": [
+    "jurevi",
+    "lira"
+   ],
+   "domain": "Music & story",
+   "image_compound": true,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "jurevilira",
+     "meaning": "hymn of thanksgiving"
+    }
+   },
+   "note": "image compound (grateful + melody), lexicalized",
+   "dictionary_line": "jurevilira [jurevi+lira] {new in 3.0}: (n) hymn of thanksgiving"
+  },
+  {
+   "headword": "nolelira",
+   "parts": [
+    "nole",
+    "lira"
+   ],
+   "domain": "Music & story",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "nolelira",
+     "meaning": "a sung litany; a song of holy names"
+    }
+   },
+   "note": null,
+   "dictionary_line": "nolelira [nole+lira] {new in 3.0}: (n) a sung litany; a song of holy names"
+  },
+  {
+   "headword": "senolira",
+   "parts": [
+    "seno",
+    "lira"
+   ],
+   "domain": "Music & story",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "senolira",
+     "meaning": "chant; words sung on few notes"
+    },
+    "v": {
+     "form": "senolirasia",
+     "meaning": "to chant"
+    }
+   },
+   "note": null,
+   "dictionary_line": "senolira [seno+lira] {new in 3.0}: (n) chant; words sung on few notes | senolirasia (v) to chant"
+  },
+  {
+   "headword": "lavburilu",
+   "parts": [
+    "lavbu",
+    "rilu"
+   ],
+   "domain": "Music & story",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lavburilu",
+     "meaning": "sacred dance"
+    },
+    "v": {
+     "form": "lavburilula",
+     "meaning": "to dance in worship"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lavburilu [lavbu+rilu] {new in 3.0}: (n) sacred dance | lavburilula (v) to dance in worship"
+  },
+  {
+   "headword": "pebudumdo",
+   "parts": [
+    "pebu",
+    "dumdo"
+   ],
+   "domain": "Music & story",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "pebudumdo",
+     "meaning": "the tapping of feet; keeping time with the feet"
+    },
+    "v": {
+     "form": "pebudumdopa",
+     "meaning": "to tap one’s feet in time"
+    }
+   },
+   "note": null,
+   "dictionary_line": "pebudumdo [pebu+dumdo] {new in 3.0}: (n) the tapping of feet; keeping time with the feet | pebudumdopa (v) to tap one’s feet in time"
+  },
+  {
+   "headword": "sonbuyeba",
+   "parts": [
+    "sonbu",
+    "yeba"
+   ],
+   "domain": "Music & story",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "sonbuyeba",
+     "meaning": "tuning; attunement"
+    },
+    "v": {
+     "form": "sonbuyebasia",
+     "meaning": "to tune; to attune"
+    },
+    "a": {
+     "form": "sonbuyebasan",
+     "meaning": "in tune; attuned"
+    },
+    "na": {
+     "form": "sonbuyebanasan",
+     "meaning": "out of tune"
+    }
+   },
+   "note": null,
+   "dictionary_line": "sonbuyeba [sonbu+yeba] {new in 3.0}: (n) tuning; attunement | sonbuyebasia (v) to tune; to attune | sonbuyebanasan (na) out of tune | sonbuyebasan (a) in tune; attuned"
+  },
+  {
+   "headword": "melokemye",
+   "parts": [
+    "melo",
+    "kemye"
+   ],
+   "domain": "Music & story",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "melokemye",
+     "meaning": "key (in music)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "melokemye [melo+kemye] {new in 3.0}: (n) key (in music)"
+  },
+  {
+   "headword": "mernolira",
+   "parts": [
+    "merno",
+    "lira"
+   ],
+   "domain": "Music & story",
+   "image_compound": true,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "mernolira",
+     "meaning": "aubade; a dawn song"
+    }
+   },
+   "note": "image compound, lexicalized",
+   "dictionary_line": "mernolira [merno+lira] {new in 3.0}: (n) aubade; a dawn song"
+  },
+  {
+   "headword": "nullolira",
+   "parts": [
+    "nullo",
+    "lira"
+   ],
+   "domain": "Music & story",
+   "image_compound": true,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "nullolira",
+     "meaning": "nocturne; a night song"
+    }
+   },
+   "note": "image compound, lexicalized",
+   "dictionary_line": "nullolira [nullo+lira] {new in 3.0}: (n) nocturne; a night song"
+  },
+  {
+   "headword": "velulira",
+   "parts": [
+    "velu",
+    "lira"
+   ],
+   "domain": "Music & story",
+   "image_compound": true,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "velulira",
+     "meaning": "star-song; the note each star sings in the cosmic melody"
+    }
+   },
+   "note": "image compound, lexicalized",
+   "dictionary_line": "velulira [velu+lira] {new in 3.0}: (n) star-song; the note each star sings in the cosmic melody"
+  },
+  {
+   "headword": "vinyelira",
+   "parts": [
+    "vinye",
+    "lira"
+   ],
+   "domain": "Music & story",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "vinyelira",
+     "meaning": "a song for the veena; a lute song"
+    }
+   },
+   "note": null,
+   "dictionary_line": "vinyelira [vinye+lira] {new in 3.0}: (n) a song for the veena; a lute song"
+  },
+  {
+   "headword": "rumbusonbu",
+   "parts": [
+    "rumbu",
+    "sonbu"
+   ],
+   "domain": "Devotional",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "rumbusonbu",
+     "meaning": "the call of the conch; a summons to worship"
+    }
+   },
+   "note": null,
+   "dictionary_line": "rumbusonbu [rumbu+sonbu] {new in 3.0}: (n) the call of the conch; a summons to worship"
+  },
+  {
+   "headword": "lirvinulu",
+   "parts": [
+    "lirvi",
+    "nulu"
+   ],
+   "domain": "Music & story",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lirvinulu",
+     "meaning": "phrase; a line of notes"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lirvinulu [lirvi+nulu] {new in 3.0}: (n) phrase; a line of notes"
+  },
+  {
+   "headword": "mumbelavbu",
+   "parts": [
+    "mumbe",
+    "lavbu"
+   ],
+   "domain": "Devotional",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "mumbelavbu",
+     "meaning": "the hum that opens prayer"
+    }
+   },
+   "note": null,
+   "dictionary_line": "mumbelavbu [mumbe+lavbu] {new in 3.0}: (n) the hum that opens prayer"
+  },
+  {
+   "headword": "cunupatu",
+   "parts": [
+    "cunu",
+    "patu"
+   ],
+   "domain": "Time, quantity & work",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "cunupatu",
+     "meaning": "unit (of measure)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "cunupatu [cunu+patu] {new in 3.0}: (n) unit (of measure)"
+  },
+  {
+   "headword": "cunumelli",
+   "parts": [
+    "cunu",
+    "melli"
+   ],
+   "domain": "Time, quantity & work",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "cunumelli",
+     "meaning": "quantity; amount"
+    }
+   },
+   "note": null,
+   "dictionary_line": "cunumelli [cunu+melli] {new in 3.0}: (n) quantity; amount"
+  },
+  {
+   "headword": "yanocunu",
+   "parts": [
+    "yano",
+    "cunu"
+   ],
+   "domain": "Time, quantity & work",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "yanocunu",
+     "meaning": "sum; total"
+    },
+    "v": {
+     "form": "yanocunuya",
+     "meaning": "to add up; to total"
+    }
+   },
+   "note": null,
+   "dictionary_line": "yanocunu [yano+cunu] {new in 3.0}: (n) sum; total | yanocunuya (v) to add up; to total"
+  },
+  {
+   "headword": "patumiga",
+   "parts": [
+    "patu",
+    "miga"
+   ],
+   "domain": "Time, quantity & work",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "patumiga",
+     "meaning": "proportion; ratio"
+    },
+    "a": {
+     "form": "patumigasan",
+     "meaning": "proportional"
+    }
+   },
+   "note": null,
+   "dictionary_line": "patumiga [patu+miga] {new in 3.0}: (n) proportion; ratio | patumigasan (a) proportional"
+  },
+  {
+   "headword": "sambalordi",
+   "parts": [
+    "samba",
+    "lordi"
+   ],
+   "domain": "Time, quantity & work",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "sambalordi",
+     "meaning": "symmetry"
+    },
+    "a": {
+     "form": "sambalordisan",
+     "meaning": "symmetrical"
+    },
+    "nn": {
+     "form": "sambalordina",
+     "meaning": "asymmetry"
+    },
+    "na": {
+     "form": "sambalordinasan",
+     "meaning": "asymmetrical"
+    }
+   },
+   "note": null,
+   "dictionary_line": "sambalordi [samba+lordi] {new in 3.0}: (n) symmetry | sambalordina (nn) asymmetry | sambalordinasan (na) asymmetrical | sambalordisan (a) symmetrical"
+  },
+  {
+   "headword": "sambabondo",
+   "parts": [
+    "samba",
+    "bondo"
+   ],
+   "domain": "Time, quantity & work",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "sambabondo",
+     "meaning": "balance; equilibrium"
+    },
+    "v": {
+     "form": "sambabondosia",
+     "meaning": "to balance"
+    },
+    "a": {
+     "form": "sambabondosan",
+     "meaning": "balanced"
+    },
+    "na": {
+     "form": "sambabondonasan",
+     "meaning": "unbalanced"
+    }
+   },
+   "note": null,
+   "dictionary_line": "sambabondo [samba+bondo] {new in 3.0}: (n) balance; equilibrium | sambabondosia (v) to balance | sambabondonasan (na) unbalanced | sambabondosan (a) balanced"
+  },
+  {
+   "headword": "mellibiti",
+   "parts": [
+    "melli",
+    "biti"
+   ],
+   "domain": "Time, quantity & work",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "mellibiti",
+     "meaning": "ruler; a measuring tool"
+    }
+   },
+   "note": null,
+   "dictionary_line": "mellibiti [melli+biti] {new in 3.0}: (n) ruler; a measuring tool"
+  },
+  {
+   "headword": "bondobiti",
+   "parts": [
+    "bondo",
+    "biti"
+   ],
+   "domain": "Time, quantity & work",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "bondobiti",
+     "meaning": "scales; a weighing balance"
+    }
+   },
+   "note": null,
+   "dictionary_line": "bondobiti [bondo+biti] {new in 3.0}: (n) scales; a weighing balance"
+  },
+  {
+   "headword": "kronomelli",
+   "parts": [
+    "krono",
+    "melli"
+   ],
+   "domain": "Time, quantity & work",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "kronomelli",
+     "meaning": "duration; length of time"
+    }
+   },
+   "note": "a noun only: it does not settle the open question of duration adverbials",
+   "dictionary_line": "kronomelli [krono+melli] {new in 3.0}: (n) duration; length of time"
+  },
+  {
+   "headword": "lumimelli",
+   "parts": [
+    "lumi",
+    "melli"
+   ],
+   "domain": "Time, quantity & work",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lumimelli",
+     "meaning": "brightness; luminance"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lumimelli [lumi+melli] {new in 3.0}: (n) brightness; luminance"
+  },
+  {
+   "headword": "tikubiti",
+   "parts": [
+    "tiku",
+    "biti"
+   ],
+   "domain": "Time, quantity & work",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "tikubiti",
+     "meaning": "precision instrument; a gauge"
+    }
+   },
+   "note": null,
+   "dictionary_line": "tikubiti [tiku+biti] {new in 3.0}: (n) precision instrument; a gauge"
+  },
+  {
+   "headword": "gakimelli",
+   "parts": [
+    "gaki",
+    "melli"
+   ],
+   "domain": "Space & orientation",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "gakimelli",
+     "meaning": "the measure of an angle; degree"
+    }
+   },
+   "note": null,
+   "dictionary_line": "gakimelli [gaki+melli] {new in 3.0}: (n) the measure of an angle; degree"
+  },
+  {
+   "headword": "finipidi",
+   "parts": [
+    "fini",
+    "pidi"
+   ],
+   "domain": "Space & orientation",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "finipidi",
+     "meaning": "fingertip"
+    }
+   },
+   "note": null,
+   "dictionary_line": "finipidi [fini+pidi] {new in 3.0}: (n) fingertip"
+  },
+  {
+   "headword": "lendanulu",
+   "parts": [
+    "lenda",
+    "nulu"
+   ],
+   "domain": "Space & orientation",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lendanulu",
+     "meaning": "straight path; a ray drawn from a point"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lendanulu [lenda+nulu] {new in 3.0}: (n) straight path; a ray drawn from a point"
+  },
+  {
+   "headword": "devipago",
+   "parts": [
+    "devi",
+    "pago"
+   ],
+   "domain": "Devotional",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "devipago",
+     "meaning": "shrine; a dwelling of the Goddess"
+    }
+   },
+   "note": "words ending in pago are nouns only (2.5:G123)",
+   "dictionary_line": "devipago [devi+pago] {new in 3.0}: (n) shrine; a dwelling of the Goddess"
+  },
+  {
+   "headword": "nolelekta",
+   "parts": [
+    "nole",
+    "lekta"
+   ],
+   "domain": "Devotional",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "nolelekta",
+     "meaning": "litany; a gathering of holy names"
+    }
+   },
+   "note": null,
+   "dictionary_line": "nolelekta [nole+lekta] {new in 3.0}: (n) litany; a gathering of holy names"
+  },
+  {
+   "headword": "sirmonole",
+   "parts": [
+    "sirmo",
+    "nole"
+   ],
+   "domain": "Devotional",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "sirmonole",
+     "meaning": "epithet; a name of praise"
+    }
+   },
+   "note": null,
+   "dictionary_line": "sirmonole [sirmo+nole] {new in 3.0}: (n) epithet; a name of praise"
+  },
+  {
+   "headword": "nolevalla",
+   "parts": [
+    "nole",
+    "valla"
+   ],
+   "domain": "Devotional",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "nolevalla",
+     "meaning": "invocation; calling a holy name aloud"
+    },
+    "v": {
+     "form": "nolevallania",
+     "meaning": "to invoke"
+    }
+   },
+   "note": null,
+   "dictionary_line": "nolevalla [nole+valla] {new in 3.0}: (n) invocation; calling a holy name aloud | nolevallania (v) to invoke"
+  },
+  {
+   "headword": "loredevo",
+   "parts": [
+    "lore",
+    "devo"
+   ],
+   "domain": "Devotional",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "loredevo",
+     "meaning": "devotion; faith held in the heart"
+    },
+    "v": {
+     "form": "loredevola",
+     "meaning": "to devote oneself"
+    },
+    "a": {
+     "form": "loredevosan",
+     "meaning": "devout"
+    }
+   },
+   "note": null,
+   "dictionary_line": "loredevo [lore+devo] {new in 3.0}: (n) devotion; faith held in the heart | loredevola (v) to devote oneself | loredevosan (a) devout"
+  },
+  {
+   "headword": "amorlavbu",
+   "parts": [
+    "amor",
+    "lavbu"
+   ],
+   "domain": "Devotional",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "amorlavbu",
+     "meaning": "adoration"
+    },
+    "v": {
+     "form": "amorlavbua",
+     "meaning": "to adore"
+    }
+   },
+   "note": "vowel-initial: verb R + a; amor compounds are protected legacy forms",
+   "dictionary_line": "amorlavbu [amor+lavbu] {new in 3.0}: (n) adoration | amorlavbua (v) to adore"
+  },
+  {
+   "headword": "loremasu",
+   "parts": [
+    "lore",
+    "masu"
+   ],
+   "domain": "Devotional",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "loremasu",
+     "meaning": "supplication; the heart’s plea"
+    },
+    "v": {
+     "form": "loremasula",
+     "meaning": "to beseech"
+    }
+   },
+   "note": null,
+   "dictionary_line": "loremasu [lore+masu] {new in 3.0}: (n) supplication; the heart’s plea | loremasula (v) to beseech"
+  },
+  {
+   "headword": "meralumi",
+   "parts": [
+    "mera",
+    "lumi"
+   ],
+   "domain": "Devotional",
+   "image_compound": true,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "meralumi",
+     "meaning": "grace; the light of mercy given freely"
+    }
+   },
+   "note": "image compound (merciful + a light that reveals …), lexicalized; distinct from rilliasa, grace received",
+   "dictionary_line": "meralumi [mera+lumi] {new in 3.0}: (n) grace; the light of mercy given freely"
+  },
+  {
+   "headword": "lumidonu",
+   "parts": [
+    "lumi",
+    "donu"
+   ],
+   "domain": "Devotional",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lumidonu",
+     "meaning": "consecration; the giving of light to a thing"
+    },
+    "v": {
+     "form": "lumidonula",
+     "meaning": "to consecrate"
+    },
+    "a": {
+     "form": "lumidonusan",
+     "meaning": "consecrated"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lumidonu [lumi+donu] {new in 3.0}: (n) consecration; the giving of light to a thing | lumidonula (v) to consecrate | lumidonusan (a) consecrated"
+  },
+  {
+   "headword": "noruvimo",
+   "parts": [
+    "noru",
+    "vimo"
+   ],
+   "domain": "Devotional",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "noruvimo",
+     "meaning": "vision; a seeing given in a dream"
+    }
+   },
+   "note": null,
+   "dictionary_line": "noruvimo [noru+vimo] {new in 3.0}: (n) vision; a seeing given in a dream"
+  },
+  {
+   "headword": "noruvalla",
+   "parts": [
+    "noru",
+    "valla"
+   ],
+   "domain": "Devotional",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "noruvalla",
+     "meaning": "oracle; a voice heard in a dream"
+    }
+   },
+   "note": null,
+   "dictionary_line": "noruvalla [noru+valla] {new in 3.0}: (n) oracle; a voice heard in a dream"
+  },
+  {
+   "headword": "deviserbu",
+   "parts": [
+    "devi",
+    "serbu"
+   ],
+   "domain": "Devotional",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "deviserbu",
+     "meaning": "theology; the seeking of the Goddess"
+    }
+   },
+   "note": null,
+   "dictionary_line": "deviserbu [devi+serbu] {new in 3.0}: (n) theology; the seeking of the Goddess"
+  },
+  {
+   "headword": "rinbakrono",
+   "parts": [
+    "rinba",
+    "krono"
+   ],
+   "domain": "Devotional",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "rinbakrono",
+     "meaning": "eternity; endless time"
+    }
+   },
+   "note": "en rinbakrono = for ever (3.0:G139)",
+   "dictionary_line": "rinbakrono [rinba+krono] {new in 3.0}: (n) eternity; endless time"
+  },
+  {
+   "headword": "manlifavro",
+   "parts": [
+    "manli",
+    "favro"
+   ],
+   "domain": "Devotional",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "manlifavro",
+     "meaning": "mudra; a sacred sign made with the hands"
+    }
+   },
+   "note": null,
+   "dictionary_line": "manlifavro [manli+favro] {new in 3.0}: (n) mudra; a sacred sign made with the hands"
+  },
+  {
+   "headword": "vimomiga",
+   "parts": [
+    "vimo",
+    "miga"
+   ],
+   "domain": "Devotional",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "vimomiga",
+     "meaning": "the sacred gaze; the bond of seeing and being seen by the divine"
+    }
+   },
+   "note": null,
+   "dictionary_line": "vimomiga [vimo+miga] {new in 3.0}: (n) the sacred gaze; the bond of seeing and being seen by the divine"
+  },
+  {
+   "headword": "loredonu",
+   "parts": [
+    "lore",
+    "donu"
+   ],
+   "domain": "Devotional",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "loredonu",
+     "meaning": "surrender; the giving of the heart"
+    },
+    "v": {
+     "form": "loredonula",
+     "meaning": "to surrender oneself"
+    }
+   },
+   "note": null,
+   "dictionary_line": "loredonu [lore+donu] {new in 3.0}: (n) surrender; the giving of the heart | loredonula (v) to surrender oneself"
+  },
+  {
+   "headword": "velurivla",
+   "parts": [
+    "velu",
+    "rivla"
+   ],
+   "domain": "Devotional",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "velurivla",
+     "meaning": "the river of stars; the Milky Way"
+    }
+   },
+   "note": null,
+   "dictionary_line": "velurivla [velu+rivla] {new in 3.0}: (n) the river of stars; the Milky Way"
+  },
+  {
+   "headword": "lavbukova",
+   "parts": [
+    "lavbu",
+    "kova"
+   ],
+   "domain": "Devotional",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lavbukova",
+     "meaning": "chalice; a sacred vessel"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lavbukova [lavbu+kova] {new in 3.0}: (n) chalice; a sacred vessel"
+  },
+  {
+   "headword": "lavbufaru",
+   "parts": [
+    "lavbu",
+    "faru"
+   ],
+   "domain": "Devotional",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lavbufaru",
+     "meaning": "altar flame; votive fire"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lavbufaru [lavbu+faru] {new in 3.0}: (n) altar flame; votive fire"
+  },
+  {
+   "headword": "lavbunulu",
+   "parts": [
+    "lavbu",
+    "nulu"
+   ],
+   "domain": "Devotional",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lavbunulu",
+     "meaning": "the way of prayer; a spiritual path"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lavbunulu [lavbu+nulu] {new in 3.0}: (n) the way of prayer; a spiritual path"
+  },
+  {
+   "headword": "lorelavbu",
+   "parts": [
+    "lore",
+    "lavbu"
+   ],
+   "domain": "Devotional",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lorelavbu",
+     "meaning": "prayer of the heart; inward prayer"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lorelavbu [lore+lavbu] {new in 3.0}: (n) prayer of the heart; inward prayer"
+  },
+  {
+   "headword": "lasolavbu",
+   "parts": [
+    "laso",
+    "lavbu"
+   ],
+   "domain": "Devotional",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lasolavbu",
+     "meaning": "silent prayer"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lasolavbu [laso+lavbu] {new in 3.0}: (n) silent prayer"
+  },
+  {
+   "headword": "duhalavbu",
+   "parts": [
+    "duha",
+    "lavbu"
+   ],
+   "domain": "Devotional",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "duhalavbu",
+     "meaning": "prayer of longing"
+    }
+   },
+   "note": null,
+   "dictionary_line": "duhalavbu [duha+lavbu] {new in 3.0}: (n) prayer of longing"
+  },
+  {
+   "headword": "opilavbu",
+   "parts": [
+    "opi",
+    "lavbu"
+   ],
+   "domain": "Devotional",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "opilavbu",
+     "meaning": "prayer of hope"
+    }
+   },
+   "note": null,
+   "dictionary_line": "opilavbu [opi+lavbu] {new in 3.0}: (n) prayer of hope"
+  },
+  {
+   "headword": "nemelavbu",
+   "parts": [
+    "neme",
+    "lavbu"
+   ],
+   "domain": "Devotional",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "nemelavbu",
+     "meaning": "prayer of lament"
+    }
+   },
+   "note": null,
+   "dictionary_line": "nemelavbu [neme+lavbu] {new in 3.0}: (n) prayer of lament"
+  },
+  {
+   "headword": "jurevilavbu",
+   "parts": [
+    "jurevi",
+    "lavbu"
+   ],
+   "domain": "Devotional",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "jurevilavbu",
+     "meaning": "prayer of thanksgiving"
+    }
+   },
+   "note": null,
+   "dictionary_line": "jurevilavbu [jurevi+lavbu] {new in 3.0}: (n) prayer of thanksgiving"
+  },
+  {
+   "headword": "sovelavbu",
+   "parts": [
+    "sove",
+    "lavbu"
+   ],
+   "domain": "Devotional",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "sovelavbu",
+     "meaning": "prayer for peace"
+    }
+   },
+   "note": null,
+   "dictionary_line": "sovelavbu [sove+lavbu] {new in 3.0}: (n) prayer for peace"
+  },
+  {
+   "headword": "marelore",
+   "parts": [
+    "mare",
+    "lore"
+   ],
+   "domain": "Devotional",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "marelore",
+     "meaning": "a mother’s heart; maternal tenderness"
+    }
+   },
+   "note": null,
+   "dictionary_line": "marelore [mare+lore] {new in 3.0}: (n) a mother’s heart; maternal tenderness"
+  },
+  {
+   "headword": "nonmopebu",
+   "parts": [
+    "nonmo",
+    "pebu"
+   ],
+   "domain": "Devotional",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "nonmopebu",
+     "meaning": "the lotus feet; the feet of the Goddess, where devotion is laid"
+    }
+   },
+   "note": null,
+   "dictionary_line": "nonmopebu [nonmo+pebu] {new in 3.0}: (n) the lotus feet; the feet of the Goddess, where devotion is laid"
+  },
+  {
+   "headword": "devotimru",
+   "parts": [
+    "devo",
+    "timru"
+   ],
+   "domain": "Devotional",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "devotimru",
+     "meaning": "tears of devotion"
+    }
+   },
+   "note": null,
+   "dictionary_line": "devotimru [devo+timru] {new in 3.0}: (n) tears of devotion"
+  },
+  {
+   "headword": "velurinba",
+   "parts": [
+    "velu",
+    "rinba"
+   ],
+   "domain": "Devotional",
+   "image_compound": true,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "velurinba",
+     "meaning": "crown of stars"
+    }
+   },
+   "note": "image compound (starlit + a circular pledge), lexicalized",
+   "dictionary_line": "velurinba [velu+rinba] {new in 3.0}: (n) crown of stars"
+  },
+  {
+   "headword": "lirajuba",
+   "parts": [
+    "lira",
+    "juba"
+   ],
+   "domain": "Devotional",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lirajuba",
+     "meaning": "song-offering; a song given as a gift"
+    },
+    "v": {
+     "form": "lirajubala",
+     "meaning": "to offer a song"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lirajuba [lira+juba] {new in 3.0}: (n) song-offering; a song given as a gift | lirajubala (v) to offer a song"
+  },
+  {
+   "headword": "devivelma",
+   "parts": [
+    "devi",
+    "velma"
+   ],
+   "domain": "Devotional",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "devivelma",
+     "meaning": "the Goddess’s mantle"
+    }
+   },
+   "note": null,
+   "dictionary_line": "devivelma [devi+velma] {new in 3.0}: (n) the Goddess’s mantle"
+  },
+  {
+   "headword": "verasado",
+   "parts": [
+    "vera",
+    "sado"
+   ],
+   "domain": "Mind & philosophy",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "verasado",
+     "meaning": "implication; the shadow a truth casts"
+    }
+   },
+   "note": null,
+   "dictionary_line": "verasado [vera+sado] {new in 3.0}: (n) implication; the shadow a truth casts"
+  },
+  {
+   "headword": "lansilira",
+   "parts": [
+    "lansi",
+    "lira"
+   ],
+   "domain": "Devotional",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lansilira",
+     "meaning": "angel-song; a heavenly chorus"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lansilira [lansi+lira] {new in 3.0}: (n) angel-song; a heavenly chorus"
+  },
+  {
+   "headword": "loremeyi",
+   "parts": [
+    "lore",
+    "meyi"
+   ],
+   "domain": "Devotional",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "loremeyi",
+     "meaning": "consolation; the mending of a heart"
+    },
+    "v": {
+     "form": "loremeyila",
+     "meaning": "to console"
+    }
+   },
+   "note": null,
+   "dictionary_line": "loremeyi [lore+meyi] {new in 3.0}: (n) consolation; the mending of a heart | loremeyila (v) to console"
+  },
+  {
+   "headword": "biojuba",
+   "parts": [
+    "bio",
+    "juba"
+   ],
+   "domain": "Devotional",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "biojuba",
+     "meaning": "the gift of life"
+    }
+   },
+   "note": null,
+   "dictionary_line": "biojuba [bio+juba] {new in 3.0}: (n) the gift of life"
+  },
+  {
+   "headword": "velusasva",
+   "parts": [
+    "velu",
+    "sasva"
+   ],
+   "domain": "Devotional",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "velusasva",
+     "meaning": "the safekeeping of the stars"
+    }
+   },
+   "note": null,
+   "dictionary_line": "velusasva [velu+sasva] {new in 3.0}: (n) the safekeeping of the stars"
+  },
+  {
+   "headword": "fatotenva",
+   "parts": [
+    "fato",
+    "tenva"
+   ],
+   "domain": "Devotional",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "fatotenva",
+     "meaning": "the weaving of fate"
+    }
+   },
+   "note": null,
+   "dictionary_line": "fatotenva [fato+tenva] {new in 3.0}: (n) the weaving of fate"
+  },
+  {
+   "headword": "velufarla",
+   "parts": [
+    "velu",
+    "farla"
+   ],
+   "domain": "Devotional",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "velufarla",
+     "meaning": "the making of stars"
+    }
+   },
+   "note": null,
+   "dictionary_line": "velufarla [velu+farla] {new in 3.0}: (n) the making of stars"
+  },
+  {
+   "headword": "dipofaru",
+   "parts": [
+    "dipo",
+    "faru"
+   ],
+   "domain": "Devotional",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "dipofaru",
+     "meaning": "lamplight; the flame of a devotional lamp"
+    }
+   },
+   "note": null,
+   "dictionary_line": "dipofaru [dipo+faru] {new in 3.0}: (n) lamplight; the flame of a devotional lamp"
+  },
+  {
+   "headword": "nelmolavbu",
+   "parts": [
+    "nelmo",
+    "lavbu"
+   ],
+   "domain": "Devotional",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "nelmolavbu",
+     "meaning": "rite; prayer enacted through symbols"
+    }
+   },
+   "note": null,
+   "dictionary_line": "nelmolavbu [nelmo+lavbu] {new in 3.0}: (n) rite; prayer enacted through symbols"
+  },
+  {
+   "headword": "velumare",
+   "parts": [
+    "velu",
+    "mare"
+   ],
+   "domain": "Devotional",
+   "image_compound": false,
+   "title": true,
+   "forms": {
+    "n": {
+     "form": "velumare",
+     "meaning": "mother of the stars (title of the Goddess)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "velumare [velu+mare] {new in 3.0; title}: (n) mother of the stars (title of the Goddess)"
+  },
+  {
+   "headword": "lumimare",
+   "parts": [
+    "lumi",
+    "mare"
+   ],
+   "domain": "Devotional",
+   "image_compound": false,
+   "title": true,
+   "forms": {
+    "n": {
+     "form": "lumimare",
+     "meaning": "mother of light (title of the Goddess)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lumimare [lumi+mare] {new in 3.0; title}: (n) mother of light (title of the Goddess)"
+  },
+  {
+   "headword": "liramare",
+   "parts": [
+    "lira",
+    "mare"
+   ],
+   "domain": "Devotional",
+   "image_compound": false,
+   "title": true,
+   "forms": {
+    "n": {
+     "form": "liramare",
+     "meaning": "mother of song (title of the Goddess)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "liramare [lira+mare] {new in 3.0; title}: (n) mother of song (title of the Goddess)"
+  },
+  {
+   "headword": "soladevi",
+   "parts": [
+    "sola",
+    "devi"
+   ],
+   "domain": "Devotional",
+   "image_compound": false,
+   "title": true,
+   "forms": {
+    "n": {
+     "form": "soladevi",
+     "meaning": "goddess of the sun"
+    }
+   },
+   "note": "pattern X + devi = goddess of X, attested in lardadevi (a Muse)",
+   "dictionary_line": "soladevi [sola+devi] {new in 3.0; title}: (n) goddess of the sun"
+  },
+  {
+   "headword": "lunodevi",
+   "parts": [
+    "luno",
+    "devi"
+   ],
+   "domain": "Devotional",
+   "image_compound": false,
+   "title": true,
+   "forms": {
+    "n": {
+     "form": "lunodevi",
+     "meaning": "goddess of the moon"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lunodevi [luno+devi] {new in 3.0; title}: (n) goddess of the moon"
+  },
+  {
+   "headword": "loredevi",
+   "parts": [
+    "lore",
+    "devi"
+   ],
+   "domain": "Devotional",
+   "image_compound": false,
+   "title": true,
+   "forms": {
+    "n": {
+     "form": "loredevi",
+     "meaning": "goddess of the heart"
+    }
+   },
+   "note": null,
+   "dictionary_line": "loredevi [lore+devi] {new in 3.0; title}: (n) goddess of the heart"
+  },
+  {
+   "headword": "liradevi",
+   "parts": [
+    "lira",
+    "devi"
+   ],
+   "domain": "Devotional",
+   "image_compound": false,
+   "title": true,
+   "forms": {
+    "n": {
+     "form": "liradevi",
+     "meaning": "goddess of song"
+    }
+   },
+   "note": null,
+   "dictionary_line": "liradevi [lira+devi] {new in 3.0; title}: (n) goddess of song"
+  },
+  {
+   "headword": "devinole",
+   "parts": [
+    "devi",
+    "nole"
+   ],
+   "domain": "Devotional",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "devinole",
+     "meaning": "a holy name of the Goddess"
+    }
+   },
+   "note": null,
+   "dictionary_line": "devinole [devi+nole] {new in 3.0}: (n) a holy name of the Goddess"
+  },
+  {
+   "headword": "noleramu",
+   "parts": [
+    "nole",
+    "ramu"
+   ],
+   "domain": "Devotional",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "noleramu",
+     "meaning": "remembrance of a holy name; keeping a name in the heart"
+    },
+    "v": {
+     "form": "noleramunia",
+     "meaning": "to keep a holy name in remembrance"
+    }
+   },
+   "note": null,
+   "dictionary_line": "noleramu [nole+ramu] {new in 3.0}: (n) remembrance of a holy name; keeping a name in the heart | noleramunia (v) to keep a holy name in remembrance"
+  },
+  {
+   "headword": "devisavali",
+   "parts": [
+    "devi",
+    "savali"
+   ],
+   "domain": "Devotional",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "devisavali",
+     "meaning": "the Goddess’s kiss; a blessing laid upon the brow"
+    }
+   },
+   "note": null,
+   "dictionary_line": "devisavali [devi+savali] {new in 3.0}: (n) the Goddess’s kiss; a blessing laid upon the brow"
+  },
+  {
+   "headword": "duhavelu",
+   "parts": [
+    "duha",
+    "velu"
+   ],
+   "domain": "Devotional",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "duhavelu",
+     "meaning": "wishing star; a star of longing"
+    }
+   },
+   "note": null,
+   "dictionary_line": "duhavelu [duha+velu] {new in 3.0}: (n) wishing star; a star of longing"
+  },
+  {
+   "headword": "melorivla",
+   "parts": [
+    "melo",
+    "rivla"
+   ],
+   "domain": "Music & story",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "melorivla",
+     "meaning": "a stream of music; music that flows on without pause"
+    }
+   },
+   "note": null,
+   "dictionary_line": "melorivla [melo+rivla] {new in 3.0}: (n) a stream of music; music that flows on without pause"
+  },
+  {
+   "headword": "lavbusonbu",
+   "parts": [
+    "lavbu",
+    "sonbu"
+   ],
+   "domain": "Devotional",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lavbusonbu",
+     "meaning": "the murmur of prayer; the sound of many praying"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lavbusonbu [lavbu+sonbu] {new in 3.0}: (n) the murmur of prayer; the sound of many praying"
+  },
+  {
+   "headword": "lumilavbu",
+   "parts": [
+    "lumi",
+    "lavbu"
+   ],
+   "domain": "Devotional",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lumilavbu",
+     "meaning": "lamp-worship; prayer offered by the waving of lights"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lumilavbu [lumi+lavbu] {new in 3.0}: (n) lamp-worship; prayer offered by the waving of lights"
+  },
+  {
+   "headword": "folnijuba",
+   "parts": [
+    "folni",
+    "juba"
+   ],
+   "domain": "Devotional",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "folnijuba",
+     "meaning": "flower-offering"
+    },
+    "v": {
+     "form": "folnijubafa",
+     "meaning": "to offer flowers"
+    }
+   },
+   "note": null,
+   "dictionary_line": "folnijuba [folni+juba] {new in 3.0}: (n) flower-offering | folnijubafa (v) to offer flowers"
+  },
+  {
+   "headword": "mirujuba",
+   "parts": [
+    "miru",
+    "juba"
+   ],
+   "domain": "Devotional",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "mirujuba",
+     "meaning": "libation; an offering of water"
+    }
+   },
+   "note": null,
+   "dictionary_line": "mirujuba [miru+juba] {new in 3.0}: (n) libation; an offering of water"
+  },
+  {
+   "headword": "dipolekta",
+   "parts": [
+    "dipo",
+    "lekta"
+   ],
+   "domain": "Devotional",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "dipolekta",
+     "meaning": "festival of lamps; a gathering of many lights"
+    }
+   },
+   "note": null,
+   "dictionary_line": "dipolekta [dipo+lekta] {new in 3.0}: (n) festival of lamps; a gathering of many lights"
+  },
+  {
+   "headword": "lunofelra",
+   "parts": [
+    "luno",
+    "felra"
+   ],
+   "domain": "Devotional",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lunofelra",
+     "meaning": "moon festival"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lunofelra [luno+felra] {new in 3.0}: (n) moon festival"
+  },
+  {
+   "headword": "lorevelu",
+   "parts": [
+    "lore",
+    "velu"
+   ],
+   "domain": "Devotional",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lorevelu",
+     "meaning": "the star within the heart; an inner guiding light"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lorevelu [lore+velu] {new in 3.0}: (n) the star within the heart; an inner guiding light"
+  },
+  {
+   "headword": "mareduha",
+   "parts": [
+    "mare",
+    "duha"
+   ],
+   "domain": "Devotional",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "mareduha",
+     "meaning": "longing for the Mother"
+    }
+   },
+   "note": null,
+   "dictionary_line": "mareduha [mare+duha] {new in 3.0}: (n) longing for the Mother"
+  },
+  {
+   "headword": "linudevo",
+   "parts": [
+    "linu",
+    "devo"
+   ],
+   "domain": "Devotional",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "linudevo",
+     "meaning": "childlike faith"
+    }
+   },
+   "note": null,
+   "dictionary_line": "linudevo [linu+devo] {new in 3.0}: (n) childlike faith"
+  },
+  {
+   "headword": "melosevu",
+   "parts": [
+    "melo",
+    "sevu"
+   ],
+   "domain": "Music & story",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "melosevu",
+     "meaning": "a sea of music; music that surrounds and holds"
+    }
+   },
+   "note": null,
+   "dictionary_line": "melosevu [melo+sevu] {new in 3.0}: (n) a sea of music; music that surrounds and holds"
+  },
+  {
+   "headword": "velunulu",
+   "parts": [
+    "velu",
+    "nulu"
+   ],
+   "domain": "Devotional",
+   "image_compound": true,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "velunulu",
+     "meaning": "the path of stars; a road through the heavens"
+    }
+   },
+   "note": "image compound (starlit + a trail), lexicalized",
+   "dictionary_line": "velunulu [velu+nulu] {new in 3.0}: (n) the path of stars; a road through the heavens"
+  },
+  {
+   "headword": "fontelira",
+   "parts": [
+    "fonte",
+    "lira"
+   ],
+   "domain": "Music & story",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "fontelira",
+     "meaning": "source-song; the song from which all songs come"
+    }
+   },
+   "note": null,
+   "dictionary_line": "fontelira [fonte+lira] {new in 3.0}: (n) source-song; the song from which all songs come"
+  },
+  {
+   "headword": "lombilira",
+   "parts": [
+    "lombi",
+    "lira"
+   ],
+   "domain": "Music & story",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lombilira",
+     "meaning": "creation hymn; a song of the beginning"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lombilira [lombi+lira] {new in 3.0}: (n) creation hymn; a song of the beginning"
+  },
+  {
+   "headword": "lendapatu",
+   "parts": [
+    "lenda",
+    "patu"
+   ],
+   "domain": "Space & orientation",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lendapatu",
+     "meaning": "line segment"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lendapatu [lenda+patu] {new in 3.0}: (n) line segment"
+  },
+  {
+   "headword": "rinbamelli",
+   "parts": [
+    "rinba",
+    "melli"
+   ],
+   "domain": "Space & orientation",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "rinbamelli",
+     "meaning": "circumference"
+    }
+   },
+   "note": null,
+   "dictionary_line": "rinbamelli [rinba+melli] {new in 3.0}: (n) circumference"
+  },
+  {
+   "headword": "cunucuza",
+   "parts": [
+    "cunu",
+    "cuza"
+   ],
+   "domain": "Time, quantity & work",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "cunucuza",
+     "meaning": "numeral; a written number"
+    }
+   },
+   "note": null,
+   "dictionary_line": "cunucuza [cunu+cuza] {new in 3.0}: (n) numeral; a written number"
+  },
+  {
+   "headword": "patucunu",
+   "parts": [
+    "patu",
+    "cunu"
+   ],
+   "domain": "Time, quantity & work",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "patucunu",
+     "meaning": "fraction"
+    }
+   },
+   "note": null,
+   "dictionary_line": "patucunu [patu+cunu] {new in 3.0}: (n) fraction"
+  },
+  {
+   "headword": "velulavbu",
+   "parts": [
+    "velu",
+    "lavbu"
+   ],
+   "domain": "Devotional",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "velulavbu",
+     "meaning": "prayer beneath the stars"
+    }
+   },
+   "note": null,
+   "dictionary_line": "velulavbu [velu+lavbu] {new in 3.0}: (n) prayer beneath the stars"
+  },
+  {
+   "headword": "lunolavbu",
+   "parts": [
+    "luno",
+    "lavbu"
+   ],
+   "domain": "Devotional",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lunolavbu",
+     "meaning": "moon-prayer; a prayer at moonrise"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lunolavbu [luno+lavbu] {new in 3.0}: (n) moon-prayer; a prayer at moonrise"
+  }
+ ],
+ "listed_derivations_add": [
+  {
+   "form": "melofarlayo",
+   "base": "melofarla",
+   "suffix": "-yo",
+   "meaning": "composer"
+  },
+  {
+   "form": "dumdoyo",
+   "base": "dumdo",
+   "suffix": "-yo",
+   "meaning": "drummer"
+  },
+  {
+   "form": "vinyeyo",
+   "base": "vinye",
+   "suffix": "-yo",
+   "meaning": "veena player; lutenist"
+  },
+  {
+   "form": "lavbulirayo",
+   "base": "lavbulira",
+   "suffix": "-yo",
+   "meaning": "cantor; a singer of hymns"
+  },
+  {
+   "form": "melobitiyo",
+   "base": "melobiti",
+   "suffix": "-yo",
+   "meaning": "instrumentalist"
+  },
+  {
+   "form": "noruvimoyo",
+   "base": "noruvimo",
+   "suffix": "-yo",
+   "meaning": "seer; one who receives visions"
+  },
+  {
+   "form": "deviserbuyo",
+   "base": "deviserbu",
+   "suffix": "-yo",
+   "meaning": "theologian"
+  },
+  {
+   "form": "lideoserbuyo",
+   "base": "lideoserbu",
+   "suffix": "-yo",
+   "meaning": "philosopher"
+  },
+  {
+   "form": "pensayo",
+   "base": "pensa",
+   "suffix": "-yo",
+   "meaning": "thinker"
+  },
+  {
+   "form": "biojubayo",
+   "base": "biojuba",
+   "suffix": "-yo",
+   "meaning": "giver of life (epithet)"
+  },
+  {
+   "form": "lirajubayo",
+   "base": "lirajuba",
+   "suffix": "-yo",
+   "meaning": "giver of song (epithet)"
+  },
+  {
+   "form": "lumidonuyo",
+   "base": "lumidonu",
+   "suffix": "-yo",
+   "meaning": "giver of light; consecrator (epithet)"
+  },
+  {
+   "form": "velusasvayo",
+   "base": "velusasva",
+   "suffix": "-yo",
+   "meaning": "keeper of the stars (epithet)"
+  },
+  {
+   "form": "loremeyiyo",
+   "base": "loremeyi",
+   "suffix": "-yo",
+   "meaning": "mender of hearts; consoler (epithet)"
+  },
+  {
+   "form": "fatotenvayo",
+   "base": "fatotenva",
+   "suffix": "-yo",
+   "meaning": "weaver of fate (epithet)"
+  },
+  {
+   "form": "velufarlayo",
+   "base": "velufarla",
+   "suffix": "-yo",
+   "meaning": "maker of stars (epithet)"
+  },
+  {
+   "form": "dipopago",
+   "base": "dipo",
+   "suffix": "-pago",
+   "meaning": "lamp-niche; a place where devotional lamps are kept"
+  }
+ ],
+ "lexicalised_diminutives_add": [
+  {
+   "form": "patuti",
+   "base": "patu",
+   "meaning": "point; dot; a speck"
+  }
+ ],
+ "restored_forms_add": [
+  {
+   "headword": "farviyeba",
+   "domain": "Ethics & emotions",
+   "slot": "v",
+   "form": "farviyebafa",
+   "meaning": "to consent",
+   "source": "ChatGPT proposal",
+   "append_to_line": "farviyebafa (v) to consent"
+  },
+  {
+   "headword": "farviyeba",
+   "domain": "Ethics & emotions",
+   "slot": "a",
+   "form": "farviyebasan",
+   "meaning": "consensual",
+   "source": "ChatGPT proposal",
+   "append_to_line": "farviyebasan (a) consensual"
+  },
+  {
+   "headword": "farviyeba",
+   "domain": "Ethics & emotions",
+   "slot": "nn",
+   "form": "farviyebana",
+   "meaning": "absence of consent",
+   "source": "ChatGPT proposal",
+   "append_to_line": "farviyebana (nn) absence of consent"
+  },
+  {
+   "headword": "farviyeba",
+   "domain": "Ethics & emotions",
+   "slot": "na",
+   "form": "farviyebanasan",
+   "meaning": "non-consensual",
+   "source": "ChatGPT proposal",
+   "append_to_line": "farviyebanasan (na) non-consensual"
+  },
+  {
+   "headword": "kulpamera",
+   "domain": "Ethics & emotions",
+   "slot": "a",
+   "form": "kulpamerasan",
+   "meaning": "forgiving",
+   "source": "ChatGPT proposal",
+   "append_to_line": "kulpamerasan (a) forgiving"
+  },
+  {
+   "headword": "kulpamera",
+   "domain": "Ethics & emotions",
+   "slot": "na",
+   "form": "kulpameranasan",
+   "meaning": "unforgiving",
+   "source": "ChatGPT proposal",
+   "append_to_line": "kulpameranasan (na) unforgiving"
+  },
+  {
+   "headword": "kulpamera",
+   "domain": "Ethics & emotions",
+   "slot": "an",
+   "form": "kulpameraasa",
+   "meaning": "boundless forgiveness",
+   "source": "ChatGPT proposal",
+   "append_to_line": "kulpameraasa (an) boundless forgiveness"
+  },
+  {
+   "headword": "surumiga",
+   "domain": "Ethics & emotions",
+   "slot": "v",
+   "form": "surumigasia",
+   "meaning": "to empathize",
+   "source": "ChatGPT proposal",
+   "append_to_line": "surumigasia (v) to empathize"
+  },
+  {
+   "headword": "surumiga",
+   "domain": "Ethics & emotions",
+   "slot": "an",
+   "form": "surumigaasa",
+   "meaning": "perfect empathy with all beings",
+   "source": "ChatGPT proposal",
+   "append_to_line": "surumigaasa (an) perfect empathy with all beings"
+  },
+  {
+   "headword": "nelavarde",
+   "domain": "Ethics & emotions",
+   "slot": "a",
+   "form": "nelavardesan",
+   "meaning": "dignified",
+   "source": "ChatGPT proposal",
+   "append_to_line": "nelavardesan (a) dignified"
+  },
+  {
+   "headword": "benarelnu",
+   "domain": "Spiritual",
+   "slot": "a",
+   "form": "benarelnusan",
+   "meaning": "redemptive",
+   "source": "ChatGPT proposal",
+   "append_to_line": "benarelnusan (a) redemptive"
+  },
+  {
+   "headword": "benarelnu",
+   "domain": "Spiritual",
+   "slot": "an",
+   "form": "benarelnuasa",
+   "meaning": "ultimate redemption",
+   "source": "ChatGPT proposal",
+   "append_to_line": "benarelnuasa (an) ultimate redemption"
+  },
+  {
+   "headword": "remnirelnu",
+   "domain": "Spiritual",
+   "slot": "a",
+   "form": "remnirelnusan",
+   "meaning": "repentant",
+   "source": "ChatGPT proposal",
+   "append_to_line": "remnirelnusan (a) repentant"
+  },
+  {
+   "headword": "lirayano",
+   "domain": "Music & story",
+   "slot": "a",
+   "form": "lirayanosan",
+   "meaning": "choral; sung by a choir",
+   "source": "ChatGPT proposal",
+   "append_to_line": "lirayanosan (a) choral; sung by a choir"
+  },
+  {
+   "headword": "kronosonbu",
+   "domain": "Music & storytelling",
+   "slot": "a",
+   "form": "kronosonbusan",
+   "meaning": "rhythmic",
+   "source": "ChatGPT proposal",
+   "append_to_line": "kronosonbusan (a) rhythmic"
+  },
+  {
+   "headword": "noruseno",
+   "domain": "Spiritual",
+   "slot": "a",
+   "form": "norusenosan",
+   "meaning": "prophetic",
+   "source": "ChatGPT proposal",
+   "append_to_line": "norusenosan (a) prophetic"
+  },
+  {
+   "headword": "ramuduha",
+   "domain": "Poetry & feeling",
+   "slot": "a",
+   "form": "ramuduhasan",
+   "meaning": "nostalgic",
+   "source": "ChatGPT proposal",
+   "append_to_line": "ramuduhasan (a) nostalgic"
+  },
+  {
+   "headword": "duhasolli",
+   "domain": "Everyday",
+   "slot": "a",
+   "form": "duhasollisan",
+   "meaning": "lonely",
+   "source": "ChatGPT proposal",
+   "append_to_line": "duhasollisan (a) lonely"
+  },
+  {
+   "headword": "follunoru",
+   "domain": "Everyday",
+   "slot": "a",
+   "form": "follunorusan",
+   "meaning": "nightmarish",
+   "source": "ChatGPT proposal",
+   "append_to_line": "follunorusan (a) nightmarish"
+  },
+  {
+   "headword": "lorevimo",
+   "domain": "Spiritual",
+   "slot": "v",
+   "form": "lorevimola",
+   "meaning": "to intuit",
+   "source": "ChatGPT proposal",
+   "append_to_line": "lorevimola (v) to intuit"
+  },
+  {
+   "headword": "mellicunu",
+   "domain": "Science & philosophical inquiry",
+   "slot": "v",
+   "form": "mellicunuma",
+   "meaning": "to measure (a quantity)",
+   "source": "ChatGPT proposal",
+   "append_to_line": "mellicunuma (v) to measure (a quantity)"
+  },
+  {
+   "headword": "mellicunu",
+   "domain": "Science & philosophical inquiry",
+   "slot": "na",
+   "form": "mellicununasan",
+   "meaning": "immeasurable",
+   "source": "this patch",
+   "append_to_line": "mellicununasan (na) immeasurable"
+  },
+  {
+   "headword": "mavolumimiga",
+   "domain": "Spiritual",
+   "slot": "an",
+   "form": "mavolumimigaasa",
+   "meaning": "an eternal soulbond",
+   "source": "ChatGPT proposal",
+   "append_to_line": "mavolumimigaasa (an) an eternal soulbond"
+  },
+  {
+   "headword": "lavbulira",
+   "domain": "Devotional",
+   "slot": "an",
+   "form": "lavbuliraasa",
+   "meaning": "the hymn of all creation; the hymn every star sings",
+   "source": "ChatGPT proposal",
+   "append_to_line": "lavbuliraasa (an) the hymn of all creation; the hymn every star sings"
+  },
+  {
+   "headword": "melolavi",
+   "domain": "Poetry & feeling",
+   "slot": "an",
+   "form": "melolaviasa",
+   "meaning": "transcendent ecstasy through music",
+   "source": "ChatGPT proposal",
+   "append_to_line": "melolaviasa (an) transcendent ecstasy through music"
+  },
+  {
+   "headword": "lumisirmo",
+   "domain": "Devotional",
+   "slot": "an",
+   "form": "lumisirmoasa",
+   "meaning": "resplendence; the glory of the Goddess",
+   "source": "this patch",
+   "append_to_line": "lumisirmoasa (an) resplendence; the glory of the Goddess"
+  },
+  {
+   "headword": "benaseno",
+   "domain": "Speech & mind",
+   "slot": "an",
+   "form": "benasenoasa",
+   "meaning": "the praise of all creation",
+   "source": "this patch",
+   "append_to_line": "benasenoasa (an) the praise of all creation"
+  },
+  {
+   "headword": "jubaseno",
+   "domain": "Devotional",
+   "slot": "v",
+   "form": "jubasenoja",
+   "meaning": "to bless aloud; to give a benediction",
+   "source": "this patch",
+   "append_to_line": "jubasenoja (v) to bless aloud; to give a benediction"
+  },
+  {
+   "headword": "jubaseno",
+   "domain": "Devotional",
+   "slot": "a",
+   "form": "jubasenosan",
+   "meaning": "blessed",
+   "source": "this patch",
+   "append_to_line": "jubasenosan (a) blessed"
+  },
+  {
+   "headword": "lavbuseno",
+   "domain": "Devotional",
+   "slot": "v",
+   "form": "lavbusenola",
+   "meaning": "to chant a mantra",
+   "source": "this patch",
+   "append_to_line": "lavbusenola (v) to chant a mantra"
+  },
+  {
+   "headword": "cunu",
+   "domain": "Speech & mind",
+   "slot": "an",
+   "form": "cunuasa",
+   "meaning": "infinity; the uncountable",
+   "source": "this patch",
+   "append_to_line": "cunuasa (an) infinity; the uncountable"
+  },
+  {
+   "headword": "cunu",
+   "domain": "Speech & mind",
+   "slot": "aa",
+   "form": "cunuasasan",
+   "meaning": "infinite; numberless",
+   "source": "this patch",
+   "append_to_line": "cunuasasan (aa) infinite; numberless"
+  },
+  {
+   "headword": "lumra",
+   "domain": "Movement & action",
+   "slot": "an",
+   "form": "lumraasa",
+   "meaning": "exaltation; the lifting of a soul to the divine",
+   "source": "this patch",
+   "append_to_line": "lumraasa (an) exaltation; the lifting of a soul to the divine"
+  }
+ ],
+ "rejected_proposals": [
+  {
+   "base": "lumisirmo",
+   "slot": "a",
+   "reason": "slot already filled: ('lumisirmosan', 'glorious')"
+  }
+ ],
+ "rulings_add": [
+  {
+   "id": "3.0:G129",
+   "topic": "The vocative particle iya",
+   "rule": "iya + noun phrase is a vocative: a direct address. It opens a sentence and is set off by a comma, stands alone as an invocation, or follows a final ki after a comma (2.5:G89). The noun phrase may be a name, a title, an epithet, a pronoun (taivo, taivori) or an owned phrase (maivo de amor). A vocative never changes the grammar of the clause it addresses. In everyday speech a bare name set off by commas remains a vocative (1.2:G31); in prayer, invocation and litany iya is expected, and it is required wherever a comma-set noun phrase could be read as an apposition (3.0:G130).",
+   "motivation": "The hymn and every prayer genre address the divine; 2.5 had no vocative particle (open question).",
+   "resolves": "A vocative particle for verse.",
+   "examples": [
+    [
+     "Iya Deviasa, lenila maivo!",
+     "O Great Goddess, hear me!"
+    ],
+    [
+     "Iya li mare de li lumi, maivo lirala vobi taivo.",
+     "O mother of light, I sing for you."
+    ],
+    [
+     "Taivo viki pagopa ligo maivo ki, iya maivo de amor?",
+     "Would you come near me, O my love?"
+    ],
+    [
+     "Iya Lumimare!",
+     "O Mother of Light!"
+    ]
+   ],
+   "ungrammatical": [
+    [
+     "Iya, Deviasa, lenila maivo!",
+     "iya is not followed by a comma: it belongs to its noun phrase"
+    ]
+   ]
+  },
+  {
+   "id": "3.0:G130",
+   "topic": "Apposition and epithets",
+   "rule": "A noun phrase may be followed by a second noun phrase, set off by commas, that renames it: an apposition. The apposed phrase keeps its own determiner, takes no copula, and is closed by a comma when the clause continues. Each phrase settles its own de-ownership: an apposition starts a new phrase, so it never joins a de-chain (2.5:G96). Several appositions in a row form a litany. A relative clause (raho) may end an apposition.",
+   "motivation": "Hymn line 11 (‘The cosmic mother, the first light who birthed stars, was pleased …’) had to be split into two statements; epithets and litanies depend on apposition.",
+   "examples": [
+    [
+     "Li mareasa de li vemiasa, li una-ne lumi raho po kronobioka li veluri, po ke lavisan.",
+     "The mother of the cosmos, the first light who gave birth to the stars, was glad."
+    ],
+    [
+     "Deviasa, li mare de li veluri, lirala.",
+     "The Great Goddess, the mother of the stars, sings."
+    ],
+    [
+     "li lumi, li lumi de li veluri",
+     "the light, the light of the stars"
+    ],
+    [
+     "Iya Deviasa, Velumare, Lumimare, Liramare!",
+     "O Great Goddess, Mother of the Stars, Mother of Light, Mother of Song!"
+    ]
+   ],
+   "ungrammatical": [
+    [
+     "Deviasa li mare de li veluri lirala.",
+     "an apposition must be set off by commas"
+    ]
+   ]
+  },
+  {
+   "id": "3.0:G131",
+   "topic": "Divine names and titles",
+   "rule": "An ascended noun or title compound used as a name of the Goddess is capitalized and takes no article (Deviasa, Lumiasa, Mareasa, Velumare). Used as a name, it owns like a personal name when it stands before de (1.2:G27): Deviasa de lira is the Great Goddess’s song. An epithet that describes her keeps its article and stays lower-case: li mare de li lumi, the mother of light. Writing a descriptive epithet as a name therefore changes its meaning.",
+   "motivation": "Titles are central to devotion, but 2.5 lets a name before de own; a capitalized ‘Mareasa de li lumi’ would silently mean ‘the Mother’s light’.",
+   "examples": [
+    [
+     "Deviasa de lira",
+     "the Great Goddess’s song (a name owns)"
+    ],
+    [
+     "li mareasa de li lumi",
+     "the mother of light (an epithet: the light ‘owns’ the relation)"
+    ],
+    [
+     "Lumimare lirala.",
+     "The Mother of Light sings."
+    ]
+   ],
+   "ungrammatical": [
+    [
+     "Mareasa de li lumi (meaning ‘the mother of light’)",
+     "as a name, Mareasa owns: this reads ‘the Mother’s light’; write li mareasa de li lumi"
+    ]
+   ]
+  },
+  {
+   "id": "3.0:G132",
+   "topic": "Absolute being: SUBJECT + miyo",
+   "rule": "miyo with a subject before it and no noun phrase after it asserts that the subject exists: absolute being. It takes tense, negation and operators like any verb. miyo + noun phrase with no subject keeps its 2.5 meaning, ‘there is’. A copula (ke, ka) still always needs a predicate.",
+   "motivation": "‘She was, she is, she will be’ and ‘I am’ could not be said in 2.5; sacred languages need a statement of existence by itself.",
+   "examples": [
+    [
+     "Saivo miyo.",
+     "She is. (She exists.)"
+    ],
+    [
+     "Maivo miyo.",
+     "I am."
+    ],
+    [
+     "Saivo po miyo, saivo miyo, saivo futu miyo.",
+     "She was, she is, she will be."
+    ],
+    [
+     "Kroti li pagoasa, Deviasa po miyo.",
+     "Before the universe, the Great Goddess was."
+    ],
+    [
+     "Miyo baba sora en li nimu.",
+     "There is a friend in the home. (2.5 meaning, unchanged)"
+    ]
+   ],
+   "ungrammatical": [
+    [
+     "Saivo po ke.",
+     "a copula needs a predicate; use Saivo po miyo"
+    ]
+   ]
+  },
+  {
+   "id": "3.0:G133",
+   "topic": "Fiat, blessing of existence, and the liturgical formulas",
+   "rule": "miyo + noun phrase marked as a command (‘!’) is a fiat: ‘let there be …’. miyo + noun phrase + pifu is a wish: ‘may there be …’. Unmarked, miyo + noun phrase stays a statement (2.5:G90). Two fixed liturgical formulas are canon: ‘Ola-modo po miyo, ola-modo miyo, ola-modo futu miyo’ (so it was, so it is, so it shall be), in which ola-modo opens an existential clause without a comma; and ‘Ola-modo pifu’ (so be it; amen), which closes a prayer.",
+   "motivation": "Hymn line 23 had to become ‘that was true, is true, will be true’; creation myths need ‘let there be’.",
+   "examples": [
+    [
+     "Miyo lumi!",
+     "Let there be light!"
+    ],
+    [
+     "Miyo sove en li nimu pifu.",
+     "May there be peace in the home."
+    ],
+    [
+     "Miyo lumi.",
+     "There is light."
+    ],
+    [
+     "Ola-modo po miyo, ola-modo miyo, ola-modo futu miyo.",
+     "So it was, so it is, so it shall be."
+    ],
+    [
+     "Ola-modo pifu.",
+     "So be it. (Amen.)"
+    ]
+   ],
+   "ungrammatical": [
+    [
+     "Ola po ka, ola ka, ola futu ka.",
+     "a copula needs a predicate"
+    ]
+   ]
+  },
+  {
+   "id": "3.0:G134",
+   "topic": "Emphatic sela",
+   "rule": "A pronoun or noun phrase + sela in subject position, or as an apposition, is emphatic: ‘herself’, ‘itself’. In object position, PRONOUN sela stays reflexive (unchanged). sela never stands alone as a subject.",
+   "motivation": "Hymn lines 8 and 17 (‘was itself the first’, ‘music itself’) could not carry the emphasis.",
+   "resolves": "sela: reflexive object only, or also emphatic (the maivori half stays open).",
+   "examples": [
+    [
+     "Saivo sela po lirala.",
+     "She herself sang."
+    ],
+    [
+     "Saivo po amora saivo sela.",
+     "She loved herself. (reflexive)"
+    ],
+    [
+     "Ito sela po ka li una-ne leninela.",
+     "It itself was the first listener."
+    ],
+    [
+     "Saivo de nole po ka sambasan ko li melo, ito sela.",
+     "Her name was the same as music, music itself."
+    ]
+   ],
+   "ungrammatical": [
+    [
+     "Sela po lirala.",
+     "sela needs a pronoun or noun phrase before it"
+    ]
+   ]
+  },
+  {
+   "id": "3.0:G135",
+   "topic": "Commands, petitions and yava",
+   "rule": "A command may carry ne, the iteration words reve and loki, and any adjuncts; it never carries tense, a modal or an evidential. A petition to the divine is a command opened by a vocative (3.0:G129), usually softened by fisa after the vocative’s comma. yava may follow a FRAME.",
+   "motivation": "Prayer is built on petitions; 2.5 left open which operators a command may carry and where yava may stand.",
+   "resolves": "Which operators a command may carry, and whether yava stands after a FRAME or always first.",
+   "examples": [
+    [
+     "Iya Deviasa, fisa, ne pagopa vofa maivo!",
+     "O Great Goddess, please, do not go far from me!"
+    ],
+    [
+     "Reve lirala!",
+     "Sing again!"
+    ],
+    [
+     "Eli-krono, yava lirala!",
+     "Now, let us sing!"
+    ],
+    [
+     "Iya Lumimare, fisa, lenila maivo de lirajuba.",
+     "O Mother of Light, please hear my song-offering."
+    ]
+   ],
+   "ungrammatical": [
+    [
+     "Po lirala!",
+     "a command carries no tense"
+    ],
+    [
+     "Povi lirala!",
+     "a command carries no modal"
+    ]
+   ]
+  },
+  {
+   "id": "3.0:G136",
+   "topic": "Authorship: gagu after a work",
+   "rule": "After a noun naming a made work (lira, lavbulira, lirasarbi, telne, sarbiasa …), gagu + noun phrase names its maker, without a passive verb. Elsewhere gagu remains the agent of gome (2.5:G110).",
+   "motivation": "Hymn line 24 (‘by the first mother’) had to use da, ‘from’.",
+   "examples": [
+    [
+     "li lira gagu Peta",
+     "the song by Peta"
+    ],
+    [
+     "Liraasa, li lira de li una-ne veluri gagu li una-ne mareasa",
+     "Liraasa, the song of the first stars, by the first mother"
+    ]
+   ],
+   "ungrammatical": [
+    [
+     "Peta gagu li lira",
+     "gagu follows the work, never precedes it"
+    ]
+   ]
+  },
+  {
+   "id": "3.0:G137",
+   "topic": "Acclamations",
+   "rule": "A verbless acclamation NP ala NP! (‘NP to NP!’) is grammatical as a liturgical fragment: glory, praise or thanks offered to someone. It may be followed by a vocative.",
+   "motivation": "Doxologies and praise lines (‘Glory to …’) had no form.",
+   "examples": [
+    [
+     "Lumisirmo ala Deviasa!",
+     "Glory to the Great Goddess!"
+    ],
+    [
+     "Benaseno ala taivo, iya Lumimare!",
+     "Praise to you, O Mother of Light!"
+    ],
+    [
+     "Lorejuba ala taivo, iya Velumare.",
+     "Thanks to you, O Mother of the Stars."
+    ]
+   ]
+  },
+  {
+   "id": "3.0:G138",
+   "topic": "Divine pronouns (orthography)",
+   "rule": "Taivo, Saivo and their forms may be capitalized mid-sentence when they refer to the Goddess. This is an optional convention of written devotion and has no grammatical effect.",
+   "examples": [
+    [
+     "Maivo amora Taivo.",
+     "I love You."
+    ],
+    [
+     "Saivo miyo, ata Saivo de lumi lumila.",
+     "She is, and Her light shines."
+    ]
+   ]
+  },
+  {
+   "id": "3.0:G139",
+   "topic": "For ever: en rinbakrono",
+   "rule": "The new noun rinbakrono (eternity) is a time noun: as ‘when’ it takes en (2.5:G103). en rinbakrono means ‘for ever; in eternity’. toda-krono (always) is unchanged. Durations in general (‘for two days’) remain an open question.",
+   "examples": [
+    [
+     "Saivo futu lirala en rinbakrono.",
+     "She will sing for ever."
+    ],
+    [
+     "Maivo amora taivo toda-krono.",
+     "I love you always."
+    ]
+   ]
+  },
+  {
+   "id": "3.0:G140",
+   "topic": "Distributive succession: X krotiapo X",
+   "rule": "A bare noun or number repeated around krotiapo (‘X after X’) is a distributive adjunct or FRAME meaning ‘one X after another’: una krotiapo una, one by one; velu krotiapo velu, star after star. It extends kroti/krotiapo + a bare noun (2.3:G79).",
+   "motivation": "Hymn line 12 (‘One by one, star by star’) had no form.",
+   "examples": [
+    [
+     "Una krotiapo una, li veluri po hiro lirala.",
+     "One by one, the stars began to sing."
+    ],
+    [
+     "Velu krotiapo velu, li navu po loya lumisan.",
+     "Star after star, the sky became bright."
+    ]
+   ]
+  },
+  {
+   "id": "3.0:G141",
+   "topic": "Register and restraint (style, non-normative)",
+   "rule": "Ascended forms are most powerful against ordinary ones. Keep ordinary forms for the human and the near; reserve ascended forms for what is truly divine; let a change of register mark a change of nearness (a mortal growing toward the divine, or the Goddess stooping to comfort). This is guidance for composition, not grammar.",
+   "examples": [
+    [
+     "Maivo ke nemesan. Taivo ka loreasa.",
+     "I am sorrowful. You are a heart larger than sorrow."
+    ]
+   ]
+  }
+ ],
+ "open_questions_resolved": [
+  "A vocative particle for verse. → 3.0:G129",
+  "Which operators a command may carry, and whether yava stands after a FRAME or always first. → 3.0:G135",
+  "sela: emphatic use → 3.0:G134 (the maivori half stays open)"
+ ],
+ "open_questions_after": [
+  "“To + verb” beyond purpose (2.5:G113 and related rulings cover the known cases).",
+  "ke sidu VERB as “destined to” (album 08): hold until a second use.",
+  "The order of two or more adjectives before one noun.",
+  "Whether maivori includes the listener.",
+  "Which quantifiers form a measure with kroti and krotiapo (2.5:G108).",
+  "Comparing an action with no manner adjective (“I sing more than you”).",
+  "A duration (“for two days”) in general; en rinbakrono covers only “for ever”.",
+  "Decimals."
+ ],
+ "hymn_test": [
+  {
+   "line": 2,
+   "v2_5": "kroti saivo de finiri sarbisia li krono ala li pagoasa.",
+   "v3_0": "kroti saivo de finipidiri sarbisia li krono ala li pagoasa.",
+   "english": "Before her fingertips wrote time into existence,",
+   "uses": "fingertip: finipidi"
+  },
+  {
+   "line": 6,
+   "v2_5": "Ata saivo po lurvala saivo de simvoasa ala li fulenasan pagona yuta li veraasa de li narvonasan lordi.",
+   "v3_0": "Ata saivo po lurvala saivo de velniasa ala li fulenasan pagona yuta li veraasa de li narvonasan sambalordi.",
+   "english": "And with her knowledge of flawless symmetry she imbued her essence into the empty non-universe,",
+   "uses": "essence: velniasa; symmetry: sambalordi"
+  },
+  {
+   "line": 7,
+   "v2_5": "Krotiata saivo de lumisan mavoasa po farlafa li pagoasa yuta baba patu de lumi.",
+   "v3_0": "Krotiata saivo de lumisan mavoasa po farlafa li pagoasa yuta baba patuti de lumi.",
+   "english": "Her luminous mind then brought forth existence with a point of light,",
+   "uses": "point: patuti"
+  },
+  {
+   "line": 8,
+   "v2_5": "Li una-ne velu po navunia, ata ito po ka li una-ne leninela raho po lenila saivo de lumiasasan kronosonbu, saivo de meloasa, saivo de vallaasa.",
+   "v3_0": "Li una-ne velu po navunia, ata ito sela po ka li una-ne leninela raho po lenila saivo de lumiasasan melopuku, saivo de meloasa, saivo de vallaasa.",
+   "english": "The first star arose and was itself the first to hear her divine cadence, her music, her voice",
+   "uses": "itself: 3.0:G134; cadence: melopuku"
+  },
+  {
+   "line": 10,
+   "v2_5": "Li una-ne velu po veluva en tranaasasan lumisirmo, ata po ralera saivo de liraasa.",
+   "v3_0": "Li una-ne velu po veluva en tranaasasan lumisirmoasa, ata po ralera saivo de liraasa.",
+   "english": "The first star shone with transcendent resplendence and echoed her song of the first stars,",
+   "uses": "resplendence: lumisirmoasa"
+  },
+  {
+   "line": 11,
+   "v2_5": "Li mareasa de li vemiasa ka li una-ne lumi raho po kronobioka li veluri; saivo po ke lavisan kube saivo lenila saivo de liraasa gase baba yanolira.",
+   "v3_0": "Li mareasa de li vemiasa, li una-ne lumi raho po kronobioka li veluri, po ke lavisan kube saivo lenila saivo de liraasa gase baba yanolira.",
+   "english": "The cosmic mother, the first light who birthed stars, was pleased to hear her song as a chorus,",
+   "uses": "apposition: 3.0:G130"
+  },
+  {
+   "line": 12,
+   "v2_5": "Ata rada-krono, baba loterosan patu de sizosan lumi po gome farlafa ala li pagoasa.",
+   "v3_0": "Ata una krotiapo una, velu krotiapo velu, kasi muya patuti de sizosan lumi po gome farlafa ala li pagoasa.",
+   "english": "One by one, star by star, further points of shimmering light were brought forth into existence,",
+   "uses": "3.0:G140; point: patuti"
+  },
+  {
+   "line": 13,
+   "v2_5": "Rada velu po kronobioka kopisa sahi lirala baba melosan sonbu en saivo de lumiasasan melonulu.",
+   "v3_0": "Rada velu po kronobioka kopisa sahi lirala baba lirvi en saivo de lumiasasan melonulu.",
+   "english": "Each star was born to repeatedly sing a musical note in her divine melody,",
+   "uses": "note: lirvi"
+  },
+  {
+   "line": 14,
+   "v2_5": "Ata kroti ola, saivo po lirala; korsi, saivo po bitiba saivo de vemiasasan veena raho ka baba lumiasasan melobiti.",
+   "v3_0": "Ata kroti ola, saivo po lirala; korsi, saivo po bitiba saivo de vinyeasa, baba lumiasasan melobiti.",
+   "english": "And where she sang before, instead she wielded her cosmic veena, a divine instrument,",
+   "uses": "veena: vinyeasa; apposition 3.0:G130"
+  },
+  {
+   "line": 15,
+   "v2_5": "Rada dalu de li melotibi po ke baba tranaasasan lumisirmo raho po lumrala li suma de li veluri raho lenila.",
+   "v3_0": "Rada pice de li vinye po ke baba tranaasasan lumisirmo raho po lumrala li suma de li veluri raho lenila.",
+   "english": "Each pluck of her tool was a transcendent splendor which ascended the heat of the listening stars,",
+   "uses": "pluck: pice"
+  },
+  {
+   "line": 16,
+   "v2_5": "Saivo de rinbaasasan melo po ka li cemnuasa, kasa toda li pagoasa po kronobioka kopisa lenila saivo de meloasa.",
+   "v3_0": "Saivo de rinbaasasan melolekta po ka li cemnuasa, kasa toda li pagoasa po kronobioka kopisa lenila saivo de meloasa.",
+   "english": "Her unending concert was the center of the universe, as all of existence was born to hear her play,",
+   "uses": "concert: melolekta"
+  },
+  {
+   "line": 17,
+   "v2_5": "Saivo de nole po ka sambasan ko li melo, en toda lermi raho po keleka.",
+   "v3_0": "Saivo de nole po ka sambasan ko li melo, ito sela, en toda lermi raho po keleka.",
+   "english": "Her name was synonymous with music itself, in every language that arose,",
+   "uses": "itself: 3.0:G134"
+  },
+  {
+   "line": 18,
+   "v2_5": "Yesta li mavopagori raho po ne lavbula ala saivo, po sabesia saivo yuta lideodonu ata kronosonbu.",
+   "v3_0": "Yesta li mavopagori raho po ne lavbula ala saivo, po sabesia fime saivo miyo, yuta verasado ata kronosonbu.",
+   "english": "Even the civilizations that did not pray to her knew of her existence by implication and rhythm,",
+   "uses": "existence: 3.0:G132; implication: verasado"
+  },
+  {
+   "line": 20,
+   "v2_5": "En li mellisan vemiri, li lideoserbuyori raho tovota yebasan felberi, loki senoralkasia eli-krono.",
+   "v3_0": "En li mellisan vemiri, li lideoserbuyori raho tovota sonbuyebasan felberi, loki senoralkasia eli-krono.",
+   "english": "The philosophers of the great worlds with their attuned ears still debate, to this day,",
+   "uses": "attuned: sonbuyebasan; lideoserbuyo now listed"
+  },
+  {
+   "line": 21,
+   "v2_5": "Nara saivori senoralkasia nayo saivori dumdoda saivori de peburi gase li sonburi raho saivo daluda su saivo de lumiasasan veena.",
+   "v3_0": "Nara saivori senoralkasia nayo saivori pebudumdopa gase li lirviri raho saivo picepa su saivo de lumiasasan vinye.",
+   "english": "But they do so as they tap their feet in accordance with the notes plucked on her divine veena,",
+   "uses": "tap: pebudumdopa; notes: lirviri; pluck: picepa; veena: vinye"
+  },
+  {
+   "line": 22,
+   "v2_5": "En li vemiri vofa maivori, yesta li mosa sirmosan sabeyori de li devo ata li luminelari ata li pensayori momvima saivori sela en li melo.",
+   "v3_0": "En li vemiri vofa maivori, yesta li mosa sirmosan deviserbuyori ata li luminelari ata li pensayori momvima saivori sela en li melo.",
+   "english": "Even the greatest theologians and priests and thinkers of the faraway worlds lose themselves to music,",
+   "uses": "theologians: deviserbuyori; pensayo now listed"
+  },
+  {
+   "line": 23,
+   "v2_5": "Ata ola po ka vera, ata ola ka vera, ata ola futu ka vera.",
+   "v3_0": "Ata ola-modo po miyo, ola-modo miyo, ola-modo futu miyo.",
+   "english": "And so it was, and so it is, and so it shall be,",
+   "uses": "3.0:G133"
+  },
+  {
+   "line": 24,
+   "v2_5": "Liraasa, li lira de li una-ne veluri, da li una-ne mareasa, vobi li una-ne linuri raho po lenila ata po lemula sidu senosia.",
+   "v3_0": "Liraasa, li lira de li una-ne veluri gagu li una-ne mareasa, vobi li una-ne linuri raho po lenila ata po lemula sidu senosia.",
+   "english": "Liraasa, the song of the first stars, by the first mother, for the first children, who listened and learned to speak",
+   "uses": "3.0:G136"
+  }
+ ],
+ "prayer_test": [
+  {
+   "liraasa": "Iya Deviasa, iya Lumimare,",
+   "english": "O Great Goddess, O Mother of Light,",
+   "uses": "G129, G130, G131"
+  },
+  {
+   "liraasa": "maivo ke nemesan, ata maivo de lore ke lemvosan.",
+   "english": "I am sorrowful, and my heart is weary.",
+   "uses": ""
+  },
+  {
+   "liraasa": "Fisa, ne pagopa vofa maivo.",
+   "english": "Please, do not go far from me.",
+   "uses": "G135"
+  },
+  {
+   "liraasa": "Taivo miyo; Taivo po miyo, ata Taivo futu miyo.",
+   "english": "You are; You were, and You will be.",
+   "uses": "G132, G138"
+  },
+  {
+   "liraasa": "Fisa, loremeyila maivo, iya loremeyiyo.",
+   "english": "Please console me, O mender of hearts.",
+   "uses": "new: loremeyi(la), loremeyiyo"
+  },
+  {
+   "liraasa": "Maivo lirajubala ala taivo.",
+   "english": "I offer you a song.",
+   "uses": "new: lirajubala"
+  },
+  {
+   "liraasa": "Ola-modo pifu.",
+   "english": "So be it.",
+   "uses": "G133"
+  }
+ ],
+ "validation": {
+  "errors": [],
+  "examples_checked": 66
+ }
+}

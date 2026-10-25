@@ -29,6 +29,7 @@ import {
   type ChangesetRuling,
   type LexiconChangeset,
   type NewHeadword,
+  type WordBuilding,
 } from '../src/core/change/apply';
 import type { ChangeRecord } from '../src/core/change/changelog';
 import { SLOT_RAW_KEY, isUnusedGloss, type FormSlot } from '../src/core/config/slots';
@@ -69,12 +70,16 @@ interface PatchRoot {
   forms: Record<string, PatchForm>;
   /** 3.1 on: 1 = ratify first, 2 = item by item. */
   tier?: number;
+  /** 3.3 on: a root's part in the archetype pattern (3.2:G142): modifier or head. */
+  archetype_role?: string | null;
 }
 interface PatchCompound extends PatchRoot {
   parts: [string, string];
   image_compound: boolean;
   title: boolean;
   note: string | null;
+  /** 3.3 on: the archetype reading, "fine + poultry" (3.2:G142). */
+  archetype?: string;
 }
 export interface Patch {
   status: string;
@@ -92,6 +97,8 @@ export interface Patch {
   listed_derivations_add: { form: string; base: string; suffix: string; meaning: string }[];
   lexicalised_diminutives_add: { form: string; base: string; meaning: string }[];
   restored_forms_add: { headword: string; slot: string; form: string; meaning: string }[];
+  /** 3.3 on: English names for existing forms, for English → Liraasa lookup only. */
+  english_aliases_add?: { form: string; add_english: string }[];
   rulings_add?: {
     id: string;
     topic: string;
@@ -122,6 +129,10 @@ export interface AdditionsConfig {
   /** The patch's name, opening every op's reason. */
   name: string;
   summary: (patch: Patch, lexicalised: string[]) => string;
+  /** Each new function word's class, by form (3.0: iya is a vocative); null when the patch gives none. */
+  functionWordClass?: Record<string, string | null>;
+  /** The word-building rulings in force (3.3: a time noun may be a modifier, 3.2:G142). */
+  wordBuilding?: WordBuilding;
   /** Ops the patch's README asks for beyond its lists (3.0: the rulings carried into the clause). */
   extraOps?: (lex: RawLexicon) => ChangeRecord[];
 }
@@ -343,9 +354,11 @@ export function makeAdditionsChangeset(cfg: AdditionsConfig): LexiconChangeset {
   const problems: string[] = [];
 
   // 1. the rulings, first, so every op below may cite them
+  const ownRulings = new Set((patch.rulings_add ?? []).map((r) => r.id));
   const rulings: (ChangesetRuling & { status: string })[] = (patch.rulings_add ?? []).map((r) => {
     const [, id] = r.id.split(':');
-    const refines = [...new Set(refsIn(r.rule))].filter((x) => !x.startsWith(`${cfg.edition}:`));
+    // a ruling refines the earlier rulings it names, not the patch's own
+    const refines = [...new Set(refsIn(r.rule))].filter((x) => !ownRulings.has(x));
     return {
       id: id ?? '',
       topic: r.topic,
@@ -373,7 +386,7 @@ export function makeAdditionsChangeset(cfg: AdditionsConfig): LexiconChangeset {
     position: f.use,
     example: f.example_liraasa,
     example_gloss: f.example_english,
-    class: 'vocative',
+    class: cfg.functionWordClass?.[f.form] ?? null,
     status_1_0: 'NEW',
     [`status_${cfg.edition.replace('.', '_')}`]: 'NEW',
     since: cfg.edition,
@@ -477,6 +490,10 @@ export function makeAdditionsChangeset(cfg: AdditionsConfig): LexiconChangeset {
         ? 'Also a modifier + head of the image-compound pattern (2.0:G40), lexicalised with the meanings listed.'
         : '',
       compound?.note ?? '',
+      compound?.archetype === undefined ? '' : `Archetype: ${compound.archetype}.`,
+      e.archetype_role === undefined || e.archetype_role === null
+        ? ''
+        : `An archetype ${e.archetype_role}.`,
     ].filter((s) => s.length > 0);
     newHeads.push({
       id,
@@ -580,7 +597,55 @@ export function makeAdditionsChangeset(cfg: AdditionsConfig): LexiconChangeset {
     );
   }
 
-  // 6. README step 4: the rulings carried into the clause and the rows they change
+  // 6. English names for existing forms (3.3 on): a lookup table, never a change to a word
+  const aliases = patch.english_aliases_add ?? [];
+  if (aliases.length > 0) {
+    const known = new Set<string>([
+      ...heads.flatMap((h) =>
+        Object.entries(h.forms)
+          .filter(([k]) => !isUnusedGloss(h.glosses[k] ?? UNUSED))
+          .map(([, f]) => f),
+      ),
+      // the patch's own new forms, derivations and diminutives
+      ...[...patch.roots_add, ...patch.compounds_add].flatMap((e) =>
+        Object.values(e.forms).map((f) => f.form),
+      ),
+      ...patch.listed_derivations_add.map((d) => d.form),
+      ...patch.lexicalised_diminutives_add.map((d) => d.form),
+      ...Object.keys(lex.morphology.lexicalised_derivations),
+      ...Object.keys(lex.morphology.lexicalised_diminutives ?? {}),
+      ...(lex.function_words as unknown as { form: string }[]).map((f) => f.form),
+      ...(lex.time_and_dates as unknown as { form: string }[]).map((f) => f.form),
+    ]);
+    const table = (lex as unknown as { english_aliases?: Record<string, string> }).english_aliases;
+    if (table === undefined)
+      ops.push(
+        rec(
+          'edit_value',
+          'value:english_aliases',
+          null,
+          '{}',
+          undefined,
+          say('the English alias table'),
+        ),
+      );
+    for (const a of aliases) {
+      if (!known.has(a.form)) problems.push(`alias ${a.form}: not a meaningful form`);
+      const was = table?.[a.form];
+      ops.push(
+        rec(
+          'edit_value',
+          `value:english_aliases.${a.form}`,
+          was === undefined ? null : JSON.stringify(was),
+          JSON.stringify(was === undefined ? a.add_english : `${was}; ${a.add_english}`),
+          undefined,
+          `${say(`${a.form} is findable as "${a.add_english}"`)} An English name only; the word does not change. ${proposed}`,
+        ),
+      );
+    }
+  }
+
+  // 7. README step 4: the rulings carried into the clause and the rows they change
   ops.push(...(cfg.extraOps?.(lex) ?? []));
 
   const changeset: LexiconChangeset = {
@@ -602,7 +667,7 @@ export function makeAdditionsChangeset(cfg: AdditionsConfig): LexiconChangeset {
     builtUtc: cfg.at,
     source: '',
     ids,
-    wordBuilding: WORD_BUILDING_2_0,
+    wordBuilding: cfg.wordBuilding ?? WORD_BUILDING_2_0,
   }).lexicon;
   const builtHeads = built.headwords as unknown as Head[];
   const builtByRoot = new Map(builtHeads.map((h) => [h.root, h]));
@@ -657,6 +722,7 @@ export const CONFIG_3_0: AdditionsConfig = {
   previous: '2.5',
   at: AT,
   id: ID_3_0,
+  functionWordClass: { iya: 'vocative' },
   name: 'Liraasa 3.0 patch (Devotion, Music and Measure)',
   summary: (patch, lexicalised) =>
     `Liraasa 3.0, "Devotion, Music and Measure" (ADR-0021), from the author's 3.0 patch. PROPOSED: ${patch.status}. ` +

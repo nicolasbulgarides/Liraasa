@@ -24,7 +24,23 @@ made from the frozen 1.1 by the two changesets in `data/changes/` via
 151 function words, rulings 1.2:G24–G36, and 25 of 25 validator checks passing
 (`npm run validate:1.2`). 1.2 is now frozen as 2.0's baseline.
 
-**3.1 is current, and proposed** (ADR-0022): `data/lexicon/liraasa_3_1.json`,
+**3.3 is current, and proposed** (ADR-0023): `data/lexicon/liraasa_3_3.json`,
+built from frozen 3.1 by `npm run integrate:3.3`: first the author's
+ratification of all of 3.1 (2026-10-25: **3.1 is canon**), then the combined
+3.2 + 3.3 patch, "Archetypes and the top 2,000" (bundle archived whole in
+`archive/patch_3_3/`): rulings 3.2:G142–G147 and 3.3:G148, the function word
+`eho`, 9 roots, 163 compounds, 43 derivations, 21 diminutives, 74 English
+aliases (`english_aliases`, form → English, for lookup only); 1836 headwords,
+4614 meaningful forms. A time noun may be a compound's modifier (3.2:G142,
+`WordBuilding.timeModifiers`). Validation 22 PASS, 3 WARN (`npm run validate:3.3`);
+the LLM reference matches the author's own 3.3 build. The checker reads 3.2 /
+3.3 (honorific titles, nationality and relational adjectives);
+`tests/grammar/patch_3_3.test.ts` names the four patch sentences that break an
+earlier ruling, which are the author's to decide (`review/questions_3_3.md`).
+The author does not want similar sounds or spellings raised. 3.1 is frozen as
+3.3's baseline.
+
+**3.1, ratified** (ADR-0022): `data/lexicon/liraasa_3_1.json`,
 built from frozen 3.0 by `npm run integrate:3.1` (changeset made by
 `scripts/make_changeset_3_1.ts`, a config for 3.0's `makeAdditionsChangeset`,
 from the author's "Everyday and Fiction" patch, archived in `archive/patch_3_1/`).
@@ -230,6 +246,8 @@ validator and parser.
 | `npm run integrate:2.5`    | Build 2.5 from frozen 2.3 plus the three 2.5 changesets (sha-checked baseline). `-- --check` writes nothing (ADR-0020).                                                                                                                                                                                           | **working** |
 | `npm run integrate:3.0`    | Build 3.0 from frozen 2.5 plus the 3.0 changeset (sha-checked baseline). `-- --check` writes nothing (ADR-0021).                                                                                                                                                                                                  | **working** |
 | `npm run integrate:3.1`    | Build 3.1 from frozen 3.0 plus the 3.1 changeset (sha-checked baseline). `-- --check` writes nothing (ADR-0022).                                                                                                                                                                                                  | **working** |
+| `npm run integrate:3.3`    | Build 3.3 from frozen 3.1: the 3.1 ratification, then the 3.3 changeset (sha-checked baseline). `-- --check` writes nothing (ADR-0023).                                                                                                                                                                           | **working** |
+| `npm run validate:3.3`     | validate_3_0.py on 3.3 (check 7 re-run under 3.2:G142, 25 re-applies every 3.3 op) → `data/lexicon/validation_3_3.json`; then the author's `validate_patch.py` on `handoff/liraasa_3_3_llm.json`.                                                                                                                 | **working** |
 | `npm run validate:3.1`     | validate_3_0.py on 3.1 (checks 1–24 by validate_2_3.py, 25 re-applies every 3.1 op) → `data/lexicon/validation_3_1.json`; then the author's `validate_patch.py` on `handoff/liraasa_3_1_llm.json`.                                                                                                                | **working** |
 | `npm run validate:3.0`     | validate_2_3.py for checks 1–24; check 25 re-applies every 3.0 op independently → `data/lexicon/validation_3_0.json`; then the author's `validate_3_0.py` on `handoff/liraasa_3_0_llm.json` (run `build:llm` first).                                                                                              | **working** |
 | `npm run validate:2.5`     | validate_2_3.py for checks 1–24 (2.5 respells nothing); check 25 re-applies every 2.5 op independently → `data/lexicon/validation_2_5.json`.                                                                                                                                                                      | **working** |

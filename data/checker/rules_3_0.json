@@ -1,5 +1,5 @@
 {
- "about": "Parameters of the 2.5 strict checker (src/core/grammar), lifted from the ruling texts so that no grammar lives in code. Each entry names the ruling it comes from; a list a ruling leaves to the author (author_inputs_needed) is marked draft and its findings are reported as unruled, never as pass or fail. Edit here, never in code. 3.0 (proposed, ADR-0021): the vocative, apposition, absolute miyo, the liturgical formula, emphatic sela, commands, gagu after a work, acclamations and X krotiapo X, as rule parameters for the strict checker.",
+ "about": "Parameters of the 2.5 strict checker (src/core/grammar), lifted from the ruling texts so that no grammar lives in code. Each entry names the ruling it comes from; a list a ruling leaves to the author (author_inputs_needed) is marked draft and its findings are reported as unruled, never as pass or fail. Edit here, never in code. 3.0 (proposed, ADR-0021): the vocative, apposition, absolute miyo, the liturgical formula, emphatic sela, commands, gagu after a work, acclamations and X krotiapo X, as rule parameters for the strict checker. 3.2 and 3.3 (proposed, ADR-0023): honorific titles, nationality adjectives and relational adjectives.",
  "question": {
   "ruling": "2.5:G88",
   "fronted_may_drop_ki": [
@@ -342,5 +342,21 @@
  "distributive": {
   "ruling": "3.0:G140",
   "word": "krotiapo"
+ },
+ "honorific": {
+  "ruling": "3.2:G145",
+  "titles": [
+   "zilenela"
+  ],
+  "noun_classes": [
+   "person"
+  ],
+  "note": "zilenela, or a kinship or rank word, directly before a name with no comma: a title"
+ },
+ "nationality": {
+  "ruling": "3.2:G147"
+ },
+ "relational_adjectives": {
+  "ruling": "3.3:G148"
  }
 }

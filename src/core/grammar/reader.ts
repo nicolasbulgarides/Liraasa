@@ -88,6 +88,30 @@ function derivation(ix: Index, w: string): Reading | null {
   return null;
 }
 
+/**
+ * 3.3:G148: the -san of a compound or a listed derivation is an adjective by
+ * rule, "of, relating to or marked by X", where the lexicon lists no other
+ * meaning for it (a root's unlisted -san stays an unused slot).
+ */
+function relational(ix: Index, w: string): Reading | null {
+  const rule = ix.source.rules.relational_adjectives;
+  if (rule === undefined || !w.endsWith('san') || w.length < 6) return null;
+  const base = w.slice(0, -3);
+  const h = ix.headwords.get(base);
+  const listed = ix.lexicalised.get(base);
+  if ((h?.parts ?? null) === null && listed === undefined) return null;
+  const sense = (h?.roles.n?.gloss ?? listed?.gloss ?? base).split(/[;(:]/)[0]?.trim() ?? base;
+  return {
+    pos: 'adj',
+    form: w,
+    root: h?.root ?? listed?.base ?? base,
+    role: 'a',
+    gloss: `of, relating to or marked by ${sense}`,
+    source: 'relational',
+    detail: rule.ruling,
+  };
+}
+
 /** A known stem's readings: a form, a derivation, a closed word or a name. */
 function stem(ix: Index, s: string): Reading[] {
   const out = [...(ix.forms.get(s) ?? [])];
@@ -191,6 +215,10 @@ export function readWord(
     }
   }
 
+  // a compound's or a listed derivation's -san, by rule (3.3:G148)
+  const rel = relational(ix, w);
+  if (rel !== null) return analysis(text, [rel]);
+
   // a form the rules would build and the dictionary leaves unlisted: its slot gives it a shape, not a meaning
   const unused = ix.unlisted.get(w);
   if (unused !== undefined) {
@@ -214,6 +242,19 @@ export function readWord(
 
   // 8: a name, known or capitalised (-ti may attach to a name, 0.8:R12)
   const known = ix.names.has(w) || (w.endsWith('ti') && ix.names.has(w.slice(0, -2)));
+  // a copied place name + -san is an adjective of origin (3.2:G147): Fransasan, French
+  const origin = ix.source.rules.nationality;
+  if (origin !== undefined && opts.capital && !known && w.endsWith('san') && w.length > 5)
+    return analysis(text, [
+      {
+        pos: 'adj',
+        form: text,
+        gloss: `of ${text.slice(0, -3)}, by origin`,
+        source: 'name',
+        detail: origin.ruling,
+      },
+      { pos: 'name', form: text, gloss: 'name', source: 'name' },
+    ]);
   if (known || opts.capital)
     return analysis(text, [
       {

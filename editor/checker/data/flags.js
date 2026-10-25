@@ -88,7 +88,8 @@ window.LIRAASA_FLAGS = {
   "deyapressa": "time",
   "deyaapo": "time",
   "deyafutu": "time",
-  "iya": "vocative"
+  "iya": "vocative",
+  "eho": "interjection"
  },
  "side_nouns_as_prepositions": {
   "_about": "2.2:G67: these side nouns may stand bare before a noun phrase as prepositions, or after a verb as adverbs. They keep their noun reading too.",
