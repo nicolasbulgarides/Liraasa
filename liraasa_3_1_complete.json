@@ -1,8 +1,8 @@
 {
  "language": "Liraasa",
- "version": "3.0",
- "built_utc": "2026-10-25T12:00:00Z",
- "source": "Built deterministically from liraasa_2_5.json (sha256 28b8756e7233f1bd52e4c0fbbe227a105873427b15a4b9be808da6644d73c271) by scripts/integrate_3_0.ts, applying the changeset 2026-10-25-lexicon-3-0 (ADR-0021). This JSON is the single source of truth for Liraasa 3.0. PROPOSED: every 3.0 addition awaits the author's ratification.",
+ "version": "3.1",
+ "built_utc": "2026-10-25T16:00:00Z",
+ "source": "Built deterministically from liraasa_3_0.json (sha256 5b44b4e534ffc106e69e978a42d2bfe2f3a815b71f32cb5e5de0fa85a94f22ef) by scripts/integrate_3_1.ts, applying the changeset 2026-10-25-lexicon-3-1 (ADR-0022). This JSON is the single source of truth for Liraasa 3.1. PROPOSED: every 3.0 and 3.1 addition awaits the author's ratification.",
  "snapshot_0_8": {
   "source_file": "lexicon_0_8_rc2.json",
   "source_version": "0.8-rc2",
@@ -247,7 +247,11 @@
    "loremeyiyo": "mender of hearts; consoler (epithet): loremeyi + -yo",
    "fatotenvayo": "weaver of fate (epithet): fatotenva + -yo",
    "velufarlayo": "maker of stars (epithet): velufarla + -yo",
-   "dipopago": "lamp-niche; a place where devotional lamps are kept: dipo + -pago"
+   "dipopago": "lamp-niche; a place where devotional lamps are kept: dipo + -pago",
+   "safavelmavu": "towel (big washcloth): safavelma + -vu",
+   "safapago": "bathroom; washroom: safa + -pago",
+   "ralkayo": "rival; contender: ralka + -yo",
+   "folluhemluyo": "bully; one who intimidates: folluhemlu + -yo"
   },
   "derivation_defaults": {
    "ruling": "2.0:G41",
@@ -264,7 +268,13 @@
    "soloti": "pebble (little stone): solo + -ti",
    "larbopagoti": "grove: larbopago + -ti",
    "lavbupagoti": "chapel: lavbupago + -ti",
-   "patuti": "point; dot; a speck: patu + -ti"
+   "patuti": "point; dot; a speck: patu + -ti",
+   "resoti": "chuckle; giggle: reso + -ti",
+   "benasenoti": "compliment: benaseno + -ti",
+   "senoti": "small talk; chit-chat: seno + -ti",
+   "valminuluti": "alley; a narrow street: valminulu + -ti",
+   "taradapagoti": "shop; a small market: taradapago + -ti",
+   "miruralnoti": "trickle; a drip of water: miruralno + -ti"
   }
  },
  "image_compounds": {
@@ -58310,20 +58320,24 @@
     "root": "romantic jealousy; jealousy",
     "ascended": "— (unused)",
     "negative": "— (unused)",
-    "verb": "— (unused)",
+    "verb": "to be jealous over; to fear losing (someone)",
     "negative_adjective": "— (unused)",
-    "adjective": "— (unused)",
+    "adjective": "jealous (in love or attachment)",
     "ascended_adjective": "— (unused)"
    },
    "register": "everyday",
    "domain": "Ethics & emotions",
    "english_synonyms": [
     "romantic jealousy",
-    "jealousy"
+    "jealousy",
+    "jealous (in love or attachment)",
+    "to be jealous over",
+    "to fear losing (someone)"
    ],
    "status_1_0": "NEW",
    "status_1_1": "NEW",
    "status_2_0": "REGLOSSED",
+   "status_3_1": "REGLOSSED",
    "since": "1.1",
    "history_0_8": null,
    "notes": "Added in 1.1 (vocabulary-only supplement). Scope: Perceived threat to a valued romantic bond. Components: amor + harlu.",
@@ -78239,7 +78253,7 @@
     "ascended": "— (unused)",
     "negative": "— (unused)",
     "verb": "to draw a line",
-    "negative_adjective": "— (unused)",
+    "negative_adjective": "crooked; not straight",
     "adjective": "linear; straight",
     "ascended_adjective": "— (unused)"
    },
@@ -78250,10 +78264,13 @@
     "stroke",
     "to draw a line",
     "linear",
-    "straight"
+    "straight",
+    "crooked",
+    "not straight"
    ],
    "status_1_0": "NEW",
    "status_3_0": "NEW",
+   "status_3_1": "REGLOSSED",
    "since": "3.0",
    "history_0_8": null,
    "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification.",
@@ -79759,7 +79776,7 @@
     "ascended": "— (unused)",
     "negative": "— (unused)",
     "verb": "— (unused)",
-    "negative_adjective": "— (unused)",
+    "negative_adjective": "dim; faint (of light)",
     "adjective": "— (unused)",
     "ascended_adjective": "— (unused)"
    },
@@ -79767,10 +79784,13 @@
    "domain": "Time, quantity & work",
    "english_synonyms": [
     "brightness",
-    "luminance"
+    "luminance",
+    "dim",
+    "faint (of light)"
    ],
    "status_1_0": "NEW",
    "status_3_0": "NEW",
+   "status_3_1": "REGLOSSED",
    "since": "3.0",
    "history_0_8": null,
    "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: lumi + melli.",
@@ -82778,6 +82798,2938 @@
    "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: luno + lavbu.",
    "protected": true,
    "id": "lx_lunolavbu_1977"
+  },
+  {
+   "root": "dugo",
+   "type": "Primal",
+   "components": null,
+   "forms": {
+    "root": "dugo",
+    "ascended": "dugoasa",
+    "negative": "dugona",
+    "verb": "dugoda",
+    "negative_adjective": "dugonasan",
+    "adjective": "dugosan",
+    "ascended_adjective": "dugoasasan"
+   },
+   "glosses": {
+    "root": "decay; rot",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "to rot; to spoil; to decay",
+    "negative_adjective": "unspoiled; incorruptible",
+    "adjective": "rotten; spoiled; stale (of food)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Materials & physics",
+   "english_synonyms": [
+    "decay",
+    "rot",
+    "to rot",
+    "to spoil",
+    "to decay",
+    "rotten",
+    "spoiled",
+    "stale (of food)",
+    "unspoiled",
+    "incorruptible"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Tier 1 in the patch.",
+   "protected": true,
+   "id": "lx_dugo_1978"
+  },
+  {
+   "root": "pega",
+   "type": "Primal",
+   "components": null,
+   "forms": {
+    "root": "pega",
+    "ascended": "pegaasa",
+    "negative": "pegana",
+    "verb": "pegapa",
+    "negative_adjective": "peganasan",
+    "adjective": "pegasan",
+    "ascended_adjective": "pegaasasan"
+   },
+   "glosses": {
+    "root": "stickiness; adhesion",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "to stick; to adhere",
+    "negative_adjective": "— (unused)",
+    "adjective": "sticky",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Materials & physics",
+   "english_synonyms": [
+    "stickiness",
+    "adhesion",
+    "to stick",
+    "to adhere",
+    "sticky"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Tier 1 in the patch.",
+   "protected": true,
+   "id": "lx_pega_1979"
+  },
+  {
+   "root": "toze",
+   "type": "Primal",
+   "components": null,
+   "forms": {
+    "root": "toze",
+    "ascended": "tozeasa",
+    "negative": "tozena",
+    "verb": "tozeta",
+    "negative_adjective": "tozenasan",
+    "adjective": "tozesan",
+    "ascended_adjective": "tozeasasan"
+   },
+   "glosses": {
+    "root": "poison; venom",
+    "ascended": "— (unused)",
+    "negative": "antidote",
+    "verb": "to poison",
+    "negative_adjective": "harmless; non-toxic",
+    "adjective": "poisonous; venomous",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Health & body",
+   "english_synonyms": [
+    "poison",
+    "venom",
+    "to poison",
+    "poisonous",
+    "venomous",
+    "antidote",
+    "harmless",
+    "non-toxic"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Tier 1 in the patch.",
+   "protected": true,
+   "id": "lx_toze_1980"
+  },
+  {
+   "root": "bika",
+   "type": "Primal",
+   "components": null,
+   "forms": {
+    "root": "bika",
+    "ascended": "bikaasa",
+    "negative": "bikana",
+    "verb": "bikaba",
+    "negative_adjective": "bikanasan",
+    "adjective": "bikasan",
+    "ascended_adjective": "bikaasasan"
+   },
+   "glosses": {
+    "root": "flinch; a start; an involuntary recoil",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "to flinch; to startle",
+    "negative_adjective": "— (unused)",
+    "adjective": "jumpy; easily startled",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Health & body",
+   "english_synonyms": [
+    "flinch",
+    "a start",
+    "an involuntary recoil",
+    "to flinch",
+    "to startle",
+    "jumpy",
+    "easily startled"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Tier 1 in the patch.",
+   "protected": true,
+   "id": "lx_bika_1981"
+  },
+  {
+   "root": "tuzo",
+   "type": "Primal",
+   "components": null,
+   "forms": {
+    "root": "tuzo",
+    "ascended": "tuzoasa",
+    "negative": "tuzona",
+    "verb": "tuzota",
+    "negative_adjective": "tuzonasan",
+    "adjective": "tuzosan",
+    "ascended_adjective": "tuzoasasan"
+   },
+   "glosses": {
+    "root": "hanging; suspension",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "to hang; to suspend",
+    "negative_adjective": "— (unused)",
+    "adjective": "hanging; suspended",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Actions & physical processes",
+   "english_synonyms": [
+    "hanging",
+    "suspension",
+    "to hang",
+    "to suspend",
+    "suspended"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Tier 2 in the patch.",
+   "protected": true,
+   "id": "lx_tuzo_1982"
+  },
+  {
+   "root": "lorelivna",
+   "type": "Compound",
+   "components": [
+    "lore",
+    "livna"
+   ],
+   "forms": {
+    "root": "lorelivna",
+    "ascended": "lorelivnaasa",
+    "negative": "lorelivnana",
+    "verb": "lorelivnala",
+    "negative_adjective": "lorelivnanasan",
+    "adjective": "lorelivnasan",
+    "ascended_adjective": "lorelivnaasasan"
+   },
+   "glosses": {
+    "root": "preference; the heart's choice",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "to prefer",
+    "negative_adjective": "— (unused)",
+    "adjective": "favorite; preferred",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Speech & mind",
+   "english_synonyms": [
+    "preference",
+    "the heart's choice",
+    "to prefer",
+    "favorite",
+    "preferred"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: lore + livna. prefer A to B: lorelivnala A korsi B Tier 1 in the patch.",
+   "protected": true,
+   "id": "lx_lorelivna_1983"
+  },
+  {
+   "root": "patudonu",
+   "type": "Compound",
+   "components": [
+    "patu",
+    "donu"
+   ],
+   "forms": {
+    "root": "patudonu",
+    "ascended": "patudonuasa",
+    "negative": "patudonuna",
+    "verb": "patudonupa",
+    "negative_adjective": "patudonunasan",
+    "adjective": "patudonusan",
+    "ascended_adjective": "patudonuasasan"
+   },
+   "glosses": {
+    "root": "sharing",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "to share",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Speech & mind",
+   "english_synonyms": [
+    "sharing",
+    "to share"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: patu + donu. Tier 1 in the patch.",
+   "protected": true,
+   "id": "lx_patudonu_1984"
+  },
+  {
+   "root": "loteromebane",
+   "type": "Compound",
+   "components": [
+    "lotero",
+    "mebane"
+   ],
+   "forms": {
+    "root": "loteromebane",
+    "ascended": "loteromebaneasa",
+    "negative": "loteromebanena",
+    "verb": "loteromebanela",
+    "negative_adjective": "loteromebanenasan",
+    "adjective": "loteromebanesan",
+    "ascended_adjective": "loteromebaneasasan"
+   },
+   "glosses": {
+    "root": "misinterpretation; understanding something as other than it is",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "to misunderstand; to misinterpret",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Speech & mind",
+   "english_synonyms": [
+    "misinterpretation",
+    "understanding something as other than it is",
+    "to misunderstand",
+    "to misinterpret"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: lotero + mebane. contrast: ne mebanema = not understand; mebanena = a misunderstanding (between people) Tier 1 in the patch.",
+   "protected": true,
+   "id": "lx_loteromebane_1985"
+  },
+  {
+   "root": "silrosude",
+   "type": "Compound",
+   "components": [
+    "silro",
+    "sude"
+   ],
+   "forms": {
+    "root": "silrosude",
+    "ascended": "silrosudeasa",
+    "negative": "silrosudena",
+    "verb": "silrosudesia",
+    "negative_adjective": "silrosudenasan",
+    "adjective": "silrosudesan",
+    "ascended_adjective": "silrosudeasasan"
+   },
+   "glosses": {
+    "root": "disclosure; the revealing of a secret",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "to reveal (a secret); to uncover",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Speech & mind",
+   "english_synonyms": [
+    "disclosure",
+    "the revealing of a secret",
+    "to reveal (a secret)",
+    "to uncover"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: silro + sude. velsona (unveiling; revelation) stays the poetic/sacred word Tier 1 in the patch.",
+   "protected": true,
+   "id": "lx_silrosude_1986"
+  },
+  {
+   "root": "dorvalordi",
+   "type": "Compound",
+   "components": [
+    "dorva",
+    "lordi"
+   ],
+   "forms": {
+    "root": "dorvalordi",
+    "ascended": "dorvalordiasa",
+    "negative": "dorvalordina",
+    "verb": "dorvalordida",
+    "negative_adjective": "dorvalordinasan",
+    "adjective": "dorvalordisan",
+    "ascended_adjective": "dorvalordiasasan"
+   },
+   "glosses": {
+    "root": "plan; an ordered intention",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "to plan",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Speech & mind",
+   "english_synonyms": [
+    "plan",
+    "an ordered intention",
+    "to plan"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: dorva + lordi. gap found while testing sentence 6: 2.5/3.0 have no word for plan Tier 1 in the patch.",
+   "protected": true,
+   "id": "lx_dorvalordi_1987"
+  },
+  {
+   "root": "dentosapu",
+   "type": "Compound",
+   "components": [
+    "dento",
+    "sapu"
+   ],
+   "forms": {
+    "root": "dentosapu",
+    "ascended": "dentosapuasa",
+    "negative": "dentosapuna",
+    "verb": "dentosapuda",
+    "negative_adjective": "dentosapunasan",
+    "adjective": "dentosapusan",
+    "ascended_adjective": "dentosapuasasan"
+   },
+   "glosses": {
+    "root": "chewing",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "to chew",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Health & body",
+   "english_synonyms": [
+    "chewing",
+    "to chew"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: dento + sapu. Tier 1 in the patch.",
+   "protected": true,
+   "id": "lx_dentosapu_1988"
+  },
+  {
+   "root": "sapunevra",
+   "type": "Compound",
+   "components": [
+    "sapu",
+    "nevra"
+   ],
+   "forms": {
+    "root": "sapunevra",
+    "ascended": "sapunevraasa",
+    "negative": "sapunevrana",
+    "verb": "sapunevrasia",
+    "negative_adjective": "sapunevranasan",
+    "adjective": "sapunevrasan",
+    "ascended_adjective": "sapunevraasasan"
+   },
+   "glosses": {
+    "root": "swallowing; a swallow",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "to swallow",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Health & body",
+   "english_synonyms": [
+    "swallowing",
+    "a swallow",
+    "to swallow"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: sapu + nevra. Tier 1 in the patch.",
+   "protected": true,
+   "id": "lx_sapunevra_1989"
+  },
+  {
+   "root": "somuhavli",
+   "type": "Compound",
+   "components": [
+    "somu",
+    "havli"
+   ],
+   "forms": {
+    "root": "somuhavli",
+    "ascended": "somuhavliasa",
+    "negative": "somuhavlina",
+    "verb": "somuhavlisia",
+    "negative_adjective": "somuhavlinasan",
+    "adjective": "somuhavlisan",
+    "ascended_adjective": "somuhavliasasan"
+   },
+   "glosses": {
+    "root": "yawn",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "to yawn",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Health & body",
+   "english_synonyms": [
+    "yawn",
+    "to yawn"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: somu + havli. Tier 1 in the patch.",
+   "protected": true,
+   "id": "lx_somuhavli_1990"
+  },
+  {
+   "root": "lenyodalu",
+   "type": "Compound",
+   "components": [
+    "lenyo",
+    "dalu"
+   ],
+   "forms": {
+    "root": "lenyodalu",
+    "ascended": "lenyodaluasa",
+    "negative": "lenyodaluna",
+    "verb": "lenyodalula",
+    "negative_adjective": "lenyodalunasan",
+    "adjective": "lenyodalusan",
+    "ascended_adjective": "lenyodaluasasan"
+   },
+   "glosses": {
+    "root": "a lick",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "to lick",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Health & body",
+   "english_synonyms": [
+    "a lick",
+    "to lick"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: lenyo + dalu. Tier 1 in the patch.",
+   "protected": true,
+   "id": "lx_lenyodalu_1991"
+  },
+  {
+   "root": "nulvahavli",
+   "type": "Compound",
+   "components": [
+    "nulva",
+    "havli"
+   ],
+   "forms": {
+    "root": "nulvahavli",
+    "ascended": "nulvahavliasa",
+    "negative": "nulvahavlina",
+    "verb": "nulvahavlinia",
+    "negative_adjective": "nulvahavlinasan",
+    "adjective": "nulvahavlisan",
+    "ascended_adjective": "nulvahavliasasan"
+   },
+   "glosses": {
+    "root": "sniff",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "to sniff",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Health & body",
+   "english_synonyms": [
+    "sniff",
+    "to sniff"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: nulva + havli. Tier 1 in the patch.",
+   "protected": true,
+   "id": "lx_nulvahavli_1992"
+  },
+  {
+   "root": "sapukovamudu",
+   "type": "Compound",
+   "components": [
+    "sapukova",
+    "mudu"
+   ],
+   "forms": {
+    "root": "sapukovamudu",
+    "ascended": "sapukovamuduasa",
+    "negative": "sapukovamuduna",
+    "verb": "sapukovamudusia",
+    "negative_adjective": "sapukovamudunasan",
+    "adjective": "sapukovamudusan",
+    "ascended_adjective": "sapukovamuduasasan"
+   },
+   "glosses": {
+    "root": "nausea",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "— (unused)",
+    "negative_adjective": "— (unused)",
+    "adjective": "nauseous; queasy",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Health & body",
+   "english_synonyms": [
+    "nausea",
+    "nauseous",
+    "queasy"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: sapukova + mudu. Tier 1 in the patch.",
+   "protected": true,
+   "id": "lx_sapukovamudu_1993"
+  },
+  {
+   "root": "nuravufasbi",
+   "type": "Compound",
+   "components": [
+    "nuravu",
+    "fasbi"
+   ],
+   "forms": {
+    "root": "nuravufasbi",
+    "ascended": "nuravufasbiasa",
+    "negative": "nuravufasbina",
+    "verb": "nuravufasbinia",
+    "negative_adjective": "nuravufasbinasan",
+    "adjective": "nuravufasbisan",
+    "ascended_adjective": "nuravufasbiasasan"
+   },
+   "glosses": {
+    "root": "wince; a face of pain",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "to wince",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Dialogue & gesture",
+   "english_synonyms": [
+    "wince",
+    "a face of pain",
+    "to wince"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: nuravu + fasbi. Tier 1 in the patch.",
+   "protected": true,
+   "id": "lx_nuravufasbi_1994"
+  },
+  {
+   "root": "vilnelenda",
+   "type": "Compound",
+   "components": [
+    "vilne",
+    "lenda"
+   ],
+   "forms": {
+    "root": "vilnelenda",
+    "ascended": "vilnelendaasa",
+    "negative": "vilnelendana",
+    "verb": "vilnelendava",
+    "negative_adjective": "vilnelendanasan",
+    "adjective": "vilnelendasan",
+    "ascended_adjective": "vilnelendaasasan"
+   },
+   "glosses": {
+    "root": "squint; eyes narrowed to a line",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "to squint",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Dialogue & gesture",
+   "english_synonyms": [
+    "squint",
+    "eyes narrowed to a line",
+    "to squint"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: vilne + lenda. vilnesevre (blink) already exists Tier 1 in the patch.",
+   "protected": true,
+   "id": "lx_vilnelenda_1995"
+  },
+  {
+   "root": "helvivimo",
+   "type": "Compound",
+   "components": [
+    "helvi",
+    "vimo"
+   ],
+   "forms": {
+    "root": "helvivimo",
+    "ascended": "helvivimoasa",
+    "negative": "helvivimona",
+    "verb": "helvivimoha",
+    "negative_adjective": "helvivimonasan",
+    "adjective": "helvivimosan",
+    "ascended_adjective": "helvivimoasasan"
+   },
+   "glosses": {
+    "root": "peek; a hidden look",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "to peek; to peer",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Dialogue & gesture",
+   "english_synonyms": [
+    "peek",
+    "a hidden look",
+    "to peek",
+    "to peer"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: helvi + vimo. Tier 1 in the patch.",
+   "protected": true,
+   "id": "lx_helvivimo_1996"
+  },
+  {
+   "root": "larnevimo",
+   "type": "Compound",
+   "components": [
+    "larne",
+    "vimo"
+   ],
+   "forms": {
+    "root": "larnevimo",
+    "ascended": "larnevimoasa",
+    "negative": "larnevimona",
+    "verb": "larnevimola",
+    "negative_adjective": "larnevimonasan",
+    "adjective": "larnevimosan",
+    "ascended_adjective": "larnevimoasasan"
+   },
+   "glosses": {
+    "root": "glare; an angry stare",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "to glare",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Dialogue & gesture",
+   "english_synonyms": [
+    "glare",
+    "an angry stare",
+    "to glare"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: larne + vimo. Tier 1 in the patch.",
+   "protected": true,
+   "id": "lx_larnevimo_1997"
+  },
+  {
+   "root": "pebusemne",
+   "type": "Compound",
+   "components": [
+    "pebu",
+    "semne"
+   ],
+   "forms": {
+    "root": "pebusemne",
+    "ascended": "pebusemneasa",
+    "negative": "pebusemnena",
+    "verb": "pebusemnepa",
+    "negative_adjective": "pebusemnenasan",
+    "adjective": "pebusemnesan",
+    "ascended_adjective": "pebusemneasasan"
+   },
+   "glosses": {
+    "root": "crouch; squat",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "to crouch; to squat",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Movement & action",
+   "english_synonyms": [
+    "crouch",
+    "squat",
+    "to crouch",
+    "to squat"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: pebu + semne. Tier 1 in the patch.",
+   "protected": true,
+   "id": "lx_pebusemne_1998"
+  },
+  {
+   "root": "lisiralno",
+   "type": "Compound",
+   "components": [
+    "lisi",
+    "ralno"
+   ],
+   "forms": {
+    "root": "lisiralno",
+    "ascended": "lisiralnoasa",
+    "negative": "lisiralnona",
+    "verb": "lisiralnola",
+    "negative_adjective": "lisiralnonasan",
+    "adjective": "lisiralnosan",
+    "ascended_adjective": "lisiralnoasasan"
+   },
+   "glosses": {
+    "root": "slip; skid",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "to slip; to skid",
+    "negative_adjective": "— (unused)",
+    "adjective": "slippery",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Movement & action",
+   "english_synonyms": [
+    "slip",
+    "skid",
+    "to slip",
+    "to skid",
+    "slippery"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: lisi + ralno. Tier 1 in the patch.",
+   "protected": true,
+   "id": "lx_lisiralno_1999"
+  },
+  {
+   "root": "dozativro",
+   "type": "Compound",
+   "components": [
+    "doza",
+    "tivro"
+   ],
+   "forms": {
+    "root": "dozativro",
+    "ascended": "dozativroasa",
+    "negative": "dozativrona",
+    "verb": "dozativroda",
+    "negative_adjective": "dozativronasan",
+    "adjective": "dozativrosan",
+    "ascended_adjective": "dozativroasasan"
+   },
+   "glosses": {
+    "root": "squeeze",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "to squeeze; to compress",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Movement & action",
+   "english_synonyms": [
+    "squeeze",
+    "to squeeze",
+    "to compress"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: doza + tivro. Tier 1 in the patch.",
+   "protected": true,
+   "id": "lx_dozativro_2000"
+  },
+  {
+   "root": "finitivro",
+   "type": "Compound",
+   "components": [
+    "fini",
+    "tivro"
+   ],
+   "forms": {
+    "root": "finitivro",
+    "ascended": "finitivroasa",
+    "negative": "finitivrona",
+    "verb": "finitivrofa",
+    "negative_adjective": "finitivronasan",
+    "adjective": "finitivrosan",
+    "ascended_adjective": "finitivroasasan"
+   },
+   "glosses": {
+    "root": "pinch",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "to pinch",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Movement & action",
+   "english_synonyms": [
+    "pinch",
+    "to pinch"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: fini + tivro. Tier 1 in the patch.",
+   "protected": true,
+   "id": "lx_finitivro_2001"
+  },
+  {
+   "root": "finihata",
+   "type": "Compound",
+   "components": [
+    "fini",
+    "hata"
+   ],
+   "forms": {
+    "root": "finihata",
+    "ascended": "finihataasa",
+    "negative": "finihatana",
+    "verb": "finihatafa",
+    "negative_adjective": "finihatanasan",
+    "adjective": "finihatasan",
+    "ascended_adjective": "finihataasasan"
+   },
+   "glosses": {
+    "root": "poke; prod",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "to poke; to prod",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Movement & action",
+   "english_synonyms": [
+    "poke",
+    "prod",
+    "to poke",
+    "to prod"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: fini + hata. Tier 1 in the patch.",
+   "protected": true,
+   "id": "lx_finihata_2002"
+  },
+  {
+   "root": "moludalu",
+   "type": "Compound",
+   "components": [
+    "molu",
+    "dalu"
+   ],
+   "forms": {
+    "root": "moludalu",
+    "ascended": "moludaluasa",
+    "negative": "moludaluna",
+    "verb": "moludaluma",
+    "negative_adjective": "moludalunasan",
+    "adjective": "moludalusan",
+    "ascended_adjective": "moludaluasasan"
+   },
+   "glosses": {
+    "root": "pat; a gentle touch",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "to pat",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Movement & action",
+   "english_synonyms": [
+    "pat",
+    "a gentle touch",
+    "to pat"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: molu + dalu. Tier 1 in the patch.",
+   "protected": true,
+   "id": "lx_moludalu_2003"
+  },
+  {
+   "root": "farulenyo",
+   "type": "Compound",
+   "components": [
+    "faru",
+    "lenyo"
+   ],
+   "forms": {
+    "root": "farulenyo",
+    "ascended": "farulenyoasa",
+    "negative": "farulenyona",
+    "verb": "farulenyofa",
+    "negative_adjective": "farulenyonasan",
+    "adjective": "farulenyosan",
+    "ascended_adjective": "farulenyoasasan"
+   },
+   "glosses": {
+    "root": "spiciness; the heat of a flavor",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "— (unused)",
+    "negative_adjective": "— (unused)",
+    "adjective": "spicy",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Materials & physics",
+   "english_synonyms": [
+    "spiciness",
+    "the heat of a flavor",
+    "spicy"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: faru + lenyo. Tier 1 in the patch.",
+   "protected": true,
+   "id": "lx_farulenyo_2004"
+  },
+  {
+   "root": "tobratabu",
+   "type": "Compound",
+   "components": [
+    "tobra",
+    "tabu"
+   ],
+   "forms": {
+    "root": "tobratabu",
+    "ascended": "tobratabuasa",
+    "negative": "tobratabuna",
+    "verb": "tobratabuta",
+    "negative_adjective": "tobratabunasan",
+    "adjective": "tobratabusan",
+    "ascended_adjective": "tobratabuasasan"
+   },
+   "glosses": {
+    "root": "shelf",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "— (unused)",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Home & objects",
+   "english_synonyms": [
+    "shelf"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: tobra + tabu. Tier 1 in the patch.",
+   "protected": true,
+   "id": "lx_tobratabu_2005"
+  },
+  {
+   "root": "tabukova",
+   "type": "Compound",
+   "components": [
+    "tabu",
+    "kova"
+   ],
+   "forms": {
+    "root": "tabukova",
+    "ascended": "tabukovaasa",
+    "negative": "tabukovana",
+    "verb": "tabukovata",
+    "negative_adjective": "tabukovanasan",
+    "adjective": "tabukovasan",
+    "ascended_adjective": "tabukovaasasan"
+   },
+   "glosses": {
+    "root": "drawer",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "— (unused)",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Home & objects",
+   "english_synonyms": [
+    "drawer"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: tabu + kova. Tier 1 in the patch.",
+   "protected": true,
+   "id": "lx_tabukova_2006"
+  },
+  {
+   "root": "pidibiti",
+   "type": "Compound",
+   "components": [
+    "pidi",
+    "biti"
+   ],
+   "forms": {
+    "root": "pidibiti",
+    "ascended": "pidibitiasa",
+    "negative": "pidibitina",
+    "verb": "pidibitipa",
+    "negative_adjective": "pidibitinasan",
+    "adjective": "pidibitisan",
+    "ascended_adjective": "pidibitiasasan"
+   },
+   "glosses": {
+    "root": "fork (utensil)",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "— (unused)",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Home & objects",
+   "english_synonyms": [
+    "fork (utensil)"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: pidi + biti. Tier 1 in the patch.",
+   "protected": true,
+   "id": "lx_pidibiti_2007"
+  },
+  {
+   "root": "lurvaralno",
+   "type": "Compound",
+   "components": [
+    "lurva",
+    "ralno"
+   ],
+   "forms": {
+    "root": "lurvaralno",
+    "ascended": "lurvaralnoasa",
+    "negative": "lurvaralnona",
+    "verb": "lurvaralnola",
+    "negative_adjective": "lurvaralnonasan",
+    "adjective": "lurvaralnosan",
+    "ascended_adjective": "lurvaralnoasasan"
+   },
+   "glosses": {
+    "root": "spill",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "to spill",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Home & objects",
+   "english_synonyms": [
+    "spill",
+    "to spill"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: lurva + ralno. Tier 1 in the patch.",
+   "protected": true,
+   "id": "lx_lurvaralno_2008"
+  },
+  {
+   "root": "helvihata",
+   "type": "Compound",
+   "components": [
+    "helvi",
+    "hata"
+   ],
+   "forms": {
+    "root": "helvihata",
+    "ascended": "helvihataasa",
+    "negative": "helvihatana",
+    "verb": "helvihataha",
+    "negative_adjective": "helvihatanasan",
+    "adjective": "helvihatasan",
+    "ascended_adjective": "helvihataasasan"
+   },
+   "glosses": {
+    "root": "ambush",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "to ambush",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Plot & society",
+   "english_synonyms": [
+    "ambush",
+    "to ambush"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: helvi + hata. Tier 1 in the patch.",
+   "protected": true,
+   "id": "lx_helvihata_2009"
+  },
+  {
+   "root": "maskabenaseno",
+   "type": "Compound",
+   "components": [
+    "maska",
+    "benaseno"
+   ],
+   "forms": {
+    "root": "maskabenaseno",
+    "ascended": "maskabenasenoasa",
+    "negative": "maskabenasenona",
+    "verb": "maskabenasenoma",
+    "negative_adjective": "maskabenasenonasan",
+    "adjective": "maskabenasenosan",
+    "ascended_adjective": "maskabenasenoasasan"
+   },
+   "glosses": {
+    "root": "flattery",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "to flatter",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Speech & mind",
+   "english_synonyms": [
+    "flattery",
+    "to flatter"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: maska + benaseno. Tier 2 in the patch.",
+   "protected": true,
+   "id": "lx_maskabenaseno_2010"
+  },
+  {
+   "root": "vizuseno",
+   "type": "Compound",
+   "components": [
+    "vizu",
+    "seno"
+   ],
+   "forms": {
+    "root": "vizuseno",
+    "ascended": "vizusenoasa",
+    "negative": "vizusenona",
+    "verb": "vizusenova",
+    "negative_adjective": "vizusenonasan",
+    "adjective": "vizusenosan",
+    "ascended_adjective": "vizusenoasasan"
+   },
+   "glosses": {
+    "root": "outburst; a blurted word",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "to blurt",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Speech & mind",
+   "english_synonyms": [
+    "outburst",
+    "a blurted word",
+    "to blurt"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: vizu + seno. Tier 2 in the patch.",
+   "protected": true,
+   "id": "lx_vizuseno_2011"
+  },
+  {
+   "root": "zegoseno",
+   "type": "Compound",
+   "components": [
+    "zego",
+    "seno"
+   ],
+   "forms": {
+    "root": "zegoseno",
+    "ascended": "zegosenoasa",
+    "negative": "zegosenona",
+    "verb": "zegosenoza",
+    "negative_adjective": "zegosenonasan",
+    "adjective": "zegosenosan",
+    "ascended_adjective": "zegosenoasasan"
+   },
+   "glosses": {
+    "root": "stammer; stutter",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "to stammer; to stutter",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Speech & mind",
+   "english_synonyms": [
+    "stammer",
+    "stutter",
+    "to stammer",
+    "to stutter"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: zego + seno. Tier 2 in the patch.",
+   "protected": true,
+   "id": "lx_zegoseno_2012"
+  },
+  {
+   "root": "yebaseno",
+   "type": "Compound",
+   "components": [
+    "yeba",
+    "seno"
+   ],
+   "forms": {
+    "root": "yebaseno",
+    "ascended": "yebasenoasa",
+    "negative": "yebasenona",
+    "verb": "yebasenoya",
+    "negative_adjective": "yebasenonasan",
+    "adjective": "yebasenosan",
+    "ascended_adjective": "yebasenoasasan"
+   },
+   "glosses": {
+    "root": "negotiation; talk toward agreement",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "to negotiate",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Speech & mind",
+   "english_synonyms": [
+    "negotiation",
+    "talk toward agreement",
+    "to negotiate"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: yeba + seno. Tier 2 in the patch.",
+   "protected": true,
+   "id": "lx_yebaseno_2013"
+  },
+  {
+   "root": "sabenela",
+   "type": "Compound",
+   "components": [
+    "sabe",
+    "nela"
+   ],
+   "forms": {
+    "root": "sabenela",
+    "ascended": "sabenelaasa",
+    "negative": "sabenelana",
+    "verb": "sabenelasia",
+    "negative_adjective": "sabenelanasan",
+    "adjective": "sabenelasan",
+    "ascended_adjective": "sabenelaasasan"
+   },
+   "glosses": {
+    "root": "acquaintance; a person one knows",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "— (unused)",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Relationships",
+   "english_synonyms": [
+    "acquaintance",
+    "a person one knows"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: sabe + nela. Tier 2 in the patch.",
+   "protected": true,
+   "id": "lx_sabenela_2014"
+  },
+  {
+   "root": "famlilinu",
+   "type": "Compound",
+   "components": [
+    "famli",
+    "linu"
+   ],
+   "forms": {
+    "root": "famlilinu",
+    "ascended": "famlilinuasa",
+    "negative": "famlilinuna",
+    "verb": "famlilinufa",
+    "negative_adjective": "famlilinunasan",
+    "adjective": "famlilinusan",
+    "ascended_adjective": "famlilinuasasan"
+   },
+   "glosses": {
+    "root": "niece; nephew; a sibling's child",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "— (unused)",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Relationships",
+   "english_synonyms": [
+    "niece",
+    "nephew",
+    "a sibling's child"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: famli + linu. pattern of purmafamlilinu (cousin); gender by adjective (1.2:G36) Tier 2 in the patch.",
+   "protected": true,
+   "id": "lx_famlilinu_2015"
+  },
+  {
+   "root": "havliturna",
+   "type": "Compound",
+   "components": [
+    "havli",
+    "turna"
+   ],
+   "forms": {
+    "root": "havliturna",
+    "ascended": "havliturnaasa",
+    "negative": "havliturnana",
+    "verb": "havliturnaha",
+    "negative_adjective": "havliturnanasan",
+    "adjective": "havliturnasan",
+    "ascended_adjective": "havliturnaasasan"
+   },
+   "glosses": {
+    "root": "inhalation",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "to breathe in",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Health & body",
+   "english_synonyms": [
+    "inhalation",
+    "to breathe in"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: havli + turna. Tier 2 in the patch.",
+   "protected": true,
+   "id": "lx_havliturna_2016"
+  },
+  {
+   "root": "havliduvla",
+   "type": "Compound",
+   "components": [
+    "havli",
+    "duvla"
+   ],
+   "forms": {
+    "root": "havliduvla",
+    "ascended": "havliduvlaasa",
+    "negative": "havliduvlana",
+    "verb": "havliduvlaha",
+    "negative_adjective": "havliduvlanasan",
+    "adjective": "havliduvlasan",
+    "ascended_adjective": "havliduvlaasasan"
+   },
+   "glosses": {
+    "root": "exhalation",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "to breathe out",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Health & body",
+   "english_synonyms": [
+    "exhalation",
+    "to breathe out"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: havli + duvla. Tier 2 in the patch.",
+   "protected": true,
+   "id": "lx_havliduvla_2017"
+  },
+  {
+   "root": "zivumilobe",
+   "type": "Compound",
+   "components": [
+    "zivu",
+    "milobe"
+   ],
+   "forms": {
+    "root": "zivumilobe",
+    "ascended": "zivumilobeasa",
+    "negative": "zivumilobena",
+    "verb": "zivumilobeza",
+    "negative_adjective": "zivumilobenasan",
+    "adjective": "zivumilobesan",
+    "ascended_adjective": "zivumilobeasasan"
+   },
+   "glosses": {
+    "root": "smirk",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "to smirk",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Dialogue & gesture",
+   "english_synonyms": [
+    "smirk",
+    "to smirk"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: zivu + milobe. Tier 2 in the patch.",
+   "protected": true,
+   "id": "lx_zivumilobe_2018"
+  },
+  {
+   "root": "lavimilobe",
+   "type": "Compound",
+   "components": [
+    "lavi",
+    "milobe"
+   ],
+   "forms": {
+    "root": "lavimilobe",
+    "ascended": "lavimilobeasa",
+    "negative": "lavimilobena",
+    "verb": "lavimilobela",
+    "negative_adjective": "lavimilobenasan",
+    "adjective": "lavimilobesan",
+    "ascended_adjective": "lavimilobeasasan"
+   },
+   "glosses": {
+    "root": "grin; a beaming smile",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "to grin; to beam",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Dialogue & gesture",
+   "english_synonyms": [
+    "grin",
+    "a beaming smile",
+    "to grin",
+    "to beam"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: lavi + milobe. Tier 2 in the patch.",
+   "protected": true,
+   "id": "lx_lavimilobe_2019"
+  },
+  {
+   "root": "manlivaye",
+   "type": "Compound",
+   "components": [
+    "manli",
+    "vaye"
+   ],
+   "forms": {
+    "root": "manlivaye",
+    "ascended": "manlivayeasa",
+    "negative": "manlivayena",
+    "verb": "manlivayema",
+    "negative_adjective": "manlivayenasan",
+    "adjective": "manlivayesan",
+    "ascended_adjective": "manlivayeasasan"
+   },
+   "glosses": {
+    "root": "wave of the hand",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "to wave",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Dialogue & gesture",
+   "english_synonyms": [
+    "wave of the hand",
+    "to wave"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: manli + vaye. Tier 2 in the patch.",
+   "protected": true,
+   "id": "lx_manlivaye_2020"
+  },
+  {
+   "root": "pidivalmi",
+   "type": "Compound",
+   "components": [
+    "pidi",
+    "valmi"
+   ],
+   "forms": {
+    "root": "pidivalmi",
+    "ascended": "pidivalmiasa",
+    "negative": "pidivalmina",
+    "verb": "pidivalmipa",
+    "negative_adjective": "pidivalminasan",
+    "adjective": "pidivalmisan",
+    "ascended_adjective": "pidivalmiasasan"
+   },
+   "glosses": {
+    "root": "tiptoeing",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "to tiptoe",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Movement & action",
+   "english_synonyms": [
+    "tiptoeing",
+    "to tiptoe"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: pidi + valmi. Tier 2 in the patch.",
+   "protected": true,
+   "id": "lx_pidivalmi_2021"
+  },
+  {
+   "root": "pebuhata",
+   "type": "Compound",
+   "components": [
+    "pebu",
+    "hata"
+   ],
+   "forms": {
+    "root": "pebuhata",
+    "ascended": "pebuhataasa",
+    "negative": "pebuhatana",
+    "verb": "pebuhatapa",
+    "negative_adjective": "pebuhatanasan",
+    "adjective": "pebuhatasan",
+    "ascended_adjective": "pebuhataasasan"
+   },
+   "glosses": {
+    "root": "kick",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "to kick",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Movement & action",
+   "english_synonyms": [
+    "kick",
+    "to kick"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: pebu + hata. Tier 2 in the patch.",
+   "protected": true,
+   "id": "lx_pebuhata_2022"
+  },
+  {
+   "root": "manlihata",
+   "type": "Compound",
+   "components": [
+    "manli",
+    "hata"
+   ],
+   "forms": {
+    "root": "manlihata",
+    "ascended": "manlihataasa",
+    "negative": "manlihatana",
+    "verb": "manlihatama",
+    "negative_adjective": "manlihatanasan",
+    "adjective": "manlihatasan",
+    "ascended_adjective": "manlihataasasan"
+   },
+   "glosses": {
+    "root": "punch; a blow of the hand",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "to punch",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Movement & action",
+   "english_synonyms": [
+    "punch",
+    "a blow of the hand",
+    "to punch"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: manli + hata. Tier 2 in the patch.",
+   "protected": true,
+   "id": "lx_manlihata_2023"
+  },
+  {
+   "root": "yendohata",
+   "type": "Compound",
+   "components": [
+    "yendo",
+    "hata"
+   ],
+   "forms": {
+    "root": "yendohata",
+    "ascended": "yendohataasa",
+    "negative": "yendohatana",
+    "verb": "yendohataya",
+    "negative_adjective": "yendohatanasan",
+    "adjective": "yendohatasan",
+    "ascended_adjective": "yendohataasasan"
+   },
+   "glosses": {
+    "root": "slap",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "to slap",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Movement & action",
+   "english_synonyms": [
+    "slap",
+    "to slap"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: yendo + hata. Tier 2 in the patch.",
+   "protected": true,
+   "id": "lx_yendohata_2024"
+  },
+  {
+   "root": "vizutivro",
+   "type": "Compound",
+   "components": [
+    "vizu",
+    "tivro"
+   ],
+   "forms": {
+    "root": "vizutivro",
+    "ascended": "vizutivroasa",
+    "negative": "vizutivrona",
+    "verb": "vizutivrova",
+    "negative_adjective": "vizutivronasan",
+    "adjective": "vizutivrosan",
+    "ascended_adjective": "vizutivroasasan"
+   },
+   "glosses": {
+    "root": "snatch; a sudden grab",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "to grab; to snatch",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Movement & action",
+   "english_synonyms": [
+    "snatch",
+    "a sudden grab",
+    "to grab",
+    "to snatch"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: vizu + tivro. Tier 2 in the patch.",
+   "protected": true,
+   "id": "lx_vizutivro_2025"
+  },
+  {
+   "root": "lisicemokova",
+   "type": "Compound",
+   "components": [
+    "lisicemo",
+    "kova"
+   ],
+   "forms": {
+    "root": "lisicemokova",
+    "ascended": "lisicemokovaasa",
+    "negative": "lisicemokovana",
+    "verb": "lisicemokovala",
+    "negative_adjective": "lisicemokovanasan",
+    "adjective": "lisicemokovasan",
+    "ascended_adjective": "lisicemokovaasasan"
+   },
+   "glosses": {
+    "root": "frying pan",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "— (unused)",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Home & objects",
+   "english_synonyms": [
+    "frying pan"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: lisicemo + kova. Tier 2 in the patch.",
+   "protected": true,
+   "id": "lx_lisicemokova_2026"
+  },
+  {
+   "root": "velmasafa",
+   "type": "Compound",
+   "components": [
+    "velma",
+    "safa"
+   ],
+   "forms": {
+    "root": "velmasafa",
+    "ascended": "velmasafaasa",
+    "negative": "velmasafana",
+    "verb": "velmasafava",
+    "negative_adjective": "velmasafanasan",
+    "adjective": "velmasafasan",
+    "ascended_adjective": "velmasafaasasan"
+   },
+   "glosses": {
+    "root": "laundry; the washing of clothes",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "to do laundry",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Home & objects",
+   "english_synonyms": [
+    "laundry",
+    "the washing of clothes",
+    "to do laundry"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: velma + safa. Tier 2 in the patch.",
+   "protected": true,
+   "id": "lx_velmasafa_2027"
+  },
+  {
+   "root": "damvavelma",
+   "type": "Compound",
+   "components": [
+    "damva",
+    "velma"
+   ],
+   "forms": {
+    "root": "damvavelma",
+    "ascended": "damvavelmaasa",
+    "negative": "damvavelmana",
+    "verb": "damvavelmada",
+    "negative_adjective": "damvavelmanasan",
+    "adjective": "damvavelmasan",
+    "ascended_adjective": "damvavelmaasasan"
+   },
+   "glosses": {
+    "root": "trousers",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "— (unused)",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Home & objects",
+   "english_synonyms": [
+    "trousers"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: damva + velma. Tier 2 in the patch.",
+   "protected": true,
+   "id": "lx_damvavelma_2028"
+  },
+  {
+   "root": "manlivelma",
+   "type": "Compound",
+   "components": [
+    "manli",
+    "velma"
+   ],
+   "forms": {
+    "root": "manlivelma",
+    "ascended": "manlivelmaasa",
+    "negative": "manlivelmana",
+    "verb": "manlivelmama",
+    "negative_adjective": "manlivelmanasan",
+    "adjective": "manlivelmasan",
+    "ascended_adjective": "manlivelmaasasan"
+   },
+   "glosses": {
+    "root": "glove",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "— (unused)",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Home & objects",
+   "english_synonyms": [
+    "glove"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: manli + velma. Tier 2 in the patch.",
+   "protected": true,
+   "id": "lx_manlivelma_2029"
+  },
+  {
+   "root": "tivrobiti",
+   "type": "Compound",
+   "components": [
+    "tivro",
+    "biti"
+   ],
+   "forms": {
+    "root": "tivrobiti",
+    "ascended": "tivrobitiasa",
+    "negative": "tivrobitina",
+    "verb": "tivrobitita",
+    "negative_adjective": "tivrobitinasan",
+    "adjective": "tivrobitisan",
+    "ascended_adjective": "tivrobitiasasan"
+   },
+   "glosses": {
+    "root": "clasp; button",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "— (unused)",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Home & objects",
+   "english_synonyms": [
+    "clasp",
+    "button"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: tivro + biti. Tier 2 in the patch.",
+   "protected": true,
+   "id": "lx_tivrobiti_2030"
+  },
+  {
+   "root": "domluvelso",
+   "type": "Compound",
+   "components": [
+    "domlu",
+    "velso"
+   ],
+   "forms": {
+    "root": "domluvelso",
+    "ascended": "domluvelsoasa",
+    "negative": "domluvelsona",
+    "verb": "domluvelsoda",
+    "negative_adjective": "domluvelsonasan",
+    "adjective": "domluvelsosan",
+    "ascended_adjective": "domluvelsoasasan"
+   },
+   "glosses": {
+    "root": "curtain",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "— (unused)",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Home & objects",
+   "english_synonyms": [
+    "curtain"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: domlu + velso. Tier 2 in the patch.",
+   "protected": true,
+   "id": "lx_domluvelso_2031"
+  },
+  {
+   "root": "velmazupa",
+   "type": "Compound",
+   "components": [
+    "velma",
+    "zupa"
+   ],
+   "forms": {
+    "root": "velmazupa",
+    "ascended": "velmazupaasa",
+    "negative": "velmazupana",
+    "verb": "velmazupava",
+    "negative_adjective": "velmazupanasan",
+    "adjective": "velmazupasan",
+    "ascended_adjective": "velmazupaasasan"
+   },
+   "glosses": {
+    "root": "wardrobe; closet",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "— (unused)",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Home & objects",
+   "english_synonyms": [
+    "wardrobe",
+    "closet"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: velma + zupa. Tier 2 in the patch.",
+   "protected": true,
+   "id": "lx_velmazupa_2032"
+  },
+  {
+   "root": "safakova",
+   "type": "Compound",
+   "components": [
+    "safa",
+    "kova"
+   ],
+   "forms": {
+    "root": "safakova",
+    "ascended": "safakovaasa",
+    "negative": "safakovana",
+    "verb": "safakovasia",
+    "negative_adjective": "safakovanasan",
+    "adjective": "safakovasan",
+    "ascended_adjective": "safakovaasasan"
+   },
+   "glosses": {
+    "root": "bath; bathtub",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "— (unused)",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Home & objects",
+   "english_synonyms": [
+    "bath",
+    "bathtub"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: safa + kova. Tier 2 in the patch.",
+   "protected": true,
+   "id": "lx_safakova_2033"
+  },
+  {
+   "root": "furosenru",
+   "type": "Compound",
+   "components": [
+    "furo",
+    "senru"
+   ],
+   "forms": {
+    "root": "furosenru",
+    "ascended": "furosenruasa",
+    "negative": "furosenruna",
+    "verb": "furosenrufa",
+    "negative_adjective": "furosenrunasan",
+    "adjective": "furosenrusan",
+    "ascended_adjective": "furosenruasasan"
+   },
+   "glosses": {
+    "root": "peel; rind",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "to peel",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Home & objects",
+   "english_synonyms": [
+    "peel",
+    "rind",
+    "to peel"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: furo + senru. Tier 2 in the patch.",
+   "protected": true,
+   "id": "lx_furosenru_2034"
+  },
+  {
+   "root": "farucemo",
+   "type": "Compound",
+   "components": [
+    "faru",
+    "cemo"
+   ],
+   "forms": {
+    "root": "farucemo",
+    "ascended": "farucemoasa",
+    "negative": "farucemona",
+    "verb": "farucemofa",
+    "negative_adjective": "farucemonasan",
+    "adjective": "farucemosan",
+    "ascended_adjective": "farucemoasasan"
+   },
+   "glosses": {
+    "root": "roasting",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "to roast",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Home & objects",
+   "english_synonyms": [
+    "roasting",
+    "to roast"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: faru + cemo. Tier 2 in the patch.",
+   "protected": true,
+   "id": "lx_farucemo_2035"
+  },
+  {
+   "root": "dozasafa",
+   "type": "Compound",
+   "components": [
+    "doza",
+    "safa"
+   ],
+   "forms": {
+    "root": "dozasafa",
+    "ascended": "dozasafaasa",
+    "negative": "dozasafana",
+    "verb": "dozasafada",
+    "negative_adjective": "dozasafanasan",
+    "adjective": "dozasafasan",
+    "ascended_adjective": "dozasafaasasan"
+   },
+   "glosses": {
+    "root": "scrubbing",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "to scrub",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Home & objects",
+   "english_synonyms": [
+    "scrubbing",
+    "to scrub"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: doza + safa. Tier 2 in the patch.",
+   "protected": true,
+   "id": "lx_dozasafa_2036"
+  },
+  {
+   "root": "sabayebiti",
+   "type": "Compound",
+   "components": [
+    "sabaye",
+    "biti"
+   ],
+   "forms": {
+    "root": "sabayebiti",
+    "ascended": "sabayebitiasa",
+    "negative": "sabayebitina",
+    "verb": "sabayebitisia",
+    "negative_adjective": "sabayebitinasan",
+    "adjective": "sabayebitisan",
+    "ascended_adjective": "sabayebitiasasan"
+   },
+   "glosses": {
+    "root": "comb; hairbrush",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "to comb; to brush (hair)",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Home & objects",
+   "english_synonyms": [
+    "comb",
+    "hairbrush",
+    "to comb",
+    "to brush (hair)"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: sabaye + biti. Tier 2 in the patch.",
+   "protected": true,
+   "id": "lx_sabayebiti_2037"
+  },
+  {
+   "root": "sabayetise",
+   "type": "Compound",
+   "components": [
+    "sabaye",
+    "tise"
+   ],
+   "forms": {
+    "root": "sabayetise",
+    "ascended": "sabayetiseasa",
+    "negative": "sabayetisena",
+    "verb": "sabayetisesia",
+    "negative_adjective": "sabayetisenasan",
+    "adjective": "sabayetisesan",
+    "ascended_adjective": "sabayetiseasasan"
+   },
+   "glosses": {
+    "root": "haircut; shave",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "to cut hair; to shave",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Home & objects",
+   "english_synonyms": [
+    "haircut",
+    "shave",
+    "to cut hair",
+    "to shave"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: sabaye + tise. Tier 2 in the patch.",
+   "protected": true,
+   "id": "lx_sabayetise_2038"
+  },
+  {
+   "root": "bakolenda",
+   "type": "Compound",
+   "components": [
+    "bako",
+    "lenda"
+   ],
+   "forms": {
+    "root": "bakolenda",
+    "ascended": "bakolendaasa",
+    "negative": "bakolendana",
+    "verb": "bakolendaba",
+    "negative_adjective": "bakolendanasan",
+    "adjective": "bakolendasan",
+    "ascended_adjective": "bakolendaasasan"
+   },
+   "glosses": {
+    "root": "crack; a fracture line",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "to crack",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Materials & physics",
+   "english_synonyms": [
+    "crack",
+    "a fracture line",
+    "to crack"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: bako + lenda. Tier 2 in the patch.",
+   "protected": true,
+   "id": "lx_bakolenda_2039"
+  },
+  {
+   "root": "germadugo",
+   "type": "Compound",
+   "components": [
+    "germa",
+    "dugo"
+   ],
+   "forms": {
+    "root": "germadugo",
+    "ascended": "germadugoasa",
+    "negative": "germadugona",
+    "verb": "germadugoga",
+    "negative_adjective": "germadugonasan",
+    "adjective": "germadugosan",
+    "ascended_adjective": "germadugoasasan"
+   },
+   "glosses": {
+    "root": "rust",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "— (unused)",
+    "negative_adjective": "— (unused)",
+    "adjective": "rusty",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Materials & physics",
+   "english_synonyms": [
+    "rust",
+    "rusty"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: germa + dugo. Tier 2 in the patch.",
+   "protected": true,
+   "id": "lx_germadugo_2040"
+  },
+  {
+   "root": "herbadugo",
+   "type": "Compound",
+   "components": [
+    "herba",
+    "dugo"
+   ],
+   "forms": {
+    "root": "herbadugo",
+    "ascended": "herbadugoasa",
+    "negative": "herbadugona",
+    "verb": "herbadugoha",
+    "negative_adjective": "herbadugonasan",
+    "adjective": "herbadugosan",
+    "ascended_adjective": "herbadugoasasan"
+   },
+   "glosses": {
+    "root": "mold; mildew",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "— (unused)",
+    "negative_adjective": "— (unused)",
+    "adjective": "moldy",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Materials & physics",
+   "english_synonyms": [
+    "mold",
+    "mildew",
+    "moldy"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: herba + dugo. Tier 2 in the patch.",
+   "protected": true,
+   "id": "lx_herbadugo_2041"
+  },
+  {
+   "root": "pomlinela",
+   "type": "Compound",
+   "components": [
+    "pomli",
+    "nela"
+   ],
+   "forms": {
+    "root": "pomlinela",
+    "ascended": "pomlinelaasa",
+    "negative": "pomlinelana",
+    "verb": "pomlinelapa",
+    "negative_adjective": "pomlinelanasan",
+    "adjective": "pomlinelasan",
+    "ascended_adjective": "pomlinelaasasan"
+   },
+   "glosses": {
+    "root": "hostage; a person held as a pledge",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "— (unused)",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Plot & society",
+   "english_synonyms": [
+    "hostage",
+    "a person held as a pledge"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: pomli + nela. Tier 2 in the patch.",
+   "protected": true,
+   "id": "lx_pomlinela_2042"
+  },
+  {
+   "root": "silrogura",
+   "type": "Compound",
+   "components": [
+    "silro",
+    "gura"
+   ],
+   "forms": {
+    "root": "silrogura",
+    "ascended": "silroguraasa",
+    "negative": "silrogurana",
+    "verb": "silrogurasia",
+    "negative_adjective": "silroguranasan",
+    "adjective": "silrogurasan",
+    "ascended_adjective": "silroguraasasan"
+   },
+   "glosses": {
+    "root": "blackmail",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "to blackmail",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Plot & society",
+   "english_synonyms": [
+    "blackmail",
+    "to blackmail"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: silro + gura. Tier 2 in the patch.",
+   "protected": true,
+   "id": "lx_silrogura_2043"
+  },
+  {
+   "root": "dozamasu",
+   "type": "Compound",
+   "components": [
+    "doza",
+    "masu"
+   ],
+   "forms": {
+    "root": "dozamasu",
+    "ascended": "dozamasuasa",
+    "negative": "dozamasuna",
+    "verb": "dozamasuda",
+    "negative_adjective": "dozamasunasan",
+    "adjective": "dozamasusan",
+    "ascended_adjective": "dozamasuasasan"
+   },
+   "glosses": {
+    "root": "interrogation",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "to interrogate",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Plot & society",
+   "english_synonyms": [
+    "interrogation",
+    "to interrogate"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: doza + masu. Tier 2 in the patch.",
+   "protected": true,
+   "id": "lx_dozamasu_2044"
+  },
+  {
+   "root": "dorvakarko",
+   "type": "Compound",
+   "components": [
+    "dorva",
+    "karko"
+   ],
+   "forms": {
+    "root": "dorvakarko",
+    "ascended": "dorvakarkoasa",
+    "negative": "dorvakarkona",
+    "verb": "dorvakarkoda",
+    "negative_adjective": "dorvakarkonasan",
+    "adjective": "dorvakarkosan",
+    "ascended_adjective": "dorvakarkoasasan"
+   },
+   "glosses": {
+    "root": "murder; a deliberate killing",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "to murder",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Plot & society",
+   "english_synonyms": [
+    "murder",
+    "a deliberate killing",
+    "to murder"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: dorva + karko. karkoyo (killer) already exists Tier 2 in the patch.",
+   "protected": true,
+   "id": "lx_dorvakarko_2045"
+  },
+  {
+   "root": "juseleni",
+   "type": "Compound",
+   "components": [
+    "juse",
+    "leni"
+   ],
+   "forms": {
+    "root": "juseleni",
+    "ascended": "juseleniasa",
+    "negative": "juselenina",
+    "verb": "juselenija",
+    "negative_adjective": "juseleninasan",
+    "adjective": "juselenisan",
+    "ascended_adjective": "juseleniasasan"
+   },
+   "glosses": {
+    "root": "trial; a hearing before a judge",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "— (unused)",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Plot & society",
+   "english_synonyms": [
+    "trial",
+    "a hearing before a judge"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: juse + leni. juseyo (judge), jusepago (courthouse), kaldopago (prison) already exist Tier 2 in the patch.",
+   "protected": true,
+   "id": "lx_juseleni_2046"
+  },
+  {
+   "root": "pagoverasude",
+   "type": "Compound",
+   "components": [
+    "pago",
+    "verasude"
+   ],
+   "forms": {
+    "root": "pagoverasude",
+    "ascended": "pagoverasudeasa",
+    "negative": "pagoverasudena",
+    "verb": "pagoverasudepa",
+    "negative_adjective": "pagoverasudenasan",
+    "adjective": "pagoverasudesan",
+    "ascended_adjective": "pagoverasudeasasan"
+   },
+   "glosses": {
+    "root": "alibi; proof of where one was",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "— (unused)",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Plot & society",
+   "english_synonyms": [
+    "alibi",
+    "proof of where one was"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: pago + verasude. Tier 2 in the patch.",
+   "protected": true,
+   "id": "lx_pagoverasude_2047"
+  },
+  {
+   "root": "verasudeserbu",
+   "type": "Compound",
+   "components": [
+    "verasude",
+    "serbu"
+   ],
+   "forms": {
+    "root": "verasudeserbu",
+    "ascended": "verasudeserbuasa",
+    "negative": "verasudeserbuna",
+    "verb": "verasudeserbuva",
+    "negative_adjective": "verasudeserbunasan",
+    "adjective": "verasudeserbusan",
+    "ascended_adjective": "verasudeserbuasasan"
+   },
+   "glosses": {
+    "root": "investigation",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "to investigate",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Plot & society",
+   "english_synonyms": [
+    "investigation",
+    "to investigate"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: verasude + serbu. Tier 2 in the patch.",
+   "protected": true,
+   "id": "lx_verasudeserbu_2048"
+  },
+  {
+   "root": "pebunulu",
+   "type": "Compound",
+   "components": [
+    "pebu",
+    "nulu"
+   ],
+   "forms": {
+    "root": "pebunulu",
+    "ascended": "pebunuluasa",
+    "negative": "pebunuluna",
+    "verb": "pebunulupa",
+    "negative_adjective": "pebunulunasan",
+    "adjective": "pebunulusan",
+    "ascended_adjective": "pebunuluasasan"
+   },
+   "glosses": {
+    "root": "footpath; sidewalk",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "— (unused)",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Nature & geography",
+   "english_synonyms": [
+    "footpath",
+    "sidewalk"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: pebu + nulu. Tier 2 in the patch.",
+   "protected": true,
+   "id": "lx_pebunulu_2049"
+  },
+  {
+   "root": "larbotobra",
+   "type": "Compound",
+   "components": [
+    "larbo",
+    "tobra"
+   ],
+   "forms": {
+    "root": "larbotobra",
+    "ascended": "larbotobraasa",
+    "negative": "larbotobrana",
+    "verb": "larbotobrala",
+    "negative_adjective": "larbotobranasan",
+    "adjective": "larbotobrasan",
+    "ascended_adjective": "larbotobraasasan"
+   },
+   "glosses": {
+    "root": "fence",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "— (unused)",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Nature & geography",
+   "english_synonyms": [
+    "fence"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: larbo + tobra. Tier 2 in the patch.",
+   "protected": true,
+   "id": "lx_larbotobra_2050"
+  },
+  {
+   "root": "halrakova",
+   "type": "Compound",
+   "components": [
+    "halra",
+    "kova"
+   ],
+   "forms": {
+    "root": "halrakova",
+    "ascended": "halrakovaasa",
+    "negative": "halrakovana",
+    "verb": "halrakovaha",
+    "negative_adjective": "halrakovanasan",
+    "adjective": "halrakovasan",
+    "ascended_adjective": "halrakovaasasan"
+   },
+   "glosses": {
+    "root": "cart; carriage",
+    "ascended": "— (unused)",
+    "negative": "— (unused)",
+    "verb": "— (unused)",
+    "negative_adjective": "— (unused)",
+    "adjective": "— (unused)",
+    "ascended_adjective": "— (unused)"
+   },
+   "register": "everyday",
+   "domain": "Nature & geography",
+   "english_synonyms": [
+    "cart",
+    "carriage"
+   ],
+   "status_1_0": "NEW",
+   "status_3_1": "NEW",
+   "since": "3.1",
+   "history_0_8": null,
+   "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: halra + kova. Tier 2 in the patch.",
+   "protected": true,
+   "id": "lx_halrakova_2051"
   }
  ],
  "function_words": [
@@ -94719,11 +97671,12 @@
     "kezuvalmi",
     "noruvalmi",
     "pebuvalmi",
+    "pidivalmi",
     "valmi",
     "vizuvalmi",
     "vulravalmi"
    ],
-   "count": 9
+   "count": 10
   },
   {
    "ending": "almu",
@@ -94758,13 +97711,15 @@
   {
    "ending": "alno",
    "members": [
+    "lisiralno",
+    "lurvaralno",
     "manliralno",
     "miruralno",
     "peburalno",
     "ralno",
     "veluralno"
    ],
-   "count": 5
+   "count": 7
   },
   {
    "ending": "alra",
@@ -95064,10 +98019,11 @@
   {
    "ending": "arko",
    "members": [
+    "dorvakarko",
     "karko",
     "silrokarko"
    ],
-   "count": 2
+   "count": 3
   },
   {
    "ending": "arku",
@@ -95167,9 +98123,10 @@
    "ending": "asbi",
    "members": [
     "farufasbi",
-    "fasbi"
+    "fasbi",
+    "nuravufasbi"
    ],
-   "count": 2
+   "count": 3
   },
   {
    "ending": "aska",
@@ -95242,9 +98199,11 @@
     "bapihavli",
     "havli",
     "moluhavli",
+    "nulvahavli",
+    "somuhavli",
     "timruhavli"
    ],
-   "count": 4
+   "count": 6
   },
   {
    "ending": "avlo",
@@ -95356,9 +98315,10 @@
   {
    "ending": "bane",
    "members": [
+    "loteromebane",
     "mebane"
    ],
-   "count": 1
+   "count": 2
   },
   {
    "ending": "banu",
@@ -95410,6 +98370,13 @@
    "count": 1
   },
   {
+   "ending": "bika",
+   "members": [
+    "bika"
+   ],
+   "count": 1
+  },
+  {
    "ending": "bio",
    "members": [
     "bio"
@@ -95451,9 +98418,11 @@
     "mudusomubiti",
     "namresomubiti",
     "pavmadivmabiti",
+    "pidibiti",
     "ralkabiti",
     "regnabiti",
     "regnasemnebiti",
+    "sabayebiti",
     "sabebiti",
     "sapubiti",
     "sarbibiti",
@@ -95465,6 +98434,7 @@
     "talvabiti",
     "tikubiti",
     "tisebiti",
+    "tivrobiti",
     "vallabiti",
     "veraserbubiti",
     "vimobiti",
@@ -95474,7 +98444,7 @@
     "zayubiti",
     "zefromelobiti"
    ],
-   "count": 47
+   "count": 50
   },
   {
    "ending": "boji",
@@ -95511,9 +98481,10 @@
    "ending": "cemo",
    "members": [
     "cemo",
+    "farucemo",
     "lisicemo"
    ],
-   "count": 2
+   "count": 3
   },
   {
    "ending": "cere",
@@ -95586,9 +98557,11 @@
   {
    "ending": "dalu",
    "members": [
-    "dalu"
+    "dalu",
+    "lenyodalu",
+    "moludalu"
    ],
-   "count": 1
+   "count": 3
   },
   {
    "ending": "dapa",
@@ -95672,10 +98645,11 @@
     "momvidonu",
     "mududonu",
     "nedudonu",
+    "patudonu",
     "talidonu",
     "volrudonu"
    ],
-   "count": 16
+   "count": 17
   },
   {
    "ending": "doza",
@@ -95686,6 +98660,15 @@
     "vulradoza"
    ],
    "count": 4
+  },
+  {
+   "ending": "dugo",
+   "members": [
+    "dugo",
+    "germadugo",
+    "herbadugo"
+   ],
+   "count": 3
   },
   {
    "ending": "duha",
@@ -95862,9 +98845,11 @@
    "ending": "elma",
    "members": [
     "daigovelma",
+    "damvavelma",
     "devivelma",
     "helvivelma",
     "lavbuvelma",
+    "manlivelma",
     "maskavelma",
     "namrevelma",
     "pebuvelma",
@@ -95876,7 +98861,7 @@
     "velma",
     "vulravelma"
    ],
-   "count": 14
+   "count": 16
   },
   {
    "ending": "elmi",
@@ -95965,9 +98950,10 @@
   {
    "ending": "elso",
    "members": [
+    "domluvelso",
     "velso"
    ],
-   "count": 1
+   "count": 2
   },
   {
    "ending": "elsu",
@@ -96020,9 +99006,10 @@
   {
    "ending": "emne",
    "members": [
+    "pebusemne",
     "semne"
    ],
-   "count": 1
+   "count": 2
   },
   {
    "ending": "emni",
@@ -96106,9 +99093,11 @@
   {
    "ending": "enda",
    "members": [
-    "lenda"
+    "bakolenda",
+    "lenda",
+    "vilnelenda"
    ],
-   "count": 1
+   "count": 3
   },
   {
    "ending": "ende",
@@ -96163,6 +99152,7 @@
    "members": [
     "bojisenru",
     "dapasarbisenru",
+    "furosenru",
     "kezusenru",
     "kronosarbisenru",
     "ramusenru",
@@ -96170,7 +99160,7 @@
     "senru",
     "sumasenru"
    ],
-   "count": 8
+   "count": 9
   },
   {
    "ending": "ensa",
@@ -96215,9 +99205,10 @@
   {
    "ending": "enyo",
    "members": [
+    "farulenyo",
     "lenyo"
    ],
-   "count": 1
+   "count": 2
   },
   {
    "ending": "erba",
@@ -96244,9 +99235,10 @@
     "milnoserbu",
     "sabeserbu",
     "serbu",
-    "veraserbu"
+    "veraserbu",
+    "verasudeserbu"
    ],
-   "count": 9
+   "count": 10
   },
   {
    "ending": "erdi",
@@ -96350,9 +99342,10 @@
    "members": [
     "namrenevra",
     "nevra",
+    "sapunevra",
     "solanevra"
    ],
-   "count": 3
+   "count": 4
   },
   {
    "ending": "evre",
@@ -96483,16 +99476,22 @@
   {
    "ending": "gura",
    "members": [
-    "gura"
+    "gura",
+    "silrogura"
    ],
-   "count": 1
+   "count": 2
   },
   {
    "ending": "hata",
    "members": [
-    "hata"
+    "finihata",
+    "hata",
+    "helvihata",
+    "manlihata",
+    "pebuhata",
+    "yendohata"
    ],
-   "count": 1
+   "count": 6
   },
   {
    "ending": "haza",
@@ -96902,19 +99901,23 @@
    "ending": "ivna",
    "members": [
     "livna",
+    "lorelivna",
     "mavopagolivna",
     "senolivna",
     "simvolivna"
    ],
-   "count": 4
+   "count": 5
   },
   {
    "ending": "ivro",
    "members": [
+    "dozativro",
+    "finitivro",
     "germativro",
-    "tivro"
+    "tivro",
+    "vizutivro"
    ],
-   "count": 2
+   "count": 5
   },
   {
    "ending": "izma",
@@ -96980,6 +99983,7 @@
     "conokova",
     "daigokova",
     "damrukova",
+    "halrakova",
     "havlikova",
     "kaldokova",
     "kavbikova",
@@ -96987,22 +99991,25 @@
     "lavbukova",
     "linukova",
     "lirakova",
+    "lisicemokova",
     "lulfakova",
     "lumikova",
     "manlikova",
     "mirukova",
     "namikova",
     "rupukova",
+    "safakova",
     "sapukova",
     "sernakova",
     "sevrekova",
     "silikova",
+    "tabukova",
     "tibikova",
     "velmakova",
     "yalmukova",
     "zefrokova"
    ],
-   "count": 26
+   "count": 30
   },
   {
    "ending": "laso",
@@ -97063,9 +100070,10 @@
   {
    "ending": "leni",
    "members": [
+    "juseleni",
     "leni"
    ],
-   "count": 1
+   "count": 2
   },
   {
    "ending": "leva",
@@ -97077,6 +100085,7 @@
   {
    "ending": "linu",
    "members": [
+    "famlilinu",
     "hunralinu",
     "kronolinu",
     "linu",
@@ -97090,7 +100099,7 @@
     "sambalinu",
     "tarnulinu"
    ],
-   "count": 12
+   "count": 13
   },
   {
    "ending": "lira",
@@ -97147,9 +100156,11 @@
   {
    "ending": "lobe",
    "members": [
-    "milobe"
+    "lavimilobe",
+    "milobe",
+    "zivumilobe"
    ],
-   "count": 1
+   "count": 3
   },
   {
    "ending": "lomo",
@@ -97239,12 +100250,13 @@
   {
    "ending": "masu",
    "members": [
+    "dozamasu",
     "loremasu",
     "masu",
     "nedumasu",
     "silromasu"
    ],
-   "count": 4
+   "count": 5
   },
   {
    "ending": "mavo",
@@ -97372,9 +100384,10 @@
    "ending": "mudu",
    "members": [
     "daigomudu",
-    "mudu"
+    "mudu",
+    "sapukovamudu"
    ],
-   "count": 2
+   "count": 3
   },
   {
    "ending": "nafe",
@@ -97426,6 +100439,8 @@
     "mirunela",
     "monrunela",
     "nela",
+    "pomlinela",
+    "sabenela",
     "sevunela",
     "solonela",
     "telnenela",
@@ -97434,7 +100449,7 @@
     "yanbanela",
     "zefronela"
    ],
-   "count": 23
+   "count": 25
   },
   {
    "ending": "neme",
@@ -97516,6 +100531,7 @@
     "mirunulu",
     "nimunulu",
     "nulu",
+    "pebunulu",
     "rivlanulu",
     "sonbunulu",
     "telnenulu",
@@ -97526,7 +100542,7 @@
     "yugenulu",
     "zupanulu"
    ],
-   "count": 26
+   "count": 27
   },
   {
    "ending": "numo",
@@ -97548,9 +100564,10 @@
    "ending": "obra",
    "members": [
     "kronotobra",
+    "larbotobra",
     "tobra"
    ],
-   "count": 2
+   "count": 3
   },
   {
    "ending": "okra",
@@ -97918,6 +100935,7 @@
    "ending": "ordi",
    "members": [
     "conolordi",
+    "dorvalordi",
     "kendelordi",
     "lavbulordi",
     "lideolordi",
@@ -97928,7 +100946,7 @@
     "talilordi",
     "vuzilordi"
    ],
-   "count": 10
+   "count": 11
   },
   {
    "ending": "ordu",
@@ -98076,6 +101094,13 @@
     "pebu"
    ],
    "count": 3
+  },
+  {
+   "ending": "pega",
+   "members": [
+    "pega"
+   ],
+   "count": 1
   },
   {
    "ending": "peli",
@@ -98369,17 +101394,20 @@
   {
    "ending": "safa",
    "members": [
+    "dozasafa",
     "larbopagosafa",
-    "safa"
+    "safa",
+    "velmasafa"
    ],
-   "count": 2
+   "count": 4
   },
   {
    "ending": "sapu",
    "members": [
+    "dentosapu",
     "sapu"
    ],
-   "count": 1
+   "count": 2
   },
   {
    "ending": "sebi",
@@ -98405,6 +101433,7 @@
     "lavbuseno",
     "liraseno",
     "livnaseno",
+    "maskabenaseno",
     "noruseno",
     "peliseno",
     "pukuseno",
@@ -98418,9 +101447,12 @@
     "silroseno",
     "sudeseno",
     "veraseno",
-    "zayuseno"
+    "vizuseno",
+    "yebaseno",
+    "zayuseno",
+    "zegoseno"
    ],
-   "count": 24
+   "count": 28
   },
   {
    "ending": "sevu",
@@ -98509,13 +101541,15 @@
   {
    "ending": "sude",
    "members": [
+    "pagoverasude",
     "ranfasude",
     "senosude",
+    "silrosude",
     "sude",
     "verasude",
     "vimosude"
    ],
-   "count": 5
+   "count": 7
   },
   {
    "ending": "suma",
@@ -98537,9 +101571,10 @@
    "ending": "tabu",
    "members": [
     "lavbutabu",
-    "tabu"
+    "tabu",
+    "tobratabu"
    ],
-   "count": 2
+   "count": 3
   },
   {
    "ending": "tali",
@@ -98603,9 +101638,10 @@
   {
    "ending": "tise",
    "members": [
+    "sabayetise",
     "tise"
    ],
-   "count": 1
+   "count": 2
   },
   {
    "ending": "tovo",
@@ -98616,6 +101652,20 @@
     "tovo"
    ],
    "count": 4
+  },
+  {
+   "ending": "toze",
+   "members": [
+    "toze"
+   ],
+   "count": 1
+  },
+  {
+   "ending": "tuzo",
+   "members": [
+    "tuzo"
+   ],
+   "count": 1
   },
   {
    "ending": "ubio",
@@ -98855,9 +101905,10 @@
   {
    "ending": "urna",
    "members": [
+    "havliturna",
     "turna"
    ],
-   "count": 1
+   "count": 2
   },
   {
    "ending": "urno",
@@ -98912,9 +101963,10 @@
   {
    "ending": "uvla",
    "members": [
-    "duvla"
+    "duvla",
+    "havliduvla"
    ],
-   "count": 1
+   "count": 2
   },
   {
    "ending": "vali",
@@ -98947,6 +101999,7 @@
    "ending": "vaye",
    "members": [
     "dozavaye",
+    "manlivaye",
     "moluvaye",
     "monruvaye",
     "riluvaye",
@@ -98957,7 +102010,7 @@
     "vaye",
     "vizuvaye"
    ],
-   "count": 10
+   "count": 11
   },
   {
    "ending": "velu",
@@ -99009,14 +102062,16 @@
   {
    "ending": "vimo",
    "members": [
+    "helvivimo",
     "kronovimo",
+    "larnevimo",
     "lorevimo",
     "mambivimo",
     "nibevimo",
     "noruvimo",
     "vimo"
    ],
-   "count": 6
+   "count": 8
   },
   {
    "ending": "vizu",
@@ -99156,9 +102211,10 @@
     "kaldozupa",
     "monruzupa",
     "tomnuzupa",
+    "velmazupa",
     "zupa"
    ],
-   "count": 5
+   "count": 6
   }
  ],
  "legacy": {
@@ -126864,7 +129920,15 @@
    "ops": 209
   }
  ],
- "handoff_note": "Liraasa 3.0 (proposed): all of 1.0, the 1.1 vocabulary supplement, the 1.2 changesets 2026-10-17-grammar-rulings and 2026-10-17-lexicon-1-2, the 2.0 changesets 2026-10-18-lexicon-2-0 and 2026-10-18-lexicon-2-0-review (word-building rulings 2.0:G37–G45, new vocabulary, the image-compound pattern), and the 2.1 changeset 2026-10-18-lexicon-2-1 and 2026-10-19-lexicon-2-1-review (rulings 2.1:G46–G59, 30 roots respelled), and the 2.2 changeset 2026-10-19-lexicon-2-2 (rulings 2.2:G60–G68, silro restored, the album), and the 2.3 changeset 2026-10-19-lexicon-2-3 and 2026-10-19-lexicon-2-3-review and 2026-10-19-lexicon-2-3-audit (rulings 2.3:G69–G86, the sound pass and the grammar audit), and the 2.5 changesets 2026-10-22-lexicon-2-5-album, 2026-10-22-lexicon-2-5, 2026-10-22-lexicon-2-5-housekeeping (rulings 2.5:G87–G128, the author's decisions on the 2.3 audit; the album is no longer canon), and the 3.0 changeset 2026-10-25-lexicon-3-0 (rulings 3.0:G129–G141, Devotion, Music and Measure: proposed, awaiting the author's ratification). Revised examples keep their earlier text in liraasa_1_1 (1.2), liraasa_1_2 (2.0), liraasa_2_0 (2.1), liraasa_2_1 (2.2), liraasa_2_2 (2.3) or liraasa_2_3 (2.5). Ruling ids are edition-qualified: 0.8:R1, 1.0:G7, 1.2:G24, 2.0:G40, 2.1:G46, 2.2:G60, 2.3:G69, 2.5:G88, 3.0:G129. Built by scripts/build_handoff.ts from data/lexicon/liraasa_3_0.json.",
+ "changesets_3_1": [
+  {
+   "id": "2026-10-25-lexicon-3-1",
+   "edition": "3.1",
+   "summary": "Liraasa 3.1, \"Everyday and Fiction\" (ADR-0022), from the author's 3.1 patch. PROPOSED: PROPOSED: ratify tier 1 first; tier 2 may be ratified, deferred or dropped item by item. Lexical only, no grammar: 5 roots and 69 compounds, 4 listed derivations, 6 lexicalised diminutives and 4 restored forms, each noted with its tier. No 3.0 word, spelling or ruling changes.",
+   "ops": 88
+  }
+ ],
+ "handoff_note": "Liraasa 3.1 (3.0 and 3.1 proposed): all of 1.0, the 1.1 vocabulary supplement, the 1.2 changesets 2026-10-17-grammar-rulings and 2026-10-17-lexicon-1-2, the 2.0 changesets 2026-10-18-lexicon-2-0 and 2026-10-18-lexicon-2-0-review (word-building rulings 2.0:G37–G45, new vocabulary, the image-compound pattern), and the 2.1 changeset 2026-10-18-lexicon-2-1 and 2026-10-19-lexicon-2-1-review (rulings 2.1:G46–G59, 30 roots respelled), and the 2.2 changeset 2026-10-19-lexicon-2-2 (rulings 2.2:G60–G68, silro restored, the album), and the 2.3 changeset 2026-10-19-lexicon-2-3 and 2026-10-19-lexicon-2-3-review and 2026-10-19-lexicon-2-3-audit (rulings 2.3:G69–G86, the sound pass and the grammar audit), and the 2.5 changesets 2026-10-22-lexicon-2-5-album, 2026-10-22-lexicon-2-5, 2026-10-22-lexicon-2-5-housekeeping (rulings 2.5:G87–G128, the author's decisions on the 2.3 audit; the album is no longer canon), and the 3.0 changeset 2026-10-25-lexicon-3-0 (rulings 3.0:G129–G141, Devotion, Music and Measure), and the 3.1 changeset 2026-10-25-lexicon-3-1 (Everyday and Fiction, vocabulary only); 3.0 and 3.1 are proposed, awaiting the author's ratification. Revised examples keep their earlier text in liraasa_1_1 (1.2), liraasa_1_2 (2.0), liraasa_2_0 (2.1), liraasa_2_1 (2.2), liraasa_2_2 (2.3) or liraasa_2_3 (2.5). Ruling ids are edition-qualified: 0.8:R1, 1.0:G7, 1.2:G24, 2.0:G40, 2.1:G46, 2.2:G60, 2.3:G69, 2.5:G88, 3.0:G129. Built by scripts/build_handoff.ts from data/lexicon/liraasa_3_1.json.",
  "counts_1_1_to_1_2": {
   "before": {
    "headwords": 1418,
@@ -166680,6 +169744,2537 @@
      "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): the gagu row follows 3.0:G136.",
      "addedIn": "3.0",
      "at": "2026-10-25T12:00:00Z",
+     "author": "nicolas"
+    }
+   ]
+  }
+ ],
+ "counts_3_0_to_3_1": {
+  "before": {
+   "headwords": 1590,
+   "primalRoots": 490,
+   "compounds": 1100,
+   "forms": 11130,
+   "distinctForms": 11130,
+   "functionWords": 153,
+   "correlatives": 39,
+   "lexicalisedDerivations": 116,
+   "rhymeFamilies": 493
+  },
+  "after": {
+   "headwords": 1664,
+   "primalRoots": 495,
+   "compounds": 1169,
+   "forms": 11648,
+   "distinctForms": 11648,
+   "functionWords": 153,
+   "correlatives": 39,
+   "lexicalisedDerivations": 120,
+   "rhymeFamilies": 498
+  }
+ },
+ "changesets_3_1_full": [
+  {
+   "id": "2026-10-25-lexicon-3-1",
+   "edition": "3.1",
+   "created": "2026-10-25T16:00:00Z",
+   "author": "nicolas",
+   "summary": "Liraasa 3.1, \"Everyday and Fiction\" (ADR-0022), from the author's 3.1 patch. PROPOSED: PROPOSED: ratify tier 1 first; tier 2 may be ratified, deferred or dropped item by item. Lexical only, no grammar: 5 roots and 69 compounds, 4 listed derivations, 6 lexicalised diminutives and 4 restored forms, each noted with its tier. No 3.0 word, spelling or ruling changes.",
+   "rulings": [],
+   "headwords": [
+    {
+     "id": "lx_dugo_1978",
+     "root": "dugo",
+     "type": "Primal",
+     "components": null,
+     "glosses": {
+      "root": "decay; rot",
+      "verb": "to rot; to spoil; to decay",
+      "adjective": "rotten; spoiled; stale (of food)",
+      "negative_adjective": "unspoiled; incorruptible"
+     },
+     "register": "everyday",
+     "domain": "Materials & physics",
+     "english_synonyms": [
+      "decay",
+      "rot",
+      "to rot",
+      "to spoil",
+      "to decay",
+      "rotten",
+      "spoiled",
+      "stale (of food)",
+      "unspoiled",
+      "incorruptible"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Tier 1 in the patch."
+    },
+    {
+     "id": "lx_pega_1979",
+     "root": "pega",
+     "type": "Primal",
+     "components": null,
+     "glosses": {
+      "root": "stickiness; adhesion",
+      "verb": "to stick; to adhere",
+      "adjective": "sticky"
+     },
+     "register": "everyday",
+     "domain": "Materials & physics",
+     "english_synonyms": [
+      "stickiness",
+      "adhesion",
+      "to stick",
+      "to adhere",
+      "sticky"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Tier 1 in the patch."
+    },
+    {
+     "id": "lx_toze_1980",
+     "root": "toze",
+     "type": "Primal",
+     "components": null,
+     "glosses": {
+      "root": "poison; venom",
+      "verb": "to poison",
+      "adjective": "poisonous; venomous",
+      "negative": "antidote",
+      "negative_adjective": "harmless; non-toxic"
+     },
+     "register": "everyday",
+     "domain": "Health & body",
+     "english_synonyms": [
+      "poison",
+      "venom",
+      "to poison",
+      "poisonous",
+      "venomous",
+      "antidote",
+      "harmless",
+      "non-toxic"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Tier 1 in the patch."
+    },
+    {
+     "id": "lx_bika_1981",
+     "root": "bika",
+     "type": "Primal",
+     "components": null,
+     "glosses": {
+      "root": "flinch; a start; an involuntary recoil",
+      "verb": "to flinch; to startle",
+      "adjective": "jumpy; easily startled"
+     },
+     "register": "everyday",
+     "domain": "Health & body",
+     "english_synonyms": [
+      "flinch",
+      "a start",
+      "an involuntary recoil",
+      "to flinch",
+      "to startle",
+      "jumpy",
+      "easily startled"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Tier 1 in the patch."
+    },
+    {
+     "id": "lx_tuzo_1982",
+     "root": "tuzo",
+     "type": "Primal",
+     "components": null,
+     "glosses": {
+      "root": "hanging; suspension",
+      "verb": "to hang; to suspend",
+      "adjective": "hanging; suspended"
+     },
+     "register": "everyday",
+     "domain": "Actions & physical processes",
+     "english_synonyms": [
+      "hanging",
+      "suspension",
+      "to hang",
+      "to suspend",
+      "suspended"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Tier 2 in the patch."
+    },
+    {
+     "id": "lx_lorelivna_1983",
+     "root": "lorelivna",
+     "type": "Compound",
+     "components": [
+      "lore",
+      "livna"
+     ],
+     "glosses": {
+      "root": "preference; the heart's choice",
+      "verb": "to prefer",
+      "adjective": "favorite; preferred"
+     },
+     "register": "everyday",
+     "domain": "Speech & mind",
+     "english_synonyms": [
+      "preference",
+      "the heart's choice",
+      "to prefer",
+      "favorite",
+      "preferred"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: lore + livna. prefer A to B: lorelivnala A korsi B Tier 1 in the patch."
+    },
+    {
+     "id": "lx_patudonu_1984",
+     "root": "patudonu",
+     "type": "Compound",
+     "components": [
+      "patu",
+      "donu"
+     ],
+     "glosses": {
+      "root": "sharing",
+      "verb": "to share"
+     },
+     "register": "everyday",
+     "domain": "Speech & mind",
+     "english_synonyms": [
+      "sharing",
+      "to share"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: patu + donu. Tier 1 in the patch."
+    },
+    {
+     "id": "lx_loteromebane_1985",
+     "root": "loteromebane",
+     "type": "Compound",
+     "components": [
+      "lotero",
+      "mebane"
+     ],
+     "glosses": {
+      "root": "misinterpretation; understanding something as other than it is",
+      "verb": "to misunderstand; to misinterpret"
+     },
+     "register": "everyday",
+     "domain": "Speech & mind",
+     "english_synonyms": [
+      "misinterpretation",
+      "understanding something as other than it is",
+      "to misunderstand",
+      "to misinterpret"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: lotero + mebane. contrast: ne mebanema = not understand; mebanena = a misunderstanding (between people) Tier 1 in the patch."
+    },
+    {
+     "id": "lx_silrosude_1986",
+     "root": "silrosude",
+     "type": "Compound",
+     "components": [
+      "silro",
+      "sude"
+     ],
+     "glosses": {
+      "root": "disclosure; the revealing of a secret",
+      "verb": "to reveal (a secret); to uncover"
+     },
+     "register": "everyday",
+     "domain": "Speech & mind",
+     "english_synonyms": [
+      "disclosure",
+      "the revealing of a secret",
+      "to reveal (a secret)",
+      "to uncover"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: silro + sude. velsona (unveiling; revelation) stays the poetic/sacred word Tier 1 in the patch."
+    },
+    {
+     "id": "lx_dorvalordi_1987",
+     "root": "dorvalordi",
+     "type": "Compound",
+     "components": [
+      "dorva",
+      "lordi"
+     ],
+     "glosses": {
+      "root": "plan; an ordered intention",
+      "verb": "to plan"
+     },
+     "register": "everyday",
+     "domain": "Speech & mind",
+     "english_synonyms": [
+      "plan",
+      "an ordered intention",
+      "to plan"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: dorva + lordi. gap found while testing sentence 6: 2.5/3.0 have no word for plan Tier 1 in the patch."
+    },
+    {
+     "id": "lx_dentosapu_1988",
+     "root": "dentosapu",
+     "type": "Compound",
+     "components": [
+      "dento",
+      "sapu"
+     ],
+     "glosses": {
+      "root": "chewing",
+      "verb": "to chew"
+     },
+     "register": "everyday",
+     "domain": "Health & body",
+     "english_synonyms": [
+      "chewing",
+      "to chew"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: dento + sapu. Tier 1 in the patch."
+    },
+    {
+     "id": "lx_sapunevra_1989",
+     "root": "sapunevra",
+     "type": "Compound",
+     "components": [
+      "sapu",
+      "nevra"
+     ],
+     "glosses": {
+      "root": "swallowing; a swallow",
+      "verb": "to swallow"
+     },
+     "register": "everyday",
+     "domain": "Health & body",
+     "english_synonyms": [
+      "swallowing",
+      "a swallow",
+      "to swallow"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: sapu + nevra. Tier 1 in the patch."
+    },
+    {
+     "id": "lx_somuhavli_1990",
+     "root": "somuhavli",
+     "type": "Compound",
+     "components": [
+      "somu",
+      "havli"
+     ],
+     "glosses": {
+      "root": "yawn",
+      "verb": "to yawn"
+     },
+     "register": "everyday",
+     "domain": "Health & body",
+     "english_synonyms": [
+      "yawn",
+      "to yawn"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: somu + havli. Tier 1 in the patch."
+    },
+    {
+     "id": "lx_lenyodalu_1991",
+     "root": "lenyodalu",
+     "type": "Compound",
+     "components": [
+      "lenyo",
+      "dalu"
+     ],
+     "glosses": {
+      "root": "a lick",
+      "verb": "to lick"
+     },
+     "register": "everyday",
+     "domain": "Health & body",
+     "english_synonyms": [
+      "a lick",
+      "to lick"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: lenyo + dalu. Tier 1 in the patch."
+    },
+    {
+     "id": "lx_nulvahavli_1992",
+     "root": "nulvahavli",
+     "type": "Compound",
+     "components": [
+      "nulva",
+      "havli"
+     ],
+     "glosses": {
+      "root": "sniff",
+      "verb": "to sniff"
+     },
+     "register": "everyday",
+     "domain": "Health & body",
+     "english_synonyms": [
+      "sniff",
+      "to sniff"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: nulva + havli. Tier 1 in the patch."
+    },
+    {
+     "id": "lx_sapukovamudu_1993",
+     "root": "sapukovamudu",
+     "type": "Compound",
+     "components": [
+      "sapukova",
+      "mudu"
+     ],
+     "glosses": {
+      "root": "nausea",
+      "adjective": "nauseous; queasy"
+     },
+     "register": "everyday",
+     "domain": "Health & body",
+     "english_synonyms": [
+      "nausea",
+      "nauseous",
+      "queasy"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: sapukova + mudu. Tier 1 in the patch."
+    },
+    {
+     "id": "lx_nuravufasbi_1994",
+     "root": "nuravufasbi",
+     "type": "Compound",
+     "components": [
+      "nuravu",
+      "fasbi"
+     ],
+     "glosses": {
+      "root": "wince; a face of pain",
+      "verb": "to wince"
+     },
+     "register": "everyday",
+     "domain": "Dialogue & gesture",
+     "english_synonyms": [
+      "wince",
+      "a face of pain",
+      "to wince"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: nuravu + fasbi. Tier 1 in the patch."
+    },
+    {
+     "id": "lx_vilnelenda_1995",
+     "root": "vilnelenda",
+     "type": "Compound",
+     "components": [
+      "vilne",
+      "lenda"
+     ],
+     "glosses": {
+      "root": "squint; eyes narrowed to a line",
+      "verb": "to squint"
+     },
+     "register": "everyday",
+     "domain": "Dialogue & gesture",
+     "english_synonyms": [
+      "squint",
+      "eyes narrowed to a line",
+      "to squint"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: vilne + lenda. vilnesevre (blink) already exists Tier 1 in the patch."
+    },
+    {
+     "id": "lx_helvivimo_1996",
+     "root": "helvivimo",
+     "type": "Compound",
+     "components": [
+      "helvi",
+      "vimo"
+     ],
+     "glosses": {
+      "root": "peek; a hidden look",
+      "verb": "to peek; to peer"
+     },
+     "register": "everyday",
+     "domain": "Dialogue & gesture",
+     "english_synonyms": [
+      "peek",
+      "a hidden look",
+      "to peek",
+      "to peer"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: helvi + vimo. Tier 1 in the patch."
+    },
+    {
+     "id": "lx_larnevimo_1997",
+     "root": "larnevimo",
+     "type": "Compound",
+     "components": [
+      "larne",
+      "vimo"
+     ],
+     "glosses": {
+      "root": "glare; an angry stare",
+      "verb": "to glare"
+     },
+     "register": "everyday",
+     "domain": "Dialogue & gesture",
+     "english_synonyms": [
+      "glare",
+      "an angry stare",
+      "to glare"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: larne + vimo. Tier 1 in the patch."
+    },
+    {
+     "id": "lx_pebusemne_1998",
+     "root": "pebusemne",
+     "type": "Compound",
+     "components": [
+      "pebu",
+      "semne"
+     ],
+     "glosses": {
+      "root": "crouch; squat",
+      "verb": "to crouch; to squat"
+     },
+     "register": "everyday",
+     "domain": "Movement & action",
+     "english_synonyms": [
+      "crouch",
+      "squat",
+      "to crouch",
+      "to squat"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: pebu + semne. Tier 1 in the patch."
+    },
+    {
+     "id": "lx_lisiralno_1999",
+     "root": "lisiralno",
+     "type": "Compound",
+     "components": [
+      "lisi",
+      "ralno"
+     ],
+     "glosses": {
+      "root": "slip; skid",
+      "verb": "to slip; to skid",
+      "adjective": "slippery"
+     },
+     "register": "everyday",
+     "domain": "Movement & action",
+     "english_synonyms": [
+      "slip",
+      "skid",
+      "to slip",
+      "to skid",
+      "slippery"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: lisi + ralno. Tier 1 in the patch."
+    },
+    {
+     "id": "lx_dozativro_2000",
+     "root": "dozativro",
+     "type": "Compound",
+     "components": [
+      "doza",
+      "tivro"
+     ],
+     "glosses": {
+      "root": "squeeze",
+      "verb": "to squeeze; to compress"
+     },
+     "register": "everyday",
+     "domain": "Movement & action",
+     "english_synonyms": [
+      "squeeze",
+      "to squeeze",
+      "to compress"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: doza + tivro. Tier 1 in the patch."
+    },
+    {
+     "id": "lx_finitivro_2001",
+     "root": "finitivro",
+     "type": "Compound",
+     "components": [
+      "fini",
+      "tivro"
+     ],
+     "glosses": {
+      "root": "pinch",
+      "verb": "to pinch"
+     },
+     "register": "everyday",
+     "domain": "Movement & action",
+     "english_synonyms": [
+      "pinch",
+      "to pinch"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: fini + tivro. Tier 1 in the patch."
+    },
+    {
+     "id": "lx_finihata_2002",
+     "root": "finihata",
+     "type": "Compound",
+     "components": [
+      "fini",
+      "hata"
+     ],
+     "glosses": {
+      "root": "poke; prod",
+      "verb": "to poke; to prod"
+     },
+     "register": "everyday",
+     "domain": "Movement & action",
+     "english_synonyms": [
+      "poke",
+      "prod",
+      "to poke",
+      "to prod"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: fini + hata. Tier 1 in the patch."
+    },
+    {
+     "id": "lx_moludalu_2003",
+     "root": "moludalu",
+     "type": "Compound",
+     "components": [
+      "molu",
+      "dalu"
+     ],
+     "glosses": {
+      "root": "pat; a gentle touch",
+      "verb": "to pat"
+     },
+     "register": "everyday",
+     "domain": "Movement & action",
+     "english_synonyms": [
+      "pat",
+      "a gentle touch",
+      "to pat"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: molu + dalu. Tier 1 in the patch."
+    },
+    {
+     "id": "lx_farulenyo_2004",
+     "root": "farulenyo",
+     "type": "Compound",
+     "components": [
+      "faru",
+      "lenyo"
+     ],
+     "glosses": {
+      "root": "spiciness; the heat of a flavor",
+      "adjective": "spicy"
+     },
+     "register": "everyday",
+     "domain": "Materials & physics",
+     "english_synonyms": [
+      "spiciness",
+      "the heat of a flavor",
+      "spicy"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: faru + lenyo. Tier 1 in the patch."
+    },
+    {
+     "id": "lx_tobratabu_2005",
+     "root": "tobratabu",
+     "type": "Compound",
+     "components": [
+      "tobra",
+      "tabu"
+     ],
+     "glosses": {
+      "root": "shelf"
+     },
+     "register": "everyday",
+     "domain": "Home & objects",
+     "english_synonyms": [
+      "shelf"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: tobra + tabu. Tier 1 in the patch."
+    },
+    {
+     "id": "lx_tabukova_2006",
+     "root": "tabukova",
+     "type": "Compound",
+     "components": [
+      "tabu",
+      "kova"
+     ],
+     "glosses": {
+      "root": "drawer"
+     },
+     "register": "everyday",
+     "domain": "Home & objects",
+     "english_synonyms": [
+      "drawer"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: tabu + kova. Tier 1 in the patch."
+    },
+    {
+     "id": "lx_pidibiti_2007",
+     "root": "pidibiti",
+     "type": "Compound",
+     "components": [
+      "pidi",
+      "biti"
+     ],
+     "glosses": {
+      "root": "fork (utensil)"
+     },
+     "register": "everyday",
+     "domain": "Home & objects",
+     "english_synonyms": [
+      "fork (utensil)"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: pidi + biti. Tier 1 in the patch."
+    },
+    {
+     "id": "lx_lurvaralno_2008",
+     "root": "lurvaralno",
+     "type": "Compound",
+     "components": [
+      "lurva",
+      "ralno"
+     ],
+     "glosses": {
+      "root": "spill",
+      "verb": "to spill"
+     },
+     "register": "everyday",
+     "domain": "Home & objects",
+     "english_synonyms": [
+      "spill",
+      "to spill"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: lurva + ralno. Tier 1 in the patch."
+    },
+    {
+     "id": "lx_helvihata_2009",
+     "root": "helvihata",
+     "type": "Compound",
+     "components": [
+      "helvi",
+      "hata"
+     ],
+     "glosses": {
+      "root": "ambush",
+      "verb": "to ambush"
+     },
+     "register": "everyday",
+     "domain": "Plot & society",
+     "english_synonyms": [
+      "ambush",
+      "to ambush"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: helvi + hata. Tier 1 in the patch."
+    },
+    {
+     "id": "lx_maskabenaseno_2010",
+     "root": "maskabenaseno",
+     "type": "Compound",
+     "components": [
+      "maska",
+      "benaseno"
+     ],
+     "glosses": {
+      "root": "flattery",
+      "verb": "to flatter"
+     },
+     "register": "everyday",
+     "domain": "Speech & mind",
+     "english_synonyms": [
+      "flattery",
+      "to flatter"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: maska + benaseno. Tier 2 in the patch."
+    },
+    {
+     "id": "lx_vizuseno_2011",
+     "root": "vizuseno",
+     "type": "Compound",
+     "components": [
+      "vizu",
+      "seno"
+     ],
+     "glosses": {
+      "root": "outburst; a blurted word",
+      "verb": "to blurt"
+     },
+     "register": "everyday",
+     "domain": "Speech & mind",
+     "english_synonyms": [
+      "outburst",
+      "a blurted word",
+      "to blurt"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: vizu + seno. Tier 2 in the patch."
+    },
+    {
+     "id": "lx_zegoseno_2012",
+     "root": "zegoseno",
+     "type": "Compound",
+     "components": [
+      "zego",
+      "seno"
+     ],
+     "glosses": {
+      "root": "stammer; stutter",
+      "verb": "to stammer; to stutter"
+     },
+     "register": "everyday",
+     "domain": "Speech & mind",
+     "english_synonyms": [
+      "stammer",
+      "stutter",
+      "to stammer",
+      "to stutter"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: zego + seno. Tier 2 in the patch."
+    },
+    {
+     "id": "lx_yebaseno_2013",
+     "root": "yebaseno",
+     "type": "Compound",
+     "components": [
+      "yeba",
+      "seno"
+     ],
+     "glosses": {
+      "root": "negotiation; talk toward agreement",
+      "verb": "to negotiate"
+     },
+     "register": "everyday",
+     "domain": "Speech & mind",
+     "english_synonyms": [
+      "negotiation",
+      "talk toward agreement",
+      "to negotiate"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: yeba + seno. Tier 2 in the patch."
+    },
+    {
+     "id": "lx_sabenela_2014",
+     "root": "sabenela",
+     "type": "Compound",
+     "components": [
+      "sabe",
+      "nela"
+     ],
+     "glosses": {
+      "root": "acquaintance; a person one knows"
+     },
+     "register": "everyday",
+     "domain": "Relationships",
+     "english_synonyms": [
+      "acquaintance",
+      "a person one knows"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: sabe + nela. Tier 2 in the patch."
+    },
+    {
+     "id": "lx_famlilinu_2015",
+     "root": "famlilinu",
+     "type": "Compound",
+     "components": [
+      "famli",
+      "linu"
+     ],
+     "glosses": {
+      "root": "niece; nephew; a sibling's child"
+     },
+     "register": "everyday",
+     "domain": "Relationships",
+     "english_synonyms": [
+      "niece",
+      "nephew",
+      "a sibling's child"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: famli + linu. pattern of purmafamlilinu (cousin); gender by adjective (1.2:G36) Tier 2 in the patch."
+    },
+    {
+     "id": "lx_havliturna_2016",
+     "root": "havliturna",
+     "type": "Compound",
+     "components": [
+      "havli",
+      "turna"
+     ],
+     "glosses": {
+      "root": "inhalation",
+      "verb": "to breathe in"
+     },
+     "register": "everyday",
+     "domain": "Health & body",
+     "english_synonyms": [
+      "inhalation",
+      "to breathe in"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: havli + turna. Tier 2 in the patch."
+    },
+    {
+     "id": "lx_havliduvla_2017",
+     "root": "havliduvla",
+     "type": "Compound",
+     "components": [
+      "havli",
+      "duvla"
+     ],
+     "glosses": {
+      "root": "exhalation",
+      "verb": "to breathe out"
+     },
+     "register": "everyday",
+     "domain": "Health & body",
+     "english_synonyms": [
+      "exhalation",
+      "to breathe out"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: havli + duvla. Tier 2 in the patch."
+    },
+    {
+     "id": "lx_zivumilobe_2018",
+     "root": "zivumilobe",
+     "type": "Compound",
+     "components": [
+      "zivu",
+      "milobe"
+     ],
+     "glosses": {
+      "root": "smirk",
+      "verb": "to smirk"
+     },
+     "register": "everyday",
+     "domain": "Dialogue & gesture",
+     "english_synonyms": [
+      "smirk",
+      "to smirk"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: zivu + milobe. Tier 2 in the patch."
+    },
+    {
+     "id": "lx_lavimilobe_2019",
+     "root": "lavimilobe",
+     "type": "Compound",
+     "components": [
+      "lavi",
+      "milobe"
+     ],
+     "glosses": {
+      "root": "grin; a beaming smile",
+      "verb": "to grin; to beam"
+     },
+     "register": "everyday",
+     "domain": "Dialogue & gesture",
+     "english_synonyms": [
+      "grin",
+      "a beaming smile",
+      "to grin",
+      "to beam"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: lavi + milobe. Tier 2 in the patch."
+    },
+    {
+     "id": "lx_manlivaye_2020",
+     "root": "manlivaye",
+     "type": "Compound",
+     "components": [
+      "manli",
+      "vaye"
+     ],
+     "glosses": {
+      "root": "wave of the hand",
+      "verb": "to wave"
+     },
+     "register": "everyday",
+     "domain": "Dialogue & gesture",
+     "english_synonyms": [
+      "wave of the hand",
+      "to wave"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: manli + vaye. Tier 2 in the patch."
+    },
+    {
+     "id": "lx_pidivalmi_2021",
+     "root": "pidivalmi",
+     "type": "Compound",
+     "components": [
+      "pidi",
+      "valmi"
+     ],
+     "glosses": {
+      "root": "tiptoeing",
+      "verb": "to tiptoe"
+     },
+     "register": "everyday",
+     "domain": "Movement & action",
+     "english_synonyms": [
+      "tiptoeing",
+      "to tiptoe"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: pidi + valmi. Tier 2 in the patch."
+    },
+    {
+     "id": "lx_pebuhata_2022",
+     "root": "pebuhata",
+     "type": "Compound",
+     "components": [
+      "pebu",
+      "hata"
+     ],
+     "glosses": {
+      "root": "kick",
+      "verb": "to kick"
+     },
+     "register": "everyday",
+     "domain": "Movement & action",
+     "english_synonyms": [
+      "kick",
+      "to kick"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: pebu + hata. Tier 2 in the patch."
+    },
+    {
+     "id": "lx_manlihata_2023",
+     "root": "manlihata",
+     "type": "Compound",
+     "components": [
+      "manli",
+      "hata"
+     ],
+     "glosses": {
+      "root": "punch; a blow of the hand",
+      "verb": "to punch"
+     },
+     "register": "everyday",
+     "domain": "Movement & action",
+     "english_synonyms": [
+      "punch",
+      "a blow of the hand",
+      "to punch"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: manli + hata. Tier 2 in the patch."
+    },
+    {
+     "id": "lx_yendohata_2024",
+     "root": "yendohata",
+     "type": "Compound",
+     "components": [
+      "yendo",
+      "hata"
+     ],
+     "glosses": {
+      "root": "slap",
+      "verb": "to slap"
+     },
+     "register": "everyday",
+     "domain": "Movement & action",
+     "english_synonyms": [
+      "slap",
+      "to slap"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: yendo + hata. Tier 2 in the patch."
+    },
+    {
+     "id": "lx_vizutivro_2025",
+     "root": "vizutivro",
+     "type": "Compound",
+     "components": [
+      "vizu",
+      "tivro"
+     ],
+     "glosses": {
+      "root": "snatch; a sudden grab",
+      "verb": "to grab; to snatch"
+     },
+     "register": "everyday",
+     "domain": "Movement & action",
+     "english_synonyms": [
+      "snatch",
+      "a sudden grab",
+      "to grab",
+      "to snatch"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: vizu + tivro. Tier 2 in the patch."
+    },
+    {
+     "id": "lx_lisicemokova_2026",
+     "root": "lisicemokova",
+     "type": "Compound",
+     "components": [
+      "lisicemo",
+      "kova"
+     ],
+     "glosses": {
+      "root": "frying pan"
+     },
+     "register": "everyday",
+     "domain": "Home & objects",
+     "english_synonyms": [
+      "frying pan"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: lisicemo + kova. Tier 2 in the patch."
+    },
+    {
+     "id": "lx_velmasafa_2027",
+     "root": "velmasafa",
+     "type": "Compound",
+     "components": [
+      "velma",
+      "safa"
+     ],
+     "glosses": {
+      "root": "laundry; the washing of clothes",
+      "verb": "to do laundry"
+     },
+     "register": "everyday",
+     "domain": "Home & objects",
+     "english_synonyms": [
+      "laundry",
+      "the washing of clothes",
+      "to do laundry"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: velma + safa. Tier 2 in the patch."
+    },
+    {
+     "id": "lx_damvavelma_2028",
+     "root": "damvavelma",
+     "type": "Compound",
+     "components": [
+      "damva",
+      "velma"
+     ],
+     "glosses": {
+      "root": "trousers"
+     },
+     "register": "everyday",
+     "domain": "Home & objects",
+     "english_synonyms": [
+      "trousers"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: damva + velma. Tier 2 in the patch."
+    },
+    {
+     "id": "lx_manlivelma_2029",
+     "root": "manlivelma",
+     "type": "Compound",
+     "components": [
+      "manli",
+      "velma"
+     ],
+     "glosses": {
+      "root": "glove"
+     },
+     "register": "everyday",
+     "domain": "Home & objects",
+     "english_synonyms": [
+      "glove"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: manli + velma. Tier 2 in the patch."
+    },
+    {
+     "id": "lx_tivrobiti_2030",
+     "root": "tivrobiti",
+     "type": "Compound",
+     "components": [
+      "tivro",
+      "biti"
+     ],
+     "glosses": {
+      "root": "clasp; button"
+     },
+     "register": "everyday",
+     "domain": "Home & objects",
+     "english_synonyms": [
+      "clasp",
+      "button"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: tivro + biti. Tier 2 in the patch."
+    },
+    {
+     "id": "lx_domluvelso_2031",
+     "root": "domluvelso",
+     "type": "Compound",
+     "components": [
+      "domlu",
+      "velso"
+     ],
+     "glosses": {
+      "root": "curtain"
+     },
+     "register": "everyday",
+     "domain": "Home & objects",
+     "english_synonyms": [
+      "curtain"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: domlu + velso. Tier 2 in the patch."
+    },
+    {
+     "id": "lx_velmazupa_2032",
+     "root": "velmazupa",
+     "type": "Compound",
+     "components": [
+      "velma",
+      "zupa"
+     ],
+     "glosses": {
+      "root": "wardrobe; closet"
+     },
+     "register": "everyday",
+     "domain": "Home & objects",
+     "english_synonyms": [
+      "wardrobe",
+      "closet"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: velma + zupa. Tier 2 in the patch."
+    },
+    {
+     "id": "lx_safakova_2033",
+     "root": "safakova",
+     "type": "Compound",
+     "components": [
+      "safa",
+      "kova"
+     ],
+     "glosses": {
+      "root": "bath; bathtub"
+     },
+     "register": "everyday",
+     "domain": "Home & objects",
+     "english_synonyms": [
+      "bath",
+      "bathtub"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: safa + kova. Tier 2 in the patch."
+    },
+    {
+     "id": "lx_furosenru_2034",
+     "root": "furosenru",
+     "type": "Compound",
+     "components": [
+      "furo",
+      "senru"
+     ],
+     "glosses": {
+      "root": "peel; rind",
+      "verb": "to peel"
+     },
+     "register": "everyday",
+     "domain": "Home & objects",
+     "english_synonyms": [
+      "peel",
+      "rind",
+      "to peel"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: furo + senru. Tier 2 in the patch."
+    },
+    {
+     "id": "lx_farucemo_2035",
+     "root": "farucemo",
+     "type": "Compound",
+     "components": [
+      "faru",
+      "cemo"
+     ],
+     "glosses": {
+      "root": "roasting",
+      "verb": "to roast"
+     },
+     "register": "everyday",
+     "domain": "Home & objects",
+     "english_synonyms": [
+      "roasting",
+      "to roast"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: faru + cemo. Tier 2 in the patch."
+    },
+    {
+     "id": "lx_dozasafa_2036",
+     "root": "dozasafa",
+     "type": "Compound",
+     "components": [
+      "doza",
+      "safa"
+     ],
+     "glosses": {
+      "root": "scrubbing",
+      "verb": "to scrub"
+     },
+     "register": "everyday",
+     "domain": "Home & objects",
+     "english_synonyms": [
+      "scrubbing",
+      "to scrub"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: doza + safa. Tier 2 in the patch."
+    },
+    {
+     "id": "lx_sabayebiti_2037",
+     "root": "sabayebiti",
+     "type": "Compound",
+     "components": [
+      "sabaye",
+      "biti"
+     ],
+     "glosses": {
+      "root": "comb; hairbrush",
+      "verb": "to comb; to brush (hair)"
+     },
+     "register": "everyday",
+     "domain": "Home & objects",
+     "english_synonyms": [
+      "comb",
+      "hairbrush",
+      "to comb",
+      "to brush (hair)"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: sabaye + biti. Tier 2 in the patch."
+    },
+    {
+     "id": "lx_sabayetise_2038",
+     "root": "sabayetise",
+     "type": "Compound",
+     "components": [
+      "sabaye",
+      "tise"
+     ],
+     "glosses": {
+      "root": "haircut; shave",
+      "verb": "to cut hair; to shave"
+     },
+     "register": "everyday",
+     "domain": "Home & objects",
+     "english_synonyms": [
+      "haircut",
+      "shave",
+      "to cut hair",
+      "to shave"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: sabaye + tise. Tier 2 in the patch."
+    },
+    {
+     "id": "lx_bakolenda_2039",
+     "root": "bakolenda",
+     "type": "Compound",
+     "components": [
+      "bako",
+      "lenda"
+     ],
+     "glosses": {
+      "root": "crack; a fracture line",
+      "verb": "to crack"
+     },
+     "register": "everyday",
+     "domain": "Materials & physics",
+     "english_synonyms": [
+      "crack",
+      "a fracture line",
+      "to crack"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: bako + lenda. Tier 2 in the patch."
+    },
+    {
+     "id": "lx_germadugo_2040",
+     "root": "germadugo",
+     "type": "Compound",
+     "components": [
+      "germa",
+      "dugo"
+     ],
+     "glosses": {
+      "root": "rust",
+      "adjective": "rusty"
+     },
+     "register": "everyday",
+     "domain": "Materials & physics",
+     "english_synonyms": [
+      "rust",
+      "rusty"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: germa + dugo. Tier 2 in the patch."
+    },
+    {
+     "id": "lx_herbadugo_2041",
+     "root": "herbadugo",
+     "type": "Compound",
+     "components": [
+      "herba",
+      "dugo"
+     ],
+     "glosses": {
+      "root": "mold; mildew",
+      "adjective": "moldy"
+     },
+     "register": "everyday",
+     "domain": "Materials & physics",
+     "english_synonyms": [
+      "mold",
+      "mildew",
+      "moldy"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: herba + dugo. Tier 2 in the patch."
+    },
+    {
+     "id": "lx_pomlinela_2042",
+     "root": "pomlinela",
+     "type": "Compound",
+     "components": [
+      "pomli",
+      "nela"
+     ],
+     "glosses": {
+      "root": "hostage; a person held as a pledge"
+     },
+     "register": "everyday",
+     "domain": "Plot & society",
+     "english_synonyms": [
+      "hostage",
+      "a person held as a pledge"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: pomli + nela. Tier 2 in the patch."
+    },
+    {
+     "id": "lx_silrogura_2043",
+     "root": "silrogura",
+     "type": "Compound",
+     "components": [
+      "silro",
+      "gura"
+     ],
+     "glosses": {
+      "root": "blackmail",
+      "verb": "to blackmail"
+     },
+     "register": "everyday",
+     "domain": "Plot & society",
+     "english_synonyms": [
+      "blackmail",
+      "to blackmail"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: silro + gura. Tier 2 in the patch."
+    },
+    {
+     "id": "lx_dozamasu_2044",
+     "root": "dozamasu",
+     "type": "Compound",
+     "components": [
+      "doza",
+      "masu"
+     ],
+     "glosses": {
+      "root": "interrogation",
+      "verb": "to interrogate"
+     },
+     "register": "everyday",
+     "domain": "Plot & society",
+     "english_synonyms": [
+      "interrogation",
+      "to interrogate"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: doza + masu. Tier 2 in the patch."
+    },
+    {
+     "id": "lx_dorvakarko_2045",
+     "root": "dorvakarko",
+     "type": "Compound",
+     "components": [
+      "dorva",
+      "karko"
+     ],
+     "glosses": {
+      "root": "murder; a deliberate killing",
+      "verb": "to murder"
+     },
+     "register": "everyday",
+     "domain": "Plot & society",
+     "english_synonyms": [
+      "murder",
+      "a deliberate killing",
+      "to murder"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: dorva + karko. karkoyo (killer) already exists Tier 2 in the patch."
+    },
+    {
+     "id": "lx_juseleni_2046",
+     "root": "juseleni",
+     "type": "Compound",
+     "components": [
+      "juse",
+      "leni"
+     ],
+     "glosses": {
+      "root": "trial; a hearing before a judge"
+     },
+     "register": "everyday",
+     "domain": "Plot & society",
+     "english_synonyms": [
+      "trial",
+      "a hearing before a judge"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: juse + leni. juseyo (judge), jusepago (courthouse), kaldopago (prison) already exist Tier 2 in the patch."
+    },
+    {
+     "id": "lx_pagoverasude_2047",
+     "root": "pagoverasude",
+     "type": "Compound",
+     "components": [
+      "pago",
+      "verasude"
+     ],
+     "glosses": {
+      "root": "alibi; proof of where one was"
+     },
+     "register": "everyday",
+     "domain": "Plot & society",
+     "english_synonyms": [
+      "alibi",
+      "proof of where one was"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: pago + verasude. Tier 2 in the patch."
+    },
+    {
+     "id": "lx_verasudeserbu_2048",
+     "root": "verasudeserbu",
+     "type": "Compound",
+     "components": [
+      "verasude",
+      "serbu"
+     ],
+     "glosses": {
+      "root": "investigation",
+      "verb": "to investigate"
+     },
+     "register": "everyday",
+     "domain": "Plot & society",
+     "english_synonyms": [
+      "investigation",
+      "to investigate"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: verasude + serbu. Tier 2 in the patch."
+    },
+    {
+     "id": "lx_pebunulu_2049",
+     "root": "pebunulu",
+     "type": "Compound",
+     "components": [
+      "pebu",
+      "nulu"
+     ],
+     "glosses": {
+      "root": "footpath; sidewalk"
+     },
+     "register": "everyday",
+     "domain": "Nature & geography",
+     "english_synonyms": [
+      "footpath",
+      "sidewalk"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: pebu + nulu. Tier 2 in the patch."
+    },
+    {
+     "id": "lx_larbotobra_2050",
+     "root": "larbotobra",
+     "type": "Compound",
+     "components": [
+      "larbo",
+      "tobra"
+     ],
+     "glosses": {
+      "root": "fence"
+     },
+     "register": "everyday",
+     "domain": "Nature & geography",
+     "english_synonyms": [
+      "fence"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: larbo + tobra. Tier 2 in the patch."
+    },
+    {
+     "id": "lx_halrakova_2051",
+     "root": "halrakova",
+     "type": "Compound",
+     "components": [
+      "halra",
+      "kova"
+     ],
+     "glosses": {
+      "root": "cart; carriage"
+     },
+     "register": "everyday",
+     "domain": "Nature & geography",
+     "english_synonyms": [
+      "cart",
+      "carriage"
+     ],
+     "notes": "Added in 3.1 (changeset 2026-10-25-lexicon-3-1). Proposed in 3.1: awaiting the author's ratification. Components: halra + kova. Tier 2 in the patch."
+    }
+   ],
+   "function_words": [],
+   "lexicalised_derivations": {
+    "safavelmavu": "towel (big washcloth): safavelma + -vu",
+    "safapago": "bathroom; washroom: safa + -pago",
+    "ralkayo": "rival; contender: ralka + -yo",
+    "folluhemluyo": "bully; one who intimidates: folluhemlu + -yo"
+   },
+   "ops": [
+    {
+     "entry": "lx_dugo_1978",
+     "op": "add_root",
+     "slot": "root",
+     "from": null,
+     "to": "dugo",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): decay; rot (domain Materials & physics).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_pega_1979",
+     "op": "add_root",
+     "slot": "root",
+     "from": null,
+     "to": "pega",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): stickiness; adhesion (domain Materials & physics).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_toze_1980",
+     "op": "add_root",
+     "slot": "root",
+     "from": null,
+     "to": "toze",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): poison; venom (domain Health & body).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_bika_1981",
+     "op": "add_root",
+     "slot": "root",
+     "from": null,
+     "to": "bika",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): flinch; a start; an involuntary recoil (domain Health & body).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_tuzo_1982",
+     "op": "add_root",
+     "slot": "root",
+     "from": null,
+     "to": "tuzo",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): hanging; suspension (domain Actions & physical processes).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_lorelivna_1983",
+     "op": "add_compound",
+     "slot": "root",
+     "from": null,
+     "to": "lorelivna",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): preference; the heart's choice: lore + livna (domain Speech & mind).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_patudonu_1984",
+     "op": "add_compound",
+     "slot": "root",
+     "from": null,
+     "to": "patudonu",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): sharing: patu + donu (domain Speech & mind).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_loteromebane_1985",
+     "op": "add_compound",
+     "slot": "root",
+     "from": null,
+     "to": "loteromebane",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): misinterpretation; understanding something as other than it is: lotero + mebane (domain Speech & mind).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_silrosude_1986",
+     "op": "add_compound",
+     "slot": "root",
+     "from": null,
+     "to": "silrosude",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): disclosure; the revealing of a secret: silro + sude (domain Speech & mind).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_dorvalordi_1987",
+     "op": "add_compound",
+     "slot": "root",
+     "from": null,
+     "to": "dorvalordi",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): plan; an ordered intention: dorva + lordi (domain Speech & mind).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_dentosapu_1988",
+     "op": "add_compound",
+     "slot": "root",
+     "from": null,
+     "to": "dentosapu",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): chewing: dento + sapu (domain Health & body).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_sapunevra_1989",
+     "op": "add_compound",
+     "slot": "root",
+     "from": null,
+     "to": "sapunevra",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): swallowing; a swallow: sapu + nevra (domain Health & body).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_somuhavli_1990",
+     "op": "add_compound",
+     "slot": "root",
+     "from": null,
+     "to": "somuhavli",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): yawn: somu + havli (domain Health & body).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_lenyodalu_1991",
+     "op": "add_compound",
+     "slot": "root",
+     "from": null,
+     "to": "lenyodalu",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): a lick: lenyo + dalu (domain Health & body).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_nulvahavli_1992",
+     "op": "add_compound",
+     "slot": "root",
+     "from": null,
+     "to": "nulvahavli",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): sniff: nulva + havli (domain Health & body).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_sapukovamudu_1993",
+     "op": "add_compound",
+     "slot": "root",
+     "from": null,
+     "to": "sapukovamudu",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): nausea: sapukova + mudu (domain Health & body).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_nuravufasbi_1994",
+     "op": "add_compound",
+     "slot": "root",
+     "from": null,
+     "to": "nuravufasbi",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): wince; a face of pain: nuravu + fasbi (domain Dialogue & gesture).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_vilnelenda_1995",
+     "op": "add_compound",
+     "slot": "root",
+     "from": null,
+     "to": "vilnelenda",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): squint; eyes narrowed to a line: vilne + lenda (domain Dialogue & gesture).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_helvivimo_1996",
+     "op": "add_compound",
+     "slot": "root",
+     "from": null,
+     "to": "helvivimo",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): peek; a hidden look: helvi + vimo (domain Dialogue & gesture).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_larnevimo_1997",
+     "op": "add_compound",
+     "slot": "root",
+     "from": null,
+     "to": "larnevimo",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): glare; an angry stare: larne + vimo (domain Dialogue & gesture).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_pebusemne_1998",
+     "op": "add_compound",
+     "slot": "root",
+     "from": null,
+     "to": "pebusemne",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): crouch; squat: pebu + semne (domain Movement & action).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_lisiralno_1999",
+     "op": "add_compound",
+     "slot": "root",
+     "from": null,
+     "to": "lisiralno",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): slip; skid: lisi + ralno (domain Movement & action).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_dozativro_2000",
+     "op": "add_compound",
+     "slot": "root",
+     "from": null,
+     "to": "dozativro",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): squeeze: doza + tivro (domain Movement & action).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_finitivro_2001",
+     "op": "add_compound",
+     "slot": "root",
+     "from": null,
+     "to": "finitivro",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): pinch: fini + tivro (domain Movement & action).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_finihata_2002",
+     "op": "add_compound",
+     "slot": "root",
+     "from": null,
+     "to": "finihata",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): poke; prod: fini + hata (domain Movement & action).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_moludalu_2003",
+     "op": "add_compound",
+     "slot": "root",
+     "from": null,
+     "to": "moludalu",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): pat; a gentle touch: molu + dalu (domain Movement & action).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_farulenyo_2004",
+     "op": "add_compound",
+     "slot": "root",
+     "from": null,
+     "to": "farulenyo",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): spiciness; the heat of a flavor: faru + lenyo (domain Materials & physics).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_tobratabu_2005",
+     "op": "add_compound",
+     "slot": "root",
+     "from": null,
+     "to": "tobratabu",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): shelf: tobra + tabu (domain Home & objects).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_tabukova_2006",
+     "op": "add_compound",
+     "slot": "root",
+     "from": null,
+     "to": "tabukova",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): drawer: tabu + kova (domain Home & objects).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_pidibiti_2007",
+     "op": "add_compound",
+     "slot": "root",
+     "from": null,
+     "to": "pidibiti",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): fork (utensil): pidi + biti (domain Home & objects).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_lurvaralno_2008",
+     "op": "add_compound",
+     "slot": "root",
+     "from": null,
+     "to": "lurvaralno",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): spill: lurva + ralno (domain Home & objects).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_helvihata_2009",
+     "op": "add_compound",
+     "slot": "root",
+     "from": null,
+     "to": "helvihata",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): ambush: helvi + hata (domain Plot & society).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_maskabenaseno_2010",
+     "op": "add_compound",
+     "slot": "root",
+     "from": null,
+     "to": "maskabenaseno",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): flattery: maska + benaseno (domain Speech & mind).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_vizuseno_2011",
+     "op": "add_compound",
+     "slot": "root",
+     "from": null,
+     "to": "vizuseno",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): outburst; a blurted word: vizu + seno (domain Speech & mind).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_zegoseno_2012",
+     "op": "add_compound",
+     "slot": "root",
+     "from": null,
+     "to": "zegoseno",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): stammer; stutter: zego + seno (domain Speech & mind).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_yebaseno_2013",
+     "op": "add_compound",
+     "slot": "root",
+     "from": null,
+     "to": "yebaseno",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): negotiation; talk toward agreement: yeba + seno (domain Speech & mind).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_sabenela_2014",
+     "op": "add_compound",
+     "slot": "root",
+     "from": null,
+     "to": "sabenela",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): acquaintance; a person one knows: sabe + nela (domain Relationships).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_famlilinu_2015",
+     "op": "add_compound",
+     "slot": "root",
+     "from": null,
+     "to": "famlilinu",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): niece; nephew; a sibling's child: famli + linu (domain Relationships).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_havliturna_2016",
+     "op": "add_compound",
+     "slot": "root",
+     "from": null,
+     "to": "havliturna",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): inhalation: havli + turna (domain Health & body).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_havliduvla_2017",
+     "op": "add_compound",
+     "slot": "root",
+     "from": null,
+     "to": "havliduvla",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): exhalation: havli + duvla (domain Health & body).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_zivumilobe_2018",
+     "op": "add_compound",
+     "slot": "root",
+     "from": null,
+     "to": "zivumilobe",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): smirk: zivu + milobe (domain Dialogue & gesture).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_lavimilobe_2019",
+     "op": "add_compound",
+     "slot": "root",
+     "from": null,
+     "to": "lavimilobe",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): grin; a beaming smile: lavi + milobe (domain Dialogue & gesture).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_manlivaye_2020",
+     "op": "add_compound",
+     "slot": "root",
+     "from": null,
+     "to": "manlivaye",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): wave of the hand: manli + vaye (domain Dialogue & gesture).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_pidivalmi_2021",
+     "op": "add_compound",
+     "slot": "root",
+     "from": null,
+     "to": "pidivalmi",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): tiptoeing: pidi + valmi (domain Movement & action).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_pebuhata_2022",
+     "op": "add_compound",
+     "slot": "root",
+     "from": null,
+     "to": "pebuhata",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): kick: pebu + hata (domain Movement & action).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_manlihata_2023",
+     "op": "add_compound",
+     "slot": "root",
+     "from": null,
+     "to": "manlihata",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): punch; a blow of the hand: manli + hata (domain Movement & action).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_yendohata_2024",
+     "op": "add_compound",
+     "slot": "root",
+     "from": null,
+     "to": "yendohata",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): slap: yendo + hata (domain Movement & action).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_vizutivro_2025",
+     "op": "add_compound",
+     "slot": "root",
+     "from": null,
+     "to": "vizutivro",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): snatch; a sudden grab: vizu + tivro (domain Movement & action).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_lisicemokova_2026",
+     "op": "add_compound",
+     "slot": "root",
+     "from": null,
+     "to": "lisicemokova",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): frying pan: lisicemo + kova (domain Home & objects).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_velmasafa_2027",
+     "op": "add_compound",
+     "slot": "root",
+     "from": null,
+     "to": "velmasafa",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): laundry; the washing of clothes: velma + safa (domain Home & objects).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_damvavelma_2028",
+     "op": "add_compound",
+     "slot": "root",
+     "from": null,
+     "to": "damvavelma",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): trousers: damva + velma (domain Home & objects).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_manlivelma_2029",
+     "op": "add_compound",
+     "slot": "root",
+     "from": null,
+     "to": "manlivelma",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): glove: manli + velma (domain Home & objects).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_tivrobiti_2030",
+     "op": "add_compound",
+     "slot": "root",
+     "from": null,
+     "to": "tivrobiti",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): clasp; button: tivro + biti (domain Home & objects).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_domluvelso_2031",
+     "op": "add_compound",
+     "slot": "root",
+     "from": null,
+     "to": "domluvelso",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): curtain: domlu + velso (domain Home & objects).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_velmazupa_2032",
+     "op": "add_compound",
+     "slot": "root",
+     "from": null,
+     "to": "velmazupa",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): wardrobe; closet: velma + zupa (domain Home & objects).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_safakova_2033",
+     "op": "add_compound",
+     "slot": "root",
+     "from": null,
+     "to": "safakova",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): bath; bathtub: safa + kova (domain Home & objects).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_furosenru_2034",
+     "op": "add_compound",
+     "slot": "root",
+     "from": null,
+     "to": "furosenru",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): peel; rind: furo + senru (domain Home & objects).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_farucemo_2035",
+     "op": "add_compound",
+     "slot": "root",
+     "from": null,
+     "to": "farucemo",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): roasting: faru + cemo (domain Home & objects).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_dozasafa_2036",
+     "op": "add_compound",
+     "slot": "root",
+     "from": null,
+     "to": "dozasafa",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): scrubbing: doza + safa (domain Home & objects).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_sabayebiti_2037",
+     "op": "add_compound",
+     "slot": "root",
+     "from": null,
+     "to": "sabayebiti",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): comb; hairbrush: sabaye + biti (domain Home & objects).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_sabayetise_2038",
+     "op": "add_compound",
+     "slot": "root",
+     "from": null,
+     "to": "sabayetise",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): haircut; shave: sabaye + tise (domain Home & objects).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_bakolenda_2039",
+     "op": "add_compound",
+     "slot": "root",
+     "from": null,
+     "to": "bakolenda",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): crack; a fracture line: bako + lenda (domain Materials & physics).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_germadugo_2040",
+     "op": "add_compound",
+     "slot": "root",
+     "from": null,
+     "to": "germadugo",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): rust: germa + dugo (domain Materials & physics).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_herbadugo_2041",
+     "op": "add_compound",
+     "slot": "root",
+     "from": null,
+     "to": "herbadugo",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): mold; mildew: herba + dugo (domain Materials & physics).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_pomlinela_2042",
+     "op": "add_compound",
+     "slot": "root",
+     "from": null,
+     "to": "pomlinela",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): hostage; a person held as a pledge: pomli + nela (domain Plot & society).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_silrogura_2043",
+     "op": "add_compound",
+     "slot": "root",
+     "from": null,
+     "to": "silrogura",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): blackmail: silro + gura (domain Plot & society).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_dozamasu_2044",
+     "op": "add_compound",
+     "slot": "root",
+     "from": null,
+     "to": "dozamasu",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): interrogation: doza + masu (domain Plot & society).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_dorvakarko_2045",
+     "op": "add_compound",
+     "slot": "root",
+     "from": null,
+     "to": "dorvakarko",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): murder; a deliberate killing: dorva + karko (domain Plot & society).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_juseleni_2046",
+     "op": "add_compound",
+     "slot": "root",
+     "from": null,
+     "to": "juseleni",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): trial; a hearing before a judge: juse + leni (domain Plot & society).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_pagoverasude_2047",
+     "op": "add_compound",
+     "slot": "root",
+     "from": null,
+     "to": "pagoverasude",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): alibi; proof of where one was: pago + verasude (domain Plot & society).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_verasudeserbu_2048",
+     "op": "add_compound",
+     "slot": "root",
+     "from": null,
+     "to": "verasudeserbu",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): investigation: verasude + serbu (domain Plot & society).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_pebunulu_2049",
+     "op": "add_compound",
+     "slot": "root",
+     "from": null,
+     "to": "pebunulu",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): footpath; sidewalk: pebu + nulu (domain Nature & geography).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_larbotobra_2050",
+     "op": "add_compound",
+     "slot": "root",
+     "from": null,
+     "to": "larbotobra",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): fence: larbo + tobra (domain Nature & geography).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_halrakova_2051",
+     "op": "add_compound",
+     "slot": "root",
+     "from": null,
+     "to": "halrakova",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): cart; carriage: halra + kova (domain Nature & geography).",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_amorharlu_1353",
+     "op": "activate_slot",
+     "slot": "adjective",
+     "from": "— (unused)",
+     "to": "jealous (in love or attachment)",
+     "ruling": "0.8:R2",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): amorharlusan, \"jealous (in love or attachment)\", restored on amorharlu. Proposed in 3.1: awaiting the author's ratification.",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_amorharlu_1353",
+     "op": "activate_slot",
+     "slot": "verb",
+     "from": "— (unused)",
+     "to": "to be jealous over; to fear losing (someone)",
+     "ruling": "0.8:R2",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): amorharlua, \"to be jealous over; to fear losing (someone)\", restored on amorharlu. Proposed in 3.1: awaiting the author's ratification.",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_lenda_1866",
+     "op": "activate_slot",
+     "slot": "negativeAdjective",
+     "from": "— (unused)",
+     "to": "crooked; not straight",
+     "ruling": "0.8:R2",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): lendanasan, \"crooked; not straight\", restored on lenda. Proposed in 3.1: awaiting the author's ratification.",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "lx_lumimelli_1902",
+     "op": "activate_slot",
+     "slot": "negativeAdjective",
+     "from": "— (unused)",
+     "to": "dim; faint (of light)",
+     "ruling": "0.8:R2",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): lumimellinasan, \"dim; faint (of light)\", restored on lumimelli. Proposed in 3.1: awaiting the author's ratification.",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "derivation:lx_safavelma_1230:-vu",
+     "op": "add_derivation",
+     "from": null,
+     "to": "safavelmavu",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): safavelmavu, \"towel (big washcloth)\", listed. Proposed in 3.1: awaiting the author's ratification.",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "derivation:lx_safa_0725:-pago",
+     "op": "add_derivation",
+     "from": null,
+     "to": "safapago",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): safapago, \"bathroom; washroom\", listed. Proposed in 3.1: awaiting the author's ratification.",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "derivation:lx_ralka_0617:-yo",
+     "op": "add_derivation",
+     "from": null,
+     "to": "ralkayo",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): ralkayo, \"rival; contender\", listed. Proposed in 3.1: awaiting the author's ratification.",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "derivation:lx_folluhemlu_0125:-yo",
+     "op": "add_derivation",
+     "from": null,
+     "to": "folluhemluyo",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): folluhemluyo, \"bully; one who intimidates\", listed. Proposed in 3.1: awaiting the author's ratification.",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "value:morphology.lexicalised_diminutives.resoti",
+     "op": "edit_value",
+     "from": null,
+     "to": "\"chuckle; giggle: reso + -ti\"",
+     "ruling": "2.5:G122",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): resoti, \"chuckle; giggle\", a lexicalised diminutive. Proposed in 3.1: awaiting the author's ratification.",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "value:morphology.lexicalised_diminutives.benasenoti",
+     "op": "edit_value",
+     "from": null,
+     "to": "\"compliment: benaseno + -ti\"",
+     "ruling": "2.5:G122",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): benasenoti, \"compliment\", a lexicalised diminutive. Proposed in 3.1: awaiting the author's ratification.",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "value:morphology.lexicalised_diminutives.senoti",
+     "op": "edit_value",
+     "from": null,
+     "to": "\"small talk; chit-chat: seno + -ti\"",
+     "ruling": "2.5:G122",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): senoti, \"small talk; chit-chat\", a lexicalised diminutive. Proposed in 3.1: awaiting the author's ratification.",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "value:morphology.lexicalised_diminutives.valminuluti",
+     "op": "edit_value",
+     "from": null,
+     "to": "\"alley; a narrow street: valminulu + -ti\"",
+     "ruling": "2.5:G122",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): valminuluti, \"alley; a narrow street\", a lexicalised diminutive. Proposed in 3.1: awaiting the author's ratification.",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "value:morphology.lexicalised_diminutives.taradapagoti",
+     "op": "edit_value",
+     "from": null,
+     "to": "\"shop; a small market: taradapago + -ti\"",
+     "ruling": "2.5:G122",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): taradapagoti, \"shop; a small market\", a lexicalised diminutive. Proposed in 3.1: awaiting the author's ratification.",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
+     "author": "nicolas"
+    },
+    {
+     "entry": "value:morphology.lexicalised_diminutives.miruralnoti",
+     "op": "edit_value",
+     "from": null,
+     "to": "\"trickle; a drip of water: miruralno + -ti\"",
+     "ruling": "2.5:G122",
+     "reason": "Liraasa 3.1 patch (Everyday and Fiction): miruralnoti, \"trickle; a drip of water\", a lexicalised diminutive. Proposed in 3.1: awaiting the author's ratification.",
+     "addedIn": "3.1",
+     "at": "2026-10-25T16:00:00Z",
      "author": "nicolas"
     }
    ]

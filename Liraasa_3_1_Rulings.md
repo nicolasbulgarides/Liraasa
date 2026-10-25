@@ -1,6 +1,6 @@
-# Liraasa 3.0 Reference Grammar: every ruling
+# Liraasa 3.1 Reference Grammar: every ruling
 
-Verbatim from the Liraasa 3.0 lexicon, newest edition first. Ruling ids are edition-qualified: 0.8:G7 and 1.0:G7 are different rulings.
+Verbatim from the Liraasa 3.1 lexicon, newest edition first. Ruling ids are edition-qualified: 0.8:G7 and 1.0:G7 are different rulings.
 
 ## Rulings 3.0
 

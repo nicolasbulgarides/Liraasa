@@ -1,16 +1,16 @@
 {
- "title": "Liraasa 3.0: the complete grammar and dictionary, for language models",
- "edition_status": "PROPOSED: the 3.0 additions (3.0:G129–3.0:G141, and every dictionary line flagged \"new in 3.0\") await the author's ratification. Everything older is canon.",
+ "title": "Liraasa 3.1: the complete grammar and dictionary, for language models",
+ "edition_status": "PROPOSED: the 3.0 and 3.1 additions (rulings 3.0:G129–3.0:G141, and every dictionary line flagged \"new in 3.0\" or \"new in 3.1\") await the author's ratification. Everything older is canon.",
  "read_me_first": [
   "Liraasa is a constructed language built for singing, by one author. This file is the complete, authoritative description of it: every grammar rule and every word.",
-  "Read the sections in order: hard_rules, how_to_translate, sound, word_building, clause, recipes, rulings, small_words, dictionary, examples. The album at the end is non-normative text, not grammar (2.5:G87).",
+  "Read the sections in order: hard_rules, how_to_translate, sound, word_building, clause, recipes, rulings, small_words, dictionary, examples, canon_texts. The album at the end is non-normative text, not grammar (2.5:G87).",
   "Liraasa text in this file is always lowercase-spelled exactly as it must be written. Never change a spelling.",
   "When you write Liraasa, use only words that appear in this file (dictionary forms, small_words, numbers), or regular inflections and compounds built by the rules in word_building.",
   "After writing, check every line against self_check. If an English idea has no Liraasa word, say so instead of inventing one."
  ],
  "hard_rules": [
   "Never invent a word. A word is valid only if it appears in this file or is built by a rule stated in word_building.",
-  "Every headword has seven possible forms, but only the forms listed on its dictionary line exist. A form not listed has no meaning and must never be used (6870 such slots are deliberately left out). The one exception: an image compound (word_building.image_compounds) has all seven forms, built by the ordinary rules (2.5:G124).",
+  "Every headword has seven possible forms, but only the forms listed on its dictionary line exist. A form not listed has no meaning and must never be used (7244 such slots are deliberately left out). The one exception: an image compound (word_building.image_compounds) has all seven forms, built by the ordinary rules (2.5:G124).",
   "Every word has the form its slot needs: a noun form where a noun stands (subject, object, after a preposition or an article), a verb form in the verb slot, an adjective form before a noun or as a predicate. An adjective stands as a noun only after a determiner (li benasan, the good one). Word order is fixed: SUBJECT, then preverbal operators, then VERB, then OBJECT, then adjuncts (see clause.template and clause.edges). Adjectives come before the noun.",
   "A noun never modifies a noun directly. Turn the first noun into its adjective, use a compound from the dictionary, or use a de phrase (rule ADR-0011).",
   "A question keeps statement order and ends in ki; only a content question whose ki-word is the first word of the sentence may leave ki out (2.5:G88). A preverbal ne scopes over everything to its right up to the verb; a ne elsewhere scopes over the single constituent that follows it.",
@@ -225,7 +225,11 @@
    "loremeyiyo": "mender of hearts; consoler (epithet): loremeyi + -yo",
    "fatotenvayo": "weaver of fate (epithet): fatotenva + -yo",
    "velufarlayo": "maker of stars (epithet): velufarla + -yo",
-   "dipopago": "lamp-niche; a place where devotional lamps are kept: dipo + -pago"
+   "dipopago": "lamp-niche; a place where devotional lamps are kept: dipo + -pago",
+   "safavelmavu": "towel (big washcloth): safavelma + -vu",
+   "safapago": "bathroom; washroom: safa + -pago",
+   "ralkayo": "rival; contender: ralka + -yo",
+   "folluhemluyo": "bully; one who intimidates: folluhemlu + -yo"
   },
   "lexicalised_diminutives": {
    "monruti": "hill (little mountain): monru + -ti",
@@ -234,7 +238,13 @@
    "soloti": "pebble (little stone): solo + -ti",
    "larbopagoti": "grove: larbopago + -ti",
    "lavbupagoti": "chapel: lavbupago + -ti",
-   "patuti": "point; dot; a speck: patu + -ti"
+   "patuti": "point; dot; a speck: patu + -ti",
+   "resoti": "chuckle; giggle: reso + -ti",
+   "benasenoti": "compliment: benaseno + -ti",
+   "senoti": "small talk; chit-chat: seno + -ti",
+   "valminuluti": "alley; a narrow street: valminulu + -ti",
+   "taradapagoti": "shop; a small market: taradapago + -ti",
+   "miruralnoti": "trickle; a drip of water: miruralno + -ti"
   },
   "compounding": "MODIFIER+HEAD written together; head rightmost; components must be active headwords (a colour base may be the modifier, 2.0:G38; a component may itself be a compound, 2.0:G42); a compound's verb class follows its first letter. A compound is written as one word, modifier first and head last: lunolumi = moon-light. Use compounds listed in the dictionary; a new compound must join exactly two existing headwords and must be flagged as new. A colour base (small_words.colours) may be the modifier, and a compound may be lexicalised with -ti (2.0:G38). Either part may itself be a compound (2.0:G42). Image compounds (image_compounds below) are valid without a flag (2.0:G40).",
   "image_compounds": {
@@ -901,7 +911,12 @@
   {"english":"she herself","pattern":"pronoun + sela as the subject","liraasa":"Saivo sela po lirala.","meaning":"She herself sang.","ruling":"3.0:G134"},
   {"english":"by (an author)","pattern":"a made work + gagu + noun phrase","liraasa":"li lira gagu Peta","meaning":"the song by Peta","ruling":"3.0:G136"},
   {"english":"one by one","pattern":"X krotiapo X, a bare noun or number repeated","liraasa":"Una krotiapo una, li veluri po hiro lirala.","meaning":"One by one, the stars began to sing.","ruling":"3.0:G140"},
-  {"english":"for ever","pattern":"en rinbakrono","liraasa":"Saivo futu lirala en rinbakrono.","meaning":"She will sing for ever.","ruling":"3.0:G139"}
+  {"english":"for ever","pattern":"en rinbakrono","liraasa":"Saivo futu lirala en rinbakrono.","meaning":"She will sing for ever.","ruling":"3.0:G139"},
+  {"english":"realize; suddenly become aware","pattern":"hiro sabesia (begin to know); zafra or hoyo for suddenness or surprise","liraasa":"Zafra, maivo po hiro sabesia fime saivo po pagopa.","meaning":"Suddenly I realized that she had gone.","status":"awaiting author review"},
+  {"english":"prefer A to B","pattern":"lorelivnala A korsi B","liraasa":"Maivo lorelivnala lavlomiru korsi miru.","meaning":"I prefer tea to water.","status":"awaiting author review"},
+  {"english":"favorite","pattern":"lorelivnasan + noun; li lorelivnasan = the favorite","liraasa":"Eli ka maivo de lorelivnasan lira.","meaning":"This is my favorite song.","status":"awaiting author review"},
+  {"english":"not understand / misunderstand","pattern":"ne mebanema (not understand) · loteromebanela (understand wrongly) · mebanena (a misunderstanding between people)","liraasa":"Maivo ne mebanema; nara saivo po loteromebanela maivo.","meaning":"I don’t understand; but she misunderstood me.","status":"awaiting author review"},
+  {"english":"envy / jealousy","pattern":"loterodesi / loterodesila (wanting what another has) · amorharlu / amorharlua (fear of losing a bond)","liraasa":"Saivo amorharlua saivo de sora.","meaning":"She is jealous over her friend.","status":"awaiting author review"}
  ],
  "rulings": [
   {"id":"3.0:G129","topic":"The vocative particle iya","rule":"iya + noun phrase is a vocative: a direct address. It opens a sentence and is set off by a comma, stands alone as an invocation, or follows a final ki after a comma (2.5:G89). The noun phrase may be a name, a title, an epithet, a pronoun (taivo, taivori) or an owned phrase (maivo de amor). A vocative never changes the grammar of the clause it addresses. In everyday speech a bare name set off by commas remains a vocative (1.2:G31); in prayer, invocation and litany iya is expected, and it is required wherever a comma-set noun phrase could be read as an apposition (3.0:G130).","refines":["2.5:G89","1.2:G31"],"status":"PROPOSED: not yet ratified by the author; follow it, and say so when a line depends on it","examples":[{"liraasa":"Iya Deviasa, lenila maivo!","english":"O Great Goddess, hear me!"},{"liraasa":"Iya li mare de li lumi, maivo lirala vobi taivo.","english":"O mother of light, I sing for you."},{"liraasa":"Taivo viki pagopa ligo maivo ki, iya maivo de amor?","english":"Would you come near me, O my love?"},{"liraasa":"Iya Lumimare!","english":"O Mother of Light!"}],"ungrammatical":[{"liraasa":"Iya, Deviasa, lenila maivo!","why":"iya is not followed by a comma: it belongs to its noun phrase"}],"notes":"The hymn and every prayer genre address the divine; 2.5 had no vocative particle (open question)."},
@@ -1525,7 +1540,7 @@
    "a": "adjective",
    "aa": "ascended adjective"
   },
-  "count": {"headwords":1590,"meaningful_forms":4260},
+  "count": {"headwords":1664,"meaningful_forms":4404},
   "by_domain": {
    "1.0 additions": [
     "famamiga [fama+miga] {formerly famatilma}: (n) kinship; family relation | famamigasan (a) kindred",
@@ -1640,7 +1655,10 @@
     "venre: (n) arrival | venreasa (an) the coming; advent | venrena (nn) departure | venreva (v) to come; to arrive; to approach | venresan (a) coming; arriving | venreasasan (aa) long-awaited",
     "yuso: (n) use | yusona (nn) uselessness | yusoya (v) to use | yusonasan (na) useless | yusosan (a) useful"
    ],
-   "Actions & physical processes": ["hata {formerly zarmo}: (n) strike; impact; physical blow/contact with force | hataha (v) to strike; hit with force; to smite | hatasan (a) striking; involving physical impact"],
+   "Actions & physical processes": [
+    "hata {formerly zarmo}: (n) strike; impact; physical blow/contact with force | hataha (v) to strike; hit with force; to smite | hatasan (a) striking; involving physical impact",
+    "tuzo {new in 3.1}: (n) hanging; suspension | tuzota (v) to hang; to suspend | tuzosan (a) hanging; suspended"
+   ],
    "Animals": [
     "bemya: (n) bee | bemyaba (v) to buzz | bemyasan (a) bee-like",
     "budi {formerly danvu}: (n) dog | budiba (v) to follow like a dog | budisan (a) canine",
@@ -1907,8 +1925,15 @@
    ],
    "Dialogue & gesture": [
     "gulma: (n) demand | gulmaga (v) to demand | gulmasan (a) demanding; insistent",
+    "helvivimo [helvi+vimo] {new in 3.1}: (n) peek; a hidden look | helvivimoha (v) to peek; to peer",
+    "larnevimo [larne+vimo] {new in 3.1}: (n) glare; an angry stare | larnevimola (v) to glare",
+    "lavimilobe [lavi+milobe] {new in 3.1}: (n) grin; a beaming smile | lavimilobela (v) to grin; to beam",
+    "manlivaye [manli+vaye] {new in 3.1}: (n) wave of the hand | manlivayema (v) to wave",
     "nenga: (n) warning | nengana (nn) absence of warning | nengania (v) to warn | nenganasan (na) unwarned | nengasan (a) warning; cautionary",
+    "nuravufasbi [nuravu+fasbi] {new in 3.1}: (n) wince; a face of pain | nuravufasbinia (v) to wince",
     "tavre: (n) refusal of a request or order | tavrena (nn) compliance | tavreta (v) to refuse; to reject | tavresan (a) refusing; defiant",
+    "vilnelenda [vilne+lenda] {new in 3.1}: (n) squint; eyes narrowed to a line | vilnelendava (v) to squint",
+    "zivumilobe [zivu+milobe] {new in 3.1}: (n) smirk | zivumilobeza (v) to smirk",
     "zonra: (n) denial (of a claim) | zonrana (nn) concession; yielding a disputed point | zonraza (v) to deny | zonranasan (na) undeniable | zonrasan (a) denying"
    ],
    "Ecology & biology": [
@@ -2009,7 +2034,7 @@
     "vera: (n) Truth (not knowledge) | veraasa (an) Divine Truth, Divine Knowledge | verana (nn) Lie, falsehood, deceit | verava (v) to speak truth; to verify a statement | veranasan (na) untruthful; dishonest | verasan (a) honest; truthful; real | veraasasan (aa) divinely truthful"
    ],
    "Ethics & emotions": [
-    "amorharlu [amor+harlu]: (n) romantic jealousy; jealousy",
+    "amorharlu [amor+harlu]: (n) romantic jealousy; jealousy | amorharlua (v) to be jealous over; to fear losing (someone) | amorharlusan (a) jealous (in love or attachment)",
     "benamavopago [bena+mavopago]: (n) ethical society",
     "benasimvo [bena+simvo]: (n) moral integrity; virtue",
     "benavulra [bena+vulra]: (n) moral injury",
@@ -2304,16 +2329,26 @@
     "yugetali [yuge+tali]: (n) exercise | yugetaliya (v) to exercise"
    ],
    "Health & body": [
+    "bika {new in 3.1}: (n) flinch; a start; an involuntary recoil | bikaba (v) to flinch; to startle | bikasan (a) jumpy; easily startled",
     "dentonuravu [dento+nuravu] {formerly teyonuravu}: (n) toothache",
+    "dentosapu [dento+sapu] {new in 3.1}: (n) chewing | dentosapuda (v) to chew",
     "havlibako [havli+bako] {formerly havlibalbu}: (n) cough | havlibakoha (v) to cough",
+    "havliduvla [havli+duvla] {new in 3.1}: (n) exhalation | havliduvlaha (v) to breathe out",
+    "havliturna [havli+turna] {new in 3.1}: (n) inhalation | havliturnaha (v) to breathe in",
     "helna: (n) medicine; remedy | helnaasa (an) the healing of the world; the elixir | helnana (nn) lack of a remedy | helnaha (v) to treat; to give medicine | helnanasan (na) incurable | helnasan (a) medicinal; healing",
     "lemvo: (n) fatigue; tiredness | lemvona (nn) freshness; vigor | lemvola (v) to tire; to grow weary | lemvonasan (na) tireless | lemvosan (a) tired; weary",
+    "lenyodalu [lenyo+dalu] {new in 3.1}: (n) a lick | lenyodalula (v) to lick",
     "mudu: (n) sickness; illness | muduna (nn) health | muduma (v) to be sick; to fall ill | mudunasan (na) healthy | mudusan (a) sick; ill",
     "mududonu [mudu+donu]: (n) contagion; infection | mududonuma (v) to infect | mududonusan (a) contagious",
     "mudusomubiti [mudu+somubiti]: (n) sickbed",
     "namirelnu [nami+relnu]: (n) vomiting | namirelnunia (v) to vomit",
     "namrenuravu [namre+nuravu]: (n) headache | namrenuravunia (v) to have a headache",
     "namrerilu [namre+rilu]: (n) dizziness | namrerilunia (v) to feel dizzy | namrerilusan (a) dizzy",
+    "nulvahavli [nulva+havli] {new in 3.1}: (n) sniff | nulvahavlinia (v) to sniff",
+    "sapukovamudu [sapukova+mudu] {new in 3.1}: (n) nausea | sapukovamudusan (a) nauseous; queasy",
+    "sapunevra [sapu+nevra] {new in 3.1}: (n) swallowing; a swallow | sapunevrasia (v) to swallow",
+    "somuhavli [somu+havli] {new in 3.1}: (n) yawn | somuhavlisia (v) to yawn",
+    "toze {new in 3.1}: (n) poison; venom | tozena (nn) antidote | tozeta (v) to poison | tozenasan (na) harmless; non-toxic | tozesan (a) poisonous; venomous",
     "vulravelma [vulra+velma]: (n) bandage; dressing | vulravelmava (v) to bandage | vulravelmasan (a) bandaged",
     "yolbenuravu [yolbe+nuravu]: (n) sharp pain | yolbenuravuya (v) to stab with pain",
     "yugefaru [yuge+faru]: (n) fever | yugefaruya (v) to have a fever | yugefarusan (a) feverish",
@@ -2344,25 +2379,42 @@
     "buzakova [buza+kova] {formerly buvokova}: (n) cup; drinking vessel | buzakovaba (v) to fill a cup | buzakovasan (a) cup-shaped",
     "cono: (n) coin | conoca (v) to mint a coin | conosan (a) monetary",
     "cuza {formerly leto}: (n) letter | cuzaca (v) to write a letter | cuzasan (a) lettered; set down in a letter",
+    "damvavelma [damva+velma] {new in 3.1}: (n) trousers",
     "domlu: (n) house; dwelling structure | domluasa (an) ancestral dwelling | domluna (nn) houselessness; being without a roof | domluda (v) to house; provide a physical dwelling | domlunasan (na) unhoused | domlusan (a) domestic; residential | domluasasan (aa) hallowed as a house",
+    "domluvelso [domlu+velso] {new in 3.1}: (n) curtain",
     "dorbi: (n) Door | dorbiasa (an) the gate of heaven; the door between life and death | dorbida (v) to open or pass through a doorway | dorbisan (a) doorlike; accessible",
+    "dozasafa [doza+safa] {new in 3.1}: (n) scrubbing | dozasafada (v) to scrub",
     "farubiti [faru+biti]: (n) candle; small flame for light | farubitifa (v) to burn as a candle | farubitisan (a) candlelit",
+    "farucemo [faru+cemo] {new in 3.1}: (n) roasting | farucemofa (v) to roast",
+    "furosenru [furo+senru] {new in 3.1}: (n) peel; rind | furosenrufa (v) to peel",
     "ganre: (n) garden | ganreasa (an) paradise; the garden of heaven | ganrega (v) to garden | ganresan (a) cultivated | ganreasasan (aa) paradisal",
     "kemye: (n) key | kemyeka (v) to unlock | kemyesan (a) keyed",
+    "lisicemokova [lisicemo+kova] {new in 3.1}: (n) frying pan",
     "lumibiti [lumi+biti]: (n) lamp | lumibitila (v) to light a lamp | lumibitisan (a) lamplit",
+    "lurvaralno [lurva+ralno] {new in 3.1}: (n) spill | lurvaralnola (v) to spill",
+    "manlivelma [manli+velma] {new in 3.1}: (n) glove",
     "milra: (n) mirror | milrama (v) to reflect | milrasan (a) mirrored",
     "nimu: (n) home; belonging and refuge, not necessarily a building | nimuasa (an) a home promised beyond life | nimuna (nn) homelessness; belonging nowhere | nimunia (v) to offer belonging; to make someone feel at home | nimunasan (na) homeless | nimusan (a) at home; cherished; dear | nimuasasan (aa) sacredly welcoming",
     "nulu: (n) Path | nuluna (nn) pathlessness; having no way forward | nulunia (v) to travel along a path | nulusan (a) pathlike; directional",
     "pagosarbi [pago+sarbi]: (n) map | pagosarbipa (v) to map | pagosarbisan (a) mapped",
+    "pidibiti [pidi+biti] {new in 3.1}: (n) fork (utensil)",
     "rinba: (n) ring | rinbaasa (an) the circle of eternity; the cycle of all things | rinbara (v) to encircle | rinbasan (a) circular | rinbaasasan (aa) unending; eternal",
     "rofe: (n) roof | rofera (v) to roof over | rofesan (a) roofed",
+    "sabayebiti [sabaye+biti] {new in 3.1}: (n) comb; hairbrush | sabayebitisia (v) to comb; to brush (hair)",
+    "sabayetise [sabaye+tise] {new in 3.1}: (n) haircut; shave | sabayetisesia (v) to cut hair; to shave",
+    "safakova [safa+kova] {new in 3.1}: (n) bath; bathtub",
     "solo: (n) Stone; rock | soloasa (an) the living stone; a jewel of countless faces | solosia (v) to petrify; to make firm | solonasan (na) unsteady; not steadfast | solosan (a) stony; steadfast",
     "somubiti [somu+biti]: (n) bed | somubitisia (v) to make a bed | somubitisan (a) bedded",
     "tabu: (n) table | tabuta (v) to set a table",
+    "tabukova [tabu+kova] {new in 3.1}: (n) drawer",
     "tibi: (n) thread | tibita (v) to thread | tibisan (a) threadlike",
+    "tivrobiti [tivro+biti] {new in 3.1}: (n) clasp; button",
     "tobra {formerly vabale}: (n) wall | tobrata (v) to wall off | tobrasan (a) walled",
+    "tobratabu [tobra+tabu] {new in 3.1}: (n) shelf",
     "vasko: (n) mask | vaskona (nn) unmasking | vaskova (v) to mask | vaskonasan (na) unmasked | vaskosan (a) masked",
     "velma: (n) clothing | velmava (v) to dress; to clothe; to wear | velmasan (a) clothed; dressed",
+    "velmasafa [velma+safa] {new in 3.1}: (n) laundry; the washing of clothes | velmasafava (v) to do laundry",
+    "velmazupa [velma+zupa] {new in 3.1}: (n) wardrobe; closet",
     "velso {poetic}: (n) veil | velsoasa (an) the veil between worlds | velsona (nn) unveiling; revelation | velsova (v) to veil | velsonasan (na) unveiled; revealed | velsosan (a) veiled",
     "vimolalle [vimo+lalle]: (n) window | vimolalleva (v) to let light through a window",
     "zupa {formerly rumne}: (n) room | zupaza (v) to make room | zupasan (a) roomy; spacious"
@@ -2424,24 +2476,30 @@
     "vanasolo [vana+solo]: (n) marble"
    ],
    "Materials & physics": [
+    "bakolenda [bako+lenda] {new in 3.1}: (n) crack; a fracture line | bakolendaba (v) to crack",
     "biokezu [bio+kezu] {formerly biotamra}: (n) soil",
     "ceresolo [cere+solo]: (n) glass",
     "cirsi: (n) crystal | cirsica (v) to crystallize | cirsisan (a) crystalline",
     "colbilisi [colbi+lisi]: (n) paint",
     "demroyalmu [demro+yalmu]: (n) kinetic energy",
     "domlusolo [domlu+solo]: (n) brick",
+    "dugo {new in 3.1}: (n) decay; rot | dugoda (v) to rot; to spoil; to decay | dugonasan (na) unspoiled; incorruptible | dugosan (a) rotten; spoiled; stale (of food)",
+    "farulenyo [faru+lenyo] {new in 3.1}: (n) spiciness; the heat of a flavor | farulenyosan (a) spicy",
     "farusolo [faru+solo]: (n) ceramic",
     "germa: (n) metal; metallic material | germana (nn) nonmetal; absence of metal | germaga (v) to coat with metal; to metalize | germanasan (na) nonmetallic | germasan (a) metallic",
     "germabimne [germa+bimne]: (n) metallic structure",
     "germabiti [germa+biti]: (n) metal tool; metal implement",
+    "germadugo [germa+dugo] {new in 3.1}: (n) rust | germadugosan (a) rusty",
     "germalavlo [germa+lavlo]: (n) metal foil",
     "germatibi [germa+tibi]: (n) wire",
     "germativro [germa+tivro]: (n) magnet",
+    "herbadugo [herba+dugo] {new in 3.1}: (n) mold; mildew | herbadugosan (a) moldy",
     "lumiyalmu [lumi+yalmu]: (n) radiant energy",
     "mirukezu [miru+kezu] {formerly mirutamra}: (n) mud",
     "mirunumo [miru+numo]: (n) steam",
     "pavma: (n) matter; physical substance; material | pavmana (nn) lack of material substance; immateriality; the void | pavmanasan (na) immaterial; nonphysical | pavmasan (a) material; physical",
     "pavmasovla [pavma+sovla]: (n) material property",
+    "pega {new in 3.1}: (n) stickiness; adhesion | pegapa (v) to stick; to adhere | pegasan (a) sticky",
     "pusanumo [pusa+numo]: (n) cloud of dust",
     "sumayalmu [suma+yalmu]: (n) thermal energy",
     "tibipavma [tibi+pavma]: (n) fabric",
@@ -2466,14 +2524,25 @@
     "verasado [vera+sado] {new in 3.0}: (n) implication; the shadow a truth casts"
    ],
    "Movement & action": [
+    "dozativro [doza+tivro] {new in 3.1}: (n) squeeze | dozativroda (v) to squeeze; to compress",
     "duvla: (n) exit; going out of an enclosed space | duvlada (v) to exit; to go out | duvlasan (a) outgoing; departing",
+    "finihata [fini+hata] {new in 3.1}: (n) poke; prod | finihatafa (v) to poke; to prod",
+    "finitivro [fini+tivro] {new in 3.1}: (n) pinch | finitivrofa (v) to pinch",
     "hirna: (n) escape | hirnaasa (an) salvation; deliverance | hirnana (nn) capture; failed escape | hirnaha (v) to escape | hirnanasan (na) inescapable | hirnasan (a) escaped; at large | hirnaasasan (aa) delivered; saved",
+    "lisiralno [lisi+ralno] {new in 3.1}: (n) slip; skid | lisiralnola (v) to slip; to skid | lisiralnosan (a) slippery",
     "lumra: (n) lifting; raising | lumraasa (an) exaltation; the lifting of a soul to the divine | lumrana (nn) lowering | lumrala (v) to lift; to raise | lumrasan (a) raised; lifted",
+    "manlihata [manli+hata] {new in 3.1}: (n) punch; a blow of the hand | manlihatama (v) to punch",
+    "moludalu [molu+dalu] {new in 3.1}: (n) pat; a gentle touch | moludaluma (v) to pat",
     "nevra: (n) descent; going down | nevrana (nn) the way up; ascent | nevrania (v) to descend; to go down | nevrasan (a) descending; downward",
     "pavru: (n) jump; leap | pavrupa (v) to jump; to leap | pavrusan (a) leaping; springy",
+    "pebuhata [pebu+hata] {new in 3.1}: (n) kick | pebuhatapa (v) to kick",
+    "pebusemne [pebu+semne] {new in 3.1}: (n) crouch; squat | pebusemnepa (v) to crouch; to squat",
+    "pidivalmi [pidi+valmi] {new in 3.1}: (n) tiptoeing | pidivalmipa (v) to tiptoe",
     "tekla: (n) stop; halt; cessation of motion; pause | teklana (nn) ceaselessness | teklata (v) to stop; to halt | teklanasan (na) unstoppable; ceaseless | teklasan (a) stopped; still",
     "turna: (n) entry; entering | turnana (nn) exclusion; being kept out | turnata (v) to enter | turnanasan (na) shut out | turnasan (a) entering; admitted",
-    "vopra: (n) turn; rotation | voprava (v) to turn; to rotate; to roll | voprasan (a) turning; rotated"
+    "vizutivro [vizu+tivro] {new in 3.1}: (n) snatch; a sudden grab | vizutivrova (v) to grab; to snatch",
+    "vopra: (n) turn; rotation | voprava (v) to turn; to rotate; to roll | voprasan (a) turning; rotated",
+    "yendohata [yendo+hata] {new in 3.1}: (n) slap | yendohataya (v) to slap"
    ],
    "Music & story": [
     "colbilarda [colbi+larda]: (n) painting",
@@ -2643,15 +2712,18 @@
    ],
    "Nature & geography": [
     "farumonru [faru+monru]: (n) volcano",
+    "halrakova [halra+kova] {new in 3.1}: (n) cart; carriage",
     "kezulelde [kezu+lelde] {formerly tamralelde}: (n) cliff",
     "kezumiru [kezu+miru] {formerly tamramiru}: (n) lake",
     "kezusovla [kezu+sovla] {formerly tamrasovla}: (n) landscape",
+    "larbotobra [larbo+tobra] {new in 3.1}: (n) fence",
     "lesmamiru [lesma+miru]: (n) oasis",
     "lunosado [luno+sado]: (n) lunar eclipse",
     "mirugalsa [miru+galsa]: (n) marsh",
     "mirulombi [miru+lombi]: (n) water source",
     "mirunululombi [mirunulu+lombi]: (n) source of a river",
     "miruralno [miru+ralno]: (n) waterfall",
+    "pebunulu [pebu+nulu] {new in 3.1}: (n) footpath; sidewalk",
     "renlicolbi [renli+colbi]: (n) rainbow",
     "ruhevabeve [ruhe+vabeve]: (n) storm surge",
     "sevulelde [sevu+lelde]: (n) coast",
@@ -2688,9 +2760,17 @@
     "yano: (n) Unity | yanoasa (an) oneness; the unity of all things | yanona (nn) division | yanoya (v) to unite; to join; to add | yanonasan (na) divided | yanosan (a) united; together | yanoasasan (aa) one with all"
    ],
    "Plot & society": [
+    "dorvakarko [dorva+karko] {new in 3.1}: (n) murder; a deliberate killing | dorvakarkoda (v) to murder",
+    "dozamasu [doza+masu] {new in 3.1}: (n) interrogation | dozamasuda (v) to interrogate",
     "harlu: (n) risk; danger of harm | harluna (nn) safety from risk | harluha (v) to risk | harlunasan (na) riskless | harlusan (a) risky",
+    "helvihata [helvi+hata] {new in 3.1}: (n) ambush | helvihataha (v) to ambush",
+    "juseleni [juse+leni] {new in 3.1}: (n) trial; a hearing before a judge",
     "kaldo: (n) confinement; constraint; restriction | kaldona (nn) release from constraint | kaldoka (v) to confine; to restrict; to imprison | kaldonasan (na) unconstrained; unconfined | kaldosan (a) confined; restricted",
-    "vazra: (n) success; victory; winning | vazraasa (an) triumph of good | vazrana (nn) failure; defeat | vazrava (v) to succeed; to win; to conquer | vazranasan (na) unsuccessful; defeated | vazrasan (a) successful; victorious"
+    "pagoverasude [pago+verasude] {new in 3.1}: (n) alibi; proof of where one was",
+    "pomlinela [pomli+nela] {new in 3.1}: (n) hostage; a person held as a pledge",
+    "silrogura [silro+gura] {new in 3.1}: (n) blackmail | silrogurasia (v) to blackmail",
+    "vazra: (n) success; victory; winning | vazraasa (an) triumph of good | vazrana (nn) failure; defeat | vazrava (v) to succeed; to win; to conquer | vazranasan (na) unsuccessful; defeated | vazrasan (a) successful; victorious",
+    "verasudeserbu [verasude+serbu] {new in 3.1}: (n) investigation | verasudeserbuva (v) to investigate"
    ],
    "Poetic compounds": [
     "bojiruhe [boji+ruhe] {poetic, formerly yelfaruhe}: (n) hailstorm; ice-storm | bojiruheasa (an) the mythic hailstorm | bojiruhena (nn) a thaw after the storm | bojiruheba (v) to rain hail | bojiruhenasan (na) free of hail | bojiruhesan (a) hailing; ice-stormy | bojiruheasasan (aa) sacred judgment by hail",
@@ -2816,7 +2896,9 @@
     "vardetarnu [varde+tarnu]: (n) lord"
    ],
    "Relationships": [
+    "famlilinu [famli+linu] {new in 3.1}: (n) niece; nephew; a sibling's child",
     "pomli: (n) promise | pomlina (nn) a broken promise | pomlipa (v) to promise | pomlinasan (na) faithless; vow-breaking | pomlisan (a) promised; pledged",
+    "sabenela [sabe+nela] {new in 3.1}: (n) acquaintance; a person one knows",
     "silro {formerly puzu}: (n) secret | silroasa (an) the sacred mystery; what is hidden in the divine | silrona (nn) disclosure | silrosia (v) to conceal a secret | silronasan (na) disclosed; no longer secret | silrosan (a) secret; hidden from others | silroasasan (aa) ineffable; mystical"
    ],
    "Romance": [
@@ -2949,7 +3031,7 @@
     "gakimelli [gaki+melli] {new in 3.0}: (n) the measure of an angle; degree",
     "jomruvizu [jomru+vizu] {formerly jomruvelbi, formerly jomruvugo}: (n) travel speed",
     "lanla {poetic}: (n) horizon | lanlaasa (an) the edge of the world | lanlasan (a) far-reaching",
-    "lenda {new in 3.0}: (n) line; stroke | lendala (v) to draw a line | lendasan (a) linear; straight",
+    "lenda {new in 3.0}: (n) line; stroke | lendala (v) to draw a line | lendanasan (na) crooked; not straight | lendasan (a) linear; straight",
     "lendanulu [lenda+nulu] {new in 3.0}: (n) straight path; a ray drawn from a point",
     "lendapatu [lenda+patu] {new in 3.0}: (n) line segment",
     "lizma: (n) leftward orientation; left side | lizmala (v) to go or turn left | lizmasan (a) left-sided; leftward",
@@ -2981,14 +3063,23 @@
     "belfi: (n) believe | belfina (nn) disbelief | belfiba (v) to believe | belfinasan (na) unbelieving; skeptical | belfisan (a) believing",
     "benaseno [bena+seno]: (n) praise | benasenoasa (an) the praise of all creation | benasenoba (v) to praise | benasenosan (a) praiseworthy",
     "cunu: (n) count; number | cunuasa (an) infinity; the uncountable | cunuca (v) to count | cunusan (a) counted | cunuasasan (aa) infinite; numberless",
+    "dorvalordi [dorva+lordi] {new in 3.1}: (n) plan; an ordered intention | dorvalordida (v) to plan",
     "hemlu: (n) call | hemluha (v) to call | hemlusan (a) called",
     "lavbu: (n) pray | lavbuasa (an) worship; the prayer of all creation | lavbula (v) to pray | lavbusan (a) prayerful | lavbuasasan (aa) devout; worshipful",
+    "lorelivna [lore+livna] {new in 3.1}: (n) preference; the heart's choice | lorelivnala (v) to prefer | lorelivnasan (a) favorite; preferred",
+    "loteromebane [lotero+mebane] {new in 3.1}: (n) misinterpretation; understanding something as other than it is | loteromebanela (v) to misunderstand; to misinterpret",
+    "maskabenaseno [maska+benaseno] {new in 3.1}: (n) flattery | maskabenasenoma (v) to flatter",
     "mebane: (n) understand | mebanena (nn) misunderstanding | mebanema (v) to understand | mebanesan (a) understanding",
     "nafe: (n) imagine | nafenia (v) to imagine | nafesan (a) imagined",
+    "patudonu [patu+donu] {new in 3.1}: (n) sharing | patudonupa (v) to share",
     "relsi: (n) answer; reply | relsira (v) to answer; to reply | relsisan (a) answered",
+    "silrosude [silro+sude] {new in 3.1}: (n) disclosure; the revealing of a secret | silrosudesia (v) to reveal (a secret); to uncover",
     "tinsa: (n) guess | tinsata (v) to guess; to suppose",
     "vese: (n) whisper | veseva (v) to whisper | vesesan (a) whispered",
-    "yeba: (n) agree | yebana (nn) disagreement | yebaya (v) to agree | yebasan (a) in accord"
+    "vizuseno [vizu+seno] {new in 3.1}: (n) outburst; a blurted word | vizusenova (v) to blurt",
+    "yeba: (n) agree | yebana (nn) disagreement | yebaya (v) to agree | yebasan (a) in accord",
+    "yebaseno [yeba+seno] {new in 3.1}: (n) negotiation; talk toward agreement | yebasenoya (v) to negotiate",
+    "zegoseno [zego+seno] {new in 3.1}: (n) stammer; stutter | zegosenoza (v) to stammer; to stutter"
    ],
    "Spiritual": [
     "benamavo [bena+mavo] {poetic}: (n) conscience",
@@ -3194,7 +3285,7 @@
     "kronopatu [krono+patu]: (n) period or era",
     "kronosulno [krono+sulno]: (n) delay | kronosulnoka (v) to delay",
     "kronotrana [krono+trana]: (n) progress",
-    "lumimelli [lumi+melli] {new in 3.0}: (n) brightness; luminance",
+    "lumimelli [lumi+melli] {new in 3.0}: (n) brightness; luminance | lumimellinasan (na) dim; faint (of light)",
     "mellibiti [melli+biti] {new in 3.0}: (n) ruler; a measuring tool",
     "parimelli [pari+melli]: (n) profit margin",
     "patucunu [patu+cunu] {new in 3.0}: (n) fraction",
@@ -3846,6 +3937,12 @@
    ["Taivo desida ki, fime maivo senosia: \"Pagopa, lirala!\"","Do you want me to say \"Go, sing!\"? (0.8 alternative)"]
   ]
  },
+ "canon_texts": {
+  "note": "Canon texts: whole works in Liraasa, every line read with no error or warning by the strict checker. Imitate their grammar and register. Words and rulings they use that are new in 3.0 are proposed with the rest of 3.0.",
+  "texts": [
+   {"title":"The Song of the First Stars","title_liraasa":"Li lira de li una-ne veluri","register":"sacred","about":"The author's creation hymn, in the sacred register. Canon corpus text by the author's request (2026-10-25): a model of devotional Liraasa. Lines 1, 3, 4, 5, 9 and 19 are the 2.5 translation (data/songs/Liraasa_de_li_Vanisan_Lirayo_Translation.pdf, where the English, the interlinear and the translator's notes are); the other eighteen are the 3.0 patch's revisions (archive/patch_3_0/liraasa_3_0_patch.json, hymn_test), which use the proposed 3.0 words and rulings. Every line reads with no error or warning under the 3.1 strict checker (tests/grammar/hymn.test.ts). Nothing here is composed by a tool except line 12's one change, noted on the line.","columns":["n","liraasa","english"],"lines":[[1,"En li lombiasa, po miyo doli saivo de mavoasa,","At the beginning of time, there was only her divine mind,"],[2,"kroti saivo de finipidiri sarbisia li krono ala li pagoasa.","Before her fingertips wrote time into existence,"],[3,"Saivo po semnesia nuna-pago, intra saivo de yanoasa, ata po pensapa.","She sat in nowhereness within the oneness of herself and pondered,"],[4,"Saivo po pensapa ki-coda po miyo, ata ki-coda suvi miyo, ata ki-coda suvi miyo nuna-krono.","She contemplated what was and what ought to be, and what ought never be,"],[5,"Saivo po lemula li modoasa de li lumiasa, ata saivo de lumina gase li sadoasa.","She studied the nature of her own divine light, and her absence as shadow"],[6,"Ata saivo po lurvala saivo de velniasa ala li fulenasan pagona yuta li veraasa de li narvonasan sambalordi.","And with her knowledge of flawless symmetry she imbued her essence into the empty non-universe,"],[7,"Krotiata saivo de lumisan mavoasa po farlafa li pagoasa yuta baba patuti de lumi.","Her luminous mind then brought forth existence with a point of light,"],[8,"Li una-ne velu po navunia, ata ito sela po ka li una-ne leninela raho po lenila saivo de lumiasasan melopuku, saivo de meloasa, saivo de vallaasa.","The first star arose and was itself the first to hear her divine cadence, her music, her voice"],[9,"Ata li mareasa de li lumi po lirala ala li una-ne velu de li vemiasa.","And the mother of light sang to the first star of the cosmos,"],[10,"Li una-ne velu po veluva en tranaasasan lumisirmoasa, ata po ralera saivo de liraasa.","The first star shone with transcendent resplendence and echoed her song of the first stars,"],[11,"Li mareasa de li vemiasa, li una-ne lumi raho po kronobioka li veluri, po ke lavisan kube saivo lenila saivo de liraasa gase baba yanolira.","The cosmic mother, the first light who birthed stars, was pleased to hear her song as a chorus,"],[12,"Ata una krotiapo una, velu krotiapo velu, muya loterosan patuti de sizosan lumi po gome farlafa ala li pagoasa.","One by one, star by star, further points of shimmering light were brought forth into existence,"],[13,"Rada velu po kronobioka kopisa sahi lirala baba lirvi en saivo de lumiasasan melonulu.","Each star was born to repeatedly sing a musical note in her divine melody,"],[14,"Ata kroti ola, saivo po lirala; korsi, saivo po bitiba saivo de vinyeasa, baba lumiasasan melobiti.","And where she sang before, instead she wielded her cosmic veena, a divine instrument,"],[15,"Rada pice de li vinye po ke baba tranaasasan lumisirmo raho po lumrala li suma de li veluri raho lenila.","Each pluck of her tool was a transcendent splendor which ascended the heat of the listening stars,"],[16,"Saivo de rinbaasasan melolekta po ka li cemnuasa, kasa toda li pagoasa po kronobioka kopisa lenila saivo de meloasa.","Her unending concert was the center of the universe, as all of existence was born to hear her play,"],[17,"Saivo de nole po ka sambasan ko li melo, ito sela, en toda lermi raho po keleka.","Her name was synonymous with music itself, in every language that arose,"],[18,"Yesta li mavopagori raho po ne lavbula ala saivo, po sabesia fime saivo miyo, yuta verasado ata kronosonbu.","Even the civilizations that did not pray to her knew of her existence by implication and rhythm,"],[19,"Baba kasi lardasan vera nosi ka li vorduasa de li pagoasa ki?","Could a more artistic truth be the underlying cause of existence?"],[20,"En li mellisan vemiri, li lideoserbuyori raho tovota sonbuyebasan felberi, loki senoralkasia eli-krono.","The philosophers of the great worlds with their attuned ears still debate, to this day,"],[21,"Nara saivori senoralkasia nayo saivori pebudumdopa gase li lirviri raho saivo picepa su saivo de lumiasasan vinye.","But they do so as they tap their feet in accordance with the notes plucked on her divine veena,"],[22,"En li vemiri vofa maivori, yesta li mosa sirmosan deviserbuyori ata li luminelari ata li pensayori momvima saivori sela en li melo.","Even the greatest theologians and priests and thinkers of the faraway worlds lose themselves to music,"],[23,"Ata ola-modo po miyo, ola-modo miyo, ola-modo futu miyo.","And so it was, and so it is, and so it shall be,"],[24,"Liraasa, li lira de li una-ne veluri gagu li una-ne mareasa, vobi li una-ne linuri raho po lenila ata po lemula sidu senosia.","Liraasa, the song of the first stars, by the first mother, for the first children, who listened and learned to speak"]]}
+  ]
+ },
  "album": {
   "how_to_use": "Non-normative text. The album predates the 2.5 grammar and contains errors (for example adjective forms used as nouns). Read it for its content; do not imitate its grammar (2.5:G87). A line with \"current\" is spelled differently in this edition. An \"album_reading\" is an annotation kept from earlier editions: it is not a licence, and a line without one is not thereby correct. No English is given.",
   "normative": false,
@@ -3865,5 +3962,5 @@
    {"track":"05alt","title":"Liraasa de Leldeasa (Crossing Lines), rhymed 1.2 version (alternate)","lines":[{"liraasa":"si maivori sarbisia lelde en solopusa,"},{"liraasa":"taivo viki helvivalmiha ligo li lelde ki?"},{"liraasa":"si maivo ke silisan ata corvisan,"},{"liraasa":"ata manlima li lelde ala pusa,"},{"liraasa":"ito viki loya pagolalnina, oro tamralelde ki?","current":"ito viki loya pagolalnina, oro kezulelde ki?"},{"liraasa":"si li fato livnala baba pagolelde"},{"liraasa":"entre taivo ata maivo,"},{"liraasa":"maivo viki teruta ganre de furori su ito."},{"liraasa":"apokna ka una humesan larbo vobi taivo."},{"liraasa":"kube ito salrusia,"},{"liraasa":"maivo futu donuda ito biti de lalfo,"},{"liraasa":"fime taivo nosi semnesia ko maivo en moluvaye."},{"liraasa":"taivo ne taro-pagopa, nara lalfola hupi li lelde,"},{"liraasa":"ata vaye vayeva en taivo de sabaye."},{"liraasa":"miyo baba kasi sovesan sonbu ki?"},{"liraasa":"si maivo lenila lelderi en eli bio,"},{"liraasa":"maivo viki vazrava taivo"},{"liraasa":"en li bio raho venreva krotiapo daigo,"},{"liraasa":"yuta megalumi kertisan sonbusamba ki?"},{"liraasa":"maivo futu sulnosia megalumi montafama."},{"liraasa":"baba navusan lavra povi ka ki-coda"},{"liraasa":"voyu li azuri raho saivo doli vimova ki?"},{"liraasa":"baba lavrati ko zirkiti vobi taivo,"},{"liraasa":"maivo de lore nedunia taivo de kemye."},{"liraasa":"ki-nela de kulpa ka ola ki?"},{"liraasa":"maivo povi ka ki-coda, sabri lavi ata sulnosove ki?"},{"liraasa":"taivo ka li yugemeyiyo de maivo de lore."},{"liraasa":"si kronoasa ka li sulno de taivo,"},{"liraasa":"fisa, livnala li huvu raho vimova maivo."},{"liraasa":"maivo de nole ka solosan,"},{"liraasa":"tonsi maivo sulnosia gase solo, nido, gase solovu."},{"liraasa":"maivo futu sulnosia ko amor ata sovelore,"},{"liraasa":"tuni taivo de kemye navdinia nimu en maivo de lore."}]}
   ]
  },
- "source": "Generated by scripts/build_llm_json.ts from data/lexicon/liraasa_3_0.json (Liraasa 3.0, built 2026-10-25T12:00:00Z). Regenerate with npm run build:llm; never edit by hand."
+ "source": "Generated by scripts/build_llm_json.ts from data/lexicon/liraasa_3_1.json (Liraasa 3.1, built 2026-10-25T16:00:00Z). Regenerate with npm run build:llm; never edit by hand."
 }
