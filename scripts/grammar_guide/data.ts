@@ -125,6 +125,7 @@ export interface Lexicon {
   rulings_2_2?: Ruling[];
   rulings_2_3?: Ruling[];
   rulings_2_5?: Ruling[];
+  rulings_3_0?: Ruling[];
   /** 2.0: the image-compound pattern, with the attested pairs whole (ADR-0016). */
   image_compounds?: {
     rule: string;
@@ -218,6 +219,7 @@ export function normGloss(gloss: string): string {
 export function rulingById(lex: Lexicon, id: string): Ruling | undefined {
   const [edition, rid] = id.split(':');
   const sets: Record<string, readonly Ruling[] | undefined> = {
+    '3.0': lex.rulings_3_0,
     '2.5': lex.rulings_2_5,
     '2.3': lex.rulings_2_3,
     '2.2': lex.rulings_2_2,
@@ -345,6 +347,7 @@ export class Index {
         ...(lex.rulings_2_2 ?? []),
         ...(lex.rulings_2_3 ?? []),
         ...(lex.rulings_2_5 ?? []),
+        ...(lex.rulings_3_0 ?? []),
         ...lex.rulings_0_8_carried,
       ].flatMap((r) => (r.examples ?? []).map(([l]) => l)),
       ...lex.discourse_particles.flatMap((p) => p.examples.map((e) => e.liraasa)),
@@ -486,6 +489,7 @@ export function canonTexts(lex: Lexicon): string[] {
     ...(lex.rulings_2_2 ?? []),
     ...(lex.rulings_2_3 ?? []),
     ...(lex.rulings_2_5 ?? []),
+    ...(lex.rulings_3_0 ?? []),
     ...lex.rulings_0_8_carried,
   ];
   return [

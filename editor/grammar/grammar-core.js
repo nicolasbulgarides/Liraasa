@@ -86,7 +86,8 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       chain: "chain",
       hortative: "hortative",
       interjection: "interjection",
-      time: "timeAdv"
+      time: "timeAdv",
+      vocative: "vocative"
     };
     if (cls !== void 0) {
       const p = byClass[cls];
@@ -508,9 +509,34 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
         }
         this.role(deAt, this.roles.get(cur.start)?.role ?? "OBJECT");
         const leftKind = cur.headKind;
-        const deKind = leftKind === "num" || cur.quant !== null && cur.head === cur.quant ? "partitive" : leftKind === "pron" || leftKind === "name" ? "owner-left" : "owner-right";
+        const title = cur.de === null && this.titleAsName(cur);
+        const deKind = leftKind === "num" || cur.quant !== null && cur.head === cur.quant ? "partitive" : leftKind === "pron" || leftKind === "name" || title ? "owner-left" : "owner-right";
+        if (title) {
+          const text = this.t[cur.head ?? -1]?.text ?? "";
+          this.find(
+            this.ix.source.rules.titles?.ruling ?? "3.0:G131",
+            `${text}, capitalised with no article, is a name: it owns what follows de (${text}’s …); a descriptive epithet keeps li and lower case (li ${text.toLowerCase()} de …)`,
+            [cur.head ?? deAt],
+            "note"
+          );
+        }
         const attach = (n) => n.de === null ? { ...n, de: right, deKind } : { ...n, de: attach(n.de) };
         cur = { ...attach(cur), end: right.end };
+      }
+      const au = this.ix.source.rules.authorship;
+      if (au !== void 0 && this.w(this.i) === au.word && this.npStart(this.i + 1)) {
+        const g = this.i;
+        if (this.workNoun(cur.head)) {
+          this.i += 1;
+          const maker = this.parseNP({ ...opts, noRelative: true });
+          if (maker === null) this.i = g;
+          else cur = { ...cur, end: maker.end, maker };
+        } else if (!this.t.slice(0, g).some((t) => t.word?.lower === this.ix.source.rules.passive.word))
+          this.find(
+            au.ruling,
+            `${au.word} names the maker after a made work (li lira ${au.word} …), or the agent after a passive verb (gome …): ${this.w(cur.head ?? g)} is neither`,
+            [g]
+          );
       }
       if (!opts.noRelative && this.w(this.i) === "raho") {
         const rel = this.parseSubClause("relative");
@@ -578,6 +604,10 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
         np.head = i0;
         np.headKind = "name";
         this.i += 1;
+        if (this.w(this.i) === "sela") {
+          np.refl = this.i;
+          this.i += 1;
+        }
         np.end = this.i;
         return np;
       }
@@ -589,6 +619,16 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
         return np;
       }
       if (this.w(this.i) === "diba" && this.is(this.i + 1, "quant")) {
+        np.degrees.push(this.i);
+        this.i += 1;
+      }
+      if (this.ix.source.rules.comparison.amount_words.includes(this.w(this.i)) && this.is(this.i + 1, "quant") && this.nounish(this.i + 2)) {
+        this.find(
+          "2.5:G106",
+          `${this.w(this.i)} + a quantifier (${this.w(this.i)} ${this.w(this.i + 1)} …) is not ruled: 2.5:G106 rules ${this.w(this.i)} + a noun`,
+          [this.i, this.i + 1],
+          "unruled"
+        );
         np.degrees.push(this.i);
         this.i += 1;
       }
@@ -722,6 +762,10 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
         np.adjectives.push(this.i);
         this.i += 1;
       }
+      if (this.w(this.i) === "sela" && np.headKind !== "adj") {
+        np.refl = this.i;
+        this.i += 1;
+      }
       const head = np.head;
       {
         const sfx = this.t[head]?.word?.suffixes ?? [];
@@ -762,6 +806,118 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     verbOfWord(i) {
       const r = this.readings(i).find((x) => x.root !== void 0);
       return r?.root === void 0 ? null : this.ix.formOf(r.root, "v");
+    }
+    // ---------------------------------------------- 3.0: address and naming
+    /** A noun naming a made work (3.0:G136): one listed, or a compound whose head is one. */
+    workNoun(i) {
+      const list = this.ix.source.rules.authorship?.work_nouns ?? [];
+      if (i === null) return false;
+      return this.readings(i).some(
+        (r) => r.pos === "noun" && list.some((n) => r.form === n || r.form.endsWith(n))
+      );
+    }
+    /** A capitalised ascended noun with no article: a title used as a name (3.0:G131). */
+    titleAsName(np) {
+      const h = np.head;
+      if (h === null || np.det !== null || np.quant !== null || np.adjectives.length > 0)
+        return false;
+      if (this.ix.source.rules.titles === void 0) return false;
+      const text = this.t[h]?.text ?? "";
+      return /^[A-Z]/.test(text) && !this.is(h, "pron") && !this.is(h, "name") && this.readings(h).some((r) => r.pos === "noun" && r.role === "an");
+    }
+    /**
+     * iya + a noun phrase: a vocative (3.0:G129). iya belongs to its noun
+     * phrase, so a comma after it is an error. Names or noun phrases set off by
+     * commas may follow, each another address: a litany (3.0:G130).
+     */
+    parseIyaVocative() {
+      const k = this.i;
+      if (!this.is(k, "vocative")) return null;
+      const rule = this.ix.source.rules.vocative?.ruling ?? "3.0:G129";
+      this.role(k, "VOCATIVE");
+      this.i += 1;
+      if (this.isPunct(this.i, ",") && this.npStart(this.i + 1)) {
+        this.find(
+          rule,
+          `${this.w(k)} belongs to its noun phrase: no comma after it`,
+          [k, this.i],
+          "error",
+          `${this.w(k)} ${this.t[this.i + 1]?.text ?? ""}`
+        );
+        this.role(this.i, "PUNCT");
+        this.i += 1;
+      }
+      const np = this.parseNP();
+      if (np === null) {
+        this.find(rule, `${this.w(k)} is followed by the noun phrase it addresses`, [k]);
+        return null;
+      }
+      this.roleSpan(np.start, np.end, "VOCATIVE");
+      let voc = { ...np, start: k };
+      for (; ; ) {
+        if (!this.isPunct(this.i, ",") || this.is(this.i + 1, "vocative")) break;
+        const save = this.i;
+        const mark = this.findings.length;
+        this.i += 1;
+        const ap = this.npStart(this.i) && !this.clauseAhead(this.i) ? this.parseNP() : null;
+        if (ap !== null && (this.isPunct(this.i, ",") || this.onlyEndPunct())) {
+          this.role(save, "PUNCT");
+          this.roleSpan(ap.start, ap.end, "VOCATIVE");
+          voc = { ...voc, end: ap.end };
+          continue;
+        }
+        this.findings.length = mark;
+        this.i = save;
+        for (let x = save; x < this.t.length; x++) this.roles.delete(x);
+        break;
+      }
+      return voc;
+    }
+    /**
+     * Noun phrases set off by commas that rename the subject just read, the last
+     * comma closing them before the predicate (3.0:G130). Nothing is consumed
+     * unless the whole pattern holds.
+     */
+    parseAppositions(role) {
+      const save = this.i;
+      const mark = this.findings.length;
+      let n = 0;
+      while (this.isPunct(this.i, ",") && this.npStart(this.i + 1) && !this.is(this.i + 1, "vocative")) {
+        const c = this.i;
+        this.i += 1;
+        const np = this.parseNP();
+        const closed = np !== null && (this.isPunct(this.i, ",") || np.relative !== null && this.isPunct(this.i - 1, ","));
+        if (np === null || !closed) {
+          this.i = c;
+          break;
+        }
+        this.role(c, "PUNCT");
+        this.roleSpan(np.start, np.end, role);
+        n += 1;
+        if (!this.isPunct(this.i, ",")) break;
+      }
+      if (n > 0 && this.isPunct(this.i, ",") && this.predicateStart(this.i + 1)) {
+        this.role(this.i, "PUNCT");
+        this.i += 1;
+        return true;
+      }
+      if (n > 0 && this.isPunct(this.i - 1, ",") && this.predicateStart(this.i)) return true;
+      this.findings.length = mark;
+      this.i = save;
+      for (let x = save; x < this.t.length; x++) this.roles.delete(x);
+      return false;
+    }
+    /** ola-modo [TENSE] miyo: the liturgical formula, opened without a comma (3.0:G133). */
+    formulaAt(k) {
+      const f = this.ix.source.rules.formula;
+      if (f === void 0 || this.w(k) !== f.opener) return false;
+      const n = this.opSlot(k + 1) === "TENSE" ? k + 2 : k + 1;
+      return this.w(n) === f.word;
+    }
+    /** X krotiapo X: one X after another, a bare noun or number repeated (3.0:G140). */
+    distributiveAt(k) {
+      const d = this.ix.source.rules.distributive;
+      return d !== void 0 && this.isWord(k) && this.w(k + 1) === d.word && this.w(k + 2) === this.w(k) && (this.is(k, "noun") || this.is(k, "num"));
     }
     // --------------------------------------------------------------- operators
     /** A run of preverbal operators, in the order of the template (1.0:G1, 1.0:G16). */
@@ -880,10 +1036,26 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
         };
         this.i += 1;
       }
+      let formula = false;
+      if (clause.subject === null && this.formulaAt(this.i)) {
+        this.role(this.i, "FRAME");
+        clause.frame.push(this.i);
+        this.i += 1;
+        formula = true;
+      }
+      const emph = this.ix.source.rules.emphatic;
       if (clause.subject === null && ctx.subjectFound !== void 0 && ctx.subjectFound !== null) {
         clause.subject = ctx.subjectFound;
-      } else if (clause.subject === null && !ctx.noSubject) {
-        if (this.w(this.i) === this.ix.source.rules.command.hortative) {
+      } else if (clause.subject === null && !ctx.noSubject && !formula) {
+        if (emph !== void 0 && this.w(this.i) === emph.word) {
+          this.find(
+            emph.ruling,
+            `${emph.word} needs a pronoun or noun phrase before it (saivo ${emph.word} …)`,
+            [this.i]
+          );
+          this.role(this.i, "SUBJECT");
+          this.i += 1;
+        } else if (this.w(this.i) === this.ix.source.rules.command.hortative) {
           this.role(this.i, "SUBJECT");
           this.i += 1;
         } else if (this.w(this.i) === "ne" && this.npStart(this.i + 1) && !this.is(this.i + 1, "op") && !this.verbish(this.i + 1)) {
@@ -922,6 +1094,29 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
             clause.subject = subj;
             this.roleSpan(subj.start, subj.end, "SUBJECT");
           } else this.i = save;
+        }
+      }
+      const ap = this.ix.source.rules.apposition;
+      if (clause.subject !== null && ap !== void 0 && this.isPunct(this.i, ","))
+        this.parseAppositions("SUBJECT");
+      else if (clause.subject !== null && ap !== void 0 && this.is(this.i, "det") && this.npStart(this.i)) {
+        const save = this.i;
+        const mark = this.findings.length;
+        const np2 = this.parseNP();
+        if (np2 !== null && this.predicateStart(this.i)) {
+          this.findings.length = mark;
+          this.find(
+            ap.ruling,
+            "an apposition is set off by commas: a second noun phrase renaming the subject stands between commas",
+            [np2.start],
+            "error",
+            ","
+          );
+          this.roleSpan(np2.start, np2.end, "SUBJECT");
+        } else {
+          this.findings.length = mark;
+          this.i = save;
+          for (let x = save; x < this.t.length; x++) this.roles.delete(x);
         }
       }
       if (clause.subject !== null && this.is(this.i, "timeAdv") && (this.predicateStart(this.i + 1) || this.verbish(this.i + 1))) {
@@ -969,13 +1164,24 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
         this.i += 1;
         const w = this.w(v);
         clause.predKind = w === "loya" ? "become" : w === "miyo" ? "existential" : "copula";
+        const being = this.ix.source.rules.absolute_being;
         if (clause.predKind === "existential") {
           const np = this.parseNP();
-          if (np === null) this.find("0.8:G7", "miyo needs a noun phrase after it", [v]);
+          if (np === null && being !== void 0 && (clause.subject !== null || formula)) ;
+          else if (np === null) this.find("0.8:G7", "miyo needs a noun phrase after it", [v]);
           else {
             clause.object = np;
             this.roleSpan(np.start, np.end, "OBJECT");
           }
+        } else if (being !== void 0 && !ctx.gap && // a place or time word as the subject keeps its own diagnosis (2.5:G93)
+        clause.subject?.headKind !== "correlative" && being.copulas_needing_a_predicate.includes(w) && (this.atEnd() || this.isPunct(this.i, ","))) {
+          this.find(
+            being.ruling,
+            `${w} needs a predicate; bare being is ${being.word} (… ${being.word})`,
+            [v],
+            "error",
+            being.word
+          );
         } else {
           this.parsePredicate(clause, v);
         }
@@ -1035,13 +1241,16 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
             this.parseObject(clause, ctx);
           }
         } else if (pp !== null) {
-          this.find(
-            "2.5:G128",
-            `a ${this.w(v)} phrase as the predicate needs ke or ka (SUBJECT ke ${this.w(v)} …)`,
-            [v],
-            "error",
-            `ke ${this.w(v)}`
-          );
+          const ac = this.ix.source.rules.acclamation;
+          const acclaimed = ac !== void 0 && this.w(v) === ac.preposition && this.acclamationEnds(ac.mark);
+          if (!acclaimed)
+            this.find(
+              "2.5:G128",
+              `a ${this.w(v)} phrase as the predicate needs ke or ka (SUBJECT ke ${this.w(v)} …)`,
+              [v],
+              "error",
+              `ke ${this.w(v)}`
+            );
           this.roleSpan(pp.start, pp.end, "PREDICATE");
           clause.predicate = {
             kind: "pp",
@@ -1165,6 +1374,12 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       this.parseAdjuncts(clause);
       this.parseClosing(clause);
       clause.end = this.i;
+    }
+    /** The sentence ends here with the mark, or after a comma-set iya vocative (3.0:G137). */
+    acclamationEnds(mark) {
+      const last = [...this.t].reverse().find((t) => t.kind === "punct")?.text ?? "";
+      if (!last.includes(mark)) return false;
+      return this.onlyEndPunct() || this.isPunct(this.i, ",") && this.is(this.i + 1, "vocative");
     }
     /** A verb starts here (so the word is not a subject): ne + verb, or a verb with no noun reading. */
     verbStartsHere() {
@@ -1831,7 +2046,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       const mute = this.findings.length;
       const roles = new Map(this.roles);
       let ok = false;
-      if (this.predicateStart(k)) ok = true;
+      if (this.predicateStart(k) || this.formulaAt(k)) ok = true;
       else if (this.npStart(k)) {
         const np = this.parseNP({ noRelative: true });
         ok = np !== null && (this.predicateStart(this.i) || np.headKind !== "adj" && this.adjish(this.i));
@@ -1942,6 +2157,29 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
           this.role(k, "LINKER");
           main.linker = k;
           this.i += 1;
+          continue;
+        }
+        if (this.is(k, "vocative")) {
+          const voc = this.parseIyaVocative();
+          if (voc !== null) main.address = [...main.address ?? [], voc];
+          if (this.isPunct(this.i, ",")) {
+            this.role(this.i, "PUNCT");
+            this.i += 1;
+          }
+          continue;
+        }
+        if (this.distributiveAt(k)) {
+          this.roleSpan(k, k + 3, "FRAME");
+          main.frame.push(k);
+          this.i = k + 3;
+          if (this.isPunct(this.i, ",")) this.i += 1;
+          else
+            this.find(
+              "2.5:G127",
+              `a FRAME (${this.w(k)} krotiapo ${this.w(k)}) is set off by a comma`,
+              [k],
+              "warn"
+            );
           continue;
         }
         if ((this.is(k, "interjection") || this.is(k, "discourse")) && (this.isPunct(k + 1, ",") || this.isPunct(k + 1, "…") || this.isPunct(k + 1, "...") || this.isPunct(k + 1, "!"))) {
@@ -2130,6 +2368,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }
     /** After the clause: subordinate and coordinate clauses, a vocative, a quotation. */
     parseAfter(main) {
+      let apposed = false;
       for (let guard = 0; guard < 24 && this.i < this.t.length; guard++) {
         const k = this.i;
         const w = this.w(k);
@@ -2140,14 +2379,29 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
         if (this.isPunct(k, ",") || this.isPunct(k, ";") || this.isPunct(k, "—") || this.isPunct(k, "–")) {
           this.role(k, "PUNCT");
           const n = k + 1;
+          if (this.is(n, "vocative")) {
+            this.i = n;
+            const voc = this.parseIyaVocative();
+            if (voc !== null && this.onlyEndPunct()) main.vocative = voc;
+            else if (voc !== null) main.address = [...main.address ?? [], voc];
+            continue;
+          }
           if (this.npStart(n)) {
             const save = this.i;
             this.i = n;
             const mark = this.findings.length;
             const np = this.parseNP();
             if (np !== null && (this.onlyEndPunct() || this.isPunct(this.i, ":") && this.onlyEndPunct(this.i + 1))) {
-              main.vocative = np;
-              this.roleSpan(np.start, np.end, "VOCATIVE");
+              if (apposed) this.roleSpan(np.start, np.end, this.roles.get(k - 1)?.role ?? "OBJECT");
+              else {
+                main.vocative = np;
+                this.roleSpan(np.start, np.end, "VOCATIVE");
+              }
+              continue;
+            }
+            if (np !== null && this.ix.source.rules.apposition !== void 0 && this.isPunct(this.i, ",") && (this.nounish(k - 1) || this.w(k - 1) === "sela") && !this.clauseAhead(n)) {
+              this.roleSpan(np.start, np.end, this.roles.get(k - 1)?.role ?? "OBJECT");
+              apposed = true;
               continue;
             }
             this.findings.length = mark;
@@ -2275,7 +2529,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
           this.clauseNo -= 1;
           continue;
         }
-        if (this.isWord(k) && (this.npStart(k) || this.predicateStart(k)) && this.clauseAhead(k) && (main.predKind !== "none" || this.isPunct(k - 1))) {
+        if (this.isWord(k) && (this.npStart(k) || this.predicateStart(k) || this.formulaAt(k)) && this.clauseAhead(k) && (main.predKind !== "none" || this.isPunct(k - 1))) {
           const prev = this.t[k - 1];
           if (prev?.kind !== "punct")
             this.find(
@@ -2290,6 +2544,19 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
           main.subordinates.push(c);
           this.clauseNo -= 1;
           continue;
+        }
+        if (this.isWord(k) && this.isPunct(k - 1, ",") && this.ix.source.rules.apposition !== void 0 && this.npStart(k) && !this.clauseAhead(k)) {
+          const save = this.i;
+          const mark = this.findings.length;
+          const np = this.parseNP();
+          if (np !== null && (this.isPunct(this.i, ",") || this.onlyEndPunct())) {
+            this.roleSpan(np.start, np.end, this.roles.get(k - 2)?.role ?? "OBJECT");
+            apposed = true;
+            continue;
+          }
+          this.findings.length = mark;
+          this.i = save;
+          for (let x = save; x < this.t.length; x++) this.roles.delete(x);
         }
         if (this.isWord(k)) {
           const run = [];
@@ -2879,20 +3146,46 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
           add("1.0:G22", `${w(k)} is an attitude word: it closes its clause`, [k]);
       }
       const hasFisa = words.some((x) => w(x.k) === "fisa");
-      if (main !== void 0 && main.subject === null && main.kiFront === null && !main.ops.some((o) => o.slot === "TENSE") && main.predKind !== "none" && main.predKind !== "existential") {
+      const allowed = p.command.operators;
+      if (main !== void 0 && main.subject === null && main.kiFront === null && (allowed !== void 0 || !main.ops.some((o) => o.slot === "TENSE")) && main.predKind !== "none" && main.predKind !== "existential") {
         const hortative = words.some((x) => w(x.k) === p.command.hortative);
         if (last.includes("!") || hasFisa || hortative) {
           type = "command";
-          const extra = main.ops.filter((o) => o.slot !== "NEGATION");
-          if (extra.length > 0)
-            add(
-              "I-42",
-              "which operators a command may carry is not ruled yet",
-              extra.map((o) => o.at),
-              "unruled"
+          if (allowed !== void 0) {
+            const never = main.ops.filter((o) => allowed.never.includes(o.slot));
+            if (never.length > 0)
+              add(
+                allowed.ruling,
+                `a command carries no tense, modal or evidential: ${never.map((o) => w(o.at)).join(" ")}`,
+                never.map((o) => o.at)
+              );
+            const other = main.ops.filter(
+              (o) => !allowed.never.includes(o.slot) && !allowed.allowed_words.includes(w(o.at))
             );
-          if (hortative && main.frame.length > 0)
-            add("I-42", "whether yava stands after a FRAME is not ruled yet", main.frame, "unruled");
+            if (other.length > 0)
+              add(
+                "I-42",
+                `whether a command may carry ${other.map((o) => w(o.at)).join(" ")} is not ruled: 3.0:G135 names ne, reve and loki`,
+                other.map((o) => o.at),
+                "unruled"
+              );
+          } else {
+            const extra = main.ops.filter((o) => o.slot !== "NEGATION");
+            if (extra.length > 0)
+              add(
+                "I-42",
+                "which operators a command may carry is not ruled yet",
+                extra.map((o) => o.at),
+                "unruled"
+              );
+            if (hortative && main.frame.length > 0)
+              add(
+                "I-42",
+                "whether yava stands after a FRAME is not ruled yet",
+                main.frame,
+                "unruled"
+              );
+          }
         }
       }
       if (words.some((x) => w(x.k) === "pifu")) type = type === "question" ? type : "wish";

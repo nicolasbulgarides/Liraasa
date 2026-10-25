@@ -403,10 +403,16 @@ describe('the 2.3 → 2.5 diff lesson', () => {
       lexicon: JSON.parse(readFileSync('data/lexicon/liraasa_2_3.json', 'utf8')) as RawLexicon,
       corpus: [],
     });
+    // 2.5 is frozen as 3.0's baseline: built here from its own file
+    const at25 = buildLearnSource({
+      ...input,
+      lexicon: JSON.parse(readFileSync('data/lexicon/liraasa_2_5.json', 'utf8')) as RawLexicon,
+      corpus: [],
+    });
     const d = diffSnapshots(
       snapshotEdition(at23.data),
-      snapshotEdition(source.data),
-      source.replacementFor,
+      snapshotEdition(at25.data),
+      at25.replacementFor,
     );
     expect([d.from, d.to]).toEqual(['2.3', '2.5']);
     expect(d.renamed).toEqual([]);
@@ -429,6 +435,53 @@ describe('the 2.3 → 2.5 diff lesson', () => {
         .filter((x) => x.ruling_id !== null)
         .map((x) => `rule:${String(x.ruling_id)}`)
         .sort(),
+    );
+  });
+});
+
+describe('the 2.5 → 3.0 diff lesson', () => {
+  it('ACCEPTANCE: additions only: no word renamed or removed; every 3.0 word, restored form and ruling', () => {
+    const at25 = buildLearnSource({
+      ...input,
+      lexicon: JSON.parse(readFileSync('data/lexicon/liraasa_2_5.json', 'utf8')) as RawLexicon,
+      corpus: [],
+    });
+    const d = diffSnapshots(
+      snapshotEdition(at25.data),
+      snapshotEdition(source.data),
+      source.replacementFor,
+    );
+    const patch = JSON.parse(readFileSync('archive/patch_3_0/liraasa_3_0_patch.json', 'utf8')) as {
+      roots_add: unknown[];
+      compounds_add: unknown[];
+      function_words_add: unknown[];
+      restored_forms_add: { headword: string }[];
+      rulings_add: { id: string }[];
+    };
+    expect([d.from, d.to]).toEqual(['2.5', '3.0']);
+    expect(d.renamed).toEqual([]);
+    expect(d.removed).toEqual([]);
+    // the four compounds 2.5 already had as attested image compounds keep their ids: reglossed, not added
+    const lexicalised = ['mernolira', 'velulira', 'velurinba', 'velunulu'];
+    expect(d.added).toHaveLength(
+      patch.roots_add.length +
+        patch.compounds_add.length -
+        lexicalised.length +
+        patch.function_words_add.length,
+    );
+    const reglossed = d.reglossed.map((r) => (r as unknown as { spelling: string }).spelling);
+    expect(reglossed.sort()).toEqual(
+      [
+        ...new Set([
+          ...patch.restored_forms_add.map((r) => r.headword),
+          ...lexicalised,
+          'miyo', // 3.0:G132
+          'sela', // 3.0:G134
+        ]),
+      ].sort(),
+    );
+    expect(d.rulesAdded.map((r) => r.id).sort()).toEqual(
+      patch.rulings_add.map((r) => `rule:${r.id}`).sort(),
     );
   });
 });

@@ -1,0 +1,5157 @@
+{
+ "id": "2026-10-25-lexicon-3-0",
+ "edition": "3.0",
+ "created": "2026-10-25T12:00:00Z",
+ "author": "nicolas",
+ "summary": "Liraasa 3.0, \"Devotion, Music and Measure\" (ADR-0021), from the author's 3.0 patch. PROPOSED: PROPOSED: every entry requires the author's ratification before it becomes canon. Additions only: rulings 3.0:G129-G141; the vocative iya; 15 roots and 112 compounds; 17 listed derivations and 1 lexicalised diminutive; 33 restored forms on 2.5 headwords; the clause template, its edges and the miyo, sela and gagu rows follow the rulings. No 2.5 spelling or ruling changes. mernolira, velulira, velurinba, velunulu were already 2.5 words, attested image compounds: each comes back as a headword with its id and takes the patch's meaning, its 2.5 reading archived (for the author's review).",
+ "rulings": [
+  {
+   "id": "G129",
+   "topic": "The vocative particle iya",
+   "ruling": "iya + noun phrase is a vocative: a direct address. It opens a sentence and is set off by a comma, stands alone as an invocation, or follows a final ki after a comma (2.5:G89). The noun phrase may be a name, a title, an epithet, a pronoun (taivo, taivori) or an owned phrase (maivo de amor). A vocative never changes the grammar of the clause it addresses. In everyday speech a bare name set off by commas remains a vocative (1.2:G31); in prayer, invocation and litany iya is expected, and it is required wherever a comma-set noun phrase could be read as an apposition (3.0:G130).",
+   "refines": [
+    "2.5:G89",
+    "1.2:G31"
+   ],
+   "examples": [
+    [
+     "Iya Deviasa, lenila maivo!",
+     "O Great Goddess, hear me!"
+    ],
+    [
+     "Iya li mare de li lumi, maivo lirala vobi taivo.",
+     "O mother of light, I sing for you."
+    ],
+    [
+     "Taivo viki pagopa ligo maivo ki, iya maivo de amor?",
+     "Would you come near me, O my love?"
+    ],
+    [
+     "Iya Lumimare!",
+     "O Mother of Light!"
+    ]
+   ],
+   "examples_ungrammatical": [
+    [
+     "Iya, Deviasa, lenila maivo!",
+     "iya is not followed by a comma: it belongs to its noun phrase"
+    ]
+   ],
+   "settles_open_questions": [
+    "A vocative particle for verse."
+   ],
+   "notes": "The hymn and every prayer genre address the divine; 2.5 had no vocative particle (open question).",
+   "status": "proposed"
+  },
+  {
+   "id": "G130",
+   "topic": "Apposition and epithets",
+   "ruling": "A noun phrase may be followed by a second noun phrase, set off by commas, that renames it: an apposition. The apposed phrase keeps its own determiner, takes no copula, and is closed by a comma when the clause continues. Each phrase settles its own de-ownership: an apposition starts a new phrase, so it never joins a de-chain (2.5:G96). Several appositions in a row form a litany. A relative clause (raho) may end an apposition.",
+   "refines": [
+    "2.5:G96"
+   ],
+   "examples": [
+    [
+     "Li mareasa de li vemiasa, li una-ne lumi raho po kronobioka li veluri, po ke lavisan.",
+     "The mother of the cosmos, the first light who gave birth to the stars, was glad."
+    ],
+    [
+     "Deviasa, li mare de li veluri, lirala.",
+     "The Great Goddess, the mother of the stars, sings."
+    ],
+    [
+     "li lumi, li lumi de li veluri",
+     "the light, the light of the stars"
+    ],
+    [
+     "Iya Deviasa, Velumare, Lumimare, Liramare!",
+     "O Great Goddess, Mother of the Stars, Mother of Light, Mother of Song!"
+    ]
+   ],
+   "examples_ungrammatical": [
+    [
+     "Deviasa li mare de li veluri lirala.",
+     "an apposition must be set off by commas"
+    ]
+   ],
+   "notes": "Hymn line 11 (‘The cosmic mother, the first light who birthed stars, was pleased …’) had to be split into two statements; epithets and litanies depend on apposition.",
+   "status": "proposed"
+  },
+  {
+   "id": "G131",
+   "topic": "Divine names and titles",
+   "ruling": "An ascended noun or title compound used as a name of the Goddess is capitalized and takes no article (Deviasa, Lumiasa, Mareasa, Velumare). Used as a name, it owns like a personal name when it stands before de (1.2:G27): Deviasa de lira is the Great Goddess’s song. An epithet that describes her keeps its article and stays lower-case: li mare de li lumi, the mother of light. Writing a descriptive epithet as a name therefore changes its meaning.",
+   "refines": [
+    "1.2:G27"
+   ],
+   "examples": [
+    [
+     "Deviasa de lira",
+     "the Great Goddess’s song (a name owns)"
+    ],
+    [
+     "li mareasa de li lumi",
+     "the mother of light (an epithet: the light ‘owns’ the relation)"
+    ],
+    [
+     "Lumimare lirala.",
+     "The Mother of Light sings."
+    ]
+   ],
+   "examples_ungrammatical": [
+    [
+     "Mareasa de li lumi (meaning ‘the mother of light’)",
+     "as a name, Mareasa owns: this reads ‘the Mother’s light’; write li mareasa de li lumi"
+    ]
+   ],
+   "notes": "Titles are central to devotion, but 2.5 lets a name before de own; a capitalized ‘Mareasa de li lumi’ would silently mean ‘the Mother’s light’.",
+   "status": "proposed"
+  },
+  {
+   "id": "G132",
+   "topic": "Absolute being: SUBJECT + miyo",
+   "ruling": "miyo with a subject before it and no noun phrase after it asserts that the subject exists: absolute being. It takes tense, negation and operators like any verb. miyo + noun phrase with no subject keeps its 2.5 meaning, ‘there is’. A copula (ke, ka) still always needs a predicate.",
+   "examples": [
+    [
+     "Saivo miyo.",
+     "She is. (She exists.)"
+    ],
+    [
+     "Maivo miyo.",
+     "I am."
+    ],
+    [
+     "Saivo po miyo, saivo miyo, saivo futu miyo.",
+     "She was, she is, she will be."
+    ],
+    [
+     "Kroti li pagoasa, Deviasa po miyo.",
+     "Before the universe, the Great Goddess was."
+    ],
+    [
+     "Miyo baba sora en li nimu.",
+     "There is a friend in the home. (2.5 meaning, unchanged)"
+    ]
+   ],
+   "examples_ungrammatical": [
+    [
+     "Saivo po ke.",
+     "a copula needs a predicate; use Saivo po miyo"
+    ]
+   ],
+   "notes": "‘She was, she is, she will be’ and ‘I am’ could not be said in 2.5; sacred languages need a statement of existence by itself.",
+   "status": "proposed"
+  },
+  {
+   "id": "G133",
+   "topic": "Fiat, blessing of existence, and the liturgical formulas",
+   "ruling": "miyo + noun phrase marked as a command (‘!’) is a fiat: ‘let there be …’. miyo + noun phrase + pifu is a wish: ‘may there be …’. Unmarked, miyo + noun phrase stays a statement (2.5:G90). Two fixed liturgical formulas are canon: ‘Ola-modo po miyo, ola-modo miyo, ola-modo futu miyo’ (so it was, so it is, so it shall be), in which ola-modo opens an existential clause without a comma; and ‘Ola-modo pifu’ (so be it; amen), which closes a prayer.",
+   "refines": [
+    "2.5:G90"
+   ],
+   "examples": [
+    [
+     "Miyo lumi!",
+     "Let there be light!"
+    ],
+    [
+     "Miyo sove en li nimu pifu.",
+     "May there be peace in the home."
+    ],
+    [
+     "Miyo lumi.",
+     "There is light."
+    ],
+    [
+     "Ola-modo po miyo, ola-modo miyo, ola-modo futu miyo.",
+     "So it was, so it is, so it shall be."
+    ],
+    [
+     "Ola-modo pifu.",
+     "So be it. (Amen.)"
+    ]
+   ],
+   "examples_ungrammatical": [
+    [
+     "Ola po ka, ola ka, ola futu ka.",
+     "a copula needs a predicate"
+    ]
+   ],
+   "notes": "Hymn line 23 had to become ‘that was true, is true, will be true’; creation myths need ‘let there be’.",
+   "status": "proposed"
+  },
+  {
+   "id": "G134",
+   "topic": "Emphatic sela",
+   "ruling": "A pronoun or noun phrase + sela in subject position, or as an apposition, is emphatic: ‘herself’, ‘itself’. In object position, PRONOUN sela stays reflexive (unchanged). sela never stands alone as a subject.",
+   "examples": [
+    [
+     "Saivo sela po lirala.",
+     "She herself sang."
+    ],
+    [
+     "Saivo po amora saivo sela.",
+     "She loved herself. (reflexive)"
+    ],
+    [
+     "Ito sela po ka li una-ne leninela.",
+     "It itself was the first listener."
+    ],
+    [
+     "Saivo de nole po ka sambasan ko li melo, ito sela.",
+     "Her name was the same as music, music itself."
+    ]
+   ],
+   "examples_ungrammatical": [
+    [
+     "Sela po lirala.",
+     "sela needs a pronoun or noun phrase before it"
+    ]
+   ],
+   "settles_open_questions": [
+    "sela: reflexive object only, or also emphatic (the maivori half stays open)."
+   ],
+   "notes": "Hymn lines 8 and 17 (‘was itself the first’, ‘music itself’) could not carry the emphasis.",
+   "status": "proposed"
+  },
+  {
+   "id": "G135",
+   "topic": "Commands, petitions and yava",
+   "ruling": "A command may carry ne, the iteration words reve and loki, and any adjuncts; it never carries tense, a modal or an evidential. A petition to the divine is a command opened by a vocative (3.0:G129), usually softened by fisa after the vocative’s comma. yava may follow a FRAME.",
+   "examples": [
+    [
+     "Iya Deviasa, fisa, ne pagopa vofa maivo!",
+     "O Great Goddess, please, do not go far from me!"
+    ],
+    [
+     "Reve lirala!",
+     "Sing again!"
+    ],
+    [
+     "Eli-krono, yava lirala!",
+     "Now, let us sing!"
+    ],
+    [
+     "Iya Lumimare, fisa, lenila maivo de lirajuba.",
+     "O Mother of Light, please hear my song-offering."
+    ]
+   ],
+   "examples_ungrammatical": [
+    [
+     "Po lirala!",
+     "a command carries no tense"
+    ],
+    [
+     "Povi lirala!",
+     "a command carries no modal"
+    ]
+   ],
+   "settles_open_questions": [
+    "Which operators a command may carry, and whether yava stands after a FRAME or always first."
+   ],
+   "notes": "Prayer is built on petitions; 2.5 left open which operators a command may carry and where yava may stand.",
+   "status": "proposed"
+  },
+  {
+   "id": "G136",
+   "topic": "Authorship: gagu after a work",
+   "ruling": "After a noun naming a made work (lira, lavbulira, lirasarbi, telne, sarbiasa …), gagu + noun phrase names its maker, without a passive verb. Elsewhere gagu remains the agent of gome (2.5:G110).",
+   "refines": [
+    "2.5:G110"
+   ],
+   "examples": [
+    [
+     "li lira gagu Peta",
+     "the song by Peta"
+    ],
+    [
+     "Liraasa, li lira de li una-ne veluri gagu li una-ne mareasa",
+     "Liraasa, the song of the first stars, by the first mother"
+    ]
+   ],
+   "examples_ungrammatical": [
+    [
+     "Peta gagu li lira",
+     "gagu follows the work, never precedes it"
+    ]
+   ],
+   "notes": "Hymn line 24 (‘by the first mother’) had to use da, ‘from’.",
+   "status": "proposed"
+  },
+  {
+   "id": "G137",
+   "topic": "Acclamations",
+   "ruling": "A verbless acclamation NP ala NP! (‘NP to NP!’) is grammatical as a liturgical fragment: glory, praise or thanks offered to someone. It may be followed by a vocative.",
+   "examples": [
+    [
+     "Lumisirmo ala Deviasa!",
+     "Glory to the Great Goddess!"
+    ],
+    [
+     "Benaseno ala taivo, iya Lumimare!",
+     "Praise to you, O Mother of Light!"
+    ],
+    [
+     "Lorejuba ala taivo, iya Velumare.",
+     "Thanks to you, O Mother of the Stars."
+    ]
+   ],
+   "notes": "Doxologies and praise lines (‘Glory to …’) had no form.",
+   "status": "proposed"
+  },
+  {
+   "id": "G138",
+   "topic": "Divine pronouns (orthography)",
+   "ruling": "Taivo, Saivo and their forms may be capitalized mid-sentence when they refer to the Goddess. This is an optional convention of written devotion and has no grammatical effect.",
+   "examples": [
+    [
+     "Maivo amora Taivo.",
+     "I love You."
+    ],
+    [
+     "Saivo miyo, ata Saivo de lumi lumila.",
+     "She is, and Her light shines."
+    ]
+   ],
+   "status": "proposed"
+  },
+  {
+   "id": "G139",
+   "topic": "For ever: en rinbakrono",
+   "ruling": "The new noun rinbakrono (eternity) is a time noun: as ‘when’ it takes en (2.5:G103). en rinbakrono means ‘for ever; in eternity’. toda-krono (always) is unchanged. Durations in general (‘for two days’) remain an open question.",
+   "refines": [
+    "2.5:G103"
+   ],
+   "examples": [
+    [
+     "Saivo futu lirala en rinbakrono.",
+     "She will sing for ever."
+    ],
+    [
+     "Maivo amora taivo toda-krono.",
+     "I love you always."
+    ]
+   ],
+   "status": "proposed"
+  },
+  {
+   "id": "G140",
+   "topic": "Distributive succession: X krotiapo X",
+   "ruling": "A bare noun or number repeated around krotiapo (‘X after X’) is a distributive adjunct or FRAME meaning ‘one X after another’: una krotiapo una, one by one; velu krotiapo velu, star after star. It extends kroti/krotiapo + a bare noun (2.3:G79).",
+   "refines": [
+    "2.3:G79"
+   ],
+   "examples": [
+    [
+     "Una krotiapo una, li veluri po hiro lirala.",
+     "One by one, the stars began to sing."
+    ],
+    [
+     "Velu krotiapo velu, li navu po loya lumisan.",
+     "Star after star, the sky became bright."
+    ]
+   ],
+   "notes": "Hymn line 12 (‘One by one, star by star’) had no form.",
+   "status": "proposed"
+  },
+  {
+   "id": "G141",
+   "topic": "Register and restraint (style, non-normative)",
+   "ruling": "Ascended forms are most powerful against ordinary ones. Keep ordinary forms for the human and the near; reserve ascended forms for what is truly divine; let a change of register mark a change of nearness (a mortal growing toward the divine, or the Goddess stooping to comfort). This is guidance for composition, not grammar.",
+   "examples": [
+    [
+     "Maivo ke nemesan. Taivo ka loreasa.",
+     "I am sorrowful. You are a heart larger than sorrow."
+    ]
+   ],
+   "status": "proposed"
+  }
+ ],
+ "headwords": [
+  {
+   "id": "lx_lirvi_1855",
+   "root": "lirvi",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "note; a single musical tone",
+    "ascended": "the keynote; the tone to which all music returns",
+    "verb": "to sound a note",
+    "adjective": "tonal; sounding as a note"
+   },
+   "register": "everyday",
+   "domain": "Music & story",
+   "english_synonyms": [
+    "note",
+    "a single musical tone",
+    "the keynote",
+    "the tone to which all music returns",
+    "to sound a note",
+    "tonal",
+    "sounding as a note"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification."
+  },
+  {
+   "id": "lx_vinye_1856",
+   "root": "vinye",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "lute; veena; a long-necked plucked string instrument",
+    "ascended": "the Goddess’s veena; the lute on which creation is played",
+    "verb": "to play the lute or veena"
+   },
+   "register": "everyday",
+   "domain": "Music & story",
+   "english_synonyms": [
+    "lute",
+    "veena",
+    "a long-necked plucked string instrument",
+    "the Goddess’s veena",
+    "the lute on which creation is played",
+    "to play the lute or veena"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification."
+  },
+  {
+   "id": "lx_dobo_1857",
+   "root": "dobo",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "beat; the pulse of music; one stroke of time",
+    "verb": "to keep the beat",
+    "adjective": "on the beat; in time"
+   },
+   "register": "everyday",
+   "domain": "Music & story",
+   "english_synonyms": [
+    "beat",
+    "the pulse of music",
+    "one stroke of time",
+    "to keep the beat",
+    "on the beat",
+    "in time"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification."
+  },
+  {
+   "id": "lx_pice_1858",
+   "root": "pice",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "a pluck; one plucked sounding of a string",
+    "verb": "to pluck (a string)"
+   },
+   "register": "everyday",
+   "domain": "Music & story",
+   "english_synonyms": [
+    "a pluck",
+    "one plucked sounding of a string",
+    "to pluck (a string)"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification."
+  },
+  {
+   "id": "lx_monve_1859",
+   "root": "monve",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "drone; a tone held beneath a melody",
+    "ascended": "the eternal drone; the hum beneath all creation",
+    "verb": "to drone; to hold a tone"
+   },
+   "register": "everyday",
+   "domain": "Music & story",
+   "english_synonyms": [
+    "drone",
+    "a tone held beneath a melody",
+    "the eternal drone",
+    "the hum beneath all creation",
+    "to drone",
+    "to hold a tone"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification."
+  },
+  {
+   "id": "lx_mumbe_1860",
+   "root": "mumbe",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "the sacred syllable; the hum sung before prayer",
+    "verb": "to intone the sacred syllable"
+   },
+   "register": "everyday",
+   "domain": "Devotional",
+   "english_synonyms": [
+    "the sacred syllable",
+    "the hum sung before prayer",
+    "to intone the sacred syllable"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification."
+  },
+  {
+   "id": "lx_rumbu_1861",
+   "root": "rumbu",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "conch; a shell sounded to call to worship",
+    "verb": "to sound the conch"
+   },
+   "register": "everyday",
+   "domain": "Devotional",
+   "english_synonyms": [
+    "conch",
+    "a shell sounded to call to worship",
+    "to sound the conch"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification."
+  },
+  {
+   "id": "lx_dipo_1862",
+   "root": "dipo",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "lamp; a small oil lamp kept in devotion",
+    "ascended": "the lamp that never goes out",
+    "verb": "to light a lamp in devotion",
+    "adjective": "lamplit"
+   },
+   "register": "everyday",
+   "domain": "Devotional",
+   "english_synonyms": [
+    "lamp",
+    "a small oil lamp kept in devotion",
+    "the lamp that never goes out",
+    "to light a lamp in devotion",
+    "lamplit"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification."
+  },
+  {
+   "id": "lx_lilya_1863",
+   "root": "lilya",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "ornament; adornment; (music) a grace note",
+    "verb": "to adorn",
+    "adjective": "adorned; ornamented",
+    "negative_adjective": "unadorned; plain"
+   },
+   "register": "everyday",
+   "domain": "Devotional",
+   "english_synonyms": [
+    "ornament",
+    "adornment",
+    "(music) a grace note",
+    "to adorn",
+    "adorned",
+    "ornamented",
+    "unadorned",
+    "plain"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification."
+  },
+  {
+   "id": "lx_velni_1864",
+   "root": "velni",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "essence; the inmost nature of a thing",
+    "ascended": "the divine essence; the essence of the Goddess",
+    "adjective": "essential",
+    "negative": "hollowness; the lack of an essence",
+    "negative_adjective": "hollow; inessential"
+   },
+   "register": "everyday",
+   "domain": "Devotional",
+   "english_synonyms": [
+    "essence",
+    "the inmost nature of a thing",
+    "the divine essence",
+    "the essence of the Goddess",
+    "essential",
+    "hollowness",
+    "the lack of an essence",
+    "hollow",
+    "inessential"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification."
+  },
+  {
+   "id": "lx_nelmo_1865",
+   "root": "nelmo",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "symbol; a sign that stands for more than itself",
+    "ascended": "sacrament; a sign that holds what it signifies",
+    "verb": "to symbolize",
+    "adjective": "symbolic"
+   },
+   "register": "everyday",
+   "domain": "Mind & philosophy",
+   "english_synonyms": [
+    "symbol",
+    "a sign that stands for more than itself",
+    "sacrament",
+    "a sign that holds what it signifies",
+    "to symbolize",
+    "symbolic"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification."
+  },
+  {
+   "id": "lx_lenda_1866",
+   "root": "lenda",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "line; stroke",
+    "verb": "to draw a line",
+    "adjective": "linear; straight"
+   },
+   "register": "everyday",
+   "domain": "Space & orientation",
+   "english_synonyms": [
+    "line",
+    "stroke",
+    "to draw a line",
+    "linear",
+    "straight"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification."
+  },
+  {
+   "id": "lx_gaki_1867",
+   "root": "gaki",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "angle; corner",
+    "adjective": "angular"
+   },
+   "register": "everyday",
+   "domain": "Space & orientation",
+   "english_synonyms": [
+    "angle",
+    "corner",
+    "angular"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification."
+  },
+  {
+   "id": "lx_pidi_1868",
+   "root": "pidi",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "tip; the very end or point of a thing",
+    "adjective": "pointed; tipped"
+   },
+   "register": "everyday",
+   "domain": "Space & orientation",
+   "english_synonyms": [
+    "tip",
+    "the very end or point of a thing",
+    "pointed",
+    "tipped"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification."
+  },
+  {
+   "id": "lx_tiku_1869",
+   "root": "tiku",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "precision; exactness",
+    "verb": "to make exact; to calibrate",
+    "adjective": "precise; exact",
+    "negative": "imprecision",
+    "negative_adjective": "imprecise; approximate"
+   },
+   "register": "everyday",
+   "domain": "Time, quantity & work",
+   "english_synonyms": [
+    "precision",
+    "exactness",
+    "to make exact",
+    "to calibrate",
+    "precise",
+    "exact",
+    "imprecision",
+    "imprecise",
+    "approximate"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification."
+  },
+  {
+   "id": "lx_melopuku_1870",
+   "root": "melopuku",
+   "type": "Compound",
+   "components": [
+    "melo",
+    "puku"
+   ],
+   "glosses": {
+    "root": "cadence; the close of a musical phrase",
+    "verb": "to bring a phrase to rest"
+   },
+   "register": "everyday",
+   "domain": "Music & story",
+   "english_synonyms": [
+    "cadence",
+    "the close of a musical phrase",
+    "to bring a phrase to rest"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: melo + puku."
+  },
+  {
+   "id": "lx_sonbunulu_1871",
+   "root": "sonbunulu",
+   "type": "Compound",
+   "components": [
+    "sonbu",
+    "nulu"
+   ],
+   "glosses": {
+    "root": "scale; a path of tones"
+   },
+   "register": "everyday",
+   "domain": "Music & story",
+   "english_synonyms": [
+    "scale",
+    "a path of tones"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: sonbu + nulu. sonbu is an image-compound head but not a modifier: ordinary compound"
+  },
+  {
+   "id": "lx_sonbulekta_1872",
+   "root": "sonbulekta",
+   "type": "Compound",
+   "components": [
+    "sonbu",
+    "lekta"
+   ],
+   "glosses": {
+    "root": "chord; tones sounded together",
+    "verb": "to sound a chord"
+   },
+   "register": "everyday",
+   "domain": "Music & story",
+   "english_synonyms": [
+    "chord",
+    "tones sounded together",
+    "to sound a chord"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: sonbu + lekta."
+  },
+  {
+   "id": "lx_sonbusalru_1873",
+   "root": "sonbusalru",
+   "type": "Compound",
+   "components": [
+    "sonbu",
+    "salru"
+   ],
+   "glosses": {
+    "root": "pitch; the height of a sound",
+    "adjective": "high-pitched",
+    "negative_adjective": "low-pitched"
+   },
+   "register": "everyday",
+   "domain": "Music & story",
+   "english_synonyms": [
+    "pitch",
+    "the height of a sound",
+    "high-pitched",
+    "low-pitched"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: sonbu + salru."
+  },
+  {
+   "id": "lx_sonbumelli_1874",
+   "root": "sonbumelli",
+   "type": "Compound",
+   "components": [
+    "sonbu",
+    "melli"
+   ],
+   "glosses": {
+    "root": "loudness; the volume of a sound"
+   },
+   "register": "everyday",
+   "domain": "Music & story",
+   "english_synonyms": [
+    "loudness",
+    "the volume of a sound"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: sonbu + melli."
+  },
+  {
+   "id": "lx_kronovizu_1875",
+   "root": "kronovizu",
+   "type": "Compound",
+   "components": [
+    "krono",
+    "vizu"
+   ],
+   "glosses": {
+    "root": "tempo; the speed of music"
+   },
+   "register": "everyday",
+   "domain": "Music & story",
+   "english_synonyms": [
+    "tempo",
+    "the speed of music"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: krono + vizu."
+  },
+  {
+   "id": "lx_melopatu_1876",
+   "root": "melopatu",
+   "type": "Compound",
+   "components": [
+    "melo",
+    "patu"
+   ],
+   "glosses": {
+    "root": "bar; a measure of music"
+   },
+   "register": "everyday",
+   "domain": "Music & story",
+   "english_synonyms": [
+    "bar",
+    "a measure of music"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: melo + patu."
+  },
+  {
+   "id": "lx_melolekta_1877",
+   "root": "melolekta",
+   "type": "Compound",
+   "components": [
+    "melo",
+    "lekta"
+   ],
+   "glosses": {
+    "root": "concert; a gathering to hear music"
+   },
+   "register": "everyday",
+   "domain": "Music & story",
+   "english_synonyms": [
+    "concert",
+    "a gathering to hear music"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: melo + lekta."
+  },
+  {
+   "id": "lx_melofarla_1878",
+   "root": "melofarla",
+   "type": "Compound",
+   "components": [
+    "melo",
+    "farla"
+   ],
+   "glosses": {
+    "root": "musical composition; a work of music",
+    "verb": "to compose music"
+   },
+   "register": "everyday",
+   "domain": "Music & story",
+   "english_synonyms": [
+    "musical composition",
+    "a work of music",
+    "to compose music"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: melo + farla."
+  },
+  {
+   "id": "lx_lavbumelo_1879",
+   "root": "lavbumelo",
+   "type": "Compound",
+   "components": [
+    "lavbu",
+    "melo"
+   ],
+   "glosses": {
+    "root": "sacred music; music made as prayer"
+   },
+   "register": "everyday",
+   "domain": "Music & story",
+   "english_synonyms": [
+    "sacred music",
+    "music made as prayer"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: lavbu + melo."
+  },
+  {
+   "id": "lx_sirmolira_1880",
+   "root": "sirmolira",
+   "type": "Compound",
+   "components": [
+    "sirmo",
+    "lira"
+   ],
+   "glosses": {
+    "root": "doxology; a hymn of glory"
+   },
+   "register": "everyday",
+   "domain": "Music & story",
+   "english_synonyms": [
+    "doxology",
+    "a hymn of glory"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: sirmo + lira."
+  },
+  {
+   "id": "lx_jurevilira_1881",
+   "root": "jurevilira",
+   "type": "Compound",
+   "components": [
+    "jurevi",
+    "lira"
+   ],
+   "glosses": {
+    "root": "hymn of thanksgiving"
+   },
+   "register": "everyday",
+   "domain": "Music & story",
+   "english_synonyms": [
+    "hymn of thanksgiving"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: jurevi + lira. Also a modifier + head of the image-compound pattern (2.0:G40), lexicalised with the meanings listed. image compound (grateful + melody), lexicalized"
+  },
+  {
+   "id": "lx_nolelira_1882",
+   "root": "nolelira",
+   "type": "Compound",
+   "components": [
+    "nole",
+    "lira"
+   ],
+   "glosses": {
+    "root": "a sung litany; a song of holy names"
+   },
+   "register": "everyday",
+   "domain": "Music & story",
+   "english_synonyms": [
+    "a sung litany",
+    "a song of holy names"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: nole + lira."
+  },
+  {
+   "id": "lx_senolira_1883",
+   "root": "senolira",
+   "type": "Compound",
+   "components": [
+    "seno",
+    "lira"
+   ],
+   "glosses": {
+    "root": "chant; words sung on few notes",
+    "verb": "to chant"
+   },
+   "register": "everyday",
+   "domain": "Music & story",
+   "english_synonyms": [
+    "chant",
+    "words sung on few notes",
+    "to chant"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: seno + lira."
+  },
+  {
+   "id": "lx_lavburilu_1884",
+   "root": "lavburilu",
+   "type": "Compound",
+   "components": [
+    "lavbu",
+    "rilu"
+   ],
+   "glosses": {
+    "root": "sacred dance",
+    "verb": "to dance in worship"
+   },
+   "register": "everyday",
+   "domain": "Music & story",
+   "english_synonyms": [
+    "sacred dance",
+    "to dance in worship"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: lavbu + rilu."
+  },
+  {
+   "id": "lx_pebudumdo_1885",
+   "root": "pebudumdo",
+   "type": "Compound",
+   "components": [
+    "pebu",
+    "dumdo"
+   ],
+   "glosses": {
+    "root": "the tapping of feet; keeping time with the feet",
+    "verb": "to tap one’s feet in time"
+   },
+   "register": "everyday",
+   "domain": "Music & story",
+   "english_synonyms": [
+    "the tapping of feet",
+    "keeping time with the feet",
+    "to tap one’s feet in time"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: pebu + dumdo."
+  },
+  {
+   "id": "lx_sonbuyeba_1886",
+   "root": "sonbuyeba",
+   "type": "Compound",
+   "components": [
+    "sonbu",
+    "yeba"
+   ],
+   "glosses": {
+    "root": "tuning; attunement",
+    "verb": "to tune; to attune",
+    "adjective": "in tune; attuned",
+    "negative_adjective": "out of tune"
+   },
+   "register": "everyday",
+   "domain": "Music & story",
+   "english_synonyms": [
+    "tuning",
+    "attunement",
+    "to tune",
+    "to attune",
+    "in tune",
+    "attuned",
+    "out of tune"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: sonbu + yeba."
+  },
+  {
+   "id": "lx_melokemye_1887",
+   "root": "melokemye",
+   "type": "Compound",
+   "components": [
+    "melo",
+    "kemye"
+   ],
+   "glosses": {
+    "root": "key (in music)"
+   },
+   "register": "everyday",
+   "domain": "Music & story",
+   "english_synonyms": [
+    "key (in music)"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: melo + kemye."
+  },
+  {
+   "id": "lx_nullolira_1888",
+   "root": "nullolira",
+   "type": "Compound",
+   "components": [
+    "nullo",
+    "lira"
+   ],
+   "glosses": {
+    "root": "nocturne; a night song"
+   },
+   "register": "everyday",
+   "domain": "Music & story",
+   "english_synonyms": [
+    "nocturne",
+    "a night song"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: nullo + lira. Also a modifier + head of the image-compound pattern (2.0:G40), lexicalised with the meanings listed. image compound, lexicalized"
+  },
+  {
+   "id": "lx_vinyelira_1889",
+   "root": "vinyelira",
+   "type": "Compound",
+   "components": [
+    "vinye",
+    "lira"
+   ],
+   "glosses": {
+    "root": "a song for the veena; a lute song"
+   },
+   "register": "everyday",
+   "domain": "Music & story",
+   "english_synonyms": [
+    "a song for the veena",
+    "a lute song"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: vinye + lira."
+  },
+  {
+   "id": "lx_rumbusonbu_1890",
+   "root": "rumbusonbu",
+   "type": "Compound",
+   "components": [
+    "rumbu",
+    "sonbu"
+   ],
+   "glosses": {
+    "root": "the call of the conch; a summons to worship"
+   },
+   "register": "everyday",
+   "domain": "Devotional",
+   "english_synonyms": [
+    "the call of the conch",
+    "a summons to worship"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: rumbu + sonbu."
+  },
+  {
+   "id": "lx_lirvinulu_1891",
+   "root": "lirvinulu",
+   "type": "Compound",
+   "components": [
+    "lirvi",
+    "nulu"
+   ],
+   "glosses": {
+    "root": "phrase; a line of notes"
+   },
+   "register": "everyday",
+   "domain": "Music & story",
+   "english_synonyms": [
+    "phrase",
+    "a line of notes"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: lirvi + nulu."
+  },
+  {
+   "id": "lx_mumbelavbu_1892",
+   "root": "mumbelavbu",
+   "type": "Compound",
+   "components": [
+    "mumbe",
+    "lavbu"
+   ],
+   "glosses": {
+    "root": "the hum that opens prayer"
+   },
+   "register": "everyday",
+   "domain": "Devotional",
+   "english_synonyms": [
+    "the hum that opens prayer"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: mumbe + lavbu."
+  },
+  {
+   "id": "lx_cunupatu_1893",
+   "root": "cunupatu",
+   "type": "Compound",
+   "components": [
+    "cunu",
+    "patu"
+   ],
+   "glosses": {
+    "root": "unit (of measure)"
+   },
+   "register": "everyday",
+   "domain": "Time, quantity & work",
+   "english_synonyms": [
+    "unit (of measure)"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: cunu + patu."
+  },
+  {
+   "id": "lx_cunumelli_1894",
+   "root": "cunumelli",
+   "type": "Compound",
+   "components": [
+    "cunu",
+    "melli"
+   ],
+   "glosses": {
+    "root": "quantity; amount"
+   },
+   "register": "everyday",
+   "domain": "Time, quantity & work",
+   "english_synonyms": [
+    "quantity",
+    "amount"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: cunu + melli."
+  },
+  {
+   "id": "lx_yanocunu_1895",
+   "root": "yanocunu",
+   "type": "Compound",
+   "components": [
+    "yano",
+    "cunu"
+   ],
+   "glosses": {
+    "root": "sum; total",
+    "verb": "to add up; to total"
+   },
+   "register": "everyday",
+   "domain": "Time, quantity & work",
+   "english_synonyms": [
+    "sum",
+    "total",
+    "to add up",
+    "to total"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: yano + cunu."
+  },
+  {
+   "id": "lx_patumiga_1896",
+   "root": "patumiga",
+   "type": "Compound",
+   "components": [
+    "patu",
+    "miga"
+   ],
+   "glosses": {
+    "root": "proportion; ratio",
+    "adjective": "proportional"
+   },
+   "register": "everyday",
+   "domain": "Time, quantity & work",
+   "english_synonyms": [
+    "proportion",
+    "ratio",
+    "proportional"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: patu + miga."
+  },
+  {
+   "id": "lx_sambalordi_1897",
+   "root": "sambalordi",
+   "type": "Compound",
+   "components": [
+    "samba",
+    "lordi"
+   ],
+   "glosses": {
+    "root": "symmetry",
+    "adjective": "symmetrical",
+    "negative": "asymmetry",
+    "negative_adjective": "asymmetrical"
+   },
+   "register": "everyday",
+   "domain": "Time, quantity & work",
+   "english_synonyms": [
+    "symmetry",
+    "symmetrical",
+    "asymmetry",
+    "asymmetrical"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: samba + lordi."
+  },
+  {
+   "id": "lx_sambabondo_1898",
+   "root": "sambabondo",
+   "type": "Compound",
+   "components": [
+    "samba",
+    "bondo"
+   ],
+   "glosses": {
+    "root": "balance; equilibrium",
+    "verb": "to balance",
+    "adjective": "balanced",
+    "negative_adjective": "unbalanced"
+   },
+   "register": "everyday",
+   "domain": "Time, quantity & work",
+   "english_synonyms": [
+    "balance",
+    "equilibrium",
+    "to balance",
+    "balanced",
+    "unbalanced"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: samba + bondo."
+  },
+  {
+   "id": "lx_mellibiti_1899",
+   "root": "mellibiti",
+   "type": "Compound",
+   "components": [
+    "melli",
+    "biti"
+   ],
+   "glosses": {
+    "root": "ruler; a measuring tool"
+   },
+   "register": "everyday",
+   "domain": "Time, quantity & work",
+   "english_synonyms": [
+    "ruler",
+    "a measuring tool"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: melli + biti."
+  },
+  {
+   "id": "lx_bondobiti_1900",
+   "root": "bondobiti",
+   "type": "Compound",
+   "components": [
+    "bondo",
+    "biti"
+   ],
+   "glosses": {
+    "root": "scales; a weighing balance"
+   },
+   "register": "everyday",
+   "domain": "Time, quantity & work",
+   "english_synonyms": [
+    "scales",
+    "a weighing balance"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: bondo + biti."
+  },
+  {
+   "id": "lx_kronomelli_1901",
+   "root": "kronomelli",
+   "type": "Compound",
+   "components": [
+    "krono",
+    "melli"
+   ],
+   "glosses": {
+    "root": "duration; length of time"
+   },
+   "register": "everyday",
+   "domain": "Time, quantity & work",
+   "english_synonyms": [
+    "duration",
+    "length of time"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: krono + melli. a noun only: it does not settle the open question of duration adverbials"
+  },
+  {
+   "id": "lx_lumimelli_1902",
+   "root": "lumimelli",
+   "type": "Compound",
+   "components": [
+    "lumi",
+    "melli"
+   ],
+   "glosses": {
+    "root": "brightness; luminance"
+   },
+   "register": "everyday",
+   "domain": "Time, quantity & work",
+   "english_synonyms": [
+    "brightness",
+    "luminance"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: lumi + melli."
+  },
+  {
+   "id": "lx_tikubiti_1903",
+   "root": "tikubiti",
+   "type": "Compound",
+   "components": [
+    "tiku",
+    "biti"
+   ],
+   "glosses": {
+    "root": "precision instrument; a gauge"
+   },
+   "register": "everyday",
+   "domain": "Time, quantity & work",
+   "english_synonyms": [
+    "precision instrument",
+    "a gauge"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: tiku + biti."
+  },
+  {
+   "id": "lx_gakimelli_1904",
+   "root": "gakimelli",
+   "type": "Compound",
+   "components": [
+    "gaki",
+    "melli"
+   ],
+   "glosses": {
+    "root": "the measure of an angle; degree"
+   },
+   "register": "everyday",
+   "domain": "Space & orientation",
+   "english_synonyms": [
+    "the measure of an angle",
+    "degree"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: gaki + melli."
+  },
+  {
+   "id": "lx_finipidi_1905",
+   "root": "finipidi",
+   "type": "Compound",
+   "components": [
+    "fini",
+    "pidi"
+   ],
+   "glosses": {
+    "root": "fingertip"
+   },
+   "register": "everyday",
+   "domain": "Space & orientation",
+   "english_synonyms": [
+    "fingertip"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: fini + pidi."
+  },
+  {
+   "id": "lx_lendanulu_1906",
+   "root": "lendanulu",
+   "type": "Compound",
+   "components": [
+    "lenda",
+    "nulu"
+   ],
+   "glosses": {
+    "root": "straight path; a ray drawn from a point"
+   },
+   "register": "everyday",
+   "domain": "Space & orientation",
+   "english_synonyms": [
+    "straight path",
+    "a ray drawn from a point"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: lenda + nulu."
+  },
+  {
+   "id": "lx_devipago_1907",
+   "root": "devipago",
+   "type": "Compound",
+   "components": [
+    "devi",
+    "pago"
+   ],
+   "glosses": {
+    "root": "shrine; a dwelling of the Goddess"
+   },
+   "register": "everyday",
+   "domain": "Devotional",
+   "english_synonyms": [
+    "shrine",
+    "a dwelling of the Goddess"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: devi + pago. words ending in pago are nouns only (2.5:G123)"
+  },
+  {
+   "id": "lx_nolelekta_1908",
+   "root": "nolelekta",
+   "type": "Compound",
+   "components": [
+    "nole",
+    "lekta"
+   ],
+   "glosses": {
+    "root": "litany; a gathering of holy names"
+   },
+   "register": "everyday",
+   "domain": "Devotional",
+   "english_synonyms": [
+    "litany",
+    "a gathering of holy names"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: nole + lekta."
+  },
+  {
+   "id": "lx_sirmonole_1909",
+   "root": "sirmonole",
+   "type": "Compound",
+   "components": [
+    "sirmo",
+    "nole"
+   ],
+   "glosses": {
+    "root": "epithet; a name of praise"
+   },
+   "register": "everyday",
+   "domain": "Devotional",
+   "english_synonyms": [
+    "epithet",
+    "a name of praise"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: sirmo + nole."
+  },
+  {
+   "id": "lx_nolevalla_1910",
+   "root": "nolevalla",
+   "type": "Compound",
+   "components": [
+    "nole",
+    "valla"
+   ],
+   "glosses": {
+    "root": "invocation; calling a holy name aloud",
+    "verb": "to invoke"
+   },
+   "register": "everyday",
+   "domain": "Devotional",
+   "english_synonyms": [
+    "invocation",
+    "calling a holy name aloud",
+    "to invoke"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: nole + valla."
+  },
+  {
+   "id": "lx_loredevo_1911",
+   "root": "loredevo",
+   "type": "Compound",
+   "components": [
+    "lore",
+    "devo"
+   ],
+   "glosses": {
+    "root": "devotion; faith held in the heart",
+    "verb": "to devote oneself",
+    "adjective": "devout"
+   },
+   "register": "everyday",
+   "domain": "Devotional",
+   "english_synonyms": [
+    "devotion",
+    "faith held in the heart",
+    "to devote oneself",
+    "devout"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: lore + devo."
+  },
+  {
+   "id": "lx_amorlavbu_1912",
+   "root": "amorlavbu",
+   "type": "Compound",
+   "components": [
+    "amor",
+    "lavbu"
+   ],
+   "glosses": {
+    "root": "adoration",
+    "verb": "to adore"
+   },
+   "register": "everyday",
+   "domain": "Devotional",
+   "english_synonyms": [
+    "adoration",
+    "to adore"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: amor + lavbu. vowel-initial: verb R + a; amor compounds are protected legacy forms"
+  },
+  {
+   "id": "lx_loremasu_1913",
+   "root": "loremasu",
+   "type": "Compound",
+   "components": [
+    "lore",
+    "masu"
+   ],
+   "glosses": {
+    "root": "supplication; the heart’s plea",
+    "verb": "to beseech"
+   },
+   "register": "everyday",
+   "domain": "Devotional",
+   "english_synonyms": [
+    "supplication",
+    "the heart’s plea",
+    "to beseech"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: lore + masu."
+  },
+  {
+   "id": "lx_meralumi_1914",
+   "root": "meralumi",
+   "type": "Compound",
+   "components": [
+    "mera",
+    "lumi"
+   ],
+   "glosses": {
+    "root": "grace; the light of mercy given freely"
+   },
+   "register": "everyday",
+   "domain": "Devotional",
+   "english_synonyms": [
+    "grace",
+    "the light of mercy given freely"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: mera + lumi. Also a modifier + head of the image-compound pattern (2.0:G40), lexicalised with the meanings listed. image compound (merciful + a light that reveals …), lexicalized; distinct from rilliasa, grace received"
+  },
+  {
+   "id": "lx_lumidonu_1915",
+   "root": "lumidonu",
+   "type": "Compound",
+   "components": [
+    "lumi",
+    "donu"
+   ],
+   "glosses": {
+    "root": "consecration; the giving of light to a thing",
+    "verb": "to consecrate",
+    "adjective": "consecrated"
+   },
+   "register": "everyday",
+   "domain": "Devotional",
+   "english_synonyms": [
+    "consecration",
+    "the giving of light to a thing",
+    "to consecrate",
+    "consecrated"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: lumi + donu."
+  },
+  {
+   "id": "lx_noruvimo_1916",
+   "root": "noruvimo",
+   "type": "Compound",
+   "components": [
+    "noru",
+    "vimo"
+   ],
+   "glosses": {
+    "root": "vision; a seeing given in a dream"
+   },
+   "register": "everyday",
+   "domain": "Devotional",
+   "english_synonyms": [
+    "vision",
+    "a seeing given in a dream"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: noru + vimo."
+  },
+  {
+   "id": "lx_noruvalla_1917",
+   "root": "noruvalla",
+   "type": "Compound",
+   "components": [
+    "noru",
+    "valla"
+   ],
+   "glosses": {
+    "root": "oracle; a voice heard in a dream"
+   },
+   "register": "everyday",
+   "domain": "Devotional",
+   "english_synonyms": [
+    "oracle",
+    "a voice heard in a dream"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: noru + valla."
+  },
+  {
+   "id": "lx_deviserbu_1918",
+   "root": "deviserbu",
+   "type": "Compound",
+   "components": [
+    "devi",
+    "serbu"
+   ],
+   "glosses": {
+    "root": "theology; the seeking of the Goddess"
+   },
+   "register": "everyday",
+   "domain": "Devotional",
+   "english_synonyms": [
+    "theology",
+    "the seeking of the Goddess"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: devi + serbu."
+  },
+  {
+   "id": "lx_rinbakrono_1919",
+   "root": "rinbakrono",
+   "type": "Compound",
+   "components": [
+    "rinba",
+    "krono"
+   ],
+   "glosses": {
+    "root": "eternity; endless time"
+   },
+   "register": "everyday",
+   "domain": "Devotional",
+   "english_synonyms": [
+    "eternity",
+    "endless time"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: rinba + krono. en rinbakrono = for ever (3.0:G139)"
+  },
+  {
+   "id": "lx_manlifavro_1920",
+   "root": "manlifavro",
+   "type": "Compound",
+   "components": [
+    "manli",
+    "favro"
+   ],
+   "glosses": {
+    "root": "mudra; a sacred sign made with the hands"
+   },
+   "register": "everyday",
+   "domain": "Devotional",
+   "english_synonyms": [
+    "mudra",
+    "a sacred sign made with the hands"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: manli + favro."
+  },
+  {
+   "id": "lx_vimomiga_1921",
+   "root": "vimomiga",
+   "type": "Compound",
+   "components": [
+    "vimo",
+    "miga"
+   ],
+   "glosses": {
+    "root": "the sacred gaze; the bond of seeing and being seen by the divine"
+   },
+   "register": "everyday",
+   "domain": "Devotional",
+   "english_synonyms": [
+    "the sacred gaze",
+    "the bond of seeing and being seen by the divine"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: vimo + miga."
+  },
+  {
+   "id": "lx_loredonu_1922",
+   "root": "loredonu",
+   "type": "Compound",
+   "components": [
+    "lore",
+    "donu"
+   ],
+   "glosses": {
+    "root": "surrender; the giving of the heart",
+    "verb": "to surrender oneself"
+   },
+   "register": "everyday",
+   "domain": "Devotional",
+   "english_synonyms": [
+    "surrender",
+    "the giving of the heart",
+    "to surrender oneself"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: lore + donu."
+  },
+  {
+   "id": "lx_velurivla_1923",
+   "root": "velurivla",
+   "type": "Compound",
+   "components": [
+    "velu",
+    "rivla"
+   ],
+   "glosses": {
+    "root": "the river of stars; the Milky Way"
+   },
+   "register": "everyday",
+   "domain": "Devotional",
+   "english_synonyms": [
+    "the river of stars",
+    "the Milky Way"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: velu + rivla."
+  },
+  {
+   "id": "lx_lavbukova_1924",
+   "root": "lavbukova",
+   "type": "Compound",
+   "components": [
+    "lavbu",
+    "kova"
+   ],
+   "glosses": {
+    "root": "chalice; a sacred vessel"
+   },
+   "register": "everyday",
+   "domain": "Devotional",
+   "english_synonyms": [
+    "chalice",
+    "a sacred vessel"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: lavbu + kova."
+  },
+  {
+   "id": "lx_lavbufaru_1925",
+   "root": "lavbufaru",
+   "type": "Compound",
+   "components": [
+    "lavbu",
+    "faru"
+   ],
+   "glosses": {
+    "root": "altar flame; votive fire"
+   },
+   "register": "everyday",
+   "domain": "Devotional",
+   "english_synonyms": [
+    "altar flame",
+    "votive fire"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: lavbu + faru."
+  },
+  {
+   "id": "lx_lavbunulu_1926",
+   "root": "lavbunulu",
+   "type": "Compound",
+   "components": [
+    "lavbu",
+    "nulu"
+   ],
+   "glosses": {
+    "root": "the way of prayer; a spiritual path"
+   },
+   "register": "everyday",
+   "domain": "Devotional",
+   "english_synonyms": [
+    "the way of prayer",
+    "a spiritual path"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: lavbu + nulu."
+  },
+  {
+   "id": "lx_lorelavbu_1927",
+   "root": "lorelavbu",
+   "type": "Compound",
+   "components": [
+    "lore",
+    "lavbu"
+   ],
+   "glosses": {
+    "root": "prayer of the heart; inward prayer"
+   },
+   "register": "everyday",
+   "domain": "Devotional",
+   "english_synonyms": [
+    "prayer of the heart",
+    "inward prayer"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: lore + lavbu."
+  },
+  {
+   "id": "lx_lasolavbu_1928",
+   "root": "lasolavbu",
+   "type": "Compound",
+   "components": [
+    "laso",
+    "lavbu"
+   ],
+   "glosses": {
+    "root": "silent prayer"
+   },
+   "register": "everyday",
+   "domain": "Devotional",
+   "english_synonyms": [
+    "silent prayer"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: laso + lavbu."
+  },
+  {
+   "id": "lx_duhalavbu_1929",
+   "root": "duhalavbu",
+   "type": "Compound",
+   "components": [
+    "duha",
+    "lavbu"
+   ],
+   "glosses": {
+    "root": "prayer of longing"
+   },
+   "register": "everyday",
+   "domain": "Devotional",
+   "english_synonyms": [
+    "prayer of longing"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: duha + lavbu."
+  },
+  {
+   "id": "lx_opilavbu_1930",
+   "root": "opilavbu",
+   "type": "Compound",
+   "components": [
+    "opi",
+    "lavbu"
+   ],
+   "glosses": {
+    "root": "prayer of hope"
+   },
+   "register": "everyday",
+   "domain": "Devotional",
+   "english_synonyms": [
+    "prayer of hope"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: opi + lavbu."
+  },
+  {
+   "id": "lx_nemelavbu_1931",
+   "root": "nemelavbu",
+   "type": "Compound",
+   "components": [
+    "neme",
+    "lavbu"
+   ],
+   "glosses": {
+    "root": "prayer of lament"
+   },
+   "register": "everyday",
+   "domain": "Devotional",
+   "english_synonyms": [
+    "prayer of lament"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: neme + lavbu."
+  },
+  {
+   "id": "lx_jurevilavbu_1932",
+   "root": "jurevilavbu",
+   "type": "Compound",
+   "components": [
+    "jurevi",
+    "lavbu"
+   ],
+   "glosses": {
+    "root": "prayer of thanksgiving"
+   },
+   "register": "everyday",
+   "domain": "Devotional",
+   "english_synonyms": [
+    "prayer of thanksgiving"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: jurevi + lavbu."
+  },
+  {
+   "id": "lx_sovelavbu_1933",
+   "root": "sovelavbu",
+   "type": "Compound",
+   "components": [
+    "sove",
+    "lavbu"
+   ],
+   "glosses": {
+    "root": "prayer for peace"
+   },
+   "register": "everyday",
+   "domain": "Devotional",
+   "english_synonyms": [
+    "prayer for peace"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: sove + lavbu."
+  },
+  {
+   "id": "lx_marelore_1934",
+   "root": "marelore",
+   "type": "Compound",
+   "components": [
+    "mare",
+    "lore"
+   ],
+   "glosses": {
+    "root": "a mother’s heart; maternal tenderness"
+   },
+   "register": "everyday",
+   "domain": "Devotional",
+   "english_synonyms": [
+    "a mother’s heart",
+    "maternal tenderness"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: mare + lore."
+  },
+  {
+   "id": "lx_nonmopebu_1935",
+   "root": "nonmopebu",
+   "type": "Compound",
+   "components": [
+    "nonmo",
+    "pebu"
+   ],
+   "glosses": {
+    "root": "the lotus feet; the feet of the Goddess, where devotion is laid"
+   },
+   "register": "everyday",
+   "domain": "Devotional",
+   "english_synonyms": [
+    "the lotus feet",
+    "the feet of the Goddess, where devotion is laid"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: nonmo + pebu."
+  },
+  {
+   "id": "lx_devotimru_1936",
+   "root": "devotimru",
+   "type": "Compound",
+   "components": [
+    "devo",
+    "timru"
+   ],
+   "glosses": {
+    "root": "tears of devotion"
+   },
+   "register": "everyday",
+   "domain": "Devotional",
+   "english_synonyms": [
+    "tears of devotion"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: devo + timru."
+  },
+  {
+   "id": "lx_lirajuba_1937",
+   "root": "lirajuba",
+   "type": "Compound",
+   "components": [
+    "lira",
+    "juba"
+   ],
+   "glosses": {
+    "root": "song-offering; a song given as a gift",
+    "verb": "to offer a song"
+   },
+   "register": "everyday",
+   "domain": "Devotional",
+   "english_synonyms": [
+    "song-offering",
+    "a song given as a gift",
+    "to offer a song"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: lira + juba."
+  },
+  {
+   "id": "lx_devivelma_1938",
+   "root": "devivelma",
+   "type": "Compound",
+   "components": [
+    "devi",
+    "velma"
+   ],
+   "glosses": {
+    "root": "the Goddess’s mantle"
+   },
+   "register": "everyday",
+   "domain": "Devotional",
+   "english_synonyms": [
+    "the Goddess’s mantle"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: devi + velma."
+  },
+  {
+   "id": "lx_verasado_1939",
+   "root": "verasado",
+   "type": "Compound",
+   "components": [
+    "vera",
+    "sado"
+   ],
+   "glosses": {
+    "root": "implication; the shadow a truth casts"
+   },
+   "register": "everyday",
+   "domain": "Mind & philosophy",
+   "english_synonyms": [
+    "implication",
+    "the shadow a truth casts"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: vera + sado."
+  },
+  {
+   "id": "lx_lansilira_1940",
+   "root": "lansilira",
+   "type": "Compound",
+   "components": [
+    "lansi",
+    "lira"
+   ],
+   "glosses": {
+    "root": "angel-song; a heavenly chorus"
+   },
+   "register": "everyday",
+   "domain": "Devotional",
+   "english_synonyms": [
+    "angel-song",
+    "a heavenly chorus"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: lansi + lira."
+  },
+  {
+   "id": "lx_loremeyi_1941",
+   "root": "loremeyi",
+   "type": "Compound",
+   "components": [
+    "lore",
+    "meyi"
+   ],
+   "glosses": {
+    "root": "consolation; the mending of a heart",
+    "verb": "to console"
+   },
+   "register": "everyday",
+   "domain": "Devotional",
+   "english_synonyms": [
+    "consolation",
+    "the mending of a heart",
+    "to console"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: lore + meyi."
+  },
+  {
+   "id": "lx_biojuba_1942",
+   "root": "biojuba",
+   "type": "Compound",
+   "components": [
+    "bio",
+    "juba"
+   ],
+   "glosses": {
+    "root": "the gift of life"
+   },
+   "register": "everyday",
+   "domain": "Devotional",
+   "english_synonyms": [
+    "the gift of life"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: bio + juba."
+  },
+  {
+   "id": "lx_velusasva_1943",
+   "root": "velusasva",
+   "type": "Compound",
+   "components": [
+    "velu",
+    "sasva"
+   ],
+   "glosses": {
+    "root": "the safekeeping of the stars"
+   },
+   "register": "everyday",
+   "domain": "Devotional",
+   "english_synonyms": [
+    "the safekeeping of the stars"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: velu + sasva."
+  },
+  {
+   "id": "lx_fatotenva_1944",
+   "root": "fatotenva",
+   "type": "Compound",
+   "components": [
+    "fato",
+    "tenva"
+   ],
+   "glosses": {
+    "root": "the weaving of fate"
+   },
+   "register": "everyday",
+   "domain": "Devotional",
+   "english_synonyms": [
+    "the weaving of fate"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: fato + tenva."
+  },
+  {
+   "id": "lx_velufarla_1945",
+   "root": "velufarla",
+   "type": "Compound",
+   "components": [
+    "velu",
+    "farla"
+   ],
+   "glosses": {
+    "root": "the making of stars"
+   },
+   "register": "everyday",
+   "domain": "Devotional",
+   "english_synonyms": [
+    "the making of stars"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: velu + farla."
+  },
+  {
+   "id": "lx_dipofaru_1946",
+   "root": "dipofaru",
+   "type": "Compound",
+   "components": [
+    "dipo",
+    "faru"
+   ],
+   "glosses": {
+    "root": "lamplight; the flame of a devotional lamp"
+   },
+   "register": "everyday",
+   "domain": "Devotional",
+   "english_synonyms": [
+    "lamplight",
+    "the flame of a devotional lamp"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: dipo + faru."
+  },
+  {
+   "id": "lx_nelmolavbu_1947",
+   "root": "nelmolavbu",
+   "type": "Compound",
+   "components": [
+    "nelmo",
+    "lavbu"
+   ],
+   "glosses": {
+    "root": "rite; prayer enacted through symbols"
+   },
+   "register": "everyday",
+   "domain": "Devotional",
+   "english_synonyms": [
+    "rite",
+    "prayer enacted through symbols"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: nelmo + lavbu."
+  },
+  {
+   "id": "lx_velumare_1948",
+   "root": "velumare",
+   "type": "Compound",
+   "components": [
+    "velu",
+    "mare"
+   ],
+   "glosses": {
+    "root": "mother of the stars (title of the Goddess)"
+   },
+   "register": "everyday",
+   "domain": "Devotional",
+   "english_synonyms": [
+    "mother of the stars (title of the Goddess)"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: velu + mare. A title of the Goddess: used as a name it is capitalised, takes no article and owns before de (3.0:G131)."
+  },
+  {
+   "id": "lx_lumimare_1949",
+   "root": "lumimare",
+   "type": "Compound",
+   "components": [
+    "lumi",
+    "mare"
+   ],
+   "glosses": {
+    "root": "mother of light (title of the Goddess)"
+   },
+   "register": "everyday",
+   "domain": "Devotional",
+   "english_synonyms": [
+    "mother of light (title of the Goddess)"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: lumi + mare. A title of the Goddess: used as a name it is capitalised, takes no article and owns before de (3.0:G131)."
+  },
+  {
+   "id": "lx_liramare_1950",
+   "root": "liramare",
+   "type": "Compound",
+   "components": [
+    "lira",
+    "mare"
+   ],
+   "glosses": {
+    "root": "mother of song (title of the Goddess)"
+   },
+   "register": "everyday",
+   "domain": "Devotional",
+   "english_synonyms": [
+    "mother of song (title of the Goddess)"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: lira + mare. A title of the Goddess: used as a name it is capitalised, takes no article and owns before de (3.0:G131)."
+  },
+  {
+   "id": "lx_soladevi_1951",
+   "root": "soladevi",
+   "type": "Compound",
+   "components": [
+    "sola",
+    "devi"
+   ],
+   "glosses": {
+    "root": "goddess of the sun"
+   },
+   "register": "everyday",
+   "domain": "Devotional",
+   "english_synonyms": [
+    "goddess of the sun"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: sola + devi. A title of the Goddess: used as a name it is capitalised, takes no article and owns before de (3.0:G131). pattern X + devi = goddess of X, attested in lardadevi (a Muse)"
+  },
+  {
+   "id": "lx_lunodevi_1952",
+   "root": "lunodevi",
+   "type": "Compound",
+   "components": [
+    "luno",
+    "devi"
+   ],
+   "glosses": {
+    "root": "goddess of the moon"
+   },
+   "register": "everyday",
+   "domain": "Devotional",
+   "english_synonyms": [
+    "goddess of the moon"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: luno + devi. A title of the Goddess: used as a name it is capitalised, takes no article and owns before de (3.0:G131)."
+  },
+  {
+   "id": "lx_loredevi_1953",
+   "root": "loredevi",
+   "type": "Compound",
+   "components": [
+    "lore",
+    "devi"
+   ],
+   "glosses": {
+    "root": "goddess of the heart"
+   },
+   "register": "everyday",
+   "domain": "Devotional",
+   "english_synonyms": [
+    "goddess of the heart"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: lore + devi. A title of the Goddess: used as a name it is capitalised, takes no article and owns before de (3.0:G131)."
+  },
+  {
+   "id": "lx_liradevi_1954",
+   "root": "liradevi",
+   "type": "Compound",
+   "components": [
+    "lira",
+    "devi"
+   ],
+   "glosses": {
+    "root": "goddess of song"
+   },
+   "register": "everyday",
+   "domain": "Devotional",
+   "english_synonyms": [
+    "goddess of song"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: lira + devi. A title of the Goddess: used as a name it is capitalised, takes no article and owns before de (3.0:G131)."
+  },
+  {
+   "id": "lx_devinole_1955",
+   "root": "devinole",
+   "type": "Compound",
+   "components": [
+    "devi",
+    "nole"
+   ],
+   "glosses": {
+    "root": "a holy name of the Goddess"
+   },
+   "register": "everyday",
+   "domain": "Devotional",
+   "english_synonyms": [
+    "a holy name of the Goddess"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: devi + nole."
+  },
+  {
+   "id": "lx_noleramu_1956",
+   "root": "noleramu",
+   "type": "Compound",
+   "components": [
+    "nole",
+    "ramu"
+   ],
+   "glosses": {
+    "root": "remembrance of a holy name; keeping a name in the heart",
+    "verb": "to keep a holy name in remembrance"
+   },
+   "register": "everyday",
+   "domain": "Devotional",
+   "english_synonyms": [
+    "remembrance of a holy name",
+    "keeping a name in the heart",
+    "to keep a holy name in remembrance"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: nole + ramu."
+  },
+  {
+   "id": "lx_devisavali_1957",
+   "root": "devisavali",
+   "type": "Compound",
+   "components": [
+    "devi",
+    "savali"
+   ],
+   "glosses": {
+    "root": "the Goddess’s kiss; a blessing laid upon the brow"
+   },
+   "register": "everyday",
+   "domain": "Devotional",
+   "english_synonyms": [
+    "the Goddess’s kiss",
+    "a blessing laid upon the brow"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: devi + savali."
+  },
+  {
+   "id": "lx_duhavelu_1958",
+   "root": "duhavelu",
+   "type": "Compound",
+   "components": [
+    "duha",
+    "velu"
+   ],
+   "glosses": {
+    "root": "wishing star; a star of longing"
+   },
+   "register": "everyday",
+   "domain": "Devotional",
+   "english_synonyms": [
+    "wishing star",
+    "a star of longing"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: duha + velu."
+  },
+  {
+   "id": "lx_melorivla_1959",
+   "root": "melorivla",
+   "type": "Compound",
+   "components": [
+    "melo",
+    "rivla"
+   ],
+   "glosses": {
+    "root": "a stream of music; music that flows on without pause"
+   },
+   "register": "everyday",
+   "domain": "Music & story",
+   "english_synonyms": [
+    "a stream of music",
+    "music that flows on without pause"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: melo + rivla."
+  },
+  {
+   "id": "lx_lavbusonbu_1960",
+   "root": "lavbusonbu",
+   "type": "Compound",
+   "components": [
+    "lavbu",
+    "sonbu"
+   ],
+   "glosses": {
+    "root": "the murmur of prayer; the sound of many praying"
+   },
+   "register": "everyday",
+   "domain": "Devotional",
+   "english_synonyms": [
+    "the murmur of prayer",
+    "the sound of many praying"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: lavbu + sonbu."
+  },
+  {
+   "id": "lx_lumilavbu_1961",
+   "root": "lumilavbu",
+   "type": "Compound",
+   "components": [
+    "lumi",
+    "lavbu"
+   ],
+   "glosses": {
+    "root": "lamp-worship; prayer offered by the waving of lights"
+   },
+   "register": "everyday",
+   "domain": "Devotional",
+   "english_synonyms": [
+    "lamp-worship",
+    "prayer offered by the waving of lights"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: lumi + lavbu."
+  },
+  {
+   "id": "lx_folnijuba_1962",
+   "root": "folnijuba",
+   "type": "Compound",
+   "components": [
+    "folni",
+    "juba"
+   ],
+   "glosses": {
+    "root": "flower-offering",
+    "verb": "to offer flowers"
+   },
+   "register": "everyday",
+   "domain": "Devotional",
+   "english_synonyms": [
+    "flower-offering",
+    "to offer flowers"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: folni + juba."
+  },
+  {
+   "id": "lx_mirujuba_1963",
+   "root": "mirujuba",
+   "type": "Compound",
+   "components": [
+    "miru",
+    "juba"
+   ],
+   "glosses": {
+    "root": "libation; an offering of water"
+   },
+   "register": "everyday",
+   "domain": "Devotional",
+   "english_synonyms": [
+    "libation",
+    "an offering of water"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: miru + juba."
+  },
+  {
+   "id": "lx_dipolekta_1964",
+   "root": "dipolekta",
+   "type": "Compound",
+   "components": [
+    "dipo",
+    "lekta"
+   ],
+   "glosses": {
+    "root": "festival of lamps; a gathering of many lights"
+   },
+   "register": "everyday",
+   "domain": "Devotional",
+   "english_synonyms": [
+    "festival of lamps",
+    "a gathering of many lights"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: dipo + lekta."
+  },
+  {
+   "id": "lx_lunofelra_1965",
+   "root": "lunofelra",
+   "type": "Compound",
+   "components": [
+    "luno",
+    "felra"
+   ],
+   "glosses": {
+    "root": "moon festival"
+   },
+   "register": "everyday",
+   "domain": "Devotional",
+   "english_synonyms": [
+    "moon festival"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: luno + felra."
+  },
+  {
+   "id": "lx_lorevelu_1966",
+   "root": "lorevelu",
+   "type": "Compound",
+   "components": [
+    "lore",
+    "velu"
+   ],
+   "glosses": {
+    "root": "the star within the heart; an inner guiding light"
+   },
+   "register": "everyday",
+   "domain": "Devotional",
+   "english_synonyms": [
+    "the star within the heart",
+    "an inner guiding light"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: lore + velu."
+  },
+  {
+   "id": "lx_mareduha_1967",
+   "root": "mareduha",
+   "type": "Compound",
+   "components": [
+    "mare",
+    "duha"
+   ],
+   "glosses": {
+    "root": "longing for the Mother"
+   },
+   "register": "everyday",
+   "domain": "Devotional",
+   "english_synonyms": [
+    "longing for the Mother"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: mare + duha."
+  },
+  {
+   "id": "lx_linudevo_1968",
+   "root": "linudevo",
+   "type": "Compound",
+   "components": [
+    "linu",
+    "devo"
+   ],
+   "glosses": {
+    "root": "childlike faith"
+   },
+   "register": "everyday",
+   "domain": "Devotional",
+   "english_synonyms": [
+    "childlike faith"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: linu + devo."
+  },
+  {
+   "id": "lx_melosevu_1969",
+   "root": "melosevu",
+   "type": "Compound",
+   "components": [
+    "melo",
+    "sevu"
+   ],
+   "glosses": {
+    "root": "a sea of music; music that surrounds and holds"
+   },
+   "register": "everyday",
+   "domain": "Music & story",
+   "english_synonyms": [
+    "a sea of music",
+    "music that surrounds and holds"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: melo + sevu."
+  },
+  {
+   "id": "lx_fontelira_1970",
+   "root": "fontelira",
+   "type": "Compound",
+   "components": [
+    "fonte",
+    "lira"
+   ],
+   "glosses": {
+    "root": "source-song; the song from which all songs come"
+   },
+   "register": "everyday",
+   "domain": "Music & story",
+   "english_synonyms": [
+    "source-song",
+    "the song from which all songs come"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: fonte + lira."
+  },
+  {
+   "id": "lx_lombilira_1971",
+   "root": "lombilira",
+   "type": "Compound",
+   "components": [
+    "lombi",
+    "lira"
+   ],
+   "glosses": {
+    "root": "creation hymn; a song of the beginning"
+   },
+   "register": "everyday",
+   "domain": "Music & story",
+   "english_synonyms": [
+    "creation hymn",
+    "a song of the beginning"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: lombi + lira."
+  },
+  {
+   "id": "lx_lendapatu_1972",
+   "root": "lendapatu",
+   "type": "Compound",
+   "components": [
+    "lenda",
+    "patu"
+   ],
+   "glosses": {
+    "root": "line segment"
+   },
+   "register": "everyday",
+   "domain": "Space & orientation",
+   "english_synonyms": [
+    "line segment"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: lenda + patu."
+  },
+  {
+   "id": "lx_rinbamelli_1973",
+   "root": "rinbamelli",
+   "type": "Compound",
+   "components": [
+    "rinba",
+    "melli"
+   ],
+   "glosses": {
+    "root": "circumference"
+   },
+   "register": "everyday",
+   "domain": "Space & orientation",
+   "english_synonyms": [
+    "circumference"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: rinba + melli."
+  },
+  {
+   "id": "lx_cunucuza_1974",
+   "root": "cunucuza",
+   "type": "Compound",
+   "components": [
+    "cunu",
+    "cuza"
+   ],
+   "glosses": {
+    "root": "numeral; a written number"
+   },
+   "register": "everyday",
+   "domain": "Time, quantity & work",
+   "english_synonyms": [
+    "numeral",
+    "a written number"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: cunu + cuza."
+  },
+  {
+   "id": "lx_patucunu_1975",
+   "root": "patucunu",
+   "type": "Compound",
+   "components": [
+    "patu",
+    "cunu"
+   ],
+   "glosses": {
+    "root": "fraction"
+   },
+   "register": "everyday",
+   "domain": "Time, quantity & work",
+   "english_synonyms": [
+    "fraction"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: patu + cunu."
+  },
+  {
+   "id": "lx_velulavbu_1976",
+   "root": "velulavbu",
+   "type": "Compound",
+   "components": [
+    "velu",
+    "lavbu"
+   ],
+   "glosses": {
+    "root": "prayer beneath the stars"
+   },
+   "register": "everyday",
+   "domain": "Devotional",
+   "english_synonyms": [
+    "prayer beneath the stars"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: velu + lavbu."
+  },
+  {
+   "id": "lx_lunolavbu_1977",
+   "root": "lunolavbu",
+   "type": "Compound",
+   "components": [
+    "luno",
+    "lavbu"
+   ],
+   "glosses": {
+    "root": "moon-prayer; a prayer at moonrise"
+   },
+   "register": "everyday",
+   "domain": "Devotional",
+   "english_synonyms": [
+    "moon-prayer",
+    "a prayer at moonrise"
+   ],
+   "notes": "Added in 3.0 (changeset 2026-10-25-lexicon-3-0). Proposed in 3.0: awaiting the author's ratification. Components: luno + lavbu."
+  }
+ ],
+ "function_words": [
+  {
+   "form": "iya",
+   "meaning": "vocative: O (solemn or reverent address)",
+   "position": "Opens a vocative noun phrase: iya + NP, set off by a comma; may also close a clause after ki. Optional in everyday address, expected in prayer, invocation and litany (3.0:G129).",
+   "example": "Iya Deviasa, lenila maivo!",
+   "example_gloss": "O Great Goddess, hear me!",
+   "class": "vocative",
+   "status_1_0": "NEW",
+   "status_3_0": "NEW",
+   "since": "3.0",
+   "id": "fw_iya_0153"
+  }
+ ],
+ "lexicalised_derivations": {
+  "melofarlayo": "composer: melofarla + -yo",
+  "dumdoyo": "drummer: dumdo + -yo",
+  "vinyeyo": "veena player; lutenist: vinye + -yo",
+  "lavbulirayo": "cantor; a singer of hymns: lavbulira + -yo",
+  "melobitiyo": "instrumentalist: melobiti + -yo",
+  "noruvimoyo": "seer; one who receives visions: noruvimo + -yo",
+  "deviserbuyo": "theologian: deviserbu + -yo",
+  "lideoserbuyo": "philosopher: lideoserbu + -yo",
+  "pensayo": "thinker: pensa + -yo",
+  "biojubayo": "giver of life (epithet): biojuba + -yo",
+  "lirajubayo": "giver of song (epithet): lirajuba + -yo",
+  "lumidonuyo": "giver of light; consecrator (epithet): lumidonu + -yo",
+  "velusasvayo": "keeper of the stars (epithet): velusasva + -yo",
+  "loremeyiyo": "mender of hearts; consoler (epithet): loremeyi + -yo",
+  "fatotenvayo": "weaver of fate (epithet): fatotenva + -yo",
+  "velufarlayo": "maker of stars (epithet): velufarla + -yo",
+  "dipopago": "lamp-niche; a place where devotional lamps are kept: dipo + -pago"
+ },
+ "ops": [
+  {
+   "entry": "3.0:G129",
+   "op": "add_ruling",
+   "from": null,
+   "to": "The vocative particle iya",
+   "ruling": "3.0:G129",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): The vocative particle iya. Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "3.0:G130",
+   "op": "add_ruling",
+   "from": null,
+   "to": "Apposition and epithets",
+   "ruling": "3.0:G130",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): Apposition and epithets. Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "3.0:G131",
+   "op": "add_ruling",
+   "from": null,
+   "to": "Divine names and titles",
+   "ruling": "3.0:G131",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): Divine names and titles. Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "3.0:G132",
+   "op": "add_ruling",
+   "from": null,
+   "to": "Absolute being: SUBJECT + miyo",
+   "ruling": "3.0:G132",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): Absolute being: SUBJECT + miyo. Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "3.0:G133",
+   "op": "add_ruling",
+   "from": null,
+   "to": "Fiat, blessing of existence, and the liturgical formulas",
+   "ruling": "3.0:G133",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): Fiat, blessing of existence, and the liturgical formulas. Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "3.0:G134",
+   "op": "add_ruling",
+   "from": null,
+   "to": "Emphatic sela",
+   "ruling": "3.0:G134",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): Emphatic sela. Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "3.0:G135",
+   "op": "add_ruling",
+   "from": null,
+   "to": "Commands, petitions and yava",
+   "ruling": "3.0:G135",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): Commands, petitions and yava. Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "3.0:G136",
+   "op": "add_ruling",
+   "from": null,
+   "to": "Authorship: gagu after a work",
+   "ruling": "3.0:G136",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): Authorship: gagu after a work. Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "3.0:G137",
+   "op": "add_ruling",
+   "from": null,
+   "to": "Acclamations",
+   "ruling": "3.0:G137",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): Acclamations. Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "3.0:G138",
+   "op": "add_ruling",
+   "from": null,
+   "to": "Divine pronouns (orthography)",
+   "ruling": "3.0:G138",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): Divine pronouns (orthography). Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "3.0:G139",
+   "op": "add_ruling",
+   "from": null,
+   "to": "For ever: en rinbakrono",
+   "ruling": "3.0:G139",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): For ever: en rinbakrono. Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "3.0:G140",
+   "op": "add_ruling",
+   "from": null,
+   "to": "Distributive succession: X krotiapo X",
+   "ruling": "3.0:G140",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): Distributive succession: X krotiapo X. Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "3.0:G141",
+   "op": "add_ruling",
+   "from": null,
+   "to": "Register and restraint (style, non-normative)",
+   "ruling": "3.0:G141",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): Register and restraint (style, non-normative). Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "fw_iya_0153",
+   "op": "add_function_word",
+   "from": null,
+   "to": "iya",
+   "ruling": "3.0:G129",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): iya, vocative: O (solemn or reverent address). Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lirvi_1855",
+   "op": "add_root",
+   "slot": "root",
+   "from": null,
+   "to": "lirvi",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): note; a single musical tone (domain Music & story).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_vinye_1856",
+   "op": "add_root",
+   "slot": "root",
+   "from": null,
+   "to": "vinye",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): lute; veena; a long-necked plucked string instrument (domain Music & story).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_dobo_1857",
+   "op": "add_root",
+   "slot": "root",
+   "from": null,
+   "to": "dobo",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): beat; the pulse of music; one stroke of time (domain Music & story).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_pice_1858",
+   "op": "add_root",
+   "slot": "root",
+   "from": null,
+   "to": "pice",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): a pluck; one plucked sounding of a string (domain Music & story).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_monve_1859",
+   "op": "add_root",
+   "slot": "root",
+   "from": null,
+   "to": "monve",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): drone; a tone held beneath a melody (domain Music & story).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_mumbe_1860",
+   "op": "add_root",
+   "slot": "root",
+   "from": null,
+   "to": "mumbe",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): the sacred syllable; the hum sung before prayer (domain Devotional).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_rumbu_1861",
+   "op": "add_root",
+   "slot": "root",
+   "from": null,
+   "to": "rumbu",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): conch; a shell sounded to call to worship (domain Devotional).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_dipo_1862",
+   "op": "add_root",
+   "slot": "root",
+   "from": null,
+   "to": "dipo",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): lamp; a small oil lamp kept in devotion (domain Devotional).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lilya_1863",
+   "op": "add_root",
+   "slot": "root",
+   "from": null,
+   "to": "lilya",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): ornament; adornment; (music) a grace note (domain Devotional).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_velni_1864",
+   "op": "add_root",
+   "slot": "root",
+   "from": null,
+   "to": "velni",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): essence; the inmost nature of a thing (domain Devotional).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_nelmo_1865",
+   "op": "add_root",
+   "slot": "root",
+   "from": null,
+   "to": "nelmo",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): symbol; a sign that stands for more than itself (domain Mind & philosophy).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lenda_1866",
+   "op": "add_root",
+   "slot": "root",
+   "from": null,
+   "to": "lenda",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): line; stroke (domain Space & orientation).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_gaki_1867",
+   "op": "add_root",
+   "slot": "root",
+   "from": null,
+   "to": "gaki",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): angle; corner (domain Space & orientation).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_pidi_1868",
+   "op": "add_root",
+   "slot": "root",
+   "from": null,
+   "to": "pidi",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): tip; the very end or point of a thing (domain Space & orientation).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_tiku_1869",
+   "op": "add_root",
+   "slot": "root",
+   "from": null,
+   "to": "tiku",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): precision; exactness (domain Time, quantity & work).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_melopuku_1870",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "melopuku",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): cadence; the close of a musical phrase: melo + puku (domain Music & story).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_sonbunulu_1871",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "sonbunulu",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): scale; a path of tones: sonbu + nulu (domain Music & story).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_sonbulekta_1872",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "sonbulekta",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): chord; tones sounded together: sonbu + lekta (domain Music & story).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_sonbusalru_1873",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "sonbusalru",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): pitch; the height of a sound: sonbu + salru (domain Music & story).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_sonbumelli_1874",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "sonbumelli",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): loudness; the volume of a sound: sonbu + melli (domain Music & story).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_kronovizu_1875",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "kronovizu",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): tempo; the speed of music: krono + vizu (domain Music & story).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_melopatu_1876",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "melopatu",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): bar; a measure of music: melo + patu (domain Music & story).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_melolekta_1877",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "melolekta",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): concert; a gathering to hear music: melo + lekta (domain Music & story).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_melofarla_1878",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "melofarla",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): musical composition; a work of music: melo + farla (domain Music & story).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lavbumelo_1879",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "lavbumelo",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): sacred music; music made as prayer: lavbu + melo (domain Music & story).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_sirmolira_1880",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "sirmolira",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): doxology; a hymn of glory: sirmo + lira (domain Music & story).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_jurevilira_1881",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "jurevilira",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): hymn of thanksgiving: jurevi + lira (domain Music & story).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_nolelira_1882",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "nolelira",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): a sung litany; a song of holy names: nole + lira (domain Music & story).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_senolira_1883",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "senolira",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): chant; words sung on few notes: seno + lira (domain Music & story).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lavburilu_1884",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "lavburilu",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): sacred dance: lavbu + rilu (domain Music & story).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_pebudumdo_1885",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "pebudumdo",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): the tapping of feet; keeping time with the feet: pebu + dumdo (domain Music & story).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_sonbuyeba_1886",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "sonbuyeba",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): tuning; attunement: sonbu + yeba (domain Music & story).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_melokemye_1887",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "melokemye",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): key (in music): melo + kemye (domain Music & story).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_mernolira_0382",
+   "op": "lexicalise_from_pattern",
+   "from": "mernolira",
+   "to": "mernolira",
+   "ruling": "2.0:G40",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): mernolira, an attested image compound of 2.5 (\"dawn-fresh song; a melody given the color of morning\"), lexicalised as a headword. The patch lists it as new; it keeps its 2.5 id. Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_mernolira_0382",
+   "op": "edit_gloss",
+   "slot": "root",
+   "archive": true,
+   "from": "dawn-fresh song; a melody given the color of morning",
+   "to": "aubade; a dawn song",
+   "ruling": "0.8:R2",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): mernolira, \"aubade; a dawn song\". Its 2.5 reading \"dawn-fresh song; a melody given the color of morning\" is archived. Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_mernolira_0382",
+   "op": "edit_metadata",
+   "field": "domain",
+   "from": "Romance",
+   "to": "Music & story",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): mernolira moves to the domain Music & story.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_nullolira_1888",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "nullolira",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): nocturne; a night song: nullo + lira (domain Music & story).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_velulira_0998",
+   "op": "lexicalise_from_pattern",
+   "from": "velulira",
+   "to": "velulira",
+   "ruling": "2.0:G40",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): velulira, an attested image compound of 2.5 (\"starlit song; a melody given the color of distant stars\"), lexicalised as a headword. The patch lists it as new; it keeps its 2.5 id. Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_velulira_0998",
+   "op": "edit_gloss",
+   "slot": "root",
+   "archive": true,
+   "from": "starlit song; a melody given the color of distant stars",
+   "to": "star-song; the note each star sings in the cosmic melody",
+   "ruling": "0.8:R2",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): velulira, \"star-song; the note each star sings in the cosmic melody\". Its 2.5 reading \"starlit song; a melody given the color of distant stars\" is archived. Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_velulira_0998",
+   "op": "edit_metadata",
+   "field": "domain",
+   "from": "Romance",
+   "to": "Music & story",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): velulira moves to the domain Music & story.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_vinyelira_1889",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "vinyelira",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): a song for the veena; a lute song: vinye + lira (domain Music & story).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_rumbusonbu_1890",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "rumbusonbu",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): the call of the conch; a summons to worship: rumbu + sonbu (domain Devotional).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lirvinulu_1891",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "lirvinulu",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): phrase; a line of notes: lirvi + nulu (domain Music & story).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_mumbelavbu_1892",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "mumbelavbu",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): the hum that opens prayer: mumbe + lavbu (domain Devotional).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_cunupatu_1893",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "cunupatu",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): unit (of measure): cunu + patu (domain Time, quantity & work).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_cunumelli_1894",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "cunumelli",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): quantity; amount: cunu + melli (domain Time, quantity & work).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_yanocunu_1895",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "yanocunu",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): sum; total: yano + cunu (domain Time, quantity & work).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_patumiga_1896",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "patumiga",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): proportion; ratio: patu + miga (domain Time, quantity & work).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_sambalordi_1897",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "sambalordi",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): symmetry: samba + lordi (domain Time, quantity & work).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_sambabondo_1898",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "sambabondo",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): balance; equilibrium: samba + bondo (domain Time, quantity & work).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_mellibiti_1899",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "mellibiti",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): ruler; a measuring tool: melli + biti (domain Time, quantity & work).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_bondobiti_1900",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "bondobiti",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): scales; a weighing balance: bondo + biti (domain Time, quantity & work).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_kronomelli_1901",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "kronomelli",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): duration; length of time: krono + melli (domain Time, quantity & work).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lumimelli_1902",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "lumimelli",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): brightness; luminance: lumi + melli (domain Time, quantity & work).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_tikubiti_1903",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "tikubiti",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): precision instrument; a gauge: tiku + biti (domain Time, quantity & work).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_gakimelli_1904",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "gakimelli",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): the measure of an angle; degree: gaki + melli (domain Space & orientation).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_finipidi_1905",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "finipidi",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): fingertip: fini + pidi (domain Space & orientation).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lendanulu_1906",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "lendanulu",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): straight path; a ray drawn from a point: lenda + nulu (domain Space & orientation).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_devipago_1907",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "devipago",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): shrine; a dwelling of the Goddess: devi + pago (domain Devotional).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_nolelekta_1908",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "nolelekta",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): litany; a gathering of holy names: nole + lekta (domain Devotional).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_sirmonole_1909",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "sirmonole",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): epithet; a name of praise: sirmo + nole (domain Devotional).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_nolevalla_1910",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "nolevalla",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): invocation; calling a holy name aloud: nole + valla (domain Devotional).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_loredevo_1911",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "loredevo",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): devotion; faith held in the heart: lore + devo (domain Devotional).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_amorlavbu_1912",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "amorlavbu",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): adoration: amor + lavbu (domain Devotional).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_loremasu_1913",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "loremasu",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): supplication; the heart’s plea: lore + masu (domain Devotional).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_meralumi_1914",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "meralumi",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): grace; the light of mercy given freely: mera + lumi (domain Devotional).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lumidonu_1915",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "lumidonu",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): consecration; the giving of light to a thing: lumi + donu (domain Devotional).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_noruvimo_1916",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "noruvimo",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): vision; a seeing given in a dream: noru + vimo (domain Devotional).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_noruvalla_1917",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "noruvalla",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): oracle; a voice heard in a dream: noru + valla (domain Devotional).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_deviserbu_1918",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "deviserbu",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): theology; the seeking of the Goddess: devi + serbu (domain Devotional).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_rinbakrono_1919",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "rinbakrono",
+   "ruling": "3.0:G139",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): eternity; endless time: rinba + krono (domain Devotional).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_manlifavro_1920",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "manlifavro",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): mudra; a sacred sign made with the hands: manli + favro (domain Devotional).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_vimomiga_1921",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "vimomiga",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): the sacred gaze; the bond of seeing and being seen by the divine: vimo + miga (domain Devotional).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_loredonu_1922",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "loredonu",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): surrender; the giving of the heart: lore + donu (domain Devotional).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_velurivla_1923",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "velurivla",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): the river of stars; the Milky Way: velu + rivla (domain Devotional).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lavbukova_1924",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "lavbukova",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): chalice; a sacred vessel: lavbu + kova (domain Devotional).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lavbufaru_1925",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "lavbufaru",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): altar flame; votive fire: lavbu + faru (domain Devotional).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lavbunulu_1926",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "lavbunulu",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): the way of prayer; a spiritual path: lavbu + nulu (domain Devotional).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lorelavbu_1927",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "lorelavbu",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): prayer of the heart; inward prayer: lore + lavbu (domain Devotional).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lasolavbu_1928",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "lasolavbu",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): silent prayer: laso + lavbu (domain Devotional).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_duhalavbu_1929",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "duhalavbu",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): prayer of longing: duha + lavbu (domain Devotional).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_opilavbu_1930",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "opilavbu",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): prayer of hope: opi + lavbu (domain Devotional).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_nemelavbu_1931",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "nemelavbu",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): prayer of lament: neme + lavbu (domain Devotional).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_jurevilavbu_1932",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "jurevilavbu",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): prayer of thanksgiving: jurevi + lavbu (domain Devotional).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_sovelavbu_1933",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "sovelavbu",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): prayer for peace: sove + lavbu (domain Devotional).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_marelore_1934",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "marelore",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): a mother’s heart; maternal tenderness: mare + lore (domain Devotional).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_nonmopebu_1935",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "nonmopebu",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): the lotus feet; the feet of the Goddess, where devotion is laid: nonmo + pebu (domain Devotional).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_devotimru_1936",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "devotimru",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): tears of devotion: devo + timru (domain Devotional).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_velurinba_1007",
+   "op": "lexicalise_from_pattern",
+   "from": "velurinba",
+   "to": "velurinba",
+   "ruling": "2.0:G40",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): velurinba, an attested image compound of 2.5 (\"starlit ring; a small circular pledge of distant stars\"), lexicalised as a headword. The patch lists it as new; it keeps its 2.5 id. Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_velurinba_1007",
+   "op": "edit_gloss",
+   "slot": "root",
+   "archive": true,
+   "from": "starlit ring; a small circular pledge of distant stars",
+   "to": "crown of stars",
+   "ruling": "0.8:R2",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): velurinba, \"crown of stars\". Its 2.5 reading \"starlit ring; a small circular pledge of distant stars\" is archived. Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_velurinba_1007",
+   "op": "edit_metadata",
+   "field": "domain",
+   "from": "Romance",
+   "to": "Devotional",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): velurinba moves to the domain Devotional.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lirajuba_1937",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "lirajuba",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): song-offering; a song given as a gift: lira + juba (domain Devotional).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_devivelma_1938",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "devivelma",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): the Goddess’s mantle: devi + velma (domain Devotional).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_verasado_1939",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "verasado",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): implication; the shadow a truth casts: vera + sado (domain Mind & philosophy).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lansilira_1940",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "lansilira",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): angel-song; a heavenly chorus: lansi + lira (domain Devotional).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_loremeyi_1941",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "loremeyi",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): consolation; the mending of a heart: lore + meyi (domain Devotional).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_biojuba_1942",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "biojuba",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): the gift of life: bio + juba (domain Devotional).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_velusasva_1943",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "velusasva",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): the safekeeping of the stars: velu + sasva (domain Devotional).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_fatotenva_1944",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "fatotenva",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): the weaving of fate: fato + tenva (domain Devotional).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_velufarla_1945",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "velufarla",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): the making of stars: velu + farla (domain Devotional).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_dipofaru_1946",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "dipofaru",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): lamplight; the flame of a devotional lamp: dipo + faru (domain Devotional).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_nelmolavbu_1947",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "nelmolavbu",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): rite; prayer enacted through symbols: nelmo + lavbu (domain Devotional).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_velumare_1948",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "velumare",
+   "ruling": "3.0:G131",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): mother of the stars (title of the Goddess): velu + mare (domain Devotional).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lumimare_1949",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "lumimare",
+   "ruling": "3.0:G131",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): mother of light (title of the Goddess): lumi + mare (domain Devotional).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_liramare_1950",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "liramare",
+   "ruling": "3.0:G131",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): mother of song (title of the Goddess): lira + mare (domain Devotional).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_soladevi_1951",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "soladevi",
+   "ruling": "3.0:G131",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): goddess of the sun: sola + devi (domain Devotional).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lunodevi_1952",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "lunodevi",
+   "ruling": "3.0:G131",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): goddess of the moon: luno + devi (domain Devotional).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_loredevi_1953",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "loredevi",
+   "ruling": "3.0:G131",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): goddess of the heart: lore + devi (domain Devotional).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_liradevi_1954",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "liradevi",
+   "ruling": "3.0:G131",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): goddess of song: lira + devi (domain Devotional).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_devinole_1955",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "devinole",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): a holy name of the Goddess: devi + nole (domain Devotional).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_noleramu_1956",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "noleramu",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): remembrance of a holy name; keeping a name in the heart: nole + ramu (domain Devotional).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_devisavali_1957",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "devisavali",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): the Goddess’s kiss; a blessing laid upon the brow: devi + savali (domain Devotional).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_duhavelu_1958",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "duhavelu",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): wishing star; a star of longing: duha + velu (domain Devotional).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_melorivla_1959",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "melorivla",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): a stream of music; music that flows on without pause: melo + rivla (domain Music & story).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lavbusonbu_1960",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "lavbusonbu",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): the murmur of prayer; the sound of many praying: lavbu + sonbu (domain Devotional).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lumilavbu_1961",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "lumilavbu",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): lamp-worship; prayer offered by the waving of lights: lumi + lavbu (domain Devotional).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_folnijuba_1962",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "folnijuba",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): flower-offering: folni + juba (domain Devotional).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_mirujuba_1963",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "mirujuba",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): libation; an offering of water: miru + juba (domain Devotional).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_dipolekta_1964",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "dipolekta",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): festival of lamps; a gathering of many lights: dipo + lekta (domain Devotional).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lunofelra_1965",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "lunofelra",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): moon festival: luno + felra (domain Devotional).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lorevelu_1966",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "lorevelu",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): the star within the heart; an inner guiding light: lore + velu (domain Devotional).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_mareduha_1967",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "mareduha",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): longing for the Mother: mare + duha (domain Devotional).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_linudevo_1968",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "linudevo",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): childlike faith: linu + devo (domain Devotional).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_melosevu_1969",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "melosevu",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): a sea of music; music that surrounds and holds: melo + sevu (domain Music & story).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_velunulu_1004",
+   "op": "lexicalise_from_pattern",
+   "from": "velunulu",
+   "to": "velunulu",
+   "ruling": "2.0:G40",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): velunulu, an attested image compound of 2.5 (\"starlit path; a trail shaped by distant stars\"), lexicalised as a headword. The patch lists it as new; it keeps its 2.5 id. Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_velunulu_1004",
+   "op": "edit_gloss",
+   "slot": "root",
+   "archive": true,
+   "from": "starlit path; a trail shaped by distant stars",
+   "to": "the path of stars; a road through the heavens",
+   "ruling": "0.8:R2",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): velunulu, \"the path of stars; a road through the heavens\". Its 2.5 reading \"starlit path; a trail shaped by distant stars\" is archived. Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_velunulu_1004",
+   "op": "edit_metadata",
+   "field": "domain",
+   "from": "Wind",
+   "to": "Devotional",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): velunulu moves to the domain Devotional.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_fontelira_1970",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "fontelira",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): source-song; the song from which all songs come: fonte + lira (domain Music & story).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lombilira_1971",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "lombilira",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): creation hymn; a song of the beginning: lombi + lira (domain Music & story).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lendapatu_1972",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "lendapatu",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): line segment: lenda + patu (domain Space & orientation).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_rinbamelli_1973",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "rinbamelli",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): circumference: rinba + melli (domain Space & orientation).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_cunucuza_1974",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "cunucuza",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): numeral; a written number: cunu + cuza (domain Time, quantity & work).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_patucunu_1975",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "patucunu",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): fraction: patu + cunu (domain Time, quantity & work).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_velulavbu_1976",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "velulavbu",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): prayer beneath the stars: velu + lavbu (domain Devotional).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lunolavbu_1977",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "lunolavbu",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): moon-prayer; a prayer at moonrise: luno + lavbu (domain Devotional).",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_farviyeba_1346",
+   "op": "activate_slot",
+   "slot": "verb",
+   "from": "— (unused)",
+   "to": "to consent",
+   "ruling": "0.8:R2",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): farviyebafa, \"to consent\", restored on farviyeba. Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_farviyeba_1346",
+   "op": "activate_slot",
+   "slot": "adjective",
+   "from": "— (unused)",
+   "to": "consensual",
+   "ruling": "0.8:R2",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): farviyebasan, \"consensual\", restored on farviyeba. Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_farviyeba_1346",
+   "op": "activate_slot",
+   "slot": "negative",
+   "from": "— (unused)",
+   "to": "absence of consent",
+   "ruling": "0.8:R2",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): farviyebana, \"absence of consent\", restored on farviyeba. Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_farviyeba_1346",
+   "op": "activate_slot",
+   "slot": "negativeAdjective",
+   "from": "— (unused)",
+   "to": "non-consensual",
+   "ruling": "0.8:R2",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): farviyebanasan, \"non-consensual\", restored on farviyeba. Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_kulpamera_1348",
+   "op": "activate_slot",
+   "slot": "adjective",
+   "from": "— (unused)",
+   "to": "forgiving",
+   "ruling": "0.8:R2",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): kulpamerasan, \"forgiving\", restored on kulpamera. Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_kulpamera_1348",
+   "op": "activate_slot",
+   "slot": "negativeAdjective",
+   "from": "— (unused)",
+   "to": "unforgiving",
+   "ruling": "0.8:R2",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): kulpameranasan, \"unforgiving\", restored on kulpamera. Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_kulpamera_1348",
+   "op": "activate_slot",
+   "slot": "ascended",
+   "from": "— (unused)",
+   "to": "boundless forgiveness",
+   "ruling": "0.8:R2",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): kulpameraasa, \"boundless forgiveness\", restored on kulpamera. Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_surutilma_1351",
+   "op": "activate_slot",
+   "slot": "verb",
+   "from": "— (unused)",
+   "to": "to empathize",
+   "ruling": "0.8:R2",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): surumigasia, \"to empathize\", restored on surumiga. Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_surutilma_1351",
+   "op": "activate_slot",
+   "slot": "ascended",
+   "from": "— (unused)",
+   "to": "perfect empathy with all beings",
+   "ruling": "0.8:R2",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): surumigaasa, \"perfect empathy with all beings\", restored on surumiga. Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_nelavarde_1355",
+   "op": "activate_slot",
+   "slot": "adjective",
+   "from": "— (unused)",
+   "to": "dignified",
+   "ruling": "0.8:R2",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): nelavardesan, \"dignified\", restored on nelavarde. Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_benarelnu_1581",
+   "op": "activate_slot",
+   "slot": "adjective",
+   "from": "— (unused)",
+   "to": "redemptive",
+   "ruling": "0.8:R2",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): benarelnusan, \"redemptive\", restored on benarelnu. Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_benarelnu_1581",
+   "op": "activate_slot",
+   "slot": "ascended",
+   "from": "— (unused)",
+   "to": "ultimate redemption",
+   "ruling": "0.8:R2",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): benarelnuasa, \"ultimate redemption\", restored on benarelnu. Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_remnirelnu_1582",
+   "op": "activate_slot",
+   "slot": "adjective",
+   "from": "— (unused)",
+   "to": "repentant",
+   "ruling": "0.8:R2",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): remnirelnusan, \"repentant\", restored on remnirelnu. Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lirayano_1503",
+   "op": "activate_slot",
+   "slot": "adjective",
+   "from": "— (unused)",
+   "to": "choral; sung by a choir",
+   "ruling": "0.8:R2",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): lirayanosan, \"choral; sung by a choir\", restored on lirayano. Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_kronosonbu_1255",
+   "op": "activate_slot",
+   "slot": "adjective",
+   "from": "— (unused)",
+   "to": "rhythmic",
+   "ruling": "0.8:R2",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): kronosonbusan, \"rhythmic\", restored on kronosonbu. Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_noruseno_1586",
+   "op": "activate_slot",
+   "slot": "adjective",
+   "from": "— (unused)",
+   "to": "prophetic",
+   "ruling": "0.8:R2",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): norusenosan, \"prophetic\", restored on noruseno. Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_ramuvorba_1843",
+   "op": "activate_slot",
+   "slot": "adjective",
+   "from": "— (unused)",
+   "to": "nostalgic",
+   "ruling": "0.8:R2",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): ramuduhasan, \"nostalgic\", restored on ramuduha. Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_vorbasolli_1499",
+   "op": "activate_slot",
+   "slot": "adjective",
+   "from": "— (unused)",
+   "to": "lonely",
+   "ruling": "0.8:R2",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): duhasollisan, \"lonely\", restored on duhasolli. Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_follunoru_1500",
+   "op": "activate_slot",
+   "slot": "adjective",
+   "from": "— (unused)",
+   "to": "nightmarish",
+   "ruling": "0.8:R2",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): follunorusan, \"nightmarish\", restored on follunoru. Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lorevimo_1584",
+   "op": "activate_slot",
+   "slot": "verb",
+   "from": "— (unused)",
+   "to": "to intuit",
+   "ruling": "0.8:R2",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): lorevimola, \"to intuit\", restored on lorevimo. Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_mellicunu_1276",
+   "op": "activate_slot",
+   "slot": "verb",
+   "from": "— (unused)",
+   "to": "to measure (a quantity)",
+   "ruling": "0.8:R2",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): mellicunuma, \"to measure (a quantity)\", restored on mellicunu. Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_mellicunu_1276",
+   "op": "activate_slot",
+   "slot": "negativeAdjective",
+   "from": "— (unused)",
+   "to": "immeasurable",
+   "ruling": "0.8:R2",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): mellicununasan, \"immeasurable\", restored on mellicunu. Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_mavolumitilma_1591",
+   "op": "activate_slot",
+   "slot": "ascended",
+   "from": "— (unused)",
+   "to": "an eternal soulbond",
+   "ruling": "0.8:R2",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): mavolumimigaasa, \"an eternal soulbond\", restored on mavolumimiga. Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lavbulira_1564",
+   "op": "activate_slot",
+   "slot": "ascended",
+   "from": "— (unused)",
+   "to": "the hymn of all creation; the hymn every star sings",
+   "ruling": "0.8:R2",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): lavbuliraasa, \"the hymn of all creation; the hymn every star sings\", restored on lavbulira. Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_melolavi_1844",
+   "op": "activate_slot",
+   "slot": "ascended",
+   "from": "— (unused)",
+   "to": "transcendent ecstasy through music",
+   "ruling": "0.8:R2",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): melolaviasa, \"transcendent ecstasy through music\", restored on melolavi. Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lumisirmo_1765",
+   "op": "activate_slot",
+   "slot": "ascended",
+   "from": "— (unused)",
+   "to": "resplendence; the glory of the Goddess",
+   "ruling": "0.8:R2",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): lumisirmoasa, \"resplendence; the glory of the Goddess\", restored on lumisirmo. Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_benaseno_0032",
+   "op": "activate_slot",
+   "slot": "ascended",
+   "from": "— (unused)",
+   "to": "the praise of all creation",
+   "ruling": "0.8:R2",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): benasenoasa, \"the praise of all creation\", restored on benaseno. Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_jubaseno_1572",
+   "op": "activate_slot",
+   "slot": "verb",
+   "from": "— (unused)",
+   "to": "to bless aloud; to give a benediction",
+   "ruling": "0.8:R2",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): jubasenoja, \"to bless aloud; to give a benediction\", restored on jubaseno. Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_jubaseno_1572",
+   "op": "activate_slot",
+   "slot": "adjective",
+   "from": "— (unused)",
+   "to": "blessed",
+   "ruling": "0.8:R2",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): jubasenosan, \"blessed\", restored on jubaseno. Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lavbuseno_1565",
+   "op": "activate_slot",
+   "slot": "verb",
+   "from": "— (unused)",
+   "to": "to chant a mantra",
+   "ruling": "0.8:R2",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): lavbusenola, \"to chant a mantra\", restored on lavbuseno. Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_cunu_0064",
+   "op": "activate_slot",
+   "slot": "ascended",
+   "from": "— (unused)",
+   "to": "infinity; the uncountable",
+   "ruling": "0.8:R2",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): cunuasa, \"infinity; the uncountable\", restored on cunu. Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_cunu_0064",
+   "op": "activate_slot",
+   "slot": "ascendedAdjective",
+   "from": "— (unused)",
+   "to": "infinite; numberless",
+   "ruling": "0.8:R2",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): cunuasasan, \"infinite; numberless\", restored on cunu. Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lumra_0309",
+   "op": "activate_slot",
+   "slot": "ascended",
+   "from": "— (unused)",
+   "to": "exaltation; the lifting of a soul to the divine",
+   "ruling": "0.8:R2",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): lumraasa, \"exaltation; the lifting of a soul to the divine\", restored on lumra. Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "derivation:lx_melofarla_1878:-yo",
+   "op": "add_derivation",
+   "from": null,
+   "to": "melofarlayo",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): melofarlayo, \"composer\", listed. Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "derivation:lx_dumdo_1424:-yo",
+   "op": "add_derivation",
+   "from": null,
+   "to": "dumdoyo",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): dumdoyo, \"drummer\", listed. Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "derivation:lx_vinye_1856:-yo",
+   "op": "add_derivation",
+   "from": null,
+   "to": "vinyeyo",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): vinyeyo, \"veena player; lutenist\", listed. Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "derivation:lx_lavbulira_1564:-yo",
+   "op": "add_derivation",
+   "from": null,
+   "to": "lavbulirayo",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): lavbulirayo, \"cantor; a singer of hymns\", listed. Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "derivation:lx_melobiti_1259:-yo",
+   "op": "add_derivation",
+   "from": null,
+   "to": "melobitiyo",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): melobitiyo, \"instrumentalist\", listed. Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "derivation:lx_noruvimo_1916:-yo",
+   "op": "add_derivation",
+   "from": null,
+   "to": "noruvimoyo",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): noruvimoyo, \"seer; one who receives visions\", listed. Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "derivation:lx_deviserbu_1918:-yo",
+   "op": "add_derivation",
+   "from": null,
+   "to": "deviserbuyo",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): deviserbuyo, \"theologian\", listed. Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "derivation:lx_lideoserbu_1286:-yo",
+   "op": "add_derivation",
+   "from": null,
+   "to": "lideoserbuyo",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): lideoserbuyo, \"philosopher\", listed. Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "derivation:lx_pensa_0601:-yo",
+   "op": "add_derivation",
+   "from": null,
+   "to": "pensayo",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): pensayo, \"thinker\", listed. Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "derivation:lx_biojuba_1942:-yo",
+   "op": "add_derivation",
+   "from": null,
+   "to": "biojubayo",
+   "ruling": "3.0:G130",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): biojubayo, \"giver of life (epithet)\", listed. Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "derivation:lx_lirajuba_1937:-yo",
+   "op": "add_derivation",
+   "from": null,
+   "to": "lirajubayo",
+   "ruling": "3.0:G130",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): lirajubayo, \"giver of song (epithet)\", listed. Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "derivation:lx_lumidonu_1915:-yo",
+   "op": "add_derivation",
+   "from": null,
+   "to": "lumidonuyo",
+   "ruling": "3.0:G130",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): lumidonuyo, \"giver of light; consecrator (epithet)\", listed. Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "derivation:lx_velusasva_1943:-yo",
+   "op": "add_derivation",
+   "from": null,
+   "to": "velusasvayo",
+   "ruling": "3.0:G130",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): velusasvayo, \"keeper of the stars (epithet)\", listed. Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "derivation:lx_loremeyi_1941:-yo",
+   "op": "add_derivation",
+   "from": null,
+   "to": "loremeyiyo",
+   "ruling": "3.0:G130",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): loremeyiyo, \"mender of hearts; consoler (epithet)\", listed. Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "derivation:lx_fatotenva_1944:-yo",
+   "op": "add_derivation",
+   "from": null,
+   "to": "fatotenvayo",
+   "ruling": "3.0:G130",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): fatotenvayo, \"weaver of fate (epithet)\", listed. Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "derivation:lx_velufarla_1945:-yo",
+   "op": "add_derivation",
+   "from": null,
+   "to": "velufarlayo",
+   "ruling": "3.0:G130",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): velufarlayo, \"maker of stars (epithet)\", listed. Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "derivation:lx_dipo_1862:-pago",
+   "op": "add_derivation",
+   "from": null,
+   "to": "dipopago",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): dipopago, \"lamp-niche; a place where devotional lamps are kept\", listed. Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:morphology.lexicalised_diminutives.patuti",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"point; dot; a speck: patu + -ti\"",
+   "ruling": "2.5:G122",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): patuti, \"point; dot; a speck\", a lexicalised diminutive. Proposed in 3.0: awaiting the author's ratification.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "text:grammar.clause_template",
+   "op": "edit_text",
+   "from": "[LINKER] [FRAME,] [TOPIC hozi,] [ki-WORD] SUBJECT [TENSE] [noma] [ne] [MODAL] [APPROACH] [PHASE] [EFFORT] [ASPECT] [ITERATION] [EVIDENTIAL] VERB [OBJECT] [ADJUNCTS] [fuyi] [hoyo|yasmo] [ATTITUDE] [ki] [, VOCATIVE]",
+   "to": "[iya VOCATIVE,] [LINKER] [FRAME,] [TOPIC hozi,] [ki-WORD] SUBJECT [TENSE] [noma] [ne] [MODAL] [APPROACH] [PHASE] [EFFORT] [ASPECT] [ITERATION] [EVIDENTIAL] VERB [OBJECT] [ADJUNCTS] [fuyi] [hoyo|yasmo] [ATTITUDE] [ki] [, [iya] VOCATIVE]",
+   "ruling": "3.0:G129",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): an iya vocative may open the sentence, set off by a comma, or close it after ki.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:grammar.edges.before_the_clause",
+   "op": "edit_value",
+   "from": "[{\"position\":\"LINKER\",\"words\":[\"ata\",\"oro\",\"nara\"],\"notes\":\"a line or clause that continues the one before (1.2:G25, 2.3:G72)\"},{\"position\":\"FRAME\",\"words\":[\"see slot 1\"],\"notes\":\"set off by a comma (2.5:G127)\"},{\"position\":\"TOPIC\",\"words\":[\"NP + hozi\"],\"notes\":\"set off by a comma (2.5:G119)\"},{\"position\":\"ki-WORD\",\"words\":[\"a fronted ki-word\"],\"notes\":\"the question may then end without ki (2.5:G88)\"}]",
+   "to": "[{\"position\":\"VOCATIVE\",\"words\":[\"iya + a noun phrase or name\"],\"notes\":\"set off by a comma; expected in prayer, invocation and litany, and required where a comma-set noun phrase could be read as an apposition (3.0:G129, 3.0:G130)\"},{\"position\":\"LINKER\",\"words\":[\"ata\",\"oro\",\"nara\"],\"notes\":\"a line or clause that continues the one before (1.2:G25, 2.3:G72)\"},{\"position\":\"FRAME\",\"words\":[\"see slot 1\"],\"notes\":\"set off by a comma (2.5:G127)\"},{\"position\":\"TOPIC\",\"words\":[\"NP + hozi\"],\"notes\":\"set off by a comma (2.5:G119)\"},{\"position\":\"ki-WORD\",\"words\":[\"a fronted ki-word\"],\"notes\":\"the question may then end without ki (2.5:G88)\"}]",
+   "ruling": "3.0:G129",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): the vocative edge before the clause, opened by iya.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:grammar.edges.after_the_clause",
+   "op": "edit_value",
+   "from": "[{\"position\":\"VOCATIVE\",\"words\":[\"a noun phrase or name\"],\"notes\":\"set off by a comma; may follow ki (2.5:G89)\"}]",
+   "to": "[{\"position\":\"VOCATIVE\",\"words\":[\"a noun phrase or name\",\"iya + a noun phrase or name\"],\"notes\":\"set off by a comma; may follow ki (2.5:G89); iya marks it in prayer (3.0:G129)\"}]",
+   "ruling": "3.0:G129",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): the closing vocative may be opened by iya.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:grammar.edges.apposition",
+   "op": "edit_value",
+   "from": null,
+   "to": "{\"position\":\"after any noun phrase\",\"words\":[\"a second noun phrase that renames it\"],\"notes\":\"set off by commas, with its own determiner and no copula; it starts a new phrase, so it never joins a de-chain; several in a row form a litany (3.0:G130)\"}",
+   "ruling": "3.0:G130",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): apposition: a noun phrase renamed by a second, comma-set noun phrase.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "fw_miyo_0100",
+   "op": "edit_function_word",
+   "field": "meaning",
+   "from": "existential there is / are",
+   "to": "existential there is / are; after a subject, absolute being: exists (3.0:G132)",
+   "ruling": "3.0:G132",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): the miyo row follows 3.0:G132.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "fw_miyo_0100",
+   "op": "edit_function_word",
+   "field": "position",
+   "from": "miyo + noun phrase (+ location); agreement invariant",
+   "to": "miyo + noun phrase (+ location): there is; SUBJECT [TENSE] miyo with nothing after it: the subject exists (3.0:G132); miyo + noun phrase + ! = let there be, + pifu = may there be (3.0:G133); agreement invariant",
+   "ruling": "3.0:G133",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): the miyo row follows 3.0:G133.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "fw_sela_0008",
+   "op": "edit_function_word",
+   "field": "meaning",
+   "from": "oneself / reflexive",
+   "to": "oneself / reflexive; emphatic -self (3.0:G134)",
+   "ruling": "3.0:G134",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): the sela row follows 3.0:G134.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "fw_sela_0008",
+   "op": "edit_function_word",
+   "field": "position",
+   "from": "pronoun + sela",
+   "to": "pronoun + sela: reflexive in object position; pronoun or noun phrase + sela in subject position or as an apposition is emphatic, herself or itself (3.0:G134); never alone as a subject",
+   "ruling": "3.0:G134",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): the sela row follows 3.0:G134.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "fw_gagu_0099",
+   "op": "edit_function_word",
+   "field": "position",
+   "from": "Introduces optional external actor after passive verb",
+   "to": "Introduces optional external actor after passive verb; after a noun naming a made work, gagu + noun phrase names its maker, with no passive verb (3.0:G136)",
+   "ruling": "3.0:G136",
+   "reason": "Liraasa 3.0 patch (Devotion, Music and Measure): the gagu row follows 3.0:G136.",
+   "addedIn": "3.0",
+   "at": "2026-10-25T12:00:00Z",
+   "author": "nicolas"
+  }
+ ]
+}

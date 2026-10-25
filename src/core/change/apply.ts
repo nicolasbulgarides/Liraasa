@@ -45,6 +45,8 @@ export interface ChangesetRuling {
   settles_open_questions?: string[];
   translator_preference?: string;
   notes?: string;
+  /** 3.0 on: `proposed` until the author ratifies the ruling (ADR-0021). */
+  status?: string;
 }
 
 export interface NewHeadword {
@@ -512,6 +514,23 @@ export function applyChangesets(
           pattern.attested.push(h);
           break;
         }
+        case 'lexicalise_from_pattern': {
+          const pattern = (lex as unknown as { image_compounds?: { attested: Headword[] } })
+            .image_compounds;
+          const i = pattern?.attested.findIndex((x) => String(x.id) === op.entry) ?? -1;
+          const h = pattern?.attested[i];
+          if (pattern === undefined || h === undefined || h.root !== op.from || op.to !== op.from)
+            throw new ApplyError(
+              `${op.entry}: not an attested image compound spelled ${String(op.from)}`,
+            );
+          if (byRoot.has(h.root) || byId.has(String(h.id)))
+            throw new ApplyError(`${op.entry}: ${h.root} is already a headword`);
+          pattern.attested.splice(i, 1);
+          heads.push(h);
+          byId.set(String(h.id), h);
+          byRoot.set(h.root, h);
+          break;
+        }
         case 'edit_ledger': {
           const spelling = op.entry.replace(/^ledger:/, '');
           const row = (lex.sound_ledger as unknown as Row[]).find((r) => r.spelling === spelling);
@@ -582,6 +601,11 @@ export function applyChangesets(
               throw new ApplyError(`${op.entry}: synonyms are not ${String(op.from)}`);
             }
             h.english_synonyms = JSON.parse(op.to) as string[];
+          } else if (op.field === 'domain') {
+            const h = headword(op);
+            if (h.domain !== op.from || op.to === null)
+              throw new ApplyError(`${op.entry}: domain is not ${String(op.from)}`);
+            h.domain = op.to;
           } else if (op.entry === 'phonology.declared_distance_1_pairs') {
             const pairs = lex.phonology.declared_distance_1_pairs as string[][];
             const pair = op.to === null ? null : (JSON.parse(op.to) as string[]);
@@ -930,6 +954,8 @@ export function auditBuild(
     ['time_and_dates', lex.time_and_dates],
     ['colors', lex.colors],
     ['discourse_particles', lex.discourse_particles],
+    // an attested image compound keeps its id (2.0:G40): no headword may take it again
+    ['image_compounds.attested', lex.image_compounds?.attested ?? []],
   ];
   const ids = new Set<string>();
   for (const [name, rows] of sections) {

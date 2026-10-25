@@ -4,7 +4,7 @@
  *
  *   npm run build:llm
  *
- * Writes handoff/liraasa_2_5_llm.json from the canonical 2.5 lexicon. It holds
+ * Writes handoff/liraasa_3_0_llm.json from the canonical 3.0 lexicon. It holds
  * every grammar rule and the full dictionary. It is shaped for a reader that
  * goes top to bottom: instructions and hard rules first, then sound, word
  * building, the clause, recipes and every ruling, then the small words, the
@@ -33,8 +33,8 @@ import {
 import { canonTexts, isCanonText, type Lexicon } from './grammar_guide/data';
 import { parseArgs } from './args';
 
-const LEXICON = 'data/lexicon/liraasa_2_5.json';
-const OUT = 'handoff/liraasa_2_5_llm.json';
+const LEXICON = 'data/lexicon/liraasa_3_0.json';
+const OUT = 'handoff/liraasa_3_0_llm.json';
 /** The album, read against the live lexicon by scripts/build_album.ts; non-normative (2.5:G87). */
 const ALBUM = 'data/corpus/album_2_0/album_current.json';
 const ALBUM_READINGS = 'data/corpus/album_2_0/album_readings.json';
@@ -93,6 +93,8 @@ interface Ruling {
   derived?: string[];
   translator_preference?: string;
   notes?: string;
+  /** 3.0 on: `proposed` until the author ratifies it (ADR-0021). */
+  status?: string;
 }
 interface Head {
   root: string;
@@ -180,6 +182,10 @@ function albumSection(): Record<string, unknown> {
 /** What a reader must know before following a ruling: superseded, amended or covered. */
 function rulingStatus(r: Ruling): string {
   const parts: string[] = [];
+  if (r.status === 'proposed')
+    parts.push(
+      'PROPOSED: not yet ratified by the author; follow it, and say so when a line depends on it',
+    );
   if (r.superseded_by !== undefined)
     parts.push(`SUPERSEDED by ${r.superseded_by}: do not follow; follow ${r.superseded_by}`);
   for (const p of r.superseded_in_part ?? [])
@@ -265,6 +271,9 @@ function main(): void {
     ...(r.notes !== undefined ? { notes: r.notes } : {}),
     ...(r.derived !== undefined ? { awaiting_author_confirmation: r.derived } : {}),
   }));
+  const proposed = rulings
+    .filter((r) => r.status?.startsWith('PROPOSED') === true)
+    .map((r) => r.id);
   rulings.push({
     id: 'ADR-0011',
     topic: 'A noun does not modify a noun',
@@ -361,6 +370,11 @@ function main(): void {
 
   const out = {
     title: `Liraasa ${lex.version}: the complete grammar and dictionary, for language models`,
+    ...(proposed.length === 0
+      ? {}
+      : {
+          edition_status: `PROPOSED: the ${lex.version} additions (${proposed[0] ?? ''}–${proposed[proposed.length - 1] ?? ''}, and every dictionary line flagged "new in ${lex.version}") await the author's ratification. Everything older is canon.`,
+        }),
     read_me_first: [
       'Liraasa is a constructed language built for singing, by one author. This file is the complete, authoritative description of it: every grammar rule and every word.',
       'Read the sections in order: hard_rules, how_to_translate, sound, word_building, clause, recipes, rulings, small_words, dictionary, examples. The album at the end is non-normative text, not grammar (2.5:G87).',
@@ -460,7 +474,7 @@ function main(): void {
     clause: {
       template: lex.grammar.clause_template,
       explanation:
-        'Twenty core slots in fixed order, with edge positions before and after the clause (edges, 2.5:G126). The minimal clause is SUBJECT + VERB, except commands, hortatives, permitted ellipsis, existential miyo clauses (no subject) and bare adjective predicates (SUBJECT ADJECTIVE, present only, no operators; anything more needs ke or ka) (2.5:G128). Bracketed slots are optional. One word per operator slot.',
+        'Twenty core slots in fixed order, with edge positions before and after the clause (edges, 2.5:G126). The minimal clause is SUBJECT + VERB, except commands, hortatives, permitted ellipsis, existential miyo clauses (no subject) and bare adjective predicates (SUBJECT ADJECTIVE, present only, no operators; anything more needs ke or ka) (2.5:G128). SUBJECT [TENSE] miyo with nothing after it asserts that the subject exists (3.0:G132). A vocative (iya + noun phrase, 3.0:G129) and an apposition (3.0:G130) stand outside the slots, set off by commas. Bracketed slots are optional. One word per operator slot.',
       edges: (lex.grammar as unknown as { edges?: unknown }).edges,
       slots: lex.grammar.slots,
       noun_phrase: lex.grammar.noun_phrase,
@@ -468,11 +482,13 @@ function main(): void {
       stacking: lex.grammar.stacking,
       valency_operators: lex.grammar.valency,
       copulas:
-        'ke and ka mark one contrast for every predicate (adjective, noun phrase or location): ke = holds now, or for a time (Li kavbikova ke su li tabu. The basket is on the table); ka = lasting, defining, by nature (Maivo ka lirayo. I am a singer) (2.5:G93). po ke = was, at that time; po ka = was (lasting), no claim about now; kapoki = was, and no longer is (2.5:G94). A bare adjective predicate (Nela vanisan.) is allowed only in the present with no operators, and carries no ke / ka contrast (2.5:G128).',
+        'ke and ka mark one contrast for every predicate (adjective, noun phrase or location): ke = holds now, or for a time (Li kavbikova ke su li tabu. The basket is on the table); ka = lasting, defining, by nature (Maivo ka lirayo. I am a singer) (2.5:G93). po ke = was, at that time; po ka = was (lasting), no claim about now; kapoki = was, and no longer is (2.5:G94). A bare adjective predicate (Nela vanisan.) is allowed only in the present with no operators, and carries no ke / ka contrast (2.5:G128). A copula always needs a predicate: bare being is miyo (Saivo miyo. She is. Saivo po miyo. She was.), never a lone ke or ka (3.0:G132). miyo + noun phrase marked as a command is a fiat (Miyo lumi! Let there be light!), + pifu a wish (Miyo sove en li nimu pifu. May there be peace in the home.); unmarked it stays a statement (3.0:G133). Two liturgical formulas are fixed: Ola-modo po miyo, ola-modo miyo, ola-modo futu miyo (so it was, so it is, so it shall be), where ola-modo opens the clause without a comma; and Ola-modo pifu. (So be it; amen.), which closes a prayer (3.0:G133).',
       questions:
         "A yes/no question keeps statement order and ends in ki (Taivo lirala ki?). A content question ends in ki unless its ki-word is the first word of the sentence (Ki-kasa taivo po amora maivo? or … maivo ki?); a ki-word left in its answer's place requires the final ki (Taivo pagopa ki-pago ki?). The fronting exception covers ki-coda, ki-pago, ki-krono, ki-nela, ki-nela de, ki-kasa, manner ki-modo and ki-muya-krono only; questions with ki-eli + noun, ki-muya + noun and degree ki-modo + adjective always end in ki, and without ki those three are exclamations (Ki-eli nullo!) (2.5:G88, 2.2:G61, 2.3:G76). A question may open with raho and then ends in ki (2.3:G74). A fragment question ends in ki (Ata ki?, 2.5:G91); echo ki follows a single word or bare noun phrase only (Lira ki?, 2.5:G92). A final ki or attitude word belongs to the main clause, and ki is the last word except for a comma-set vocative (2.5:G89). Embedded questions never take ki; an embedded yes/no question uses ki-oro (2.3:G77). A ki-word in place in a clause without final ki is an embedded question or part of a statement, never a direct question.",
       commands:
-        'A command is marked: in writing it ends in ! or contains fisa; in speech fisa or command intonation marks it. A subjectless, tenseless clause with neither mark is an elliptical statement (2.5:G90). ne + command forbids (2.1:G56).',
+        'A command is marked: in writing it ends in ! or contains fisa; in speech fisa or command intonation marks it. A subjectless, tenseless clause with neither mark is an elliptical statement (2.5:G90). ne + command forbids (2.1:G56). A command may carry ne, the iteration words reve and loki, and any adjuncts; never tense, a modal or an evidential. A petition is a command opened by a vocative, usually softened by fisa after its comma (Iya Deviasa, fisa, ne pagopa vofa maivo! O Great Goddess, please, do not go far from me!); yava may follow a FRAME (Eli-krono, yava lirala!) (3.0:G135).',
+      address_and_naming:
+        'Vocative: iya + noun phrase addresses someone; it opens the sentence, set off by a comma (never iya, …), stands alone (Iya Lumimare!), or follows a final ki after a comma; in prayer it is expected, and it is required wherever a comma-set noun phrase could be read as an apposition (3.0:G129). Apposition: a second noun phrase set off by commas renames the first, keeps its own determiner, takes no copula and never joins a de-chain; several in a row form a litany (3.0:G130). Titles: a title of the Goddess used as a name is capitalised, takes no article and owns before de like a personal name (Deviasa de lira, the Great Goddess’s song); a descriptive epithet keeps li and stays lower-case (li mareasa de li lumi, the mother of light), so Mareasa de li lumi means the Mother’s light (3.0:G131). Emphatic sela: pronoun or noun phrase + sela as the subject, or as an apposition, is herself / itself; in object position it stays reflexive; sela never stands alone as a subject (3.0:G134). Authorship: after a noun naming a made work, gagu + noun phrase names its maker, with no passive verb (li lira gagu Peta, the song by Peta) (3.0:G136). Acclamation: a verbless NP ala NP! (Lumisirmo ala Deviasa! Glory to the Great Goddess!) is a liturgical fragment, and may be followed by a vocative (3.0:G137). Taivo, Saivo and their forms may be capitalised when they refer to the Goddess, with no grammatical effect (3.0:G138). en rinbakrono = for ever (3.0:G139). A bare noun or number repeated around krotiapo is one X after another (una krotiapo una, one by one) (3.0:G140). Style, not grammar: keep ordinary forms for the human and the near, ascended forms for what is truly divine (3.0:G141).',
       linking: `fime = "that" introducing a content clause; ola = the demonstrative "that". raho opens a relative clause; one that does not end the sentence is closed by a comma when it contains its own object or adjunct (2.5:G115); a relative on a preposition, a possessor, a time or a place keeps a resumptive pronoun in place (2.1:G52, 2.5:G120). sidu joins two verbs with one subject (want to sing = ${verbOf(WANT)} sidu ${verbOf(SING)}); a second verb with its own subject goes in a fime clause (2.1:G50). Purpose always uses kopisa: kopisa + bare verb phrase with the same subject, kopisa + clause with a different one, and kopisa + a clause with nosi for hopeful purpose (2.5:G113, 2.5:G116). An unmarked subordinate clause takes the main clause's tense; sige clauses mark their own (2.5:G118). ala means toward, never the infinitive "to".`,
     },
     recipes: RECIPES.map(([english, pattern, liraasa, gloss, ruling]) => ({

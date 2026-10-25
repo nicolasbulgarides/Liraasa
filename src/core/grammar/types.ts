@@ -30,6 +30,8 @@ export type Pos =
   | 'chain'
   | 'hortative'
   | 'interjection'
+  /** iya, opening a vocative noun phrase (3.0:G129). */
+  | 'vocative'
   | 'timeAdv'
   | 'placeAdv'
   | 'mannerAdv'
@@ -202,6 +204,8 @@ export interface NounPhrase {
   plural: boolean;
   /** A ata B, A oro B */
   and?: { linker: number; np: NounPhrase };
+  /** gagu + the maker, after a noun naming a made work (3.0:G136). */
+  maker?: NounPhrase;
 }
 
 export interface Adjunct {
@@ -280,6 +284,8 @@ export interface Clause {
   adjuncts: Adjunct[];
   closing: { at: number; slot: string }[];
   vocative: NounPhrase | null;
+  /** iya vocatives opening the sentence, before the clause (3.0:G129). */
+  address?: NounPhrase[];
   /** Clauses joined after this one (ata, nara, a comma …) or subordinate to it. */
   subordinates: Clause[];
   /** A scope operator before the clause's linker: yesta si …, doli si … (1.0:G10). */

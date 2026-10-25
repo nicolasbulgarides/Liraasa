@@ -2,7 +2,7 @@
  * The word index of the strict checker (2.5, ADR-0020), built entirely from
  * the data: the LLM reference (handoff/liraasa_2_5_llm.json), the checker's
  * overlay (data/checker/lexicon_flags.json), its rule parameters
- * (data/checker/rules_2_5.json), the legacy spellings and the known names.
+ * (data/checker/rules_3_0.json), the legacy spellings and the known names.
  * Nothing here names a Liraasa word.
  */
 import type { FormRole, Pos, Reading } from './types';
@@ -76,7 +76,7 @@ export interface Flags {
   noun_class: Record<string, string>;
 }
 
-/** data/checker/rules_2_5.json, as the checker reads it. */
+/** data/checker/rules_3_0.json (2.5's, plus the 3.0 parameters), as the checker reads it. */
 export interface RuleParams {
   question: {
     fragment?: string;
@@ -103,7 +103,22 @@ export interface RuleParams {
   };
   recipient: { draft_tags: { status: string; verbs: string[] } };
   tense: { own_tense: string[] };
-  command: { hortative: string; marks: string[] };
+  command: {
+    hortative: string;
+    marks: string[];
+    /** 3.0:G135: what a command may and may not carry. */
+    operators?: { ruling: string; never: string[]; allowed_words: string[] };
+  };
+  /** 3.0 (proposed, ADR-0021). */
+  vocative?: { ruling: string; particle: string };
+  apposition?: { ruling: string };
+  titles?: { ruling: string };
+  absolute_being?: { ruling: string; word: string; copulas_needing_a_predicate: string[] };
+  formula?: { ruling: string; opener: string; word: string };
+  emphatic?: { ruling: string; word: string };
+  authorship?: { ruling: string; word: string; work_nouns: string[] };
+  acclamation?: { ruling: string; preposition: string; mark: string };
+  distributive?: { ruling: string; word: string };
   adjective_sidu: { dummy: string };
   negative_number: { word: string };
   [key: string]: unknown;
@@ -260,6 +275,7 @@ function functionPos(
     hortative: 'hortative',
     interjection: 'interjection',
     time: 'timeAdv',
+    vocative: 'vocative',
   };
   if (cls !== undefined) {
     const p = byClass[cls];

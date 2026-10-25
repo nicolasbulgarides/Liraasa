@@ -1,0 +1,48 @@
+{
+ "report": "Liraasa 3.0 build",
+ "built_utc": "2026-10-25T12:00:00Z",
+ "baseline": {
+  "file": "liraasa_2_5.json",
+  "sha256": "28b8756e7233f1bd52e4c0fbbe227a105873427b15a4b9be808da6644d73c271"
+ },
+ "changesets": [
+  {
+   "file": "data/changes/2026-10-25-lexicon-3-0.json",
+   "id": "2026-10-25-lexicon-3-0",
+   "sha256": "28fd3b0748342ccb876b8936c2bce0f8c00b1dca554aab47b414974361611a79"
+  }
+ ],
+ "output": {
+  "file": "liraasa_3_0.json",
+  "sha256": "5b44b4e534ffc106e69e978a42d2bfe2f3a815b71f32cb5e5de0fa85a94f22ef",
+  "bytes": 3237135
+ },
+ "counts": {
+  "before": {
+   "headwords": 1463,
+   "primalRoots": 475,
+   "compounds": 988,
+   "forms": 10241,
+   "distinctForms": 10241,
+   "functionWords": 152,
+   "correlatives": 39,
+   "lexicalisedDerivations": 99,
+   "rhymeFamilies": 478
+  },
+  "after": {
+   "headwords": 1590,
+   "primalRoots": 490,
+   "compounds": 1100,
+   "forms": 11130,
+   "distinctForms": 11130,
+   "functionWords": 153,
+   "correlatives": 39,
+   "lexicalisedDerivations": 116,
+   "rhymeFamilies": 493
+  }
+ },
+ "audit": {
+  "passed": true,
+  "findings": []
+ }
+}

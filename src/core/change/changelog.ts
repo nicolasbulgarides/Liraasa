@@ -49,6 +49,12 @@ export type ChangeOp =
    */
   | 'move_to_pattern'
   /**
+   * The reverse of `move_to_pattern`: an attested image compound becomes a
+   * headword again, whole and with its id, so a later op can give it a
+   * lexicalised meaning (3.0, ADR-0021). `from` and `to` are its spelling.
+   */
+  | 'lexicalise_from_pattern'
+  /**
    * A new data section, from the changeset's `sections` payload. `entry` is
    * its path: `image_compounds`, `morphology.derivation_defaults`… (ADR-0016).
    */

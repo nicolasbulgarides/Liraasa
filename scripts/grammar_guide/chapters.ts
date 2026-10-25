@@ -1042,6 +1042,64 @@ export const RECIPES: readonly (readonly [string, string, string, string, string
     'I sat by the table. Now I am still sitting here.',
     '0.8:R4',
   ],
+  // 3.0, proposed: the recipes the 3.0 patch's README asks for, each a ruling's own example
+  [
+    'O … (addressing)',
+    '`iya` + noun phrase, set off by a comma',
+    'Iya Deviasa, lenila maivo!',
+    'O Great Goddess, hear me!',
+    '3.0:G129',
+  ],
+  [
+    'Glory to …!',
+    'noun phrase `ala` noun phrase!',
+    'Lumisirmo ala Deviasa!',
+    'Glory to the Great Goddess!',
+    '3.0:G137',
+  ],
+  [
+    'she is (she exists)',
+    'subject [tense] `miyo`, nothing after it',
+    'Saivo miyo.',
+    'She is. (She exists.)',
+    '3.0:G132',
+  ],
+  ['let there be …', '`miyo` + noun phrase + !', 'Miyo lumi!', 'Let there be light!', '3.0:G133'],
+  [
+    'so be it (amen)',
+    '`ola-modo pifu` closes a prayer',
+    'Ola-modo pifu.',
+    'So be it. (Amen.)',
+    '3.0:G133',
+  ],
+  [
+    'she herself',
+    'pronoun + `sela` as the subject',
+    'Saivo sela po lirala.',
+    'She herself sang.',
+    '3.0:G134',
+  ],
+  [
+    'by (an author)',
+    'a made work + `gagu` + noun phrase',
+    'li lira gagu Peta',
+    'the song by Peta',
+    '3.0:G136',
+  ],
+  [
+    'one by one',
+    'X `krotiapo` X, a bare noun or number repeated',
+    'Una krotiapo una, li veluri po hiro lirala.',
+    'One by one, the stars began to sing.',
+    '3.0:G140',
+  ],
+  [
+    'for ever',
+    '`en rinbakrono`',
+    'Saivo futu lirala en rinbakrono.',
+    'She will sing for ever.',
+    '3.0:G139',
+  ],
 ];
 
 export function recipesPart(index: Index): string {
@@ -1140,21 +1198,24 @@ export const RULES: readonly (readonly [string, string, string])[] = [
   ['warn', 'a saying-verb + su read as “about”', '1.2:G30'],
   ['warn', 'English gloss is passive but the line has no gome', 'passive'],
   ['note', '-na direction; hema as hesitation', ''],
+  [
+    'error',
+    'a descriptive epithet keeps li; only a title used as a name drops it, and a name before de owns (Mareasa de li lumi is “the Mother’s light”)',
+    '3.0:G131',
+  ],
 ];
 
 // ------------------------------------------------------------ Open questions
 
 /** Not decided: presented as open, resolved nowhere (SPEC §14). Language only. */
 export const OPEN_QUESTIONS: readonly string[] = [
-  '**A vocative particle for verse.**',
   '**“To + verb” beyond purpose:** purpose is `kopisa` (2.5:G113); `sidu` (same subject), `fime` (a different subject, 2.1:G50) and adjective + `sidu` (2.5:G111) cover the other known cases; the general case remains open.',
   '`ke sidu` VERB **as “destined to”** (album 08): hold until a second use.',
   '**The order of two or more adjectives** before one noun.',
-  '**Which operators a command may carry**, and whether `yava` stands after a FRAME or always first.',
-  '`sela`: reflexive object only, or also emphatic (“I myself”); whether `maivori` includes the listener.',
+  'Whether `maivori` includes the listener.',
   '**Which quantifiers form a measure** with `kroti` and `krotiapo` (2.5:G108): until ruled, only NUMBER + unit.',
   '**Comparing an action with no manner adjective** (“I sing more than you”).',
-  '**A duration** (“for two days”), now that a bare noun after a verb is its object (2.5:G103).',
+  '**A duration** (“for two days”) in general, now that a bare noun after a verb is its object (2.5:G103); `en rinbakrono` covers only “for ever” (3.0:G139).',
   '**Decimals**: outside the language until ruled (2.5:G125).',
 ];
 

@@ -1,29 +1,29 @@
 /**
- * CLI: build Liraasa 2.5: The Grammar in Lessons → handoff/Liraasa_2_5_Lessons.html
+ * CLI: build Liraasa 3.0: The Grammar in Lessons → handoff/Liraasa_3_0_Lessons.html
  *
  *   npm run build:lessons            # the HTML
  *   npm run build:lessons -- --pdf   # also the PDF (Edge or Chrome), both copied to LirasaCodexLatest/
  *
- * The content is scripts/lessons/lessons_2_5.ts. The build refuses to write
- * the page unless, under the 2.5 strict checker (src/core/grammar):
+ * The content is scripts/lessons/lessons_3_0.ts (the 2.5 lessons and a proposed 3.0 part). The build refuses to write
+ * the page unless, under the strict checker (src/core/grammar):
  *   - every example and every practice answer reads with no error or warning;
  *   - every "watch out" sentence is rejected, citing the rule it names;
  *   - every Liraasa word in the prose is a word of Liraasa;
- *   - every rule cited exists in the 2.5 reference.
+ *   - every rule cited exists in the 3.0 reference.
  */
 import { copyFileSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { pdfPages, printPdf } from './grammar_guide/check';
 import { createChecker } from '../src/core/grammar';
 import { loadGrammarSource } from './grammar_source';
-import { INTRO, MAP, OPEN, PARTS } from './lessons/lessons_2_5';
+import { INTRO, MAP, OPEN, PARTS } from './lessons/lessons_3_0';
 
-const OUT = 'handoff/Liraasa_2_5_Lessons.html';
-const PDF = 'handoff/Liraasa_2_5_Lessons.pdf';
+const OUT = 'handoff/Liraasa_3_0_Lessons.html';
+const PDF = 'handoff/Liraasa_3_0_Lessons.pdf';
 /** With --pdf, the HTML and the PDF also land here, beside the published guide. */
 const LATEST_DIR = 'LirasaCodexLatest';
 const ck = createChecker(loadGrammarSource());
-const ref = JSON.parse(readFileSync('handoff/liraasa_2_5_llm.json', 'utf8')) as {
+const ref = JSON.parse(readFileSync('handoff/liraasa_3_0_llm.json', 'utf8')) as {
   rulings: { id: string }[];
 };
 const rulingIds = new Set(ref.rulings.map((r) => r.id));
@@ -172,7 +172,7 @@ summary{cursor:pointer}details p{margin:.4rem 0 .1rem;font-size:1.05rem}
 <body>
 <main>
 <h1>Liraasa: The Grammar in Lessons</h1>
-<p class="sub">Edition 2.5 · twenty short lessons, about ten minutes each</p>
+<p class="sub">Edition 3.0 · ${String(n)} short lessons, about ten minutes each; the last part is proposed</p>
 <div class="intro">${INTRO.map((p) => `<p>${md(p, 'intro')}</p>`).join('')}</div>
 <nav aria-label="Lessons"><h2>The lessons</h2><ol>${toc.join('')}</ol></nav>
 ${body.join('\n')}
@@ -186,6 +186,7 @@ ${MAP.lines.map((l) => `<code>${esc(l)}</code>`).join('')}
 </main>
 <script>
 (function(){
+  // kept from 2.5: lessons 1-20 keep their numbers, so a reader's marks still apply
   var KEY='liraasa-lessons-2-5';
   var done={};
   try{done=JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){}
@@ -206,7 +207,7 @@ console.log(`wrote ${OUT}: ${String(n)} lessons, every example checked`);
 
 if (process.argv.includes('--pdf')) {
   // on paper every answer is shown: the print copy opens each practice line
-  const printCopy = 'handoff/.Liraasa_2_5_Lessons.print.html';
+  const printCopy = 'handoff/.Liraasa_3_0_Lessons.print.html';
   writeFileSync(printCopy, html.replace(/<details>/g, '<details open>'), 'utf8');
   printPdf(resolve(printCopy), resolve(PDF));
   rmSync(printCopy);

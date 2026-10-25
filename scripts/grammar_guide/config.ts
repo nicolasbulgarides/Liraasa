@@ -16,13 +16,13 @@ export interface Theme {
 
 export const GUIDE = {
   /** Read only. Rebuilt by `npm run build:handoff`. */
-  lexicon: 'handoff/liraasa_2_5_complete.json',
+  lexicon: 'handoff/liraasa_3_0_complete.json',
   /** The frozen 1.0, read only for its headword count in the edition note. */
   lexicon10: 'data/lexicon/liraasa_1_0.json',
   outDir: 'handoff',
   /** The file stem; `.html` and `.pdf` are added. */
-  outName: 'Liraasa_2_5_Reference_Grammar',
-  title: 'Liraasa 2.5 Reference Grammar',
+  outName: 'Liraasa_3_0_Reference_Grammar',
+  title: 'Liraasa 3.0 Reference Grammar',
   subtitle: 'A language built for singing',
 
   /**
@@ -268,7 +268,8 @@ export const INVITATION = {
 
   /** The “try it” pairs: the reader joins each modifier to its head. */
   tryPairs: [
-    ['lx_merno_0381', 'lx_lira_0272'],
+    // merno + lira (mernolira) is a headword since 3.0, aubade: no longer a pattern example
+    ['lx_merno_0381', 'lx_vaye_0945'],
     ['lx_noru_0545', 'lx_havli_0158'],
     ['lx_nevlo_0491', 'lx_belda_0026'],
   ],

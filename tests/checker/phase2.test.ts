@@ -221,6 +221,14 @@ describe('rule ids and the overlay', () => {
   });
 
   it('every overlay key is a word the reference knows', () => {
+    // the overlay is shared with the 3.0 strict checker: a word added since 2.3 (iya, 3.0:G129) is not in this reference
+    const later = new Set(
+      (
+        read('../../handoff/liraasa_3_0_llm.json') as {
+          small_words: { function_words: { rows: string[][] } };
+        }
+      ).small_words.function_words.rows.map((r) => r[0]),
+    );
     for (const table of [
       'word_class',
       'give_type',
@@ -233,6 +241,7 @@ describe('rule ids and the overlay', () => {
       for (const w of Object.keys(flags[table] ?? {})) {
         if (w.startsWith('_')) continue;
         const r = checker.readLine(w)[0]?.reading;
+        if (r?.kind !== 'lexical' && r?.kind !== 'closed' && later.has(w)) continue;
         expect(r?.kind === 'lexical' || r?.kind === 'closed', `${table}.${w}`).toBe(true);
       }
     }

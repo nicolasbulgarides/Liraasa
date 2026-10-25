@@ -59,8 +59,10 @@ describe('what the checker reports as unruled, not pass or fail', () => {
     const f = ck.checkLine('Maivo po venreva kroti poka deyari.').findings;
     expect(f.some((x) => x.severity === 'unruled' && x.rule === '2.5:G108')).toBe(true);
   });
-  it('a command with an operator other than ne (I-42)', () => {
-    const f = ck.checkLine('Povi lirala!').findings;
+  it('a command with an operator other than ne, reve or loki (I-42, narrowed by 3.0:G135)', () => {
+    // 3.0:G135 rules tense, modals and evidentials out of a command: Povi lirala! is its ✗
+    expect(ck.checkLine('Povi lirala!').findings.some((x) => x.rule === '3.0:G135')).toBe(true);
+    const f = ck.checkLine('Hiro lirala!').findings;
     expect(f.some((x) => x.severity === 'unruled' && x.rule === 'I-42')).toBe(true);
   });
   it('ke sidu, "destined to" (an open question)', () => {

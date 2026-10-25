@@ -484,27 +484,54 @@ export function createChecker(source: GrammarSource): Checker {
 
     // ------------------------------------------------------------ commands
     const hasFisa = words.some((x) => w(x.k) === 'fisa');
+    // 3.0:G135 rules what a command carries: ne, reve, loki and adjuncts, never tense, a modal or an evidential
+    const allowed = p.command.operators;
     if (
       main !== undefined &&
       main.subject === null &&
       main.kiFront === null &&
-      !main.ops.some((o) => o.slot === 'TENSE') &&
+      (allowed !== undefined || !main.ops.some((o) => o.slot === 'TENSE')) &&
       main.predKind !== 'none' &&
       main.predKind !== 'existential'
     ) {
       const hortative = words.some((x) => w(x.k) === p.command.hortative);
       if (last.includes('!') || hasFisa || hortative) {
         type = 'command';
-        const extra = main.ops.filter((o) => o.slot !== 'NEGATION');
-        if (extra.length > 0)
-          add(
-            'I-42',
-            'which operators a command may carry is not ruled yet',
-            extra.map((o) => o.at),
-            'unruled',
+        if (allowed !== undefined) {
+          const never = main.ops.filter((o) => allowed.never.includes(o.slot));
+          if (never.length > 0)
+            add(
+              allowed.ruling,
+              `a command carries no tense, modal or evidential: ${never.map((o) => w(o.at)).join(' ')}`,
+              never.map((o) => o.at),
+            );
+          const other = main.ops.filter(
+            (o) => !allowed.never.includes(o.slot) && !allowed.allowed_words.includes(w(o.at)),
           );
-        if (hortative && main.frame.length > 0)
-          add('I-42', 'whether yava stands after a FRAME is not ruled yet', main.frame, 'unruled');
+          if (other.length > 0)
+            add(
+              'I-42',
+              `whether a command may carry ${other.map((o) => w(o.at)).join(' ')} is not ruled: 3.0:G135 names ne, reve and loki`,
+              other.map((o) => o.at),
+              'unruled',
+            );
+        } else {
+          const extra = main.ops.filter((o) => o.slot !== 'NEGATION');
+          if (extra.length > 0)
+            add(
+              'I-42',
+              'which operators a command may carry is not ruled yet',
+              extra.map((o) => o.at),
+              'unruled',
+            );
+          if (hortative && main.frame.length > 0)
+            add(
+              'I-42',
+              'whether yava stands after a FRAME is not ruled yet',
+              main.frame,
+              'unruled',
+            );
+        }
       }
     }
     if (words.some((x) => w(x.k) === 'pifu')) type = type === 'question' ? type : 'wish';

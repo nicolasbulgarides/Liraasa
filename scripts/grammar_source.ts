@@ -1,6 +1,6 @@
 /**
  * Read what the strict checker (src/core/grammar) is built from, for the CLIs
- * and the tests: the 2.5 LLM reference, the checker's overlay and rule
+ * and the tests: the 3.0 LLM reference, the checker's overlay and rule
  * parameters, the known names and the legacy spellings. The browser bundle
  * (scripts/build_grammar.ts) packs the same object.
  */
@@ -10,10 +10,10 @@ import type { Flags, GrammarSource, Reference, RuleParams } from '../src/core/gr
 import type { EnglishData, TranslateSource } from '../src/core/translate';
 
 export const GRAMMAR_FILES = {
-  reference: 'handoff/liraasa_2_5_llm.json',
-  lexicon: 'data/lexicon/liraasa_2_5.json',
+  reference: 'handoff/liraasa_3_0_llm.json',
+  lexicon: 'data/lexicon/liraasa_3_0.json',
   flags: 'data/checker/lexicon_flags.json',
-  rules: 'data/checker/rules_2_5.json',
+  rules: 'data/checker/rules_3_0.json',
   names: 'data/checker/names.json',
   transitive: 'data/checker/transitive_2_5.json',
 } as const;

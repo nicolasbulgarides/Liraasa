@@ -27,6 +27,7 @@ point.
 | [0018](0018-lexicon-2-2.md)                   | Liraasa 2.2: the grammar of the album, silro restored                          | accepted | 2.2   |
 | [0019](0019-lexicon-2-3.md)                   | Liraasa 2.3: the sound pass, bear, cow and frog made roots                     | accepted | 2.3   |
 | [0020](0020-lexicon-2-5.md)                   | Liraasa 2.5: the author's grammar decisions, a strict checker and a translator | accepted | 2.5   |
+| [0021](0021-lexicon-3-0.md)                   | Liraasa 3.0: Devotion, Music and Measure (proposed)                            | accepted | 3.0   |
 
 ADR-0007 and ADR-0008 record decisions the author made in answer to the Phase 0
 report; the questions and answers are summarised in each. ADR-0009 and ADR-0010

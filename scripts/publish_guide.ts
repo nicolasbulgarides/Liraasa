@@ -41,12 +41,14 @@ import { CODEX, GUIDE, INVITATION, codexUrl } from './grammar_guide/config';
 
 const PUBLISH_DIR = 'LirasaCodexLatest';
 const STAMP = join(PUBLISH_DIR, '.build-stamp.json');
-const LLM_FILE = 'liraasa_2_5_llm.json';
+const LLM_FILE = 'liraasa_3_0_llm.json';
 /** The Grammar in Lessons, built by `npm run build:lessons -- --pdf` (file stem in handoff/). */
-const LESSONS = 'Liraasa_2_5_Lessons';
+const LESSONS = 'Liraasa_3_0_Lessons';
 
 /** What the guide is built from. A change to any of these means a rebuild. */
 const INPUTS = [
+  'data/lexicon/liraasa_3_0.json',
+  'data/lexicon/integration_report_3_0.json',
   'data/lexicon/liraasa_2_5.json',
   'data/lexicon/integration_report_2_5.json',
   'data/lexicon/liraasa_2_3.json',
@@ -69,12 +71,14 @@ const INPUTS = [
   'scripts/changesets_2_2.ts',
   'scripts/changesets_2_3.ts',
   'scripts/changesets_2_5.ts',
+  'scripts/changesets_3_0.ts',
   'data/corpus/album_2_0',
   'scripts/build_grammar_guide.ts',
   'scripts/build_invitation.ts',
   'scripts/build_lessons.ts',
   'scripts/lessons',
   'src/core/grammar',
+  'data/checker/rules_3_0.json',
   'data/checker/rules_2_5.json',
   'data/checker/transitive_2_5.json',
   'data/checker/drafts_2_5.json',
