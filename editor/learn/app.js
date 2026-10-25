@@ -1100,7 +1100,9 @@
     A.view = { name: 'session', args: {} };
     renderNav();
     const host = A.main;
-    U.runSession(host, {
+    // one runner at a time: a session left by a link or the nav still listens on A.main
+    stopSession();
+    A.session = U.runSession(host, {
       title,
       exercises,
       gctx: A.gctx,
@@ -1130,6 +1132,11 @@
       openRef: (ref) => openRef(ref),
       playAudio: (key) => play(key),
     });
+  }
+
+  function stopSession() {
+    if (A.session) A.session.stop();
+    A.session = null;
   }
 
   function summary(title, results, back, note) {
@@ -1351,6 +1358,8 @@
 
   function render() {
     if (!A.ready) return;
+    // the runner draws sessions itself, so any render means the session is over
+    stopSession();
     renderNav();
     const v =
       A.view.name === 'unit' && A.view.args.index === undefined && A.unitBack !== undefined
