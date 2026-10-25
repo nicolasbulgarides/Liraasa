@@ -1,0 +1,4593 @@
+{
+ "patch": "Liraasa 3.3 — Archetypes and the top 2,000 (supersedes the separate 3.2 draft)",
+ "base_version": "3.1",
+ "target_version": "3.3",
+ "status": "PROPOSED: ratify tier 1 first; tier 2 may be ratified, deferred or dropped item by item",
+ "base_file": "liraasa_3_1_llm.json (2.5 + 3.0 + 3.1)",
+ "base_counts": {
+  "headwords": 1664,
+  "meaningful_forms": 4404
+ },
+ "counts": {
+  "new_roots": 9,
+  "new_compounds": 163,
+  "new_listed_derivations": 43,
+  "new_lexicalised_diminutives": 21,
+  "restored_forms": 2,
+  "tier1_entries": 151,
+  "tier2_entries": 87,
+  "headwords_after": 1836,
+  "meaningful_forms_after": 4614
+ },
+ "principles": [
+  "Compaction: a few short roots carry many meanings through archetype compounds (3.2:G142).",
+  "Short CVCV roots, the scarcest spellings, are spent only on high-frequency archetype words.",
+  "Where a concept is already sayable, it is documented as a recipe instead of a word.",
+  "Tier 1 = high-frequency fiction gaps; tier 2 = optional."
+ ],
+ "function_words_add": [
+  {
+   "form": "eho",
+   "meaning": "okay; all right (casual assent)",
+   "use": "Standalone reply or clause-initial with a comma; everyday register only. zabo stays the plain 'yes'.",
+   "example_liraasa": "Taivo futu venreva ki? — Eho.",
+   "example_english": "Will you come? — Okay."
+  }
+ ],
+ "rulings_add": [
+  {
+   "id": "3.2:G142",
+   "topic": "Archetype compounds",
+   "rule": "A small set of archetype modifiers combines with archetype heads to name kinds of a thing. Modifiers: gudo (common, ordinary), zile (fine, fancy), farvi (wild), yalmu (powered), krono (aged), and any time or place noun. Heads: pocu (fowl), kadu (vehicle), kaze (gun), velma (clothing), nami (food), miru (infused drink), favro (signal device), bujo (joint), nela (person). A pair is read 'the MODIFIER sort of HEAD', but its listed meaning is binding and specific: gudopocu is chicken, not any common bird. Unlisted pairs may be coined by rule and must be flagged until listed. -vu (big) and -ti (small) apply as usual: pocuvu turkey, pocuti chick.",
+   "examples": [
+    [
+     "gudopocu · zilepocu · farvipocu",
+     "chicken · duck · game bird"
+    ],
+    [
+     "gudokadu · zilekadu · yalmukadu",
+     "wagon · carriage · car"
+    ],
+    [
+     "gudovelma · zilevelma",
+     "work clothes · gown"
+    ]
+   ]
+  },
+  {
+   "id": "3.2:G143",
+   "topic": "An animal names its meat",
+   "rule": "In eating and cooking, an animal noun also names its meat, as English chicken and fish do: sapusia gudopocu, to eat chicken. yugenami (meat) remains the general word; X de yugenami is never needed.",
+   "examples": [
+    [
+     "Maivo sapusia gubu.",
+     "I eat pork."
+    ],
+    [
+     "Li murmu ka sumasan.",
+     "The beef is warm."
+    ]
+   ]
+  },
+  {
+   "id": "3.2:G144",
+   "topic": "Body units and the league",
+   "rule": "Body-part nouns double as units of length when they follow a number: pebu (a foot), fini (a finger-width, roughly an inch), varo (an arm-length, roughly a yard). valmilornu (an hour's walk) is the long unit. cono (coin) is the generic money unit.",
+   "examples": [
+    [
+     "dossa pebu",
+     "two feet"
+    ],
+    [
+     "tressa valmilornu",
+     "three leagues"
+    ]
+   ]
+  },
+  {
+   "id": "3.2:G145",
+   "topic": "Honorific titles",
+   "rule": "zilenela placed directly before a name, with no comma, is an honorific title: Mr, Mrs, Ms. As a vocative, iya zilenela is sir or madam. A kinship or rank word may stand before a name the same way (pilo Peta, Father Peta).",
+   "examples": [
+    [
+     "zilenela Peta",
+     "Mr Peta"
+    ],
+    [
+     "Iya zilenela, fisa, lisrola.",
+     "Please stay, sir."
+    ]
+   ]
+  },
+  {
+   "id": "3.2:G146",
+   "topic": "Food and object archetypes",
+   "rule": "Further archetype heads under 3.2:G142: furo (fruit; a colour base names the fruit: rubifuro apple, aurumifuro lemon, viofuroti grape), herba (plant, vegetable), marna (grain), pusa (powder), nami (dish), kova (container), biti (tool), velma (garment), rinba (ring, jewelry), zupa (room), domlu (building). Listed meanings are binding; unlisted pairs are flagged.",
+   "examples": [
+    [
+     "rubifuro · aurumifuro · ojofuro",
+     "apple · lemon · orange"
+    ],
+    [
+     "seldirinba · yedirinba · felberinba",
+     "necklace · bracelet · earring"
+    ]
+   ]
+  },
+  {
+   "id": "3.2:G147",
+   "topic": "Nationality adjectives",
+   "rule": "A copied place name (2.0:G45) + -san is an adjective of origin: Fransa + -san = Fransasan, French. The bare name stays a noun; de + the name means from the place.",
+   "examples": [
+    [
+     "Fransasan lira",
+     "a French song"
+    ],
+    [
+     "Peta da Amerika",
+     "Peta from America"
+    ]
+   ]
+  },
+  {
+   "id": "3.3:G148",
+   "topic": "Relational adjectives from compounds and derivations",
+   "rule": "The adjective slot (-san) of any compound, listed derivation or image compound is available by rule, with the reading 'of, relating to, or marked by X', unless the lexicon lists another meaning for it. For roots, only listed forms exist (unchanged). This supplies English relational adjectives (theological, railway, comic, muddy, distant) without listing each one.",
+   "examples": [
+    [
+     "deviserbusan · kadulendasan · resotelnesan",
+     "theological · railway (adj) · comic"
+    ],
+    [
+     "Li cilni ka pagolalnisan.",
+     "The city is distant."
+    ]
+   ]
+  }
+ ],
+ "roots_add": [
+  {
+   "headword": "gudo",
+   "domain": "Qualities",
+   "tier": 1,
+   "archetype_role": "modifier",
+   "sound_class": "earthy (g d)",
+   "forms": {
+    "n": {
+     "form": "gudo",
+     "meaning": "the common sort; ordinariness; everyday life"
+    },
+    "an": {
+     "form": "gudoasa",
+     "meaning": "the holiness of ordinary things"
+    },
+    "a": {
+     "form": "gudosan",
+     "meaning": "common; ordinary; normal; plain"
+    },
+    "na": {
+     "form": "gudonasan",
+     "meaning": "uncommon; special; rare; unusual"
+    }
+   },
+   "dictionary_line": "gudo {new in 3.3}: (n) the common sort; ordinariness; everyday life | gudoasa (an) the holiness of ordinary things | gudonasan (na) uncommon; special; rare; unusual | gudosan (a) common; ordinary; normal; plain"
+  },
+  {
+   "headword": "zile",
+   "domain": "Qualities",
+   "tier": 1,
+   "archetype_role": "modifier",
+   "sound_class": "bright (z l)",
+   "forms": {
+    "n": {
+     "form": "zile",
+     "meaning": "finery; the fine sort; luxury"
+    },
+    "v": {
+     "form": "zileza",
+     "meaning": "to dress up; to make fancy"
+    },
+    "a": {
+     "form": "zilesan",
+     "meaning": "fine; fancy; elegant; luxurious"
+    },
+    "na": {
+     "form": "zilenasan",
+     "meaning": "shabby; tawdry"
+    }
+   },
+   "dictionary_line": "zile {new in 3.3}: (n) finery; the fine sort; luxury | zileza (v) to dress up; to make fancy | zilenasan (na) shabby; tawdry | zilesan (a) fine; fancy; elegant; luxurious"
+  },
+  {
+   "headword": "pocu",
+   "domain": "Animals",
+   "tier": 1,
+   "archetype_role": "head",
+   "sound_class": "playful (p c), for a small beloved creature",
+   "forms": {
+    "n": {
+     "form": "pocu",
+     "meaning": "poultry; a domestic fowl"
+    }
+   },
+   "dictionary_line": "pocu {new in 3.3}: (n) poultry; a domestic fowl"
+  },
+  {
+   "headword": "kadu",
+   "domain": "Travel & war",
+   "tier": 1,
+   "archetype_role": "head",
+   "sound_class": "everyday (k d)",
+   "forms": {
+    "n": {
+     "form": "kadu",
+     "meaning": "vehicle; a wheeled conveyance"
+    },
+    "v": {
+     "form": "kaduka",
+     "meaning": "to drive; to ride in a vehicle"
+    }
+   },
+   "dictionary_line": "kadu {new in 3.3}: (n) vehicle; a wheeled conveyance | kaduka (v) to drive; to ride in a vehicle"
+  },
+  {
+   "headword": "kaze",
+   "domain": "Travel & war",
+   "tier": 1,
+   "archetype_role": "head",
+   "sound_class": "harsh (k z)",
+   "forms": {
+    "n": {
+     "form": "kaze",
+     "meaning": "gun; firearm"
+    },
+    "v": {
+     "form": "kazeka",
+     "meaning": "to shoot (a gun)"
+    }
+   },
+   "dictionary_line": "kaze {new in 3.3}: (n) gun; firearm | kazeka (v) to shoot (a gun)"
+  },
+  {
+   "headword": "bujo",
+   "domain": "Body",
+   "tier": 1,
+   "archetype_role": "head",
+   "sound_class": "bodily (b j)",
+   "forms": {
+    "n": {
+     "form": "bujo",
+     "meaning": "joint (of the body)"
+    }
+   },
+   "dictionary_line": "bujo {new in 3.3}: (n) joint (of the body)"
+  },
+  {
+   "headword": "gubu",
+   "domain": "Animals",
+   "tier": 2,
+   "archetype_role": null,
+   "sound_class": "earthy (g b)",
+   "forms": {
+    "n": {
+     "form": "gubu",
+     "meaning": "pig; swine"
+    }
+   },
+   "dictionary_line": "gubu {new in 3.3}: (n) pig; swine"
+  },
+  {
+   "headword": "tebo",
+   "domain": "Time & sequence",
+   "tier": 1,
+   "archetype_role": null,
+   "sound_class": "plain (t b)",
+   "forms": {
+    "n": {
+     "form": "tebo",
+     "meaning": "earliness"
+    },
+    "a": {
+     "form": "tebosan",
+     "meaning": "early"
+    },
+    "na": {
+     "form": "tebonasan",
+     "meaning": "late; behind time"
+    }
+   },
+   "dictionary_line": "tebo {new in 3.3}: (n) earliness | tebonasan (na) late; behind time | tebosan (a) early"
+  },
+  {
+   "headword": "joko",
+   "domain": "Everyday & feast",
+   "tier": 1,
+   "archetype_role": null,
+   "sound_class": "plain (j k)",
+   "forms": {
+    "n": {
+     "form": "joko",
+     "meaning": "cheese"
+    }
+   },
+   "dictionary_line": "joko {new in 3.3}: (n) cheese"
+  }
+ ],
+ "compounds_add": [
+  {
+   "headword": "gudopocu",
+   "parts": [
+    "gudo",
+    "pocu"
+   ],
+   "domain": "Animals",
+   "tier": 1,
+   "archetype": "common + poultry",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "gudopocu",
+     "meaning": "chicken (the common fowl)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "gudopocu [gudo+pocu] {new in 3.3}: (n) chicken (the common fowl)"
+  },
+  {
+   "headword": "zilepocu",
+   "parts": [
+    "zile",
+    "pocu"
+   ],
+   "domain": "Animals",
+   "tier": 1,
+   "archetype": "fine + poultry",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "zilepocu",
+     "meaning": "duck (the fancy fowl)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "zilepocu [zile+pocu] {new in 3.3}: (n) duck (the fancy fowl)"
+  },
+  {
+   "headword": "farvipocu",
+   "parts": [
+    "farvi",
+    "pocu"
+   ],
+   "domain": "Animals",
+   "tier": 1,
+   "archetype": "wild + poultry",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "farvipocu",
+     "meaning": "game bird; wild fowl (pheasant, quail, grouse)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "farvipocu [farvi+pocu] {new in 3.3}: (n) game bird; wild fowl (pheasant, quail, grouse)"
+  },
+  {
+   "headword": "gudokadu",
+   "parts": [
+    "gudo",
+    "kadu"
+   ],
+   "domain": "Travel & war",
+   "tier": 1,
+   "archetype": "common + vehicle",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "gudokadu",
+     "meaning": "wagon; the common vehicle"
+    }
+   },
+   "note": null,
+   "dictionary_line": "gudokadu [gudo+kadu] {new in 3.3}: (n) wagon; the common vehicle"
+  },
+  {
+   "headword": "zilekadu",
+   "parts": [
+    "zile",
+    "kadu"
+   ],
+   "domain": "Travel & war",
+   "tier": 1,
+   "archetype": "fine + vehicle",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "zilekadu",
+     "meaning": "carriage; the fine vehicle"
+    }
+   },
+   "note": null,
+   "dictionary_line": "zilekadu [zile+kadu] {new in 3.3}: (n) carriage; the fine vehicle"
+  },
+  {
+   "headword": "yalmukadu",
+   "parts": [
+    "yalmu",
+    "kadu"
+   ],
+   "domain": "Travel & war",
+   "tier": 1,
+   "archetype": "powered + vehicle",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "yalmukadu",
+     "meaning": "car; motor vehicle"
+    }
+   },
+   "note": null,
+   "dictionary_line": "yalmukadu [yalmu+kadu] {new in 3.3}: (n) car; motor vehicle"
+  },
+  {
+   "headword": "lektakadu",
+   "parts": [
+    "lekta",
+    "kadu"
+   ],
+   "domain": "Travel & war",
+   "tier": 2,
+   "archetype": "gathering + vehicle",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lektakadu",
+     "meaning": "bus; coach"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lektakadu [lekta+kadu] {new in 3.3}: (n) bus; coach"
+  },
+  {
+   "headword": "lendakadu",
+   "parts": [
+    "lenda",
+    "kadu"
+   ],
+   "domain": "Travel & war",
+   "tier": 1,
+   "archetype": "line + vehicle",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lendakadu",
+     "meaning": "train"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lendakadu [lenda+kadu] {new in 3.3}: (n) train"
+  },
+  {
+   "headword": "pebukadu",
+   "parts": [
+    "pebu",
+    "kadu"
+   ],
+   "domain": "Travel & war",
+   "tier": 2,
+   "archetype": "foot + vehicle",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "pebukadu",
+     "meaning": "bicycle"
+    }
+   },
+   "note": null,
+   "dictionary_line": "pebukadu [pebu+kadu] {new in 3.3}: (n) bicycle"
+  },
+  {
+   "headword": "navukadu",
+   "parts": [
+    "navu",
+    "kadu"
+   ],
+   "domain": "Travel & war",
+   "tier": 1,
+   "archetype": "sky + vehicle",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "navukadu",
+     "meaning": "aircraft; airplane"
+    }
+   },
+   "note": null,
+   "dictionary_line": "navukadu [navu+kadu] {new in 3.3}: (n) aircraft; airplane"
+  },
+  {
+   "headword": "faruhata",
+   "parts": [
+    "faru",
+    "hata"
+   ],
+   "domain": "Travel & war",
+   "tier": 1,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "faruhata",
+     "meaning": "gunshot; a shot"
+    }
+   },
+   "note": null,
+   "dictionary_line": "faruhata [faru+hata] {new in 3.3}: (n) gunshot; a shot"
+  },
+  {
+   "headword": "zilenela",
+   "parts": [
+    "zile",
+    "nela"
+   ],
+   "domain": "People",
+   "tier": 1,
+   "archetype": "fine + person",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "zilenela",
+     "meaning": "lady; gentleman; a fine person (iya zilenela = sir, madam)"
+    }
+   },
+   "note": "kezunela (peasant; commoner) and vardenela (a noble) already exist",
+   "dictionary_line": "zilenela [zile+nela] {new in 3.3}: (n) lady; gentleman; a fine person (iya zilenela = sir, madam)"
+  },
+  {
+   "headword": "lanvesasva",
+   "parts": [
+    "lanve",
+    "sasva"
+   ],
+   "domain": "People",
+   "tier": 1,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lanvesasva",
+     "meaning": "policing; the keeping of the law"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lanvesasva [lanve+sasva] {new in 3.3}: (n) policing; the keeping of the law"
+  },
+  {
+   "headword": "silroserbu",
+   "parts": [
+    "silro",
+    "serbu"
+   ],
+   "domain": "People",
+   "tier": 1,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "silroserbu",
+     "meaning": "detection; the search for secrets"
+    }
+   },
+   "note": null,
+   "dictionary_line": "silroserbu [silro+serbu] {new in 3.3}: (n) detection; the search for secrets"
+  },
+  {
+   "headword": "samnimiru",
+   "parts": [
+    "samni",
+    "miru"
+   ],
+   "domain": "Everyday & feast",
+   "tier": 1,
+   "archetype": "seed + water (cf. lavlomiru, tea = leaf + water)",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "samnimiru",
+     "meaning": "coffee"
+    }
+   },
+   "note": null,
+   "dictionary_line": "samnimiru [samni+miru] {new in 3.3}: (n) coffee"
+  },
+  {
+   "headword": "kronomarna",
+   "parts": [
+    "krono",
+    "marna"
+   ],
+   "domain": "Everyday & feast",
+   "tier": 1,
+   "archetype": "aged + grain (cf. kronofuro, wine = aged fruit)",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "kronomarna",
+     "meaning": "beer (aged grain)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "kronomarna [krono+marna] {new in 3.3}: (n) beer (aged grain)"
+  },
+  {
+   "headword": "kronofaru",
+   "parts": [
+    "krono",
+    "faru"
+   ],
+   "domain": "Everyday & feast",
+   "tier": 1,
+   "archetype": "aged + fire",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "kronofaru",
+     "meaning": "spirits; liquor; whisky (aged fire)"
+    },
+    "a": {
+     "form": "kronofarusan",
+     "meaning": "drunk; intoxicated"
+    }
+   },
+   "note": null,
+   "dictionary_line": "kronofaru [krono+faru] {new in 3.3}: (n) spirits; liquor; whisky (aged fire) | kronofarusan (a) drunk; intoxicated"
+  },
+  {
+   "headword": "mernonami",
+   "parts": [
+    "merno",
+    "nami"
+   ],
+   "domain": "Everyday & feast",
+   "tier": 1,
+   "archetype": "morning + food",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "mernonami",
+     "meaning": "breakfast"
+    }
+   },
+   "note": null,
+   "dictionary_line": "mernonami [merno+nami] {new in 3.3}: (n) breakfast"
+  },
+  {
+   "headword": "cemnunami",
+   "parts": [
+    "cemnu",
+    "nami"
+   ],
+   "domain": "Everyday & feast",
+   "tier": 1,
+   "archetype": "middle + food",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "cemnunami",
+     "meaning": "lunch; the midday meal"
+    }
+   },
+   "note": null,
+   "dictionary_line": "cemnunami [cemnu+nami] {new in 3.3}: (n) lunch; the midday meal"
+  },
+  {
+   "headword": "vesnonami",
+   "parts": [
+    "vesno",
+    "nami"
+   ],
+   "domain": "Everyday & feast",
+   "tier": 1,
+   "archetype": "evening + food (namilornu remains meal; dinner)",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "vesnonami",
+     "meaning": "supper; the evening meal"
+    }
+   },
+   "note": null,
+   "dictionary_line": "vesnonami [vesno+nami] {new in 3.3}: (n) supper; the evening meal"
+  },
+  {
+   "headword": "sulmebiti",
+   "parts": [
+    "sulme",
+    "biti"
+   ],
+   "domain": "Everyday & feast",
+   "tier": 2,
+   "archetype": "smoke + tool",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "sulmebiti",
+     "meaning": "cigarette"
+    }
+   },
+   "note": null,
+   "dictionary_line": "sulmebiti [sulme+biti] {new in 3.3}: (n) cigarette"
+  },
+  {
+   "headword": "silivelma",
+   "parts": [
+    "sili",
+    "velma"
+   ],
+   "domain": "Home & objects",
+   "tier": 1,
+   "archetype": "image compound (winter-cold + fabric), lexicalized",
+   "image_compound": true,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "silivelma",
+     "meaning": "coat; jacket"
+    }
+   },
+   "note": null,
+   "dictionary_line": "silivelma [sili+velma] {new in 3.3}: (n) coat; jacket"
+  },
+  {
+   "headword": "lordivelma",
+   "parts": [
+    "lordi",
+    "velma"
+   ],
+   "domain": "Home & objects",
+   "tier": 1,
+   "archetype": "order + clothing",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lordivelma",
+     "meaning": "uniform"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lordivelma [lordi+velma] {new in 3.3}: (n) uniform"
+  },
+  {
+   "headword": "zilevelma",
+   "parts": [
+    "zile",
+    "velma"
+   ],
+   "domain": "Home & objects",
+   "tier": 1,
+   "archetype": "fine + clothing",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "zilevelma",
+     "meaning": "gown; formal dress; finery"
+    }
+   },
+   "note": null,
+   "dictionary_line": "zilevelma [zile+velma] {new in 3.3}: (n) gown; formal dress; finery"
+  },
+  {
+   "headword": "gudovelma",
+   "parts": [
+    "gudo",
+    "velma"
+   ],
+   "domain": "Home & objects",
+   "tier": 2,
+   "archetype": "common + clothing",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "gudovelma",
+     "meaning": "work clothes; everyday dress"
+    }
+   },
+   "note": null,
+   "dictionary_line": "gudovelma [gudo+velma] {new in 3.3}: (n) work clothes; everyday dress"
+  },
+  {
+   "headword": "varobujo",
+   "parts": [
+    "varo",
+    "bujo"
+   ],
+   "domain": "Body",
+   "tier": 1,
+   "archetype": "arm + joint",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "varobujo",
+     "meaning": "elbow"
+    }
+   },
+   "note": null,
+   "dictionary_line": "varobujo [varo+bujo] {new in 3.3}: (n) elbow"
+  },
+  {
+   "headword": "pebubujo",
+   "parts": [
+    "pebu",
+    "bujo"
+   ],
+   "domain": "Body",
+   "tier": 1,
+   "archetype": "foot + joint",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "pebubujo",
+     "meaning": "ankle"
+    }
+   },
+   "note": null,
+   "dictionary_line": "pebubujo [pebu+bujo] {new in 3.3}: (n) ankle"
+  },
+  {
+   "headword": "finibujo",
+   "parts": [
+    "fini",
+    "bujo"
+   ],
+   "domain": "Body",
+   "tier": 1,
+   "archetype": "finger + joint",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "finibujo",
+     "meaning": "knuckle"
+    }
+   },
+   "note": null,
+   "dictionary_line": "finibujo [fini+bujo] {new in 3.3}: (n) knuckle"
+  },
+  {
+   "headword": "damvabujo",
+   "parts": [
+    "damva",
+    "bujo"
+   ],
+   "domain": "Body",
+   "tier": 1,
+   "archetype": "leg + joint",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "damvabujo",
+     "meaning": "hip"
+    }
+   },
+   "note": null,
+   "dictionary_line": "damvabujo [damva+bujo] {new in 3.3}: (n) hip"
+  },
+  {
+   "headword": "pebufini",
+   "parts": [
+    "pebu",
+    "fini"
+   ],
+   "domain": "Body",
+   "tier": 1,
+   "archetype": "foot + finger",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "pebufini",
+     "meaning": "toe"
+    }
+   },
+   "note": null,
+   "dictionary_line": "pebufini [pebu+fini] {new in 3.3}: (n) toe"
+  },
+  {
+   "headword": "finizelki",
+   "parts": [
+    "fini",
+    "zelki"
+   ],
+   "domain": "Body",
+   "tier": 1,
+   "archetype": "finger + scale",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "finizelki",
+     "meaning": "fingernail; nail"
+    }
+   },
+   "note": null,
+   "dictionary_line": "finizelki [fini+zelki] {new in 3.3}: (n) fingernail; nail"
+  },
+  {
+   "headword": "vilnevelso",
+   "parts": [
+    "vilne",
+    "velso"
+   ],
+   "domain": "Body",
+   "tier": 1,
+   "archetype": "eye + veil",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "vilnevelso",
+     "meaning": "eyelid"
+    }
+   },
+   "note": null,
+   "dictionary_line": "vilnevelso [vilne+velso] {new in 3.3}: (n) eyelid"
+  },
+  {
+   "headword": "manlisevre",
+   "parts": [
+    "manli",
+    "sevre"
+   ],
+   "domain": "Body",
+   "tier": 1,
+   "archetype": "hand + closing",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "manlisevre",
+     "meaning": "fist"
+    }
+   },
+   "note": null,
+   "dictionary_line": "manlisevre [manli+sevre] {new in 3.3}: (n) fist"
+  },
+  {
+   "headword": "domlupatu",
+   "parts": [
+    "domlu",
+    "patu"
+   ],
+   "domain": "Everyday objects & work",
+   "tier": 1,
+   "archetype": "house + part",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "domlupatu",
+     "meaning": "apartment; flat"
+    }
+   },
+   "note": null,
+   "dictionary_line": "domlupatu [domlu+patu] {new in 3.3}: (n) apartment; flat"
+  },
+  {
+   "headword": "domluzavme",
+   "parts": [
+    "domlu",
+    "zavme"
+   ],
+   "domain": "Everyday objects & work",
+   "tier": 1,
+   "archetype": "house + front",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "domluzavme",
+     "meaning": "porch"
+    }
+   },
+   "note": null,
+   "dictionary_line": "domluzavme [domlu+zavme] {new in 3.3}: (n) porch"
+  },
+  {
+   "headword": "marnadomlu",
+   "parts": [
+    "marna",
+    "domlu"
+   ],
+   "domain": "Everyday objects & work",
+   "tier": 1,
+   "archetype": "grain + house",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "marnadomlu",
+     "meaning": "barn"
+    }
+   },
+   "note": null,
+   "dictionary_line": "marnadomlu [marna+domlu] {new in 3.3}: (n) barn"
+  },
+  {
+   "headword": "talitabu",
+   "parts": [
+    "tali",
+    "tabu"
+   ],
+   "domain": "Everyday objects & work",
+   "tier": 1,
+   "archetype": "work + table",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "talitabu",
+     "meaning": "desk"
+    }
+   },
+   "note": null,
+   "dictionary_line": "talitabu [tali+tabu] {new in 3.3}: (n) desk"
+  },
+  {
+   "headword": "pelisovla",
+   "parts": [
+    "peli",
+    "sovla"
+   ],
+   "domain": "Everyday objects & work",
+   "tier": 1,
+   "archetype": "play + shape",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "pelisovla",
+     "meaning": "ball"
+    }
+   },
+   "note": null,
+   "dictionary_line": "pelisovla [peli+sovla] {new in 3.3}: (n) ball"
+  },
+  {
+   "headword": "vallafavro",
+   "parts": [
+    "valla",
+    "favro"
+   ],
+   "domain": "Everyday objects & work",
+   "tier": 1,
+   "archetype": "voice + signal",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "vallafavro",
+     "meaning": "telephone"
+    }
+   },
+   "note": null,
+   "dictionary_line": "vallafavro [valla+favro] {new in 3.3}: (n) telephone"
+  },
+  {
+   "headword": "melofavro",
+   "parts": [
+    "melo",
+    "favro"
+   ],
+   "domain": "Everyday objects & work",
+   "tier": 2,
+   "archetype": "music + signal",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "melofavro",
+     "meaning": "radio"
+    }
+   },
+   "note": null,
+   "dictionary_line": "melofavro [melo+favro] {new in 3.3}: (n) radio"
+  },
+  {
+   "headword": "vimofavro",
+   "parts": [
+    "vimo",
+    "favro"
+   ],
+   "domain": "Everyday objects & work",
+   "tier": 2,
+   "archetype": "sight + signal",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "vimofavro",
+     "meaning": "television"
+    }
+   },
+   "note": null,
+   "dictionary_line": "vimofavro [vimo+favro] {new in 3.3}: (n) television"
+  },
+  {
+   "headword": "valmilornu",
+   "parts": [
+    "valmi",
+    "lornu"
+   ],
+   "domain": "Time, quantity & work",
+   "tier": 1,
+   "archetype": "walking + hour",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "valmilornu",
+     "meaning": "league; mile (an hour's walk)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "valmilornu [valmi+lornu] {new in 3.3}: (n) league; mile (an hour's walk)"
+  },
+  {
+   "headword": "nevrasola",
+   "parts": [
+    "nevra",
+    "sola"
+   ],
+   "domain": "Time & sequence",
+   "tier": 1,
+   "archetype": "contrast solanevra, sunset; solacemnu, noon, already exists",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "nevrasola",
+     "meaning": "afternoon (the descending sun)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "nevrasola [nevra+sola] {new in 3.3}: (n) afternoon (the descending sun)"
+  },
+  {
+   "headword": "felbelazu",
+   "parts": [
+    "felbe",
+    "lazu"
+   ],
+   "domain": "Animals",
+   "tier": 2,
+   "archetype": "ear + animal",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "felbelazu",
+     "meaning": "rabbit; hare"
+    }
+   },
+   "note": null,
+   "dictionary_line": "felbelazu [felbe+lazu] {new in 3.3}: (n) rabbit; hare"
+  },
+  {
+   "headword": "nimumolu",
+   "parts": [
+    "nimu",
+    "molu"
+   ],
+   "domain": "Qualities",
+   "tier": 1,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "nimumolu",
+     "meaning": "comfort; homely ease"
+    },
+    "a": {
+     "form": "nimumolusan",
+     "meaning": "comfortable; cozy"
+    }
+   },
+   "note": null,
+   "dictionary_line": "nimumolu [nimu+molu] {new in 3.3}: (n) comfort; homely ease | nimumolusan (a) comfortable; cozy"
+  },
+  {
+   "headword": "rubifuro",
+   "parts": [
+    "rubi",
+    "furo"
+   ],
+   "domain": "Everyday & feast",
+   "tier": 1,
+   "archetype": "colour + fruit",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "rubifuro",
+     "meaning": "apple (the red fruit)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "rubifuro [rubi+furo] {new in 3.3}: (n) apple (the red fruit)"
+  },
+  {
+   "headword": "aurumifuro",
+   "parts": [
+    "aurumi",
+    "furo"
+   ],
+   "domain": "Everyday & feast",
+   "tier": 1,
+   "archetype": "colour + fruit",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "aurumifuro",
+     "meaning": "lemon (the yellow fruit)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "aurumifuro [aurumi+furo] {new in 3.3}: (n) lemon (the yellow fruit)"
+  },
+  {
+   "headword": "ojofuro",
+   "parts": [
+    "ojo",
+    "furo"
+   ],
+   "domain": "Everyday & feast",
+   "tier": 1,
+   "archetype": "colour + fruit",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "ojofuro",
+     "meaning": "orange (the fruit)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "ojofuro [ojo+furo] {new in 3.3}: (n) orange (the fruit)"
+  },
+  {
+   "headword": "manlifuro",
+   "parts": [
+    "manli",
+    "furo"
+   ],
+   "domain": "Everyday & feast",
+   "tier": 2,
+   "archetype": "hand + fruit",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "manlifuro",
+     "meaning": "banana (the hand-fruit)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "manlifuro [manli+furo] {new in 3.3}: (n) banana (the hand-fruit)"
+  },
+  {
+   "headword": "kezufuro",
+   "parts": [
+    "kezu",
+    "furo"
+   ],
+   "domain": "Everyday & feast",
+   "tier": 1,
+   "archetype": "land + fruit",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "kezufuro",
+     "meaning": "potato (earth-fruit)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "kezufuro [kezu+furo] {new in 3.3}: (n) potato (earth-fruit)"
+  },
+  {
+   "headword": "samnisolo",
+   "parts": [
+    "samni",
+    "solo"
+   ],
+   "domain": "Everyday & feast",
+   "tier": 1,
+   "archetype": "seed + stone",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "samnisolo",
+     "meaning": "nut (seed-stone)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "samnisolo [samni+solo] {new in 3.3}: (n) nut (seed-stone)"
+  },
+  {
+   "headword": "timruherba",
+   "parts": [
+    "timru",
+    "herba"
+   ],
+   "domain": "Everyday & feast",
+   "tier": 1,
+   "archetype": "tear + plant",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "timruherba",
+     "meaning": "onion (the tear-plant)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "timruherba [timru+herba] {new in 3.3}: (n) onion (the tear-plant)"
+  },
+  {
+   "headword": "nulvaherba",
+   "parts": [
+    "nulva",
+    "herba"
+   ],
+   "domain": "Everyday & feast",
+   "tier": 2,
+   "archetype": "nose + plant",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "nulvaherba",
+     "meaning": "garlic (the nose-plant)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "nulvaherba [nulva+herba] {new in 3.3}: (n) garlic (the nose-plant)"
+  },
+  {
+   "headword": "mirumarna",
+   "parts": [
+    "miru",
+    "marna"
+   ],
+   "domain": "Everyday & feast",
+   "tier": 1,
+   "archetype": "water + grain",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "mirumarna",
+     "meaning": "rice (water-grain)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "mirumarna [miru+marna] {new in 3.3}: (n) rice (water-grain)"
+  },
+  {
+   "headword": "aurumimarna",
+   "parts": [
+    "aurumi",
+    "marna"
+   ],
+   "domain": "Everyday & feast",
+   "tier": 1,
+   "archetype": "colour + grain",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "aurumimarna",
+     "meaning": "maize; corn (yellow grain)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "aurumimarna [aurumi+marna] {new in 3.3}: (n) maize; corn (yellow grain)"
+  },
+  {
+   "headword": "kovasamni",
+   "parts": [
+    "kova",
+    "samni"
+   ],
+   "domain": "Everyday & feast",
+   "tier": 1,
+   "archetype": "vessel + seed",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "kovasamni",
+     "meaning": "bean (pod-seed)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "kovasamni [kova+samni] {new in 3.3}: (n) bean (pod-seed)"
+  },
+  {
+   "headword": "farusamni",
+   "parts": [
+    "faru",
+    "samni"
+   ],
+   "domain": "Everyday & feast",
+   "tier": 1,
+   "archetype": "fire + seed",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "farusamni",
+     "meaning": "pepper; peppercorn (fire-seed)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "farusamni [faru+samni] {new in 3.3}: (n) pepper; peppercorn (fire-seed)"
+  },
+  {
+   "headword": "mirunami",
+   "parts": [
+    "miru",
+    "nami"
+   ],
+   "domain": "Everyday & feast",
+   "tier": 1,
+   "archetype": "water + food",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "mirunami",
+     "meaning": "soup"
+    }
+   },
+   "note": null,
+   "dictionary_line": "mirunami [miru+nami] {new in 3.3}: (n) soup"
+  },
+  {
+   "headword": "lurvanami",
+   "parts": [
+    "lurva",
+    "nami"
+   ],
+   "domain": "Everyday & feast",
+   "tier": 1,
+   "archetype": "pouring + food",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lurvanami",
+     "meaning": "sauce (poured food)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lurvanami [lurva+nami] {new in 3.3}: (n) sauce (poured food)"
+  },
+  {
+   "headword": "herbanami",
+   "parts": [
+    "herba",
+    "nami"
+   ],
+   "domain": "Everyday & feast",
+   "tier": 2,
+   "archetype": "plant + food",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "herbanami",
+     "meaning": "salad"
+    }
+   },
+   "note": null,
+   "dictionary_line": "herbanami [herba+nami] {new in 3.3}: (n) salad"
+  },
+  {
+   "headword": "zilebumre",
+   "parts": [
+    "zile",
+    "bumre"
+   ],
+   "domain": "Everyday & feast",
+   "tier": 1,
+   "archetype": "fine + bread",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "zilebumre",
+     "meaning": "cake (fine bread)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "zilebumre [zile+bumre] {new in 3.3}: (n) cake (fine bread)"
+  },
+  {
+   "headword": "bumrekova",
+   "parts": [
+    "bumre",
+    "kova"
+   ],
+   "domain": "Everyday & feast",
+   "tier": 2,
+   "archetype": "bread + vessel",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "bumrekova",
+     "meaning": "pie (bread-vessel)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "bumrekova [bumre+kova] {new in 3.3}: (n) pie (bread-vessel)"
+  },
+  {
+   "headword": "ertayumli",
+   "parts": [
+    "erta",
+    "yumli"
+   ],
+   "domain": "Everyday & feast",
+   "tier": 1,
+   "archetype": "colour + sweetness",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "ertayumli",
+     "meaning": "chocolate (brown sweet)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "ertayumli [erta+yumli] {new in 3.3}: (n) chocolate (brown sweet)"
+  },
+  {
+   "headword": "furoyumli",
+   "parts": [
+    "furo",
+    "yumli"
+   ],
+   "domain": "Everyday & feast",
+   "tier": 2,
+   "archetype": "fruit + sweetness",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "furoyumli",
+     "meaning": "jam (fruit-sweet)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "furoyumli [furo+yumli] {new in 3.3}: (n) jam (fruit-sweet)"
+  },
+  {
+   "headword": "lenyolavi",
+   "parts": [
+    "lenyo",
+    "lavi"
+   ],
+   "domain": "Everyday & feast",
+   "tier": 1,
+   "archetype": "tongue + joy",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lenyolavi",
+     "meaning": "relish; the joy of taste"
+    },
+    "a": {
+     "form": "lenyolavisan",
+     "meaning": "delicious; tasty"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lenyolavi [lenyo+lavi] {new in 3.3}: (n) relish; the joy of taste | lenyolavisan (a) delicious; tasty"
+  },
+  {
+   "headword": "maremirulisi",
+   "parts": [
+    "maremiru",
+    "lisi"
+   ],
+   "domain": "Everyday & feast",
+   "tier": 2,
+   "archetype": "milk + oil",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "maremirulisi",
+     "meaning": "butter (milk-oil)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "maremirulisi [maremiru+lisi] {new in 3.3}: (n) butter (milk-oil)"
+  },
+  {
+   "headword": "namidonu",
+   "parts": [
+    "nami",
+    "donu"
+   ],
+   "domain": "People",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "namidonu",
+     "meaning": "serving food; table service"
+    }
+   },
+   "note": null,
+   "dictionary_line": "namidonu [nami+donu] {new in 3.3}: (n) serving food; table service"
+  },
+  {
+   "headword": "molusemne",
+   "parts": [
+    "molu",
+    "semne"
+   ],
+   "domain": "Home & objects",
+   "tier": 1,
+   "archetype": "tenderness + sitting",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "molusemne",
+     "meaning": "couch; sofa (soft seat)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "molusemne [molu+semne] {new in 3.3}: (n) couch; sofa (soft seat)"
+  },
+  {
+   "headword": "lalnisemne",
+   "parts": [
+    "lalni",
+    "semne"
+   ],
+   "domain": "Home & objects",
+   "tier": 1,
+   "archetype": "length + sitting",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lalnisemne",
+     "meaning": "bench (long seat)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lalnisemne [lalni+semne] {new in 3.3}: (n) bench (long seat)"
+  },
+  {
+   "headword": "teruvelma",
+   "parts": [
+    "teru",
+    "velma"
+   ],
+   "domain": "Home & objects",
+   "tier": 1,
+   "archetype": "earth/floor + clothing",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "teruvelma",
+     "meaning": "rug; carpet (floor-cloth)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "teruvelma [teru+velma] {new in 3.3}: (n) rug; carpet (floor-cloth)"
+  },
+  {
+   "headword": "yalmubiti",
+   "parts": [
+    "yalmu",
+    "biti"
+   ],
+   "domain": "Everyday objects & work",
+   "tier": 1,
+   "archetype": "energy + tool",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "yalmubiti",
+     "meaning": "engine; motor"
+    }
+   },
+   "note": null,
+   "dictionary_line": "yalmubiti [yalmu+biti] {new in 3.3}: (n) engine; motor"
+  },
+  {
+   "headword": "larbobiti",
+   "parts": [
+    "larbo",
+    "biti"
+   ],
+   "domain": "Everyday objects & work",
+   "tier": 2,
+   "archetype": "tree + tool",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "larbobiti",
+     "meaning": "axe (tree-tool)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "larbobiti [larbo+biti] {new in 3.3}: (n) axe (tree-tool)"
+  },
+  {
+   "headword": "kezubiti",
+   "parts": [
+    "kezu",
+    "biti"
+   ],
+   "domain": "Everyday objects & work",
+   "tier": 2,
+   "archetype": "land + tool",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "kezubiti",
+     "meaning": "shovel; spade (earth-tool)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "kezubiti [kezu+biti] {new in 3.3}: (n) shovel; spade (earth-tool)"
+  },
+  {
+   "headword": "cuzabiti",
+   "parts": [
+    "cuza",
+    "biti"
+   ],
+   "domain": "Everyday objects & work",
+   "tier": 1,
+   "archetype": "letter + tool",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "cuzabiti",
+     "meaning": "pen; pencil (letter-tool)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "cuzabiti [cuza+biti] {new in 3.3}: (n) pen; pencil (letter-tool)"
+  },
+  {
+   "headword": "cuzakova",
+   "parts": [
+    "cuza",
+    "kova"
+   ],
+   "domain": "Everyday objects & work",
+   "tier": 2,
+   "archetype": "letter + vessel",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "cuzakova",
+     "meaning": "envelope (letter-vessel)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "cuzakova [cuza+kova] {new in 3.3}: (n) envelope (letter-vessel)"
+  },
+  {
+   "headword": "renlivelso",
+   "parts": [
+    "renli",
+    "velso"
+   ],
+   "domain": "Everyday objects & work",
+   "tier": 1,
+   "archetype": "rain + veil",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "renlivelso",
+     "meaning": "umbrella (rain-veil)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "renlivelso [renli+velso] {new in 3.3}: (n) umbrella (rain-veil)"
+  },
+  {
+   "headword": "seldivelma",
+   "parts": [
+    "seldi",
+    "velma"
+   ],
+   "domain": "Home & objects",
+   "tier": 2,
+   "archetype": "neck + clothing",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "seldivelma",
+     "meaning": "scarf (neck-clothing)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "seldivelma [seldi+velma] {new in 3.3}: (n) scarf (neck-clothing)"
+  },
+  {
+   "headword": "yugerinba",
+   "parts": [
+    "yuge",
+    "rinba"
+   ],
+   "domain": "Home & objects",
+   "tier": 1,
+   "archetype": "body + ring",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "yugerinba",
+     "meaning": "belt (body-ring)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "yugerinba [yuge+rinba] {new in 3.3}: (n) belt (body-ring)"
+  },
+  {
+   "headword": "seldirinba",
+   "parts": [
+    "seldi",
+    "rinba"
+   ],
+   "domain": "Home & objects",
+   "tier": 1,
+   "archetype": "neck + ring",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "seldirinba",
+     "meaning": "necklace (neck-ring)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "seldirinba [seldi+rinba] {new in 3.3}: (n) necklace (neck-ring)"
+  },
+  {
+   "headword": "felberinba",
+   "parts": [
+    "felbe",
+    "rinba"
+   ],
+   "domain": "Home & objects",
+   "tier": 2,
+   "archetype": "ear + ring",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "felberinba",
+     "meaning": "earring (ear-ring)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "felberinba [felbe+rinba] {new in 3.3}: (n) earring (ear-ring)"
+  },
+  {
+   "headword": "dozadalu",
+   "parts": [
+    "doza",
+    "dalu"
+   ],
+   "domain": "Movement & action",
+   "tier": 1,
+   "archetype": "strength + touch",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "dozadalu",
+     "meaning": "pressure; a press"
+    },
+    "v": {
+     "form": "dozadaluda",
+     "meaning": "to press; to push down"
+    }
+   },
+   "note": null,
+   "dictionary_line": "dozadalu [doza+dalu] {new in 3.3}: (n) pressure; a press | dozadaluda (v) to press; to push down"
+  },
+  {
+   "headword": "lardazupa",
+   "parts": [
+    "larda",
+    "zupa"
+   ],
+   "domain": "Everyday objects & work",
+   "tier": 2,
+   "archetype": "art + room",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lardazupa",
+     "meaning": "studio (art-room)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lardazupa [larda+zupa] {new in 3.3}: (n) studio (art-room)"
+  },
+  {
+   "headword": "kezuzupa",
+   "parts": [
+    "kezu",
+    "zupa"
+   ],
+   "domain": "Everyday objects & work",
+   "tier": 2,
+   "archetype": "land + room",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "kezuzupa",
+     "meaning": "cellar (earth-room)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "kezuzupa [kezu+zupa] {new in 3.3}: (n) cellar (earth-room)"
+  },
+  {
+   "headword": "lektazupa",
+   "parts": [
+    "lekta",
+    "zupa"
+   ],
+   "domain": "Everyday objects & work",
+   "tier": 1,
+   "archetype": "gathering + room",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lektazupa",
+     "meaning": "living room; parlor (gathering-room)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lektazupa [lekta+zupa] {new in 3.3}: (n) living room; parlor (gathering-room)"
+  },
+  {
+   "headword": "larbodomlu",
+   "parts": [
+    "larbo",
+    "domlu"
+   ],
+   "domain": "Everyday objects & work",
+   "tier": 1,
+   "archetype": "tree + house",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "larbodomlu",
+     "meaning": "cabin; cottage (wood-house)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "larbodomlu [larbo+domlu] {new in 3.3}: (n) cabin; cottage (wood-house)"
+  },
+  {
+   "headword": "pelilekta",
+   "parts": [
+    "peli",
+    "lekta"
+   ],
+   "domain": "People",
+   "tier": 1,
+   "archetype": "play + gathering",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "pelilekta",
+     "meaning": "team (play-gathering)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "pelilekta [peli+lekta] {new in 3.3}: (n) team (play-gathering)"
+  },
+  {
+   "headword": "verdefuro",
+   "parts": [
+    "verde",
+    "furo"
+   ],
+   "domain": "Everyday & feast",
+   "tier": 2,
+   "archetype": "colour + fruit",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "verdefuro",
+     "meaning": "pear (the green fruit)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "verdefuro [verde+furo] {new in 3.3}: (n) pear (the green fruit)"
+  },
+  {
+   "headword": "ojoherba",
+   "parts": [
+    "ojo",
+    "herba"
+   ],
+   "domain": "Everyday & feast",
+   "tier": 2,
+   "archetype": "colour + plant",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "ojoherba",
+     "meaning": "carrot (the orange plant)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "ojoherba [ojo+herba] {new in 3.3}: (n) carrot (the orange plant)"
+  },
+  {
+   "headword": "sumbifuro",
+   "parts": [
+    "sumbi",
+    "furo"
+   ],
+   "domain": "Everyday & feast",
+   "tier": 2,
+   "archetype": "image compound (summer-bright + fruit), lexicalized",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "sumbifuro",
+     "meaning": "tomato (summer fruit)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "sumbifuro [sumbi+furo] {new in 3.3}: (n) tomato (summer fruit)"
+  },
+  {
+   "headword": "bumrenami",
+   "parts": [
+    "bumre",
+    "nami"
+   ],
+   "domain": "Everyday & feast",
+   "tier": 2,
+   "archetype": "bread + food",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "bumrenami",
+     "meaning": "sandwich (bread-dish)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "bumrenami [bumre+nami] {new in 3.3}: (n) sandwich (bread-dish)"
+  },
+  {
+   "headword": "murmupatu",
+   "parts": [
+    "murmu",
+    "patu"
+   ],
+   "domain": "Everyday & feast",
+   "tier": 2,
+   "archetype": "cow + piece",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "murmupatu",
+     "meaning": "steak; a cut of beef"
+    }
+   },
+   "note": null,
+   "dictionary_line": "murmupatu [murmu+patu] {new in 3.3}: (n) steak; a cut of beef"
+  },
+  {
+   "headword": "kezulirbu",
+   "parts": [
+    "kezu",
+    "lirbu"
+   ],
+   "domain": "People",
+   "tier": 1,
+   "archetype": "land + leader",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "kezulirbu",
+     "meaning": "president; head of a land"
+    }
+   },
+   "note": null,
+   "dictionary_line": "kezulirbu [kezu+lirbu] {new in 3.3}: (n) president; head of a land"
+  },
+  {
+   "headword": "lavbulirbu",
+   "parts": [
+    "lavbu",
+    "lirbu"
+   ],
+   "domain": "People",
+   "tier": 2,
+   "archetype": "prayer + leader",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lavbulirbu",
+     "meaning": "bishop; head of a temple"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lavbulirbu [lavbu+lirbu] {new in 3.3}: (n) bishop; head of a temple"
+  },
+  {
+   "headword": "lektalirbu",
+   "parts": [
+    "lekta",
+    "lirbu"
+   ],
+   "domain": "People",
+   "tier": 2,
+   "archetype": "gathering + leader",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lektalirbu",
+     "meaning": "politician; leader of an assembly"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lektalirbu [lekta+lirbu] {new in 3.3}: (n) politician; leader of an assembly"
+  },
+  {
+   "headword": "domlutovo",
+   "parts": [
+    "domlu",
+    "tovo"
+   ],
+   "domain": "People",
+   "tier": 2,
+   "archetype": "house + possession",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "domlutovo",
+     "meaning": "house ownership"
+    }
+   },
+   "note": null,
+   "dictionary_line": "domlutovo [domlu+tovo] {new in 3.3}: (n) house ownership"
+  },
+  {
+   "headword": "sevudokrayano",
+   "parts": [
+    "sevu",
+    "dokrayano"
+   ],
+   "domain": "People",
+   "tier": 2,
+   "archetype": "sea + army",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "sevudokrayano",
+     "meaning": "navy (sea-army)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "sevudokrayano [sevu+dokrayano] {new in 3.3}: (n) navy (sea-army)"
+  },
+  {
+   "headword": "sasvavalmi",
+   "parts": [
+    "sasva",
+    "valmi"
+   ],
+   "domain": "People",
+   "tier": 2,
+   "archetype": "safety + walking",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "sasvavalmi",
+     "meaning": "patrol (guard-walk)"
+    },
+    "v": {
+     "form": "sasvavalmisia",
+     "meaning": "to patrol"
+    }
+   },
+   "note": null,
+   "dictionary_line": "sasvavalmi [sasva+valmi] {new in 3.3}: (n) patrol (guard-walk) | sasvavalmisia (v) to patrol"
+  },
+  {
+   "headword": "salruzupa",
+   "parts": [
+    "salru",
+    "zupa"
+   ],
+   "domain": "Everyday objects & work",
+   "tier": 1,
+   "archetype": "height + room",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "salruzupa",
+     "meaning": "upper room; upstairs"
+    }
+   },
+   "note": null,
+   "dictionary_line": "salruzupa [salru+zupa] {new in 3.3}: (n) upper room; upstairs"
+  },
+  {
+   "headword": "bimnedomlu",
+   "parts": [
+    "bimne",
+    "domlu"
+   ],
+   "domain": "Everyday objects & work",
+   "tier": 1,
+   "archetype": "build + house",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "bimnedomlu",
+     "meaning": "building (a built house)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "bimnedomlu [bimne+domlu] {new in 3.3}: (n) building (a built house)"
+  },
+  {
+   "headword": "domluganre",
+   "parts": [
+    "domlu",
+    "ganre"
+   ],
+   "domain": "Everyday objects & work",
+   "tier": 1,
+   "archetype": "house + garden",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "domluganre",
+     "meaning": "yard (house-garden)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "domluganre [domlu+ganre] {new in 3.3}: (n) yard (house-garden)"
+  },
+  {
+   "headword": "cilnipatu",
+   "parts": [
+    "cilni",
+    "patu"
+   ],
+   "domain": "Everyday objects & work",
+   "tier": 1,
+   "archetype": "city + part",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "cilnipatu",
+     "meaning": "block; city quarter"
+    }
+   },
+   "note": null,
+   "dictionary_line": "cilnipatu [cilni+patu] {new in 3.3}: (n) block; city quarter"
+  },
+  {
+   "headword": "kezupatu",
+   "parts": [
+    "kezu",
+    "patu"
+   ],
+   "domain": "Everyday objects & work",
+   "tier": 1,
+   "archetype": "land + part",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "kezupatu",
+     "meaning": "county; district"
+    }
+   },
+   "note": null,
+   "dictionary_line": "kezupatu [kezu+patu] {new in 3.3}: (n) county; district"
+  },
+  {
+   "headword": "lavbusalru",
+   "parts": [
+    "lavbu",
+    "salru"
+   ],
+   "domain": "Everyday objects & work",
+   "tier": 2,
+   "archetype": "prayer + height",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lavbusalru",
+     "meaning": "steeple; spire"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lavbusalru [lavbu+salru] {new in 3.3}: (n) steeple; spire"
+  },
+  {
+   "headword": "zupalekta",
+   "parts": [
+    "zupa",
+    "lekta"
+   ],
+   "domain": "Everyday objects & work",
+   "tier": 2,
+   "archetype": "room + gathering",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "zupalekta",
+     "meaning": "suite (of rooms)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "zupalekta [zupa+lekta] {new in 3.3}: (n) suite (of rooms)"
+  },
+  {
+   "headword": "helnazupa",
+   "parts": [
+    "helna",
+    "zupa"
+   ],
+   "domain": "Everyday objects & work",
+   "tier": 2,
+   "archetype": "medicine + room",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "helnazupa",
+     "meaning": "ward; sickroom"
+    }
+   },
+   "note": null,
+   "dictionary_line": "helnazupa [helna+zupa] {new in 3.3}: (n) ward; sickroom"
+  },
+  {
+   "headword": "halrazupa",
+   "parts": [
+    "halra",
+    "zupa"
+   ],
+   "domain": "Everyday objects & work",
+   "tier": 2,
+   "archetype": "horse + room",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "halrazupa",
+     "meaning": "stall; stable"
+    }
+   },
+   "note": null,
+   "dictionary_line": "halrazupa [halra+zupa] {new in 3.3}: (n) stall; stable"
+  },
+  {
+   "headword": "sevukova",
+   "parts": [
+    "sevu",
+    "kova"
+   ],
+   "domain": "Nature & geography",
+   "tier": 1,
+   "archetype": "sea + vessel",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "sevukova",
+     "meaning": "bay (sea-vessel)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "sevukova [sevu+kova] {new in 3.3}: (n) bay (sea-vessel)"
+  },
+  {
+   "headword": "boteteru",
+   "parts": [
+    "bote",
+    "teru"
+   ],
+   "domain": "Travel & war",
+   "tier": 2,
+   "archetype": "boat + floor",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "boteteru",
+     "meaning": "deck (ship-floor)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "boteteru [bote+teru] {new in 3.3}: (n) deck (ship-floor)"
+  },
+  {
+   "headword": "sasvazupa",
+   "parts": [
+    "sasva",
+    "zupa"
+   ],
+   "domain": "Everyday objects & work",
+   "tier": 2,
+   "archetype": "safety + room",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "sasvazupa",
+     "meaning": "guard post; guardroom"
+    }
+   },
+   "note": null,
+   "dictionary_line": "sasvazupa [sasva+zupa] {new in 3.3}: (n) guard post; guardroom"
+  },
+  {
+   "headword": "kadulenda",
+   "parts": [
+    "kadu",
+    "lenda"
+   ],
+   "domain": "Travel & war",
+   "tier": 1,
+   "archetype": "vehicle + line",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "kadulenda",
+     "meaning": "rail; railway"
+    }
+   },
+   "note": null,
+   "dictionary_line": "kadulenda [kadu+lenda] {new in 3.3}: (n) rail; railway"
+  },
+  {
+   "headword": "renlilarbopago",
+   "parts": [
+    "renli",
+    "larbopago"
+   ],
+   "domain": "Nature & geography",
+   "tier": 1,
+   "archetype": "rain + forest",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "renlilarbopago",
+     "meaning": "jungle; rainforest"
+    }
+   },
+   "note": null,
+   "dictionary_line": "renlilarbopago [renli+larbopago] {new in 3.3}: (n) jungle; rainforest"
+  },
+  {
+   "headword": "marnakadu",
+   "parts": [
+    "marna",
+    "kadu"
+   ],
+   "domain": "Travel & war",
+   "tier": 2,
+   "archetype": "grain + vehicle",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "marnakadu",
+     "meaning": "tractor"
+    }
+   },
+   "note": null,
+   "dictionary_line": "marnakadu [marna+kadu] {new in 3.3}: (n) tractor"
+  },
+  {
+   "headword": "dokrakadu",
+   "parts": [
+    "dokra",
+    "kadu"
+   ],
+   "domain": "Travel & war",
+   "tier": 2,
+   "archetype": "war + vehicle",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "dokrakadu",
+     "meaning": "jeep; military vehicle"
+    }
+   },
+   "note": null,
+   "dictionary_line": "dokrakadu [dokra+kadu] {new in 3.3}: (n) jeep; military vehicle"
+  },
+  {
+   "headword": "dapakadu",
+   "parts": [
+    "dapa",
+    "kadu"
+   ],
+   "domain": "Travel & war",
+   "tier": 1,
+   "archetype": "fare + vehicle",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "dapakadu",
+     "meaning": "taxi; cab"
+    }
+   },
+   "note": null,
+   "dictionary_line": "dapakadu [dapa+kadu] {new in 3.3}: (n) taxi; cab"
+  },
+  {
+   "headword": "kadurivla",
+   "parts": [
+    "kadu",
+    "rivla"
+   ],
+   "domain": "Travel & war",
+   "tier": 1,
+   "archetype": "vehicle + flow",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "kadurivla",
+     "meaning": "traffic"
+    }
+   },
+   "note": null,
+   "dictionary_line": "kadurivla [kadu+rivla] {new in 3.3}: (n) traffic"
+  },
+  {
+   "headword": "kadukavbi",
+   "parts": [
+    "kadu",
+    "kavbi"
+   ],
+   "domain": "Travel & war",
+   "tier": 2,
+   "archetype": "vehicle + carrying",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "kadukavbi",
+     "meaning": "freight; cargo"
+    }
+   },
+   "note": null,
+   "dictionary_line": "kadukavbi [kadu+kavbi] {new in 3.3}: (n) freight; cargo"
+  },
+  {
+   "headword": "kadusemne",
+   "parts": [
+    "kadu",
+    "semne"
+   ],
+   "domain": "Travel & war",
+   "tier": 1,
+   "archetype": "vehicle + sitting",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "kadusemne",
+     "meaning": "parking"
+    },
+    "v": {
+     "form": "kadusemneka",
+     "meaning": "to park"
+    }
+   },
+   "note": null,
+   "dictionary_line": "kadusemne [kadu+semne] {new in 3.3}: (n) parking | kadusemneka (v) to park"
+  },
+  {
+   "headword": "kaduhata",
+   "parts": [
+    "kadu",
+    "hata"
+   ],
+   "domain": "Travel & war",
+   "tier": 1,
+   "archetype": "vehicle + strike",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "kaduhata",
+     "meaning": "crash; collision"
+    },
+    "v": {
+     "form": "kaduhataka",
+     "meaning": "to crash"
+    }
+   },
+   "note": null,
+   "dictionary_line": "kaduhata [kadu+hata] {new in 3.3}: (n) crash; collision | kaduhataka (v) to crash"
+  },
+  {
+   "headword": "kazekova",
+   "parts": [
+    "kaze",
+    "kova"
+   ],
+   "domain": "Travel & war",
+   "tier": 2,
+   "archetype": "gun + vessel",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "kazekova",
+     "meaning": "holster"
+    }
+   },
+   "note": null,
+   "dictionary_line": "kazekova [kaze+kova] {new in 3.3}: (n) holster"
+  },
+  {
+   "headword": "farukova",
+   "parts": [
+    "faru",
+    "kova"
+   ],
+   "domain": "Travel & war",
+   "tier": 1,
+   "archetype": "fire + vessel",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "farukova",
+     "meaning": "bomb"
+    }
+   },
+   "note": null,
+   "dictionary_line": "farukova [faru+kova] {new in 3.3}: (n) bomb"
+  },
+  {
+   "headword": "rinbavelma",
+   "parts": [
+    "rinba",
+    "velma"
+   ],
+   "domain": "Home & objects",
+   "tier": 1,
+   "archetype": "ring + clothing",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "rinbavelma",
+     "meaning": "skirt (ring-garment)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "rinbavelma [rinba+velma] {new in 3.3}: (n) skirt (ring-garment)"
+  },
+  {
+   "headword": "nulvavelma",
+   "parts": [
+    "nulva",
+    "velma"
+   ],
+   "domain": "Home & objects",
+   "tier": 2,
+   "archetype": "nose + clothing",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "nulvavelma",
+     "meaning": "handkerchief"
+    }
+   },
+   "note": null,
+   "dictionary_line": "nulvavelma [nulva+velma] {new in 3.3}: (n) handkerchief"
+  },
+  {
+   "headword": "senrupavma",
+   "parts": [
+    "senru",
+    "pavma"
+   ],
+   "domain": "Materials & physics",
+   "tier": 1,
+   "archetype": "skin + material",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "senrupavma",
+     "meaning": "leather"
+    }
+   },
+   "note": null,
+   "dictionary_line": "senrupavma [senru+pavma] {new in 3.3}: (n) leather"
+  },
+  {
+   "headword": "pebunazru",
+   "parts": [
+    "pebu",
+    "nazru"
+   ],
+   "domain": "Body",
+   "tier": 1,
+   "archetype": "foot + back",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "pebunazru",
+     "meaning": "heel"
+    }
+   },
+   "note": null,
+   "dictionary_line": "pebunazru [pebu+nazru] {new in 3.3}: (n) heel"
+  },
+  {
+   "headword": "damvatabu",
+   "parts": [
+    "damva",
+    "tabu"
+   ],
+   "domain": "Body",
+   "tier": 1,
+   "archetype": "leg + table",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "damvatabu",
+     "meaning": "lap (leg-table)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "damvatabu [damva+tabu] {new in 3.3}: (n) lap (leg-table)"
+  },
+  {
+   "headword": "lazupebu",
+   "parts": [
+    "lazu",
+    "pebu"
+   ],
+   "domain": "Body",
+   "tier": 2,
+   "archetype": "animal + foot",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lazupebu",
+     "meaning": "hoof; paw"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lazupebu [lazu+pebu] {new in 3.3}: (n) hoof; paw"
+  },
+  {
+   "headword": "halrasemne",
+   "parts": [
+    "halra",
+    "semne"
+   ],
+   "domain": "Home & objects",
+   "tier": 2,
+   "archetype": "horse + seat",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "halrasemne",
+     "meaning": "saddle (horse-seat)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "halrasemne [halra+semne] {new in 3.3}: (n) saddle (horse-seat)"
+  },
+  {
+   "headword": "daigoyuge",
+   "parts": [
+    "daigo",
+    "yuge"
+   ],
+   "domain": "Body",
+   "tier": 1,
+   "archetype": "death + body",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "daigoyuge",
+     "meaning": "corpse; dead body"
+    }
+   },
+   "note": null,
+   "dictionary_line": "daigoyuge [daigo+yuge] {new in 3.3}: (n) corpse; dead body"
+  },
+  {
+   "headword": "finifavro",
+   "parts": [
+    "fini",
+    "favro"
+   ],
+   "domain": "Body",
+   "tier": 2,
+   "archetype": "finger + sign",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "finifavro",
+     "meaning": "fingerprint"
+    }
+   },
+   "note": null,
+   "dictionary_line": "finifavro [fini+favro] {new in 3.3}: (n) fingerprint"
+  },
+  {
+   "headword": "aurumisabaye",
+   "parts": [
+    "aurumi",
+    "sabaye"
+   ],
+   "domain": "Body",
+   "tier": 2,
+   "archetype": "colour + hair",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "aurumisabaye",
+     "meaning": "blond hair"
+    },
+    "a": {
+     "form": "aurumisabayesan",
+     "meaning": "blond"
+    }
+   },
+   "note": null,
+   "dictionary_line": "aurumisabaye [aurumi+sabaye] {new in 3.3}: (n) blond hair | aurumisabayesan (a) blond"
+  },
+  {
+   "headword": "resotelne",
+   "parts": [
+    "reso",
+    "telne"
+   ],
+   "domain": "Language & art",
+   "tier": 1,
+   "archetype": "laughter + story",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "resotelne",
+     "meaning": "comedy (laughter-story)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "resotelne [reso+telne] {new in 3.3}: (n) comedy (laughter-story)"
+  },
+  {
+   "headword": "amortelne",
+   "parts": [
+    "amor",
+    "telne"
+   ],
+   "domain": "Language & art",
+   "tier": 1,
+   "archetype": "love + story",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "amortelne",
+     "meaning": "romance (love-story)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "amortelne [amor+telne] {new in 3.3}: (n) romance (love-story)"
+  },
+  {
+   "headword": "ramucuza",
+   "parts": [
+    "ramu",
+    "cuza"
+   ],
+   "domain": "Language & art",
+   "tier": 1,
+   "archetype": "memory + letter",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "ramucuza",
+     "meaning": "record (memory-writing)"
+    },
+    "v": {
+     "form": "ramucuzara",
+     "meaning": "to record"
+    }
+   },
+   "note": null,
+   "dictionary_line": "ramucuza [ramu+cuza] {new in 3.3}: (n) record (memory-writing) | ramucuzara (v) to record"
+  },
+  {
+   "headword": "cuzalekta",
+   "parts": [
+    "cuza",
+    "lekta"
+   ],
+   "domain": "Language & art",
+   "tier": 2,
+   "archetype": "letter + gathering",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "cuzalekta",
+     "meaning": "file; dossier"
+    }
+   },
+   "note": null,
+   "dictionary_line": "cuzalekta [cuza+lekta] {new in 3.3}: (n) file; dossier"
+  },
+  {
+   "headword": "nimunole",
+   "parts": [
+    "nimu",
+    "nole"
+   ],
+   "domain": "Language & art",
+   "tier": 1,
+   "archetype": "home + name",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "nimunole",
+     "meaning": "address (home-name)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "nimunole [nimu+nole] {new in 3.3}: (n) address (home-name)"
+  },
+  {
+   "headword": "deyanole",
+   "parts": [
+    "deya",
+    "nole"
+   ],
+   "domain": "Language & art",
+   "tier": 1,
+   "archetype": "day + name",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "deyanole",
+     "meaning": "date (day-name)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "deyanole [deya+nole] {new in 3.3}: (n) date (day-name)"
+  },
+  {
+   "headword": "lemupatu",
+   "parts": [
+    "lemu",
+    "patu"
+   ],
+   "domain": "Language & art",
+   "tier": 1,
+   "archetype": "learning + part",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lemupatu",
+     "meaning": "lesson"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lemupatu [lemu+patu] {new in 3.3}: (n) lesson"
+  },
+  {
+   "headword": "nolecuza",
+   "parts": [
+    "nole",
+    "cuza"
+   ],
+   "domain": "Language & art",
+   "tier": 2,
+   "archetype": "name + letter",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "nolecuza",
+     "meaning": "registration; enrolment"
+    },
+    "v": {
+     "form": "nolecuzania",
+     "meaning": "to register"
+    }
+   },
+   "note": null,
+   "dictionary_line": "nolecuza [nole+cuza] {new in 3.3}: (n) registration; enrolment | nolecuzania (v) to register"
+  },
+  {
+   "headword": "zefropavma",
+   "parts": [
+    "zefro",
+    "pavma"
+   ],
+   "domain": "Materials & physics",
+   "tier": 1,
+   "archetype": "air + material",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "zefropavma",
+     "meaning": "gas"
+    }
+   },
+   "note": null,
+   "dictionary_line": "zefropavma [zefro+pavma] {new in 3.3}: (n) gas"
+  },
+  {
+   "headword": "dipopavma",
+   "parts": [
+    "dipo",
+    "pavma"
+   ],
+   "domain": "Materials & physics",
+   "tier": 2,
+   "archetype": "lamp + material",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "dipopavma",
+     "meaning": "wax"
+    }
+   },
+   "note": null,
+   "dictionary_line": "dipopavma [dipo+pavma] {new in 3.3}: (n) wax"
+  },
+  {
+   "headword": "aurumigerma",
+   "parts": [
+    "aurumi",
+    "germa"
+   ],
+   "domain": "Materials & physics",
+   "tier": 2,
+   "archetype": "colour + metal",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "aurumigerma",
+     "meaning": "brass"
+    }
+   },
+   "note": null,
+   "dictionary_line": "aurumigerma [aurumi+germa] {new in 3.3}: (n) brass"
+  },
+  {
+   "headword": "larbopatu",
+   "parts": [
+    "larbo",
+    "patu"
+   ],
+   "domain": "Materials & physics",
+   "tier": 1,
+   "archetype": "tree + part",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "larbopatu",
+     "meaning": "log; piece of wood"
+    }
+   },
+   "note": null,
+   "dictionary_line": "larbopatu [larbo+patu] {new in 3.3}: (n) log; piece of wood"
+  },
+  {
+   "headword": "mirusovla",
+   "parts": [
+    "miru",
+    "sovla"
+   ],
+   "domain": "Materials & physics",
+   "tier": 2,
+   "archetype": "water + shape",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "mirusovla",
+     "meaning": "bubble"
+    }
+   },
+   "note": null,
+   "dictionary_line": "mirusovla [miru+sovla] {new in 3.3}: (n) bubble"
+  },
+  {
+   "headword": "tiselenda",
+   "parts": [
+    "tise",
+    "lenda"
+   ],
+   "domain": "Materials & physics",
+   "tier": 2,
+   "archetype": "cut + line",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "tiselenda",
+     "meaning": "blade; edge of a cut"
+    }
+   },
+   "note": null,
+   "dictionary_line": "tiselenda [tise+lenda] {new in 3.3}: (n) blade; edge of a cut"
+  },
+  {
+   "headword": "zilekronofuro",
+   "parts": [
+    "zile",
+    "kronofuro"
+   ],
+   "domain": "Everyday & feast",
+   "tier": 2,
+   "archetype": "fine + wine",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "zilekronofuro",
+     "meaning": "champagne; fine wine"
+    }
+   },
+   "note": null,
+   "dictionary_line": "zilekronofuro [zile+kronofuro] {new in 3.3}: (n) champagne; fine wine"
+  },
+  {
+   "headword": "tibidoza",
+   "parts": [
+    "tibi",
+    "doza"
+   ],
+   "domain": "Materials & physics",
+   "tier": 1,
+   "archetype": "thread + strength",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "tibidoza",
+     "meaning": "tension; tautness"
+    }
+   },
+   "note": null,
+   "dictionary_line": "tibidoza [tibi+doza] {new in 3.3}: (n) tension; tautness"
+  },
+  {
+   "headword": "vizudesi",
+   "parts": [
+    "vizu",
+    "desi"
+   ],
+   "domain": "Mind & philosophy",
+   "tier": 1,
+   "archetype": "speed + want",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "vizudesi",
+     "meaning": "impulse; a sudden want"
+    }
+   },
+   "note": null,
+   "dictionary_line": "vizudesi [vizu+desi] {new in 3.3}: (n) impulse; a sudden want"
+  },
+  {
+   "headword": "dozasevre",
+   "parts": [
+    "doza",
+    "sevre"
+   ],
+   "domain": "Movement & action",
+   "tier": 1,
+   "archetype": "strength + closing",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "dozasevre",
+     "meaning": "a slam"
+    },
+    "v": {
+     "form": "dozasevreda",
+     "meaning": "to slam"
+    }
+   },
+   "note": null,
+   "dictionary_line": "dozasevre [doza+sevre] {new in 3.3}: (n) a slam | dozasevreda (v) to slam"
+  },
+  {
+   "headword": "lalnilenbu",
+   "parts": [
+    "lalni",
+    "lenbu"
+   ],
+   "domain": "Movement & action",
+   "tier": 2,
+   "archetype": "length + lying",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lalnilenbu",
+     "meaning": "sprawl"
+    },
+    "v": {
+     "form": "lalnilenbula",
+     "meaning": "to sprawl"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lalnilenbu [lalni+lenbu] {new in 3.3}: (n) sprawl | lalnilenbula (v) to sprawl"
+  },
+  {
+   "headword": "rinbavopra",
+   "parts": [
+    "rinba",
+    "vopra"
+   ],
+   "domain": "Movement & action",
+   "tier": 1,
+   "archetype": "ring + turn",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "rinbavopra",
+     "meaning": "curl"
+    },
+    "v": {
+     "form": "rinbavoprara",
+     "meaning": "to curl"
+    }
+   },
+   "note": null,
+   "dictionary_line": "rinbavopra [rinba+vopra] {new in 3.3}: (n) curl | rinbavoprara (v) to curl"
+  },
+  {
+   "headword": "vizutalva",
+   "parts": [
+    "vizu",
+    "talva"
+   ],
+   "domain": "Movement & action",
+   "tier": 1,
+   "archetype": "speed + throw",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "vizutalva",
+     "meaning": "a fling"
+    },
+    "v": {
+     "form": "vizutalvava",
+     "meaning": "to fling; to hurl"
+    }
+   },
+   "note": null,
+   "dictionary_line": "vizutalva [vizu+talva] {new in 3.3}: (n) a fling | vizutalvava (v) to fling; to hurl"
+  },
+  {
+   "headword": "dozademro",
+   "parts": [
+    "doza",
+    "demro"
+   ],
+   "domain": "Movement & action",
+   "tier": 1,
+   "archetype": "strength + motion",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "dozademro",
+     "meaning": "a shove"
+    },
+    "v": {
+     "form": "dozademroda",
+     "meaning": "to shove"
+    }
+   },
+   "note": null,
+   "dictionary_line": "dozademro [doza+demro] {new in 3.3}: (n) a shove | dozademroda (v) to shove"
+  },
+  {
+   "headword": "vizutise",
+   "parts": [
+    "vizu",
+    "tise"
+   ],
+   "domain": "Movement & action",
+   "tier": 2,
+   "archetype": "speed + cut",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "vizutise",
+     "meaning": "a slash"
+    },
+    "v": {
+     "form": "vizutiseva",
+     "meaning": "to slash"
+    }
+   },
+   "note": null,
+   "dictionary_line": "vizutise [vizu+tise] {new in 3.3}: (n) a slash | vizutiseva (v) to slash"
+  },
+  {
+   "headword": "havlisevre",
+   "parts": [
+    "havli",
+    "sevre"
+   ],
+   "domain": "Movement & action",
+   "tier": 1,
+   "archetype": "breath + closing",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "havlisevre",
+     "meaning": "choking"
+    },
+    "v": {
+     "form": "havlisevreha",
+     "meaning": "to choke"
+    }
+   },
+   "note": null,
+   "dictionary_line": "havlisevre [havli+sevre] {new in 3.3}: (n) choking | havlisevreha (v) to choke"
+  },
+  {
+   "headword": "vizudemro",
+   "parts": [
+    "vizu",
+    "demro"
+   ],
+   "domain": "Movement & action",
+   "tier": 1,
+   "archetype": "speed + motion",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "vizudemro",
+     "meaning": "a jerk"
+    },
+    "v": {
+     "form": "vizudemrova",
+     "meaning": "to jerk"
+    }
+   },
+   "note": null,
+   "dictionary_line": "vizudemro [vizu+demro] {new in 3.3}: (n) a jerk | vizudemrova (v) to jerk"
+  },
+  {
+   "headword": "tisedalu",
+   "parts": [
+    "tise",
+    "dalu"
+   ],
+   "domain": "Movement & action",
+   "tier": 2,
+   "archetype": "cut + touch",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "tisedalu",
+     "meaning": "a scrape"
+    },
+    "v": {
+     "form": "tisedaluta",
+     "meaning": "to scrape"
+    }
+   },
+   "note": null,
+   "dictionary_line": "tisedalu [tise+dalu] {new in 3.3}: (n) a scrape | tisedaluta (v) to scrape"
+  },
+  {
+   "headword": "tibihata",
+   "parts": [
+    "tibi",
+    "hata"
+   ],
+   "domain": "Movement & action",
+   "tier": 1,
+   "archetype": "thread + strike",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "tibihata",
+     "meaning": "whip; lash"
+    },
+    "v": {
+     "form": "tibihatata",
+     "meaning": "to whip"
+    }
+   },
+   "note": null,
+   "dictionary_line": "tibihata [tibi+hata] {new in 3.3}: (n) whip; lash | tibihatata (v) to whip"
+  },
+  {
+   "headword": "zegovalmi",
+   "parts": [
+    "zego",
+    "valmi"
+   ],
+   "domain": "Movement & action",
+   "tier": 1,
+   "archetype": "tremor + walking",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "zegovalmi",
+     "meaning": "a stagger"
+    },
+    "v": {
+     "form": "zegovalmiza",
+     "meaning": "to stagger"
+    }
+   },
+   "note": null,
+   "dictionary_line": "zegovalmi [zego+valmi] {new in 3.3}: (n) a stagger | zegovalmiza (v) to stagger"
+  },
+  {
+   "headword": "gubuvalla",
+   "parts": [
+    "gubu",
+    "valla"
+   ],
+   "domain": "Movement & action",
+   "tier": 2,
+   "archetype": "pig + voice",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "gubuvalla",
+     "meaning": "grunt"
+    },
+    "v": {
+     "form": "gubuvallaga",
+     "meaning": "to grunt"
+    }
+   },
+   "note": null,
+   "dictionary_line": "gubuvalla [gubu+valla] {new in 3.3}: (n) grunt | gubuvallaga (v) to grunt"
+  },
+  {
+   "headword": "narvodalu",
+   "parts": [
+    "narvo",
+    "dalu"
+   ],
+   "domain": "Movement & action",
+   "tier": 2,
+   "archetype": "darkness + touch",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "narvodalu",
+     "meaning": "groping"
+    },
+    "v": {
+     "form": "narvodalunia",
+     "meaning": "to grope"
+    }
+   },
+   "note": null,
+   "dictionary_line": "narvodalu [narvo+dalu] {new in 3.3}: (n) groping | narvodalunia (v) to grope"
+  },
+  {
+   "headword": "larbosonbu",
+   "parts": [
+    "larbo",
+    "sonbu"
+   ],
+   "domain": "Movement & action",
+   "tier": 2,
+   "archetype": "wood + sound",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "larbosonbu",
+     "meaning": "creak"
+    },
+    "v": {
+     "form": "larbosonbula",
+     "meaning": "to creak"
+    }
+   },
+   "note": null,
+   "dictionary_line": "larbosonbu [larbo+sonbu] {new in 3.3}: (n) creak | larbosonbula (v) to creak"
+  },
+  {
+   "headword": "milnovimo",
+   "parts": [
+    "milno",
+    "vimo"
+   ],
+   "domain": "Movement & action",
+   "tier": 1,
+   "archetype": "wonder + sight",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "milnovimo",
+     "meaning": "admiration"
+    },
+    "v": {
+     "form": "milnovimoma",
+     "meaning": "to admire"
+    }
+   },
+   "note": null,
+   "dictionary_line": "milnovimo [milno+vimo] {new in 3.3}: (n) admiration | milnovimoma (v) to admire"
+  },
+  {
+   "headword": "jurevilore",
+   "parts": [
+    "jurevi",
+    "lore"
+   ],
+   "domain": "Movement & action",
+   "tier": 1,
+   "archetype": "gratitude + heart",
+   "image_compound": true,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "jurevilore",
+     "meaning": "appreciation"
+    },
+    "v": {
+     "form": "jureviloreja",
+     "meaning": "to appreciate"
+    }
+   },
+   "note": null,
+   "dictionary_line": "jurevilore [jurevi+lore] {new in 3.3}: (n) appreciation | jureviloreja (v) to appreciate"
+  }
+ ],
+ "listed_derivations_add": [
+  {
+   "form": "pocuvu",
+   "base": "pocu",
+   "suffix": "-vu",
+   "meaning": "turkey (big fowl)",
+   "tier": 1
+  },
+  {
+   "form": "kaduvu",
+   "base": "kadu",
+   "suffix": "-vu",
+   "meaning": "truck; lorry (big vehicle)",
+   "tier": 1
+  },
+  {
+   "form": "kaduyo",
+   "base": "kadu",
+   "suffix": "-yo",
+   "meaning": "driver",
+   "tier": 1
+  },
+  {
+   "form": "kadupago",
+   "base": "kadu",
+   "suffix": "-pago",
+   "meaning": "garage",
+   "tier": 2
+  },
+  {
+   "form": "kazevu",
+   "base": "kaze",
+   "suffix": "-vu",
+   "meaning": "rifle (big gun)",
+   "tier": 1
+  },
+  {
+   "form": "kazeyo",
+   "base": "kaze",
+   "suffix": "-yo",
+   "meaning": "gunman; shooter",
+   "tier": 2
+  },
+  {
+   "form": "lanveyo",
+   "base": "lanve",
+   "suffix": "-yo",
+   "meaning": "lawyer",
+   "tier": 1
+  },
+  {
+   "form": "cuzayo",
+   "base": "cuza",
+   "suffix": "-yo",
+   "meaning": "clerk; secretary",
+   "tier": 1
+  },
+  {
+   "form": "sernayo",
+   "base": "serna",
+   "suffix": "-yo",
+   "meaning": "reporter",
+   "tier": 2
+  },
+  {
+   "form": "lordiyo",
+   "base": "lordi",
+   "suffix": "-yo",
+   "meaning": "manager; one who directs",
+   "tier": 1
+  },
+  {
+   "form": "lanvesasvayo",
+   "base": "lanvesasva",
+   "suffix": "-yo",
+   "meaning": "police officer",
+   "tier": 1
+  },
+  {
+   "form": "silroserbuyo",
+   "base": "silroserbu",
+   "suffix": "-yo",
+   "meaning": "detective",
+   "tier": 1
+  },
+  {
+   "form": "talipago",
+   "base": "tali",
+   "suffix": "-pago",
+   "meaning": "office; workplace",
+   "tier": 1
+  },
+  {
+   "form": "finivu",
+   "base": "fini",
+   "suffix": "-vu",
+   "meaning": "thumb (big finger)",
+   "tier": 1
+  },
+  {
+   "form": "pebuvelmavu",
+   "base": "pebuvelma",
+   "suffix": "-vu",
+   "meaning": "boot (big shoe)",
+   "tier": 2
+  },
+  {
+   "form": "bondovu",
+   "base": "bondo",
+   "suffix": "-vu",
+   "meaning": "ton (a great weight)",
+   "tier": 2
+  },
+  {
+   "form": "namipago",
+   "base": "nami",
+   "suffix": "-pago",
+   "meaning": "restaurant",
+   "tier": 1
+  },
+  {
+   "form": "navukadupago",
+   "base": "navukadu",
+   "suffix": "-pago",
+   "meaning": "airport",
+   "tier": 2
+  },
+  {
+   "form": "sabepago",
+   "base": "sabe",
+   "suffix": "-pago",
+   "meaning": "university; college",
+   "tier": 1
+  },
+  {
+   "form": "farlapago",
+   "base": "farla",
+   "suffix": "-pago",
+   "meaning": "factory; workshop",
+   "tier": 1
+  },
+  {
+   "form": "galsapago",
+   "base": "galsa",
+   "suffix": "-pago",
+   "meaning": "lawn; meadow-plot",
+   "tier": 2
+  },
+  {
+   "form": "taliyo",
+   "base": "tali",
+   "suffix": "-yo",
+   "meaning": "worker",
+   "tier": 1
+  },
+  {
+   "form": "tovoyo",
+   "base": "tovo",
+   "suffix": "-yo",
+   "meaning": "owner",
+   "tier": 1
+  },
+  {
+   "form": "dapatovoyo",
+   "base": "dapatovo",
+   "suffix": "-yo",
+   "meaning": "customer; buyer",
+   "tier": 1
+  },
+  {
+   "form": "lardayo",
+   "base": "larda",
+   "suffix": "-yo",
+   "meaning": "artist",
+   "tier": 1
+  },
+  {
+   "form": "cilniyo",
+   "base": "cilni",
+   "suffix": "-yo",
+   "meaning": "citizen; townsperson",
+   "tier": 2
+  },
+  {
+   "form": "namidonuyo",
+   "base": "namidonu",
+   "suffix": "-yo",
+   "meaning": "waiter; server",
+   "tier": 2
+  },
+  {
+   "form": "cipivu",
+   "base": "cipi",
+   "suffix": "-vu",
+   "meaning": "rat (big mouse)",
+   "tier": 2
+  },
+  {
+   "form": "dokralirbuvu",
+   "base": "dokralirbu",
+   "suffix": "-vu",
+   "meaning": "general; colonel (high officer)",
+   "tier": 1
+  },
+  {
+   "form": "domlutovoyo",
+   "base": "domlutovo",
+   "suffix": "-yo",
+   "meaning": "landlord",
+   "tier": 2
+  },
+  {
+   "form": "kaldomerviyo",
+   "base": "kaldomervi",
+   "suffix": "-yo",
+   "meaning": "slave",
+   "tier": 2
+  },
+  {
+   "form": "dorvakarkoyo",
+   "base": "dorvakarko",
+   "suffix": "-yo",
+   "meaning": "murderer",
+   "tier": 1
+  },
+  {
+   "form": "murmuyo",
+   "base": "murmu",
+   "suffix": "-yo",
+   "meaning": "rancher; cattle-keeper",
+   "tier": 2
+  },
+  {
+   "form": "camviyo",
+   "base": "camvi",
+   "suffix": "-yo",
+   "meaning": "catcher",
+   "tier": 2
+  },
+  {
+   "form": "navukaduyo",
+   "base": "navukadu",
+   "suffix": "-yo",
+   "meaning": "pilot",
+   "tier": 1
+  },
+  {
+   "form": "nemvapago",
+   "base": "nemva",
+   "suffix": "-pago",
+   "meaning": "neighbourhood",
+   "tier": 1
+  },
+  {
+   "form": "lordipago",
+   "base": "lordi",
+   "suffix": "-pago",
+   "meaning": "headquarters",
+   "tier": 2
+  },
+  {
+   "form": "valminuluvu",
+   "base": "valminulu",
+   "suffix": "-vu",
+   "meaning": "highway",
+   "tier": 1
+  },
+  {
+   "form": "larbotobravu",
+   "base": "larbotobra",
+   "suffix": "-vu",
+   "meaning": "stockade; palisade",
+   "tier": 2
+  },
+  {
+   "form": "kovavu",
+   "base": "kova",
+   "suffix": "-vu",
+   "meaning": "barrel; cask",
+   "tier": 1
+  },
+  {
+   "form": "namikovavu",
+   "base": "namikova",
+   "suffix": "-vu",
+   "meaning": "tray; platter",
+   "tier": 2
+  },
+  {
+   "form": "buzakovavu",
+   "base": "buzakova",
+   "suffix": "-vu",
+   "meaning": "tankard; pint",
+   "tier": 2
+  },
+  {
+   "form": "sulmebitivu",
+   "base": "sulmebiti",
+   "suffix": "-vu",
+   "meaning": "cigar",
+   "tier": 2
+  }
+ ],
+ "lexicalised_diminutives_add": [
+  {
+   "form": "pocuti",
+   "base": "pocu",
+   "meaning": "chick (little fowl)",
+   "tier": 1
+  },
+  {
+   "form": "kazeti",
+   "base": "kaze",
+   "meaning": "pistol (little gun)",
+   "tier": 1
+  },
+  {
+   "form": "gubuti",
+   "base": "gubu",
+   "meaning": "piglet",
+   "tier": 2
+  },
+  {
+   "form": "murmuti",
+   "base": "murmu",
+   "meaning": "calf",
+   "tier": 2
+  },
+  {
+   "form": "halrati",
+   "base": "halra",
+   "meaning": "pony",
+   "tier": 2
+  },
+  {
+   "form": "linuti",
+   "base": "linu",
+   "meaning": "baby",
+   "tier": 1
+  },
+  {
+   "form": "piloti",
+   "base": "pilo",
+   "meaning": "dad; papa",
+   "tier": 1
+  },
+  {
+   "form": "mareti",
+   "base": "mare",
+   "meaning": "mom; mama",
+   "tier": 1
+  },
+  {
+   "form": "namiti",
+   "base": "nami",
+   "meaning": "snack",
+   "tier": 2
+  },
+  {
+   "form": "cuzati",
+   "base": "cuza",
+   "meaning": "ticket; slip; note",
+   "tier": 2
+  },
+  {
+   "form": "rubifuroti",
+   "base": "rubifuro",
+   "meaning": "cherry (little red fruit)",
+   "tier": 2
+  },
+  {
+   "form": "furoti",
+   "base": "furo",
+   "meaning": "berry",
+   "tier": 1
+  },
+  {
+   "form": "zilebumreti",
+   "base": "zilebumre",
+   "meaning": "cookie; biscuit (little cake)",
+   "tier": 1
+  },
+  {
+   "form": "yumliti",
+   "base": "yumli",
+   "meaning": "candy; a sweet",
+   "tier": 1
+  },
+  {
+   "form": "domluti",
+   "base": "domlu",
+   "meaning": "hut; cabin",
+   "tier": 1
+  },
+  {
+   "form": "conokovati",
+   "base": "conokova",
+   "meaning": "wallet; purse (little vault)",
+   "tier": 1
+  },
+  {
+   "form": "dokralirbuti",
+   "base": "dokralirbu",
+   "meaning": "sergeant; lieutenant (junior officer)",
+   "tier": 1
+  },
+  {
+   "form": "boteti",
+   "base": "bote",
+   "meaning": "skiff; dinghy",
+   "tier": 2
+  },
+  {
+   "form": "bulliti",
+   "base": "bulli",
+   "meaning": "magazine; booklet",
+   "tier": 1
+  },
+  {
+   "form": "helnati",
+   "base": "helna",
+   "meaning": "pill; tablet",
+   "tier": 1
+  },
+  {
+   "form": "conoti",
+   "base": "cono",
+   "meaning": "cent; small coin",
+   "tier": 1
+  }
+ ],
+ "restored_forms_add": [
+  {
+   "headword": "mirukezu",
+   "domain": "Materials & physics",
+   "slot": "a",
+   "form": "mirukezusan",
+   "meaning": "muddy",
+   "tier": 2,
+   "append_to_line": "mirukezusan (a) muddy"
+  },
+  {
+   "headword": "pagolalni",
+   "domain": "Abstract",
+   "slot": "a",
+   "form": "pagolalnisan",
+   "meaning": "distant; far-off",
+   "tier": 1,
+   "append_to_line": "pagolalnisan (a) distant; far-off"
+  }
+ ],
+ "rejected_proposals": [],
+ "recipes_add": [
+  {
+   "english": "hen / rooster",
+   "pattern": "minvasan / tarnusan + gudopocu (gender adjective, 1.2:G36)",
+   "liraasa": "Li minvasan gudopocu po lavrasamnila.",
+   "meaning": "The hen laid an egg.",
+   "ruling": "1.2:G36"
+  },
+  {
+   "english": "chicken (meat), pork, beef",
+   "pattern": "an animal noun also names its meat when it is eaten (3.2:G143)",
+   "liraasa": "Maivo sapusia gubu.",
+   "meaning": "I eat pork.",
+   "ruling": "3.2:G143"
+  },
+  {
+   "english": "a mile, a foot, an inch",
+   "pattern": "valmilornu (an hour's walk) and body parts as units: pebu (foot), fini (finger-width), varo (arm-length) (3.2:G144)",
+   "liraasa": "Li nimu ka vofa dossa valmilornu.",
+   "meaning": "The home is two leagues away.",
+   "ruling": "3.2:G144"
+  },
+  {
+   "english": "wow! · hey! · whatever · just kidding",
+   "pattern": "Hoyo! · Iya! · Yori. · Peliseno!",
+   "liraasa": "Hoyo! Li yalmukadu ka zilesan!",
+   "meaning": "Wow! The car is fancy!",
+   "ruling": "3.2 recipe"
+  },
+  {
+   "english": "busy · strange/weird · smart · sad · expensive",
+   "pattern": "talisan · hurvosan · ravmisan · nemesan · dapasan (already in the lexicon)",
+   "liraasa": "Saivo ke talisan deyapressa.",
+   "meaning": "She is busy today.",
+   "ruling": "3.2 recipe"
+  },
+  {
+   "english": "slightly · neatly · grimly · furiously (any -ly adverb)",
+   "pattern": "la + adjective after the verb and object (2.5:G105); la menu = slightly",
+   "liraasa": "Saivo milobema la menu.",
+   "meaning": "She smiles slightly.",
+   "ruling": "2.5:G105"
+  },
+  {
+   "english": "asleep · occasionally · meanwhile · someday · anywhere",
+   "pattern": "ke somusia · poka-krono · nayo ola · futupago · somi-pago",
+   "liraasa": "Nayo ola, li linu ke somusia.",
+   "meaning": "Meanwhile, the child is asleep.",
+   "ruling": "recipe"
+  },
+  {
+   "english": "dozen · quarter · century",
+   "pattern": "unzira-dossa · una de cuara · centa montafama",
+   "liraasa": "Maivo tovota unzira-dossa lavrasamni.",
+   "meaning": "I have a dozen eggs.",
+   "ruling": "numbers"
+  },
+  {
+   "english": "frighten · remind · upset · straighten",
+   "pattern": "vaku + actor + verb (2.5:G109)",
+   "liraasa": "Li ruhe vaku li linu follufa.",
+   "meaning": "The storm frightens the child.",
+   "ruling": "2.5:G109"
+  },
+  {
+   "english": "resemble · discuss · huddle",
+   "pattern": "ka sambasan ko · senosia ko · yave-semnesia",
+   "liraasa": "Saivori yave-semnesia ligo li faru.",
+   "meaning": "They huddle by the fire.",
+   "ruling": "recipe"
+  },
+  {
+   "english": "various · enormous · damp",
+   "pattern": "muya loterosan · ruli mellisan · menu mulyisan",
+   "liraasa": "Li monru ka ruli mellisan.",
+   "meaning": "The mountain is enormous.",
+   "ruling": "recipe"
+  },
+  {
+   "english": "upstairs",
+   "pattern": "en li salruzupa (in the upper room)",
+   "liraasa": "Saivo ke en li salruzupa.",
+   "meaning": "She is upstairs.",
+   "ruling": "recipe"
+  }
+ ],
+ "english_aliases_add": [
+  {
+   "form": "nemesan",
+   "add_english": "sad; unhappy"
+  },
+  {
+   "form": "ravminasan",
+   "add_english": "stupid; foolish"
+  },
+  {
+   "form": "dapasan",
+   "add_english": "expensive"
+  },
+  {
+   "form": "vaninasan",
+   "add_english": "ugly"
+  },
+  {
+   "form": "talisan",
+   "add_english": "busy"
+  },
+  {
+   "form": "hurvosan",
+   "add_english": "odd; weird"
+  },
+  {
+   "form": "yumlisan",
+   "add_english": "nice"
+  },
+  {
+   "form": "lavila",
+   "add_english": "to enjoy"
+  },
+  {
+   "form": "ravmisan",
+   "add_english": "smart; clever"
+  },
+  {
+   "form": "dozasan",
+   "add_english": "tough"
+  },
+  {
+   "form": "vera",
+   "add_english": "fact"
+  },
+  {
+   "form": "patuti",
+   "add_english": "a bit; a little"
+  },
+  {
+   "form": "nolsasan",
+   "add_english": "modern"
+  },
+  {
+   "form": "vanisan",
+   "add_english": "lovely"
+  },
+  {
+   "form": "gonbipago",
+   "add_english": "hotel; motel"
+  },
+  {
+   "form": "botepago",
+   "add_english": "port"
+  },
+  {
+   "form": "lemudonuyo",
+   "add_english": "professor"
+  },
+  {
+   "form": "jomruyo",
+   "add_english": "tourist"
+  },
+  {
+   "form": "lekta",
+   "add_english": "group"
+  },
+  {
+   "form": "lordisan",
+   "add_english": "proper; regular"
+  },
+  {
+   "form": "silrosan",
+   "add_english": "private"
+  },
+  {
+   "form": "ceresan",
+   "add_english": "obvious"
+  },
+  {
+   "form": "cono",
+   "add_english": "cash; money; dollar"
+  },
+  {
+   "form": "nibe",
+   "add_english": "fog"
+  },
+  {
+   "form": "verasudeva",
+   "add_english": "to check; to verify"
+  },
+  {
+   "form": "lanvesasvayo",
+   "add_english": "sheriff; marshal; inspector"
+  },
+  {
+   "form": "lordiyo",
+   "add_english": "boss"
+  },
+  {
+   "form": "sovesia",
+   "add_english": "to calm; to relax"
+  },
+  {
+   "form": "ralkabiti",
+   "add_english": "arms"
+  },
+  {
+   "form": "voprarinba",
+   "add_english": "wheel"
+  },
+  {
+   "form": "talinasan",
+   "add_english": "lazy"
+  },
+  {
+   "form": "bondosan",
+   "add_english": "serious; grave (weighty)"
+  },
+  {
+   "form": "silikova",
+   "add_english": "fridge"
+  },
+  {
+   "form": "namrevelma",
+   "add_english": "cap"
+  },
+  {
+   "form": "seye",
+   "add_english": "indeed; definitely"
+  },
+  {
+   "form": "sovelavi",
+   "add_english": "satisfaction"
+  },
+  {
+   "form": "tivrota",
+   "add_english": "to clutch"
+  },
+  {
+   "form": "pegapa",
+   "add_english": "to attach"
+  },
+  {
+   "form": "namilornunia",
+   "add_english": "to dine"
+  },
+  {
+   "form": "safasia",
+   "add_english": "to bathe"
+  },
+  {
+   "form": "ravnura",
+   "add_english": "to seize"
+  },
+  {
+   "form": "buzaba",
+   "add_english": "to suck"
+  },
+  {
+   "form": "folluzogu",
+   "add_english": "screech"
+  },
+  {
+   "form": "lideodonula",
+   "add_english": "to recommend"
+  },
+  {
+   "form": "colbica",
+   "add_english": "to stain"
+  },
+  {
+   "form": "tivronasan",
+   "add_english": "loose"
+  },
+  {
+   "form": "molusan",
+   "add_english": "delicate"
+  },
+  {
+   "form": "gudosan",
+   "add_english": "casual"
+  },
+  {
+   "form": "lordi",
+   "add_english": "control; leadership"
+  },
+  {
+   "form": "tali",
+   "add_english": "profession; job"
+  },
+  {
+   "form": "nulu",
+   "add_english": "trail"
+  },
+  {
+   "form": "pebunulu",
+   "add_english": "pavement"
+  },
+  {
+   "form": "jomru",
+   "add_english": "expedition"
+  },
+  {
+   "form": "cuzati",
+   "add_english": "card"
+  },
+  {
+   "form": "seno",
+   "add_english": "term"
+  },
+  {
+   "form": "sude",
+   "add_english": "performance"
+  },
+  {
+   "form": "reso",
+   "add_english": "humor"
+  },
+  {
+   "form": "follu",
+   "add_english": "horror"
+  },
+  {
+   "form": "mambi",
+   "add_english": "occasion"
+  },
+  {
+   "form": "kronopatu",
+   "add_english": "interval"
+  },
+  {
+   "form": "talvabiti",
+   "add_english": "bullet"
+  },
+  {
+   "form": "duvlada",
+   "add_english": "to emerge"
+  },
+  {
+   "form": "bakoba",
+   "add_english": "to shatter"
+  },
+  {
+   "form": "vismava",
+   "add_english": "to scan; to check"
+  },
+  {
+   "form": "pebuvalmi",
+   "add_english": "pace"
+  },
+  {
+   "form": "nimuyo",
+   "add_english": "tenant"
+  },
+  {
+   "form": "biti",
+   "add_english": "equipment (bitiri)"
+  },
+  {
+   "form": "silivelma",
+   "add_english": "sweater"
+  },
+  {
+   "form": "velma",
+   "add_english": "outfit"
+  },
+  {
+   "form": "solotalbe",
+   "add_english": "column"
+  },
+  {
+   "form": "damrukova",
+   "add_english": "trunk"
+  },
+  {
+   "form": "musvasan",
+   "add_english": "responsible"
+  },
+  {
+   "form": "lumivera",
+   "add_english": "importance; significance"
+  },
+  {
+   "form": "dokralirbu",
+   "add_english": "lieutenant; captain (army)"
+  }
+ ],
+ "test_sentences": [
+  {
+   "liraasa": "Maivo po sapusia gudopocu, nara saivo po sapusia zilepocu.",
+   "english": "I ate chicken, but she ate duck.",
+   "tests": "archetypes; animal = its meat (3.2:G143)"
+  },
+  {
+   "liraasa": "Li kaduyo po kaduka li yalmukadu ala li talipago.",
+   "english": "The driver drove the car to the office.",
+   "tests": "vehicle archetype; -yo; -pago"
+  },
+  {
+   "liraasa": "Iya zilenela, taivo desida samnimiru oro kronomarna ki?",
+   "english": "Sir, would you like coffee or beer?",
+   "tests": "fine person as address; drinks"
+  },
+  {
+   "liraasa": "En li mernonami, piloti po senosia: \"Eho, yava pagopa.\"",
+   "english": "At breakfast, Dad said: “Okay, let's go.”",
+   "tests": "meal; affectionate -ti; eho"
+  },
+  {
+   "liraasa": "Li silroserbuyo po vimova li kazeti ligo saivo de varobujo.",
+   "english": "The detective saw the pistol near his elbow.",
+   "tests": "derivation; diminutive; joint archetype"
+  },
+  {
+   "liraasa": "Eli lira ka gudonasan, ne gudosan.",
+   "english": "This song is special, not ordinary.",
+   "tests": "common axis: gudosan / gudonasan"
+  },
+  {
+   "liraasa": "Saivo po pagopa ala li lendakadu en li nevrasola.",
+   "english": "She went to the train in the afternoon.",
+   "tests": "line-vehicle; afternoon"
+  },
+  {
+   "liraasa": "Li domlupatu ka nimumolusan nara ne zilesan.",
+   "english": "The apartment is comfortable but not fancy.",
+   "tests": "comfort; fine axis"
+  },
+  {
+   "liraasa": "Maivo po sapusia baba rubifuro ata baba zilebumreti.",
+   "english": "I ate an apple and a cookie.",
+   "tests": "fruit by colour; fine + bread"
+  },
+  {
+   "liraasa": "Li mirunami de kezufuro ka lenyolavisan.",
+   "english": "The potato soup is delicious.",
+   "tests": "food archetypes"
+  },
+  {
+   "liraasa": "Zilenela Peta po tovota baba seldirinba ata baba renlivelso.",
+   "english": "Mr Peta had a necklace and an umbrella.",
+   "tests": "honorific; ring and veil archetypes"
+  },
+  {
+   "liraasa": "Li dokralirbuti po zegovalmiza ala li kadulenda, ata po havlisevreha.",
+   "english": "The sergeant staggered toward the railway and choked.",
+   "tests": "3.3 manner verbs; rank ladder"
+  },
+  {
+   "liraasa": "Li resotelne po ke en li bimnedomlu raho li kezulirbu po tovota.",
+   "english": "The comedy was in the building that the president owned.",
+   "tests": "3.3 story and building compounds"
+  },
+  {
+   "liraasa": "Saivo po semnesia su maivo de damvatabu nayo li dapakadu po kadurivla.",
+   "english": "She sat on my lap while the taxi was in traffic.",
+   "tests": "3.3 body and vehicle compounds"
+  }
+ ],
+ "validation": {
+  "errors": []
+ }
+}

@@ -6,7 +6,7 @@ import { FORM_SLOTS, SLOT_RAW_KEY, isUnusedGloss } from '../../src/core/config/s
 import type { RawLexicon } from '../../src/core/model/raw';
 
 /**
- * handoff/liraasa_3_3_llm.json: the one-file reference for language models
+ * handoff/liraasa_3_4_llm.json: the one-file reference for language models
  * (npm run build:llm). Its dictionary is one line per headword; parsing every
  * line back must give exactly the lexicon's meaningful forms, so the compact
  * format is lossless and adds nothing.
@@ -26,9 +26,9 @@ interface Reference {
   examples: { sentences: [string, string][] };
 }
 
-const llm = read('../../handoff/liraasa_3_3_llm.json') as Reference;
-const latest = read('../../LirasaCodexLatest/liraasa_3_3_llm.json');
-const lex = read('../../data/lexicon/liraasa_3_3.json') as RawLexicon;
+const llm = read('../../handoff/liraasa_3_4_llm.json') as Reference;
+const latest = read('../../LirasaCodexLatest/liraasa_3_4_llm.json');
+const lex = read('../../data/lexicon/liraasa_3_4.json') as RawLexicon;
 const lines = Object.values(llm.dictionary.by_domain).flat();
 const CODE = ['n', 'an', 'nn', 'v', 'na', 'a', 'aa'];
 /** HEADWORD [PART+PART(+-SUFFIX)] {FLAGS}: … (a lexicalised suffix: 2.0:G38) */

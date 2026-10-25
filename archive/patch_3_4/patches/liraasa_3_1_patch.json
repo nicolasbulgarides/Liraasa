@@ -1,0 +1,1868 @@
+{
+ "patch": "Liraasa 3.1 — Everyday and Fiction",
+ "base_version": "3.0",
+ "target_version": "3.1",
+ "status": "PROPOSED: ratify tier 1 first; tier 2 may be ratified, deferred or dropped item by item",
+ "base_file": "liraasa_3_0_llm.json (2.5 + the 3.0 patch)",
+ "base_counts": {
+  "headwords": 1590,
+  "meaningful_forms": 4260
+ },
+ "counts": {
+  "new_roots": 5,
+  "new_compounds": 69,
+  "new_listed_derivations": 4,
+  "new_lexicalised_diminutives": 6,
+  "restored_forms": 4,
+  "tier1_entries": 35,
+  "tier2_entries": 53,
+  "headwords_after": 1664,
+  "meaningful_forms_after": 4404
+ },
+ "principles": [
+  "Lexical patch only: no new grammar. Every addition is a compound, derivation, diminutive or restored form built by existing rules, except five roots for foundational senses no compound expresses cleanly (decay, stick, poison, flinch, hang).",
+  "Where a concept is already sayable, it is documented as a recipe instead of a new word.",
+  "Tier 1 = genuine gaps among the report's A-priority senses (plus 'plan', found during testing). Tier 2 = B-priority senses that a short, transparent compound fills."
+ ],
+ "function_words_add": [],
+ "roots_add": [
+  {
+   "headword": "dugo",
+   "domain": "Materials & physics",
+   "tier": 1,
+   "sound_class": "dull, heavy (d g)",
+   "forms": {
+    "n": {
+     "form": "dugo",
+     "meaning": "decay; rot"
+    },
+    "v": {
+     "form": "dugoda",
+     "meaning": "to rot; to spoil; to decay"
+    },
+    "a": {
+     "form": "dugosan",
+     "meaning": "rotten; spoiled; stale (of food)"
+    },
+    "na": {
+     "form": "dugonasan",
+     "meaning": "unspoiled; incorruptible"
+    }
+   },
+   "dictionary_line": "dugo {new in 3.1}: (n) decay; rot | dugoda (v) to rot; to spoil; to decay | dugonasan (na) unspoiled; incorruptible | dugosan (a) rotten; spoiled; stale (of food)"
+  },
+  {
+   "headword": "pega",
+   "domain": "Materials & physics",
+   "tier": 1,
+   "sound_class": "clinging (p g)",
+   "forms": {
+    "n": {
+     "form": "pega",
+     "meaning": "stickiness; adhesion"
+    },
+    "v": {
+     "form": "pegapa",
+     "meaning": "to stick; to adhere"
+    },
+    "a": {
+     "form": "pegasan",
+     "meaning": "sticky"
+    }
+   },
+   "dictionary_line": "pega {new in 3.1}: (n) stickiness; adhesion | pegapa (v) to stick; to adhere | pegasan (a) sticky"
+  },
+  {
+   "headword": "toze",
+   "domain": "Health & body",
+   "tier": 1,
+   "sound_class": "sharp (t z)",
+   "forms": {
+    "n": {
+     "form": "toze",
+     "meaning": "poison; venom"
+    },
+    "v": {
+     "form": "tozeta",
+     "meaning": "to poison"
+    },
+    "a": {
+     "form": "tozesan",
+     "meaning": "poisonous; venomous"
+    },
+    "nn": {
+     "form": "tozena",
+     "meaning": "antidote"
+    },
+    "na": {
+     "form": "tozenasan",
+     "meaning": "harmless; non-toxic"
+    }
+   },
+   "dictionary_line": "toze {new in 3.1}: (n) poison; venom | tozena (nn) antidote | tozeta (v) to poison | tozenasan (na) harmless; non-toxic | tozesan (a) poisonous; venomous"
+  },
+  {
+   "headword": "bika",
+   "domain": "Health & body",
+   "tier": 1,
+   "sound_class": "sudden (b k)",
+   "forms": {
+    "n": {
+     "form": "bika",
+     "meaning": "flinch; a start; an involuntary recoil"
+    },
+    "v": {
+     "form": "bikaba",
+     "meaning": "to flinch; to startle"
+    },
+    "a": {
+     "form": "bikasan",
+     "meaning": "jumpy; easily startled"
+    }
+   },
+   "dictionary_line": "bika {new in 3.1}: (n) flinch; a start; an involuntary recoil | bikaba (v) to flinch; to startle | bikasan (a) jumpy; easily startled"
+  },
+  {
+   "headword": "tuzo",
+   "domain": "Actions & physical processes",
+   "tier": 2,
+   "sound_class": "plain (t z)",
+   "forms": {
+    "n": {
+     "form": "tuzo",
+     "meaning": "hanging; suspension"
+    },
+    "v": {
+     "form": "tuzota",
+     "meaning": "to hang; to suspend"
+    },
+    "a": {
+     "form": "tuzosan",
+     "meaning": "hanging; suspended"
+    }
+   },
+   "dictionary_line": "tuzo {new in 3.1}: (n) hanging; suspension | tuzota (v) to hang; to suspend | tuzosan (a) hanging; suspended"
+  }
+ ],
+ "compounds_add": [
+  {
+   "headword": "lorelivna",
+   "parts": [
+    "lore",
+    "livna"
+   ],
+   "domain": "Speech & mind",
+   "tier": 1,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lorelivna",
+     "meaning": "preference; the heart's choice"
+    },
+    "v": {
+     "form": "lorelivnala",
+     "meaning": "to prefer"
+    },
+    "a": {
+     "form": "lorelivnasan",
+     "meaning": "favorite; preferred"
+    }
+   },
+   "note": "prefer A to B: lorelivnala A korsi B",
+   "dictionary_line": "lorelivna [lore+livna] {new in 3.1}: (n) preference; the heart's choice | lorelivnala (v) to prefer | lorelivnasan (a) favorite; preferred"
+  },
+  {
+   "headword": "patudonu",
+   "parts": [
+    "patu",
+    "donu"
+   ],
+   "domain": "Speech & mind",
+   "tier": 1,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "patudonu",
+     "meaning": "sharing"
+    },
+    "v": {
+     "form": "patudonupa",
+     "meaning": "to share"
+    }
+   },
+   "note": null,
+   "dictionary_line": "patudonu [patu+donu] {new in 3.1}: (n) sharing | patudonupa (v) to share"
+  },
+  {
+   "headword": "loteromebane",
+   "parts": [
+    "lotero",
+    "mebane"
+   ],
+   "domain": "Speech & mind",
+   "tier": 1,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "loteromebane",
+     "meaning": "misinterpretation; understanding something as other than it is"
+    },
+    "v": {
+     "form": "loteromebanela",
+     "meaning": "to misunderstand; to misinterpret"
+    }
+   },
+   "note": "contrast: ne mebanema = not understand; mebanena = a misunderstanding (between people)",
+   "dictionary_line": "loteromebane [lotero+mebane] {new in 3.1}: (n) misinterpretation; understanding something as other than it is | loteromebanela (v) to misunderstand; to misinterpret"
+  },
+  {
+   "headword": "silrosude",
+   "parts": [
+    "silro",
+    "sude"
+   ],
+   "domain": "Speech & mind",
+   "tier": 1,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "silrosude",
+     "meaning": "disclosure; the revealing of a secret"
+    },
+    "v": {
+     "form": "silrosudesia",
+     "meaning": "to reveal (a secret); to uncover"
+    }
+   },
+   "note": "velsona (unveiling; revelation) stays the poetic/sacred word",
+   "dictionary_line": "silrosude [silro+sude] {new in 3.1}: (n) disclosure; the revealing of a secret | silrosudesia (v) to reveal (a secret); to uncover"
+  },
+  {
+   "headword": "dorvalordi",
+   "parts": [
+    "dorva",
+    "lordi"
+   ],
+   "domain": "Speech & mind",
+   "tier": 1,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "dorvalordi",
+     "meaning": "plan; an ordered intention"
+    },
+    "v": {
+     "form": "dorvalordida",
+     "meaning": "to plan"
+    }
+   },
+   "note": "gap found while testing sentence 6: 2.5/3.0 have no word for plan",
+   "dictionary_line": "dorvalordi [dorva+lordi] {new in 3.1}: (n) plan; an ordered intention | dorvalordida (v) to plan"
+  },
+  {
+   "headword": "dentosapu",
+   "parts": [
+    "dento",
+    "sapu"
+   ],
+   "domain": "Health & body",
+   "tier": 1,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "dentosapu",
+     "meaning": "chewing"
+    },
+    "v": {
+     "form": "dentosapuda",
+     "meaning": "to chew"
+    }
+   },
+   "note": null,
+   "dictionary_line": "dentosapu [dento+sapu] {new in 3.1}: (n) chewing | dentosapuda (v) to chew"
+  },
+  {
+   "headword": "sapunevra",
+   "parts": [
+    "sapu",
+    "nevra"
+   ],
+   "domain": "Health & body",
+   "tier": 1,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "sapunevra",
+     "meaning": "swallowing; a swallow"
+    },
+    "v": {
+     "form": "sapunevrasia",
+     "meaning": "to swallow"
+    }
+   },
+   "note": null,
+   "dictionary_line": "sapunevra [sapu+nevra] {new in 3.1}: (n) swallowing; a swallow | sapunevrasia (v) to swallow"
+  },
+  {
+   "headword": "somuhavli",
+   "parts": [
+    "somu",
+    "havli"
+   ],
+   "domain": "Health & body",
+   "tier": 1,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "somuhavli",
+     "meaning": "yawn"
+    },
+    "v": {
+     "form": "somuhavlisia",
+     "meaning": "to yawn"
+    }
+   },
+   "note": null,
+   "dictionary_line": "somuhavli [somu+havli] {new in 3.1}: (n) yawn | somuhavlisia (v) to yawn"
+  },
+  {
+   "headword": "lenyodalu",
+   "parts": [
+    "lenyo",
+    "dalu"
+   ],
+   "domain": "Health & body",
+   "tier": 1,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lenyodalu",
+     "meaning": "a lick"
+    },
+    "v": {
+     "form": "lenyodalula",
+     "meaning": "to lick"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lenyodalu [lenyo+dalu] {new in 3.1}: (n) a lick | lenyodalula (v) to lick"
+  },
+  {
+   "headword": "nulvahavli",
+   "parts": [
+    "nulva",
+    "havli"
+   ],
+   "domain": "Health & body",
+   "tier": 1,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "nulvahavli",
+     "meaning": "sniff"
+    },
+    "v": {
+     "form": "nulvahavlinia",
+     "meaning": "to sniff"
+    }
+   },
+   "note": null,
+   "dictionary_line": "nulvahavli [nulva+havli] {new in 3.1}: (n) sniff | nulvahavlinia (v) to sniff"
+  },
+  {
+   "headword": "sapukovamudu",
+   "parts": [
+    "sapukova",
+    "mudu"
+   ],
+   "domain": "Health & body",
+   "tier": 1,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "sapukovamudu",
+     "meaning": "nausea"
+    },
+    "a": {
+     "form": "sapukovamudusan",
+     "meaning": "nauseous; queasy"
+    }
+   },
+   "note": null,
+   "dictionary_line": "sapukovamudu [sapukova+mudu] {new in 3.1}: (n) nausea | sapukovamudusan (a) nauseous; queasy"
+  },
+  {
+   "headword": "nuravufasbi",
+   "parts": [
+    "nuravu",
+    "fasbi"
+   ],
+   "domain": "Dialogue & gesture",
+   "tier": 1,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "nuravufasbi",
+     "meaning": "wince; a face of pain"
+    },
+    "v": {
+     "form": "nuravufasbinia",
+     "meaning": "to wince"
+    }
+   },
+   "note": null,
+   "dictionary_line": "nuravufasbi [nuravu+fasbi] {new in 3.1}: (n) wince; a face of pain | nuravufasbinia (v) to wince"
+  },
+  {
+   "headword": "vilnelenda",
+   "parts": [
+    "vilne",
+    "lenda"
+   ],
+   "domain": "Dialogue & gesture",
+   "tier": 1,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "vilnelenda",
+     "meaning": "squint; eyes narrowed to a line"
+    },
+    "v": {
+     "form": "vilnelendava",
+     "meaning": "to squint"
+    }
+   },
+   "note": "vilnesevre (blink) already exists",
+   "dictionary_line": "vilnelenda [vilne+lenda] {new in 3.1}: (n) squint; eyes narrowed to a line | vilnelendava (v) to squint"
+  },
+  {
+   "headword": "helvivimo",
+   "parts": [
+    "helvi",
+    "vimo"
+   ],
+   "domain": "Dialogue & gesture",
+   "tier": 1,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "helvivimo",
+     "meaning": "peek; a hidden look"
+    },
+    "v": {
+     "form": "helvivimoha",
+     "meaning": "to peek; to peer"
+    }
+   },
+   "note": null,
+   "dictionary_line": "helvivimo [helvi+vimo] {new in 3.1}: (n) peek; a hidden look | helvivimoha (v) to peek; to peer"
+  },
+  {
+   "headword": "larnevimo",
+   "parts": [
+    "larne",
+    "vimo"
+   ],
+   "domain": "Dialogue & gesture",
+   "tier": 1,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "larnevimo",
+     "meaning": "glare; an angry stare"
+    },
+    "v": {
+     "form": "larnevimola",
+     "meaning": "to glare"
+    }
+   },
+   "note": null,
+   "dictionary_line": "larnevimo [larne+vimo] {new in 3.1}: (n) glare; an angry stare | larnevimola (v) to glare"
+  },
+  {
+   "headword": "pebusemne",
+   "parts": [
+    "pebu",
+    "semne"
+   ],
+   "domain": "Movement & action",
+   "tier": 1,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "pebusemne",
+     "meaning": "crouch; squat"
+    },
+    "v": {
+     "form": "pebusemnepa",
+     "meaning": "to crouch; to squat"
+    }
+   },
+   "note": null,
+   "dictionary_line": "pebusemne [pebu+semne] {new in 3.1}: (n) crouch; squat | pebusemnepa (v) to crouch; to squat"
+  },
+  {
+   "headword": "lisiralno",
+   "parts": [
+    "lisi",
+    "ralno"
+   ],
+   "domain": "Movement & action",
+   "tier": 1,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lisiralno",
+     "meaning": "slip; skid"
+    },
+    "v": {
+     "form": "lisiralnola",
+     "meaning": "to slip; to skid"
+    },
+    "a": {
+     "form": "lisiralnosan",
+     "meaning": "slippery"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lisiralno [lisi+ralno] {new in 3.1}: (n) slip; skid | lisiralnola (v) to slip; to skid | lisiralnosan (a) slippery"
+  },
+  {
+   "headword": "dozativro",
+   "parts": [
+    "doza",
+    "tivro"
+   ],
+   "domain": "Movement & action",
+   "tier": 1,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "dozativro",
+     "meaning": "squeeze"
+    },
+    "v": {
+     "form": "dozativroda",
+     "meaning": "to squeeze; to compress"
+    }
+   },
+   "note": null,
+   "dictionary_line": "dozativro [doza+tivro] {new in 3.1}: (n) squeeze | dozativroda (v) to squeeze; to compress"
+  },
+  {
+   "headword": "finitivro",
+   "parts": [
+    "fini",
+    "tivro"
+   ],
+   "domain": "Movement & action",
+   "tier": 1,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "finitivro",
+     "meaning": "pinch"
+    },
+    "v": {
+     "form": "finitivrofa",
+     "meaning": "to pinch"
+    }
+   },
+   "note": null,
+   "dictionary_line": "finitivro [fini+tivro] {new in 3.1}: (n) pinch | finitivrofa (v) to pinch"
+  },
+  {
+   "headword": "finihata",
+   "parts": [
+    "fini",
+    "hata"
+   ],
+   "domain": "Movement & action",
+   "tier": 1,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "finihata",
+     "meaning": "poke; prod"
+    },
+    "v": {
+     "form": "finihatafa",
+     "meaning": "to poke; to prod"
+    }
+   },
+   "note": null,
+   "dictionary_line": "finihata [fini+hata] {new in 3.1}: (n) poke; prod | finihatafa (v) to poke; to prod"
+  },
+  {
+   "headword": "moludalu",
+   "parts": [
+    "molu",
+    "dalu"
+   ],
+   "domain": "Movement & action",
+   "tier": 1,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "moludalu",
+     "meaning": "pat; a gentle touch"
+    },
+    "v": {
+     "form": "moludaluma",
+     "meaning": "to pat"
+    }
+   },
+   "note": null,
+   "dictionary_line": "moludalu [molu+dalu] {new in 3.1}: (n) pat; a gentle touch | moludaluma (v) to pat"
+  },
+  {
+   "headword": "farulenyo",
+   "parts": [
+    "faru",
+    "lenyo"
+   ],
+   "domain": "Materials & physics",
+   "tier": 1,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "farulenyo",
+     "meaning": "spiciness; the heat of a flavor"
+    },
+    "a": {
+     "form": "farulenyosan",
+     "meaning": "spicy"
+    }
+   },
+   "note": null,
+   "dictionary_line": "farulenyo [faru+lenyo] {new in 3.1}: (n) spiciness; the heat of a flavor | farulenyosan (a) spicy"
+  },
+  {
+   "headword": "tobratabu",
+   "parts": [
+    "tobra",
+    "tabu"
+   ],
+   "domain": "Home & objects",
+   "tier": 1,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "tobratabu",
+     "meaning": "shelf"
+    }
+   },
+   "note": null,
+   "dictionary_line": "tobratabu [tobra+tabu] {new in 3.1}: (n) shelf"
+  },
+  {
+   "headword": "tabukova",
+   "parts": [
+    "tabu",
+    "kova"
+   ],
+   "domain": "Home & objects",
+   "tier": 1,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "tabukova",
+     "meaning": "drawer"
+    }
+   },
+   "note": null,
+   "dictionary_line": "tabukova [tabu+kova] {new in 3.1}: (n) drawer"
+  },
+  {
+   "headword": "pidibiti",
+   "parts": [
+    "pidi",
+    "biti"
+   ],
+   "domain": "Home & objects",
+   "tier": 1,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "pidibiti",
+     "meaning": "fork (utensil)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "pidibiti [pidi+biti] {new in 3.1}: (n) fork (utensil)"
+  },
+  {
+   "headword": "lurvaralno",
+   "parts": [
+    "lurva",
+    "ralno"
+   ],
+   "domain": "Home & objects",
+   "tier": 1,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lurvaralno",
+     "meaning": "spill"
+    },
+    "v": {
+     "form": "lurvaralnola",
+     "meaning": "to spill"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lurvaralno [lurva+ralno] {new in 3.1}: (n) spill | lurvaralnola (v) to spill"
+  },
+  {
+   "headword": "helvihata",
+   "parts": [
+    "helvi",
+    "hata"
+   ],
+   "domain": "Plot & society",
+   "tier": 1,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "helvihata",
+     "meaning": "ambush"
+    },
+    "v": {
+     "form": "helvihataha",
+     "meaning": "to ambush"
+    }
+   },
+   "note": null,
+   "dictionary_line": "helvihata [helvi+hata] {new in 3.1}: (n) ambush | helvihataha (v) to ambush"
+  },
+  {
+   "headword": "maskabenaseno",
+   "parts": [
+    "maska",
+    "benaseno"
+   ],
+   "domain": "Speech & mind",
+   "tier": 2,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "maskabenaseno",
+     "meaning": "flattery"
+    },
+    "v": {
+     "form": "maskabenasenoma",
+     "meaning": "to flatter"
+    }
+   },
+   "note": null,
+   "dictionary_line": "maskabenaseno [maska+benaseno] {new in 3.1}: (n) flattery | maskabenasenoma (v) to flatter"
+  },
+  {
+   "headword": "vizuseno",
+   "parts": [
+    "vizu",
+    "seno"
+   ],
+   "domain": "Speech & mind",
+   "tier": 2,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "vizuseno",
+     "meaning": "outburst; a blurted word"
+    },
+    "v": {
+     "form": "vizusenova",
+     "meaning": "to blurt"
+    }
+   },
+   "note": null,
+   "dictionary_line": "vizuseno [vizu+seno] {new in 3.1}: (n) outburst; a blurted word | vizusenova (v) to blurt"
+  },
+  {
+   "headword": "zegoseno",
+   "parts": [
+    "zego",
+    "seno"
+   ],
+   "domain": "Speech & mind",
+   "tier": 2,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "zegoseno",
+     "meaning": "stammer; stutter"
+    },
+    "v": {
+     "form": "zegosenoza",
+     "meaning": "to stammer; to stutter"
+    }
+   },
+   "note": null,
+   "dictionary_line": "zegoseno [zego+seno] {new in 3.1}: (n) stammer; stutter | zegosenoza (v) to stammer; to stutter"
+  },
+  {
+   "headword": "yebaseno",
+   "parts": [
+    "yeba",
+    "seno"
+   ],
+   "domain": "Speech & mind",
+   "tier": 2,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "yebaseno",
+     "meaning": "negotiation; talk toward agreement"
+    },
+    "v": {
+     "form": "yebasenoya",
+     "meaning": "to negotiate"
+    }
+   },
+   "note": null,
+   "dictionary_line": "yebaseno [yeba+seno] {new in 3.1}: (n) negotiation; talk toward agreement | yebasenoya (v) to negotiate"
+  },
+  {
+   "headword": "sabenela",
+   "parts": [
+    "sabe",
+    "nela"
+   ],
+   "domain": "Relationships",
+   "tier": 2,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "sabenela",
+     "meaning": "acquaintance; a person one knows"
+    }
+   },
+   "note": null,
+   "dictionary_line": "sabenela [sabe+nela] {new in 3.1}: (n) acquaintance; a person one knows"
+  },
+  {
+   "headword": "famlilinu",
+   "parts": [
+    "famli",
+    "linu"
+   ],
+   "domain": "Relationships",
+   "tier": 2,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "famlilinu",
+     "meaning": "niece; nephew; a sibling's child"
+    }
+   },
+   "note": "pattern of purmafamlilinu (cousin); gender by adjective (1.2:G36)",
+   "dictionary_line": "famlilinu [famli+linu] {new in 3.1}: (n) niece; nephew; a sibling's child"
+  },
+  {
+   "headword": "havliturna",
+   "parts": [
+    "havli",
+    "turna"
+   ],
+   "domain": "Health & body",
+   "tier": 2,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "havliturna",
+     "meaning": "inhalation"
+    },
+    "v": {
+     "form": "havliturnaha",
+     "meaning": "to breathe in"
+    }
+   },
+   "note": null,
+   "dictionary_line": "havliturna [havli+turna] {new in 3.1}: (n) inhalation | havliturnaha (v) to breathe in"
+  },
+  {
+   "headword": "havliduvla",
+   "parts": [
+    "havli",
+    "duvla"
+   ],
+   "domain": "Health & body",
+   "tier": 2,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "havliduvla",
+     "meaning": "exhalation"
+    },
+    "v": {
+     "form": "havliduvlaha",
+     "meaning": "to breathe out"
+    }
+   },
+   "note": null,
+   "dictionary_line": "havliduvla [havli+duvla] {new in 3.1}: (n) exhalation | havliduvlaha (v) to breathe out"
+  },
+  {
+   "headword": "zivumilobe",
+   "parts": [
+    "zivu",
+    "milobe"
+   ],
+   "domain": "Dialogue & gesture",
+   "tier": 2,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "zivumilobe",
+     "meaning": "smirk"
+    },
+    "v": {
+     "form": "zivumilobeza",
+     "meaning": "to smirk"
+    }
+   },
+   "note": null,
+   "dictionary_line": "zivumilobe [zivu+milobe] {new in 3.1}: (n) smirk | zivumilobeza (v) to smirk"
+  },
+  {
+   "headword": "lavimilobe",
+   "parts": [
+    "lavi",
+    "milobe"
+   ],
+   "domain": "Dialogue & gesture",
+   "tier": 2,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lavimilobe",
+     "meaning": "grin; a beaming smile"
+    },
+    "v": {
+     "form": "lavimilobela",
+     "meaning": "to grin; to beam"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lavimilobe [lavi+milobe] {new in 3.1}: (n) grin; a beaming smile | lavimilobela (v) to grin; to beam"
+  },
+  {
+   "headword": "manlivaye",
+   "parts": [
+    "manli",
+    "vaye"
+   ],
+   "domain": "Dialogue & gesture",
+   "tier": 2,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "manlivaye",
+     "meaning": "wave of the hand"
+    },
+    "v": {
+     "form": "manlivayema",
+     "meaning": "to wave"
+    }
+   },
+   "note": null,
+   "dictionary_line": "manlivaye [manli+vaye] {new in 3.1}: (n) wave of the hand | manlivayema (v) to wave"
+  },
+  {
+   "headword": "pidivalmi",
+   "parts": [
+    "pidi",
+    "valmi"
+   ],
+   "domain": "Movement & action",
+   "tier": 2,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "pidivalmi",
+     "meaning": "tiptoeing"
+    },
+    "v": {
+     "form": "pidivalmipa",
+     "meaning": "to tiptoe"
+    }
+   },
+   "note": null,
+   "dictionary_line": "pidivalmi [pidi+valmi] {new in 3.1}: (n) tiptoeing | pidivalmipa (v) to tiptoe"
+  },
+  {
+   "headword": "pebuhata",
+   "parts": [
+    "pebu",
+    "hata"
+   ],
+   "domain": "Movement & action",
+   "tier": 2,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "pebuhata",
+     "meaning": "kick"
+    },
+    "v": {
+     "form": "pebuhatapa",
+     "meaning": "to kick"
+    }
+   },
+   "note": null,
+   "dictionary_line": "pebuhata [pebu+hata] {new in 3.1}: (n) kick | pebuhatapa (v) to kick"
+  },
+  {
+   "headword": "manlihata",
+   "parts": [
+    "manli",
+    "hata"
+   ],
+   "domain": "Movement & action",
+   "tier": 2,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "manlihata",
+     "meaning": "punch; a blow of the hand"
+    },
+    "v": {
+     "form": "manlihatama",
+     "meaning": "to punch"
+    }
+   },
+   "note": null,
+   "dictionary_line": "manlihata [manli+hata] {new in 3.1}: (n) punch; a blow of the hand | manlihatama (v) to punch"
+  },
+  {
+   "headword": "yendohata",
+   "parts": [
+    "yendo",
+    "hata"
+   ],
+   "domain": "Movement & action",
+   "tier": 2,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "yendohata",
+     "meaning": "slap"
+    },
+    "v": {
+     "form": "yendohataya",
+     "meaning": "to slap"
+    }
+   },
+   "note": null,
+   "dictionary_line": "yendohata [yendo+hata] {new in 3.1}: (n) slap | yendohataya (v) to slap"
+  },
+  {
+   "headword": "vizutivro",
+   "parts": [
+    "vizu",
+    "tivro"
+   ],
+   "domain": "Movement & action",
+   "tier": 2,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "vizutivro",
+     "meaning": "snatch; a sudden grab"
+    },
+    "v": {
+     "form": "vizutivrova",
+     "meaning": "to grab; to snatch"
+    }
+   },
+   "note": null,
+   "dictionary_line": "vizutivro [vizu+tivro] {new in 3.1}: (n) snatch; a sudden grab | vizutivrova (v) to grab; to snatch"
+  },
+  {
+   "headword": "lisicemokova",
+   "parts": [
+    "lisicemo",
+    "kova"
+   ],
+   "domain": "Home & objects",
+   "tier": 2,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lisicemokova",
+     "meaning": "frying pan"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lisicemokova [lisicemo+kova] {new in 3.1}: (n) frying pan"
+  },
+  {
+   "headword": "velmasafa",
+   "parts": [
+    "velma",
+    "safa"
+   ],
+   "domain": "Home & objects",
+   "tier": 2,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "velmasafa",
+     "meaning": "laundry; the washing of clothes"
+    },
+    "v": {
+     "form": "velmasafava",
+     "meaning": "to do laundry"
+    }
+   },
+   "note": null,
+   "dictionary_line": "velmasafa [velma+safa] {new in 3.1}: (n) laundry; the washing of clothes | velmasafava (v) to do laundry"
+  },
+  {
+   "headword": "damvavelma",
+   "parts": [
+    "damva",
+    "velma"
+   ],
+   "domain": "Home & objects",
+   "tier": 2,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "damvavelma",
+     "meaning": "trousers"
+    }
+   },
+   "note": null,
+   "dictionary_line": "damvavelma [damva+velma] {new in 3.1}: (n) trousers"
+  },
+  {
+   "headword": "manlivelma",
+   "parts": [
+    "manli",
+    "velma"
+   ],
+   "domain": "Home & objects",
+   "tier": 2,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "manlivelma",
+     "meaning": "glove"
+    }
+   },
+   "note": null,
+   "dictionary_line": "manlivelma [manli+velma] {new in 3.1}: (n) glove"
+  },
+  {
+   "headword": "tivrobiti",
+   "parts": [
+    "tivro",
+    "biti"
+   ],
+   "domain": "Home & objects",
+   "tier": 2,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "tivrobiti",
+     "meaning": "clasp; button"
+    }
+   },
+   "note": null,
+   "dictionary_line": "tivrobiti [tivro+biti] {new in 3.1}: (n) clasp; button"
+  },
+  {
+   "headword": "domluvelso",
+   "parts": [
+    "domlu",
+    "velso"
+   ],
+   "domain": "Home & objects",
+   "tier": 2,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "domluvelso",
+     "meaning": "curtain"
+    }
+   },
+   "note": null,
+   "dictionary_line": "domluvelso [domlu+velso] {new in 3.1}: (n) curtain"
+  },
+  {
+   "headword": "velmazupa",
+   "parts": [
+    "velma",
+    "zupa"
+   ],
+   "domain": "Home & objects",
+   "tier": 2,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "velmazupa",
+     "meaning": "wardrobe; closet"
+    }
+   },
+   "note": null,
+   "dictionary_line": "velmazupa [velma+zupa] {new in 3.1}: (n) wardrobe; closet"
+  },
+  {
+   "headword": "safakova",
+   "parts": [
+    "safa",
+    "kova"
+   ],
+   "domain": "Home & objects",
+   "tier": 2,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "safakova",
+     "meaning": "bath; bathtub"
+    }
+   },
+   "note": null,
+   "dictionary_line": "safakova [safa+kova] {new in 3.1}: (n) bath; bathtub"
+  },
+  {
+   "headword": "furosenru",
+   "parts": [
+    "furo",
+    "senru"
+   ],
+   "domain": "Home & objects",
+   "tier": 2,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "furosenru",
+     "meaning": "peel; rind"
+    },
+    "v": {
+     "form": "furosenrufa",
+     "meaning": "to peel"
+    }
+   },
+   "note": null,
+   "dictionary_line": "furosenru [furo+senru] {new in 3.1}: (n) peel; rind | furosenrufa (v) to peel"
+  },
+  {
+   "headword": "farucemo",
+   "parts": [
+    "faru",
+    "cemo"
+   ],
+   "domain": "Home & objects",
+   "tier": 2,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "farucemo",
+     "meaning": "roasting"
+    },
+    "v": {
+     "form": "farucemofa",
+     "meaning": "to roast"
+    }
+   },
+   "note": null,
+   "dictionary_line": "farucemo [faru+cemo] {new in 3.1}: (n) roasting | farucemofa (v) to roast"
+  },
+  {
+   "headword": "dozasafa",
+   "parts": [
+    "doza",
+    "safa"
+   ],
+   "domain": "Home & objects",
+   "tier": 2,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "dozasafa",
+     "meaning": "scrubbing"
+    },
+    "v": {
+     "form": "dozasafada",
+     "meaning": "to scrub"
+    }
+   },
+   "note": null,
+   "dictionary_line": "dozasafa [doza+safa] {new in 3.1}: (n) scrubbing | dozasafada (v) to scrub"
+  },
+  {
+   "headword": "sabayebiti",
+   "parts": [
+    "sabaye",
+    "biti"
+   ],
+   "domain": "Home & objects",
+   "tier": 2,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "sabayebiti",
+     "meaning": "comb; hairbrush"
+    },
+    "v": {
+     "form": "sabayebitisia",
+     "meaning": "to comb; to brush (hair)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "sabayebiti [sabaye+biti] {new in 3.1}: (n) comb; hairbrush | sabayebitisia (v) to comb; to brush (hair)"
+  },
+  {
+   "headword": "sabayetise",
+   "parts": [
+    "sabaye",
+    "tise"
+   ],
+   "domain": "Home & objects",
+   "tier": 2,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "sabayetise",
+     "meaning": "haircut; shave"
+    },
+    "v": {
+     "form": "sabayetisesia",
+     "meaning": "to cut hair; to shave"
+    }
+   },
+   "note": null,
+   "dictionary_line": "sabayetise [sabaye+tise] {new in 3.1}: (n) haircut; shave | sabayetisesia (v) to cut hair; to shave"
+  },
+  {
+   "headword": "bakolenda",
+   "parts": [
+    "bako",
+    "lenda"
+   ],
+   "domain": "Materials & physics",
+   "tier": 2,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "bakolenda",
+     "meaning": "crack; a fracture line"
+    },
+    "v": {
+     "form": "bakolendaba",
+     "meaning": "to crack"
+    }
+   },
+   "note": null,
+   "dictionary_line": "bakolenda [bako+lenda] {new in 3.1}: (n) crack; a fracture line | bakolendaba (v) to crack"
+  },
+  {
+   "headword": "germadugo",
+   "parts": [
+    "germa",
+    "dugo"
+   ],
+   "domain": "Materials & physics",
+   "tier": 2,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "germadugo",
+     "meaning": "rust"
+    },
+    "a": {
+     "form": "germadugosan",
+     "meaning": "rusty"
+    }
+   },
+   "note": null,
+   "dictionary_line": "germadugo [germa+dugo] {new in 3.1}: (n) rust | germadugosan (a) rusty"
+  },
+  {
+   "headword": "herbadugo",
+   "parts": [
+    "herba",
+    "dugo"
+   ],
+   "domain": "Materials & physics",
+   "tier": 2,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "herbadugo",
+     "meaning": "mold; mildew"
+    },
+    "a": {
+     "form": "herbadugosan",
+     "meaning": "moldy"
+    }
+   },
+   "note": null,
+   "dictionary_line": "herbadugo [herba+dugo] {new in 3.1}: (n) mold; mildew | herbadugosan (a) moldy"
+  },
+  {
+   "headword": "pomlinela",
+   "parts": [
+    "pomli",
+    "nela"
+   ],
+   "domain": "Plot & society",
+   "tier": 2,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "pomlinela",
+     "meaning": "hostage; a person held as a pledge"
+    }
+   },
+   "note": null,
+   "dictionary_line": "pomlinela [pomli+nela] {new in 3.1}: (n) hostage; a person held as a pledge"
+  },
+  {
+   "headword": "silrogura",
+   "parts": [
+    "silro",
+    "gura"
+   ],
+   "domain": "Plot & society",
+   "tier": 2,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "silrogura",
+     "meaning": "blackmail"
+    },
+    "v": {
+     "form": "silrogurasia",
+     "meaning": "to blackmail"
+    }
+   },
+   "note": null,
+   "dictionary_line": "silrogura [silro+gura] {new in 3.1}: (n) blackmail | silrogurasia (v) to blackmail"
+  },
+  {
+   "headword": "dozamasu",
+   "parts": [
+    "doza",
+    "masu"
+   ],
+   "domain": "Plot & society",
+   "tier": 2,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "dozamasu",
+     "meaning": "interrogation"
+    },
+    "v": {
+     "form": "dozamasuda",
+     "meaning": "to interrogate"
+    }
+   },
+   "note": null,
+   "dictionary_line": "dozamasu [doza+masu] {new in 3.1}: (n) interrogation | dozamasuda (v) to interrogate"
+  },
+  {
+   "headword": "dorvakarko",
+   "parts": [
+    "dorva",
+    "karko"
+   ],
+   "domain": "Plot & society",
+   "tier": 2,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "dorvakarko",
+     "meaning": "murder; a deliberate killing"
+    },
+    "v": {
+     "form": "dorvakarkoda",
+     "meaning": "to murder"
+    }
+   },
+   "note": "karkoyo (killer) already exists",
+   "dictionary_line": "dorvakarko [dorva+karko] {new in 3.1}: (n) murder; a deliberate killing | dorvakarkoda (v) to murder"
+  },
+  {
+   "headword": "juseleni",
+   "parts": [
+    "juse",
+    "leni"
+   ],
+   "domain": "Plot & society",
+   "tier": 2,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "juseleni",
+     "meaning": "trial; a hearing before a judge"
+    }
+   },
+   "note": "juseyo (judge), jusepago (courthouse), kaldopago (prison) already exist",
+   "dictionary_line": "juseleni [juse+leni] {new in 3.1}: (n) trial; a hearing before a judge"
+  },
+  {
+   "headword": "pagoverasude",
+   "parts": [
+    "pago",
+    "verasude"
+   ],
+   "domain": "Plot & society",
+   "tier": 2,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "pagoverasude",
+     "meaning": "alibi; proof of where one was"
+    }
+   },
+   "note": null,
+   "dictionary_line": "pagoverasude [pago+verasude] {new in 3.1}: (n) alibi; proof of where one was"
+  },
+  {
+   "headword": "verasudeserbu",
+   "parts": [
+    "verasude",
+    "serbu"
+   ],
+   "domain": "Plot & society",
+   "tier": 2,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "verasudeserbu",
+     "meaning": "investigation"
+    },
+    "v": {
+     "form": "verasudeserbuva",
+     "meaning": "to investigate"
+    }
+   },
+   "note": null,
+   "dictionary_line": "verasudeserbu [verasude+serbu] {new in 3.1}: (n) investigation | verasudeserbuva (v) to investigate"
+  },
+  {
+   "headword": "pebunulu",
+   "parts": [
+    "pebu",
+    "nulu"
+   ],
+   "domain": "Nature & geography",
+   "tier": 2,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "pebunulu",
+     "meaning": "footpath; sidewalk"
+    }
+   },
+   "note": null,
+   "dictionary_line": "pebunulu [pebu+nulu] {new in 3.1}: (n) footpath; sidewalk"
+  },
+  {
+   "headword": "larbotobra",
+   "parts": [
+    "larbo",
+    "tobra"
+   ],
+   "domain": "Nature & geography",
+   "tier": 2,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "larbotobra",
+     "meaning": "fence"
+    }
+   },
+   "note": null,
+   "dictionary_line": "larbotobra [larbo+tobra] {new in 3.1}: (n) fence"
+  },
+  {
+   "headword": "halrakova",
+   "parts": [
+    "halra",
+    "kova"
+   ],
+   "domain": "Nature & geography",
+   "tier": 2,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "halrakova",
+     "meaning": "cart; carriage"
+    }
+   },
+   "note": null,
+   "dictionary_line": "halrakova [halra+kova] {new in 3.1}: (n) cart; carriage"
+  }
+ ],
+ "listed_derivations_add": [
+  {
+   "form": "safavelmavu",
+   "base": "safavelma",
+   "suffix": "-vu",
+   "meaning": "towel (big washcloth)",
+   "tier": 1
+  },
+  {
+   "form": "safapago",
+   "base": "safa",
+   "suffix": "-pago",
+   "meaning": "bathroom; washroom",
+   "tier": 2
+  },
+  {
+   "form": "ralkayo",
+   "base": "ralka",
+   "suffix": "-yo",
+   "meaning": "rival; contender",
+   "tier": 2
+  },
+  {
+   "form": "folluhemluyo",
+   "base": "folluhemlu",
+   "suffix": "-yo",
+   "meaning": "bully; one who intimidates",
+   "tier": 2
+  }
+ ],
+ "lexicalised_diminutives_add": [
+  {
+   "form": "resoti",
+   "base": "reso",
+   "meaning": "chuckle; giggle",
+   "tier": 1
+  },
+  {
+   "form": "benasenoti",
+   "base": "benaseno",
+   "meaning": "compliment",
+   "tier": 2
+  },
+  {
+   "form": "senoti",
+   "base": "seno",
+   "meaning": "small talk; chit-chat",
+   "tier": 2
+  },
+  {
+   "form": "valminuluti",
+   "base": "valminulu",
+   "meaning": "alley; a narrow street",
+   "tier": 2
+  },
+  {
+   "form": "taradapagoti",
+   "base": "taradapago",
+   "meaning": "shop; a small market",
+   "tier": 2
+  },
+  {
+   "form": "miruralnoti",
+   "base": "miruralno",
+   "meaning": "trickle; a drip of water",
+   "tier": 2
+  }
+ ],
+ "restored_forms_add": [
+  {
+   "headword": "amorharlu",
+   "domain": "Ethics & emotions",
+   "slot": "a",
+   "form": "amorharlusan",
+   "meaning": "jealous (in love or attachment)",
+   "tier": 1,
+   "append_to_line": "amorharlusan (a) jealous (in love or attachment)"
+  },
+  {
+   "headword": "amorharlu",
+   "domain": "Ethics & emotions",
+   "slot": "v",
+   "form": "amorharlua",
+   "meaning": "to be jealous over; to fear losing (someone)",
+   "tier": 1,
+   "append_to_line": "amorharlua (v) to be jealous over; to fear losing (someone)"
+  },
+  {
+   "headword": "lenda",
+   "domain": "Space & orientation",
+   "slot": "na",
+   "form": "lendanasan",
+   "meaning": "crooked; not straight",
+   "tier": 2,
+   "append_to_line": "lendanasan (na) crooked; not straight"
+  },
+  {
+   "headword": "lumimelli",
+   "domain": "Time, quantity & work",
+   "slot": "na",
+   "form": "lumimellinasan",
+   "meaning": "dim; faint (of light)",
+   "tier": 2,
+   "append_to_line": "lumimellinasan (na) dim; faint (of light)"
+  }
+ ],
+ "rejected_proposals": [],
+ "recipes_add": [
+  {
+   "english": "recognize (someone or something met before)",
+   "pattern": "revo-sabesia (listed prefix meaning, 2.5:G121)",
+   "liraasa": "Maivo revo-sabesia taivo.",
+   "meaning": "I recognize you.",
+   "ruling": "2.5:G121"
+  },
+  {
+   "english": "realize; suddenly become aware",
+   "pattern": "hiro sabesia (begin to know); with zafra or hoyo for suddenness or surprise",
+   "liraasa": "Zafra, maivo po hiro sabesia fime saivo po pagopa.",
+   "meaning": "Suddenly I realized that she had gone.",
+   "ruling": "3.1 recipe"
+  },
+  {
+   "english": "prefer A to B",
+   "pattern": "lorelivnala A korsi B",
+   "liraasa": "Maivo lorelivnala lavlomiru korsi miru.",
+   "meaning": "I prefer tea to water.",
+   "ruling": "3.1 recipe"
+  },
+  {
+   "english": "favorite",
+   "pattern": "lorelivnasan + noun; li lorelivnasan = the favorite",
+   "liraasa": "Eli ka maivo de lorelivnasan lira.",
+   "meaning": "This is my favorite song.",
+   "ruling": "3.1 recipe"
+  },
+  {
+   "english": "not understand vs misunderstand",
+   "pattern": "ne mebanema (not understand) · loteromebanela (understand wrongly) · mebanena (a misunderstanding between people)",
+   "liraasa": "Maivo ne mebanema; nara saivo po loteromebanela maivo.",
+   "meaning": "I don't understand; but she misunderstood me.",
+   "ruling": "3.1 recipe"
+  },
+  {
+   "english": "envy vs jealousy",
+   "pattern": "loterodesi / loterodesila (wanting what another has) · amorharlu / amorharlua (fear of losing a bond)",
+   "liraasa": "Saivo amorharlua saivo de sora.",
+   "meaning": "She is jealous over her friend.",
+   "ruling": "3.1 recipe"
+  }
+ ],
+ "test_sentences": [
+  {
+   "liraasa": "Sidu patudonupa li patu raho lisrola ka maivo de lorelivna, ne sidu livnala baba lorelivnasan.",
+   "english": "To share the piece that remains is my preference, not to choose a favorite.",
+   "tests": "prefer, share, favorite"
+  },
+  {
+   "liraasa": "Saivo po lurvaralnola li lavlomiru, po vizutivrova baba safavelmavu, ata po sispasia li pegasan tobratabu.",
+   "english": "She spilled the tea, grabbed a towel, and wiped the sticky shelf.",
+   "tests": "spill, grab, towel, sticky, shelf"
+  },
+  {
+   "liraasa": "Saivo po dentosapuda la vizunasan, po sapunevrasia, ata po nuravufasbinia.",
+   "english": "He chewed slowly, swallowed, and winced.",
+   "tests": "chew, swallow, wince"
+  },
+  {
+   "liraasa": "Saivo po vilnelendava ala li lumimellinasan zupanulu, ata po helvivimoha nazru li domluvelso.",
+   "english": "She squinted into the dim corridor and peeked behind the curtain.",
+   "tests": "squint, dim, peek, curtain"
+  },
+  {
+   "liraasa": "Saivo po ne loterodesila li loteronela; saivo po amorharlua saivo de devorivo.",
+   "english": "She did not envy the stranger; she was jealous over her partner.",
+   "tests": "envy (2.5) vs jealousy (restored verb)"
+  },
+  {
+   "liraasa": "Li buzakova raho po gome tozeta po ke baba helvihata, nara saivo po silrosudesia li dorvalordi.",
+   "english": "The cup that had been poisoned was an ambush, but she uncovered the plan.",
+   "tests": "poison, ambush, reveal, plan"
+  },
+  {
+   "liraasa": "Maivo po loteromebanela taivo, nara eli-krono, maivo hiro sabesia raho taivo po desida sidu senosia.",
+   "english": "I misunderstood you, but now I realize what you meant.",
+   "tests": "misunderstand; realize = hiro sabesia"
+  },
+  {
+   "liraasa": "Saivo po lisiralnola su li mulyisan teru, po pebusemnepa, ata po dozativroda saivo de pebu.",
+   "english": "He slipped on the wet floor, crouched, and squeezed his foot.",
+   "tests": "slip, crouch, squeeze"
+  }
+ ],
+ "validation": {
+  "errors": []
+ }
+}

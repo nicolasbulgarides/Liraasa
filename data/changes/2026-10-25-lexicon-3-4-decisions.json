@@ -1,0 +1,21 @@
+{
+ "id": "2026-10-25-lexicon-3-4-decisions",
+ "edition": "3.4",
+ "created": "2026-10-25T20:00:00Z",
+ "author": "nicolas",
+ "summary": "The editor's decisions on the four 3.3 sentences that broke an earlier ruling, which the author left to best judgement (2026-10-25, review/questions_3_3.md). In the lexicon, one: 3.2:G147's example \"Peta da Amerika\" reads \"li lira de Amerika\", as the ruling's text gives it; the old example is archived.",
+ "ops": [
+  {
+   "entry": "3.2:G147",
+   "op": "archive_text",
+   "field": "example:1",
+   "from": "Peta da Amerika",
+   "to": "li lira de Amerika",
+   "ruling": "3.2:G147",
+   "reason": "The author left this to the editor (2026-10-25). 3.2:G147 says \"de + the name means from the place\", and a noun phrase takes de, not a prepositional phrase, after it (2.5:G98): \"a song from America\" is li lira de Amerika. Peta da Amerika had neither a verb nor a place for its da phrase. For a person, Peta ka da Amerika (Peta is from America) also reads clean.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  }
+ ]
+}

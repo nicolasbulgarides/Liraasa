@@ -24,7 +24,19 @@ made from the frozen 1.1 by the two changesets in `data/changes/` via
 151 function words, rulings 1.2:G24–G36, and 25 of 25 validator checks passing
 (`npm run validate:1.2`). 1.2 is now frozen as 2.0's baseline.
 
-**3.3 is current, and proposed** (ADR-0023): `data/lexicon/liraasa_3_3.json`,
+**3.4 is current, and proposed** (ADR-0024): `data/lexicon/liraasa_3_4.json`,
+built from frozen 3.3 by `npm run integrate:3.4`: the author's "Abstraction and
+the human condition" patch (bundle archived whole in `archive/patch_3_4/`; no
+new roots: 94 compounds, 18 derivations, 3 diminutives, 50 aliases, ruling
+3.4:G149), then the editor's decisions on the four 3.3 sentences the author
+left to best judgement (`…-3-4-decisions`: 3.2:G147's example is now `li lira de
+Amerika`; the recipes and test sentence are fixed where they live). 1930
+headwords, 4747 meaningful forms; validation 22 PASS, 3 WARN (`npm run
+validate:3.4`); the LLM reference matches the author's own 3.4 build except that
+one example. Proposed editions: 3.0, 3.3, 3.4 (`scripts/proposed_editions.ts`).
+3.3 is frozen as 3.4's baseline.
+
+**3.3, proposed** (ADR-0023): `data/lexicon/liraasa_3_3.json`,
 built from frozen 3.1 by `npm run integrate:3.3`: first the author's
 ratification of all of 3.1 (2026-10-25: **3.1 is canon**), then the combined
 3.2 + 3.3 patch, "Archetypes and the top 2,000" (bundle archived whole in
@@ -247,6 +259,8 @@ validator and parser.
 | `npm run integrate:3.0`    | Build 3.0 from frozen 2.5 plus the 3.0 changeset (sha-checked baseline). `-- --check` writes nothing (ADR-0021).                                                                                                                                                                                                  | **working** |
 | `npm run integrate:3.1`    | Build 3.1 from frozen 3.0 plus the 3.1 changeset (sha-checked baseline). `-- --check` writes nothing (ADR-0022).                                                                                                                                                                                                  | **working** |
 | `npm run integrate:3.3`    | Build 3.3 from frozen 3.1: the 3.1 ratification, then the 3.3 changeset (sha-checked baseline). `-- --check` writes nothing (ADR-0023).                                                                                                                                                                           | **working** |
+| `npm run integrate:3.4`    | Build 3.4 from frozen 3.3: the 3.4 patch, then the editor's decisions on four 3.3 sentences (sha-checked baseline). `-- --check` writes nothing (ADR-0024).                                                                                                                                                       | **working** |
+| `npm run validate:3.4`     | validate_3_0.py on 3.4 → `data/lexicon/validation_3_4.json`; then the author's `validate_patch.py` on `handoff/liraasa_3_4_llm.json`.                                                                                                                                                                             | **working** |
 | `npm run validate:3.3`     | validate_3_0.py on 3.3 (check 7 re-run under 3.2:G142, 25 re-applies every 3.3 op) → `data/lexicon/validation_3_3.json`; then the author's `validate_patch.py` on `handoff/liraasa_3_3_llm.json`.                                                                                                                 | **working** |
 | `npm run validate:3.1`     | validate_3_0.py on 3.1 (checks 1–24 by validate_2_3.py, 25 re-applies every 3.1 op) → `data/lexicon/validation_3_1.json`; then the author's `validate_patch.py` on `handoff/liraasa_3_1_llm.json`.                                                                                                                | **working** |
 | `npm run validate:3.0`     | validate_2_3.py for checks 1–24; check 25 re-applies every 3.0 op independently → `data/lexicon/validation_3_0.json`; then the author's `validate_3_0.py` on `handoff/liraasa_3_0_llm.json` (run `build:llm` first).                                                                                              | **working** |

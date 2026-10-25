@@ -534,10 +534,16 @@ describe('the 3.1 → 3.3 diff lesson', () => {
       lexicon: JSON.parse(readFileSync('data/lexicon/liraasa_3_1.json', 'utf8')) as RawLexicon,
       corpus: [],
     });
+    // 3.3 is frozen as 3.4's baseline: built here from its own file
+    const at33 = buildLearnSource({
+      ...input,
+      lexicon: JSON.parse(readFileSync('data/lexicon/liraasa_3_3.json', 'utf8')) as RawLexicon,
+      corpus: [],
+    });
     const d = diffSnapshots(
       snapshotEdition(at31.data),
-      snapshotEdition(source.data),
-      source.replacementFor,
+      snapshotEdition(at33.data),
+      at33.replacementFor,
     );
     const patch = JSON.parse(
       readFileSync('archive/patch_3_3/patches/liraasa_3_3_patch.json', 'utf8'),
@@ -557,6 +563,41 @@ describe('the 3.1 → 3.3 diff lesson', () => {
     const reglossed = d.reglossed.map((r) => (r as unknown as { spelling: string }).spelling);
     expect(reglossed.sort()).toEqual(
       [...new Set(patch.restored_forms_add.map((r) => r.headword))].sort(),
+    );
+    expect(d.rulesAdded.map((r) => r.id).sort()).toEqual(
+      patch.rulings_add.map((r) => `rule:${r.id}`).sort(),
+    );
+  });
+});
+
+describe('the 3.3 → 3.4 diff lesson', () => {
+  it('ACCEPTANCE: additions only: no word renamed or removed; every 3.4 word, restored form and ruling', () => {
+    const at33 = buildLearnSource({
+      ...input,
+      lexicon: JSON.parse(readFileSync('data/lexicon/liraasa_3_3.json', 'utf8')) as RawLexicon,
+      corpus: [],
+    });
+    const d = diffSnapshots(
+      snapshotEdition(at33.data),
+      snapshotEdition(source.data),
+      source.replacementFor,
+    );
+    const patch = JSON.parse(
+      readFileSync('archive/patch_3_4/patches/liraasa_3_4_patch.json', 'utf8'),
+    ) as {
+      compounds_add: { headword: string }[];
+      restored_forms_add: { headword: string }[];
+      rulings_add: { id: string }[];
+    };
+    expect([d.from, d.to]).toEqual(['3.3', '3.4']);
+    expect(d.renamed).toEqual([]);
+    expect(d.removed).toEqual([]);
+    // miruvaye was already a 3.3 word, an attested image compound: lexicalised, so reglossed
+    const lexicalised = ['miruvaye'];
+    expect(d.added).toHaveLength(patch.compounds_add.length - lexicalised.length);
+    const reglossed = d.reglossed.map((r) => (r as unknown as { spelling: string }).spelling);
+    expect(reglossed.sort()).toEqual(
+      [...new Set([...patch.restored_forms_add.map((r) => r.headword), ...lexicalised])].sort(),
     );
     expect(d.rulesAdded.map((r) => r.id).sort()).toEqual(
       patch.rulings_add.map((r) => `rule:${r.id}`).sort(),

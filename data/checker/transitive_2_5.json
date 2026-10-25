@@ -3,6 +3,7 @@
  "verbs": [
   "amora",
   "amorharlua",
+  "bimneba",
   "bitiba",
   "bumreba",
   "buzaba",
@@ -52,6 +53,7 @@
   "nedunia",
   "nosvonia",
   "opioa",
+  "pagopa",
   "palvipa",
   "paripa",
   "peligozapa",
@@ -90,6 +92,7 @@
  "attested_in": {
   "amora": "Maivo amora taivo.",
   "amorharlua": "Saivo amorharlua saivo de sora.",
+  "bimneba": "Maivori futu revo-bimneba li domlu.",
   "bitiba": "Maivo po bitiba li germabiti.",
   "bumreba": "Maivo po bumreba tressa, nido, cuara bumreri.",
   "buzaba": "Maivo buzaba miru.",
@@ -139,6 +142,7 @@
   "nedunia": "Taivo nedunia miru.",
   "nosvonia": "Li lermi nosvonia li pensa.",
   "opioa": "Maivo de benasan melo opioa lumi.",
+  "pagopa": "Saivo du-pagopa li zarku.",
   "palvipa": "Palvipa li miru en li kova!",
   "paripa": "Li bumrepago po ne paripa eli montafama.",
   "peligozapa": "Kipo peligozapa Dorin toda-krono.",

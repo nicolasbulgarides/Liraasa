@@ -128,6 +128,7 @@ export interface Lexicon {
   rulings_3_0?: Ruling[];
   rulings_3_2?: Ruling[];
   rulings_3_3?: Ruling[];
+  rulings_3_4?: Ruling[];
   /** 2.0: the image-compound pattern, with the attested pairs whole (ADR-0016). */
   image_compounds?: {
     rule: string;
@@ -221,6 +222,7 @@ export function normGloss(gloss: string): string {
 export function rulingById(lex: Lexicon, id: string): Ruling | undefined {
   const [edition, rid] = id.split(':');
   const sets: Record<string, readonly Ruling[] | undefined> = {
+    '3.4': lex.rulings_3_4,
     '3.3': lex.rulings_3_3,
     '3.2': lex.rulings_3_2,
     '3.0': lex.rulings_3_0,
@@ -354,6 +356,7 @@ export class Index {
         ...(lex.rulings_3_0 ?? []),
         ...(lex.rulings_3_2 ?? []),
         ...(lex.rulings_3_3 ?? []),
+        ...(lex.rulings_3_4 ?? []),
         ...lex.rulings_0_8_carried,
       ].flatMap((r) => (r.examples ?? []).map(([l]) => l)),
       ...lex.discourse_particles.flatMap((p) => p.examples.map((e) => e.liraasa)),
@@ -420,7 +423,12 @@ export class Index {
   unusedReadings(token: string): FormHit[] {
     const hits = this.forms.get(token) ?? [];
     if (hits.length === 0 || this.closed.has(token) || this.attested.has(token)) return [];
-    return hits.every((h) => !isUsed(h.headword, h.slot)) ? hits : [];
+    // a compound's -san is an adjective by rule, once 3.3:G148 is in force
+    const relational = (this.lex.rulings_3_3 ?? []).some((r) => r.id === 'G148');
+    const unused = (h: FormHit): boolean =>
+      !isUsed(h.headword, h.slot) &&
+      !(relational && h.slot === 'adjective' && h.headword.components !== null);
+    return hits.every(unused) ? hits : [];
   }
 
   /**
@@ -498,6 +506,7 @@ export function canonTexts(lex: Lexicon): string[] {
     ...(lex.rulings_3_0 ?? []),
     ...(lex.rulings_3_2 ?? []),
     ...(lex.rulings_3_3 ?? []),
+    ...(lex.rulings_3_4 ?? []),
     ...lex.rulings_0_8_carried,
   ];
   return [

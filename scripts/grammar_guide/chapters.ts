@@ -1214,6 +1214,65 @@ export const RECIPES: readonly (readonly [string, string, string, string, string
     'She is upstairs.',
     '',
   ],
+  // 3.3, decided by the editor at the author's request (2026-10-25, ADR-0024): the two recipes
+  // that broke an earlier ruling, in a form that keeps it
+  [
+    'slightly · a little (before an adjective)',
+    '`menu` (less) before the adjective; for a manner, `la` + adjective after the verb (2.5:G105)',
+    'Saivo ke menu lavisan.',
+    'She is slightly happy.',
+    '',
+  ],
+  [
+    'meanwhile · asleep',
+    '`ola-krono,` (at that time) opening the clause · `somusia` (sleeps): `ke` takes no verb (2.5:G93)',
+    'Ola-krono, li linu somusia.',
+    'Meanwhile, the child is asleep.',
+    '',
+  ],
+  // 3.4, proposed: the recipes the 3.4 patch adds
+  [
+    'avoid · look away · dismiss · banish',
+    'du- (away) on the verb: du-pagopa · du-vimova · du-silbesia (2.5:G121)',
+    'Saivo du-pagopa li zarku.',
+    'She avoids the enemy.',
+    '2.5:G121',
+  ],
+  [
+    'rebuild · resume',
+    'revo- (again) on the verb; reve + verb',
+    'Maivori futu revo-bimneba li domlu.',
+    'We will rebuild the house.',
+    '2.5:G121',
+  ],
+  [
+    'horrify · entertain · discourage · tighten',
+    'vaku + actor + verb (2.5:G109)',
+    'Li resotelne vaku li nelari lavila.',
+    'The comedy entertains the people.',
+    '2.5:G109',
+  ],
+  [
+    'coward · liar · the wise (person-from-quality)',
+    'li + adjective (1.2:G29): li corvinasan · li veranasan',
+    'Li corvinasan po pagopa.',
+    'The coward left.',
+    '1.2:G29',
+  ],
+  [
+    'local · mental · sexual · foreign · traditional',
+    'G148 adjectives: nemvapagosan · mavoyugesan · amordalusan · loterokezusan · ramulordisan',
+    'Saivo ka baba loterokezusan nela.',
+    'She is a foreign person.',
+    '3.3:G148',
+  ],
+  [
+    'differ · shrink · minority',
+    'ka sambanasan da · loya mellinasan · li mellinasan patu',
+    'Eli lira ka sambanasan da ola lira.',
+    'This song differs from that one.',
+    '',
+  ],
 ];
 
 export function recipesPart(index: Index): string {

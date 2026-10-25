@@ -39,7 +39,7 @@ import {
 import type { RawLexicon } from '../src/core/model/raw';
 import { parseArgs } from './args';
 
-const DEFAULT_LEXICON = 'data/lexicon/liraasa_3_3.json';
+const DEFAULT_LEXICON = 'data/lexicon/liraasa_3_4.json';
 const DEFAULT_OUT = 'data/export';
 const CORPUS_DIRS = ['data/corpus/songs_2_3', 'data/corpus/bumrepago_2_3'];
 

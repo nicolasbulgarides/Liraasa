@@ -1,0 +1,2517 @@
+{
+ "patch": "Liraasa 3.4 — Abstraction and the human condition",
+ "base_version": "3.3",
+ "target_version": "3.4",
+ "status": "PROPOSED: ratify tier 1 first; tier 2 may be ratified, deferred or dropped item by item",
+ "base_file": "liraasa_3_3_llm.json (2.5 + 3.0 + 3.1 + 3.3)",
+ "base_counts": {
+  "headwords": 1836,
+  "meaningful_forms": 4614
+ },
+ "counts": {
+  "new_roots": 0,
+  "new_compounds": 94,
+  "new_listed_derivations": 18,
+  "new_lexicalised_diminutives": 3,
+  "restored_forms": 1,
+  "tier1_entries": 73,
+  "tier2_entries": 43,
+  "headwords_after": 1930,
+  "meaningful_forms_after": 4747
+ },
+ "principles": [
+  "No new roots: every entry is built from existing headwords.",
+  "Existing words are reused through aliases before anything is coined.",
+  "Motion prefixes, causatives, li + adjective and 3.3:G148 adjectives are documented as recipes rather than listed.",
+  "Tier 1 = frequent abstractions; tier 2 = optional."
+ ],
+ "function_words_add": [],
+ "rulings_add": [
+  {
+   "id": "3.4:G149",
+   "topic": "Quality nouns and their adjectives",
+   "rule": "For a compound X whose adjective is available under 3.3:G148, the bare compound names the quality and X-san describes what has it: tibilekta complexity, tibilektasan complex; lordidoza strictness, lordidozasan strict. A person defined by a quality is li + the adjective (1.2:G29): li corvinasan, the coward. No -ness or -ity suffix is needed or created.",
+   "examples": [
+    [
+     "tibilekta · tibilektasan",
+     "complexity · complex"
+    ],
+    [
+     "Li lordidozasan lemudonuyo po ne merama li linu.",
+     "The strict teacher did not forgive the child."
+    ]
+   ]
+  }
+ ],
+ "roots_add": [],
+ "compounds_add": [
+  {
+   "headword": "amordalu",
+   "parts": [
+    "amor",
+    "dalu"
+   ],
+   "domain": "Romance",
+   "tier": 1,
+   "archetype": "Human condition & the body",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "amordalu",
+     "meaning": "sex; lovemaking"
+    },
+    "v": {
+     "form": "amordalua",
+     "meaning": "to make love; to have sex"
+    }
+   },
+   "note": "sexual = amordalusan (3.3:G148); biological sex = minvasan / tarnusan (1.2:G36)",
+   "dictionary_line": "amordalu [amor+dalu] {new in 3.4}: (n) sex; lovemaking | amordalua (v) to make love; to have sex"
+  },
+  {
+   "headword": "somusonbu",
+   "parts": [
+    "somu",
+    "sonbu"
+   ],
+   "domain": "Health & body",
+   "tier": 2,
+   "archetype": "Human condition & the body",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "somusonbu",
+     "meaning": "snore"
+    },
+    "v": {
+     "form": "somusonbusia",
+     "meaning": "to snore"
+    }
+   },
+   "note": null,
+   "dictionary_line": "somusonbu [somu+sonbu] {new in 3.4}: (n) snore | somusonbusia (v) to snore"
+  },
+  {
+   "headword": "havlihata",
+   "parts": [
+    "havli",
+    "hata"
+   ],
+   "domain": "Health & body",
+   "tier": 2,
+   "archetype": "Human condition & the body",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "havlihata",
+     "meaning": "hiccup"
+    },
+    "v": {
+     "form": "havlihataha",
+     "meaning": "to hiccup"
+    }
+   },
+   "note": null,
+   "dictionary_line": "havlihata [havli+hata] {new in 3.4}: (n) hiccup | havlihataha (v) to hiccup"
+  },
+  {
+   "headword": "kaldodesi",
+   "parts": [
+    "kaldo",
+    "desi"
+   ],
+   "domain": "Health & body",
+   "tier": 1,
+   "archetype": "Human condition & the body",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "kaldodesi",
+     "meaning": "addiction; a bound craving"
+    }
+   },
+   "note": "addicted = kaldodesisan (G148)",
+   "dictionary_line": "kaldodesi [kaldo+desi] {new in 3.4}: (n) addiction; a bound craving"
+  },
+  {
+   "headword": "lorenevra",
+   "parts": [
+    "lore",
+    "nevra"
+   ],
+   "domain": "Emotions",
+   "tier": 1,
+   "archetype": "Human condition & the body",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lorenevra",
+     "meaning": "depression; a sinking of the heart"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lorenevra [lore+nevra] {new in 3.4}: (n) depression; a sinking of the heart"
+  },
+  {
+   "headword": "talipuku",
+   "parts": [
+    "tali",
+    "puku"
+   ],
+   "domain": "Daily life",
+   "tier": 1,
+   "archetype": "Human condition & the body",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "talipuku",
+     "meaning": "retirement; resignation"
+    },
+    "v": {
+     "form": "talipukuta",
+     "meaning": "to retire; to resign"
+    }
+   },
+   "note": null,
+   "dictionary_line": "talipuku [tali+puku] {new in 3.4}: (n) retirement; resignation | talipukuta (v) to retire; to resign"
+  },
+  {
+   "headword": "yugedoza",
+   "parts": [
+    "yuge",
+    "doza"
+   ],
+   "domain": "Health & body",
+   "tier": 2,
+   "archetype": "Human condition & the body",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "yugedoza",
+     "meaning": "fitness; bodily strength"
+    }
+   },
+   "note": null,
+   "dictionary_line": "yugedoza [yuge+doza] {new in 3.4}: (n) fitness; bodily strength"
+  },
+  {
+   "headword": "namiduha",
+   "parts": [
+    "nami",
+    "duha"
+   ],
+   "domain": "Health & body",
+   "tier": 1,
+   "archetype": "Human condition & the body",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "namiduha",
+     "meaning": "appetite; hunger for food"
+    }
+   },
+   "note": null,
+   "dictionary_line": "namiduha [nami+duha] {new in 3.4}: (n) appetite; hunger for food"
+  },
+  {
+   "headword": "simvodaigo",
+   "parts": [
+    "simvo",
+    "daigo"
+   ],
+   "domain": "Health & body",
+   "tier": 2,
+   "archetype": "Human condition & the body",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "simvodaigo",
+     "meaning": "suicide"
+    }
+   },
+   "note": null,
+   "dictionary_line": "simvodaigo [simvo+daigo] {new in 3.4}: (n) suicide"
+  },
+  {
+   "headword": "zeldodesi",
+   "parts": [
+    "zeldo",
+    "desi"
+   ],
+   "domain": "Emotions",
+   "tier": 1,
+   "archetype": "Feelings & states of mind",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "zeldodesi",
+     "meaning": "dislike; aversion"
+    },
+    "v": {
+     "form": "zeldodesiza",
+     "meaning": "to dislike"
+    }
+   },
+   "note": null,
+   "dictionary_line": "zeldodesi [zeldo+desi] {new in 3.4}: (n) dislike; aversion | zeldodesiza (v) to dislike"
+  },
+  {
+   "headword": "lorefaru",
+   "parts": [
+    "lore",
+    "faru"
+   ],
+   "domain": "Emotions",
+   "tier": 1,
+   "archetype": "Feelings & states of mind",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lorefaru",
+     "meaning": "enthusiasm; zeal"
+    },
+    "a": {
+     "form": "lorefarusan",
+     "meaning": "enthusiastic; eager"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lorefaru [lore+faru] {new in 3.4}: (n) enthusiasm; zeal | lorefarusan (a) enthusiastic; eager"
+  },
+  {
+   "headword": "loremiga",
+   "parts": [
+    "lore",
+    "miga"
+   ],
+   "domain": "Emotions",
+   "tier": 1,
+   "archetype": "Feelings & states of mind",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "loremiga",
+     "meaning": "attachment; fondness"
+    }
+   },
+   "note": null,
+   "dictionary_line": "loremiga [lore+miga] {new in 3.4}: (n) attachment; fondness"
+  },
+  {
+   "headword": "mavokaldo",
+   "parts": [
+    "mavo",
+    "kaldo"
+   ],
+   "domain": "Mind & philosophy",
+   "tier": 1,
+   "archetype": "Feelings & states of mind",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "mavokaldo",
+     "meaning": "obsession"
+    },
+    "a": {
+     "form": "mavokaldosan",
+     "meaning": "obsessed"
+    }
+   },
+   "note": null,
+   "dictionary_line": "mavokaldo [mavo+kaldo] {new in 3.4}: (n) obsession | mavokaldosan (a) obsessed"
+  },
+  {
+   "headword": "follufavro",
+   "parts": [
+    "follu",
+    "favro"
+   ],
+   "domain": "Emotions",
+   "tier": 2,
+   "archetype": "Feelings & states of mind",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "follufavro",
+     "meaning": "alarm; a signal of fear"
+    }
+   },
+   "note": null,
+   "dictionary_line": "follufavro [follu+favro] {new in 3.4}: (n) alarm; a signal of fear"
+  },
+  {
+   "headword": "dendufollu",
+   "parts": [
+    "dendu",
+    "follu"
+   ],
+   "domain": "Emotions",
+   "tier": 1,
+   "archetype": "Feelings & states of mind",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "dendufollu",
+     "meaning": "dread; deep fear"
+    }
+   },
+   "note": null,
+   "dictionary_line": "dendufollu [dendu+follu] {new in 3.4}: (n) dread; deep fear"
+  },
+  {
+   "headword": "pelilavi",
+   "parts": [
+    "peli",
+    "lavi"
+   ],
+   "domain": "Emotions",
+   "tier": 1,
+   "archetype": "Feelings & states of mind",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "pelilavi",
+     "meaning": "amusement; fun"
+    }
+   },
+   "note": null,
+   "dictionary_line": "pelilavi [peli+lavi] {new in 3.4}: (n) amusement; fun"
+  },
+  {
+   "headword": "yugesabe",
+   "parts": [
+    "yuge",
+    "sabe"
+   ],
+   "domain": "Mind & philosophy",
+   "tier": 1,
+   "archetype": "Feelings & states of mind",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "yugesabe",
+     "meaning": "instinct; the body's knowing"
+    }
+   },
+   "note": null,
+   "dictionary_line": "yugesabe [yuge+sabe] {new in 3.4}: (n) instinct; the body's knowing"
+  },
+  {
+   "headword": "devodoza",
+   "parts": [
+    "devo",
+    "doza"
+   ],
+   "domain": "Mind & philosophy",
+   "tier": 2,
+   "archetype": "Feelings & states of mind",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "devodoza",
+     "meaning": "conviction; firm belief"
+    }
+   },
+   "note": null,
+   "dictionary_line": "devodoza [devo+doza] {new in 3.4}: (n) conviction; firm belief"
+  },
+  {
+   "headword": "yanolore",
+   "parts": [
+    "yano",
+    "lore"
+   ],
+   "domain": "Emotions",
+   "tier": 2,
+   "archetype": "Feelings & states of mind",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "yanolore",
+     "meaning": "solidarity; one heart among many"
+    }
+   },
+   "note": null,
+   "dictionary_line": "yanolore [yano+lore] {new in 3.4}: (n) solidarity; one heart among many"
+  },
+  {
+   "headword": "verasirmo",
+   "parts": [
+    "vera",
+    "sirmo"
+   ],
+   "domain": "Mind & philosophy",
+   "tier": 2,
+   "archetype": "Feelings & states of mind",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "verasirmo",
+     "meaning": "credibility; a reputation for truth"
+    }
+   },
+   "note": null,
+   "dictionary_line": "verasirmo [vera+sirmo] {new in 3.4}: (n) credibility; a reputation for truth"
+  },
+  {
+   "headword": "resovarde",
+   "parts": [
+    "reso",
+    "varde"
+   ],
+   "domain": "Qualities",
+   "tier": 1,
+   "archetype": "Feelings & states of mind",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "resovarde",
+     "meaning": "absurdity; a thing worthy of laughter"
+    },
+    "a": {
+     "form": "resovardesan",
+     "meaning": "ridiculous; absurd"
+    }
+   },
+   "note": null,
+   "dictionary_line": "resovarde [reso+varde] {new in 3.4}: (n) absurdity; a thing worthy of laughter | resovardesan (a) ridiculous; absurd"
+  },
+  {
+   "headword": "regnajuba",
+   "parts": [
+    "regna",
+    "juba"
+   ],
+   "domain": "Society",
+   "tier": 1,
+   "archetype": "Abstract states, qualities & relations",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "regnajuba",
+     "meaning": "privilege (a sovereign's gift)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "regnajuba [regna+juba] {new in 3.4}: (n) privilege (a sovereign's gift)"
+  },
+  {
+   "headword": "ruhemambi",
+   "parts": [
+    "ruhe",
+    "mambi"
+   ],
+   "domain": "Abstract",
+   "tier": 1,
+   "archetype": "Abstract states, qualities & relations",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "ruhemambi",
+     "meaning": "crisis; a stormy moment"
+    }
+   },
+   "note": null,
+   "dictionary_line": "ruhemambi [ruhe+mambi] {new in 3.4}: (n) crisis; a stormy moment"
+  },
+  {
+   "headword": "vemibako",
+   "parts": [
+    "vemi",
+    "bako"
+   ],
+   "domain": "Abstract",
+   "tier": 1,
+   "archetype": "Abstract states, qualities & relations",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "vemibako",
+     "meaning": "disaster; catastrophe"
+    }
+   },
+   "note": null,
+   "dictionary_line": "vemibako [vemi+bako] {new in 3.4}: (n) disaster; catastrophe"
+  },
+  {
+   "headword": "dozaserbu",
+   "parts": [
+    "doza",
+    "serbu"
+   ],
+   "domain": "Abstract",
+   "tier": 1,
+   "archetype": "Abstract states, qualities & relations",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "dozaserbu",
+     "meaning": "challenge; a test of strength"
+    }
+   },
+   "note": null,
+   "dictionary_line": "dozaserbu [doza+serbu] {new in 3.4}: (n) challenge; a test of strength"
+  },
+  {
+   "headword": "vazraserbu",
+   "parts": [
+    "vazra",
+    "serbu"
+   ],
+   "domain": "Abstract",
+   "tier": 1,
+   "archetype": "Abstract states, qualities & relations",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "vazraserbu",
+     "meaning": "competition; contest"
+    },
+    "v": {
+     "form": "vazraserbuva",
+     "meaning": "to compete"
+    }
+   },
+   "note": null,
+   "dictionary_line": "vazraserbu [vazra+serbu] {new in 3.4}: (n) competition; contest | vazraserbuva (v) to compete"
+  },
+  {
+   "headword": "dozaseno",
+   "parts": [
+    "doza",
+    "seno"
+   ],
+   "domain": "Speech & mind",
+   "tier": 1,
+   "archetype": "Abstract states, qualities & relations",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "dozaseno",
+     "meaning": "emphasis"
+    },
+    "v": {
+     "form": "dozasenoda",
+     "meaning": "to emphasize; to stress"
+    }
+   },
+   "note": null,
+   "dictionary_line": "dozaseno [doza+seno] {new in 3.4}: (n) emphasis | dozasenoda (v) to emphasize; to stress"
+  },
+  {
+   "headword": "yanoyeba",
+   "parts": [
+    "yano",
+    "yeba"
+   ],
+   "domain": "Society",
+   "tier": 2,
+   "archetype": "Abstract states, qualities & relations",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "yanoyeba",
+     "meaning": "consensus; general agreement"
+    }
+   },
+   "note": null,
+   "dictionary_line": "yanoyeba [yano+yeba] {new in 3.4}: (n) consensus; general agreement"
+  },
+  {
+   "headword": "yanopalvi",
+   "parts": [
+    "yano",
+    "palvi"
+   ],
+   "domain": "Abstract",
+   "tier": 1,
+   "archetype": "Abstract states, qualities & relations",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "yanopalvi",
+     "meaning": "inclusion"
+    },
+    "v": {
+     "form": "yanopalviya",
+     "meaning": "to include"
+    }
+   },
+   "note": null,
+   "dictionary_line": "yanopalvi [yano+palvi] {new in 3.4}: (n) inclusion | yanopalviya (v) to include"
+  },
+  {
+   "headword": "sambapatu",
+   "parts": [
+    "samba",
+    "patu"
+   ],
+   "domain": "Abstract",
+   "tier": 1,
+   "archetype": "Abstract states, qualities & relations",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "sambapatu",
+     "meaning": "similarity; likeness"
+    },
+    "a": {
+     "form": "sambapatusan",
+     "meaning": "similar; alike"
+    }
+   },
+   "note": null,
+   "dictionary_line": "sambapatu [samba+patu] {new in 3.4}: (n) similarity; likeness | sambapatusan (a) similar; alike"
+  },
+  {
+   "headword": "lisrodoza",
+   "parts": [
+    "lisro",
+    "doza"
+   ],
+   "domain": "Abstract",
+   "tier": 1,
+   "archetype": "Abstract states, qualities & relations",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lisrodoza",
+     "meaning": "stability; steadiness"
+    },
+    "a": {
+     "form": "lisrodozasan",
+     "meaning": "stable; steady"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lisrodoza [lisro+doza] {new in 3.4}: (n) stability; steadiness | lisrodozasan (a) stable; steady"
+  },
+  {
+   "headword": "lordidoza",
+   "parts": [
+    "lordi",
+    "doza"
+   ],
+   "domain": "Abstract",
+   "tier": 1,
+   "archetype": "Abstract states, qualities & relations",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lordidoza",
+     "meaning": "strictness; rigor"
+    },
+    "a": {
+     "form": "lordidozasan",
+     "meaning": "strict; rigorous"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lordidoza [lordi+doza] {new in 3.4}: (n) strictness; rigor | lordidozasan (a) strict; rigorous"
+  },
+  {
+   "headword": "tibilekta",
+   "parts": [
+    "tibi",
+    "lekta"
+   ],
+   "domain": "Abstract",
+   "tier": 1,
+   "archetype": "Abstract states, qualities & relations",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "tibilekta",
+     "meaning": "complexity; tangle"
+    },
+    "a": {
+     "form": "tibilektasan",
+     "meaning": "complex; complicated"
+    }
+   },
+   "note": null,
+   "dictionary_line": "tibilekta [tibi+lekta] {new in 3.4}: (n) complexity; tangle | tibilektasan (a) complex; complicated"
+  },
+  {
+   "headword": "mellipatu",
+   "parts": [
+    "melli",
+    "patu"
+   ],
+   "domain": "Abstract",
+   "tier": 2,
+   "archetype": "Abstract states, qualities & relations",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "mellipatu",
+     "meaning": "majority; the greater part"
+    }
+   },
+   "note": null,
+   "dictionary_line": "mellipatu [melli+patu] {new in 3.4}: (n) majority; the greater part"
+  },
+  {
+   "headword": "ramulordi",
+   "parts": [
+    "ramu",
+    "lordi"
+   ],
+   "domain": "Society",
+   "tier": 1,
+   "archetype": "Abstract states, qualities & relations",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "ramulordi",
+     "meaning": "tradition"
+    }
+   },
+   "note": "traditional = ramulordisan (G148)",
+   "dictionary_line": "ramulordi [ramu+lordi] {new in 3.4}: (n) tradition"
+  },
+  {
+   "headword": "vilalordi",
+   "parts": [
+    "vila",
+    "lordi"
+   ],
+   "domain": "Society",
+   "tier": 2,
+   "archetype": "Abstract states, qualities & relations",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "vilalordi",
+     "meaning": "custom; local ways"
+    }
+   },
+   "note": null,
+   "dictionary_line": "vilalordi [vila+lordi] {new in 3.4}: (n) custom; local ways"
+  },
+  {
+   "headword": "gudolordi",
+   "parts": [
+    "gudo",
+    "lordi"
+   ],
+   "domain": "Society",
+   "tier": 2,
+   "archetype": "Abstract states, qualities & relations",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "gudolordi",
+     "meaning": "norm; standard practice"
+    }
+   },
+   "note": "common + order (3.2 archetype)",
+   "dictionary_line": "gudolordi [gudo+lordi] {new in 3.4}: (n) norm; standard practice"
+  },
+  {
+   "headword": "rinbapago",
+   "parts": [
+    "rinba",
+    "pago"
+   ],
+   "domain": "Nature & geography",
+   "tier": 1,
+   "archetype": "Abstract states, qualities & relations",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "rinbapago",
+     "meaning": "environment; surroundings"
+    }
+   },
+   "note": "environmental = rinbapagosan (G148)",
+   "dictionary_line": "rinbapago [rinba+pago] {new in 3.4}: (n) environment; surroundings"
+  },
+  {
+   "headword": "nemetelne",
+   "parts": [
+    "neme",
+    "telne"
+   ],
+   "domain": "Language & art",
+   "tier": 1,
+   "archetype": "Abstract states, qualities & relations",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "nemetelne",
+     "meaning": "tragedy"
+    }
+   },
+   "note": "tragic = nemetelnesan (G148)",
+   "dictionary_line": "nemetelne [neme+telne] {new in 3.4}: (n) tragedy"
+  },
+  {
+   "headword": "bakolarbo",
+   "parts": [
+    "bako",
+    "larbo"
+   ],
+   "domain": "Nature & geography",
+   "tier": 2,
+   "archetype": "Abstract states, qualities & relations",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "bakolarbo",
+     "meaning": "stump (a broken tree)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "bakolarbo [bako+larbo] {new in 3.4}: (n) stump (a broken tree)"
+  },
+  {
+   "headword": "lukayano",
+   "parts": [
+    "luka",
+    "yano"
+   ],
+   "domain": "Abstract",
+   "tier": 2,
+   "archetype": "Abstract states, qualities & relations",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lukayano",
+     "meaning": "coincidence; luck meeting luck"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lukayano [luka+yano] {new in 3.4}: (n) coincidence; luck meeting luck"
+  },
+  {
+   "headword": "benakerso",
+   "parts": [
+    "bena",
+    "kerso"
+   ],
+   "domain": "Abstract",
+   "tier": 1,
+   "archetype": "Abstract states, qualities & relations",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "benakerso",
+     "meaning": "improvement"
+    },
+    "v": {
+     "form": "benakersoba",
+     "meaning": "to improve"
+    }
+   },
+   "note": null,
+   "dictionary_line": "benakerso [bena+kerso] {new in 3.4}: (n) improvement | benakersoba (v) to improve"
+  },
+  {
+   "headword": "tikutrana",
+   "parts": [
+    "tiku",
+    "trana"
+   ],
+   "domain": "Abstract",
+   "tier": 2,
+   "archetype": "Abstract states, qualities & relations",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "tikutrana",
+     "meaning": "adjustment"
+    },
+    "v": {
+     "form": "tikutranata",
+     "meaning": "to adjust"
+    }
+   },
+   "note": null,
+   "dictionary_line": "tikutrana [tiku+trana] {new in 3.4}: (n) adjustment | tikutranata (v) to adjust"
+  },
+  {
+   "headword": "relsidemro",
+   "parts": [
+    "relsi",
+    "demro"
+   ],
+   "domain": "Abstract",
+   "tier": 1,
+   "archetype": "Abstract states, qualities & relations",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "relsidemro",
+     "meaning": "reaction; response"
+    },
+    "v": {
+     "form": "relsidemrora",
+     "meaning": "to react"
+    }
+   },
+   "note": null,
+   "dictionary_line": "relsidemro [relsi+demro] {new in 3.4}: (n) reaction; response | relsidemrora (v) to react"
+  },
+  {
+   "headword": "nululordi",
+   "parts": [
+    "nulu",
+    "lordi"
+   ],
+   "domain": "Abstract",
+   "tier": 1,
+   "archetype": "Abstract states, qualities & relations",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "nululordi",
+     "meaning": "method; procedure"
+    }
+   },
+   "note": null,
+   "dictionary_line": "nululordi [nulu+lordi] {new in 3.4}: (n) method; procedure"
+  },
+  {
+   "headword": "vazranulu",
+   "parts": [
+    "vazra",
+    "nulu"
+   ],
+   "domain": "Abstract",
+   "tier": 1,
+   "archetype": "Abstract states, qualities & relations",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "vazranulu",
+     "meaning": "strategy; a path to victory"
+    }
+   },
+   "note": null,
+   "dictionary_line": "vazranulu [vazra+nulu] {new in 3.4}: (n) strategy; a path to victory"
+  },
+  {
+   "headword": "manlisabe",
+   "parts": [
+    "manli",
+    "sabe"
+   ],
+   "domain": "Abstract",
+   "tier": 2,
+   "archetype": "Abstract states, qualities & relations",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "manlisabe",
+     "meaning": "technique; skill of the hand"
+    }
+   },
+   "note": null,
+   "dictionary_line": "manlisabe [manli+sabe] {new in 3.4}: (n) technique; skill of the hand"
+  },
+  {
+   "headword": "lanvenulu",
+   "parts": [
+    "lanve",
+    "nulu"
+   ],
+   "domain": "Society & governance",
+   "tier": 2,
+   "archetype": "Abstract states, qualities & relations",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lanvenulu",
+     "meaning": "policy"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lanvenulu [lanve+nulu] {new in 3.4}: (n) policy"
+  },
+  {
+   "headword": "fasbipatu",
+   "parts": [
+    "fasbi",
+    "patu"
+   ],
+   "domain": "Abstract",
+   "tier": 2,
+   "archetype": "Abstract states, qualities & relations",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "fasbipatu",
+     "meaning": "aspect; facet"
+    }
+   },
+   "note": null,
+   "dictionary_line": "fasbipatu [fasbi+patu] {new in 3.4}: (n) aspect; facet"
+  },
+  {
+   "headword": "simvopatu",
+   "parts": [
+    "simvo",
+    "patu"
+   ],
+   "domain": "Abstract",
+   "tier": 1,
+   "archetype": "Abstract states, qualities & relations",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "simvopatu",
+     "meaning": "feature; characteristic"
+    }
+   },
+   "note": null,
+   "dictionary_line": "simvopatu [simvo+patu] {new in 3.4}: (n) feature; characteristic"
+  },
+  {
+   "headword": "musvajomru",
+   "parts": [
+    "musva",
+    "jomru"
+   ],
+   "domain": "Society",
+   "tier": 1,
+   "archetype": "Abstract states, qualities & relations",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "musvajomru",
+     "meaning": "mission; an errand of duty"
+    }
+   },
+   "note": null,
+   "dictionary_line": "musvajomru [musva+jomru] {new in 3.4}: (n) mission; an errand of duty"
+  },
+  {
+   "headword": "pebupatu",
+   "parts": [
+    "pebu",
+    "patu"
+   ],
+   "domain": "Space & orientation",
+   "tier": 1,
+   "archetype": "Abstract states, qualities & relations",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "pebupatu",
+     "meaning": "bottom; base; foot (of a thing)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "pebupatu [pebu+patu] {new in 3.4}: (n) bottom; base; foot (of a thing)"
+  },
+  {
+   "headword": "rillidonu",
+   "parts": [
+    "rilli",
+    "donu"
+   ],
+   "domain": "Commerce & obligation",
+   "tier": 1,
+   "archetype": "Abstract states, qualities & relations",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "rillidonu",
+     "meaning": "exchange; trade"
+    },
+    "v": {
+     "form": "rillidonura",
+     "meaning": "to exchange"
+    }
+   },
+   "note": null,
+   "dictionary_line": "rillidonu [rilli+donu] {new in 3.4}: (n) exchange; trade | rillidonura (v) to exchange"
+  },
+  {
+   "headword": "buzarilli",
+   "parts": [
+    "buza",
+    "rilli"
+   ],
+   "domain": "Actions & physical processes",
+   "tier": 1,
+   "archetype": "Abstract verbs",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "buzarilli",
+     "meaning": "absorption"
+    },
+    "v": {
+     "form": "buzarilliba",
+     "meaning": "to absorb; to soak up"
+    }
+   },
+   "note": null,
+   "dictionary_line": "buzarilli [buza+rilli] {new in 3.4}: (n) absorption | buzarilliba (v) to absorb; to soak up"
+  },
+  {
+   "headword": "navulalfo",
+   "parts": [
+    "navu",
+    "lalfo"
+   ],
+   "domain": "Fantasy",
+   "tier": 1,
+   "archetype": "Abstract verbs",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "navulalfo",
+     "meaning": "levitation"
+    },
+    "v": {
+     "form": "navulalfonia",
+     "meaning": "to levitate"
+    }
+   },
+   "note": null,
+   "dictionary_line": "navulalfo [navu+lalfo] {new in 3.4}: (n) levitation | navulalfonia (v) to levitate"
+  },
+  {
+   "headword": "loteropalvi",
+   "parts": [
+    "lotero",
+    "palvi"
+   ],
+   "domain": "Actions & physical processes",
+   "tier": 1,
+   "archetype": "Abstract verbs",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "loteropalvi",
+     "meaning": "replacement"
+    },
+    "v": {
+     "form": "loteropalvila",
+     "meaning": "to replace"
+    }
+   },
+   "note": null,
+   "dictionary_line": "loteropalvi [lotero+palvi] {new in 3.4}: (n) replacement | loteropalvila (v) to replace"
+  },
+  {
+   "headword": "pidihata",
+   "parts": [
+    "pidi",
+    "hata"
+   ],
+   "domain": "Movement & action",
+   "tier": 1,
+   "archetype": "Abstract verbs",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "pidihata",
+     "meaning": "a piercing; a stab"
+    },
+    "v": {
+     "form": "pidihatapa",
+     "meaning": "to pierce"
+    }
+   },
+   "note": null,
+   "dictionary_line": "pidihata [pidi+hata] {new in 3.4}: (n) a piercing; a stab | pidihatapa (v) to pierce"
+  },
+  {
+   "headword": "farubako",
+   "parts": [
+    "faru",
+    "bako"
+   ],
+   "domain": "Actions & physical processes",
+   "tier": 1,
+   "archetype": "Abstract verbs",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "farubako",
+     "meaning": "explosion"
+    },
+    "v": {
+     "form": "farubakofa",
+     "meaning": "to explode"
+    }
+   },
+   "note": null,
+   "dictionary_line": "farubako [faru+bako] {new in 3.4}: (n) explosion | farubakofa (v) to explode"
+  },
+  {
+   "headword": "larnelaso",
+   "parts": [
+    "larne",
+    "laso"
+   ],
+   "domain": "Emotions",
+   "tier": 2,
+   "archetype": "Abstract verbs",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "larnelaso",
+     "meaning": "a sulk; angry silence"
+    },
+    "v": {
+     "form": "larnelasola",
+     "meaning": "to sulk"
+    }
+   },
+   "note": null,
+   "dictionary_line": "larnelaso [larne+laso] {new in 3.4}: (n) a sulk; angry silence | larnelasola (v) to sulk"
+  },
+  {
+   "headword": "samnibako",
+   "parts": [
+    "samni",
+    "bako"
+   ],
+   "domain": "Actions & physical processes",
+   "tier": 2,
+   "archetype": "Abstract verbs",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "samnibako",
+     "meaning": "hatching"
+    },
+    "v": {
+     "form": "samnibakosia",
+     "meaning": "to hatch"
+    }
+   },
+   "note": null,
+   "dictionary_line": "samnibako [samni+bako] {new in 3.4}: (n) hatching | samnibakosia (v) to hatch"
+  },
+  {
+   "headword": "dozalumra",
+   "parts": [
+    "doza",
+    "lumra"
+   ],
+   "domain": "Movement & action",
+   "tier": 2,
+   "archetype": "Abstract verbs",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "dozalumra",
+     "meaning": "a heave"
+    },
+    "v": {
+     "form": "dozalumrada",
+     "meaning": "to heave"
+    }
+   },
+   "note": null,
+   "dictionary_line": "dozalumra [doza+lumra] {new in 3.4}: (n) a heave | dozalumrada (v) to heave"
+  },
+  {
+   "headword": "germaserbu",
+   "parts": [
+    "germa",
+    "serbu"
+   ],
+   "domain": "Everyday objects & work",
+   "tier": 2,
+   "archetype": "Abstract verbs",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "germaserbu",
+     "meaning": "mining"
+    },
+    "v": {
+     "form": "germaserbuga",
+     "meaning": "to mine"
+    }
+   },
+   "note": null,
+   "dictionary_line": "germaserbu [germa+serbu] {new in 3.4}: (n) mining | germaserbuga (v) to mine"
+  },
+  {
+   "headword": "mirumomvi",
+   "parts": [
+    "miru",
+    "momvi"
+   ],
+   "domain": "Actions & physical processes",
+   "tier": 2,
+   "archetype": "Abstract verbs",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "mirumomvi",
+     "meaning": "dissolving"
+    },
+    "v": {
+     "form": "mirumomvima",
+     "meaning": "to dissolve"
+    }
+   },
+   "note": null,
+   "dictionary_line": "mirumomvi [miru+momvi] {new in 3.4}: (n) dissolving | mirumomvima (v) to dissolve"
+  },
+  {
+   "headword": "miruvaye",
+   "parts": [
+    "miru",
+    "vaye"
+   ],
+   "domain": "Actions & physical processes",
+   "tier": 2,
+   "archetype": "Abstract verbs",
+   "image_compound": true,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "miruvaye",
+     "meaning": "evaporation"
+    },
+    "v": {
+     "form": "miruvayema",
+     "meaning": "to evaporate"
+    }
+   },
+   "note": null,
+   "dictionary_line": "miruvaye [miru+vaye] {new in 3.4}: (n) evaporation | miruvayema (v) to evaporate"
+  },
+  {
+   "headword": "mellikerso",
+   "parts": [
+    "melli",
+    "kerso"
+   ],
+   "domain": "Actions & physical processes",
+   "tier": 1,
+   "archetype": "Abstract verbs",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "mellikerso",
+     "meaning": "expansion"
+    },
+    "v": {
+     "form": "mellikersoma",
+     "meaning": "to expand; to swell"
+    }
+   },
+   "note": null,
+   "dictionary_line": "mellikerso [melli+kerso] {new in 3.4}: (n) expansion | mellikersoma (v) to expand; to swell"
+  },
+  {
+   "headword": "cunukerso",
+   "parts": [
+    "cunu",
+    "kerso"
+   ],
+   "domain": "Time, quantity & work",
+   "tier": 2,
+   "archetype": "Abstract verbs",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "cunukerso",
+     "meaning": "multiplication"
+    },
+    "v": {
+     "form": "cunukersoca",
+     "meaning": "to multiply"
+    }
+   },
+   "note": null,
+   "dictionary_line": "cunukerso [cunu+kerso] {new in 3.4}: (n) multiplication | cunukersoca (v) to multiply"
+  },
+  {
+   "headword": "sambavimo",
+   "parts": [
+    "samba",
+    "vimo"
+   ],
+   "domain": "Abstract",
+   "tier": 1,
+   "archetype": "Abstract verbs",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "sambavimo",
+     "meaning": "comparison"
+    },
+    "v": {
+     "form": "sambavimosia",
+     "meaning": "to compare"
+    }
+   },
+   "note": null,
+   "dictionary_line": "sambavimo [samba+vimo] {new in 3.4}: (n) comparison | sambavimosia (v) to compare"
+  },
+  {
+   "headword": "zivuseno",
+   "parts": [
+    "zivu",
+    "seno"
+   ],
+   "domain": "Speech & mind",
+   "tier": 1,
+   "archetype": "Abstract verbs",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "zivuseno",
+     "meaning": "insult"
+    },
+    "v": {
+     "form": "zivusenoza",
+     "meaning": "to insult"
+    }
+   },
+   "note": null,
+   "dictionary_line": "zivuseno [zivu+seno] {new in 3.4}: (n) insult | zivusenoza (v) to insult"
+  },
+  {
+   "headword": "lideomasu",
+   "parts": [
+    "lideo",
+    "masu"
+   ],
+   "domain": "Speech & mind",
+   "tier": 2,
+   "archetype": "Abstract verbs",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lideomasu",
+     "meaning": "consultation"
+    },
+    "v": {
+     "form": "lideomasula",
+     "meaning": "to consult"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lideomasu [lideo+masu] {new in 3.4}: (n) consultation | lideomasula (v) to consult"
+  },
+  {
+   "headword": "loterokezu",
+   "parts": [
+    "lotero",
+    "kezu"
+   ],
+   "domain": "Society",
+   "tier": 1,
+   "archetype": "Society, roles & institutions",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "loterokezu",
+     "meaning": "foreign land; abroad"
+    }
+   },
+   "note": "foreign = loterokezusan (G148)",
+   "dictionary_line": "loterokezu [lotero+kezu] {new in 3.4}: (n) foreign land; abroad"
+  },
+  {
+   "headword": "patusabe",
+   "parts": [
+    "patu",
+    "sabe"
+   ],
+   "domain": "Mind & philosophy",
+   "tier": 1,
+   "archetype": "Society, roles & institutions",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "patusabe",
+     "meaning": "specialty; specialized knowledge"
+    }
+   },
+   "note": null,
+   "dictionary_line": "patusabe [patu+sabe] {new in 3.4}: (n) specialty; specialized knowledge"
+  },
+  {
+   "headword": "lideolekta",
+   "parts": [
+    "lideo",
+    "lekta"
+   ],
+   "domain": "Society & governance",
+   "tier": 1,
+   "archetype": "Society, roles & institutions",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lideolekta",
+     "meaning": "council; a gathering for counsel"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lideolekta [lideo+lekta] {new in 3.4}: (n) council; a gathering for counsel"
+  },
+  {
+   "headword": "lanvelekta",
+   "parts": [
+    "lanve",
+    "lekta"
+   ],
+   "domain": "Society & governance",
+   "tier": 1,
+   "archetype": "Society, roles & institutions",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lanvelekta",
+     "meaning": "parliament; senate; congress"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lanvelekta [lanve+lekta] {new in 3.4}: (n) parliament; senate; congress"
+  },
+  {
+   "headword": "sasvaserbu",
+   "parts": [
+    "sasva",
+    "serbu"
+   ],
+   "domain": "Society",
+   "tier": 2,
+   "archetype": "Society, roles & institutions",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "sasvaserbu",
+     "meaning": "seeking refuge; asylum"
+    }
+   },
+   "note": null,
+   "dictionary_line": "sasvaserbu [sasva+serbu] {new in 3.4}: (n) seeking refuge; asylum"
+  },
+  {
+   "headword": "sovenela",
+   "parts": [
+    "sove",
+    "nela"
+   ],
+   "domain": "Society",
+   "tier": 2,
+   "archetype": "Society, roles & institutions",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "sovenela",
+     "meaning": "civilian; a person of peace"
+    }
+   },
+   "note": null,
+   "dictionary_line": "sovenela [sove+nela] {new in 3.4}: (n) civilian; a person of peace"
+  },
+  {
+   "headword": "tisehelna",
+   "parts": [
+    "tise",
+    "helna"
+   ],
+   "domain": "Health & body",
+   "tier": 1,
+   "archetype": "Society, roles & institutions",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "tisehelna",
+     "meaning": "surgery"
+    }
+   },
+   "note": "surgical = tisehelnasan (G148)",
+   "dictionary_line": "tisehelna [tise+helna] {new in 3.4}: (n) surgery"
+  },
+  {
+   "headword": "domlufarla",
+   "parts": [
+    "domlu",
+    "farla"
+   ],
+   "domain": "Everyday objects & work",
+   "tier": 2,
+   "archetype": "Society, roles & institutions",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "domlufarla",
+     "meaning": "architecture; house-making"
+    }
+   },
+   "note": null,
+   "dictionary_line": "domlufarla [domlu+farla] {new in 3.4}: (n) architecture; house-making"
+  },
+  {
+   "headword": "lardajuse",
+   "parts": [
+    "larda",
+    "juse"
+   ],
+   "domain": "Language & art",
+   "tier": 2,
+   "archetype": "Society, roles & institutions",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lardajuse",
+     "meaning": "criticism; critique"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lardajuse [larda+juse] {new in 3.4}: (n) criticism; critique"
+  },
+  {
+   "headword": "ramuserbu",
+   "parts": [
+    "ramu",
+    "serbu"
+   ],
+   "domain": "Language & art",
+   "tier": 1,
+   "archetype": "Society, roles & institutions",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "ramuserbu",
+     "meaning": "history (as a study)"
+    }
+   },
+   "note": "historical = ramuserbusan (G148)",
+   "dictionary_line": "ramuserbu [ramu+serbu] {new in 3.4}: (n) history (as a study)"
+  },
+  {
+   "headword": "kezuserbu",
+   "parts": [
+    "kezu",
+    "serbu"
+   ],
+   "domain": "Travel & war",
+   "tier": 1,
+   "archetype": "Society, roles & institutions",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "kezuserbu",
+     "meaning": "exploration"
+    },
+    "v": {
+     "form": "kezuserbuka",
+     "meaning": "to explore"
+    }
+   },
+   "note": null,
+   "dictionary_line": "kezuserbu [kezu+serbu] {new in 3.4}: (n) exploration | kezuserbuka (v) to explore"
+  },
+  {
+   "headword": "cuzalordi",
+   "parts": [
+    "cuza",
+    "lordi"
+   ],
+   "domain": "Language & art",
+   "tier": 2,
+   "archetype": "Society, roles & institutions",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "cuzalordi",
+     "meaning": "editing"
+    },
+    "v": {
+     "form": "cuzalordica",
+     "meaning": "to edit"
+    }
+   },
+   "note": null,
+   "dictionary_line": "cuzalordi [cuza+lordi] {new in 3.4}: (n) editing | cuzalordica (v) to edit"
+  },
+  {
+   "headword": "kaldovila",
+   "parts": [
+    "kaldo",
+    "vila"
+   ],
+   "domain": "Society",
+   "tier": 2,
+   "archetype": "Society, roles & institutions",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "kaldovila",
+     "meaning": "ghetto; a confined quarter"
+    }
+   },
+   "note": null,
+   "dictionary_line": "kaldovila [kaldo+vila] {new in 3.4}: (n) ghetto; a confined quarter"
+  },
+  {
+   "headword": "nelaramu",
+   "parts": [
+    "nela",
+    "ramu"
+   ],
+   "domain": "Society",
+   "tier": 1,
+   "archetype": "Knowledge, culture & communication",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "nelaramu",
+     "meaning": "culture; a people's memory"
+    }
+   },
+   "note": "cultural = nelaramusan (G148)",
+   "dictionary_line": "nelaramu [nela+ramu] {new in 3.4}: (n) culture; a people's memory"
+  },
+  {
+   "headword": "conodivma",
+   "parts": [
+    "cono",
+    "divma"
+   ],
+   "domain": "Commerce & obligation",
+   "tier": 1,
+   "archetype": "Knowledge, culture & communication",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "conodivma",
+     "meaning": "economy"
+    }
+   },
+   "note": "economic = conodivmasan (G148)",
+   "dictionary_line": "conodivma [cono+divma] {new in 3.4}: (n) economy"
+  },
+  {
+   "headword": "lektalordi",
+   "parts": [
+    "lekta",
+    "lordi"
+   ],
+   "domain": "Society & governance",
+   "tier": 1,
+   "archetype": "Knowledge, culture & communication",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lektalordi",
+     "meaning": "politics"
+    }
+   },
+   "note": "political = lektalordisan (G148)",
+   "dictionary_line": "lektalordi [lekta+lordi] {new in 3.4}: (n) politics"
+  },
+  {
+   "headword": "nelaregna",
+   "parts": [
+    "nela",
+    "regna"
+   ],
+   "domain": "Society & governance",
+   "tier": 2,
+   "archetype": "Knowledge, culture & communication",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "nelaregna",
+     "meaning": "democracy; rule by the people"
+    }
+   },
+   "note": null,
+   "dictionary_line": "nelaregna [nela+regna] {new in 3.4}: (n) democracy; rule by the people"
+  },
+  {
+   "headword": "sarbilarda",
+   "parts": [
+    "sarbi",
+    "larda"
+   ],
+   "domain": "Language & art",
+   "tier": 1,
+   "archetype": "Knowledge, culture & communication",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "sarbilarda",
+     "meaning": "literature"
+    }
+   },
+   "note": "literary = sarbilardasan (G148)",
+   "dictionary_line": "sarbilarda [sarbi+larda] {new in 3.4}: (n) literature"
+  },
+  {
+   "headword": "lermitrana",
+   "parts": [
+    "lermi",
+    "trana"
+   ],
+   "domain": "Language & art",
+   "tier": 1,
+   "archetype": "Knowledge, culture & communication",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lermitrana",
+     "meaning": "translation"
+    },
+    "v": {
+     "form": "lermitranala",
+     "meaning": "to translate"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lermitrana [lermi+trana] {new in 3.4}: (n) translation | lermitranala (v) to translate"
+  },
+  {
+   "headword": "lermisonbu",
+   "parts": [
+    "lermi",
+    "sonbu"
+   ],
+   "domain": "Language & art",
+   "tier": 2,
+   "archetype": "Knowledge, culture & communication",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lermisonbu",
+     "meaning": "accent"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lermisonbu [lermi+sonbu] {new in 3.4}: (n) accent"
+  },
+  {
+   "headword": "molunole",
+   "parts": [
+    "molu",
+    "nole"
+   ],
+   "domain": "Language & art",
+   "tier": 1,
+   "archetype": "Knowledge, culture & communication",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "molunole",
+     "meaning": "nickname; pet name"
+    }
+   },
+   "note": null,
+   "dictionary_line": "molunole [molu+nole] {new in 3.4}: (n) nickname; pet name"
+  },
+  {
+   "headword": "deyacuza",
+   "parts": [
+    "deya",
+    "cuza"
+   ],
+   "domain": "Language & art",
+   "tier": 1,
+   "archetype": "Knowledge, culture & communication",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "deyacuza",
+     "meaning": "diary; journal"
+    }
+   },
+   "note": null,
+   "dictionary_line": "deyacuza [deya+cuza] {new in 3.4}: (n) diary; journal"
+  },
+  {
+   "headword": "favrodivma",
+   "parts": [
+    "favro",
+    "divma"
+   ],
+   "domain": "Information & technology",
+   "tier": 2,
+   "archetype": "Knowledge, culture & communication",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "favrodivma",
+     "meaning": "electronics"
+    }
+   },
+   "note": "electronic = favrodivmasan (G148)",
+   "dictionary_line": "favrodivma [favro+divma] {new in 3.4}: (n) electronics"
+  },
+  {
+   "headword": "lardavelma",
+   "parts": [
+    "larda",
+    "velma"
+   ],
+   "domain": "Language & art",
+   "tier": 2,
+   "archetype": "Knowledge, culture & communication",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lardavelma",
+     "meaning": "canvas"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lardavelma [larda+velma] {new in 3.4}: (n) canvas"
+  },
+  {
+   "headword": "lanvecuza",
+   "parts": [
+    "lanve",
+    "cuza"
+   ],
+   "domain": "Society & governance",
+   "tier": 2,
+   "archetype": "Knowledge, culture & communication",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lanvecuza",
+     "meaning": "constitution; charter"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lanvecuza [lanve+cuza] {new in 3.4}: (n) constitution; charter"
+  }
+ ],
+ "listed_derivations_add": [
+  {
+   "form": "vazrapago",
+   "base": "vazra",
+   "suffix": "-pago",
+   "meaning": "advantage; a winning position",
+   "tier": 1
+  },
+  {
+   "form": "nimupago",
+   "base": "nimu",
+   "suffix": "-pago",
+   "meaning": "residence; dwelling place",
+   "tier": 1
+  },
+  {
+   "form": "loterokezuyo",
+   "base": "loterokezu",
+   "suffix": "-yo",
+   "meaning": "foreigner; immigrant",
+   "tier": 1
+  },
+  {
+   "form": "patusabeyo",
+   "base": "patusabe",
+   "suffix": "-yo",
+   "meaning": "specialist; expert",
+   "tier": 1
+  },
+  {
+   "form": "lombiyo",
+   "base": "lombi",
+   "suffix": "-yo",
+   "meaning": "pioneer; founder",
+   "tier": 1
+  },
+  {
+   "form": "sasvaserbuyo",
+   "base": "sasvaserbu",
+   "suffix": "-yo",
+   "meaning": "refugee",
+   "tier": 2
+  },
+  {
+   "form": "talidonuyo",
+   "base": "talidonu",
+   "suffix": "-yo",
+   "meaning": "employer",
+   "tier": 1
+  },
+  {
+   "form": "veraserbuyo",
+   "base": "veraserbu",
+   "suffix": "-yo",
+   "meaning": "scientist",
+   "tier": 1
+  },
+  {
+   "form": "tisehelnayo",
+   "base": "tisehelna",
+   "suffix": "-yo",
+   "meaning": "surgeon",
+   "tier": 1
+  },
+  {
+   "form": "domlufarlayo",
+   "base": "domlufarla",
+   "suffix": "-yo",
+   "meaning": "architect",
+   "tier": 2
+  },
+  {
+   "form": "lideodonuyo",
+   "base": "lideodonu",
+   "suffix": "-yo",
+   "meaning": "adviser; consultant",
+   "tier": 1
+  },
+  {
+   "form": "lardajuseyo",
+   "base": "lardajuse",
+   "suffix": "-yo",
+   "meaning": "critic",
+   "tier": 2
+  },
+  {
+   "form": "ramuserbuyo",
+   "base": "ramuserbu",
+   "suffix": "-yo",
+   "meaning": "historian",
+   "tier": 2
+  },
+  {
+   "form": "kezuserbuyo",
+   "base": "kezuserbu",
+   "suffix": "-yo",
+   "meaning": "explorer",
+   "tier": 1
+  },
+  {
+   "form": "biolisroyo",
+   "base": "biolisro",
+   "suffix": "-yo",
+   "meaning": "survivor",
+   "tier": 1
+  },
+  {
+   "form": "cuzalordiyo",
+   "base": "cuzalordi",
+   "suffix": "-yo",
+   "meaning": "editor",
+   "tier": 2
+  },
+  {
+   "form": "lumitelneyo",
+   "base": "lumitelne",
+   "suffix": "-yo",
+   "meaning": "preacher",
+   "tier": 2
+  },
+  {
+   "form": "yalmubitiyo",
+   "base": "yalmubiti",
+   "suffix": "-yo",
+   "meaning": "engineer; mechanic",
+   "tier": 1
+  }
+ ],
+ "lexicalised_diminutives_add": [
+  {
+   "form": "somuti",
+   "base": "somu",
+   "meaning": "doze; nap",
+   "tier": 1
+  },
+  {
+   "form": "larneti",
+   "base": "larne",
+   "meaning": "annoyance; irritation",
+   "tier": 1
+  },
+  {
+   "form": "lektati",
+   "base": "lekta",
+   "meaning": "committee",
+   "tier": 1
+  }
+ ],
+ "restored_forms_add": [
+  {
+   "headword": "nimumolu",
+   "domain": "Qualities",
+   "slot": "na",
+   "form": "nimumolunasan",
+   "meaning": "uncomfortable",
+   "tier": 1,
+   "append_to_line": "nimumolunasan (na) uncomfortable"
+  }
+ ],
+ "rejected_proposals": [],
+ "recipes_add": [
+  {
+   "english": "avoid · look away · dismiss · banish",
+   "pattern": "du- (away) on the verb: du-pagopa · du-vimova · du-silbesia (2.5:G121)",
+   "liraasa": "Saivo du-pagopa li zarku.",
+   "meaning": "She avoids the enemy.",
+   "ruling": "2.5:G121"
+  },
+  {
+   "english": "rebuild · resume",
+   "pattern": "revo- (again) on the verb; reve + verb",
+   "liraasa": "Maivori futu revo-bimneba li domlu.",
+   "meaning": "We will rebuild the house.",
+   "ruling": "2.5:G121"
+  },
+  {
+   "english": "horrify · entertain · discourage · tighten",
+   "pattern": "vaku + actor + verb (2.5:G109)",
+   "liraasa": "Li resotelne vaku li nelari lavila.",
+   "meaning": "The comedy entertains the people.",
+   "ruling": "2.5:G109"
+  },
+  {
+   "english": "coward · liar · the wise (person-from-quality)",
+   "pattern": "li + adjective (1.2:G29): li corvinasan · li veranasan",
+   "liraasa": "Li corvinasan po pagopa.",
+   "meaning": "The coward left.",
+   "ruling": "1.2:G29"
+  },
+  {
+   "english": "local · mental · sexual · foreign · traditional",
+   "pattern": "G148 adjectives: nemvapagosan · mavoyugesan · amordalusan · loterokezusan · ramulordisan",
+   "liraasa": "Saivo ka baba loterokezusan nela.",
+   "meaning": "She is a foreign person.",
+   "ruling": "3.3:G148"
+  },
+  {
+   "english": "differ · shrink · minority",
+   "pattern": "ka sambanasan da · loya mellinasan · li mellinasan patu",
+   "liraasa": "Eli lira ka sambanasan da ola lira.",
+   "meaning": "This song differs from that one.",
+   "ruling": "recipe"
+  }
+ ],
+ "english_aliases_add": [
+  {
+   "form": "timruta",
+   "add_english": "to cry; to weep"
+  },
+  {
+   "form": "mudu",
+   "add_english": "disease"
+  },
+  {
+   "form": "lavina",
+   "add_english": "misery"
+  },
+  {
+   "form": "felrana",
+   "add_english": "grief; bereavement"
+  },
+  {
+   "form": "daigo",
+   "add_english": "mortality"
+  },
+  {
+   "form": "milnona",
+   "add_english": "boredom"
+  },
+  {
+   "form": "cerena",
+   "add_english": "bewilderment"
+  },
+  {
+   "form": "talina",
+   "add_english": "laziness"
+  },
+  {
+   "form": "devo",
+   "add_english": "loyalty"
+  },
+  {
+   "form": "tevulunasan",
+   "add_english": "loyal"
+  },
+  {
+   "form": "visma",
+   "add_english": "perception"
+  },
+  {
+   "form": "zeldona",
+   "add_english": "tolerance"
+  },
+  {
+   "form": "nenga",
+   "add_english": "caution"
+  },
+  {
+   "form": "loredonu",
+   "add_english": "commitment; dedication"
+  },
+  {
+   "form": "ramuduha",
+   "add_english": "nostalgia"
+  },
+  {
+   "form": "simvolivna",
+   "add_english": "independence"
+  },
+  {
+   "form": "biokerso",
+   "add_english": "prosperity"
+  },
+  {
+   "form": "miga",
+   "add_english": "relationship"
+  },
+  {
+   "form": "divmabiti",
+   "add_english": "mechanism"
+  },
+  {
+   "form": "nimumolu",
+   "add_english": "convenience"
+  },
+  {
+   "form": "kezupatu",
+   "add_english": "region; district"
+  },
+  {
+   "form": "kezu",
+   "add_english": "territory"
+  },
+  {
+   "form": "lideodonu",
+   "add_english": "proposal"
+  },
+  {
+   "form": "lemudonu",
+   "add_english": "education"
+  },
+  {
+   "form": "sernayo",
+   "add_english": "journalist"
+  },
+  {
+   "form": "tranasovlata",
+   "add_english": "to transform"
+  },
+  {
+   "form": "verasudeva",
+   "add_english": "to justify"
+  },
+  {
+   "form": "cunuca",
+   "add_english": "to calculate"
+  },
+  {
+   "form": "jubaja",
+   "add_english": "to donate"
+  },
+  {
+   "form": "navdinia",
+   "add_english": "to locate"
+  },
+  {
+   "form": "moludaluma",
+   "add_english": "to caress"
+  },
+  {
+   "form": "bakoba",
+   "add_english": "to wreck"
+  },
+  {
+   "form": "sudeseno",
+   "add_english": "proclamation"
+  },
+  {
+   "form": "cerenasan",
+   "add_english": "ambiguous; vague"
+  },
+  {
+   "form": "sirmosan",
+   "add_english": "popular"
+  },
+  {
+   "form": "verasan",
+   "add_english": "actual; realistic; valid"
+  },
+  {
+   "form": "mellisan",
+   "add_english": "massive"
+  },
+  {
+   "form": "lanvenasan",
+   "add_english": "illegal"
+  },
+  {
+   "form": "lanvesan",
+   "add_english": "legal"
+  },
+  {
+   "form": "vilasan",
+   "add_english": "rural"
+  },
+  {
+   "form": "lumisan",
+   "add_english": "brilliant"
+  },
+  {
+   "form": "vanisan",
+   "add_english": "attractive"
+  },
+  {
+   "form": "ranfasan",
+   "add_english": "logical"
+  },
+  {
+   "form": "ralkasan",
+   "add_english": "aggressive"
+  },
+  {
+   "form": "tozesan",
+   "add_english": "toxic"
+  },
+  {
+   "form": "sasvanasan",
+   "add_english": "vulnerable"
+  },
+  {
+   "form": "helnasan",
+   "add_english": "medical"
+  },
+  {
+   "form": "pukusan",
+   "add_english": "effective"
+  },
+  {
+   "form": "corvinasan",
+   "add_english": "a coward (li corvinasan)"
+  },
+  {
+   "form": "veranasan",
+   "add_english": "a liar (li veranasan)"
+  }
+ ],
+ "test_sentences": [
+  {
+   "liraasa": "Li loterokezuyo po zeldodesiza li kaldovila, kasa ito ka sasvanasan.",
+   "english": "The foreigner disliked the ghetto, because it is unsafe.",
+   "tests": "dislike; foreigner; ghetto"
+  },
+  {
+   "liraasa": "Li patusabeyo po sambavimosia li dossa lira ata po benakersoba ito.",
+   "english": "The specialist compared the two songs and improved it.",
+   "tests": "compare; improve; specialist"
+  },
+  {
+   "liraasa": "Li zayuyo po navulalfonia, nara li faru po buzarilliba li suma.",
+   "english": "The wizard levitated, but the fire absorbed the warmth.",
+   "tests": "levitate; absorb"
+  },
+  {
+   "liraasa": "Maivori po rillidonura lavlomiru ata cono, ata po ne zivusenoza fuyi.",
+   "english": "We exchanged tea and coins, and did not insult each other.",
+   "tests": "exchange; insult; reciprocal"
+  },
+  {
+   "liraasa": "Li lideolekta po loteropalvila li lanvenulu kopisa li ruhemambi apoka.",
+   "english": "The council replaced the policy so that the crisis would end.",
+   "tests": "council; replace; policy; crisis"
+  }
+ ],
+ "validation": {
+  "errors": []
+ }
+}

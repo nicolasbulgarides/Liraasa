@@ -1,0 +1,3677 @@
+{
+ "id": "2026-10-25-lexicon-3-4",
+ "edition": "3.4",
+ "created": "2026-10-25T20:00:00Z",
+ "author": "nicolas",
+ "summary": "Liraasa 3.4, \"Abstraction and the human condition\" (ADR-0024), from the author's 3.4 patch. PROPOSED: PROPOSED: ratify tier 1 first; tier 2 may be ratified, deferred or dropped item by item. Additions only, no new roots: ruling 3.4:G149; 94 compounds, 18 listed derivations, 3 lexicalised diminutives, 1 restored form and 50 English aliases, each entry noted with its tier. No 3.3 word, spelling or ruling changes.",
+ "rulings": [
+  {
+   "id": "G149",
+   "topic": "Quality nouns and their adjectives",
+   "ruling": "For a compound X whose adjective is available under 3.3:G148, the bare compound names the quality and X-san describes what has it: tibilekta complexity, tibilektasan complex; lordidoza strictness, lordidozasan strict. A person defined by a quality is li + the adjective (1.2:G29): li corvinasan, the coward. No -ness or -ity suffix is needed or created.",
+   "refines": [
+    "3.3:G148",
+    "1.2:G29"
+   ],
+   "examples": [
+    [
+     "tibilekta · tibilektasan",
+     "complexity · complex"
+    ],
+    [
+     "Li lordidozasan lemudonuyo po ne merama li linu.",
+     "The strict teacher did not forgive the child."
+    ]
+   ],
+   "status": "proposed"
+  }
+ ],
+ "headwords": [
+  {
+   "id": "lx_amordalu_2224",
+   "root": "amordalu",
+   "type": "Compound",
+   "components": [
+    "amor",
+    "dalu"
+   ],
+   "glosses": {
+    "root": "sex; lovemaking",
+    "verb": "to make love; to have sex"
+   },
+   "register": "everyday",
+   "domain": "Romance",
+   "english_synonyms": [
+    "sex",
+    "lovemaking",
+    "to make love",
+    "to have sex"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: amor + dalu. sexual = amordalusan (3.3:G148); biological sex = minvasan / tarnusan (1.2:G36) Archetype: Human condition & the body. Tier 1 in the patch."
+  },
+  {
+   "id": "lx_somusonbu_2225",
+   "root": "somusonbu",
+   "type": "Compound",
+   "components": [
+    "somu",
+    "sonbu"
+   ],
+   "glosses": {
+    "root": "snore",
+    "verb": "to snore"
+   },
+   "register": "everyday",
+   "domain": "Health & body",
+   "english_synonyms": [
+    "snore",
+    "to snore"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: somu + sonbu. Archetype: Human condition & the body. Tier 2 in the patch."
+  },
+  {
+   "id": "lx_havlihata_2226",
+   "root": "havlihata",
+   "type": "Compound",
+   "components": [
+    "havli",
+    "hata"
+   ],
+   "glosses": {
+    "root": "hiccup",
+    "verb": "to hiccup"
+   },
+   "register": "everyday",
+   "domain": "Health & body",
+   "english_synonyms": [
+    "hiccup",
+    "to hiccup"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: havli + hata. Archetype: Human condition & the body. Tier 2 in the patch."
+  },
+  {
+   "id": "lx_kaldodesi_2227",
+   "root": "kaldodesi",
+   "type": "Compound",
+   "components": [
+    "kaldo",
+    "desi"
+   ],
+   "glosses": {
+    "root": "addiction; a bound craving"
+   },
+   "register": "everyday",
+   "domain": "Health & body",
+   "english_synonyms": [
+    "addiction",
+    "a bound craving"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: kaldo + desi. addicted = kaldodesisan (G148) Archetype: Human condition & the body. Tier 1 in the patch."
+  },
+  {
+   "id": "lx_lorenevra_2228",
+   "root": "lorenevra",
+   "type": "Compound",
+   "components": [
+    "lore",
+    "nevra"
+   ],
+   "glosses": {
+    "root": "depression; a sinking of the heart"
+   },
+   "register": "everyday",
+   "domain": "Emotions",
+   "english_synonyms": [
+    "depression",
+    "a sinking of the heart"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: lore + nevra. Archetype: Human condition & the body. Tier 1 in the patch."
+  },
+  {
+   "id": "lx_talipuku_2229",
+   "root": "talipuku",
+   "type": "Compound",
+   "components": [
+    "tali",
+    "puku"
+   ],
+   "glosses": {
+    "root": "retirement; resignation",
+    "verb": "to retire; to resign"
+   },
+   "register": "everyday",
+   "domain": "Daily life",
+   "english_synonyms": [
+    "retirement",
+    "resignation",
+    "to retire",
+    "to resign"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: tali + puku. Archetype: Human condition & the body. Tier 1 in the patch."
+  },
+  {
+   "id": "lx_yugedoza_2230",
+   "root": "yugedoza",
+   "type": "Compound",
+   "components": [
+    "yuge",
+    "doza"
+   ],
+   "glosses": {
+    "root": "fitness; bodily strength"
+   },
+   "register": "everyday",
+   "domain": "Health & body",
+   "english_synonyms": [
+    "fitness",
+    "bodily strength"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: yuge + doza. Archetype: Human condition & the body. Tier 2 in the patch."
+  },
+  {
+   "id": "lx_namiduha_2231",
+   "root": "namiduha",
+   "type": "Compound",
+   "components": [
+    "nami",
+    "duha"
+   ],
+   "glosses": {
+    "root": "appetite; hunger for food"
+   },
+   "register": "everyday",
+   "domain": "Health & body",
+   "english_synonyms": [
+    "appetite",
+    "hunger for food"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: nami + duha. Archetype: Human condition & the body. Tier 1 in the patch."
+  },
+  {
+   "id": "lx_simvodaigo_2232",
+   "root": "simvodaigo",
+   "type": "Compound",
+   "components": [
+    "simvo",
+    "daigo"
+   ],
+   "glosses": {
+    "root": "suicide"
+   },
+   "register": "everyday",
+   "domain": "Health & body",
+   "english_synonyms": [
+    "suicide"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: simvo + daigo. Archetype: Human condition & the body. Tier 2 in the patch."
+  },
+  {
+   "id": "lx_zeldodesi_2233",
+   "root": "zeldodesi",
+   "type": "Compound",
+   "components": [
+    "zeldo",
+    "desi"
+   ],
+   "glosses": {
+    "root": "dislike; aversion",
+    "verb": "to dislike"
+   },
+   "register": "everyday",
+   "domain": "Emotions",
+   "english_synonyms": [
+    "dislike",
+    "aversion",
+    "to dislike"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: zeldo + desi. Archetype: Feelings & states of mind. Tier 1 in the patch."
+  },
+  {
+   "id": "lx_lorefaru_2234",
+   "root": "lorefaru",
+   "type": "Compound",
+   "components": [
+    "lore",
+    "faru"
+   ],
+   "glosses": {
+    "root": "enthusiasm; zeal",
+    "adjective": "enthusiastic; eager"
+   },
+   "register": "everyday",
+   "domain": "Emotions",
+   "english_synonyms": [
+    "enthusiasm",
+    "zeal",
+    "enthusiastic",
+    "eager"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: lore + faru. Archetype: Feelings & states of mind. Tier 1 in the patch."
+  },
+  {
+   "id": "lx_loremiga_2235",
+   "root": "loremiga",
+   "type": "Compound",
+   "components": [
+    "lore",
+    "miga"
+   ],
+   "glosses": {
+    "root": "attachment; fondness"
+   },
+   "register": "everyday",
+   "domain": "Emotions",
+   "english_synonyms": [
+    "attachment",
+    "fondness"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: lore + miga. Archetype: Feelings & states of mind. Tier 1 in the patch."
+  },
+  {
+   "id": "lx_mavokaldo_2236",
+   "root": "mavokaldo",
+   "type": "Compound",
+   "components": [
+    "mavo",
+    "kaldo"
+   ],
+   "glosses": {
+    "root": "obsession",
+    "adjective": "obsessed"
+   },
+   "register": "everyday",
+   "domain": "Mind & philosophy",
+   "english_synonyms": [
+    "obsession",
+    "obsessed"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: mavo + kaldo. Archetype: Feelings & states of mind. Tier 1 in the patch."
+  },
+  {
+   "id": "lx_follufavro_2237",
+   "root": "follufavro",
+   "type": "Compound",
+   "components": [
+    "follu",
+    "favro"
+   ],
+   "glosses": {
+    "root": "alarm; a signal of fear"
+   },
+   "register": "everyday",
+   "domain": "Emotions",
+   "english_synonyms": [
+    "alarm",
+    "a signal of fear"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: follu + favro. Archetype: Feelings & states of mind. Tier 2 in the patch."
+  },
+  {
+   "id": "lx_dendufollu_2238",
+   "root": "dendufollu",
+   "type": "Compound",
+   "components": [
+    "dendu",
+    "follu"
+   ],
+   "glosses": {
+    "root": "dread; deep fear"
+   },
+   "register": "everyday",
+   "domain": "Emotions",
+   "english_synonyms": [
+    "dread",
+    "deep fear"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: dendu + follu. Archetype: Feelings & states of mind. Tier 1 in the patch."
+  },
+  {
+   "id": "lx_pelilavi_2239",
+   "root": "pelilavi",
+   "type": "Compound",
+   "components": [
+    "peli",
+    "lavi"
+   ],
+   "glosses": {
+    "root": "amusement; fun"
+   },
+   "register": "everyday",
+   "domain": "Emotions",
+   "english_synonyms": [
+    "amusement",
+    "fun"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: peli + lavi. Archetype: Feelings & states of mind. Tier 1 in the patch."
+  },
+  {
+   "id": "lx_yugesabe_2240",
+   "root": "yugesabe",
+   "type": "Compound",
+   "components": [
+    "yuge",
+    "sabe"
+   ],
+   "glosses": {
+    "root": "instinct; the body's knowing"
+   },
+   "register": "everyday",
+   "domain": "Mind & philosophy",
+   "english_synonyms": [
+    "instinct",
+    "the body's knowing"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: yuge + sabe. Archetype: Feelings & states of mind. Tier 1 in the patch."
+  },
+  {
+   "id": "lx_devodoza_2241",
+   "root": "devodoza",
+   "type": "Compound",
+   "components": [
+    "devo",
+    "doza"
+   ],
+   "glosses": {
+    "root": "conviction; firm belief"
+   },
+   "register": "everyday",
+   "domain": "Mind & philosophy",
+   "english_synonyms": [
+    "conviction",
+    "firm belief"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: devo + doza. Archetype: Feelings & states of mind. Tier 2 in the patch."
+  },
+  {
+   "id": "lx_yanolore_2242",
+   "root": "yanolore",
+   "type": "Compound",
+   "components": [
+    "yano",
+    "lore"
+   ],
+   "glosses": {
+    "root": "solidarity; one heart among many"
+   },
+   "register": "everyday",
+   "domain": "Emotions",
+   "english_synonyms": [
+    "solidarity",
+    "one heart among many"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: yano + lore. Archetype: Feelings & states of mind. Tier 2 in the patch."
+  },
+  {
+   "id": "lx_verasirmo_2243",
+   "root": "verasirmo",
+   "type": "Compound",
+   "components": [
+    "vera",
+    "sirmo"
+   ],
+   "glosses": {
+    "root": "credibility; a reputation for truth"
+   },
+   "register": "everyday",
+   "domain": "Mind & philosophy",
+   "english_synonyms": [
+    "credibility",
+    "a reputation for truth"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: vera + sirmo. Archetype: Feelings & states of mind. Tier 2 in the patch."
+  },
+  {
+   "id": "lx_resovarde_2244",
+   "root": "resovarde",
+   "type": "Compound",
+   "components": [
+    "reso",
+    "varde"
+   ],
+   "glosses": {
+    "root": "absurdity; a thing worthy of laughter",
+    "adjective": "ridiculous; absurd"
+   },
+   "register": "everyday",
+   "domain": "Qualities",
+   "english_synonyms": [
+    "absurdity",
+    "a thing worthy of laughter",
+    "ridiculous",
+    "absurd"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: reso + varde. Archetype: Feelings & states of mind. Tier 1 in the patch."
+  },
+  {
+   "id": "lx_regnajuba_2245",
+   "root": "regnajuba",
+   "type": "Compound",
+   "components": [
+    "regna",
+    "juba"
+   ],
+   "glosses": {
+    "root": "privilege (a sovereign's gift)"
+   },
+   "register": "everyday",
+   "domain": "Society",
+   "english_synonyms": [
+    "privilege (a sovereign's gift)"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: regna + juba. Archetype: Abstract states, qualities & relations. Tier 1 in the patch."
+  },
+  {
+   "id": "lx_ruhemambi_2246",
+   "root": "ruhemambi",
+   "type": "Compound",
+   "components": [
+    "ruhe",
+    "mambi"
+   ],
+   "glosses": {
+    "root": "crisis; a stormy moment"
+   },
+   "register": "everyday",
+   "domain": "Abstract",
+   "english_synonyms": [
+    "crisis",
+    "a stormy moment"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: ruhe + mambi. Archetype: Abstract states, qualities & relations. Tier 1 in the patch."
+  },
+  {
+   "id": "lx_vemibako_2247",
+   "root": "vemibako",
+   "type": "Compound",
+   "components": [
+    "vemi",
+    "bako"
+   ],
+   "glosses": {
+    "root": "disaster; catastrophe"
+   },
+   "register": "everyday",
+   "domain": "Abstract",
+   "english_synonyms": [
+    "disaster",
+    "catastrophe"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: vemi + bako. Archetype: Abstract states, qualities & relations. Tier 1 in the patch."
+  },
+  {
+   "id": "lx_dozaserbu_2248",
+   "root": "dozaserbu",
+   "type": "Compound",
+   "components": [
+    "doza",
+    "serbu"
+   ],
+   "glosses": {
+    "root": "challenge; a test of strength"
+   },
+   "register": "everyday",
+   "domain": "Abstract",
+   "english_synonyms": [
+    "challenge",
+    "a test of strength"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: doza + serbu. Archetype: Abstract states, qualities & relations. Tier 1 in the patch."
+  },
+  {
+   "id": "lx_vazraserbu_2249",
+   "root": "vazraserbu",
+   "type": "Compound",
+   "components": [
+    "vazra",
+    "serbu"
+   ],
+   "glosses": {
+    "root": "competition; contest",
+    "verb": "to compete"
+   },
+   "register": "everyday",
+   "domain": "Abstract",
+   "english_synonyms": [
+    "competition",
+    "contest",
+    "to compete"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: vazra + serbu. Archetype: Abstract states, qualities & relations. Tier 1 in the patch."
+  },
+  {
+   "id": "lx_dozaseno_2250",
+   "root": "dozaseno",
+   "type": "Compound",
+   "components": [
+    "doza",
+    "seno"
+   ],
+   "glosses": {
+    "root": "emphasis",
+    "verb": "to emphasize; to stress"
+   },
+   "register": "everyday",
+   "domain": "Speech & mind",
+   "english_synonyms": [
+    "emphasis",
+    "to emphasize",
+    "to stress"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: doza + seno. Archetype: Abstract states, qualities & relations. Tier 1 in the patch."
+  },
+  {
+   "id": "lx_yanoyeba_2251",
+   "root": "yanoyeba",
+   "type": "Compound",
+   "components": [
+    "yano",
+    "yeba"
+   ],
+   "glosses": {
+    "root": "consensus; general agreement"
+   },
+   "register": "everyday",
+   "domain": "Society",
+   "english_synonyms": [
+    "consensus",
+    "general agreement"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: yano + yeba. Archetype: Abstract states, qualities & relations. Tier 2 in the patch."
+  },
+  {
+   "id": "lx_yanopalvi_2252",
+   "root": "yanopalvi",
+   "type": "Compound",
+   "components": [
+    "yano",
+    "palvi"
+   ],
+   "glosses": {
+    "root": "inclusion",
+    "verb": "to include"
+   },
+   "register": "everyday",
+   "domain": "Abstract",
+   "english_synonyms": [
+    "inclusion",
+    "to include"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: yano + palvi. Archetype: Abstract states, qualities & relations. Tier 1 in the patch."
+  },
+  {
+   "id": "lx_sambapatu_2253",
+   "root": "sambapatu",
+   "type": "Compound",
+   "components": [
+    "samba",
+    "patu"
+   ],
+   "glosses": {
+    "root": "similarity; likeness",
+    "adjective": "similar; alike"
+   },
+   "register": "everyday",
+   "domain": "Abstract",
+   "english_synonyms": [
+    "similarity",
+    "likeness",
+    "similar",
+    "alike"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: samba + patu. Archetype: Abstract states, qualities & relations. Tier 1 in the patch."
+  },
+  {
+   "id": "lx_lisrodoza_2254",
+   "root": "lisrodoza",
+   "type": "Compound",
+   "components": [
+    "lisro",
+    "doza"
+   ],
+   "glosses": {
+    "root": "stability; steadiness",
+    "adjective": "stable; steady"
+   },
+   "register": "everyday",
+   "domain": "Abstract",
+   "english_synonyms": [
+    "stability",
+    "steadiness",
+    "stable",
+    "steady"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: lisro + doza. Archetype: Abstract states, qualities & relations. Tier 1 in the patch."
+  },
+  {
+   "id": "lx_lordidoza_2255",
+   "root": "lordidoza",
+   "type": "Compound",
+   "components": [
+    "lordi",
+    "doza"
+   ],
+   "glosses": {
+    "root": "strictness; rigor",
+    "adjective": "strict; rigorous"
+   },
+   "register": "everyday",
+   "domain": "Abstract",
+   "english_synonyms": [
+    "strictness",
+    "rigor",
+    "strict",
+    "rigorous"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: lordi + doza. Archetype: Abstract states, qualities & relations. Tier 1 in the patch."
+  },
+  {
+   "id": "lx_tibilekta_2256",
+   "root": "tibilekta",
+   "type": "Compound",
+   "components": [
+    "tibi",
+    "lekta"
+   ],
+   "glosses": {
+    "root": "complexity; tangle",
+    "adjective": "complex; complicated"
+   },
+   "register": "everyday",
+   "domain": "Abstract",
+   "english_synonyms": [
+    "complexity",
+    "tangle",
+    "complex",
+    "complicated"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: tibi + lekta. Archetype: Abstract states, qualities & relations. Tier 1 in the patch."
+  },
+  {
+   "id": "lx_mellipatu_2257",
+   "root": "mellipatu",
+   "type": "Compound",
+   "components": [
+    "melli",
+    "patu"
+   ],
+   "glosses": {
+    "root": "majority; the greater part"
+   },
+   "register": "everyday",
+   "domain": "Abstract",
+   "english_synonyms": [
+    "majority",
+    "the greater part"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: melli + patu. Archetype: Abstract states, qualities & relations. Tier 2 in the patch."
+  },
+  {
+   "id": "lx_ramulordi_2258",
+   "root": "ramulordi",
+   "type": "Compound",
+   "components": [
+    "ramu",
+    "lordi"
+   ],
+   "glosses": {
+    "root": "tradition"
+   },
+   "register": "everyday",
+   "domain": "Society",
+   "english_synonyms": [
+    "tradition"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: ramu + lordi. traditional = ramulordisan (G148) Archetype: Abstract states, qualities & relations. Tier 1 in the patch."
+  },
+  {
+   "id": "lx_vilalordi_2259",
+   "root": "vilalordi",
+   "type": "Compound",
+   "components": [
+    "vila",
+    "lordi"
+   ],
+   "glosses": {
+    "root": "custom; local ways"
+   },
+   "register": "everyday",
+   "domain": "Society",
+   "english_synonyms": [
+    "custom",
+    "local ways"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: vila + lordi. Archetype: Abstract states, qualities & relations. Tier 2 in the patch."
+  },
+  {
+   "id": "lx_gudolordi_2260",
+   "root": "gudolordi",
+   "type": "Compound",
+   "components": [
+    "gudo",
+    "lordi"
+   ],
+   "glosses": {
+    "root": "norm; standard practice"
+   },
+   "register": "everyday",
+   "domain": "Society",
+   "english_synonyms": [
+    "norm",
+    "standard practice"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: gudo + lordi. common + order (3.2 archetype) Archetype: Abstract states, qualities & relations. Tier 2 in the patch."
+  },
+  {
+   "id": "lx_rinbapago_2261",
+   "root": "rinbapago",
+   "type": "Compound",
+   "components": [
+    "rinba",
+    "pago"
+   ],
+   "glosses": {
+    "root": "environment; surroundings"
+   },
+   "register": "everyday",
+   "domain": "Nature & geography",
+   "english_synonyms": [
+    "environment",
+    "surroundings"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: rinba + pago. environmental = rinbapagosan (G148) Archetype: Abstract states, qualities & relations. Tier 1 in the patch."
+  },
+  {
+   "id": "lx_nemetelne_2262",
+   "root": "nemetelne",
+   "type": "Compound",
+   "components": [
+    "neme",
+    "telne"
+   ],
+   "glosses": {
+    "root": "tragedy"
+   },
+   "register": "everyday",
+   "domain": "Language & art",
+   "english_synonyms": [
+    "tragedy"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: neme + telne. tragic = nemetelnesan (G148) Archetype: Abstract states, qualities & relations. Tier 1 in the patch."
+  },
+  {
+   "id": "lx_bakolarbo_2263",
+   "root": "bakolarbo",
+   "type": "Compound",
+   "components": [
+    "bako",
+    "larbo"
+   ],
+   "glosses": {
+    "root": "stump (a broken tree)"
+   },
+   "register": "everyday",
+   "domain": "Nature & geography",
+   "english_synonyms": [
+    "stump (a broken tree)"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: bako + larbo. Archetype: Abstract states, qualities & relations. Tier 2 in the patch."
+  },
+  {
+   "id": "lx_lukayano_2264",
+   "root": "lukayano",
+   "type": "Compound",
+   "components": [
+    "luka",
+    "yano"
+   ],
+   "glosses": {
+    "root": "coincidence; luck meeting luck"
+   },
+   "register": "everyday",
+   "domain": "Abstract",
+   "english_synonyms": [
+    "coincidence",
+    "luck meeting luck"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: luka + yano. Archetype: Abstract states, qualities & relations. Tier 2 in the patch."
+  },
+  {
+   "id": "lx_benakerso_2265",
+   "root": "benakerso",
+   "type": "Compound",
+   "components": [
+    "bena",
+    "kerso"
+   ],
+   "glosses": {
+    "root": "improvement",
+    "verb": "to improve"
+   },
+   "register": "everyday",
+   "domain": "Abstract",
+   "english_synonyms": [
+    "improvement",
+    "to improve"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: bena + kerso. Archetype: Abstract states, qualities & relations. Tier 1 in the patch."
+  },
+  {
+   "id": "lx_tikutrana_2266",
+   "root": "tikutrana",
+   "type": "Compound",
+   "components": [
+    "tiku",
+    "trana"
+   ],
+   "glosses": {
+    "root": "adjustment",
+    "verb": "to adjust"
+   },
+   "register": "everyday",
+   "domain": "Abstract",
+   "english_synonyms": [
+    "adjustment",
+    "to adjust"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: tiku + trana. Archetype: Abstract states, qualities & relations. Tier 2 in the patch."
+  },
+  {
+   "id": "lx_relsidemro_2267",
+   "root": "relsidemro",
+   "type": "Compound",
+   "components": [
+    "relsi",
+    "demro"
+   ],
+   "glosses": {
+    "root": "reaction; response",
+    "verb": "to react"
+   },
+   "register": "everyday",
+   "domain": "Abstract",
+   "english_synonyms": [
+    "reaction",
+    "response",
+    "to react"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: relsi + demro. Archetype: Abstract states, qualities & relations. Tier 1 in the patch."
+  },
+  {
+   "id": "lx_nululordi_2268",
+   "root": "nululordi",
+   "type": "Compound",
+   "components": [
+    "nulu",
+    "lordi"
+   ],
+   "glosses": {
+    "root": "method; procedure"
+   },
+   "register": "everyday",
+   "domain": "Abstract",
+   "english_synonyms": [
+    "method",
+    "procedure"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: nulu + lordi. Archetype: Abstract states, qualities & relations. Tier 1 in the patch."
+  },
+  {
+   "id": "lx_vazranulu_2269",
+   "root": "vazranulu",
+   "type": "Compound",
+   "components": [
+    "vazra",
+    "nulu"
+   ],
+   "glosses": {
+    "root": "strategy; a path to victory"
+   },
+   "register": "everyday",
+   "domain": "Abstract",
+   "english_synonyms": [
+    "strategy",
+    "a path to victory"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: vazra + nulu. Archetype: Abstract states, qualities & relations. Tier 1 in the patch."
+  },
+  {
+   "id": "lx_manlisabe_2270",
+   "root": "manlisabe",
+   "type": "Compound",
+   "components": [
+    "manli",
+    "sabe"
+   ],
+   "glosses": {
+    "root": "technique; skill of the hand"
+   },
+   "register": "everyday",
+   "domain": "Abstract",
+   "english_synonyms": [
+    "technique",
+    "skill of the hand"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: manli + sabe. Archetype: Abstract states, qualities & relations. Tier 2 in the patch."
+  },
+  {
+   "id": "lx_lanvenulu_2271",
+   "root": "lanvenulu",
+   "type": "Compound",
+   "components": [
+    "lanve",
+    "nulu"
+   ],
+   "glosses": {
+    "root": "policy"
+   },
+   "register": "everyday",
+   "domain": "Society & governance",
+   "english_synonyms": [
+    "policy"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: lanve + nulu. Archetype: Abstract states, qualities & relations. Tier 2 in the patch."
+  },
+  {
+   "id": "lx_fasbipatu_2272",
+   "root": "fasbipatu",
+   "type": "Compound",
+   "components": [
+    "fasbi",
+    "patu"
+   ],
+   "glosses": {
+    "root": "aspect; facet"
+   },
+   "register": "everyday",
+   "domain": "Abstract",
+   "english_synonyms": [
+    "aspect",
+    "facet"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: fasbi + patu. Archetype: Abstract states, qualities & relations. Tier 2 in the patch."
+  },
+  {
+   "id": "lx_simvopatu_2273",
+   "root": "simvopatu",
+   "type": "Compound",
+   "components": [
+    "simvo",
+    "patu"
+   ],
+   "glosses": {
+    "root": "feature; characteristic"
+   },
+   "register": "everyday",
+   "domain": "Abstract",
+   "english_synonyms": [
+    "feature",
+    "characteristic"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: simvo + patu. Archetype: Abstract states, qualities & relations. Tier 1 in the patch."
+  },
+  {
+   "id": "lx_musvajomru_2274",
+   "root": "musvajomru",
+   "type": "Compound",
+   "components": [
+    "musva",
+    "jomru"
+   ],
+   "glosses": {
+    "root": "mission; an errand of duty"
+   },
+   "register": "everyday",
+   "domain": "Society",
+   "english_synonyms": [
+    "mission",
+    "an errand of duty"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: musva + jomru. Archetype: Abstract states, qualities & relations. Tier 1 in the patch."
+  },
+  {
+   "id": "lx_pebupatu_2275",
+   "root": "pebupatu",
+   "type": "Compound",
+   "components": [
+    "pebu",
+    "patu"
+   ],
+   "glosses": {
+    "root": "bottom; base; foot (of a thing)"
+   },
+   "register": "everyday",
+   "domain": "Space & orientation",
+   "english_synonyms": [
+    "bottom",
+    "base",
+    "foot (of a thing)"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: pebu + patu. Archetype: Abstract states, qualities & relations. Tier 1 in the patch."
+  },
+  {
+   "id": "lx_rillidonu_2276",
+   "root": "rillidonu",
+   "type": "Compound",
+   "components": [
+    "rilli",
+    "donu"
+   ],
+   "glosses": {
+    "root": "exchange; trade",
+    "verb": "to exchange"
+   },
+   "register": "everyday",
+   "domain": "Commerce & obligation",
+   "english_synonyms": [
+    "exchange",
+    "trade",
+    "to exchange"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: rilli + donu. Archetype: Abstract states, qualities & relations. Tier 1 in the patch."
+  },
+  {
+   "id": "lx_buzarilli_2277",
+   "root": "buzarilli",
+   "type": "Compound",
+   "components": [
+    "buza",
+    "rilli"
+   ],
+   "glosses": {
+    "root": "absorption",
+    "verb": "to absorb; to soak up"
+   },
+   "register": "everyday",
+   "domain": "Actions & physical processes",
+   "english_synonyms": [
+    "absorption",
+    "to absorb",
+    "to soak up"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: buza + rilli. Archetype: Abstract verbs. Tier 1 in the patch."
+  },
+  {
+   "id": "lx_navulalfo_2278",
+   "root": "navulalfo",
+   "type": "Compound",
+   "components": [
+    "navu",
+    "lalfo"
+   ],
+   "glosses": {
+    "root": "levitation",
+    "verb": "to levitate"
+   },
+   "register": "everyday",
+   "domain": "Fantasy",
+   "english_synonyms": [
+    "levitation",
+    "to levitate"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: navu + lalfo. Archetype: Abstract verbs. Tier 1 in the patch."
+  },
+  {
+   "id": "lx_loteropalvi_2279",
+   "root": "loteropalvi",
+   "type": "Compound",
+   "components": [
+    "lotero",
+    "palvi"
+   ],
+   "glosses": {
+    "root": "replacement",
+    "verb": "to replace"
+   },
+   "register": "everyday",
+   "domain": "Actions & physical processes",
+   "english_synonyms": [
+    "replacement",
+    "to replace"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: lotero + palvi. Archetype: Abstract verbs. Tier 1 in the patch."
+  },
+  {
+   "id": "lx_pidihata_2280",
+   "root": "pidihata",
+   "type": "Compound",
+   "components": [
+    "pidi",
+    "hata"
+   ],
+   "glosses": {
+    "root": "a piercing; a stab",
+    "verb": "to pierce"
+   },
+   "register": "everyday",
+   "domain": "Movement & action",
+   "english_synonyms": [
+    "a piercing",
+    "a stab",
+    "to pierce"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: pidi + hata. Archetype: Abstract verbs. Tier 1 in the patch."
+  },
+  {
+   "id": "lx_farubako_2281",
+   "root": "farubako",
+   "type": "Compound",
+   "components": [
+    "faru",
+    "bako"
+   ],
+   "glosses": {
+    "root": "explosion",
+    "verb": "to explode"
+   },
+   "register": "everyday",
+   "domain": "Actions & physical processes",
+   "english_synonyms": [
+    "explosion",
+    "to explode"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: faru + bako. Archetype: Abstract verbs. Tier 1 in the patch."
+  },
+  {
+   "id": "lx_larnelaso_2282",
+   "root": "larnelaso",
+   "type": "Compound",
+   "components": [
+    "larne",
+    "laso"
+   ],
+   "glosses": {
+    "root": "a sulk; angry silence",
+    "verb": "to sulk"
+   },
+   "register": "everyday",
+   "domain": "Emotions",
+   "english_synonyms": [
+    "a sulk",
+    "angry silence",
+    "to sulk"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: larne + laso. Archetype: Abstract verbs. Tier 2 in the patch."
+  },
+  {
+   "id": "lx_samnibako_2283",
+   "root": "samnibako",
+   "type": "Compound",
+   "components": [
+    "samni",
+    "bako"
+   ],
+   "glosses": {
+    "root": "hatching",
+    "verb": "to hatch"
+   },
+   "register": "everyday",
+   "domain": "Actions & physical processes",
+   "english_synonyms": [
+    "hatching",
+    "to hatch"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: samni + bako. Archetype: Abstract verbs. Tier 2 in the patch."
+  },
+  {
+   "id": "lx_dozalumra_2284",
+   "root": "dozalumra",
+   "type": "Compound",
+   "components": [
+    "doza",
+    "lumra"
+   ],
+   "glosses": {
+    "root": "a heave",
+    "verb": "to heave"
+   },
+   "register": "everyday",
+   "domain": "Movement & action",
+   "english_synonyms": [
+    "a heave",
+    "to heave"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: doza + lumra. Archetype: Abstract verbs. Tier 2 in the patch."
+  },
+  {
+   "id": "lx_germaserbu_2285",
+   "root": "germaserbu",
+   "type": "Compound",
+   "components": [
+    "germa",
+    "serbu"
+   ],
+   "glosses": {
+    "root": "mining",
+    "verb": "to mine"
+   },
+   "register": "everyday",
+   "domain": "Everyday objects & work",
+   "english_synonyms": [
+    "mining",
+    "to mine"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: germa + serbu. Archetype: Abstract verbs. Tier 2 in the patch."
+  },
+  {
+   "id": "lx_mirumomvi_2286",
+   "root": "mirumomvi",
+   "type": "Compound",
+   "components": [
+    "miru",
+    "momvi"
+   ],
+   "glosses": {
+    "root": "dissolving",
+    "verb": "to dissolve"
+   },
+   "register": "everyday",
+   "domain": "Actions & physical processes",
+   "english_synonyms": [
+    "dissolving",
+    "to dissolve"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: miru + momvi. Archetype: Abstract verbs. Tier 2 in the patch."
+  },
+  {
+   "id": "lx_mellikerso_2287",
+   "root": "mellikerso",
+   "type": "Compound",
+   "components": [
+    "melli",
+    "kerso"
+   ],
+   "glosses": {
+    "root": "expansion",
+    "verb": "to expand; to swell"
+   },
+   "register": "everyday",
+   "domain": "Actions & physical processes",
+   "english_synonyms": [
+    "expansion",
+    "to expand",
+    "to swell"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: melli + kerso. Archetype: Abstract verbs. Tier 1 in the patch."
+  },
+  {
+   "id": "lx_cunukerso_2288",
+   "root": "cunukerso",
+   "type": "Compound",
+   "components": [
+    "cunu",
+    "kerso"
+   ],
+   "glosses": {
+    "root": "multiplication",
+    "verb": "to multiply"
+   },
+   "register": "everyday",
+   "domain": "Time, quantity & work",
+   "english_synonyms": [
+    "multiplication",
+    "to multiply"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: cunu + kerso. Archetype: Abstract verbs. Tier 2 in the patch."
+  },
+  {
+   "id": "lx_sambavimo_2289",
+   "root": "sambavimo",
+   "type": "Compound",
+   "components": [
+    "samba",
+    "vimo"
+   ],
+   "glosses": {
+    "root": "comparison",
+    "verb": "to compare"
+   },
+   "register": "everyday",
+   "domain": "Abstract",
+   "english_synonyms": [
+    "comparison",
+    "to compare"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: samba + vimo. Archetype: Abstract verbs. Tier 1 in the patch."
+  },
+  {
+   "id": "lx_zivuseno_2290",
+   "root": "zivuseno",
+   "type": "Compound",
+   "components": [
+    "zivu",
+    "seno"
+   ],
+   "glosses": {
+    "root": "insult",
+    "verb": "to insult"
+   },
+   "register": "everyday",
+   "domain": "Speech & mind",
+   "english_synonyms": [
+    "insult",
+    "to insult"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: zivu + seno. Archetype: Abstract verbs. Tier 1 in the patch."
+  },
+  {
+   "id": "lx_lideomasu_2291",
+   "root": "lideomasu",
+   "type": "Compound",
+   "components": [
+    "lideo",
+    "masu"
+   ],
+   "glosses": {
+    "root": "consultation",
+    "verb": "to consult"
+   },
+   "register": "everyday",
+   "domain": "Speech & mind",
+   "english_synonyms": [
+    "consultation",
+    "to consult"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: lideo + masu. Archetype: Abstract verbs. Tier 2 in the patch."
+  },
+  {
+   "id": "lx_loterokezu_2292",
+   "root": "loterokezu",
+   "type": "Compound",
+   "components": [
+    "lotero",
+    "kezu"
+   ],
+   "glosses": {
+    "root": "foreign land; abroad"
+   },
+   "register": "everyday",
+   "domain": "Society",
+   "english_synonyms": [
+    "foreign land",
+    "abroad"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: lotero + kezu. foreign = loterokezusan (G148) Archetype: Society, roles & institutions. Tier 1 in the patch."
+  },
+  {
+   "id": "lx_patusabe_2293",
+   "root": "patusabe",
+   "type": "Compound",
+   "components": [
+    "patu",
+    "sabe"
+   ],
+   "glosses": {
+    "root": "specialty; specialized knowledge"
+   },
+   "register": "everyday",
+   "domain": "Mind & philosophy",
+   "english_synonyms": [
+    "specialty",
+    "specialized knowledge"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: patu + sabe. Archetype: Society, roles & institutions. Tier 1 in the patch."
+  },
+  {
+   "id": "lx_lideolekta_2294",
+   "root": "lideolekta",
+   "type": "Compound",
+   "components": [
+    "lideo",
+    "lekta"
+   ],
+   "glosses": {
+    "root": "council; a gathering for counsel"
+   },
+   "register": "everyday",
+   "domain": "Society & governance",
+   "english_synonyms": [
+    "council",
+    "a gathering for counsel"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: lideo + lekta. Archetype: Society, roles & institutions. Tier 1 in the patch."
+  },
+  {
+   "id": "lx_lanvelekta_2295",
+   "root": "lanvelekta",
+   "type": "Compound",
+   "components": [
+    "lanve",
+    "lekta"
+   ],
+   "glosses": {
+    "root": "parliament; senate; congress"
+   },
+   "register": "everyday",
+   "domain": "Society & governance",
+   "english_synonyms": [
+    "parliament",
+    "senate",
+    "congress"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: lanve + lekta. Archetype: Society, roles & institutions. Tier 1 in the patch."
+  },
+  {
+   "id": "lx_sasvaserbu_2296",
+   "root": "sasvaserbu",
+   "type": "Compound",
+   "components": [
+    "sasva",
+    "serbu"
+   ],
+   "glosses": {
+    "root": "seeking refuge; asylum"
+   },
+   "register": "everyday",
+   "domain": "Society",
+   "english_synonyms": [
+    "seeking refuge",
+    "asylum"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: sasva + serbu. Archetype: Society, roles & institutions. Tier 2 in the patch."
+  },
+  {
+   "id": "lx_sovenela_2297",
+   "root": "sovenela",
+   "type": "Compound",
+   "components": [
+    "sove",
+    "nela"
+   ],
+   "glosses": {
+    "root": "civilian; a person of peace"
+   },
+   "register": "everyday",
+   "domain": "Society",
+   "english_synonyms": [
+    "civilian",
+    "a person of peace"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: sove + nela. Archetype: Society, roles & institutions. Tier 2 in the patch."
+  },
+  {
+   "id": "lx_tisehelna_2298",
+   "root": "tisehelna",
+   "type": "Compound",
+   "components": [
+    "tise",
+    "helna"
+   ],
+   "glosses": {
+    "root": "surgery"
+   },
+   "register": "everyday",
+   "domain": "Health & body",
+   "english_synonyms": [
+    "surgery"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: tise + helna. surgical = tisehelnasan (G148) Archetype: Society, roles & institutions. Tier 1 in the patch."
+  },
+  {
+   "id": "lx_domlufarla_2299",
+   "root": "domlufarla",
+   "type": "Compound",
+   "components": [
+    "domlu",
+    "farla"
+   ],
+   "glosses": {
+    "root": "architecture; house-making"
+   },
+   "register": "everyday",
+   "domain": "Everyday objects & work",
+   "english_synonyms": [
+    "architecture",
+    "house-making"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: domlu + farla. Archetype: Society, roles & institutions. Tier 2 in the patch."
+  },
+  {
+   "id": "lx_lardajuse_2300",
+   "root": "lardajuse",
+   "type": "Compound",
+   "components": [
+    "larda",
+    "juse"
+   ],
+   "glosses": {
+    "root": "criticism; critique"
+   },
+   "register": "everyday",
+   "domain": "Language & art",
+   "english_synonyms": [
+    "criticism",
+    "critique"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: larda + juse. Archetype: Society, roles & institutions. Tier 2 in the patch."
+  },
+  {
+   "id": "lx_ramuserbu_2301",
+   "root": "ramuserbu",
+   "type": "Compound",
+   "components": [
+    "ramu",
+    "serbu"
+   ],
+   "glosses": {
+    "root": "history (as a study)"
+   },
+   "register": "everyday",
+   "domain": "Language & art",
+   "english_synonyms": [
+    "history (as a study)"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: ramu + serbu. historical = ramuserbusan (G148) Archetype: Society, roles & institutions. Tier 1 in the patch."
+  },
+  {
+   "id": "lx_kezuserbu_2302",
+   "root": "kezuserbu",
+   "type": "Compound",
+   "components": [
+    "kezu",
+    "serbu"
+   ],
+   "glosses": {
+    "root": "exploration",
+    "verb": "to explore"
+   },
+   "register": "everyday",
+   "domain": "Travel & war",
+   "english_synonyms": [
+    "exploration",
+    "to explore"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: kezu + serbu. Archetype: Society, roles & institutions. Tier 1 in the patch."
+  },
+  {
+   "id": "lx_cuzalordi_2303",
+   "root": "cuzalordi",
+   "type": "Compound",
+   "components": [
+    "cuza",
+    "lordi"
+   ],
+   "glosses": {
+    "root": "editing",
+    "verb": "to edit"
+   },
+   "register": "everyday",
+   "domain": "Language & art",
+   "english_synonyms": [
+    "editing",
+    "to edit"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: cuza + lordi. Archetype: Society, roles & institutions. Tier 2 in the patch."
+  },
+  {
+   "id": "lx_kaldovila_2304",
+   "root": "kaldovila",
+   "type": "Compound",
+   "components": [
+    "kaldo",
+    "vila"
+   ],
+   "glosses": {
+    "root": "ghetto; a confined quarter"
+   },
+   "register": "everyday",
+   "domain": "Society",
+   "english_synonyms": [
+    "ghetto",
+    "a confined quarter"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: kaldo + vila. Archetype: Society, roles & institutions. Tier 2 in the patch."
+  },
+  {
+   "id": "lx_nelaramu_2305",
+   "root": "nelaramu",
+   "type": "Compound",
+   "components": [
+    "nela",
+    "ramu"
+   ],
+   "glosses": {
+    "root": "culture; a people's memory"
+   },
+   "register": "everyday",
+   "domain": "Society",
+   "english_synonyms": [
+    "culture",
+    "a people's memory"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: nela + ramu. cultural = nelaramusan (G148) Archetype: Knowledge, culture & communication. Tier 1 in the patch."
+  },
+  {
+   "id": "lx_conodivma_2306",
+   "root": "conodivma",
+   "type": "Compound",
+   "components": [
+    "cono",
+    "divma"
+   ],
+   "glosses": {
+    "root": "economy"
+   },
+   "register": "everyday",
+   "domain": "Commerce & obligation",
+   "english_synonyms": [
+    "economy"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: cono + divma. economic = conodivmasan (G148) Archetype: Knowledge, culture & communication. Tier 1 in the patch."
+  },
+  {
+   "id": "lx_lektalordi_2307",
+   "root": "lektalordi",
+   "type": "Compound",
+   "components": [
+    "lekta",
+    "lordi"
+   ],
+   "glosses": {
+    "root": "politics"
+   },
+   "register": "everyday",
+   "domain": "Society & governance",
+   "english_synonyms": [
+    "politics"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: lekta + lordi. political = lektalordisan (G148) Archetype: Knowledge, culture & communication. Tier 1 in the patch."
+  },
+  {
+   "id": "lx_nelaregna_2308",
+   "root": "nelaregna",
+   "type": "Compound",
+   "components": [
+    "nela",
+    "regna"
+   ],
+   "glosses": {
+    "root": "democracy; rule by the people"
+   },
+   "register": "everyday",
+   "domain": "Society & governance",
+   "english_synonyms": [
+    "democracy",
+    "rule by the people"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: nela + regna. Archetype: Knowledge, culture & communication. Tier 2 in the patch."
+  },
+  {
+   "id": "lx_sarbilarda_2309",
+   "root": "sarbilarda",
+   "type": "Compound",
+   "components": [
+    "sarbi",
+    "larda"
+   ],
+   "glosses": {
+    "root": "literature"
+   },
+   "register": "everyday",
+   "domain": "Language & art",
+   "english_synonyms": [
+    "literature"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: sarbi + larda. literary = sarbilardasan (G148) Archetype: Knowledge, culture & communication. Tier 1 in the patch."
+  },
+  {
+   "id": "lx_lermitrana_2310",
+   "root": "lermitrana",
+   "type": "Compound",
+   "components": [
+    "lermi",
+    "trana"
+   ],
+   "glosses": {
+    "root": "translation",
+    "verb": "to translate"
+   },
+   "register": "everyday",
+   "domain": "Language & art",
+   "english_synonyms": [
+    "translation",
+    "to translate"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: lermi + trana. Archetype: Knowledge, culture & communication. Tier 1 in the patch."
+  },
+  {
+   "id": "lx_lermisonbu_2311",
+   "root": "lermisonbu",
+   "type": "Compound",
+   "components": [
+    "lermi",
+    "sonbu"
+   ],
+   "glosses": {
+    "root": "accent"
+   },
+   "register": "everyday",
+   "domain": "Language & art",
+   "english_synonyms": [
+    "accent"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: lermi + sonbu. Archetype: Knowledge, culture & communication. Tier 2 in the patch."
+  },
+  {
+   "id": "lx_molunole_2312",
+   "root": "molunole",
+   "type": "Compound",
+   "components": [
+    "molu",
+    "nole"
+   ],
+   "glosses": {
+    "root": "nickname; pet name"
+   },
+   "register": "everyday",
+   "domain": "Language & art",
+   "english_synonyms": [
+    "nickname",
+    "pet name"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: molu + nole. Archetype: Knowledge, culture & communication. Tier 1 in the patch."
+  },
+  {
+   "id": "lx_deyacuza_2313",
+   "root": "deyacuza",
+   "type": "Compound",
+   "components": [
+    "deya",
+    "cuza"
+   ],
+   "glosses": {
+    "root": "diary; journal"
+   },
+   "register": "everyday",
+   "domain": "Language & art",
+   "english_synonyms": [
+    "diary",
+    "journal"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: deya + cuza. Archetype: Knowledge, culture & communication. Tier 1 in the patch."
+  },
+  {
+   "id": "lx_favrodivma_2314",
+   "root": "favrodivma",
+   "type": "Compound",
+   "components": [
+    "favro",
+    "divma"
+   ],
+   "glosses": {
+    "root": "electronics"
+   },
+   "register": "everyday",
+   "domain": "Information & technology",
+   "english_synonyms": [
+    "electronics"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: favro + divma. electronic = favrodivmasan (G148) Archetype: Knowledge, culture & communication. Tier 2 in the patch."
+  },
+  {
+   "id": "lx_lardavelma_2315",
+   "root": "lardavelma",
+   "type": "Compound",
+   "components": [
+    "larda",
+    "velma"
+   ],
+   "glosses": {
+    "root": "canvas"
+   },
+   "register": "everyday",
+   "domain": "Language & art",
+   "english_synonyms": [
+    "canvas"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: larda + velma. Archetype: Knowledge, culture & communication. Tier 2 in the patch."
+  },
+  {
+   "id": "lx_lanvecuza_2316",
+   "root": "lanvecuza",
+   "type": "Compound",
+   "components": [
+    "lanve",
+    "cuza"
+   ],
+   "glosses": {
+    "root": "constitution; charter"
+   },
+   "register": "everyday",
+   "domain": "Society & governance",
+   "english_synonyms": [
+    "constitution",
+    "charter"
+   ],
+   "notes": "Added in 3.4 (changeset 2026-10-25-lexicon-3-4). Proposed in 3.4: awaiting the author's ratification. Components: lanve + cuza. Archetype: Knowledge, culture & communication. Tier 2 in the patch."
+  }
+ ],
+ "function_words": [],
+ "lexicalised_derivations": {
+  "vazrapago": "advantage; a winning position: vazra + -pago",
+  "nimupago": "residence; dwelling place: nimu + -pago",
+  "loterokezuyo": "foreigner; immigrant: loterokezu + -yo",
+  "patusabeyo": "specialist; expert: patusabe + -yo",
+  "lombiyo": "pioneer; founder: lombi + -yo",
+  "sasvaserbuyo": "refugee: sasvaserbu + -yo",
+  "talidonuyo": "employer: talidonu + -yo",
+  "veraserbuyo": "scientist: veraserbu + -yo",
+  "tisehelnayo": "surgeon: tisehelna + -yo",
+  "domlufarlayo": "architect: domlufarla + -yo",
+  "lideodonuyo": "adviser; consultant: lideodonu + -yo",
+  "lardajuseyo": "critic: lardajuse + -yo",
+  "ramuserbuyo": "historian: ramuserbu + -yo",
+  "kezuserbuyo": "explorer: kezuserbu + -yo",
+  "biolisroyo": "survivor: biolisro + -yo",
+  "cuzalordiyo": "editor: cuzalordi + -yo",
+  "lumitelneyo": "preacher: lumitelne + -yo",
+  "yalmubitiyo": "engineer; mechanic: yalmubiti + -yo"
+ },
+ "ops": [
+  {
+   "entry": "3.4:G149",
+   "op": "add_ruling",
+   "from": null,
+   "to": "Quality nouns and their adjectives",
+   "ruling": "3.4:G149",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): Quality nouns and their adjectives. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_amordalu_2224",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "amordalu",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): sex; lovemaking: amor + dalu (domain Romance).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_somusonbu_2225",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "somusonbu",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): snore: somu + sonbu (domain Health & body).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_havlihata_2226",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "havlihata",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): hiccup: havli + hata (domain Health & body).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_kaldodesi_2227",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "kaldodesi",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): addiction; a bound craving: kaldo + desi (domain Health & body).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lorenevra_2228",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "lorenevra",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): depression; a sinking of the heart: lore + nevra (domain Emotions).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_talipuku_2229",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "talipuku",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): retirement; resignation: tali + puku (domain Daily life).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_yugedoza_2230",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "yugedoza",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): fitness; bodily strength: yuge + doza (domain Health & body).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_namiduha_2231",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "namiduha",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): appetite; hunger for food: nami + duha (domain Health & body).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_simvodaigo_2232",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "simvodaigo",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): suicide: simvo + daigo (domain Health & body).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_zeldodesi_2233",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "zeldodesi",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): dislike; aversion: zeldo + desi (domain Emotions).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lorefaru_2234",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "lorefaru",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): enthusiasm; zeal: lore + faru (domain Emotions).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_loremiga_2235",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "loremiga",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): attachment; fondness: lore + miga (domain Emotions).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_mavokaldo_2236",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "mavokaldo",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): obsession: mavo + kaldo (domain Mind & philosophy).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_follufavro_2237",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "follufavro",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): alarm; a signal of fear: follu + favro (domain Emotions).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_dendufollu_2238",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "dendufollu",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): dread; deep fear: dendu + follu (domain Emotions).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_pelilavi_2239",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "pelilavi",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): amusement; fun: peli + lavi (domain Emotions).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_yugesabe_2240",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "yugesabe",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): instinct; the body's knowing: yuge + sabe (domain Mind & philosophy).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_devodoza_2241",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "devodoza",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): conviction; firm belief: devo + doza (domain Mind & philosophy).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_yanolore_2242",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "yanolore",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): solidarity; one heart among many: yano + lore (domain Emotions).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_verasirmo_2243",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "verasirmo",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): credibility; a reputation for truth: vera + sirmo (domain Mind & philosophy).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_resovarde_2244",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "resovarde",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): absurdity; a thing worthy of laughter: reso + varde (domain Qualities).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_regnajuba_2245",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "regnajuba",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): privilege (a sovereign's gift): regna + juba (domain Society).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_ruhemambi_2246",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "ruhemambi",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): crisis; a stormy moment: ruhe + mambi (domain Abstract).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_vemibako_2247",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "vemibako",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): disaster; catastrophe: vemi + bako (domain Abstract).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_dozaserbu_2248",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "dozaserbu",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): challenge; a test of strength: doza + serbu (domain Abstract).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_vazraserbu_2249",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "vazraserbu",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): competition; contest: vazra + serbu (domain Abstract).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_dozaseno_2250",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "dozaseno",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): emphasis: doza + seno (domain Speech & mind).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_yanoyeba_2251",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "yanoyeba",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): consensus; general agreement: yano + yeba (domain Society).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_yanopalvi_2252",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "yanopalvi",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): inclusion: yano + palvi (domain Abstract).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_sambapatu_2253",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "sambapatu",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): similarity; likeness: samba + patu (domain Abstract).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lisrodoza_2254",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "lisrodoza",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): stability; steadiness: lisro + doza (domain Abstract).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lordidoza_2255",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "lordidoza",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): strictness; rigor: lordi + doza (domain Abstract).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_tibilekta_2256",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "tibilekta",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): complexity; tangle: tibi + lekta (domain Abstract).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_mellipatu_2257",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "mellipatu",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): majority; the greater part: melli + patu (domain Abstract).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_ramulordi_2258",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "ramulordi",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): tradition: ramu + lordi (domain Society).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_vilalordi_2259",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "vilalordi",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): custom; local ways: vila + lordi (domain Society).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_gudolordi_2260",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "gudolordi",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): norm; standard practice: gudo + lordi (domain Society).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_rinbapago_2261",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "rinbapago",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): environment; surroundings: rinba + pago (domain Nature & geography).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_nemetelne_2262",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "nemetelne",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): tragedy: neme + telne (domain Language & art).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_bakolarbo_2263",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "bakolarbo",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): stump (a broken tree): bako + larbo (domain Nature & geography).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lukayano_2264",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "lukayano",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): coincidence; luck meeting luck: luka + yano (domain Abstract).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_benakerso_2265",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "benakerso",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): improvement: bena + kerso (domain Abstract).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_tikutrana_2266",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "tikutrana",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): adjustment: tiku + trana (domain Abstract).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_relsidemro_2267",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "relsidemro",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): reaction; response: relsi + demro (domain Abstract).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_nululordi_2268",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "nululordi",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): method; procedure: nulu + lordi (domain Abstract).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_vazranulu_2269",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "vazranulu",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): strategy; a path to victory: vazra + nulu (domain Abstract).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_manlisabe_2270",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "manlisabe",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): technique; skill of the hand: manli + sabe (domain Abstract).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lanvenulu_2271",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "lanvenulu",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): policy: lanve + nulu (domain Society & governance).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_fasbipatu_2272",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "fasbipatu",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): aspect; facet: fasbi + patu (domain Abstract).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_simvopatu_2273",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "simvopatu",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): feature; characteristic: simvo + patu (domain Abstract).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_musvajomru_2274",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "musvajomru",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): mission; an errand of duty: musva + jomru (domain Society).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_pebupatu_2275",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "pebupatu",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): bottom; base; foot (of a thing): pebu + patu (domain Space & orientation).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_rillidonu_2276",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "rillidonu",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): exchange; trade: rilli + donu (domain Commerce & obligation).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_buzarilli_2277",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "buzarilli",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): absorption: buza + rilli (domain Actions & physical processes).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_navulalfo_2278",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "navulalfo",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): levitation: navu + lalfo (domain Fantasy).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_loteropalvi_2279",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "loteropalvi",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): replacement: lotero + palvi (domain Actions & physical processes).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_pidihata_2280",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "pidihata",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): a piercing; a stab: pidi + hata (domain Movement & action).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_farubako_2281",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "farubako",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): explosion: faru + bako (domain Actions & physical processes).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_larnelaso_2282",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "larnelaso",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): a sulk; angry silence: larne + laso (domain Emotions).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_samnibako_2283",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "samnibako",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): hatching: samni + bako (domain Actions & physical processes).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_dozalumra_2284",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "dozalumra",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): a heave: doza + lumra (domain Movement & action).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_germaserbu_2285",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "germaserbu",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): mining: germa + serbu (domain Everyday objects & work).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_mirumomvi_2286",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "mirumomvi",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): dissolving: miru + momvi (domain Actions & physical processes).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_miruvaye_0410",
+   "op": "lexicalise_from_pattern",
+   "from": "miruvaye",
+   "to": "miruvaye",
+   "ruling": "2.0:G40",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): miruvaye, an attested image compound of 3.3 (\"water-clear wind; air moving with the character of water\"), lexicalised as a headword. The patch lists it as new; it keeps its 3.3 id. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_miruvaye_0410",
+   "op": "edit_gloss",
+   "slot": "root",
+   "archive": true,
+   "from": "water-clear wind; air moving with the character of water",
+   "to": "evaporation",
+   "ruling": "0.8:R2",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): miruvaye, \"evaporation\". Its 3.3 reading \"water-clear wind; air moving with the character of water\" is archived. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_miruvaye_0410",
+   "op": "activate_slot",
+   "slot": "verb",
+   "from": "— (unused)",
+   "to": "to evaporate",
+   "ruling": "0.8:R2",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): miruvayema, \"to evaporate\". Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_miruvaye_0410",
+   "op": "edit_metadata",
+   "field": "domain",
+   "from": "Wind",
+   "to": "Actions & physical processes",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): miruvaye moves to the domain Actions & physical processes.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_mellikerso_2287",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "mellikerso",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): expansion: melli + kerso (domain Actions & physical processes).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_cunukerso_2288",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "cunukerso",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): multiplication: cunu + kerso (domain Time, quantity & work).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_sambavimo_2289",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "sambavimo",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): comparison: samba + vimo (domain Abstract).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_zivuseno_2290",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "zivuseno",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): insult: zivu + seno (domain Speech & mind).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lideomasu_2291",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "lideomasu",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): consultation: lideo + masu (domain Speech & mind).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_loterokezu_2292",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "loterokezu",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): foreign land; abroad: lotero + kezu (domain Society).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_patusabe_2293",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "patusabe",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): specialty; specialized knowledge: patu + sabe (domain Mind & philosophy).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lideolekta_2294",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "lideolekta",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): council; a gathering for counsel: lideo + lekta (domain Society & governance).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lanvelekta_2295",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "lanvelekta",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): parliament; senate; congress: lanve + lekta (domain Society & governance).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_sasvaserbu_2296",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "sasvaserbu",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): seeking refuge; asylum: sasva + serbu (domain Society).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_sovenela_2297",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "sovenela",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): civilian; a person of peace: sove + nela (domain Society).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_tisehelna_2298",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "tisehelna",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): surgery: tise + helna (domain Health & body).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_domlufarla_2299",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "domlufarla",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): architecture; house-making: domlu + farla (domain Everyday objects & work).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lardajuse_2300",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "lardajuse",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): criticism; critique: larda + juse (domain Language & art).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_ramuserbu_2301",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "ramuserbu",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): history (as a study): ramu + serbu (domain Language & art).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_kezuserbu_2302",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "kezuserbu",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): exploration: kezu + serbu (domain Travel & war).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_cuzalordi_2303",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "cuzalordi",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): editing: cuza + lordi (domain Language & art).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_kaldovila_2304",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "kaldovila",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): ghetto; a confined quarter: kaldo + vila (domain Society).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_nelaramu_2305",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "nelaramu",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): culture; a people's memory: nela + ramu (domain Society).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_conodivma_2306",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "conodivma",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): economy: cono + divma (domain Commerce & obligation).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lektalordi_2307",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "lektalordi",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): politics: lekta + lordi (domain Society & governance).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_nelaregna_2308",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "nelaregna",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): democracy; rule by the people: nela + regna (domain Society & governance).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_sarbilarda_2309",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "sarbilarda",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): literature: sarbi + larda (domain Language & art).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lermitrana_2310",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "lermitrana",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): translation: lermi + trana (domain Language & art).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lermisonbu_2311",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "lermisonbu",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): accent: lermi + sonbu (domain Language & art).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_molunole_2312",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "molunole",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): nickname; pet name: molu + nole (domain Language & art).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_deyacuza_2313",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "deyacuza",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): diary; journal: deya + cuza (domain Language & art).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_favrodivma_2314",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "favrodivma",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): electronics: favro + divma (domain Information & technology).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lardavelma_2315",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "lardavelma",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): canvas: larda + velma (domain Language & art).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lanvecuza_2316",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "lanvecuza",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): constitution; charter: lanve + cuza (domain Society & governance).",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_nimumolu_2105",
+   "op": "activate_slot",
+   "slot": "negativeAdjective",
+   "from": "— (unused)",
+   "to": "uncomfortable",
+   "ruling": "0.8:R2",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): nimumolunasan, \"uncomfortable\", restored on nimumolu. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "derivation:lx_vazra_0967:-pago",
+   "op": "add_derivation",
+   "from": null,
+   "to": "vazrapago",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): vazrapago, \"advantage; a winning position\", listed. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "derivation:lx_nimu_0526:-pago",
+   "op": "add_derivation",
+   "from": null,
+   "to": "nimupago",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): nimupago, \"residence; dwelling place\", listed. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "derivation:lx_loterokezu_2292:-yo",
+   "op": "add_derivation",
+   "from": null,
+   "to": "loterokezuyo",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): loterokezuyo, \"foreigner; immigrant\", listed. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "derivation:lx_patusabe_2293:-yo",
+   "op": "add_derivation",
+   "from": null,
+   "to": "patusabeyo",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): patusabeyo, \"specialist; expert\", listed. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "derivation:lx_lombi_0282:-yo",
+   "op": "add_derivation",
+   "from": null,
+   "to": "lombiyo",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): lombiyo, \"pioneer; founder\", listed. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "derivation:lx_sasvaserbu_2296:-yo",
+   "op": "add_derivation",
+   "from": null,
+   "to": "sasvaserbuyo",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): sasvaserbuyo, \"refugee\", listed. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "derivation:lx_talidonu_0900:-yo",
+   "op": "add_derivation",
+   "from": null,
+   "to": "talidonuyo",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): talidonuyo, \"employer\", listed. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "derivation:lx_veraserbu_1272:-yo",
+   "op": "add_derivation",
+   "from": null,
+   "to": "veraserbuyo",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): veraserbuyo, \"scientist\", listed. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "derivation:lx_tisehelna_2298:-yo",
+   "op": "add_derivation",
+   "from": null,
+   "to": "tisehelnayo",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): tisehelnayo, \"surgeon\", listed. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "derivation:lx_domlufarla_2299:-yo",
+   "op": "add_derivation",
+   "from": null,
+   "to": "domlufarlayo",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): domlufarlayo, \"architect\", listed. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "derivation:lx_lideodonu_0268:-yo",
+   "op": "add_derivation",
+   "from": null,
+   "to": "lideodonuyo",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): lideodonuyo, \"adviser; consultant\", listed. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "derivation:lx_lardajuse_2300:-yo",
+   "op": "add_derivation",
+   "from": null,
+   "to": "lardajuseyo",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): lardajuseyo, \"critic\", listed. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "derivation:lx_ramuserbu_2301:-yo",
+   "op": "add_derivation",
+   "from": null,
+   "to": "ramuserbuyo",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): ramuserbuyo, \"historian\", listed. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "derivation:lx_kezuserbu_2302:-yo",
+   "op": "add_derivation",
+   "from": null,
+   "to": "kezuserbuyo",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): kezuserbuyo, \"explorer\", listed. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "derivation:lx_biolisro_0035:-yo",
+   "op": "add_derivation",
+   "from": null,
+   "to": "biolisroyo",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): biolisroyo, \"survivor\", listed. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "derivation:lx_cuzalordi_2303:-yo",
+   "op": "add_derivation",
+   "from": null,
+   "to": "cuzalordiyo",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): cuzalordiyo, \"editor\", listed. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "derivation:lx_lumitelne_1574:-yo",
+   "op": "add_derivation",
+   "from": null,
+   "to": "lumitelneyo",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): lumitelneyo, \"preacher\", listed. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "derivation:lx_yalmubiti_2131:-yo",
+   "op": "add_derivation",
+   "from": null,
+   "to": "yalmubitiyo",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): yalmubitiyo, \"engineer; mechanic\", listed. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:morphology.lexicalised_diminutives.somuti",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"doze; nap: somu + -ti\"",
+   "ruling": "2.5:G122",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): somuti, \"doze; nap\", a lexicalised diminutive. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:morphology.lexicalised_diminutives.larneti",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"annoyance; irritation: larne + -ti\"",
+   "ruling": "2.5:G122",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): larneti, \"annoyance; irritation\", a lexicalised diminutive. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:morphology.lexicalised_diminutives.lektati",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"committee: lekta + -ti\"",
+   "ruling": "2.5:G122",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): lektati, \"committee\", a lexicalised diminutive. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.timruta",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"to cry; to weep\"",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): timruta is findable as \"to cry; to weep\". An English name only; the word does not change. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.mudu",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"disease\"",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): mudu is findable as \"disease\". An English name only; the word does not change. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.lavina",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"misery\"",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): lavina is findable as \"misery\". An English name only; the word does not change. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.felrana",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"grief; bereavement\"",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): felrana is findable as \"grief; bereavement\". An English name only; the word does not change. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.daigo",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"mortality\"",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): daigo is findable as \"mortality\". An English name only; the word does not change. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.milnona",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"boredom\"",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): milnona is findable as \"boredom\". An English name only; the word does not change. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.cerena",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"bewilderment\"",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): cerena is findable as \"bewilderment\". An English name only; the word does not change. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.talina",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"laziness\"",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): talina is findable as \"laziness\". An English name only; the word does not change. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.devo",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"loyalty\"",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): devo is findable as \"loyalty\". An English name only; the word does not change. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.tevulunasan",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"loyal\"",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): tevulunasan is findable as \"loyal\". An English name only; the word does not change. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.visma",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"perception\"",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): visma is findable as \"perception\". An English name only; the word does not change. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.zeldona",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"tolerance\"",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): zeldona is findable as \"tolerance\". An English name only; the word does not change. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.nenga",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"caution\"",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): nenga is findable as \"caution\". An English name only; the word does not change. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.loredonu",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"commitment; dedication\"",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): loredonu is findable as \"commitment; dedication\". An English name only; the word does not change. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.ramuduha",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"nostalgia\"",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): ramuduha is findable as \"nostalgia\". An English name only; the word does not change. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.simvolivna",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"independence\"",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): simvolivna is findable as \"independence\". An English name only; the word does not change. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.biokerso",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"prosperity\"",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): biokerso is findable as \"prosperity\". An English name only; the word does not change. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.miga",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"relationship\"",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): miga is findable as \"relationship\". An English name only; the word does not change. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.divmabiti",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"mechanism\"",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): divmabiti is findable as \"mechanism\". An English name only; the word does not change. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.nimumolu",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"convenience\"",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): nimumolu is findable as \"convenience\". An English name only; the word does not change. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.kezupatu",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"region; district\"",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): kezupatu is findable as \"region; district\". An English name only; the word does not change. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.kezu",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"territory\"",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): kezu is findable as \"territory\". An English name only; the word does not change. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.lideodonu",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"proposal\"",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): lideodonu is findable as \"proposal\". An English name only; the word does not change. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.lemudonu",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"education\"",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): lemudonu is findable as \"education\". An English name only; the word does not change. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.sernayo",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"journalist\"",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): sernayo is findable as \"journalist\". An English name only; the word does not change. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.tranasovlata",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"to transform\"",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): tranasovlata is findable as \"to transform\". An English name only; the word does not change. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.verasudeva",
+   "op": "edit_value",
+   "from": "\"to check; to verify\"",
+   "to": "\"to check; to verify; to justify\"",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): verasudeva is findable as \"to justify\". An English name only; the word does not change. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.cunuca",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"to calculate\"",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): cunuca is findable as \"to calculate\". An English name only; the word does not change. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.jubaja",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"to donate\"",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): jubaja is findable as \"to donate\". An English name only; the word does not change. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.navdinia",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"to locate\"",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): navdinia is findable as \"to locate\". An English name only; the word does not change. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.moludaluma",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"to caress\"",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): moludaluma is findable as \"to caress\". An English name only; the word does not change. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.bakoba",
+   "op": "edit_value",
+   "from": "\"to shatter\"",
+   "to": "\"to shatter; to wreck\"",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): bakoba is findable as \"to wreck\". An English name only; the word does not change. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.sudeseno",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"proclamation\"",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): sudeseno is findable as \"proclamation\". An English name only; the word does not change. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.cerenasan",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"ambiguous; vague\"",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): cerenasan is findable as \"ambiguous; vague\". An English name only; the word does not change. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.sirmosan",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"popular\"",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): sirmosan is findable as \"popular\". An English name only; the word does not change. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.verasan",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"actual; realistic; valid\"",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): verasan is findable as \"actual; realistic; valid\". An English name only; the word does not change. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.mellisan",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"massive\"",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): mellisan is findable as \"massive\". An English name only; the word does not change. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.lanvenasan",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"illegal\"",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): lanvenasan is findable as \"illegal\". An English name only; the word does not change. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.lanvesan",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"legal\"",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): lanvesan is findable as \"legal\". An English name only; the word does not change. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.vilasan",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"rural\"",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): vilasan is findable as \"rural\". An English name only; the word does not change. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.lumisan",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"brilliant\"",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): lumisan is findable as \"brilliant\". An English name only; the word does not change. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.vanisan",
+   "op": "edit_value",
+   "from": "\"lovely\"",
+   "to": "\"lovely; attractive\"",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): vanisan is findable as \"attractive\". An English name only; the word does not change. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.ranfasan",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"logical\"",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): ranfasan is findable as \"logical\". An English name only; the word does not change. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.ralkasan",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"aggressive\"",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): ralkasan is findable as \"aggressive\". An English name only; the word does not change. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.tozesan",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"toxic\"",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): tozesan is findable as \"toxic\". An English name only; the word does not change. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.sasvanasan",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"vulnerable\"",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): sasvanasan is findable as \"vulnerable\". An English name only; the word does not change. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.helnasan",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"medical\"",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): helnasan is findable as \"medical\". An English name only; the word does not change. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.pukusan",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"effective\"",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): pukusan is findable as \"effective\". An English name only; the word does not change. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.corvinasan",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"a coward (li corvinasan)\"",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): corvinasan is findable as \"a coward (li corvinasan)\". An English name only; the word does not change. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.veranasan",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"a liar (li veranasan)\"",
+   "reason": "Liraasa 3.4 patch (Abstraction and the human condition): veranasan is findable as \"a liar (li veranasan)\". An English name only; the word does not change. Proposed in 3.4: awaiting the author's ratification.",
+   "addedIn": "3.4",
+   "at": "2026-10-25T20:00:00Z",
+   "author": "nicolas"
+  }
+ ]
+}
