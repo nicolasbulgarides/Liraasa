@@ -1,6 +1,17 @@
-# Liraasa 3.3 Reference Grammar: every ruling
+# Liraasa 3.4 Reference Grammar: every ruling
 
-Verbatim from the Liraasa 3.3 lexicon, newest edition first. Ruling ids are edition-qualified: 0.8:G7 and 1.0:G7 are different rulings.
+Verbatim from the Liraasa 3.4 lexicon, newest edition first. Ruling ids are edition-qualified: 0.8:G7 and 1.0:G7 are different rulings.
+
+## Rulings 3.4
+
+### 3.4:G149: Quality nouns and their adjectives
+
+For a compound X whose adjective is available under 3.3:G148, the bare compound names the quality and X-san describes what has it: tibilekta complexity, tibilektasan complex; lordidoza strictness, lordidozasan strict. A person defined by a quality is li + the adjective (1.2:G29): li corvinasan, the coward. No -ness or -ity suffix is needed or created.
+
+Refines 3.3:G148, 1.2:G29.
+
+- *tibilekta · tibilektasan* — complexity · complex
+- *Li lordidozasan lemudonuyo po ne merama li linu.* — The strict teacher did not forgive the child.
 
 ## Rulings 3.3
 
@@ -56,7 +67,7 @@ A copied place name (2.0:G45) + -san is an adjective of origin: Fransa + -san = 
 Refines 2.0:G45.
 
 - *Fransasan lira* — a French song
-- *Peta da Amerika* — Peta from America
+- *li lira de Amerika* — Peta from America
 
 ## Rulings 3.0
 
