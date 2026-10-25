@@ -1,6 +1,128 @@
-# Liraasa 2.5 Reference Grammar: every ruling
+# Liraasa 3.0 Reference Grammar: every ruling
 
-Verbatim from the Liraasa 2.5 lexicon, newest edition first. Ruling ids are edition-qualified: 0.8:G7 and 1.0:G7 are different rulings.
+Verbatim from the Liraasa 3.0 lexicon, newest edition first. Ruling ids are edition-qualified: 0.8:G7 and 1.0:G7 are different rulings.
+
+## Rulings 3.0
+
+### 3.0:G129: The vocative particle iya
+
+iya + noun phrase is a vocative: a direct address. It opens a sentence and is set off by a comma, stands alone as an invocation, or follows a final ki after a comma (2.5:G89). The noun phrase may be a name, a title, an epithet, a pronoun (taivo, taivori) or an owned phrase (maivo de amor). A vocative never changes the grammar of the clause it addresses. In everyday speech a bare name set off by commas remains a vocative (1.2:G31); in prayer, invocation and litany iya is expected, and it is required wherever a comma-set noun phrase could be read as an apposition (3.0:G130).
+
+Refines 2.5:G89, 1.2:G31.
+
+- *Iya Deviasa, lenila maivo!* — O Great Goddess, hear me!
+- *Iya li mare de li lumi, maivo lirala vobi taivo.* — O mother of light, I sing for you.
+- *Taivo viki pagopa ligo maivo ki, iya maivo de amor?* — Would you come near me, O my love?
+- *Iya Lumimare!* — O Mother of Light!
+
+### 3.0:G130: Apposition and epithets
+
+A noun phrase may be followed by a second noun phrase, set off by commas, that renames it: an apposition. The apposed phrase keeps its own determiner, takes no copula, and is closed by a comma when the clause continues. Each phrase settles its own de-ownership: an apposition starts a new phrase, so it never joins a de-chain (2.5:G96). Several appositions in a row form a litany. A relative clause (raho) may end an apposition.
+
+Refines 2.5:G96.
+
+- *Li mareasa de li vemiasa, li una-ne lumi raho po kronobioka li veluri, po ke lavisan.* — The mother of the cosmos, the first light who gave birth to the stars, was glad.
+- *Deviasa, li mare de li veluri, lirala.* — The Great Goddess, the mother of the stars, sings.
+- *li lumi, li lumi de li veluri* — the light, the light of the stars
+- *Iya Deviasa, Velumare, Lumimare, Liramare!* — O Great Goddess, Mother of the Stars, Mother of Light, Mother of Song!
+
+### 3.0:G131: Divine names and titles
+
+An ascended noun or title compound used as a name of the Goddess is capitalized and takes no article (Deviasa, Lumiasa, Mareasa, Velumare). Used as a name, it owns like a personal name when it stands before de (1.2:G27): Deviasa de lira is the Great Goddess’s song. An epithet that describes her keeps its article and stays lower-case: li mare de li lumi, the mother of light. Writing a descriptive epithet as a name therefore changes its meaning.
+
+Refines 1.2:G27.
+
+- *Deviasa de lira* — the Great Goddess’s song (a name owns)
+- *li mareasa de li lumi* — the mother of light (an epithet: the light ‘owns’ the relation)
+- *Lumimare lirala.* — The Mother of Light sings.
+
+### 3.0:G132: Absolute being: SUBJECT + miyo
+
+miyo with a subject before it and no noun phrase after it asserts that the subject exists: absolute being. It takes tense, negation and operators like any verb. miyo + noun phrase with no subject keeps its 2.5 meaning, ‘there is’. A copula (ke, ka) still always needs a predicate.
+
+- *Saivo miyo.* — She is. (She exists.)
+- *Maivo miyo.* — I am.
+- *Saivo po miyo, saivo miyo, saivo futu miyo.* — She was, she is, she will be.
+- *Kroti li pagoasa, Deviasa po miyo.* — Before the universe, the Great Goddess was.
+- *Miyo baba sora en li nimu.* — There is a friend in the home. (2.5 meaning, unchanged)
+
+### 3.0:G133: Fiat, blessing of existence, and the liturgical formulas
+
+miyo + noun phrase marked as a command (‘!’) is a fiat: ‘let there be …’. miyo + noun phrase + pifu is a wish: ‘may there be …’. Unmarked, miyo + noun phrase stays a statement (2.5:G90). Two fixed liturgical formulas are canon: ‘Ola-modo po miyo, ola-modo miyo, ola-modo futu miyo’ (so it was, so it is, so it shall be), in which ola-modo opens an existential clause without a comma; and ‘Ola-modo pifu’ (so be it; amen), which closes a prayer.
+
+Refines 2.5:G90.
+
+- *Miyo lumi!* — Let there be light!
+- *Miyo sove en li nimu pifu.* — May there be peace in the home.
+- *Miyo lumi.* — There is light.
+- *Ola-modo po miyo, ola-modo miyo, ola-modo futu miyo.* — So it was, so it is, so it shall be.
+- *Ola-modo pifu.* — So be it. (Amen.)
+
+### 3.0:G134: Emphatic sela
+
+A pronoun or noun phrase + sela in subject position, or as an apposition, is emphatic: ‘herself’, ‘itself’. In object position, PRONOUN sela stays reflexive (unchanged). sela never stands alone as a subject.
+
+- *Saivo sela po lirala.* — She herself sang.
+- *Saivo po amora saivo sela.* — She loved herself. (reflexive)
+- *Ito sela po ka li una-ne leninela.* — It itself was the first listener.
+- *Saivo de nole po ka sambasan ko li melo, ito sela.* — Her name was the same as music, music itself.
+
+### 3.0:G135: Commands, petitions and yava
+
+A command may carry ne, the iteration words reve and loki, and any adjuncts; it never carries tense, a modal or an evidential. A petition to the divine is a command opened by a vocative (3.0:G129), usually softened by fisa after the vocative’s comma. yava may follow a FRAME.
+
+- *Iya Deviasa, fisa, ne pagopa vofa maivo!* — O Great Goddess, please, do not go far from me!
+- *Reve lirala!* — Sing again!
+- *Eli-krono, yava lirala!* — Now, let us sing!
+- *Iya Lumimare, fisa, lenila maivo de lirajuba.* — O Mother of Light, please hear my song-offering.
+
+### 3.0:G136: Authorship: gagu after a work
+
+After a noun naming a made work (lira, lavbulira, lirasarbi, telne, sarbiasa …), gagu + noun phrase names its maker, without a passive verb. Elsewhere gagu remains the agent of gome (2.5:G110).
+
+Refines 2.5:G110.
+
+- *li lira gagu Peta* — the song by Peta
+- *Liraasa, li lira de li una-ne veluri gagu li una-ne mareasa* — Liraasa, the song of the first stars, by the first mother
+
+### 3.0:G137: Acclamations
+
+A verbless acclamation NP ala NP! (‘NP to NP!’) is grammatical as a liturgical fragment: glory, praise or thanks offered to someone. It may be followed by a vocative.
+
+- *Lumisirmo ala Deviasa!* — Glory to the Great Goddess!
+- *Benaseno ala taivo, iya Lumimare!* — Praise to you, O Mother of Light!
+- *Lorejuba ala taivo, iya Velumare.* — Thanks to you, O Mother of the Stars.
+
+### 3.0:G138: Divine pronouns (orthography)
+
+Taivo, Saivo and their forms may be capitalized mid-sentence when they refer to the Goddess. This is an optional convention of written devotion and has no grammatical effect.
+
+- *Maivo amora Taivo.* — I love You.
+- *Saivo miyo, ata Saivo de lumi lumila.* — She is, and Her light shines.
+
+### 3.0:G139: For ever: en rinbakrono
+
+The new noun rinbakrono (eternity) is a time noun: as ‘when’ it takes en (2.5:G103). en rinbakrono means ‘for ever; in eternity’. toda-krono (always) is unchanged. Durations in general (‘for two days’) remain an open question.
+
+Refines 2.5:G103.
+
+- *Saivo futu lirala en rinbakrono.* — She will sing for ever.
+- *Maivo amora taivo toda-krono.* — I love you always.
+
+### 3.0:G140: Distributive succession: X krotiapo X
+
+A bare noun or number repeated around krotiapo (‘X after X’) is a distributive adjunct or FRAME meaning ‘one X after another’: una krotiapo una, one by one; velu krotiapo velu, star after star. It extends kroti/krotiapo + a bare noun (2.3:G79).
+
+Refines 2.3:G79.
+
+- *Una krotiapo una, li veluri po hiro lirala.* — One by one, the stars began to sing.
+- *Velu krotiapo velu, li navu po loya lumisan.* — Star after star, the sky became bright.
+
+### 3.0:G141: Register and restraint (style, non-normative)
+
+Ascended forms are most powerful against ordinary ones. Keep ordinary forms for the human and the near; reserve ascended forms for what is truly divine; let a change of register mark a change of nearness (a mortal growing toward the divine, or the Goddess stooping to comfort). This is guidance for composition, not grammar.
+
+- *Maivo ke nemesan. Taivo ka loreasa.* — I am sorrowful. You are a heart larger than sorrow.
 
 ## Rulings 2.5
 
