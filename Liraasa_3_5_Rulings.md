@@ -19,6 +19,14 @@ Refines 2.0:G45.
 
 - *pitsa · hamburga* — pizza · hamburger
 
+### 3.5:G152: maivori: we, with or without the listener
+
+maivori is the first person plural, we. Whether it includes the listener (you and I) or not (they and I) is left to the context: Liraasa has no separate inclusive and exclusive forms. Where the difference matters, name who is meant: maivo ata taivo, you and I; maivori ata taivo, we and you.
+
+- *Maivori lirala.* — We sing (with or without you, as the context shows).
+- *Maivo ata taivo lirala.* — You and I sing.
+- *Maivori ata taivo futu pagopa.* — We and you will go.
+
 ## Rulings 3.4
 
 ### 3.4:G149: Quality nouns and their adjectives
@@ -84,7 +92,7 @@ A copied place name (2.0:G45) + -san is an adjective of origin: Fransa + -san = 
 Refines 2.0:G45.
 
 - *Fransasan lira* — a French song
-- *li lira de Amerika* — Peta from America
+- *li lira de Amerika* — a song from America
 
 ## Rulings 3.0
 
