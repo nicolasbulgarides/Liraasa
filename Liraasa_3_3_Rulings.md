@@ -1,6 +1,62 @@
-# Liraasa 3.1 Reference Grammar: every ruling
+# Liraasa 3.3 Reference Grammar: every ruling
 
-Verbatim from the Liraasa 3.1 lexicon, newest edition first. Ruling ids are edition-qualified: 0.8:G7 and 1.0:G7 are different rulings.
+Verbatim from the Liraasa 3.3 lexicon, newest edition first. Ruling ids are edition-qualified: 0.8:G7 and 1.0:G7 are different rulings.
+
+## Rulings 3.3
+
+### 3.3:G148: Relational adjectives from compounds and derivations
+
+The adjective slot (-san) of any compound, listed derivation or image compound is available by rule, with the reading 'of, relating to, or marked by X', unless the lexicon lists another meaning for it. For roots, only listed forms exist (unchanged). This supplies English relational adjectives (theological, railway, comic, muddy, distant) without listing each one.
+
+- *deviserbusan · kadulendasan · resotelnesan* — theological · railway (adj) · comic
+- *Li cilni ka pagolalnisan.* — The city is distant.
+
+## Rulings 3.2
+
+### 3.2:G142: Archetype compounds
+
+A small set of archetype modifiers combines with archetype heads to name kinds of a thing. Modifiers: gudo (common, ordinary), zile (fine, fancy), farvi (wild), yalmu (powered), krono (aged), and any time or place noun. Heads: pocu (fowl), kadu (vehicle), kaze (gun), velma (clothing), nami (food), miru (infused drink), favro (signal device), bujo (joint), nela (person). A pair is read 'the MODIFIER sort of HEAD', but its listed meaning is binding and specific: gudopocu is chicken, not any common bird. Unlisted pairs may be coined by rule and must be flagged until listed. -vu (big) and -ti (small) apply as usual: pocuvu turkey, pocuti chick.
+
+- *gudopocu · zilepocu · farvipocu* — chicken · duck · game bird
+- *gudokadu · zilekadu · yalmukadu* — wagon · carriage · car
+- *gudovelma · zilevelma* — work clothes · gown
+
+### 3.2:G143: An animal names its meat
+
+In eating and cooking, an animal noun also names its meat, as English chicken and fish do: sapusia gudopocu, to eat chicken. yugenami (meat) remains the general word; X de yugenami is never needed.
+
+- *Maivo sapusia gubu.* — I eat pork.
+- *Li murmu ka sumasan.* — The beef is warm.
+
+### 3.2:G144: Body units and the league
+
+Body-part nouns double as units of length when they follow a number: pebu (a foot), fini (a finger-width, roughly an inch), varo (an arm-length, roughly a yard). valmilornu (an hour's walk) is the long unit. cono (coin) is the generic money unit.
+
+- *dossa pebu* — two feet
+- *tressa valmilornu* — three leagues
+
+### 3.2:G145: Honorific titles
+
+zilenela placed directly before a name, with no comma, is an honorific title: Mr, Mrs, Ms. As a vocative, iya zilenela is sir or madam. A kinship or rank word may stand before a name the same way (pilo Peta, Father Peta).
+
+- *zilenela Peta* — Mr Peta
+- *Iya zilenela, fisa, lisrola.* — Please stay, sir.
+
+### 3.2:G146: Food and object archetypes
+
+Further archetype heads under 3.2:G142: furo (fruit; a colour base names the fruit: rubifuro apple, aurumifuro lemon, viofuroti grape), herba (plant, vegetable), marna (grain), pusa (powder), nami (dish), kova (container), biti (tool), velma (garment), rinba (ring, jewelry), zupa (room), domlu (building). Listed meanings are binding; unlisted pairs are flagged.
+
+- *rubifuro · aurumifuro · ojofuro* — apple · lemon · orange
+- *seldirinba · yedirinba · felberinba* — necklace · bracelet · earring
+
+### 3.2:G147: Nationality adjectives
+
+A copied place name (2.0:G45) + -san is an adjective of origin: Fransa + -san = Fransasan, French. The bare name stays a noun; de + the name means from the place.
+
+Refines 2.0:G45.
+
+- *Fransasan lira* — a French song
+- *Peta da Amerika* — Peta from America
 
 ## Rulings 3.0
 
