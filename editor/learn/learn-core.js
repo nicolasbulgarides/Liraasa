@@ -1327,7 +1327,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       formNotes
     };
   }
-  function headwordItem(h, indexes, edition, gaps, colourIds = /* @__PURE__ */ new Map()) {
+  function headwordItem(h, indexes, edition, gaps, colourIds = /* @__PURE__ */ new Map(), timeIds = /* @__PURE__ */ new Map()) {
     const forms = FORM_SLOTS.map((slot) => ({
       slot,
       form: h.forms[slot],
@@ -1346,7 +1346,8 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     let components = null;
     if (h.components !== null) {
       const ids = h.components.map(
-        (c, i) => indexes.headwordBySpelling.get(c)?.id ?? (i === 0 ? colourIds.get(c) : void 0)
+        // a time noun may also be the head (3.5): felra + deya
+        (c, i) => indexes.headwordBySpelling.get(c)?.id ?? (i === 0 ? colourIds.get(c) : timeIds.get(c))
       );
       const [modifier, head] = ids;
       if (modifier !== void 0 && head !== void 0) {
@@ -1494,15 +1495,16 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     );
     const context = { indexes, numbers, names, motionPrefixes };
     const items = /* @__PURE__ */ new Map();
+    const timeIds = new Map(lexicon.timeWords.map((t) => [t.form, t.id]));
     const colourIds = new Map([
       ...lexicon.timeWords.map((t) => [t.form, t.id]),
       ...lexicon.colors.map((c) => [c.base, c.id])
     ]);
     for (const h of lexicon.headwords)
-      items.set(h.id, headwordItem(h, indexes, edition, gaps, colourIds));
+      items.set(h.id, headwordItem(h, indexes, edition, gaps, colourIds, timeIds));
     for (const h of lexicon.imageCompounds?.attested ?? []) {
       items.set(h.id, {
-        ...headwordItem(h, indexes, edition, gaps, colourIds),
+        ...headwordItem(h, indexes, edition, gaps, colourIds, timeIds),
         kind: "imageCompound"
       });
     }

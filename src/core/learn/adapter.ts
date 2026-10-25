@@ -73,6 +73,7 @@ function headwordItem(
   edition: string,
   gaps: Gap[],
   colourIds: ReadonlyMap<string, EntryId> = new Map(),
+  timeIds: ReadonlyMap<string, EntryId> = new Map(),
 ): LearnItem {
   const forms = FORM_SLOTS.map((slot) => ({
     slot,
@@ -96,7 +97,9 @@ function headwordItem(
   if (h.components !== null) {
     // the modifier may be a colour base (2.0:G38) or a time noun (3.2:G142): it links to that entry
     const ids = h.components.map(
-      (c, i) => indexes.headwordBySpelling.get(c)?.id ?? (i === 0 ? colourIds.get(c) : undefined),
+      // a time noun may also be the head (3.5): felra + deya
+      (c, i) =>
+        indexes.headwordBySpelling.get(c)?.id ?? (i === 0 ? colourIds.get(c) : timeIds.get(c)),
     );
     const [modifier, head] = ids;
     if (modifier !== undefined && head !== undefined) {
@@ -265,16 +268,17 @@ export function buildLearnSource(input: LearnInput): LearnSource {
   /* items */
   const items = new Map<EntryId, LearnItem>();
   // a compound's modifier that is not a headword: a colour base (2.0:G38) or a time noun (3.2:G142)
+  const timeIds = new Map(lexicon.timeWords.map((t) => [t.form, t.id] as const));
   const colourIds = new Map([
     ...lexicon.timeWords.map((t) => [t.form, t.id] as const),
     ...lexicon.colors.map((c) => [c.base, c.id] as const),
   ]);
   for (const h of lexicon.headwords)
-    items.set(h.id, headwordItem(h, indexes, edition, gaps, colourIds));
+    items.set(h.id, headwordItem(h, indexes, edition, gaps, colourIds, timeIds));
   // attested image compounds keep their ids: a learner's cards on them stay live (2.0:G40)
   for (const h of lexicon.imageCompounds?.attested ?? []) {
     items.set(h.id, {
-      ...headwordItem(h, indexes, edition, gaps, colourIds),
+      ...headwordItem(h, indexes, edition, gaps, colourIds, timeIds),
       kind: 'imageCompound',
     });
   }

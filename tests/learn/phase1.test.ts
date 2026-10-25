@@ -72,7 +72,8 @@ describe('the data adapter', () => {
       const [modifier, head] = item.components ?? [];
       // the modifier may be a colour base (2.0:G38) or a time noun (3.2:G142)
       expect(data.items.get(modifier ?? '')?.kind).toMatch(/root|compound|color|timeWord/);
-      expect(data.items.get(head ?? '')?.kind).toMatch(/root|compound/);
+      // from 3.5 the head may be a time noun (felradeya, ADR-0025)
+      expect(data.items.get(head ?? '')?.kind).toMatch(/root|compound|timeWord/);
       for (const part of item.components ?? []) {
         expect(data.items.get(part)?.usedIn, item.spelling).toContain(item.id);
       }

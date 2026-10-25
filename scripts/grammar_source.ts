@@ -10,8 +10,8 @@ import type { Flags, GrammarSource, Reference, RuleParams } from '../src/core/gr
 import type { EnglishData, TranslateSource } from '../src/core/translate';
 
 export const GRAMMAR_FILES = {
-  reference: 'handoff/liraasa_3_4_llm.json',
-  lexicon: 'data/lexicon/liraasa_3_4.json',
+  reference: 'handoff/liraasa_3_5_llm.json',
+  lexicon: 'data/lexicon/liraasa_3_5.json',
   flags: 'data/checker/lexicon_flags.json',
   rules: 'data/checker/rules_3_0.json',
   names: 'data/checker/names.json',

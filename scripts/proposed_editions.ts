@@ -1,7 +1,8 @@
 /**
- * Editions whose additions await the author's ratification (ADR-0021,
- * ADR-0023, ADR-0024). 3.1 is not among them: the author ratified it on 2026-10-25.
- * The LLM reference flags their words "new in <edition>" and says so in its
- * edition_status; the tests read the same list.
+ * Editions whose additions await the author's ratification (ADR-0025).
+ * Everything up to 3.4 is ratified: 3.1 on 2026-10-25 (ADR-0023), 3.0, 3.3
+ * and 3.4 on the same day (ADR-0025). The LLM reference flags these
+ * editions' words "new in <edition>" and says so in its edition_status; the
+ * tests read the same list.
  */
-export const PROPOSED_EDITIONS: readonly string[] = ['3.0', '3.3', '3.4'];
+export const PROPOSED_EDITIONS: readonly string[] = ['3.5'];

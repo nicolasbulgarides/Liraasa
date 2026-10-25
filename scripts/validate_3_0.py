@@ -47,7 +47,7 @@ UNUSED = "— (unused)"
 SLOTS = ["root", "ascended", "negative", "verb", "negative_adjective", "adjective", "ascended_adjective"]
 CAMEL = {"negativeAdjective": "negative_adjective", "ascendedAdjective": "ascended_adjective"}
 HEADWORD_OPS = {"add_root", "add_compound", "activate_slot", "add_derivation",
-                "lexicalise_from_pattern", "edit_gloss", "edit_metadata"}
+                "lexicalise_from_pattern", "edit_gloss", "edit_metadata", "ratify_ruling"}
 
 
 def rhyme_families(roots):
@@ -65,8 +65,8 @@ def expected(prev, changesets, version):
     known = [dict(c, ops=[o for o in c["ops"] if o["op"] not in HEADWORD_OPS]) for c in mine]
     want, added, det = v25.expected(prev, known, version)
     tag = "status_" + version.replace(".", "_")
-    modifier_bases = {c["Base color"] for c in want["colors"]} | {
-        t["form"] for t in want["time_and_dates"] if t.get("time_class") == "noun"}
+    time_nouns = {t["form"] for t in want["time_and_dates"] if t.get("time_class") == "noun"}
+    modifier_bases = {c["Base color"] for c in want["colors"]} | time_nouns
     heads = want["headwords"]
     by_id = {h["id"]: h for h in heads}
     by_root = {h["root"]: h for h in heads}
@@ -86,8 +86,10 @@ def expected(prev, changesets, version):
                 if o == "add_compound" and "".join(p["components"]) != p["root"]:
                     det.append("%s: not its components joined" % entry)
                 for i, c in enumerate(p["components"] or []):
-                    # the modifier may be a colour base (2.0:G38) or a time noun (3.2:G142)
-                    if c not in by_root and not (i == 0 and c in modifier_bases):
+                    # the modifier may be a colour base (2.0:G38) or a time noun (3.2:G142);
+                    # from 3.5 a time noun may be the head too
+                    if c not in by_root and not (i == 0 and c in modifier_bases) and not (
+                            i == 1 and c in time_nouns and version >= "3.5"):
                         det.append("%s: component %s is not a headword" % (entry, c))
                 h = {
                     "root": p["root"], "type": p["type"], "components": p["components"],
@@ -101,6 +103,15 @@ def expected(prev, changesets, version):
                 heads.append(h)
                 by_id[h["id"]] = h
                 by_root[h["root"]] = h
+            elif o == "ratify_ruling":
+                # 3.5: a proposed ruling is ratified; its status only, never its text
+                ed, rid = entry.split(":")
+                r = next((x for x in want.get(v25.ruling_key(entry), []) if x["id"] == rid), None)
+                if r is None or r.get("status") != "proposed" or op["to"] != "ratified":
+                    det.append("%s: not a proposed ruling" % entry)
+                    continue
+                r["status"] = "ratified"
+                r["ratified_in"] = version
             elif o == "lexicalise_from_pattern":
                 att = want["image_compounds"]["attested"]
                 h = next((x for x in att if x["id"] == entry), None)
@@ -234,6 +245,10 @@ def main():
         bases = {c["Base color"] for c in data["colors"]} | {
             t["form"] for t in data["time_and_dates"] if t.get("time_class") == "noun"}
         det7 = v20.check_7(data, bases)
+        # from 3.5 a time noun may be a compound's head as well (felradeya)
+        if version >= "3.5":
+            times = {t["form"] for t in data["time_and_dates"] if t.get("time_class") == "noun"}
+            det7 = [d for d in det7 if not any(d.endswith("component %s is not an active headword or (as modifier) a colour base" % t) for t in times)]
         for c in checks:
             if c["id"] == 7:
                 c.update(status="FAIL" if det7 else "PASS", count=len(det7), details=det7[:60],

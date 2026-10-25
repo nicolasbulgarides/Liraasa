@@ -1,6 +1,6 @@
 # Liraasa 3.1: questions for the author
 
-**Answered on 2026-10-25, except the hymn's Liraasa title (section 3), which is still open.**
+**All answered on 2026-10-25.**
 
 Liraasa 3.1 is installed whole, as **proposed** (ADR-0022): tier 1 and tier 2 together. To ratify tier 1 only, or to drop an item:
 
@@ -24,5 +24,5 @@ All 88 entries are installed. Ratify all of them, or tier 1 only? **Answer:** ra
 *The Song of the First Stars* is now a canon corpus text (`data/corpus/hymn/song_of_the_first_stars.json`), shown in the editor's Hymn view.
 
 - **Line 12:** the 3.0 patch has `kasi muya patuti` ("further points"). `kasi` + a quantifier is not ruled, so the canon text reads `muya loterosan patuti` instead, using the 2.5 translation's word for "further". Rule on `kasi muya`, or keep the new wording? **Answer:** keep line 12 as it is (2026-10-25).
-- **The Liraasa title:** under 3.0:G131 the PDF's title, `Liraasa de li una-ne veluri`, reads "Liraasa's first stars". The canon title is the hymn's own name in line 24, `Li lira de li una-ne veluri`. Agreed? **Answer:**
+- **The Liraasa title:** under 3.0:G131 the PDF's title, `Liraasa de li una-ne veluri`, reads "Liraasa's first stars". The canon title is the hymn's own name in line 24, `Li lira de li una-ne veluri`. Agreed? **Answer:** yes, ratified with everything else (2026-10-25, ADR-0025).
 - **Line 15:** the English says "the heat of the listening stars", and the Liraasa follows it with `suma`. The translator noted this might be a slip for "heart" (`lore`). Which is it? **Answer:** heat, not heart (2026-10-25).

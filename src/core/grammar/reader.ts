@@ -112,6 +112,56 @@ function relational(ix: Index, w: string): Reading | null {
   };
 }
 
+/**
+ * 3.5:G150: a numeral joined by a hyphen to gaki names a polygon (tressa-gaki,
+ * triangle), and its -san is the shape (cuara-gakisan, square). 3.5:G151: a
+ * foreign dish or product is copied like a name, lower-case (pitsa), with -san
+ * for its adjective.
+ */
+function polygonOrCopied(ix: Index, w: string): Reading | null {
+  const poly = ix.source.rules.polygon;
+  if (poly !== undefined) {
+    const m = new RegExp(`^([a-z]+)-${poly.head}(san)?$`).exec(w);
+    const n = m === null ? null : numeral(ix, m[1] ?? '');
+    if (m !== null && n !== null)
+      return m[2] === undefined
+        ? {
+            pos: 'noun',
+            form: w,
+            gloss: `a ${n.gloss}-sided figure`,
+            source: 'relational',
+            detail: poly.ruling,
+          }
+        : {
+            pos: 'adj',
+            form: w,
+            gloss: `shaped with ${n.gloss} sides`,
+            source: 'relational',
+            detail: poly.ruling,
+          };
+  }
+  const copied = ix.source.rules.copied_words;
+  if (copied !== undefined) {
+    if (copied.words.includes(w))
+      return {
+        pos: 'noun',
+        form: w,
+        gloss: `${w} (a copied name)`,
+        source: 'name',
+        detail: copied.ruling,
+      };
+    if (w.endsWith('san') && copied.words.includes(w.slice(0, -3)))
+      return {
+        pos: 'adj',
+        form: w,
+        gloss: `of ${w.slice(0, -3)}`,
+        source: 'name',
+        detail: copied.ruling,
+      };
+  }
+  return null;
+}
+
 /** A known stem's readings: a form, a derivation, a closed word or a name. */
 function stem(ix: Index, s: string): Reading[] {
   const out = [...(ix.forms.get(s) ?? [])];
@@ -218,6 +268,10 @@ export function readWord(
   // a compound's or a listed derivation's -san, by rule (3.3:G148)
   const rel = relational(ix, w);
   if (rel !== null) return analysis(text, [rel]);
+
+  // 3.5: a polygon, NUMERAL-gaki, and its shape adjective (3.5:G150); a copied foreign word (3.5:G151)
+  const built = polygonOrCopied(ix, w);
+  if (built !== null) return analysis(text, [built]);
 
   // a form the rules would build and the dictionary leaves unlisted: its slot gives it a shape, not a meaning
   const unused = ix.unlisted.get(w);

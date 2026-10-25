@@ -695,6 +695,25 @@ export const RULED_RECIPES: ReadonlySet<string> = new Set([
   'Eli ka maivo de lorelivnasan lira.',
   'Maivo ne mebanema; nara saivo po loteromebanela maivo.',
   'Saivo amorharlua saivo de sora.',
+  // the 3.3 and 3.4 recipes, ratified by the author with the rest of 3.3 and 3.4 (2026-10-25)
+  'Li minvasan gudopocu po lavrasamnila.',
+  'Maivo sapusia gubu.',
+  'Li nimu ka vofa dossa valmilornu.',
+  'Hoyo! Li yalmukadu ka zilesan!',
+  'Saivo ke talisan deyapressa.',
+  'Maivo tovota unzira-dossa lavrasamni.',
+  'Li ruhe vaku li linu follufa.',
+  'Saivori yave-semnesia ligo li faru.',
+  'Li monru ka ruli mellisan.',
+  'Saivo ke en li salruzupa.',
+  'Saivo ke menu lavisan.',
+  'Ola-krono, li linu somusia.',
+  'Saivo du-pagopa li zarku.',
+  'Maivori futu revo-bimneba li domlu.',
+  'Li resotelne vaku li nelari lavila.',
+  'Li corvinasan po pagopa.',
+  'Saivo ka baba loterokezusan nela.',
+  'Eli lira ka sambanasan da ola lira.',
 ]);
 
 export const RECIPES: readonly (readonly [string, string, string, string, string])[] = [
@@ -1048,7 +1067,7 @@ export const RECIPES: readonly (readonly [string, string, string, string, string
     'I sat by the table. Now I am still sitting here.',
     '0.8:R4',
   ],
-  // 3.0, proposed: the recipes the 3.0 patch's README asks for, each a ruling's own example
+  // 3.0 (ratified 2026-10-25): the recipes the 3.0 patch's README asks for, each a ruling's own example
   [
     'O … (addressing)',
     '`iya` + noun phrase, set off by a comma',
@@ -1106,7 +1125,7 @@ export const RECIPES: readonly (readonly [string, string, string, string, string
     'She will sing for ever.',
     '3.0:G139',
   ],
-  // 3.1, proposed: the recipes the 3.1 patch adds, for senses already sayable without a new word
+  // 3.1 (ratified 2026-10-25): the recipes the 3.1 patch adds, for senses already sayable without a new word
   [
     'realize; suddenly become aware',
     '`hiro sabesia` (begin to know); `zafra` or `hoyo` for suddenness or surprise',
@@ -1142,7 +1161,7 @@ export const RECIPES: readonly (readonly [string, string, string, string, string
     'She is jealous over her friend.',
     '',
   ],
-  // 3.3, proposed: the recipes the 3.3 patch adds that read clean (two that break an earlier ruling
+  // 3.3 (ratified 2026-10-25): the recipes the 3.3 patch adds that read clean (two that broke an earlier ruling
   // are put to the author, review/questions_3_3.md)
   [
     'hen / rooster',
@@ -1230,7 +1249,7 @@ export const RECIPES: readonly (readonly [string, string, string, string, string
     'Meanwhile, the child is asleep.',
     '',
   ],
-  // 3.4, proposed: the recipes the 3.4 patch adds
+  // 3.4 (ratified 2026-10-25): the recipes the 3.4 patch adds
   [
     'avoid · look away · dismiss · banish',
     'du- (away) on the verb: du-pagopa · du-vimova · du-silbesia (2.5:G121)',
@@ -1273,6 +1292,131 @@ export const RECIPES: readonly (readonly [string, string, string, string, string
     'This song differs from that one.',
     '',
   ],
+  // 3.5, proposed: the recipes the 3.5 patch adds, every module; three that broke an earlier
+  // ruling are given in a form that keeps it (the editor's judgement, ADR-0025)
+  ['get (receive)', 'rillira', 'Maivo po rillira baba cuza.', 'I got a letter.', ''],
+  ['get (become)', 'loya + adjective', 'Li deya loya narvosan.', 'It is getting dark.', ''],
+  ['get (arrive)', 'venreva', 'Saivo po venreva ala li nimu.', 'She got home.', ''],
+  [
+    'get (fetch, obtain)',
+    'navdinia / tovota',
+    'Taivo navdinia li mirukova!',
+    'Get the bucket!',
+    '',
+  ],
+  [
+    'excellent · super · awesome',
+    'ruli + adjective',
+    'Li mirunami ka ruli benasan.',
+    'The soup is excellent.',
+    '',
+  ],
+  [
+    'half · double · triple',
+    'una de dossa · dossa- · tressa-',
+    'Maivo po sapusia una de dossa de li zilebumre.',
+    'I ate half of the cake.',
+    '',
+  ],
+  [
+    'main · primary · prime',
+    'li una-ne · mosa',
+    'Ola ka li una-ne nulu.',
+    'That is the main road.',
+    '',
+  ],
+  [
+    'daily · weekly · yearly',
+    'rada deya · rada deyafama · rada montafama',
+    'Saivo lirala rada deya.',
+    'She sings daily.',
+    '',
+  ],
+  [
+    'decade · century',
+    'unzira montafama · centa montafama',
+    'Maivo po lisrola unzira montafama.',
+    'I stayed a decade.',
+    '',
+  ],
+  [
+    'due · due to',
+    'musvasan (owed) · kasa (because)',
+    'Li gura ka musvasan.',
+    'The debt is due.',
+    '',
+  ],
+  [
+    'temporary',
+    'kronopatusan (3.3:G148)',
+    'Ola ka baba kronopatusan nimupago.',
+    'That is a temporary residence.',
+    '3.3:G148',
+  ],
+  [
+    'overlook · behold · blur',
+    'du-vimova (look away) · vimova · nibevimo',
+    'Saivo du-vimova li verana.',
+    'She overlooks the lie.',
+    '2.5:G121',
+  ],
+  [
+    'sharpen · flatten · tighten · dwindle',
+    'vaku + ACTOR + loya + adjective: make X become … (2.5:G109)',
+    'Saivo vaku li tise loya pidisan.',
+    'She sharpens the knife.',
+    '2.5:G109',
+  ],
+  [
+    'additional · extra · numerous · widespread',
+    'kasi · muya · toda-pago',
+    'Maivo desida kasi lavlomiru.',
+    'I want extra tea.',
+    '',
+  ],
+  [
+    'internal · external · overhead · aboard',
+    'intra · vofa · hupi · en li bote',
+    'Saivo ke en li bote.',
+    'She is aboard.',
+    '',
+  ],
+  [
+    'moreover · simultaneously · presumably · undoubtedly',
+    'ata tu · nayo · mufe (closing its clause, 1.0:G22) · seye',
+    'Saivo po pagopa mufe.',
+    'Presumably she left.',
+    '',
+  ],
+  [
+    'any -ly adverb (tightly, shyly, noisily)',
+    'la + adjective (2.5:G105)',
+    'Saivo po senosia la lorefollusan.',
+    'She spoke shyly.',
+    '2.5:G105',
+  ],
+  [
+    'invisible',
+    'ne povi gome vimova (cannot be seen)',
+    'Li zayuyo ne povi gome vimova.',
+    'The wizard is invisible.',
+    '',
+  ],
+  [
+    'anymore · whatever · thus · regardless',
+    'ne … loki · yori · tonsi · nevi',
+    'Maivo ne lirala loki.',
+    'I don’t sing anymore.',
+    '',
+  ],
+  [
+    'literally · overall · otherwise · nearby',
+    'la verasan · toda · sina + clause (unless …) · ligo',
+    'Sina taivo lirala, maivori futu pagopa.',
+    'Unless you sing, we will go.',
+    '',
+  ],
+  ['alright · okay', 'eho (3.2)', 'Eho, maivo venreva.', 'Alright, I’m coming.', ''],
 ];
 
 export function recipesPart(index: Index): string {

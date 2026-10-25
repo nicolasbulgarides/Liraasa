@@ -2679,6 +2679,47 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
       detail: rule.ruling
     };
   }
+  function polygonOrCopied(ix, w) {
+    const poly = ix.source.rules.polygon;
+    if (poly !== void 0) {
+      const m = new RegExp(`^([a-z]+)-${poly.head}(san)?$`).exec(w);
+      const n = m === null ? null : numeral(ix, m[1] ?? "");
+      if (m !== null && n !== null)
+        return m[2] === void 0 ? {
+          pos: "noun",
+          form: w,
+          gloss: `a ${n.gloss}-sided figure`,
+          source: "relational",
+          detail: poly.ruling
+        } : {
+          pos: "adj",
+          form: w,
+          gloss: `shaped with ${n.gloss} sides`,
+          source: "relational",
+          detail: poly.ruling
+        };
+    }
+    const copied = ix.source.rules.copied_words;
+    if (copied !== void 0) {
+      if (copied.words.includes(w))
+        return {
+          pos: "noun",
+          form: w,
+          gloss: `${w} (a copied name)`,
+          source: "name",
+          detail: copied.ruling
+        };
+      if (w.endsWith("san") && copied.words.includes(w.slice(0, -3)))
+        return {
+          pos: "adj",
+          form: w,
+          gloss: `of ${w.slice(0, -3)}`,
+          source: "name",
+          detail: copied.ruling
+        };
+    }
+    return null;
+  }
   function stem(ix, s) {
     const out = [...ix.forms.get(s) ?? []];
     const d = derivation(ix, s);
@@ -2757,6 +2798,8 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }
     const rel = relational(ix, w);
     if (rel !== null) return analysis(text, [rel]);
+    const built = polygonOrCopied(ix, w);
+    if (built !== null) return analysis(text, [built]);
     const unused = ix.unlisted.get(w);
     if (unused !== void 0) {
       const pos = unused.role === "v" ? "verb" : ["n", "an", "nn"].includes(unused.role) ? "noun" : "adj";

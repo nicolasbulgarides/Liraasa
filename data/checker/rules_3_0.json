@@ -1,5 +1,5 @@
 {
- "about": "Parameters of the 2.5 strict checker (src/core/grammar), lifted from the ruling texts so that no grammar lives in code. Each entry names the ruling it comes from; a list a ruling leaves to the author (author_inputs_needed) is marked draft and its findings are reported as unruled, never as pass or fail. Edit here, never in code. 3.0 (proposed, ADR-0021): the vocative, apposition, absolute miyo, the liturgical formula, emphatic sela, commands, gagu after a work, acclamations and X krotiapo X, as rule parameters for the strict checker. 3.2 and 3.3 (proposed, ADR-0023): honorific titles, nationality adjectives and relational adjectives.",
+ "about": "Parameters of the 2.5 strict checker (src/core/grammar), lifted from the ruling texts so that no grammar lives in code. Each entry names the ruling it comes from; a list a ruling leaves to the author (author_inputs_needed) is marked draft and its findings are reported as unruled, never as pass or fail. Edit here, never in code. 3.0 (proposed, ADR-0021): the vocative, apposition, absolute miyo, the liturgical formula, emphatic sela, commands, gagu after a work, acclamations and X krotiapo X, as rule parameters for the strict checker. 3.2 and 3.3 (proposed, ADR-0023): honorific titles, nationality adjectives and relational adjectives. 3.5 (proposed, ADR-0025): polygons and copied names of foreign things.",
  "question": {
   "ruling": "2.5:G88",
   "fronted_may_drop_ki": [
@@ -358,5 +358,18 @@
  },
  "relational_adjectives": {
   "ruling": "3.3:G148"
+ },
+ "polygon": {
+  "ruling": "3.5:G150",
+  "head": "gaki",
+  "note": "a numeral joined by a hyphen to gaki names a polygon (tressa-gaki); its -san is the shape adjective (cuara-gakisan)"
+ },
+ "copied_words": {
+  "ruling": "3.5:G151",
+  "words": [
+   "pitsa",
+   "hamburga"
+  ],
+  "note": "foreign dishes and products copied like names (2.0:G45), lower-case as common nouns; -san makes their adjective"
  }
 }

@@ -70,6 +70,8 @@ interface PatchRoot {
   forms: Record<string, PatchForm>;
   /** 3.1 on: 1 = ratify first, 2 = item by item. */
   tier?: number;
+  /** 3.5 on: the patch module the entry belongs to (core, archetypes, pack.tech …). */
+  module?: string;
   /** 3.3 on: a root's part in the archetype pattern (3.2:G142): modifier or head. */
   archetype_role?: string | null;
 }
@@ -508,7 +510,8 @@ export function makeAdditionsChangeset(cfg: AdditionsConfig): LexiconChangeset {
         `Added in ${cfg.edition} (changeset ${cfg.id}). ${proposed}` +
         (compound === null ? '' : ` Components: ${compound.parts.join(' + ')}.`) +
         (said.length > 0 ? ` ${said.join(' ')}` : '') +
-        (e.tier === undefined ? '' : ` Tier ${String(e.tier)} in the patch.`),
+        (e.tier === undefined ? '' : ` Tier ${String(e.tier)} in the patch.`) +
+        (e.module === undefined ? '' : ` Module ${e.module}.`),
     });
     const ruling =
       compound?.title === true ? '3.0:G131' : e.headword === 'rinbakrono' ? '3.0:G139' : undefined;
@@ -629,9 +632,12 @@ export function makeAdditionsChangeset(cfg: AdditionsConfig): LexiconChangeset {
           say('the English alias table'),
         ),
       );
+    // the table as it stands op by op: a form may get aliases from two modules
+    const running: Record<string, string> = { ...(table ?? {}) };
     for (const a of aliases) {
       if (!known.has(a.form)) problems.push(`alias ${a.form}: not a meaningful form`);
-      const was = table?.[a.form];
+      const was = running[a.form];
+      running[a.form] = was === undefined ? a.add_english : `${was}; ${a.add_english}`;
       ops.push(
         rec(
           'edit_value',

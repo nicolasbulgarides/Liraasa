@@ -55,6 +55,12 @@ export type ChangeOp =
    */
   | 'lexicalise_from_pattern'
   /**
+   * The author ratifies a proposed ruling (3.5, ADR-0025): its `status` goes
+   * from `proposed` to `ratified`; its text and examples never change.
+   * `entry` is its edition-qualified id.
+   */
+  | 'ratify_ruling'
+  /**
    * A new data section, from the changeset's `sections` payload. `entry` is
    * its path: `image_compounds`, `morphology.derivation_defaults`… (ADR-0016).
    */

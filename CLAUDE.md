@@ -24,7 +24,22 @@ made from the frozen 1.1 by the two changesets in `data/changes/` via
 151 function words, rulings 1.2:G24–G36, and 25 of 25 validator checks passing
 (`npm run validate:1.2`). 1.2 is now frozen as 2.0's baseline.
 
-**3.4 is current, and proposed** (ADR-0024): `data/lexicon/liraasa_3_4.json`,
+**3.5 is current** (ADR-0025): `data/lexicon/liraasa_3_5.json`, built from
+frozen 3.4 by `npm run integrate:3.5`: first the author's ratification of
+3.0, 3.3 and 3.4 (2026-10-25, "ratify everything": op **`ratify_ruling`** marks
+each proposed ruling ratified, never touching its text; notes say ratified;
+the 2.5 erratum _pilo de bumre_ is corrected to _li bumre de pilo_), then the
+modular 3.5 patch with **every module** (bundle archived in
+`archive/patch_3_5/`): 164 compounds, rulings 3.5:G150 (polygons, NUMERAL-gaki)
+and G151 (copied names: pitsa), 150 aliases; 2094 headwords, 4951 meaningful
+forms. **Everything up to 3.4 is canon; only 3.5 is proposed**
+(`scripts/proposed_editions.ts`). From 3.5 a time noun may be a compound's
+head (`felradeya`, `WordBuilding.timeHeads`). Validation 22 PASS, 3 WARN
+(`npm run validate:3.5`). Five 3.5 sentences that broke an earlier ruling were
+settled by the editor, as for 3.3 (`tests/grammar/patch_3_5.test.ts`). 3.4 is
+frozen as 3.5's baseline.
+
+**3.4, ratified** (ADR-0024): `data/lexicon/liraasa_3_4.json`,
 built from frozen 3.3 by `npm run integrate:3.4`: the author's "Abstraction and
 the human condition" patch (bundle archived whole in `archive/patch_3_4/`; no
 new roots: 94 compounds, 18 derivations, 3 diminutives, 50 aliases, ruling
@@ -36,7 +51,7 @@ validate:3.4`); the LLM reference matches the author's own 3.4 build except that
 one example. Proposed editions: 3.0, 3.3, 3.4 (`scripts/proposed_editions.ts`).
 3.3 is frozen as 3.4's baseline.
 
-**3.3, proposed** (ADR-0023): `data/lexicon/liraasa_3_3.json`,
+**3.3, ratified** (ADR-0023): `data/lexicon/liraasa_3_3.json`,
 built from frozen 3.1 by `npm run integrate:3.3`: first the author's
 ratification of all of 3.1 (2026-10-25: **3.1 is canon**), then the combined
 3.2 + 3.3 patch, "Archetypes and the top 2,000" (bundle archived whole in
@@ -67,7 +82,7 @@ strict checker, and the editor opens it from the masthead's "✦ The Hymn". The
 editions whose words are proposed are listed in `scripts/proposed_editions.ts`.
 3.0 is frozen as 3.1's baseline.
 
-**3.0, proposed** (ADR-0021): `data/lexicon/liraasa_3_0.json`,
+**3.0, ratified** (ADR-0021): `data/lexicon/liraasa_3_0.json`,
 built from frozen 2.5 by one changeset via `npm run integrate:3.0` (made by
 `scripts/make_changeset_3_0.ts` from the author's patch
 `archive/patch_3_0/liraasa_3_0_patch.json`, its README `LIRAASA_3_0_README.md`
@@ -260,6 +275,8 @@ validator and parser.
 | `npm run integrate:3.1`    | Build 3.1 from frozen 3.0 plus the 3.1 changeset (sha-checked baseline). `-- --check` writes nothing (ADR-0022).                                                                                                                                                                                                  | **working** |
 | `npm run integrate:3.3`    | Build 3.3 from frozen 3.1: the 3.1 ratification, then the 3.3 changeset (sha-checked baseline). `-- --check` writes nothing (ADR-0023).                                                                                                                                                                           | **working** |
 | `npm run integrate:3.4`    | Build 3.4 from frozen 3.3: the 3.4 patch, then the editor's decisions on four 3.3 sentences (sha-checked baseline). `-- --check` writes nothing (ADR-0024).                                                                                                                                                       | **working** |
+| `npm run integrate:3.5`    | Build 3.5 from frozen 3.4: the ratification of 3.0, 3.3 and 3.4, then the 3.5 patch with every module (sha-checked baseline). `-- --check` writes nothing (ADR-0025).                                                                                                                                             | **working** |
+| `npm run validate:3.5`     | validate_3_0.py on 3.5 → `data/lexicon/validation_3_5.json`; then the author's `validate_patch.py` on `handoff/liraasa_3_5_llm.json`.                                                                                                                                                                             | **working** |
 | `npm run validate:3.4`     | validate_3_0.py on 3.4 → `data/lexicon/validation_3_4.json`; then the author's `validate_patch.py` on `handoff/liraasa_3_4_llm.json`.                                                                                                                                                                             | **working** |
 | `npm run validate:3.3`     | validate_3_0.py on 3.3 (check 7 re-run under 3.2:G142, 25 re-applies every 3.3 op) → `data/lexicon/validation_3_3.json`; then the author's `validate_patch.py` on `handoff/liraasa_3_3_llm.json`.                                                                                                                 | **working** |
 | `npm run validate:3.1`     | validate_3_0.py on 3.1 (checks 1–24 by validate_2_3.py, 25 re-applies every 3.1 op) → `data/lexicon/validation_3_1.json`; then the author's `validate_patch.py` on `handoff/liraasa_3_1_llm.json`.                                                                                                                | **working** |

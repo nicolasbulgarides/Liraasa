@@ -1,14 +1,14 @@
 {
  "report": "Liraasa MFA dictionary export",
- "lexicon": "C:/Users/nicol/Desktop/Liraasa-workbench/data/lexicon/liraasa_3_4.json",
- "version": "3.4",
- "words": 66920,
+ "lexicon": "C:/Users/nicol/Desktop/Liraasa-workbench/data/lexicon/liraasa_3_5.json",
+ "version": "3.5",
+ "words": 72496,
  "by_source": {
   "closed class": 254,
   "corpus": 824,
-  "form": 13510,
-  "inflection": 40530,
-  "derivation": 11578,
+  "form": 14658,
+  "inflection": 43974,
+  "derivation": 12562,
   "colour": 45,
   "name": 14,
   "numeral": 1002

@@ -123,6 +123,9 @@ export interface RuleParams {
   honorific?: { ruling: string; titles: string[]; noun_classes: string[] };
   nationality?: { ruling: string };
   relational_adjectives?: { ruling: string };
+  /** 3.5 (proposed, ADR-0025). */
+  polygon?: { ruling: string; head: string };
+  copied_words?: { ruling: string; words: string[] };
   adjective_sidu: { dummy: string };
   negative_number: { word: string };
   [key: string]: unknown;

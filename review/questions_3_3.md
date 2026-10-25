@@ -24,4 +24,4 @@ The strict checker rejects them, so they are not in the guide's recipes. `tests/
 
 ## 2. A choice the build made
 
-- **Time nouns as modifiers.** 3.2:G142 lets any time noun be a compound's modifier, and `deyanole` (date) = `deya` + `nole` is the first such compound. The build, the validator and Learn now accept a time word in that place, as they accept a colour base (2.0:G38). **Answer:**
+- **Time nouns as modifiers.** 3.2:G142 lets any time noun be a compound's modifier, and `deyanole` (date) = `deya` + `nole` is the first such compound. The build, the validator and Learn now accept a time word in that place, as they accept a colour base (2.0:G38). **Answer:** ratified with everything else (2026-10-25, ADR-0025); from 3.5 a time noun may be the head too (`felradeya`).

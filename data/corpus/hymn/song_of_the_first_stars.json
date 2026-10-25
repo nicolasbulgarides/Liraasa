@@ -5,7 +5,7 @@
  "register": "sacred",
  "kind": "devotional",
  "status": "canon",
- "about": "The author's creation hymn, in the sacred register. Canon corpus text by the author's request (2026-10-25): a model of devotional Liraasa. Lines 1, 3, 4, 5, 9 and 19 are the 2.5 translation (data/songs/Liraasa_de_li_Vanisan_Lirayo_Translation.pdf, where the English, the interlinear and the translator's notes are); the other eighteen are the 3.0 patch's revisions (archive/patch_3_0/liraasa_3_0_patch.json, hymn_test), which use the proposed 3.0 words and rulings. Every line reads with no error or warning under the strict checker (tests/grammar/hymn.test.ts), in 3.1 and in 3.3. Nothing here is composed by a tool except line 12's one change, noted on the line, which the author kept (2026-10-25).",
+ "about": "The author's creation hymn, in the sacred register. Canon corpus text by the author's request (2026-10-25): a model of devotional Liraasa. Lines 1, 3, 4, 5, 9 and 19 are the 2.5 translation (data/songs/Liraasa_de_li_Vanisan_Lirayo_Translation.pdf, where the English, the interlinear and the translator's notes are); the other eighteen are the 3.0 patch's revisions (archive/patch_3_0/liraasa_3_0_patch.json, hymn_test), which use the proposed 3.0 words and rulings. Every line reads with no error or warning under the strict checker (tests/grammar/hymn.test.ts) in every edition since 3.1. Canon, with everything up to 3.4, since the author's ratification of 2026-10-25. Nothing here is composed by a tool except line 12's one change, noted on the line, which the author kept (2026-10-25).",
  "lines": [
   {
    "n": 1,

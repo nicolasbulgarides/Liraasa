@@ -92,6 +92,8 @@ export interface WordBuilding {
   colourModifiers: boolean;
   /** A time noun (time_and_dates, class noun) may be a compound's modifier (3.2:G142): deya + nole. */
   timeModifiers?: boolean;
+  /** A time noun may also be a compound's head (3.5, ADR-0025): felra + deya, a feast day. */
+  timeHeads?: boolean;
 }
 
 export const STRICT_WORD_BUILDING: WordBuilding = { nesting: false, colourModifiers: false };
@@ -374,6 +376,7 @@ export function applyChangesets(
                 // only the modifier may be a colour base, and only under 2.0:G38
                 if (i === 0 && rules.colourModifiers && bases.has(c)) return;
                 if (i === 0 && rules.timeModifiers === true && times.has(c)) return;
+                if (i === 1 && rules.timeHeads === true && times.has(c)) return;
                 throw new ApplyError(`${p.root}: component ${c} is not a headword`);
               }
               if (part.type === 'Compound' && !rules.nesting)
@@ -742,6 +745,14 @@ export function applyChangesets(
           }
           break;
         }
+        case 'ratify_ruling': {
+          const r = rulingOf(op.entry);
+          if (r === undefined || r.status !== op.from || op.to !== 'ratified')
+            throw new ApplyError(`${op.entry}: not a ${String(op.from)} ruling`);
+          r.status = 'ratified';
+          r.ratified_in = cs.edition;
+          break;
+        }
         case 'amend_ruling':
         case 'mark_ruling_covered': {
           // 2.5: an earlier ruling a new one amends (in part) or makes redundant; it is kept as ruled
@@ -953,9 +964,10 @@ export function auditBuild(
         findings.push(`${h.root}: not its components joined`);
       parts.forEach((c, i) => {
         const colour =
-          i === 0 &&
-          ((rules.colourModifiers && bases.has(c)) ||
-            (rules.timeModifiers === true && times.has(c)));
+          (i === 0 &&
+            ((rules.colourModifiers && bases.has(c)) ||
+              (rules.timeModifiers === true && times.has(c)))) ||
+          (i === 1 && rules.timeHeads === true && times.has(c));
         if (!roots.has(c) && !colour) findings.push(`${h.root}: component ${c} is not a headword`);
       });
     }
