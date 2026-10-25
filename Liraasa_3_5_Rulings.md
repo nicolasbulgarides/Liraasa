@@ -1,6 +1,23 @@
-# Liraasa 3.4 Reference Grammar: every ruling
+# Liraasa 3.5 Reference Grammar: every ruling
 
-Verbatim from the Liraasa 3.4 lexicon, newest edition first. Ruling ids are edition-qualified: 0.8:G7 and 1.0:G7 are different rulings.
+Verbatim from the Liraasa 3.5 lexicon, newest edition first. Ruling ids are edition-qualified: 0.8:G7 and 1.0:G7 are different rulings.
+
+## Rulings 3.5
+
+### 3.5:G150: Shapes and polygons
+
+A numeral joined by a hyphen to gaki (angle) names a polygon: tressa-gaki triangle, cuara-gaki square or quadrilateral, penta-gaki pentagon. rinba (ring) is the circle and vemisovla (sphere) the ball shape. The -san adjective follows: cuara-gakisan, square-shaped.
+
+- *tressa-gaki · cuara-gaki · rinba* — triangle · square · circle
+- *Li tabu ka cuara-gakisan.* — The table is square.
+
+### 3.5:G151: Copied names of foreign things
+
+Foreign dishes, products and fixed proper concepts with no Liraasa equivalent are copied like names (2.0:G45), respelled in Liraasa letters, lower-case as common nouns, and given -san for adjectives: pitsa (pizza), hamburga (hamburger). Prefer a native compound whenever one is transparent.
+
+Refines 2.0:G45.
+
+- *pitsa · hamburga* — pizza · hamburger
 
 ## Rulings 3.4
 
