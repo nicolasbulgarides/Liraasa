@@ -618,10 +618,16 @@ describe('the 3.4 → 3.5 diff lesson', () => {
       lexicon: JSON.parse(readFileSync('data/lexicon/liraasa_3_4.json', 'utf8')) as RawLexicon,
       corpus: [],
     });
+    // 3.5 is frozen as 3.6's baseline: built here from its own file
+    const at35 = buildLearnSource({
+      ...input,
+      lexicon: JSON.parse(readFileSync('data/lexicon/liraasa_3_5.json', 'utf8')) as RawLexicon,
+      corpus: [],
+    });
     const d = diffSnapshots(
       snapshotEdition(at34.data),
-      snapshotEdition(source.data),
-      source.replacementFor,
+      snapshotEdition(at35.data),
+      at35.replacementFor,
     );
     const patch = JSON.parse(
       readFileSync('archive/patch_3_5/patches/liraasa_3_5_patch.json', 'utf8'),
@@ -646,6 +652,44 @@ describe('the 3.4 → 3.5 diff lesson', () => {
     );
     expect(d.rulesAdded.map((r) => r.id).sort()).toEqual(
       [...patch.rulings_add.map((r) => `rule:${r.id}`), 'rule:3.5:G152'].sort(),
+    );
+  });
+});
+
+describe('the 3.5 → 3.6 diff lesson', () => {
+  it('ACCEPTANCE: additions only: no word renamed or removed; every 3.6 word (every module), restored form and ruling', () => {
+    const at35 = buildLearnSource({
+      ...input,
+      lexicon: JSON.parse(readFileSync('data/lexicon/liraasa_3_5.json', 'utf8')) as RawLexicon,
+      corpus: [],
+    });
+    const d = diffSnapshots(
+      snapshotEdition(at35.data),
+      snapshotEdition(source.data),
+      source.replacementFor,
+    );
+    const patch = JSON.parse(
+      readFileSync('data/proposals/liraasa_3_6_patch_decided.json', 'utf8'),
+    ) as {
+      roots_add: { headword: string }[];
+      compounds_add: { headword: string }[];
+      restored_forms_add: { headword: string }[];
+      rulings_add: { id: string }[];
+    };
+    expect([d.from, d.to]).toEqual(['3.5', '3.6']);
+    expect(d.renamed).toEqual([]);
+    expect(d.removed).toEqual([]);
+    // vayesonbu was already a 3.5 word, an attested image compound: lexicalised for wazoop, so reglossed
+    const lexicalised = ['vayesonbu'];
+    expect(d.added).toHaveLength(
+      patch.roots_add.length + patch.compounds_add.length - lexicalised.length,
+    );
+    const reglossed = d.reglossed.map((r) => (r as unknown as { spelling: string }).spelling);
+    expect(reglossed.sort()).toEqual(
+      [...new Set([...patch.restored_forms_add.map((r) => r.headword), ...lexicalised])].sort(),
+    );
+    expect(d.rulesAdded.map((r) => r.id).sort()).toEqual(
+      patch.rulings_add.map((r) => `rule:${r.id}`).sort(),
     );
   });
 });

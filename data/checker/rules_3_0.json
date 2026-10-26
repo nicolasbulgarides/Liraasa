@@ -1,5 +1,5 @@
 {
- "about": "Parameters of the 2.5 strict checker (src/core/grammar), lifted from the ruling texts so that no grammar lives in code. Each entry names the ruling it comes from; a list a ruling leaves to the author (author_inputs_needed) is marked draft and its findings are reported as unruled, never as pass or fail. Edit here, never in code. 3.0 (proposed, ADR-0021): the vocative, apposition, absolute miyo, the liturgical formula, emphatic sela, commands, gagu after a work, acclamations and X krotiapo X, as rule parameters for the strict checker. 3.2 and 3.3 (proposed, ADR-0023): honorific titles, nationality adjectives and relational adjectives. 3.5 (proposed, ADR-0025): polygons and copied names of foreign things.",
+ "about": "Parameters of the 2.5 strict checker (src/core/grammar), lifted from the ruling texts so that no grammar lives in code. Each entry names the ruling it comes from; a list a ruling leaves to the author (author_inputs_needed) is marked draft and its findings are reported as unruled, never as pass or fail. Edit here, never in code. 3.0 (proposed, ADR-0021): the vocative, apposition, absolute miyo, the liturgical formula, emphatic sela, commands, gagu after a work, acclamations and X krotiapo X, as rule parameters for the strict checker. 3.2 and 3.3 (proposed, ADR-0023): honorific titles, nationality adjectives and relational adjectives. 3.5 (proposed, ADR-0025): polygons and copied names of foreign things. 3.6 (proposed, ADR-0027): the copied names of drugs; the -san of a lexicalised diminutive (3.6:G153) is read by the 3.3:G148 rule.",
  "question": {
   "ruling": "2.5:G88",
   "fronted_may_drop_ki": [
@@ -368,8 +368,13 @@
   "ruling": "3.5:G151",
   "words": [
    "pitsa",
-   "hamburga"
+   "hamburga",
+   "ativan",
+   "herona",
+   "elesede",
+   "dopamina",
+   "serotonina"
   ],
-  "note": "foreign dishes and products copied like names (2.0:G45), lower-case as common nouns; -san makes their adjective"
+  "note": "foreign dishes and products copied like names (2.0:G45), lower-case as common nouns; -san makes their adjective; 3.6 (proposed, ADR-0027) adds the named drugs of its recipe: ativan, herona, elesede; dopamine and serotonin are copied as dopamina and serotonina (the author, 2026-10-25)"
  }
 }

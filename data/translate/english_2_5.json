@@ -1304,7 +1304,12 @@
    "hexagon": "sesa-gaki",
    "octagon": "ocha-gaki",
    "pizza": "pitsa",
-   "hamburger": "hamburga"
+   "hamburger": "hamburga",
+   "ativan": "ativan",
+   "heroin": "herona",
+   "lsd": "elesede",
+   "dopamine": "dopamina",
+   "serotonin": "serotonina"
   },
   "adj": {
    "triangular": "tressa-gakisan",

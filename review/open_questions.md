@@ -1,6 +1,6 @@
 # Liraasa: every open question
 
-As of 3.5 (2026-10-25). **Everything up to and including 3.5 is ratified**, so nothing here is a pending patch. These are the points the language does not yet decide. The strict checker reports each one as **unruled**, never right or wrong, and the guide, the Lessons and the LLM reference list them as open. Answer any of them and it becomes a ruling.
+As of 3.6 (2026-10-25). **Everything up to and including 3.5 is ratified.** 3.6, the _2100 Dreams_ patch, is proposed: its questions are in `review/questions_3_6.md`. These are the points the language does not yet decide. The strict checker reports each one as **unruled**, never right or wrong, and the guide, the Lessons and the LLM reference list them as open. Answer any of them and it becomes a ruling.
 
 Settled on 2026-10-25, and so no longer here:
 

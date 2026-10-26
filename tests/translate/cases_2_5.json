@@ -649,6 +649,21 @@
       "english": "I eat pizza.",
       "ruling": "3.5:G151",
       "expect": "Maivo sapusia pitsa."
+    },
+    {
+      "english": "The robot broke the table.",
+      "ruling": "3.6",
+      "expect": "Li kibo po bakoba li tabu."
+    },
+    {
+      "english": "I saw the hologram.",
+      "ruling": "3.6",
+      "expect": "Maivo po vimova li lumisovla."
+    },
+    {
+      "english": "The psychiatrist gave Ativan.",
+      "ruling": "3.5:G151",
+      "expect": "Li mavohelnayo po donuda ativan."
     }
   ]
 }

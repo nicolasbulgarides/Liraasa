@@ -16,7 +16,7 @@ export type { Lesson, Part };
 export const INTRO = [
   'Liraasa is a language built for singing: every vowel rings, every word ends open, and the grammar keeps a fixed, calm order so the words can be sung without tripping.',
   'These lessons take you through the whole grammar, one small idea at a time. Each takes about ten minutes. Read the idea, say the examples aloud, then try the practice lines before you open the answers. Each lesson uses only what came before it.',
-  'Every Liraasa sentence here has been checked against the 3.5 grammar, so you can trust it as a model. Parts 6 and 7 teach the 3.x rulings: devotion, music and measure (3.0), then word families, names and shapes (3.2 to 3.5). The rule numbers at the foot of each lesson (2.5:G88, 3.0:G129 and so on) point into the Reference Grammar.',
+  'Every Liraasa sentence here has been checked against the 3.6 grammar, so you can trust it as a model. Parts 6 and 7 teach the 3.x rulings: devotion, music and measure (3.0), then word families, names and shapes (3.2 to 3.5). Part 8 teaches the 3.6 rulings, which are **proposed**: the author has not yet ratified them. The rule numbers at the foot of each lesson (2.5:G88, 3.0:G129 and so on) point into the Reference Grammar.',
 ];
 
 const DEVOTION: Part = {
@@ -224,7 +224,38 @@ const FAMILIES: Part = {
   ],
 };
 
-export const PARTS: Part[] = [...PARTS_2_5, DEVOTION, FAMILIES];
+const DREAMS: Part = {
+  title: 'Robots, minds and measures (proposed in 3.6)',
+  lessons: [
+    {
+      title: 'Units, robots and the -san rule once more',
+      welcome:
+        'The 2100 Dreams patch brings the words of a future city. Most are compounds you can already read; three rules come with them.',
+      points: [
+        '`kibo` is a robot: `helnakibo`, a medical bot; `kibosan`, robotic.',
+        'Metric units are compounds on `patu`: `bondopatu` gram, `lalnipatu` metre, `mirupatu` litre. `-ti` is the thousandth and `-vu` the thousandfold: `bondopatuti` milligram, `lalnipatuvu` kilometre. Count them with a numeral: `tressa lalnipatuvu`, three kilometres.',
+        'The `-san` rule reaches lexicalised diminutives: `mavofaruti`, hypomania; `mavofarutisan`, hypomanic.',
+        'Coarse words are a register of their own, never ascended: `garzasan`, damned. Leave them out of song unless the song needs them.',
+      ],
+      examples: [
+        ['tressa lalnipatuvu', 'three kilometres'],
+        ['penzira bondopatuti', 'fifty milligrams'],
+        [
+          'Li kibo po helnaha li linu, kasa saivo ke mavonibesan.',
+          'The bot treated the child, because she is psychotic.',
+        ],
+        ['Li garzasan kibo po bakoba li tabu.', 'The damned bot broke the table.'],
+      ],
+      practice: [
+        ['“three kilometres”', 'tressa lalnipatuvu'],
+        ['“fifty milligrams”', 'penzira bondopatuti'],
+      ],
+      rules: ['3.6:G155', '3.6:G153', '3.6:G154'],
+    },
+  ],
+};
+
+export const PARTS: Part[] = [...PARTS_2_5, DEVOTION, FAMILIES, DREAMS];
 
 /** The whole clause on one page, for review after the last lesson. */
 export const MAP = {

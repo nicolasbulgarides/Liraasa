@@ -4,7 +4,7 @@
  *
  *   npm run build:llm
  *
- * Writes handoff/liraasa_3_5_llm.json from the canonical 3.5 lexicon. It holds
+ * Writes handoff/liraasa_3_6_llm.json from the canonical 3.6 lexicon. It holds
  * every grammar rule and the full dictionary. It is shaped for a reader that
  * goes top to bottom: instructions and hard rules first, then sound, word
  * building, the clause, recipes and every ruling, then the small words, the
@@ -35,8 +35,8 @@ import { parseArgs } from './args';
 import { loadHymn } from './hymn';
 import { PROPOSED_EDITIONS } from './proposed_editions';
 
-const LEXICON = 'data/lexicon/liraasa_3_5.json';
-const OUT = 'handoff/liraasa_3_5_llm.json';
+const LEXICON = 'data/lexicon/liraasa_3_6.json';
+const OUT = 'handoff/liraasa_3_6_llm.json';
 /** The album, read against the live lexicon by scripts/build_album.ts; non-normative (2.5:G87). */
 const ALBUM = 'data/corpus/album_2_0/album_current.json';
 const ALBUM_READINGS = 'data/corpus/album_2_0/album_readings.json';
@@ -414,7 +414,7 @@ function main(): void {
     ...(proposed.length === 0
       ? {}
       : {
-          edition_status: `PROPOSED: the ${PROPOSED_EDITIONS.join(', ')} additions (rulings ${proposedRanges(proposed)}, and every dictionary line flagged ${PROPOSED_EDITIONS.map((e) => `"new in ${e}"`).join(' or ')}) await the author's ratification. Everything else is canon: the author ratified everything up to 3.4 on 2026-10-25.`,
+          edition_status: `PROPOSED: the ${PROPOSED_EDITIONS.join(', ')} additions (rulings ${proposedRanges(proposed)}, and every dictionary line flagged ${PROPOSED_EDITIONS.map((e) => `"new in ${e}"`).join(' or ')}) await the author's ratification. Everything else is canon: the author ratified everything up to 3.5 on 2026-10-25.`,
         }),
     read_me_first: [
       'Liraasa is a constructed language built for singing, by one author. This file is the complete, authoritative description of it: every grammar rule and every word.',

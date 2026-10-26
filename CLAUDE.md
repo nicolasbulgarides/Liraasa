@@ -24,7 +24,23 @@ made from the frozen 1.1 by the two changesets in `data/changes/` via
 151 function words, rulings 1.2:G24–G36, and 25 of 25 validator checks passing
 (`npm run validate:1.2`). 1.2 is now frozen as 2.0's baseline.
 
-**3.5 is current** (ADR-0025): `data/lexicon/liraasa_3_5.json`, built from
+**3.6 is current** (ADR-0027): `data/lexicon/liraasa_3_6.json`, built from
+frozen 3.5 by `npm run integrate:3.6` (changeset made by
+`scripts/make_changeset_3_6.ts`, a config for 3.0's `makeAdditionsChangeset`):
+the author's _2100 Dreams_ patch with **every module** (core, mind, world,
+nature, register, book.2100; bundle archived in `archive/patch_3_6/`): roots
+`kibo` (robot) and `garza` (coarse), 146 compounds, rulings 3.6:G153 (`-san`
+of a lexicalised diminutive), G154 (coarse register), G155 (metric units),
+renumbered past 3.5:G152 by the author; the author's decisions (dopamine and
+serotonin copied, the novel's sound-words built) are applied to the patch as
+read by `decide3_6` → `data/proposals/liraasa_3_6_patch_decided.json`;
+2242 headwords, 5140 meaningful forms. **3.6 is proposed**
+(`scripts/proposed_editions.ts`); questions in `review/questions_3_6.md`.
+Validation 23 PASS, 2 WARN (`npm run validate:3.6`) and the author's validator
+PASS. The one recipe that broke a ruling is settled as for 3.5
+(`tests/grammar/patch_3_6.test.ts`). 3.5 is frozen as 3.6's baseline.
+
+**3.5, ratified** (ADR-0025): `data/lexicon/liraasa_3_5.json`, built from
 frozen 3.4 by `npm run integrate:3.5`: first the author's ratification of
 3.0, 3.3 and 3.4 (2026-10-25, "ratify everything": op **`ratify_ruling`** marks
 each proposed ruling ratified, never touching its text; notes say ratified;
@@ -282,6 +298,8 @@ validator and parser.
 | `npm run integrate:3.3`    | Build 3.3 from frozen 3.1: the 3.1 ratification, then the 3.3 changeset (sha-checked baseline). `-- --check` writes nothing (ADR-0023).                                                                                                                                                                           | **working** |
 | `npm run integrate:3.4`    | Build 3.4 from frozen 3.3: the 3.4 patch, then the editor's decisions on four 3.3 sentences (sha-checked baseline). `-- --check` writes nothing (ADR-0024).                                                                                                                                                       | **working** |
 | `npm run integrate:3.5`    | Build 3.5 from frozen 3.4: the ratification of 3.0, 3.3 and 3.4, then the 3.5 patch with every module (sha-checked baseline). `-- --check` writes nothing (ADR-0025).                                                                                                                                             | **working** |
+| `npm run integrate:3.6`    | Build 3.6 from frozen 3.5: the 2100 Dreams patch with every module (sha-checked baseline). `-- --check` writes nothing (ADR-0027).                                                                                                                                                                                | **working** |
+| `npm run validate:3.6`     | validate_3_0.py on 3.6 → `data/lexicon/validation_3_6.json`; then the author's `validate_patch.py` on `handoff/liraasa_3_6_llm.json`.                                                                                                                                                                             | **working** |
 | `npm run validate:3.5`     | validate_3_0.py on 3.5 → `data/lexicon/validation_3_5.json`; then the author's `validate_patch.py` on `handoff/liraasa_3_5_llm.json`.                                                                                                                                                                             | **working** |
 | `npm run validate:3.4`     | validate_3_0.py on 3.4 → `data/lexicon/validation_3_4.json`; then the author's `validate_patch.py` on `handoff/liraasa_3_4_llm.json`.                                                                                                                                                                             | **working** |
 | `npm run validate:3.3`     | validate_3_0.py on 3.3 (check 7 re-run under 3.2:G142, 25 re-applies every 3.3 op) → `data/lexicon/validation_3_3.json`; then the author's `validate_patch.py` on `handoff/liraasa_3_3_llm.json`.                                                                                                                 | **working** |

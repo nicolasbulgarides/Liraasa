@@ -7,6 +7,15 @@
  */
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
+
+/** The copied names of foreign things the strict checker reads (3.5:G151): data/checker/rules_3_0.json. */
+const COPIED_WORDS: ReadonlySet<string> = new Set(
+  (
+    JSON.parse(readFileSync(resolve('data/checker/rules_3_0.json'), 'utf8')) as {
+      copied_words?: { words: string[] };
+    }
+  ).copied_words?.words ?? [],
+);
 import {
   FORM_SLOTS,
   SLOT_RAW_KEY,
@@ -129,6 +138,7 @@ export interface Lexicon {
   rulings_3_2?: Ruling[];
   rulings_3_3?: Ruling[];
   rulings_3_4?: Ruling[];
+  rulings_3_6?: Ruling[];
   rulings_3_5?: Ruling[];
   /** 2.0: the image-compound pattern, with the attested pairs whole (ADR-0016). */
   image_compounds?: {
@@ -223,6 +233,7 @@ export function normGloss(gloss: string): string {
 export function rulingById(lex: Lexicon, id: string): Ruling | undefined {
   const [edition, rid] = id.split(':');
   const sets: Record<string, readonly Ruling[] | undefined> = {
+    '3.6': lex.rulings_3_6,
     '3.5': lex.rulings_3_5,
     '3.4': lex.rulings_3_4,
     '3.3': lex.rulings_3_3,
@@ -360,6 +371,7 @@ export class Index {
         ...(lex.rulings_3_3 ?? []),
         ...(lex.rulings_3_4 ?? []),
         ...(lex.rulings_3_5 ?? []),
+        ...(lex.rulings_3_6 ?? []),
         ...lex.rulings_0_8_carried,
       ].flatMap((r) => (r.examples ?? []).map(([l]) => l)),
       ...lex.discourse_particles.flatMap((p) => p.examples.map((e) => e.liraasa)),
@@ -384,6 +396,8 @@ export class Index {
   /** Is this one token a word of Liraasa, by form, closed class, inflection or attestation? */
   isWord(token: string): boolean {
     if (this.forms.has(token) || this.closed.has(token) || this.attested.has(token)) return true;
+    // a foreign dish, product or drug copied like a name (3.5:G151), as the checker lists them
+    if (COPIED_WORDS.has(token)) return true;
     if (this.patterns.has(token)) return true;
     // -ri, -ti, -tiri on a known form or closed word.
     for (const suffix of ['tiri', 'ri', 'ti']) {
@@ -511,6 +525,7 @@ export function canonTexts(lex: Lexicon): string[] {
     ...(lex.rulings_3_3 ?? []),
     ...(lex.rulings_3_4 ?? []),
     ...(lex.rulings_3_5 ?? []),
+    ...(lex.rulings_3_6 ?? []),
     ...lex.rulings_0_8_carried,
   ];
   return [

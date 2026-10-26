@@ -1440,18 +1440,56 @@ export const RECIPES: readonly (readonly [string, string, string, string, string
     '',
   ],
   ['alright · okay', 'eho (3.2)', 'Eho, maivo venreva.', 'Alright, I’m coming.', ''],
+  // 3.6, proposed (ADR-0027): the 2100 Dreams patch's recipes; "unabated" is given in a
+  // form that keeps 1.0:G1 (the editor's judgement, for the author in review/questions_3_6.md)
+  [
+    'actress · hostess (female role)',
+    'minvasan + role word',
+    'Li minvasan sudeyo po lirala.',
+    'The actress sang.',
+    '1.2:G36',
+  ],
+  [
+    'rename · relive · rebuild',
+    '`revo-` + verb',
+    'Saivo revo-ramura li deya.',
+    'She relives the day.',
+    '2.5:G121',
+  ],
+  ['idiot · kiddo', 'li ravminasan · linuti', 'Taivo ka li ravminasan!', 'You are an idiot!', ''],
+  [
+    'unabated',
+    '`ne` + verb: did not stop',
+    'Li renli po ne teklata.',
+    'The rain went on unabated.',
+    '1.0:G1',
+  ],
+  [
+    'in unison · downstairs',
+    'en sambakrono · en li kezuzupa',
+    'Saivori lirala en sambakrono.',
+    'They sing in unison.',
+    '',
+  ],
+  [
+    'Ativan · heroin · LSD (named drugs)',
+    'copied names: ativan, herona, elesede',
+    'Li mavohelnayo po helnaha ativan.',
+    'The psychiatrist administered Ativan.',
+    '3.5:G151',
+  ],
 ];
 
 // ---------------------------------------------------------------- 7. The 3.x grammar
 
-/** Devotion, music and measure (3.0), then word families, names and shapes (3.2 to 3.5). */
+/** Devotion, music and measure (3.0), word families, names and shapes (3.2 to 3.5), and 3.6 (proposed). */
 export function threePart(index: Index): string {
   const lex = index.lex;
   const ex = (id: string, l: string, e: string): [string, string] => [example(lex, id, l), e];
   return part(
     '7',
     'Devotion, families and shapes',
-    'What 3.0 to 3.5 add: how to address, praise and bless; how a few roots name whole families; and the adjectives, titles, shapes and copied names that come by rule. Every example is a ruling’s own.',
+    'What 3.0 to 3.6 add: how to address, praise and bless; how a few roots name whole families; the adjectives, titles, shapes and copied names that come by rule; and, proposed in 3.6, units and the coarse register. Every example is a ruling’s own.',
     `${h3('Address and praise')}
 ${examples([
   ex('3.0:G129', 'Iya Deviasa, lenila maivo!', 'O Great Goddess, hear me!'),
@@ -1538,6 +1576,18 @@ ${ul([
   'A numeral joined to `gaki` names a polygon: `tressa-gaki` triangle, `cuara-gaki` square [[3.5:G150]].',
   'Foreign dishes are copied like names, in lower case: `pitsa`, `hamburga` [[3.5:G151]].',
   '`maivori` is we, with or without the listener, as the context shows; name who is meant when it matters: `maivo ata taivo` [[3.5:G152]].',
+])}
+${h3('Units, minds and the coarse register (3.6, proposed)')}
+${examples([
+  ex('3.6:G155', 'penzira bondopatuti', 'fifty milligrams'),
+  ex('3.6:G155', 'tressa lalnipatuvu', 'three kilometres'),
+  ex('3.6:G154', 'Garza! Li kadu ne venreva.', 'Damn! The car isn’t coming.'),
+  ex('3.6:G154', 'Li garzasan kibo po bakoba li tabu.', 'The damned bot broke the table.'),
+])}
+${ul([
+  'Metric units are compounds on `patu`: `bondopatu` gram, `lalnipatu` metre, `mirupatu` litre. `-ti` is the thousandth and `-vu` the thousandfold: `bondopatuti` milligram, `lalnipatuvu` kilometre [[3.6:G155]]. Body units stay the everyday measures [[3.2:G144]].',
+  'The `-san` rule reaches lexicalised diminutives too: `mavofaruti` hypomania, `mavofarutisan` hypomanic [[3.6:G153]]. ',
+  'Coarse words are a register, not a grammar: `Garza!` is the interjection, `garzasan` the intensifier, `garzaga` to swear, `Rupu!` the lesser oath. They never take ascended forms [[3.6:G154]].',
 ])}`,
   );
 }

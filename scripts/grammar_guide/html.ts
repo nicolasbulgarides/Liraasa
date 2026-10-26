@@ -67,6 +67,7 @@ export function md(text: string): string {
 export function badge(id: string): string {
   const edition = id.split(':')[0] ?? '';
   const cls =
+    edition === '3.6' ||
     edition === '3.5' ||
     edition === '3.4' ||
     edition === '3.3' ||

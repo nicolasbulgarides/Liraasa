@@ -28,3 +28,23 @@ LirasaCodexLatest/
 
 # The GitHub Pages site, assembled by scripts/build_site.sh.
 _site/
+
+# the 2100 Dreams draft run: logs and the run checkpoint stay local
+translation/logs/
+translation/*.tmp
+translation/out/*.tmp
+# the novel's text and the live draft stay out of git until the author says otherwise
+/2100 Dreams Full Manuscript.pdf
+translation/source/
+translation/segments/
+translation/index/
+translation/out/
+translation/draft/
+translation/prompts/
+translation/registry.json
+translation/state.json
+translation/decisions.*
+translation/report.md
+translation/source_typos.json
+translation/FINISHED
+translation/STOPPED_WEEKLY_CAP

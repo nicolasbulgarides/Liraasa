@@ -137,6 +137,12 @@ export interface AdditionsConfig {
   wordBuilding?: WordBuilding;
   /** Ops the patch's README asks for beyond its lists (3.0: the rulings carried into the clause). */
   extraOps?: (lex: RawLexicon) => ChangeRecord[];
+  /**
+   * The author's decisions on the patch before it is ratified (3.6, ADR-0027): entries dropped,
+   * added or renumbered, as the patch README says ("delete any rejected entry … recompute
+   * counts"), applied to the patch as read, never to its file.
+   */
+  patchTransform?: (patch: Patch) => Patch;
 }
 
 /** A change record stamped with the config's edition and time. */
@@ -337,7 +343,8 @@ export function makeAdditionsChangeset(cfg: AdditionsConfig): LexiconChangeset {
   const proposed = `Proposed in ${cfg.edition}: awaiting the author's ratification.`;
   const rec = recorder(cfg);
   const say = (what: string): string => `${cfg.name}: ${what}.`;
-  const patch = JSON.parse(readFileSync(resolve(cfg.patch), 'utf8')) as Patch;
+  const read = JSON.parse(readFileSync(resolve(cfg.patch), 'utf8')) as Patch;
+  const patch = cfg.patchTransform === undefined ? read : cfg.patchTransform(read);
   const lex = JSON.parse(readFileSync(resolve(cfg.baseline), 'utf8')) as RawLexicon;
   const ids = idsAfter(
     lex,

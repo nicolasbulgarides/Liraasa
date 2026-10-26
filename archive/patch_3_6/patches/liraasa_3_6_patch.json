@@ -1,0 +1,3847 @@
+{
+ "patch": "Liraasa 3.6 — The 2100 Dreams patch: robots, the mind, the neocity",
+ "base_version": "3.5",
+ "target_version": "3.6",
+ "status": "PROPOSED: ratify tier 1 first; tier 2 may be ratified, deferred or dropped item by item",
+ "base_file": "liraasa_3_5_llm.json (2.5 + 3.0 + 3.1 + 3.3 + 3.4 + 3.5, all modules)",
+ "base_counts": {
+  "headwords": 2094,
+  "meaningful_forms": 4951
+ },
+ "counts": {
+  "new_roots": 2,
+  "new_compounds": 140,
+  "new_listed_derivations": 10,
+  "new_lexicalised_diminutives": 7,
+  "restored_forms": 1,
+  "tier1_entries": 94,
+  "tier2_entries": 66,
+  "headwords_after": 2236,
+  "meaningful_forms_after": 5133
+ },
+ "principles": [
+  "No new roots: every entry is built from existing headwords.",
+  "Alias before coining: an existing word gets an English name rather than a new synonym.",
+  "Recipe before word: grammar that already says it is documented, not lexicalised.",
+  "Modular: every entry carries a module; apply_patch.py --modules selects which to merge. core is the essentials; archetypes, qualities and casual extend the general lexicon; pack.* are optional domain packs."
+ ],
+ "modules": {
+  "core": "kibo (robot) and the everyday vocabulary the novel needs",
+  "mind": "The mental-health family on mavo (mind) and helna (medicine)",
+  "world": "Holo-tech, materials and science-fiction words of the neocity",
+  "nature": "Creatures and food in the book",
+  "register": "Coarse register: garza, rupu and insult compounds",
+  "book.2100": "Invented terms of 2100 Dreams and the Liraasa name sheet"
+ },
+ "function_words_add": [],
+ "rulings_add": [
+  {
+   "id": "3.6:G154",
+   "topic": "Metric units",
+   "module": "core",
+   "rule": "Base units are compounds on patu: bondopatu (gram), lalnipatu (metre), mirupatu (litre). The diminutive -ti names the thousandth (milli-) and -vu the thousandfold (kilo-): bondopatuti milligram, bondopatuvu kilogram, lalnipatuvu kilometre. A numeral counts them: dossa bondopatuti, two milligrams. Body units (3.2:G144) remain the everyday, poetic measures.",
+   "examples": [
+    [
+     "penzira bondopatuti",
+     "fifty milligrams"
+    ],
+    [
+     "tressa lalnipatuvu",
+     "three kilometres"
+    ]
+   ]
+  },
+  {
+   "id": "3.6:G152",
+   "topic": "Relational adjectives from lexicalised diminutives",
+   "module": "mind",
+   "rule": "3.3:G148 also applies to lexicalised diminutives: their -san form means 'of or marked by X'. mavofaruti (hypomania) gives mavofarutisan (hypomanic); vizudemroti (tic) gives vizudemrotisan.",
+   "examples": [
+    [
+     "mavofaruti · mavofarutisan",
+     "hypomania · hypomanic"
+    ]
+   ]
+  },
+  {
+   "id": "3.6:G153",
+   "topic": "Coarse register",
+   "module": "register",
+   "rule": "Profanity is a register, not a grammar. garza is the all-purpose curse: the interjection Garza! (Fuck!, Damn!), the intensifier garzasan before a noun (fucking, damned), and the verb garzaga (to swear). rupu (waste) serves as Rupu! (Shit!). Insults are person-compounds on nela: rupunela, larnenela. Coarse words never take ascended forms, and are marked [coarse] in the lexicon.",
+   "examples": [
+    [
+     "Garza! Li kadu ne venreva.",
+     "Fuck! The car isn't coming."
+    ],
+    [
+     "Li garzasan kibo po bakoba li tabu.",
+     "The damned bot broke the table."
+    ]
+   ]
+  }
+ ],
+ "roots_add": [
+  {
+   "module": "core",
+   "headword": "kibo",
+   "domain": "Information & technology",
+   "tier": 1,
+   "archetype_role": null,
+   "sound_class": "crisp (k b): a short, friendly everyday word",
+   "forms": {
+    "n": {
+     "form": "kibo",
+     "meaning": "robot; bot (everyday word)"
+    },
+    "a": {
+     "form": "kibosan",
+     "meaning": "robotic; bot-like"
+    }
+   },
+   "dictionary_line": "kibo {new in 3.6}: (n) robot; bot (everyday word) | kibosan (a) robotic; bot-like"
+  },
+  {
+   "module": "register",
+   "headword": "garza",
+   "domain": "Emotion & song",
+   "tier": 1,
+   "archetype_role": null,
+   "sound_class": "harsh (g r z): sound follows meaning",
+   "forms": {
+    "n": {
+     "form": "garza",
+     "meaning": "curse; obscenity"
+    },
+    "v": {
+     "form": "garzaga",
+     "meaning": "to swear; to curse"
+    },
+    "a": {
+     "form": "garzasan",
+     "meaning": "damned; fucking (coarse intensifier)"
+    }
+   },
+   "dictionary_line": "garza {new in 3.6}: (n) curse; obscenity | garzaga (v) to swear; to curse | garzasan (a) damned; fucking (coarse intensifier)"
+  }
+ ],
+ "compounds_add": [
+  {
+   "module": "core",
+   "headword": "helnakibo",
+   "parts": [
+    "helna",
+    "kibo"
+   ],
+   "domain": "Health & body",
+   "tier": 1,
+   "archetype": "robots",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "helnakibo",
+     "meaning": "medical bot"
+    }
+   },
+   "note": null,
+   "dictionary_line": "helnakibo [helna+kibo] {new in 3.6}: (n) medical bot"
+  },
+  {
+   "module": "core",
+   "headword": "germanamre",
+   "parts": [
+    "germa",
+    "namre"
+   ],
+   "domain": "Society",
+   "tier": 1,
+   "archetype": "robots",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "germanamre",
+     "meaning": "metalhead (affectionate slang for a robot)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "germanamre [germa+namre] {new in 3.6}: (n) metalhead (affectionate slang for a robot)"
+  },
+  {
+   "module": "core",
+   "headword": "divmanela",
+   "parts": [
+    "divma",
+    "nela"
+   ],
+   "domain": "Information & technology",
+   "tier": 1,
+   "archetype": "robots",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "divmanela",
+     "meaning": "android; mechanoid (machine-person)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "divmanela [divma+nela] {new in 3.6}: (n) android; mechanoid (machine-person)"
+  },
+  {
+   "module": "core",
+   "headword": "biokibo",
+   "parts": [
+    "bio",
+    "kibo"
+   ],
+   "domain": "Information & technology",
+   "tier": 2,
+   "archetype": "robots",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "biokibo",
+     "meaning": "biobot (living robot)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "biokibo [bio+kibo] {new in 3.6}: (n) biobot (living robot)"
+  },
+  {
+   "module": "core",
+   "headword": "simvocuza",
+   "parts": [
+    "simvo",
+    "cuza"
+   ],
+   "domain": "Information & technology",
+   "tier": 1,
+   "archetype": "tech",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "simvocuza",
+     "meaning": "profile (identity-record)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "simvocuza [simvo+cuza] {new in 3.6}: (n) profile (identity-record)"
+  },
+  {
+   "module": "core",
+   "headword": "vimoramu",
+   "parts": [
+    "vimo",
+    "ramu"
+   ],
+   "domain": "Information & technology",
+   "tier": 1,
+   "archetype": "tech",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "vimoramu",
+     "meaning": "footage; a recording (sight-memory)"
+    },
+    "v": {
+     "form": "vimoramuva",
+     "meaning": "to record on video"
+    }
+   },
+   "note": null,
+   "dictionary_line": "vimoramu [vimo+ramu] {new in 3.6}: (n) footage; a recording (sight-memory) | vimoramuva (v) to record on video"
+  },
+  {
+   "module": "core",
+   "headword": "pelicono",
+   "parts": [
+    "peli",
+    "cono"
+   ],
+   "domain": "Everyday & feast",
+   "tier": 1,
+   "archetype": "tech",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "pelicono",
+     "meaning": "token; game coin"
+    }
+   },
+   "note": null,
+   "dictionary_line": "pelicono [peli+cono] {new in 3.6}: (n) token; game coin"
+  },
+  {
+   "module": "core",
+   "headword": "kronolazu",
+   "parts": [
+    "krono",
+    "lazu"
+   ],
+   "domain": "Animals",
+   "tier": 1,
+   "archetype": "creatures",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "kronolazu",
+     "meaning": "dinosaur (the ancient beast)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "kronolazu [krono+lazu] {new in 3.6}: (n) dinosaur (the ancient beast)"
+  },
+  {
+   "module": "core",
+   "headword": "mambipuku",
+   "parts": [
+    "mambi",
+    "puku"
+   ],
+   "domain": "Abstract",
+   "tier": 1,
+   "archetype": "events",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "mambipuku",
+     "meaning": "incident; an event and what came of it"
+    }
+   },
+   "note": null,
+   "dictionary_line": "mambipuku [mambi+puku] {new in 3.6}: (n) incident; an event and what came of it"
+  },
+  {
+   "module": "core",
+   "headword": "molusasva",
+   "parts": [
+    "molu",
+    "sasva"
+   ],
+   "domain": "People",
+   "tier": 1,
+   "archetype": "people",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "molusasva",
+     "meaning": "caregiving; tender keeping"
+    }
+   },
+   "note": null,
+   "dictionary_line": "molusasva [molu+sasva] {new in 3.6}: (n) caregiving; tender keeping"
+  },
+  {
+   "module": "core",
+   "headword": "vanilordi",
+   "parts": [
+    "vani",
+    "lordi"
+   ],
+   "domain": "Language & art",
+   "tier": 1,
+   "archetype": "qualities",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "vanilordi",
+     "meaning": "aesthetic; aesthetics (beauty-order)"
+    }
+   },
+   "note": "aesthetic (adj.) = vanilordisan (3.3:G148)",
+   "dictionary_line": "vanilordi [vani+lordi] {new in 3.6}: (n) aesthetic; aesthetics (beauty-order)"
+  },
+  {
+   "module": "core",
+   "headword": "resodalu",
+   "parts": [
+    "reso",
+    "dalu"
+   ],
+   "domain": "Movement & action",
+   "tier": 1,
+   "archetype": "manner verbs",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "resodalu",
+     "meaning": "tickle"
+    },
+    "v": {
+     "form": "resodalura",
+     "meaning": "to tickle"
+    }
+   },
+   "note": null,
+   "dictionary_line": "resodalu [reso+dalu] {new in 3.6}: (n) tickle | resodalura (v) to tickle"
+  },
+  {
+   "module": "core",
+   "headword": "rezamiru",
+   "parts": [
+    "reza",
+    "miru"
+   ],
+   "domain": "Body",
+   "tier": 1,
+   "archetype": "manner verbs",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "rezamiru",
+     "meaning": "drool"
+    },
+    "v": {
+     "form": "rezamirura",
+     "meaning": "to drool"
+    }
+   },
+   "note": null,
+   "dictionary_line": "rezamiru [reza+miru] {new in 3.6}: (n) drool | rezamirura (v) to drool"
+  },
+  {
+   "module": "core",
+   "headword": "maskayalmu",
+   "parts": [
+    "maska",
+    "yalmu"
+   ],
+   "domain": "Society",
+   "tier": 1,
+   "archetype": "abstract",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "maskayalmu",
+     "meaning": "manipulation (false influence)"
+    },
+    "v": {
+     "form": "maskayalmuma",
+     "meaning": "to manipulate (someone)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "maskayalmu [maska+yalmu] {new in 3.6}: (n) manipulation (false influence) | maskayalmuma (v) to manipulate (someone)"
+  },
+  {
+   "module": "core",
+   "headword": "manlidemro",
+   "parts": [
+    "manli",
+    "demro"
+   ],
+   "domain": "Movement & action",
+   "tier": 2,
+   "archetype": "manner verbs",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "manlidemro",
+     "meaning": "handling"
+    },
+    "v": {
+     "form": "manlidemroma",
+     "meaning": "to manipulate (a thing); to handle"
+    }
+   },
+   "note": null,
+   "dictionary_line": "manlidemro [manli+demro] {new in 3.6}: (n) handling | manlidemroma (v) to manipulate (a thing); to handle"
+  },
+  {
+   "module": "core",
+   "headword": "simvosovla",
+   "parts": [
+    "simvo",
+    "sovla"
+   ],
+   "domain": "Language & art",
+   "tier": 2,
+   "archetype": "abstract",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "simvosovla",
+     "meaning": "fractal (self-shape)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "simvosovla [simvo+sovla] {new in 3.6}: (n) fractal (self-shape)"
+  },
+  {
+   "module": "core",
+   "headword": "navufaruhata",
+   "parts": [
+    "navufaru",
+    "hata"
+   ],
+   "domain": "Movement & action",
+   "tier": 1,
+   "archetype": "manner verbs",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "navufaruhata",
+     "meaning": "zap; lightning strike"
+    },
+    "v": {
+     "form": "navufaruhatania",
+     "meaning": "to zap"
+    }
+   },
+   "note": null,
+   "dictionary_line": "navufaruhata [navufaru+hata] {new in 3.6}: (n) zap; lightning strike | navufaruhatania (v) to zap"
+  },
+  {
+   "module": "core",
+   "headword": "mellikrono",
+   "parts": [
+    "melli",
+    "krono"
+   ],
+   "domain": "Abstract",
+   "tier": 1,
+   "archetype": "abstract",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "mellikrono",
+     "meaning": "time dilation (expanded time)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "mellikrono [melli+krono] {new in 3.6}: (n) time dilation (expanded time)"
+  },
+  {
+   "module": "core",
+   "headword": "lordilekta",
+   "parts": [
+    "lordi",
+    "lekta"
+   ],
+   "domain": "Abstract",
+   "tier": 2,
+   "archetype": "abstract",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lordilekta",
+     "meaning": "array; an ordered set"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lordilekta [lordi+lekta] {new in 3.6}: (n) array; an ordered set"
+  },
+  {
+   "module": "core",
+   "headword": "senorinba",
+   "parts": [
+    "seno",
+    "rinba"
+   ],
+   "domain": "Language & art",
+   "tier": 1,
+   "archetype": "abstract",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "senorinba",
+     "meaning": "context (the ring of words around)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "senorinba [seno+rinba] {new in 3.6}: (n) context (the ring of words around)"
+  },
+  {
+   "module": "core",
+   "headword": "sevrelalle",
+   "parts": [
+    "sevre",
+    "lalle"
+   ],
+   "domain": "Information & technology",
+   "tier": 2,
+   "archetype": "tech",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "sevrelalle",
+     "meaning": "binary (closed-open; on-off)"
+    }
+   },
+   "note": "binary (adj.) = sevrelallesan (G148)",
+   "dictionary_line": "sevrelalle [sevre+lalle] {new in 3.6}: (n) binary (closed-open; on-off)"
+  },
+  {
+   "module": "core",
+   "headword": "lorefavro",
+   "parts": [
+    "lore",
+    "favro"
+   ],
+   "domain": "Information & technology",
+   "tier": 1,
+   "archetype": "tech",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lorefavro",
+     "meaning": "emoticon; emoji (heart-sign)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lorefavro [lore+favro] {new in 3.6}: (n) emoticon; emoji (heart-sign)"
+  },
+  {
+   "module": "core",
+   "headword": "resofavro",
+   "parts": [
+    "reso",
+    "favro"
+   ],
+   "domain": "Information & technology",
+   "tier": 2,
+   "archetype": "tech",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "resofavro",
+     "meaning": "meme (laugh-sign)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "resofavro [reso+favro] {new in 3.6}: (n) meme (laugh-sign)"
+  },
+  {
+   "module": "core",
+   "headword": "pagofavro",
+   "parts": [
+    "pago",
+    "favro"
+   ],
+   "domain": "Information & technology",
+   "tier": 2,
+   "archetype": "tech",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "pagofavro",
+     "meaning": "geotag; location marker"
+    }
+   },
+   "note": null,
+   "dictionary_line": "pagofavro [pago+favro] {new in 3.6}: (n) geotag; location marker"
+  },
+  {
+   "module": "core",
+   "headword": "lombilordi",
+   "parts": [
+    "lombi",
+    "lordi"
+   ],
+   "domain": "Information & technology",
+   "tier": 2,
+   "archetype": "tech",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lombilordi",
+     "meaning": "preset; default setting"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lombilordi [lombi+lordi] {new in 3.6}: (n) preset; default setting"
+  },
+  {
+   "module": "core",
+   "headword": "yalmusevre",
+   "parts": [
+    "yalmu",
+    "sevre"
+   ],
+   "domain": "Information & technology",
+   "tier": 1,
+   "archetype": "tech",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "yalmusevre",
+     "meaning": "shutdown"
+    },
+    "v": {
+     "form": "yalmusevreya",
+     "meaning": "to deactivate; to shut down"
+    }
+   },
+   "note": null,
+   "dictionary_line": "yalmusevre [yalmu+sevre] {new in 3.6}: (n) shutdown | yalmusevreya (v) to deactivate; to shut down"
+  },
+  {
+   "module": "core",
+   "headword": "sambakrono",
+   "parts": [
+    "samba",
+    "krono"
+   ],
+   "domain": "Time, quantity & work",
+   "tier": 1,
+   "archetype": "time",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "sambakrono",
+     "meaning": "synchrony"
+    },
+    "v": {
+     "form": "sambakronosia",
+     "meaning": "to synchronize"
+    }
+   },
+   "note": "simultaneous = sambakronosan (G148)",
+   "dictionary_line": "sambakrono [samba+krono] {new in 3.6}: (n) synchrony | sambakronosia (v) to synchronize"
+  },
+  {
+   "module": "core",
+   "headword": "rinbanulu",
+   "parts": [
+    "rinba",
+    "nulu"
+   ],
+   "domain": "Abstract",
+   "tier": 1,
+   "archetype": "abstract",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "rinbanulu",
+     "meaning": "loop (ring-path)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "rinbanulu [rinba+nulu] {new in 3.6}: (n) loop (ring-path)"
+  },
+  {
+   "module": "core",
+   "headword": "mavotibi",
+   "parts": [
+    "mavo",
+    "tibi"
+   ],
+   "domain": "Body",
+   "tier": 1,
+   "archetype": "body",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "mavotibi",
+     "meaning": "nerve; neuron (mind-thread)"
+    }
+   },
+   "note": "neural = mavotibisan (G148)",
+   "dictionary_line": "mavotibi [mavo+tibi] {new in 3.6}: (n) nerve; neuron (mind-thread)"
+  },
+  {
+   "module": "core",
+   "headword": "dendumiru",
+   "parts": [
+    "dendu",
+    "miru"
+   ],
+   "domain": "Abstract",
+   "tier": 2,
+   "archetype": "abstract",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "dendumiru",
+     "meaning": "immersion (deep water)"
+    }
+   },
+   "note": "immersive = dendumirusan (G148)",
+   "dictionary_line": "dendumiru [dendu+miru] {new in 3.6}: (n) immersion (deep water)"
+  },
+  {
+   "module": "core",
+   "headword": "lumipatu",
+   "parts": [
+    "lumi",
+    "patu"
+   ],
+   "domain": "Language & art",
+   "tier": 1,
+   "archetype": "abstract",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lumipatu",
+     "meaning": "highlight"
+    },
+    "v": {
+     "form": "lumipatula",
+     "meaning": "to highlight"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lumipatu [lumi+patu] {new in 3.6}: (n) highlight | lumipatula (v) to highlight"
+  },
+  {
+   "module": "core",
+   "headword": "cuzapatu",
+   "parts": [
+    "cuza",
+    "patu"
+   ],
+   "domain": "Language & art",
+   "tier": 1,
+   "archetype": "writing",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "cuzapatu",
+     "meaning": "paragraph"
+    }
+   },
+   "note": null,
+   "dictionary_line": "cuzapatu [cuza+patu] {new in 3.6}: (n) paragraph"
+  },
+  {
+   "module": "core",
+   "headword": "lalnikerso",
+   "parts": [
+    "lalni",
+    "kerso"
+   ],
+   "domain": "Abstract",
+   "tier": 2,
+   "archetype": "abstract",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lalnikerso",
+     "meaning": "extension; lengthening"
+    },
+    "v": {
+     "form": "lalnikersola",
+     "meaning": "to extend"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lalnikerso [lalni+kerso] {new in 3.6}: (n) extension; lengthening | lalnikersola (v) to extend"
+  },
+  {
+   "module": "core",
+   "headword": "valladoza",
+   "parts": [
+    "valla",
+    "doza"
+   ],
+   "domain": "Language & art",
+   "tier": 2,
+   "archetype": "writing",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "valladoza",
+     "meaning": "exclamation; outcry"
+    }
+   },
+   "note": null,
+   "dictionary_line": "valladoza [valla+doza] {new in 3.6}: (n) exclamation; outcry"
+  },
+  {
+   "module": "core",
+   "headword": "gonbiseno",
+   "parts": [
+    "gonbi",
+    "seno"
+   ],
+   "domain": "Language & art",
+   "tier": 1,
+   "archetype": "writing",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "gonbiseno",
+     "meaning": "greeting (guest-word)"
+    },
+    "v": {
+     "form": "gonbisenoga",
+     "meaning": "to greet"
+    }
+   },
+   "note": null,
+   "dictionary_line": "gonbiseno [gonbi+seno] {new in 3.6}: (n) greeting (guest-word) | gonbisenoga (v) to greet"
+  },
+  {
+   "module": "core",
+   "headword": "dapafavro",
+   "parts": [
+    "dapa",
+    "favro"
+   ],
+   "domain": "Society",
+   "tier": 1,
+   "archetype": "society",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "dapafavro",
+     "meaning": "advertisement (sale-sign)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "dapafavro [dapa+favro] {new in 3.6}: (n) advertisement (sale-sign)"
+  },
+  {
+   "module": "core",
+   "headword": "lumitalva",
+   "parts": [
+    "lumi",
+    "talva"
+   ],
+   "domain": "Information & technology",
+   "tier": 2,
+   "archetype": "tech",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lumitalva",
+     "meaning": "projection (light-throw)"
+    },
+    "v": {
+     "form": "lumitalvala",
+     "meaning": "to project"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lumitalva [lumi+talva] {new in 3.6}: (n) projection (light-throw) | lumitalvala (v) to project"
+  },
+  {
+   "module": "core",
+   "headword": "talipatu",
+   "parts": [
+    "tali",
+    "patu"
+   ],
+   "domain": "Everyday objects & work",
+   "tier": 1,
+   "archetype": "work",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "talipatu",
+     "meaning": "assignment; task"
+    }
+   },
+   "note": null,
+   "dictionary_line": "talipatu [tali+patu] {new in 3.6}: (n) assignment; task"
+  },
+  {
+   "module": "core",
+   "headword": "kronodivma",
+   "parts": [
+    "krono",
+    "divma"
+   ],
+   "domain": "Information & technology",
+   "tier": 1,
+   "archetype": "tech",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "kronodivma",
+     "meaning": "clockwork (time-system)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "kronodivma [krono+divma] {new in 3.6}: (n) clockwork (time-system)"
+  },
+  {
+   "module": "core",
+   "headword": "nolsacilni",
+   "parts": [
+    "nolsa",
+    "cilni"
+   ],
+   "domain": "Society",
+   "tier": 2,
+   "archetype": "society",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "nolsacilni",
+     "meaning": "neocity; new city"
+    }
+   },
+   "note": null,
+   "dictionary_line": "nolsacilni [nolsa+cilni] {new in 3.6}: (n) neocity; new city"
+  },
+  {
+   "module": "core",
+   "headword": "pebunela",
+   "parts": [
+    "pebu",
+    "nela"
+   ],
+   "domain": "Society",
+   "tier": 1,
+   "archetype": "society",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "pebunela",
+     "meaning": "the underclass (the foot of society)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "pebunela [pebu+nela] {new in 3.6}: (n) the underclass (the foot of society)"
+  },
+  {
+   "module": "core",
+   "headword": "patulekta",
+   "parts": [
+    "patu",
+    "lekta"
+   ],
+   "domain": "Society",
+   "tier": 1,
+   "archetype": "society",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "patulekta",
+     "meaning": "faction; splinter group"
+    }
+   },
+   "note": null,
+   "dictionary_line": "patulekta [patu+lekta] {new in 3.6}: (n) faction; splinter group"
+  },
+  {
+   "module": "core",
+   "headword": "patuyeba",
+   "parts": [
+    "patu",
+    "yeba"
+   ],
+   "domain": "Society",
+   "tier": 1,
+   "archetype": "society",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "patuyeba",
+     "meaning": "compromise"
+    },
+    "v": {
+     "form": "patuyebapa",
+     "meaning": "to compromise"
+    }
+   },
+   "note": null,
+   "dictionary_line": "patuyeba [patu+yeba] {new in 3.6}: (n) compromise | patuyebapa (v) to compromise"
+  },
+  {
+   "module": "core",
+   "headword": "taliranfa",
+   "parts": [
+    "tali",
+    "ranfa"
+   ],
+   "domain": "Mind & philosophy",
+   "tier": 1,
+   "archetype": "qualities",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "taliranfa",
+     "meaning": "pragmatism (work-reason)"
+    },
+    "a": {
+     "form": "taliranfasan",
+     "meaning": "pragmatic; practical"
+    }
+   },
+   "note": null,
+   "dictionary_line": "taliranfa [tali+ranfa] {new in 3.6}: (n) pragmatism (work-reason) | taliranfasan (a) pragmatic; practical"
+  },
+  {
+   "module": "core",
+   "headword": "velmasirmo",
+   "parts": [
+    "velma",
+    "sirmo"
+   ],
+   "domain": "Society",
+   "tier": 1,
+   "archetype": "qualities",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "velmasirmo",
+     "meaning": "fashion (clothing-renown)"
+    }
+   },
+   "note": "fashionable = velmasirmosan (G148)",
+   "dictionary_line": "velmasirmo [velma+sirmo] {new in 3.6}: (n) fashion (clothing-renown)"
+  },
+  {
+   "module": "core",
+   "headword": "gudolideo",
+   "parts": [
+    "gudo",
+    "lideo"
+   ],
+   "domain": "Mind & philosophy",
+   "tier": 1,
+   "archetype": "qualities",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "gudolideo",
+     "meaning": "stereotype (common idea)"
+    }
+   },
+   "note": "stereotypical = gudolideosan (G148)",
+   "dictionary_line": "gudolideo [gudo+lideo] {new in 3.6}: (n) stereotype (common idea)"
+  },
+  {
+   "module": "core",
+   "headword": "loreramu",
+   "parts": [
+    "lore",
+    "ramu"
+   ],
+   "domain": "Emotions",
+   "tier": 1,
+   "archetype": "qualities",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "loreramu",
+     "meaning": "sentiment; a fond memory"
+    },
+    "a": {
+     "form": "loreramusan",
+     "meaning": "sentimental"
+    }
+   },
+   "note": null,
+   "dictionary_line": "loreramu [lore+ramu] {new in 3.6}: (n) sentiment; a fond memory | loreramusan (a) sentimental"
+  },
+  {
+   "module": "core",
+   "headword": "kronosirmo",
+   "parts": [
+    "krono",
+    "sirmo"
+   ],
+   "domain": "Language & art",
+   "tier": 1,
+   "archetype": "qualities",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "kronosirmo",
+     "meaning": "a classic (time-renown)"
+    },
+    "a": {
+     "form": "kronosirmosan",
+     "meaning": "classic; timeless"
+    }
+   },
+   "note": null,
+   "dictionary_line": "kronosirmo [krono+sirmo] {new in 3.6}: (n) a classic (time-renown) | kronosirmosan (a) classic; timeless"
+  },
+  {
+   "module": "core",
+   "headword": "vizufarla",
+   "parts": [
+    "vizu",
+    "farla"
+   ],
+   "domain": "Movement & action",
+   "tier": 1,
+   "archetype": "manner verbs",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "vizufarla",
+     "meaning": "improvisation"
+    },
+    "v": {
+     "form": "vizufarlava",
+     "meaning": "to improvise"
+    }
+   },
+   "note": null,
+   "dictionary_line": "vizufarla [vizu+farla] {new in 3.6}: (n) improvisation | vizufarlava (v) to improvise"
+  },
+  {
+   "module": "core",
+   "headword": "lumiturna",
+   "parts": [
+    "lumi",
+    "turna"
+   ],
+   "domain": "Materials & physics",
+   "tier": 2,
+   "archetype": "qualities",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lumiturna",
+     "meaning": "translucence (light-entering)"
+    },
+    "a": {
+     "form": "lumiturnasan",
+     "meaning": "translucent"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lumiturna [lumi+turna] {new in 3.6}: (n) translucence (light-entering) | lumiturnasan (a) translucent"
+  },
+  {
+   "module": "core",
+   "headword": "lumiramu",
+   "parts": [
+    "lumi",
+    "ramu"
+   ],
+   "domain": "Materials & physics",
+   "tier": 2,
+   "archetype": "abstract",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lumiramu",
+     "meaning": "afterimage (light-memory)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lumiramu [lumi+ramu] {new in 3.6}: (n) afterimage (light-memory)"
+  },
+  {
+   "module": "core",
+   "headword": "pelimaska",
+   "parts": [
+    "peli",
+    "maska"
+   ],
+   "domain": "Society",
+   "tier": 1,
+   "archetype": "qualities",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "pelimaska",
+     "meaning": "mischief (play-trick)"
+    },
+    "a": {
+     "form": "pelimaskasan",
+     "meaning": "mischievous"
+    }
+   },
+   "note": null,
+   "dictionary_line": "pelimaska [peli+maska] {new in 3.6}: (n) mischief (play-trick) | pelimaskasan (a) mischievous"
+  },
+  {
+   "module": "core",
+   "headword": "maskanulu",
+   "parts": [
+    "maska",
+    "nulu"
+   ],
+   "domain": "Society",
+   "tier": 2,
+   "archetype": "abstract",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "maskanulu",
+     "meaning": "misdirection (false path)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "maskanulu [maska+nulu] {new in 3.6}: (n) misdirection (false path)"
+  },
+  {
+   "module": "core",
+   "headword": "zeldorilli",
+   "parts": [
+    "zeldo",
+    "rilli"
+   ],
+   "domain": "Emotions",
+   "tier": 1,
+   "archetype": "abstract",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "zeldorilli",
+     "meaning": "rejection"
+    },
+    "v": {
+     "form": "zeldorilliza",
+     "meaning": "to reject"
+    }
+   },
+   "note": null,
+   "dictionary_line": "zeldorilli [zeldo+rilli] {new in 3.6}: (n) rejection | zeldorilliza (v) to reject"
+  },
+  {
+   "module": "core",
+   "headword": "yanopatu",
+   "parts": [
+    "yano",
+    "patu"
+   ],
+   "domain": "Abstract",
+   "tier": 1,
+   "archetype": "abstract",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "yanopatu",
+     "meaning": "combination"
+    },
+    "v": {
+     "form": "yanopatuya",
+     "meaning": "to combine"
+    }
+   },
+   "note": null,
+   "dictionary_line": "yanopatu [yano+patu] {new in 3.6}: (n) combination | yanopatuya (v) to combine"
+  },
+  {
+   "module": "core",
+   "headword": "cunuyano",
+   "parts": [
+    "cunu",
+    "yano"
+   ],
+   "domain": "Time, quantity & work",
+   "tier": 2,
+   "archetype": "abstract",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "cunuyano",
+     "meaning": "addition (number-union)"
+    },
+    "v": {
+     "form": "cunuyanoca",
+     "meaning": "to add up"
+    }
+   },
+   "note": null,
+   "dictionary_line": "cunuyano [cunu+yano] {new in 3.6}: (n) addition (number-union) | cunuyanoca (v) to add up"
+  },
+  {
+   "module": "core",
+   "headword": "simvolore",
+   "parts": [
+    "simvo",
+    "lore"
+   ],
+   "domain": "Mind & philosophy",
+   "tier": 1,
+   "archetype": "mind",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "simvolore",
+     "meaning": "personality; disposition (self-heart)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "simvolore [simvo+lore] {new in 3.6}: (n) personality; disposition (self-heart)"
+  },
+  {
+   "module": "core",
+   "headword": "lorerivla",
+   "parts": [
+    "lore",
+    "rivla"
+   ],
+   "domain": "Emotions",
+   "tier": 1,
+   "archetype": "mind",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lorerivla",
+     "meaning": "overwhelm; a flood of feeling"
+    },
+    "v": {
+     "form": "lorerivlala",
+     "meaning": "to overwhelm"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lorerivla [lore+rivla] {new in 3.6}: (n) overwhelm; a flood of feeling | lorerivlala (v) to overwhelm"
+  },
+  {
+   "module": "core",
+   "headword": "dendubako",
+   "parts": [
+    "dendu",
+    "bako"
+   ],
+   "domain": "Emotions",
+   "tier": 2,
+   "archetype": "mind",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "dendubako",
+     "meaning": "traumatization; a deep break"
+    },
+    "v": {
+     "form": "dendubakoda",
+     "meaning": "to traumatize"
+    }
+   },
+   "note": null,
+   "dictionary_line": "dendubako [dendu+bako] {new in 3.6}: (n) traumatization; a deep break | dendubakoda (v) to traumatize"
+  },
+  {
+   "module": "core",
+   "headword": "milrademro",
+   "parts": [
+    "milra",
+    "demro"
+   ],
+   "domain": "Movement & action",
+   "tier": 1,
+   "archetype": "manner verbs",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "milrademro",
+     "meaning": "mimicry"
+    },
+    "v": {
+     "form": "milrademroma",
+     "meaning": "to mimic"
+    }
+   },
+   "note": null,
+   "dictionary_line": "milrademro [milra+demro] {new in 3.6}: (n) mimicry | milrademroma (v) to mimic"
+  },
+  {
+   "module": "core",
+   "headword": "zivureso",
+   "parts": [
+    "zivu",
+    "reso"
+   ],
+   "domain": "Movement & action",
+   "tier": 2,
+   "archetype": "manner verbs",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "zivureso",
+     "meaning": "cackle (sneering laugh)"
+    },
+    "v": {
+     "form": "zivuresoza",
+     "meaning": "to cackle"
+    }
+   },
+   "note": null,
+   "dictionary_line": "zivureso [zivu+reso] {new in 3.6}: (n) cackle (sneering laugh) | zivuresoza (v) to cackle"
+  },
+  {
+   "module": "core",
+   "headword": "zegodemro",
+   "parts": [
+    "zego",
+    "demro"
+   ],
+   "domain": "Movement & action",
+   "tier": 2,
+   "archetype": "manner verbs",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "zegodemro",
+     "meaning": "wiggle"
+    },
+    "v": {
+     "form": "zegodemroza",
+     "meaning": "to wiggle"
+    }
+   },
+   "note": null,
+   "dictionary_line": "zegodemro [zego+demro] {new in 3.6}: (n) wiggle | zegodemroza (v) to wiggle"
+  },
+  {
+   "module": "core",
+   "headword": "nulvadalu",
+   "parts": [
+    "nulva",
+    "dalu"
+   ],
+   "domain": "Movement & action",
+   "tier": 2,
+   "archetype": "manner verbs",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "nulvadalu",
+     "meaning": "boop; a nose-touch"
+    },
+    "v": {
+     "form": "nulvadalunia",
+     "meaning": "to boop"
+    }
+   },
+   "note": null,
+   "dictionary_line": "nulvadalu [nulva+dalu] {new in 3.6}: (n) boop; a nose-touch | nulvadalunia (v) to boop"
+  },
+  {
+   "module": "core",
+   "headword": "rezatalva",
+   "parts": [
+    "reza",
+    "talva"
+   ],
+   "domain": "Movement & action",
+   "tier": 2,
+   "archetype": "manner verbs",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "rezatalva",
+     "meaning": "spit"
+    },
+    "v": {
+     "form": "rezatalvara",
+     "meaning": "to spit"
+    }
+   },
+   "note": null,
+   "dictionary_line": "rezatalva [reza+talva] {new in 3.6}: (n) spit | rezatalvara (v) to spit"
+  },
+  {
+   "module": "core",
+   "headword": "farufolni",
+   "parts": [
+    "faru",
+    "folni"
+   ],
+   "domain": "Everyday & feast",
+   "tier": 1,
+   "archetype": "world",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "farufolni",
+     "meaning": "firework (fire-flower)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "farufolni [faru+folni] {new in 3.6}: (n) firework (fire-flower)"
+  },
+  {
+   "module": "core",
+   "headword": "dokrakaze",
+   "parts": [
+    "dokra",
+    "kaze"
+   ],
+   "domain": "Everyday & feast",
+   "tier": 2,
+   "archetype": "world",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "dokrakaze",
+     "meaning": "cannon (war-gun)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "dokrakaze [dokra+kaze] {new in 3.6}: (n) cannon (war-gun)"
+  },
+  {
+   "module": "core",
+   "headword": "talvadivma",
+   "parts": [
+    "talva",
+    "divma"
+   ],
+   "domain": "Everyday & feast",
+   "tier": 2,
+   "archetype": "world",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "talvadivma",
+     "meaning": "catapult (throw-machine)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "talvadivma [talva+divma] {new in 3.6}: (n) catapult (throw-machine)"
+  },
+  {
+   "module": "core",
+   "headword": "sumbikezu",
+   "parts": [
+    "sumbi",
+    "kezu"
+   ],
+   "domain": "Nature & geography",
+   "tier": 1,
+   "archetype": "world",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "sumbikezu",
+     "meaning": "the tropics (summer-land)"
+    },
+    "a": {
+     "form": "sumbikezusan",
+     "meaning": "tropical"
+    }
+   },
+   "note": null,
+   "dictionary_line": "sumbikezu [sumbi+kezu] {new in 3.6}: (n) the tropics (summer-land) | sumbikezusan (a) tropical"
+  },
+  {
+   "module": "core",
+   "headword": "mirucolbi",
+   "parts": [
+    "miru",
+    "colbi"
+   ],
+   "domain": "Language & art",
+   "tier": 2,
+   "archetype": "world",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "mirucolbi",
+     "meaning": "watercolor"
+    }
+   },
+   "note": null,
+   "dictionary_line": "mirucolbi [miru+colbi] {new in 3.6}: (n) watercolor"
+  },
+  {
+   "module": "core",
+   "headword": "noruzayutelne",
+   "parts": [
+    "noruzayu",
+    "telne"
+   ],
+   "domain": "Language & art",
+   "tier": 2,
+   "archetype": "writing",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "noruzayutelne",
+     "meaning": "fantasy (a story of dream-magic)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "noruzayutelne [noruzayu+telne] {new in 3.6}: (n) fantasy (a story of dream-magic)"
+  },
+  {
+   "module": "core",
+   "headword": "sovedendu",
+   "parts": [
+    "sove",
+    "dendu"
+   ],
+   "domain": "Mind & philosophy",
+   "tier": 2,
+   "archetype": "mind",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "sovedendu",
+     "meaning": "zen; deep calm"
+    }
+   },
+   "note": null,
+   "dictionary_line": "sovedendu [sove+dendu] {new in 3.6}: (n) zen; deep calm"
+  },
+  {
+   "module": "core",
+   "headword": "sovlabako",
+   "parts": [
+    "sovla",
+    "bako"
+   ],
+   "domain": "Body",
+   "tier": 2,
+   "archetype": "body",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "sovlabako",
+     "meaning": "deformity (a broken shape)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "sovlabako [sovla+bako] {new in 3.6}: (n) deformity (a broken shape)"
+  },
+  {
+   "module": "core",
+   "headword": "velnivelu",
+   "parts": [
+    "velni",
+    "velu"
+   ],
+   "domain": "Mind & philosophy",
+   "tier": 2,
+   "archetype": "mind",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "velnivelu",
+     "meaning": "quintessence (the star of the essence)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "velnivelu [velni+velu] {new in 3.6}: (n) quintessence (the star of the essence)"
+  },
+  {
+   "module": "core",
+   "headword": "liralavra",
+   "parts": [
+    "lira",
+    "lavra"
+   ],
+   "domain": "Animals",
+   "tier": 2,
+   "archetype": "creatures",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "liralavra",
+     "meaning": "songbird"
+    }
+   },
+   "note": null,
+   "dictionary_line": "liralavra [lira+lavra] {new in 3.6}: (n) songbird"
+  },
+  {
+   "module": "core",
+   "headword": "mirunevra",
+   "parts": [
+    "miru",
+    "nevra"
+   ],
+   "domain": "Nature & geography",
+   "tier": 2,
+   "archetype": "world",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "mirunevra",
+     "meaning": "cascade; waterfall (water-descent)"
+    },
+    "v": {
+     "form": "mirunevrama",
+     "meaning": "to cascade"
+    }
+   },
+   "note": null,
+   "dictionary_line": "mirunevra [miru+nevra] {new in 3.6}: (n) cascade; waterfall (water-descent) | mirunevrama (v) to cascade"
+  },
+  {
+   "module": "core",
+   "headword": "sambanole",
+   "parts": [
+    "samba",
+    "nole"
+   ],
+   "domain": "Language & art",
+   "tier": 2,
+   "archetype": "writing",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "sambanole",
+     "meaning": "namesake (same-name)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "sambanole [samba+nole] {new in 3.6}: (n) namesake (same-name)"
+  },
+  {
+   "module": "core",
+   "headword": "sasvalore",
+   "parts": [
+    "sasva",
+    "lore"
+   ],
+   "domain": "Emotions",
+   "tier": 1,
+   "archetype": "qualities",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "sasvalore",
+     "meaning": "protectiveness (guarding heart)"
+    },
+    "a": {
+     "form": "sasvaloresan",
+     "meaning": "protective"
+    }
+   },
+   "note": null,
+   "dictionary_line": "sasvalore [sasva+lore] {new in 3.6}: (n) protectiveness (guarding heart) | sasvaloresan (a) protective"
+  },
+  {
+   "module": "core",
+   "headword": "dapalore",
+   "parts": [
+    "dapa",
+    "lore"
+   ],
+   "domain": "Society",
+   "tier": 2,
+   "archetype": "coarse",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "dapalore",
+     "meaning": "whore (coarse: a heart for sale)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "dapalore [dapa+lore] {new in 3.6}: (n) whore (coarse: a heart for sale)"
+  },
+  {
+   "module": "core",
+   "headword": "lavrasamninami",
+   "parts": [
+    "lavrasamni",
+    "nami"
+   ],
+   "domain": "Everyday & feast",
+   "tier": 2,
+   "archetype": "food",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lavrasamninami",
+     "meaning": "omelet (egg-dish)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lavrasamninami [lavrasamni+nami] {new in 3.6}: (n) omelet (egg-dish)"
+  },
+  {
+   "module": "core",
+   "headword": "bondopatu",
+   "parts": [
+    "bondo",
+    "patu"
+   ],
+   "domain": "Time, quantity & work",
+   "tier": 1,
+   "archetype": "units",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "bondopatu",
+     "meaning": "gram (unit of weight)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "bondopatu [bondo+patu] {new in 3.6}: (n) gram (unit of weight)"
+  },
+  {
+   "module": "core",
+   "headword": "lalnipatu",
+   "parts": [
+    "lalni",
+    "patu"
+   ],
+   "domain": "Time, quantity & work",
+   "tier": 1,
+   "archetype": "units",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lalnipatu",
+     "meaning": "metre (unit of length)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lalnipatu [lalni+patu] {new in 3.6}: (n) metre (unit of length)"
+  },
+  {
+   "module": "core",
+   "headword": "mirupatu",
+   "parts": [
+    "miru",
+    "patu"
+   ],
+   "domain": "Time, quantity & work",
+   "tier": 1,
+   "archetype": "units",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "mirupatu",
+     "meaning": "litre (unit of volume)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "mirupatu [miru+patu] {new in 3.6}: (n) litre (unit of volume)"
+  },
+  {
+   "module": "mind",
+   "headword": "mavohelna",
+   "parts": [
+    "mavo",
+    "helna"
+   ],
+   "domain": "Health & body",
+   "tier": 1,
+   "archetype": "mind",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "mavohelna",
+     "meaning": "psychiatry (mind-medicine)"
+    }
+   },
+   "note": "psychiatric = mavohelnasan (G148); Light's Hope Psychiatric",
+   "dictionary_line": "mavohelna [mavo+helna] {new in 3.6}: (n) psychiatry (mind-medicine)"
+  },
+  {
+   "module": "mind",
+   "headword": "mavonibe",
+   "parts": [
+    "mavo",
+    "nibe"
+   ],
+   "domain": "Health & body",
+   "tier": 1,
+   "archetype": "mind",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "mavonibe",
+     "meaning": "psychosis (mind-fog)"
+    }
+   },
+   "note": "psychotic = mavonibesan (G148); chosen as a gentle image, not 'break'",
+   "dictionary_line": "mavonibe [mavo+nibe] {new in 3.6}: (n) psychosis (mind-fog)"
+  },
+  {
+   "module": "mind",
+   "headword": "zeldonibe",
+   "parts": [
+    "zeldo",
+    "nibe"
+   ],
+   "domain": "Health & body",
+   "tier": 1,
+   "archetype": "mind",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "zeldonibe",
+     "meaning": "antipsychotic (fog-resisting medicine)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "zeldonibe [zeldo+nibe] {new in 3.6}: (n) antipsychotic (fog-resisting medicine)"
+  },
+  {
+   "module": "mind",
+   "headword": "mavofaru",
+   "parts": [
+    "mavo",
+    "faru"
+   ],
+   "domain": "Health & body",
+   "tier": 1,
+   "archetype": "mind",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "mavofaru",
+     "meaning": "mania (mind-fire)"
+    }
+   },
+   "note": "manic = mavofarusan (G148)",
+   "dictionary_line": "mavofaru [mavo+faru] {new in 3.6}: (n) mania (mind-fire)"
+  },
+  {
+   "module": "mind",
+   "headword": "lorevopra",
+   "parts": [
+    "lore",
+    "vopra"
+   ],
+   "domain": "Health & body",
+   "tier": 1,
+   "archetype": "mind",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lorevopra",
+     "meaning": "bipolar disorder (the turning heart)"
+    }
+   },
+   "note": "bipolar (adj.) = lorevoprasan (G148)",
+   "dictionary_line": "lorevopra [lore+vopra] {new in 3.6}: (n) bipolar disorder (the turning heart)"
+  },
+  {
+   "module": "mind",
+   "headword": "maskavimo",
+   "parts": [
+    "maska",
+    "vimo"
+   ],
+   "domain": "Health & body",
+   "tier": 1,
+   "archetype": "mind",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "maskavimo",
+     "meaning": "hallucination (false sight)"
+    },
+    "v": {
+     "form": "maskavimoma",
+     "meaning": "to hallucinate"
+    }
+   },
+   "note": null,
+   "dictionary_line": "maskavimo [maska+vimo] {new in 3.6}: (n) hallucination (false sight) | maskavimoma (v) to hallucinate"
+  },
+  {
+   "module": "mind",
+   "headword": "maskadevo",
+   "parts": [
+    "maska",
+    "devo"
+   ],
+   "domain": "Health & body",
+   "tier": 1,
+   "archetype": "mind",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "maskadevo",
+     "meaning": "delusion (false belief)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "maskadevo [maska+devo] {new in 3.6}: (n) delusion (false belief)"
+  },
+  {
+   "module": "mind",
+   "headword": "follumavo",
+   "parts": [
+    "follu",
+    "mavo"
+   ],
+   "domain": "Health & body",
+   "tier": 1,
+   "archetype": "mind",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "follumavo",
+     "meaning": "paranoia (fear-mind)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "follumavo [follu+mavo] {new in 3.6}: (n) paranoia (fear-mind)"
+  },
+  {
+   "module": "mind",
+   "headword": "dendumavo",
+   "parts": [
+    "dendu",
+    "mavo"
+   ],
+   "domain": "Mind & philosophy",
+   "tier": 1,
+   "archetype": "mind",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "dendumavo",
+     "meaning": "the subconscious (deep mind)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "dendumavo [dendu+mavo] {new in 3.6}: (n) the subconscious (deep mind)"
+  },
+  {
+   "module": "mind",
+   "headword": "yanovimo",
+   "parts": [
+    "yano",
+    "vimo"
+   ],
+   "domain": "Mind & philosophy",
+   "tier": 2,
+   "archetype": "mind",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "yanovimo",
+     "meaning": "synesthesia (united senses)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "yanovimo [yano+vimo] {new in 3.6}: (n) synesthesia (united senses)"
+  },
+  {
+   "module": "mind",
+   "headword": "lordikaldo",
+   "parts": [
+    "lordi",
+    "kaldo"
+   ],
+   "domain": "Health & body",
+   "tier": 1,
+   "archetype": "mind",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lordikaldo",
+     "meaning": "obsessive-compulsive disorder; OCD (order-bound)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lordikaldo [lordi+kaldo] {new in 3.6}: (n) obsessive-compulsive disorder; OCD (order-bound)"
+  },
+  {
+   "module": "mind",
+   "headword": "helnaturna",
+   "parts": [
+    "helna",
+    "turna"
+   ],
+   "domain": "Health & body",
+   "tier": 1,
+   "archetype": "mind",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "helnaturna",
+     "meaning": "hospitalization"
+    },
+    "v": {
+     "form": "helnaturnaha",
+     "meaning": "to hospitalize"
+    }
+   },
+   "note": null,
+   "dictionary_line": "helnaturna [helna+turna] {new in 3.6}: (n) hospitalization | helnaturnaha (v) to hospitalize"
+  },
+  {
+   "module": "mind",
+   "headword": "somudendu",
+   "parts": [
+    "somu",
+    "dendu"
+   ],
+   "domain": "Health & body",
+   "tier": 1,
+   "archetype": "mind",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "somudendu",
+     "meaning": "coma (deep sleep)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "somudendu [somu+dendu] {new in 3.6}: (n) coma (deep sleep)"
+  },
+  {
+   "module": "mind",
+   "headword": "zegolore",
+   "parts": [
+    "zego",
+    "lore"
+   ],
+   "domain": "Health & body",
+   "tier": 1,
+   "archetype": "mind",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "zegolore",
+     "meaning": "agitation (trembling heart)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "zegolore [zego+lore] {new in 3.6}: (n) agitation (trembling heart)"
+  },
+  {
+   "module": "mind",
+   "headword": "helnakavbi",
+   "parts": [
+    "helna",
+    "kavbi"
+   ],
+   "domain": "Health & body",
+   "tier": 2,
+   "archetype": "mind",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "helnakavbi",
+     "meaning": "stretcher (medicine-carrying)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "helnakavbi [helna+kavbi] {new in 3.6}: (n) stretcher (medicine-carrying)"
+  },
+  {
+   "module": "mind",
+   "headword": "sasvahelna",
+   "parts": [
+    "sasva",
+    "helna"
+   ],
+   "domain": "Health & body",
+   "tier": 1,
+   "archetype": "mind",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "sasvahelna",
+     "meaning": "vaccine (protecting medicine)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "sasvahelna [sasva+helna] {new in 3.6}: (n) vaccine (protecting medicine)"
+  },
+  {
+   "module": "mind",
+   "headword": "safalordi",
+   "parts": [
+    "safa",
+    "lordi"
+   ],
+   "domain": "Health & body",
+   "tier": 1,
+   "archetype": "mind",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "safalordi",
+     "meaning": "hygiene (washing-order)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "safalordi [safa+lordi] {new in 3.6}: (n) hygiene (washing-order)"
+  },
+  {
+   "module": "mind",
+   "headword": "lavipavma",
+   "parts": [
+    "lavi",
+    "pavma"
+   ],
+   "domain": "Health & body",
+   "tier": 2,
+   "archetype": "mind",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lavipavma",
+     "meaning": "dopamine (joy-substance)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lavipavma [lavi+pavma] {new in 3.6}: (n) dopamine (joy-substance)"
+  },
+  {
+   "module": "mind",
+   "headword": "sovepavma",
+   "parts": [
+    "sove",
+    "pavma"
+   ],
+   "domain": "Health & body",
+   "tier": 2,
+   "archetype": "mind",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "sovepavma",
+     "meaning": "serotonin (peace-substance)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "sovepavma [sove+pavma] {new in 3.6}: (n) serotonin (peace-substance)"
+  },
+  {
+   "module": "mind",
+   "headword": "sulmepavma",
+   "parts": [
+    "sulme",
+    "pavma"
+   ],
+   "domain": "Health & body",
+   "tier": 1,
+   "archetype": "mind",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "sulmepavma",
+     "meaning": "nicotine (smoke-substance)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "sulmepavma [sulme+pavma] {new in 3.6}: (n) nicotine (smoke-substance)"
+  },
+  {
+   "module": "mind",
+   "headword": "linufulepuku",
+   "parts": [
+    "linufule",
+    "puku"
+   ],
+   "domain": "Health & body",
+   "tier": 2,
+   "archetype": "mind",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "linufulepuku",
+     "meaning": "abortion (end of a pregnancy)"
+    }
+   },
+   "note": "neutral, clinical image",
+   "dictionary_line": "linufulepuku [linufule+puku] {new in 3.6}: (n) abortion (end of a pregnancy)"
+  },
+  {
+   "module": "world",
+   "headword": "lumisovla",
+   "parts": [
+    "lumi",
+    "sovla"
+   ],
+   "domain": "Information & technology",
+   "tier": 1,
+   "archetype": "holo",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lumisovla",
+     "meaning": "hologram (light-shape)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lumisovla [lumi+sovla] {new in 3.6}: (n) hologram (light-shape)"
+  },
+  {
+   "module": "world",
+   "headword": "lumivelma",
+   "parts": [
+    "lumi",
+    "velma"
+   ],
+   "domain": "Home & objects",
+   "tier": 1,
+   "archetype": "holo",
+   "image_compound": true,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lumivelma",
+     "meaning": "holodress; light-garment"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lumivelma [lumi+velma] {new in 3.6}: (n) holodress; light-garment"
+  },
+  {
+   "module": "world",
+   "headword": "lumipeli",
+   "parts": [
+    "lumi",
+    "peli"
+   ],
+   "domain": "Everyday & feast",
+   "tier": 2,
+   "archetype": "holo",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lumipeli",
+     "meaning": "hologame (holochess and the like)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lumipeli [lumi+peli] {new in 3.6}: (n) hologame (holochess and the like)"
+  },
+  {
+   "module": "world",
+   "headword": "lumivimo",
+   "parts": [
+    "lumi",
+    "vimo"
+   ],
+   "domain": "Information & technology",
+   "tier": 2,
+   "archetype": "holo",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lumivimo",
+     "meaning": "holoscreen (light-sight)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lumivimo [lumi+vimo] {new in 3.6}: (n) holoscreen (light-sight)"
+  },
+  {
+   "module": "world",
+   "headword": "lumizefro",
+   "parts": [
+    "lumi",
+    "zefro"
+   ],
+   "domain": "Materials & physics",
+   "tier": 1,
+   "archetype": "materials",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lumizefro",
+     "meaning": "neon (light-gas)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lumizefro [lumi+zefro] {new in 3.6}: (n) neon (light-gas)"
+  },
+  {
+   "module": "world",
+   "headword": "lamsapavma",
+   "parts": [
+    "lamsa",
+    "pavma"
+   ],
+   "domain": "Materials & physics",
+   "tier": 1,
+   "archetype": "materials",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lamsapavma",
+     "meaning": "carbon (ash-material)"
+    }
+   },
+   "note": "carbonic = lamsapavmasan (G148)",
+   "dictionary_line": "lamsapavma [lamsa+pavma] {new in 3.6}: (n) carbon (ash-material)"
+  },
+  {
+   "module": "world",
+   "headword": "lalfogerma",
+   "parts": [
+    "lalfo",
+    "germa"
+   ],
+   "domain": "Materials & physics",
+   "tier": 2,
+   "archetype": "materials",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lalfogerma",
+     "meaning": "titanium (floating metal: light and strong)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lalfogerma [lalfo+germa] {new in 3.6}: (n) titanium (floating metal: light and strong)"
+  },
+  {
+   "module": "world",
+   "headword": "tranagerma",
+   "parts": [
+    "trana",
+    "germa"
+   ],
+   "domain": "Materials & physics",
+   "tier": 2,
+   "archetype": "materials",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "tranagerma",
+     "meaning": "adaptometal (change-metal)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "tranagerma [trana+germa] {new in 3.6}: (n) adaptometal (change-metal)"
+  },
+  {
+   "module": "world",
+   "headword": "farupavma",
+   "parts": [
+    "faru",
+    "pavma"
+   ],
+   "domain": "Materials & physics",
+   "tier": 2,
+   "archetype": "materials",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "farupavma",
+     "meaning": "plasma (fire-matter)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "farupavma [faru+pavma] {new in 3.6}: (n) plasma (fire-matter)"
+  },
+  {
+   "module": "world",
+   "headword": "yalmuyano",
+   "parts": [
+    "yalmu",
+    "yano"
+   ],
+   "domain": "Materials & physics",
+   "tier": 2,
+   "archetype": "materials",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "yalmuyano",
+     "meaning": "fusion (energy-union)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "yalmuyano [yalmu+yano] {new in 3.6}: (n) fusion (energy-union)"
+  },
+  {
+   "module": "world",
+   "headword": "sovlafarla",
+   "parts": [
+    "sovla",
+    "farla"
+   ],
+   "domain": "Information & technology",
+   "tier": 1,
+   "archetype": "tech",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "sovlafarla",
+     "meaning": "printing; 3D printing (shape-making)"
+    },
+    "v": {
+     "form": "sovlafarlasia",
+     "meaning": "to print"
+    }
+   },
+   "note": null,
+   "dictionary_line": "sovlafarla [sovla+farla] {new in 3.6}: (n) printing; 3D printing (shape-making) | sovlafarlasia (v) to print"
+  },
+  {
+   "module": "world",
+   "headword": "sovlafarlabiti",
+   "parts": [
+    "sovlafarla",
+    "biti"
+   ],
+   "domain": "Information & technology",
+   "tier": 1,
+   "archetype": "tech",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "sovlafarlabiti",
+     "meaning": "printer; 3D printer"
+    }
+   },
+   "note": null,
+   "dictionary_line": "sovlafarlabiti [sovlafarla+biti] {new in 3.6}: (n) printer; 3D printer"
+  },
+  {
+   "module": "world",
+   "headword": "divmapatu",
+   "parts": [
+    "divma",
+    "patu"
+   ],
+   "domain": "Information & technology",
+   "tier": 1,
+   "archetype": "tech",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "divmapatu",
+     "meaning": "chip; microchip (system-part)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "divmapatu [divma+patu] {new in 3.6}: (n) chip; microchip (system-part)"
+  },
+  {
+   "module": "world",
+   "headword": "biofarla",
+   "parts": [
+    "bio",
+    "farla"
+   ],
+   "domain": "Information & technology",
+   "tier": 2,
+   "archetype": "tech",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "biofarla",
+     "meaning": "biosynthesis (life-making)"
+    }
+   },
+   "note": "biosynthetic = biofarlasan (G148)",
+   "dictionary_line": "biofarla [bio+farla] {new in 3.6}: (n) biosynthesis (life-making)"
+  },
+  {
+   "module": "world",
+   "headword": "yugedivma",
+   "parts": [
+    "yuge",
+    "divma"
+   ],
+   "domain": "Information & technology",
+   "tier": 2,
+   "archetype": "tech",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "yugedivma",
+     "meaning": "biocybernetics (body-system)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "yugedivma [yuge+divma] {new in 3.6}: (n) biocybernetics (body-system)"
+  },
+  {
+   "module": "world",
+   "headword": "silisomu",
+   "parts": [
+    "sili",
+    "somu"
+   ],
+   "domain": "Information & technology",
+   "tier": 1,
+   "archetype": "tech",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "silisomu",
+     "meaning": "cryosleep; cryogenics (cold-sleep)"
+    }
+   },
+   "note": "cryogenic = silisomusan (G148)",
+   "dictionary_line": "silisomu [sili+somu] {new in 3.6}: (n) cryosleep; cryogenics (cold-sleep)"
+  },
+  {
+   "module": "world",
+   "headword": "lisrokrono",
+   "parts": [
+    "lisro",
+    "krono"
+   ],
+   "domain": "Information & technology",
+   "tier": 1,
+   "archetype": "tech",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lisrokrono",
+     "meaning": "stasis (still time)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "lisrokrono [lisro+krono] {new in 3.6}: (n) stasis (still time)"
+  },
+  {
+   "module": "world",
+   "headword": "somukova",
+   "parts": [
+    "somu",
+    "kova"
+   ],
+   "domain": "Information & technology",
+   "tier": 1,
+   "archetype": "tech",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "somukova",
+     "meaning": "capsule; sleep pod"
+    }
+   },
+   "note": null,
+   "dictionary_line": "somukova [somu+kova] {new in 3.6}: (n) capsule; sleep pod"
+  },
+  {
+   "module": "world",
+   "headword": "pagotrana",
+   "parts": [
+    "pago",
+    "trana"
+   ],
+   "domain": "Information & technology",
+   "tier": 1,
+   "archetype": "tech",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "pagotrana",
+     "meaning": "teleportation"
+    },
+    "v": {
+     "form": "pagotranapa",
+     "meaning": "to teleport"
+    }
+   },
+   "note": null,
+   "dictionary_line": "pagotrana [pago+trana] {new in 3.6}: (n) teleportation | pagotranapa (v) to teleport"
+  },
+  {
+   "module": "world",
+   "headword": "velukadu",
+   "parts": [
+    "velu",
+    "kadu"
+   ],
+   "domain": "Information & technology",
+   "tier": 1,
+   "archetype": "tech",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "velukadu",
+     "meaning": "spaceship (star-vehicle)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "velukadu [velu+kadu] {new in 3.6}: (n) spaceship (star-vehicle)"
+  },
+  {
+   "module": "world",
+   "headword": "zefrovopra",
+   "parts": [
+    "zefro",
+    "vopra"
+   ],
+   "domain": "Information & technology",
+   "tier": 2,
+   "archetype": "tech",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "zefrovopra",
+     "meaning": "propeller (air-turn)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "zefrovopra [zefro+vopra] {new in 3.6}: (n) propeller (air-turn)"
+  },
+  {
+   "module": "world",
+   "headword": "farumavo",
+   "parts": [
+    "faru",
+    "mavo"
+   ],
+   "domain": "Mind & philosophy",
+   "tier": 2,
+   "archetype": "tech",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "farumavo",
+     "meaning": "pyrokinesis (fire-mind)"
+    }
+   },
+   "note": "pyrokinetic = farumavosan (G148)",
+   "dictionary_line": "farumavo [faru+mavo] {new in 3.6}: (n) pyrokinesis (fire-mind)"
+  },
+  {
+   "module": "nature",
+   "headword": "sevureso",
+   "parts": [
+    "sevu",
+    "reso"
+   ],
+   "domain": "Animals",
+   "tier": 1,
+   "archetype": "creatures",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "sevureso",
+     "meaning": "dolphin (sea-laughter)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "sevureso [sevu+reso] {new in 3.6}: (n) dolphin (sea-laughter)"
+  },
+  {
+   "module": "nature",
+   "headword": "sevuzimzi",
+   "parts": [
+    "sevu",
+    "zimzi"
+   ],
+   "domain": "Animals",
+   "tier": 2,
+   "archetype": "creatures",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "sevuzimzi",
+     "meaning": "crab (sea-insect)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "sevuzimzi [sevu+zimzi] {new in 3.6}: (n) crab (sea-insect)"
+  },
+  {
+   "module": "nature",
+   "headword": "pavrulazu",
+   "parts": [
+    "pavru",
+    "lazu"
+   ],
+   "domain": "Animals",
+   "tier": 2,
+   "archetype": "creatures",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "pavrulazu",
+     "meaning": "kangaroo (leaping animal)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "pavrulazu [pavru+lazu] {new in 3.6}: (n) kangaroo (leaping animal)"
+  },
+  {
+   "module": "nature",
+   "headword": "larbolazu",
+   "parts": [
+    "larbo",
+    "lazu"
+   ],
+   "domain": "Animals",
+   "tier": 1,
+   "archetype": "creatures",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "larbolazu",
+     "meaning": "monkey (tree-animal)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "larbolazu [larbo+lazu] {new in 3.6}: (n) monkey (tree-animal)"
+  },
+  {
+   "module": "nature",
+   "headword": "somulazu",
+   "parts": [
+    "somu",
+    "lazu"
+   ],
+   "domain": "Animals",
+   "tier": 2,
+   "archetype": "creatures",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "somulazu",
+     "meaning": "koala (sleep-animal)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "somulazu [somu+lazu] {new in 3.6}: (n) koala (sleep-animal)"
+  },
+  {
+   "module": "nature",
+   "headword": "renliherba",
+   "parts": [
+    "renli",
+    "herba"
+   ],
+   "domain": "Everyday & feast",
+   "tier": 1,
+   "archetype": "food",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "renliherba",
+     "meaning": "mushroom (rain-plant)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "renliherba [renli+herba] {new in 3.6}: (n) mushroom (rain-plant)"
+  },
+  {
+   "module": "nature",
+   "headword": "sumayumli",
+   "parts": [
+    "suma",
+    "yumli"
+   ],
+   "domain": "Everyday & feast",
+   "tier": 2,
+   "archetype": "food",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "sumayumli",
+     "meaning": "caramel (warm sweet)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "sumayumli [suma+yumli] {new in 3.6}: (n) caramel (warm sweet)"
+  },
+  {
+   "module": "nature",
+   "headword": "kezusamni",
+   "parts": [
+    "kezu",
+    "samni"
+   ],
+   "domain": "Everyday & feast",
+   "tier": 2,
+   "archetype": "food",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "kezusamni",
+     "meaning": "peanut (earth-seed)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "kezusamni [kezu+samni] {new in 3.6}: (n) peanut (earth-seed)"
+  },
+  {
+   "module": "nature",
+   "headword": "molubumre",
+   "parts": [
+    "molu",
+    "bumre"
+   ],
+   "domain": "Everyday & feast",
+   "tier": 2,
+   "archetype": "food",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "molubumre",
+     "meaning": "pancake (soft bread)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "molubumre [molu+bumre] {new in 3.6}: (n) pancake (soft bread)"
+  },
+  {
+   "module": "nature",
+   "headword": "dentobiti",
+   "parts": [
+    "dento",
+    "biti"
+   ],
+   "domain": "Home & objects",
+   "tier": 2,
+   "archetype": "home",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "dentobiti",
+     "meaning": "toothbrush (tooth-tool)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "dentobiti [dento+biti] {new in 3.6}: (n) toothbrush (tooth-tool)"
+  },
+  {
+   "module": "nature",
+   "headword": "dentopavma",
+   "parts": [
+    "dento",
+    "pavma"
+   ],
+   "domain": "Home & objects",
+   "tier": 2,
+   "archetype": "home",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "dentopavma",
+     "meaning": "toothpaste (tooth-material)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "dentopavma [dento+pavma] {new in 3.6}: (n) toothpaste (tooth-material)"
+  },
+  {
+   "module": "register",
+   "headword": "rupunela",
+   "parts": [
+    "rupu",
+    "nela"
+   ],
+   "domain": "Society",
+   "tier": 2,
+   "archetype": "coarse",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "rupunela",
+     "meaning": "asshole (coarse: a waste of a person)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "rupunela [rupu+nela] {new in 3.6}: (n) asshole (coarse: a waste of a person)"
+  },
+  {
+   "module": "register",
+   "headword": "larnenela",
+   "parts": [
+    "larne",
+    "nela"
+   ],
+   "domain": "Society",
+   "tier": 2,
+   "archetype": "coarse",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "larnenela",
+     "meaning": "bitch (coarse: a spiteful person)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "larnenela [larne+nela] {new in 3.6}: (n) bitch (coarse: a spiteful person)"
+  },
+  {
+   "module": "book.2100",
+   "headword": "ceresolodoza",
+   "parts": [
+    "ceresolo",
+    "doza"
+   ],
+   "domain": "Materials & physics",
+   "tier": 2,
+   "archetype": "book",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "ceresolodoza",
+     "meaning": "siliglass (strong glass)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "ceresolodoza [ceresolo+doza] {new in 3.6}: (n) siliglass (strong glass)"
+  },
+  {
+   "module": "book.2100",
+   "headword": "silipega",
+   "parts": [
+    "sili",
+    "pega"
+   ],
+   "domain": "Health & body",
+   "tier": 2,
+   "archetype": "book",
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "silipega",
+     "meaning": "cryogel (cold gel)"
+    }
+   },
+   "note": null,
+   "dictionary_line": "silipega [sili+pega] {new in 3.6}: (n) cryogel (cold gel)"
+  }
+ ],
+ "listed_derivations_add": [
+  {
+   "module": "core",
+   "form": "molusasvayo",
+   "base": "molusasva",
+   "suffix": "-yo",
+   "meaning": "caretaker; caregiver",
+   "tier": 1
+  },
+  {
+   "module": "core",
+   "form": "renlivu",
+   "base": "renli",
+   "suffix": "-vu",
+   "meaning": "downpour; torrential rain",
+   "tier": 1
+  },
+  {
+   "module": "core",
+   "form": "cilnivu",
+   "base": "cilni",
+   "suffix": "-vu",
+   "meaning": "megacity",
+   "tier": 1
+  },
+  {
+   "module": "core",
+   "form": "resoyo",
+   "base": "reso",
+   "suffix": "-yo",
+   "meaning": "clown; jester",
+   "tier": 1
+  },
+  {
+   "module": "core",
+   "form": "bondopatuvu",
+   "base": "bondopatu",
+   "suffix": "-vu",
+   "meaning": "kilogram",
+   "tier": 1
+  },
+  {
+   "module": "core",
+   "form": "lalnipatuvu",
+   "base": "lalnipatu",
+   "suffix": "-vu",
+   "meaning": "kilometre",
+   "tier": 1
+  },
+  {
+   "module": "mind",
+   "form": "mavohelnayo",
+   "base": "mavohelna",
+   "suffix": "-yo",
+   "meaning": "psychiatrist",
+   "tier": 1
+  },
+  {
+   "module": "mind",
+   "form": "kaldodesiyo",
+   "base": "kaldodesi",
+   "suffix": "-yo",
+   "meaning": "addict",
+   "tier": 1
+  },
+  {
+   "module": "nature",
+   "form": "ojofurovu",
+   "base": "ojofuro",
+   "suffix": "-vu",
+   "meaning": "mango (big orange fruit)",
+   "tier": 2
+  },
+  {
+   "module": "book.2100",
+   "form": "noruzayuyo",
+   "base": "noruzayu",
+   "suffix": "-yo",
+   "meaning": "neomage (neomagi); dream-magician",
+   "tier": 2
+  }
+ ],
+ "lexicalised_diminutives_add": [
+  {
+   "module": "core",
+   "form": "finiti",
+   "base": "fini",
+   "meaning": "pinky; little finger",
+   "tier": 1
+  },
+  {
+   "module": "core",
+   "form": "bondopatuti",
+   "base": "bondopatu",
+   "meaning": "milligram",
+   "tier": 1
+  },
+  {
+   "module": "core",
+   "form": "lalnipatuti",
+   "base": "lalnipatu",
+   "meaning": "millimetre",
+   "tier": 2
+  },
+  {
+   "module": "mind",
+   "form": "mavofaruti",
+   "base": "mavofaru",
+   "meaning": "hypomania (a small mind-fire)",
+   "tier": 1
+  },
+  {
+   "module": "mind",
+   "form": "vizudemroti",
+   "base": "vizudemro",
+   "meaning": "tic (a little jerk)",
+   "tier": 1
+  },
+  {
+   "module": "book.2100",
+   "form": "divmanelati",
+   "base": "divmanela",
+   "meaning": "mechadwarf; little android",
+   "tier": 2
+  },
+  {
+   "module": "book.2100",
+   "form": "farusebiti",
+   "base": "farusebi",
+   "meaning": "dragonoid; dragonling",
+   "tier": 2
+  }
+ ],
+ "restored_forms_add": [
+  {
+   "module": "core",
+   "headword": "fasbilarda",
+   "domain": "Language & art",
+   "slot": "v",
+   "form": "fasbilardafa",
+   "meaning": "to portray",
+   "tier": 1,
+   "append_to_line": "fasbilardafa (v) to portray"
+  }
+ ],
+ "rejected_proposals": [],
+ "recipes_add": [
+  {
+   "english": "actress · hostess (female role)",
+   "pattern": "minvasan + role word (1.2:G36)",
+   "liraasa": "Li minvasan sudeyo po lirala.",
+   "meaning": "The actress sang.",
+   "ruling": "1.2:G36",
+   "module": "core"
+  },
+  {
+   "english": "rename · relive · rebuild",
+   "pattern": "revo- + verb (2.5:G121)",
+   "liraasa": "Saivo revo-ramura li deya.",
+   "meaning": "She relives the day.",
+   "ruling": "2.5:G121",
+   "module": "core"
+  },
+  {
+   "english": "idiot · kiddo",
+   "pattern": "li ravminasan · linuti",
+   "liraasa": "Taivo ka li ravminasan!",
+   "meaning": "You are an idiot!",
+   "ruling": "recipe",
+   "module": "core"
+  },
+  {
+   "english": "unabated · newfound · predispose",
+   "pattern": "ne menu · nolsa navdisan · vaku … loya",
+   "liraasa": "Li renli lisrola ne menu.",
+   "meaning": "The rain went on unabated.",
+   "ruling": "recipe",
+   "module": "core"
+  },
+  {
+   "english": "downstairs · unison · romanticize",
+   "pattern": "en li kezuzupa / tula · en sambakrono · vaku … amortelnesan",
+   "liraasa": "Saivori lirala en sambakrono.",
+   "meaning": "They sing in unison.",
+   "ruling": "recipe",
+   "module": "core"
+  },
+  {
+   "english": "Ativan · heroin · LSD (named drugs)",
+   "pattern": "copied names (3.5:G151): ativan, herona, elesede",
+   "liraasa": "Li mavohelnayo po helnaha ativan.",
+   "meaning": "The psychiatrist administered Ativan.",
+   "ruling": "3.5:G151",
+   "module": "mind"
+  }
+ ],
+ "names_sheet": [
+  {
+   "english": "Light's Hope",
+   "liraasa": "Lumiopi",
+   "note": "light + hope; the city"
+  },
+  {
+   "english": "Light's Hope Psychiatric",
+   "liraasa": "Mavohelnapago Lumiopi",
+   "note": "psychiatric hospital of Lumiopi"
+  },
+  {
+   "english": "Everse",
+   "liraasa": "Rinbavemi",
+   "note": "eternity + world: the metaverse"
+  },
+  {
+   "english": "LearnQuest",
+   "liraasa": "Lemujomru",
+   "note": "learning + journey"
+  },
+  {
+   "english": "Steelslum",
+   "liraasa": "Germarupu",
+   "note": "metal + waste"
+  },
+  {
+   "english": "Metal Alliance",
+   "liraasa": "Germayano",
+   "note": "metal + union"
+  },
+  {
+   "english": "Guild",
+   "liraasa": "Talilekta",
+   "note": "work-gathering"
+  },
+  {
+   "english": "Alliance",
+   "liraasa": "Yano",
+   "note": "union"
+  },
+  {
+   "english": "Zenbot",
+   "liraasa": "Sovekibo",
+   "note": "calm + robot"
+  },
+  {
+   "english": "Denkeeper",
+   "liraasa": "Nimusasvayo",
+   "note": "home-keeper"
+  },
+  {
+   "english": "Quickmeal",
+   "liraasa": "Vizunami",
+   "note": "quick + food"
+  },
+  {
+   "english": "Neon Fire",
+   "liraasa": "Lumizefro Faru",
+   "note": "neon + fire"
+  },
+  {
+   "english": "Hotel Apollo",
+   "liraasa": "Gonbipago Apollo",
+   "note": "inn + copied name"
+  },
+  {
+   "english": "Cyclops King",
+   "liraasa": "Unavilne Regna",
+   "note": "one-eye + monarch"
+  },
+  {
+   "english": "Doge Guild",
+   "liraasa": "Talilekta Doge",
+   "note": "guild + copied name"
+  },
+  {
+   "english": "Medicos",
+   "liraasa": "Helnayori",
+   "note": "the healers"
+  },
+  {
+   "english": "Geneticus",
+   "liraasa": "Biocuza",
+   "note": "gene (3.5 pack.health)"
+  },
+  {
+   "english": "Great Dream",
+   "liraasa": "Noruasa",
+   "note": "the great dream"
+  },
+  {
+   "english": "Cadence Corner",
+   "liraasa": "Melopuku Gaki",
+   "note": "cadence + corner"
+  },
+  {
+   "english": "Snowglobe of the Soul (ch. 10)",
+   "liraasa": "Fojovemisovla de li Lumiasa",
+   "note": "snow-sphere of the soul"
+  },
+  {
+   "english": "AI",
+   "liraasa": "farlaravmi",
+   "note": "artificial intelligence (existing)"
+  },
+  {
+   "english": "Alianii, Amanda, Saraswati, Moseby …",
+   "liraasa": "copy as names",
+   "note": "2.0:G45"
+  }
+ ],
+ "english_aliases_add": [
+  {
+   "module": "core",
+   "form": "farlasan",
+   "add_english": "synthetic; artificial"
+  },
+  {
+   "module": "core",
+   "form": "ramumomvi",
+   "add_english": "oblivion"
+  },
+  {
+   "module": "core",
+   "form": "conodonu",
+   "add_english": "funding; subsidy (conodonuca, to fund)"
+  },
+  {
+   "module": "core",
+   "form": "kronosonbu",
+   "add_english": "ticking; tick-tock"
+  },
+  {
+   "module": "core",
+   "form": "talipago",
+   "add_english": "facility"
+  },
+  {
+   "module": "core",
+   "form": "molusan",
+   "add_english": "subtle"
+  },
+  {
+   "module": "core",
+   "form": "mavovulra",
+   "add_english": "trauma"
+  },
+  {
+   "module": "core",
+   "form": "ruhe",
+   "add_english": "thunderstorm"
+  },
+  {
+   "module": "core",
+   "form": "colbi",
+   "add_english": "hue; dye"
+  },
+  {
+   "module": "core",
+   "form": "tibi",
+   "add_english": "strand"
+  },
+  {
+   "module": "core",
+   "form": "lekta",
+   "add_english": "assortment"
+  },
+  {
+   "module": "core",
+   "form": "cemnu",
+   "add_english": "medium; middle"
+  },
+  {
+   "module": "core",
+   "form": "lelde",
+   "add_english": "extreme (the edge)"
+  },
+  {
+   "module": "core",
+   "form": "holba",
+   "add_english": "entirety"
+  },
+  {
+   "module": "core",
+   "form": "simvo",
+   "add_english": "entity"
+  },
+  {
+   "module": "core",
+   "form": "nimumolu",
+   "add_english": "convenience (adj.: nimumolusan, convenient)"
+  },
+  {
+   "module": "core",
+   "form": "yanbasan",
+   "add_english": "vintage"
+  },
+  {
+   "module": "core",
+   "form": "gudonasan",
+   "add_english": "unconventional"
+  },
+  {
+   "module": "core",
+   "form": "hurvosan",
+   "add_english": "quirky"
+  },
+  {
+   "module": "core",
+   "form": "paralosan",
+   "add_english": "cocky"
+  },
+  {
+   "module": "core",
+   "form": "musvanasan",
+   "add_english": "irresponsible (not bound by duty)"
+  },
+  {
+   "module": "core",
+   "form": "lordinasan",
+   "add_english": "haphazard"
+  },
+  {
+   "module": "core",
+   "form": "talisan",
+   "add_english": "functional"
+  },
+  {
+   "module": "core",
+   "form": "holbasan",
+   "add_english": "holistic"
+  },
+  {
+   "module": "core",
+   "form": "lavinasan",
+   "add_english": "displeased; unpleasant"
+  },
+  {
+   "module": "core",
+   "form": "mellinasan",
+   "add_english": "skinny"
+  },
+  {
+   "module": "core",
+   "form": "yuge",
+   "add_english": "physicality"
+  },
+  {
+   "module": "core",
+   "form": "yeba",
+   "add_english": "willingness"
+  },
+  {
+   "module": "core",
+   "form": "simvona",
+   "add_english": "selflessness"
+  },
+  {
+   "module": "core",
+   "form": "vismana",
+   "add_english": "negligence"
+  },
+  {
+   "module": "core",
+   "form": "tinota",
+   "add_english": "to classify"
+  },
+  {
+   "module": "core",
+   "form": "cuzalekta",
+   "add_english": "paperwork"
+  },
+  {
+   "module": "core",
+   "form": "dendusan",
+   "add_english": "underlying"
+  },
+  {
+   "module": "core",
+   "form": "vaniasa",
+   "add_english": "splendor"
+  },
+  {
+   "module": "core",
+   "form": "jubaja",
+   "add_english": "to bestow"
+  },
+  {
+   "module": "core",
+   "form": "helnaha",
+   "add_english": "to administer (medicine)"
+  },
+  {
+   "module": "core",
+   "form": "pensapa",
+   "add_english": "to contemplate"
+  },
+  {
+   "module": "core",
+   "form": "trana",
+   "add_english": "modification"
+  },
+  {
+   "module": "core",
+   "form": "palvi",
+   "add_english": "installation"
+  },
+  {
+   "module": "core",
+   "form": "patudonu",
+   "add_english": "allocation"
+  },
+  {
+   "module": "core",
+   "form": "turna",
+   "add_english": "access; entry"
+  },
+  {
+   "module": "core",
+   "form": "vimosovla",
+   "add_english": "graphic"
+  },
+  {
+   "module": "core",
+   "form": "zilevelma",
+   "add_english": "tuxedo; formal wear"
+  },
+  {
+   "module": "core",
+   "form": "molupavma",
+   "add_english": "plush"
+  },
+  {
+   "module": "core",
+   "form": "lemudonuyo",
+   "add_english": "educator"
+  },
+  {
+   "module": "core",
+   "form": "lazuserbu",
+   "add_english": "hunting (hunter = lazuserbuyo)"
+  },
+  {
+   "module": "core",
+   "form": "liralavra",
+   "add_english": "songbird"
+  },
+  {
+   "module": "core",
+   "form": "vamridarno",
+   "add_english": "dimension (dimensional: vamridarnosan)"
+  },
+  {
+   "module": "core",
+   "form": "zirki",
+   "add_english": "insanity"
+  },
+  {
+   "module": "core",
+   "form": "solasan",
+   "add_english": "sunny"
+  },
+  {
+   "module": "core",
+   "form": "lumirivla",
+   "add_english": "radiance (to radiate: lumirivla as a verb phrase, loya lumirivla)"
+  },
+  {
+   "module": "core",
+   "form": "mosa",
+   "add_english": "dominant (li mosa …)"
+  },
+  {
+   "module": "mind",
+   "form": "mudusan",
+   "add_english": "unhealthy"
+  },
+  {
+   "module": "mind",
+   "form": "mavosabe",
+   "add_english": "cognition (cognitive: mavosabesan, 3.3:G148)"
+  },
+  {
+   "module": "mind",
+   "form": "sove",
+   "add_english": "relaxation"
+  },
+  {
+   "module": "mind",
+   "form": "zivusan",
+   "add_english": "judgmental"
+  },
+  {
+   "module": "register",
+   "form": "rupu",
+   "add_english": "shit (coarse; Rupu! = Shit!)"
+  },
+  {
+   "module": "book.2100",
+   "form": "nimunasan",
+   "add_english": "unhomed"
+  },
+  {
+   "module": "book.2100",
+   "form": "vimolavlo",
+   "add_english": "holoscreen (with lumivimo)"
+  }
+ ],
+ "test_sentences": [
+  {
+   "liraasa": "Li kibo po helnaha li linu, kasa saivo ke mavonibesan.",
+   "english": "The bot treated the child, because she is psychotic.",
+   "tests": "core + mind",
+   "module": "mind"
+  },
+  {
+   "liraasa": "Maivo po vimova li lumisovla de li fojo en li nolsacilni.",
+   "english": "I saw the hologram of the snow in the neocity.",
+   "tests": "world",
+   "module": "world"
+  },
+  {
+   "liraasa": "Garza! Li kibo po resodalura maivo.",
+   "english": "Fuck! The bot tickled me.",
+   "tests": "register",
+   "module": "register"
+  },
+  {
+   "liraasa": "Li molusasvayo po gonbisenoga li germanamre en li talipago.",
+   "english": "The caretaker greeted the metalhead in the facility.",
+   "tests": "core",
+   "module": "core"
+  }
+ ],
+ "validation": {
+  "errors": []
+ }
+}

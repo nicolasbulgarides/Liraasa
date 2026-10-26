@@ -1,0 +1,5308 @@
+{
+ "id": "2026-10-25-lexicon-3-6",
+ "edition": "3.6",
+ "created": "2026-10-25T23:00:00Z",
+ "author": "nicolas",
+ "summary": "Liraasa 3.6, \"The 2100 Dreams patch: robots, the mind, the neocity\" (ADR-0027), from the author's 3.6 patch, every module installed. PROPOSED: PROPOSED: ratify tier 1 first; tier 2 may be ratified, deferred or dropped item by item. Additions only: 2 roots (kibo, garza), rulings 3.6:G153-G155 (renumbered past 3.5:G152); 146 compounds (lavipavma and sovepavma dropped for the copied scientific names, seven coinages for the novel's sound-words and slang), 10 listed derivations, 7 lexicalised diminutives, 1 restored forms and 59 English aliases, each entry noted with its tier and module. No 3.5 word, spelling or ruling changes.",
+ "rulings": [
+  {
+   "id": "G155",
+   "topic": "Metric units",
+   "ruling": "Base units are compounds on patu: bondopatu (gram), lalnipatu (metre), mirupatu (litre). The diminutive -ti names the thousandth (milli-) and -vu the thousandfold (kilo-): bondopatuti milligram, bondopatuvu kilogram, lalnipatuvu kilometre. A numeral counts them: dossa bondopatuti, two milligrams. Body units (3.2:G144) remain the everyday, poetic measures.",
+   "refines": [
+    "3.2:G144"
+   ],
+   "examples": [
+    [
+     "penzira bondopatuti",
+     "fifty milligrams"
+    ],
+    [
+     "tressa lalnipatuvu",
+     "three kilometres"
+    ]
+   ],
+   "status": "proposed"
+  },
+  {
+   "id": "G153",
+   "topic": "Relational adjectives from lexicalised diminutives",
+   "ruling": "3.3:G148 also applies to lexicalised diminutives: their -san form means 'of or marked by X'. mavofaruti (hypomania) gives mavofarutisan (hypomanic); vizudemroti (tic) gives vizudemrotisan.",
+   "refines": [
+    "3.3:G148"
+   ],
+   "examples": [
+    [
+     "mavofaruti · mavofarutisan",
+     "hypomania · hypomanic"
+    ]
+   ],
+   "status": "proposed"
+  },
+  {
+   "id": "G154",
+   "topic": "Coarse register",
+   "ruling": "Profanity is a register, not a grammar. garza is the all-purpose curse: the interjection Garza! (Fuck!, Damn!), the intensifier garzasan before a noun (fucking, damned), and the verb garzaga (to swear). rupu (waste) serves as Rupu! (Shit!). Insults are person-compounds on nela: rupunela, larnenela. Coarse words never take ascended forms, and are marked [coarse] in the lexicon.",
+   "examples": [
+    [
+     "Garza! Li kadu ne venreva.",
+     "Fuck! The car isn't coming."
+    ],
+    [
+     "Li garzasan kibo po bakoba li tabu.",
+     "The damned bot broke the table."
+    ]
+   ],
+   "status": "proposed"
+  }
+ ],
+ "headwords": [
+  {
+   "id": "lx_kibo_2480",
+   "root": "kibo",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "robot; bot (everyday word)",
+    "adjective": "robotic; bot-like"
+   },
+   "register": "everyday",
+   "domain": "Information & technology",
+   "english_synonyms": [
+    "robot",
+    "bot (everyday word)",
+    "robotic",
+    "bot-like"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Tier 1 in the patch. Module core."
+  },
+  {
+   "id": "lx_garza_2481",
+   "root": "garza",
+   "type": "Primal",
+   "components": null,
+   "glosses": {
+    "root": "curse; obscenity",
+    "verb": "to swear; to curse",
+    "adjective": "damned; fucking (coarse intensifier)"
+   },
+   "register": "everyday",
+   "domain": "Emotion & song",
+   "english_synonyms": [
+    "curse",
+    "obscenity",
+    "to swear",
+    "to curse",
+    "damned",
+    "fucking (coarse intensifier)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Tier 1 in the patch. Module register."
+  },
+  {
+   "id": "lx_helnakibo_2482",
+   "root": "helnakibo",
+   "type": "Compound",
+   "components": [
+    "helna",
+    "kibo"
+   ],
+   "glosses": {
+    "root": "medical bot"
+   },
+   "register": "everyday",
+   "domain": "Health & body",
+   "english_synonyms": [
+    "medical bot"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: helna + kibo. Archetype: robots. Tier 1 in the patch. Module core."
+  },
+  {
+   "id": "lx_germanamre_2483",
+   "root": "germanamre",
+   "type": "Compound",
+   "components": [
+    "germa",
+    "namre"
+   ],
+   "glosses": {
+    "root": "metalhead (affectionate slang for a robot)"
+   },
+   "register": "everyday",
+   "domain": "Society",
+   "english_synonyms": [
+    "metalhead (affectionate slang for a robot)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: germa + namre. Archetype: robots. Tier 1 in the patch. Module core."
+  },
+  {
+   "id": "lx_divmanela_2484",
+   "root": "divmanela",
+   "type": "Compound",
+   "components": [
+    "divma",
+    "nela"
+   ],
+   "glosses": {
+    "root": "android; mechanoid (machine-person)"
+   },
+   "register": "everyday",
+   "domain": "Information & technology",
+   "english_synonyms": [
+    "android",
+    "mechanoid (machine-person)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: divma + nela. Archetype: robots. Tier 1 in the patch. Module core."
+  },
+  {
+   "id": "lx_biokibo_2485",
+   "root": "biokibo",
+   "type": "Compound",
+   "components": [
+    "bio",
+    "kibo"
+   ],
+   "glosses": {
+    "root": "biobot (living robot)"
+   },
+   "register": "everyday",
+   "domain": "Information & technology",
+   "english_synonyms": [
+    "biobot (living robot)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: bio + kibo. Archetype: robots. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_simvocuza_2486",
+   "root": "simvocuza",
+   "type": "Compound",
+   "components": [
+    "simvo",
+    "cuza"
+   ],
+   "glosses": {
+    "root": "profile (identity-record)"
+   },
+   "register": "everyday",
+   "domain": "Information & technology",
+   "english_synonyms": [
+    "profile (identity-record)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: simvo + cuza. Archetype: tech. Tier 1 in the patch. Module core."
+  },
+  {
+   "id": "lx_vimoramu_2487",
+   "root": "vimoramu",
+   "type": "Compound",
+   "components": [
+    "vimo",
+    "ramu"
+   ],
+   "glosses": {
+    "root": "footage; a recording (sight-memory)",
+    "verb": "to record on video"
+   },
+   "register": "everyday",
+   "domain": "Information & technology",
+   "english_synonyms": [
+    "footage",
+    "a recording (sight-memory)",
+    "to record on video"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: vimo + ramu. Archetype: tech. Tier 1 in the patch. Module core."
+  },
+  {
+   "id": "lx_pelicono_2488",
+   "root": "pelicono",
+   "type": "Compound",
+   "components": [
+    "peli",
+    "cono"
+   ],
+   "glosses": {
+    "root": "token; game coin"
+   },
+   "register": "everyday",
+   "domain": "Everyday & feast",
+   "english_synonyms": [
+    "token",
+    "game coin"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: peli + cono. Archetype: tech. Tier 1 in the patch. Module core."
+  },
+  {
+   "id": "lx_kronolazu_2489",
+   "root": "kronolazu",
+   "type": "Compound",
+   "components": [
+    "krono",
+    "lazu"
+   ],
+   "glosses": {
+    "root": "dinosaur (the ancient beast)"
+   },
+   "register": "everyday",
+   "domain": "Animals",
+   "english_synonyms": [
+    "dinosaur (the ancient beast)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: krono + lazu. Archetype: creatures. Tier 1 in the patch. Module core."
+  },
+  {
+   "id": "lx_mambipuku_2490",
+   "root": "mambipuku",
+   "type": "Compound",
+   "components": [
+    "mambi",
+    "puku"
+   ],
+   "glosses": {
+    "root": "incident; an event and what came of it"
+   },
+   "register": "everyday",
+   "domain": "Abstract",
+   "english_synonyms": [
+    "incident",
+    "an event and what came of it"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: mambi + puku. Archetype: events. Tier 1 in the patch. Module core."
+  },
+  {
+   "id": "lx_molusasva_2491",
+   "root": "molusasva",
+   "type": "Compound",
+   "components": [
+    "molu",
+    "sasva"
+   ],
+   "glosses": {
+    "root": "caregiving; tender keeping"
+   },
+   "register": "everyday",
+   "domain": "People",
+   "english_synonyms": [
+    "caregiving",
+    "tender keeping"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: molu + sasva. Archetype: people. Tier 1 in the patch. Module core."
+  },
+  {
+   "id": "lx_vanilordi_2492",
+   "root": "vanilordi",
+   "type": "Compound",
+   "components": [
+    "vani",
+    "lordi"
+   ],
+   "glosses": {
+    "root": "aesthetic; aesthetics (beauty-order)"
+   },
+   "register": "everyday",
+   "domain": "Language & art",
+   "english_synonyms": [
+    "aesthetic",
+    "aesthetics (beauty-order)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: vani + lordi. aesthetic (adj.) = vanilordisan (3.3:G148) Archetype: qualities. Tier 1 in the patch. Module core."
+  },
+  {
+   "id": "lx_resodalu_2493",
+   "root": "resodalu",
+   "type": "Compound",
+   "components": [
+    "reso",
+    "dalu"
+   ],
+   "glosses": {
+    "root": "tickle",
+    "verb": "to tickle"
+   },
+   "register": "everyday",
+   "domain": "Movement & action",
+   "english_synonyms": [
+    "tickle",
+    "to tickle"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: reso + dalu. Archetype: manner verbs. Tier 1 in the patch. Module core."
+  },
+  {
+   "id": "lx_rezamiru_2494",
+   "root": "rezamiru",
+   "type": "Compound",
+   "components": [
+    "reza",
+    "miru"
+   ],
+   "glosses": {
+    "root": "drool",
+    "verb": "to drool"
+   },
+   "register": "everyday",
+   "domain": "Body",
+   "english_synonyms": [
+    "drool",
+    "to drool"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: reza + miru. Archetype: manner verbs. Tier 1 in the patch. Module core."
+  },
+  {
+   "id": "lx_maskayalmu_2495",
+   "root": "maskayalmu",
+   "type": "Compound",
+   "components": [
+    "maska",
+    "yalmu"
+   ],
+   "glosses": {
+    "root": "manipulation (false influence)",
+    "verb": "to manipulate (someone)"
+   },
+   "register": "everyday",
+   "domain": "Society",
+   "english_synonyms": [
+    "manipulation (false influence)",
+    "to manipulate (someone)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: maska + yalmu. Archetype: abstract. Tier 1 in the patch. Module core."
+  },
+  {
+   "id": "lx_manlidemro_2496",
+   "root": "manlidemro",
+   "type": "Compound",
+   "components": [
+    "manli",
+    "demro"
+   ],
+   "glosses": {
+    "root": "handling",
+    "verb": "to manipulate (a thing); to handle"
+   },
+   "register": "everyday",
+   "domain": "Movement & action",
+   "english_synonyms": [
+    "handling",
+    "to manipulate (a thing)",
+    "to handle"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: manli + demro. Archetype: manner verbs. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_simvosovla_2497",
+   "root": "simvosovla",
+   "type": "Compound",
+   "components": [
+    "simvo",
+    "sovla"
+   ],
+   "glosses": {
+    "root": "fractal (self-shape)"
+   },
+   "register": "everyday",
+   "domain": "Language & art",
+   "english_synonyms": [
+    "fractal (self-shape)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: simvo + sovla. Archetype: abstract. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_navufaruhata_2498",
+   "root": "navufaruhata",
+   "type": "Compound",
+   "components": [
+    "navufaru",
+    "hata"
+   ],
+   "glosses": {
+    "root": "zap; lightning strike",
+    "verb": "to zap"
+   },
+   "register": "everyday",
+   "domain": "Movement & action",
+   "english_synonyms": [
+    "zap",
+    "lightning strike",
+    "to zap"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: navufaru + hata. Archetype: manner verbs. Tier 1 in the patch. Module core."
+  },
+  {
+   "id": "lx_mellikrono_2499",
+   "root": "mellikrono",
+   "type": "Compound",
+   "components": [
+    "melli",
+    "krono"
+   ],
+   "glosses": {
+    "root": "time dilation (expanded time)"
+   },
+   "register": "everyday",
+   "domain": "Abstract",
+   "english_synonyms": [
+    "time dilation (expanded time)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: melli + krono. Archetype: abstract. Tier 1 in the patch. Module core."
+  },
+  {
+   "id": "lx_lordilekta_2500",
+   "root": "lordilekta",
+   "type": "Compound",
+   "components": [
+    "lordi",
+    "lekta"
+   ],
+   "glosses": {
+    "root": "array; an ordered set"
+   },
+   "register": "everyday",
+   "domain": "Abstract",
+   "english_synonyms": [
+    "array",
+    "an ordered set"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: lordi + lekta. Archetype: abstract. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_senorinba_2501",
+   "root": "senorinba",
+   "type": "Compound",
+   "components": [
+    "seno",
+    "rinba"
+   ],
+   "glosses": {
+    "root": "context (the ring of words around)"
+   },
+   "register": "everyday",
+   "domain": "Language & art",
+   "english_synonyms": [
+    "context (the ring of words around)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: seno + rinba. Archetype: abstract. Tier 1 in the patch. Module core."
+  },
+  {
+   "id": "lx_sevrelalle_2502",
+   "root": "sevrelalle",
+   "type": "Compound",
+   "components": [
+    "sevre",
+    "lalle"
+   ],
+   "glosses": {
+    "root": "binary (closed-open; on-off)"
+   },
+   "register": "everyday",
+   "domain": "Information & technology",
+   "english_synonyms": [
+    "binary (closed-open",
+    "on-off)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: sevre + lalle. binary (adj.) = sevrelallesan (G148) Archetype: tech. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_lorefavro_2503",
+   "root": "lorefavro",
+   "type": "Compound",
+   "components": [
+    "lore",
+    "favro"
+   ],
+   "glosses": {
+    "root": "emoticon; emoji (heart-sign)"
+   },
+   "register": "everyday",
+   "domain": "Information & technology",
+   "english_synonyms": [
+    "emoticon",
+    "emoji (heart-sign)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: lore + favro. Archetype: tech. Tier 1 in the patch. Module core."
+  },
+  {
+   "id": "lx_resofavro_2504",
+   "root": "resofavro",
+   "type": "Compound",
+   "components": [
+    "reso",
+    "favro"
+   ],
+   "glosses": {
+    "root": "meme (laugh-sign)"
+   },
+   "register": "everyday",
+   "domain": "Information & technology",
+   "english_synonyms": [
+    "meme (laugh-sign)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: reso + favro. Archetype: tech. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_pagofavro_2505",
+   "root": "pagofavro",
+   "type": "Compound",
+   "components": [
+    "pago",
+    "favro"
+   ],
+   "glosses": {
+    "root": "geotag; location marker"
+   },
+   "register": "everyday",
+   "domain": "Information & technology",
+   "english_synonyms": [
+    "geotag",
+    "location marker"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: pago + favro. Archetype: tech. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_lombilordi_2506",
+   "root": "lombilordi",
+   "type": "Compound",
+   "components": [
+    "lombi",
+    "lordi"
+   ],
+   "glosses": {
+    "root": "preset; default setting"
+   },
+   "register": "everyday",
+   "domain": "Information & technology",
+   "english_synonyms": [
+    "preset",
+    "default setting"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: lombi + lordi. Archetype: tech. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_yalmusevre_2507",
+   "root": "yalmusevre",
+   "type": "Compound",
+   "components": [
+    "yalmu",
+    "sevre"
+   ],
+   "glosses": {
+    "root": "shutdown",
+    "verb": "to deactivate; to shut down"
+   },
+   "register": "everyday",
+   "domain": "Information & technology",
+   "english_synonyms": [
+    "shutdown",
+    "to deactivate",
+    "to shut down"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: yalmu + sevre. Archetype: tech. Tier 1 in the patch. Module core."
+  },
+  {
+   "id": "lx_sambakrono_2508",
+   "root": "sambakrono",
+   "type": "Compound",
+   "components": [
+    "samba",
+    "krono"
+   ],
+   "glosses": {
+    "root": "synchrony",
+    "verb": "to synchronize"
+   },
+   "register": "everyday",
+   "domain": "Time, quantity & work",
+   "english_synonyms": [
+    "synchrony",
+    "to synchronize"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: samba + krono. simultaneous = sambakronosan (G148) Archetype: time. Tier 1 in the patch. Module core."
+  },
+  {
+   "id": "lx_rinbanulu_2509",
+   "root": "rinbanulu",
+   "type": "Compound",
+   "components": [
+    "rinba",
+    "nulu"
+   ],
+   "glosses": {
+    "root": "loop (ring-path)"
+   },
+   "register": "everyday",
+   "domain": "Abstract",
+   "english_synonyms": [
+    "loop (ring-path)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: rinba + nulu. Archetype: abstract. Tier 1 in the patch. Module core."
+  },
+  {
+   "id": "lx_mavotibi_2510",
+   "root": "mavotibi",
+   "type": "Compound",
+   "components": [
+    "mavo",
+    "tibi"
+   ],
+   "glosses": {
+    "root": "nerve; neuron (mind-thread)"
+   },
+   "register": "everyday",
+   "domain": "Body",
+   "english_synonyms": [
+    "nerve",
+    "neuron (mind-thread)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: mavo + tibi. neural = mavotibisan (G148) Archetype: body. Tier 1 in the patch. Module core."
+  },
+  {
+   "id": "lx_dendumiru_2511",
+   "root": "dendumiru",
+   "type": "Compound",
+   "components": [
+    "dendu",
+    "miru"
+   ],
+   "glosses": {
+    "root": "immersion (deep water)"
+   },
+   "register": "everyday",
+   "domain": "Abstract",
+   "english_synonyms": [
+    "immersion (deep water)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: dendu + miru. immersive = dendumirusan (G148) Archetype: abstract. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_lumipatu_2512",
+   "root": "lumipatu",
+   "type": "Compound",
+   "components": [
+    "lumi",
+    "patu"
+   ],
+   "glosses": {
+    "root": "highlight",
+    "verb": "to highlight"
+   },
+   "register": "everyday",
+   "domain": "Language & art",
+   "english_synonyms": [
+    "highlight",
+    "to highlight"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: lumi + patu. Archetype: abstract. Tier 1 in the patch. Module core."
+  },
+  {
+   "id": "lx_cuzapatu_2513",
+   "root": "cuzapatu",
+   "type": "Compound",
+   "components": [
+    "cuza",
+    "patu"
+   ],
+   "glosses": {
+    "root": "paragraph"
+   },
+   "register": "everyday",
+   "domain": "Language & art",
+   "english_synonyms": [
+    "paragraph"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: cuza + patu. Archetype: writing. Tier 1 in the patch. Module core."
+  },
+  {
+   "id": "lx_lalnikerso_2514",
+   "root": "lalnikerso",
+   "type": "Compound",
+   "components": [
+    "lalni",
+    "kerso"
+   ],
+   "glosses": {
+    "root": "extension; lengthening",
+    "verb": "to extend"
+   },
+   "register": "everyday",
+   "domain": "Abstract",
+   "english_synonyms": [
+    "extension",
+    "lengthening",
+    "to extend"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: lalni + kerso. Archetype: abstract. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_valladoza_2515",
+   "root": "valladoza",
+   "type": "Compound",
+   "components": [
+    "valla",
+    "doza"
+   ],
+   "glosses": {
+    "root": "exclamation; outcry"
+   },
+   "register": "everyday",
+   "domain": "Language & art",
+   "english_synonyms": [
+    "exclamation",
+    "outcry"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: valla + doza. Archetype: writing. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_gonbiseno_2516",
+   "root": "gonbiseno",
+   "type": "Compound",
+   "components": [
+    "gonbi",
+    "seno"
+   ],
+   "glosses": {
+    "root": "greeting (guest-word)",
+    "verb": "to greet"
+   },
+   "register": "everyday",
+   "domain": "Language & art",
+   "english_synonyms": [
+    "greeting (guest-word)",
+    "to greet"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: gonbi + seno. Archetype: writing. Tier 1 in the patch. Module core."
+  },
+  {
+   "id": "lx_dapafavro_2517",
+   "root": "dapafavro",
+   "type": "Compound",
+   "components": [
+    "dapa",
+    "favro"
+   ],
+   "glosses": {
+    "root": "advertisement (sale-sign)"
+   },
+   "register": "everyday",
+   "domain": "Society",
+   "english_synonyms": [
+    "advertisement (sale-sign)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: dapa + favro. Archetype: society. Tier 1 in the patch. Module core."
+  },
+  {
+   "id": "lx_lumitalva_2518",
+   "root": "lumitalva",
+   "type": "Compound",
+   "components": [
+    "lumi",
+    "talva"
+   ],
+   "glosses": {
+    "root": "projection (light-throw)",
+    "verb": "to project"
+   },
+   "register": "everyday",
+   "domain": "Information & technology",
+   "english_synonyms": [
+    "projection (light-throw)",
+    "to project"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: lumi + talva. Archetype: tech. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_talipatu_2519",
+   "root": "talipatu",
+   "type": "Compound",
+   "components": [
+    "tali",
+    "patu"
+   ],
+   "glosses": {
+    "root": "assignment; task"
+   },
+   "register": "everyday",
+   "domain": "Everyday objects & work",
+   "english_synonyms": [
+    "assignment",
+    "task"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: tali + patu. Archetype: work. Tier 1 in the patch. Module core."
+  },
+  {
+   "id": "lx_kronodivma_2520",
+   "root": "kronodivma",
+   "type": "Compound",
+   "components": [
+    "krono",
+    "divma"
+   ],
+   "glosses": {
+    "root": "clockwork (time-system)"
+   },
+   "register": "everyday",
+   "domain": "Information & technology",
+   "english_synonyms": [
+    "clockwork (time-system)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: krono + divma. Archetype: tech. Tier 1 in the patch. Module core."
+  },
+  {
+   "id": "lx_nolsacilni_2521",
+   "root": "nolsacilni",
+   "type": "Compound",
+   "components": [
+    "nolsa",
+    "cilni"
+   ],
+   "glosses": {
+    "root": "neocity; new city"
+   },
+   "register": "everyday",
+   "domain": "Society",
+   "english_synonyms": [
+    "neocity",
+    "new city"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: nolsa + cilni. Archetype: society. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_pebunela_2522",
+   "root": "pebunela",
+   "type": "Compound",
+   "components": [
+    "pebu",
+    "nela"
+   ],
+   "glosses": {
+    "root": "the underclass (the foot of society)"
+   },
+   "register": "everyday",
+   "domain": "Society",
+   "english_synonyms": [
+    "the underclass (the foot of society)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: pebu + nela. Archetype: society. Tier 1 in the patch. Module core."
+  },
+  {
+   "id": "lx_patulekta_2523",
+   "root": "patulekta",
+   "type": "Compound",
+   "components": [
+    "patu",
+    "lekta"
+   ],
+   "glosses": {
+    "root": "faction; splinter group"
+   },
+   "register": "everyday",
+   "domain": "Society",
+   "english_synonyms": [
+    "faction",
+    "splinter group"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: patu + lekta. Archetype: society. Tier 1 in the patch. Module core."
+  },
+  {
+   "id": "lx_patuyeba_2524",
+   "root": "patuyeba",
+   "type": "Compound",
+   "components": [
+    "patu",
+    "yeba"
+   ],
+   "glosses": {
+    "root": "compromise",
+    "verb": "to compromise"
+   },
+   "register": "everyday",
+   "domain": "Society",
+   "english_synonyms": [
+    "compromise",
+    "to compromise"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: patu + yeba. Archetype: society. Tier 1 in the patch. Module core."
+  },
+  {
+   "id": "lx_taliranfa_2525",
+   "root": "taliranfa",
+   "type": "Compound",
+   "components": [
+    "tali",
+    "ranfa"
+   ],
+   "glosses": {
+    "root": "pragmatism (work-reason)",
+    "adjective": "pragmatic; practical"
+   },
+   "register": "everyday",
+   "domain": "Mind & philosophy",
+   "english_synonyms": [
+    "pragmatism (work-reason)",
+    "pragmatic",
+    "practical"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: tali + ranfa. Archetype: qualities. Tier 1 in the patch. Module core."
+  },
+  {
+   "id": "lx_velmasirmo_2526",
+   "root": "velmasirmo",
+   "type": "Compound",
+   "components": [
+    "velma",
+    "sirmo"
+   ],
+   "glosses": {
+    "root": "fashion (clothing-renown)"
+   },
+   "register": "everyday",
+   "domain": "Society",
+   "english_synonyms": [
+    "fashion (clothing-renown)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: velma + sirmo. fashionable = velmasirmosan (G148) Archetype: qualities. Tier 1 in the patch. Module core."
+  },
+  {
+   "id": "lx_gudolideo_2527",
+   "root": "gudolideo",
+   "type": "Compound",
+   "components": [
+    "gudo",
+    "lideo"
+   ],
+   "glosses": {
+    "root": "stereotype (common idea)"
+   },
+   "register": "everyday",
+   "domain": "Mind & philosophy",
+   "english_synonyms": [
+    "stereotype (common idea)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: gudo + lideo. stereotypical = gudolideosan (G148) Archetype: qualities. Tier 1 in the patch. Module core."
+  },
+  {
+   "id": "lx_loreramu_2528",
+   "root": "loreramu",
+   "type": "Compound",
+   "components": [
+    "lore",
+    "ramu"
+   ],
+   "glosses": {
+    "root": "sentiment; a fond memory",
+    "adjective": "sentimental"
+   },
+   "register": "everyday",
+   "domain": "Emotions",
+   "english_synonyms": [
+    "sentiment",
+    "a fond memory",
+    "sentimental"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: lore + ramu. Archetype: qualities. Tier 1 in the patch. Module core."
+  },
+  {
+   "id": "lx_kronosirmo_2529",
+   "root": "kronosirmo",
+   "type": "Compound",
+   "components": [
+    "krono",
+    "sirmo"
+   ],
+   "glosses": {
+    "root": "a classic (time-renown)",
+    "adjective": "classic; timeless"
+   },
+   "register": "everyday",
+   "domain": "Language & art",
+   "english_synonyms": [
+    "a classic (time-renown)",
+    "classic",
+    "timeless"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: krono + sirmo. Archetype: qualities. Tier 1 in the patch. Module core."
+  },
+  {
+   "id": "lx_vizufarla_2530",
+   "root": "vizufarla",
+   "type": "Compound",
+   "components": [
+    "vizu",
+    "farla"
+   ],
+   "glosses": {
+    "root": "improvisation",
+    "verb": "to improvise"
+   },
+   "register": "everyday",
+   "domain": "Movement & action",
+   "english_synonyms": [
+    "improvisation",
+    "to improvise"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: vizu + farla. Archetype: manner verbs. Tier 1 in the patch. Module core."
+  },
+  {
+   "id": "lx_lumiturna_2531",
+   "root": "lumiturna",
+   "type": "Compound",
+   "components": [
+    "lumi",
+    "turna"
+   ],
+   "glosses": {
+    "root": "translucence (light-entering)",
+    "adjective": "translucent"
+   },
+   "register": "everyday",
+   "domain": "Materials & physics",
+   "english_synonyms": [
+    "translucence (light-entering)",
+    "translucent"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: lumi + turna. Archetype: qualities. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_lumiramu_2532",
+   "root": "lumiramu",
+   "type": "Compound",
+   "components": [
+    "lumi",
+    "ramu"
+   ],
+   "glosses": {
+    "root": "afterimage (light-memory)"
+   },
+   "register": "everyday",
+   "domain": "Materials & physics",
+   "english_synonyms": [
+    "afterimage (light-memory)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: lumi + ramu. Archetype: abstract. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_pelimaska_2533",
+   "root": "pelimaska",
+   "type": "Compound",
+   "components": [
+    "peli",
+    "maska"
+   ],
+   "glosses": {
+    "root": "mischief (play-trick)",
+    "adjective": "mischievous"
+   },
+   "register": "everyday",
+   "domain": "Society",
+   "english_synonyms": [
+    "mischief (play-trick)",
+    "mischievous"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: peli + maska. Archetype: qualities. Tier 1 in the patch. Module core."
+  },
+  {
+   "id": "lx_maskanulu_2534",
+   "root": "maskanulu",
+   "type": "Compound",
+   "components": [
+    "maska",
+    "nulu"
+   ],
+   "glosses": {
+    "root": "misdirection (false path)"
+   },
+   "register": "everyday",
+   "domain": "Society",
+   "english_synonyms": [
+    "misdirection (false path)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: maska + nulu. Archetype: abstract. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_zeldorilli_2535",
+   "root": "zeldorilli",
+   "type": "Compound",
+   "components": [
+    "zeldo",
+    "rilli"
+   ],
+   "glosses": {
+    "root": "rejection",
+    "verb": "to reject"
+   },
+   "register": "everyday",
+   "domain": "Emotions",
+   "english_synonyms": [
+    "rejection",
+    "to reject"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: zeldo + rilli. Archetype: abstract. Tier 1 in the patch. Module core."
+  },
+  {
+   "id": "lx_yanopatu_2536",
+   "root": "yanopatu",
+   "type": "Compound",
+   "components": [
+    "yano",
+    "patu"
+   ],
+   "glosses": {
+    "root": "combination",
+    "verb": "to combine"
+   },
+   "register": "everyday",
+   "domain": "Abstract",
+   "english_synonyms": [
+    "combination",
+    "to combine"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: yano + patu. Archetype: abstract. Tier 1 in the patch. Module core."
+  },
+  {
+   "id": "lx_cunuyano_2537",
+   "root": "cunuyano",
+   "type": "Compound",
+   "components": [
+    "cunu",
+    "yano"
+   ],
+   "glosses": {
+    "root": "addition (number-union)",
+    "verb": "to add up"
+   },
+   "register": "everyday",
+   "domain": "Time, quantity & work",
+   "english_synonyms": [
+    "addition (number-union)",
+    "to add up"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: cunu + yano. Archetype: abstract. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_simvolore_2538",
+   "root": "simvolore",
+   "type": "Compound",
+   "components": [
+    "simvo",
+    "lore"
+   ],
+   "glosses": {
+    "root": "personality; disposition (self-heart)"
+   },
+   "register": "everyday",
+   "domain": "Mind & philosophy",
+   "english_synonyms": [
+    "personality",
+    "disposition (self-heart)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: simvo + lore. Archetype: mind. Tier 1 in the patch. Module core."
+  },
+  {
+   "id": "lx_lorerivla_2539",
+   "root": "lorerivla",
+   "type": "Compound",
+   "components": [
+    "lore",
+    "rivla"
+   ],
+   "glosses": {
+    "root": "overwhelm; a flood of feeling",
+    "verb": "to overwhelm"
+   },
+   "register": "everyday",
+   "domain": "Emotions",
+   "english_synonyms": [
+    "overwhelm",
+    "a flood of feeling",
+    "to overwhelm"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: lore + rivla. Archetype: mind. Tier 1 in the patch. Module core."
+  },
+  {
+   "id": "lx_dendubako_2540",
+   "root": "dendubako",
+   "type": "Compound",
+   "components": [
+    "dendu",
+    "bako"
+   ],
+   "glosses": {
+    "root": "traumatization; a deep break",
+    "verb": "to traumatize"
+   },
+   "register": "everyday",
+   "domain": "Emotions",
+   "english_synonyms": [
+    "traumatization",
+    "a deep break",
+    "to traumatize"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: dendu + bako. Archetype: mind. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_milrademro_2541",
+   "root": "milrademro",
+   "type": "Compound",
+   "components": [
+    "milra",
+    "demro"
+   ],
+   "glosses": {
+    "root": "mimicry",
+    "verb": "to mimic"
+   },
+   "register": "everyday",
+   "domain": "Movement & action",
+   "english_synonyms": [
+    "mimicry",
+    "to mimic"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: milra + demro. Archetype: manner verbs. Tier 1 in the patch. Module core."
+  },
+  {
+   "id": "lx_zivureso_2542",
+   "root": "zivureso",
+   "type": "Compound",
+   "components": [
+    "zivu",
+    "reso"
+   ],
+   "glosses": {
+    "root": "cackle (sneering laugh)",
+    "verb": "to cackle"
+   },
+   "register": "everyday",
+   "domain": "Movement & action",
+   "english_synonyms": [
+    "cackle (sneering laugh)",
+    "to cackle"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: zivu + reso. Archetype: manner verbs. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_zegodemro_2543",
+   "root": "zegodemro",
+   "type": "Compound",
+   "components": [
+    "zego",
+    "demro"
+   ],
+   "glosses": {
+    "root": "wiggle",
+    "verb": "to wiggle"
+   },
+   "register": "everyday",
+   "domain": "Movement & action",
+   "english_synonyms": [
+    "wiggle",
+    "to wiggle"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: zego + demro. Archetype: manner verbs. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_nulvadalu_2544",
+   "root": "nulvadalu",
+   "type": "Compound",
+   "components": [
+    "nulva",
+    "dalu"
+   ],
+   "glosses": {
+    "root": "boop; a nose-touch",
+    "verb": "to boop"
+   },
+   "register": "everyday",
+   "domain": "Movement & action",
+   "english_synonyms": [
+    "boop",
+    "a nose-touch",
+    "to boop"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: nulva + dalu. Archetype: manner verbs. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_rezatalva_2545",
+   "root": "rezatalva",
+   "type": "Compound",
+   "components": [
+    "reza",
+    "talva"
+   ],
+   "glosses": {
+    "root": "spit",
+    "verb": "to spit"
+   },
+   "register": "everyday",
+   "domain": "Movement & action",
+   "english_synonyms": [
+    "spit",
+    "to spit"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: reza + talva. Archetype: manner verbs. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_farufolni_2546",
+   "root": "farufolni",
+   "type": "Compound",
+   "components": [
+    "faru",
+    "folni"
+   ],
+   "glosses": {
+    "root": "firework (fire-flower)"
+   },
+   "register": "everyday",
+   "domain": "Everyday & feast",
+   "english_synonyms": [
+    "firework (fire-flower)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: faru + folni. Archetype: world. Tier 1 in the patch. Module core."
+  },
+  {
+   "id": "lx_dokrakaze_2547",
+   "root": "dokrakaze",
+   "type": "Compound",
+   "components": [
+    "dokra",
+    "kaze"
+   ],
+   "glosses": {
+    "root": "cannon (war-gun)"
+   },
+   "register": "everyday",
+   "domain": "Everyday & feast",
+   "english_synonyms": [
+    "cannon (war-gun)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: dokra + kaze. Archetype: world. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_talvadivma_2548",
+   "root": "talvadivma",
+   "type": "Compound",
+   "components": [
+    "talva",
+    "divma"
+   ],
+   "glosses": {
+    "root": "catapult (throw-machine)"
+   },
+   "register": "everyday",
+   "domain": "Everyday & feast",
+   "english_synonyms": [
+    "catapult (throw-machine)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: talva + divma. Archetype: world. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_sumbikezu_2549",
+   "root": "sumbikezu",
+   "type": "Compound",
+   "components": [
+    "sumbi",
+    "kezu"
+   ],
+   "glosses": {
+    "root": "the tropics (summer-land)",
+    "adjective": "tropical"
+   },
+   "register": "everyday",
+   "domain": "Nature & geography",
+   "english_synonyms": [
+    "the tropics (summer-land)",
+    "tropical"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: sumbi + kezu. Archetype: world. Tier 1 in the patch. Module core."
+  },
+  {
+   "id": "lx_mirucolbi_2550",
+   "root": "mirucolbi",
+   "type": "Compound",
+   "components": [
+    "miru",
+    "colbi"
+   ],
+   "glosses": {
+    "root": "watercolor"
+   },
+   "register": "everyday",
+   "domain": "Language & art",
+   "english_synonyms": [
+    "watercolor"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: miru + colbi. Archetype: world. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_noruzayutelne_2551",
+   "root": "noruzayutelne",
+   "type": "Compound",
+   "components": [
+    "noruzayu",
+    "telne"
+   ],
+   "glosses": {
+    "root": "fantasy (a story of dream-magic)"
+   },
+   "register": "everyday",
+   "domain": "Language & art",
+   "english_synonyms": [
+    "fantasy (a story of dream-magic)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: noruzayu + telne. Archetype: writing. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_sovedendu_2552",
+   "root": "sovedendu",
+   "type": "Compound",
+   "components": [
+    "sove",
+    "dendu"
+   ],
+   "glosses": {
+    "root": "zen; deep calm"
+   },
+   "register": "everyday",
+   "domain": "Mind & philosophy",
+   "english_synonyms": [
+    "zen",
+    "deep calm"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: sove + dendu. Archetype: mind. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_sovlabako_2553",
+   "root": "sovlabako",
+   "type": "Compound",
+   "components": [
+    "sovla",
+    "bako"
+   ],
+   "glosses": {
+    "root": "deformity (a broken shape)"
+   },
+   "register": "everyday",
+   "domain": "Body",
+   "english_synonyms": [
+    "deformity (a broken shape)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: sovla + bako. Archetype: body. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_velnivelu_2554",
+   "root": "velnivelu",
+   "type": "Compound",
+   "components": [
+    "velni",
+    "velu"
+   ],
+   "glosses": {
+    "root": "quintessence (the star of the essence)"
+   },
+   "register": "everyday",
+   "domain": "Mind & philosophy",
+   "english_synonyms": [
+    "quintessence (the star of the essence)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: velni + velu. Archetype: mind. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_liralavra_2555",
+   "root": "liralavra",
+   "type": "Compound",
+   "components": [
+    "lira",
+    "lavra"
+   ],
+   "glosses": {
+    "root": "songbird"
+   },
+   "register": "everyday",
+   "domain": "Animals",
+   "english_synonyms": [
+    "songbird"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: lira + lavra. Archetype: creatures. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_mirunevra_2556",
+   "root": "mirunevra",
+   "type": "Compound",
+   "components": [
+    "miru",
+    "nevra"
+   ],
+   "glosses": {
+    "root": "cascade; waterfall (water-descent)",
+    "verb": "to cascade"
+   },
+   "register": "everyday",
+   "domain": "Nature & geography",
+   "english_synonyms": [
+    "cascade",
+    "waterfall (water-descent)",
+    "to cascade"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: miru + nevra. Archetype: world. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_sambanole_2557",
+   "root": "sambanole",
+   "type": "Compound",
+   "components": [
+    "samba",
+    "nole"
+   ],
+   "glosses": {
+    "root": "namesake (same-name)"
+   },
+   "register": "everyday",
+   "domain": "Language & art",
+   "english_synonyms": [
+    "namesake (same-name)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: samba + nole. Archetype: writing. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_sasvalore_2558",
+   "root": "sasvalore",
+   "type": "Compound",
+   "components": [
+    "sasva",
+    "lore"
+   ],
+   "glosses": {
+    "root": "protectiveness (guarding heart)",
+    "adjective": "protective"
+   },
+   "register": "everyday",
+   "domain": "Emotions",
+   "english_synonyms": [
+    "protectiveness (guarding heart)",
+    "protective"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: sasva + lore. Archetype: qualities. Tier 1 in the patch. Module core."
+  },
+  {
+   "id": "lx_dapalore_2559",
+   "root": "dapalore",
+   "type": "Compound",
+   "components": [
+    "dapa",
+    "lore"
+   ],
+   "glosses": {
+    "root": "whore (coarse: a heart for sale)"
+   },
+   "register": "everyday",
+   "domain": "Society",
+   "english_synonyms": [
+    "whore (coarse: a heart for sale)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: dapa + lore. Archetype: coarse. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_lavrasamninami_2560",
+   "root": "lavrasamninami",
+   "type": "Compound",
+   "components": [
+    "lavrasamni",
+    "nami"
+   ],
+   "glosses": {
+    "root": "omelet (egg-dish)"
+   },
+   "register": "everyday",
+   "domain": "Everyday & feast",
+   "english_synonyms": [
+    "omelet (egg-dish)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: lavrasamni + nami. Archetype: food. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_bondopatu_2561",
+   "root": "bondopatu",
+   "type": "Compound",
+   "components": [
+    "bondo",
+    "patu"
+   ],
+   "glosses": {
+    "root": "gram (unit of weight)"
+   },
+   "register": "everyday",
+   "domain": "Time, quantity & work",
+   "english_synonyms": [
+    "gram (unit of weight)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: bondo + patu. Archetype: units. Tier 1 in the patch. Module core."
+  },
+  {
+   "id": "lx_lalnipatu_2562",
+   "root": "lalnipatu",
+   "type": "Compound",
+   "components": [
+    "lalni",
+    "patu"
+   ],
+   "glosses": {
+    "root": "metre (unit of length)"
+   },
+   "register": "everyday",
+   "domain": "Time, quantity & work",
+   "english_synonyms": [
+    "metre (unit of length)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: lalni + patu. Archetype: units. Tier 1 in the patch. Module core."
+  },
+  {
+   "id": "lx_mirupatu_2563",
+   "root": "mirupatu",
+   "type": "Compound",
+   "components": [
+    "miru",
+    "patu"
+   ],
+   "glosses": {
+    "root": "litre (unit of volume)"
+   },
+   "register": "everyday",
+   "domain": "Time, quantity & work",
+   "english_synonyms": [
+    "litre (unit of volume)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: miru + patu. Archetype: units. Tier 1 in the patch. Module core."
+  },
+  {
+   "id": "lx_mavohelna_2564",
+   "root": "mavohelna",
+   "type": "Compound",
+   "components": [
+    "mavo",
+    "helna"
+   ],
+   "glosses": {
+    "root": "psychiatry (mind-medicine)"
+   },
+   "register": "everyday",
+   "domain": "Health & body",
+   "english_synonyms": [
+    "psychiatry (mind-medicine)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: mavo + helna. psychiatric = mavohelnasan (G148); Light's Hope Psychiatric Archetype: mind. Tier 1 in the patch. Module mind."
+  },
+  {
+   "id": "lx_mavonibe_2565",
+   "root": "mavonibe",
+   "type": "Compound",
+   "components": [
+    "mavo",
+    "nibe"
+   ],
+   "glosses": {
+    "root": "psychosis (mind-fog)"
+   },
+   "register": "everyday",
+   "domain": "Health & body",
+   "english_synonyms": [
+    "psychosis (mind-fog)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: mavo + nibe. psychotic = mavonibesan (G148); chosen as a gentle image, not 'break' Archetype: mind. Tier 1 in the patch. Module mind."
+  },
+  {
+   "id": "lx_zeldonibe_2566",
+   "root": "zeldonibe",
+   "type": "Compound",
+   "components": [
+    "zeldo",
+    "nibe"
+   ],
+   "glosses": {
+    "root": "antipsychotic (fog-resisting medicine)"
+   },
+   "register": "everyday",
+   "domain": "Health & body",
+   "english_synonyms": [
+    "antipsychotic (fog-resisting medicine)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: zeldo + nibe. Archetype: mind. Tier 1 in the patch. Module mind."
+  },
+  {
+   "id": "lx_mavofaru_2567",
+   "root": "mavofaru",
+   "type": "Compound",
+   "components": [
+    "mavo",
+    "faru"
+   ],
+   "glosses": {
+    "root": "mania (mind-fire)"
+   },
+   "register": "everyday",
+   "domain": "Health & body",
+   "english_synonyms": [
+    "mania (mind-fire)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: mavo + faru. manic = mavofarusan (G148) Archetype: mind. Tier 1 in the patch. Module mind."
+  },
+  {
+   "id": "lx_lorevopra_2568",
+   "root": "lorevopra",
+   "type": "Compound",
+   "components": [
+    "lore",
+    "vopra"
+   ],
+   "glosses": {
+    "root": "bipolar disorder (the turning heart)"
+   },
+   "register": "everyday",
+   "domain": "Health & body",
+   "english_synonyms": [
+    "bipolar disorder (the turning heart)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: lore + vopra. bipolar (adj.) = lorevoprasan (G148) Archetype: mind. Tier 1 in the patch. Module mind."
+  },
+  {
+   "id": "lx_maskavimo_2569",
+   "root": "maskavimo",
+   "type": "Compound",
+   "components": [
+    "maska",
+    "vimo"
+   ],
+   "glosses": {
+    "root": "hallucination (false sight)",
+    "verb": "to hallucinate"
+   },
+   "register": "everyday",
+   "domain": "Health & body",
+   "english_synonyms": [
+    "hallucination (false sight)",
+    "to hallucinate"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: maska + vimo. Archetype: mind. Tier 1 in the patch. Module mind."
+  },
+  {
+   "id": "lx_maskadevo_2570",
+   "root": "maskadevo",
+   "type": "Compound",
+   "components": [
+    "maska",
+    "devo"
+   ],
+   "glosses": {
+    "root": "delusion (false belief)"
+   },
+   "register": "everyday",
+   "domain": "Health & body",
+   "english_synonyms": [
+    "delusion (false belief)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: maska + devo. Archetype: mind. Tier 1 in the patch. Module mind."
+  },
+  {
+   "id": "lx_follumavo_2571",
+   "root": "follumavo",
+   "type": "Compound",
+   "components": [
+    "follu",
+    "mavo"
+   ],
+   "glosses": {
+    "root": "paranoia (fear-mind)"
+   },
+   "register": "everyday",
+   "domain": "Health & body",
+   "english_synonyms": [
+    "paranoia (fear-mind)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: follu + mavo. Archetype: mind. Tier 1 in the patch. Module mind."
+  },
+  {
+   "id": "lx_dendumavo_2572",
+   "root": "dendumavo",
+   "type": "Compound",
+   "components": [
+    "dendu",
+    "mavo"
+   ],
+   "glosses": {
+    "root": "the subconscious (deep mind)"
+   },
+   "register": "everyday",
+   "domain": "Mind & philosophy",
+   "english_synonyms": [
+    "the subconscious (deep mind)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: dendu + mavo. Archetype: mind. Tier 1 in the patch. Module mind."
+  },
+  {
+   "id": "lx_yanovimo_2573",
+   "root": "yanovimo",
+   "type": "Compound",
+   "components": [
+    "yano",
+    "vimo"
+   ],
+   "glosses": {
+    "root": "synesthesia (united senses)"
+   },
+   "register": "everyday",
+   "domain": "Mind & philosophy",
+   "english_synonyms": [
+    "synesthesia (united senses)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: yano + vimo. Archetype: mind. Tier 2 in the patch. Module mind."
+  },
+  {
+   "id": "lx_lordikaldo_2574",
+   "root": "lordikaldo",
+   "type": "Compound",
+   "components": [
+    "lordi",
+    "kaldo"
+   ],
+   "glosses": {
+    "root": "obsessive-compulsive disorder; OCD (order-bound)"
+   },
+   "register": "everyday",
+   "domain": "Health & body",
+   "english_synonyms": [
+    "obsessive-compulsive disorder",
+    "OCD (order-bound)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: lordi + kaldo. Archetype: mind. Tier 1 in the patch. Module mind."
+  },
+  {
+   "id": "lx_helnaturna_2575",
+   "root": "helnaturna",
+   "type": "Compound",
+   "components": [
+    "helna",
+    "turna"
+   ],
+   "glosses": {
+    "root": "hospitalization",
+    "verb": "to hospitalize"
+   },
+   "register": "everyday",
+   "domain": "Health & body",
+   "english_synonyms": [
+    "hospitalization",
+    "to hospitalize"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: helna + turna. Archetype: mind. Tier 1 in the patch. Module mind."
+  },
+  {
+   "id": "lx_somudendu_2576",
+   "root": "somudendu",
+   "type": "Compound",
+   "components": [
+    "somu",
+    "dendu"
+   ],
+   "glosses": {
+    "root": "coma (deep sleep)"
+   },
+   "register": "everyday",
+   "domain": "Health & body",
+   "english_synonyms": [
+    "coma (deep sleep)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: somu + dendu. Archetype: mind. Tier 1 in the patch. Module mind."
+  },
+  {
+   "id": "lx_zegolore_2577",
+   "root": "zegolore",
+   "type": "Compound",
+   "components": [
+    "zego",
+    "lore"
+   ],
+   "glosses": {
+    "root": "agitation (trembling heart)"
+   },
+   "register": "everyday",
+   "domain": "Health & body",
+   "english_synonyms": [
+    "agitation (trembling heart)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: zego + lore. Archetype: mind. Tier 1 in the patch. Module mind."
+  },
+  {
+   "id": "lx_helnakavbi_2578",
+   "root": "helnakavbi",
+   "type": "Compound",
+   "components": [
+    "helna",
+    "kavbi"
+   ],
+   "glosses": {
+    "root": "stretcher (medicine-carrying)"
+   },
+   "register": "everyday",
+   "domain": "Health & body",
+   "english_synonyms": [
+    "stretcher (medicine-carrying)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: helna + kavbi. Archetype: mind. Tier 2 in the patch. Module mind."
+  },
+  {
+   "id": "lx_sasvahelna_2579",
+   "root": "sasvahelna",
+   "type": "Compound",
+   "components": [
+    "sasva",
+    "helna"
+   ],
+   "glosses": {
+    "root": "vaccine (protecting medicine)"
+   },
+   "register": "everyday",
+   "domain": "Health & body",
+   "english_synonyms": [
+    "vaccine (protecting medicine)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: sasva + helna. Archetype: mind. Tier 1 in the patch. Module mind."
+  },
+  {
+   "id": "lx_safalordi_2580",
+   "root": "safalordi",
+   "type": "Compound",
+   "components": [
+    "safa",
+    "lordi"
+   ],
+   "glosses": {
+    "root": "hygiene (washing-order)"
+   },
+   "register": "everyday",
+   "domain": "Health & body",
+   "english_synonyms": [
+    "hygiene (washing-order)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: safa + lordi. Archetype: mind. Tier 1 in the patch. Module mind."
+  },
+  {
+   "id": "lx_sulmepavma_2581",
+   "root": "sulmepavma",
+   "type": "Compound",
+   "components": [
+    "sulme",
+    "pavma"
+   ],
+   "glosses": {
+    "root": "nicotine (smoke-substance)"
+   },
+   "register": "everyday",
+   "domain": "Health & body",
+   "english_synonyms": [
+    "nicotine (smoke-substance)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: sulme + pavma. Archetype: mind. Tier 1 in the patch. Module mind."
+  },
+  {
+   "id": "lx_linufulepuku_2582",
+   "root": "linufulepuku",
+   "type": "Compound",
+   "components": [
+    "linufule",
+    "puku"
+   ],
+   "glosses": {
+    "root": "abortion (end of a pregnancy)"
+   },
+   "register": "everyday",
+   "domain": "Health & body",
+   "english_synonyms": [
+    "abortion (end of a pregnancy)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: linufule + puku. neutral, clinical image Archetype: mind. Tier 2 in the patch. Module mind."
+  },
+  {
+   "id": "lx_lumisovla_2583",
+   "root": "lumisovla",
+   "type": "Compound",
+   "components": [
+    "lumi",
+    "sovla"
+   ],
+   "glosses": {
+    "root": "hologram (light-shape)"
+   },
+   "register": "everyday",
+   "domain": "Information & technology",
+   "english_synonyms": [
+    "hologram (light-shape)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: lumi + sovla. Archetype: holo. Tier 1 in the patch. Module world."
+  },
+  {
+   "id": "lx_lumivelma_2584",
+   "root": "lumivelma",
+   "type": "Compound",
+   "components": [
+    "lumi",
+    "velma"
+   ],
+   "glosses": {
+    "root": "holodress; light-garment"
+   },
+   "register": "everyday",
+   "domain": "Home & objects",
+   "english_synonyms": [
+    "holodress",
+    "light-garment"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: lumi + velma. Also a modifier + head of the image-compound pattern (2.0:G40), lexicalised with the meanings listed. Archetype: holo. Tier 1 in the patch. Module world."
+  },
+  {
+   "id": "lx_lumipeli_2585",
+   "root": "lumipeli",
+   "type": "Compound",
+   "components": [
+    "lumi",
+    "peli"
+   ],
+   "glosses": {
+    "root": "hologame (holochess and the like)"
+   },
+   "register": "everyday",
+   "domain": "Everyday & feast",
+   "english_synonyms": [
+    "hologame (holochess and the like)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: lumi + peli. Archetype: holo. Tier 2 in the patch. Module world."
+  },
+  {
+   "id": "lx_lumivimo_2586",
+   "root": "lumivimo",
+   "type": "Compound",
+   "components": [
+    "lumi",
+    "vimo"
+   ],
+   "glosses": {
+    "root": "holoscreen (light-sight)"
+   },
+   "register": "everyday",
+   "domain": "Information & technology",
+   "english_synonyms": [
+    "holoscreen (light-sight)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: lumi + vimo. Archetype: holo. Tier 2 in the patch. Module world."
+  },
+  {
+   "id": "lx_lumizefro_2587",
+   "root": "lumizefro",
+   "type": "Compound",
+   "components": [
+    "lumi",
+    "zefro"
+   ],
+   "glosses": {
+    "root": "neon (light-gas)"
+   },
+   "register": "everyday",
+   "domain": "Materials & physics",
+   "english_synonyms": [
+    "neon (light-gas)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: lumi + zefro. Archetype: materials. Tier 1 in the patch. Module world."
+  },
+  {
+   "id": "lx_lamsapavma_2588",
+   "root": "lamsapavma",
+   "type": "Compound",
+   "components": [
+    "lamsa",
+    "pavma"
+   ],
+   "glosses": {
+    "root": "carbon (ash-material)"
+   },
+   "register": "everyday",
+   "domain": "Materials & physics",
+   "english_synonyms": [
+    "carbon (ash-material)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: lamsa + pavma. carbonic = lamsapavmasan (G148) Archetype: materials. Tier 1 in the patch. Module world."
+  },
+  {
+   "id": "lx_lalfogerma_2589",
+   "root": "lalfogerma",
+   "type": "Compound",
+   "components": [
+    "lalfo",
+    "germa"
+   ],
+   "glosses": {
+    "root": "titanium (floating metal: light and strong)"
+   },
+   "register": "everyday",
+   "domain": "Materials & physics",
+   "english_synonyms": [
+    "titanium (floating metal: light and strong)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: lalfo + germa. Archetype: materials. Tier 2 in the patch. Module world."
+  },
+  {
+   "id": "lx_tranagerma_2590",
+   "root": "tranagerma",
+   "type": "Compound",
+   "components": [
+    "trana",
+    "germa"
+   ],
+   "glosses": {
+    "root": "adaptometal (change-metal)"
+   },
+   "register": "everyday",
+   "domain": "Materials & physics",
+   "english_synonyms": [
+    "adaptometal (change-metal)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: trana + germa. Archetype: materials. Tier 2 in the patch. Module world."
+  },
+  {
+   "id": "lx_farupavma_2591",
+   "root": "farupavma",
+   "type": "Compound",
+   "components": [
+    "faru",
+    "pavma"
+   ],
+   "glosses": {
+    "root": "plasma (fire-matter)"
+   },
+   "register": "everyday",
+   "domain": "Materials & physics",
+   "english_synonyms": [
+    "plasma (fire-matter)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: faru + pavma. Archetype: materials. Tier 2 in the patch. Module world."
+  },
+  {
+   "id": "lx_yalmuyano_2592",
+   "root": "yalmuyano",
+   "type": "Compound",
+   "components": [
+    "yalmu",
+    "yano"
+   ],
+   "glosses": {
+    "root": "fusion (energy-union)"
+   },
+   "register": "everyday",
+   "domain": "Materials & physics",
+   "english_synonyms": [
+    "fusion (energy-union)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: yalmu + yano. Archetype: materials. Tier 2 in the patch. Module world."
+  },
+  {
+   "id": "lx_sovlafarla_2593",
+   "root": "sovlafarla",
+   "type": "Compound",
+   "components": [
+    "sovla",
+    "farla"
+   ],
+   "glosses": {
+    "root": "printing; 3D printing (shape-making)",
+    "verb": "to print"
+   },
+   "register": "everyday",
+   "domain": "Information & technology",
+   "english_synonyms": [
+    "printing",
+    "3D printing (shape-making)",
+    "to print"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: sovla + farla. Archetype: tech. Tier 1 in the patch. Module world."
+  },
+  {
+   "id": "lx_sovlafarlabiti_2594",
+   "root": "sovlafarlabiti",
+   "type": "Compound",
+   "components": [
+    "sovlafarla",
+    "biti"
+   ],
+   "glosses": {
+    "root": "printer; 3D printer"
+   },
+   "register": "everyday",
+   "domain": "Information & technology",
+   "english_synonyms": [
+    "printer",
+    "3D printer"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: sovlafarla + biti. Archetype: tech. Tier 1 in the patch. Module world."
+  },
+  {
+   "id": "lx_divmapatu_2595",
+   "root": "divmapatu",
+   "type": "Compound",
+   "components": [
+    "divma",
+    "patu"
+   ],
+   "glosses": {
+    "root": "chip; microchip (system-part)"
+   },
+   "register": "everyday",
+   "domain": "Information & technology",
+   "english_synonyms": [
+    "chip",
+    "microchip (system-part)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: divma + patu. Archetype: tech. Tier 1 in the patch. Module world."
+  },
+  {
+   "id": "lx_biofarla_2596",
+   "root": "biofarla",
+   "type": "Compound",
+   "components": [
+    "bio",
+    "farla"
+   ],
+   "glosses": {
+    "root": "biosynthesis (life-making)"
+   },
+   "register": "everyday",
+   "domain": "Information & technology",
+   "english_synonyms": [
+    "biosynthesis (life-making)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: bio + farla. biosynthetic = biofarlasan (G148) Archetype: tech. Tier 2 in the patch. Module world."
+  },
+  {
+   "id": "lx_yugedivma_2597",
+   "root": "yugedivma",
+   "type": "Compound",
+   "components": [
+    "yuge",
+    "divma"
+   ],
+   "glosses": {
+    "root": "biocybernetics (body-system)"
+   },
+   "register": "everyday",
+   "domain": "Information & technology",
+   "english_synonyms": [
+    "biocybernetics (body-system)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: yuge + divma. Archetype: tech. Tier 2 in the patch. Module world."
+  },
+  {
+   "id": "lx_silisomu_2598",
+   "root": "silisomu",
+   "type": "Compound",
+   "components": [
+    "sili",
+    "somu"
+   ],
+   "glosses": {
+    "root": "cryosleep; cryogenics (cold-sleep)"
+   },
+   "register": "everyday",
+   "domain": "Information & technology",
+   "english_synonyms": [
+    "cryosleep",
+    "cryogenics (cold-sleep)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: sili + somu. cryogenic = silisomusan (G148) Archetype: tech. Tier 1 in the patch. Module world."
+  },
+  {
+   "id": "lx_lisrokrono_2599",
+   "root": "lisrokrono",
+   "type": "Compound",
+   "components": [
+    "lisro",
+    "krono"
+   ],
+   "glosses": {
+    "root": "stasis (still time)"
+   },
+   "register": "everyday",
+   "domain": "Information & technology",
+   "english_synonyms": [
+    "stasis (still time)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: lisro + krono. Archetype: tech. Tier 1 in the patch. Module world."
+  },
+  {
+   "id": "lx_somukova_2600",
+   "root": "somukova",
+   "type": "Compound",
+   "components": [
+    "somu",
+    "kova"
+   ],
+   "glosses": {
+    "root": "capsule; sleep pod"
+   },
+   "register": "everyday",
+   "domain": "Information & technology",
+   "english_synonyms": [
+    "capsule",
+    "sleep pod"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: somu + kova. Archetype: tech. Tier 1 in the patch. Module world."
+  },
+  {
+   "id": "lx_pagotrana_2601",
+   "root": "pagotrana",
+   "type": "Compound",
+   "components": [
+    "pago",
+    "trana"
+   ],
+   "glosses": {
+    "root": "teleportation",
+    "verb": "to teleport"
+   },
+   "register": "everyday",
+   "domain": "Information & technology",
+   "english_synonyms": [
+    "teleportation",
+    "to teleport"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: pago + trana. Archetype: tech. Tier 1 in the patch. Module world."
+  },
+  {
+   "id": "lx_velukadu_2602",
+   "root": "velukadu",
+   "type": "Compound",
+   "components": [
+    "velu",
+    "kadu"
+   ],
+   "glosses": {
+    "root": "spaceship (star-vehicle)"
+   },
+   "register": "everyday",
+   "domain": "Information & technology",
+   "english_synonyms": [
+    "spaceship (star-vehicle)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: velu + kadu. Archetype: tech. Tier 1 in the patch. Module world."
+  },
+  {
+   "id": "lx_zefrovopra_2603",
+   "root": "zefrovopra",
+   "type": "Compound",
+   "components": [
+    "zefro",
+    "vopra"
+   ],
+   "glosses": {
+    "root": "propeller (air-turn)"
+   },
+   "register": "everyday",
+   "domain": "Information & technology",
+   "english_synonyms": [
+    "propeller (air-turn)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: zefro + vopra. Archetype: tech. Tier 2 in the patch. Module world."
+  },
+  {
+   "id": "lx_farumavo_2604",
+   "root": "farumavo",
+   "type": "Compound",
+   "components": [
+    "faru",
+    "mavo"
+   ],
+   "glosses": {
+    "root": "pyrokinesis (fire-mind)"
+   },
+   "register": "everyday",
+   "domain": "Mind & philosophy",
+   "english_synonyms": [
+    "pyrokinesis (fire-mind)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: faru + mavo. pyrokinetic = farumavosan (G148) Archetype: tech. Tier 2 in the patch. Module world."
+  },
+  {
+   "id": "lx_sevureso_2605",
+   "root": "sevureso",
+   "type": "Compound",
+   "components": [
+    "sevu",
+    "reso"
+   ],
+   "glosses": {
+    "root": "dolphin (sea-laughter)"
+   },
+   "register": "everyday",
+   "domain": "Animals",
+   "english_synonyms": [
+    "dolphin (sea-laughter)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: sevu + reso. Archetype: creatures. Tier 1 in the patch. Module nature."
+  },
+  {
+   "id": "lx_sevuzimzi_2606",
+   "root": "sevuzimzi",
+   "type": "Compound",
+   "components": [
+    "sevu",
+    "zimzi"
+   ],
+   "glosses": {
+    "root": "crab (sea-insect)"
+   },
+   "register": "everyday",
+   "domain": "Animals",
+   "english_synonyms": [
+    "crab (sea-insect)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: sevu + zimzi. Archetype: creatures. Tier 2 in the patch. Module nature."
+  },
+  {
+   "id": "lx_pavrulazu_2607",
+   "root": "pavrulazu",
+   "type": "Compound",
+   "components": [
+    "pavru",
+    "lazu"
+   ],
+   "glosses": {
+    "root": "kangaroo (leaping animal)"
+   },
+   "register": "everyday",
+   "domain": "Animals",
+   "english_synonyms": [
+    "kangaroo (leaping animal)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: pavru + lazu. Archetype: creatures. Tier 2 in the patch. Module nature."
+  },
+  {
+   "id": "lx_larbolazu_2608",
+   "root": "larbolazu",
+   "type": "Compound",
+   "components": [
+    "larbo",
+    "lazu"
+   ],
+   "glosses": {
+    "root": "monkey (tree-animal)"
+   },
+   "register": "everyday",
+   "domain": "Animals",
+   "english_synonyms": [
+    "monkey (tree-animal)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: larbo + lazu. Archetype: creatures. Tier 1 in the patch. Module nature."
+  },
+  {
+   "id": "lx_somulazu_2609",
+   "root": "somulazu",
+   "type": "Compound",
+   "components": [
+    "somu",
+    "lazu"
+   ],
+   "glosses": {
+    "root": "koala (sleep-animal)"
+   },
+   "register": "everyday",
+   "domain": "Animals",
+   "english_synonyms": [
+    "koala (sleep-animal)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: somu + lazu. Archetype: creatures. Tier 2 in the patch. Module nature."
+  },
+  {
+   "id": "lx_renliherba_2610",
+   "root": "renliherba",
+   "type": "Compound",
+   "components": [
+    "renli",
+    "herba"
+   ],
+   "glosses": {
+    "root": "mushroom (rain-plant)"
+   },
+   "register": "everyday",
+   "domain": "Everyday & feast",
+   "english_synonyms": [
+    "mushroom (rain-plant)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: renli + herba. Archetype: food. Tier 1 in the patch. Module nature."
+  },
+  {
+   "id": "lx_sumayumli_2611",
+   "root": "sumayumli",
+   "type": "Compound",
+   "components": [
+    "suma",
+    "yumli"
+   ],
+   "glosses": {
+    "root": "caramel (warm sweet)"
+   },
+   "register": "everyday",
+   "domain": "Everyday & feast",
+   "english_synonyms": [
+    "caramel (warm sweet)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: suma + yumli. Archetype: food. Tier 2 in the patch. Module nature."
+  },
+  {
+   "id": "lx_kezusamni_2612",
+   "root": "kezusamni",
+   "type": "Compound",
+   "components": [
+    "kezu",
+    "samni"
+   ],
+   "glosses": {
+    "root": "peanut (earth-seed)"
+   },
+   "register": "everyday",
+   "domain": "Everyday & feast",
+   "english_synonyms": [
+    "peanut (earth-seed)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: kezu + samni. Archetype: food. Tier 2 in the patch. Module nature."
+  },
+  {
+   "id": "lx_molubumre_2613",
+   "root": "molubumre",
+   "type": "Compound",
+   "components": [
+    "molu",
+    "bumre"
+   ],
+   "glosses": {
+    "root": "pancake (soft bread)"
+   },
+   "register": "everyday",
+   "domain": "Everyday & feast",
+   "english_synonyms": [
+    "pancake (soft bread)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: molu + bumre. Archetype: food. Tier 2 in the patch. Module nature."
+  },
+  {
+   "id": "lx_dentobiti_2614",
+   "root": "dentobiti",
+   "type": "Compound",
+   "components": [
+    "dento",
+    "biti"
+   ],
+   "glosses": {
+    "root": "toothbrush (tooth-tool)"
+   },
+   "register": "everyday",
+   "domain": "Home & objects",
+   "english_synonyms": [
+    "toothbrush (tooth-tool)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: dento + biti. Archetype: home. Tier 2 in the patch. Module nature."
+  },
+  {
+   "id": "lx_dentopavma_2615",
+   "root": "dentopavma",
+   "type": "Compound",
+   "components": [
+    "dento",
+    "pavma"
+   ],
+   "glosses": {
+    "root": "toothpaste (tooth-material)"
+   },
+   "register": "everyday",
+   "domain": "Home & objects",
+   "english_synonyms": [
+    "toothpaste (tooth-material)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: dento + pavma. Archetype: home. Tier 2 in the patch. Module nature."
+  },
+  {
+   "id": "lx_rupunela_2616",
+   "root": "rupunela",
+   "type": "Compound",
+   "components": [
+    "rupu",
+    "nela"
+   ],
+   "glosses": {
+    "root": "asshole (coarse: a waste of a person)"
+   },
+   "register": "everyday",
+   "domain": "Society",
+   "english_synonyms": [
+    "asshole (coarse: a waste of a person)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: rupu + nela. Archetype: coarse. Tier 2 in the patch. Module register."
+  },
+  {
+   "id": "lx_larnenela_2617",
+   "root": "larnenela",
+   "type": "Compound",
+   "components": [
+    "larne",
+    "nela"
+   ],
+   "glosses": {
+    "root": "bitch (coarse: a spiteful person)"
+   },
+   "register": "everyday",
+   "domain": "Society",
+   "english_synonyms": [
+    "bitch (coarse: a spiteful person)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: larne + nela. Archetype: coarse. Tier 2 in the patch. Module register."
+  },
+  {
+   "id": "lx_ceresolodoza_2618",
+   "root": "ceresolodoza",
+   "type": "Compound",
+   "components": [
+    "ceresolo",
+    "doza"
+   ],
+   "glosses": {
+    "root": "siliglass (strong glass)"
+   },
+   "register": "everyday",
+   "domain": "Materials & physics",
+   "english_synonyms": [
+    "siliglass (strong glass)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: ceresolo + doza. Archetype: book. Tier 2 in the patch. Module book.2100."
+  },
+  {
+   "id": "lx_silipega_2619",
+   "root": "silipega",
+   "type": "Compound",
+   "components": [
+    "sili",
+    "pega"
+   ],
+   "glosses": {
+    "root": "cryogel (cold gel)"
+   },
+   "register": "everyday",
+   "domain": "Health & body",
+   "english_synonyms": [
+    "cryogel (cold gel)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: sili + pega. Archetype: book. Tier 2 in the patch. Module book.2100."
+  },
+  {
+   "id": "lx_lunovurfa_2620",
+   "root": "lunovurfa",
+   "type": "Compound",
+   "components": [
+    "luno",
+    "vurfa"
+   ],
+   "glosses": {
+    "root": "moonfox (a genetically engineered fox)"
+   },
+   "register": "everyday",
+   "domain": "Animals",
+   "english_synonyms": [
+    "moonfox (a genetically engineered fox)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: luno + vurfa. Built from existing words at the author’s request (2026-10-25): a sound-word or slang term of 2100 Dreams. Tier 2 in the patch. Module book.2100."
+  },
+  {
+   "id": "lx_pelipebuvelma_2621",
+   "root": "pelipebuvelma",
+   "type": "Compound",
+   "components": [
+    "peli",
+    "pebuvelma"
+   ],
+   "glosses": {
+    "root": "sneakerette; a trendy sneaker (play-shoe)"
+   },
+   "register": "everyday",
+   "domain": "Clothing & adornment",
+   "english_synonyms": [
+    "sneakerette",
+    "a trendy sneaker (play-shoe)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: peli + pebuvelma. Built from existing words at the author’s request (2026-10-25): a sound-word or slang term of 2100 Dreams. Tier 2 in the patch. Module book.2100."
+  },
+  {
+   "id": "lx_kibosonbu_2622",
+   "root": "kibosonbu",
+   "type": "Compound",
+   "components": [
+    "kibo",
+    "sonbu"
+   ],
+   "glosses": {
+    "root": "zeep zoop; a robot’s chime (robot-sound)"
+   },
+   "register": "everyday",
+   "domain": "Information & technology",
+   "english_synonyms": [
+    "zeep zoop",
+    "a robot’s chime (robot-sound)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: kibo + sonbu. Built from existing words at the author’s request (2026-10-25): a sound-word or slang term of 2100 Dreams. Tier 2 in the patch. Module book.2100."
+  },
+  {
+   "id": "lx_linuvalmi_2623",
+   "root": "linuvalmi",
+   "type": "Compound",
+   "components": [
+    "linu",
+    "valmi"
+   ],
+   "glosses": {
+    "root": "toddling; a tottle (child-walk)",
+    "verb": "to tottle along; to toddle"
+   },
+   "register": "everyday",
+   "domain": "Body & movement",
+   "english_synonyms": [
+    "toddling",
+    "a tottle (child-walk)",
+    "to tottle along",
+    "to toddle"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: linu + valmi. Built from existing words at the author’s request (2026-10-25): a sound-word or slang term of 2100 Dreams. Tier 2 in the patch. Module book.2100."
+  },
+  {
+   "id": "lx_mirufarvibudi_2624",
+   "root": "mirufarvibudi",
+   "type": "Compound",
+   "components": [
+    "miru",
+    "farvibudi"
+   ],
+   "glosses": {
+    "root": "hydrocune (a water-wolf of legend)"
+   },
+   "register": "everyday",
+   "domain": "Animals",
+   "english_synonyms": [
+    "hydrocune (a water-wolf of legend)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: miru + farvibudi. Built from existing words at the author’s request (2026-10-25): a sound-word or slang term of 2100 Dreams. Tier 2 in the patch. Module book.2100."
+  },
+  {
+   "id": "lx_lumiyelmi_2625",
+   "root": "lumiyelmi",
+   "type": "Compound",
+   "components": [
+    "lumi",
+    "yelmi"
+   ],
+   "glosses": {
+    "root": "zazzle; flair; dazzle (light-glitter)"
+   },
+   "register": "everyday",
+   "domain": "Language & art",
+   "english_synonyms": [
+    "zazzle",
+    "flair",
+    "dazzle (light-glitter)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: lumi + yelmi. Built from existing words at the author’s request (2026-10-25): a sound-word or slang term of 2100 Dreams. Tier 2 in the patch. Module book.2100."
+  },
+  {
+   "id": "lx_auruminela_2626",
+   "root": "auruminela",
+   "type": "Compound",
+   "components": [
+    "aurumi",
+    "nela"
+   ],
+   "glosses": {
+    "root": "a goldie; one of the gilded rich (gold-person)"
+   },
+   "register": "everyday",
+   "domain": "Society & people",
+   "english_synonyms": [
+    "a goldie",
+    "one of the gilded rich (gold-person)"
+   ],
+   "notes": "Added in 3.6 (changeset 2026-10-25-lexicon-3-6). Proposed in 3.6: awaiting the author's ratification. Components: aurumi + nela. Built from existing words at the author’s request (2026-10-25): a sound-word or slang term of 2100 Dreams. Tier 2 in the patch. Module book.2100."
+  }
+ ],
+ "function_words": [],
+ "lexicalised_derivations": {
+  "molusasvayo": "caretaker; caregiver: molusasva + -yo",
+  "renlivu": "downpour; torrential rain: renli + -vu",
+  "cilnivu": "megacity: cilni + -vu",
+  "resoyo": "clown; jester: reso + -yo",
+  "bondopatuvu": "kilogram: bondopatu + -vu",
+  "lalnipatuvu": "kilometre: lalnipatu + -vu",
+  "mavohelnayo": "psychiatrist: mavohelna + -yo",
+  "kaldodesiyo": "addict: kaldodesi + -yo",
+  "ojofurovu": "mango (big orange fruit): ojofuro + -vu",
+  "noruzayuyo": "neomage (neomagi); dream-magician: noruzayu + -yo"
+ },
+ "ops": [
+  {
+   "entry": "3.6:G155",
+   "op": "add_ruling",
+   "from": null,
+   "to": "Metric units",
+   "ruling": "3.6:G155",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): Metric units. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "3.6:G153",
+   "op": "add_ruling",
+   "from": null,
+   "to": "Relational adjectives from lexicalised diminutives",
+   "ruling": "3.6:G153",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): Relational adjectives from lexicalised diminutives. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "3.6:G154",
+   "op": "add_ruling",
+   "from": null,
+   "to": "Coarse register",
+   "ruling": "3.6:G154",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): Coarse register. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_kibo_2480",
+   "op": "add_root",
+   "slot": "root",
+   "from": null,
+   "to": "kibo",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): robot; bot (everyday word) (domain Information & technology).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_garza_2481",
+   "op": "add_root",
+   "slot": "root",
+   "from": null,
+   "to": "garza",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): curse; obscenity (domain Emotion & song).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_helnakibo_2482",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "helnakibo",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): medical bot: helna + kibo (domain Health & body).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_germanamre_2483",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "germanamre",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): metalhead (affectionate slang for a robot): germa + namre (domain Society).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_divmanela_2484",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "divmanela",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): android; mechanoid (machine-person): divma + nela (domain Information & technology).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_biokibo_2485",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "biokibo",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): biobot (living robot): bio + kibo (domain Information & technology).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_simvocuza_2486",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "simvocuza",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): profile (identity-record): simvo + cuza (domain Information & technology).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_vimoramu_2487",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "vimoramu",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): footage; a recording (sight-memory): vimo + ramu (domain Information & technology).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_pelicono_2488",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "pelicono",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): token; game coin: peli + cono (domain Everyday & feast).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_kronolazu_2489",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "kronolazu",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): dinosaur (the ancient beast): krono + lazu (domain Animals).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_mambipuku_2490",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "mambipuku",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): incident; an event and what came of it: mambi + puku (domain Abstract).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_molusasva_2491",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "molusasva",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): caregiving; tender keeping: molu + sasva (domain People).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_vanilordi_2492",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "vanilordi",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): aesthetic; aesthetics (beauty-order): vani + lordi (domain Language & art).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_resodalu_2493",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "resodalu",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): tickle: reso + dalu (domain Movement & action).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_rezamiru_2494",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "rezamiru",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): drool: reza + miru (domain Body).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_maskayalmu_2495",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "maskayalmu",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): manipulation (false influence): maska + yalmu (domain Society).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_manlidemro_2496",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "manlidemro",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): handling: manli + demro (domain Movement & action).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_simvosovla_2497",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "simvosovla",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): fractal (self-shape): simvo + sovla (domain Language & art).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_navufaruhata_2498",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "navufaruhata",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): zap; lightning strike: navufaru + hata (domain Movement & action).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_mellikrono_2499",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "mellikrono",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): time dilation (expanded time): melli + krono (domain Abstract).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lordilekta_2500",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "lordilekta",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): array; an ordered set: lordi + lekta (domain Abstract).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_senorinba_2501",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "senorinba",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): context (the ring of words around): seno + rinba (domain Language & art).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_sevrelalle_2502",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "sevrelalle",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): binary (closed-open; on-off): sevre + lalle (domain Information & technology).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lorefavro_2503",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "lorefavro",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): emoticon; emoji (heart-sign): lore + favro (domain Information & technology).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_resofavro_2504",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "resofavro",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): meme (laugh-sign): reso + favro (domain Information & technology).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_pagofavro_2505",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "pagofavro",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): geotag; location marker: pago + favro (domain Information & technology).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lombilordi_2506",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "lombilordi",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): preset; default setting: lombi + lordi (domain Information & technology).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_yalmusevre_2507",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "yalmusevre",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): shutdown: yalmu + sevre (domain Information & technology).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_sambakrono_2508",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "sambakrono",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): synchrony: samba + krono (domain Time, quantity & work).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_rinbanulu_2509",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "rinbanulu",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): loop (ring-path): rinba + nulu (domain Abstract).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_mavotibi_2510",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "mavotibi",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): nerve; neuron (mind-thread): mavo + tibi (domain Body).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_dendumiru_2511",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "dendumiru",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): immersion (deep water): dendu + miru (domain Abstract).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lumipatu_2512",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "lumipatu",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): highlight: lumi + patu (domain Language & art).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_cuzapatu_2513",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "cuzapatu",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): paragraph: cuza + patu (domain Language & art).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lalnikerso_2514",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "lalnikerso",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): extension; lengthening: lalni + kerso (domain Abstract).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_valladoza_2515",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "valladoza",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): exclamation; outcry: valla + doza (domain Language & art).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_gonbiseno_2516",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "gonbiseno",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): greeting (guest-word): gonbi + seno (domain Language & art).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_dapafavro_2517",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "dapafavro",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): advertisement (sale-sign): dapa + favro (domain Society).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lumitalva_2518",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "lumitalva",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): projection (light-throw): lumi + talva (domain Information & technology).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_talipatu_2519",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "talipatu",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): assignment; task: tali + patu (domain Everyday objects & work).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_kronodivma_2520",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "kronodivma",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): clockwork (time-system): krono + divma (domain Information & technology).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_nolsacilni_2521",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "nolsacilni",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): neocity; new city: nolsa + cilni (domain Society).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_pebunela_2522",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "pebunela",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): the underclass (the foot of society): pebu + nela (domain Society).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_patulekta_2523",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "patulekta",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): faction; splinter group: patu + lekta (domain Society).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_patuyeba_2524",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "patuyeba",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): compromise: patu + yeba (domain Society).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_taliranfa_2525",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "taliranfa",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): pragmatism (work-reason): tali + ranfa (domain Mind & philosophy).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_velmasirmo_2526",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "velmasirmo",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): fashion (clothing-renown): velma + sirmo (domain Society).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_gudolideo_2527",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "gudolideo",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): stereotype (common idea): gudo + lideo (domain Mind & philosophy).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_loreramu_2528",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "loreramu",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): sentiment; a fond memory: lore + ramu (domain Emotions).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_kronosirmo_2529",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "kronosirmo",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): a classic (time-renown): krono + sirmo (domain Language & art).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_vizufarla_2530",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "vizufarla",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): improvisation: vizu + farla (domain Movement & action).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lumiturna_2531",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "lumiturna",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): translucence (light-entering): lumi + turna (domain Materials & physics).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lumiramu_2532",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "lumiramu",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): afterimage (light-memory): lumi + ramu (domain Materials & physics).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_pelimaska_2533",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "pelimaska",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): mischief (play-trick): peli + maska (domain Society).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_maskanulu_2534",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "maskanulu",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): misdirection (false path): maska + nulu (domain Society).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_zeldorilli_2535",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "zeldorilli",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): rejection: zeldo + rilli (domain Emotions).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_yanopatu_2536",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "yanopatu",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): combination: yano + patu (domain Abstract).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_cunuyano_2537",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "cunuyano",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): addition (number-union): cunu + yano (domain Time, quantity & work).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_simvolore_2538",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "simvolore",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): personality; disposition (self-heart): simvo + lore (domain Mind & philosophy).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lorerivla_2539",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "lorerivla",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): overwhelm; a flood of feeling: lore + rivla (domain Emotions).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_dendubako_2540",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "dendubako",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): traumatization; a deep break: dendu + bako (domain Emotions).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_milrademro_2541",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "milrademro",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): mimicry: milra + demro (domain Movement & action).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_zivureso_2542",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "zivureso",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): cackle (sneering laugh): zivu + reso (domain Movement & action).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_zegodemro_2543",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "zegodemro",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): wiggle: zego + demro (domain Movement & action).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_nulvadalu_2544",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "nulvadalu",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): boop; a nose-touch: nulva + dalu (domain Movement & action).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_rezatalva_2545",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "rezatalva",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): spit: reza + talva (domain Movement & action).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_farufolni_2546",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "farufolni",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): firework (fire-flower): faru + folni (domain Everyday & feast).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_dokrakaze_2547",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "dokrakaze",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): cannon (war-gun): dokra + kaze (domain Everyday & feast).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_talvadivma_2548",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "talvadivma",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): catapult (throw-machine): talva + divma (domain Everyday & feast).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_sumbikezu_2549",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "sumbikezu",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): the tropics (summer-land): sumbi + kezu (domain Nature & geography).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_mirucolbi_2550",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "mirucolbi",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): watercolor: miru + colbi (domain Language & art).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_noruzayutelne_2551",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "noruzayutelne",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): fantasy (a story of dream-magic): noruzayu + telne (domain Language & art).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_sovedendu_2552",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "sovedendu",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): zen; deep calm: sove + dendu (domain Mind & philosophy).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_sovlabako_2553",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "sovlabako",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): deformity (a broken shape): sovla + bako (domain Body).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_velnivelu_2554",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "velnivelu",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): quintessence (the star of the essence): velni + velu (domain Mind & philosophy).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_liralavra_2555",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "liralavra",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): songbird: lira + lavra (domain Animals).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_mirunevra_2556",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "mirunevra",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): cascade; waterfall (water-descent): miru + nevra (domain Nature & geography).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_sambanole_2557",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "sambanole",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): namesake (same-name): samba + nole (domain Language & art).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_sasvalore_2558",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "sasvalore",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): protectiveness (guarding heart): sasva + lore (domain Emotions).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_dapalore_2559",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "dapalore",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): whore (coarse: a heart for sale): dapa + lore (domain Society).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lavrasamninami_2560",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "lavrasamninami",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): omelet (egg-dish): lavrasamni + nami (domain Everyday & feast).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_bondopatu_2561",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "bondopatu",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): gram (unit of weight): bondo + patu (domain Time, quantity & work).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lalnipatu_2562",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "lalnipatu",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): metre (unit of length): lalni + patu (domain Time, quantity & work).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_mirupatu_2563",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "mirupatu",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): litre (unit of volume): miru + patu (domain Time, quantity & work).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_mavohelna_2564",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "mavohelna",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): psychiatry (mind-medicine): mavo + helna (domain Health & body).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_mavonibe_2565",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "mavonibe",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): psychosis (mind-fog): mavo + nibe (domain Health & body).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_zeldonibe_2566",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "zeldonibe",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): antipsychotic (fog-resisting medicine): zeldo + nibe (domain Health & body).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_mavofaru_2567",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "mavofaru",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): mania (mind-fire): mavo + faru (domain Health & body).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lorevopra_2568",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "lorevopra",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): bipolar disorder (the turning heart): lore + vopra (domain Health & body).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_maskavimo_2569",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "maskavimo",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): hallucination (false sight): maska + vimo (domain Health & body).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_maskadevo_2570",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "maskadevo",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): delusion (false belief): maska + devo (domain Health & body).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_follumavo_2571",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "follumavo",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): paranoia (fear-mind): follu + mavo (domain Health & body).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_dendumavo_2572",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "dendumavo",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): the subconscious (deep mind): dendu + mavo (domain Mind & philosophy).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_yanovimo_2573",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "yanovimo",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): synesthesia (united senses): yano + vimo (domain Mind & philosophy).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lordikaldo_2574",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "lordikaldo",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): obsessive-compulsive disorder; OCD (order-bound): lordi + kaldo (domain Health & body).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_helnaturna_2575",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "helnaturna",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): hospitalization: helna + turna (domain Health & body).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_somudendu_2576",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "somudendu",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): coma (deep sleep): somu + dendu (domain Health & body).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_zegolore_2577",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "zegolore",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): agitation (trembling heart): zego + lore (domain Health & body).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_helnakavbi_2578",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "helnakavbi",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): stretcher (medicine-carrying): helna + kavbi (domain Health & body).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_sasvahelna_2579",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "sasvahelna",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): vaccine (protecting medicine): sasva + helna (domain Health & body).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_safalordi_2580",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "safalordi",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): hygiene (washing-order): safa + lordi (domain Health & body).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_sulmepavma_2581",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "sulmepavma",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): nicotine (smoke-substance): sulme + pavma (domain Health & body).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_linufulepuku_2582",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "linufulepuku",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): abortion (end of a pregnancy): linufule + puku (domain Health & body).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lumisovla_2583",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "lumisovla",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): hologram (light-shape): lumi + sovla (domain Information & technology).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lumivelma_2584",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "lumivelma",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): holodress; light-garment: lumi + velma (domain Home & objects).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lumipeli_2585",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "lumipeli",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): hologame (holochess and the like): lumi + peli (domain Everyday & feast).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lumivimo_2586",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "lumivimo",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): holoscreen (light-sight): lumi + vimo (domain Information & technology).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lumizefro_2587",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "lumizefro",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): neon (light-gas): lumi + zefro (domain Materials & physics).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lamsapavma_2588",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "lamsapavma",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): carbon (ash-material): lamsa + pavma (domain Materials & physics).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lalfogerma_2589",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "lalfogerma",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): titanium (floating metal: light and strong): lalfo + germa (domain Materials & physics).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_tranagerma_2590",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "tranagerma",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): adaptometal (change-metal): trana + germa (domain Materials & physics).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_farupavma_2591",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "farupavma",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): plasma (fire-matter): faru + pavma (domain Materials & physics).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_yalmuyano_2592",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "yalmuyano",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): fusion (energy-union): yalmu + yano (domain Materials & physics).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_sovlafarla_2593",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "sovlafarla",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): printing; 3D printing (shape-making): sovla + farla (domain Information & technology).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_sovlafarlabiti_2594",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "sovlafarlabiti",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): printer; 3D printer: sovlafarla + biti (domain Information & technology).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_divmapatu_2595",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "divmapatu",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): chip; microchip (system-part): divma + patu (domain Information & technology).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_biofarla_2596",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "biofarla",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): biosynthesis (life-making): bio + farla (domain Information & technology).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_yugedivma_2597",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "yugedivma",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): biocybernetics (body-system): yuge + divma (domain Information & technology).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_silisomu_2598",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "silisomu",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): cryosleep; cryogenics (cold-sleep): sili + somu (domain Information & technology).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lisrokrono_2599",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "lisrokrono",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): stasis (still time): lisro + krono (domain Information & technology).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_somukova_2600",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "somukova",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): capsule; sleep pod: somu + kova (domain Information & technology).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_pagotrana_2601",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "pagotrana",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): teleportation: pago + trana (domain Information & technology).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_velukadu_2602",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "velukadu",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): spaceship (star-vehicle): velu + kadu (domain Information & technology).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_zefrovopra_2603",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "zefrovopra",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): propeller (air-turn): zefro + vopra (domain Information & technology).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_farumavo_2604",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "farumavo",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): pyrokinesis (fire-mind): faru + mavo (domain Mind & philosophy).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_sevureso_2605",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "sevureso",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): dolphin (sea-laughter): sevu + reso (domain Animals).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_sevuzimzi_2606",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "sevuzimzi",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): crab (sea-insect): sevu + zimzi (domain Animals).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_pavrulazu_2607",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "pavrulazu",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): kangaroo (leaping animal): pavru + lazu (domain Animals).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_larbolazu_2608",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "larbolazu",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): monkey (tree-animal): larbo + lazu (domain Animals).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_somulazu_2609",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "somulazu",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): koala (sleep-animal): somu + lazu (domain Animals).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_renliherba_2610",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "renliherba",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): mushroom (rain-plant): renli + herba (domain Everyday & feast).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_sumayumli_2611",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "sumayumli",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): caramel (warm sweet): suma + yumli (domain Everyday & feast).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_kezusamni_2612",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "kezusamni",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): peanut (earth-seed): kezu + samni (domain Everyday & feast).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_molubumre_2613",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "molubumre",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): pancake (soft bread): molu + bumre (domain Everyday & feast).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_dentobiti_2614",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "dentobiti",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): toothbrush (tooth-tool): dento + biti (domain Home & objects).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_dentopavma_2615",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "dentopavma",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): toothpaste (tooth-material): dento + pavma (domain Home & objects).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_rupunela_2616",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "rupunela",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): asshole (coarse: a waste of a person): rupu + nela (domain Society).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_larnenela_2617",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "larnenela",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): bitch (coarse: a spiteful person): larne + nela (domain Society).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_ceresolodoza_2618",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "ceresolodoza",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): siliglass (strong glass): ceresolo + doza (domain Materials & physics).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_silipega_2619",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "silipega",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): cryogel (cold gel): sili + pega (domain Health & body).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lunovurfa_2620",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "lunovurfa",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): moonfox (a genetically engineered fox): luno + vurfa (domain Animals).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_pelipebuvelma_2621",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "pelipebuvelma",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): sneakerette; a trendy sneaker (play-shoe): peli + pebuvelma (domain Clothing & adornment).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_kibosonbu_2622",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "kibosonbu",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): zeep zoop; a robot’s chime (robot-sound): kibo + sonbu (domain Information & technology).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_linuvalmi_2623",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "linuvalmi",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): toddling; a tottle (child-walk): linu + valmi (domain Body & movement).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_mirufarvibudi_2624",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "mirufarvibudi",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): hydrocune (a water-wolf of legend): miru + farvibudi (domain Animals).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lumiyelmi_2625",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "lumiyelmi",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): zazzle; flair; dazzle (light-glitter): lumi + yelmi (domain Language & art).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_vayesonbu_0964",
+   "op": "lexicalise_from_pattern",
+   "from": "vayesonbu",
+   "to": "vayesonbu",
+   "ruling": "2.0:G40",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): vayesonbu, an attested image compound of 3.5 (\"wind-carried sound; a pulse or sound like wind\"), lexicalised as a headword. The patch lists it as new; it keeps its 3.5 id. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_vayesonbu_0964",
+   "op": "edit_gloss",
+   "slot": "root",
+   "archive": true,
+   "from": "wind-carried sound; a pulse or sound like wind",
+   "to": "wazoop; whoosh; a wind-carried sound",
+   "ruling": "0.8:R2",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): vayesonbu, \"wazoop; whoosh; a wind-carried sound\". Its 3.5 reading \"wind-carried sound; a pulse or sound like wind\" is archived. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_vayesonbu_0964",
+   "op": "edit_metadata",
+   "field": "domain",
+   "from": "Wind",
+   "to": "Language & art",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): vayesonbu moves to the domain Language & art.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_auruminela_2626",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "auruminela",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): a goldie; one of the gilded rich (gold-person): aurumi + nela (domain Society & people).",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_fasbilarda_2367",
+   "op": "activate_slot",
+   "slot": "verb",
+   "from": "— (unused)",
+   "to": "to portray",
+   "ruling": "0.8:R2",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): fasbilardafa, \"to portray\", restored on fasbilarda. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "derivation:lx_molusasva_2491:-yo",
+   "op": "add_derivation",
+   "from": null,
+   "to": "molusasvayo",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): molusasvayo, \"caretaker; caregiver\", listed. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "derivation:lx_renli_0653:-vu",
+   "op": "add_derivation",
+   "from": null,
+   "to": "renlivu",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): renlivu, \"downpour; torrential rain\", listed. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "derivation:lx_cilni_0055:-vu",
+   "op": "add_derivation",
+   "from": null,
+   "to": "cilnivu",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): cilnivu, \"megacity\", listed. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "derivation:lx_reso_0687:-yo",
+   "op": "add_derivation",
+   "from": null,
+   "to": "resoyo",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): resoyo, \"clown; jester\", listed. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "derivation:lx_bondopatu_2561:-vu",
+   "op": "add_derivation",
+   "from": null,
+   "to": "bondopatuvu",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): bondopatuvu, \"kilogram\", listed. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "derivation:lx_lalnipatu_2562:-vu",
+   "op": "add_derivation",
+   "from": null,
+   "to": "lalnipatuvu",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): lalnipatuvu, \"kilometre\", listed. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "derivation:lx_mavohelna_2564:-yo",
+   "op": "add_derivation",
+   "from": null,
+   "to": "mavohelnayo",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): mavohelnayo, \"psychiatrist\", listed. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "derivation:lx_kaldodesi_2227:-yo",
+   "op": "add_derivation",
+   "from": null,
+   "to": "kaldodesiyo",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): kaldodesiyo, \"addict\", listed. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "derivation:lx_ojofuro_2108:-vu",
+   "op": "add_derivation",
+   "from": null,
+   "to": "ojofurovu",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): ojofurovu, \"mango (big orange fruit)\", listed. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "derivation:lx_noruzirme_1655:-yo",
+   "op": "add_derivation",
+   "from": null,
+   "to": "noruzayuyo",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): noruzayuyo, \"neomage (neomagi); dream-magician\", listed. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:morphology.lexicalised_diminutives.finiti",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"pinky; little finger: fini + -ti\"",
+   "ruling": "2.5:G122",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): finiti, \"pinky; little finger\", a lexicalised diminutive. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:morphology.lexicalised_diminutives.bondopatuti",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"milligram: bondopatu + -ti\"",
+   "ruling": "2.5:G122",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): bondopatuti, \"milligram\", a lexicalised diminutive. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:morphology.lexicalised_diminutives.lalnipatuti",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"millimetre: lalnipatu + -ti\"",
+   "ruling": "2.5:G122",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): lalnipatuti, \"millimetre\", a lexicalised diminutive. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:morphology.lexicalised_diminutives.mavofaruti",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"hypomania (a small mind-fire): mavofaru + -ti\"",
+   "ruling": "2.5:G122",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): mavofaruti, \"hypomania (a small mind-fire)\", a lexicalised diminutive. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:morphology.lexicalised_diminutives.vizudemroti",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"tic (a little jerk): vizudemro + -ti\"",
+   "ruling": "2.5:G122",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): vizudemroti, \"tic (a little jerk)\", a lexicalised diminutive. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:morphology.lexicalised_diminutives.divmanelati",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"mechadwarf; little android: divmanela + -ti\"",
+   "ruling": "2.5:G122",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): divmanelati, \"mechadwarf; little android\", a lexicalised diminutive. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:morphology.lexicalised_diminutives.farusebiti",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"dragonoid; dragonling: farusebi + -ti\"",
+   "ruling": "2.5:G122",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): farusebiti, \"dragonoid; dragonling\", a lexicalised diminutive. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.farlasan",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"synthetic; artificial\"",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): farlasan is findable as \"synthetic; artificial\". An English name only; the word does not change. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.ramumomvi",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"oblivion\"",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): ramumomvi is findable as \"oblivion\". An English name only; the word does not change. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.conodonu",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"funding; subsidy (conodonuca, to fund)\"",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): conodonu is findable as \"funding; subsidy (conodonuca, to fund)\". An English name only; the word does not change. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.kronosonbu",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"ticking; tick-tock\"",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): kronosonbu is findable as \"ticking; tick-tock\". An English name only; the word does not change. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.talipago",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"facility\"",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): talipago is findable as \"facility\". An English name only; the word does not change. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.molusan",
+   "op": "edit_value",
+   "from": "\"delicate\"",
+   "to": "\"delicate; subtle\"",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): molusan is findable as \"subtle\". An English name only; the word does not change. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.mavovulra",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"trauma\"",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): mavovulra is findable as \"trauma\". An English name only; the word does not change. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.ruhe",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"thunderstorm\"",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): ruhe is findable as \"thunderstorm\". An English name only; the word does not change. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.colbi",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"hue; dye\"",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): colbi is findable as \"hue; dye\". An English name only; the word does not change. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.tibi",
+   "op": "edit_value",
+   "from": "\"cord\"",
+   "to": "\"cord; strand\"",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): tibi is findable as \"strand\". An English name only; the word does not change. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.lekta",
+   "op": "edit_value",
+   "from": "\"group; series\"",
+   "to": "\"group; series; assortment\"",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): lekta is findable as \"assortment\". An English name only; the word does not change. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.cemnu",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"medium; middle\"",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): cemnu is findable as \"medium; middle\". An English name only; the word does not change. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.lelde",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"extreme (the edge)\"",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): lelde is findable as \"extreme (the edge)\". An English name only; the word does not change. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.holba",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"entirety\"",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): holba is findable as \"entirety\". An English name only; the word does not change. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.simvo",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"entity\"",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): simvo is findable as \"entity\". An English name only; the word does not change. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.nimumolu",
+   "op": "edit_value",
+   "from": "\"convenience\"",
+   "to": "\"convenience; convenience (adj.: nimumolusan, convenient)\"",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): nimumolu is findable as \"convenience (adj.: nimumolusan, convenient)\". An English name only; the word does not change. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.yanbasan",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"vintage\"",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): yanbasan is findable as \"vintage\". An English name only; the word does not change. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.gudonasan",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"unconventional\"",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): gudonasan is findable as \"unconventional\". An English name only; the word does not change. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.hurvosan",
+   "op": "edit_value",
+   "from": "\"odd; weird\"",
+   "to": "\"odd; weird; quirky\"",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): hurvosan is findable as \"quirky\". An English name only; the word does not change. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.paralosan",
+   "op": "edit_value",
+   "from": "\"smug\"",
+   "to": "\"smug; cocky\"",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): paralosan is findable as \"cocky\". An English name only; the word does not change. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.musvanasan",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"irresponsible (not bound by duty)\"",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): musvanasan is findable as \"irresponsible (not bound by duty)\". An English name only; the word does not change. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.lordinasan",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"haphazard\"",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): lordinasan is findable as \"haphazard\". An English name only; the word does not change. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.talisan",
+   "op": "edit_value",
+   "from": "\"busy; professional (at work)\"",
+   "to": "\"busy; professional (at work); functional\"",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): talisan is findable as \"functional\". An English name only; the word does not change. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.holbasan",
+   "op": "edit_value",
+   "from": "\"entire\"",
+   "to": "\"entire; holistic\"",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): holbasan is findable as \"holistic\". An English name only; the word does not change. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.lavinasan",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"displeased; unpleasant\"",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): lavinasan is findable as \"displeased; unpleasant\". An English name only; the word does not change. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.mellinasan",
+   "op": "edit_value",
+   "from": "\"meagre\"",
+   "to": "\"meagre; skinny\"",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): mellinasan is findable as \"skinny\". An English name only; the word does not change. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.yuge",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"physicality\"",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): yuge is findable as \"physicality\". An English name only; the word does not change. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.yeba",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"willingness\"",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): yeba is findable as \"willingness\". An English name only; the word does not change. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.simvona",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"selflessness\"",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): simvona is findable as \"selflessness\". An English name only; the word does not change. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.vismana",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"negligence\"",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): vismana is findable as \"negligence\". An English name only; the word does not change. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.tinota",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"to classify\"",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): tinota is findable as \"to classify\". An English name only; the word does not change. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.cuzalekta",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"paperwork\"",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): cuzalekta is findable as \"paperwork\". An English name only; the word does not change. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.dendusan",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"underlying\"",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): dendusan is findable as \"underlying\". An English name only; the word does not change. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.vaniasa",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"splendor\"",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): vaniasa is findable as \"splendor\". An English name only; the word does not change. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.jubaja",
+   "op": "edit_value",
+   "from": "\"to donate\"",
+   "to": "\"to donate; to bestow\"",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): jubaja is findable as \"to bestow\". An English name only; the word does not change. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.helnaha",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"to administer (medicine)\"",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): helnaha is findable as \"to administer (medicine)\". An English name only; the word does not change. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.pensapa",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"to contemplate\"",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): pensapa is findable as \"to contemplate\". An English name only; the word does not change. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.trana",
+   "op": "edit_value",
+   "from": "\"conversion\"",
+   "to": "\"conversion; modification\"",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): trana is findable as \"modification\". An English name only; the word does not change. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.palvi",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"installation\"",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): palvi is findable as \"installation\". An English name only; the word does not change. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.patudonu",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"allocation\"",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): patudonu is findable as \"allocation\". An English name only; the word does not change. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.turna",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"access; entry\"",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): turna is findable as \"access; entry\". An English name only; the word does not change. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.vimosovla",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"graphic\"",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): vimosovla is findable as \"graphic\". An English name only; the word does not change. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.zilevelma",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"tuxedo; formal wear\"",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): zilevelma is findable as \"tuxedo; formal wear\". An English name only; the word does not change. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.molupavma",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"plush\"",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): molupavma is findable as \"plush\". An English name only; the word does not change. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.lemudonuyo",
+   "op": "edit_value",
+   "from": "\"professor\"",
+   "to": "\"professor; educator\"",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): lemudonuyo is findable as \"educator\". An English name only; the word does not change. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.lazuserbu",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"hunting (hunter = lazuserbuyo)\"",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): lazuserbu is findable as \"hunting (hunter = lazuserbuyo)\". An English name only; the word does not change. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.liralavra",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"songbird\"",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): liralavra is findable as \"songbird\". An English name only; the word does not change. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.vamridarno",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"dimension (dimensional: vamridarnosan)\"",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): vamridarno is findable as \"dimension (dimensional: vamridarnosan)\". An English name only; the word does not change. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.zirki",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"insanity\"",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): zirki is findable as \"insanity\". An English name only; the word does not change. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.solasan",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"sunny\"",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): solasan is findable as \"sunny\". An English name only; the word does not change. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.lumirivla",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"radiance (to radiate: lumirivla as a verb phrase, loya lumirivla)\"",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): lumirivla is findable as \"radiance (to radiate: lumirivla as a verb phrase, loya lumirivla)\". An English name only; the word does not change. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.mosa",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"dominant (li mosa …)\"",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): mosa is findable as \"dominant (li mosa …)\". An English name only; the word does not change. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.mudusan",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"unhealthy\"",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): mudusan is findable as \"unhealthy\". An English name only; the word does not change. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.mavosabe",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"cognition (cognitive: mavosabesan, 3.3:G148)\"",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): mavosabe is findable as \"cognition (cognitive: mavosabesan, 3.3:G148)\". An English name only; the word does not change. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.sove",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"relaxation\"",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): sove is findable as \"relaxation\". An English name only; the word does not change. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.zivusan",
+   "op": "edit_value",
+   "from": "\"rude; insolent\"",
+   "to": "\"rude; insolent; judgmental\"",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): zivusan is findable as \"judgmental\". An English name only; the word does not change. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.rupu",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"shit (coarse; Rupu! = Shit!)\"",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): rupu is findable as \"shit (coarse; Rupu! = Shit!)\". An English name only; the word does not change. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.nimunasan",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"unhomed\"",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): nimunasan is findable as \"unhomed\". An English name only; the word does not change. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.vimolavlo",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"holoscreen (with lumivimo)\"",
+   "reason": "Liraasa 3.6 patch (The 2100 Dreams patch): vimolavlo is findable as \"holoscreen (with lumivimo)\". An English name only; the word does not change. Proposed in 3.6: awaiting the author's ratification.",
+   "addedIn": "3.6",
+   "at": "2026-10-25T23:00:00Z",
+   "author": "nicolas"
+  }
+ ]
+}

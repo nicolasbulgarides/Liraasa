@@ -16,13 +16,13 @@ export interface Theme {
 
 export const GUIDE = {
   /** Read only. Rebuilt by `npm run build:handoff`. */
-  lexicon: 'handoff/liraasa_3_5_complete.json',
+  lexicon: 'handoff/liraasa_3_6_complete.json',
   /** The frozen 1.0, read only for its headword count in the edition note. */
   lexicon10: 'data/lexicon/liraasa_1_0.json',
   outDir: 'handoff',
   /** The file stem; `.html` and `.pdf` are added. */
-  outName: 'Liraasa_3_5_Reference_Grammar',
-  title: 'Liraasa 3.5 Reference Grammar',
+  outName: 'Liraasa_3_6_Reference_Grammar',
+  title: 'Liraasa 3.6 Reference Grammar',
   subtitle: 'A language built for singing',
 
   /**
