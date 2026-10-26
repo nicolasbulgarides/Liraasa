@@ -16,6 +16,8 @@ import common
 import run
 
 PATH = os.path.join(common.REPO, "review", "2100_dreams_vocabulary_candidates.md")
+# the suggestions themselves, kept apart so that review_md.py can rebuild the table around them
+SUGGESTIONS = os.path.join(common.REPO, "review", "2100_dreams_vocabulary_suggestions.json")
 SKIP = {"dear", "haha", "of course", "at least", "in fact", "march", "thirty-five percent", "join us", "welcome",
         "actually", "basically", "mostly", "technically", "in person", "quotation marks", "indefinitely"}
 
@@ -65,6 +67,12 @@ def main():
                 keep.append(f"*{joined}* ({'+'.join(parts)}: {c.get('image', '')})")
         ex = str(r.get("existing", "")).strip()
         out[e] = "; ".join(keep) + (f"; or the existing *{ex}*" if ex and keep else f"existing: *{ex}*" if ex else "")
+    common.save(SUGGESTIONS, out)
+    import review_md
+
+    review_md.main()
+    print(f"suggestions for {sum(1 for v in out.values() if v)} of {len(words)} words")
+    return
     lines = text.split("\n")
     res = []
     for l in lines:

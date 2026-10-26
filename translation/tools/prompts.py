@@ -191,3 +191,33 @@ name only real loss of the kind above.
 if __name__ == "__main__":
     t = build_system()
     print(f"wrote {SYSTEM}: {len(t)} chars, ~{len(t) // 4} tokens")
+
+
+FIDELITY = """# Task: restore lost meaning in Liraasa translations
+
+Each segment below already reads as grammatical Liraasa, but a back-translation shows meaning was
+lost. Write a new rendering that keeps everything the English says: every fact, action, person,
+object, attitude, cause, image and joke. Use `lost` to see what went missing and `back` to see how
+the current Liraasa reads.
+
+- Do not simplify or drop content. Prefer more short clauses to fewer: split a sentence rather than
+  lose a part of it. Longer is fine.
+- Choose the closest listed word, not a vaguer one; use the registered coinages where they fit.
+- Keep the voice (irony, warmth) through word choice and attitude words where Liraasa allows.
+- It must still pass the grammar checker: the clause template, one verb a clause, linkers between
+  clauses, `ka`/`ke` before a noun predicate, recipients with `ala`.
+- Pronoun gender, articles and fine tense are not encoded in Liraasa: do not try to add them.
+
+## Dictionary entries for these segments
+{entries}
+
+## Registered coinages (compounds awaiting the author; usable in the draft)
+{registry}
+
+## The segments
+{segments}
+
+## Reply
+
+The same JSON array shape as a translation: id, liraasa, gloss, coinages, calls.
+"""

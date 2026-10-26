@@ -95,11 +95,13 @@ def main():
          "From the draft translation (ADR-0027, `translation/`). These are **candidates for the author**, not words of Liraasa: "
          "the English words the draft most often had to paraphrase, and the compounds it coined more than once. "
          "A new root, a new gloss or a coinage becomes Liraasa only through a patch the author approves (SPEC §14).", "",
-         "## English words paraphrased most often", "", "| English | Times | How the draft managed |", "|---|---:|---|"]
+         "## English words paraphrased most often", "",
+         "| English | Times | How the draft managed | Suggested (not yet Liraasa) |", "|---|---:|---|---|"]
+    sugg = common.load(os.path.join(common.REPO, "review", "2100_dreams_vocabulary_suggestions.json"), {}) or {}
     for e, n in par.most_common(60):
         if n < 2:
             break
-        v.append(f"| {e} | {n} | {how[e].replace('|', '/')} |")
+        v.append(f"| {e} | {n} | {how[e].replace('|', '/')} | {sugg.get(e, '').replace('|', '/')} |")
     v += ["", "## Coinages the draft used more than once", "", "| English | Compound | Parts | Uses |", "|---|---|---|---:|"]
     for k, val in multi:
         v.append(f"| {k} | {val['liraasa']} | {'+'.join(val['parts'])} | {len(val['uses'])} |")
