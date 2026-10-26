@@ -64,6 +64,36 @@ def parser():
 
 
 PARSERS = []
+WORKERS_FILE = os.path.join(common.ROOT, "workers.txt")
+STOP_FILE = os.path.join(common.ROOT, "STOP")
+
+
+class Limiter:
+    """At most N model calls at once, N read from translation/workers.txt (changeable while running)."""
+
+    def __init__(self):
+        self.cv = threading.Condition()
+        self.active = 0
+
+    def limit(self):
+        try:
+            return max(1, int(open(WORKERS_FILE, encoding="utf-8").read().strip()))
+        except Exception:
+            return 3
+
+    def __enter__(self):
+        with self.cv:
+            while self.active >= self.limit():
+                self.cv.wait(timeout=30)
+            self.active += 1
+
+    def __exit__(self, *exc):
+        with self.cv:
+            self.active -= 1
+            self.cv.notify_all()
+
+
+CALLS = Limiter()
 
 
 def now():
@@ -127,6 +157,7 @@ def claude(state, prompt, model, kind, effort=None):
     while True:
         t0 = time.time()
         try:
+          with CALLS:
             p = subprocess.run(
                 [exe, "-p", "--model", model, "--tools", "", "--strict-mcp-config",
                  "--setting-sources", "user", "--no-session-persistence",
@@ -135,7 +166,7 @@ def claude(state, prompt, model, kind, effort=None):
                 input=prompt, capture_output=True, text=True, encoding="utf-8",
                 cwd=common.CLAUDE_CWD, env=env, timeout=1800,
             )
-            out, err = p.stdout or "", p.stderr or ""
+          out, err = p.stdout or "", p.stderr or ""
         except subprocess.TimeoutExpired:
             out, err = "", "timeout after 30 minutes"
         except Exception as e:  # the CLI could not start
@@ -156,19 +187,13 @@ def claude(state, prompt, model, kind, effort=None):
         if not is_error and result.strip():
             return result
         blob = f"{result}\n{out[-2000:]}\n{err[-2000:]}"
-        if STOP_ALL.is_set():
-            raise WeeklyCap("another worker hit the weekly cap")
-        if re.search(r"weekly", blob, re.I) and re.search(r"limit", blob, re.I):
-            with LOCK:
-                state.s["pauses"].append({"at": now(), "why": "weekly usage cap", "minutes": None})
-            state.save()
-            STOP_ALL.set()
-            raise WeeklyCap(blob[:500])
-        if re.search(r"usage limit|limit reached|rate.?limit|too many requests|overloaded|resets", blob, re.I):
-            until = reset_time(blob) or (datetime.now() + timedelta(minutes=15))
+        # out of usage (the 5-hour window or the weekly cap): wait for the reset, then go on; never stop
+        if re.search(r"usage limit|limit reached|hit your limit|out of (?:usage|credits)|rate.?limit|too many requests|overloaded|resets|weekly", blob, re.I):
+            weekly = bool(re.search(r"weekly", blob, re.I))
+            until = reset_time(blob) or (datetime.now() + timedelta(minutes=60 if weekly else 15))
             mins = max(1, round((until - datetime.now()).total_seconds() / 60)) + 2
             with LOCK:
-                state.s["pauses"].append({"at": now(), "why": "usage limit", "minutes": mins, "detail": blob.strip()[:200]})
+                state.s["pauses"].append({"at": now(), "why": "weekly usage cap" if weekly else "usage limit", "minutes": mins, "detail": blob.strip()[:200]})
             state.save()
             log(f"usage limit: sleeping {mins} min (until {until:%H:%M})")
             time.sleep(mins * 60)
@@ -324,8 +349,16 @@ def valid_coinage(book, c):
         if p not in book.heads and p not in book.colours and p not in book.timen:
             return f"part {p} is not a headword"
     joined = "".join(parts)
-    if not str(c.get("liraasa", "")).lower().startswith(joined):
+    form = str(c.get("liraasa", "")).lower()
+    if not form.startswith(joined):
         return f"{c.get('liraasa')} is not spelled {joined}+…"
+    # only the compound's own forms by rule: the seven forms, -yo / -ti / -vu, and plural -ri
+    f0 = joined[0] if joined else ""
+    verb = joined + ("nia" if f0 == "n" else "sia" if f0 == "s" else "a" if f0 in "aeiou" else f0 + "a")
+    ends = {"", "asa", "na", "san", "nasan", "asasan", "yo", "ti", "vu", verb[len(joined):]}
+    rest = form[len(joined):]
+    if rest not in ends and not (rest.endswith("ri") and rest[:-2] in ends):
+        return f"{c.get('liraasa')} is not a form of {joined} by the word-building rules"
     if joined in book.heads:
         return None  # already a word: not a coinage, but harmless
     return None
@@ -472,11 +505,14 @@ def score_batch(state, book, ch, recs, model=MODEL_BULK):
     prompt = prompts.BACK.format(
         entries="\n".join(book.form_entries([r["liraasa"] for r in recs])) or "(none)",
         registry="\n".join(reg) or "(none)",
-        segments="\n".join(json.dumps({"id": r["id"], "liraasa": r["liraasa"]}, ensure_ascii=False) for r in recs),
+        segments="\n".join(json.dumps({"id": r["id"], "liraasa": r["liraasa"],
+                                        "reading": r.get("check", {}).get("checker_gloss", "")},
+                                       ensure_ascii=False) for r in recs),
     )
-    back = {b.get("id"): b.get("english", "") for b in json_array(claude(state, prompt, model, "back", "low")) if isinstance(b, dict)}
+    back ={b.get("id"): b.get("english", "") for b in json_array(claude(state, prompt, model, "back", "low")) if isinstance(b, dict)}
     pairs = "\n".join(json.dumps({"id": r["id"], "source": r["english"], "back": back.get(r["id"], "")}, ensure_ascii=False) for r in recs)
     scores = {s.get("id"): s for s in json_array(claude(state, prompts.SCORE.format(pairs=pairs), model, "score", "low")) if isinstance(s, dict)}
+    measured = "2026-10-26 v2: checker reading in back-translation; gender, articles, tense nuance and names not counted"
     for r in recs:
         r["back"] = back.get(r["id"], "")
         s = scores.get(r["id"], {})
@@ -485,6 +521,7 @@ def score_batch(state, book, ch, recs, model=MODEL_BULK):
         except (TypeError, ValueError):
             r["score"] = 0.0
         r["lost"] = s.get("lost", "")
+        r["measure"] = measured
         r["confidence"] = confidence(r)
         with LOCK:
             book.out[ch][r["id"]] = r
@@ -526,6 +563,10 @@ def translate_chapter(state, book, ch, limit_left, calibrate_only=False):
     done = 0
     i = 0
     while i < len(todo) and not STOP_ALL.is_set():
+        if os.path.exists(STOP_FILE):
+            STOP_ALL.set()
+            state.event("STOP file found: finishing the batches in flight, then stopping")
+            break
         calibrating = state.s["strategy"] is None and ch != "ch00.jsonl"
         size = STRATEGIES[strategy]["batch"]
         batch = todo[i : i + size]
@@ -570,6 +611,10 @@ def translate_chapter(state, book, ch, limit_left, calibrate_only=False):
 
 
 def strong_repair(state, book, group):
+    if os.path.exists(STOP_FILE):
+        STOP_ALL.set()
+    if STOP_ALL.is_set():
+        return
     ch_of = {r["id"]: f"ch{r['id'][1:3]}.jsonl" for r in group}
     before = {r["id"]: (r["check"]["ok"], r.get("score", 0), r["liraasa"]) for r in group}
     repair(state, book, group, 3 if any(not r["check"]["ok"] for r in group) else 2, MODEL_STRONG)
@@ -635,6 +680,8 @@ def run(limit=None, workers=3):
             with LOCK:
                 todo = [r for r in book.out[ch].values() if "score" not in r]
             for k in range(0, len(todo), 20):
+                if os.path.exists(STOP_FILE):
+                    STOP_ALL.set()
                 if STOP_ALL.is_set():
                     return
                 score_batch(state, book, ch, todo[k : k + 20])
@@ -662,9 +709,12 @@ def run(limit=None, workers=3):
         with open(os.path.join(common.ROOT, "FINISHED"), "w") as f:
             f.write(now() + "\n")
     except WeeklyCap as e:
-        state.event(f"weekly usage cap reached: stopping with everything saved ({str(e)[:120]})")
-        with open(os.path.join(common.ROOT, "STOPPED_WEEKLY_CAP"), "w") as f:
-            f.write(now() + "\n")
+        if os.path.exists(STOP_FILE):
+            state.event("stopped on the STOP file, with everything saved")
+        else:
+            state.event(f"weekly usage cap reached: stopping with everything saved ({str(e)[:120]})")
+            with open(os.path.join(common.ROOT, "STOPPED_WEEKLY_CAP"), "w") as f:
+                f.write(now() + "\n")
     finally:
         book.save_registry()
         state.save()

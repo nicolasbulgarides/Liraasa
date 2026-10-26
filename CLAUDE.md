@@ -40,6 +40,11 @@ Validation 23 PASS, 2 WARN (`npm run validate:3.6`) and the author's validator
 PASS. The one recipe that broke a ruling is settled as for 3.5
 (`tests/grammar/patch_3_6.test.ts`). 3.5 is frozen as 3.6's baseline.
 
+**The 2100 Dreams draft** (ADR-0028): `translation/tools/` translated the
+author's novel into 3.6 overnight (checker-validated, back-translated and
+scored; 92% pass, meaning kept 0.74). The novel's text and the draft stay out
+of git; review starts at `translation/REVIEW.md`.
+
 **3.5, ratified** (ADR-0025): `data/lexicon/liraasa_3_5.json`, built from
 frozen 3.4 by `npm run integrate:3.5`: first the author's ratification of
 3.0, 3.3 and 3.4 (2026-10-25, "ratify everything": op **`ratify_ruling`** marks

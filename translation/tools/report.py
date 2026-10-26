@@ -21,6 +21,7 @@ GRAMMAR = {
     "G-6": "destined to: fatofa sidu VERB",
     "G-7": "Quantifier measures with kroti / krotiapo: avoided, rephrased",
     "G-8": "Decimals: a fraction or a rounded number",
+    "G-9": "Quote-first dialogue (“…,” she said): not ruled by 2.3:G83; counted unruled, not wrong (the author, 2026-10-26)",
 }
 ORDER = ["grammar-default", "name", "coinage", "idiom", "wordplay", "reference", "register",
          "ambiguity", "paraphrase", "drift", "unparsed", "source-typo"]
@@ -75,6 +76,10 @@ def build_decisions(book, registry):
                     key = f"{typ}:{eng.lower()}"
                 add(key, typ, eng or typ, s["id"], c.get("rendering", ""), c.get("alternatives") or [],
                     c.get("confidence", "medium"), s["english"][:160])
+            if any(str(u).startswith("quote-first") for u in r.get("check", {}).get("unruled", [])):
+                add("grammar:G-9", "grammar-default", f"G-9 · {GRAMMAR['G-9']}", s["id"],
+                    "speech first, then its verb of saying, as the novel writes it",
+                    ["the ruled order, VERB: “…”, for every quotation"], "medium", s["english"][:160])
             if r.get("status") == "unparsed" or (r.get("check") and not r["check"].get("ok")):
                 add(f"unparsed:{s['id']}", "unparsed", f"{s['id']} did not pass the checker", s["id"],
                     r.get("liraasa", "")[:200], [], "low", s["english"][:160],

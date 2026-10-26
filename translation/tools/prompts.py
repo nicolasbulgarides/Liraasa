@@ -137,8 +137,14 @@ LADDER = {
 BACK = """\
 # Task: back-translate Liraasa into English
 
-You see only the Liraasa and the dictionary entries for its words, never the English source.
-Translate each segment into plain English, as literally as the grammar allows.
+You see only the Liraasa, the grammar checker's word-by-word reading of it, and the dictionary
+entries for its words; never the English source. Translate each segment into plain English, as
+literally as the grammar allows.
+
+- `reading` is the checker's analysis, word=meaning, in order. Trust it for what each word is.
+- A capitalised word the reading marks as a name, or a word in the name sheet, is a name: keep it.
+- saivo / saivori are "he, she, they" (Liraasa marks no gender): write "they" unless the segment
+  itself shows which. Do not invent a gender.
 
 ## Dictionary entries
 {entries}
@@ -161,11 +167,24 @@ For each segment, compare the source English with the back-translation of its Li
 meaning agreement from 0 to 1 (1 = the same meaning; style and word order do not matter, lost
 or changed content does). Name what was lost or changed, briefly.
 
+Liraasa does not encode some things English does. Never count these as loss:
+
+- the gender of a pronoun (saivo is he, she or they) or of a person;
+- articles (a / the), and singular or plural where the source leaves it implicit;
+- tense nuance beyond past, present and future (had done, was doing, would have);
+- names respelled or kept as names, and named things rendered by their Liraasa names
+  (Light's Hope = Lumiopi, Everse = Rinbavemi);
+- word order, register words and stylistic restructuring, when the content is the same.
+
+Do count as loss: facts, actions, people, objects, attitudes, causes, jokes and images that are
+missing, changed or reversed.
+
 {pairs}
 
 ## Reply
 
-A JSON array: [{{"id": "…", "score": 0.0, "lost": "…"}}], in order, and nothing else.
+A JSON array: [{{"id": "…", "score": 0.0, "lost": "…"}}], in order, and nothing else. In `lost`,
+name only real loss of the kind above.
 """
 
 
