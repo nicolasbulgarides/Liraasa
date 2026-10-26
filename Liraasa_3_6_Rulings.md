@@ -1,6 +1,32 @@
-# Liraasa 3.5 Reference Grammar: every ruling
+# Liraasa 3.6 Reference Grammar: every ruling
 
-Verbatim from the Liraasa 3.5 lexicon, newest edition first. Ruling ids are edition-qualified: 0.8:G7 and 1.0:G7 are different rulings.
+Verbatim from the Liraasa 3.6 lexicon, newest edition first. Ruling ids are edition-qualified: 0.8:G7 and 1.0:G7 are different rulings.
+
+## Rulings 3.6
+
+### 3.6:G154: Metric units
+
+Base units are compounds on patu: bondopatu (gram), lalnipatu (metre), mirupatu (litre). The diminutive -ti names the thousandth (milli-) and -vu the thousandfold (kilo-): bondopatuti milligram, bondopatuvu kilogram, lalnipatuvu kilometre. A numeral counts them: dossa bondopatuti, two milligrams. Body units (3.2:G144) remain the everyday, poetic measures.
+
+Refines 3.2:G144.
+
+- *penzira bondopatuti* — fifty milligrams
+- *tressa lalnipatuvu* — three kilometres
+
+### 3.6:G152: Relational adjectives from lexicalised diminutives
+
+3.3:G148 also applies to lexicalised diminutives: their -san form means 'of or marked by X'. mavofaruti (hypomania) gives mavofarutisan (hypomanic); vizudemroti (tic) gives vizudemrotisan.
+
+Refines 3.3:G148.
+
+- *mavofaruti · mavofarutisan* — hypomania · hypomanic
+
+### 3.6:G153: Coarse register
+
+Profanity is a register, not a grammar. garza is the all-purpose curse: the interjection Garza! (Fuck!, Damn!), the intensifier garzasan before a noun (fucking, damned), and the verb garzaga (to swear). rupu (waste) serves as Rupu! (Shit!). Insults are person-compounds on nela: rupunela, larnenela. Coarse words never take ascended forms, and are marked [coarse] in the lexicon.
+
+- *Garza! Li kadu ne venreva.* — Fuck! The car isn't coming.
+- *Li garzasan kibo po bakoba li tabu.* — The damned bot broke the table.
 
 ## Rulings 3.5
 
