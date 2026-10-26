@@ -15,7 +15,7 @@ From the draft translation (ADR-0027, `translation/`). These are **candidates fo
 | adventure guide | 6 | harlujomruyo (default -yo derivation, one who does adventure) |
 | actually | 6 | la verasan |
 | abilities | 6 | no noun for 'ability'; deactivated motion and change directly; the lis |
-| social worker | 5 | mavopagomelvayo (productive -yo on mavopagomelva, 2.0:G41) |
+| social worker | 6 | mavopagomelvayo (productive -yo on mavopagomelva, 2.0:G41) |
 | of course | 5 | Zabo |
 | soul | 5 | lulfaasa |
 | hugged | 5 | tivrota (hold) |
@@ -32,6 +32,7 @@ From the draft translation (ADR-0027, `translation/`). These are **candidates fo
 | activated | 4 | po loya lumisan (became lit) |
 | quotation marks | 4 |  |
 | lightning magic | 4 | navufarusan zayu |
+| irl | 4 | verasan (real) |
 | photos | 4 | vimoramuti (little footage, still image) |
 | tablet | 3 | Kindle |
 | reluctantly | 3 | la menu lavisan (less joyfully) |
@@ -43,7 +44,9 @@ From the draft translation (ADR-0027, `translation/`). These are **candidates fo
 | creativity | 3 | larda (art) |
 | wonderful | 3 | ruli vanisan |
 | horror section | 3 |  |
+| rulebreakers | 3 | zeldoyo (rebel) |
 | in fact | 3 | dropped; no suitable discourse word |
+| simultaneously | 3 | en sambakrono |
 | steel | 3 | germa (metal) |
 | digital | 3 | sernasan (on the model of sernasimvo, digital identity) |
 | intimacy | 3 | silroamor (love of a shared secret) |
@@ -63,9 +66,6 @@ From the draft translation (ADR-0027, `translation/`). These are **candidates fo
 | downstairs | 3 | en li kezuzupa |
 | welcome | 3 |  |
 | escort bots | 3 | kibo raho sasvasia |
-| more jaded | 3 | kasi milnonasan (more unimpressed) |
-| thirty-five percent | 3 | trezira-penta de centa (fraction) |
-| join us | 3 | yanoya ko maivori |
 
 ## Coinages the draft used more than once
 
