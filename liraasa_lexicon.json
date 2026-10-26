@@ -1,6 +1,6 @@
 {
  "title": "Liraasa 3.6: the complete grammar and dictionary, for language models",
- "edition_status": "PROPOSED: the 3.6 additions (rulings 3.6:G152–G154, and every dictionary line flagged \"new in 3.6\") await the author's ratification. Everything else is canon: the author ratified everything up to 3.5 on 2026-10-25.",
+ "edition_status": "PROPOSED: the 3.6 additions (rulings 3.6:G153–G155, and every dictionary line flagged \"new in 3.6\") await the author's ratification. Everything else is canon: the author ratified everything up to 3.5 on 2026-10-25.",
  "read_me_first": [
   "Liraasa is a constructed language built for singing, by one author. This file is the complete, authoritative description of it: every grammar rule and every word.",
   "Read the sections in order: hard_rules, how_to_translate, sound, word_building, clause, recipes, rulings, small_words, dictionary, examples, canon_texts. The album at the end is non-normative text, not grammar (2.5:G87).",
@@ -10,7 +10,7 @@
  ],
  "hard_rules": [
   "Never invent a word. A word is valid only if it appears in this file or is built by a rule stated in word_building.",
-  "Every headword has seven possible forms, but only the forms listed on its dictionary line exist. A form not listed has no meaning and must never be used (10519 such slots are deliberately left out). The one exception: an image compound (word_building.image_compounds) has all seven forms, built by the ordinary rules (2.5:G124).",
+  "Every headword has seven possible forms, but only the forms listed on its dictionary line exist. A form not listed has no meaning and must never be used (10554 such slots are deliberately left out). The one exception: an image compound (word_building.image_compounds) has all seven forms, built by the ordinary rules (2.5:G124).",
   "Every word has the form its slot needs: a noun form where a noun stands (subject, object, after a preposition or an article), a verb form in the verb slot, an adjective form before a noun or as a predicate. An adjective stands as a noun only after a determiner (li benasan, the good one). Word order is fixed: SUBJECT, then preverbal operators, then VERB, then OBJECT, then adjuncts (see clause.template and clause.edges). Adjectives come before the noun.",
   "A noun never modifies a noun directly. Turn the first noun into its adjective, use a compound from the dictionary, or use a de phrase (rule ADR-0011).",
   "A question keeps statement order and ends in ki; only a content question whose ki-word is the first word of the sentence may leave ki out (2.5:G88). A preverbal ne scopes over everything to its right up to the verb; a ne elsewhere scopes over the single constituent that follows it.",
@@ -857,7 +857,6 @@
     "sumbivelma": "summer-bright garment; fabric transformed by summer",
     "vabevevaye": "vabeve wind; air moving with the character of vabeve",
     "vayenulu": "wind-carried path; a trail shaped by wind",
-    "vayesonbu": "wind-carried sound; a pulse or sound like wind",
     "vayevelma": "wind-carried garment; fabric transformed by wind",
     "fajivaye": "spring-awakened wind; air moving with the character of spring",
     "velubelda": "starlit bell; a bell stirred by distant stars",
@@ -865,7 +864,7 @@
     "veluvaye": "starlit wind; air moving with the character of distant stars",
     "bojivaye": "ice-bright wind; air moving with the character of ice"
    },
-   "count": {"attested":385,"possible":1767}
+   "count": {"attested":384,"possible":1767}
   },
   "motion_prefixes": {
    "canon": {
@@ -1095,9 +1094,9 @@
   {"english":"Ativan · heroin · LSD (named drugs)","pattern":"copied names: ativan, herona, elesede","liraasa":"Li mavohelnayo po helnaha ativan.","meaning":"The psychiatrist administered Ativan.","ruling":"3.5:G151","status":"awaiting author review"}
  ],
  "rulings": [
-  {"id":"3.6:G154","topic":"Metric units","rule":"Base units are compounds on patu: bondopatu (gram), lalnipatu (metre), mirupatu (litre). The diminutive -ti names the thousandth (milli-) and -vu the thousandfold (kilo-): bondopatuti milligram, bondopatuvu kilogram, lalnipatuvu kilometre. A numeral counts them: dossa bondopatuti, two milligrams. Body units (3.2:G144) remain the everyday, poetic measures.","refines":["3.2:G144"],"status":"PROPOSED: not yet ratified by the author; follow it, and say so when a line depends on it","examples":[{"liraasa":"penzira bondopatuti","english":"fifty milligrams"},{"liraasa":"tressa lalnipatuvu","english":"three kilometres"}]},
-  {"id":"3.6:G152","topic":"Relational adjectives from lexicalised diminutives","rule":"3.3:G148 also applies to lexicalised diminutives: their -san form means 'of or marked by X'. mavofaruti (hypomania) gives mavofarutisan (hypomanic); vizudemroti (tic) gives vizudemrotisan.","refines":["3.3:G148"],"status":"PROPOSED: not yet ratified by the author; follow it, and say so when a line depends on it","examples":[{"liraasa":"mavofaruti · mavofarutisan","english":"hypomania · hypomanic"}]},
-  {"id":"3.6:G153","topic":"Coarse register","rule":"Profanity is a register, not a grammar. garza is the all-purpose curse: the interjection Garza! (Fuck!, Damn!), the intensifier garzasan before a noun (fucking, damned), and the verb garzaga (to swear). rupu (waste) serves as Rupu! (Shit!). Insults are person-compounds on nela: rupunela, larnenela. Coarse words never take ascended forms, and are marked [coarse] in the lexicon.","status":"PROPOSED: not yet ratified by the author; follow it, and say so when a line depends on it","examples":[{"liraasa":"Garza! Li kadu ne venreva.","english":"Fuck! The car isn't coming."},{"liraasa":"Li garzasan kibo po bakoba li tabu.","english":"The damned bot broke the table."}]},
+  {"id":"3.6:G155","topic":"Metric units","rule":"Base units are compounds on patu: bondopatu (gram), lalnipatu (metre), mirupatu (litre). The diminutive -ti names the thousandth (milli-) and -vu the thousandfold (kilo-): bondopatuti milligram, bondopatuvu kilogram, lalnipatuvu kilometre. A numeral counts them: dossa bondopatuti, two milligrams. Body units (3.2:G144) remain the everyday, poetic measures.","refines":["3.2:G144"],"status":"PROPOSED: not yet ratified by the author; follow it, and say so when a line depends on it","examples":[{"liraasa":"penzira bondopatuti","english":"fifty milligrams"},{"liraasa":"tressa lalnipatuvu","english":"three kilometres"}]},
+  {"id":"3.6:G153","topic":"Relational adjectives from lexicalised diminutives","rule":"3.3:G148 also applies to lexicalised diminutives: their -san form means 'of or marked by X'. mavofaruti (hypomania) gives mavofarutisan (hypomanic); vizudemroti (tic) gives vizudemrotisan.","refines":["3.3:G148"],"status":"PROPOSED: not yet ratified by the author; follow it, and say so when a line depends on it","examples":[{"liraasa":"mavofaruti · mavofarutisan","english":"hypomania · hypomanic"}]},
+  {"id":"3.6:G154","topic":"Coarse register","rule":"Profanity is a register, not a grammar. garza is the all-purpose curse: the interjection Garza! (Fuck!, Damn!), the intensifier garzasan before a noun (fucking, damned), and the verb garzaga (to swear). rupu (waste) serves as Rupu! (Shit!). Insults are person-compounds on nela: rupunela, larnenela. Coarse words never take ascended forms, and are marked [coarse] in the lexicon.","status":"PROPOSED: not yet ratified by the author; follow it, and say so when a line depends on it","examples":[{"liraasa":"Garza! Li kadu ne venreva.","english":"Fuck! The car isn't coming."},{"liraasa":"Li garzasan kibo po bakoba li tabu.","english":"The damned bot broke the table."}]},
   {"id":"3.5:G150","topic":"Shapes and polygons","rule":"A numeral joined by a hyphen to gaki (angle) names a polygon: tressa-gaki triangle, cuara-gaki square or quadrilateral, penta-gaki pentagon. rinba (ring) is the circle and vemisovla (sphere) the ball shape. The -san adjective follows: cuara-gakisan, square-shaped.","examples":[{"liraasa":"tressa-gaki · cuara-gaki · rinba","english":"triangle · square · circle"},{"liraasa":"Li tabu ka cuara-gakisan.","english":"The table is square."}]},
   {"id":"3.5:G151","topic":"Copied names of foreign things","rule":"Foreign dishes, products and fixed proper concepts with no Liraasa equivalent are copied like names (2.0:G45), respelled in Liraasa letters, lower-case as common nouns, and given -san for adjectives: pitsa (pizza), hamburga (hamburger). Prefer a native compound whenever one is transparent.","refines":["2.0:G45"],"examples":[{"liraasa":"pitsa · hamburga","english":"pizza · hamburger"}]},
   {"id":"3.5:G152","topic":"maivori: we, with or without the listener","rule":"maivori is the first person plural, we. Whether it includes the listener (you and I) or not (they and I) is left to the context: Liraasa has no separate inclusive and exclusive forms. Where the difference matters, name who is meant: maivo ata taivo, you and I; maivori ata taivo, we and you.","examples":[{"liraasa":"Maivori lirala.","english":"We sing (with or without you, as the context shows)."},{"liraasa":"Maivo ata taivo lirala.","english":"You and I sing."},{"liraasa":"Maivori ata taivo futu pagopa.","english":"We and you will go."}],"notes":"The author's decision (2026-10-25): make it context specific."},
@@ -1730,7 +1729,7 @@
    "a": "adjective",
    "aa": "ascended adjective"
   },
-  "count": {"headwords":2236,"meaningful_forms":5133},
+  "count": {"headwords":2242,"meaningful_forms":5140},
   "by_domain": {
    "1.0 additions": [
     "famamiga [fama+miga] {formerly famatilma}: (n) kinship; family relation | famamigasan (a) kindred",
@@ -1920,6 +1919,8 @@
     "limli: (n) lamb | limlisan (a) lamblike",
     "liralavra [lira+lavra] {new in 3.6}: (n) songbird",
     "lulfa: (n) butterfly | lulfaasa (an) the soul in flight; the psyche | lulfala (v) to flutter | lulfasan (a) butterfly-like",
+    "lunovurfa [luno+vurfa] {new in 3.6}: (n) moonfox (a genetically engineered fox)",
+    "mirufarvibudi [miru+farvibudi] {new in 3.6}: (n) hydrocune (a water-wolf of legend)",
     "mirunululira [mirunulu+lira]: (n) river-song; the murmur of a river",
     "mobe: (n) moth | mobema (v) to circle a light | mobesan (a) mothlike",
     "monrulimli [monru+limli]: (n) goat",
@@ -2029,6 +2030,8 @@
     "yugesolo [yuge+solo]: (n) bone | yugesoloya (v) to ossify; to harden like bone | yugesolosan (a) bony",
     "zegomanli [zego+manli] {poetic}: (n) trembling hands; palms that will not lie still"
    ],
+   "Body & movement": ["linuvalmi [linu+valmi] {new in 3.6}: (n) toddling; a tottle (child-walk) | linuvalmila (v) to tottle along; to toddle"],
+   "Clothing & adornment": ["pelipebuvelma [peli+pebuvelma] {new in 3.6}: (n) sneakerette; a trendy sneaker (play-shoe)"],
    "Commerce & obligation": [
     "conocuza [cono+cuza] {formerly conoleto}: (n) account book; ledger | conocuzaca (v) to keep accounts",
     "conodivma [cono+divma]: (n) economy",
@@ -2743,7 +2746,6 @@
     "helnapatu [helna+patu]: (n) dose; dosage",
     "helnaturna [helna+turna] {new in 3.6}: (n) hospitalization | helnaturnaha (v) to hospitalize",
     "kaldodesi [kaldo+desi]: (n) addiction; a bound craving",
-    "lavipavma [lavi+pavma] {new in 3.6}: (n) dopamine (joy-substance)",
     "lemvo: (n) fatigue; tiredness | lemvona (nn) freshness; vigor | lemvola (v) to tire; to grow weary | lemvonasan (na) tireless | lemvosan (a) tired; weary",
     "lenyodalu [lenyo+dalu]: (n) a lick | lenyodalula (v) to lick",
     "linufulepuku [linufule+puku] {new in 3.6}: (n) abortion (end of a pregnancy)",
@@ -2776,7 +2778,6 @@
     "somudendu [somu+dendu] {new in 3.6}: (n) coma (deep sleep)",
     "somuhavli [somu+havli]: (n) yawn | somuhavlisia (v) to yawn",
     "somusonbu [somu+sonbu]: (n) snore | somusonbusia (v) to snore",
-    "sovepavma [sove+pavma] {new in 3.6}: (n) serotonin (peace-substance)",
     "sulmepavma [sulme+pavma] {new in 3.6}: (n) nicotine (smoke-substance)",
     "tisehelna [tise+helna]: (n) surgery",
     "toze: (n) poison; venom | tozena (nn) antidote | tozeta (v) to poison | tozenasan (na) harmless; non-toxic | tozesan (a) poisonous; venomous",
@@ -2924,6 +2925,7 @@
     "favrocuza [favro+cuza]: (n) email; electronic letter | favrocuzafa (v) to email",
     "favrodivma [favro+divma]: (n) electronics",
     "kibo {new in 3.6}: (n) robot; bot (everyday word) | kibosan (a) robotic; bot-like",
+    "kibosonbu [kibo+sonbu] {new in 3.6}: (n) zeep zoop; a robot’s chime (robot-sound)",
     "kronodivma [krono+divma] {new in 3.6}: (n) clockwork (time-system)",
     "lermi: (n) language; structured human/animal/artificial system of meaningful signs | lermiasa (an) the sacred tongue; the language of the heavens | lermina (nn) absence of language | lermila (v) to communicate in language; to use language | lerminasan (na) nonlinguistic | lermisan (a) linguistic; language-based | lermiasasan (aa) spoken in the sacred tongue",
     "lisrokrono [lisro+krono] {new in 3.6}: (n) stasis (still time)",
@@ -2974,6 +2976,7 @@
     "lira: (n) song | liraasa (an) song of the first stars | lirana (nn) the hush where music was | lirala (v) to sing | liranasan (na) unsung | lirasan (a) lyrical; sung | liraasasan (aa) celestially sung",
     "lovu: (n) Reading | lovuna (nn) inability to read; illiteracy | lovula (v) to read; to interpret writing | lovunasan (na) illiterate | lovusan (a) readable; interpretive",
     "lumipatu [lumi+patu] {new in 3.6}: (n) highlight | lumipatula (v) to highlight",
+    "lumiyelmi [lumi+yelmi] {new in 3.6}: (n) zazzle; flair; dazzle (light-glitter)",
     "masu: (n) Question | masuna (nn) certainty | masuma (v) to ask; to request | masunasan (na) certain; sure | masusan (a) inquisitive; questioning",
     "mirucolbi [miru+colbi] {new in 3.6}: (n) watercolor",
     "molunole [molu+nole]: (n) nickname; pet name",
@@ -3003,6 +3006,7 @@
     "telnelideo [telne+lideo]: (n) scenario; plot idea",
     "valladoza [valla+doza] {new in 3.6}: (n) exclamation; outcry",
     "vanilordi [vani+lordi] {new in 3.6}: (n) aesthetic; aesthetics (beauty-order)",
+    "vayesonbu [vaye+sonbu]: (n) wazoop; whoosh; a wind-carried sound",
     "veratelne [vera+telne]: (n) documentary; true story"
    ],
    "Life & states": [
@@ -3743,6 +3747,7 @@
     "taradadivma [tarada+divma]: (n) economic system",
     "volrudonu [volru+donu]: (n) wealth transfer"
    ],
+   "Society & people": ["auruminela [aurumi+nela] {new in 3.6}: (n) a goldie; one of the gilded rich (gold-person)"],
    "Space & orientation": [
     "darnobiti [darno+biti]: (n) compass",
     "darnonulu [darno+nulu]: (n) route",
@@ -5020,5 +5025,5 @@
    {"track":"05alt","title":"Liraasa de Leldeasa (Crossing Lines), rhymed 1.2 version (alternate)","lines":[{"liraasa":"si maivori sarbisia lelde en solopusa,"},{"liraasa":"taivo viki helvivalmiha ligo li lelde ki?"},{"liraasa":"si maivo ke silisan ata corvisan,"},{"liraasa":"ata manlima li lelde ala pusa,"},{"liraasa":"ito viki loya pagolalnina, oro tamralelde ki?","current":"ito viki loya pagolalnina, oro kezulelde ki?"},{"liraasa":"si li fato livnala baba pagolelde"},{"liraasa":"entre taivo ata maivo,"},{"liraasa":"maivo viki teruta ganre de furori su ito."},{"liraasa":"apokna ka una humesan larbo vobi taivo."},{"liraasa":"kube ito salrusia,"},{"liraasa":"maivo futu donuda ito biti de lalfo,"},{"liraasa":"fime taivo nosi semnesia ko maivo en moluvaye."},{"liraasa":"taivo ne taro-pagopa, nara lalfola hupi li lelde,"},{"liraasa":"ata vaye vayeva en taivo de sabaye."},{"liraasa":"miyo baba kasi sovesan sonbu ki?"},{"liraasa":"si maivo lenila lelderi en eli bio,"},{"liraasa":"maivo viki vazrava taivo"},{"liraasa":"en li bio raho venreva krotiapo daigo,"},{"liraasa":"yuta megalumi kertisan sonbusamba ki?"},{"liraasa":"maivo futu sulnosia megalumi montafama."},{"liraasa":"baba navusan lavra povi ka ki-coda"},{"liraasa":"voyu li azuri raho saivo doli vimova ki?"},{"liraasa":"baba lavrati ko zirkiti vobi taivo,"},{"liraasa":"maivo de lore nedunia taivo de kemye."},{"liraasa":"ki-nela de kulpa ka ola ki?"},{"liraasa":"maivo povi ka ki-coda, sabri lavi ata sulnosove ki?"},{"liraasa":"taivo ka li yugemeyiyo de maivo de lore."},{"liraasa":"si kronoasa ka li sulno de taivo,"},{"liraasa":"fisa, livnala li huvu raho vimova maivo."},{"liraasa":"maivo de nole ka solosan,"},{"liraasa":"tonsi maivo sulnosia gase solo, nido, gase solovu."},{"liraasa":"maivo futu sulnosia ko amor ata sovelore,"},{"liraasa":"tuni taivo de kemye navdinia nimu en maivo de lore."}]}
   ]
  },
- "source": "Generated by scripts/build_llm_json.ts from data/lexicon/liraasa_3_6.json (Liraasa 3.6, built 2026-10-26T12:00:00Z). Regenerate with npm run build:llm; never edit by hand."
+ "source": "Generated by scripts/build_llm_json.ts from data/lexicon/liraasa_3_6.json (Liraasa 3.6, built 2026-10-25T23:00:00Z). Regenerate with npm run build:llm; never edit by hand."
 }
