@@ -602,8 +602,8 @@ export class SentenceParser {
           'error',
           `${this.w(np.det)}ri`,
         );
-      // more than one adjective before the noun: the order is not ruled (A4.22)
-      if (np.adjectives.length > 1)
+      // more than one adjective before the noun: the order is not ruled (A4.22) until 4.0:G157
+      if (np.adjectives.length > 1 && this.ix.source.rules.adjective_order_rule === undefined)
         this.find(
           'A4.22',
           'the order of two or more adjectives before one noun is not ruled yet',

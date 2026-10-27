@@ -1,0 +1,4603 @@
+{
+ "patch": "Liraasa 4.0: what translating 2100 Dreams needed",
+ "base_version": "3.6",
+ "target_version": "4.0",
+ "status": "PROPOSED: made by the editor at the author's request (2026-10-26), from the draft translation of 2100 Dreams",
+ "base_file": "liraasa_3_6.json",
+ "base_counts": {
+  "headwords": 2242,
+  "meaningful_forms": 5140
+ },
+ "principles": [
+  "No new roots: every word is a compound of existing headwords, colour bases or time nouns.",
+  "Only what the draft used: a coinage the finished draft does not use is left out.",
+  "The grammar defaults the draft relied on become rulings, each example checked."
+ ],
+ "modules": {
+  "2100-dreams": "The vocabulary and grammar the draft translation of 2100 Dreams needed"
+ },
+ "function_words_add": [],
+ "rulings_add": [
+  {
+   "id": "4.0:G156",
+   "topic": "A quotation before its verb of saying",
+   "rule": "A direct quotation may come before its verb of saying, closed by a comma inside the quotation marks: “…,” saivo po senosia. It may also follow its verb after a colon (2.3:G83). The quotation is its own sentence or sentences; the clause around it is read without it.",
+   "examples": [
+    [
+     "“Maivo ne pagopa,” saivo po senosia.",
+     "“I am not going,” she said."
+    ],
+    [
+     "“Taivo lirala ki?” maivo po masuma.",
+     "“Are you singing?” I asked."
+    ]
+   ],
+   "resolves": "Speech before its verb of saying (the draft's G-9)."
+  },
+  {
+   "id": "4.0:G157",
+   "topic": "The order of adjectives",
+   "rule": "Two or more adjectives before one noun stand in this order: opinion, size, age, shape, colour, origin, material, purpose. With more than three, put one in a raho clause.",
+   "examples": [
+    [
+     "Saivo po vimova baba vanisan nolsasan kadu.",
+     "She saw a beautiful new car."
+    ],
+    [
+     "Li lira raho ka molusan ka vanisan.",
+     "The song, which is gentle, is beautiful."
+    ]
+   ],
+   "resolves": "The order of two or more adjectives before one noun (A4.22, I-28)."
+  },
+  {
+   "id": "4.0:G158",
+   "topic": "Durations",
+   "rule": "A duration is en + NUMBER + a time noun after the verb: en dossa deya, for two days. en rinbakrono (3.0:G139) is its unbounded case.",
+   "examples": [
+    [
+     "Maivo po lisrola en dossa deya.",
+     "I stayed for two days."
+    ]
+   ],
+   "resolves": "A duration (“for two days”) in general (I-17)."
+  },
+  {
+   "id": "4.0:G159",
+   "topic": "Comparing actions",
+   "rule": "An action is compared with la kasi (or la menu) + an adjective + tamo X: Maivo lirala la kasi benasan tamo taivo, I sing better than you. With no adjective, use benasan (well) or mellisan (much).",
+   "examples": [
+    [
+     "Maivo lirala la kasi benasan tamo taivo.",
+     "I sing better than you."
+    ]
+   ],
+   "resolves": "Comparing an action with no manner adjective (“I sing more than you”)."
+  },
+  {
+   "id": "4.0:G160",
+   "topic": "Destined to",
+   "rule": "“Destined to” is fatofa sidu + verb: Saivo fatofa sidu lirala. ke sidu is not used for destiny.",
+   "examples": [
+    [
+     "Saivo fatofa sidu lirala.",
+     "She is destined to sing."
+    ]
+   ],
+   "resolves": "ke sidu VERB as “destined to” (album 08): fatofa sidu instead."
+  },
+  {
+   "id": "4.0:G161",
+   "topic": "Decimals and percentages",
+   "rule": "A decimal or a percentage is said as a fraction, NUMBER de NUMBER (trezira-penta de centa, thirty-five per cent), or rounded.",
+   "examples": [
+    [
+     "Trezira-penta de centa nelari po lirala.",
+     "Thirty-five per cent of the people sang."
+    ]
+   ],
+   "resolves": "Decimals (2.5:G125)."
+  }
+ ],
+ "roots_add": [],
+ "compounds_add": [
+  {
+   "module": "2100-dreams",
+   "headword": "amordaludapadonu",
+   "parts": [
+    "amordalu",
+    "dapadonu"
+   ],
+   "domain": "Commerce & obligation",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "amordaludapadonu",
+     "meaning": "prostitution"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (2 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "amordaludesi",
+   "parts": [
+    "amordalu",
+    "desi"
+   ],
+   "domain": "Actions",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "amordaludesi",
+     "meaning": "horny"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (0 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "amordalukibo",
+   "parts": [
+    "amordalu",
+    "kibo"
+   ],
+   "domain": "Information & technology",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "amordalukibo",
+     "meaning": "sex bot"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "amorfarukova",
+   "parts": [
+    "amor",
+    "farukova"
+   ],
+   "domain": "Travel & war",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "amorfarukova",
+     "meaning": "l bomb (love bomb)"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "amorsora",
+   "parts": [
+    "amor",
+    "sora"
+   ],
+   "domain": "People",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "amorsora",
+     "meaning": "lover"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (22 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "azurimulfo",
+   "parts": [
+    "azuri",
+    "mulfo"
+   ],
+   "domain": "Animals",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "azurimulfo",
+     "meaning": "blue fur"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "azurisabaye",
+   "parts": [
+    "azuri",
+    "sabaye"
+   ],
+   "domain": "Body",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "azurisabaye",
+     "meaning": "blue hair"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (0 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "biodivmapatu",
+   "parts": [
+    "bio",
+    "divmapatu"
+   ],
+   "domain": "Information & technology",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "biodivmapatu",
+     "meaning": "biochip"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (3 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "bioramu",
+   "parts": [
+    "bio",
+    "ramu"
+   ],
+   "domain": "Mind & dreams",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "bioramu",
+     "meaning": "experience"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (33 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "bitilumi",
+   "parts": [
+    "biti",
+    "lumi"
+   ],
+   "domain": "Foundations",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "bitilumi",
+     "meaning": "ui overlay"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (2 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "bojinami",
+   "parts": [
+    "boji",
+    "nami"
+   ],
+   "domain": "Daily life",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "bojinami",
+     "meaning": "ice cream"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (7 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "buzaneme",
+   "parts": [
+    "buza",
+    "neme"
+   ],
+   "domain": "Emotions",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "buzaneme",
+     "meaning": "hangover"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "ceresolotobra",
+   "parts": [
+    "ceresolo",
+    "tobra"
+   ],
+   "domain": "Home & objects",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "ceresolotobra",
+     "meaning": "glass walls"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (2 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "cibuteru",
+   "parts": [
+    "cibu",
+    "teru"
+   ],
+   "domain": "Nature",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "cibuteru",
+     "meaning": "cat litter"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "cirsibumbo",
+   "parts": [
+    "cirsi",
+    "bumbo"
+   ],
+   "domain": "Animals",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "cirsibumbo",
+     "meaning": "crystal bear"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "cirsizefrokova",
+   "parts": [
+    "cirsi",
+    "zefrokova"
+   ],
+   "domain": "Everyday",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "cirsizefrokova",
+     "meaning": "crystal balloon"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (4 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "colbiceresolo",
+   "parts": [
+    "colbi",
+    "ceresolo"
+   ],
+   "domain": "Materials & physics",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "colbiceresolo",
+     "meaning": "stained glass"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (0 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "colbitrana",
+   "parts": [
+    "colbi",
+    "trana"
+   ],
+   "domain": "Established concepts",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "colbitrana",
+     "meaning": "gradient"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (7 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "colbivemibako",
+   "parts": [
+    "colbi",
+    "vemibako"
+   ],
+   "domain": "Abstract",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "colbivemibako",
+     "meaning": "color catastrophe"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "conotovo",
+   "parts": [
+    "cono",
+    "tovo"
+   ],
+   "domain": "Actions",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "conotovo",
+     "meaning": "capitalism"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "daigodevi",
+   "parts": [
+    "daigo",
+    "devi"
+   ],
+   "domain": "Spiritual",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "daigodevi",
+     "meaning": "death goddess"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "daigofarusebi",
+   "parts": [
+    "daigo",
+    "farusebi"
+   ],
+   "domain": "Fantasy",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "daigofarusebi",
+     "meaning": "death dragon"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "dalutobra",
+   "parts": [
+    "dalu",
+    "tobra"
+   ],
+   "domain": "Home & objects",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "dalutobra",
+     "meaning": "touch barrier"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (2 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "dentohata",
+   "parts": [
+    "dento",
+    "hata"
+   ],
+   "domain": "Actions & physical processes",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "dentohata",
+     "meaning": "bit"
+    },
+    "v": {
+     "form": "dentohatada",
+     "meaning": "to bit"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (0 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "dentosilbeseno",
+   "parts": [
+    "dento",
+    "silbeseno"
+   ],
+   "domain": "Technology & AI",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "dentosilbeseno",
+     "meaning": "munch message"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (2 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "divmasenotikutrana",
+   "parts": [
+    "divmaseno",
+    "tikutrana"
+   ],
+   "domain": "Abstract",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "divmasenotikutrana",
+     "meaning": "code patch"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (7 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "duhasolo",
+   "parts": [
+    "duha",
+    "solo"
+   ],
+   "domain": "Home & objects",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "duhasolo",
+     "meaning": "stone of wishes"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (5 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "ertarofe",
+   "parts": [
+    "erta",
+    "rofe"
+   ],
+   "domain": "Home & objects",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "ertarofe",
+     "meaning": "clay rooftops"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "ertasabaye",
+   "parts": [
+    "erta",
+    "sabaye"
+   ],
+   "domain": "Body",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "ertasabaye",
+     "meaning": "brunette hair; brown hair"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (5 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "ertavilne",
+   "parts": [
+    "erta",
+    "vilne"
+   ],
+   "domain": "Body",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "ertavilne",
+     "meaning": "brown eyes"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (0 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "ertayumlimiru",
+   "parts": [
+    "ertayumli",
+    "miru"
+   ],
+   "domain": "Nature",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "ertayumlimiru",
+     "meaning": "hot chocolate (the drink)"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "fasbivelma",
+   "parts": [
+    "fasbi",
+    "velma"
+   ],
+   "domain": "Home & objects",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "fasbivelma",
+     "meaning": "make-up"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (9 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "favrodemro",
+   "parts": [
+    "favro",
+    "demro"
+   ],
+   "domain": "Space & orientation",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "favrodemro",
+     "meaning": "digital motion"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "favrodomlu",
+   "parts": [
+    "favro",
+    "domlu"
+   ],
+   "domain": "Home & objects",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "favrodomlu",
+     "meaning": "digital house"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (3 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "favrofaru",
+   "parts": [
+    "favro",
+    "faru"
+   ],
+   "domain": "Nature",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "favrofaru",
+     "meaning": "digital flame"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "favrokronobiti",
+   "parts": [
+    "favro",
+    "kronobiti"
+   ],
+   "domain": "Everyday objects & work",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "favrokronobiti",
+     "meaning": "digital clock"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "favrolumi",
+   "parts": [
+    "favro",
+    "lumi"
+   ],
+   "domain": "Foundations",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "favrolumi",
+     "meaning": "simulated light"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "favronela",
+   "parts": [
+    "favro",
+    "nela"
+   ],
+   "domain": "People",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "favronela",
+     "meaning": "simulated avatar"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (4 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "favronimunole",
+   "parts": [
+    "favro",
+    "nimunole"
+   ],
+   "domain": "Language & art",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "favronimunole",
+     "meaning": "ip address"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (2 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "favronoru",
+   "parts": [
+    "favro",
+    "noru"
+   ],
+   "domain": "Mind & dreams",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "favronoru",
+     "meaning": "simulated dream"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "favrorivla",
+   "parts": [
+    "favro",
+    "rivla"
+   ],
+   "domain": "Core roots",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "favrorivla",
+     "meaning": "stream; live broadcast"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "favrorivo",
+   "parts": [
+    "favro",
+    "rivo"
+   ],
+   "domain": "People",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "favrorivo",
+     "meaning": "digital companion"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "favrovalla",
+   "parts": [
+    "favro",
+    "valla"
+   ],
+   "domain": "Body",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "favrovalla",
+     "meaning": "digital voice"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (2 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "favrovamri",
+   "parts": [
+    "favro",
+    "vamri"
+   ],
+   "domain": "Space & orientation",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "favrovamri",
+     "meaning": "digital space"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (11 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "favrovaye",
+   "parts": [
+    "favro",
+    "vaye"
+   ],
+   "domain": "Nature",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "favrovaye",
+     "meaning": "simulated wind"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "favrozefro",
+   "parts": [
+    "favro",
+    "zefro"
+   ],
+   "domain": "Core roots",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "favrozefro",
+     "meaning": "digital air"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "filsedomlu",
+   "parts": [
+    "filse",
+    "domlu"
+   ],
+   "domain": "Home & objects",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "filsedomlu",
+     "meaning": "aquarium"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "filsenulu",
+   "parts": [
+    "filse",
+    "nulu"
+   ],
+   "domain": "Home & objects",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "filsenulu",
+     "meaning": "eel"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (2 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "fojonela",
+   "parts": [
+    "fojo",
+    "nela"
+   ],
+   "domain": "People",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "fojonela",
+     "meaning": "snowman"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "fojovemisovla",
+   "parts": [
+    "fojo",
+    "vemisovla"
+   ],
+   "domain": "Cosmos & light",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "fojovemisovla",
+     "meaning": "snowglobe"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (2 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "follutelne",
+   "parts": [
+    "follu",
+    "telne"
+   ],
+   "domain": "Language & art",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "follutelne",
+     "meaning": "horror story"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "folluzupa",
+   "parts": [
+    "follu",
+    "zupa"
+   ],
+   "domain": "Home & objects",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "folluzupa",
+     "meaning": "horror section"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (6 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "folnitibiyumli",
+   "parts": [
+    "folnitibi",
+    "yumli"
+   ],
+   "domain": "Qualities",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "folnitibiyumli",
+     "meaning": "cotton candy"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (2 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "gonbidamrukova",
+   "parts": [
+    "gonbi",
+    "damrukova"
+   ],
+   "domain": "Storytelling",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "gonbidamrukova",
+     "meaning": "welcome box"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (2 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "harlujomrulive",
+   "parts": [
+    "harlujomru",
+    "live"
+   ],
+   "domain": "Actions",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "harlujomrulive",
+     "meaning": "adventure guide"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (3 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "helnakadu",
+   "parts": [
+    "helna",
+    "kadu"
+   ],
+   "domain": "Travel & war",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "helnakadu",
+     "meaning": "ambulance"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (6 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "helnanela",
+   "parts": [
+    "helna",
+    "nela"
+   ],
+   "domain": "People",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "helnanela",
+     "meaning": "patient (medical)"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (10 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "helnapalvi",
+   "parts": [
+    "helna",
+    "palvi"
+   ],
+   "domain": "Actions",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "helnapalvi",
+     "meaning": "medicine station"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (2 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "helnapidihata",
+   "parts": [
+    "helna",
+    "pidihata"
+   ],
+   "domain": "Movement & action",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "helnapidihata",
+     "meaning": "the shot (injection)"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (11 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "juseseno",
+   "parts": [
+    "juse",
+    "seno"
+   ],
+   "domain": "Language & art",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "juseseno",
+     "meaning": "review"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (0 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "karkodivmaseno",
+   "parts": [
+    "karko",
+    "divmaseno"
+   ],
+   "domain": "Information & technology",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "karkodivmaseno",
+     "meaning": "kill program"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (2 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "karkokemye",
+   "parts": [
+    "karko",
+    "kemye"
+   ],
+   "domain": "Home & objects",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "karkokemye",
+     "meaning": "kill switch"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (31 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "kazepusa",
+   "parts": [
+    "kaze",
+    "pusa"
+   ],
+   "domain": "Home, kitchen & labor",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "kazepusa",
+     "meaning": "gunpowder"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "kendejomrupelicono",
+   "parts": [
+    "kendejomru",
+    "pelicono"
+   ],
+   "domain": "Everyday & feast",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "kendejomrupelicono",
+     "meaning": "quest token"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (7 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "kezusamnilisi",
+   "parts": [
+    "kezusamni",
+    "lisi"
+   ],
+   "domain": "Home, kitchen & labor",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "kezusamnilisi",
+     "meaning": "peanut butter"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (2 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "kiboyano",
+   "parts": [
+    "kibo",
+    "yano"
+   ],
+   "domain": "People",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "kiboyano",
+     "meaning": "drone swarm"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "kronokadu",
+   "parts": [
+    "krono",
+    "kadu"
+   ],
+   "domain": "Travel & war",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "kronokadu",
+     "meaning": "vintage car"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (0 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "kronokova",
+   "parts": [
+    "krono",
+    "kova"
+   ],
+   "domain": "Home, kitchen & labor",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "kronokova",
+     "meaning": "time capsule"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (3 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "kronolelde",
+   "parts": [
+    "krono",
+    "lelde"
+   ],
+   "domain": "Abstract",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "kronolelde",
+     "meaning": "chronological limit"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (5 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "kronopilo",
+   "parts": [
+    "krono",
+    "pilo"
+   ],
+   "domain": "People",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "kronopilo",
+     "meaning": "grandfather"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "kronorinbanulu",
+   "parts": [
+    "krono",
+    "rinbanulu"
+   ],
+   "domain": "Abstract",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "kronorinbanulu",
+     "meaning": "time loop"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (3 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "lamsapavmahavli",
+   "parts": [
+    "lamsapavma",
+    "havli"
+   ],
+   "domain": "Body",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lamsapavmahavli",
+     "meaning": "carbon dioxide"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "lamsapavmavelma",
+   "parts": [
+    "lamsapavma",
+    "velma"
+   ],
+   "domain": "Home & objects",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lamsapavmavelma",
+     "meaning": "carbon cloth"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (2 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "lardakibo",
+   "parts": [
+    "larda",
+    "kibo"
+   ],
+   "domain": "Information & technology",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lardakibo",
+     "meaning": "art robot"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (2 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "lardapatu",
+   "parts": [
+    "larda",
+    "patu"
+   ],
+   "domain": "Abstract",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lardapatu",
+     "meaning": "art piece"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (10 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "lasokibo",
+   "parts": [
+    "laso",
+    "kibo"
+   ],
+   "domain": "Information & technology",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lasokibo",
+     "meaning": "zenbot"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (0 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "lavbularda",
+   "parts": [
+    "lavbu",
+    "larda"
+   ],
+   "domain": "Abstract",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lavbularda",
+     "meaning": "sacred art"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "lavidesi",
+   "parts": [
+    "lavi",
+    "desi"
+   ],
+   "domain": "Actions",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lavidesi",
+     "meaning": "hedonistic"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (0 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "lektamambihelvikaldo",
+   "parts": [
+    "lektamambi",
+    "helvikaldo"
+   ],
+   "domain": "Travel & war",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lektamambihelvikaldo",
+     "meaning": "session trap"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (2 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "lektatali",
+   "parts": [
+    "lekta",
+    "tali"
+   ],
+   "domain": "Daily life",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lektatali",
+     "meaning": "group activity"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (6 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "lemucono",
+   "parts": [
+    "lemu",
+    "cono"
+   ],
+   "domain": "Home & objects",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lemucono",
+     "meaning": "scholarship"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "lesmahalra",
+   "parts": [
+    "lesma",
+    "halra"
+   ],
+   "domain": "Animals",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lesmahalra",
+     "meaning": "camels"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (0 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "lesmavila",
+   "parts": [
+    "lesma",
+    "vila"
+   ],
+   "domain": "Society",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lesmavila",
+     "meaning": "desert town"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "linlekibo",
+   "parts": [
+    "linle",
+    "kibo"
+   ],
+   "domain": "Information & technology",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "linlekibo",
+     "meaning": "cleaner drone"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (3 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "linlemiru",
+   "parts": [
+    "linle",
+    "miru"
+   ],
+   "domain": "Nature",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "linlemiru",
+     "meaning": "cleaning chemical"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (4 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "linusasva",
+   "parts": [
+    "linu",
+    "sasva"
+   ],
+   "domain": "Qualities",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "linusasva",
+     "meaning": "child protective services"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (3 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "linuvani",
+   "parts": [
+    "linu",
+    "vani"
+   ],
+   "domain": "Emotions",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "linuvani",
+     "meaning": "cute"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "loresilro",
+   "parts": [
+    "lore",
+    "silro"
+   ],
+   "domain": "Relationships",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "loresilro",
+     "meaning": "intimacy"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "lorevasko",
+   "parts": [
+    "lore",
+    "vasko"
+   ],
+   "domain": "Home & objects",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lorevasko",
+     "meaning": "emotion mask"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (4 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "lorevemi",
+   "parts": [
+    "lore",
+    "vemi"
+   ],
+   "domain": "Nature",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lorevemi",
+     "meaning": "inner world"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (4 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "lornubiti",
+   "parts": [
+    "lornu",
+    "biti"
+   ],
+   "domain": "Home, kitchen & labor",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lornubiti",
+     "meaning": "watch"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (3 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "loteroseno",
+   "parts": [
+    "lotero",
+    "seno"
+   ],
+   "domain": "Language & art",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "loteroseno",
+     "meaning": "sarcasm"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "lulfaganre",
+   "parts": [
+    "lulfa",
+    "ganre"
+   ],
+   "domain": "Home & objects",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lulfaganre",
+     "meaning": "butterfly garden"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "lumipusa",
+   "parts": [
+    "lumi",
+    "pusa"
+   ],
+   "domain": "Home, kitchen & labor",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lumipusa",
+     "meaning": "materialized"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "lumisovlabiti",
+   "parts": [
+    "lumisovla",
+    "biti"
+   ],
+   "domain": "Home, kitchen & labor",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lumisovlabiti",
+     "meaning": "hologram projector"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (2 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "lumisovlakibo",
+   "parts": [
+    "lumisovla",
+    "kibo"
+   ],
+   "domain": "Information & technology",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lumisovlakibo",
+     "meaning": "hologram drone"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (0 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "lumisovlavimofavro",
+   "parts": [
+    "lumisovla",
+    "vimofavro"
+   ],
+   "domain": "Everyday objects & work",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lumisovlavimofavro",
+     "meaning": "hologram television"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (3 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "lumivilne",
+   "parts": [
+    "lumi",
+    "vilne"
+   ],
+   "domain": "Body",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lumivilne",
+     "meaning": "led pseudo-eyes"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (0 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "lumizefrofaru",
+   "parts": [
+    "lumizefro",
+    "faru"
+   ],
+   "domain": "Nature",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lumizefrofaru",
+     "meaning": "neon fire (the virtual venue, copied as a name)"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (12 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "lunosolo",
+   "parts": [
+    "luno",
+    "solo"
+   ],
+   "domain": "Home & objects",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lunosolo",
+     "meaning": "moonstone"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (0 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "manliseno",
+   "parts": [
+    "manli",
+    "seno"
+   ],
+   "domain": "Language & art",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "manliseno",
+     "meaning": "interactive"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (0 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "marecemnu",
+   "parts": [
+    "mare",
+    "cemnu"
+   ],
+   "domain": "Abstract",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "marecemnu",
+     "meaning": "nurture center"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (2 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "mavohelnapago",
+   "parts": [
+    "mavohelna",
+    "pago"
+   ],
+   "domain": "Foundations",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "mavohelnapago",
+     "meaning": "psych hospital"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (8 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "mavojuba",
+   "parts": [
+    "mavo",
+    "juba"
+   ],
+   "domain": "Established concepts",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "mavojuba",
+     "meaning": "abilities"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (2 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "mavolotero",
+   "parts": [
+    "mavo",
+    "lotero"
+   ],
+   "domain": "Abstract",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "mavolotero",
+     "meaning": "neurodivergent"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "mavomudu",
+   "parts": [
+    "mavo",
+    "mudu"
+   ],
+   "domain": "Health & body",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "mavomudu",
+     "meaning": "mental illness; mental illness / mental health exceptionality"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (8 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "mavonavufaru",
+   "parts": [
+    "mavo",
+    "navufaru"
+   ],
+   "domain": "Nature",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "mavonavufaru",
+     "meaning": "seizure"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (0 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "mavopeli",
+   "parts": [
+    "mavo",
+    "peli"
+   ],
+   "domain": "Daily life",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "mavopeli",
+     "meaning": "mindgames"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (2 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "mavoyugedivma",
+   "parts": [
+    "mavoyuge",
+    "divma"
+   ],
+   "domain": "Systems & relations",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "mavoyugedivma",
+     "meaning": "nervous system"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "mavozayu",
+   "parts": [
+    "mavo",
+    "zayu"
+   ],
+   "domain": "Storytelling",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "mavozayu",
+     "meaning": "creativity"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (6 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "mernolornu",
+   "parts": [
+    "merno",
+    "lornu"
+   ],
+   "domain": "Time",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "mernolornu",
+     "meaning": "morning hours"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (9 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "mernovelma",
+   "parts": [
+    "merno",
+    "velma"
+   ],
+   "domain": "Home & objects",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "mernovelma",
+     "meaning": "morning robe"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (2 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "migadivmaperemo",
+   "parts": [
+    "migadivma",
+    "peremo"
+   ],
+   "domain": "Abstract",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "migadivmaperemo",
+     "meaning": "network issues"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "minvatarnu",
+   "parts": [
+    "minva",
+    "tarnu"
+   ],
+   "domain": "People",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "minvatarnu",
+     "meaning": "gender"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (3 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "mirufuro",
+   "parts": [
+    "miru",
+    "furo"
+   ],
+   "domain": "Nature",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "mirufuro",
+     "meaning": "watermelon"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "molupavmabumbo",
+   "parts": [
+    "molupavma",
+    "bumbo"
+   ],
+   "domain": "Animals",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "molupavmabumbo",
+     "meaning": "teddy bear"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (6 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "mubofolluhelna",
+   "parts": [
+    "mubofollu",
+    "helna"
+   ],
+   "domain": "Health & body",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "mubofolluhelna",
+     "meaning": "anxiety medicine"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (4 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "namidonukibo",
+   "parts": [
+    "namidonu",
+    "kibo"
+   ],
+   "domain": "Information & technology",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "namidonukibo",
+     "meaning": "server bot"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (6 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "navufarulumra",
+   "parts": [
+    "navufaru",
+    "lumra"
+   ],
+   "domain": "Movement & action",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "navufarulumra",
+     "meaning": "activated"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "navufaruzayu",
+   "parts": [
+    "navufaru",
+    "zayu"
+   ],
+   "domain": "Storytelling",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "navufaruzayu",
+     "meaning": "lightning magic"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "navukadutali",
+   "parts": [
+    "navukadu",
+    "tali"
+   ],
+   "domain": "Daily life",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "navukadutali",
+     "meaning": "airlines"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "navuzupa",
+   "parts": [
+    "navu",
+    "zupa"
+   ],
+   "domain": "Home & objects",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "navuzupa",
+     "meaning": "balcony"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "nelalore",
+   "parts": [
+    "nela",
+    "lore"
+   ],
+   "domain": "Body",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "nelalore",
+     "meaning": "humanistic"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (0 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "nemehelna",
+   "parts": [
+    "neme",
+    "helna"
+   ],
+   "domain": "Health & body",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "nemehelna",
+     "meaning": "antidepressant"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (2 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "ojofaru",
+   "parts": [
+    "ojo",
+    "faru"
+   ],
+   "domain": "Nature",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "ojofaru",
+     "meaning": "orange flame"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "ojokronolazu",
+   "parts": [
+    "ojo",
+    "kronolazu"
+   ],
+   "domain": "Animals",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "ojokronolazu",
+     "meaning": "orange dinosaur"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (9 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "ojosolo",
+   "parts": [
+    "ojo",
+    "solo"
+   ],
+   "domain": "Home & objects",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "ojosolo",
+     "meaning": "orange stone"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (2 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "ojovelma",
+   "parts": [
+    "ojo",
+    "velma"
+   ],
+   "domain": "Home & objects",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "ojovelma",
+     "meaning": "orange outfit"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (4 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "ojovilne",
+   "parts": [
+    "ojo",
+    "vilne"
+   ],
+   "domain": "Body",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "ojovilne",
+     "meaning": "orange eyes (reddish-orange eyes)"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (4 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "opiganre",
+   "parts": [
+    "opi",
+    "ganre"
+   ],
+   "domain": "Home & objects",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "opiganre",
+     "meaning": "hope park"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (3 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "pagomodo",
+   "parts": [
+    "pago",
+    "modo"
+   ],
+   "domain": "Established concepts",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "pagomodo",
+     "meaning": "reality; irl"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (12 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "pagotranasonbu",
+   "parts": [
+    "pagotrana",
+    "sonbu"
+   ],
+   "domain": "Abstract",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "pagotranasonbu",
+     "meaning": "sound effect of teleportation"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "pelibiti",
+   "parts": [
+    "peli",
+    "biti"
+   ],
+   "domain": "Home, kitchen & labor",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "pelibiti",
+     "meaning": "toy"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "pelivelma",
+   "parts": [
+    "peli",
+    "velma"
+   ],
+   "domain": "Home & objects",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "pelivelma",
+     "meaning": "trendy garment (shoulderhood)"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (4 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "pensanulu",
+   "parts": [
+    "pensa",
+    "nulu"
+   ],
+   "domain": "Home & objects",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "pensanulu",
+     "meaning": "thought patterns"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (0 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "pensapolva",
+   "parts": [
+    "pensa",
+    "polva"
+   ],
+   "domain": "Society",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "pensapolva",
+     "meaning": "processing power"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (4 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "ramulanve",
+   "parts": [
+    "ramu",
+    "lanve"
+   ],
+   "domain": "Society",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "ramulanve",
+     "meaning": "precedent"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (2 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "regnadomlu",
+   "parts": [
+    "regna",
+    "domlu"
+   ],
+   "domain": "Home & objects",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "regnadomlu",
+     "meaning": "castle"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (8 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "regnazupa",
+   "parts": [
+    "regna",
+    "zupa"
+   ],
+   "domain": "Home & objects",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "regnazupa",
+     "meaning": "throne room/hall"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (6 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "renliherbanumo",
+   "parts": [
+    "renliherba",
+    "numo"
+   ],
+   "domain": "Nature",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "renliherbanumo",
+     "meaning": "mushroom cloud"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "renlipatu",
+   "parts": [
+    "renli",
+    "patu"
+   ],
+   "domain": "Abstract",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "renlipatu",
+     "meaning": "raindrop"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "rinbasovla",
+   "parts": [
+    "rinba",
+    "sovla"
+   ],
+   "domain": "Abstract",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "rinbasovla",
+     "meaning": "roundness"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (3 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "rubidamrukova",
+   "parts": [
+    "rubi",
+    "damrukova"
+   ],
+   "domain": "Storytelling",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "rubidamrukova",
+     "meaning": "red box"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "rubilumipatu",
+   "parts": [
+    "rubi",
+    "lumipatu"
+   ],
+   "domain": "Language & art",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "rubilumipatu",
+     "meaning": "red highlights"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (0 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "rubivilne",
+   "parts": [
+    "rubi",
+    "vilne"
+   ],
+   "domain": "Body",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "rubivilne",
+     "meaning": "red eyes"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (2 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "rukodokra",
+   "parts": [
+    "ruko",
+    "dokra"
+   ],
+   "domain": "Society",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "rukodokra",
+     "meaning": "violence"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (15 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "rukodozadalu",
+   "parts": [
+    "ruko",
+    "dozadalu"
+   ],
+   "domain": "Movement & action",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "rukodozadalu",
+     "meaning": "blood pressure"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "sabayecolbi",
+   "parts": [
+    "sabaye",
+    "colbi"
+   ],
+   "domain": "Abstract",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "sabayecolbi",
+     "meaning": "hair color"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (4 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "sabayepago",
+   "parts": [
+    "sabaye",
+    "pago"
+   ],
+   "domain": "Foundations",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "sabayepago",
+     "meaning": "salon"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (2 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "sabayepatu",
+   "parts": [
+    "sabaye",
+    "patu"
+   ],
+   "domain": "Abstract",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "sabayepatu",
+     "meaning": "hair sample (dna sample)"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "sabayesafa",
+   "parts": [
+    "sabaye",
+    "safa"
+   ],
+   "domain": "Actions",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "sabayesafa",
+     "meaning": "shampoo"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (2 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "salrukadu",
+   "parts": [
+    "salru",
+    "kadu"
+   ],
+   "domain": "Travel & war",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "salrukadu",
+     "meaning": "elevator"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (7 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "sarbikibo",
+   "parts": [
+    "sarbi",
+    "kibo"
+   ],
+   "domain": "Information & technology",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "sarbikibo",
+     "meaning": "writer bot"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (0 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "sasvakibo",
+   "parts": [
+    "sasva",
+    "kibo"
+   ],
+   "domain": "Information & technology",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "sasvakibo",
+     "meaning": "sentry bot"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (2 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "senohelna",
+   "parts": [
+    "seno",
+    "helna"
+   ],
+   "domain": "Health & body",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "senohelna",
+     "meaning": "therapy (talk-treatment)"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (0 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "senrucolbi",
+   "parts": [
+    "senru",
+    "colbi"
+   ],
+   "domain": "Abstract",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "senrucolbi",
+     "meaning": "skin tone"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (3 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "sernanulu",
+   "parts": [
+    "serna",
+    "nulu"
+   ],
+   "domain": "Home & objects",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "sernanulu",
+     "meaning": "digital"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "sevunami",
+   "parts": [
+    "sevu",
+    "nami"
+   ],
+   "domain": "Daily life",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "sevunami",
+     "meaning": "shrimp (as seafood)"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "shadasabaye",
+   "parts": [
+    "shada",
+    "sabaye"
+   ],
+   "domain": "Body",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "shadasabaye",
+     "meaning": "black hair"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (10 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "shadavelma",
+   "parts": [
+    "shada",
+    "velma"
+   ],
+   "domain": "Home & objects",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "shadavelma",
+     "meaning": "black clothes (shorts, shoulderhoods)"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (2 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "shadavilne",
+   "parts": [
+    "shada",
+    "vilne"
+   ],
+   "domain": "Body",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "shadavilne",
+     "meaning": "black eyes"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (2 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "solavelma",
+   "parts": [
+    "sola",
+    "velma"
+   ],
+   "domain": "Home & objects",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "solavelma",
+     "meaning": "sundress"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "solayalmu",
+   "parts": [
+    "sola",
+    "yalmu"
+   ],
+   "domain": "Materials & physics",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "solayalmu",
+     "meaning": "solar energy"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (2 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "solliseno",
+   "parts": [
+    "solli",
+    "seno"
+   ],
+   "domain": "Language & art",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "solliseno",
+     "meaning": "soliloquy"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "sololore",
+   "parts": [
+    "solo",
+    "lore"
+   ],
+   "domain": "Body",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "sololore",
+     "meaning": "stone heart"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (2 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "solomelo",
+   "parts": [
+    "solo",
+    "melo"
+   ],
+   "domain": "Established concepts",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "solomelo",
+     "meaning": "rock star"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (0 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "somufelra",
+   "parts": [
+    "somu",
+    "felra"
+   ],
+   "domain": "Society",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "somufelra",
+     "meaning": "slumber party"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (2 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "soralekta",
+   "parts": [
+    "sora",
+    "lekta"
+   ],
+   "domain": "Core roots",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "soralekta",
+     "meaning": "friends list"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (6 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "sovezupa",
+   "parts": [
+    "sove",
+    "zupa"
+   ],
+   "domain": "Home & objects",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "sovezupa",
+     "meaning": "lounge"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (4 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "sovlafarlabitizupa",
+   "parts": [
+    "sovlafarlabiti",
+    "zupa"
+   ],
+   "domain": "Home & objects",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "sovlafarlabitizupa",
+     "meaning": "printer room"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "sulmepavmaminvaregna",
+   "parts": [
+    "sulmepavma",
+    "minvaregna"
+   ],
+   "domain": "Fiction",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "sulmepavmaminvaregna",
+     "meaning": "nicotine queen"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "sulmepavmavelma",
+   "parts": [
+    "sulmepavma",
+    "velma"
+   ],
+   "domain": "Home & objects",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "sulmepavmavelma",
+     "meaning": "nicotine patch"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (14 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "sumazefrokova",
+   "parts": [
+    "suma",
+    "zefrokova"
+   ],
+   "domain": "Everyday",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "sumazefrokova",
+     "meaning": "hot air balloon"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (3 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "telnekezulalle",
+   "parts": [
+    "telne",
+    "kezulalle"
+   ],
+   "domain": "Narration",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "telnekezulalle",
+     "meaning": "plot hole"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "telnepeli",
+   "parts": [
+    "telne",
+    "peli"
+   ],
+   "domain": "Daily life",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "telnepeli",
+     "meaning": "story game"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "terurenliherba",
+   "parts": [
+    "teru",
+    "renliherba"
+   ],
+   "domain": "Everyday & feast",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "terurenliherba",
+     "meaning": "truffle"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (2 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "tozelazu",
+   "parts": [
+    "toze",
+    "lazu"
+   ],
+   "domain": "Ecology & biology",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "tozelazu",
+     "meaning": "snake"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "turnazupa",
+   "parts": [
+    "turna",
+    "zupa"
+   ],
+   "domain": "Home & objects",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "turnazupa",
+     "meaning": "lobby"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (15 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "vanabumbo",
+   "parts": [
+    "vana",
+    "bumbo"
+   ],
+   "domain": "Animals",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "vanabumbo",
+     "meaning": "polar bear"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "vanacirsi",
+   "parts": [
+    "vana",
+    "cirsi"
+   ],
+   "domain": "Materials & physics",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "vanacirsi",
+     "meaning": "white crystal"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "vanajubagerma",
+   "parts": [
+    "vanajuba",
+    "germa"
+   ],
+   "domain": "Materials & physics",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "vanajubagerma",
+     "meaning": "chrome"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (2 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "vanajubalelde",
+   "parts": [
+    "vanajuba",
+    "lelde"
+   ],
+   "domain": "Abstract",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "vanajubalelde",
+     "meaning": "silver trim"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "vanajubasabaye",
+   "parts": [
+    "vanajuba",
+    "sabaye"
+   ],
+   "domain": "Body",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "vanajubasabaye",
+     "meaning": "silver hair"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (33 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "vanakibo",
+   "parts": [
+    "vana",
+    "kibo"
+   ],
+   "domain": "Information & technology",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "vanakibo",
+     "meaning": "whitey"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (2 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "vananullovelma",
+   "parts": [
+    "vana",
+    "nullovelma"
+   ],
+   "domain": "Home & objects",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "vananullovelma",
+     "meaning": "white nightie"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (3 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "vanarezasabaye",
+   "parts": [
+    "vana",
+    "rezasabaye"
+   ],
+   "domain": "Body",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "vanarezasabaye",
+     "meaning": "white mustache"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "vanasenru",
+   "parts": [
+    "vana",
+    "senru"
+   ],
+   "domain": "Body",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "vanasenru",
+     "meaning": "pale skin"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (2 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "vanatobra",
+   "parts": [
+    "vana",
+    "tobra"
+   ],
+   "domain": "Home & objects",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "vanatobra",
+     "meaning": "white walls"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (0 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "vanavelma",
+   "parts": [
+    "vana",
+    "velma"
+   ],
+   "domain": "Home & objects",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "vanavelma",
+     "meaning": "white outfit; white doctor clothes"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (4 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "vazranulupatu",
+   "parts": [
+    "vazranulu",
+    "patu"
+   ],
+   "domain": "Abstract",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "vazranulupatu",
+     "meaning": "strategy division"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (6 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "velmakovapago",
+   "parts": [
+    "velmakova",
+    "pago"
+   ],
+   "domain": "Foundations",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "velmakovapago",
+     "meaning": "pocket universe"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (6 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "velmasirmofarla",
+   "parts": [
+    "velmasirmo",
+    "farla"
+   ],
+   "domain": "Actions",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "velmasirmofarla",
+     "meaning": "fashion designer"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (0 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "verdesabaye",
+   "parts": [
+    "verde",
+    "sabaye"
+   ],
+   "domain": "Body",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "verdesabaye",
+     "meaning": "green hair"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (3 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "verdevilne",
+   "parts": [
+    "verde",
+    "vilne"
+   ],
+   "domain": "Body",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "verdevilne",
+     "meaning": "green eyes; jade eyes"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (8 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "vilneceresolo",
+   "parts": [
+    "vilne",
+    "ceresolo"
+   ],
+   "domain": "Materials & physics",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "vilneceresolo",
+     "meaning": "glasses"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (4 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "vilnecolbi",
+   "parts": [
+    "vilne",
+    "colbi"
+   ],
+   "domain": "Abstract",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "vilnecolbi",
+     "meaning": "eyeliner"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (3 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "vilnesabaye",
+   "parts": [
+    "vilne",
+    "sabaye"
+   ],
+   "domain": "Body",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "vilnesabaye",
+     "meaning": "eyelashes"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (2 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "vilnesasva",
+   "parts": [
+    "vilne",
+    "sasva"
+   ],
+   "domain": "Qualities",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "vilnesasva",
+     "meaning": "aviator goggles"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "vilnetibi",
+   "parts": [
+    "vilne",
+    "tibi"
+   ],
+   "domain": "Home & objects",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "vilnetibi",
+     "meaning": "eyebrow"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (4 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "vimopeli",
+   "parts": [
+    "vimo",
+    "peli"
+   ],
+   "domain": "Daily life",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "vimopeli",
+     "meaning": "video game"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (8 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "vimotelne",
+   "parts": [
+    "vimo",
+    "telne"
+   ],
+   "domain": "Language & art",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "vimotelne",
+     "meaning": "movie"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (28 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "vinyelore",
+   "parts": [
+    "vinye",
+    "lore"
+   ],
+   "domain": "Body",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "vinyelore",
+     "meaning": "violin heart"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "vinyesonbu",
+   "parts": [
+    "vinye",
+    "sonbu"
+   ],
+   "domain": "Abstract",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "vinyesonbu",
+     "meaning": "veena sound"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (3 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "viodamrukova",
+   "parts": [
+    "vio",
+    "damrukova"
+   ],
+   "domain": "Storytelling",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "viodamrukova",
+     "meaning": "violet box"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "viofarvibudi",
+   "parts": [
+    "vio",
+    "farvibudi"
+   ],
+   "domain": "Animals",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "viofarvibudi",
+     "meaning": "purple wolf"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "viofuro",
+   "parts": [
+    "vio",
+    "furo"
+   ],
+   "domain": "Nature",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "viofuro",
+     "meaning": "violet apple"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "violavi",
+   "parts": [
+    "vio",
+    "lavi"
+   ],
+   "domain": "Emotions",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "violavi",
+     "meaning": "purple joy"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "violavra",
+   "parts": [
+    "vio",
+    "lavra"
+   ],
+   "domain": "Nature",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "violavra",
+     "meaning": "viofinch"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (7 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "violore",
+   "parts": [
+    "vio",
+    "lore"
+   ],
+   "domain": "Body",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "violore",
+     "meaning": "purple heart"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (3 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "vioruko",
+   "parts": [
+    "vio",
+    "ruko"
+   ],
+   "domain": "Body",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "vioruko",
+     "meaning": "purple blood"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "viosemnebiti",
+   "parts": [
+    "vio",
+    "semnebiti"
+   ],
+   "domain": "Storytelling",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "viosemnebiti",
+     "meaning": "violet chair"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (2 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "viosevureso",
+   "parts": [
+    "vio",
+    "sevureso"
+   ],
+   "domain": "Animals",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "viosevureso",
+     "meaning": "purpoise (purple porpoise, wordplay gloss)"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "viovelma",
+   "parts": [
+    "vio",
+    "velma"
+   ],
+   "domain": "Home & objects",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "viovelma",
+     "meaning": "purple clothes"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (3 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "viovilne",
+   "parts": [
+    "vio",
+    "vilne"
+   ],
+   "domain": "Body",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "viovilne",
+     "meaning": "purple eyes; violet eyes"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (14 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "vulradesi",
+   "parts": [
+    "vulra",
+    "desi"
+   ],
+   "domain": "Actions",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "vulradesi",
+     "meaning": "sadistic"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (0 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "yugelermi",
+   "parts": [
+    "yuge",
+    "lermi"
+   ],
+   "domain": "Information & technology",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "yugelermi",
+     "meaning": "body language"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (3 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "zavmepatu",
+   "parts": [
+    "zavme",
+    "patu"
+   ],
+   "domain": "Abstract",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "zavmepatu",
+     "meaning": "forward division"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (3 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "zayumodo",
+   "parts": [
+    "zayu",
+    "modo"
+   ],
+   "domain": "Established concepts",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "zayumodo",
+     "meaning": "surreal"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "zefrodapakadu",
+   "parts": [
+    "zefro",
+    "dapakadu"
+   ],
+   "domain": "Travel & war",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "zefrodapakadu",
+     "meaning": "air taxi"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (14 uses)."
+  },
+  {
+   "module": "2100-dreams",
+   "headword": "zupamervi",
+   "parts": [
+    "zupa",
+    "mervi"
+   ],
+   "domain": "Society",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "zupamervi",
+     "meaning": "room service"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  }
+ ],
+ "listed_derivations_add": [],
+ "lexicalised_diminutives_add": [],
+ "restored_forms_add": [],
+ "rejected_proposals": [
+  {
+   "headword": "cuzakova",
+   "why": "already a word of 3.6"
+  },
+  {
+   "headword": "furomiru",
+   "why": "already a word of 3.6"
+  },
+  {
+   "headword": "kavbikova",
+   "why": "already a word of 3.6"
+  },
+  {
+   "headword": "lardazupa",
+   "why": "already a word of 3.6"
+  },
+  {
+   "headword": "lavburinba",
+   "why": "already a word of 3.6"
+  },
+  {
+   "headword": "lumibiti",
+   "why": "already a word of 3.6"
+  },
+  {
+   "headword": "nibevimo",
+   "why": "already a word of 3.6"
+  },
+  {
+   "headword": "nullovelma",
+   "why": "already a word of 3.6"
+  },
+  {
+   "headword": "regnarinba",
+   "why": "already a word of 3.6"
+  },
+  {
+   "headword": "safakova",
+   "why": "already a word of 3.6"
+  },
+  {
+   "headword": "salkolazu",
+   "why": "already a word of 3.6"
+  },
+  {
+   "headword": "sarbibiti",
+   "why": "already a word of 3.6"
+  },
+  {
+   "headword": "tivrobiti",
+   "why": "already a word of 3.6"
+  },
+  {
+   "headword": "vimobiti",
+   "why": "already a word of 3.6"
+  },
+  {
+   "headword": "vimoramu",
+   "why": "already a word of 3.6"
+  },
+  {
+   "headword": "vismabiti",
+   "why": "already a word of 3.6"
+  },
+  {
+   "headword": "zupanulu",
+   "why": "already a word of 3.6"
+  }
+ ],
+ "recipes_add": [],
+ "english_aliases_add": [
+  {
+   "form": "mavopagoasa",
+   "add_english": "heaven"
+  },
+  {
+   "form": "lavbujuba",
+   "add_english": "dedication (of a book); offering"
+  }
+ ],
+ "test_sentences": [],
+ "validation": {
+  "errors": []
+ },
+ "counts": {
+  "new_roots": 0,
+  "new_compounds": 220,
+  "headwords_after": 2462,
+  "meaningful_forms_after": 5361
+ }
+}

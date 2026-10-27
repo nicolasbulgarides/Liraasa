@@ -126,6 +126,9 @@ export interface RuleParams {
   /** 3.5 (proposed, ADR-0025). */
   polygon?: { ruling: string; head: string };
   copied_words?: { ruling: string; words: string[] };
+  /** 4.0 (proposed, ADR-0029): speech before its verb of saying; the order of adjectives. */
+  quotation_first?: { ruling: string };
+  adjective_order_rule?: { ruling: string; order: string[] };
   adjective_sidu: { dummy: string };
   negative_number: { word: string };
   [key: string]: unknown;

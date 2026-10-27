@@ -67,7 +67,7 @@ export function tokenize(line: string): Token[] {
  * direct quotation read as its own sentence (2.3:G83), and a lone tense
  * opening a passage (Po —, 0.8:R4) set apart.
  */
-function sentencesOf(tokens: Token[]): { tokens: Token[]; quote: boolean }[] {
+function sentencesOf(tokens: Token[], quoteFirst = false): { tokens: Token[]; quote: boolean }[] {
   const out: { tokens: Token[]; quote: boolean }[] = [];
   let cur: Token[] = [];
   let inQuote = false;
@@ -78,12 +78,33 @@ function sentencesOf(tokens: Token[]): { tokens: Token[]; quote: boolean }[] {
   };
   let afterColon = false;
   let mention = false;
-  for (const t of tokens) {
+  for (let k = 0; k < tokens.length; k++) {
+    const t = tokens[k] as Token;
     const opening = t.kind === 'punct' && (t.text === '“' || (t.text === '"' && !inQuote));
     if (opening && afterColon) {
       inQuote = true;
       quote = [];
       continue;
+    }
+    // 4.0:G156: speech before its verb of saying (“…,” saivo po senosia), or after it with a
+    // comma: the speech is its own sentences, and the comma that closes it is dropped
+    if (opening && quoteFirst && !inQuote && !mention) {
+      let close = k + 1;
+      while (
+        close < tokens.length &&
+        !(tokens[close]?.kind === 'punct' && /^["”]$/.test(tokens[close]?.text ?? ''))
+      )
+        close += 1;
+      const inner = tokens.slice(k + 1, close);
+      const words = inner.filter((x) => x.kind === 'word').length;
+      const last = inner[inner.length - 1];
+      if (words > 1 || (last?.kind === 'punct' && /^[.,!?…]+$/.test(last.text))) {
+        const speech = last?.kind === 'punct' && last.text === ',' ? inner.slice(0, -1) : inner;
+        for (const s of sentencesOf(speech, true)) out.push({ tokens: s.tokens, quote: true });
+        k = close;
+        if (tokens[k + 1]?.kind === 'punct' && tokens[k + 1]?.text === ',') k += 1;
+        continue;
+      }
     }
     // quotation marks around a word mentioned (ne "juba", nara "donu"): the word is a mention
     if (t.kind === 'punct' && /^["“”]$/.test(t.text) && !inQuote) {
@@ -609,11 +630,13 @@ export function createChecker(source: GrammarSource): Checker {
 
   function checkLine(line: string): LineResult {
     const tokens = tokenize(line);
-    const sentences = sentencesOf(tokens).map((s) => {
-      const startChar = s.tokens[0]?.start ?? 0;
-      const endChar = s.tokens[s.tokens.length - 1]?.end ?? startChar;
-      return checkSentence(line.slice(startChar, endChar), startChar, s.tokens);
-    });
+    const sentences = sentencesOf(tokens, ix.source.rules.quotation_first !== undefined).map(
+      (s) => {
+        const startChar = s.tokens[0]?.start ?? 0;
+        const endChar = s.tokens[s.tokens.length - 1]?.end ?? startChar;
+        return checkSentence(line.slice(startChar, endChar), startChar, s.tokens);
+      },
+    );
     const findings = sentences.flatMap((s, n) =>
       s.findings.map((f) => {
         const ts = f.at.map((k) => s.tokens[k]).filter((t): t is Token => t !== undefined);
