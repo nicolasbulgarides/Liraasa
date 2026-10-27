@@ -9,10 +9,10 @@ From the draft translation (ADR-0027, `translation/`). These are **candidates fo
 | heaven | 10 | ganreasa (paradise) | existing: *mavopagoasa (Heaven); also ganreasa (paradise), cilniasa (the heavenly city)* |
 | quest token | 8 | kendejomrusan pelicono (3.3:G148) | *kendejomrupelicono* (kendejomru+pelicono: quest-token: a game coin earned on a quest (nested compound, 2.0:G42)); *kendejomrucono* (kendejomru+cono: quest-coin: a shorter, more singable form) |
 | reality | 7 | vera (truth) | *pagomodo* (pago+modo: the manner of the world: how things really are) |
+| adventure guide | 7 | harlujomruyo (default -yo derivation, one who does adventure) | *harlujomrupilo* (harlujomru+pilo: adventure-father: the one who guides an adventure (pilopa = to guide)); *harlujomrunela* (harlujomru+nela: adventure-person: a neutral alternative without the paternal tone) |
 | materialized | 7 | vaku … miyo (made … exist) | *lumipusa* (lumi+pusa: light-dust: light turned into matter. 'It materialized' = ito po loya lumipusasan (adjective by 3.3:G148; no verb form exists)) |
 | lilac | 7 | violumisan (colour base + san) | existing: *violumi (light purple)* |
 | dear | 7 |  |  |
-| adventure guide | 6 | harlujomruyo (default -yo derivation, one who does adventure) | *harlujomrupilo* (harlujomru+pilo: adventure-father: the one who guides an adventure (pilopa = to guide)); *harlujomrunela* (harlujomru+nela: adventure-person: a neutral alternative without the paternal tone) |
 | actually | 6 | la verasan |  |
 | abilities | 6 | no noun for 'ability'; deactivated motion and change directly; the lis | *mavojuba* (mavo+juba: mind-gift: a talent or power; plural mavojubari); *manlijuba* (manli+juba: hand-gift: a practical skill) |
 | social worker | 6 | mavopagomelvayo (productive -yo on mavopagomelva, 2.0:G41) |  |
@@ -28,6 +28,7 @@ From the draft translation (ADR-0027, `translation/`). These are **candidates fo
 | technically | 4 | la manlisabesan (technical, 3.3:G148) |  |
 | in person | 4 | ligo |  |
 | haha | 4 |  |  |
+| basically | 4 | gase (like) |  |
 | shoulderhoods | 4 | omitted (no word for shoulder or hood) | *lulfavelma* (lulfa+velma: butterfly-garment: a hood that folds over the shoulders like wings) |
 | activated | 4 | po loya lumisan (became lit) | *navufarulumra* (navufaru+lumra: a lifting by lightning: switching something on; navufarulumrasan = activated (3.3:G148)) |
 | quotation marks | 4 |  |  |
@@ -44,6 +45,7 @@ From the draft translation (ADR-0027, `translation/`). These are **candidates fo
 | creativity | 3 | larda (art) | *mavozayu* (mavo+zayu: mind-magic: creativity; mavozayusan = creative) |
 | wonderful | 3 | ruli vanisan | existing: *ruli vanisan or ruli benasan (ruli + adjective, as in the 'excellent' recipe)* |
 | horror section | 3 |  | *folluzupa* (follu+zupa: horror-room: the horror section (zupa is an archetype head, 3.2:G146)) |
+| exhibits | 3 |  |  |
 | rulebreakers | 3 | zeldoyo (rebel) | existing: *mavopagona (outlaw), plural mavopagonari; or li mavopagonasanri* |
 | in fact | 3 | dropped; no suitable discourse word |  |
 | simultaneously | 3 | en sambakrono | existing: *nayo ola (1.0:G17), or a nayo clause* |
@@ -52,11 +54,11 @@ From the draft translation (ADR-0027, `translation/`). These are **candidates fo
 | intimacy | 3 | silroamor (love of a shared secret) | *loresilro* (lore+silro: heart-secret: what only intimates share); or the existing *silrolore (secret heart, attested image compound) is close* |
 | blessing | 3 | juba (gift) | existing: *jubaseno (a blessing spoken aloud); devisavali for a divine blessing* |
 | raped | 3 | po nosi tovota farviyebanasan amordalu ko |  |
-| basically | 3 | gase (like) |  |
 | spiritual | 3 | mavo (mind) in place of a missing 'spiritual' | existing: *lavbunulusan (from lavbunulu, the spiritual path; 3.3:G148)* |
 | broad | 3 | minvasan nela (female person) | existing: *vamdusan* |
 | mostly | 3 | muya de saivori (many of them) |  |
 | cubby | 3 | kovati | *helvikova* (helvi+kova: hiding-container: a small nook for keeping things (kova is an archetype head, 3.2:G146)) |
+| burly felon | 3 | dozayugesan kaldonela (muscular prisoner) |  |
 | cannibal | 3 | baba nela raho sapusia nelari (a person who eats people) |  |
 | sarcasm | 3 | maska (pretense) | *loteroseno* (lotero+seno: other-speech: saying the opposite of what one means); or the existing *zoke (the irony particle), for the tone of a line* |
 | perfect | 3 | vaku ... loya ruli benasan | existing: *lordiasasan (perfectly ordered); ruli benasan in everyday speech* |
@@ -64,8 +66,6 @@ From the draft translation (ADR-0027, `translation/`). These are **candidates fo
 | indefinitely | 3 | en rinbakrono |  |
 | nurse | 3 | molusasvayo (caregiver) | existing: *molusasvayo (caregiver); the verb is marema (to nurture)* |
 | downstairs | 3 | en li kezuzupa | existing: *en li kezuzupa (recipe, awaiting author review)* |
-| welcome | 3 |  |  |
-| escort bots | 3 | kibo raho sasvasia |  |
 
 ## Coinages the draft used more than once
 
@@ -77,6 +77,11 @@ From the draft translation (ADR-0027, `translation/`). These are **candidates fo
 | black hair | shadasabaye | shada+sabaye | 2 |
 | neurodivergent | mavolotero | mavo+lotero | 2 |
 | make-up | fasbivelma | fasbi+velma | 2 |
+| silver hair | vanajubasabaye | vanajuba+sabaye | 2 |
+| skin tone | senrucolbi | senru+colbi | 2 |
 | orange dinosaur | ojokronolazu | ojo+kronolazu | 2 |
+| ip address | favronimunole | favro+nimunole | 2 |
+| cotton candy | folnitibiyumli | folnitibi+yumli | 2 |
 | chrome | vanajubagerma | vanajuba+germa | 2 |
+| experience | bioramu | bio+ramu | 2 |
 | grandfather | kronopilo | krono+pilo | 2 |
