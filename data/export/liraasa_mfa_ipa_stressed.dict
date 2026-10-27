@@ -284,6 +284,40 @@ amorlavbuvu	a0 m o0 r l a0 v b u1 v u0
 amorlavbuvuri	a0 m o0 r l a0 v b u0 v u1 r i0
 amorlavbuyo	a0 m o0 r l a0 v b u1 j o0
 amorlavbuyori	a0 m o0 r l a0 v b u0 j o1 r i0
+amorlore	a0 m o0 r l o1 r e0
+amorlorea	a0 m o0 r l o0 r e1 a0
+amorloreari	a0 m o0 r l o0 r e0 a1 r i0
+amorloreasa	a0 m o0 r l o0 r e0 a1 s a0
+amorloreasari	a0 m o0 r l o0 r e0 a0 s a1 r i0
+amorloreasasan	a0 m o0 r l o0 r e0 a0 s a1 s a0 n
+amorloreasasanri	a0 m o0 r l o0 r e0 a0 s a0 s a1 n r i0
+amorloreasasanti	a0 m o0 r l o0 r e0 a0 s a0 s a1 n t i0
+amorloreasasantiri	a0 m o0 r l o0 r e0 a0 s a0 s a0 n t i1 r i0
+amorloreasati	a0 m o0 r l o0 r e0 a0 s a1 t i0
+amorloreasatiri	a0 m o0 r l o0 r e0 a0 s a0 t i1 r i0
+amorloreati	a0 m o0 r l o0 r e0 a1 t i0
+amorloreatiri	a0 m o0 r l o0 r e0 a0 t i1 r i0
+amorlorena	a0 m o0 r l o0 r e1 n a0
+amorlorenari	a0 m o0 r l o0 r e0 n a1 r i0
+amorlorenasan	a0 m o0 r l o0 r e0 n a1 s a0 n
+amorlorenasanri	a0 m o0 r l o0 r e0 n a0 s a1 n r i0
+amorlorenasanti	a0 m o0 r l o0 r e0 n a0 s a1 n t i0
+amorlorenasantiri	a0 m o0 r l o0 r e0 n a0 s a0 n t i1 r i0
+amorlorenati	a0 m o0 r l o0 r e0 n a1 t i0
+amorlorenatiri	a0 m o0 r l o0 r e0 n a0 t i1 r i0
+amorlorepago	a0 m o0 r l o0 r e0 p a1 ɡ o0
+amorlorepagori	a0 m o0 r l o0 r e0 p a0 ɡ o1 r i0
+amorloreri	a0 m o0 r l o0 r e1 r i0
+amorloresan	a0 m o0 r l o0 r e1 s a0 n
+amorloresanri	a0 m o0 r l o0 r e0 s a1 n r i0
+amorloresanti	a0 m o0 r l o0 r e0 s a1 n t i0
+amorloresantiri	a0 m o0 r l o0 r e0 s a0 n t i1 r i0
+amorloreti	a0 m o0 r l o0 r e1 t i0
+amorloretiri	a0 m o0 r l o0 r e0 t i1 r i0
+amorlorevu	a0 m o0 r l o0 r e1 v u0
+amorlorevuri	a0 m o0 r l o0 r e0 v u1 r i0
+amorloreyo	a0 m o0 r l o0 r e1 j o0
+amorloreyori	a0 m o0 r l o0 r e0 j o1 r i0
 amorna	a0 m o1 r n a0
 amornari	a0 m o0 r n a1 r i0
 amornasan	a0 m o0 r n a1 s a0 n
@@ -7008,6 +7042,40 @@ damrukovavu	d a0 m r u0 k o0 v a1 v u0
 damrukovavuri	d a0 m r u0 k o0 v a0 v u1 r i0
 damrukovayo	d a0 m r u0 k o0 v a1 j o0
 damrukovayori	d a0 m r u0 k o0 v a0 j o1 r i0
+damrulore	d a0 m r u0 l o1 r e0
+damruloreasa	d a0 m r u0 l o0 r e0 a1 s a0
+damruloreasari	d a0 m r u0 l o0 r e0 a0 s a1 r i0
+damruloreasasan	d a0 m r u0 l o0 r e0 a0 s a1 s a0 n
+damruloreasasanri	d a0 m r u0 l o0 r e0 a0 s a0 s a1 n r i0
+damruloreasasanti	d a0 m r u0 l o0 r e0 a0 s a0 s a1 n t i0
+damruloreasasantiri	d a0 m r u0 l o0 r e0 a0 s a0 s a0 n t i1 r i0
+damruloreasati	d a0 m r u0 l o0 r e0 a0 s a1 t i0
+damruloreasatiri	d a0 m r u0 l o0 r e0 a0 s a0 t i1 r i0
+damruloreda	d a0 m r u0 l o0 r e1 d a0
+damruloredari	d a0 m r u0 l o0 r e0 d a1 r i0
+damruloredati	d a0 m r u0 l o0 r e0 d a1 t i0
+damruloredatiri	d a0 m r u0 l o0 r e0 d a0 t i1 r i0
+damrulorena	d a0 m r u0 l o0 r e1 n a0
+damrulorenari	d a0 m r u0 l o0 r e0 n a1 r i0
+damrulorenasan	d a0 m r u0 l o0 r e0 n a1 s a0 n
+damrulorenasanri	d a0 m r u0 l o0 r e0 n a0 s a1 n r i0
+damrulorenasanti	d a0 m r u0 l o0 r e0 n a0 s a1 n t i0
+damrulorenasantiri	d a0 m r u0 l o0 r e0 n a0 s a0 n t i1 r i0
+damrulorenati	d a0 m r u0 l o0 r e0 n a1 t i0
+damrulorenatiri	d a0 m r u0 l o0 r e0 n a0 t i1 r i0
+damrulorepago	d a0 m r u0 l o0 r e0 p a1 ɡ o0
+damrulorepagori	d a0 m r u0 l o0 r e0 p a0 ɡ o1 r i0
+damruloreri	d a0 m r u0 l o0 r e1 r i0
+damruloresan	d a0 m r u0 l o0 r e1 s a0 n
+damruloresanri	d a0 m r u0 l o0 r e0 s a1 n r i0
+damruloresanti	d a0 m r u0 l o0 r e0 s a1 n t i0
+damruloresantiri	d a0 m r u0 l o0 r e0 s a0 n t i1 r i0
+damruloreti	d a0 m r u0 l o0 r e1 t i0
+damruloretiri	d a0 m r u0 l o0 r e0 t i1 r i0
+damrulorevu	d a0 m r u0 l o0 r e1 v u0
+damrulorevuri	d a0 m r u0 l o0 r e0 v u1 r i0
+damruloreyo	d a0 m r u0 l o0 r e1 j o0
+damruloreyori	d a0 m r u0 l o0 r e0 j o1 r i0
 damruna	d a0 m r u1 n a0
 damrunari	d a0 m r u0 n a1 r i0
 damrunasan	d a0 m r u0 n a1 s a0 n
@@ -9986,6 +10054,40 @@ dokranati	d o0 k r a0 n a1 t i0
 dokranatiri	d o0 k r a0 n a0 t i1 r i0
 dokrapago	d o0 k r a0 p a1 ɡ o0
 dokrapagori	d o0 k r a0 p a0 ɡ o1 r i0
+dokrapeli	d o0 k r a0 p e1 l i0
+dokrapeliasa	d o0 k r a0 p e0 l i0 a1 s a0
+dokrapeliasari	d o0 k r a0 p e0 l i0 a0 s a1 r i0
+dokrapeliasasan	d o0 k r a0 p e0 l i0 a0 s a1 s a0 n
+dokrapeliasasanri	d o0 k r a0 p e0 l i0 a0 s a0 s a1 n r i0
+dokrapeliasasanti	d o0 k r a0 p e0 l i0 a0 s a0 s a1 n t i0
+dokrapeliasasantiri	d o0 k r a0 p e0 l i0 a0 s a0 s a0 n t i1 r i0
+dokrapeliasati	d o0 k r a0 p e0 l i0 a0 s a1 t i0
+dokrapeliasatiri	d o0 k r a0 p e0 l i0 a0 s a0 t i1 r i0
+dokrapelida	d o0 k r a0 p e0 l i1 d a0
+dokrapelidari	d o0 k r a0 p e0 l i0 d a1 r i0
+dokrapelidati	d o0 k r a0 p e0 l i0 d a1 t i0
+dokrapelidatiri	d o0 k r a0 p e0 l i0 d a0 t i1 r i0
+dokrapelina	d o0 k r a0 p e0 l i1 n a0
+dokrapelinari	d o0 k r a0 p e0 l i0 n a1 r i0
+dokrapelinasan	d o0 k r a0 p e0 l i0 n a1 s a0 n
+dokrapelinasanri	d o0 k r a0 p e0 l i0 n a0 s a1 n r i0
+dokrapelinasanti	d o0 k r a0 p e0 l i0 n a0 s a1 n t i0
+dokrapelinasantiri	d o0 k r a0 p e0 l i0 n a0 s a0 n t i1 r i0
+dokrapelinati	d o0 k r a0 p e0 l i0 n a1 t i0
+dokrapelinatiri	d o0 k r a0 p e0 l i0 n a0 t i1 r i0
+dokrapelipago	d o0 k r a0 p e0 l i0 p a1 ɡ o0
+dokrapelipagori	d o0 k r a0 p e0 l i0 p a0 ɡ o1 r i0
+dokrapeliri	d o0 k r a0 p e0 l i1 r i0
+dokrapelisan	d o0 k r a0 p e0 l i1 s a0 n
+dokrapelisanri	d o0 k r a0 p e0 l i0 s a1 n r i0
+dokrapelisanti	d o0 k r a0 p e0 l i0 s a1 n t i0
+dokrapelisantiri	d o0 k r a0 p e0 l i0 s a0 n t i1 r i0
+dokrapeliti	d o0 k r a0 p e0 l i1 t i0
+dokrapelitiri	d o0 k r a0 p e0 l i0 t i1 r i0
+dokrapelivu	d o0 k r a0 p e0 l i1 v u0
+dokrapelivuri	d o0 k r a0 p e0 l i0 v u1 r i0
+dokrapeliyo	d o0 k r a0 p e0 l i1 j o0
+dokrapeliyori	d o0 k r a0 p e0 l i0 j o1 r i0
 dokrari	d o0 k r a1 r i0
 dokrasan	d o0 k r a1 s a0 n
 dokrasanri	d o0 k r a0 s a1 n r i0
@@ -13586,6 +13688,40 @@ fasbinasanti	f a0 s b i0 n a0 s a1 n t i0
 fasbinasantiri	f a0 s b i0 n a0 s a0 n t i1 r i0
 fasbinati	f a0 s b i0 n a1 t i0
 fasbinatiri	f a0 s b i0 n a0 t i1 r i0
+fasbinela	f a0 s b i0 n e1 l a0
+fasbinelaasa	f a0 s b i0 n e0 l a0 a1 s a0
+fasbinelaasari	f a0 s b i0 n e0 l a0 a0 s a1 r i0
+fasbinelaasasan	f a0 s b i0 n e0 l a0 a0 s a1 s a0 n
+fasbinelaasasanri	f a0 s b i0 n e0 l a0 a0 s a0 s a1 n r i0
+fasbinelaasasanti	f a0 s b i0 n e0 l a0 a0 s a0 s a1 n t i0
+fasbinelaasasantiri	f a0 s b i0 n e0 l a0 a0 s a0 s a0 n t i1 r i0
+fasbinelaasati	f a0 s b i0 n e0 l a0 a0 s a1 t i0
+fasbinelaasatiri	f a0 s b i0 n e0 l a0 a0 s a0 t i1 r i0
+fasbinelafa	f a0 s b i0 n e0 l a1 f a0
+fasbinelafari	f a0 s b i0 n e0 l a0 f a1 r i0
+fasbinelafati	f a0 s b i0 n e0 l a0 f a1 t i0
+fasbinelafatiri	f a0 s b i0 n e0 l a0 f a0 t i1 r i0
+fasbinelana	f a0 s b i0 n e0 l a1 n a0
+fasbinelanari	f a0 s b i0 n e0 l a0 n a1 r i0
+fasbinelanasan	f a0 s b i0 n e0 l a0 n a1 s a0 n
+fasbinelanasanri	f a0 s b i0 n e0 l a0 n a0 s a1 n r i0
+fasbinelanasanti	f a0 s b i0 n e0 l a0 n a0 s a1 n t i0
+fasbinelanasantiri	f a0 s b i0 n e0 l a0 n a0 s a0 n t i1 r i0
+fasbinelanati	f a0 s b i0 n e0 l a0 n a1 t i0
+fasbinelanatiri	f a0 s b i0 n e0 l a0 n a0 t i1 r i0
+fasbinelapago	f a0 s b i0 n e0 l a0 p a1 ɡ o0
+fasbinelapagori	f a0 s b i0 n e0 l a0 p a0 ɡ o1 r i0
+fasbinelari	f a0 s b i0 n e0 l a1 r i0
+fasbinelasan	f a0 s b i0 n e0 l a1 s a0 n
+fasbinelasanri	f a0 s b i0 n e0 l a0 s a1 n r i0
+fasbinelasanti	f a0 s b i0 n e0 l a0 s a1 n t i0
+fasbinelasantiri	f a0 s b i0 n e0 l a0 s a0 n t i1 r i0
+fasbinelati	f a0 s b i0 n e0 l a1 t i0
+fasbinelatiri	f a0 s b i0 n e0 l a0 t i1 r i0
+fasbinelavu	f a0 s b i0 n e0 l a1 v u0
+fasbinelavuri	f a0 s b i0 n e0 l a0 v u1 r i0
+fasbinelayo	f a0 s b i0 n e0 l a1 j o0
+fasbinelayori	f a0 s b i0 n e0 l a0 j o1 r i0
 fasbipago	f a0 s b i0 p a1 ɡ o0
 fasbipagori	f a0 s b i0 p a0 ɡ o1 r i0
 fasbipatu	f a0 s b i0 p a1 t u0
@@ -16098,6 +16234,40 @@ folnilombivu	f o0 l n i0 l o0 m b i1 v u0
 folnilombivuri	f o0 l n i0 l o0 m b i0 v u1 r i0
 folnilombiyo	f o0 l n i0 l o0 m b i1 j o0
 folnilombiyori	f o0 l n i0 l o0 m b i0 j o1 r i0
+folniminvalinu	f o0 l n i0 m i0 n v a0 l i1 n u0
+folniminvalinuasa	f o0 l n i0 m i0 n v a0 l i0 n u0 a1 s a0
+folniminvalinuasari	f o0 l n i0 m i0 n v a0 l i0 n u0 a0 s a1 r i0
+folniminvalinuasasan	f o0 l n i0 m i0 n v a0 l i0 n u0 a0 s a1 s a0 n
+folniminvalinuasasanri	f o0 l n i0 m i0 n v a0 l i0 n u0 a0 s a0 s a1 n r i0
+folniminvalinuasasanti	f o0 l n i0 m i0 n v a0 l i0 n u0 a0 s a0 s a1 n t i0
+folniminvalinuasasantiri	f o0 l n i0 m i0 n v a0 l i0 n u0 a0 s a0 s a0 n t i1 r i0
+folniminvalinuasati	f o0 l n i0 m i0 n v a0 l i0 n u0 a0 s a1 t i0
+folniminvalinuasatiri	f o0 l n i0 m i0 n v a0 l i0 n u0 a0 s a0 t i1 r i0
+folniminvalinufa	f o0 l n i0 m i0 n v a0 l i0 n u1 f a0
+folniminvalinufari	f o0 l n i0 m i0 n v a0 l i0 n u0 f a1 r i0
+folniminvalinufati	f o0 l n i0 m i0 n v a0 l i0 n u0 f a1 t i0
+folniminvalinufatiri	f o0 l n i0 m i0 n v a0 l i0 n u0 f a0 t i1 r i0
+folniminvalinuna	f o0 l n i0 m i0 n v a0 l i0 n u1 n a0
+folniminvalinunari	f o0 l n i0 m i0 n v a0 l i0 n u0 n a1 r i0
+folniminvalinunasan	f o0 l n i0 m i0 n v a0 l i0 n u0 n a1 s a0 n
+folniminvalinunasanri	f o0 l n i0 m i0 n v a0 l i0 n u0 n a0 s a1 n r i0
+folniminvalinunasanti	f o0 l n i0 m i0 n v a0 l i0 n u0 n a0 s a1 n t i0
+folniminvalinunasantiri	f o0 l n i0 m i0 n v a0 l i0 n u0 n a0 s a0 n t i1 r i0
+folniminvalinunati	f o0 l n i0 m i0 n v a0 l i0 n u0 n a1 t i0
+folniminvalinunatiri	f o0 l n i0 m i0 n v a0 l i0 n u0 n a0 t i1 r i0
+folniminvalinupago	f o0 l n i0 m i0 n v a0 l i0 n u0 p a1 ɡ o0
+folniminvalinupagori	f o0 l n i0 m i0 n v a0 l i0 n u0 p a0 ɡ o1 r i0
+folniminvalinuri	f o0 l n i0 m i0 n v a0 l i0 n u1 r i0
+folniminvalinusan	f o0 l n i0 m i0 n v a0 l i0 n u1 s a0 n
+folniminvalinusanri	f o0 l n i0 m i0 n v a0 l i0 n u0 s a1 n r i0
+folniminvalinusanti	f o0 l n i0 m i0 n v a0 l i0 n u0 s a1 n t i0
+folniminvalinusantiri	f o0 l n i0 m i0 n v a0 l i0 n u0 s a0 n t i1 r i0
+folniminvalinuti	f o0 l n i0 m i0 n v a0 l i0 n u1 t i0
+folniminvalinutiri	f o0 l n i0 m i0 n v a0 l i0 n u0 t i1 r i0
+folniminvalinuvu	f o0 l n i0 m i0 n v a0 l i0 n u1 v u0
+folniminvalinuvuri	f o0 l n i0 m i0 n v a0 l i0 n u0 v u1 r i0
+folniminvalinuyo	f o0 l n i0 m i0 n v a0 l i0 n u1 j o0
+folniminvalinuyori	f o0 l n i0 m i0 n v a0 l i0 n u0 j o1 r i0
 folnina	f o0 l n i1 n a0
 folninari	f o0 l n i0 n a1 r i0
 folninasan	f o0 l n i0 n a1 s a0 n
@@ -18965,6 +19135,40 @@ hataha	h a0 t a1 h a0
 hatahari	h a0 t a0 h a1 r i0
 hatahati	h a0 t a0 h a1 t i0
 hatahatiri	h a0 t a0 h a0 t i1 r i0
+hatalekta	h a0 t a0 l e1 k t a0
+hatalektaasa	h a0 t a0 l e0 k t a0 a1 s a0
+hatalektaasari	h a0 t a0 l e0 k t a0 a0 s a1 r i0
+hatalektaasasan	h a0 t a0 l e0 k t a0 a0 s a1 s a0 n
+hatalektaasasanri	h a0 t a0 l e0 k t a0 a0 s a0 s a1 n r i0
+hatalektaasasanti	h a0 t a0 l e0 k t a0 a0 s a0 s a1 n t i0
+hatalektaasasantiri	h a0 t a0 l e0 k t a0 a0 s a0 s a0 n t i1 r i0
+hatalektaasati	h a0 t a0 l e0 k t a0 a0 s a1 t i0
+hatalektaasatiri	h a0 t a0 l e0 k t a0 a0 s a0 t i1 r i0
+hatalektaha	h a0 t a0 l e0 k t a1 h a0
+hatalektahari	h a0 t a0 l e0 k t a0 h a1 r i0
+hatalektahati	h a0 t a0 l e0 k t a0 h a1 t i0
+hatalektahatiri	h a0 t a0 l e0 k t a0 h a0 t i1 r i0
+hatalektana	h a0 t a0 l e0 k t a1 n a0
+hatalektanari	h a0 t a0 l e0 k t a0 n a1 r i0
+hatalektanasan	h a0 t a0 l e0 k t a0 n a1 s a0 n
+hatalektanasanri	h a0 t a0 l e0 k t a0 n a0 s a1 n r i0
+hatalektanasanti	h a0 t a0 l e0 k t a0 n a0 s a1 n t i0
+hatalektanasantiri	h a0 t a0 l e0 k t a0 n a0 s a0 n t i1 r i0
+hatalektanati	h a0 t a0 l e0 k t a0 n a1 t i0
+hatalektanatiri	h a0 t a0 l e0 k t a0 n a0 t i1 r i0
+hatalektapago	h a0 t a0 l e0 k t a0 p a1 ɡ o0
+hatalektapagori	h a0 t a0 l e0 k t a0 p a0 ɡ o1 r i0
+hatalektari	h a0 t a0 l e0 k t a1 r i0
+hatalektasan	h a0 t a0 l e0 k t a1 s a0 n
+hatalektasanri	h a0 t a0 l e0 k t a0 s a1 n r i0
+hatalektasanti	h a0 t a0 l e0 k t a0 s a1 n t i0
+hatalektasantiri	h a0 t a0 l e0 k t a0 s a0 n t i1 r i0
+hatalektati	h a0 t a0 l e0 k t a1 t i0
+hatalektatiri	h a0 t a0 l e0 k t a0 t i1 r i0
+hatalektavu	h a0 t a0 l e0 k t a1 v u0
+hatalektavuri	h a0 t a0 l e0 k t a0 v u1 r i0
+hatalektayo	h a0 t a0 l e0 k t a1 j o0
+hatalektayori	h a0 t a0 l e0 k t a0 j o1 r i0
 hatana	h a0 t a1 n a0
 hatanari	h a0 t a0 n a1 r i0
 hatanasan	h a0 t a0 n a1 s a0 n
@@ -19734,6 +19938,40 @@ helnavu	h e0 l n a1 v u0
 helnavuri	h e0 l n a0 v u1 r i0
 helnayo	h e0 l n a1 j o0
 helnayori	h e0 l n a0 j o1 r i0
+helnayuso	h e0 l n a0 j u1 s o0
+helnayusoasa	h e0 l n a0 j u0 s o0 a1 s a0
+helnayusoasari	h e0 l n a0 j u0 s o0 a0 s a1 r i0
+helnayusoasasan	h e0 l n a0 j u0 s o0 a0 s a1 s a0 n
+helnayusoasasanri	h e0 l n a0 j u0 s o0 a0 s a0 s a1 n r i0
+helnayusoasasanti	h e0 l n a0 j u0 s o0 a0 s a0 s a1 n t i0
+helnayusoasasantiri	h e0 l n a0 j u0 s o0 a0 s a0 s a0 n t i1 r i0
+helnayusoasati	h e0 l n a0 j u0 s o0 a0 s a1 t i0
+helnayusoasatiri	h e0 l n a0 j u0 s o0 a0 s a0 t i1 r i0
+helnayusoha	h e0 l n a0 j u0 s o1 h a0
+helnayusohari	h e0 l n a0 j u0 s o0 h a1 r i0
+helnayusohati	h e0 l n a0 j u0 s o0 h a1 t i0
+helnayusohatiri	h e0 l n a0 j u0 s o0 h a0 t i1 r i0
+helnayusona	h e0 l n a0 j u0 s o1 n a0
+helnayusonari	h e0 l n a0 j u0 s o0 n a1 r i0
+helnayusonasan	h e0 l n a0 j u0 s o0 n a1 s a0 n
+helnayusonasanri	h e0 l n a0 j u0 s o0 n a0 s a1 n r i0
+helnayusonasanti	h e0 l n a0 j u0 s o0 n a0 s a1 n t i0
+helnayusonasantiri	h e0 l n a0 j u0 s o0 n a0 s a0 n t i1 r i0
+helnayusonati	h e0 l n a0 j u0 s o0 n a1 t i0
+helnayusonatiri	h e0 l n a0 j u0 s o0 n a0 t i1 r i0
+helnayusopago	h e0 l n a0 j u0 s o0 p a1 ɡ o0
+helnayusopagori	h e0 l n a0 j u0 s o0 p a0 ɡ o1 r i0
+helnayusori	h e0 l n a0 j u0 s o1 r i0
+helnayusosan	h e0 l n a0 j u0 s o1 s a0 n
+helnayusosanri	h e0 l n a0 j u0 s o0 s a1 n r i0
+helnayusosanti	h e0 l n a0 j u0 s o0 s a1 n t i0
+helnayusosantiri	h e0 l n a0 j u0 s o0 s a0 n t i1 r i0
+helnayusoti	h e0 l n a0 j u0 s o1 t i0
+helnayusotiri	h e0 l n a0 j u0 s o0 t i1 r i0
+helnayusovu	h e0 l n a0 j u0 s o1 v u0
+helnayusovuri	h e0 l n a0 j u0 s o0 v u1 r i0
+helnayusoyo	h e0 l n a0 j u0 s o1 j o0
+helnayusoyori	h e0 l n a0 j u0 s o0 j o1 r i0
 helnazupa	h e0 l n a0 z u1 p a0
 helnazupaasa	h e0 l n a0 z u0 p a0 a1 s a0
 helnazupaasari	h e0 l n a0 z u0 p a0 a0 s a1 r i0
@@ -19883,6 +20121,74 @@ helvikovavu	h e0 l v i0 k o0 v a1 v u0
 helvikovavuri	h e0 l v i0 k o0 v a0 v u1 r i0
 helvikovayo	h e0 l v i0 k o0 v a1 j o0
 helvikovayori	h e0 l v i0 k o0 v a0 j o1 r i0
+helvilektalordi	h e0 l v i0 l e0 k t a0 l o1 r d i0
+helvilektalordiasa	h e0 l v i0 l e0 k t a0 l o0 r d i0 a1 s a0
+helvilektalordiasari	h e0 l v i0 l e0 k t a0 l o0 r d i0 a0 s a1 r i0
+helvilektalordiasasan	h e0 l v i0 l e0 k t a0 l o0 r d i0 a0 s a1 s a0 n
+helvilektalordiasasanri	h e0 l v i0 l e0 k t a0 l o0 r d i0 a0 s a0 s a1 n r i0
+helvilektalordiasasanti	h e0 l v i0 l e0 k t a0 l o0 r d i0 a0 s a0 s a1 n t i0
+helvilektalordiasasantiri	h e0 l v i0 l e0 k t a0 l o0 r d i0 a0 s a0 s a0 n t i1 r i0
+helvilektalordiasati	h e0 l v i0 l e0 k t a0 l o0 r d i0 a0 s a1 t i0
+helvilektalordiasatiri	h e0 l v i0 l e0 k t a0 l o0 r d i0 a0 s a0 t i1 r i0
+helvilektalordiha	h e0 l v i0 l e0 k t a0 l o0 r d i1 h a0
+helvilektalordihari	h e0 l v i0 l e0 k t a0 l o0 r d i0 h a1 r i0
+helvilektalordihati	h e0 l v i0 l e0 k t a0 l o0 r d i0 h a1 t i0
+helvilektalordihatiri	h e0 l v i0 l e0 k t a0 l o0 r d i0 h a0 t i1 r i0
+helvilektalordina	h e0 l v i0 l e0 k t a0 l o0 r d i1 n a0
+helvilektalordinari	h e0 l v i0 l e0 k t a0 l o0 r d i0 n a1 r i0
+helvilektalordinasan	h e0 l v i0 l e0 k t a0 l o0 r d i0 n a1 s a0 n
+helvilektalordinasanri	h e0 l v i0 l e0 k t a0 l o0 r d i0 n a0 s a1 n r i0
+helvilektalordinasanti	h e0 l v i0 l e0 k t a0 l o0 r d i0 n a0 s a1 n t i0
+helvilektalordinasantiri	h e0 l v i0 l e0 k t a0 l o0 r d i0 n a0 s a0 n t i1 r i0
+helvilektalordinati	h e0 l v i0 l e0 k t a0 l o0 r d i0 n a1 t i0
+helvilektalordinatiri	h e0 l v i0 l e0 k t a0 l o0 r d i0 n a0 t i1 r i0
+helvilektalordipago	h e0 l v i0 l e0 k t a0 l o0 r d i0 p a1 ɡ o0
+helvilektalordipagori	h e0 l v i0 l e0 k t a0 l o0 r d i0 p a0 ɡ o1 r i0
+helvilektalordiri	h e0 l v i0 l e0 k t a0 l o0 r d i1 r i0
+helvilektalordisan	h e0 l v i0 l e0 k t a0 l o0 r d i1 s a0 n
+helvilektalordisanri	h e0 l v i0 l e0 k t a0 l o0 r d i0 s a1 n r i0
+helvilektalordisanti	h e0 l v i0 l e0 k t a0 l o0 r d i0 s a1 n t i0
+helvilektalordisantiri	h e0 l v i0 l e0 k t a0 l o0 r d i0 s a0 n t i1 r i0
+helvilektalorditi	h e0 l v i0 l e0 k t a0 l o0 r d i1 t i0
+helvilektalorditiri	h e0 l v i0 l e0 k t a0 l o0 r d i0 t i1 r i0
+helvilektalordivu	h e0 l v i0 l e0 k t a0 l o0 r d i1 v u0
+helvilektalordivuri	h e0 l v i0 l e0 k t a0 l o0 r d i0 v u1 r i0
+helvilektalordiyo	h e0 l v i0 l e0 k t a0 l o0 r d i1 j o0
+helvilektalordiyori	h e0 l v i0 l e0 k t a0 l o0 r d i0 j o1 r i0
+helvimelli	h e0 l v i0 m e1 l l i0
+helvimelliasa	h e0 l v i0 m e0 l l i0 a1 s a0
+helvimelliasari	h e0 l v i0 m e0 l l i0 a0 s a1 r i0
+helvimelliasasan	h e0 l v i0 m e0 l l i0 a0 s a1 s a0 n
+helvimelliasasanri	h e0 l v i0 m e0 l l i0 a0 s a0 s a1 n r i0
+helvimelliasasanti	h e0 l v i0 m e0 l l i0 a0 s a0 s a1 n t i0
+helvimelliasasantiri	h e0 l v i0 m e0 l l i0 a0 s a0 s a0 n t i1 r i0
+helvimelliasati	h e0 l v i0 m e0 l l i0 a0 s a1 t i0
+helvimelliasatiri	h e0 l v i0 m e0 l l i0 a0 s a0 t i1 r i0
+helvimelliha	h e0 l v i0 m e0 l l i1 h a0
+helvimellihari	h e0 l v i0 m e0 l l i0 h a1 r i0
+helvimellihati	h e0 l v i0 m e0 l l i0 h a1 t i0
+helvimellihatiri	h e0 l v i0 m e0 l l i0 h a0 t i1 r i0
+helvimellina	h e0 l v i0 m e0 l l i1 n a0
+helvimellinari	h e0 l v i0 m e0 l l i0 n a1 r i0
+helvimellinasan	h e0 l v i0 m e0 l l i0 n a1 s a0 n
+helvimellinasanri	h e0 l v i0 m e0 l l i0 n a0 s a1 n r i0
+helvimellinasanti	h e0 l v i0 m e0 l l i0 n a0 s a1 n t i0
+helvimellinasantiri	h e0 l v i0 m e0 l l i0 n a0 s a0 n t i1 r i0
+helvimellinati	h e0 l v i0 m e0 l l i0 n a1 t i0
+helvimellinatiri	h e0 l v i0 m e0 l l i0 n a0 t i1 r i0
+helvimellipago	h e0 l v i0 m e0 l l i0 p a1 ɡ o0
+helvimellipagori	h e0 l v i0 m e0 l l i0 p a0 ɡ o1 r i0
+helvimelliri	h e0 l v i0 m e0 l l i1 r i0
+helvimellisan	h e0 l v i0 m e0 l l i1 s a0 n
+helvimellisanri	h e0 l v i0 m e0 l l i0 s a1 n r i0
+helvimellisanti	h e0 l v i0 m e0 l l i0 s a1 n t i0
+helvimellisantiri	h e0 l v i0 m e0 l l i0 s a0 n t i1 r i0
+helvimelliti	h e0 l v i0 m e0 l l i1 t i0
+helvimellitiri	h e0 l v i0 m e0 l l i0 t i1 r i0
+helvimellivu	h e0 l v i0 m e0 l l i1 v u0
+helvimellivuri	h e0 l v i0 m e0 l l i0 v u1 r i0
+helvimelliyo	h e0 l v i0 m e0 l l i1 j o0
+helvimelliyori	h e0 l v i0 m e0 l l i0 j o1 r i0
 helvina	h e0 l v i1 n a0
 helvinari	h e0 l v i0 n a1 r i0
 helvinasan	h e0 l v i0 n a1 s a0 n
@@ -21401,6 +21707,40 @@ jusenuluyo	d͡ʒ u0 s e0 n u0 l u1 j o0
 jusenuluyori	d͡ʒ u0 s e0 n u0 l u0 j o1 r i0
 jusepago	d͡ʒ u0 s e0 p a1 ɡ o0
 jusepagori	d͡ʒ u0 s e0 p a0 ɡ o1 r i0
+jusepolva	d͡ʒ u0 s e0 p o1 l v a0
+jusepolvaasa	d͡ʒ u0 s e0 p o0 l v a0 a1 s a0
+jusepolvaasari	d͡ʒ u0 s e0 p o0 l v a0 a0 s a1 r i0
+jusepolvaasasan	d͡ʒ u0 s e0 p o0 l v a0 a0 s a1 s a0 n
+jusepolvaasasanri	d͡ʒ u0 s e0 p o0 l v a0 a0 s a0 s a1 n r i0
+jusepolvaasasanti	d͡ʒ u0 s e0 p o0 l v a0 a0 s a0 s a1 n t i0
+jusepolvaasasantiri	d͡ʒ u0 s e0 p o0 l v a0 a0 s a0 s a0 n t i1 r i0
+jusepolvaasati	d͡ʒ u0 s e0 p o0 l v a0 a0 s a1 t i0
+jusepolvaasatiri	d͡ʒ u0 s e0 p o0 l v a0 a0 s a0 t i1 r i0
+jusepolvaja	d͡ʒ u0 s e0 p o0 l v a1 d͡ʒ a0
+jusepolvajari	d͡ʒ u0 s e0 p o0 l v a0 d͡ʒ a1 r i0
+jusepolvajati	d͡ʒ u0 s e0 p o0 l v a0 d͡ʒ a1 t i0
+jusepolvajatiri	d͡ʒ u0 s e0 p o0 l v a0 d͡ʒ a0 t i1 r i0
+jusepolvana	d͡ʒ u0 s e0 p o0 l v a1 n a0
+jusepolvanari	d͡ʒ u0 s e0 p o0 l v a0 n a1 r i0
+jusepolvanasan	d͡ʒ u0 s e0 p o0 l v a0 n a1 s a0 n
+jusepolvanasanri	d͡ʒ u0 s e0 p o0 l v a0 n a0 s a1 n r i0
+jusepolvanasanti	d͡ʒ u0 s e0 p o0 l v a0 n a0 s a1 n t i0
+jusepolvanasantiri	d͡ʒ u0 s e0 p o0 l v a0 n a0 s a0 n t i1 r i0
+jusepolvanati	d͡ʒ u0 s e0 p o0 l v a0 n a1 t i0
+jusepolvanatiri	d͡ʒ u0 s e0 p o0 l v a0 n a0 t i1 r i0
+jusepolvapago	d͡ʒ u0 s e0 p o0 l v a0 p a1 ɡ o0
+jusepolvapagori	d͡ʒ u0 s e0 p o0 l v a0 p a0 ɡ o1 r i0
+jusepolvari	d͡ʒ u0 s e0 p o0 l v a1 r i0
+jusepolvasan	d͡ʒ u0 s e0 p o0 l v a1 s a0 n
+jusepolvasanri	d͡ʒ u0 s e0 p o0 l v a0 s a1 n r i0
+jusepolvasanti	d͡ʒ u0 s e0 p o0 l v a0 s a1 n t i0
+jusepolvasantiri	d͡ʒ u0 s e0 p o0 l v a0 s a0 n t i1 r i0
+jusepolvati	d͡ʒ u0 s e0 p o0 l v a1 t i0
+jusepolvatiri	d͡ʒ u0 s e0 p o0 l v a0 t i1 r i0
+jusepolvavu	d͡ʒ u0 s e0 p o0 l v a1 v u0
+jusepolvavuri	d͡ʒ u0 s e0 p o0 l v a0 v u1 r i0
+jusepolvayo	d͡ʒ u0 s e0 p o0 l v a1 j o0
+jusepolvayori	d͡ʒ u0 s e0 p o0 l v a0 j o1 r i0
 jusepuku	d͡ʒ u0 s e0 p u1 k u0
 jusepukuasa	d͡ʒ u0 s e0 p u0 k u0 a1 s a0
 jusepukuasari	d͡ʒ u0 s e0 p u0 k u0 a0 s a1 r i0
@@ -27944,6 +28284,40 @@ larneasasanti	l a0 r n e0 a0 s a0 s a1 n t i0
 larneasasantiri	l a0 r n e0 a0 s a0 s a0 n t i1 r i0
 larneasati	l a0 r n e0 a0 s a1 t i0
 larneasatiri	l a0 r n e0 a0 s a0 t i1 r i0
+larnebako	l a0 r n e0 b a1 k o0
+larnebakoasa	l a0 r n e0 b a0 k o0 a1 s a0
+larnebakoasari	l a0 r n e0 b a0 k o0 a0 s a1 r i0
+larnebakoasasan	l a0 r n e0 b a0 k o0 a0 s a1 s a0 n
+larnebakoasasanri	l a0 r n e0 b a0 k o0 a0 s a0 s a1 n r i0
+larnebakoasasanti	l a0 r n e0 b a0 k o0 a0 s a0 s a1 n t i0
+larnebakoasasantiri	l a0 r n e0 b a0 k o0 a0 s a0 s a0 n t i1 r i0
+larnebakoasati	l a0 r n e0 b a0 k o0 a0 s a1 t i0
+larnebakoasatiri	l a0 r n e0 b a0 k o0 a0 s a0 t i1 r i0
+larnebakola	l a0 r n e0 b a0 k o1 l a0
+larnebakolari	l a0 r n e0 b a0 k o0 l a1 r i0
+larnebakolati	l a0 r n e0 b a0 k o0 l a1 t i0
+larnebakolatiri	l a0 r n e0 b a0 k o0 l a0 t i1 r i0
+larnebakona	l a0 r n e0 b a0 k o1 n a0
+larnebakonari	l a0 r n e0 b a0 k o0 n a1 r i0
+larnebakonasan	l a0 r n e0 b a0 k o0 n a1 s a0 n
+larnebakonasanri	l a0 r n e0 b a0 k o0 n a0 s a1 n r i0
+larnebakonasanti	l a0 r n e0 b a0 k o0 n a0 s a1 n t i0
+larnebakonasantiri	l a0 r n e0 b a0 k o0 n a0 s a0 n t i1 r i0
+larnebakonati	l a0 r n e0 b a0 k o0 n a1 t i0
+larnebakonatiri	l a0 r n e0 b a0 k o0 n a0 t i1 r i0
+larnebakopago	l a0 r n e0 b a0 k o0 p a1 ɡ o0
+larnebakopagori	l a0 r n e0 b a0 k o0 p a0 ɡ o1 r i0
+larnebakori	l a0 r n e0 b a0 k o1 r i0
+larnebakosan	l a0 r n e0 b a0 k o1 s a0 n
+larnebakosanri	l a0 r n e0 b a0 k o0 s a1 n r i0
+larnebakosanti	l a0 r n e0 b a0 k o0 s a1 n t i0
+larnebakosantiri	l a0 r n e0 b a0 k o0 s a0 n t i1 r i0
+larnebakoti	l a0 r n e0 b a0 k o1 t i0
+larnebakotiri	l a0 r n e0 b a0 k o0 t i1 r i0
+larnebakovu	l a0 r n e0 b a0 k o1 v u0
+larnebakovuri	l a0 r n e0 b a0 k o0 v u1 r i0
+larnebakoyo	l a0 r n e0 b a0 k o1 j o0
+larnebakoyori	l a0 r n e0 b a0 k o0 j o1 r i0
 larnela	l a0 r n e1 l a0
 larnelari	l a0 r n e0 l a1 r i0
 larnelaso	l a0 r n e0 l a1 s o0
@@ -28322,6 +28696,40 @@ lasoliravu	l a0 s o0 l i0 r a1 v u0
 lasoliravuri	l a0 s o0 l i0 r a0 v u1 r i0
 lasolirayo	l a0 s o0 l i0 r a1 j o0
 lasolirayori	l a0 s o0 l i0 r a0 j o1 r i0
+lasolore	l a0 s o0 l o1 r e0
+lasoloreasa	l a0 s o0 l o0 r e0 a1 s a0
+lasoloreasari	l a0 s o0 l o0 r e0 a0 s a1 r i0
+lasoloreasasan	l a0 s o0 l o0 r e0 a0 s a1 s a0 n
+lasoloreasasanri	l a0 s o0 l o0 r e0 a0 s a0 s a1 n r i0
+lasoloreasasanti	l a0 s o0 l o0 r e0 a0 s a0 s a1 n t i0
+lasoloreasasantiri	l a0 s o0 l o0 r e0 a0 s a0 s a0 n t i1 r i0
+lasoloreasati	l a0 s o0 l o0 r e0 a0 s a1 t i0
+lasoloreasatiri	l a0 s o0 l o0 r e0 a0 s a0 t i1 r i0
+lasolorela	l a0 s o0 l o0 r e1 l a0
+lasolorelari	l a0 s o0 l o0 r e0 l a1 r i0
+lasolorelati	l a0 s o0 l o0 r e0 l a1 t i0
+lasolorelatiri	l a0 s o0 l o0 r e0 l a0 t i1 r i0
+lasolorena	l a0 s o0 l o0 r e1 n a0
+lasolorenari	l a0 s o0 l o0 r e0 n a1 r i0
+lasolorenasan	l a0 s o0 l o0 r e0 n a1 s a0 n
+lasolorenasanri	l a0 s o0 l o0 r e0 n a0 s a1 n r i0
+lasolorenasanti	l a0 s o0 l o0 r e0 n a0 s a1 n t i0
+lasolorenasantiri	l a0 s o0 l o0 r e0 n a0 s a0 n t i1 r i0
+lasolorenati	l a0 s o0 l o0 r e0 n a1 t i0
+lasolorenatiri	l a0 s o0 l o0 r e0 n a0 t i1 r i0
+lasolorepago	l a0 s o0 l o0 r e0 p a1 ɡ o0
+lasolorepagori	l a0 s o0 l o0 r e0 p a0 ɡ o1 r i0
+lasoloreri	l a0 s o0 l o0 r e1 r i0
+lasoloresan	l a0 s o0 l o0 r e1 s a0 n
+lasoloresanri	l a0 s o0 l o0 r e0 s a1 n r i0
+lasoloresanti	l a0 s o0 l o0 r e0 s a1 n t i0
+lasoloresantiri	l a0 s o0 l o0 r e0 s a0 n t i1 r i0
+lasoloreti	l a0 s o0 l o0 r e1 t i0
+lasoloretiri	l a0 s o0 l o0 r e0 t i1 r i0
+lasolorevu	l a0 s o0 l o0 r e1 v u0
+lasolorevuri	l a0 s o0 l o0 r e0 v u1 r i0
+lasoloreyo	l a0 s o0 l o0 r e1 j o0
+lasoloreyori	l a0 s o0 l o0 r e0 j o1 r i0
 lasomambi	l a0 s o0 m a1 m b i0
 lasomambiasa	l a0 s o0 m a0 m b i0 a1 s a0
 lasomambiasari	l a0 s o0 m a0 m b i0 a0 s a1 r i0
@@ -28877,6 +29285,40 @@ lavburinbavu	l a0 v b u0 r i0 n b a1 v u0
 lavburinbavuri	l a0 v b u0 r i0 n b a0 v u1 r i0
 lavburinbayo	l a0 v b u0 r i0 n b a1 j o0
 lavburinbayori	l a0 v b u0 r i0 n b a0 j o1 r i0
+lavbusabe	l a0 v b u0 s a1 b e0
+lavbusabeasa	l a0 v b u0 s a0 b e0 a1 s a0
+lavbusabeasari	l a0 v b u0 s a0 b e0 a0 s a1 r i0
+lavbusabeasasan	l a0 v b u0 s a0 b e0 a0 s a1 s a0 n
+lavbusabeasasanri	l a0 v b u0 s a0 b e0 a0 s a0 s a1 n r i0
+lavbusabeasasanti	l a0 v b u0 s a0 b e0 a0 s a0 s a1 n t i0
+lavbusabeasasantiri	l a0 v b u0 s a0 b e0 a0 s a0 s a0 n t i1 r i0
+lavbusabeasati	l a0 v b u0 s a0 b e0 a0 s a1 t i0
+lavbusabeasatiri	l a0 v b u0 s a0 b e0 a0 s a0 t i1 r i0
+lavbusabela	l a0 v b u0 s a0 b e1 l a0
+lavbusabelari	l a0 v b u0 s a0 b e0 l a1 r i0
+lavbusabelati	l a0 v b u0 s a0 b e0 l a1 t i0
+lavbusabelatiri	l a0 v b u0 s a0 b e0 l a0 t i1 r i0
+lavbusabena	l a0 v b u0 s a0 b e1 n a0
+lavbusabenari	l a0 v b u0 s a0 b e0 n a1 r i0
+lavbusabenasan	l a0 v b u0 s a0 b e0 n a1 s a0 n
+lavbusabenasanri	l a0 v b u0 s a0 b e0 n a0 s a1 n r i0
+lavbusabenasanti	l a0 v b u0 s a0 b e0 n a0 s a1 n t i0
+lavbusabenasantiri	l a0 v b u0 s a0 b e0 n a0 s a0 n t i1 r i0
+lavbusabenati	l a0 v b u0 s a0 b e0 n a1 t i0
+lavbusabenatiri	l a0 v b u0 s a0 b e0 n a0 t i1 r i0
+lavbusabepago	l a0 v b u0 s a0 b e0 p a1 ɡ o0
+lavbusabepagori	l a0 v b u0 s a0 b e0 p a0 ɡ o1 r i0
+lavbusaberi	l a0 v b u0 s a0 b e1 r i0
+lavbusabesan	l a0 v b u0 s a0 b e1 s a0 n
+lavbusabesanri	l a0 v b u0 s a0 b e0 s a1 n r i0
+lavbusabesanti	l a0 v b u0 s a0 b e0 s a1 n t i0
+lavbusabesantiri	l a0 v b u0 s a0 b e0 s a0 n t i1 r i0
+lavbusabeti	l a0 v b u0 s a0 b e1 t i0
+lavbusabetiri	l a0 v b u0 s a0 b e0 t i1 r i0
+lavbusabevu	l a0 v b u0 s a0 b e1 v u0
+lavbusabevuri	l a0 v b u0 s a0 b e0 v u1 r i0
+lavbusabeyo	l a0 v b u0 s a0 b e1 j o0
+lavbusabeyori	l a0 v b u0 s a0 b e0 j o1 r i0
 lavbusalru	l a0 v b u0 s a1 l r u0
 lavbusalruasa	l a0 v b u0 s a0 l r u0 a1 s a0
 lavbusalruasari	l a0 v b u0 s a0 l r u0 a0 s a1 r i0
@@ -29441,6 +29883,40 @@ lavraasasanti	l a0 v r a0 a0 s a0 s a1 n t i0
 lavraasasantiri	l a0 v r a0 a0 s a0 s a0 n t i1 r i0
 lavraasati	l a0 v r a0 a0 s a1 t i0
 lavraasatiri	l a0 v r a0 a0 s a0 t i1 r i0
+lavradobo	l a0 v r a0 d o1 b o0
+lavradoboasa	l a0 v r a0 d o0 b o0 a1 s a0
+lavradoboasari	l a0 v r a0 d o0 b o0 a0 s a1 r i0
+lavradoboasasan	l a0 v r a0 d o0 b o0 a0 s a1 s a0 n
+lavradoboasasanri	l a0 v r a0 d o0 b o0 a0 s a0 s a1 n r i0
+lavradoboasasanti	l a0 v r a0 d o0 b o0 a0 s a0 s a1 n t i0
+lavradoboasasantiri	l a0 v r a0 d o0 b o0 a0 s a0 s a0 n t i1 r i0
+lavradoboasati	l a0 v r a0 d o0 b o0 a0 s a1 t i0
+lavradoboasatiri	l a0 v r a0 d o0 b o0 a0 s a0 t i1 r i0
+lavradobola	l a0 v r a0 d o0 b o1 l a0
+lavradobolari	l a0 v r a0 d o0 b o0 l a1 r i0
+lavradobolati	l a0 v r a0 d o0 b o0 l a1 t i0
+lavradobolatiri	l a0 v r a0 d o0 b o0 l a0 t i1 r i0
+lavradobona	l a0 v r a0 d o0 b o1 n a0
+lavradobonari	l a0 v r a0 d o0 b o0 n a1 r i0
+lavradobonasan	l a0 v r a0 d o0 b o0 n a1 s a0 n
+lavradobonasanri	l a0 v r a0 d o0 b o0 n a0 s a1 n r i0
+lavradobonasanti	l a0 v r a0 d o0 b o0 n a0 s a1 n t i0
+lavradobonasantiri	l a0 v r a0 d o0 b o0 n a0 s a0 n t i1 r i0
+lavradobonati	l a0 v r a0 d o0 b o0 n a1 t i0
+lavradobonatiri	l a0 v r a0 d o0 b o0 n a0 t i1 r i0
+lavradobopago	l a0 v r a0 d o0 b o0 p a1 ɡ o0
+lavradobopagori	l a0 v r a0 d o0 b o0 p a0 ɡ o1 r i0
+lavradobori	l a0 v r a0 d o0 b o1 r i0
+lavradobosan	l a0 v r a0 d o0 b o1 s a0 n
+lavradobosanri	l a0 v r a0 d o0 b o0 s a1 n r i0
+lavradobosanti	l a0 v r a0 d o0 b o0 s a1 n t i0
+lavradobosantiri	l a0 v r a0 d o0 b o0 s a0 n t i1 r i0
+lavradoboti	l a0 v r a0 d o0 b o1 t i0
+lavradobotiri	l a0 v r a0 d o0 b o0 t i1 r i0
+lavradobovu	l a0 v r a0 d o0 b o1 v u0
+lavradobovuri	l a0 v r a0 d o0 b o0 v u1 r i0
+lavradoboyo	l a0 v r a0 d o0 b o1 j o0
+lavradoboyori	l a0 v r a0 d o0 b o0 j o1 r i0
 lavragarvu	l a0 v r a0 ɡ a1 r v u0
 lavragarvuasa	l a0 v r a0 ɡ a0 r v u0 a1 s a0
 lavragarvuasari	l a0 v r a0 ɡ a0 r v u0 a0 s a1 r i0
@@ -33387,6 +33863,40 @@ lisroasasanti	l i0 s r o0 a0 s a0 s a1 n t i0
 lisroasasantiri	l i0 s r o0 a0 s a0 s a0 n t i1 r i0
 lisroasati	l i0 s r o0 a0 s a1 t i0
 lisroasatiri	l i0 s r o0 a0 s a0 t i1 r i0
+lisrocuza	l i0 s r o0 t͡ʃ u1 z a0
+lisrocuzaasa	l i0 s r o0 t͡ʃ u0 z a0 a1 s a0
+lisrocuzaasari	l i0 s r o0 t͡ʃ u0 z a0 a0 s a1 r i0
+lisrocuzaasasan	l i0 s r o0 t͡ʃ u0 z a0 a0 s a1 s a0 n
+lisrocuzaasasanri	l i0 s r o0 t͡ʃ u0 z a0 a0 s a0 s a1 n r i0
+lisrocuzaasasanti	l i0 s r o0 t͡ʃ u0 z a0 a0 s a0 s a1 n t i0
+lisrocuzaasasantiri	l i0 s r o0 t͡ʃ u0 z a0 a0 s a0 s a0 n t i1 r i0
+lisrocuzaasati	l i0 s r o0 t͡ʃ u0 z a0 a0 s a1 t i0
+lisrocuzaasatiri	l i0 s r o0 t͡ʃ u0 z a0 a0 s a0 t i1 r i0
+lisrocuzala	l i0 s r o0 t͡ʃ u0 z a1 l a0
+lisrocuzalari	l i0 s r o0 t͡ʃ u0 z a0 l a1 r i0
+lisrocuzalati	l i0 s r o0 t͡ʃ u0 z a0 l a1 t i0
+lisrocuzalatiri	l i0 s r o0 t͡ʃ u0 z a0 l a0 t i1 r i0
+lisrocuzana	l i0 s r o0 t͡ʃ u0 z a1 n a0
+lisrocuzanari	l i0 s r o0 t͡ʃ u0 z a0 n a1 r i0
+lisrocuzanasan	l i0 s r o0 t͡ʃ u0 z a0 n a1 s a0 n
+lisrocuzanasanri	l i0 s r o0 t͡ʃ u0 z a0 n a0 s a1 n r i0
+lisrocuzanasanti	l i0 s r o0 t͡ʃ u0 z a0 n a0 s a1 n t i0
+lisrocuzanasantiri	l i0 s r o0 t͡ʃ u0 z a0 n a0 s a0 n t i1 r i0
+lisrocuzanati	l i0 s r o0 t͡ʃ u0 z a0 n a1 t i0
+lisrocuzanatiri	l i0 s r o0 t͡ʃ u0 z a0 n a0 t i1 r i0
+lisrocuzapago	l i0 s r o0 t͡ʃ u0 z a0 p a1 ɡ o0
+lisrocuzapagori	l i0 s r o0 t͡ʃ u0 z a0 p a0 ɡ o1 r i0
+lisrocuzari	l i0 s r o0 t͡ʃ u0 z a1 r i0
+lisrocuzasan	l i0 s r o0 t͡ʃ u0 z a1 s a0 n
+lisrocuzasanri	l i0 s r o0 t͡ʃ u0 z a0 s a1 n r i0
+lisrocuzasanti	l i0 s r o0 t͡ʃ u0 z a0 s a1 n t i0
+lisrocuzasantiri	l i0 s r o0 t͡ʃ u0 z a0 s a0 n t i1 r i0
+lisrocuzati	l i0 s r o0 t͡ʃ u0 z a1 t i0
+lisrocuzatiri	l i0 s r o0 t͡ʃ u0 z a0 t i1 r i0
+lisrocuzavu	l i0 s r o0 t͡ʃ u0 z a1 v u0
+lisrocuzavuri	l i0 s r o0 t͡ʃ u0 z a0 v u1 r i0
+lisrocuzayo	l i0 s r o0 t͡ʃ u0 z a1 j o0
+lisrocuzayori	l i0 s r o0 t͡ʃ u0 z a0 j o1 r i0
 lisrodoza	l i0 s r o0 d o1 z a0
 lisrodozaasa	l i0 s r o0 d o0 z a0 a1 s a0
 lisrodozaasari	l i0 s r o0 d o0 z a0 a0 s a1 r i0
@@ -36751,6 +37261,40 @@ lumisovlabitivu	l u0 m i0 s o0 v l a0 b i0 t i1 v u0
 lumisovlabitivuri	l u0 m i0 s o0 v l a0 b i0 t i0 v u1 r i0
 lumisovlabitiyo	l u0 m i0 s o0 v l a0 b i0 t i1 j o0
 lumisovlabitiyori	l u0 m i0 s o0 v l a0 b i0 t i0 j o1 r i0
+lumisovlacunudivmabiti	l u0 m i0 s o0 v l a0 t͡ʃ u0 n u0 d i0 v m a0 b i1 t i0
+lumisovlacunudivmabitiasa	l u0 m i0 s o0 v l a0 t͡ʃ u0 n u0 d i0 v m a0 b i0 t i0 a1 s a0
+lumisovlacunudivmabitiasari	l u0 m i0 s o0 v l a0 t͡ʃ u0 n u0 d i0 v m a0 b i0 t i0 a0 s a1 r i0
+lumisovlacunudivmabitiasasan	l u0 m i0 s o0 v l a0 t͡ʃ u0 n u0 d i0 v m a0 b i0 t i0 a0 s a1 s a0 n
+lumisovlacunudivmabitiasasanri	l u0 m i0 s o0 v l a0 t͡ʃ u0 n u0 d i0 v m a0 b i0 t i0 a0 s a0 s a1 n r i0
+lumisovlacunudivmabitiasasanti	l u0 m i0 s o0 v l a0 t͡ʃ u0 n u0 d i0 v m a0 b i0 t i0 a0 s a0 s a1 n t i0
+lumisovlacunudivmabitiasasantiri	l u0 m i0 s o0 v l a0 t͡ʃ u0 n u0 d i0 v m a0 b i0 t i0 a0 s a0 s a0 n t i1 r i0
+lumisovlacunudivmabitiasati	l u0 m i0 s o0 v l a0 t͡ʃ u0 n u0 d i0 v m a0 b i0 t i0 a0 s a1 t i0
+lumisovlacunudivmabitiasatiri	l u0 m i0 s o0 v l a0 t͡ʃ u0 n u0 d i0 v m a0 b i0 t i0 a0 s a0 t i1 r i0
+lumisovlacunudivmabitila	l u0 m i0 s o0 v l a0 t͡ʃ u0 n u0 d i0 v m a0 b i0 t i1 l a0
+lumisovlacunudivmabitilari	l u0 m i0 s o0 v l a0 t͡ʃ u0 n u0 d i0 v m a0 b i0 t i0 l a1 r i0
+lumisovlacunudivmabitilati	l u0 m i0 s o0 v l a0 t͡ʃ u0 n u0 d i0 v m a0 b i0 t i0 l a1 t i0
+lumisovlacunudivmabitilatiri	l u0 m i0 s o0 v l a0 t͡ʃ u0 n u0 d i0 v m a0 b i0 t i0 l a0 t i1 r i0
+lumisovlacunudivmabitina	l u0 m i0 s o0 v l a0 t͡ʃ u0 n u0 d i0 v m a0 b i0 t i1 n a0
+lumisovlacunudivmabitinari	l u0 m i0 s o0 v l a0 t͡ʃ u0 n u0 d i0 v m a0 b i0 t i0 n a1 r i0
+lumisovlacunudivmabitinasan	l u0 m i0 s o0 v l a0 t͡ʃ u0 n u0 d i0 v m a0 b i0 t i0 n a1 s a0 n
+lumisovlacunudivmabitinasanri	l u0 m i0 s o0 v l a0 t͡ʃ u0 n u0 d i0 v m a0 b i0 t i0 n a0 s a1 n r i0
+lumisovlacunudivmabitinasanti	l u0 m i0 s o0 v l a0 t͡ʃ u0 n u0 d i0 v m a0 b i0 t i0 n a0 s a1 n t i0
+lumisovlacunudivmabitinasantiri	l u0 m i0 s o0 v l a0 t͡ʃ u0 n u0 d i0 v m a0 b i0 t i0 n a0 s a0 n t i1 r i0
+lumisovlacunudivmabitinati	l u0 m i0 s o0 v l a0 t͡ʃ u0 n u0 d i0 v m a0 b i0 t i0 n a1 t i0
+lumisovlacunudivmabitinatiri	l u0 m i0 s o0 v l a0 t͡ʃ u0 n u0 d i0 v m a0 b i0 t i0 n a0 t i1 r i0
+lumisovlacunudivmabitipago	l u0 m i0 s o0 v l a0 t͡ʃ u0 n u0 d i0 v m a0 b i0 t i0 p a1 ɡ o0
+lumisovlacunudivmabitipagori	l u0 m i0 s o0 v l a0 t͡ʃ u0 n u0 d i0 v m a0 b i0 t i0 p a0 ɡ o1 r i0
+lumisovlacunudivmabitiri	l u0 m i0 s o0 v l a0 t͡ʃ u0 n u0 d i0 v m a0 b i0 t i1 r i0
+lumisovlacunudivmabitisan	l u0 m i0 s o0 v l a0 t͡ʃ u0 n u0 d i0 v m a0 b i0 t i1 s a0 n
+lumisovlacunudivmabitisanri	l u0 m i0 s o0 v l a0 t͡ʃ u0 n u0 d i0 v m a0 b i0 t i0 s a1 n r i0
+lumisovlacunudivmabitisanti	l u0 m i0 s o0 v l a0 t͡ʃ u0 n u0 d i0 v m a0 b i0 t i0 s a1 n t i0
+lumisovlacunudivmabitisantiri	l u0 m i0 s o0 v l a0 t͡ʃ u0 n u0 d i0 v m a0 b i0 t i0 s a0 n t i1 r i0
+lumisovlacunudivmabititi	l u0 m i0 s o0 v l a0 t͡ʃ u0 n u0 d i0 v m a0 b i0 t i1 t i0
+lumisovlacunudivmabititiri	l u0 m i0 s o0 v l a0 t͡ʃ u0 n u0 d i0 v m a0 b i0 t i0 t i1 r i0
+lumisovlacunudivmabitivu	l u0 m i0 s o0 v l a0 t͡ʃ u0 n u0 d i0 v m a0 b i0 t i1 v u0
+lumisovlacunudivmabitivuri	l u0 m i0 s o0 v l a0 t͡ʃ u0 n u0 d i0 v m a0 b i0 t i0 v u1 r i0
+lumisovlacunudivmabitiyo	l u0 m i0 s o0 v l a0 t͡ʃ u0 n u0 d i0 v m a0 b i0 t i1 j o0
+lumisovlacunudivmabitiyori	l u0 m i0 s o0 v l a0 t͡ʃ u0 n u0 d i0 v m a0 b i0 t i0 j o1 r i0
 lumisovlakibo	l u0 m i0 s o0 v l a0 k i1 b o0
 lumisovlakiboasa	l u0 m i0 s o0 v l a0 k i0 b o0 a1 s a0
 lumisovlakiboasari	l u0 m i0 s o0 v l a0 k i0 b o0 a0 s a1 r i0
@@ -37781,6 +38325,40 @@ madiasasanti	m a0 d i0 a0 s a0 s a1 n t i0
 madiasasantiri	m a0 d i0 a0 s a0 s a0 n t i1 r i0
 madiasati	m a0 d i0 a0 s a1 t i0
 madiasatiri	m a0 d i0 a0 s a0 t i1 r i0
+madijomru	m a0 d i0 d͡ʒ o1 m r u0
+madijomruasa	m a0 d i0 d͡ʒ o0 m r u0 a1 s a0
+madijomruasari	m a0 d i0 d͡ʒ o0 m r u0 a0 s a1 r i0
+madijomruasasan	m a0 d i0 d͡ʒ o0 m r u0 a0 s a1 s a0 n
+madijomruasasanri	m a0 d i0 d͡ʒ o0 m r u0 a0 s a0 s a1 n r i0
+madijomruasasanti	m a0 d i0 d͡ʒ o0 m r u0 a0 s a0 s a1 n t i0
+madijomruasasantiri	m a0 d i0 d͡ʒ o0 m r u0 a0 s a0 s a0 n t i1 r i0
+madijomruasati	m a0 d i0 d͡ʒ o0 m r u0 a0 s a1 t i0
+madijomruasatiri	m a0 d i0 d͡ʒ o0 m r u0 a0 s a0 t i1 r i0
+madijomruma	m a0 d i0 d͡ʒ o0 m r u1 m a0
+madijomrumari	m a0 d i0 d͡ʒ o0 m r u0 m a1 r i0
+madijomrumati	m a0 d i0 d͡ʒ o0 m r u0 m a1 t i0
+madijomrumatiri	m a0 d i0 d͡ʒ o0 m r u0 m a0 t i1 r i0
+madijomruna	m a0 d i0 d͡ʒ o0 m r u1 n a0
+madijomrunari	m a0 d i0 d͡ʒ o0 m r u0 n a1 r i0
+madijomrunasan	m a0 d i0 d͡ʒ o0 m r u0 n a1 s a0 n
+madijomrunasanri	m a0 d i0 d͡ʒ o0 m r u0 n a0 s a1 n r i0
+madijomrunasanti	m a0 d i0 d͡ʒ o0 m r u0 n a0 s a1 n t i0
+madijomrunasantiri	m a0 d i0 d͡ʒ o0 m r u0 n a0 s a0 n t i1 r i0
+madijomrunati	m a0 d i0 d͡ʒ o0 m r u0 n a1 t i0
+madijomrunatiri	m a0 d i0 d͡ʒ o0 m r u0 n a0 t i1 r i0
+madijomrupago	m a0 d i0 d͡ʒ o0 m r u0 p a1 ɡ o0
+madijomrupagori	m a0 d i0 d͡ʒ o0 m r u0 p a0 ɡ o1 r i0
+madijomruri	m a0 d i0 d͡ʒ o0 m r u1 r i0
+madijomrusan	m a0 d i0 d͡ʒ o0 m r u1 s a0 n
+madijomrusanri	m a0 d i0 d͡ʒ o0 m r u0 s a1 n r i0
+madijomrusanti	m a0 d i0 d͡ʒ o0 m r u0 s a1 n t i0
+madijomrusantiri	m a0 d i0 d͡ʒ o0 m r u0 s a0 n t i1 r i0
+madijomruti	m a0 d i0 d͡ʒ o0 m r u1 t i0
+madijomrutiri	m a0 d i0 d͡ʒ o0 m r u0 t i1 r i0
+madijomruvu	m a0 d i0 d͡ʒ o0 m r u1 v u0
+madijomruvuri	m a0 d i0 d͡ʒ o0 m r u0 v u1 r i0
+madijomruyo	m a0 d i0 d͡ʒ o0 m r u1 j o0
+madijomruyori	m a0 d i0 d͡ʒ o0 m r u0 j o1 r i0
 madima	m a0 d i1 m a0
 madimari	m a0 d i0 m a1 r i0
 madimati	m a0 d i0 m a1 t i0
@@ -39756,6 +40334,40 @@ mavoma	m a0 v o1 m a0
 mavomari	m a0 v o0 m a1 r i0
 mavomati	m a0 v o0 m a1 t i0
 mavomatiri	m a0 v o0 m a0 t i1 r i0
+mavomelo	m a0 v o0 m e1 l o0
+mavomeloasa	m a0 v o0 m e0 l o0 a1 s a0
+mavomeloasari	m a0 v o0 m e0 l o0 a0 s a1 r i0
+mavomeloasasan	m a0 v o0 m e0 l o0 a0 s a1 s a0 n
+mavomeloasasanri	m a0 v o0 m e0 l o0 a0 s a0 s a1 n r i0
+mavomeloasasanti	m a0 v o0 m e0 l o0 a0 s a0 s a1 n t i0
+mavomeloasasantiri	m a0 v o0 m e0 l o0 a0 s a0 s a0 n t i1 r i0
+mavomeloasati	m a0 v o0 m e0 l o0 a0 s a1 t i0
+mavomeloasatiri	m a0 v o0 m e0 l o0 a0 s a0 t i1 r i0
+mavomeloma	m a0 v o0 m e0 l o1 m a0
+mavomelomari	m a0 v o0 m e0 l o0 m a1 r i0
+mavomelomati	m a0 v o0 m e0 l o0 m a1 t i0
+mavomelomatiri	m a0 v o0 m e0 l o0 m a0 t i1 r i0
+mavomelona	m a0 v o0 m e0 l o1 n a0
+mavomelonari	m a0 v o0 m e0 l o0 n a1 r i0
+mavomelonasan	m a0 v o0 m e0 l o0 n a1 s a0 n
+mavomelonasanri	m a0 v o0 m e0 l o0 n a0 s a1 n r i0
+mavomelonasanti	m a0 v o0 m e0 l o0 n a0 s a1 n t i0
+mavomelonasantiri	m a0 v o0 m e0 l o0 n a0 s a0 n t i1 r i0
+mavomelonati	m a0 v o0 m e0 l o0 n a1 t i0
+mavomelonatiri	m a0 v o0 m e0 l o0 n a0 t i1 r i0
+mavomelopago	m a0 v o0 m e0 l o0 p a1 ɡ o0
+mavomelopagori	m a0 v o0 m e0 l o0 p a0 ɡ o1 r i0
+mavomelori	m a0 v o0 m e0 l o1 r i0
+mavomelosan	m a0 v o0 m e0 l o1 s a0 n
+mavomelosanri	m a0 v o0 m e0 l o0 s a1 n r i0
+mavomelosanti	m a0 v o0 m e0 l o0 s a1 n t i0
+mavomelosantiri	m a0 v o0 m e0 l o0 s a0 n t i1 r i0
+mavomeloti	m a0 v o0 m e0 l o1 t i0
+mavomelotiri	m a0 v o0 m e0 l o0 t i1 r i0
+mavomelovu	m a0 v o0 m e0 l o1 v u0
+mavomelovuri	m a0 v o0 m e0 l o0 v u1 r i0
+mavomeloyo	m a0 v o0 m e0 l o1 j o0
+mavomeloyori	m a0 v o0 m e0 l o0 j o1 r i0
 mavomudu	m a0 v o0 m u1 d u0
 mavomuduasa	m a0 v o0 m u0 d u0 a1 s a0
 mavomuduasari	m a0 v o0 m u0 d u0 a0 s a1 r i0
@@ -40036,6 +40648,40 @@ mavopagomelvanasanti	m a0 v o0 p a0 ɡ o0 m e0 l v a0 n a0 s a1 n t i0
 mavopagomelvanasantiri	m a0 v o0 p a0 ɡ o0 m e0 l v a0 n a0 s a0 n t i1 r i0
 mavopagomelvanati	m a0 v o0 p a0 ɡ o0 m e0 l v a0 n a1 t i0
 mavopagomelvanatiri	m a0 v o0 p a0 ɡ o0 m e0 l v a0 n a0 t i1 r i0
+mavopagomelvanela	m a0 v o0 p a0 ɡ o0 m e0 l v a0 n e1 l a0
+mavopagomelvanelaasa	m a0 v o0 p a0 ɡ o0 m e0 l v a0 n e0 l a0 a1 s a0
+mavopagomelvanelaasari	m a0 v o0 p a0 ɡ o0 m e0 l v a0 n e0 l a0 a0 s a1 r i0
+mavopagomelvanelaasasan	m a0 v o0 p a0 ɡ o0 m e0 l v a0 n e0 l a0 a0 s a1 s a0 n
+mavopagomelvanelaasasanri	m a0 v o0 p a0 ɡ o0 m e0 l v a0 n e0 l a0 a0 s a0 s a1 n r i0
+mavopagomelvanelaasasanti	m a0 v o0 p a0 ɡ o0 m e0 l v a0 n e0 l a0 a0 s a0 s a1 n t i0
+mavopagomelvanelaasasantiri	m a0 v o0 p a0 ɡ o0 m e0 l v a0 n e0 l a0 a0 s a0 s a0 n t i1 r i0
+mavopagomelvanelaasati	m a0 v o0 p a0 ɡ o0 m e0 l v a0 n e0 l a0 a0 s a1 t i0
+mavopagomelvanelaasatiri	m a0 v o0 p a0 ɡ o0 m e0 l v a0 n e0 l a0 a0 s a0 t i1 r i0
+mavopagomelvanelama	m a0 v o0 p a0 ɡ o0 m e0 l v a0 n e0 l a1 m a0
+mavopagomelvanelamari	m a0 v o0 p a0 ɡ o0 m e0 l v a0 n e0 l a0 m a1 r i0
+mavopagomelvanelamati	m a0 v o0 p a0 ɡ o0 m e0 l v a0 n e0 l a0 m a1 t i0
+mavopagomelvanelamatiri	m a0 v o0 p a0 ɡ o0 m e0 l v a0 n e0 l a0 m a0 t i1 r i0
+mavopagomelvanelana	m a0 v o0 p a0 ɡ o0 m e0 l v a0 n e0 l a1 n a0
+mavopagomelvanelanari	m a0 v o0 p a0 ɡ o0 m e0 l v a0 n e0 l a0 n a1 r i0
+mavopagomelvanelanasan	m a0 v o0 p a0 ɡ o0 m e0 l v a0 n e0 l a0 n a1 s a0 n
+mavopagomelvanelanasanri	m a0 v o0 p a0 ɡ o0 m e0 l v a0 n e0 l a0 n a0 s a1 n r i0
+mavopagomelvanelanasanti	m a0 v o0 p a0 ɡ o0 m e0 l v a0 n e0 l a0 n a0 s a1 n t i0
+mavopagomelvanelanasantiri	m a0 v o0 p a0 ɡ o0 m e0 l v a0 n e0 l a0 n a0 s a0 n t i1 r i0
+mavopagomelvanelanati	m a0 v o0 p a0 ɡ o0 m e0 l v a0 n e0 l a0 n a1 t i0
+mavopagomelvanelanatiri	m a0 v o0 p a0 ɡ o0 m e0 l v a0 n e0 l a0 n a0 t i1 r i0
+mavopagomelvanelapago	m a0 v o0 p a0 ɡ o0 m e0 l v a0 n e0 l a0 p a1 ɡ o0
+mavopagomelvanelapagori	m a0 v o0 p a0 ɡ o0 m e0 l v a0 n e0 l a0 p a0 ɡ o1 r i0
+mavopagomelvanelari	m a0 v o0 p a0 ɡ o0 m e0 l v a0 n e0 l a1 r i0
+mavopagomelvanelasan	m a0 v o0 p a0 ɡ o0 m e0 l v a0 n e0 l a1 s a0 n
+mavopagomelvanelasanri	m a0 v o0 p a0 ɡ o0 m e0 l v a0 n e0 l a0 s a1 n r i0
+mavopagomelvanelasanti	m a0 v o0 p a0 ɡ o0 m e0 l v a0 n e0 l a0 s a1 n t i0
+mavopagomelvanelasantiri	m a0 v o0 p a0 ɡ o0 m e0 l v a0 n e0 l a0 s a0 n t i1 r i0
+mavopagomelvanelati	m a0 v o0 p a0 ɡ o0 m e0 l v a0 n e0 l a1 t i0
+mavopagomelvanelatiri	m a0 v o0 p a0 ɡ o0 m e0 l v a0 n e0 l a0 t i1 r i0
+mavopagomelvanelavu	m a0 v o0 p a0 ɡ o0 m e0 l v a0 n e0 l a1 v u0
+mavopagomelvanelavuri	m a0 v o0 p a0 ɡ o0 m e0 l v a0 n e0 l a0 v u1 r i0
+mavopagomelvanelayo	m a0 v o0 p a0 ɡ o0 m e0 l v a0 n e0 l a1 j o0
+mavopagomelvanelayori	m a0 v o0 p a0 ɡ o0 m e0 l v a0 n e0 l a0 j o1 r i0
 mavopagomelvapago	m a0 v o0 p a0 ɡ o0 m e0 l v a0 p a1 ɡ o0
 mavopagomelvapagori	m a0 v o0 p a0 ɡ o0 m e0 l v a0 p a0 ɡ o1 r i0
 mavopagomelvari	m a0 v o0 p a0 ɡ o0 m e0 l v a1 r i0
@@ -40942,6 +41588,40 @@ melolektavu	m e0 l o0 l e0 k t a1 v u0
 melolektavuri	m e0 l o0 l e0 k t a0 v u1 r i0
 melolektayo	m e0 l o0 l e0 k t a1 j o0
 melolektayori	m e0 l o0 l e0 k t a0 j o1 r i0
+melolemupatu	m e0 l o0 l e0 m u0 p a1 t u0
+melolemupatuasa	m e0 l o0 l e0 m u0 p a0 t u0 a1 s a0
+melolemupatuasari	m e0 l o0 l e0 m u0 p a0 t u0 a0 s a1 r i0
+melolemupatuasasan	m e0 l o0 l e0 m u0 p a0 t u0 a0 s a1 s a0 n
+melolemupatuasasanri	m e0 l o0 l e0 m u0 p a0 t u0 a0 s a0 s a1 n r i0
+melolemupatuasasanti	m e0 l o0 l e0 m u0 p a0 t u0 a0 s a0 s a1 n t i0
+melolemupatuasasantiri	m e0 l o0 l e0 m u0 p a0 t u0 a0 s a0 s a0 n t i1 r i0
+melolemupatuasati	m e0 l o0 l e0 m u0 p a0 t u0 a0 s a1 t i0
+melolemupatuasatiri	m e0 l o0 l e0 m u0 p a0 t u0 a0 s a0 t i1 r i0
+melolemupatuma	m e0 l o0 l e0 m u0 p a0 t u1 m a0
+melolemupatumari	m e0 l o0 l e0 m u0 p a0 t u0 m a1 r i0
+melolemupatumati	m e0 l o0 l e0 m u0 p a0 t u0 m a1 t i0
+melolemupatumatiri	m e0 l o0 l e0 m u0 p a0 t u0 m a0 t i1 r i0
+melolemupatuna	m e0 l o0 l e0 m u0 p a0 t u1 n a0
+melolemupatunari	m e0 l o0 l e0 m u0 p a0 t u0 n a1 r i0
+melolemupatunasan	m e0 l o0 l e0 m u0 p a0 t u0 n a1 s a0 n
+melolemupatunasanri	m e0 l o0 l e0 m u0 p a0 t u0 n a0 s a1 n r i0
+melolemupatunasanti	m e0 l o0 l e0 m u0 p a0 t u0 n a0 s a1 n t i0
+melolemupatunasantiri	m e0 l o0 l e0 m u0 p a0 t u0 n a0 s a0 n t i1 r i0
+melolemupatunati	m e0 l o0 l e0 m u0 p a0 t u0 n a1 t i0
+melolemupatunatiri	m e0 l o0 l e0 m u0 p a0 t u0 n a0 t i1 r i0
+melolemupatupago	m e0 l o0 l e0 m u0 p a0 t u0 p a1 ɡ o0
+melolemupatupagori	m e0 l o0 l e0 m u0 p a0 t u0 p a0 ɡ o1 r i0
+melolemupaturi	m e0 l o0 l e0 m u0 p a0 t u1 r i0
+melolemupatusan	m e0 l o0 l e0 m u0 p a0 t u1 s a0 n
+melolemupatusanri	m e0 l o0 l e0 m u0 p a0 t u0 s a1 n r i0
+melolemupatusanti	m e0 l o0 l e0 m u0 p a0 t u0 s a1 n t i0
+melolemupatusantiri	m e0 l o0 l e0 m u0 p a0 t u0 s a0 n t i1 r i0
+melolemupatuti	m e0 l o0 l e0 m u0 p a0 t u1 t i0
+melolemupatutiri	m e0 l o0 l e0 m u0 p a0 t u0 t i1 r i0
+melolemupatuvu	m e0 l o0 l e0 m u0 p a0 t u1 v u0
+melolemupatuvuri	m e0 l o0 l e0 m u0 p a0 t u0 v u1 r i0
+melolemupatuyo	m e0 l o0 l e0 m u0 p a0 t u1 j o0
+melolemupatuyori	m e0 l o0 l e0 m u0 p a0 t u0 j o1 r i0
 melolordi	m e0 l o0 l o1 r d i0
 melolordiasa	m e0 l o0 l o0 r d i0 a1 s a0
 melolordiasari	m e0 l o0 l o0 r d i0 a0 s a1 r i0
@@ -44080,6 +44760,40 @@ moluliravu	m o0 l u0 l i0 r a1 v u0
 moluliravuri	m o0 l u0 l i0 r a0 v u1 r i0
 molulirayo	m o0 l u0 l i0 r a1 j o0
 molulirayori	m o0 l u0 l i0 r a0 j o1 r i0
+molulore	m o0 l u0 l o1 r e0
+moluloreasa	m o0 l u0 l o0 r e0 a1 s a0
+moluloreasari	m o0 l u0 l o0 r e0 a0 s a1 r i0
+moluloreasasan	m o0 l u0 l o0 r e0 a0 s a1 s a0 n
+moluloreasasanri	m o0 l u0 l o0 r e0 a0 s a0 s a1 n r i0
+moluloreasasanti	m o0 l u0 l o0 r e0 a0 s a0 s a1 n t i0
+moluloreasasantiri	m o0 l u0 l o0 r e0 a0 s a0 s a0 n t i1 r i0
+moluloreasati	m o0 l u0 l o0 r e0 a0 s a1 t i0
+moluloreasatiri	m o0 l u0 l o0 r e0 a0 s a0 t i1 r i0
+molulorema	m o0 l u0 l o0 r e1 m a0
+moluloremari	m o0 l u0 l o0 r e0 m a1 r i0
+moluloremati	m o0 l u0 l o0 r e0 m a1 t i0
+molulorematiri	m o0 l u0 l o0 r e0 m a0 t i1 r i0
+molulorena	m o0 l u0 l o0 r e1 n a0
+molulorenari	m o0 l u0 l o0 r e0 n a1 r i0
+molulorenasan	m o0 l u0 l o0 r e0 n a1 s a0 n
+molulorenasanri	m o0 l u0 l o0 r e0 n a0 s a1 n r i0
+molulorenasanti	m o0 l u0 l o0 r e0 n a0 s a1 n t i0
+molulorenasantiri	m o0 l u0 l o0 r e0 n a0 s a0 n t i1 r i0
+molulorenati	m o0 l u0 l o0 r e0 n a1 t i0
+molulorenatiri	m o0 l u0 l o0 r e0 n a0 t i1 r i0
+molulorepago	m o0 l u0 l o0 r e0 p a1 ɡ o0
+molulorepagori	m o0 l u0 l o0 r e0 p a0 ɡ o1 r i0
+moluloreri	m o0 l u0 l o0 r e1 r i0
+moluloresan	m o0 l u0 l o0 r e1 s a0 n
+moluloresanri	m o0 l u0 l o0 r e0 s a1 n r i0
+moluloresanti	m o0 l u0 l o0 r e0 s a1 n t i0
+moluloresantiri	m o0 l u0 l o0 r e0 s a0 n t i1 r i0
+moluloreti	m o0 l u0 l o0 r e1 t i0
+moluloretiri	m o0 l u0 l o0 r e0 t i1 r i0
+molulorevu	m o0 l u0 l o0 r e1 v u0
+molulorevuri	m o0 l u0 l o0 r e0 v u1 r i0
+moluloreyo	m o0 l u0 l o0 r e1 j o0
+moluloreyori	m o0 l u0 l o0 r e0 j o1 r i0
 moluma	m o0 l u1 m a0
 molumari	m o0 l u0 m a1 r i0
 molumati	m o0 l u0 m a1 t i0
@@ -45016,7 +45730,39 @@ mubonasantiri	m u0 b o0 n a0 s a0 n t i1 r i0
 mubonati	m u0 b o0 n a1 t i0
 mubonatiri	m u0 b o0 n a0 t i1 r i0
 mubopago	m u0 b o0 p a1 ɡ o0
+mubopagoasa	m u0 b o0 p a0 ɡ o0 a1 s a0
+mubopagoasari	m u0 b o0 p a0 ɡ o0 a0 s a1 r i0
+mubopagoasasan	m u0 b o0 p a0 ɡ o0 a0 s a1 s a0 n
+mubopagoasasanri	m u0 b o0 p a0 ɡ o0 a0 s a0 s a1 n r i0
+mubopagoasasanti	m u0 b o0 p a0 ɡ o0 a0 s a0 s a1 n t i0
+mubopagoasasantiri	m u0 b o0 p a0 ɡ o0 a0 s a0 s a0 n t i1 r i0
+mubopagoasati	m u0 b o0 p a0 ɡ o0 a0 s a1 t i0
+mubopagoasatiri	m u0 b o0 p a0 ɡ o0 a0 s a0 t i1 r i0
+mubopagoma	m u0 b o0 p a0 ɡ o1 m a0
+mubopagomari	m u0 b o0 p a0 ɡ o0 m a1 r i0
+mubopagomati	m u0 b o0 p a0 ɡ o0 m a1 t i0
+mubopagomatiri	m u0 b o0 p a0 ɡ o0 m a0 t i1 r i0
+mubopagona	m u0 b o0 p a0 ɡ o1 n a0
+mubopagonari	m u0 b o0 p a0 ɡ o0 n a1 r i0
+mubopagonasan	m u0 b o0 p a0 ɡ o0 n a1 s a0 n
+mubopagonasanri	m u0 b o0 p a0 ɡ o0 n a0 s a1 n r i0
+mubopagonasanti	m u0 b o0 p a0 ɡ o0 n a0 s a1 n t i0
+mubopagonasantiri	m u0 b o0 p a0 ɡ o0 n a0 s a0 n t i1 r i0
+mubopagonati	m u0 b o0 p a0 ɡ o0 n a1 t i0
+mubopagonatiri	m u0 b o0 p a0 ɡ o0 n a0 t i1 r i0
+mubopagopago	m u0 b o0 p a0 ɡ o0 p a1 ɡ o0
+mubopagopagori	m u0 b o0 p a0 ɡ o0 p a0 ɡ o1 r i0
 mubopagori	m u0 b o0 p a0 ɡ o1 r i0
+mubopagosan	m u0 b o0 p a0 ɡ o1 s a0 n
+mubopagosanri	m u0 b o0 p a0 ɡ o0 s a1 n r i0
+mubopagosanti	m u0 b o0 p a0 ɡ o0 s a1 n t i0
+mubopagosantiri	m u0 b o0 p a0 ɡ o0 s a0 n t i1 r i0
+mubopagoti	m u0 b o0 p a0 ɡ o1 t i0
+mubopagotiri	m u0 b o0 p a0 ɡ o0 t i1 r i0
+mubopagovu	m u0 b o0 p a0 ɡ o1 v u0
+mubopagovuri	m u0 b o0 p a0 ɡ o0 v u1 r i0
+mubopagoyo	m u0 b o0 p a0 ɡ o1 j o0
+mubopagoyori	m u0 b o0 p a0 ɡ o0 j o1 r i0
 mubori	m u0 b o1 r i0
 mubosan	m u0 b o1 s a0 n
 mubosanri	m u0 b o0 s a1 n r i0
@@ -46839,6 +47585,40 @@ navufarusan	n a0 v u0 f a0 r u1 s a0 n
 navufarusanri	n a0 v u0 f a0 r u0 s a1 n r i0
 navufarusanti	n a0 v u0 f a0 r u0 s a1 n t i0
 navufarusantiri	n a0 v u0 f a0 r u0 s a0 n t i1 r i0
+navufarusuma	n a0 v u0 f a0 r u0 s u1 m a0
+navufarusumaasa	n a0 v u0 f a0 r u0 s u0 m a0 a1 s a0
+navufarusumaasari	n a0 v u0 f a0 r u0 s u0 m a0 a0 s a1 r i0
+navufarusumaasasan	n a0 v u0 f a0 r u0 s u0 m a0 a0 s a1 s a0 n
+navufarusumaasasanri	n a0 v u0 f a0 r u0 s u0 m a0 a0 s a0 s a1 n r i0
+navufarusumaasasanti	n a0 v u0 f a0 r u0 s u0 m a0 a0 s a0 s a1 n t i0
+navufarusumaasasantiri	n a0 v u0 f a0 r u0 s u0 m a0 a0 s a0 s a0 n t i1 r i0
+navufarusumaasati	n a0 v u0 f a0 r u0 s u0 m a0 a0 s a1 t i0
+navufarusumaasatiri	n a0 v u0 f a0 r u0 s u0 m a0 a0 s a0 t i1 r i0
+navufarusumana	n a0 v u0 f a0 r u0 s u0 m a1 n a0
+navufarusumanari	n a0 v u0 f a0 r u0 s u0 m a0 n a1 r i0
+navufarusumanasan	n a0 v u0 f a0 r u0 s u0 m a0 n a1 s a0 n
+navufarusumanasanri	n a0 v u0 f a0 r u0 s u0 m a0 n a0 s a1 n r i0
+navufarusumanasanti	n a0 v u0 f a0 r u0 s u0 m a0 n a0 s a1 n t i0
+navufarusumanasantiri	n a0 v u0 f a0 r u0 s u0 m a0 n a0 s a0 n t i1 r i0
+navufarusumanati	n a0 v u0 f a0 r u0 s u0 m a0 n a1 t i0
+navufarusumanatiri	n a0 v u0 f a0 r u0 s u0 m a0 n a0 t i1 r i0
+navufarusumania	n a0 v u0 f a0 r u0 s u0 m a0 n i1 a0
+navufarusumaniari	n a0 v u0 f a0 r u0 s u0 m a0 n i0 a1 r i0
+navufarusumaniati	n a0 v u0 f a0 r u0 s u0 m a0 n i0 a1 t i0
+navufarusumaniatiri	n a0 v u0 f a0 r u0 s u0 m a0 n i0 a0 t i1 r i0
+navufarusumapago	n a0 v u0 f a0 r u0 s u0 m a0 p a1 ɡ o0
+navufarusumapagori	n a0 v u0 f a0 r u0 s u0 m a0 p a0 ɡ o1 r i0
+navufarusumari	n a0 v u0 f a0 r u0 s u0 m a1 r i0
+navufarusumasan	n a0 v u0 f a0 r u0 s u0 m a1 s a0 n
+navufarusumasanri	n a0 v u0 f a0 r u0 s u0 m a0 s a1 n r i0
+navufarusumasanti	n a0 v u0 f a0 r u0 s u0 m a0 s a1 n t i0
+navufarusumasantiri	n a0 v u0 f a0 r u0 s u0 m a0 s a0 n t i1 r i0
+navufarusumati	n a0 v u0 f a0 r u0 s u0 m a1 t i0
+navufarusumatiri	n a0 v u0 f a0 r u0 s u0 m a0 t i1 r i0
+navufarusumavu	n a0 v u0 f a0 r u0 s u0 m a1 v u0
+navufarusumavuri	n a0 v u0 f a0 r u0 s u0 m a0 v u1 r i0
+navufarusumayo	n a0 v u0 f a0 r u0 s u0 m a1 j o0
+navufarusumayori	n a0 v u0 f a0 r u0 s u0 m a0 j o1 r i0
 navufaruti	n a0 v u0 f a0 r u1 t i0
 navufarutiri	n a0 v u0 f a0 r u0 t i1 r i0
 navufaruvu	n a0 v u0 f a0 r u1 v u0
@@ -48650,6 +49430,40 @@ nimuduhavu	n i0 m u0 d u0 h a1 v u0
 nimuduhavuri	n i0 m u0 d u0 h a0 v u1 r i0
 nimuduhayo	n i0 m u0 d u0 h a1 j o0
 nimuduhayori	n i0 m u0 d u0 h a0 j o1 r i0
+nimufama	n i0 m u0 f a1 m a0
+nimufamaasa	n i0 m u0 f a0 m a0 a1 s a0
+nimufamaasari	n i0 m u0 f a0 m a0 a0 s a1 r i0
+nimufamaasasan	n i0 m u0 f a0 m a0 a0 s a1 s a0 n
+nimufamaasasanri	n i0 m u0 f a0 m a0 a0 s a0 s a1 n r i0
+nimufamaasasanti	n i0 m u0 f a0 m a0 a0 s a0 s a1 n t i0
+nimufamaasasantiri	n i0 m u0 f a0 m a0 a0 s a0 s a0 n t i1 r i0
+nimufamaasati	n i0 m u0 f a0 m a0 a0 s a1 t i0
+nimufamaasatiri	n i0 m u0 f a0 m a0 a0 s a0 t i1 r i0
+nimufamana	n i0 m u0 f a0 m a1 n a0
+nimufamanari	n i0 m u0 f a0 m a0 n a1 r i0
+nimufamanasan	n i0 m u0 f a0 m a0 n a1 s a0 n
+nimufamanasanri	n i0 m u0 f a0 m a0 n a0 s a1 n r i0
+nimufamanasanti	n i0 m u0 f a0 m a0 n a0 s a1 n t i0
+nimufamanasantiri	n i0 m u0 f a0 m a0 n a0 s a0 n t i1 r i0
+nimufamanati	n i0 m u0 f a0 m a0 n a1 t i0
+nimufamanatiri	n i0 m u0 f a0 m a0 n a0 t i1 r i0
+nimufamania	n i0 m u0 f a0 m a0 n i1 a0
+nimufamaniari	n i0 m u0 f a0 m a0 n i0 a1 r i0
+nimufamaniati	n i0 m u0 f a0 m a0 n i0 a1 t i0
+nimufamaniatiri	n i0 m u0 f a0 m a0 n i0 a0 t i1 r i0
+nimufamapago	n i0 m u0 f a0 m a0 p a1 ɡ o0
+nimufamapagori	n i0 m u0 f a0 m a0 p a0 ɡ o1 r i0
+nimufamari	n i0 m u0 f a0 m a1 r i0
+nimufamasan	n i0 m u0 f a0 m a1 s a0 n
+nimufamasanri	n i0 m u0 f a0 m a0 s a1 n r i0
+nimufamasanti	n i0 m u0 f a0 m a0 s a1 n t i0
+nimufamasantiri	n i0 m u0 f a0 m a0 s a0 n t i1 r i0
+nimufamati	n i0 m u0 f a0 m a1 t i0
+nimufamatiri	n i0 m u0 f a0 m a0 t i1 r i0
+nimufamavu	n i0 m u0 f a0 m a1 v u0
+nimufamavuri	n i0 m u0 f a0 m a0 v u1 r i0
+nimufamayo	n i0 m u0 f a0 m a1 j o0
+nimufamayori	n i0 m u0 f a0 m a0 j o1 r i0
 nimulazu	n i0 m u0 l a1 z u0
 nimulazuasa	n i0 m u0 l a0 z u0 a1 s a0
 nimulazuasari	n i0 m u0 l a0 z u0 a0 s a1 r i0
@@ -49475,6 +50289,40 @@ nolsacilnivu	n o0 l s a0 t͡ʃ i0 l n i1 v u0
 nolsacilnivuri	n o0 l s a0 t͡ʃ i0 l n i0 v u1 r i0
 nolsacilniyo	n o0 l s a0 t͡ʃ i0 l n i1 j o0
 nolsacilniyori	n o0 l s a0 t͡ʃ i0 l n i0 j o1 r i0
+nolsajuba	n o0 l s a0 d͡ʒ u1 b a0
+nolsajubaasa	n o0 l s a0 d͡ʒ u0 b a0 a1 s a0
+nolsajubaasari	n o0 l s a0 d͡ʒ u0 b a0 a0 s a1 r i0
+nolsajubaasasan	n o0 l s a0 d͡ʒ u0 b a0 a0 s a1 s a0 n
+nolsajubaasasanri	n o0 l s a0 d͡ʒ u0 b a0 a0 s a0 s a1 n r i0
+nolsajubaasasanti	n o0 l s a0 d͡ʒ u0 b a0 a0 s a0 s a1 n t i0
+nolsajubaasasantiri	n o0 l s a0 d͡ʒ u0 b a0 a0 s a0 s a0 n t i1 r i0
+nolsajubaasati	n o0 l s a0 d͡ʒ u0 b a0 a0 s a1 t i0
+nolsajubaasatiri	n o0 l s a0 d͡ʒ u0 b a0 a0 s a0 t i1 r i0
+nolsajubana	n o0 l s a0 d͡ʒ u0 b a1 n a0
+nolsajubanari	n o0 l s a0 d͡ʒ u0 b a0 n a1 r i0
+nolsajubanasan	n o0 l s a0 d͡ʒ u0 b a0 n a1 s a0 n
+nolsajubanasanri	n o0 l s a0 d͡ʒ u0 b a0 n a0 s a1 n r i0
+nolsajubanasanti	n o0 l s a0 d͡ʒ u0 b a0 n a0 s a1 n t i0
+nolsajubanasantiri	n o0 l s a0 d͡ʒ u0 b a0 n a0 s a0 n t i1 r i0
+nolsajubanati	n o0 l s a0 d͡ʒ u0 b a0 n a1 t i0
+nolsajubanatiri	n o0 l s a0 d͡ʒ u0 b a0 n a0 t i1 r i0
+nolsajubania	n o0 l s a0 d͡ʒ u0 b a0 n i1 a0
+nolsajubaniari	n o0 l s a0 d͡ʒ u0 b a0 n i0 a1 r i0
+nolsajubaniati	n o0 l s a0 d͡ʒ u0 b a0 n i0 a1 t i0
+nolsajubaniatiri	n o0 l s a0 d͡ʒ u0 b a0 n i0 a0 t i1 r i0
+nolsajubapago	n o0 l s a0 d͡ʒ u0 b a0 p a1 ɡ o0
+nolsajubapagori	n o0 l s a0 d͡ʒ u0 b a0 p a0 ɡ o1 r i0
+nolsajubari	n o0 l s a0 d͡ʒ u0 b a1 r i0
+nolsajubasan	n o0 l s a0 d͡ʒ u0 b a1 s a0 n
+nolsajubasanri	n o0 l s a0 d͡ʒ u0 b a0 s a1 n r i0
+nolsajubasanti	n o0 l s a0 d͡ʒ u0 b a0 s a1 n t i0
+nolsajubasantiri	n o0 l s a0 d͡ʒ u0 b a0 s a0 n t i1 r i0
+nolsajubati	n o0 l s a0 d͡ʒ u0 b a1 t i0
+nolsajubatiri	n o0 l s a0 d͡ʒ u0 b a0 t i1 r i0
+nolsajubavu	n o0 l s a0 d͡ʒ u0 b a1 v u0
+nolsajubavuri	n o0 l s a0 d͡ʒ u0 b a0 v u1 r i0
+nolsajubayo	n o0 l s a0 d͡ʒ u0 b a1 j o0
+nolsajubayori	n o0 l s a0 d͡ʒ u0 b a0 j o1 r i0
 nolsakerso	n o0 l s a0 k e1 r s o0
 nolsakersoasa	n o0 l s a0 k e0 r s o0 a1 s a0
 nolsakersoasari	n o0 l s a0 k e0 r s o0 a0 s a1 r i0
@@ -51671,6 +52519,40 @@ pagopari	p a0 ɡ o0 p a1 r i0
 pagopati	p a0 ɡ o0 p a1 t i0
 pagopatiri	p a0 ɡ o0 p a0 t i1 r i0
 pagori	p a0 ɡ o1 r i0
+pagorinba	p a0 ɡ o0 r i1 n b a0
+pagorinbaasa	p a0 ɡ o0 r i0 n b a0 a1 s a0
+pagorinbaasari	p a0 ɡ o0 r i0 n b a0 a0 s a1 r i0
+pagorinbaasasan	p a0 ɡ o0 r i0 n b a0 a0 s a1 s a0 n
+pagorinbaasasanri	p a0 ɡ o0 r i0 n b a0 a0 s a0 s a1 n r i0
+pagorinbaasasanti	p a0 ɡ o0 r i0 n b a0 a0 s a0 s a1 n t i0
+pagorinbaasasantiri	p a0 ɡ o0 r i0 n b a0 a0 s a0 s a0 n t i1 r i0
+pagorinbaasati	p a0 ɡ o0 r i0 n b a0 a0 s a1 t i0
+pagorinbaasatiri	p a0 ɡ o0 r i0 n b a0 a0 s a0 t i1 r i0
+pagorinbana	p a0 ɡ o0 r i0 n b a1 n a0
+pagorinbanari	p a0 ɡ o0 r i0 n b a0 n a1 r i0
+pagorinbanasan	p a0 ɡ o0 r i0 n b a0 n a1 s a0 n
+pagorinbanasanri	p a0 ɡ o0 r i0 n b a0 n a0 s a1 n r i0
+pagorinbanasanti	p a0 ɡ o0 r i0 n b a0 n a0 s a1 n t i0
+pagorinbanasantiri	p a0 ɡ o0 r i0 n b a0 n a0 s a0 n t i1 r i0
+pagorinbanati	p a0 ɡ o0 r i0 n b a0 n a1 t i0
+pagorinbanatiri	p a0 ɡ o0 r i0 n b a0 n a0 t i1 r i0
+pagorinbapa	p a0 ɡ o0 r i0 n b a1 p a0
+pagorinbapago	p a0 ɡ o0 r i0 n b a0 p a1 ɡ o0
+pagorinbapagori	p a0 ɡ o0 r i0 n b a0 p a0 ɡ o1 r i0
+pagorinbapari	p a0 ɡ o0 r i0 n b a0 p a1 r i0
+pagorinbapati	p a0 ɡ o0 r i0 n b a0 p a1 t i0
+pagorinbapatiri	p a0 ɡ o0 r i0 n b a0 p a0 t i1 r i0
+pagorinbari	p a0 ɡ o0 r i0 n b a1 r i0
+pagorinbasan	p a0 ɡ o0 r i0 n b a1 s a0 n
+pagorinbasanri	p a0 ɡ o0 r i0 n b a0 s a1 n r i0
+pagorinbasanti	p a0 ɡ o0 r i0 n b a0 s a1 n t i0
+pagorinbasantiri	p a0 ɡ o0 r i0 n b a0 s a0 n t i1 r i0
+pagorinbati	p a0 ɡ o0 r i0 n b a1 t i0
+pagorinbatiri	p a0 ɡ o0 r i0 n b a0 t i1 r i0
+pagorinbavu	p a0 ɡ o0 r i0 n b a1 v u0
+pagorinbavuri	p a0 ɡ o0 r i0 n b a0 v u1 r i0
+pagorinbayo	p a0 ɡ o0 r i0 n b a1 j o0
+pagorinbayori	p a0 ɡ o0 r i0 n b a0 j o1 r i0
 pagosan	p a0 ɡ o1 s a0 n
 pagosanri	p a0 ɡ o0 s a1 n r i0
 pagosanti	p a0 ɡ o0 s a1 n t i0
@@ -54323,6 +55205,40 @@ polvaasasanti	p o0 l v a0 a0 s a0 s a1 n t i0
 polvaasasantiri	p o0 l v a0 a0 s a0 s a0 n t i1 r i0
 polvaasati	p o0 l v a0 a0 s a1 t i0
 polvaasatiri	p o0 l v a0 a0 s a0 t i1 r i0
+polvadonu	p o0 l v a0 d o1 n u0
+polvadonuasa	p o0 l v a0 d o0 n u0 a1 s a0
+polvadonuasari	p o0 l v a0 d o0 n u0 a0 s a1 r i0
+polvadonuasasan	p o0 l v a0 d o0 n u0 a0 s a1 s a0 n
+polvadonuasasanri	p o0 l v a0 d o0 n u0 a0 s a0 s a1 n r i0
+polvadonuasasanti	p o0 l v a0 d o0 n u0 a0 s a0 s a1 n t i0
+polvadonuasasantiri	p o0 l v a0 d o0 n u0 a0 s a0 s a0 n t i1 r i0
+polvadonuasati	p o0 l v a0 d o0 n u0 a0 s a1 t i0
+polvadonuasatiri	p o0 l v a0 d o0 n u0 a0 s a0 t i1 r i0
+polvadonuna	p o0 l v a0 d o0 n u1 n a0
+polvadonunari	p o0 l v a0 d o0 n u0 n a1 r i0
+polvadonunasan	p o0 l v a0 d o0 n u0 n a1 s a0 n
+polvadonunasanri	p o0 l v a0 d o0 n u0 n a0 s a1 n r i0
+polvadonunasanti	p o0 l v a0 d o0 n u0 n a0 s a1 n t i0
+polvadonunasantiri	p o0 l v a0 d o0 n u0 n a0 s a0 n t i1 r i0
+polvadonunati	p o0 l v a0 d o0 n u0 n a1 t i0
+polvadonunatiri	p o0 l v a0 d o0 n u0 n a0 t i1 r i0
+polvadonupa	p o0 l v a0 d o0 n u1 p a0
+polvadonupago	p o0 l v a0 d o0 n u0 p a1 ɡ o0
+polvadonupagori	p o0 l v a0 d o0 n u0 p a0 ɡ o1 r i0
+polvadonupari	p o0 l v a0 d o0 n u0 p a1 r i0
+polvadonupati	p o0 l v a0 d o0 n u0 p a1 t i0
+polvadonupatiri	p o0 l v a0 d o0 n u0 p a0 t i1 r i0
+polvadonuri	p o0 l v a0 d o0 n u1 r i0
+polvadonusan	p o0 l v a0 d o0 n u1 s a0 n
+polvadonusanri	p o0 l v a0 d o0 n u0 s a1 n r i0
+polvadonusanti	p o0 l v a0 d o0 n u0 s a1 n t i0
+polvadonusantiri	p o0 l v a0 d o0 n u0 s a0 n t i1 r i0
+polvadonuti	p o0 l v a0 d o0 n u1 t i0
+polvadonutiri	p o0 l v a0 d o0 n u0 t i1 r i0
+polvadonuvu	p o0 l v a0 d o0 n u1 v u0
+polvadonuvuri	p o0 l v a0 d o0 n u0 v u1 r i0
+polvadonuyo	p o0 l v a0 d o0 n u1 j o0
+polvadonuyori	p o0 l v a0 d o0 n u0 j o1 r i0
 polvakezupago	p o0 l v a0 k e0 z u0 p a1 ɡ o0
 polvakezupagoasa	p o0 l v a0 k e0 z u0 p a0 ɡ o0 a1 s a0
 polvakezupagoasari	p o0 l v a0 k e0 z u0 p a0 ɡ o0 a0 s a1 r i0
@@ -55736,6 +56652,40 @@ ramunatiri	r a0 m u0 n a0 t i1 r i0
 ramupago	r a0 m u0 p a1 ɡ o0
 ramupagori	r a0 m u0 p a0 ɡ o1 r i0
 ramura	r a0 m u1 r a0
+ramuralno	r a0 m u0 r a1 l n o0
+ramuralnoasa	r a0 m u0 r a0 l n o0 a1 s a0
+ramuralnoasari	r a0 m u0 r a0 l n o0 a0 s a1 r i0
+ramuralnoasasan	r a0 m u0 r a0 l n o0 a0 s a1 s a0 n
+ramuralnoasasanri	r a0 m u0 r a0 l n o0 a0 s a0 s a1 n r i0
+ramuralnoasasanti	r a0 m u0 r a0 l n o0 a0 s a0 s a1 n t i0
+ramuralnoasasantiri	r a0 m u0 r a0 l n o0 a0 s a0 s a0 n t i1 r i0
+ramuralnoasati	r a0 m u0 r a0 l n o0 a0 s a1 t i0
+ramuralnoasatiri	r a0 m u0 r a0 l n o0 a0 s a0 t i1 r i0
+ramuralnona	r a0 m u0 r a0 l n o1 n a0
+ramuralnonari	r a0 m u0 r a0 l n o0 n a1 r i0
+ramuralnonasan	r a0 m u0 r a0 l n o0 n a1 s a0 n
+ramuralnonasanri	r a0 m u0 r a0 l n o0 n a0 s a1 n r i0
+ramuralnonasanti	r a0 m u0 r a0 l n o0 n a0 s a1 n t i0
+ramuralnonasantiri	r a0 m u0 r a0 l n o0 n a0 s a0 n t i1 r i0
+ramuralnonati	r a0 m u0 r a0 l n o0 n a1 t i0
+ramuralnonatiri	r a0 m u0 r a0 l n o0 n a0 t i1 r i0
+ramuralnopago	r a0 m u0 r a0 l n o0 p a1 ɡ o0
+ramuralnopagori	r a0 m u0 r a0 l n o0 p a0 ɡ o1 r i0
+ramuralnora	r a0 m u0 r a0 l n o1 r a0
+ramuralnorari	r a0 m u0 r a0 l n o0 r a1 r i0
+ramuralnorati	r a0 m u0 r a0 l n o0 r a1 t i0
+ramuralnoratiri	r a0 m u0 r a0 l n o0 r a0 t i1 r i0
+ramuralnori	r a0 m u0 r a0 l n o1 r i0
+ramuralnosan	r a0 m u0 r a0 l n o1 s a0 n
+ramuralnosanri	r a0 m u0 r a0 l n o0 s a1 n r i0
+ramuralnosanti	r a0 m u0 r a0 l n o0 s a1 n t i0
+ramuralnosantiri	r a0 m u0 r a0 l n o0 s a0 n t i1 r i0
+ramuralnoti	r a0 m u0 r a0 l n o1 t i0
+ramuralnotiri	r a0 m u0 r a0 l n o0 t i1 r i0
+ramuralnovu	r a0 m u0 r a0 l n o1 v u0
+ramuralnovuri	r a0 m u0 r a0 l n o0 v u1 r i0
+ramuralnoyo	r a0 m u0 r a0 l n o1 j o0
+ramuralnoyori	r a0 m u0 r a0 l n o0 j o1 r i0
 ramurari	r a0 m u0 r a1 r i0
 ramurati	r a0 m u0 r a1 t i0
 ramuratiri	r a0 m u0 r a0 t i1 r i0
@@ -58621,6 +59571,40 @@ rivoasasanti	r i0 v o0 a0 s a0 s a1 n t i0
 rivoasasantiri	r i0 v o0 a0 s a0 s a0 n t i1 r i0
 rivoasati	r i0 v o0 a0 s a1 t i0
 rivoasatiri	r i0 v o0 a0 s a0 t i1 r i0
+rivodonu	r i0 v o0 d o1 n u0
+rivodonuasa	r i0 v o0 d o0 n u0 a1 s a0
+rivodonuasari	r i0 v o0 d o0 n u0 a0 s a1 r i0
+rivodonuasasan	r i0 v o0 d o0 n u0 a0 s a1 s a0 n
+rivodonuasasanri	r i0 v o0 d o0 n u0 a0 s a0 s a1 n r i0
+rivodonuasasanti	r i0 v o0 d o0 n u0 a0 s a0 s a1 n t i0
+rivodonuasasantiri	r i0 v o0 d o0 n u0 a0 s a0 s a0 n t i1 r i0
+rivodonuasati	r i0 v o0 d o0 n u0 a0 s a1 t i0
+rivodonuasatiri	r i0 v o0 d o0 n u0 a0 s a0 t i1 r i0
+rivodonuna	r i0 v o0 d o0 n u1 n a0
+rivodonunari	r i0 v o0 d o0 n u0 n a1 r i0
+rivodonunasan	r i0 v o0 d o0 n u0 n a1 s a0 n
+rivodonunasanri	r i0 v o0 d o0 n u0 n a0 s a1 n r i0
+rivodonunasanti	r i0 v o0 d o0 n u0 n a0 s a1 n t i0
+rivodonunasantiri	r i0 v o0 d o0 n u0 n a0 s a0 n t i1 r i0
+rivodonunati	r i0 v o0 d o0 n u0 n a1 t i0
+rivodonunatiri	r i0 v o0 d o0 n u0 n a0 t i1 r i0
+rivodonupago	r i0 v o0 d o0 n u0 p a1 ɡ o0
+rivodonupagori	r i0 v o0 d o0 n u0 p a0 ɡ o1 r i0
+rivodonura	r i0 v o0 d o0 n u1 r a0
+rivodonurari	r i0 v o0 d o0 n u0 r a1 r i0
+rivodonurati	r i0 v o0 d o0 n u0 r a1 t i0
+rivodonuratiri	r i0 v o0 d o0 n u0 r a0 t i1 r i0
+rivodonuri	r i0 v o0 d o0 n u1 r i0
+rivodonusan	r i0 v o0 d o0 n u1 s a0 n
+rivodonusanri	r i0 v o0 d o0 n u0 s a1 n r i0
+rivodonusanti	r i0 v o0 d o0 n u0 s a1 n t i0
+rivodonusantiri	r i0 v o0 d o0 n u0 s a0 n t i1 r i0
+rivodonuti	r i0 v o0 d o0 n u1 t i0
+rivodonutiri	r i0 v o0 d o0 n u0 t i1 r i0
+rivodonuvu	r i0 v o0 d o0 n u1 v u0
+rivodonuvuri	r i0 v o0 d o0 n u0 v u1 r i0
+rivodonuyo	r i0 v o0 d o0 n u1 j o0
+rivodonuyori	r i0 v o0 d o0 n u0 j o1 r i0
 rivolira	r i0 v o0 l i1 r a0
 rivoliraasa	r i0 v o0 l i0 r a0 a1 s a0
 rivoliraasari	r i0 v o0 l i0 r a0 a0 s a1 r i0
@@ -62305,6 +63289,40 @@ sasvavimonati	s a0 s v a0 v i0 m o0 n a1 t i0
 sasvavimonatiri	s a0 s v a0 v i0 m o0 n a0 t i1 r i0
 sasvavimopago	s a0 s v a0 v i0 m o0 p a1 ɡ o0
 sasvavimopagori	s a0 s v a0 v i0 m o0 p a0 ɡ o1 r i0
+sasvavimoramu	s a0 s v a0 v i0 m o0 r a1 m u0
+sasvavimoramuasa	s a0 s v a0 v i0 m o0 r a0 m u0 a1 s a0
+sasvavimoramuasari	s a0 s v a0 v i0 m o0 r a0 m u0 a0 s a1 r i0
+sasvavimoramuasasan	s a0 s v a0 v i0 m o0 r a0 m u0 a0 s a1 s a0 n
+sasvavimoramuasasanri	s a0 s v a0 v i0 m o0 r a0 m u0 a0 s a0 s a1 n r i0
+sasvavimoramuasasanti	s a0 s v a0 v i0 m o0 r a0 m u0 a0 s a0 s a1 n t i0
+sasvavimoramuasasantiri	s a0 s v a0 v i0 m o0 r a0 m u0 a0 s a0 s a0 n t i1 r i0
+sasvavimoramuasati	s a0 s v a0 v i0 m o0 r a0 m u0 a0 s a1 t i0
+sasvavimoramuasatiri	s a0 s v a0 v i0 m o0 r a0 m u0 a0 s a0 t i1 r i0
+sasvavimoramuna	s a0 s v a0 v i0 m o0 r a0 m u1 n a0
+sasvavimoramunari	s a0 s v a0 v i0 m o0 r a0 m u0 n a1 r i0
+sasvavimoramunasan	s a0 s v a0 v i0 m o0 r a0 m u0 n a1 s a0 n
+sasvavimoramunasanri	s a0 s v a0 v i0 m o0 r a0 m u0 n a0 s a1 n r i0
+sasvavimoramunasanti	s a0 s v a0 v i0 m o0 r a0 m u0 n a0 s a1 n t i0
+sasvavimoramunasantiri	s a0 s v a0 v i0 m o0 r a0 m u0 n a0 s a0 n t i1 r i0
+sasvavimoramunati	s a0 s v a0 v i0 m o0 r a0 m u0 n a1 t i0
+sasvavimoramunatiri	s a0 s v a0 v i0 m o0 r a0 m u0 n a0 t i1 r i0
+sasvavimoramupago	s a0 s v a0 v i0 m o0 r a0 m u0 p a1 ɡ o0
+sasvavimoramupagori	s a0 s v a0 v i0 m o0 r a0 m u0 p a0 ɡ o1 r i0
+sasvavimoramuri	s a0 s v a0 v i0 m o0 r a0 m u1 r i0
+sasvavimoramusan	s a0 s v a0 v i0 m o0 r a0 m u1 s a0 n
+sasvavimoramusanri	s a0 s v a0 v i0 m o0 r a0 m u0 s a1 n r i0
+sasvavimoramusanti	s a0 s v a0 v i0 m o0 r a0 m u0 s a1 n t i0
+sasvavimoramusantiri	s a0 s v a0 v i0 m o0 r a0 m u0 s a0 n t i1 r i0
+sasvavimoramusia	s a0 s v a0 v i0 m o0 r a0 m u0 s i1 a0
+sasvavimoramusiari	s a0 s v a0 v i0 m o0 r a0 m u0 s i0 a1 r i0
+sasvavimoramusiati	s a0 s v a0 v i0 m o0 r a0 m u0 s i0 a1 t i0
+sasvavimoramusiatiri	s a0 s v a0 v i0 m o0 r a0 m u0 s i0 a0 t i1 r i0
+sasvavimoramuti	s a0 s v a0 v i0 m o0 r a0 m u1 t i0
+sasvavimoramutiri	s a0 s v a0 v i0 m o0 r a0 m u0 t i1 r i0
+sasvavimoramuvu	s a0 s v a0 v i0 m o0 r a0 m u1 v u0
+sasvavimoramuvuri	s a0 s v a0 v i0 m o0 r a0 m u0 v u1 r i0
+sasvavimoramuyo	s a0 s v a0 v i0 m o0 r a0 m u1 j o0
+sasvavimoramuyori	s a0 s v a0 v i0 m o0 r a0 m u0 j o1 r i0
 sasvavimori	s a0 s v a0 v i0 m o1 r i0
 sasvavimosan	s a0 s v a0 v i0 m o1 s a0 n
 sasvavimosanri	s a0 s v a0 v i0 m o0 s a1 n r i0
@@ -63560,6 +64578,40 @@ serbuasasanti	s e0 r b u0 a0 s a0 s a1 n t i0
 serbuasasantiri	s e0 r b u0 a0 s a0 s a0 n t i1 r i0
 serbuasati	s e0 r b u0 a0 s a1 t i0
 serbuasatiri	s e0 r b u0 a0 s a0 t i1 r i0
+serbucuza	s e0 r b u0 t͡ʃ u1 z a0
+serbucuzaasa	s e0 r b u0 t͡ʃ u0 z a0 a1 s a0
+serbucuzaasari	s e0 r b u0 t͡ʃ u0 z a0 a0 s a1 r i0
+serbucuzaasasan	s e0 r b u0 t͡ʃ u0 z a0 a0 s a1 s a0 n
+serbucuzaasasanri	s e0 r b u0 t͡ʃ u0 z a0 a0 s a0 s a1 n r i0
+serbucuzaasasanti	s e0 r b u0 t͡ʃ u0 z a0 a0 s a0 s a1 n t i0
+serbucuzaasasantiri	s e0 r b u0 t͡ʃ u0 z a0 a0 s a0 s a0 n t i1 r i0
+serbucuzaasati	s e0 r b u0 t͡ʃ u0 z a0 a0 s a1 t i0
+serbucuzaasatiri	s e0 r b u0 t͡ʃ u0 z a0 a0 s a0 t i1 r i0
+serbucuzana	s e0 r b u0 t͡ʃ u0 z a1 n a0
+serbucuzanari	s e0 r b u0 t͡ʃ u0 z a0 n a1 r i0
+serbucuzanasan	s e0 r b u0 t͡ʃ u0 z a0 n a1 s a0 n
+serbucuzanasanri	s e0 r b u0 t͡ʃ u0 z a0 n a0 s a1 n r i0
+serbucuzanasanti	s e0 r b u0 t͡ʃ u0 z a0 n a0 s a1 n t i0
+serbucuzanasantiri	s e0 r b u0 t͡ʃ u0 z a0 n a0 s a0 n t i1 r i0
+serbucuzanati	s e0 r b u0 t͡ʃ u0 z a0 n a1 t i0
+serbucuzanatiri	s e0 r b u0 t͡ʃ u0 z a0 n a0 t i1 r i0
+serbucuzapago	s e0 r b u0 t͡ʃ u0 z a0 p a1 ɡ o0
+serbucuzapagori	s e0 r b u0 t͡ʃ u0 z a0 p a0 ɡ o1 r i0
+serbucuzari	s e0 r b u0 t͡ʃ u0 z a1 r i0
+serbucuzasan	s e0 r b u0 t͡ʃ u0 z a1 s a0 n
+serbucuzasanri	s e0 r b u0 t͡ʃ u0 z a0 s a1 n r i0
+serbucuzasanti	s e0 r b u0 t͡ʃ u0 z a0 s a1 n t i0
+serbucuzasantiri	s e0 r b u0 t͡ʃ u0 z a0 s a0 n t i1 r i0
+serbucuzasia	s e0 r b u0 t͡ʃ u0 z a0 s i1 a0
+serbucuzasiari	s e0 r b u0 t͡ʃ u0 z a0 s i0 a1 r i0
+serbucuzasiati	s e0 r b u0 t͡ʃ u0 z a0 s i0 a1 t i0
+serbucuzasiatiri	s e0 r b u0 t͡ʃ u0 z a0 s i0 a0 t i1 r i0
+serbucuzati	s e0 r b u0 t͡ʃ u0 z a1 t i0
+serbucuzatiri	s e0 r b u0 t͡ʃ u0 z a0 t i1 r i0
+serbucuzavu	s e0 r b u0 t͡ʃ u0 z a1 v u0
+serbucuzavuri	s e0 r b u0 t͡ʃ u0 z a0 v u1 r i0
+serbucuzayo	s e0 r b u0 t͡ʃ u0 z a1 j o0
+serbucuzayori	s e0 r b u0 t͡ʃ u0 z a0 j o1 r i0
 serbuna	s e0 r b u1 n a0
 serbunari	s e0 r b u0 n a1 r i0
 serbunasan	s e0 r b u0 n a1 s a0 n
@@ -66239,6 +67291,40 @@ silrolordivu	s i0 l r o0 l o0 r d i1 v u0
 silrolordivuri	s i0 l r o0 l o0 r d i0 v u1 r i0
 silrolordiyo	s i0 l r o0 l o0 r d i1 j o0
 silrolordiyori	s i0 l r o0 l o0 r d i0 j o1 r i0
+silrolore	s i0 l r o0 l o1 r e0
+silroloreasa	s i0 l r o0 l o0 r e0 a1 s a0
+silroloreasari	s i0 l r o0 l o0 r e0 a0 s a1 r i0
+silroloreasasan	s i0 l r o0 l o0 r e0 a0 s a1 s a0 n
+silroloreasasanri	s i0 l r o0 l o0 r e0 a0 s a0 s a1 n r i0
+silroloreasasanti	s i0 l r o0 l o0 r e0 a0 s a0 s a1 n t i0
+silroloreasasantiri	s i0 l r o0 l o0 r e0 a0 s a0 s a0 n t i1 r i0
+silroloreasati	s i0 l r o0 l o0 r e0 a0 s a1 t i0
+silroloreasatiri	s i0 l r o0 l o0 r e0 a0 s a0 t i1 r i0
+silrolorena	s i0 l r o0 l o0 r e1 n a0
+silrolorenari	s i0 l r o0 l o0 r e0 n a1 r i0
+silrolorenasan	s i0 l r o0 l o0 r e0 n a1 s a0 n
+silrolorenasanri	s i0 l r o0 l o0 r e0 n a0 s a1 n r i0
+silrolorenasanti	s i0 l r o0 l o0 r e0 n a0 s a1 n t i0
+silrolorenasantiri	s i0 l r o0 l o0 r e0 n a0 s a0 n t i1 r i0
+silrolorenati	s i0 l r o0 l o0 r e0 n a1 t i0
+silrolorenatiri	s i0 l r o0 l o0 r e0 n a0 t i1 r i0
+silrolorepago	s i0 l r o0 l o0 r e0 p a1 ɡ o0
+silrolorepagori	s i0 l r o0 l o0 r e0 p a0 ɡ o1 r i0
+silroloreri	s i0 l r o0 l o0 r e1 r i0
+silroloresan	s i0 l r o0 l o0 r e1 s a0 n
+silroloresanri	s i0 l r o0 l o0 r e0 s a1 n r i0
+silroloresanti	s i0 l r o0 l o0 r e0 s a1 n t i0
+silroloresantiri	s i0 l r o0 l o0 r e0 s a0 n t i1 r i0
+silroloresia	s i0 l r o0 l o0 r e0 s i1 a0
+silroloresiari	s i0 l r o0 l o0 r e0 s i0 a1 r i0
+silroloresiati	s i0 l r o0 l o0 r e0 s i0 a1 t i0
+silroloresiatiri	s i0 l r o0 l o0 r e0 s i0 a0 t i1 r i0
+silroloreti	s i0 l r o0 l o0 r e1 t i0
+silroloretiri	s i0 l r o0 l o0 r e0 t i1 r i0
+silrolorevu	s i0 l r o0 l o0 r e1 v u0
+silrolorevuri	s i0 l r o0 l o0 r e0 v u1 r i0
+silroloreyo	s i0 l r o0 l o0 r e1 j o0
+silroloreyori	s i0 l r o0 l o0 r e0 j o1 r i0
 silrolumi	s i0 l r o0 l u1 m i0
 silrolumiasa	s i0 l r o0 l u0 m i0 a1 s a0
 silrolumiasari	s i0 l r o0 l u0 m i0 a0 s a1 r i0
@@ -66886,6 +67972,40 @@ sirmoliravu	s i0 r m o0 l i0 r a1 v u0
 sirmoliravuri	s i0 r m o0 l i0 r a0 v u1 r i0
 sirmolirayo	s i0 r m o0 l i0 r a1 j o0
 sirmolirayori	s i0 r m o0 l i0 r a0 j o1 r i0
+sirmolore	s i0 r m o0 l o1 r e0
+sirmoloreasa	s i0 r m o0 l o0 r e0 a1 s a0
+sirmoloreasari	s i0 r m o0 l o0 r e0 a0 s a1 r i0
+sirmoloreasasan	s i0 r m o0 l o0 r e0 a0 s a1 s a0 n
+sirmoloreasasanri	s i0 r m o0 l o0 r e0 a0 s a0 s a1 n r i0
+sirmoloreasasanti	s i0 r m o0 l o0 r e0 a0 s a0 s a1 n t i0
+sirmoloreasasantiri	s i0 r m o0 l o0 r e0 a0 s a0 s a0 n t i1 r i0
+sirmoloreasati	s i0 r m o0 l o0 r e0 a0 s a1 t i0
+sirmoloreasatiri	s i0 r m o0 l o0 r e0 a0 s a0 t i1 r i0
+sirmolorena	s i0 r m o0 l o0 r e1 n a0
+sirmolorenari	s i0 r m o0 l o0 r e0 n a1 r i0
+sirmolorenasan	s i0 r m o0 l o0 r e0 n a1 s a0 n
+sirmolorenasanri	s i0 r m o0 l o0 r e0 n a0 s a1 n r i0
+sirmolorenasanti	s i0 r m o0 l o0 r e0 n a0 s a1 n t i0
+sirmolorenasantiri	s i0 r m o0 l o0 r e0 n a0 s a0 n t i1 r i0
+sirmolorenati	s i0 r m o0 l o0 r e0 n a1 t i0
+sirmolorenatiri	s i0 r m o0 l o0 r e0 n a0 t i1 r i0
+sirmolorepago	s i0 r m o0 l o0 r e0 p a1 ɡ o0
+sirmolorepagori	s i0 r m o0 l o0 r e0 p a0 ɡ o1 r i0
+sirmoloreri	s i0 r m o0 l o0 r e1 r i0
+sirmoloresan	s i0 r m o0 l o0 r e1 s a0 n
+sirmoloresanri	s i0 r m o0 l o0 r e0 s a1 n r i0
+sirmoloresanti	s i0 r m o0 l o0 r e0 s a1 n t i0
+sirmoloresantiri	s i0 r m o0 l o0 r e0 s a0 n t i1 r i0
+sirmoloresia	s i0 r m o0 l o0 r e0 s i1 a0
+sirmoloresiari	s i0 r m o0 l o0 r e0 s i0 a1 r i0
+sirmoloresiati	s i0 r m o0 l o0 r e0 s i0 a1 t i0
+sirmoloresiatiri	s i0 r m o0 l o0 r e0 s i0 a0 t i1 r i0
+sirmoloreti	s i0 r m o0 l o0 r e1 t i0
+sirmoloretiri	s i0 r m o0 l o0 r e0 t i1 r i0
+sirmolorevu	s i0 r m o0 l o0 r e1 v u0
+sirmolorevuri	s i0 r m o0 l o0 r e0 v u1 r i0
+sirmoloreyo	s i0 r m o0 l o0 r e1 j o0
+sirmoloreyori	s i0 r m o0 l o0 r e0 j o1 r i0
 sirmona	s i0 r m o1 n a0
 sirmonari	s i0 r m o0 n a1 r i0
 sirmonasan	s i0 r m o0 n a1 s a0 n
@@ -69352,6 +70472,40 @@ sulmenasanti	s u0 l m e0 n a0 s a1 n t i0
 sulmenasantiri	s u0 l m e0 n a0 s a0 n t i1 r i0
 sulmenati	s u0 l m e0 n a1 t i0
 sulmenatiri	s u0 l m e0 n a0 t i1 r i0
+sulmenela	s u0 l m e0 n e1 l a0
+sulmenelaasa	s u0 l m e0 n e0 l a0 a1 s a0
+sulmenelaasari	s u0 l m e0 n e0 l a0 a0 s a1 r i0
+sulmenelaasasan	s u0 l m e0 n e0 l a0 a0 s a1 s a0 n
+sulmenelaasasanri	s u0 l m e0 n e0 l a0 a0 s a0 s a1 n r i0
+sulmenelaasasanti	s u0 l m e0 n e0 l a0 a0 s a0 s a1 n t i0
+sulmenelaasasantiri	s u0 l m e0 n e0 l a0 a0 s a0 s a0 n t i1 r i0
+sulmenelaasati	s u0 l m e0 n e0 l a0 a0 s a1 t i0
+sulmenelaasatiri	s u0 l m e0 n e0 l a0 a0 s a0 t i1 r i0
+sulmenelana	s u0 l m e0 n e0 l a1 n a0
+sulmenelanari	s u0 l m e0 n e0 l a0 n a1 r i0
+sulmenelanasan	s u0 l m e0 n e0 l a0 n a1 s a0 n
+sulmenelanasanri	s u0 l m e0 n e0 l a0 n a0 s a1 n r i0
+sulmenelanasanti	s u0 l m e0 n e0 l a0 n a0 s a1 n t i0
+sulmenelanasantiri	s u0 l m e0 n e0 l a0 n a0 s a0 n t i1 r i0
+sulmenelanati	s u0 l m e0 n e0 l a0 n a1 t i0
+sulmenelanatiri	s u0 l m e0 n e0 l a0 n a0 t i1 r i0
+sulmenelapago	s u0 l m e0 n e0 l a0 p a1 ɡ o0
+sulmenelapagori	s u0 l m e0 n e0 l a0 p a0 ɡ o1 r i0
+sulmenelari	s u0 l m e0 n e0 l a1 r i0
+sulmenelasan	s u0 l m e0 n e0 l a1 s a0 n
+sulmenelasanri	s u0 l m e0 n e0 l a0 s a1 n r i0
+sulmenelasanti	s u0 l m e0 n e0 l a0 s a1 n t i0
+sulmenelasantiri	s u0 l m e0 n e0 l a0 s a0 n t i1 r i0
+sulmenelasia	s u0 l m e0 n e0 l a0 s i1 a0
+sulmenelasiari	s u0 l m e0 n e0 l a0 s i0 a1 r i0
+sulmenelasiati	s u0 l m e0 n e0 l a0 s i0 a1 t i0
+sulmenelasiatiri	s u0 l m e0 n e0 l a0 s i0 a0 t i1 r i0
+sulmenelati	s u0 l m e0 n e0 l a1 t i0
+sulmenelatiri	s u0 l m e0 n e0 l a0 t i1 r i0
+sulmenelavu	s u0 l m e0 n e0 l a1 v u0
+sulmenelavuri	s u0 l m e0 n e0 l a0 v u1 r i0
+sulmenelayo	s u0 l m e0 n e0 l a1 j o0
+sulmenelayori	s u0 l m e0 n e0 l a0 j o1 r i0
 sulmenulu	s u0 l m e0 n u1 l u0
 sulmenuluasa	s u0 l m e0 n u0 l u0 a1 s a0
 sulmenuluasari	s u0 l m e0 n u0 l u0 a0 s a1 r i0
@@ -73469,6 +74623,40 @@ turnanatiri	t u0 r n a0 n a0 t i1 r i0
 turnapago	t u0 r n a0 p a1 ɡ o0
 turnapagori	t u0 r n a0 p a0 ɡ o1 r i0
 turnari	t u0 r n a1 r i0
+turnasalrupatu	t u0 r n a0 s a0 l r u0 p a1 t u0
+turnasalrupatuasa	t u0 r n a0 s a0 l r u0 p a0 t u0 a1 s a0
+turnasalrupatuasari	t u0 r n a0 s a0 l r u0 p a0 t u0 a0 s a1 r i0
+turnasalrupatuasasan	t u0 r n a0 s a0 l r u0 p a0 t u0 a0 s a1 s a0 n
+turnasalrupatuasasanri	t u0 r n a0 s a0 l r u0 p a0 t u0 a0 s a0 s a1 n r i0
+turnasalrupatuasasanti	t u0 r n a0 s a0 l r u0 p a0 t u0 a0 s a0 s a1 n t i0
+turnasalrupatuasasantiri	t u0 r n a0 s a0 l r u0 p a0 t u0 a0 s a0 s a0 n t i1 r i0
+turnasalrupatuasati	t u0 r n a0 s a0 l r u0 p a0 t u0 a0 s a1 t i0
+turnasalrupatuasatiri	t u0 r n a0 s a0 l r u0 p a0 t u0 a0 s a0 t i1 r i0
+turnasalrupatuna	t u0 r n a0 s a0 l r u0 p a0 t u1 n a0
+turnasalrupatunari	t u0 r n a0 s a0 l r u0 p a0 t u0 n a1 r i0
+turnasalrupatunasan	t u0 r n a0 s a0 l r u0 p a0 t u0 n a1 s a0 n
+turnasalrupatunasanri	t u0 r n a0 s a0 l r u0 p a0 t u0 n a0 s a1 n r i0
+turnasalrupatunasanti	t u0 r n a0 s a0 l r u0 p a0 t u0 n a0 s a1 n t i0
+turnasalrupatunasantiri	t u0 r n a0 s a0 l r u0 p a0 t u0 n a0 s a0 n t i1 r i0
+turnasalrupatunati	t u0 r n a0 s a0 l r u0 p a0 t u0 n a1 t i0
+turnasalrupatunatiri	t u0 r n a0 s a0 l r u0 p a0 t u0 n a0 t i1 r i0
+turnasalrupatupago	t u0 r n a0 s a0 l r u0 p a0 t u0 p a1 ɡ o0
+turnasalrupatupagori	t u0 r n a0 s a0 l r u0 p a0 t u0 p a0 ɡ o1 r i0
+turnasalrupaturi	t u0 r n a0 s a0 l r u0 p a0 t u1 r i0
+turnasalrupatusan	t u0 r n a0 s a0 l r u0 p a0 t u1 s a0 n
+turnasalrupatusanri	t u0 r n a0 s a0 l r u0 p a0 t u0 s a1 n r i0
+turnasalrupatusanti	t u0 r n a0 s a0 l r u0 p a0 t u0 s a1 n t i0
+turnasalrupatusantiri	t u0 r n a0 s a0 l r u0 p a0 t u0 s a0 n t i1 r i0
+turnasalrupatuta	t u0 r n a0 s a0 l r u0 p a0 t u1 t a0
+turnasalrupatutari	t u0 r n a0 s a0 l r u0 p a0 t u0 t a1 r i0
+turnasalrupatutati	t u0 r n a0 s a0 l r u0 p a0 t u0 t a1 t i0
+turnasalrupatutatiri	t u0 r n a0 s a0 l r u0 p a0 t u0 t a0 t i1 r i0
+turnasalrupatuti	t u0 r n a0 s a0 l r u0 p a0 t u1 t i0
+turnasalrupatutiri	t u0 r n a0 s a0 l r u0 p a0 t u0 t i1 r i0
+turnasalrupatuvu	t u0 r n a0 s a0 l r u0 p a0 t u1 v u0
+turnasalrupatuvuri	t u0 r n a0 s a0 l r u0 p a0 t u0 v u1 r i0
+turnasalrupatuyo	t u0 r n a0 s a0 l r u0 p a0 t u1 j o0
+turnasalrupatuyori	t u0 r n a0 s a0 l r u0 p a0 t u0 j o1 r i0
 turnasan	t u0 r n a1 s a0 n
 turnasanri	t u0 r n a0 s a1 n r i0
 turnasanti	t u0 r n a0 s a1 n t i0
@@ -73668,6 +74856,40 @@ valladozanati	v a0 l l a0 d o0 z a0 n a1 t i0
 valladozanatiri	v a0 l l a0 d o0 z a0 n a0 t i1 r i0
 valladozapago	v a0 l l a0 d o0 z a0 p a1 ɡ o0
 valladozapagori	v a0 l l a0 d o0 z a0 p a0 ɡ o1 r i0
+valladozapatu	v a0 l l a0 d o0 z a0 p a1 t u0
+valladozapatuasa	v a0 l l a0 d o0 z a0 p a0 t u0 a1 s a0
+valladozapatuasari	v a0 l l a0 d o0 z a0 p a0 t u0 a0 s a1 r i0
+valladozapatuasasan	v a0 l l a0 d o0 z a0 p a0 t u0 a0 s a1 s a0 n
+valladozapatuasasanri	v a0 l l a0 d o0 z a0 p a0 t u0 a0 s a0 s a1 n r i0
+valladozapatuasasanti	v a0 l l a0 d o0 z a0 p a0 t u0 a0 s a0 s a1 n t i0
+valladozapatuasasantiri	v a0 l l a0 d o0 z a0 p a0 t u0 a0 s a0 s a0 n t i1 r i0
+valladozapatuasati	v a0 l l a0 d o0 z a0 p a0 t u0 a0 s a1 t i0
+valladozapatuasatiri	v a0 l l a0 d o0 z a0 p a0 t u0 a0 s a0 t i1 r i0
+valladozapatuna	v a0 l l a0 d o0 z a0 p a0 t u1 n a0
+valladozapatunari	v a0 l l a0 d o0 z a0 p a0 t u0 n a1 r i0
+valladozapatunasan	v a0 l l a0 d o0 z a0 p a0 t u0 n a1 s a0 n
+valladozapatunasanri	v a0 l l a0 d o0 z a0 p a0 t u0 n a0 s a1 n r i0
+valladozapatunasanti	v a0 l l a0 d o0 z a0 p a0 t u0 n a0 s a1 n t i0
+valladozapatunasantiri	v a0 l l a0 d o0 z a0 p a0 t u0 n a0 s a0 n t i1 r i0
+valladozapatunati	v a0 l l a0 d o0 z a0 p a0 t u0 n a1 t i0
+valladozapatunatiri	v a0 l l a0 d o0 z a0 p a0 t u0 n a0 t i1 r i0
+valladozapatupago	v a0 l l a0 d o0 z a0 p a0 t u0 p a1 ɡ o0
+valladozapatupagori	v a0 l l a0 d o0 z a0 p a0 t u0 p a0 ɡ o1 r i0
+valladozapaturi	v a0 l l a0 d o0 z a0 p a0 t u1 r i0
+valladozapatusan	v a0 l l a0 d o0 z a0 p a0 t u1 s a0 n
+valladozapatusanri	v a0 l l a0 d o0 z a0 p a0 t u0 s a1 n r i0
+valladozapatusanti	v a0 l l a0 d o0 z a0 p a0 t u0 s a1 n t i0
+valladozapatusantiri	v a0 l l a0 d o0 z a0 p a0 t u0 s a0 n t i1 r i0
+valladozapatuti	v a0 l l a0 d o0 z a0 p a0 t u1 t i0
+valladozapatutiri	v a0 l l a0 d o0 z a0 p a0 t u0 t i1 r i0
+valladozapatuva	v a0 l l a0 d o0 z a0 p a0 t u1 v a0
+valladozapatuvari	v a0 l l a0 d o0 z a0 p a0 t u0 v a1 r i0
+valladozapatuvati	v a0 l l a0 d o0 z a0 p a0 t u0 v a1 t i0
+valladozapatuvatiri	v a0 l l a0 d o0 z a0 p a0 t u0 v a0 t i1 r i0
+valladozapatuvu	v a0 l l a0 d o0 z a0 p a0 t u1 v u0
+valladozapatuvuri	v a0 l l a0 d o0 z a0 p a0 t u0 v u1 r i0
+valladozapatuyo	v a0 l l a0 d o0 z a0 p a0 t u1 j o0
+valladozapatuyori	v a0 l l a0 d o0 z a0 p a0 t u0 j o1 r i0
 valladozari	v a0 l l a0 d o0 z a1 r i0
 valladozasan	v a0 l l a0 d o0 z a1 s a0 n
 valladozasanri	v a0 l l a0 d o0 z a0 s a1 n r i0
@@ -73785,6 +75007,40 @@ valmibitivu	v a0 l m i0 b i0 t i1 v u0
 valmibitivuri	v a0 l m i0 b i0 t i0 v u1 r i0
 valmibitiyo	v a0 l m i0 b i0 t i1 j o0
 valmibitiyori	v a0 l m i0 b i0 t i0 j o1 r i0
+valmikibo	v a0 l m i0 k i1 b o0
+valmikiboasa	v a0 l m i0 k i0 b o0 a1 s a0
+valmikiboasari	v a0 l m i0 k i0 b o0 a0 s a1 r i0
+valmikiboasasan	v a0 l m i0 k i0 b o0 a0 s a1 s a0 n
+valmikiboasasanri	v a0 l m i0 k i0 b o0 a0 s a0 s a1 n r i0
+valmikiboasasanti	v a0 l m i0 k i0 b o0 a0 s a0 s a1 n t i0
+valmikiboasasantiri	v a0 l m i0 k i0 b o0 a0 s a0 s a0 n t i1 r i0
+valmikiboasati	v a0 l m i0 k i0 b o0 a0 s a1 t i0
+valmikiboasatiri	v a0 l m i0 k i0 b o0 a0 s a0 t i1 r i0
+valmikibona	v a0 l m i0 k i0 b o1 n a0
+valmikibonari	v a0 l m i0 k i0 b o0 n a1 r i0
+valmikibonasan	v a0 l m i0 k i0 b o0 n a1 s a0 n
+valmikibonasanri	v a0 l m i0 k i0 b o0 n a0 s a1 n r i0
+valmikibonasanti	v a0 l m i0 k i0 b o0 n a0 s a1 n t i0
+valmikibonasantiri	v a0 l m i0 k i0 b o0 n a0 s a0 n t i1 r i0
+valmikibonati	v a0 l m i0 k i0 b o0 n a1 t i0
+valmikibonatiri	v a0 l m i0 k i0 b o0 n a0 t i1 r i0
+valmikibopago	v a0 l m i0 k i0 b o0 p a1 ɡ o0
+valmikibopagori	v a0 l m i0 k i0 b o0 p a0 ɡ o1 r i0
+valmikibori	v a0 l m i0 k i0 b o1 r i0
+valmikibosan	v a0 l m i0 k i0 b o1 s a0 n
+valmikibosanri	v a0 l m i0 k i0 b o0 s a1 n r i0
+valmikibosanti	v a0 l m i0 k i0 b o0 s a1 n t i0
+valmikibosantiri	v a0 l m i0 k i0 b o0 s a0 n t i1 r i0
+valmikiboti	v a0 l m i0 k i0 b o1 t i0
+valmikibotiri	v a0 l m i0 k i0 b o0 t i1 r i0
+valmikibova	v a0 l m i0 k i0 b o1 v a0
+valmikibovari	v a0 l m i0 k i0 b o0 v a1 r i0
+valmikibovati	v a0 l m i0 k i0 b o0 v a1 t i0
+valmikibovatiri	v a0 l m i0 k i0 b o0 v a0 t i1 r i0
+valmikibovu	v a0 l m i0 k i0 b o1 v u0
+valmikibovuri	v a0 l m i0 k i0 b o0 v u1 r i0
+valmikiboyo	v a0 l m i0 k i0 b o1 j o0
+valmikiboyori	v a0 l m i0 k i0 b o0 j o1 r i0
 valmilornu	v a0 l m i0 l o1 r n u0
 valmilornuasa	v a0 l m i0 l o0 r n u0 a1 s a0
 valmilornuasari	v a0 l m i0 l o0 r n u0 a0 s a1 r i0
@@ -73827,6 +75083,40 @@ valminasanti	v a0 l m i0 n a0 s a1 n t i0
 valminasantiri	v a0 l m i0 n a0 s a0 n t i1 r i0
 valminati	v a0 l m i0 n a1 t i0
 valminatiri	v a0 l m i0 n a0 t i1 r i0
+valminela	v a0 l m i0 n e1 l a0
+valminelaasa	v a0 l m i0 n e0 l a0 a1 s a0
+valminelaasari	v a0 l m i0 n e0 l a0 a0 s a1 r i0
+valminelaasasan	v a0 l m i0 n e0 l a0 a0 s a1 s a0 n
+valminelaasasanri	v a0 l m i0 n e0 l a0 a0 s a0 s a1 n r i0
+valminelaasasanti	v a0 l m i0 n e0 l a0 a0 s a0 s a1 n t i0
+valminelaasasantiri	v a0 l m i0 n e0 l a0 a0 s a0 s a0 n t i1 r i0
+valminelaasati	v a0 l m i0 n e0 l a0 a0 s a1 t i0
+valminelaasatiri	v a0 l m i0 n e0 l a0 a0 s a0 t i1 r i0
+valminelana	v a0 l m i0 n e0 l a1 n a0
+valminelanari	v a0 l m i0 n e0 l a0 n a1 r i0
+valminelanasan	v a0 l m i0 n e0 l a0 n a1 s a0 n
+valminelanasanri	v a0 l m i0 n e0 l a0 n a0 s a1 n r i0
+valminelanasanti	v a0 l m i0 n e0 l a0 n a0 s a1 n t i0
+valminelanasantiri	v a0 l m i0 n e0 l a0 n a0 s a0 n t i1 r i0
+valminelanati	v a0 l m i0 n e0 l a0 n a1 t i0
+valminelanatiri	v a0 l m i0 n e0 l a0 n a0 t i1 r i0
+valminelapago	v a0 l m i0 n e0 l a0 p a1 ɡ o0
+valminelapagori	v a0 l m i0 n e0 l a0 p a0 ɡ o1 r i0
+valminelari	v a0 l m i0 n e0 l a1 r i0
+valminelasan	v a0 l m i0 n e0 l a1 s a0 n
+valminelasanri	v a0 l m i0 n e0 l a0 s a1 n r i0
+valminelasanti	v a0 l m i0 n e0 l a0 s a1 n t i0
+valminelasantiri	v a0 l m i0 n e0 l a0 s a0 n t i1 r i0
+valminelati	v a0 l m i0 n e0 l a1 t i0
+valminelatiri	v a0 l m i0 n e0 l a0 t i1 r i0
+valminelava	v a0 l m i0 n e0 l a1 v a0
+valminelavari	v a0 l m i0 n e0 l a0 v a1 r i0
+valminelavati	v a0 l m i0 n e0 l a0 v a1 t i0
+valminelavatiri	v a0 l m i0 n e0 l a0 v a0 t i1 r i0
+valminelavu	v a0 l m i0 n e0 l a1 v u0
+valminelavuri	v a0 l m i0 n e0 l a0 v u1 r i0
+valminelayo	v a0 l m i0 n e0 l a1 j o0
+valminelayori	v a0 l m i0 n e0 l a0 j o1 r i0
 valminulu	v a0 l m i0 n u1 l u0
 valminuluasa	v a0 l m i0 n u0 l u0 a1 s a0
 valminuluasari	v a0 l m i0 n u0 l u0 a0 s a1 r i0
@@ -79698,6 +80988,40 @@ volmenati	v o0 l m e0 n a1 t i0
 volmenatiri	v o0 l m e0 n a0 t i1 r i0
 volmepago	v o0 l m e0 p a1 ɡ o0
 volmepagori	v o0 l m e0 p a0 ɡ o1 r i0
+volmepilo	v o0 l m e0 p i1 l o0
+volmepiloasa	v o0 l m e0 p i0 l o0 a1 s a0
+volmepiloasari	v o0 l m e0 p i0 l o0 a0 s a1 r i0
+volmepiloasasan	v o0 l m e0 p i0 l o0 a0 s a1 s a0 n
+volmepiloasasanri	v o0 l m e0 p i0 l o0 a0 s a0 s a1 n r i0
+volmepiloasasanti	v o0 l m e0 p i0 l o0 a0 s a0 s a1 n t i0
+volmepiloasasantiri	v o0 l m e0 p i0 l o0 a0 s a0 s a0 n t i1 r i0
+volmepiloasati	v o0 l m e0 p i0 l o0 a0 s a1 t i0
+volmepiloasatiri	v o0 l m e0 p i0 l o0 a0 s a0 t i1 r i0
+volmepilona	v o0 l m e0 p i0 l o1 n a0
+volmepilonari	v o0 l m e0 p i0 l o0 n a1 r i0
+volmepilonasan	v o0 l m e0 p i0 l o0 n a1 s a0 n
+volmepilonasanri	v o0 l m e0 p i0 l o0 n a0 s a1 n r i0
+volmepilonasanti	v o0 l m e0 p i0 l o0 n a0 s a1 n t i0
+volmepilonasantiri	v o0 l m e0 p i0 l o0 n a0 s a0 n t i1 r i0
+volmepilonati	v o0 l m e0 p i0 l o0 n a1 t i0
+volmepilonatiri	v o0 l m e0 p i0 l o0 n a0 t i1 r i0
+volmepilopago	v o0 l m e0 p i0 l o0 p a1 ɡ o0
+volmepilopagori	v o0 l m e0 p i0 l o0 p a0 ɡ o1 r i0
+volmepilori	v o0 l m e0 p i0 l o1 r i0
+volmepilosan	v o0 l m e0 p i0 l o1 s a0 n
+volmepilosanri	v o0 l m e0 p i0 l o0 s a1 n r i0
+volmepilosanti	v o0 l m e0 p i0 l o0 s a1 n t i0
+volmepilosantiri	v o0 l m e0 p i0 l o0 s a0 n t i1 r i0
+volmepiloti	v o0 l m e0 p i0 l o1 t i0
+volmepilotiri	v o0 l m e0 p i0 l o0 t i1 r i0
+volmepilova	v o0 l m e0 p i0 l o1 v a0
+volmepilovari	v o0 l m e0 p i0 l o0 v a1 r i0
+volmepilovati	v o0 l m e0 p i0 l o0 v a1 t i0
+volmepilovatiri	v o0 l m e0 p i0 l o0 v a0 t i1 r i0
+volmepilovu	v o0 l m e0 p i0 l o1 v u0
+volmepilovuri	v o0 l m e0 p i0 l o0 v u1 r i0
+volmepiloyo	v o0 l m e0 p i0 l o1 j o0
+volmepiloyori	v o0 l m e0 p i0 l o0 j o1 r i0
 volmeri	v o0 l m e1 r i0
 volmesan	v o0 l m e1 s a0 n
 volmesanri	v o0 l m e0 s a1 n r i0
@@ -82114,6 +83438,40 @@ yugehelnayati	j u0 ɡ e0 h e0 l n a0 j a1 t i0
 yugehelnayatiri	j u0 ɡ e0 h e0 l n a0 j a0 t i1 r i0
 yugehelnayo	j u0 ɡ e0 h e0 l n a1 j o0
 yugehelnayori	j u0 ɡ e0 h e0 l n a0 j o1 r i0
+yugelarda	j u0 ɡ e0 l a1 r d a0
+yugelardaasa	j u0 ɡ e0 l a0 r d a0 a1 s a0
+yugelardaasari	j u0 ɡ e0 l a0 r d a0 a0 s a1 r i0
+yugelardaasasan	j u0 ɡ e0 l a0 r d a0 a0 s a1 s a0 n
+yugelardaasasanri	j u0 ɡ e0 l a0 r d a0 a0 s a0 s a1 n r i0
+yugelardaasasanti	j u0 ɡ e0 l a0 r d a0 a0 s a0 s a1 n t i0
+yugelardaasasantiri	j u0 ɡ e0 l a0 r d a0 a0 s a0 s a0 n t i1 r i0
+yugelardaasati	j u0 ɡ e0 l a0 r d a0 a0 s a1 t i0
+yugelardaasatiri	j u0 ɡ e0 l a0 r d a0 a0 s a0 t i1 r i0
+yugelardana	j u0 ɡ e0 l a0 r d a1 n a0
+yugelardanari	j u0 ɡ e0 l a0 r d a0 n a1 r i0
+yugelardanasan	j u0 ɡ e0 l a0 r d a0 n a1 s a0 n
+yugelardanasanri	j u0 ɡ e0 l a0 r d a0 n a0 s a1 n r i0
+yugelardanasanti	j u0 ɡ e0 l a0 r d a0 n a0 s a1 n t i0
+yugelardanasantiri	j u0 ɡ e0 l a0 r d a0 n a0 s a0 n t i1 r i0
+yugelardanati	j u0 ɡ e0 l a0 r d a0 n a1 t i0
+yugelardanatiri	j u0 ɡ e0 l a0 r d a0 n a0 t i1 r i0
+yugelardapago	j u0 ɡ e0 l a0 r d a0 p a1 ɡ o0
+yugelardapagori	j u0 ɡ e0 l a0 r d a0 p a0 ɡ o1 r i0
+yugelardari	j u0 ɡ e0 l a0 r d a1 r i0
+yugelardasan	j u0 ɡ e0 l a0 r d a1 s a0 n
+yugelardasanri	j u0 ɡ e0 l a0 r d a0 s a1 n r i0
+yugelardasanti	j u0 ɡ e0 l a0 r d a0 s a1 n t i0
+yugelardasantiri	j u0 ɡ e0 l a0 r d a0 s a0 n t i1 r i0
+yugelardati	j u0 ɡ e0 l a0 r d a1 t i0
+yugelardatiri	j u0 ɡ e0 l a0 r d a0 t i1 r i0
+yugelardavu	j u0 ɡ e0 l a0 r d a1 v u0
+yugelardavuri	j u0 ɡ e0 l a0 r d a0 v u1 r i0
+yugelardaya	j u0 ɡ e0 l a0 r d a1 j a0
+yugelardayari	j u0 ɡ e0 l a0 r d a0 j a1 r i0
+yugelardayati	j u0 ɡ e0 l a0 r d a0 j a1 t i0
+yugelardayatiri	j u0 ɡ e0 l a0 r d a0 j a0 t i1 r i0
+yugelardayo	j u0 ɡ e0 l a0 r d a1 j o0
+yugelardayori	j u0 ɡ e0 l a0 r d a0 j o1 r i0
 yugelermi	j u0 ɡ e0 l e1 r m i0
 yugelermiasa	j u0 ɡ e0 l e0 r m i0 a1 s a0
 yugelermiasari	j u0 ɡ e0 l e0 r m i0 a0 s a1 r i0

@@ -51,7 +51,7 @@ describe('Grammar Lessons in Learn', () => {
 
   it('ships in the Learn bundle and the editor loads its room', () => {
     expect(readFileSync('editor/learn/learn-data.js', 'utf8')).toContain(
-      '"course":{"edition":"4.0"',
+      '"course":{"edition":"4.1"',
     );
     expect(readFileSync('editor/index.html', 'utf8')).toContain(
       '<script src="learn/course.js"></script>',

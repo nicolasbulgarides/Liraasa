@@ -40,13 +40,19 @@ Validation 23 PASS, 2 WARN (`npm run validate:3.6`) and the author's validator
 PASS. The one recipe that broke a ruling is settled as for 3.5
 (`tests/grammar/patch_3_6.test.ts`). 3.5 is frozen as 3.6's baseline.
 
-**Everything is ratified** (ADR-0030, 2026-10-27): the author ratified 3.6
+**4.1 is current, proposed** (ADR-0031): `data/lexicon/liraasa_4_1.json`, built
+from frozen 4.0 by `npm run integrate:4.1`: the vocabulary the 2100 Dreams
+draft still paraphrased (`translation/tools/vocab_4_1.py` → `data/proposals/liraasa_4_1_patch.json`):
+40 compounds of existing headwords, 112 English aliases, no new roots; 2508
+headwords. Validation 23 PASS, 2 WARN (`npm run validate:4.1`).
+
+**Up to 4.0 is ratified** (ADR-0030, 2026-10-27): the author ratified 3.6
 and 4.0 (op `ratify_ruling` in `…-4-0-ratify`) and approved the 2100 Dreams
-vocabulary candidates; `PROPOSED_EDITIONS` is empty. 4.0 has 2468 headwords.
+vocabulary candidates. 4.0 has 2468 headwords.
 The Liraasa draft of the novel (`translation/draft/2100_Dreams_Liraasa_DRAFT.md`)
 is in git; the interlinear and every file with the English text are not.
 
-**4.0 is current** (ADR-0029): `data/lexicon/liraasa_4_0.json`, built from
+**4.0** (ADR-0029): `data/lexicon/liraasa_4_0.json`, built from
 frozen 3.6 by `npm run integrate:4.0`: what translating _2100 Dreams_ needed,
 made by the editor at the author's request. 220 compounds the draft coined (no
 new roots), 2 aliases, rulings 4.0:G156–G161 (speech before its verb of saying,
@@ -320,6 +326,8 @@ validator and parser.
 | `npm run integrate:3.3`    | Build 3.3 from frozen 3.1: the 3.1 ratification, then the 3.3 changeset (sha-checked baseline). `-- --check` writes nothing (ADR-0023).                                                                                                                                                                           | **working** |
 | `npm run integrate:3.4`    | Build 3.4 from frozen 3.3: the 3.4 patch, then the editor's decisions on four 3.3 sentences (sha-checked baseline). `-- --check` writes nothing (ADR-0024).                                                                                                                                                       | **working** |
 | `npm run integrate:3.5`    | Build 3.5 from frozen 3.4: the ratification of 3.0, 3.3 and 3.4, then the 3.5 patch with every module (sha-checked baseline). `-- --check` writes nothing (ADR-0025).                                                                                                                                             | **working** |
+| `npm run integrate:4.1`    | Build 4.1 from frozen 4.0: the vocabulary the 2100 Dreams draft still paraphrased (sha-checked baseline). `-- --check` writes nothing (ADR-0031).                                                                                                                                                                 | **working** |
+| `npm run validate:4.1`     | validate_3_0.py on 4.1 → `data/lexicon/validation_4_1.json`; then the author's validator on `handoff/liraasa_4_1_llm.json`.                                                                                                                                                                                       | **working** |
 | `npm run integrate:4.0`    | Build 4.0 from frozen 3.6: what translating 2100 Dreams needed (sha-checked baseline). `-- --check` writes nothing (ADR-0029).                                                                                                                                                                                    | **working** |
 | `npm run validate:4.0`     | validate_3_0.py on 4.0 → `data/lexicon/validation_4_0.json`; then the author's validator on `handoff/liraasa_4_0_llm.json`.                                                                                                                                                                                       | **working** |
 | `npm run integrate:3.6`    | Build 3.6 from frozen 3.5: the 2100 Dreams patch with every module (sha-checked baseline). `-- --check` writes nothing (ADR-0027).                                                                                                                                                                                | **working** |

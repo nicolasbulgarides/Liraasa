@@ -1,0 +1,1667 @@
+{
+ "patch": "Liraasa 4.1: the vocabulary the 2100 Dreams draft still paraphrased",
+ "base_version": "4.0",
+ "target_version": "4.1",
+ "status": "PROPOSED: made by the editor at the author's request (2026-10-27)",
+ "base_file": "liraasa_4_0.json",
+ "base_counts": {
+  "headwords": 2468,
+  "meaningful_forms": 5367
+ },
+ "principles": [
+  "No new roots: every word is a compound of existing headwords, colour bases or time nouns.",
+  "An existing word that covers the sense is preferred, and made findable as an English alias."
+ ],
+ "modules": {
+  "core": "The vocabulary the 2100 Dreams draft still had to paraphrase"
+ },
+ "function_words_add": [],
+ "rulings_add": [],
+ "roots_add": [],
+ "compounds_add": [
+  {
+   "module": "core",
+   "headword": "mavopagomelvanela",
+   "parts": [
+    "mavopagomelva",
+    "nela"
+   ],
+   "domain": "People",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "mavopagomelvanela",
+     "meaning": "social worker (a social-welfare person)"
+    }
+   },
+   "note": "For a gap the 2100 Dreams draft had to paraphrase (4.1, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "folniminvalinu",
+   "parts": [
+    "folni",
+    "minvalinu"
+   ],
+   "domain": "Family & society",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "folniminvalinu",
+     "meaning": "flower girl (flower-girl; the girl of the flowers)"
+    }
+   },
+   "note": "For a gap the 2100 Dreams draft had to paraphrase (4.1, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "valladozapatu",
+   "parts": [
+    "valladoza",
+    "patu"
+   ],
+   "domain": "Abstract",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "valladozapatu",
+     "meaning": "exclamation mark (outcry-point)"
+    }
+   },
+   "note": "For a gap the 2100 Dreams draft had to paraphrase (4.1, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "turnasalrupatu",
+   "parts": [
+    "turna",
+    "salrupatu"
+   ],
+   "domain": "Abstract",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "turnasalrupatu",
+     "meaning": "access level (entry-tier)"
+    }
+   },
+   "note": "For a gap the 2100 Dreams draft had to paraphrase (4.1, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "silrolore",
+   "parts": [
+    "silro",
+    "lore"
+   ],
+   "domain": "Body",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "silrolore",
+     "meaning": "close confidant (secret heart: the heart that holds your shared secrets)"
+    }
+   },
+   "note": "For a gap the 2100 Dreams draft had to paraphrase (4.1, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "helvilektalordi",
+   "parts": [
+    "helvi",
+    "lektalordi"
+   ],
+   "domain": "Society & governance",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "helvilektalordi",
+     "meaning": "machiavellian politics (hidden politics: statecraft played from concealment)"
+    }
+   },
+   "note": "For a gap the 2100 Dreams draft had to paraphrase (4.1, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "pagorinba",
+   "parts": [
+    "pago",
+    "rinba"
+   ],
+   "domain": "Home & objects",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "pagorinba",
+     "meaning": "situation (place-ring: the circle of circumstances around where one stands)"
+    }
+   },
+   "note": "For a gap the 2100 Dreams draft had to paraphrase (4.1, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "madijomru",
+   "parts": [
+    "madi",
+    "jomru"
+   ],
+   "domain": "Society",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "madijomru",
+     "meaning": "field trip (meadow journey: an outing away from the classroom into the open)"
+    }
+   },
+   "note": "For a gap the 2100 Dreams draft had to paraphrase (4.1, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "mavomelo",
+   "parts": [
+    "mavo",
+    "melo"
+   ],
+   "domain": "Established concepts",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "mavomelo",
+     "meaning": "neopsyphonic music (mind-music: music made for and of the mind)"
+    }
+   },
+   "note": "For a gap the 2100 Dreams draft had to paraphrase (4.1, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "molulore",
+   "parts": [
+    "molu",
+    "lore"
+   ],
+   "domain": "Body",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "molulore",
+     "meaning": "babe (tender heart, used as an endearment)"
+    }
+   },
+   "note": "For a gap the 2100 Dreams draft had to paraphrase (4.1, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "nimufama",
+   "parts": [
+    "nimu",
+    "fama"
+   ],
+   "domain": "Established concepts",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "nimufama",
+     "meaning": "folk (home-family: one's own people)"
+    }
+   },
+   "note": "For a gap the 2100 Dreams draft had to paraphrase (4.1, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "helvimelli",
+   "parts": [
+    "helvi",
+    "melli"
+   ],
+   "domain": "Abstract",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "helvimelli",
+     "meaning": "artificial scarcity (hidden plenty: abundance deliberately held back so that it seems scarce)"
+    }
+   },
+   "note": "For a gap the 2100 Dreams draft had to paraphrase (4.1, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "navufarusuma",
+   "parts": [
+    "navufaru",
+    "suma"
+   ],
+   "domain": "Life & states",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "navufarusuma",
+     "meaning": "hot flash (a lightning of warmth: sudden heat flashing through the body)"
+    }
+   },
+   "note": "For a gap the 2100 Dreams draft had to paraphrase (4.1, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "ramuralno",
+   "parts": [
+    "ramu",
+    "ralno"
+   ],
+   "domain": "Actions",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "ramuralno",
+     "meaning": "relapse (a fall back into a state one remembers)"
+    }
+   },
+   "note": "For a gap the 2100 Dreams draft had to paraphrase (4.1, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "amorlore",
+   "parts": [
+    "amor",
+    "lore"
+   ],
+   "domain": "Body",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "amorlore",
+     "meaning": "hon (loving heart, used as an endearment)"
+    }
+   },
+   "note": "For a gap the 2100 Dreams draft had to paraphrase (4.1, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "larnebako",
+   "parts": [
+    "larne",
+    "bako"
+   ],
+   "domain": "Actions",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "larnebako",
+     "meaning": "violent offender (anger-breaking: violence (the offenders are larnebakoyo))"
+    }
+   },
+   "note": "For a gap the 2100 Dreams draft had to paraphrase (4.1, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "serbucuza",
+   "parts": [
+    "serbu",
+    "cuza"
+   ],
+   "domain": "Home & objects",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "serbucuza",
+     "meaning": "undergraduate thesis (a letter of seeking: a written piece of research)"
+    }
+   },
+   "note": "For a gap the 2100 Dreams draft had to paraphrase (4.1, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "hatalekta",
+   "parts": [
+    "hata",
+    "lekta"
+   ],
+   "domain": "Core roots",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "hatalekta",
+     "meaning": "gang (a blow-gathering: a group bound together by force (new coinage, flag))"
+    }
+   },
+   "note": "For a gap the 2100 Dreams draft had to paraphrase (4.1, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "dokrapeli",
+   "parts": [
+    "dokra",
+    "peli"
+   ],
+   "domain": "Daily life",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "dokrapeli",
+     "meaning": "chess (war-play: the game of battle (new coinage, flag))"
+    }
+   },
+   "note": "For a gap the 2100 Dreams draft had to paraphrase (4.1, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "sasvavimoramu",
+   "parts": [
+    "sasva",
+    "vimoramu"
+   ],
+   "domain": "Information & technology",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "sasvavimoramu",
+     "meaning": "security footage (guard-recording: footage kept for protection (new coinage, flag))"
+    }
+   },
+   "note": "For a gap the 2100 Dreams draft had to paraphrase (4.1, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "yugelarda",
+   "parts": [
+    "yuge",
+    "larda"
+   ],
+   "domain": "Abstract",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "yugelarda",
+     "meaning": "physical art (body-art: arts practised with the body (new coinage, flag))"
+    }
+   },
+   "note": "For a gap the 2100 Dreams draft had to paraphrase (4.1, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "mubopago",
+   "parts": [
+    "mubo",
+    "pago"
+   ],
+   "domain": "Foundations",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "mubopago",
+     "meaning": "predicament (worry-place: a tight spot (new coinage, flag))"
+    }
+   },
+   "note": "For a gap the 2100 Dreams draft had to paraphrase (4.1, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "helnayuso",
+   "parts": [
+    "helna",
+    "yuso"
+   ],
+   "domain": "Actions",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "helnayuso",
+     "meaning": "drug use (drug-use: the using of drugs (new coinage, flag))"
+    }
+   },
+   "note": "For a gap the 2100 Dreams draft had to paraphrase (4.1, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "fasbinela",
+   "parts": [
+    "fasbi",
+    "nela"
+   ],
+   "domain": "People",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "fasbinela",
+     "meaning": "hypocrite (a face-person: one who lives by the face they show)"
+    }
+   },
+   "note": "For a gap the 2100 Dreams draft had to paraphrase (4.1, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "melolemupatu",
+   "parts": [
+    "melo",
+    "lemupatu"
+   ],
+   "domain": "Language & art",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "melolemupatu",
+     "meaning": "music lesson (a music lesson)"
+    }
+   },
+   "note": "For a gap the 2100 Dreams draft had to paraphrase (4.1, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "valminela",
+   "parts": [
+    "valmi",
+    "nela"
+   ],
+   "domain": "People",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "valminela",
+     "meaning": "escort (a walking-person: one who walks beside you)"
+    }
+   },
+   "note": "For a gap the 2100 Dreams draft had to paraphrase (4.1, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "nolsajuba",
+   "parts": [
+    "nolsa",
+    "juba"
+   ],
+   "domain": "Established concepts",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "nolsajuba",
+     "meaning": "innate talent (a newborn gift: a gift carried from birth)"
+    }
+   },
+   "note": "For a gap the 2100 Dreams draft had to paraphrase (4.1, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "polvadonu",
+   "parts": [
+    "polva",
+    "donu"
+   ],
+   "domain": "Actions",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "polvadonu",
+     "meaning": "effort (strength-giving: spending one's strength on something)"
+    }
+   },
+   "note": "For a gap the 2100 Dreams draft had to paraphrase (4.1, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "sirmolore",
+   "parts": [
+    "sirmo",
+    "lore"
+   ],
+   "domain": "Body",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "sirmolore",
+     "meaning": "respect (a praise-heart: honour held in the heart)"
+    }
+   },
+   "note": "For a gap the 2100 Dreams draft had to paraphrase (4.1, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "lisrocuza",
+   "parts": [
+    "lisro",
+    "cuza"
+   ],
+   "domain": "Home & objects",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lisrocuza",
+     "meaning": "back-up (a staying note: a copy that remains)"
+    }
+   },
+   "note": "For a gap the 2100 Dreams draft had to paraphrase (4.1, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "valmikibo",
+   "parts": [
+    "valmi",
+    "kibo"
+   ],
+   "domain": "Information & technology",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "valmikibo",
+     "meaning": "robot escort (a walking robot: a bot that walks beside you)"
+    }
+   },
+   "note": "For a gap the 2100 Dreams draft had to paraphrase (4.1, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "jusepolva",
+   "parts": [
+    "juse",
+    "polva"
+   ],
+   "domain": "Society",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "jusepolva",
+     "meaning": "jurisdiction (justice-power: the reach of the law)"
+    }
+   },
+   "note": "For a gap the 2100 Dreams draft had to paraphrase (4.1, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "sulmenela",
+   "parts": [
+    "sulme",
+    "nela"
+   ],
+   "domain": "People",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "sulmenela",
+     "meaning": "spook (a smoke-person: a ghostly figure)"
+    }
+   },
+   "note": "For a gap the 2100 Dreams draft had to paraphrase (4.1, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "damrulore",
+   "parts": [
+    "damru",
+    "lore"
+   ],
+   "domain": "Body",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "damrulore",
+     "meaning": "sociopath (a hardened heart that feels no fellow-feeling (the person is li damrulore + -san))"
+    }
+   },
+   "note": "For a gap the 2100 Dreams draft had to paraphrase (4.1, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "rivodonu",
+   "parts": [
+    "rivo",
+    "donu"
+   ],
+   "domain": "Actions",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "rivodonu",
+     "meaning": "assistance (companion-giving: help a fellow gives)"
+    }
+   },
+   "note": "For a gap the 2100 Dreams draft had to paraphrase (4.1, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "volmepilo",
+   "parts": [
+    "volme",
+    "pilo"
+   ],
+   "domain": "People",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "volmepilo",
+     "meaning": "spirit guide (spirit-father: a spirit who guides (pilopa = to guide))"
+    }
+   },
+   "note": "For a gap the 2100 Dreams draft had to paraphrase (4.1, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "lavradobo",
+   "parts": [
+    "lavra",
+    "dobo"
+   ],
+   "domain": "Music & story",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lavradobo",
+     "meaning": "flap (bird-beat: a wingbeat)"
+    }
+   },
+   "note": "For a gap the 2100 Dreams draft had to paraphrase (4.1, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "lavbusabe",
+   "parts": [
+    "lavbu",
+    "sabe"
+   ],
+   "domain": "Mind & dreams",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lavbusabe",
+     "meaning": "religion (worship-knowing)"
+    }
+   },
+   "note": "For a gap the 2100 Dreams draft had to paraphrase (4.1, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "lasolore",
+   "parts": [
+    "laso",
+    "lore"
+   ],
+   "domain": "Body",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lasolore",
+     "meaning": "tranquility (silence-heart: a quiet heart)"
+    }
+   },
+   "note": "For a gap the 2100 Dreams draft had to paraphrase (4.1, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "lumisovlacunudivmabiti",
+   "parts": [
+    "lumisovla",
+    "cunudivmabiti"
+   ],
+   "domain": "Technology & AI",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lumisovlacunudivmabiti",
+     "meaning": "hologram computer (a light-shape computer, patterned on lumisovlavimofavro (nested compound, 2.0:G42))"
+    }
+   },
+   "note": "For a gap the 2100 Dreams draft had to paraphrase (4.1, the author's request of 2026-10-27)."
+  }
+ ],
+ "listed_derivations_add": [],
+ "lexicalised_diminutives_add": [],
+ "restored_forms_add": [],
+ "rejected_proposals": [
+  {
+   "english": "lightning mage",
+   "proposed": "navufaruzayuyo",
+   "parts": [
+    "navufaruzayu",
+    "-yo"
+   ],
+   "why": "parts not headwords, misspelled, or already a word"
+  },
+  {
+   "english": "pink hair",
+   "proposed": "rubilumisabaye",
+   "parts": [
+    "rubilumi",
+    "sabaye"
+   ],
+   "why": "parts not headwords, misspelled, or already a word"
+  },
+  {
+   "english": "boarding school",
+   "proposed": "nimulemupago",
+   "parts": [
+    "nimu",
+    "lemupago"
+   ],
+   "why": "parts not headwords, misspelled, or already a word"
+  },
+  {
+   "english": "analyzed",
+   "proposed": "patuserbu",
+   "parts": [
+    "patu",
+    "serbu"
+   ],
+   "why": "not a dictionary noun (a verb form, a joke or a slogan)"
+  },
+  {
+   "english": "predicted",
+   "proposed": "livevimo",
+   "parts": [
+    "live",
+    "vimo"
+   ],
+   "why": "not a dictionary noun (a verb form, a joke or a slogan)"
+  },
+  {
+   "english": "plaque",
+   "proposed": "ramucuza",
+   "parts": [
+    "ramu",
+    "cuza"
+   ],
+   "why": "parts not headwords, misspelled, or already a word"
+  },
+  {
+   "english": "snapped",
+   "proposed": "larneseno",
+   "parts": [
+    "larne",
+    "seno"
+   ],
+   "why": "not a dictionary noun (a verb form, a joke or a slogan)"
+  },
+  {
+   "english": "sappy talk",
+   "proposed": "amorseno",
+   "parts": [
+    "amor",
+    "seno"
+   ],
+   "why": "an adjective, a verb phrase or a one-off description (the editor)"
+  },
+  {
+   "english": "what-the-fuck-is-time-ning",
+   "proposed": "zirkikrono",
+   "parts": [
+    "zirki",
+    "krono"
+   ],
+   "why": "not a dictionary noun (a verb form, a joke or a slogan)"
+  },
+  {
+   "english": "barely-burnt",
+   "proposed": "farupatu",
+   "parts": [
+    "faru",
+    "patu"
+   ],
+   "why": "an adjective, a verb phrase or a one-off description (the editor)"
+  },
+  {
+   "english": "universe-destroying",
+   "proposed": "vemibako",
+   "parts": [
+    "vemi",
+    "bako"
+   ],
+   "why": "not a dictionary noun (a verb form, a joke or a slogan)"
+  },
+  {
+   "english": "short-circuiting",
+   "proposed": "navufaruralno",
+   "parts": [
+    "navufaru",
+    "ralno"
+   ],
+   "why": "not a dictionary noun (a verb form, a joke or a slogan)"
+  },
+  {
+   "english": "make it",
+   "proposed": "biolisro",
+   "parts": [
+    "bio",
+    "lisro"
+   ],
+   "why": "parts not headwords, misspelled, or already a word"
+  },
+  {
+   "english": "nurse",
+   "proposed": "moludonu",
+   "parts": [
+    "molu",
+    "donu"
+   ],
+   "why": "parts not headwords, misspelled, or already a word"
+  },
+  {
+   "english": "looked down",
+   "proposed": "nevravimo",
+   "parts": [
+    "nevra",
+    "vimo"
+   ],
+   "why": "an adjective, a verb phrase or a one-off description (the editor)"
+  },
+  {
+   "english": "meandering",
+   "proposed": "vopranulu",
+   "parts": [
+    "vopra",
+    "nulu"
+   ],
+   "why": "not a dictionary noun (a verb form, a joke or a slogan)"
+  },
+  {
+   "english": "indignant",
+   "proposed": "veralarne",
+   "parts": [
+    "vera",
+    "larne"
+   ],
+   "why": "an adjective, a verb phrase or a one-off description (the editor)"
+  },
+  {
+   "english": "affection",
+   "proposed": "amorlore",
+   "parts": [
+    "amor",
+    "lore"
+   ],
+   "why": "parts not headwords, misspelled, or already a word"
+  },
+  {
+   "english": "get high",
+   "proposed": "helnasalru",
+   "parts": [
+    "helna",
+    "salru"
+   ],
+   "why": "an adjective, a verb phrase or a one-off description (the editor)"
+  },
+  {
+   "english": "burly form",
+   "proposed": "monruyuge",
+   "parts": [
+    "monru",
+    "yuge"
+   ],
+   "why": "an adjective, a verb phrase or a one-off description (the editor)"
+  },
+  {
+   "english": "de-winged bird",
+   "proposed": "lisrolavra",
+   "parts": [
+    "lisro",
+    "lavra"
+   ],
+   "why": "an adjective, a verb phrase or a one-off description (the editor)"
+  },
+  {
+   "english": "genetic engineering",
+   "proposed": "bioyalmubiti",
+   "parts": [
+    "bio",
+    "yalmubiti"
+   ],
+   "why": "not a dictionary noun (a verb form, a joke or a slogan)"
+  },
+  {
+   "english": "remedial teaching",
+   "proposed": "relnulemudonu",
+   "parts": [
+    "relnu",
+    "lemudonu"
+   ],
+   "why": "not a dictionary noun (a verb form, a joke or a slogan)"
+  },
+  {
+   "english": "purple pirate",
+   "proposed": "viosevuhifayo",
+   "parts": [
+    "vio",
+    "sevuhifa"
+   ],
+   "why": "parts not headwords, misspelled, or already a word"
+  },
+  {
+   "english": "generated",
+   "proposed": "fontedonu",
+   "parts": [
+    "fonte",
+    "donu"
+   ],
+   "why": "not a dictionary noun (a verb form, a joke or a slogan)"
+  },
+  {
+   "english": "presumed torture",
+   "proposed": "hatadalu",
+   "parts": [
+    "hata",
+    "dalu"
+   ],
+   "why": "an adjective, a verb phrase or a one-off description (the editor)"
+  },
+  {
+   "english": "last name",
+   "proposed": "nimunole",
+   "parts": [
+    "nimu",
+    "nole"
+   ],
+   "why": "parts not headwords, misspelled, or already a word"
+  },
+  {
+   "english": "designer",
+   "proposed": "lardalideoyo",
+   "parts": [
+    "larda",
+    "lideo"
+   ],
+   "why": "parts not headwords, misspelled, or already a word"
+  },
+  {
+   "english": "tickle attack",
+   "proposed": "resodaluzarkuhata",
+   "parts": [
+    "resodalu",
+    "zarkuhata"
+   ],
+   "why": "an adjective, a verb phrase or a one-off description (the editor)"
+  },
+  {
+   "english": "chronologically-bound affection",
+   "proposed": "kronolore",
+   "parts": [
+    "krono",
+    "lore"
+   ],
+   "why": "an adjective, a verb phrase or a one-off description (the editor)"
+  },
+  {
+   "english": "tiny human",
+   "proposed": "linunela",
+   "parts": [
+    "linu",
+    "nela"
+   ],
+   "why": "an adjective, a verb phrase or a one-off description (the editor)"
+  },
+  {
+   "english": "triumphant joy",
+   "proposed": "regnalavi",
+   "parts": [
+    "regna",
+    "lavi"
+   ],
+   "why": "an adjective, a verb phrase or a one-off description (the editor)"
+  },
+  {
+   "english": "midflight",
+   "proposed": "diyimambi",
+   "parts": [
+    "diyi",
+    "mambi"
+   ],
+   "why": "an adjective, a verb phrase or a one-off description (the editor)"
+  },
+  {
+   "english": "misguided",
+   "proposed": "loteropilo",
+   "parts": [
+    "lotero",
+    "pilo"
+   ],
+   "why": "not a dictionary noun (a verb form, a joke or a slogan)"
+  },
+  {
+   "english": "fellow teacher",
+   "proposed": "rivolemudonuyo",
+   "parts": [
+    "rivo",
+    "lemudonuyo"
+   ],
+   "why": "parts not headwords, misspelled, or already a word"
+  },
+  {
+   "english": "deafening",
+   "proposed": "lenibako",
+   "parts": [
+    "leni",
+    "bako"
+   ],
+   "why": "not a dictionary noun (a verb form, a joke or a slogan)"
+  },
+  {
+   "english": "gnome",
+   "proposed": "solonela",
+   "parts": [
+    "solo",
+    "nela"
+   ],
+   "why": "parts not headwords, misspelled, or already a word"
+  },
+  {
+   "english": "aura type",
+   "proposed": "lumitino",
+   "parts": [
+    "lumi",
+    "tino"
+   ],
+   "why": "an adjective, a verb phrase or a one-off description (the editor)"
+  },
+  {
+   "english": "sneaky",
+   "proposed": "helvipebu",
+   "parts": [
+    "helvi",
+    "pebu"
+   ],
+   "why": "an adjective, a verb phrase or a one-off description (the editor)"
+  },
+  {
+   "english": "sappy",
+   "proposed": "molulore",
+   "parts": [
+    "molu",
+    "lore"
+   ],
+   "why": "parts not headwords, misspelled, or already a word"
+  },
+  {
+   "english": "congratulatory anthem",
+   "proposed": "lavilira",
+   "parts": [
+    "lavi",
+    "lira"
+   ],
+   "why": "an adjective, a verb phrase or a one-off description (the editor)"
+  },
+  {
+   "english": "pinky promise",
+   "proposed": "finitipomli",
+   "parts": [
+    "finiti",
+    "pomli"
+   ],
+   "why": "parts not headwords, misspelled, or already a word"
+  }
+ ],
+ "recipes_add": [],
+ "english_aliases_add": [
+  {
+   "form": "mavopagoasa",
+   "add_english": "heaven"
+  },
+  {
+   "form": "nimusan",
+   "add_english": "dear"
+  },
+  {
+   "form": "tinsata",
+   "add_english": "i guess"
+  },
+  {
+   "form": "verasan",
+   "add_english": "actually"
+  },
+  {
+   "form": "mavolumi",
+   "add_english": "soul"
+  },
+  {
+   "form": "vera",
+   "add_english": "in fact"
+  },
+  {
+   "form": "peremo",
+   "add_english": "no problem"
+  },
+  {
+   "form": "nimunia",
+   "add_english": "welcome"
+  },
+  {
+   "form": "lukadapala",
+   "add_english": "i bet"
+  },
+  {
+   "form": "hirnaasasan",
+   "add_english": "saved"
+  },
+  {
+   "form": "paralo",
+   "add_english": "self-esteem"
+  },
+  {
+   "form": "mavopagona",
+   "add_english": "rulebreakers"
+  },
+  {
+   "form": "vimosudeva",
+   "add_english": "it seems"
+  },
+  {
+   "form": "lavrasamni",
+   "add_english": "eggs"
+  },
+  {
+   "form": "jubaseno",
+   "add_english": "blessing"
+  },
+  {
+   "form": "vamdusan",
+   "add_english": "broad"
+  },
+  {
+   "form": "salrusia",
+   "add_english": "stood up"
+  },
+  {
+   "form": "lordiasasan",
+   "add_english": "perfect"
+  },
+  {
+   "form": "manliravnuma",
+   "add_english": "took"
+  },
+  {
+   "form": "amordalukibo",
+   "add_english": "escort bots"
+  },
+  {
+   "form": "yanoya",
+   "add_english": "join us"
+  },
+  {
+   "form": "minvalinu",
+   "add_english": "missy"
+  },
+  {
+   "form": "neme",
+   "add_english": "wailing woes"
+  },
+  {
+   "form": "nimusan",
+   "add_english": "cherished"
+  },
+  {
+   "form": "nimusan",
+   "add_english": "dearies"
+  },
+  {
+   "form": "nimunia",
+   "add_english": "accommodated"
+  },
+  {
+   "form": "opisan",
+   "add_english": "hopefully"
+  },
+  {
+   "form": "larneramu",
+   "add_english": "spite"
+  },
+  {
+   "form": "nulloramusan",
+   "add_english": "ever-present"
+  },
+  {
+   "form": "mavopagodivma",
+   "add_english": "government"
+  },
+  {
+   "form": "favronela",
+   "add_english": "avatar"
+  },
+  {
+   "form": "mirulombi",
+   "add_english": "aquifer water"
+  },
+  {
+   "form": "nimuregna",
+   "add_english": "master"
+  },
+  {
+   "form": "gozanasan",
+   "add_english": "respectfully"
+  },
+  {
+   "form": "gozaga",
+   "add_english": "bullied her"
+  },
+  {
+   "form": "senohelna",
+   "add_english": "therapy"
+  },
+  {
+   "form": "finifa",
+   "add_english": "pointed out"
+  },
+  {
+   "form": "holmosan",
+   "add_english": "blank"
+  },
+  {
+   "form": "pensasan",
+   "add_english": "considered"
+  },
+  {
+   "form": "lumiverasan",
+   "add_english": "important"
+  },
+  {
+   "form": "dorvanasan",
+   "add_english": "automatically"
+  },
+  {
+   "form": "zonranasan",
+   "add_english": "guaranteed"
+  },
+  {
+   "form": "linuti",
+   "add_english": "kiddo"
+  },
+  {
+   "form": "mavoma",
+   "add_english": "beware"
+  },
+  {
+   "form": "verasan",
+   "add_english": "really"
+  },
+  {
+   "form": "navdinia",
+   "add_english": "find out"
+  },
+  {
+   "form": "hatasan",
+   "add_english": "forcefully"
+  },
+  {
+   "form": "mambipuku",
+   "add_english": "alianii incident"
+  },
+  {
+   "form": "vimosudeva",
+   "add_english": "seemed"
+  },
+  {
+   "form": "vilnelendava",
+   "add_english": "squinting slightly"
+  },
+  {
+   "form": "livela",
+   "add_english": "escorted"
+  },
+  {
+   "form": "cunu",
+   "add_english": "digits"
+  },
+  {
+   "form": "devorinba",
+   "add_english": "wedding ring"
+  },
+  {
+   "form": "sevresia",
+   "add_english": "blocked me"
+  },
+  {
+   "form": "bioramu",
+   "add_english": "experiences"
+  },
+  {
+   "form": "cunuasasan",
+   "add_english": "infinitely"
+  },
+  {
+   "form": "zirkisan",
+   "add_english": "go crazy"
+  },
+  {
+   "form": "vanisan",
+   "add_english": "hey beautiful"
+  },
+  {
+   "form": "hemluha",
+   "add_english": "call me"
+  },
+  {
+   "form": "moluna",
+   "add_english": "torture"
+  },
+  {
+   "form": "masunasan",
+   "add_english": "adamantly"
+  },
+  {
+   "form": "pelipa",
+   "add_english": "quit playing"
+  },
+  {
+   "form": "navdinia",
+   "add_english": "found out"
+  },
+  {
+   "form": "filvifa",
+   "add_english": "piped in"
+  },
+  {
+   "form": "mavohelnapago",
+   "add_english": "psychiatric hospitals"
+  },
+  {
+   "form": "pelinasan",
+   "add_english": "unnecessarily stern"
+  },
+  {
+   "form": "vismava",
+   "add_english": "check on"
+  },
+  {
+   "form": "paralo",
+   "add_english": "haughtiness"
+  },
+  {
+   "form": "gonbiseno",
+   "add_english": "greetings"
+  },
+  {
+   "form": "verasudeva",
+   "add_english": "make sure"
+  },
+  {
+   "form": "turna",
+   "add_english": "entry"
+  },
+  {
+   "form": "yusosan",
+   "add_english": "nifty"
+  },
+  {
+   "form": "filvisan",
+   "add_english": "slender"
+  },
+  {
+   "form": "mubo",
+   "add_english": "paramount concern"
+  },
+  {
+   "form": "turnasan",
+   "add_english": "involved"
+  },
+  {
+   "form": "venreva",
+   "add_english": "come in"
+  },
+  {
+   "form": "lumiverala",
+   "add_english": "convey"
+  },
+  {
+   "form": "jusenulu",
+   "add_english": "amanda's case"
+  },
+  {
+   "form": "corvibelfisan",
+   "add_english": "increasingly confident"
+  },
+  {
+   "form": "sevuhifa",
+   "add_english": "pillaging"
+  },
+  {
+   "form": "telnenulu",
+   "add_english": "a plot"
+  },
+  {
+   "form": "buzarilliba",
+   "add_english": "hardly processed"
+  },
+  {
+   "form": "manliravnusan",
+   "add_english": "picked up"
+  },
+  {
+   "form": "verasudeserbu",
+   "add_english": "ongoing investigation"
+  },
+  {
+   "form": "vilnelalleva",
+   "add_english": "turned on"
+  },
+  {
+   "form": "juseseno",
+   "add_english": "reviewing"
+  },
+  {
+   "form": "resoti",
+   "add_english": "giggled"
+  },
+  {
+   "form": "tino",
+   "add_english": "style"
+  },
+  {
+   "form": "havlibakoha",
+   "add_english": "cough up"
+  },
+  {
+   "form": "duhasolo",
+   "add_english": "wishing stone"
+  },
+  {
+   "form": "sabeasasan",
+   "add_english": "wise"
+  },
+  {
+   "form": "tinosan",
+   "add_english": "usually"
+  },
+  {
+   "form": "diyida",
+   "add_english": "keep flying"
+  },
+  {
+   "form": "mellikrono",
+   "add_english": "dilated time"
+  },
+  {
+   "form": "lunovurfa",
+   "add_english": "lilac moonfox"
+  },
+  {
+   "form": "lasomambi",
+   "add_english": "dramatic pauses"
+  },
+  {
+   "form": "regnajuba",
+   "add_english": "administrator privileges"
+  },
+  {
+   "form": "ceresan",
+   "add_english": "obviously"
+  },
+  {
+   "form": "silbeseno",
+   "add_english": "messaged"
+  },
+  {
+   "form": "namizupa",
+   "add_english": "dining hall"
+  },
+  {
+   "form": "maskavelma",
+   "add_english": "detailed costumes"
+  },
+  {
+   "form": "derdisan",
+   "add_english": "bouncy"
+  },
+  {
+   "form": "sasvasan",
+   "add_english": "under protection"
+  },
+  {
+   "form": "mavolumiasa",
+   "add_english": "god"
+  },
+  {
+   "form": "mavopagoasa",
+   "add_english": "prescribed heaven"
+  },
+  {
+   "form": "sasvanasan",
+   "add_english": "dangerous"
+  },
+  {
+   "form": "opimomvisan",
+   "add_english": "disappointed"
+  },
+  {
+   "form": "bakodomlu",
+   "add_english": "ruin"
+  },
+  {
+   "form": "molusasvayo",
+   "add_english": "emergency caretaker"
+  },
+  {
+   "form": "mellikrono",
+   "add_english": "dilate time"
+  },
+  {
+   "form": "pelilavi",
+   "add_english": "fun"
+  },
+  {
+   "form": "vimosovla",
+   "add_english": "take pictures"
+  }
+ ],
+ "test_sentences": [],
+ "validation": {
+  "errors": []
+ },
+ "counts": {
+  "new_roots": 0,
+  "new_compounds": 40,
+  "headwords_after": 2508,
+  "meaningful_forms_after": 5407
+ }
+}

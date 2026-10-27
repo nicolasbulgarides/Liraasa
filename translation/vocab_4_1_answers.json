@@ -1,0 +1,2512 @@
+{
+ "heaven": {
+  "english": "heaven",
+  "existing": "mavopagoasa",
+  "liraasa": "",
+  "parts": [],
+  "image": "the Ultimate Society; heaven"
+ },
+ "dear": {
+  "english": "dear",
+  "existing": "nimusan",
+  "liraasa": "",
+  "parts": [],
+  "image": "at home; cherished; dear"
+ },
+ "social worker": {
+  "english": "social worker",
+  "existing": "",
+  "liraasa": "mavopagomelvanela",
+  "parts": [
+   "mavopagomelva",
+   "nela"
+  ],
+  "image": "a social-welfare person"
+ },
+ "i guess": {
+  "english": "i guess",
+  "existing": "tinsata",
+  "liraasa": "",
+  "parts": [],
+  "image": "to guess; to suppose (maivo tinsata)"
+ },
+ "lilac": {
+  "english": "lilac",
+  "existing": "violumi",
+  "liraasa": "",
+  "parts": [],
+  "image": "light purple"
+ },
+ "actually": {
+  "english": "actually",
+  "existing": "verasan",
+  "liraasa": "",
+  "parts": [],
+  "image": "actual; used as la verasan"
+ },
+ "upset": {
+  "english": "upset",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no fitting headword in these entries; paraphrase needed"
+ },
+ "technically": {
+  "english": "technically",
+  "existing": "manlisabesan",
+  "liraasa": "",
+  "parts": [],
+  "image": "technical (3.3:G148); used as la manlisabesan"
+ },
+ "in person": {
+  "english": "in person",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no fitting headword in these entries; paraphrase needed"
+ },
+ "soul": {
+  "english": "soul",
+  "existing": "mavolumi",
+  "liraasa": "",
+  "parts": [],
+  "image": "mind-light; the soul"
+ },
+ "hugged": {
+  "english": "hugged",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no embrace headword in these entries (lomo appears only inside relnulomo)"
+ },
+ "data": {
+  "english": "data",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "serna appears only inside compounds here; no standalone entry given"
+ },
+ "reflections": {
+  "english": "reflections",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no fitting headword in these entries"
+ },
+ "exhibit": {
+  "english": "exhibit",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no fitting headword in these entries"
+ },
+ "in fact": {
+  "english": "in fact",
+  "existing": "vera",
+  "liraasa": "",
+  "parts": [],
+  "image": "fact; truth (en vera)"
+ },
+ "no problem": {
+  "english": "no problem",
+  "existing": "peremo",
+  "liraasa": "",
+  "parts": [],
+  "image": "problem; trouble (nuna peremo = no problem)"
+ },
+ "basically": {
+  "english": "basically",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no fitting headword in these entries"
+ },
+ "welcome": {
+  "english": "welcome",
+  "existing": "nimunia",
+  "liraasa": "",
+  "parts": [],
+  "image": "to offer belonging; to make someone feel at home"
+ },
+ "quotation marks": {
+  "english": "quotation marks",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no fitting headword in these entries"
+ },
+ "cuddle": {
+  "english": "cuddle",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no embrace headword in these entries"
+ },
+ "photos": {
+  "english": "photos",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no fitting headword in these entries"
+ },
+ "i bet": {
+  "english": "i bet",
+  "existing": "lukadapala",
+  "liraasa": "",
+  "parts": [],
+  "image": "to bet; to wager"
+ },
+ "saved": {
+  "english": "saved",
+  "existing": "hirnaasasan",
+  "liraasa": "",
+  "parts": [],
+  "image": "delivered; saved"
+ },
+ "powder blue": {
+  "english": "powder blue",
+  "existing": "azurilumi",
+  "liraasa": "",
+  "parts": [],
+  "image": "light blue"
+ },
+ "self-esteem": {
+  "english": "self-esteem",
+  "existing": "paralo",
+  "liraasa": "",
+  "parts": [],
+  "image": "pride (closest fit; paralosan can read as haughty)"
+ },
+ "wonderful": {
+  "english": "wonderful",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no fitting headword in these entries"
+ },
+ "exhibits": {
+  "english": "exhibits",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no fitting headword in these entries"
+ },
+ "rulebreakers": {
+  "english": "rulebreakers",
+  "existing": "mavopagona",
+  "liraasa": "",
+  "parts": [],
+  "image": "outlaw; one without society (plural mavopagonari)"
+ },
+ "it seems": {
+  "english": "it seems",
+  "existing": "vimosudeva",
+  "liraasa": "",
+  "parts": [],
+  "image": "to appear; to seem"
+ },
+ "steel": {
+  "english": "steel",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no metal headword in these entries"
+ },
+ "eggs": {
+  "english": "eggs",
+  "existing": "lavrasamni",
+  "liraasa": "",
+  "parts": [],
+  "image": "bird-seed; egg (plural lavrasamniri)"
+ },
+ "blessing": {
+  "english": "blessing",
+  "existing": "jubaseno",
+  "liraasa": "",
+  "parts": [],
+  "image": "gift-speech; a blessing spoken aloud"
+ },
+ "raped": {
+  "english": "raped",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no fitting headword in these entries; needs a careful paraphrase"
+ },
+ "cathartic": {
+  "english": "cathartic",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no fitting headword in these entries"
+ },
+ "of course": {
+  "english": "of course"
+ },
+ "anyways": {
+  "english": "anyways"
+ },
+ "you know": {
+  "english": "you know"
+ },
+ "at least": {
+  "english": "at least"
+ },
+ "after all": {
+  "english": "after all"
+ },
+ "that's okay": {
+  "english": "that's okay"
+ },
+ "thank god": {
+  "english": "thank god"
+ },
+ "who knows": {
+  "english": "who knows"
+ },
+ "simultaneously": {
+  "english": "simultaneously"
+ },
+ "that is": {
+  "english": "that is"
+ },
+ "lol": {
+  "english": "lol"
+ },
+ "spiritual": {
+  "english": "spiritual",
+  "existing": "lavbunulusan",
+  "liraasa": "",
+  "parts": [],
+  "image": "of the way of prayer; the -san adjective of lavbunulu by 3.3:G148"
+ },
+ "broad": {
+  "english": "broad",
+  "existing": "vamdusan",
+  "liraasa": "",
+  "parts": [],
+  "image": "wide; broad"
+ },
+ "stood up": {
+  "english": "stood up",
+  "existing": "salrusia",
+  "liraasa": "",
+  "parts": [],
+  "image": "to rise (past: po salrusia)"
+ },
+ "sexually harassed": {
+  "english": "sexually harassed",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no fit: amordalu appears only inside amordalukibo, and these entries have no harassment word"
+ },
+ "burly felon": {
+  "english": "burly felon",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no fit in these entries"
+ },
+ "cannibal": {
+  "english": "cannibal",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no fit in these entries"
+ },
+ "perfect": {
+  "english": "perfect",
+  "existing": "lordiasasan",
+  "liraasa": "",
+  "parts": [],
+  "image": "perfectly ordered; perfect"
+ },
+ "carbonic": {
+  "english": "carbonic",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no fit in these entries"
+ },
+ "indefinitely": {
+  "english": "indefinitely",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no fit in these entries"
+ },
+ "nurse": {
+  "english": "nurse",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no fit: helna appears only inside helnakibo (medical bot), which names a bot, not a human nurse"
+ },
+ "blank slate": {
+  "english": "blank slate",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no fit in these entries"
+ },
+ "took": {
+  "english": "took",
+  "existing": "manliravnuma",
+  "liraasa": "",
+  "parts": [],
+  "image": "to pick up (the hand-lift); fits only the physical sense of 'take'"
+ },
+ "escort bots": {
+  "english": "escort bots",
+  "existing": "amordalukibo",
+  "liraasa": "",
+  "parts": [],
+  "image": "sex bot; plural amordalukibori"
+ },
+ "deal with": {
+  "english": "deal with",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no fit in these entries"
+ },
+ "sweetie": {
+  "english": "sweetie",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no fit in these entries; nimusan (dear) is an adjective and needs a determiner to stand as a noun"
+ },
+ "more jaded": {
+  "english": "more jaded",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no fit in these entries"
+ },
+ "join us": {
+  "english": "join us",
+  "existing": "yanoya",
+  "liraasa": "",
+  "parts": [],
+  "image": "to unite; to join"
+ },
+ "log in": {
+  "english": "log in",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no fit in these entries"
+ },
+ "missy": {
+  "english": "missy",
+  "existing": "minvalinu",
+  "liraasa": "",
+  "parts": [],
+  "image": "girl; maid; as a teasing address, minvalinuti (little girl)"
+ },
+ "wailing woes": {
+  "english": "wailing woes",
+  "existing": "neme",
+  "liraasa": "",
+  "parts": [],
+  "image": "sorrow; woe (the verb nemenia, to mourn, carries the wailing)"
+ },
+ "lightning mage": {
+  "english": "lightning mage",
+  "existing": "",
+  "liraasa": "navufaruzayuyo",
+  "parts": [
+   "navufaruzayu",
+   "-yo"
+  ],
+  "image": "one who works lightning magic (a -yo derivation by 2.0:G41, not a compound of two headwords)"
+ },
+ "shocked": {
+  "english": "shocked",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no fit for the emotional sense; navufaruhatania (to zap) covers only an electric shock"
+ },
+ "immersed": {
+  "english": "immersed",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no fit; buzarilliba (to soak up) is the nearest, but it means absorbing, not being immersed"
+ },
+ "bubblegum pink": {
+  "english": "bubblegum pink",
+  "existing": "rubilumi",
+  "liraasa": "",
+  "parts": [],
+  "image": "pink (the light shade of red)"
+ },
+ "ragamuffin": {
+  "english": "ragamuffin",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no fit in these entries"
+ },
+ "cherished": {
+  "english": "cherished",
+  "existing": "nimusan",
+  "liraasa": "",
+  "parts": [],
+  "image": "at home; cherished; dear"
+ },
+ "dearies": {
+  "english": "dearies",
+  "existing": "nimusan",
+  "liraasa": "",
+  "parts": [],
+  "image": "dear; as a noun after a determiner: li nimusanri, the dear ones"
+ },
+ "cheesecake": {
+  "english": "cheesecake",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no fit in these entries"
+ },
+ "pink hair": {
+  "english": "pink hair",
+  "existing": "",
+  "liraasa": "rubilumisabaye",
+  "parts": [
+   "rubilumi",
+   "sabaye"
+  ],
+  "image": "pink hair, patterned on azurisabaye and vanajubasabaye"
+ },
+ "flower girl": {
+  "english": "flower girl",
+  "existing": "",
+  "liraasa": "folniminvalinu",
+  "parts": [
+   "folni",
+   "minvalinu"
+  ],
+  "image": "flower-girl; the girl of the flowers"
+ },
+ "accommodated": {
+  "english": "accommodated",
+  "existing": "nimunia",
+  "liraasa": "",
+  "parts": [],
+  "image": "to offer belonging; to make someone feel at home"
+ },
+ "genetically engineered": {
+  "english": "genetically engineered",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no fit in these entries"
+ },
+ "relented": {
+  "english": "relented",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no fit in these entries"
+ },
+ "mesmerized": {
+  "english": "mesmerized",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no fit in these entries"
+ },
+ "street cred": {
+  "english": "street cred",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no fit: valminulu (street) is available, but these entries have no headword for reputation"
+ },
+ "hopefully": {
+  "english": "hopefully",
+  "existing": "opisan",
+  "liraasa": "",
+  "parts": [],
+  "image": "hopeful; as an adverb: la opisan"
+ },
+ "spite": {
+  "english": "spite",
+  "existing": "larneramu",
+  "liraasa": "",
+  "parts": [],
+  "image": "resentment; a harboured grievance"
+ },
+ "ever-present": {
+  "english": "ever-present",
+  "existing": "nulloramusan",
+  "liraasa": "",
+  "parts": [],
+  "image": "haunting; ever-present"
+ },
+ "mostly": {
+  "english": "mostly"
+ },
+ "jeez": {
+  "english": "jeez"
+ },
+ "whatever": {
+  "english": "whatever"
+ },
+ "you see": {
+  "english": "you see"
+ },
+ "downstairs": {
+  "english": "downstairs"
+ },
+ "thirty-five percent": {
+  "english": "thirty-five percent"
+ },
+ "alright": {
+  "english": "alright"
+ },
+ "government": {
+  "english": "government",
+  "existing": "mavopagodivma",
+  "liraasa": "",
+  "parts": [],
+  "image": "society-structure"
+ },
+ "recycled": {
+  "english": "recycled",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no fitting form; use revo- on a verb"
+ },
+ "anti-gravity": {
+  "english": "anti-gravity",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no headword for gravity here; paraphrase"
+ },
+ "avatar": {
+  "english": "avatar",
+  "existing": "favronela",
+  "liraasa": "",
+  "parts": [],
+  "image": "signal-person"
+ },
+ "aquifer water": {
+  "english": "aquifer water",
+  "existing": "mirulombi",
+  "liraasa": "",
+  "parts": [],
+  "image": "water source"
+ },
+ "pants": {
+  "english": "pants",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no garment headword in these entries"
+ },
+ "master": {
+  "english": "master",
+  "existing": "nimuregna",
+  "liraasa": "",
+  "parts": [],
+  "image": "house-ruler"
+ },
+ "respectfully": {
+  "english": "respectfully",
+  "existing": "gozanasan",
+  "liraasa": "",
+  "parts": [],
+  "image": "never derisive; use la gozanasan"
+ },
+ "bullied her": {
+  "english": "bullied her",
+  "existing": "gozaga",
+  "liraasa": "",
+  "parts": [],
+  "image": "to mock or ridicule (folluhemluyo is the noun 'bully' only)"
+ },
+ "therapy": {
+  "english": "therapy",
+  "existing": "senohelna",
+  "liraasa": "",
+  "parts": [],
+  "image": "talk-treatment"
+ },
+ "pointed out": {
+  "english": "pointed out",
+  "existing": "finifa",
+  "liraasa": "",
+  "parts": [],
+  "image": "to point with the finger"
+ },
+ "blank": {
+  "english": "blank",
+  "existing": "holmosan",
+  "liraasa": "",
+  "parts": [],
+  "image": "hollow"
+ },
+ "take medication": {
+  "english": "take medication",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no listed verb; paraphrase"
+ },
+ "contact": {
+  "english": "contact",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "hata is a forceful blow and does not fit; paraphrase"
+ },
+ "exclamation mark": {
+  "english": "exclamation mark",
+  "existing": "",
+  "liraasa": "valladozapatu",
+  "parts": [
+   "valladoza",
+   "patu"
+  ],
+  "image": "outcry-point"
+ },
+ "etchings": {
+  "english": "etchings",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no fitting form"
+ },
+ "considered": {
+  "english": "considered",
+  "existing": "pensasan",
+  "liraasa": "",
+  "parts": [],
+  "image": "thoughtful; considered"
+ },
+ "three dimensional": {
+  "english": "three dimensional",
+  "existing": "vamridarnosan",
+  "liraasa": "",
+  "parts": [],
+  "image": "dimensional; say tressa vamridarno for three dimensions"
+ },
+ "messy": {
+  "english": "messy",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no fitting form"
+ },
+ "discourage": {
+  "english": "discourage",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no fitting form; use the vaku pattern"
+ },
+ "grooming habits": {
+  "english": "grooming habits",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "devotarnu means bridegroom, a false friend; paraphrase"
+ },
+ "important": {
+  "english": "important",
+  "existing": "lumiverasan",
+  "liraasa": "",
+  "parts": [],
+  "image": "meaningful; significant"
+ },
+ "continued": {
+  "english": "continued",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "grammar: loki (keep on)"
+ },
+ "automatically": {
+  "english": "automatically",
+  "existing": "dorvanasan",
+  "liraasa": "",
+  "parts": [],
+  "image": "unintended; use la dorvanasan"
+ },
+ "guaranteed": {
+  "english": "guaranteed",
+  "existing": "zonranasan",
+  "liraasa": "",
+  "parts": [],
+  "image": "undeniable"
+ },
+ "kiddo": {
+  "english": "kiddo",
+  "existing": "linuti",
+  "liraasa": "",
+  "parts": [],
+  "image": "little child (from the recipes)"
+ },
+ "beware": {
+  "english": "beware",
+  "existing": "mavoma",
+  "liraasa": "",
+  "parts": [],
+  "image": "to mind; to attend; as a command: Mavoma!"
+ },
+ "really": {
+  "english": "really",
+  "existing": "verasan",
+  "liraasa": "",
+  "parts": [],
+  "image": "true, real; use la verasan"
+ },
+ "abuse": {
+  "english": "abuse",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no fitting form"
+ },
+ "find out": {
+  "english": "find out",
+  "existing": "navdinia",
+  "liraasa": "",
+  "parts": [],
+  "image": "to find; to discover"
+ },
+ "access levels": {
+  "english": "access levels",
+  "existing": "",
+  "liraasa": "turnasalrupatu",
+  "parts": [
+   "turna",
+   "salrupatu"
+  ],
+  "image": "entry-tier"
+ },
+ "forcefully": {
+  "english": "forcefully",
+  "existing": "hatasan",
+  "liraasa": "",
+  "parts": [],
+  "image": "with impact; use la hatasan"
+ },
+ "report": {
+  "english": "report",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "only sernayo (reporter) is listed; paraphrase"
+ },
+ "wayward children": {
+  "english": "wayward children",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no fitting form"
+ },
+ "protocols": {
+  "english": "protocols",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no fitting form"
+ },
+ "government-sponsored": {
+  "english": "government-sponsored",
+  "existing": "mavopagodivmasan",
+  "liraasa": "",
+  "parts": [],
+  "image": "of the government (by 3.3:G148)"
+ },
+ "boarding school": {
+  "english": "boarding school",
+  "existing": "",
+  "liraasa": "nimulemupago",
+  "parts": [
+   "nimu",
+   "lemupago"
+  ],
+  "image": "home-school"
+ },
+ "military brief": {
+  "english": "military brief",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no fitting form"
+ },
+ "documentation": {
+  "english": "documentation",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no fitting form"
+ },
+ "alianii incident": {
+  "english": "alianii incident",
+  "existing": "mambipuku",
+  "liraasa": "",
+  "parts": [],
+  "image": "an event and what came of it; with the name: Alianii de mambipuku"
+ },
+ "etc": {
+  "english": "etc"
+ },
+ "monday": {
+  "english": "monday"
+ },
+ "mind you": {
+  "english": "mind you"
+ },
+ "i mean": {
+  "english": "i mean"
+ },
+ "chica": {
+  "english": "chica"
+ },
+ "analyzed": {
+  "english": "analyzed",
+  "existing": "",
+  "liraasa": "patuserbu",
+  "parts": [
+   "patu",
+   "serbu"
+  ],
+  "image": "point-seeking: searching a thing out point by point (analysis)"
+ },
+ "close confidant": {
+  "english": "close confidant",
+  "existing": "",
+  "liraasa": "silrolore",
+  "parts": [
+   "silro",
+   "lore"
+  ],
+  "image": "secret heart: the heart that holds your shared secrets"
+ },
+ "machiavellian politics": {
+  "english": "machiavellian politics",
+  "existing": "",
+  "liraasa": "helvilektalordi",
+  "parts": [
+   "helvi",
+   "lektalordi"
+  ],
+  "image": "hidden politics: statecraft played from concealment"
+ },
+ "predicted": {
+  "english": "predicted",
+  "existing": "",
+  "liraasa": "livevimo",
+  "parts": [
+   "live",
+   "vimo"
+  ],
+  "image": "lead-sight: seeing what goes first, ahead of time"
+ },
+ "plaque": {
+  "english": "plaque",
+  "existing": "",
+  "liraasa": "ramucuza",
+  "parts": [
+   "ramu",
+   "cuza"
+  ],
+  "image": "memory letter: words set down so that something is remembered"
+ },
+ "seemed": {
+  "english": "seemed",
+  "existing": "vimosudeva",
+  "liraasa": "",
+  "parts": [],
+  "image": ""
+ },
+ "situation": {
+  "english": "situation",
+  "existing": "",
+  "liraasa": "pagorinba",
+  "parts": [
+   "pago",
+   "rinba"
+  ],
+  "image": "place-ring: the circle of circumstances around where one stands"
+ },
+ "snapped": {
+  "english": "snapped",
+  "existing": "",
+  "liraasa": "larneseno",
+  "parts": [
+   "larne",
+   "seno"
+  ],
+  "image": "anger-word: a sharp, angry remark"
+ },
+ "turned away": {
+  "english": "turned away",
+  "existing": "du-voprava",
+  "liraasa": "",
+  "parts": [],
+  "image": ""
+ },
+ "squinting slightly": {
+  "english": "squinting slightly",
+  "existing": "vilnelendava",
+  "liraasa": "",
+  "parts": [],
+  "image": ""
+ },
+ "field trips": {
+  "english": "field trips",
+  "existing": "",
+  "liraasa": "madijomru",
+  "parts": [
+   "madi",
+   "jomru"
+  ],
+  "image": "meadow journey: an outing away from the classroom into the open"
+ },
+ "neopsyphonic music": {
+  "english": "neopsyphonic music",
+  "existing": "",
+  "liraasa": "mavomelo",
+  "parts": [
+   "mavo",
+   "melo"
+  ],
+  "image": "mind-music: music made for and of the mind"
+ },
+ "babe": {
+  "english": "babe",
+  "existing": "",
+  "liraasa": "molulore",
+  "parts": [
+   "molu",
+   "lore"
+  ],
+  "image": "tender heart, used as an endearment"
+ },
+ "sappy talk": {
+  "english": "sappy talk",
+  "existing": "",
+  "liraasa": "amorseno",
+  "parts": [
+   "amor",
+   "seno"
+  ],
+  "image": "love-words: sentimental, lovey talk"
+ },
+ "escorted": {
+  "english": "escorted",
+  "existing": "livela",
+  "liraasa": "",
+  "parts": [],
+  "image": ""
+ },
+ "digitally": {
+  "english": "digitally",
+  "existing": "sernanulusan",
+  "liraasa": "",
+  "parts": [],
+  "image": ""
+ },
+ "folks": {
+  "english": "folks",
+  "existing": "",
+  "liraasa": "nimufama",
+  "parts": [
+   "nimu",
+   "fama"
+  ],
+  "image": "home-family: one's own people"
+ },
+ "artificial scarcity": {
+  "english": "artificial scarcity",
+  "existing": "",
+  "liraasa": "helvimelli",
+  "parts": [
+   "helvi",
+   "melli"
+  ],
+  "image": "hidden plenty: abundance deliberately held back so that it seems scarce"
+ },
+ "what-the-fuck-is-time-ning": {
+  "english": "what-the-fuck-is-time-ning",
+  "existing": "",
+  "liraasa": "zirkikrono",
+  "parts": [
+   "zirki",
+   "krono"
+  ],
+  "image": "crazy-time: time that has gone mad (log as wordplay)"
+ },
+ "barely-burnt": {
+  "english": "barely-burnt",
+  "existing": "",
+  "liraasa": "farupatu",
+  "parts": [
+   "faru",
+   "patu"
+  ],
+  "image": "a speck of fire: only touched by the flame (adj. farupatusan)"
+ },
+ "digits": {
+  "english": "digits",
+  "existing": "cunu",
+  "liraasa": "",
+  "parts": [],
+  "image": ""
+ },
+ "wedding ring": {
+  "english": "wedding ring",
+  "existing": "devorinba",
+  "liraasa": "",
+  "parts": [],
+  "image": ""
+ },
+ "blocked me": {
+  "english": "blocked me",
+  "existing": "sevresia",
+  "liraasa": "",
+  "parts": [],
+  "image": ""
+ },
+ "universe-destroying": {
+  "english": "universe-destroying",
+  "existing": "",
+  "liraasa": "vemibako",
+  "parts": [
+   "vemi",
+   "bako"
+  ],
+  "image": "world-breaking (adj. vemibakosan)"
+ },
+ "short-circuiting": {
+  "english": "short-circuiting",
+  "existing": "",
+  "liraasa": "navufaruralno",
+  "parts": [
+   "navufaru",
+   "ralno"
+  ],
+  "image": "lightning-stumble: electricity tripping over itself"
+ },
+ "hot flashes": {
+  "english": "hot flashes",
+  "existing": "",
+  "liraasa": "navufarusuma",
+  "parts": [
+   "navufaru",
+   "suma"
+  ],
+  "image": "a lightning of warmth: sudden heat flashing through the body"
+ },
+ "make it": {
+  "english": "make it",
+  "existing": "",
+  "liraasa": "biolisro",
+  "parts": [
+   "bio",
+   "lisro"
+  ],
+  "image": "life-staying: surviving, coming through"
+ },
+ "experiences": {
+  "english": "experiences",
+  "existing": "bioramu",
+  "liraasa": "",
+  "parts": [],
+  "image": ""
+ },
+ "relapse": {
+  "english": "relapse",
+  "existing": "",
+  "liraasa": "ramuralno",
+  "parts": [
+   "ramu",
+   "ralno"
+  ],
+  "image": "a fall back into a state one remembers"
+ },
+ "gun-metal gray": {
+  "english": "gun-metal gray",
+  "existing": "shadalumi",
+  "liraasa": "",
+  "parts": [],
+  "image": "the grey colour word; it is not in this request's entries, so check it"
+ },
+ "nurses": {
+  "english": "nurses",
+  "existing": "",
+  "liraasa": "moludonu",
+  "parts": [
+   "molu",
+   "donu"
+  ],
+  "image": "tenderness-giving: care given (the person is moludonuyo)"
+ },
+ "looked down": {
+  "english": "looked down",
+  "existing": "",
+  "liraasa": "nevravimo",
+  "parts": [
+   "nevra",
+   "vimo"
+  ],
+  "image": "a downward look"
+ },
+ "meandering": {
+  "english": "meandering",
+  "existing": "",
+  "liraasa": "vopranulu",
+  "parts": [
+   "vopra",
+   "nulu"
+  ],
+  "image": "a turning path: a winding course (adj. vopranulusan)"
+ },
+ "infinitely": {
+  "english": "infinitely",
+  "existing": "cunuasasan",
+  "liraasa": "",
+  "parts": [],
+  "image": ""
+ },
+ "go crazy": {
+  "english": "go crazy",
+  "existing": "zirkisan",
+  "liraasa": "",
+  "parts": [],
+  "image": ""
+ },
+ "reptile": {
+  "english": "reptile",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no fit: the entries have no animal head; this needs an animal headword such as lazu"
+ },
+ "hey beautiful": {
+  "english": "hey beautiful",
+  "existing": "vanisan",
+  "liraasa": "",
+  "parts": [],
+  "image": ""
+ },
+ "hon": {
+  "english": "hon",
+  "existing": "",
+  "liraasa": "amorlore",
+  "parts": [
+   "amor",
+   "lore"
+  ],
+  "image": "loving heart, used as an endearment"
+ },
+ "indignant": {
+  "english": "indignant",
+  "existing": "",
+  "liraasa": "veralarne",
+  "parts": [
+   "vera",
+   "larne"
+  ],
+  "image": "truth-anger: righteous anger (adj. veralarnesan)"
+ },
+ "call me": {
+  "english": "call me",
+  "existing": "hemluha",
+  "liraasa": "",
+  "parts": [],
+  "image": ""
+ },
+ "violent offenders": {
+  "english": "violent offenders",
+  "existing": "",
+  "liraasa": "larnebako",
+  "parts": [
+   "larne",
+   "bako"
+  ],
+  "image": "anger-breaking: violence (the offenders are larnebakoyo)"
+ },
+ "undergraduate thesis": {
+  "english": "undergraduate thesis",
+  "existing": "",
+  "liraasa": "serbucuza",
+  "parts": [
+   "serbu",
+   "cuza"
+  ],
+  "image": "a letter of seeking: a written piece of research"
+ },
+ "torture": {
+  "english": "torture",
+  "existing": "moluna",
+  "liraasa": "",
+  "parts": [],
+  "image": ""
+ },
+ "times ten": {
+  "english": "times ten"
+ },
+ "first": {
+  "english": "first"
+ },
+ "gang": {
+  "english": "gang",
+  "existing": "",
+  "liraasa": "hatalekta",
+  "parts": [
+   "hata",
+   "lekta"
+  ],
+  "image": "a blow-gathering: a group bound together by force (new coinage, flag)"
+ },
+ "adamantly": {
+  "english": "adamantly",
+  "existing": "masunasan",
+  "liraasa": "",
+  "parts": [],
+  "image": "certain, sure; use as la masunasan, unshakeably"
+ },
+ "affection": {
+  "english": "affection",
+  "existing": "",
+  "liraasa": "amorlore",
+  "parts": [
+   "amor",
+   "lore"
+  ],
+  "image": "loving heart: a heart changed by love (image compound, valid without flag)"
+ },
+ "quit playing": {
+  "english": "quit playing",
+  "existing": "pelipa",
+  "liraasa": "",
+  "parts": [],
+  "image": "to play; use as teki pelipa, stop playing"
+ },
+ "found out": {
+  "english": "found out",
+  "existing": "navdinia",
+  "liraasa": "",
+  "parts": [],
+  "image": "to find, discover"
+ },
+ "piped in": {
+  "english": "piped in",
+  "existing": "filvifa",
+  "liraasa": "",
+  "parts": [],
+  "image": "to pipe; to pipe up in a thin voice (idiom, spoke up)"
+ },
+ "chipped in": {
+  "english": "chipped in",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no fitting headword in these entries; paraphrase (shared, gave)"
+ },
+ "saggy tits": {
+  "english": "saggy tits",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no breast word in these entries; needs the body-part headword"
+ },
+ "blow job": {
+  "english": "blow job",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no mouth word in these entries; paraphrase with amordalu"
+ },
+ "suitcase": {
+  "english": "suitcase",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no container or journey headword in these entries"
+ },
+ "psychiatric hospitals": {
+  "english": "psychiatric hospitals",
+  "existing": "mavohelnapago",
+  "liraasa": "",
+  "parts": [],
+  "image": "psych hospital; plural mavohelnapagori"
+ },
+ "shoulder-length": {
+  "english": "shoulder-length",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no shoulder word in these entries"
+ },
+ "curfew": {
+  "english": "curfew",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no night or rule headword in these entries"
+ },
+ "crazier": {
+  "english": "crazier",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "kasi + a mind-family adjective; none in these entries"
+ },
+ "unnecessarily stern": {
+  "english": "unnecessarily stern",
+  "existing": "pelinasan",
+  "liraasa": "",
+  "parts": [],
+  "image": "solemn, unplayful; with diba: diba pelinasan, too stern"
+ },
+ "paper-thin": {
+  "english": "paper-thin",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no paper or thin word in these entries"
+ },
+ "check on": {
+  "english": "check on",
+  "existing": "vismava",
+  "liraasa": "",
+  "parts": [],
+  "image": "to scan, to check"
+ },
+ "chess": {
+  "english": "chess",
+  "existing": "",
+  "liraasa": "dokrapeli",
+  "parts": [
+   "dokra",
+   "peli"
+  ],
+  "image": "war-play: the game of battle (new coinage, flag)"
+ },
+ "triumphantly": {
+  "english": "triumphantly",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no victory word in these entries; vazra (victory) is needed"
+ },
+ "haughtiness": {
+  "english": "haughtiness",
+  "existing": "paralo",
+  "liraasa": "",
+  "parts": [],
+  "image": "pride; haughty is paralosan"
+ },
+ "greetings": {
+  "english": "greetings",
+  "existing": "gonbiseno",
+  "liraasa": "",
+  "parts": [],
+  "image": "greeting, guest-word"
+ },
+ "get high": {
+  "english": "get high",
+  "existing": "",
+  "liraasa": "helnasalru",
+  "parts": [
+   "helna",
+   "salru"
+  ],
+  "image": "drug-height: the high of a drug (new coinage, flag; as a verb use loya + helnasalrusan)"
+ },
+ "security footage": {
+  "english": "security footage",
+  "existing": "",
+  "liraasa": "sasvavimoramu",
+  "parts": [
+   "sasva",
+   "vimoramu"
+  ],
+  "image": "guard-recording: footage kept for protection (new coinage, flag)"
+ },
+ "make sure": {
+  "english": "make sure",
+  "existing": "verasudeva",
+  "liraasa": "",
+  "parts": [],
+  "image": "to check, to verify"
+ },
+ "entry": {
+  "english": "entry",
+  "existing": "turna",
+  "liraasa": "",
+  "parts": [],
+  "image": "entry, access"
+ },
+ "physical arts": {
+  "english": "physical arts",
+  "existing": "",
+  "liraasa": "yugelarda",
+  "parts": [
+   "yuge",
+   "larda"
+  ],
+  "image": "body-art: arts practised with the body (new coinage, flag)"
+ },
+ "nifty": {
+  "english": "nifty",
+  "existing": "yusosan",
+  "liraasa": "",
+  "parts": [],
+  "image": "useful, handy"
+ },
+ "biochemistry": {
+  "english": "biochemistry",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no bio or chemistry headword in these entries"
+ },
+ "embroidered": {
+  "english": "embroidered",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no thread or sewing word in these entries"
+ },
+ "burly form": {
+  "english": "burly form",
+  "existing": "",
+  "liraasa": "monruyuge",
+  "parts": [
+   "monru",
+   "yuge"
+  ],
+  "image": "mountain-body: a big, heavy-built frame (new coinage, flag)"
+ },
+ "slender": {
+  "english": "slender",
+  "existing": "filvisan",
+  "liraasa": "",
+  "parts": [],
+  "image": "reedy, thin like a reed"
+ },
+ "paramount concern": {
+  "english": "paramount concern",
+  "existing": "mubo",
+  "liraasa": "",
+  "parts": [],
+  "image": "worry, concern; mosa mubo, the greatest concern"
+ },
+ "involved": {
+  "english": "involved",
+  "existing": "turnasan",
+  "liraasa": "",
+  "parts": [],
+  "image": "entering, admitted: drawn in"
+ },
+ "asexual": {
+  "english": "asexual",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no listed negative of amordalu; paraphrase: ne desida amordalu"
+ },
+ "predicament": {
+  "english": "predicament",
+  "existing": "",
+  "liraasa": "mubopago",
+  "parts": [
+   "mubo",
+   "pago"
+  ],
+  "image": "worry-place: a tight spot (new coinage, flag)"
+ },
+ "overdosed": {
+  "english": "overdosed",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "paraphrase: po sapusia diba muya helna"
+ },
+ "drug use": {
+  "english": "drug use",
+  "existing": "",
+  "liraasa": "helnayuso",
+  "parts": [
+   "helna",
+   "yuso"
+  ],
+  "image": "drug-use: the using of drugs (new coinage, flag)"
+ },
+ "you guys": {
+  "english": "you guys"
+ },
+ "let's see": {
+  "english": "let's see"
+ },
+ "a guy": {
+  "english": "a guy"
+ },
+ "aw jeez": {
+  "english": "aw jeez"
+ },
+ "excuse me": {
+  "english": "excuse me"
+ },
+ "oh god": {
+  "english": "oh god"
+ },
+ "ever": {
+  "english": "ever"
+ },
+ "come on": {
+  "english": "come on"
+ },
+ "de-winged bird": {
+  "english": "de-winged bird",
+  "existing": "",
+  "liraasa": "lisrolavra",
+  "parts": [
+   "lisro",
+   "lavra"
+  ],
+  "image": "a staying bird: a bird kept from flight"
+ },
+ "hypocrite": {
+  "english": "hypocrite",
+  "existing": "",
+  "liraasa": "fasbinela",
+  "parts": [
+   "fasbi",
+   "nela"
+  ],
+  "image": "a face-person: one who lives by the face they show"
+ },
+ "genetic engineering": {
+  "english": "genetic engineering",
+  "existing": "",
+  "liraasa": "bioyalmubiti",
+  "parts": [
+   "bio",
+   "yalmubiti"
+  ],
+  "image": "life-machinery: engineering applied to living things"
+ },
+ "come in": {
+  "english": "come in",
+  "existing": "venreva",
+  "liraasa": "",
+  "parts": [],
+  "image": "to come; to arrive"
+ },
+ "music lessons": {
+  "english": "music lessons",
+  "existing": "",
+  "liraasa": "melolemupatu",
+  "parts": [
+   "melo",
+   "lemupatu"
+  ],
+  "image": "a music lesson"
+ },
+ "escort": {
+  "english": "escort",
+  "existing": "",
+  "liraasa": "valminela",
+  "parts": [
+   "valmi",
+   "nela"
+  ],
+  "image": "a walking-person: one who walks beside you"
+ },
+ "convey": {
+  "english": "convey",
+  "existing": "lumiverala",
+  "liraasa": "",
+  "parts": [],
+  "image": "to convey meaning"
+ },
+ "innate talents": {
+  "english": "innate talents",
+  "existing": "",
+  "liraasa": "nolsajuba",
+  "parts": [
+   "nolsa",
+   "juba"
+  ],
+  "image": "a newborn gift: a gift carried from birth"
+ },
+ "effort": {
+  "english": "effort",
+  "existing": "",
+  "liraasa": "polvadonu",
+  "parts": [
+   "polva",
+   "donu"
+  ],
+  "image": "strength-giving: spending one's strength on something"
+ },
+ "remedial teaching": {
+  "english": "remedial teaching",
+  "existing": "",
+  "liraasa": "relnulemudonu",
+  "parts": [
+   "relnu",
+   "lemudonu"
+  ],
+  "image": "return-teaching: teaching that goes back over what was missed"
+ },
+ "respect": {
+  "english": "respect",
+  "existing": "",
+  "liraasa": "sirmolore",
+  "parts": [
+   "sirmo",
+   "lore"
+  ],
+  "image": "a praise-heart: honour held in the heart"
+ },
+ "amanda's case": {
+  "english": "amanda's case",
+  "existing": "jusenulu",
+  "liraasa": "",
+  "parts": [],
+  "image": "a justice process; a legal case (Amanda is copied as a name)"
+ },
+ "purple pirate": {
+  "english": "purple pirate",
+  "existing": "",
+  "liraasa": "viosevuhifayo",
+  "parts": [
+   "vio",
+   "sevuhifa"
+  ],
+  "image": "a purple sea-thief, with the -yo agent suffix, in the series of the 4.0 purple coinages"
+ },
+ "increasingly confident": {
+  "english": "increasingly confident",
+  "existing": "corvibelfisan",
+  "liraasa": "",
+  "parts": [],
+  "image": "confident ('increasingly' is grammar: kasi)"
+ },
+ "pillaging": {
+  "english": "pillaging",
+  "existing": "sevuhifa",
+  "liraasa": "",
+  "parts": [],
+  "image": "sea-theft; piracy"
+ },
+ "generated": {
+  "english": "generated",
+  "existing": "",
+  "liraasa": "fontedonu",
+  "parts": [
+   "fonte",
+   "donu"
+  ],
+  "image": "source-giving: bringing something forth from a source"
+ },
+ "a plot": {
+  "english": "a plot",
+  "existing": "telnenulu",
+  "liraasa": "",
+  "parts": [],
+  "image": "the plot of a story; a narrative line"
+ },
+ "presumed torture": {
+  "english": "presumed torture",
+  "existing": "",
+  "liraasa": "hatadalu",
+  "parts": [
+   "hata",
+   "dalu"
+  ],
+  "image": "attack-touch: harm done by hand ('presumed' is the attitude word mufe)"
+ },
+ "hardly processed": {
+  "english": "hardly processed",
+  "existing": "buzarilliba",
+  "liraasa": "",
+  "parts": [],
+  "image": "to absorb; to soak up ('hardly' is grammar)"
+ },
+ "back-up": {
+  "english": "back-up",
+  "existing": "",
+  "liraasa": "lisrocuza",
+  "parts": [
+   "lisro",
+   "cuza"
+  ],
+  "image": "a staying note: a copy that remains"
+ },
+ "picked up": {
+  "english": "picked up",
+  "existing": "manliravnusan",
+  "liraasa": "",
+  "parts": [],
+  "image": "picked up"
+ },
+ "robot escorts": {
+  "english": "robot escorts",
+  "existing": "",
+  "liraasa": "valmikibo",
+  "parts": [
+   "valmi",
+   "kibo"
+  ],
+  "image": "a walking robot: a bot that walks beside you"
+ },
+ "last name": {
+  "english": "last name",
+  "existing": "",
+  "liraasa": "nimunole",
+  "parts": [
+   "nimu",
+   "nole"
+  ],
+  "image": "a home-name: the household's name"
+ },
+ "jurisdiction": {
+  "english": "jurisdiction",
+  "existing": "",
+  "liraasa": "jusepolva",
+  "parts": [
+   "juse",
+   "polva"
+  ],
+  "image": "justice-power: the reach of the law"
+ },
+ "ongoing investigation": {
+  "english": "ongoing investigation",
+  "existing": "verasudeserbu",
+  "liraasa": "",
+  "parts": [],
+  "image": "an investigation ('ongoing' is the aspect word roni)"
+ },
+ "turned on": {
+  "english": "turned on",
+  "existing": "vilnelalleva",
+  "liraasa": "",
+  "parts": [],
+  "image": "to wake up: a device opening its eyes"
+ },
+ "reviewing": {
+  "english": "reviewing",
+  "existing": "juseseno",
+  "liraasa": "",
+  "parts": [],
+  "image": "a review"
+ },
+ "designers": {
+  "english": "designers",
+  "existing": "",
+  "liraasa": "lardalideoyo",
+  "parts": [
+   "larda",
+   "lideo"
+  ],
+  "image": "one who makes art-ideas: a designer"
+ },
+ "spook": {
+  "english": "spook",
+  "existing": "",
+  "liraasa": "sulmenela",
+  "parts": [
+   "sulme",
+   "nela"
+  ],
+  "image": "a smoke-person: a ghostly figure"
+ },
+ "sociopath": {
+  "english": "sociopath",
+  "existing": "",
+  "liraasa": "damrulore",
+  "parts": [
+   "damru",
+   "lore"
+  ],
+  "image": "a hardened heart that feels no fellow-feeling (the person is li damrulore + -san)"
+ },
+ "tickle attack": {
+  "english": "tickle attack",
+  "existing": "",
+  "liraasa": "resodaluzarkuhata",
+  "parts": [
+   "resodalu",
+   "zarkuhata"
+  ],
+  "image": "a tickle-assault"
+ },
+ "in particular": {
+  "english": "in particular"
+ },
+ "single handedly": {
+  "english": "single handedly"
+ },
+ "ha-ha": {
+  "english": "ha-ha"
+ },
+ "furthermore": {
+  "english": "furthermore"
+ },
+ "not yet": {
+  "english": "not yet"
+ },
+ "unfortunately": {
+  "english": "unfortunately"
+ },
+ "she's ten": {
+  "english": "she's ten"
+ },
+ "shortly thereafter": {
+  "english": "shortly thereafter"
+ },
+ "future alianii": {
+  "english": "future alianii"
+ },
+ "neo-hindu": {
+  "english": "neo-hindu"
+ },
+ "sans medication": {
+  "english": "sans medication"
+ },
+ "mmm": {
+  "english": "mmm"
+ },
+ "its okay": {
+  "english": "its okay"
+ },
+ "you three": {
+  "english": "you three"
+ },
+ "giggled": {
+  "english": "giggled",
+  "existing": "resoti",
+  "liraasa": "",
+  "parts": [],
+  "image": "a little laugh (giggle)"
+ },
+ "cuddled up": {
+  "english": "cuddled up",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no fitting parts in these entries; paraphrase (e.g. ligo + rivo)"
+ },
+ "chronologically-bound affection": {
+  "english": "chronologically-bound affection",
+  "existing": "",
+  "liraasa": "kronolore",
+  "parts": [
+   "krono",
+   "lore"
+  ],
+  "image": "time-held heart: affection bound to a time"
+ },
+ "tiny human": {
+  "english": "tiny human",
+  "existing": "",
+  "liraasa": "linunela",
+  "parts": [
+   "linu",
+   "nela"
+  ],
+  "image": "child-person"
+ },
+ "style": {
+  "english": "style",
+  "existing": "tino",
+  "liraasa": "",
+  "parts": [],
+  "image": "kind; sort"
+ },
+ "cough up": {
+  "english": "cough up",
+  "existing": "havlibakoha",
+  "liraasa": "",
+  "parts": [],
+  "image": "to cough (literal; the idiom 'hand over' needs a paraphrase)"
+ },
+ "tacky": {
+  "english": "tacky",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no fitting parts in these entries; paraphrase"
+ },
+ "wishing stone": {
+  "english": "wishing stone",
+  "existing": "duhasolo",
+  "liraasa": "",
+  "parts": [],
+  "image": "stone of wishes"
+ },
+ "triumphant joy": {
+  "english": "triumphant joy",
+  "existing": "",
+  "liraasa": "regnalavi",
+  "parts": [
+   "regna",
+   "lavi"
+  ],
+  "image": "sovereign joy: the joy of one who reigns"
+ },
+ "assistance": {
+  "english": "assistance",
+  "existing": "",
+  "liraasa": "rivodonu",
+  "parts": [
+   "rivo",
+   "donu"
+  ],
+  "image": "companion-giving: help a fellow gives"
+ },
+ "midflight": {
+  "english": "midflight",
+  "existing": "",
+  "liraasa": "diyimambi",
+  "parts": [
+   "diyi",
+   "mambi"
+  ],
+  "image": "flight-moment: a moment within a flight"
+ },
+ "spirit guide": {
+  "english": "spirit guide",
+  "existing": "",
+  "liraasa": "volmepilo",
+  "parts": [
+   "volme",
+   "pilo"
+  ],
+  "image": "spirit-father: a spirit who guides (pilopa = to guide)"
+ },
+ "westerly winds": {
+  "english": "westerly winds",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no word for west in these entries; paraphrase"
+ },
+ "flap": {
+  "english": "flap",
+  "existing": "",
+  "liraasa": "lavradobo",
+  "parts": [
+   "lavra",
+   "dobo"
+  ],
+  "image": "bird-beat: a wingbeat"
+ },
+ "misguided": {
+  "english": "misguided",
+  "existing": "",
+  "liraasa": "loteropilo",
+  "parts": [
+   "lotero",
+   "pilo"
+  ],
+  "image": "wrong guidance; adjective loteropilosan"
+ },
+ "wise": {
+  "english": "wise",
+  "existing": "sabeasasan",
+  "liraasa": "",
+  "parts": [],
+  "image": "wise"
+ },
+ "usually": {
+  "english": "usually",
+  "existing": "tinosan",
+  "liraasa": "",
+  "parts": [],
+  "image": "typical (as la tinosan)"
+ },
+ "keep flying": {
+  "english": "keep flying",
+  "existing": "diyida",
+  "liraasa": "",
+  "parts": [],
+  "image": "to fly (with loki for 'keep')"
+ },
+ "dilated time": {
+  "english": "dilated time",
+  "existing": "mellikrono",
+  "liraasa": "",
+  "parts": [],
+  "image": "expanded time"
+ },
+ "incredulous": {
+  "english": "incredulous",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no fitting parts in these entries; paraphrase"
+ },
+ "lilac moonfox": {
+  "english": "lilac moonfox",
+  "existing": "lunovurfa",
+  "liraasa": "",
+  "parts": [],
+  "image": "moonfox (lilac added by the colour violumi in the phrase)"
+ },
+ "tweak them": {
+  "english": "tweak them",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no fitting parts in these entries; paraphrase"
+ },
+ "dramatic pauses": {
+  "english": "dramatic pauses",
+  "existing": "lasomambi",
+  "liraasa": "",
+  "parts": [],
+  "image": "a meaningful pause"
+ },
+ "for free": {
+  "english": "for free",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no fitting parts in these entries; paraphrase (voyu cono)"
+ },
+ "fellow teacher": {
+  "english": "fellow teacher",
+  "existing": "",
+  "liraasa": "rivolemudonuyo",
+  "parts": [
+   "rivo",
+   "lemudonuyo"
+  ],
+  "image": "companion-teacher"
+ },
+ "administrator privileges": {
+  "english": "administrator privileges",
+  "existing": "regnajuba",
+  "liraasa": "",
+  "parts": [],
+  "image": "privilege (a sovereign's gift)"
+ },
+ "deafening": {
+  "english": "deafening",
+  "existing": "",
+  "liraasa": "lenibako",
+  "parts": [
+   "leni",
+   "bako"
+  ],
+  "image": "hearing-break; adjective lenibakosan"
+ },
+ "gnome": {
+  "english": "gnome",
+  "existing": "",
+  "liraasa": "solonela",
+  "parts": [
+   "solo",
+   "nela"
+  ],
+  "image": "stone-person: an earth spirit, like larbonela (dryad)"
+ },
+ "religion": {
+  "english": "religion",
+  "existing": "",
+  "liraasa": "lavbusabe",
+  "parts": [
+   "lavbu",
+   "sabe"
+  ],
+  "image": "worship-knowing"
+ },
+ "microdilated time": {
+  "english": "microdilated time",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no compound needed: build mellikronoti from mellikrono + -ti (little dilated time)"
+ },
+ "refined it": {
+  "english": "refined it",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no fitting parts in these entries; paraphrase"
+ },
+ "aura type": {
+  "english": "aura type",
+  "existing": "",
+  "liraasa": "lumitino",
+  "parts": [
+   "lumi",
+   "tino"
+  ],
+  "image": "light-kind: the type of one's aura"
+ },
+ "obviously": {
+  "english": "obviously",
+  "existing": "ceresan",
+  "liraasa": "",
+  "parts": [],
+  "image": "obvious (as la ceresan)"
+ },
+ "tranquility": {
+  "english": "tranquility",
+  "existing": "",
+  "liraasa": "lasolore",
+  "parts": [
+   "laso",
+   "lore"
+  ],
+  "image": "silence-heart: a quiet heart"
+ },
+ "messaged": {
+  "english": "messaged",
+  "existing": "silbeseno",
+  "liraasa": "",
+  "parts": [],
+  "image": "message (no verb form listed)"
+ },
+ "sneaky": {
+  "english": "sneaky",
+  "existing": "",
+  "liraasa": "helvipebu",
+  "parts": [
+   "helvi",
+   "pebu"
+  ],
+  "image": "hiding-foot; adjective helvipebusan"
+ },
+ "sappy": {
+  "english": "sappy",
+  "existing": "",
+  "liraasa": "molulore",
+  "parts": [
+   "molu",
+   "lore"
+  ],
+  "image": "tender heart"
+ },
+ "dining hall": {
+  "english": "dining hall",
+  "existing": "namizupa",
+  "liraasa": "",
+  "parts": [],
+  "image": "dining room"
+ },
+ "congratulatory anthem": {
+  "english": "congratulatory anthem",
+  "existing": "",
+  "liraasa": "lavilira",
+  "parts": [
+   "lavi",
+   "lira"
+  ],
+  "image": "joyful song"
+ },
+ "detailed costumes": {
+  "english": "detailed costumes",
+  "existing": "maskavelma",
+  "liraasa": "",
+  "parts": [],
+  "image": "costume ('detailed' added in the phrase)"
+ },
+ "very well": {
+  "english": "very well"
+ },
+ "got it": {
+  "english": "got it"
+ },
+ "you're right": {
+  "english": "you're right"
+ },
+ "arguably": {
+  "english": "arguably"
+ },
+ "and stuff": {
+  "english": "and stuff"
+ },
+ "on standby": {
+  "english": "on standby",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no fit in these entries; lisrokrono (stasis) and lisrosan (remaining) are too far from 'ready and waiting'"
+ },
+ "bouncy": {
+  "english": "bouncy",
+  "existing": "derdisan",
+  "liraasa": "",
+  "parts": [],
+  "image": "deerlike, leaping like a deer (derdida)"
+ },
+ "ran over": {
+  "english": "ran over",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "idiom, no fit in these entries"
+ },
+ "mingle": {
+  "english": "mingle",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "lekta is not a headword in these entries; paraphrase with yave- + verb"
+ },
+ "under protection": {
+  "english": "under protection",
+  "existing": "sasvasan",
+  "liraasa": "",
+  "parts": [],
+  "image": "safe; protected"
+ },
+ "last": {
+  "english": "last",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no general 'last' in these entries"
+ },
+ "squealed": {
+  "english": "squealed",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no sound verb fits in these entries"
+ },
+ "confirmation": {
+  "english": "confirmation",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no fit in these entries"
+ },
+ "chimed in": {
+  "english": "chimed in",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "idiom for joining a conversation; kronobeldaka and kibosonbu are literal chimes only"
+ },
+ "hologram computer": {
+  "english": "hologram computer",
+  "existing": "",
+  "liraasa": "lumisovlacunudivmabiti",
+  "parts": [
+   "lumisovla",
+   "cunudivmabiti"
+  ],
+  "image": "a light-shape computer, patterned on lumisovlavimofavro (nested compound, 2.0:G42)"
+ },
+ "little sister": {
+  "english": "little sister",
+  "existing": "minvafamliti",
+  "liraasa": "",
+  "parts": [],
+  "image": "dear little sister (minvafamli + diminutive -ti, 2.5:G122)"
+ },
+ "pinky promise": {
+  "english": "pinky promise",
+  "existing": "",
+  "liraasa": "finitipomli",
+  "parts": [
+   "finiti",
+   "pomli"
+  ],
+  "image": "a little-finger promise. Flag: the modifier is a lexicalised diminutive; check that 2.0:G38 allows it"
+ },
+ "her newer-as-a-sister": {
+  "english": "her newer-as-a-sister",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "wordplay; paraphrase in context"
+ },
+ "biological self-sabotage": {
+  "english": "biological self-sabotage",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no fit in these entries; paraphrase"
+ },
+ "god": {
+  "english": "god",
+  "existing": "mavolumiasa",
+  "liraasa": "",
+  "parts": [],
+  "image": "the ultimate soul; God; Divinity"
+ },
+ "prescribed heaven": {
+  "english": "prescribed heaven",
+  "existing": "mavopagoasa",
+  "liraasa": "",
+  "parts": [],
+  "image": "heaven only; 'prescribed' needs a paraphrase"
+ },
+ "hotel-technology-bedazzled room": {
+  "english": "hotel-technology-bedazzled room",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no fit in these entries; paraphrase around zupa"
+ },
+ "regrettably": {
+  "english": "regrettably",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no fit in these entries"
+ },
+ "grandmas": {
+  "english": "grandmas",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no kinship head for grandparent in these entries"
+ },
+ "dangerous": {
+  "english": "dangerous",
+  "existing": "sasvanasan",
+  "liraasa": "",
+  "parts": [],
+  "image": "unsafe"
+ },
+ "jaw-dropping": {
+  "english": "jaw-dropping",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no fit in these entries"
+ },
+ "fluffy headfeathers": {
+  "english": "fluffy headfeathers",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no fit in these entries"
+ },
+ "sunday": {
+  "english": "sunday",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no day name in these entries"
+ },
+ "accentuated": {
+  "english": "accentuated",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no fit in these entries"
+ },
+ "disappointed": {
+  "english": "disappointed",
+  "existing": "opimomvisan",
+  "liraasa": "",
+  "parts": [],
+  "image": "disappointed"
+ },
+ "ruin": {
+  "english": "ruin",
+  "existing": "bakodomlu",
+  "liraasa": "",
+  "parts": [],
+  "image": "ruins (noun sense only; no verb form is listed)"
+ },
+ "emergency caretaker": {
+  "english": "emergency caretaker",
+  "existing": "molusasvayo",
+  "liraasa": "",
+  "parts": [],
+  "image": "caretaker; carry 'emergency' in context"
+ },
+ "cried": {
+  "english": "cried",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no 'weep' in these entries; nemenia (grieve) is too strong"
+ },
+ "munchkin": {
+  "english": "munchkin",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no fit in these entries"
+ },
+ "dilate time": {
+  "english": "dilate time",
+  "existing": "mellikrono",
+  "liraasa": "",
+  "parts": [],
+  "image": "time dilation (noun only; no verb form is listed)"
+ },
+ "fun": {
+  "english": "fun",
+  "existing": "pelilavi",
+  "liraasa": "",
+  "parts": [],
+  "image": "amusement; fun"
+ },
+ "take pictures": {
+  "english": "take pictures",
+  "existing": "vimosovla",
+  "liraasa": "",
+  "parts": [],
+  "image": "image; picture (noun only; pair it with a verb such as ravnura)"
+ },
+ "lied": {
+  "english": "lied",
+  "existing": "",
+  "liraasa": "",
+  "parts": [],
+  "image": "no 'lie' in these entries"
+ },
+ "sari": {
+  "english": "sari"
+ },
+ "luigihood": {
+  "english": "luigihood"
+ },
+ "that's it": {
+  "english": "that's it"
+ },
+ "as if": {
+  "english": "as if"
+ },
+ "a lot": {
+  "english": "a lot"
+ },
+ "wholeheartedly": {
+  "english": "wholeheartedly"
+ },
+ "otherwise": {
+  "english": "otherwise"
+ },
+ "around eight": {
+  "english": "around eight"
+ },
+ "anything else": {
+  "english": "anything else"
+ },
+ "hey": {
+  "english": "hey"
+ },
+ "like usual": {
+  "english": "like usual"
+ },
+ "right away": {
+  "english": "right away"
+ }
+}
