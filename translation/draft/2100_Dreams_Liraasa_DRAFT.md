@@ -777,7 +777,7 @@ Li sonbu de li pagolalnisan sevulirayori po venreva ala maivo de felberi. Ito po
 
 ### Una-ne patu — Masuma ito
 
-Li relnu de li zirki ata li helnaturna: maivo po sarbisia ito su maivo de sarbibiti, en li sasva de li vanatobra. Maivo tovota doli poka lumiverasan tovori, ata ito ka una de olari. <sup>[c04-p0003 · medium]</sup>
+Li ramuralno ata li helnaturna: maivo po sarbisia ito su maivo de sarbibiti, intra li vanatobrari, en itori de sasva. Maivo tovota doli poka lumiverasan tovori, ata ito ka una de olari. <sup>[c04-p0003 · medium]</sup>
 
 Kube li helnakadu po venreva ala maivo, maivo po roni molovuma. Maivo tovota cemoyanosan ramuri de li telnepatu kroti maivo po loya nurminasan. Li navu po ke larbolamsa toda-krono, ata li renli po ke nibesan. Li renli po ne ke tonsi dozasan fime ito buzarilliba taivo, nara ito po donuda larneti ala taivo de leheri. Maivo po roni semnesia en li dorbi raho turnata ala maivo de mellinasan somupago. Maivo po zegoza, ata po roni pagopa ala lizmasilda ata ala riznosilda la mellinasan. Maivo po ke sambabondonasan ata po roni molovuma. Baba pidihatasan follufavro de baba helnakadu po vimosudeva en li pagolalnisan lanla de sonbu, ata po roni loya menu pagolalnisan. Li helnakadu po venreva su li “valminulu”, ligo li lalnisan lordilekta de kaldokovari. Eliri kaldokovari ke ceresolo ata germa, ata li cilniyori de Germarupu nolenia itori nimu. <sup>[c04-p0004 · medium]</sup>
 
@@ -1633,7 +1633,7 @@ Diotrem po maskayalmuma sambalinuri raho ne bodu kronobioka, en kersopagori muya
 
 Li ramumomvisan tarnufamliri po senosia fuyi: “Taivo ka maivo, ata maivo ka taivo. Maivori ka una ata una, en li sola. Tonsi, maivori de dokra ne bodu apoka.” <sup>[c06-p0148 · medium]</sup>
 
-Kube li sambalinuri po simvosia fuyi, rada sambalinu po vimova li lotero en li vilneri de li lotero, li divmabitisan vilneri. Ata saivori po sabesia fime saivori po gome sabetelbasia, ata fime saivori po loya rivonasan, kube saivori po ke linutiri. Nevi rada sambalinu po ke zavme li lotero, saivo po ne povi vaku li lotero turnata en saivo de soralekta. Saivo po ne povi silbesia baba silbeseno ala li lotero, ata saivo po ne povi vismava li lotero yuta saivo de nelasan vismabiti. Krotiata, saivori po tovota baba lumilideo: rada sambalinu po povi sernasia li lotero yuta li sorari raho ke en nuna soralekta. Ola po ka baba dorvanasan nulu ultra li tobra, kopisa sernasia yuta loterosan nelari. Lanto, li silro po gome silrosudesia: Embeel po ka baba narvosan farlapuku gagu Diotrem. Diotrem de kenderi po ka kasi mellisan, nara itori po ka levanasan sidu mebanema. Itori po ka kenderi vobi li lordi de li mavopago, ata Embeel po ka baba patu de itori. <sup>[c06-p0149 · low]</sup>
+Kube li sambalinuri po simvosia fuyi, rada sambalinu po vimova li lotero en li vilneri de li lotero, li divmabitisan vilneri. Ata saivori po sabesia fime saivori po gome sabetelbasia, ata fime saivori po loya rivonasan, kube saivori po ke linutiri. Rada sambalinu po ke en li zavmepago de li lotero. Narli, saivori po ne povi yanoya li lotero ala saivori de soralekta. Saivo po ne povi silbesia baba silbeseno ala li lotero, ata saivo po ne povi vismava li lotero yuta saivo de nelasan vismabiti. Krotiata, saivori po tovota baba lumilideo: rada sambalinu po povi sernasia li lotero yuta li sorari raho ke en nuna soralekta. Ola po ka baba dorvanasan nulu ultra li tobra, kopisa sernasia yuta loterosan nelari. Lanto, li silro po gome silrosudesia: Embeel po ka baba narvosan farlapuku gagu Diotrem. Diotrem de kenderi po ka kasi mellisan, nara itori po ka levanasan sidu mebanema. Itori po ka kenderi vobi li lordi de li mavopago, ata Embeel po ka baba patu de itori. <sup>[c06-p0149 · medium]</sup>
 
 Eli-krono, eli ka gudosan sabe. Li nelari de Diotrem po tefa loya helviyori en Efbiai. Ata saivori po tefa darnoda li palvi de benanasan mavoyugesan divmapaturi en “lavrasamniri” raho gome linula en talipagori de li mavopagodivma. Saivori po tefa palvipa karkokemye en baba kasi mellisan patu de li nelacunu raho toda-krono loya kasi mellisan. Eliri karkokemye po gome lordila kroti. Ata saivori povi yusoya ito kopisa karkoka muya nelari la pagolalnisan. <sup>[c06-p0150 · high]</sup>
 
@@ -2029,7 +2029,7 @@ Maivori po kezuvenreka en Sandicus, ata maivo po ke lalvusan kasa Saraswati po v
 
 Maivo po donuda saivo baba vizusan silbeseno: “Taivo tefa rillira ki-muya lombilordiri ki? Taivo ramura ki-muya lombilordiri ki?” <sup>[c08-p0066 · medium]</sup>
 
-Saivo po relsira gase li navufaru: “Maivo tefa rillira unzira-ocha-mililumi-nivacenta-sesazira-penta lombilordiri, ata maivo ramura gase penta mililumi poye. Taivo ki?” <sup>[c08-p0067 · low]</sup>
+“Maivo tefa rillira unzira-ocha-mililumi-nivacenta-sesazira-penta lombilordiri, ata maivo ramura gase penta-mililumi poye. Taivo ki?” saivo po relsira la navufarusan. <sup>[c08-p0067 · low]</sup>
 
 Maivo po revo-silbesia saivo baba simvosovlasan solonela de lorefavrori raho milobema, resora ata lavila. Maivo po yanoya baba Hindusan vanilorditi, kopisa ito vimosudeva gase maivori de devosan lavbularda raho tovota muya fasbiri. Maivo po nosi ne ka Indiyasan. Nara maivo simvosia maivo sela gase Hindu seye. Nevi maivo po ne tefa senosia ola ko Saraswati. <sup>[c08-p0068 · medium]</sup>
 
@@ -2847,7 +2847,7 @@ Maivo po amora saivo da li una-ne mambi. Maivo po hiro sabesia saivo kube saivo 
 
 Maivori de amor po ka verasan. Nara en li noruvu, maivori po ke en li favrovamri, ata ola po ne ka verasan. En saivo de ganreasa, saivo po tavreta sidu pagopa kopisa vimova Pokemon la yugesan. Saivo po tavreta kasa saivo po ka zeldoloresan. Ola po vaku maivo hiro amora saivo. Maivori po roni bitifarlaba ganreasa vobi saivo, nara Alianii po vaku toda-coda tranata, ata Alianii po vaku maivo pagopa ko Amanda. Maivo po roni bitifarlaba noruri vobi saivo en li verasan bio, ata en saivo de yugesan noruri, saivo po bitifarlaba noruri vobi maivo. Saivo de nurmi po tavreta toda loterosan nulu. Maivo de sambapatusan kibo po sudesia maivo. Maivo po silbesia ito ruli nedusan livnari, ata maivo po silbesia ito tu li livnari de amordalu. Tonsi, ito po teki zeldoza. <sup>[c10-p0028 · low]</sup>
 
-Tonsi, maivo po vimova maivo sela ata Amanda nayo saivori po pagopa ala Pokemon Park, gase amor sevresan en li fojovemisovla en baba norusan mavolumi. <sup>[c10-p0029 · low]</sup>
+Tonsi, maivo po vimova Amanda ata maivo sela nayo maivori po venreva ala li ganre de Pokemon. Maivori po ke gase sevresan amor en baba fojovemisovla intra baba norusan mavolumi. <sup>[c10-p0029 · medium]</sup>
 
 
 ### Tressa-ne patu: Jomru

@@ -525,6 +525,13 @@ def score_batch(state, book, ch, recs, model=MODEL_BULK):
     for r in recs:
         r["back"] = back.get(r["id"], "")
         s = scores.get(r["id"], {})
+        # a scorer that declines to score (its safety filter) has not measured anything:
+        # keep the earlier score, or leave the segment unscored, never record a 0
+        if re.search(r"safety|classifier|won.t repeat|cannot score|can.t score", str(s.get("lost", "")), re.I):
+            r["score_refused"] = True
+            if r.get("score") is None:
+                r.pop("score", None)
+            continue
         try:
             r["score"] = max(0.0, min(1.0, float(s.get("score", 0))))
         except (TypeError, ValueError):
