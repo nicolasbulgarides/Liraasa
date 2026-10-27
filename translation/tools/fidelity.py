@@ -24,6 +24,20 @@ import report
 import run
 
 CANDIDATES = os.path.join(common.REPO, "review", "2100_dreams_vocabulary_candidates.md")
+MODEL_FILE = os.path.join(common.ROOT, "fidelity_model.txt")
+
+
+def model():
+    """The model for the pass, read from translation/fidelity_model.txt each group (opus or sonnet):
+    the strongest model costs about five times the usage, so the lowest segments get it and the
+    rest may run on the bulk model."""
+    try:
+        m = open(MODEL_FILE, encoding="utf-8").read().strip()
+        return m if m in ("opus", "sonnet") else run.MODEL_STRONG
+    except OSError:
+        return run.MODEL_STRONG
+
+
 MISSED = {"heaven": "mavopagoasa (Heaven, listed)", "lilac": "violumi (light purple, listed); adjective violumisan"}
 
 
@@ -50,6 +64,21 @@ def register_suggestions(book):
 
 
 def fidelity_group(state, book, group):
+    try:
+        _fidelity_group(state, book, group)
+    except run.Flagged:
+        # the content was declined: keep every segment as it is, noted, and move on
+        with run.LOCK:
+            for r in group:
+                cur = book.out[f"ch{r['id'][1:3]}.jsonl"][r["id"]]
+                cur["fidelity_tried"] = True
+                cur["fidelity_declined"] = True
+            for ch in {f"ch{r['id'][1:3]}.jsonl" for r in group}:
+                book._save_chapter(ch)
+        run.log(f"declined by the model's safeguards: {', '.join(r['id'] for r in group)} kept as they were")
+
+
+def _fidelity_group(state, book, group):
     ch_of = {r["id"]: f"ch{r['id'][1:3]}.jsonl" for r in group}
     before = {r["id"]: json.loads(json.dumps(r)) for r in group}
     texts = [r["english"] for r in group]
@@ -60,7 +89,7 @@ def fidelity_group(state, book, group):
         registry="\n".join(book.registry_for(texts, cap=400)) or "(none)",
         segments=block,
     )
-    reply = run.json_array(run.claude(state, prompt, run.MODEL_STRONG, "fidelity"))
+    reply = run.json_array(run.claude(state, prompt, model(), "fidelity"))
     got = {x.get("id"): x for x in reply if isinstance(x, dict)}
     cands = []
     for r in group:
@@ -78,7 +107,7 @@ def fidelity_group(state, book, group):
     # one retry on checker findings, fixing exactly what they name
     bad = [c for c in cands if not c["check"]["ok"]]
     if bad:
-        run.repair(state, book, bad, 1, run.MODEL_STRONG)
+        run.repair(state, book, bad, 1, model())
     # score the candidates (as their own records), keep a rewrite only if it is better
     for ch in set(ch_of.values()):
         mine = [c for c in cands if ch_of[c["id"]] == ch]

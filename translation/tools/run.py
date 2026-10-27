@@ -48,6 +48,10 @@ class WeeklyCap(Exception):
     pass
 
 
+class Flagged(Exception):
+    """The model's safeguards declined the request: retrying the same text will not help."""
+
+
 LOCK = threading.RLock()
 STOP_ALL = threading.Event()
 _local = threading.local()
@@ -187,6 +191,11 @@ def claude(state, prompt, model, kind, effort=None):
         if not is_error and result.strip():
             return result
         blob = f"{result}\n{out[-2000:]}\n{err[-2000:]}"
+        if re.search(r"safeguards flagged|usage policy|anthropic\.com/legal/aup", blob, re.I):
+            with LOCK:
+                state.s["pauses"].append({"at": now(), "why": "declined by safeguards", "minutes": 0, "detail": kind})
+            state.save()
+            raise Flagged(blob.strip()[:200])
         # out of usage (the 5-hour window or the weekly cap): wait for the reset, then go on; never stop
         if re.search(r"usage limit|limit reached|hit your limit|out of (?:usage|credits)|rate.?limit|too many requests|overloaded|resets|weekly", blob, re.I):
             weekly = bool(re.search(r"weekly", blob, re.I))
