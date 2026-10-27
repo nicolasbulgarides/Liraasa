@@ -788,7 +788,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
             "error",
             `${this.w(np.det)}ri`
           );
-        if (np.adjectives.length > 1)
+        if (np.adjectives.length > 1 && this.ix.source.rules.adjective_order_rule === void 0)
           this.find(
             "A4.22",
             "the order of two or more adjectives before one noun is not ruled yet",
@@ -2876,7 +2876,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }
     return out;
   }
-  function sentencesOf(tokens) {
+  function sentencesOf(tokens, quoteFirst = false) {
     const out = [];
     let cur = [];
     let inQuote = false;
@@ -2887,12 +2887,28 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     };
     let afterColon = false;
     let mention = false;
-    for (const t of tokens) {
+    for (let k = 0; k < tokens.length; k++) {
+      const t = tokens[k];
       const opening = t.kind === "punct" && (t.text === "“" || t.text === '"' && !inQuote);
       if (opening && afterColon) {
         inQuote = true;
         quote = [];
         continue;
+      }
+      if (opening && quoteFirst && !inQuote && !mention) {
+        let close = k + 1;
+        while (close < tokens.length && !(tokens[close]?.kind === "punct" && /^["”]$/.test(tokens[close]?.text ?? "")))
+          close += 1;
+        const inner = tokens.slice(k + 1, close);
+        const words = inner.filter((x) => x.kind === "word").length;
+        const last = inner[inner.length - 1];
+        if (words > 1 || last?.kind === "punct" && /^[.,!?…]+$/.test(last.text)) {
+          const speech = last?.kind === "punct" && last.text === "," ? inner.slice(0, -1) : inner;
+          for (const s of sentencesOf(speech, true)) out.push({ tokens: s.tokens, quote: true });
+          k = close;
+          if (tokens[k + 1]?.kind === "punct" && tokens[k + 1]?.text === ",") k += 1;
+          continue;
+        }
       }
       if (t.kind === "punct" && /^["“”]$/.test(t.text) && !inQuote) {
         mention = !mention;
@@ -3343,11 +3359,13 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     }
     function checkLine(line) {
       const tokens = tokenize$1(line);
-      const sentences = sentencesOf(tokens).map((s) => {
-        const startChar = s.tokens[0]?.start ?? 0;
-        const endChar = s.tokens[s.tokens.length - 1]?.end ?? startChar;
-        return checkSentence(line.slice(startChar, endChar), startChar, s.tokens);
-      });
+      const sentences = sentencesOf(tokens, ix.source.rules.quotation_first !== void 0).map(
+        (s) => {
+          const startChar = s.tokens[0]?.start ?? 0;
+          const endChar = s.tokens[s.tokens.length - 1]?.end ?? startChar;
+          return checkSentence(line.slice(startChar, endChar), startChar, s.tokens);
+        }
+      );
       const findings = sentences.flatMap(
         (s, n) => s.findings.map((f) => {
           const ts = f.at.map((k) => s.tokens[k]).filter((t) => t !== void 0);
@@ -5511,10 +5529,8 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
         case "ago":
           return a.np === void 0 ? null : { kind: "measure", word: fw("kroti", "ago"), np: np(a.np, "pp") };
         case "duration":
-          flags.push(
-            `I-17: "${a.word ?? "for"} …" (a duration) has no ruled form yet; it is left out`
-          );
-          return null;
+          if (a.np === void 0) return null;
+          return { kind: "pp", word: fw("en", "for"), np: stripArticle(np(a.np, "pp")) };
         case "comparison":
           if (a.word === "about" && a.np !== void 0)
             return { kind: "pp", word: fw("de", "about"), np: np(a.np, "pp") };

@@ -664,6 +664,11 @@
       "english": "The psychiatrist gave Ativan.",
       "ruling": "3.5:G151",
       "expect": "Li mavohelnayo po donuda ativan."
+    },
+    {
+      "english": "I stayed for two days.",
+      "ruling": "4.0:G158",
+      "expect": "Maivo po lisrola en dossa deya."
     }
   ]
 }

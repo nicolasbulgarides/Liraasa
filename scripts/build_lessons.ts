@@ -1,5 +1,5 @@
 /**
- * CLI: build Liraasa 3.6: The Grammar in Lessons → handoff/Liraasa_3_6_Lessons.html
+ * CLI: build Liraasa 4.0: The Grammar in Lessons → handoff/Liraasa_4_0_Lessons.html
  *
  *   npm run build:lessons            # the HTML
  *   npm run build:lessons -- --pdf   # also the PDF (Edge or Chrome), both copied to LirasaCodexLatest/
@@ -9,7 +9,7 @@
  *   - every example and every practice answer reads with no error or warning;
  *   - every "watch out" sentence is rejected, citing the rule it names;
  *   - every Liraasa word in the prose is a word of Liraasa;
- *   - every rule cited exists in the 3.6 reference.
+ *   - every rule cited exists in the 4.0 reference.
  */
 import { copyFileSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
@@ -18,12 +18,12 @@ import { createChecker } from '../src/core/grammar';
 import { loadGrammarSource } from './grammar_source';
 import { INTRO, MAP, OPEN, PARTS } from './lessons/lessons_3_0';
 
-const OUT = 'handoff/Liraasa_3_6_Lessons.html';
-const PDF = 'handoff/Liraasa_3_6_Lessons.pdf';
+const OUT = 'handoff/Liraasa_4_0_Lessons.html';
+const PDF = 'handoff/Liraasa_4_0_Lessons.pdf';
 /** With --pdf, the HTML and the PDF also land here, beside the published guide. */
 const LATEST_DIR = 'LirasaCodexLatest';
 const ck = createChecker(loadGrammarSource());
-const ref = JSON.parse(readFileSync('handoff/liraasa_3_6_llm.json', 'utf8')) as {
+const ref = JSON.parse(readFileSync('handoff/liraasa_4_0_llm.json', 'utf8')) as {
   rulings: { id: string }[];
 };
 const rulingIds = new Set(ref.rulings.map((r) => r.id));
@@ -172,7 +172,7 @@ summary{cursor:pointer}details p{margin:.4rem 0 .1rem;font-size:1.05rem}
 <body>
 <main>
 <h1>Liraasa: The Grammar in Lessons</h1>
-<p class="sub">Edition 3.6 · ${String(n)} short lessons, about ten minutes each; the last part is proposed</p>
+<p class="sub">Edition 4.0 · ${String(n)} short lessons, about ten minutes each; the last part is proposed</p>
 <div class="intro">${INTRO.map((p) => `<p>${md(p, 'intro')}</p>`).join('')}</div>
 <nav aria-label="Lessons"><h2>The lessons</h2><ol>${toc.join('')}</ol></nav>
 ${body.join('\n')}
@@ -207,7 +207,7 @@ console.log(`wrote ${OUT}: ${String(n)} lessons, every example checked`);
 
 if (process.argv.includes('--pdf')) {
   // on paper every answer is shown: the print copy opens each practice line
-  const printCopy = 'handoff/.Liraasa_3_6_Lessons.print.html';
+  const printCopy = 'handoff/.Liraasa_4_0_Lessons.print.html';
   writeFileSync(printCopy, html.replace(/<details>/g, '<details open>'), 'utf8');
   printPdf(resolve(printCopy), resolve(PDF));
   rmSync(printCopy);

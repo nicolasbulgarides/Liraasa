@@ -663,10 +663,16 @@ describe('the 3.5 → 3.6 diff lesson', () => {
       lexicon: JSON.parse(readFileSync('data/lexicon/liraasa_3_5.json', 'utf8')) as RawLexicon,
       corpus: [],
     });
+    // 3.6 is frozen as 4.0's baseline: built here from its own file
+    const at36 = buildLearnSource({
+      ...input,
+      lexicon: JSON.parse(readFileSync('data/lexicon/liraasa_3_6.json', 'utf8')) as RawLexicon,
+      corpus: [],
+    });
     const d = diffSnapshots(
       snapshotEdition(at35.data),
-      snapshotEdition(source.data),
-      source.replacementFor,
+      snapshotEdition(at36.data),
+      at36.replacementFor,
     );
     const patch = JSON.parse(
       readFileSync('data/proposals/liraasa_3_6_patch_decided.json', 'utf8'),
@@ -688,6 +694,32 @@ describe('the 3.5 → 3.6 diff lesson', () => {
     expect(reglossed.sort()).toEqual(
       [...new Set([...patch.restored_forms_add.map((r) => r.headword), ...lexicalised])].sort(),
     );
+    expect(d.rulesAdded.map((r) => r.id).sort()).toEqual(
+      patch.rulings_add.map((r) => `rule:${r.id}`).sort(),
+    );
+  });
+});
+
+describe('the 3.6 → 4.0 diff lesson', () => {
+  it('ACCEPTANCE: additions only: every 4.0 compound and ruling, no word renamed or removed', () => {
+    const at36 = buildLearnSource({
+      ...input,
+      lexicon: JSON.parse(readFileSync('data/lexicon/liraasa_3_6.json', 'utf8')) as RawLexicon,
+      corpus: [],
+    });
+    const d = diffSnapshots(
+      snapshotEdition(at36.data),
+      snapshotEdition(source.data),
+      source.replacementFor,
+    );
+    const patch = JSON.parse(readFileSync('data/proposals/liraasa_4_0_patch.json', 'utf8')) as {
+      compounds_add: { headword: string }[];
+      rulings_add: { id: string }[];
+    };
+    expect([d.from, d.to]).toEqual(['3.6', '4.0']);
+    expect(d.renamed).toEqual([]);
+    expect(d.removed).toEqual([]);
+    expect(d.added).toHaveLength(patch.compounds_add.length);
     expect(d.rulesAdded.map((r) => r.id).sort()).toEqual(
       patch.rulings_add.map((r) => `rule:${r.id}`).sort(),
     );

@@ -409,10 +409,14 @@ function digraphLine(index: Index): string {
   ];
   const sh = words.filter((w) => w.includes('sh'));
   const ch = words.filter((w) => w.includes('ch'));
-  if (!sh.every((w) => colours.has(w)) || !ch.every((w) => numbers.has(w))) {
+  // a compound on a colour base (2.0:G38) is a colour word by construction: shadasabaye, black hair (4.0)
+  const onColour = (w: string): boolean =>
+    colours.has(w) || [...colours].some((c) => c.includes('sh') && w.startsWith(c));
+  if (!sh.every(onColour) || !ch.every((w) => numbers.has(w))) {
     throw new Error('sh or ch now occurs outside the colour and number words: revise the guide');
   }
-  return 'sh is written only in colour words (`shada`), and ch only in `ocha`, eight, and the numbers built on it.';
+  const compounds = sh.some((w) => !colours.has(w));
+  return `sh is written only in colour words (\`shada\`)${compounds ? ' and the compounds built on them (`shadasabaye`, black hair; 2.0:G38)' : ''}, and ch only in \`ocha\`, eight, and the numbers built on it.`;
 }
 
 export function smallWordsPart(index: Index): string {
@@ -1489,7 +1493,7 @@ export function threePart(index: Index): string {
   return part(
     '7',
     'Devotion, families and shapes',
-    'What 3.0 to 3.6 add: how to address, praise and bless; how a few roots name whole families; the adjectives, titles, shapes and copied names that come by rule; and, proposed in 3.6, units and the coarse register. Every example is a ruling’s own.',
+    'What 3.0 to 4.0 add: how to address, praise and bless; how a few roots name whole families; the adjectives, titles, shapes and copied names that come by rule; and, proposed in 3.6 and 4.0, units, the coarse register and what translating a novel needed. Every example is a ruling’s own.',
     `${h3('Address and praise')}
 ${examples([
   ex('3.0:G129', 'Iya Deviasa, lenila maivo!', 'O Great Goddess, hear me!'),
@@ -1588,6 +1592,20 @@ ${ul([
   'Metric units are compounds on `patu`: `bondopatu` gram, `lalnipatu` metre, `mirupatu` litre. `-ti` is the thousandth and `-vu` the thousandfold: `bondopatuti` milligram, `lalnipatuvu` kilometre [[3.6:G155]]. Body units stay the everyday measures [[3.2:G144]].',
   'The `-san` rule reaches lexicalised diminutives too: `mavofaruti` hypomania, `mavofarutisan` hypomanic [[3.6:G153]]. ',
   'Coarse words are a register, not a grammar: `Garza!` is the interjection, `garzasan` the intensifier, `garzaga` to swear, `Rupu!` the lesser oath. They never take ascended forms [[3.6:G154]].',
+])}
+${h3('What translating a novel needed (4.0, proposed)')}
+${examples([
+  ex('4.0:G156', '“Maivo ne pagopa,” saivo po senosia.', '“I am not going,” she said.'),
+  ex('4.0:G157', 'Saivo po vimova baba vanisan nolsasan kadu.', 'She saw a beautiful new car.'),
+  ex('4.0:G158', 'Maivo po lisrola en dossa deya.', 'I stayed for two days.'),
+  ex('4.0:G159', 'Maivo lirala la kasi benasan tamo taivo.', 'I sing better than you.'),
+  ex('4.0:G160', 'Saivo fatofa sidu lirala.', 'She is destined to sing.'),
+])}
+${ul([
+  'Speech may come before its verb of saying, closed by a comma inside the quotation marks [[4.0:G156]].',
+  'Adjectives stand in the order opinion, size, age, shape, colour, origin, material, purpose [[4.0:G157]].',
+  'A duration is `en` + NUMBER + a time noun [[4.0:G158]]; an action is compared with `la kasi` + adjective + `tamo` [[4.0:G159]]; destiny is `fatofa sidu` [[4.0:G160]]; a decimal or percentage is a fraction, NUMBER `de` NUMBER [[4.0:G161]].',
+  '4.0 adds 220 compounds the draft translation of _2100 Dreams_ coined from existing words, such as `kronorinbanulu` (a time loop) and `kronopilo` (grandfather). No root is new.',
 ])}`,
   );
 }

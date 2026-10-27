@@ -14,7 +14,7 @@
   "The grammar defaults the draft relied on become rulings, each example checked."
  ],
  "modules": {
-  "2100-dreams": "The vocabulary and grammar the draft translation of 2100 Dreams needed"
+  "core": "The vocabulary and grammar the draft translation of 2100 Dreams needed"
  },
  "function_words_add": [],
  "rulings_add": [
@@ -102,7 +102,7 @@
  "roots_add": [],
  "compounds_add": [
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "amordaludapadonu",
    "parts": [
     "amordalu",
@@ -122,7 +122,7 @@
    "note": "Coined for the 2100 Dreams draft translation (2 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "amordaludesi",
    "parts": [
     "amordalu",
@@ -142,7 +142,7 @@
    "note": "Coined for the 2100 Dreams draft translation (0 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "amordalukibo",
    "parts": [
     "amordalu",
@@ -162,7 +162,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "amorfarukova",
    "parts": [
     "amor",
@@ -182,7 +182,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "amorsora",
    "parts": [
     "amor",
@@ -202,7 +202,7 @@
    "note": "Coined for the 2100 Dreams draft translation (22 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "azurimulfo",
    "parts": [
     "azuri",
@@ -222,7 +222,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "azurisabaye",
    "parts": [
     "azuri",
@@ -242,7 +242,7 @@
    "note": "Coined for the 2100 Dreams draft translation (0 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "biodivmapatu",
    "parts": [
     "bio",
@@ -262,7 +262,7 @@
    "note": "Coined for the 2100 Dreams draft translation (3 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "bioramu",
    "parts": [
     "bio",
@@ -282,7 +282,7 @@
    "note": "Coined for the 2100 Dreams draft translation (33 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "bitilumi",
    "parts": [
     "biti",
@@ -302,7 +302,7 @@
    "note": "Coined for the 2100 Dreams draft translation (2 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "bojinami",
    "parts": [
     "boji",
@@ -322,7 +322,7 @@
    "note": "Coined for the 2100 Dreams draft translation (7 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "buzaneme",
    "parts": [
     "buza",
@@ -342,7 +342,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "ceresolotobra",
    "parts": [
     "ceresolo",
@@ -362,7 +362,7 @@
    "note": "Coined for the 2100 Dreams draft translation (2 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "cibuteru",
    "parts": [
     "cibu",
@@ -382,7 +382,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "cirsibumbo",
    "parts": [
     "cirsi",
@@ -402,7 +402,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "cirsizefrokova",
    "parts": [
     "cirsi",
@@ -422,7 +422,7 @@
    "note": "Coined for the 2100 Dreams draft translation (4 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "colbiceresolo",
    "parts": [
     "colbi",
@@ -442,7 +442,7 @@
    "note": "Coined for the 2100 Dreams draft translation (0 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "colbitrana",
    "parts": [
     "colbi",
@@ -462,7 +462,7 @@
    "note": "Coined for the 2100 Dreams draft translation (7 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "colbivemibako",
    "parts": [
     "colbi",
@@ -482,7 +482,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "conotovo",
    "parts": [
     "cono",
@@ -502,7 +502,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "daigodevi",
    "parts": [
     "daigo",
@@ -522,7 +522,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "daigofarusebi",
    "parts": [
     "daigo",
@@ -542,7 +542,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "dalutobra",
    "parts": [
     "dalu",
@@ -562,7 +562,7 @@
    "note": "Coined for the 2100 Dreams draft translation (2 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "dentohata",
    "parts": [
     "dento",
@@ -586,7 +586,7 @@
    "note": "Coined for the 2100 Dreams draft translation (0 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "dentosilbeseno",
    "parts": [
     "dento",
@@ -606,7 +606,7 @@
    "note": "Coined for the 2100 Dreams draft translation (2 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "divmasenotikutrana",
    "parts": [
     "divmaseno",
@@ -626,7 +626,7 @@
    "note": "Coined for the 2100 Dreams draft translation (7 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "duhasolo",
    "parts": [
     "duha",
@@ -643,10 +643,10 @@
      "meaning": "stone of wishes"
     }
    },
-   "note": "Coined for the 2100 Dreams draft translation (5 uses)."
+   "note": "Coined for the 2100 Dreams draft translation (6 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "ertarofe",
    "parts": [
     "erta",
@@ -666,7 +666,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "ertasabaye",
    "parts": [
     "erta",
@@ -686,7 +686,7 @@
    "note": "Coined for the 2100 Dreams draft translation (5 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "ertavilne",
    "parts": [
     "erta",
@@ -706,7 +706,7 @@
    "note": "Coined for the 2100 Dreams draft translation (0 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "ertayumlimiru",
    "parts": [
     "ertayumli",
@@ -726,7 +726,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "fasbivelma",
    "parts": [
     "fasbi",
@@ -746,7 +746,7 @@
    "note": "Coined for the 2100 Dreams draft translation (9 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "favrodemro",
    "parts": [
     "favro",
@@ -766,7 +766,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "favrodomlu",
    "parts": [
     "favro",
@@ -786,7 +786,7 @@
    "note": "Coined for the 2100 Dreams draft translation (3 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "favrofaru",
    "parts": [
     "favro",
@@ -806,7 +806,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "favrokronobiti",
    "parts": [
     "favro",
@@ -826,7 +826,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "favrolumi",
    "parts": [
     "favro",
@@ -846,7 +846,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "favronela",
    "parts": [
     "favro",
@@ -866,7 +866,7 @@
    "note": "Coined for the 2100 Dreams draft translation (4 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "favronimunole",
    "parts": [
     "favro",
@@ -886,7 +886,7 @@
    "note": "Coined for the 2100 Dreams draft translation (2 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "favronoru",
    "parts": [
     "favro",
@@ -906,7 +906,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "favrorivla",
    "parts": [
     "favro",
@@ -926,7 +926,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "favrorivo",
    "parts": [
     "favro",
@@ -946,7 +946,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "favrovalla",
    "parts": [
     "favro",
@@ -966,7 +966,7 @@
    "note": "Coined for the 2100 Dreams draft translation (2 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "favrovamri",
    "parts": [
     "favro",
@@ -986,7 +986,7 @@
    "note": "Coined for the 2100 Dreams draft translation (11 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "favrovaye",
    "parts": [
     "favro",
@@ -1006,7 +1006,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "favrozefro",
    "parts": [
     "favro",
@@ -1026,7 +1026,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "filsedomlu",
    "parts": [
     "filse",
@@ -1046,7 +1046,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "filsenulu",
    "parts": [
     "filse",
@@ -1066,7 +1066,7 @@
    "note": "Coined for the 2100 Dreams draft translation (2 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "fojonela",
    "parts": [
     "fojo",
@@ -1086,7 +1086,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "fojovemisovla",
    "parts": [
     "fojo",
@@ -1106,7 +1106,7 @@
    "note": "Coined for the 2100 Dreams draft translation (2 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "follutelne",
    "parts": [
     "follu",
@@ -1126,7 +1126,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "folluzupa",
    "parts": [
     "follu",
@@ -1146,7 +1146,7 @@
    "note": "Coined for the 2100 Dreams draft translation (6 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "folnitibiyumli",
    "parts": [
     "folnitibi",
@@ -1166,7 +1166,7 @@
    "note": "Coined for the 2100 Dreams draft translation (2 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "gonbidamrukova",
    "parts": [
     "gonbi",
@@ -1186,7 +1186,7 @@
    "note": "Coined for the 2100 Dreams draft translation (2 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "harlujomrulive",
    "parts": [
     "harlujomru",
@@ -1206,7 +1206,7 @@
    "note": "Coined for the 2100 Dreams draft translation (3 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "helnakadu",
    "parts": [
     "helna",
@@ -1226,7 +1226,7 @@
    "note": "Coined for the 2100 Dreams draft translation (6 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "helnanela",
    "parts": [
     "helna",
@@ -1246,7 +1246,7 @@
    "note": "Coined for the 2100 Dreams draft translation (10 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "helnapalvi",
    "parts": [
     "helna",
@@ -1266,7 +1266,7 @@
    "note": "Coined for the 2100 Dreams draft translation (2 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "helnapidihata",
    "parts": [
     "helna",
@@ -1286,7 +1286,7 @@
    "note": "Coined for the 2100 Dreams draft translation (11 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "juseseno",
    "parts": [
     "juse",
@@ -1306,7 +1306,7 @@
    "note": "Coined for the 2100 Dreams draft translation (0 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "karkodivmaseno",
    "parts": [
     "karko",
@@ -1326,7 +1326,7 @@
    "note": "Coined for the 2100 Dreams draft translation (2 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "karkokemye",
    "parts": [
     "karko",
@@ -1346,7 +1346,7 @@
    "note": "Coined for the 2100 Dreams draft translation (31 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "kazepusa",
    "parts": [
     "kaze",
@@ -1366,7 +1366,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "kendejomrupelicono",
    "parts": [
     "kendejomru",
@@ -1386,7 +1386,7 @@
    "note": "Coined for the 2100 Dreams draft translation (7 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "kezusamnilisi",
    "parts": [
     "kezusamni",
@@ -1406,7 +1406,7 @@
    "note": "Coined for the 2100 Dreams draft translation (2 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "kiboyano",
    "parts": [
     "kibo",
@@ -1426,7 +1426,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "kronokadu",
    "parts": [
     "krono",
@@ -1446,7 +1446,7 @@
    "note": "Coined for the 2100 Dreams draft translation (0 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "kronokova",
    "parts": [
     "krono",
@@ -1466,7 +1466,7 @@
    "note": "Coined for the 2100 Dreams draft translation (3 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "kronolelde",
    "parts": [
     "krono",
@@ -1486,7 +1486,7 @@
    "note": "Coined for the 2100 Dreams draft translation (5 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "kronopilo",
    "parts": [
     "krono",
@@ -1506,7 +1506,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "kronorinbanulu",
    "parts": [
     "krono",
@@ -1526,7 +1526,7 @@
    "note": "Coined for the 2100 Dreams draft translation (3 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "lamsapavmahavli",
    "parts": [
     "lamsapavma",
@@ -1546,7 +1546,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "lamsapavmavelma",
    "parts": [
     "lamsapavma",
@@ -1566,7 +1566,7 @@
    "note": "Coined for the 2100 Dreams draft translation (2 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "lardakibo",
    "parts": [
     "larda",
@@ -1586,7 +1586,7 @@
    "note": "Coined for the 2100 Dreams draft translation (2 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "lardapatu",
    "parts": [
     "larda",
@@ -1606,7 +1606,7 @@
    "note": "Coined for the 2100 Dreams draft translation (10 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "lasokibo",
    "parts": [
     "laso",
@@ -1626,7 +1626,7 @@
    "note": "Coined for the 2100 Dreams draft translation (0 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "lavbularda",
    "parts": [
     "lavbu",
@@ -1646,7 +1646,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "lavidesi",
    "parts": [
     "lavi",
@@ -1666,7 +1666,7 @@
    "note": "Coined for the 2100 Dreams draft translation (0 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "lektamambihelvikaldo",
    "parts": [
     "lektamambi",
@@ -1686,7 +1686,7 @@
    "note": "Coined for the 2100 Dreams draft translation (2 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "lektatali",
    "parts": [
     "lekta",
@@ -1706,7 +1706,7 @@
    "note": "Coined for the 2100 Dreams draft translation (6 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "lemucono",
    "parts": [
     "lemu",
@@ -1726,7 +1726,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "lesmahalra",
    "parts": [
     "lesma",
@@ -1746,7 +1746,7 @@
    "note": "Coined for the 2100 Dreams draft translation (0 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "lesmavila",
    "parts": [
     "lesma",
@@ -1766,7 +1766,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "linlekibo",
    "parts": [
     "linle",
@@ -1786,7 +1786,7 @@
    "note": "Coined for the 2100 Dreams draft translation (3 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "linlemiru",
    "parts": [
     "linle",
@@ -1806,7 +1806,7 @@
    "note": "Coined for the 2100 Dreams draft translation (4 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "linusasva",
    "parts": [
     "linu",
@@ -1826,7 +1826,7 @@
    "note": "Coined for the 2100 Dreams draft translation (3 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "linuvani",
    "parts": [
     "linu",
@@ -1846,7 +1846,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "loresilro",
    "parts": [
     "lore",
@@ -1866,7 +1866,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "lorevasko",
    "parts": [
     "lore",
@@ -1886,7 +1886,7 @@
    "note": "Coined for the 2100 Dreams draft translation (4 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "lorevemi",
    "parts": [
     "lore",
@@ -1906,7 +1906,7 @@
    "note": "Coined for the 2100 Dreams draft translation (4 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "lornubiti",
    "parts": [
     "lornu",
@@ -1926,7 +1926,7 @@
    "note": "Coined for the 2100 Dreams draft translation (3 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "loteroseno",
    "parts": [
     "lotero",
@@ -1946,7 +1946,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "lulfaganre",
    "parts": [
     "lulfa",
@@ -1966,7 +1966,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "lumipusa",
    "parts": [
     "lumi",
@@ -1986,7 +1986,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "lumisovlabiti",
    "parts": [
     "lumisovla",
@@ -2006,7 +2006,7 @@
    "note": "Coined for the 2100 Dreams draft translation (2 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "lumisovlakibo",
    "parts": [
     "lumisovla",
@@ -2026,7 +2026,7 @@
    "note": "Coined for the 2100 Dreams draft translation (0 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "lumisovlavimofavro",
    "parts": [
     "lumisovla",
@@ -2046,7 +2046,7 @@
    "note": "Coined for the 2100 Dreams draft translation (3 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "lumivilne",
    "parts": [
     "lumi",
@@ -2066,7 +2066,7 @@
    "note": "Coined for the 2100 Dreams draft translation (0 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "lumizefrofaru",
    "parts": [
     "lumizefro",
@@ -2086,7 +2086,7 @@
    "note": "Coined for the 2100 Dreams draft translation (12 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "lunosolo",
    "parts": [
     "luno",
@@ -2106,7 +2106,7 @@
    "note": "Coined for the 2100 Dreams draft translation (0 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "manliseno",
    "parts": [
     "manli",
@@ -2126,7 +2126,7 @@
    "note": "Coined for the 2100 Dreams draft translation (0 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "marecemnu",
    "parts": [
     "mare",
@@ -2146,7 +2146,7 @@
    "note": "Coined for the 2100 Dreams draft translation (2 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "mavohelnapago",
    "parts": [
     "mavohelna",
@@ -2166,7 +2166,7 @@
    "note": "Coined for the 2100 Dreams draft translation (8 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "mavojuba",
    "parts": [
     "mavo",
@@ -2186,7 +2186,7 @@
    "note": "Coined for the 2100 Dreams draft translation (2 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "mavolotero",
    "parts": [
     "mavo",
@@ -2206,7 +2206,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "mavomudu",
    "parts": [
     "mavo",
@@ -2226,7 +2226,7 @@
    "note": "Coined for the 2100 Dreams draft translation (8 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "mavonavufaru",
    "parts": [
     "mavo",
@@ -2246,7 +2246,7 @@
    "note": "Coined for the 2100 Dreams draft translation (0 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "mavopeli",
    "parts": [
     "mavo",
@@ -2266,7 +2266,7 @@
    "note": "Coined for the 2100 Dreams draft translation (2 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "mavoyugedivma",
    "parts": [
     "mavoyuge",
@@ -2286,7 +2286,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "mavozayu",
    "parts": [
     "mavo",
@@ -2306,7 +2306,7 @@
    "note": "Coined for the 2100 Dreams draft translation (6 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "mernolornu",
    "parts": [
     "merno",
@@ -2326,7 +2326,7 @@
    "note": "Coined for the 2100 Dreams draft translation (9 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "mernovelma",
    "parts": [
     "merno",
@@ -2346,7 +2346,7 @@
    "note": "Coined for the 2100 Dreams draft translation (2 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "migadivmaperemo",
    "parts": [
     "migadivma",
@@ -2366,7 +2366,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "minvatarnu",
    "parts": [
     "minva",
@@ -2386,7 +2386,7 @@
    "note": "Coined for the 2100 Dreams draft translation (3 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "mirufuro",
    "parts": [
     "miru",
@@ -2406,7 +2406,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "molupavmabumbo",
    "parts": [
     "molupavma",
@@ -2426,7 +2426,7 @@
    "note": "Coined for the 2100 Dreams draft translation (6 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "mubofolluhelna",
    "parts": [
     "mubofollu",
@@ -2446,7 +2446,7 @@
    "note": "Coined for the 2100 Dreams draft translation (4 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "namidonukibo",
    "parts": [
     "namidonu",
@@ -2466,7 +2466,7 @@
    "note": "Coined for the 2100 Dreams draft translation (6 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "navufarulumra",
    "parts": [
     "navufaru",
@@ -2486,7 +2486,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "navufaruzayu",
    "parts": [
     "navufaru",
@@ -2506,7 +2506,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "navukadutali",
    "parts": [
     "navukadu",
@@ -2526,7 +2526,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "navuzupa",
    "parts": [
     "navu",
@@ -2546,7 +2546,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "nelalore",
    "parts": [
     "nela",
@@ -2566,7 +2566,7 @@
    "note": "Coined for the 2100 Dreams draft translation (0 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "nemehelna",
    "parts": [
     "neme",
@@ -2586,7 +2586,7 @@
    "note": "Coined for the 2100 Dreams draft translation (2 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "ojofaru",
    "parts": [
     "ojo",
@@ -2606,7 +2606,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "ojokronolazu",
    "parts": [
     "ojo",
@@ -2626,7 +2626,7 @@
    "note": "Coined for the 2100 Dreams draft translation (9 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "ojosolo",
    "parts": [
     "ojo",
@@ -2646,7 +2646,7 @@
    "note": "Coined for the 2100 Dreams draft translation (2 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "ojovelma",
    "parts": [
     "ojo",
@@ -2666,7 +2666,7 @@
    "note": "Coined for the 2100 Dreams draft translation (4 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "ojovilne",
    "parts": [
     "ojo",
@@ -2686,7 +2686,7 @@
    "note": "Coined for the 2100 Dreams draft translation (4 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "opiganre",
    "parts": [
     "opi",
@@ -2706,7 +2706,7 @@
    "note": "Coined for the 2100 Dreams draft translation (3 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "pagomodo",
    "parts": [
     "pago",
@@ -2726,7 +2726,7 @@
    "note": "Coined for the 2100 Dreams draft translation (12 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "pagotranasonbu",
    "parts": [
     "pagotrana",
@@ -2746,7 +2746,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "pelibiti",
    "parts": [
     "peli",
@@ -2766,7 +2766,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "pelivelma",
    "parts": [
     "peli",
@@ -2786,7 +2786,7 @@
    "note": "Coined for the 2100 Dreams draft translation (4 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "pensanulu",
    "parts": [
     "pensa",
@@ -2806,7 +2806,7 @@
    "note": "Coined for the 2100 Dreams draft translation (0 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "pensapolva",
    "parts": [
     "pensa",
@@ -2826,7 +2826,7 @@
    "note": "Coined for the 2100 Dreams draft translation (4 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "ramulanve",
    "parts": [
     "ramu",
@@ -2846,7 +2846,7 @@
    "note": "Coined for the 2100 Dreams draft translation (2 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "regnadomlu",
    "parts": [
     "regna",
@@ -2866,7 +2866,7 @@
    "note": "Coined for the 2100 Dreams draft translation (8 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "regnazupa",
    "parts": [
     "regna",
@@ -2886,7 +2886,7 @@
    "note": "Coined for the 2100 Dreams draft translation (6 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "renliherbanumo",
    "parts": [
     "renliherba",
@@ -2906,7 +2906,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "renlipatu",
    "parts": [
     "renli",
@@ -2926,7 +2926,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "rinbasovla",
    "parts": [
     "rinba",
@@ -2946,7 +2946,7 @@
    "note": "Coined for the 2100 Dreams draft translation (3 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "rubidamrukova",
    "parts": [
     "rubi",
@@ -2966,7 +2966,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "rubilumipatu",
    "parts": [
     "rubi",
@@ -2986,7 +2986,7 @@
    "note": "Coined for the 2100 Dreams draft translation (0 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "rubivilne",
    "parts": [
     "rubi",
@@ -3006,7 +3006,7 @@
    "note": "Coined for the 2100 Dreams draft translation (2 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "rukodokra",
    "parts": [
     "ruko",
@@ -3026,7 +3026,7 @@
    "note": "Coined for the 2100 Dreams draft translation (15 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "rukodozadalu",
    "parts": [
     "ruko",
@@ -3046,7 +3046,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "sabayecolbi",
    "parts": [
     "sabaye",
@@ -3066,7 +3066,7 @@
    "note": "Coined for the 2100 Dreams draft translation (4 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "sabayepago",
    "parts": [
     "sabaye",
@@ -3086,7 +3086,7 @@
    "note": "Coined for the 2100 Dreams draft translation (2 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "sabayepatu",
    "parts": [
     "sabaye",
@@ -3106,7 +3106,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "sabayesafa",
    "parts": [
     "sabaye",
@@ -3126,7 +3126,7 @@
    "note": "Coined for the 2100 Dreams draft translation (2 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "salrukadu",
    "parts": [
     "salru",
@@ -3146,7 +3146,7 @@
    "note": "Coined for the 2100 Dreams draft translation (7 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "sarbikibo",
    "parts": [
     "sarbi",
@@ -3166,7 +3166,7 @@
    "note": "Coined for the 2100 Dreams draft translation (0 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "sasvakibo",
    "parts": [
     "sasva",
@@ -3186,7 +3186,7 @@
    "note": "Coined for the 2100 Dreams draft translation (2 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "senohelna",
    "parts": [
     "seno",
@@ -3206,7 +3206,7 @@
    "note": "Coined for the 2100 Dreams draft translation (0 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "senrucolbi",
    "parts": [
     "senru",
@@ -3226,7 +3226,7 @@
    "note": "Coined for the 2100 Dreams draft translation (3 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "sernanulu",
    "parts": [
     "serna",
@@ -3246,7 +3246,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "sevunami",
    "parts": [
     "sevu",
@@ -3266,7 +3266,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "shadasabaye",
    "parts": [
     "shada",
@@ -3286,7 +3286,7 @@
    "note": "Coined for the 2100 Dreams draft translation (10 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "shadavelma",
    "parts": [
     "shada",
@@ -3306,7 +3306,7 @@
    "note": "Coined for the 2100 Dreams draft translation (2 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "shadavilne",
    "parts": [
     "shada",
@@ -3326,7 +3326,7 @@
    "note": "Coined for the 2100 Dreams draft translation (2 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "solavelma",
    "parts": [
     "sola",
@@ -3346,7 +3346,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "solayalmu",
    "parts": [
     "sola",
@@ -3366,7 +3366,7 @@
    "note": "Coined for the 2100 Dreams draft translation (2 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "solliseno",
    "parts": [
     "solli",
@@ -3386,7 +3386,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "sololore",
    "parts": [
     "solo",
@@ -3406,7 +3406,7 @@
    "note": "Coined for the 2100 Dreams draft translation (2 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "solomelo",
    "parts": [
     "solo",
@@ -3426,7 +3426,7 @@
    "note": "Coined for the 2100 Dreams draft translation (0 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "somufelra",
    "parts": [
     "somu",
@@ -3446,7 +3446,7 @@
    "note": "Coined for the 2100 Dreams draft translation (2 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "soralekta",
    "parts": [
     "sora",
@@ -3466,7 +3466,7 @@
    "note": "Coined for the 2100 Dreams draft translation (6 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "sovezupa",
    "parts": [
     "sove",
@@ -3486,7 +3486,7 @@
    "note": "Coined for the 2100 Dreams draft translation (4 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "sovlafarlabitizupa",
    "parts": [
     "sovlafarlabiti",
@@ -3506,7 +3506,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "sulmepavmaminvaregna",
    "parts": [
     "sulmepavma",
@@ -3526,7 +3526,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "sulmepavmavelma",
    "parts": [
     "sulmepavma",
@@ -3546,7 +3546,7 @@
    "note": "Coined for the 2100 Dreams draft translation (14 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "sumazefrokova",
    "parts": [
     "suma",
@@ -3566,7 +3566,7 @@
    "note": "Coined for the 2100 Dreams draft translation (3 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "telnekezulalle",
    "parts": [
     "telne",
@@ -3586,7 +3586,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "telnepeli",
    "parts": [
     "telne",
@@ -3606,7 +3606,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "terurenliherba",
    "parts": [
     "teru",
@@ -3626,7 +3626,7 @@
    "note": "Coined for the 2100 Dreams draft translation (2 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "tozelazu",
    "parts": [
     "toze",
@@ -3646,7 +3646,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "turnazupa",
    "parts": [
     "turna",
@@ -3666,7 +3666,7 @@
    "note": "Coined for the 2100 Dreams draft translation (15 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "vanabumbo",
    "parts": [
     "vana",
@@ -3686,7 +3686,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "vanacirsi",
    "parts": [
     "vana",
@@ -3706,7 +3706,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "vanajubagerma",
    "parts": [
     "vanajuba",
@@ -3726,7 +3726,7 @@
    "note": "Coined for the 2100 Dreams draft translation (2 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "vanajubalelde",
    "parts": [
     "vanajuba",
@@ -3746,7 +3746,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "vanajubasabaye",
    "parts": [
     "vanajuba",
@@ -3766,7 +3766,7 @@
    "note": "Coined for the 2100 Dreams draft translation (33 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "vanakibo",
    "parts": [
     "vana",
@@ -3786,7 +3786,7 @@
    "note": "Coined for the 2100 Dreams draft translation (2 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "vananullovelma",
    "parts": [
     "vana",
@@ -3806,7 +3806,7 @@
    "note": "Coined for the 2100 Dreams draft translation (3 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "vanarezasabaye",
    "parts": [
     "vana",
@@ -3826,7 +3826,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "vanasenru",
    "parts": [
     "vana",
@@ -3846,7 +3846,7 @@
    "note": "Coined for the 2100 Dreams draft translation (2 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "vanatobra",
    "parts": [
     "vana",
@@ -3866,7 +3866,7 @@
    "note": "Coined for the 2100 Dreams draft translation (0 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "vanavelma",
    "parts": [
     "vana",
@@ -3886,7 +3886,7 @@
    "note": "Coined for the 2100 Dreams draft translation (4 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "vazranulupatu",
    "parts": [
     "vazranulu",
@@ -3906,7 +3906,7 @@
    "note": "Coined for the 2100 Dreams draft translation (6 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "velmakovapago",
    "parts": [
     "velmakova",
@@ -3926,7 +3926,7 @@
    "note": "Coined for the 2100 Dreams draft translation (6 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "velmasirmofarla",
    "parts": [
     "velmasirmo",
@@ -3946,7 +3946,7 @@
    "note": "Coined for the 2100 Dreams draft translation (0 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "verdesabaye",
    "parts": [
     "verde",
@@ -3966,7 +3966,7 @@
    "note": "Coined for the 2100 Dreams draft translation (3 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "verdevilne",
    "parts": [
     "verde",
@@ -3986,7 +3986,7 @@
    "note": "Coined for the 2100 Dreams draft translation (8 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "vilneceresolo",
    "parts": [
     "vilne",
@@ -4006,7 +4006,7 @@
    "note": "Coined for the 2100 Dreams draft translation (4 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "vilnecolbi",
    "parts": [
     "vilne",
@@ -4026,7 +4026,7 @@
    "note": "Coined for the 2100 Dreams draft translation (3 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "vilnesabaye",
    "parts": [
     "vilne",
@@ -4046,7 +4046,7 @@
    "note": "Coined for the 2100 Dreams draft translation (2 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "vilnesasva",
    "parts": [
     "vilne",
@@ -4066,7 +4066,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "vilnetibi",
    "parts": [
     "vilne",
@@ -4086,7 +4086,7 @@
    "note": "Coined for the 2100 Dreams draft translation (4 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "vimopeli",
    "parts": [
     "vimo",
@@ -4106,7 +4106,7 @@
    "note": "Coined for the 2100 Dreams draft translation (8 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "vimotelne",
    "parts": [
     "vimo",
@@ -4126,7 +4126,7 @@
    "note": "Coined for the 2100 Dreams draft translation (28 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "vinyelore",
    "parts": [
     "vinye",
@@ -4146,7 +4146,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "vinyesonbu",
    "parts": [
     "vinye",
@@ -4166,7 +4166,7 @@
    "note": "Coined for the 2100 Dreams draft translation (3 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "viodamrukova",
    "parts": [
     "vio",
@@ -4186,7 +4186,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "viofarvibudi",
    "parts": [
     "vio",
@@ -4206,7 +4206,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "viofuro",
    "parts": [
     "vio",
@@ -4226,7 +4226,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "violavi",
    "parts": [
     "vio",
@@ -4246,7 +4246,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "violavra",
    "parts": [
     "vio",
@@ -4266,7 +4266,7 @@
    "note": "Coined for the 2100 Dreams draft translation (7 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "violore",
    "parts": [
     "vio",
@@ -4286,7 +4286,7 @@
    "note": "Coined for the 2100 Dreams draft translation (3 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "vioruko",
    "parts": [
     "vio",
@@ -4306,7 +4306,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "viosemnebiti",
    "parts": [
     "vio",
@@ -4326,7 +4326,7 @@
    "note": "Coined for the 2100 Dreams draft translation (2 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "viosevureso",
    "parts": [
     "vio",
@@ -4346,7 +4346,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "viovelma",
    "parts": [
     "vio",
@@ -4366,7 +4366,7 @@
    "note": "Coined for the 2100 Dreams draft translation (3 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "viovilne",
    "parts": [
     "vio",
@@ -4386,7 +4386,7 @@
    "note": "Coined for the 2100 Dreams draft translation (14 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "vulradesi",
    "parts": [
     "vulra",
@@ -4406,7 +4406,7 @@
    "note": "Coined for the 2100 Dreams draft translation (0 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "yugelermi",
    "parts": [
     "yuge",
@@ -4426,7 +4426,7 @@
    "note": "Coined for the 2100 Dreams draft translation (3 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "zavmepatu",
    "parts": [
     "zavme",
@@ -4446,7 +4446,7 @@
    "note": "Coined for the 2100 Dreams draft translation (3 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "zayumodo",
    "parts": [
     "zayu",
@@ -4466,7 +4466,7 @@
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "zefrodapakadu",
    "parts": [
     "zefro",
@@ -4486,7 +4486,7 @@
    "note": "Coined for the 2100 Dreams draft translation (14 uses)."
   },
   {
-   "module": "2100-dreams",
+   "module": "core",
    "headword": "zupamervi",
    "parts": [
     "zupa",

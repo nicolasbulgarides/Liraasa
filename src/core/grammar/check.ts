@@ -79,7 +79,8 @@ function sentencesOf(tokens: Token[], quoteFirst = false): { tokens: Token[]; qu
   let afterColon = false;
   let mention = false;
   for (let k = 0; k < tokens.length; k++) {
-    const t = tokens[k] as Token;
+    const t = tokens[k];
+    if (t === undefined) continue;
     const opening = t.kind === 'punct' && (t.text === '“' || (t.text === '"' && !inQuote));
     if (opening && afterColon) {
       inQuote = true;

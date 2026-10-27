@@ -41,12 +41,14 @@ import { CODEX, GUIDE, INVITATION, codexUrl } from './grammar_guide/config';
 
 const PUBLISH_DIR = 'LirasaCodexLatest';
 const STAMP = join(PUBLISH_DIR, '.build-stamp.json');
-const LLM_FILE = 'liraasa_3_6_llm.json';
+const LLM_FILE = 'liraasa_4_0_llm.json';
 /** The Grammar in Lessons, built by `npm run build:lessons -- --pdf` (file stem in handoff/). */
-const LESSONS = 'Liraasa_3_6_Lessons';
+const LESSONS = 'Liraasa_4_0_Lessons';
 
 /** What the guide is built from. A change to any of these means a rebuild. */
 const INPUTS = [
+  'data/lexicon/liraasa_4_0.json',
+  'data/lexicon/integration_report_4_0.json',
   'data/lexicon/liraasa_3_6.json',
   'data/lexicon/integration_report_3_6.json',
   'data/lexicon/liraasa_3_5.json',
@@ -85,6 +87,7 @@ const INPUTS = [
   'scripts/changesets_3_1.ts',
   'scripts/changesets_3_3.ts',
   'scripts/changesets_3_4.ts',
+  'scripts/changesets_4_0.ts',
   'scripts/changesets_3_6.ts',
   'scripts/changesets_3_5.ts',
   'data/songs',

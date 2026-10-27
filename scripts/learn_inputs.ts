@@ -10,7 +10,7 @@ import { parseOverrides, type CorpusFile, type LearnInput } from '../src/core/le
 import type { RawLexicon } from '../src/core/model/raw';
 import { hymnCorpusFile } from './hymn';
 
-export const LEARN_LEXICON = 'data/lexicon/liraasa_3_6.json';
+export const LEARN_LEXICON = 'data/lexicon/liraasa_4_0.json';
 export const LEARN_OVERRIDES = 'data/lessons/overrides.json';
 export const CORPUS_DIRS = ['data/corpus/songs_2_3', 'data/corpus/bumrepago_2_3'];
 const NAMES = 'data/checker/names.json';

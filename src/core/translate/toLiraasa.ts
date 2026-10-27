@@ -329,10 +329,9 @@ export function buildLSentence(
           ? null
           : { kind: 'measure', word: fw('kroti', 'ago'), np: np(a.np, 'pp') };
       case 'duration':
-        flags.push(
-          `I-17: "${a.word ?? 'for'} …" (a duration) has no ruled form yet; it is left out`,
-        );
-        return null;
+        // en + NUMBER + a time noun (4.0:G158); with no noun phrase there is nothing to say
+        if (a.np === undefined) return null;
+        return { kind: 'pp', word: fw('en', 'for'), np: stripArticle(np(a.np, 'pp')) };
       case 'comparison':
         if (a.word === 'about' && a.np !== undefined)
           return { kind: 'pp', word: fw('de', 'about'), np: np(a.np, 'pp') };

@@ -7,7 +7,7 @@
  * Then builds the Invitation (scripts/build_invitation.ts) with the same flags.
  *
  * Writes handoff/<name>.html (and .pdf). Every table, count, ruling and
- * example is read from handoff/liraasa_3_6_complete.json; the teaching prose
+ * example is read from handoff/liraasa_4_0_complete.json; the teaching prose
  * lives in scripts/grammar_guide/chapters.ts; the song, the treasury words
  * and the image-compound samples are set in scripts/grammar_guide/config.ts.
  *

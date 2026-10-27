@@ -1,8 +1,10 @@
 # Liraasa: every open question
 
-As of 3.6 (2026-10-25). **Everything up to and including 3.5 is ratified.** 3.6, the _2100 Dreams_ patch, is proposed: its questions are in `review/questions_3_6.md`. These are the points the language does not yet decide. The strict checker reports each one as **unruled**, never right or wrong, and the guide, the Lessons and the LLM reference list them as open. Answer any of them and it becomes a ruling.
+As of 4.0 (2026-10-26). **Everything up to and including 3.5 is ratified.** 3.6, the _2100 Dreams_ patch, is proposed: its questions are in `review/questions_3_6.md`. These are the points the language does not yet decide. The strict checker reports each one as **unruled**, never right or wrong, and the guide, the Lessons and the LLM reference list them as open. Answer any of them and it becomes a ruling.
 
-Settled on 2026-10-25, and so no longer here:
+Settled, and so no longer here:
+
+- by 4.0 (proposed, ADR-0029): adjective order (4.0:G157), durations (G158), comparing actions (G159), `ke sidu` / destiny (G160), decimals (G161), and speech before its verb of saying (G156);
 
 - `maivori` includes or excludes the listener by context (3.5:G152);
 - "slightly", "meanwhile" and "asleep" (ADR-0024);
@@ -10,7 +12,6 @@ Settled on 2026-10-25, and so no longer here:
 
 ## 1. Grammar
 
-1. **The order of two or more adjectives before one noun.** `li vanisan molusan lira` is read, but which adjective comes first is not ruled. (A4.22, I-28)
 2. **"To + verb" beyond purpose.** These cases are covered:
    - purpose is `kopisa` (2.5:G113);
    - one subject is `sidu` (2.1:G50);
@@ -18,12 +19,8 @@ Settled on 2026-10-25, and so no longer here:
    - adjective + `sidu` (2.5:G111).
 
    The general case is not.
-3. **`ke sidu` + verb as "destined to"** (the album, track 08). It is held until a second use.
-4. **Durations in general** ("for two days"). A bare noun after a verb is its object (2.5:G103), so NUMBER + a time unit after the verb is not read as a duration. `en rinbakrono` covers only "for ever" (3.0:G139). (I-17)
-5. **Comparing an action with no manner adjective** ("I sing more than you").
 6. **Which quantifiers form a measure with `kroti` / `krotiapo`** (2.5:G108). Until ruled, only NUMBER + unit (`kroti dossa deyari`, two days before).
 7. **`kasi` / `menu` + a quantifier** (`kasi muya patuti`, "further points"). 2.5:G106 rules `kasi` + a noun only. The hymn's line 12 was reworded around it.
-8. **Decimals** are outside the language until ruled (2.5:G125).
 9. **Operators in a command beyond `ne`, `reve` and `loki`.** 3.0:G135 rules out tense, modals and evidentials, and allows those three. Phase, effort, aspect and approach words in a command (`Hiro lirala!`, "Start singing!") are not ruled. (I-42)
 10. **A demonstrative standing for a whole clause** (`kasa ola`, "because of that", meaning the whole previous clause). (I-54)
 

@@ -50,9 +50,9 @@ describe('the counts', () => {
 });
 
 describe('what the checker reports as unruled, not pass or fail', () => {
-  it('two adjectives before one noun (A4.22)', () => {
+  it('two adjectives before one noun (A4.22): ruled since 4.0:G157, no longer unruled', () => {
     const f = ck.checkLine('li vanisan molusan lira').findings;
-    expect(f.some((x) => x.severity === 'unruled' && x.rule === 'A4.22')).toBe(true);
+    expect(f.some((x) => x.rule === 'A4.22')).toBe(false);
     expect(f.filter((x) => x.severity === 'error')).toEqual([]);
   });
   it('kroti + a quantifier + a noun (2.5:G108)', () => {

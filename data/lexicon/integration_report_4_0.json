@@ -9,13 +9,13 @@
   {
    "file": "data/changes/2026-10-26-lexicon-4-0.json",
    "id": "2026-10-26-lexicon-4-0",
-   "sha256": "4602553e43f9f6a534ae2dfa58ac392957a0b4d3eb22adf621a396c10da4d087"
+   "sha256": "923d0fefdc13123516f2e2530dd651c5ddd2e3787667a103eef456b94a16690c"
   }
  ],
  "output": {
   "file": "liraasa_4_0.json",
-  "sha256": "31b21e41f29a44fd65ab6068614d3d7c0b40c6c632c86585585e68855223d249",
-  "bytes": 4266285
+  "sha256": "cb371097e3218bd7923319e29c5e5a8917028cac8e1d9a488b9701dcce428a82",
+  "bytes": 4264745
  },
  "counts": {
   "before": {

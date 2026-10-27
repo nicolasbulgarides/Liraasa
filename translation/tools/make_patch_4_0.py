@@ -99,7 +99,7 @@ def main():
             f, eng = verbs[joined]
             fs["v"] = {"form": f, "meaning": f"to {eng}" if not eng.startswith("to ") else eng}
         compounds.append({
-            "module": "2100-dreams", "headword": joined, "parts": [a, b],
+            "module": "core", "headword": joined, "parts": [a, b],
             "domain": domain_of.get(b) or domain_of.get(a) or "Language & art", "tier": 2,
             "archetype": None, "image_compound": False, "title": False, "forms": fs,
             "note": f"Coined for the 2100 Dreams draft translation ({sum(toks[x] for x in fs and [joined])} uses).",
@@ -113,7 +113,7 @@ def main():
         "principles": ["No new roots: every word is a compound of existing headwords, colour bases or time nouns.",
                        "Only what the draft used: a coinage the finished draft does not use is left out.",
                        "The grammar defaults the draft relied on become rulings, each example checked."],
-        "modules": {"2100-dreams": "The vocabulary and grammar the draft translation of 2100 Dreams needed"},
+        "modules": {"core": "The vocabulary and grammar the draft translation of 2100 Dreams needed"},
         "function_words_add": [], "rulings_add": RULINGS, "roots_add": [], "compounds_add": compounds,
         "listed_derivations_add": [], "lexicalised_diminutives_add": [], "restored_forms_add": [],
         "rejected_proposals": [{"headword": s, "why": "already a word of 3.6"} for s in skipped],
