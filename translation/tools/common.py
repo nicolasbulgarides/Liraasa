@@ -12,8 +12,8 @@ INDEX = os.path.join(ROOT, "index")
 LOGS = os.path.join(ROOT, "logs")
 REGISTRY = os.path.join(ROOT, "registry.json")
 STATE = os.path.join(ROOT, "state.json")
-# the lexicon this run reads: 3.6 with the author's decisions of 2026-10-25 (ADR-0027)
-LEXICON = os.path.join(REPO, "handoff", "liraasa_3_6_llm.json")
+# the lexicon this run reads: 4.0 (ADR-0029), built on 3.6 with the author's decisions
+LEXICON = os.path.join(REPO, "handoff", "liraasa_4_0_llm.json")
 PATCH = os.path.join(REPO, "data", "proposals", "liraasa_3_6_patch_decided.json")
 MASTER = os.path.join(REPO, "archive", "patch_3_6", "docs", "2100_Dreams_Liraasa_Master_Word_List.xlsx")
 # claude -p runs here, outside the repository, so no project hook or CLAUDE.md is loaded
