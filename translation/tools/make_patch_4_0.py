@@ -56,10 +56,19 @@ ALIASES = [
     {"form": "mavopagoasa", "add_english": "heaven"},
     {"form": "lavbujuba", "add_english": "dedication (of a book); offering"},
 ]
+# the author approved the vocabulary candidates (2026-10-27): existing words the draft's gaps
+# pointed to become findable by their English names (kept only where the form is a listed one)
+APPROVED_ALIASES = [
+    ("lulfaasa", "soul"), ("ramulumi", "reflection"), ("mavopagona", "rulebreaker"),
+    ("jubaseno", "blessing"), ("lavbunulusan", "spiritual"), ("vamdusan", "broad"),
+    ("lordiasasan", "perfect"), ("molusasvayo", "nurse"), ("hirnaasasan", "saved; rescued"),
+]
+SUGGESTIONS = os.path.join(common.REPO, "review", "2100_dreams_vocabulary_suggestions.json")
 
 
 def main():
-    ref = common.load(common.LEXICON)
+    # 4.0 is built on 3.6: what is "already a word" is judged against 3.6, not the current lexicon
+    ref = common.load(os.path.join(common.REPO, "handoff", "liraasa_3_6_llm.json"))
     domain_of, forms, heads = {}, set(), set()
     for dom, lines in ref["dictionary"]["by_domain"].items():
         for l in lines:
@@ -104,6 +113,27 @@ def main():
             "archetype": None, "image_compound": False, "title": False, "forms": fs,
             "note": f"Coined for the 2100 Dreams draft translation ({sum(toks[x] for x in fs and [joined])} uses).",
         })
+    # the approved candidates (the author, 2026-10-27): the first suggested compound for each gap
+    have = {c["headword"] for c in compounds}
+    approved = []
+    for eng, v in (common.load(SUGGESTIONS, {}) or {}).items():
+        m = re.search(r"\*([a-z]+)\* \(([a-z]+)\+([a-z]+): ([^;)]*)", v)
+        if not m:
+            continue
+        form, a, b, image = m.groups()
+        if form in have or form in forms or form != a + b or a not in heads or b not in heads:
+            continue
+        have.add(form)
+        approved.append(form)
+        compounds.append({
+            "module": "core", "headword": form, "parts": [a, b],
+            "domain": domain_of.get(b) or domain_of.get(a) or "Language & art", "tier": 2,
+            "archetype": None, "image_compound": False, "title": False,
+            "forms": {"n": {"form": form, "meaning": f"{eng} ({image.strip()})"}},
+            "note": "A vocabulary candidate from the 2100 Dreams draft, approved by the author (2026-10-27).",
+        })
+    aliases = ALIASES + [{"form": f, "add_english": e} for f, e in APPROVED_ALIASES if f in forms]
+    print("approved compounds:", approved)
     base = {"headwords": 2242, "meaningful_forms": 5140}
     patch = {
         "patch": "Liraasa 4.0: what translating 2100 Dreams needed",
@@ -117,7 +147,7 @@ def main():
         "function_words_add": [], "rulings_add": RULINGS, "roots_add": [], "compounds_add": compounds,
         "listed_derivations_add": [], "lexicalised_diminutives_add": [], "restored_forms_add": [],
         "rejected_proposals": [{"headword": s, "why": "already a word of 3.6"} for s in skipped],
-        "recipes_add": [], "english_aliases_add": ALIASES, "test_sentences": [], "validation": {"errors": []},
+        "recipes_add": [], "english_aliases_add": aliases, "test_sentences": [], "validation": {"errors": []},
         "counts": {"new_roots": 0, "new_compounds": len(compounds),
                    "headwords_after": base["headwords"] + len(compounds),
                    "meaningful_forms_after": base["meaningful_forms"] + sum(len(c["forms"]) for c in compounds)},
@@ -125,7 +155,7 @@ def main():
     with open(OUT, "w", encoding="utf-8", newline="\n") as f:
         json.dump(patch, f, ensure_ascii=False, indent=1)
         f.write("\n")
-    print(f"wrote {OUT}: {len(compounds)} compounds, {len(RULINGS)} rulings, {len(ALIASES)} aliases; skipped {skipped}")
+    print(f"wrote {OUT}: {len(compounds)} compounds, {len(RULINGS)} rulings, {len(aliases)} aliases; skipped {len(skipped)}")
 
 
 if __name__ == "__main__":

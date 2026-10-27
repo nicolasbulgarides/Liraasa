@@ -199,7 +199,7 @@
      "meaning": "lover"
     }
    },
-   "note": "Coined for the 2100 Dreams draft translation (22 uses)."
+   "note": "Coined for the 2100 Dreams draft translation (23 uses)."
   },
   {
    "module": "core",
@@ -239,7 +239,7 @@
      "meaning": "blue hair"
     }
    },
-   "note": "Coined for the 2100 Dreams draft translation (0 uses)."
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
    "module": "core",
@@ -279,7 +279,7 @@
      "meaning": "experience"
     }
    },
-   "note": "Coined for the 2100 Dreams draft translation (33 uses)."
+   "note": "Coined for the 2100 Dreams draft translation (34 uses)."
   },
   {
    "module": "core",
@@ -319,7 +319,27 @@
      "meaning": "ice cream"
     }
    },
-   "note": "Coined for the 2100 Dreams draft translation (7 uses)."
+   "note": "Coined for the 2100 Dreams draft translation (6 uses)."
+  },
+  {
+   "module": "core",
+   "headword": "bojinamimiru",
+   "parts": [
+    "bojinami",
+    "miru"
+   ],
+   "domain": "Nature",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "bojinamimiru",
+     "meaning": "milkshake"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
    "module": "core",
@@ -399,7 +419,7 @@
      "meaning": "crystal bear"
     }
    },
-   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+   "note": "Coined for the 2100 Dreams draft translation (2 uses)."
   },
   {
    "module": "core",
@@ -439,7 +459,7 @@
      "meaning": "stained glass"
     }
    },
-   "note": "Coined for the 2100 Dreams draft translation (0 uses)."
+   "note": "Coined for the 2100 Dreams draft translation (2 uses)."
   },
   {
    "module": "core",
@@ -583,7 +603,7 @@
      "meaning": "to bit"
     }
    },
-   "note": "Coined for the 2100 Dreams draft translation (0 uses)."
+   "note": "Coined for the 2100 Dreams draft translation (2 uses)."
   },
   {
    "module": "core",
@@ -603,7 +623,7 @@
      "meaning": "munch message"
     }
    },
-   "note": "Coined for the 2100 Dreams draft translation (2 uses)."
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
    "module": "core",
@@ -783,7 +803,7 @@
      "meaning": "digital house"
     }
    },
-   "note": "Coined for the 2100 Dreams draft translation (3 uses)."
+   "note": "Coined for the 2100 Dreams draft translation (4 uses)."
   },
   {
    "module": "core",
@@ -923,7 +943,7 @@
      "meaning": "stream; live broadcast"
     }
    },
-   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+   "note": "Coined for the 2100 Dreams draft translation (2 uses)."
   },
   {
    "module": "core",
@@ -983,7 +1003,7 @@
      "meaning": "digital space"
     }
    },
-   "note": "Coined for the 2100 Dreams draft translation (11 uses)."
+   "note": "Coined for the 2100 Dreams draft translation (12 uses)."
   },
   {
    "module": "core",
@@ -1203,7 +1223,27 @@
      "meaning": "adventure guide"
     }
    },
-   "note": "Coined for the 2100 Dreams draft translation (3 uses)."
+   "note": "Coined for the 2100 Dreams draft translation (8 uses)."
+  },
+  {
+   "module": "core",
+   "headword": "harlulore",
+   "parts": [
+    "harlu",
+    "lore"
+   ],
+   "domain": "Body",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "harlulore",
+     "meaning": "reluctantly"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
    "module": "core",
@@ -1243,7 +1283,7 @@
      "meaning": "patient (medical)"
     }
    },
-   "note": "Coined for the 2100 Dreams draft translation (10 uses)."
+   "note": "Coined for the 2100 Dreams draft translation (9 uses)."
   },
   {
    "module": "core",
@@ -1263,7 +1303,7 @@
      "meaning": "medicine station"
     }
    },
-   "note": "Coined for the 2100 Dreams draft translation (2 uses)."
+   "note": "Coined for the 2100 Dreams draft translation (3 uses)."
   },
   {
    "module": "core",
@@ -1283,7 +1323,7 @@
      "meaning": "the shot (injection)"
     }
    },
-   "note": "Coined for the 2100 Dreams draft translation (11 uses)."
+   "note": "Coined for the 2100 Dreams draft translation (10 uses)."
   },
   {
    "module": "core",
@@ -1303,7 +1343,7 @@
      "meaning": "review"
     }
    },
-   "note": "Coined for the 2100 Dreams draft translation (0 uses)."
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
    "module": "core",
@@ -1343,7 +1383,7 @@
      "meaning": "kill switch"
     }
    },
-   "note": "Coined for the 2100 Dreams draft translation (31 uses)."
+   "note": "Coined for the 2100 Dreams draft translation (30 uses)."
   },
   {
    "module": "core",
@@ -1383,7 +1423,7 @@
      "meaning": "quest token"
     }
    },
-   "note": "Coined for the 2100 Dreams draft translation (7 uses)."
+   "note": "Coined for the 2100 Dreams draft translation (13 uses)."
   },
   {
    "module": "core",
@@ -1423,7 +1463,7 @@
      "meaning": "drone swarm"
     }
    },
-   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+   "note": "Coined for the 2100 Dreams draft translation (3 uses)."
   },
   {
    "module": "core",
@@ -1503,7 +1543,7 @@
      "meaning": "grandfather"
     }
    },
-   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+   "note": "Coined for the 2100 Dreams draft translation (3 uses)."
   },
   {
    "module": "core",
@@ -1523,7 +1563,7 @@
      "meaning": "time loop"
     }
    },
-   "note": "Coined for the 2100 Dreams draft translation (3 uses)."
+   "note": "Coined for the 2100 Dreams draft translation (2 uses)."
   },
   {
    "module": "core",
@@ -1603,7 +1643,7 @@
      "meaning": "art piece"
     }
    },
-   "note": "Coined for the 2100 Dreams draft translation (10 uses)."
+   "note": "Coined for the 2100 Dreams draft translation (12 uses)."
   },
   {
    "module": "core",
@@ -1783,7 +1823,7 @@
      "meaning": "cleaner drone"
     }
    },
-   "note": "Coined for the 2100 Dreams draft translation (3 uses)."
+   "note": "Coined for the 2100 Dreams draft translation (4 uses)."
   },
   {
    "module": "core",
@@ -1803,7 +1843,7 @@
      "meaning": "cleaning chemical"
     }
    },
-   "note": "Coined for the 2100 Dreams draft translation (4 uses)."
+   "note": "Coined for the 2100 Dreams draft translation (5 uses)."
   },
   {
    "module": "core",
@@ -1863,7 +1903,7 @@
      "meaning": "intimacy"
     }
    },
-   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+   "note": "Coined for the 2100 Dreams draft translation (4 uses)."
   },
   {
    "module": "core",
@@ -1903,7 +1943,7 @@
      "meaning": "inner world"
     }
    },
-   "note": "Coined for the 2100 Dreams draft translation (4 uses)."
+   "note": "Coined for the 2100 Dreams draft translation (5 uses)."
   },
   {
    "module": "core",
@@ -1943,7 +1983,7 @@
      "meaning": "sarcasm"
     }
    },
-   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+   "note": "Coined for the 2100 Dreams draft translation (2 uses)."
   },
   {
    "module": "core",
@@ -1983,7 +2023,7 @@
      "meaning": "materialized"
     }
    },
-   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+   "note": "Coined for the 2100 Dreams draft translation (2 uses)."
   },
   {
    "module": "core",
@@ -2043,7 +2083,7 @@
      "meaning": "hologram television"
     }
    },
-   "note": "Coined for the 2100 Dreams draft translation (3 uses)."
+   "note": "Coined for the 2100 Dreams draft translation (4 uses)."
   },
   {
    "module": "core",
@@ -2123,7 +2163,7 @@
      "meaning": "interactive"
     }
    },
-   "note": "Coined for the 2100 Dreams draft translation (0 uses)."
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
    "module": "core",
@@ -2183,7 +2223,7 @@
      "meaning": "abilities"
     }
    },
-   "note": "Coined for the 2100 Dreams draft translation (2 uses)."
+   "note": "Coined for the 2100 Dreams draft translation (8 uses)."
   },
   {
    "module": "core",
@@ -2223,7 +2263,7 @@
      "meaning": "mental illness; mental illness / mental health exceptionality"
     }
    },
-   "note": "Coined for the 2100 Dreams draft translation (8 uses)."
+   "note": "Coined for the 2100 Dreams draft translation (9 uses)."
   },
   {
    "module": "core",
@@ -2263,7 +2303,7 @@
      "meaning": "mindgames"
     }
    },
-   "note": "Coined for the 2100 Dreams draft translation (2 uses)."
+   "note": "Coined for the 2100 Dreams draft translation (3 uses)."
   },
   {
    "module": "core",
@@ -2303,7 +2343,7 @@
      "meaning": "creativity"
     }
    },
-   "note": "Coined for the 2100 Dreams draft translation (6 uses)."
+   "note": "Coined for the 2100 Dreams draft translation (7 uses)."
   },
   {
    "module": "core",
@@ -2323,7 +2363,7 @@
      "meaning": "morning hours"
     }
    },
-   "note": "Coined for the 2100 Dreams draft translation (9 uses)."
+   "note": "Coined for the 2100 Dreams draft translation (10 uses)."
   },
   {
    "module": "core",
@@ -2383,7 +2423,7 @@
      "meaning": "gender"
     }
    },
-   "note": "Coined for the 2100 Dreams draft translation (3 uses)."
+   "note": "Coined for the 2100 Dreams draft translation (4 uses)."
   },
   {
    "module": "core",
@@ -2443,7 +2483,7 @@
      "meaning": "anxiety medicine"
     }
    },
-   "note": "Coined for the 2100 Dreams draft translation (4 uses)."
+   "note": "Coined for the 2100 Dreams draft translation (3 uses)."
   },
   {
    "module": "core",
@@ -2723,7 +2763,7 @@
      "meaning": "reality; irl"
     }
    },
-   "note": "Coined for the 2100 Dreams draft translation (12 uses)."
+   "note": "Coined for the 2100 Dreams draft translation (18 uses)."
   },
   {
    "module": "core",
@@ -2843,7 +2883,7 @@
      "meaning": "precedent"
     }
    },
-   "note": "Coined for the 2100 Dreams draft translation (2 uses)."
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
   },
   {
    "module": "core",
@@ -3023,7 +3063,7 @@
      "meaning": "violence"
     }
    },
-   "note": "Coined for the 2100 Dreams draft translation (15 uses)."
+   "note": "Coined for the 2100 Dreams draft translation (17 uses)."
   },
   {
    "module": "core",
@@ -3203,7 +3243,7 @@
      "meaning": "therapy (talk-treatment)"
     }
    },
-   "note": "Coined for the 2100 Dreams draft translation (0 uses)."
+   "note": "Coined for the 2100 Dreams draft translation (2 uses)."
   },
   {
    "module": "core",
@@ -3327,6 +3367,26 @@
   },
   {
    "module": "core",
+   "headword": "silroyano",
+   "parts": [
+    "silro",
+    "yano"
+   ],
+   "domain": "People",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "silroyano",
+     "meaning": "cryptoguild"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "core",
    "headword": "solavelma",
    "parts": [
     "sola",
@@ -3443,7 +3503,7 @@
      "meaning": "slumber party"
     }
    },
-   "note": "Coined for the 2100 Dreams draft translation (2 uses)."
+   "note": "Coined for the 2100 Dreams draft translation (4 uses)."
   },
   {
    "module": "core",
@@ -3483,7 +3543,7 @@
      "meaning": "lounge"
     }
    },
-   "note": "Coined for the 2100 Dreams draft translation (4 uses)."
+   "note": "Coined for the 2100 Dreams draft translation (3 uses)."
   },
   {
    "module": "core",
@@ -3763,7 +3823,7 @@
      "meaning": "silver hair"
     }
    },
-   "note": "Coined for the 2100 Dreams draft translation (33 uses)."
+   "note": "Coined for the 2100 Dreams draft translation (32 uses)."
   },
   {
    "module": "core",
@@ -3847,26 +3907,6 @@
   },
   {
    "module": "core",
-   "headword": "vanatobra",
-   "parts": [
-    "vana",
-    "tobra"
-   ],
-   "domain": "Home & objects",
-   "tier": 2,
-   "archetype": null,
-   "image_compound": false,
-   "title": false,
-   "forms": {
-    "n": {
-     "form": "vanatobra",
-     "meaning": "white walls"
-    }
-   },
-   "note": "Coined for the 2100 Dreams draft translation (0 uses)."
-  },
-  {
-   "module": "core",
    "headword": "vanavelma",
    "parts": [
     "vana",
@@ -3923,27 +3963,7 @@
      "meaning": "pocket universe"
     }
    },
-   "note": "Coined for the 2100 Dreams draft translation (6 uses)."
-  },
-  {
-   "module": "core",
-   "headword": "velmasirmofarla",
-   "parts": [
-    "velmasirmo",
-    "farla"
-   ],
-   "domain": "Actions",
-   "tier": 2,
-   "archetype": null,
-   "image_compound": false,
-   "title": false,
-   "forms": {
-    "n": {
-     "form": "velmasirmofarla",
-     "meaning": "fashion designer"
-    }
-   },
-   "note": "Coined for the 2100 Dreams draft translation (0 uses)."
+   "note": "Coined for the 2100 Dreams draft translation (7 uses)."
   },
   {
    "module": "core",
@@ -4103,7 +4123,7 @@
      "meaning": "video game"
     }
    },
-   "note": "Coined for the 2100 Dreams draft translation (8 uses)."
+   "note": "Coined for the 2100 Dreams draft translation (9 uses)."
   },
   {
    "module": "core",
@@ -4263,7 +4283,7 @@
      "meaning": "viofinch"
     }
    },
-   "note": "Coined for the 2100 Dreams draft translation (7 uses)."
+   "note": "Coined for the 2100 Dreams draft translation (8 uses)."
   },
   {
    "module": "core",
@@ -4383,7 +4403,7 @@
      "meaning": "purple eyes; violet eyes"
     }
    },
-   "note": "Coined for the 2100 Dreams draft translation (14 uses)."
+   "note": "Coined for the 2100 Dreams draft translation (16 uses)."
   },
   {
    "module": "core",
@@ -4427,6 +4447,26 @@
   },
   {
    "module": "core",
+   "headword": "yumlinami",
+   "parts": [
+    "yumli",
+    "nami"
+   ],
+   "domain": "Daily life",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "yumlinami",
+     "meaning": "dessert (spelled 'desert' in the book)"
+    }
+   },
+   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "core",
    "headword": "zavmepatu",
    "parts": [
     "zavme",
@@ -4463,7 +4503,7 @@
      "meaning": "surreal"
     }
    },
-   "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+   "note": "Coined for the 2100 Dreams draft translation (2 uses)."
   },
   {
    "module": "core",
@@ -4483,7 +4523,7 @@
      "meaning": "air taxi"
     }
    },
-   "note": "Coined for the 2100 Dreams draft translation (14 uses)."
+   "note": "Coined for the 2100 Dreams draft translation (15 uses)."
   },
   {
    "module": "core",
@@ -4504,6 +4544,86 @@
     }
    },
    "note": "Coined for the 2100 Dreams draft translation (1 uses)."
+  },
+  {
+   "module": "core",
+   "headword": "harlujomrupilo",
+   "parts": [
+    "harlujomru",
+    "pilo"
+   ],
+   "domain": "People",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "harlujomrupilo",
+     "meaning": "adventure guide (adventure-father: the one who guides an adventure (pilopa = to guide)"
+    }
+   },
+   "note": "A vocabulary candidate from the 2100 Dreams draft, approved by the author (2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "lulfavelma",
+   "parts": [
+    "lulfa",
+    "velma"
+   ],
+   "domain": "Home & objects",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lulfavelma",
+     "meaning": "shoulderhoods (butterfly-garment: a hood that folds over the shoulders like wings)"
+    }
+   },
+   "note": "A vocabulary candidate from the 2100 Dreams draft, approved by the author (2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "sernafavro",
+   "parts": [
+    "serna",
+    "favro"
+   ],
+   "domain": "Systems & relations",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "sernafavro",
+     "meaning": "tablet (data signal-device: a tablet computer (favro is an archetype head, 3.2:G142)"
+    }
+   },
+   "note": "A vocabulary candidate from the 2100 Dreams draft, approved by the author (2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "helvikova",
+   "parts": [
+    "helvi",
+    "kova"
+   ],
+   "domain": "Home, kitchen & labor",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "helvikova",
+     "meaning": "cubby (hiding-container: a small nook for keeping things (kova is an archetype head, 3.2:G146)"
+    }
+   },
+   "note": "A vocabulary candidate from the 2100 Dreams draft, approved by the author (2026-10-27)."
   }
  ],
  "listed_derivations_add": [],
@@ -4519,7 +4639,15 @@
    "why": "already a word of 3.6"
   },
   {
+   "headword": "germabiti",
+   "why": "already a word of 3.6"
+  },
+  {
    "headword": "kavbikova",
+   "why": "already a word of 3.6"
+  },
+  {
+   "headword": "lanvecuza",
    "why": "already a word of 3.6"
   },
   {
@@ -4588,6 +4716,30 @@
   {
    "form": "lavbujuba",
    "add_english": "dedication (of a book); offering"
+  },
+  {
+   "form": "lulfaasa",
+   "add_english": "soul"
+  },
+  {
+   "form": "mavopagona",
+   "add_english": "rulebreaker"
+  },
+  {
+   "form": "jubaseno",
+   "add_english": "blessing"
+  },
+  {
+   "form": "vamdusan",
+   "add_english": "broad"
+  },
+  {
+   "form": "lordiasasan",
+   "add_english": "perfect"
+  },
+  {
+   "form": "hirnaasasan",
+   "add_english": "saved; rescued"
   }
  ],
  "test_sentences": [],
@@ -4596,8 +4748,8 @@
  },
  "counts": {
   "new_roots": 0,
-  "new_compounds": 220,
-  "headwords_after": 2462,
-  "meaningful_forms_after": 5361
+  "new_compounds": 226,
+  "headwords_after": 2468,
+  "meaningful_forms_after": 5367
  }
 }

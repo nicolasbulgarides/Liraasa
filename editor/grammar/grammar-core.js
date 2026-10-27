@@ -2889,6 +2889,7 @@ var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "sy
     let mention = false;
     for (let k = 0; k < tokens.length; k++) {
       const t = tokens[k];
+      if (t === void 0) continue;
       const opening = t.kind === "punct" && (t.text === "“" || t.text === '"' && !inQuote);
       if (opening && afterColon) {
         inQuote = true;

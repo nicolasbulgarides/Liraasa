@@ -2,13 +2,13 @@
  "report": "Liraasa MFA dictionary export",
  "lexicon": "C:/Users/nicol/Desktop/Liraasa-workbench/data/lexicon/liraasa_4_0.json",
  "version": "4.0",
- "words": 85000,
+ "words": 85204,
  "by_source": {
   "closed class": 254,
   "corpus": 824,
-  "form": 17234,
-  "inflection": 51701,
-  "derivation": 14770,
+  "form": 17276,
+  "inflection": 51827,
+  "derivation": 14806,
   "colour": 45,
   "name": 14,
   "numeral": 1002

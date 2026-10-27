@@ -39,7 +39,7 @@ translation/source/
 translation/segments/
 translation/index/
 translation/out/
-translation/draft/
+translation/draft/interlinear.md
 translation/prompts/
 translation/registry.json
 translation/state.json

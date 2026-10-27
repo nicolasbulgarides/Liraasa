@@ -9,13 +9,18 @@
   {
    "file": "data/changes/2026-10-26-lexicon-4-0.json",
    "id": "2026-10-26-lexicon-4-0",
-   "sha256": "923d0fefdc13123516f2e2530dd651c5ddd2e3787667a103eef456b94a16690c"
+   "sha256": "5e84ba16945356c75de97b97f077bdece92a2f557cdeba8a9e748ca5e5347c1d"
+  },
+  {
+   "file": "data/changes/2026-10-27-lexicon-4-0-ratify.json",
+   "id": "2026-10-27-lexicon-4-0-ratify",
+   "sha256": "208f239530554bfe601c439b82b58b5dacd210c7deb6718139a517c72d219538"
   }
  ],
  "output": {
   "file": "liraasa_4_0.json",
-  "sha256": "cb371097e3218bd7923319e29c5e5a8917028cac8e1d9a488b9701dcce428a82",
-  "bytes": 4264745
+  "sha256": "9fbc87d384ea2ce8896c6846995f98fdf7f5a59dc73fd8ed8fb49f3bb32a5313",
+  "bytes": 4283196
  },
  "counts": {
   "before": {
@@ -30,11 +35,11 @@
    "rhymeFamilies": 510
   },
   "after": {
-   "headwords": 2462,
+   "headwords": 2468,
    "primalRoots": 506,
-   "compounds": 1956,
-   "forms": 17234,
-   "distinctForms": 17234,
+   "compounds": 1962,
+   "forms": 17276,
+   "distinctForms": 17276,
    "functionWords": 154,
    "correlatives": 39,
    "lexicalisedDerivations": 211,

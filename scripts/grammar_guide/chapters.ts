@@ -1444,7 +1444,7 @@ export const RECIPES: readonly (readonly [string, string, string, string, string
     '',
   ],
   ['alright · okay', 'eho (3.2)', 'Eho, maivo venreva.', 'Alright, I’m coming.', ''],
-  // 3.6, proposed (ADR-0027): the 2100 Dreams patch's recipes; "unabated" is given in a
+  // 3.6, ratified 2026-10-27 (ADR-0027): the 2100 Dreams patch's recipes; "unabated" is given in a
   // form that keeps 1.0:G1 (the editor's judgement, for the author in review/questions_3_6.md)
   [
     'actress · hostess (female role)',
@@ -1486,14 +1486,14 @@ export const RECIPES: readonly (readonly [string, string, string, string, string
 
 // ---------------------------------------------------------------- 7. The 3.x grammar
 
-/** Devotion, music and measure (3.0), word families, names and shapes (3.2 to 3.5), and 3.6 (proposed). */
+/** Devotion, music and measure (3.0), word families, names and shapes (3.2 to 3.5), 3.6 and 4.0. */
 export function threePart(index: Index): string {
   const lex = index.lex;
   const ex = (id: string, l: string, e: string): [string, string] => [example(lex, id, l), e];
   return part(
     '7',
     'Devotion, families and shapes',
-    'What 3.0 to 4.0 add: how to address, praise and bless; how a few roots name whole families; the adjectives, titles, shapes and copied names that come by rule; and, proposed in 3.6 and 4.0, units, the coarse register and what translating a novel needed. Every example is a ruling’s own.',
+    'What 3.0 to 4.0 add: how to address, praise and bless; how a few roots name whole families; the adjectives, titles, shapes and copied names that come by rule; and, from 3.6 and 4.0, units, the coarse register and what translating a novel needed. Every example is a ruling’s own.',
     `${h3('Address and praise')}
 ${examples([
   ex('3.0:G129', 'Iya Deviasa, lenila maivo!', 'O Great Goddess, hear me!'),
@@ -1581,7 +1581,7 @@ ${ul([
   'Foreign dishes are copied like names, in lower case: `pitsa`, `hamburga` [[3.5:G151]].',
   '`maivori` is we, with or without the listener, as the context shows; name who is meant when it matters: `maivo ata taivo` [[3.5:G152]].',
 ])}
-${h3('Units, minds and the coarse register (3.6, proposed)')}
+${h3('Units, minds and the coarse register (3.6)')}
 ${examples([
   ex('3.6:G155', 'penzira bondopatuti', 'fifty milligrams'),
   ex('3.6:G155', 'tressa lalnipatuvu', 'three kilometres'),
@@ -1593,7 +1593,7 @@ ${ul([
   'The `-san` rule reaches lexicalised diminutives too: `mavofaruti` hypomania, `mavofarutisan` hypomanic [[3.6:G153]]. ',
   'Coarse words are a register, not a grammar: `Garza!` is the interjection, `garzasan` the intensifier, `garzaga` to swear, `Rupu!` the lesser oath. They never take ascended forms [[3.6:G154]].',
 ])}
-${h3('What translating a novel needed (4.0, proposed)')}
+${h3('What translating a novel needed (4.0)')}
 ${examples([
   ex('4.0:G156', '“Maivo ne pagopa,” saivo po senosia.', '“I am not going,” she said.'),
   ex('4.0:G157', 'Saivo po vimova baba vanisan nolsasan kadu.', 'She saw a beautiful new car.'),

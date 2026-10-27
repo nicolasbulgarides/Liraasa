@@ -172,7 +172,7 @@ summary{cursor:pointer}details p{margin:.4rem 0 .1rem;font-size:1.05rem}
 <body>
 <main>
 <h1>Liraasa: The Grammar in Lessons</h1>
-<p class="sub">Edition 4.0 · ${String(n)} short lessons, about ten minutes each; the last part is proposed</p>
+<p class="sub">Edition 4.0 · ${String(n)} short lessons, about ten minutes each</p>
 <div class="intro">${INTRO.map((p) => `<p>${md(p, 'intro')}</p>`).join('')}</div>
 <nav aria-label="Lessons"><h2>The lessons</h2><ol>${toc.join('')}</ol></nav>
 ${body.join('\n')}

@@ -3,7 +3,7 @@
  "edition": "4.0",
  "created": "2026-10-26T23:00:00Z",
  "author": "nicolas",
- "summary": "Liraasa 4.0, \"what translating 2100 Dreams needed\" (ADR-0029), made by the editor at the author's request from the draft translation. PROPOSED: PROPOSED: made by the editor at the author's request (2026-10-26), from the draft translation of 2100 Dreams. Additions only, no new roots: rulings 4.0:G156-G161 (speech before its verb of saying, adjective order, durations, comparing actions, destiny, decimals); 220 compounds the draft used and 2 English aliases. No 3.6 word, spelling or ruling changes.",
+ "summary": "Liraasa 4.0, \"what translating 2100 Dreams needed\" (ADR-0029), made by the editor at the author's request from the draft translation. PROPOSED: PROPOSED: made by the editor at the author's request (2026-10-26), from the draft translation of 2100 Dreams. Additions only, no new roots: rulings 4.0:G156-G161 (speech before its verb of saying, adjective order, durations, comparing actions, destiny, decimals); 226 compounds the draft used and 8 English aliases. No 3.6 word, spelling or ruling changes.",
  "rulings": [
   {
    "id": "G156",
@@ -199,7 +199,7 @@
    "english_synonyms": [
     "lover"
    ],
-   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: amor + sora. Coined for the 2100 Dreams draft translation (22 uses). Archetype: null. Tier 2 in the patch. Module core."
+   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: amor + sora. Coined for the 2100 Dreams draft translation (23 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
    "id": "lx_azurimulfo_2632",
@@ -235,7 +235,7 @@
    "english_synonyms": [
     "blue hair"
    ],
-   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: azuri + sabaye. Coined for the 2100 Dreams draft translation (0 uses). Archetype: null. Tier 2 in the patch. Module core."
+   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: azuri + sabaye. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
    "id": "lx_biodivmapatu_2634",
@@ -271,7 +271,7 @@
    "english_synonyms": [
     "experience"
    ],
-   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: bio + ramu. Coined for the 2100 Dreams draft translation (33 uses). Archetype: null. Tier 2 in the patch. Module core."
+   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: bio + ramu. Coined for the 2100 Dreams draft translation (34 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
    "id": "lx_bitilumi_2636",
@@ -307,10 +307,28 @@
    "english_synonyms": [
     "ice cream"
    ],
-   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: boji + nami. Coined for the 2100 Dreams draft translation (7 uses). Archetype: null. Tier 2 in the patch. Module core."
+   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: boji + nami. Coined for the 2100 Dreams draft translation (6 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_buzaneme_2638",
+   "id": "lx_bojinamimiru_2638",
+   "root": "bojinamimiru",
+   "type": "Compound",
+   "components": [
+    "bojinami",
+    "miru"
+   ],
+   "glosses": {
+    "root": "milkshake"
+   },
+   "register": "everyday",
+   "domain": "Nature",
+   "english_synonyms": [
+    "milkshake"
+   ],
+   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: bojinami + miru. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_buzaneme_2639",
    "root": "buzaneme",
    "type": "Compound",
    "components": [
@@ -328,7 +346,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: buza + neme. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_ceresolotobra_2639",
+   "id": "lx_ceresolotobra_2640",
    "root": "ceresolotobra",
    "type": "Compound",
    "components": [
@@ -346,7 +364,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: ceresolo + tobra. Coined for the 2100 Dreams draft translation (2 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_cibuteru_2640",
+   "id": "lx_cibuteru_2641",
    "root": "cibuteru",
    "type": "Compound",
    "components": [
@@ -364,7 +382,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: cibu + teru. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_cirsibumbo_2641",
+   "id": "lx_cirsibumbo_2642",
    "root": "cirsibumbo",
    "type": "Compound",
    "components": [
@@ -379,10 +397,10 @@
    "english_synonyms": [
     "crystal bear"
    ],
-   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: cirsi + bumbo. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
+   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: cirsi + bumbo. Coined for the 2100 Dreams draft translation (2 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_cirsizefrokova_2642",
+   "id": "lx_cirsizefrokova_2643",
    "root": "cirsizefrokova",
    "type": "Compound",
    "components": [
@@ -400,7 +418,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: cirsi + zefrokova. Coined for the 2100 Dreams draft translation (4 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_colbiceresolo_2643",
+   "id": "lx_colbiceresolo_2644",
    "root": "colbiceresolo",
    "type": "Compound",
    "components": [
@@ -415,10 +433,10 @@
    "english_synonyms": [
     "stained glass"
    ],
-   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: colbi + ceresolo. Coined for the 2100 Dreams draft translation (0 uses). Archetype: null. Tier 2 in the patch. Module core."
+   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: colbi + ceresolo. Coined for the 2100 Dreams draft translation (2 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_colbitrana_2644",
+   "id": "lx_colbitrana_2645",
    "root": "colbitrana",
    "type": "Compound",
    "components": [
@@ -436,7 +454,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: colbi + trana. Coined for the 2100 Dreams draft translation (7 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_colbivemibako_2645",
+   "id": "lx_colbivemibako_2646",
    "root": "colbivemibako",
    "type": "Compound",
    "components": [
@@ -454,7 +472,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: colbi + vemibako. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_conotovo_2646",
+   "id": "lx_conotovo_2647",
    "root": "conotovo",
    "type": "Compound",
    "components": [
@@ -472,7 +490,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: cono + tovo. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_daigodevi_2647",
+   "id": "lx_daigodevi_2648",
    "root": "daigodevi",
    "type": "Compound",
    "components": [
@@ -490,7 +508,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: daigo + devi. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_daigofarusebi_2648",
+   "id": "lx_daigofarusebi_2649",
    "root": "daigofarusebi",
    "type": "Compound",
    "components": [
@@ -508,7 +526,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: daigo + farusebi. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_dalutobra_2649",
+   "id": "lx_dalutobra_2650",
    "root": "dalutobra",
    "type": "Compound",
    "components": [
@@ -526,7 +544,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: dalu + tobra. Coined for the 2100 Dreams draft translation (2 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_dentohata_2650",
+   "id": "lx_dentohata_2651",
    "root": "dentohata",
    "type": "Compound",
    "components": [
@@ -543,10 +561,10 @@
     "bit",
     "to bit"
    ],
-   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: dento + hata. Coined for the 2100 Dreams draft translation (0 uses). Archetype: null. Tier 2 in the patch. Module core."
+   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: dento + hata. Coined for the 2100 Dreams draft translation (2 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_dentosilbeseno_2651",
+   "id": "lx_dentosilbeseno_2652",
    "root": "dentosilbeseno",
    "type": "Compound",
    "components": [
@@ -561,10 +579,10 @@
    "english_synonyms": [
     "munch message"
    ],
-   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: dento + silbeseno. Coined for the 2100 Dreams draft translation (2 uses). Archetype: null. Tier 2 in the patch. Module core."
+   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: dento + silbeseno. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_divmasenotikutrana_2652",
+   "id": "lx_divmasenotikutrana_2653",
    "root": "divmasenotikutrana",
    "type": "Compound",
    "components": [
@@ -582,7 +600,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: divmaseno + tikutrana. Coined for the 2100 Dreams draft translation (7 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_duhasolo_2653",
+   "id": "lx_duhasolo_2654",
    "root": "duhasolo",
    "type": "Compound",
    "components": [
@@ -600,7 +618,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: duha + solo. Coined for the 2100 Dreams draft translation (6 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_ertarofe_2654",
+   "id": "lx_ertarofe_2655",
    "root": "ertarofe",
    "type": "Compound",
    "components": [
@@ -618,7 +636,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: erta + rofe. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_ertasabaye_2655",
+   "id": "lx_ertasabaye_2656",
    "root": "ertasabaye",
    "type": "Compound",
    "components": [
@@ -637,7 +655,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: erta + sabaye. Coined for the 2100 Dreams draft translation (5 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_ertavilne_2656",
+   "id": "lx_ertavilne_2657",
    "root": "ertavilne",
    "type": "Compound",
    "components": [
@@ -655,7 +673,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: erta + vilne. Coined for the 2100 Dreams draft translation (0 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_ertayumlimiru_2657",
+   "id": "lx_ertayumlimiru_2658",
    "root": "ertayumlimiru",
    "type": "Compound",
    "components": [
@@ -673,7 +691,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: ertayumli + miru. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_fasbivelma_2658",
+   "id": "lx_fasbivelma_2659",
    "root": "fasbivelma",
    "type": "Compound",
    "components": [
@@ -691,7 +709,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: fasbi + velma. Coined for the 2100 Dreams draft translation (9 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_favrodemro_2659",
+   "id": "lx_favrodemro_2660",
    "root": "favrodemro",
    "type": "Compound",
    "components": [
@@ -709,7 +727,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: favro + demro. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_favrodomlu_2660",
+   "id": "lx_favrodomlu_2661",
    "root": "favrodomlu",
    "type": "Compound",
    "components": [
@@ -724,10 +742,10 @@
    "english_synonyms": [
     "digital house"
    ],
-   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: favro + domlu. Coined for the 2100 Dreams draft translation (3 uses). Archetype: null. Tier 2 in the patch. Module core."
+   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: favro + domlu. Coined for the 2100 Dreams draft translation (4 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_favrofaru_2661",
+   "id": "lx_favrofaru_2662",
    "root": "favrofaru",
    "type": "Compound",
    "components": [
@@ -745,7 +763,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: favro + faru. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_favrokronobiti_2662",
+   "id": "lx_favrokronobiti_2663",
    "root": "favrokronobiti",
    "type": "Compound",
    "components": [
@@ -763,7 +781,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: favro + kronobiti. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_favrolumi_2663",
+   "id": "lx_favrolumi_2664",
    "root": "favrolumi",
    "type": "Compound",
    "components": [
@@ -781,7 +799,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: favro + lumi. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_favronela_2664",
+   "id": "lx_favronela_2665",
    "root": "favronela",
    "type": "Compound",
    "components": [
@@ -799,7 +817,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: favro + nela. Coined for the 2100 Dreams draft translation (4 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_favronimunole_2665",
+   "id": "lx_favronimunole_2666",
    "root": "favronimunole",
    "type": "Compound",
    "components": [
@@ -817,7 +835,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: favro + nimunole. Coined for the 2100 Dreams draft translation (2 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_favronoru_2666",
+   "id": "lx_favronoru_2667",
    "root": "favronoru",
    "type": "Compound",
    "components": [
@@ -835,7 +853,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: favro + noru. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_favrorivla_2667",
+   "id": "lx_favrorivla_2668",
    "root": "favrorivla",
    "type": "Compound",
    "components": [
@@ -851,10 +869,10 @@
     "stream",
     "live broadcast"
    ],
-   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: favro + rivla. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
+   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: favro + rivla. Coined for the 2100 Dreams draft translation (2 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_favrorivo_2668",
+   "id": "lx_favrorivo_2669",
    "root": "favrorivo",
    "type": "Compound",
    "components": [
@@ -872,7 +890,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: favro + rivo. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_favrovalla_2669",
+   "id": "lx_favrovalla_2670",
    "root": "favrovalla",
    "type": "Compound",
    "components": [
@@ -890,7 +908,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: favro + valla. Coined for the 2100 Dreams draft translation (2 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_favrovamri_2670",
+   "id": "lx_favrovamri_2671",
    "root": "favrovamri",
    "type": "Compound",
    "components": [
@@ -905,10 +923,10 @@
    "english_synonyms": [
     "digital space"
    ],
-   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: favro + vamri. Coined for the 2100 Dreams draft translation (11 uses). Archetype: null. Tier 2 in the patch. Module core."
+   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: favro + vamri. Coined for the 2100 Dreams draft translation (12 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_favrovaye_2671",
+   "id": "lx_favrovaye_2672",
    "root": "favrovaye",
    "type": "Compound",
    "components": [
@@ -926,7 +944,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: favro + vaye. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_favrozefro_2672",
+   "id": "lx_favrozefro_2673",
    "root": "favrozefro",
    "type": "Compound",
    "components": [
@@ -944,7 +962,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: favro + zefro. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_filsedomlu_2673",
+   "id": "lx_filsedomlu_2674",
    "root": "filsedomlu",
    "type": "Compound",
    "components": [
@@ -962,7 +980,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: filse + domlu. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_filsenulu_2674",
+   "id": "lx_filsenulu_2675",
    "root": "filsenulu",
    "type": "Compound",
    "components": [
@@ -980,7 +998,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: filse + nulu. Coined for the 2100 Dreams draft translation (2 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_fojonela_2675",
+   "id": "lx_fojonela_2676",
    "root": "fojonela",
    "type": "Compound",
    "components": [
@@ -998,7 +1016,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: fojo + nela. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_fojovemisovla_2676",
+   "id": "lx_fojovemisovla_2677",
    "root": "fojovemisovla",
    "type": "Compound",
    "components": [
@@ -1016,7 +1034,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: fojo + vemisovla. Coined for the 2100 Dreams draft translation (2 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_follutelne_2677",
+   "id": "lx_follutelne_2678",
    "root": "follutelne",
    "type": "Compound",
    "components": [
@@ -1034,7 +1052,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: follu + telne. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_folluzupa_2678",
+   "id": "lx_folluzupa_2679",
    "root": "folluzupa",
    "type": "Compound",
    "components": [
@@ -1052,7 +1070,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: follu + zupa. Coined for the 2100 Dreams draft translation (6 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_folnitibiyumli_2679",
+   "id": "lx_folnitibiyumli_2680",
    "root": "folnitibiyumli",
    "type": "Compound",
    "components": [
@@ -1070,7 +1088,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: folnitibi + yumli. Coined for the 2100 Dreams draft translation (2 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_gonbidamrukova_2680",
+   "id": "lx_gonbidamrukova_2681",
    "root": "gonbidamrukova",
    "type": "Compound",
    "components": [
@@ -1088,7 +1106,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: gonbi + damrukova. Coined for the 2100 Dreams draft translation (2 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_harlujomrulive_2681",
+   "id": "lx_harlujomrulive_2682",
    "root": "harlujomrulive",
    "type": "Compound",
    "components": [
@@ -1103,10 +1121,28 @@
    "english_synonyms": [
     "adventure guide"
    ],
-   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: harlujomru + live. Coined for the 2100 Dreams draft translation (3 uses). Archetype: null. Tier 2 in the patch. Module core."
+   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: harlujomru + live. Coined for the 2100 Dreams draft translation (8 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_helnakadu_2682",
+   "id": "lx_harlulore_2683",
+   "root": "harlulore",
+   "type": "Compound",
+   "components": [
+    "harlu",
+    "lore"
+   ],
+   "glosses": {
+    "root": "reluctantly"
+   },
+   "register": "everyday",
+   "domain": "Body",
+   "english_synonyms": [
+    "reluctantly"
+   ],
+   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: harlu + lore. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_helnakadu_2684",
    "root": "helnakadu",
    "type": "Compound",
    "components": [
@@ -1124,7 +1160,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: helna + kadu. Coined for the 2100 Dreams draft translation (6 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_helnanela_2683",
+   "id": "lx_helnanela_2685",
    "root": "helnanela",
    "type": "Compound",
    "components": [
@@ -1139,10 +1175,10 @@
    "english_synonyms": [
     "patient (medical)"
    ],
-   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: helna + nela. Coined for the 2100 Dreams draft translation (10 uses). Archetype: null. Tier 2 in the patch. Module core."
+   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: helna + nela. Coined for the 2100 Dreams draft translation (9 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_helnapalvi_2684",
+   "id": "lx_helnapalvi_2686",
    "root": "helnapalvi",
    "type": "Compound",
    "components": [
@@ -1157,10 +1193,10 @@
    "english_synonyms": [
     "medicine station"
    ],
-   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: helna + palvi. Coined for the 2100 Dreams draft translation (2 uses). Archetype: null. Tier 2 in the patch. Module core."
+   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: helna + palvi. Coined for the 2100 Dreams draft translation (3 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_helnapidihata_2685",
+   "id": "lx_helnapidihata_2687",
    "root": "helnapidihata",
    "type": "Compound",
    "components": [
@@ -1175,10 +1211,10 @@
    "english_synonyms": [
     "the shot (injection)"
    ],
-   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: helna + pidihata. Coined for the 2100 Dreams draft translation (11 uses). Archetype: null. Tier 2 in the patch. Module core."
+   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: helna + pidihata. Coined for the 2100 Dreams draft translation (10 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_juseseno_2686",
+   "id": "lx_juseseno_2688",
    "root": "juseseno",
    "type": "Compound",
    "components": [
@@ -1193,10 +1229,10 @@
    "english_synonyms": [
     "review"
    ],
-   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: juse + seno. Coined for the 2100 Dreams draft translation (0 uses). Archetype: null. Tier 2 in the patch. Module core."
+   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: juse + seno. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_karkodivmaseno_2687",
+   "id": "lx_karkodivmaseno_2689",
    "root": "karkodivmaseno",
    "type": "Compound",
    "components": [
@@ -1214,7 +1250,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: karko + divmaseno. Coined for the 2100 Dreams draft translation (2 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_karkokemye_2688",
+   "id": "lx_karkokemye_2690",
    "root": "karkokemye",
    "type": "Compound",
    "components": [
@@ -1229,10 +1265,10 @@
    "english_synonyms": [
     "kill switch"
    ],
-   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: karko + kemye. Coined for the 2100 Dreams draft translation (31 uses). Archetype: null. Tier 2 in the patch. Module core."
+   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: karko + kemye. Coined for the 2100 Dreams draft translation (30 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_kazepusa_2689",
+   "id": "lx_kazepusa_2691",
    "root": "kazepusa",
    "type": "Compound",
    "components": [
@@ -1250,7 +1286,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: kaze + pusa. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_kendejomrupelicono_2690",
+   "id": "lx_kendejomrupelicono_2692",
    "root": "kendejomrupelicono",
    "type": "Compound",
    "components": [
@@ -1265,10 +1301,10 @@
    "english_synonyms": [
     "quest token"
    ],
-   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: kendejomru + pelicono. Coined for the 2100 Dreams draft translation (7 uses). Archetype: null. Tier 2 in the patch. Module core."
+   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: kendejomru + pelicono. Coined for the 2100 Dreams draft translation (13 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_kezusamnilisi_2691",
+   "id": "lx_kezusamnilisi_2693",
    "root": "kezusamnilisi",
    "type": "Compound",
    "components": [
@@ -1286,7 +1322,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: kezusamni + lisi. Coined for the 2100 Dreams draft translation (2 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_kiboyano_2692",
+   "id": "lx_kiboyano_2694",
    "root": "kiboyano",
    "type": "Compound",
    "components": [
@@ -1301,10 +1337,10 @@
    "english_synonyms": [
     "drone swarm"
    ],
-   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: kibo + yano. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
+   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: kibo + yano. Coined for the 2100 Dreams draft translation (3 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_kronokadu_2693",
+   "id": "lx_kronokadu_2695",
    "root": "kronokadu",
    "type": "Compound",
    "components": [
@@ -1322,7 +1358,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: krono + kadu. Coined for the 2100 Dreams draft translation (0 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_kronokova_2694",
+   "id": "lx_kronokova_2696",
    "root": "kronokova",
    "type": "Compound",
    "components": [
@@ -1340,7 +1376,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: krono + kova. Coined for the 2100 Dreams draft translation (3 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_kronolelde_2695",
+   "id": "lx_kronolelde_2697",
    "root": "kronolelde",
    "type": "Compound",
    "components": [
@@ -1358,7 +1394,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: krono + lelde. Coined for the 2100 Dreams draft translation (5 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_kronopilo_2696",
+   "id": "lx_kronopilo_2698",
    "root": "kronopilo",
    "type": "Compound",
    "components": [
@@ -1373,10 +1409,10 @@
    "english_synonyms": [
     "grandfather"
    ],
-   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: krono + pilo. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
+   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: krono + pilo. Coined for the 2100 Dreams draft translation (3 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_kronorinbanulu_2697",
+   "id": "lx_kronorinbanulu_2699",
    "root": "kronorinbanulu",
    "type": "Compound",
    "components": [
@@ -1391,10 +1427,10 @@
    "english_synonyms": [
     "time loop"
    ],
-   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: krono + rinbanulu. Coined for the 2100 Dreams draft translation (3 uses). Archetype: null. Tier 2 in the patch. Module core."
+   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: krono + rinbanulu. Coined for the 2100 Dreams draft translation (2 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_lamsapavmahavli_2698",
+   "id": "lx_lamsapavmahavli_2700",
    "root": "lamsapavmahavli",
    "type": "Compound",
    "components": [
@@ -1412,7 +1448,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: lamsapavma + havli. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_lamsapavmavelma_2699",
+   "id": "lx_lamsapavmavelma_2701",
    "root": "lamsapavmavelma",
    "type": "Compound",
    "components": [
@@ -1430,7 +1466,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: lamsapavma + velma. Coined for the 2100 Dreams draft translation (2 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_lardakibo_2700",
+   "id": "lx_lardakibo_2702",
    "root": "lardakibo",
    "type": "Compound",
    "components": [
@@ -1448,7 +1484,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: larda + kibo. Coined for the 2100 Dreams draft translation (2 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_lardapatu_2701",
+   "id": "lx_lardapatu_2703",
    "root": "lardapatu",
    "type": "Compound",
    "components": [
@@ -1463,10 +1499,10 @@
    "english_synonyms": [
     "art piece"
    ],
-   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: larda + patu. Coined for the 2100 Dreams draft translation (10 uses). Archetype: null. Tier 2 in the patch. Module core."
+   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: larda + patu. Coined for the 2100 Dreams draft translation (12 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_lasokibo_2702",
+   "id": "lx_lasokibo_2704",
    "root": "lasokibo",
    "type": "Compound",
    "components": [
@@ -1484,7 +1520,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: laso + kibo. Coined for the 2100 Dreams draft translation (0 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_lavbularda_2703",
+   "id": "lx_lavbularda_2705",
    "root": "lavbularda",
    "type": "Compound",
    "components": [
@@ -1502,7 +1538,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: lavbu + larda. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_lavidesi_2704",
+   "id": "lx_lavidesi_2706",
    "root": "lavidesi",
    "type": "Compound",
    "components": [
@@ -1520,7 +1556,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: lavi + desi. Coined for the 2100 Dreams draft translation (0 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_lektamambihelvikaldo_2705",
+   "id": "lx_lektamambihelvikaldo_2707",
    "root": "lektamambihelvikaldo",
    "type": "Compound",
    "components": [
@@ -1538,7 +1574,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: lektamambi + helvikaldo. Coined for the 2100 Dreams draft translation (2 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_lektatali_2706",
+   "id": "lx_lektatali_2708",
    "root": "lektatali",
    "type": "Compound",
    "components": [
@@ -1556,7 +1592,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: lekta + tali. Coined for the 2100 Dreams draft translation (6 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_lemucono_2707",
+   "id": "lx_lemucono_2709",
    "root": "lemucono",
    "type": "Compound",
    "components": [
@@ -1574,7 +1610,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: lemu + cono. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_lesmahalra_2708",
+   "id": "lx_lesmahalra_2710",
    "root": "lesmahalra",
    "type": "Compound",
    "components": [
@@ -1592,7 +1628,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: lesma + halra. Coined for the 2100 Dreams draft translation (0 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_lesmavila_2709",
+   "id": "lx_lesmavila_2711",
    "root": "lesmavila",
    "type": "Compound",
    "components": [
@@ -1610,7 +1646,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: lesma + vila. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_linlekibo_2710",
+   "id": "lx_linlekibo_2712",
    "root": "linlekibo",
    "type": "Compound",
    "components": [
@@ -1625,10 +1661,10 @@
    "english_synonyms": [
     "cleaner drone"
    ],
-   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: linle + kibo. Coined for the 2100 Dreams draft translation (3 uses). Archetype: null. Tier 2 in the patch. Module core."
+   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: linle + kibo. Coined for the 2100 Dreams draft translation (4 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_linlemiru_2711",
+   "id": "lx_linlemiru_2713",
    "root": "linlemiru",
    "type": "Compound",
    "components": [
@@ -1643,10 +1679,10 @@
    "english_synonyms": [
     "cleaning chemical"
    ],
-   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: linle + miru. Coined for the 2100 Dreams draft translation (4 uses). Archetype: null. Tier 2 in the patch. Module core."
+   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: linle + miru. Coined for the 2100 Dreams draft translation (5 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_linusasva_2712",
+   "id": "lx_linusasva_2714",
    "root": "linusasva",
    "type": "Compound",
    "components": [
@@ -1664,7 +1700,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: linu + sasva. Coined for the 2100 Dreams draft translation (3 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_linuvani_2713",
+   "id": "lx_linuvani_2715",
    "root": "linuvani",
    "type": "Compound",
    "components": [
@@ -1682,7 +1718,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: linu + vani. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_loresilro_2714",
+   "id": "lx_loresilro_2716",
    "root": "loresilro",
    "type": "Compound",
    "components": [
@@ -1697,10 +1733,10 @@
    "english_synonyms": [
     "intimacy"
    ],
-   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: lore + silro. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
+   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: lore + silro. Coined for the 2100 Dreams draft translation (4 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_lorevasko_2715",
+   "id": "lx_lorevasko_2717",
    "root": "lorevasko",
    "type": "Compound",
    "components": [
@@ -1718,7 +1754,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: lore + vasko. Coined for the 2100 Dreams draft translation (4 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_lorevemi_2716",
+   "id": "lx_lorevemi_2718",
    "root": "lorevemi",
    "type": "Compound",
    "components": [
@@ -1733,10 +1769,10 @@
    "english_synonyms": [
     "inner world"
    ],
-   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: lore + vemi. Coined for the 2100 Dreams draft translation (4 uses). Archetype: null. Tier 2 in the patch. Module core."
+   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: lore + vemi. Coined for the 2100 Dreams draft translation (5 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_lornubiti_2717",
+   "id": "lx_lornubiti_2719",
    "root": "lornubiti",
    "type": "Compound",
    "components": [
@@ -1754,7 +1790,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: lornu + biti. Coined for the 2100 Dreams draft translation (3 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_loteroseno_2718",
+   "id": "lx_loteroseno_2720",
    "root": "loteroseno",
    "type": "Compound",
    "components": [
@@ -1769,10 +1805,10 @@
    "english_synonyms": [
     "sarcasm"
    ],
-   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: lotero + seno. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
+   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: lotero + seno. Coined for the 2100 Dreams draft translation (2 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_lulfaganre_2719",
+   "id": "lx_lulfaganre_2721",
    "root": "lulfaganre",
    "type": "Compound",
    "components": [
@@ -1790,7 +1826,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: lulfa + ganre. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_lumipusa_2720",
+   "id": "lx_lumipusa_2722",
    "root": "lumipusa",
    "type": "Compound",
    "components": [
@@ -1805,10 +1841,10 @@
    "english_synonyms": [
     "materialized"
    ],
-   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: lumi + pusa. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
+   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: lumi + pusa. Coined for the 2100 Dreams draft translation (2 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_lumisovlabiti_2721",
+   "id": "lx_lumisovlabiti_2723",
    "root": "lumisovlabiti",
    "type": "Compound",
    "components": [
@@ -1826,7 +1862,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: lumisovla + biti. Coined for the 2100 Dreams draft translation (2 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_lumisovlakibo_2722",
+   "id": "lx_lumisovlakibo_2724",
    "root": "lumisovlakibo",
    "type": "Compound",
    "components": [
@@ -1844,7 +1880,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: lumisovla + kibo. Coined for the 2100 Dreams draft translation (0 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_lumisovlavimofavro_2723",
+   "id": "lx_lumisovlavimofavro_2725",
    "root": "lumisovlavimofavro",
    "type": "Compound",
    "components": [
@@ -1859,10 +1895,10 @@
    "english_synonyms": [
     "hologram television"
    ],
-   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: lumisovla + vimofavro. Coined for the 2100 Dreams draft translation (3 uses). Archetype: null. Tier 2 in the patch. Module core."
+   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: lumisovla + vimofavro. Coined for the 2100 Dreams draft translation (4 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_lumivilne_2724",
+   "id": "lx_lumivilne_2726",
    "root": "lumivilne",
    "type": "Compound",
    "components": [
@@ -1880,7 +1916,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: lumi + vilne. Coined for the 2100 Dreams draft translation (0 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_lumizefrofaru_2725",
+   "id": "lx_lumizefrofaru_2727",
    "root": "lumizefrofaru",
    "type": "Compound",
    "components": [
@@ -1899,7 +1935,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: lumizefro + faru. Coined for the 2100 Dreams draft translation (12 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_lunosolo_2726",
+   "id": "lx_lunosolo_2728",
    "root": "lunosolo",
    "type": "Compound",
    "components": [
@@ -1917,7 +1953,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: luno + solo. Coined for the 2100 Dreams draft translation (0 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_manliseno_2727",
+   "id": "lx_manliseno_2729",
    "root": "manliseno",
    "type": "Compound",
    "components": [
@@ -1932,10 +1968,10 @@
    "english_synonyms": [
     "interactive"
    ],
-   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: manli + seno. Coined for the 2100 Dreams draft translation (0 uses). Archetype: null. Tier 2 in the patch. Module core."
+   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: manli + seno. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_marecemnu_2728",
+   "id": "lx_marecemnu_2730",
    "root": "marecemnu",
    "type": "Compound",
    "components": [
@@ -1953,7 +1989,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: mare + cemnu. Coined for the 2100 Dreams draft translation (2 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_mavohelnapago_2729",
+   "id": "lx_mavohelnapago_2731",
    "root": "mavohelnapago",
    "type": "Compound",
    "components": [
@@ -1971,7 +2007,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: mavohelna + pago. Coined for the 2100 Dreams draft translation (8 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_mavojuba_2730",
+   "id": "lx_mavojuba_2732",
    "root": "mavojuba",
    "type": "Compound",
    "components": [
@@ -1986,10 +2022,10 @@
    "english_synonyms": [
     "abilities"
    ],
-   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: mavo + juba. Coined for the 2100 Dreams draft translation (2 uses). Archetype: null. Tier 2 in the patch. Module core."
+   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: mavo + juba. Coined for the 2100 Dreams draft translation (8 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_mavolotero_2731",
+   "id": "lx_mavolotero_2733",
    "root": "mavolotero",
    "type": "Compound",
    "components": [
@@ -2007,7 +2043,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: mavo + lotero. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_mavomudu_2732",
+   "id": "lx_mavomudu_2734",
    "root": "mavomudu",
    "type": "Compound",
    "components": [
@@ -2023,10 +2059,10 @@
     "mental illness",
     "mental illness / mental health exceptionality"
    ],
-   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: mavo + mudu. Coined for the 2100 Dreams draft translation (8 uses). Archetype: null. Tier 2 in the patch. Module core."
+   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: mavo + mudu. Coined for the 2100 Dreams draft translation (9 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_mavonavufaru_2733",
+   "id": "lx_mavonavufaru_2735",
    "root": "mavonavufaru",
    "type": "Compound",
    "components": [
@@ -2044,7 +2080,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: mavo + navufaru. Coined for the 2100 Dreams draft translation (0 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_mavopeli_2734",
+   "id": "lx_mavopeli_2736",
    "root": "mavopeli",
    "type": "Compound",
    "components": [
@@ -2059,10 +2095,10 @@
    "english_synonyms": [
     "mindgames"
    ],
-   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: mavo + peli. Coined for the 2100 Dreams draft translation (2 uses). Archetype: null. Tier 2 in the patch. Module core."
+   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: mavo + peli. Coined for the 2100 Dreams draft translation (3 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_mavoyugedivma_2735",
+   "id": "lx_mavoyugedivma_2737",
    "root": "mavoyugedivma",
    "type": "Compound",
    "components": [
@@ -2080,7 +2116,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: mavoyuge + divma. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_mavozayu_2736",
+   "id": "lx_mavozayu_2738",
    "root": "mavozayu",
    "type": "Compound",
    "components": [
@@ -2095,10 +2131,10 @@
    "english_synonyms": [
     "creativity"
    ],
-   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: mavo + zayu. Coined for the 2100 Dreams draft translation (6 uses). Archetype: null. Tier 2 in the patch. Module core."
+   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: mavo + zayu. Coined for the 2100 Dreams draft translation (7 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_mernolornu_2737",
+   "id": "lx_mernolornu_2739",
    "root": "mernolornu",
    "type": "Compound",
    "components": [
@@ -2113,10 +2149,10 @@
    "english_synonyms": [
     "morning hours"
    ],
-   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: merno + lornu. Coined for the 2100 Dreams draft translation (9 uses). Archetype: null. Tier 2 in the patch. Module core."
+   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: merno + lornu. Coined for the 2100 Dreams draft translation (10 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_mernovelma_2738",
+   "id": "lx_mernovelma_2740",
    "root": "mernovelma",
    "type": "Compound",
    "components": [
@@ -2134,7 +2170,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: merno + velma. Coined for the 2100 Dreams draft translation (2 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_migadivmaperemo_2739",
+   "id": "lx_migadivmaperemo_2741",
    "root": "migadivmaperemo",
    "type": "Compound",
    "components": [
@@ -2152,7 +2188,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: migadivma + peremo. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_minvatarnu_2740",
+   "id": "lx_minvatarnu_2742",
    "root": "minvatarnu",
    "type": "Compound",
    "components": [
@@ -2167,10 +2203,10 @@
    "english_synonyms": [
     "gender"
    ],
-   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: minva + tarnu. Coined for the 2100 Dreams draft translation (3 uses). Archetype: null. Tier 2 in the patch. Module core."
+   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: minva + tarnu. Coined for the 2100 Dreams draft translation (4 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_mirufuro_2741",
+   "id": "lx_mirufuro_2743",
    "root": "mirufuro",
    "type": "Compound",
    "components": [
@@ -2188,7 +2224,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: miru + furo. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_molupavmabumbo_2742",
+   "id": "lx_molupavmabumbo_2744",
    "root": "molupavmabumbo",
    "type": "Compound",
    "components": [
@@ -2206,7 +2242,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: molupavma + bumbo. Coined for the 2100 Dreams draft translation (6 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_mubofolluhelna_2743",
+   "id": "lx_mubofolluhelna_2745",
    "root": "mubofolluhelna",
    "type": "Compound",
    "components": [
@@ -2221,10 +2257,10 @@
    "english_synonyms": [
     "anxiety medicine"
    ],
-   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: mubofollu + helna. Coined for the 2100 Dreams draft translation (4 uses). Archetype: null. Tier 2 in the patch. Module core."
+   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: mubofollu + helna. Coined for the 2100 Dreams draft translation (3 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_namidonukibo_2744",
+   "id": "lx_namidonukibo_2746",
    "root": "namidonukibo",
    "type": "Compound",
    "components": [
@@ -2242,7 +2278,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: namidonu + kibo. Coined for the 2100 Dreams draft translation (6 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_navufarulumra_2745",
+   "id": "lx_navufarulumra_2747",
    "root": "navufarulumra",
    "type": "Compound",
    "components": [
@@ -2260,7 +2296,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: navufaru + lumra. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_navufaruzayu_2746",
+   "id": "lx_navufaruzayu_2748",
    "root": "navufaruzayu",
    "type": "Compound",
    "components": [
@@ -2278,7 +2314,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: navufaru + zayu. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_navukadutali_2747",
+   "id": "lx_navukadutali_2749",
    "root": "navukadutali",
    "type": "Compound",
    "components": [
@@ -2296,7 +2332,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: navukadu + tali. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_navuzupa_2748",
+   "id": "lx_navuzupa_2750",
    "root": "navuzupa",
    "type": "Compound",
    "components": [
@@ -2314,7 +2350,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: navu + zupa. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_nelalore_2749",
+   "id": "lx_nelalore_2751",
    "root": "nelalore",
    "type": "Compound",
    "components": [
@@ -2332,7 +2368,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: nela + lore. Coined for the 2100 Dreams draft translation (0 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_nemehelna_2750",
+   "id": "lx_nemehelna_2752",
    "root": "nemehelna",
    "type": "Compound",
    "components": [
@@ -2350,7 +2386,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: neme + helna. Coined for the 2100 Dreams draft translation (2 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_ojofaru_2751",
+   "id": "lx_ojofaru_2753",
    "root": "ojofaru",
    "type": "Compound",
    "components": [
@@ -2368,7 +2404,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: ojo + faru. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_ojokronolazu_2752",
+   "id": "lx_ojokronolazu_2754",
    "root": "ojokronolazu",
    "type": "Compound",
    "components": [
@@ -2386,7 +2422,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: ojo + kronolazu. Coined for the 2100 Dreams draft translation (9 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_ojosolo_2753",
+   "id": "lx_ojosolo_2755",
    "root": "ojosolo",
    "type": "Compound",
    "components": [
@@ -2404,7 +2440,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: ojo + solo. Coined for the 2100 Dreams draft translation (2 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_ojovelma_2754",
+   "id": "lx_ojovelma_2756",
    "root": "ojovelma",
    "type": "Compound",
    "components": [
@@ -2422,7 +2458,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: ojo + velma. Coined for the 2100 Dreams draft translation (4 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_ojovilne_2755",
+   "id": "lx_ojovilne_2757",
    "root": "ojovilne",
    "type": "Compound",
    "components": [
@@ -2440,7 +2476,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: ojo + vilne. Coined for the 2100 Dreams draft translation (4 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_opiganre_2756",
+   "id": "lx_opiganre_2758",
    "root": "opiganre",
    "type": "Compound",
    "components": [
@@ -2458,7 +2494,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: opi + ganre. Coined for the 2100 Dreams draft translation (3 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_pagomodo_2757",
+   "id": "lx_pagomodo_2759",
    "root": "pagomodo",
    "type": "Compound",
    "components": [
@@ -2474,10 +2510,10 @@
     "reality",
     "irl"
    ],
-   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: pago + modo. Coined for the 2100 Dreams draft translation (12 uses). Archetype: null. Tier 2 in the patch. Module core."
+   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: pago + modo. Coined for the 2100 Dreams draft translation (18 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_pagotranasonbu_2758",
+   "id": "lx_pagotranasonbu_2760",
    "root": "pagotranasonbu",
    "type": "Compound",
    "components": [
@@ -2495,7 +2531,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: pagotrana + sonbu. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_pelibiti_2759",
+   "id": "lx_pelibiti_2761",
    "root": "pelibiti",
    "type": "Compound",
    "components": [
@@ -2513,7 +2549,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: peli + biti. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_pelivelma_2760",
+   "id": "lx_pelivelma_2762",
    "root": "pelivelma",
    "type": "Compound",
    "components": [
@@ -2531,7 +2567,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: peli + velma. Coined for the 2100 Dreams draft translation (4 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_pensanulu_2761",
+   "id": "lx_pensanulu_2763",
    "root": "pensanulu",
    "type": "Compound",
    "components": [
@@ -2549,7 +2585,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: pensa + nulu. Coined for the 2100 Dreams draft translation (0 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_pensapolva_2762",
+   "id": "lx_pensapolva_2764",
    "root": "pensapolva",
    "type": "Compound",
    "components": [
@@ -2567,7 +2603,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: pensa + polva. Coined for the 2100 Dreams draft translation (4 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_ramulanve_2763",
+   "id": "lx_ramulanve_2765",
    "root": "ramulanve",
    "type": "Compound",
    "components": [
@@ -2582,10 +2618,10 @@
    "english_synonyms": [
     "precedent"
    ],
-   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: ramu + lanve. Coined for the 2100 Dreams draft translation (2 uses). Archetype: null. Tier 2 in the patch. Module core."
+   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: ramu + lanve. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_regnadomlu_2764",
+   "id": "lx_regnadomlu_2766",
    "root": "regnadomlu",
    "type": "Compound",
    "components": [
@@ -2603,7 +2639,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: regna + domlu. Coined for the 2100 Dreams draft translation (8 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_regnazupa_2765",
+   "id": "lx_regnazupa_2767",
    "root": "regnazupa",
    "type": "Compound",
    "components": [
@@ -2621,7 +2657,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: regna + zupa. Coined for the 2100 Dreams draft translation (6 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_renliherbanumo_2766",
+   "id": "lx_renliherbanumo_2768",
    "root": "renliherbanumo",
    "type": "Compound",
    "components": [
@@ -2639,7 +2675,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: renliherba + numo. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_renlipatu_2767",
+   "id": "lx_renlipatu_2769",
    "root": "renlipatu",
    "type": "Compound",
    "components": [
@@ -2657,7 +2693,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: renli + patu. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_rinbasovla_2768",
+   "id": "lx_rinbasovla_2770",
    "root": "rinbasovla",
    "type": "Compound",
    "components": [
@@ -2675,7 +2711,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: rinba + sovla. Coined for the 2100 Dreams draft translation (3 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_rubidamrukova_2769",
+   "id": "lx_rubidamrukova_2771",
    "root": "rubidamrukova",
    "type": "Compound",
    "components": [
@@ -2693,7 +2729,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: rubi + damrukova. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_rubilumipatu_2770",
+   "id": "lx_rubilumipatu_2772",
    "root": "rubilumipatu",
    "type": "Compound",
    "components": [
@@ -2711,7 +2747,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: rubi + lumipatu. Coined for the 2100 Dreams draft translation (0 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_rubivilne_2771",
+   "id": "lx_rubivilne_2773",
    "root": "rubivilne",
    "type": "Compound",
    "components": [
@@ -2729,7 +2765,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: rubi + vilne. Coined for the 2100 Dreams draft translation (2 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_rukodokra_2772",
+   "id": "lx_rukodokra_2774",
    "root": "rukodokra",
    "type": "Compound",
    "components": [
@@ -2744,10 +2780,10 @@
    "english_synonyms": [
     "violence"
    ],
-   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: ruko + dokra. Coined for the 2100 Dreams draft translation (15 uses). Archetype: null. Tier 2 in the patch. Module core."
+   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: ruko + dokra. Coined for the 2100 Dreams draft translation (17 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_rukodozadalu_2773",
+   "id": "lx_rukodozadalu_2775",
    "root": "rukodozadalu",
    "type": "Compound",
    "components": [
@@ -2765,7 +2801,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: ruko + dozadalu. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_sabayecolbi_2774",
+   "id": "lx_sabayecolbi_2776",
    "root": "sabayecolbi",
    "type": "Compound",
    "components": [
@@ -2783,7 +2819,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: sabaye + colbi. Coined for the 2100 Dreams draft translation (4 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_sabayepago_2775",
+   "id": "lx_sabayepago_2777",
    "root": "sabayepago",
    "type": "Compound",
    "components": [
@@ -2801,7 +2837,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: sabaye + pago. Coined for the 2100 Dreams draft translation (2 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_sabayepatu_2776",
+   "id": "lx_sabayepatu_2778",
    "root": "sabayepatu",
    "type": "Compound",
    "components": [
@@ -2819,7 +2855,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: sabaye + patu. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_sabayesafa_2777",
+   "id": "lx_sabayesafa_2779",
    "root": "sabayesafa",
    "type": "Compound",
    "components": [
@@ -2837,7 +2873,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: sabaye + safa. Coined for the 2100 Dreams draft translation (2 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_salrukadu_2778",
+   "id": "lx_salrukadu_2780",
    "root": "salrukadu",
    "type": "Compound",
    "components": [
@@ -2855,7 +2891,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: salru + kadu. Coined for the 2100 Dreams draft translation (7 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_sarbikibo_2779",
+   "id": "lx_sarbikibo_2781",
    "root": "sarbikibo",
    "type": "Compound",
    "components": [
@@ -2873,7 +2909,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: sarbi + kibo. Coined for the 2100 Dreams draft translation (0 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_sasvakibo_2780",
+   "id": "lx_sasvakibo_2782",
    "root": "sasvakibo",
    "type": "Compound",
    "components": [
@@ -2891,7 +2927,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: sasva + kibo. Coined for the 2100 Dreams draft translation (2 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_senohelna_2781",
+   "id": "lx_senohelna_2783",
    "root": "senohelna",
    "type": "Compound",
    "components": [
@@ -2906,10 +2942,10 @@
    "english_synonyms": [
     "therapy (talk-treatment)"
    ],
-   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: seno + helna. Coined for the 2100 Dreams draft translation (0 uses). Archetype: null. Tier 2 in the patch. Module core."
+   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: seno + helna. Coined for the 2100 Dreams draft translation (2 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_senrucolbi_2782",
+   "id": "lx_senrucolbi_2784",
    "root": "senrucolbi",
    "type": "Compound",
    "components": [
@@ -2927,7 +2963,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: senru + colbi. Coined for the 2100 Dreams draft translation (3 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_sernanulu_2783",
+   "id": "lx_sernanulu_2785",
    "root": "sernanulu",
    "type": "Compound",
    "components": [
@@ -2945,7 +2981,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: serna + nulu. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_sevunami_2784",
+   "id": "lx_sevunami_2786",
    "root": "sevunami",
    "type": "Compound",
    "components": [
@@ -2963,7 +2999,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: sevu + nami. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_shadasabaye_2785",
+   "id": "lx_shadasabaye_2787",
    "root": "shadasabaye",
    "type": "Compound",
    "components": [
@@ -2981,7 +3017,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: shada + sabaye. Coined for the 2100 Dreams draft translation (10 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_shadavelma_2786",
+   "id": "lx_shadavelma_2788",
    "root": "shadavelma",
    "type": "Compound",
    "components": [
@@ -3000,7 +3036,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: shada + velma. Coined for the 2100 Dreams draft translation (2 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_shadavilne_2787",
+   "id": "lx_shadavilne_2789",
    "root": "shadavilne",
    "type": "Compound",
    "components": [
@@ -3018,7 +3054,25 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: shada + vilne. Coined for the 2100 Dreams draft translation (2 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_solavelma_2788",
+   "id": "lx_silroyano_2790",
+   "root": "silroyano",
+   "type": "Compound",
+   "components": [
+    "silro",
+    "yano"
+   ],
+   "glosses": {
+    "root": "cryptoguild"
+   },
+   "register": "everyday",
+   "domain": "People",
+   "english_synonyms": [
+    "cryptoguild"
+   ],
+   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: silro + yano. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_solavelma_2791",
    "root": "solavelma",
    "type": "Compound",
    "components": [
@@ -3036,7 +3090,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: sola + velma. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_solayalmu_2789",
+   "id": "lx_solayalmu_2792",
    "root": "solayalmu",
    "type": "Compound",
    "components": [
@@ -3054,7 +3108,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: sola + yalmu. Coined for the 2100 Dreams draft translation (2 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_solliseno_2790",
+   "id": "lx_solliseno_2793",
    "root": "solliseno",
    "type": "Compound",
    "components": [
@@ -3072,7 +3126,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: solli + seno. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_sololore_2791",
+   "id": "lx_sololore_2794",
    "root": "sololore",
    "type": "Compound",
    "components": [
@@ -3090,7 +3144,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: solo + lore. Coined for the 2100 Dreams draft translation (2 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_solomelo_2792",
+   "id": "lx_solomelo_2795",
    "root": "solomelo",
    "type": "Compound",
    "components": [
@@ -3108,7 +3162,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: solo + melo. Coined for the 2100 Dreams draft translation (0 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_somufelra_2793",
+   "id": "lx_somufelra_2796",
    "root": "somufelra",
    "type": "Compound",
    "components": [
@@ -3123,10 +3177,10 @@
    "english_synonyms": [
     "slumber party"
    ],
-   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: somu + felra. Coined for the 2100 Dreams draft translation (2 uses). Archetype: null. Tier 2 in the patch. Module core."
+   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: somu + felra. Coined for the 2100 Dreams draft translation (4 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_soralekta_2794",
+   "id": "lx_soralekta_2797",
    "root": "soralekta",
    "type": "Compound",
    "components": [
@@ -3144,7 +3198,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: sora + lekta. Coined for the 2100 Dreams draft translation (6 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_sovezupa_2795",
+   "id": "lx_sovezupa_2798",
    "root": "sovezupa",
    "type": "Compound",
    "components": [
@@ -3159,10 +3213,10 @@
    "english_synonyms": [
     "lounge"
    ],
-   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: sove + zupa. Coined for the 2100 Dreams draft translation (4 uses). Archetype: null. Tier 2 in the patch. Module core."
+   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: sove + zupa. Coined for the 2100 Dreams draft translation (3 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_sovlafarlabitizupa_2796",
+   "id": "lx_sovlafarlabitizupa_2799",
    "root": "sovlafarlabitizupa",
    "type": "Compound",
    "components": [
@@ -3180,7 +3234,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: sovlafarlabiti + zupa. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_sulmepavmaminvaregna_2797",
+   "id": "lx_sulmepavmaminvaregna_2800",
    "root": "sulmepavmaminvaregna",
    "type": "Compound",
    "components": [
@@ -3198,7 +3252,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: sulmepavma + minvaregna. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_sulmepavmavelma_2798",
+   "id": "lx_sulmepavmavelma_2801",
    "root": "sulmepavmavelma",
    "type": "Compound",
    "components": [
@@ -3216,7 +3270,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: sulmepavma + velma. Coined for the 2100 Dreams draft translation (14 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_sumazefrokova_2799",
+   "id": "lx_sumazefrokova_2802",
    "root": "sumazefrokova",
    "type": "Compound",
    "components": [
@@ -3234,7 +3288,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: suma + zefrokova. Coined for the 2100 Dreams draft translation (3 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_telnekezulalle_2800",
+   "id": "lx_telnekezulalle_2803",
    "root": "telnekezulalle",
    "type": "Compound",
    "components": [
@@ -3252,7 +3306,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: telne + kezulalle. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_telnepeli_2801",
+   "id": "lx_telnepeli_2804",
    "root": "telnepeli",
    "type": "Compound",
    "components": [
@@ -3270,7 +3324,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: telne + peli. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_terurenliherba_2802",
+   "id": "lx_terurenliherba_2805",
    "root": "terurenliherba",
    "type": "Compound",
    "components": [
@@ -3288,7 +3342,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: teru + renliherba. Coined for the 2100 Dreams draft translation (2 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_tozelazu_2803",
+   "id": "lx_tozelazu_2806",
    "root": "tozelazu",
    "type": "Compound",
    "components": [
@@ -3306,7 +3360,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: toze + lazu. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_turnazupa_2804",
+   "id": "lx_turnazupa_2807",
    "root": "turnazupa",
    "type": "Compound",
    "components": [
@@ -3324,7 +3378,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: turna + zupa. Coined for the 2100 Dreams draft translation (15 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_vanabumbo_2805",
+   "id": "lx_vanabumbo_2808",
    "root": "vanabumbo",
    "type": "Compound",
    "components": [
@@ -3342,7 +3396,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: vana + bumbo. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_vanacirsi_2806",
+   "id": "lx_vanacirsi_2809",
    "root": "vanacirsi",
    "type": "Compound",
    "components": [
@@ -3360,7 +3414,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: vana + cirsi. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_vanajubagerma_2807",
+   "id": "lx_vanajubagerma_2810",
    "root": "vanajubagerma",
    "type": "Compound",
    "components": [
@@ -3378,7 +3432,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: vanajuba + germa. Coined for the 2100 Dreams draft translation (2 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_vanajubalelde_2808",
+   "id": "lx_vanajubalelde_2811",
    "root": "vanajubalelde",
    "type": "Compound",
    "components": [
@@ -3396,7 +3450,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: vanajuba + lelde. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_vanajubasabaye_2809",
+   "id": "lx_vanajubasabaye_2812",
    "root": "vanajubasabaye",
    "type": "Compound",
    "components": [
@@ -3411,10 +3465,10 @@
    "english_synonyms": [
     "silver hair"
    ],
-   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: vanajuba + sabaye. Coined for the 2100 Dreams draft translation (33 uses). Archetype: null. Tier 2 in the patch. Module core."
+   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: vanajuba + sabaye. Coined for the 2100 Dreams draft translation (32 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_vanakibo_2810",
+   "id": "lx_vanakibo_2813",
    "root": "vanakibo",
    "type": "Compound",
    "components": [
@@ -3432,7 +3486,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: vana + kibo. Coined for the 2100 Dreams draft translation (2 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_vananullovelma_2811",
+   "id": "lx_vananullovelma_2814",
    "root": "vananullovelma",
    "type": "Compound",
    "components": [
@@ -3450,7 +3504,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: vana + nullovelma. Coined for the 2100 Dreams draft translation (3 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_vanarezasabaye_2812",
+   "id": "lx_vanarezasabaye_2815",
    "root": "vanarezasabaye",
    "type": "Compound",
    "components": [
@@ -3468,7 +3522,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: vana + rezasabaye. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_vanasenru_2813",
+   "id": "lx_vanasenru_2816",
    "root": "vanasenru",
    "type": "Compound",
    "components": [
@@ -3486,25 +3540,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: vana + senru. Coined for the 2100 Dreams draft translation (2 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_vanatobra_2814",
-   "root": "vanatobra",
-   "type": "Compound",
-   "components": [
-    "vana",
-    "tobra"
-   ],
-   "glosses": {
-    "root": "white walls"
-   },
-   "register": "everyday",
-   "domain": "Home & objects",
-   "english_synonyms": [
-    "white walls"
-   ],
-   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: vana + tobra. Coined for the 2100 Dreams draft translation (0 uses). Archetype: null. Tier 2 in the patch. Module core."
-  },
-  {
-   "id": "lx_vanavelma_2815",
+   "id": "lx_vanavelma_2817",
    "root": "vanavelma",
    "type": "Compound",
    "components": [
@@ -3523,7 +3559,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: vana + velma. Coined for the 2100 Dreams draft translation (4 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_vazranulupatu_2816",
+   "id": "lx_vazranulupatu_2818",
    "root": "vazranulupatu",
    "type": "Compound",
    "components": [
@@ -3541,7 +3577,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: vazranulu + patu. Coined for the 2100 Dreams draft translation (6 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_velmakovapago_2817",
+   "id": "lx_velmakovapago_2819",
    "root": "velmakovapago",
    "type": "Compound",
    "components": [
@@ -3556,28 +3592,10 @@
    "english_synonyms": [
     "pocket universe"
    ],
-   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: velmakova + pago. Coined for the 2100 Dreams draft translation (6 uses). Archetype: null. Tier 2 in the patch. Module core."
+   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: velmakova + pago. Coined for the 2100 Dreams draft translation (7 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_velmasirmofarla_2818",
-   "root": "velmasirmofarla",
-   "type": "Compound",
-   "components": [
-    "velmasirmo",
-    "farla"
-   ],
-   "glosses": {
-    "root": "fashion designer"
-   },
-   "register": "everyday",
-   "domain": "Actions",
-   "english_synonyms": [
-    "fashion designer"
-   ],
-   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: velmasirmo + farla. Coined for the 2100 Dreams draft translation (0 uses). Archetype: null. Tier 2 in the patch. Module core."
-  },
-  {
-   "id": "lx_verdesabaye_2819",
+   "id": "lx_verdesabaye_2820",
    "root": "verdesabaye",
    "type": "Compound",
    "components": [
@@ -3595,7 +3613,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: verde + sabaye. Coined for the 2100 Dreams draft translation (3 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_verdevilne_2820",
+   "id": "lx_verdevilne_2821",
    "root": "verdevilne",
    "type": "Compound",
    "components": [
@@ -3614,7 +3632,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: verde + vilne. Coined for the 2100 Dreams draft translation (8 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_vilneceresolo_2821",
+   "id": "lx_vilneceresolo_2822",
    "root": "vilneceresolo",
    "type": "Compound",
    "components": [
@@ -3632,7 +3650,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: vilne + ceresolo. Coined for the 2100 Dreams draft translation (4 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_vilnecolbi_2822",
+   "id": "lx_vilnecolbi_2823",
    "root": "vilnecolbi",
    "type": "Compound",
    "components": [
@@ -3650,7 +3668,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: vilne + colbi. Coined for the 2100 Dreams draft translation (3 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_vilnesabaye_2823",
+   "id": "lx_vilnesabaye_2824",
    "root": "vilnesabaye",
    "type": "Compound",
    "components": [
@@ -3668,7 +3686,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: vilne + sabaye. Coined for the 2100 Dreams draft translation (2 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_vilnesasva_2824",
+   "id": "lx_vilnesasva_2825",
    "root": "vilnesasva",
    "type": "Compound",
    "components": [
@@ -3686,7 +3704,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: vilne + sasva. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_vilnetibi_2825",
+   "id": "lx_vilnetibi_2826",
    "root": "vilnetibi",
    "type": "Compound",
    "components": [
@@ -3704,7 +3722,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: vilne + tibi. Coined for the 2100 Dreams draft translation (4 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_vimopeli_2826",
+   "id": "lx_vimopeli_2827",
    "root": "vimopeli",
    "type": "Compound",
    "components": [
@@ -3719,10 +3737,10 @@
    "english_synonyms": [
     "video game"
    ],
-   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: vimo + peli. Coined for the 2100 Dreams draft translation (8 uses). Archetype: null. Tier 2 in the patch. Module core."
+   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: vimo + peli. Coined for the 2100 Dreams draft translation (9 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_vimotelne_2827",
+   "id": "lx_vimotelne_2828",
    "root": "vimotelne",
    "type": "Compound",
    "components": [
@@ -3740,7 +3758,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: vimo + telne. Coined for the 2100 Dreams draft translation (28 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_vinyelore_2828",
+   "id": "lx_vinyelore_2829",
    "root": "vinyelore",
    "type": "Compound",
    "components": [
@@ -3758,7 +3776,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: vinye + lore. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_vinyesonbu_2829",
+   "id": "lx_vinyesonbu_2830",
    "root": "vinyesonbu",
    "type": "Compound",
    "components": [
@@ -3776,7 +3794,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: vinye + sonbu. Coined for the 2100 Dreams draft translation (3 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_viodamrukova_2830",
+   "id": "lx_viodamrukova_2831",
    "root": "viodamrukova",
    "type": "Compound",
    "components": [
@@ -3794,7 +3812,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: vio + damrukova. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_viofarvibudi_2831",
+   "id": "lx_viofarvibudi_2832",
    "root": "viofarvibudi",
    "type": "Compound",
    "components": [
@@ -3812,7 +3830,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: vio + farvibudi. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_viofuro_2832",
+   "id": "lx_viofuro_2833",
    "root": "viofuro",
    "type": "Compound",
    "components": [
@@ -3830,7 +3848,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: vio + furo. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_violavi_2833",
+   "id": "lx_violavi_2834",
    "root": "violavi",
    "type": "Compound",
    "components": [
@@ -3848,7 +3866,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: vio + lavi. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_violavra_2834",
+   "id": "lx_violavra_2835",
    "root": "violavra",
    "type": "Compound",
    "components": [
@@ -3863,10 +3881,10 @@
    "english_synonyms": [
     "viofinch"
    ],
-   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: vio + lavra. Coined for the 2100 Dreams draft translation (7 uses). Archetype: null. Tier 2 in the patch. Module core."
+   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: vio + lavra. Coined for the 2100 Dreams draft translation (8 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_violore_2835",
+   "id": "lx_violore_2836",
    "root": "violore",
    "type": "Compound",
    "components": [
@@ -3884,7 +3902,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: vio + lore. Coined for the 2100 Dreams draft translation (3 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_vioruko_2836",
+   "id": "lx_vioruko_2837",
    "root": "vioruko",
    "type": "Compound",
    "components": [
@@ -3902,7 +3920,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: vio + ruko. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_viosemnebiti_2837",
+   "id": "lx_viosemnebiti_2838",
    "root": "viosemnebiti",
    "type": "Compound",
    "components": [
@@ -3920,7 +3938,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: vio + semnebiti. Coined for the 2100 Dreams draft translation (2 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_viosevureso_2838",
+   "id": "lx_viosevureso_2839",
    "root": "viosevureso",
    "type": "Compound",
    "components": [
@@ -3939,7 +3957,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: vio + sevureso. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_viovelma_2839",
+   "id": "lx_viovelma_2840",
    "root": "viovelma",
    "type": "Compound",
    "components": [
@@ -3957,7 +3975,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: vio + velma. Coined for the 2100 Dreams draft translation (3 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_viovilne_2840",
+   "id": "lx_viovilne_2841",
    "root": "viovilne",
    "type": "Compound",
    "components": [
@@ -3973,10 +3991,10 @@
     "purple eyes",
     "violet eyes"
    ],
-   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: vio + vilne. Coined for the 2100 Dreams draft translation (14 uses). Archetype: null. Tier 2 in the patch. Module core."
+   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: vio + vilne. Coined for the 2100 Dreams draft translation (16 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_vulradesi_2841",
+   "id": "lx_vulradesi_2842",
    "root": "vulradesi",
    "type": "Compound",
    "components": [
@@ -3994,7 +4012,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: vulra + desi. Coined for the 2100 Dreams draft translation (0 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_yugelermi_2842",
+   "id": "lx_yugelermi_2843",
    "root": "yugelermi",
    "type": "Compound",
    "components": [
@@ -4012,7 +4030,25 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: yuge + lermi. Coined for the 2100 Dreams draft translation (3 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_zavmepatu_2843",
+   "id": "lx_yumlinami_2844",
+   "root": "yumlinami",
+   "type": "Compound",
+   "components": [
+    "yumli",
+    "nami"
+   ],
+   "glosses": {
+    "root": "dessert (spelled 'desert' in the book)"
+   },
+   "register": "everyday",
+   "domain": "Daily life",
+   "english_synonyms": [
+    "dessert (spelled 'desert' in the book)"
+   ],
+   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: yumli + nami. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_zavmepatu_2845",
    "root": "zavmepatu",
    "type": "Compound",
    "components": [
@@ -4030,7 +4066,7 @@
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: zavme + patu. Coined for the 2100 Dreams draft translation (3 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_zayumodo_2844",
+   "id": "lx_zayumodo_2846",
    "root": "zayumodo",
    "type": "Compound",
    "components": [
@@ -4045,10 +4081,10 @@
    "english_synonyms": [
     "surreal"
    ],
-   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: zayu + modo. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
+   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: zayu + modo. Coined for the 2100 Dreams draft translation (2 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_zefrodapakadu_2845",
+   "id": "lx_zefrodapakadu_2847",
    "root": "zefrodapakadu",
    "type": "Compound",
    "components": [
@@ -4063,10 +4099,10 @@
    "english_synonyms": [
     "air taxi"
    ],
-   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: zefro + dapakadu. Coined for the 2100 Dreams draft translation (14 uses). Archetype: null. Tier 2 in the patch. Module core."
+   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: zefro + dapakadu. Coined for the 2100 Dreams draft translation (15 uses). Archetype: null. Tier 2 in the patch. Module core."
   },
   {
-   "id": "lx_zupamervi_2846",
+   "id": "lx_zupamervi_2848",
    "root": "zupamervi",
    "type": "Compound",
    "components": [
@@ -4082,6 +4118,80 @@
     "room service"
    ],
    "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: zupa + mervi. Coined for the 2100 Dreams draft translation (1 uses). Archetype: null. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_harlujomrupilo_2849",
+   "root": "harlujomrupilo",
+   "type": "Compound",
+   "components": [
+    "harlujomru",
+    "pilo"
+   ],
+   "glosses": {
+    "root": "adventure guide (adventure-father: the one who guides an adventure (pilopa = to guide)"
+   },
+   "register": "everyday",
+   "domain": "People",
+   "english_synonyms": [
+    "adventure guide (adventure-father: the one who guides an adventure (pilopa = to guide)"
+   ],
+   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: harlujomru + pilo. A vocabulary candidate from the 2100 Dreams draft, approved by the author (2026-10-27). Archetype: null. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_lulfavelma_2850",
+   "root": "lulfavelma",
+   "type": "Compound",
+   "components": [
+    "lulfa",
+    "velma"
+   ],
+   "glosses": {
+    "root": "shoulderhoods (butterfly-garment: a hood that folds over the shoulders like wings)"
+   },
+   "register": "everyday",
+   "domain": "Home & objects",
+   "english_synonyms": [
+    "shoulderhoods (butterfly-garment: a hood that folds over the shoulders like wings)"
+   ],
+   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: lulfa + velma. A vocabulary candidate from the 2100 Dreams draft, approved by the author (2026-10-27). Archetype: null. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_sernafavro_2851",
+   "root": "sernafavro",
+   "type": "Compound",
+   "components": [
+    "serna",
+    "favro"
+   ],
+   "glosses": {
+    "root": "tablet (data signal-device: a tablet computer (favro is an archetype head, 3.2:G142)"
+   },
+   "register": "everyday",
+   "domain": "Systems & relations",
+   "english_synonyms": [
+    "tablet (data signal-device: a tablet computer (favro is an archetype head",
+    "3.2:G142)"
+   ],
+   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: serna + favro. A vocabulary candidate from the 2100 Dreams draft, approved by the author (2026-10-27). Archetype: null. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_helvikova_2852",
+   "root": "helvikova",
+   "type": "Compound",
+   "components": [
+    "helvi",
+    "kova"
+   ],
+   "glosses": {
+    "root": "cubby (hiding-container: a small nook for keeping things (kova is an archetype head, 3.2:G146)"
+   },
+   "register": "everyday",
+   "domain": "Home, kitchen & labor",
+   "english_synonyms": [
+    "cubby (hiding-container: a small nook for keeping things (kova is an archetype head",
+    "3.2:G146)"
+   ],
+   "notes": "Added in 4.0 (changeset 2026-10-26-lexicon-4-0). Proposed in 4.0: awaiting the author's ratification. Components: helvi + kova. A vocabulary candidate from the 2100 Dreams draft, approved by the author (2026-10-27). Archetype: null. Tier 2 in the patch. Module core."
   }
  ],
  "function_words": [],
@@ -4275,7 +4385,18 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_buzaneme_2638",
+   "entry": "lx_bojinamimiru_2638",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "bojinamimiru",
+   "reason": "Liraasa 4.0 (what translating 2100 Dreams needed): milkshake: bojinami + miru (domain Nature).",
+   "addedIn": "4.0",
+   "at": "2026-10-26T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_buzaneme_2639",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -4286,7 +4407,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_ceresolotobra_2639",
+   "entry": "lx_ceresolotobra_2640",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -4297,7 +4418,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_cibuteru_2640",
+   "entry": "lx_cibuteru_2641",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -4308,7 +4429,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_cirsibumbo_2641",
+   "entry": "lx_cirsibumbo_2642",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -4319,7 +4440,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_cirsizefrokova_2642",
+   "entry": "lx_cirsizefrokova_2643",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -4330,7 +4451,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_colbiceresolo_2643",
+   "entry": "lx_colbiceresolo_2644",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -4341,7 +4462,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_colbitrana_2644",
+   "entry": "lx_colbitrana_2645",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -4352,7 +4473,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_colbivemibako_2645",
+   "entry": "lx_colbivemibako_2646",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -4363,7 +4484,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_conotovo_2646",
+   "entry": "lx_conotovo_2647",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -4374,7 +4495,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_daigodevi_2647",
+   "entry": "lx_daigodevi_2648",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -4385,7 +4506,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_daigofarusebi_2648",
+   "entry": "lx_daigofarusebi_2649",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -4396,7 +4517,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_dalutobra_2649",
+   "entry": "lx_dalutobra_2650",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -4407,7 +4528,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_dentohata_2650",
+   "entry": "lx_dentohata_2651",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -4418,7 +4539,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_dentosilbeseno_2651",
+   "entry": "lx_dentosilbeseno_2652",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -4429,7 +4550,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_divmasenotikutrana_2652",
+   "entry": "lx_divmasenotikutrana_2653",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -4440,7 +4561,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_duhasolo_2653",
+   "entry": "lx_duhasolo_2654",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -4451,7 +4572,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_ertarofe_2654",
+   "entry": "lx_ertarofe_2655",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -4462,7 +4583,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_ertasabaye_2655",
+   "entry": "lx_ertasabaye_2656",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -4473,7 +4594,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_ertavilne_2656",
+   "entry": "lx_ertavilne_2657",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -4484,7 +4605,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_ertayumlimiru_2657",
+   "entry": "lx_ertayumlimiru_2658",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -4495,7 +4616,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_fasbivelma_2658",
+   "entry": "lx_fasbivelma_2659",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -4506,7 +4627,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_favrodemro_2659",
+   "entry": "lx_favrodemro_2660",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -4517,7 +4638,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_favrodomlu_2660",
+   "entry": "lx_favrodomlu_2661",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -4528,7 +4649,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_favrofaru_2661",
+   "entry": "lx_favrofaru_2662",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -4539,7 +4660,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_favrokronobiti_2662",
+   "entry": "lx_favrokronobiti_2663",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -4550,7 +4671,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_favrolumi_2663",
+   "entry": "lx_favrolumi_2664",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -4561,7 +4682,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_favronela_2664",
+   "entry": "lx_favronela_2665",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -4572,7 +4693,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_favronimunole_2665",
+   "entry": "lx_favronimunole_2666",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -4583,7 +4704,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_favronoru_2666",
+   "entry": "lx_favronoru_2667",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -4594,7 +4715,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_favrorivla_2667",
+   "entry": "lx_favrorivla_2668",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -4605,7 +4726,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_favrorivo_2668",
+   "entry": "lx_favrorivo_2669",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -4616,7 +4737,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_favrovalla_2669",
+   "entry": "lx_favrovalla_2670",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -4627,7 +4748,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_favrovamri_2670",
+   "entry": "lx_favrovamri_2671",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -4638,7 +4759,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_favrovaye_2671",
+   "entry": "lx_favrovaye_2672",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -4649,7 +4770,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_favrozefro_2672",
+   "entry": "lx_favrozefro_2673",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -4660,7 +4781,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_filsedomlu_2673",
+   "entry": "lx_filsedomlu_2674",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -4671,7 +4792,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_filsenulu_2674",
+   "entry": "lx_filsenulu_2675",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -4682,7 +4803,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_fojonela_2675",
+   "entry": "lx_fojonela_2676",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -4693,7 +4814,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_fojovemisovla_2676",
+   "entry": "lx_fojovemisovla_2677",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -4704,7 +4825,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_follutelne_2677",
+   "entry": "lx_follutelne_2678",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -4715,7 +4836,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_folluzupa_2678",
+   "entry": "lx_folluzupa_2679",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -4726,7 +4847,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_folnitibiyumli_2679",
+   "entry": "lx_folnitibiyumli_2680",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -4737,7 +4858,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_gonbidamrukova_2680",
+   "entry": "lx_gonbidamrukova_2681",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -4748,7 +4869,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_harlujomrulive_2681",
+   "entry": "lx_harlujomrulive_2682",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -4759,7 +4880,18 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_helnakadu_2682",
+   "entry": "lx_harlulore_2683",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "harlulore",
+   "reason": "Liraasa 4.0 (what translating 2100 Dreams needed): reluctantly: harlu + lore (domain Body).",
+   "addedIn": "4.0",
+   "at": "2026-10-26T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_helnakadu_2684",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -4770,7 +4902,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_helnanela_2683",
+   "entry": "lx_helnanela_2685",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -4781,7 +4913,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_helnapalvi_2684",
+   "entry": "lx_helnapalvi_2686",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -4792,7 +4924,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_helnapidihata_2685",
+   "entry": "lx_helnapidihata_2687",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -4803,7 +4935,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_juseseno_2686",
+   "entry": "lx_juseseno_2688",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -4814,7 +4946,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_karkodivmaseno_2687",
+   "entry": "lx_karkodivmaseno_2689",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -4825,7 +4957,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_karkokemye_2688",
+   "entry": "lx_karkokemye_2690",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -4836,7 +4968,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_kazepusa_2689",
+   "entry": "lx_kazepusa_2691",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -4847,7 +4979,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_kendejomrupelicono_2690",
+   "entry": "lx_kendejomrupelicono_2692",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -4858,7 +4990,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_kezusamnilisi_2691",
+   "entry": "lx_kezusamnilisi_2693",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -4869,7 +5001,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_kiboyano_2692",
+   "entry": "lx_kiboyano_2694",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -4880,7 +5012,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_kronokadu_2693",
+   "entry": "lx_kronokadu_2695",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -4891,7 +5023,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_kronokova_2694",
+   "entry": "lx_kronokova_2696",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -4902,7 +5034,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_kronolelde_2695",
+   "entry": "lx_kronolelde_2697",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -4913,7 +5045,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_kronopilo_2696",
+   "entry": "lx_kronopilo_2698",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -4924,7 +5056,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_kronorinbanulu_2697",
+   "entry": "lx_kronorinbanulu_2699",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -4935,7 +5067,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_lamsapavmahavli_2698",
+   "entry": "lx_lamsapavmahavli_2700",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -4946,7 +5078,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_lamsapavmavelma_2699",
+   "entry": "lx_lamsapavmavelma_2701",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -4957,7 +5089,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_lardakibo_2700",
+   "entry": "lx_lardakibo_2702",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -4968,7 +5100,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_lardapatu_2701",
+   "entry": "lx_lardapatu_2703",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -4979,7 +5111,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_lasokibo_2702",
+   "entry": "lx_lasokibo_2704",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -4990,7 +5122,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_lavbularda_2703",
+   "entry": "lx_lavbularda_2705",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5001,7 +5133,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_lavidesi_2704",
+   "entry": "lx_lavidesi_2706",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5012,7 +5144,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_lektamambihelvikaldo_2705",
+   "entry": "lx_lektamambihelvikaldo_2707",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5023,7 +5155,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_lektatali_2706",
+   "entry": "lx_lektatali_2708",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5034,7 +5166,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_lemucono_2707",
+   "entry": "lx_lemucono_2709",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5045,7 +5177,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_lesmahalra_2708",
+   "entry": "lx_lesmahalra_2710",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5056,7 +5188,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_lesmavila_2709",
+   "entry": "lx_lesmavila_2711",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5067,7 +5199,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_linlekibo_2710",
+   "entry": "lx_linlekibo_2712",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5078,7 +5210,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_linlemiru_2711",
+   "entry": "lx_linlemiru_2713",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5089,7 +5221,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_linusasva_2712",
+   "entry": "lx_linusasva_2714",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5100,7 +5232,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_linuvani_2713",
+   "entry": "lx_linuvani_2715",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5111,7 +5243,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_loresilro_2714",
+   "entry": "lx_loresilro_2716",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5122,7 +5254,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_lorevasko_2715",
+   "entry": "lx_lorevasko_2717",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5133,7 +5265,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_lorevemi_2716",
+   "entry": "lx_lorevemi_2718",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5144,7 +5276,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_lornubiti_2717",
+   "entry": "lx_lornubiti_2719",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5155,7 +5287,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_loteroseno_2718",
+   "entry": "lx_loteroseno_2720",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5166,7 +5298,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_lulfaganre_2719",
+   "entry": "lx_lulfaganre_2721",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5177,7 +5309,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_lumipusa_2720",
+   "entry": "lx_lumipusa_2722",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5188,7 +5320,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_lumisovlabiti_2721",
+   "entry": "lx_lumisovlabiti_2723",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5199,7 +5331,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_lumisovlakibo_2722",
+   "entry": "lx_lumisovlakibo_2724",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5210,7 +5342,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_lumisovlavimofavro_2723",
+   "entry": "lx_lumisovlavimofavro_2725",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5221,7 +5353,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_lumivilne_2724",
+   "entry": "lx_lumivilne_2726",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5232,7 +5364,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_lumizefrofaru_2725",
+   "entry": "lx_lumizefrofaru_2727",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5243,7 +5375,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_lunosolo_2726",
+   "entry": "lx_lunosolo_2728",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5254,7 +5386,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_manliseno_2727",
+   "entry": "lx_manliseno_2729",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5265,7 +5397,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_marecemnu_2728",
+   "entry": "lx_marecemnu_2730",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5276,7 +5408,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_mavohelnapago_2729",
+   "entry": "lx_mavohelnapago_2731",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5287,7 +5419,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_mavojuba_2730",
+   "entry": "lx_mavojuba_2732",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5298,7 +5430,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_mavolotero_2731",
+   "entry": "lx_mavolotero_2733",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5309,7 +5441,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_mavomudu_2732",
+   "entry": "lx_mavomudu_2734",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5320,7 +5452,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_mavonavufaru_2733",
+   "entry": "lx_mavonavufaru_2735",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5331,7 +5463,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_mavopeli_2734",
+   "entry": "lx_mavopeli_2736",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5342,7 +5474,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_mavoyugedivma_2735",
+   "entry": "lx_mavoyugedivma_2737",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5353,7 +5485,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_mavozayu_2736",
+   "entry": "lx_mavozayu_2738",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5364,7 +5496,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_mernolornu_2737",
+   "entry": "lx_mernolornu_2739",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5375,7 +5507,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_mernovelma_2738",
+   "entry": "lx_mernovelma_2740",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5386,7 +5518,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_migadivmaperemo_2739",
+   "entry": "lx_migadivmaperemo_2741",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5397,7 +5529,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_minvatarnu_2740",
+   "entry": "lx_minvatarnu_2742",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5408,7 +5540,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_mirufuro_2741",
+   "entry": "lx_mirufuro_2743",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5419,7 +5551,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_molupavmabumbo_2742",
+   "entry": "lx_molupavmabumbo_2744",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5430,7 +5562,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_mubofolluhelna_2743",
+   "entry": "lx_mubofolluhelna_2745",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5441,7 +5573,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_namidonukibo_2744",
+   "entry": "lx_namidonukibo_2746",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5452,7 +5584,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_navufarulumra_2745",
+   "entry": "lx_navufarulumra_2747",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5463,7 +5595,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_navufaruzayu_2746",
+   "entry": "lx_navufaruzayu_2748",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5474,7 +5606,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_navukadutali_2747",
+   "entry": "lx_navukadutali_2749",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5485,7 +5617,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_navuzupa_2748",
+   "entry": "lx_navuzupa_2750",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5496,7 +5628,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_nelalore_2749",
+   "entry": "lx_nelalore_2751",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5507,7 +5639,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_nemehelna_2750",
+   "entry": "lx_nemehelna_2752",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5518,7 +5650,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_ojofaru_2751",
+   "entry": "lx_ojofaru_2753",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5529,7 +5661,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_ojokronolazu_2752",
+   "entry": "lx_ojokronolazu_2754",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5540,7 +5672,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_ojosolo_2753",
+   "entry": "lx_ojosolo_2755",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5551,7 +5683,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_ojovelma_2754",
+   "entry": "lx_ojovelma_2756",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5562,7 +5694,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_ojovilne_2755",
+   "entry": "lx_ojovilne_2757",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5573,7 +5705,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_opiganre_2756",
+   "entry": "lx_opiganre_2758",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5584,7 +5716,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_pagomodo_2757",
+   "entry": "lx_pagomodo_2759",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5595,7 +5727,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_pagotranasonbu_2758",
+   "entry": "lx_pagotranasonbu_2760",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5606,7 +5738,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_pelibiti_2759",
+   "entry": "lx_pelibiti_2761",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5617,7 +5749,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_pelivelma_2760",
+   "entry": "lx_pelivelma_2762",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5628,7 +5760,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_pensanulu_2761",
+   "entry": "lx_pensanulu_2763",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5639,7 +5771,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_pensapolva_2762",
+   "entry": "lx_pensapolva_2764",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5650,7 +5782,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_ramulanve_2763",
+   "entry": "lx_ramulanve_2765",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5661,7 +5793,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_regnadomlu_2764",
+   "entry": "lx_regnadomlu_2766",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5672,7 +5804,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_regnazupa_2765",
+   "entry": "lx_regnazupa_2767",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5683,7 +5815,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_renliherbanumo_2766",
+   "entry": "lx_renliherbanumo_2768",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5694,7 +5826,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_renlipatu_2767",
+   "entry": "lx_renlipatu_2769",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5705,7 +5837,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_rinbasovla_2768",
+   "entry": "lx_rinbasovla_2770",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5716,7 +5848,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_rubidamrukova_2769",
+   "entry": "lx_rubidamrukova_2771",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5727,7 +5859,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_rubilumipatu_2770",
+   "entry": "lx_rubilumipatu_2772",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5738,7 +5870,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_rubivilne_2771",
+   "entry": "lx_rubivilne_2773",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5749,7 +5881,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_rukodokra_2772",
+   "entry": "lx_rukodokra_2774",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5760,7 +5892,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_rukodozadalu_2773",
+   "entry": "lx_rukodozadalu_2775",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5771,7 +5903,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_sabayecolbi_2774",
+   "entry": "lx_sabayecolbi_2776",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5782,7 +5914,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_sabayepago_2775",
+   "entry": "lx_sabayepago_2777",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5793,7 +5925,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_sabayepatu_2776",
+   "entry": "lx_sabayepatu_2778",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5804,7 +5936,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_sabayesafa_2777",
+   "entry": "lx_sabayesafa_2779",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5815,7 +5947,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_salrukadu_2778",
+   "entry": "lx_salrukadu_2780",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5826,7 +5958,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_sarbikibo_2779",
+   "entry": "lx_sarbikibo_2781",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5837,7 +5969,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_sasvakibo_2780",
+   "entry": "lx_sasvakibo_2782",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5848,7 +5980,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_senohelna_2781",
+   "entry": "lx_senohelna_2783",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5859,7 +5991,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_senrucolbi_2782",
+   "entry": "lx_senrucolbi_2784",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5870,7 +6002,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_sernanulu_2783",
+   "entry": "lx_sernanulu_2785",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5881,7 +6013,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_sevunami_2784",
+   "entry": "lx_sevunami_2786",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5892,7 +6024,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_shadasabaye_2785",
+   "entry": "lx_shadasabaye_2787",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5903,7 +6035,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_shadavelma_2786",
+   "entry": "lx_shadavelma_2788",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5914,7 +6046,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_shadavilne_2787",
+   "entry": "lx_shadavilne_2789",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5925,7 +6057,18 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_solavelma_2788",
+   "entry": "lx_silroyano_2790",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "silroyano",
+   "reason": "Liraasa 4.0 (what translating 2100 Dreams needed): cryptoguild: silro + yano (domain People).",
+   "addedIn": "4.0",
+   "at": "2026-10-26T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_solavelma_2791",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5936,7 +6079,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_solayalmu_2789",
+   "entry": "lx_solayalmu_2792",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5947,7 +6090,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_solliseno_2790",
+   "entry": "lx_solliseno_2793",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5958,7 +6101,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_sololore_2791",
+   "entry": "lx_sololore_2794",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5969,7 +6112,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_solomelo_2792",
+   "entry": "lx_solomelo_2795",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5980,7 +6123,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_somufelra_2793",
+   "entry": "lx_somufelra_2796",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -5991,7 +6134,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_soralekta_2794",
+   "entry": "lx_soralekta_2797",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -6002,7 +6145,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_sovezupa_2795",
+   "entry": "lx_sovezupa_2798",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -6013,7 +6156,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_sovlafarlabitizupa_2796",
+   "entry": "lx_sovlafarlabitizupa_2799",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -6024,7 +6167,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_sulmepavmaminvaregna_2797",
+   "entry": "lx_sulmepavmaminvaregna_2800",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -6035,7 +6178,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_sulmepavmavelma_2798",
+   "entry": "lx_sulmepavmavelma_2801",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -6046,7 +6189,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_sumazefrokova_2799",
+   "entry": "lx_sumazefrokova_2802",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -6057,7 +6200,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_telnekezulalle_2800",
+   "entry": "lx_telnekezulalle_2803",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -6068,7 +6211,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_telnepeli_2801",
+   "entry": "lx_telnepeli_2804",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -6079,7 +6222,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_terurenliherba_2802",
+   "entry": "lx_terurenliherba_2805",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -6090,7 +6233,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_tozelazu_2803",
+   "entry": "lx_tozelazu_2806",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -6101,7 +6244,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_turnazupa_2804",
+   "entry": "lx_turnazupa_2807",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -6112,7 +6255,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_vanabumbo_2805",
+   "entry": "lx_vanabumbo_2808",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -6123,7 +6266,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_vanacirsi_2806",
+   "entry": "lx_vanacirsi_2809",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -6134,7 +6277,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_vanajubagerma_2807",
+   "entry": "lx_vanajubagerma_2810",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -6145,7 +6288,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_vanajubalelde_2808",
+   "entry": "lx_vanajubalelde_2811",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -6156,7 +6299,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_vanajubasabaye_2809",
+   "entry": "lx_vanajubasabaye_2812",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -6167,7 +6310,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_vanakibo_2810",
+   "entry": "lx_vanakibo_2813",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -6178,7 +6321,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_vananullovelma_2811",
+   "entry": "lx_vananullovelma_2814",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -6189,7 +6332,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_vanarezasabaye_2812",
+   "entry": "lx_vanarezasabaye_2815",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -6200,7 +6343,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_vanasenru_2813",
+   "entry": "lx_vanasenru_2816",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -6211,18 +6354,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_vanatobra_2814",
-   "op": "add_compound",
-   "slot": "root",
-   "from": null,
-   "to": "vanatobra",
-   "reason": "Liraasa 4.0 (what translating 2100 Dreams needed): white walls: vana + tobra (domain Home & objects).",
-   "addedIn": "4.0",
-   "at": "2026-10-26T23:00:00Z",
-   "author": "nicolas"
-  },
-  {
-   "entry": "lx_vanavelma_2815",
+   "entry": "lx_vanavelma_2817",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -6233,7 +6365,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_vazranulupatu_2816",
+   "entry": "lx_vazranulupatu_2818",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -6244,7 +6376,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_velmakovapago_2817",
+   "entry": "lx_velmakovapago_2819",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -6255,18 +6387,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_velmasirmofarla_2818",
-   "op": "add_compound",
-   "slot": "root",
-   "from": null,
-   "to": "velmasirmofarla",
-   "reason": "Liraasa 4.0 (what translating 2100 Dreams needed): fashion designer: velmasirmo + farla (domain Actions).",
-   "addedIn": "4.0",
-   "at": "2026-10-26T23:00:00Z",
-   "author": "nicolas"
-  },
-  {
-   "entry": "lx_verdesabaye_2819",
+   "entry": "lx_verdesabaye_2820",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -6277,7 +6398,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_verdevilne_2820",
+   "entry": "lx_verdevilne_2821",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -6288,7 +6409,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_vilneceresolo_2821",
+   "entry": "lx_vilneceresolo_2822",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -6299,7 +6420,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_vilnecolbi_2822",
+   "entry": "lx_vilnecolbi_2823",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -6310,7 +6431,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_vilnesabaye_2823",
+   "entry": "lx_vilnesabaye_2824",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -6321,7 +6442,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_vilnesasva_2824",
+   "entry": "lx_vilnesasva_2825",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -6332,7 +6453,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_vilnetibi_2825",
+   "entry": "lx_vilnetibi_2826",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -6343,7 +6464,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_vimopeli_2826",
+   "entry": "lx_vimopeli_2827",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -6354,7 +6475,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_vimotelne_2827",
+   "entry": "lx_vimotelne_2828",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -6365,7 +6486,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_vinyelore_2828",
+   "entry": "lx_vinyelore_2829",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -6376,7 +6497,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_vinyesonbu_2829",
+   "entry": "lx_vinyesonbu_2830",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -6387,7 +6508,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_viodamrukova_2830",
+   "entry": "lx_viodamrukova_2831",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -6398,7 +6519,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_viofarvibudi_2831",
+   "entry": "lx_viofarvibudi_2832",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -6409,7 +6530,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_viofuro_2832",
+   "entry": "lx_viofuro_2833",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -6420,7 +6541,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_violavi_2833",
+   "entry": "lx_violavi_2834",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -6431,7 +6552,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_violavra_2834",
+   "entry": "lx_violavra_2835",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -6442,7 +6563,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_violore_2835",
+   "entry": "lx_violore_2836",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -6453,7 +6574,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_vioruko_2836",
+   "entry": "lx_vioruko_2837",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -6464,7 +6585,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_viosemnebiti_2837",
+   "entry": "lx_viosemnebiti_2838",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -6475,7 +6596,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_viosevureso_2838",
+   "entry": "lx_viosevureso_2839",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -6486,7 +6607,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_viovelma_2839",
+   "entry": "lx_viovelma_2840",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -6497,7 +6618,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_viovilne_2840",
+   "entry": "lx_viovilne_2841",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -6508,7 +6629,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_vulradesi_2841",
+   "entry": "lx_vulradesi_2842",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -6519,7 +6640,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_yugelermi_2842",
+   "entry": "lx_yugelermi_2843",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -6530,7 +6651,18 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_zavmepatu_2843",
+   "entry": "lx_yumlinami_2844",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "yumlinami",
+   "reason": "Liraasa 4.0 (what translating 2100 Dreams needed): dessert (spelled 'desert' in the book): yumli + nami (domain Daily life).",
+   "addedIn": "4.0",
+   "at": "2026-10-26T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_zavmepatu_2845",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -6541,7 +6673,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_zayumodo_2844",
+   "entry": "lx_zayumodo_2846",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -6552,7 +6684,7 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_zefrodapakadu_2845",
+   "entry": "lx_zefrodapakadu_2847",
    "op": "add_compound",
    "slot": "root",
    "from": null,
@@ -6563,12 +6695,56 @@
    "author": "nicolas"
   },
   {
-   "entry": "lx_zupamervi_2846",
+   "entry": "lx_zupamervi_2848",
    "op": "add_compound",
    "slot": "root",
    "from": null,
    "to": "zupamervi",
    "reason": "Liraasa 4.0 (what translating 2100 Dreams needed): room service: zupa + mervi (domain Society).",
+   "addedIn": "4.0",
+   "at": "2026-10-26T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_harlujomrupilo_2849",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "harlujomrupilo",
+   "reason": "Liraasa 4.0 (what translating 2100 Dreams needed): adventure guide (adventure-father: the one who guides an adventure (pilopa = to guide): harlujomru + pilo (domain People).",
+   "addedIn": "4.0",
+   "at": "2026-10-26T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lulfavelma_2850",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "lulfavelma",
+   "reason": "Liraasa 4.0 (what translating 2100 Dreams needed): shoulderhoods (butterfly-garment: a hood that folds over the shoulders like wings): lulfa + velma (domain Home & objects).",
+   "addedIn": "4.0",
+   "at": "2026-10-26T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_sernafavro_2851",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "sernafavro",
+   "reason": "Liraasa 4.0 (what translating 2100 Dreams needed): tablet (data signal-device: a tablet computer (favro is an archetype head, 3.2:G142): serna + favro (domain Systems & relations).",
+   "addedIn": "4.0",
+   "at": "2026-10-26T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_helvikova_2852",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "helvikova",
+   "reason": "Liraasa 4.0 (what translating 2100 Dreams needed): cubby (hiding-container: a small nook for keeping things (kova is an archetype head, 3.2:G146): helvi + kova (domain Home, kitchen & labor).",
    "addedIn": "4.0",
    "at": "2026-10-26T23:00:00Z",
    "author": "nicolas"
@@ -6589,6 +6765,66 @@
    "from": null,
    "to": "\"dedication (of a book); offering\"",
    "reason": "Liraasa 4.0 (what translating 2100 Dreams needed): lavbujuba is findable as \"dedication (of a book); offering\". An English name only; the word does not change. Proposed in 4.0: awaiting the author's ratification.",
+   "addedIn": "4.0",
+   "at": "2026-10-26T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.lulfaasa",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"soul\"",
+   "reason": "Liraasa 4.0 (what translating 2100 Dreams needed): lulfaasa is findable as \"soul\". An English name only; the word does not change. Proposed in 4.0: awaiting the author's ratification.",
+   "addedIn": "4.0",
+   "at": "2026-10-26T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.mavopagona",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"rulebreaker\"",
+   "reason": "Liraasa 4.0 (what translating 2100 Dreams needed): mavopagona is findable as \"rulebreaker\". An English name only; the word does not change. Proposed in 4.0: awaiting the author's ratification.",
+   "addedIn": "4.0",
+   "at": "2026-10-26T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.jubaseno",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"blessing\"",
+   "reason": "Liraasa 4.0 (what translating 2100 Dreams needed): jubaseno is findable as \"blessing\". An English name only; the word does not change. Proposed in 4.0: awaiting the author's ratification.",
+   "addedIn": "4.0",
+   "at": "2026-10-26T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.vamdusan",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"broad\"",
+   "reason": "Liraasa 4.0 (what translating 2100 Dreams needed): vamdusan is findable as \"broad\". An English name only; the word does not change. Proposed in 4.0: awaiting the author's ratification.",
+   "addedIn": "4.0",
+   "at": "2026-10-26T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.lordiasasan",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"perfect\"",
+   "reason": "Liraasa 4.0 (what translating 2100 Dreams needed): lordiasasan is findable as \"perfect\". An English name only; the word does not change. Proposed in 4.0: awaiting the author's ratification.",
+   "addedIn": "4.0",
+   "at": "2026-10-26T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.hirnaasasan",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"saved; rescued\"",
+   "reason": "Liraasa 4.0 (what translating 2100 Dreams needed): hirnaasasan is findable as \"saved; rescued\". An English name only; the word does not change. Proposed in 4.0: awaiting the author's ratification.",
    "addedIn": "4.0",
    "at": "2026-10-26T23:00:00Z",
    "author": "nicolas"

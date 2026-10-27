@@ -221,7 +221,7 @@ function proposedRanges(ids: readonly string[]): string {
 function canonTextsSection() {
   const h = loadHymn();
   return {
-    note: 'Canon texts: whole works in Liraasa, every line read with no error or warning by the strict checker. Imitate their grammar and register. Words and rulings they use that are new in 3.0 are proposed with the rest of 3.0.',
+    note: 'Canon texts: whole works in Liraasa, every line read with no error or warning by the strict checker. Imitate their grammar and register.',
     texts: [
       {
         title: h.title,
@@ -414,7 +414,7 @@ function main(): void {
     ...(proposed.length === 0
       ? {}
       : {
-          edition_status: `PROPOSED: the ${PROPOSED_EDITIONS.join(', ')} additions (rulings ${proposedRanges(proposed)}, and every dictionary line flagged ${PROPOSED_EDITIONS.map((e) => `"new in ${e}"`).join(' or ')}) await the author's ratification. Everything else is canon: the author ratified everything up to 3.5 on 2026-10-25.`,
+          edition_status: `PROPOSED: the ${PROPOSED_EDITIONS.join(', ')} additions (rulings ${proposedRanges(proposed)}, and every dictionary line flagged ${PROPOSED_EDITIONS.map((e) => `"new in ${e}"`).join(' or ')}) await the author's ratification. Everything else is canon: the author ratified everything up to 4.0 on 2026-10-27.`,
         }),
     read_me_first: [
       'Liraasa is a constructed language built for singing, by one author. This file is the complete, authoritative description of it: every grammar rule and every word.',

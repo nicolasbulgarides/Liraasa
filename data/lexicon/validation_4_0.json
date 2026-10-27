@@ -3,11 +3,11 @@
   "lexicon": "_validate_lex_2_3.json",
   "version": "4.0",
   "counts": {
-   "headwords": 2462,
+   "headwords": 2468,
    "primal_roots": 506,
-   "compounds": 1956,
-   "forms": 17234,
-   "unused_forms": 11873,
+   "compounds": 1962,
+   "forms": 17276,
+   "unused_forms": 11909,
    "function_words": 154,
    "new_function_words_1_0": 32,
    "respelled_in_4_0": 0,
@@ -109,7 +109,7 @@
    "count": 0,
    "details": [],
    "details_total": 0,
-   "note": "220 added entries checked.",
+   "note": "226 added entries checked.",
    "executed_against": "entries with since == '4.0' (validate_1_1 supplement) (validate_3_0.py: 4.0 respells nothing)"
   },
   {
@@ -284,7 +284,7 @@
    "count": 0,
    "details": [],
    "details_total": 0,
-   "note": "Compared against liraasa_3_6.json with every 4.0 op re-applied independently; changesets: 2026-10-26-lexicon-4-0; 6 rulings, 0 roots, 220 compounds, 0 slots activated, 0 derivations, 0 function words added; 0 texts and 2 values edited; 0 function-word fields edited.",
+   "note": "Compared against liraasa_3_6.json with every 4.0 op re-applied independently; changesets: 2026-10-26-lexicon-4-0, 2026-10-27-lexicon-4-0-ratify; 6 rulings, 0 roots, 226 compounds, 0 slots activated, 0 derivations, 0 function words added; 0 texts and 8 values edited; 0 function-word fields edited.",
    "executed_against": "validate_3_0.py"
   }
  ]

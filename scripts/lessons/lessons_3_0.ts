@@ -16,7 +16,7 @@ export type { Lesson, Part };
 export const INTRO = [
   'Liraasa is a language built for singing: every vowel rings, every word ends open, and the grammar keeps a fixed, calm order so the words can be sung without tripping.',
   'These lessons take you through the whole grammar, one small idea at a time. Each takes about ten minutes. Read the idea, say the examples aloud, then try the practice lines before you open the answers. Each lesson uses only what came before it.',
-  'Every Liraasa sentence here has been checked against the 3.6 grammar, so you can trust it as a model. Parts 6 and 7 teach the 3.x rulings: devotion, music and measure (3.0), then word families, names and shapes (3.2 to 3.5). Part 8 teaches the 3.6 rulings, which are **proposed**: the author has not yet ratified them. The rule numbers at the foot of each lesson (2.5:G88, 3.0:G129 and so on) point into the Reference Grammar.',
+  'Every Liraasa sentence here has been checked against the 4.0 grammar, so you can trust it as a model. Parts 6 and 7 teach the 3.x rulings: devotion, music and measure (3.0), then word families, names and shapes (3.2 to 3.5). Part 8 teaches the 3.6 rulings. The rule numbers at the foot of each lesson (2.5:G88, 3.0:G129 and so on) point into the Reference Grammar.',
 ];
 
 const DEVOTION: Part = {
@@ -225,7 +225,7 @@ const FAMILIES: Part = {
 };
 
 const DREAMS: Part = {
-  title: 'Robots, minds and measures (proposed in 3.6)',
+  title: 'Robots, minds and measures (3.6)',
   lessons: [
     {
       title: 'Units, robots and the -san rule once more',
