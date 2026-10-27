@@ -1,6 +1,50 @@
-# Liraasa 3.6 Reference Grammar: every ruling
+# Liraasa 4.0 Reference Grammar: every ruling
 
-Verbatim from the Liraasa 3.6 lexicon, newest edition first. Ruling ids are edition-qualified: 0.8:G7 and 1.0:G7 are different rulings.
+Verbatim from the Liraasa 4.0 lexicon, newest edition first. Ruling ids are edition-qualified: 0.8:G7 and 1.0:G7 are different rulings.
+
+## Rulings 4.0
+
+### 4.0:G156: A quotation before its verb of saying
+
+A direct quotation may come before its verb of saying, closed by a comma inside the quotation marks: “…,” saivo po senosia. It may also follow its verb after a colon (2.3:G83). The quotation is its own sentence or sentences; the clause around it is read without it.
+
+Refines 2.3:G83.
+
+- *“Maivo ne pagopa,” saivo po senosia.* — “I am not going,” she said.
+- *“Taivo lirala ki?” maivo po masuma.* — “Are you singing?” I asked.
+
+### 4.0:G157: The order of adjectives
+
+Two or more adjectives before one noun stand in this order: opinion, size, age, shape, colour, origin, material, purpose. With more than three, put one in a raho clause.
+
+- *Saivo po vimova baba vanisan nolsasan kadu.* — She saw a beautiful new car.
+- *Li lira raho ka molusan ka vanisan.* — The song, which is gentle, is beautiful.
+
+### 4.0:G158: Durations
+
+A duration is en + NUMBER + a time noun after the verb: en dossa deya, for two days. en rinbakrono (3.0:G139) is its unbounded case.
+
+Refines 3.0:G139.
+
+- *Maivo po lisrola en dossa deya.* — I stayed for two days.
+
+### 4.0:G159: Comparing actions
+
+An action is compared with la kasi (or la menu) + an adjective + tamo X: Maivo lirala la kasi benasan tamo taivo, I sing better than you. With no adjective, use benasan (well) or mellisan (much).
+
+- *Maivo lirala la kasi benasan tamo taivo.* — I sing better than you.
+
+### 4.0:G160: Destined to
+
+“Destined to” is fatofa sidu + verb: Saivo fatofa sidu lirala. ke sidu is not used for destiny.
+
+- *Saivo fatofa sidu lirala.* — She is destined to sing.
+
+### 4.0:G161: Decimals and percentages
+
+A decimal or a percentage is said as a fraction, NUMBER de NUMBER (trezira-penta de centa, thirty-five per cent), or rounded.
+
+- *Trezira-penta de centa nelari po lirala.* — Thirty-five per cent of the people sang.
 
 ## Rulings 3.6
 
