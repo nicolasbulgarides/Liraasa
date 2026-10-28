@@ -1,0 +1,2300 @@
+{
+ "id": "2026-10-27-lexicon-4-2",
+ "edition": "4.2",
+ "created": "2026-10-27T23:00:00Z",
+ "author": "nicolas",
+ "summary": "Liraasa 4.2, \"the exact words whose meaning shifted in the 2100 Dreams draft\" (ADR-0032), made by the editor at the author's request. PROPOSED: PROPOSED: made by the editor at the author's request (2026-10-27). Additions only, no new roots: 42 compounds of existing headwords and 105 English aliases. No 4.1 word, spelling or ruling changes.",
+ "rulings": [],
+ "headwords": [
+  {
+   "id": "lx_peliganre_2891",
+   "root": "peliganre",
+   "type": "Compound",
+   "components": [
+    "peli",
+    "ganre"
+   ],
+   "glosses": {
+    "root": "park (play-garden: a planted refuge for play; a public park)"
+   },
+   "register": "everyday",
+   "domain": "Home & objects",
+   "english_synonyms": [
+    "park (play-garden: a planted refuge for play",
+    "a public park)"
+   ],
+   "notes": "Added in 4.2 (changeset 2026-10-27-lexicon-4-2). Proposed in 4.2: awaiting the author's ratification. Components: peli + ganre. For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27). Archetype: null. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_bujovelma_2892",
+   "root": "bujovelma",
+   "type": "Compound",
+   "components": [
+    "bujo",
+    "velma"
+   ],
+   "glosses": {
+    "root": "pants (joint-garment: clothing that bends at the knee; trousers)"
+   },
+   "register": "everyday",
+   "domain": "Home & objects",
+   "english_synonyms": [
+    "pants (joint-garment: clothing that bends at the knee",
+    "trousers)"
+   ],
+   "notes": "Added in 4.2 (changeset 2026-10-27-lexicon-4-2). Proposed in 4.2: awaiting the author's ratification. Components: bujo + velma. For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27). Archetype: null. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_vimolekta_2893",
+   "root": "vimolekta",
+   "type": "Compound",
+   "components": [
+    "vimo",
+    "lekta"
+   ],
+   "glosses": {
+    "root": "exhibit (viewing-gathering: things gathered to be seen; an exhibition)"
+   },
+   "register": "everyday",
+   "domain": "Core roots",
+   "english_synonyms": [
+    "exhibit (viewing-gathering: things gathered to be seen",
+    "an exhibition)"
+   ],
+   "notes": "Added in 4.2 (changeset 2026-10-27-lexicon-4-2). Proposed in 4.2: awaiting the author's ratification. Components: vimo + lekta. For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27). Archetype: null. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_amorminvalinu_2894",
+   "root": "amorminvalinu",
+   "type": "Compound",
+   "components": [
+    "amor",
+    "minvalinu"
+   ],
+   "glosses": {
+    "root": "girlfriend (loving girl: the girl one loves)"
+   },
+   "register": "everyday",
+   "domain": "Family & society",
+   "english_synonyms": [
+    "girlfriend (loving girl: the girl one loves)"
+   ],
+   "notes": "Added in 4.2 (changeset 2026-10-27-lexicon-4-2). Proposed in 4.2: awaiting the author's ratification. Components: amor + minvalinu. For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27). Archetype: null. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_fasbigoza_2895",
+   "root": "fasbigoza",
+   "type": "Compound",
+   "components": [
+    "fasbi",
+    "goza"
+   ],
+   "glosses": {
+    "root": "irony (face-mockery: mockery worn behind a straight face; saying what one does not mean)"
+   },
+   "register": "everyday",
+   "domain": "Emotion & song",
+   "english_synonyms": [
+    "irony (face-mockery: mockery worn behind a straight face",
+    "saying what one does not mean)"
+   ],
+   "notes": "Added in 4.2 (changeset 2026-10-27-lexicon-4-2). Proposed in 4.2: awaiting the author's ratification. Components: fasbi + goza. For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27). Archetype: null. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_talinulu_2896",
+   "root": "talinulu",
+   "type": "Compound",
+   "components": [
+    "tali",
+    "nulu"
+   ],
+   "glosses": {
+    "root": "process (work-path: the way a task runs through its steps)"
+   },
+   "register": "everyday",
+   "domain": "Home & objects",
+   "english_synonyms": [
+    "process (work-path: the way a task runs through its steps)"
+   ],
+   "notes": "Added in 4.2 (changeset 2026-10-27-lexicon-4-2). Proposed in 4.2: awaiting the author's ratification. Components: tali + nulu. For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27). Archetype: null. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_pensamambi_2897",
+   "root": "pensamambi",
+   "type": "Compound",
+   "components": [
+    "pensa",
+    "mambi"
+   ],
+   "glosses": {
+    "root": "reflection (thought-moment: a moment given to thinking (plural pensamambiri))"
+   },
+   "register": "everyday",
+   "domain": "Time",
+   "english_synonyms": [
+    "reflection (thought-moment: a moment given to thinking (plural pensamambiri))"
+   ],
+   "notes": "Added in 4.2 (changeset 2026-10-27-lexicon-4-2). Proposed in 4.2: awaiting the author's ratification. Components: pensa + mambi. For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27). Archetype: null. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_dokralordi_2898",
+   "root": "dokralordi",
+   "type": "Compound",
+   "components": [
+    "dokra",
+    "lordi"
+   ],
+   "glosses": {
+    "root": "military brief (war-direction: orders handed down for a mission)"
+   },
+   "register": "everyday",
+   "domain": "Abstract",
+   "english_synonyms": [
+    "military brief (war-direction: orders handed down for a mission)"
+   ],
+   "notes": "Added in 4.2 (changeset 2026-10-27-lexicon-4-2). Proposed in 4.2: awaiting the author's ratification. Components: dokra + lordi. For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27). Archetype: null. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_opinulu_2899",
+   "root": "opinulu",
+   "type": "Compound",
+   "components": [
+    "opi",
+    "nulu"
+   ],
+   "glosses": {
+    "root": "lifeline (hope-path: the one way out that keeps hope alive)"
+   },
+   "register": "everyday",
+   "domain": "Home & objects",
+   "english_synonyms": [
+    "lifeline (hope-path: the one way out that keeps hope alive)"
+   ],
+   "notes": "Added in 4.2 (changeset 2026-10-27-lexicon-4-2). Proposed in 4.2: awaiting the author's ratification. Components: opi + nulu. For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27). Archetype: null. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_vimopago_2900",
+   "root": "vimopago",
+   "type": "Compound",
+   "components": [
+    "vimo",
+    "pago"
+   ],
+   "glosses": {
+    "root": "perspective (the place of seeing: a viewpoint; a standpoint)"
+   },
+   "register": "everyday",
+   "domain": "Foundations",
+   "english_synonyms": [
+    "perspective (the place of seeing: a viewpoint",
+    "a standpoint)"
+   ],
+   "notes": "Added in 4.2 (changeset 2026-10-27-lexicon-4-2). Proposed in 4.2: awaiting the author's ratification. Components: vimo + pago. For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27). Archetype: null. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_loretekla_2901",
+   "root": "loretekla",
+   "type": "Compound",
+   "components": [
+    "lore",
+    "tekla"
+   ],
+   "glosses": {
+    "root": "apathy (heart-halt: a heart that has stopped caring)"
+   },
+   "register": "everyday",
+   "domain": "Movement & action",
+   "english_synonyms": [
+    "apathy (heart-halt: a heart that has stopped caring)"
+   ],
+   "notes": "Added in 4.2 (changeset 2026-10-27-lexicon-4-2). Proposed in 4.2: awaiting the author's ratification. Components: lore + tekla. For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27). Archetype: null. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_nullotekla_2902",
+   "root": "nullotekla",
+   "type": "Compound",
+   "components": [
+    "nullo",
+    "tekla"
+   ],
+   "glosses": {
+    "root": "curfew (night-halt: the hour when movement stops for the night)"
+   },
+   "register": "everyday",
+   "domain": "Movement & action",
+   "english_synonyms": [
+    "curfew (night-halt: the hour when movement stops for the night)"
+   ],
+   "notes": "Added in 4.2 (changeset 2026-10-27-lexicon-4-2). Proposed in 4.2: awaiting the author's ratification. Components: nullo + tekla. For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27). Archetype: null. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_nimulore_2903",
+   "root": "nimulore",
+   "type": "Compound",
+   "components": [
+    "nimu",
+    "lore"
+   ],
+   "glosses": {
+    "root": "affection (homelike heart (image compound): a heart changed by a safe home)"
+   },
+   "register": "everyday",
+   "domain": "Body",
+   "english_synonyms": [
+    "affection (homelike heart (image compound): a heart changed by a safe home)"
+   ],
+   "notes": "Added in 4.2 (changeset 2026-10-27-lexicon-4-2). Proposed in 4.2: awaiting the author's ratification. Components: nimu + lore. For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27). Archetype: null. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_vallaregnaseno_2904",
+   "root": "vallaregnaseno",
+   "type": "Compound",
+   "components": [
+    "valla",
+    "regnaseno"
+   ],
+   "glosses": {
+    "root": "voice command (voice-decree: a command given by voice)"
+   },
+   "register": "everyday",
+   "domain": "Fiction",
+   "english_synonyms": [
+    "voice command (voice-decree: a command given by voice)"
+   ],
+   "notes": "Added in 4.2 (changeset 2026-10-27-lexicon-4-2). Proposed in 4.2: awaiting the author's ratification. Components: valla + regnaseno. For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27). Archetype: null. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_minvalinunullo_2905",
+   "root": "minvalinunullo",
+   "type": "Compound",
+   "components": [
+    "minvalinu",
+    "nullo"
+   ],
+   "glosses": {
+    "root": "girls night (maiden-night: a night for the girls)"
+   },
+   "register": "everyday",
+   "domain": "Time",
+   "english_synonyms": [
+    "girls night (maiden-night: a night for the girls)"
+   ],
+   "notes": "Added in 4.2 (changeset 2026-10-27-lexicon-4-2). Proposed in 4.2: awaiting the author's ratification. Components: minvalinu + nullo. For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27). Archetype: null. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_kronominvafamli_2906",
+   "root": "kronominvafamli",
+   "type": "Compound",
+   "components": [
+    "krono",
+    "minvafamli"
+   ],
+   "glosses": {
+    "root": "big sister (aged sister: the elder sister (nested compound, 2.0:G42))"
+   },
+   "register": "everyday",
+   "domain": "Family & society",
+   "english_synonyms": [
+    "big sister (aged sister: the elder sister (nested compound",
+    "2.0:G42))"
+   ],
+   "notes": "Added in 4.2 (changeset 2026-10-27-lexicon-4-2). Proposed in 4.2: awaiting the author's ratification. Components: krono + minvafamli. For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27). Archetype: null. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_ramusarbisenru_2907",
+   "root": "ramusarbisenru",
+   "type": "Compound",
+   "components": [
+    "ramu",
+    "sarbisenru"
+   ],
+   "glosses": {
+    "root": "archived paper (remembered paper: a page kept in memory's store)"
+   },
+   "register": "everyday",
+   "domain": "Storytelling",
+   "english_synonyms": [
+    "archived paper (remembered paper: a page kept in memory's store)"
+   ],
+   "notes": "Added in 4.2 (changeset 2026-10-27-lexicon-4-2). Proposed in 4.2: awaiting the author's ratification. Components: ramu + sarbisenru. For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27). Archetype: null. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_sildabako_2908",
+   "root": "sildabako",
+   "type": "Compound",
+   "components": [
+    "silda",
+    "bako"
+   ],
+   "glosses": {
+    "root": "collateral damage (side-damage: harm done beside the target)"
+   },
+   "register": "everyday",
+   "domain": "Actions",
+   "english_synonyms": [
+    "collateral damage (side-damage: harm done beside the target)"
+   ],
+   "notes": "Added in 4.2 (changeset 2026-10-27-lexicon-4-2). Proposed in 4.2: awaiting the author's ratification. Components: silda + bako. For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27). Archetype: null. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_amordaluvimo_2909",
+   "root": "amordaluvimo",
+   "type": "Compound",
+   "components": [
+    "amordalu",
+    "vimo"
+   ],
+   "glosses": {
+    "root": "racy photo (a sexual sight: a racy image)"
+   },
+   "register": "everyday",
+   "domain": "Body",
+   "english_synonyms": [
+    "racy photo (a sexual sight: a racy image)"
+   ],
+   "notes": "Added in 4.2 (changeset 2026-10-27-lexicon-4-2). Proposed in 4.2: awaiting the author's ratification. Components: amordalu + vimo. For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27). Archetype: null. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_marnamiru_2910",
+   "root": "marnamiru",
+   "type": "Compound",
+   "components": [
+    "marna",
+    "miru"
+   ],
+   "glosses": {
+    "root": "whiskey (grain drink (miru as the infused-drink archetype head, 3.2:G142))"
+   },
+   "register": "everyday",
+   "domain": "Nature",
+   "english_synonyms": [
+    "whiskey (grain drink (miru as the infused-drink archetype head",
+    "3.2:G142))"
+   ],
+   "notes": "Added in 4.2 (changeset 2026-10-27-lexicon-4-2). Proposed in 4.2: awaiting the author's ratification. Components: marna + miru. For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27). Archetype: null. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_amordalunela_2911",
+   "root": "amordalunela",
+   "type": "Compound",
+   "components": [
+    "amordalu",
+    "nela"
+   ],
+   "glosses": {
+    "root": "floozy (a sex-person: coarse person-compound on nela (3.6:G154))"
+   },
+   "register": "everyday",
+   "domain": "People",
+   "english_synonyms": [
+    "floozy (a sex-person: coarse person-compound on nela (3.6:G154))"
+   ],
+   "notes": "Added in 4.2 (changeset 2026-10-27-lexicon-4-2). Proposed in 4.2: awaiting the author's ratification. Components: amordalu + nela. For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27). Archetype: null. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_zivusonbu_2912",
+   "root": "zivusonbu",
+   "type": "Compound",
+   "components": [
+    "zivu",
+    "sonbu"
+   ],
+   "glosses": {
+    "root": "rant (a scornful noise poured out)"
+   },
+   "register": "everyday",
+   "domain": "Abstract",
+   "english_synonyms": [
+    "rant (a scornful noise poured out)"
+   ],
+   "notes": "Added in 4.2 (changeset 2026-10-27-lexicon-4-2). Proposed in 4.2: awaiting the author's ratification. Components: zivu + sonbu. For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27). Archetype: null. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_sildapavma_2913",
+   "root": "sildapavma",
+   "type": "Compound",
+   "components": [
+    "silda",
+    "pavma"
+   ],
+   "glosses": {
+    "root": "byproduct (side-matter: the substance made beside the main thing)"
+   },
+   "register": "everyday",
+   "domain": "Materials & physics",
+   "english_synonyms": [
+    "byproduct (side-matter: the substance made beside the main thing)"
+   ],
+   "notes": "Added in 4.2 (changeset 2026-10-27-lexicon-4-2). Proposed in 4.2: awaiting the author's ratification. Components: silda + pavma. For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27). Archetype: null. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_helvilumi_2914",
+   "root": "helvilumi",
+   "type": "Compound",
+   "components": [
+    "helvi",
+    "lumi"
+   ],
+   "glosses": {
+    "root": "untapped potential (hidden light: a gift not yet shown)"
+   },
+   "register": "everyday",
+   "domain": "Foundations",
+   "english_synonyms": [
+    "untapped potential (hidden light: a gift not yet shown)"
+   ],
+   "notes": "Added in 4.2 (changeset 2026-10-27-lexicon-4-2). Proposed in 4.2: awaiting the author's ratification. Components: helvi + lumi. For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27). Archetype: null. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_linupatu_2915",
+   "root": "linupatu",
+   "type": "Compound",
+   "components": [
+    "linu",
+    "patu"
+   ],
+   "glosses": {
+    "root": "embryo (child-speck: the child as a tiny piece)"
+   },
+   "register": "everyday",
+   "domain": "Abstract",
+   "english_synonyms": [
+    "embryo (child-speck: the child as a tiny piece)"
+   ],
+   "notes": "Added in 4.2 (changeset 2026-10-27-lexicon-4-2). Proposed in 4.2: awaiting the author's ratification. Components: linu + patu. For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27). Archetype: null. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_favromerno_2916",
+   "root": "favromerno",
+   "type": "Compound",
+   "components": [
+    "favro",
+    "merno"
+   ],
+   "glosses": {
+    "root": "pseudo-morning routine (simulated morning (like favrolumi); with routines: favromernosan krononuluri)"
+   },
+   "register": "everyday",
+   "domain": "Time",
+   "english_synonyms": [
+    "pseudo-morning routine (simulated morning (like favrolumi)",
+    "with routines: favromernosan krononuluri)"
+   ],
+   "notes": "Added in 4.2 (changeset 2026-10-27-lexicon-4-2). Proposed in 4.2: awaiting the author's ratification. Components: favro + merno. For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27). Archetype: null. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_krononulu_2917",
+   "root": "krononulu",
+   "type": "Compound",
+   "components": [
+    "krono",
+    "nulu"
+   ],
+   "glosses": {
+    "root": "routine (time-path: the path walked through each day (plural krononuluri))"
+   },
+   "register": "everyday",
+   "domain": "Home & objects",
+   "english_synonyms": [
+    "routine (time-path: the path walked through each day (plural krononuluri))"
+   ],
+   "notes": "Added in 4.2 (changeset 2026-10-27-lexicon-4-2). Proposed in 4.2: awaiting the author's ratification. Components: krono + nulu. For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27). Archetype: null. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_biotinosude_2918",
+   "root": "biotinosude",
+   "type": "Compound",
+   "components": [
+    "biotino",
+    "sude"
+   ],
+   "glosses": {
+    "root": "biological manifestation (living appearance: life showing itself)"
+   },
+   "register": "everyday",
+   "domain": "Actions",
+   "english_synonyms": [
+    "biological manifestation (living appearance: life showing itself)"
+   ],
+   "notes": "Added in 4.2 (changeset 2026-10-27-lexicon-4-2). Proposed in 4.2: awaiting the author's ratification. Components: biotino + sude. For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27). Archetype: null. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_mernomiga_2919",
+   "root": "mernomiga",
+   "type": "Compound",
+   "components": [
+    "merno",
+    "miga"
+   ],
+   "glosses": {
+    "root": "morning pleasantry (morning-bond: the small ties people renew at daybreak (verb mernoma, to greet the morning, also exists))"
+   },
+   "register": "everyday",
+   "domain": "Abstract",
+   "english_synonyms": [
+    "morning pleasantry (morning-bond: the small ties people renew at daybreak (verb mernoma",
+    "to greet the morning",
+    "also exists))"
+   ],
+   "notes": "Added in 4.2 (changeset 2026-10-27-lexicon-4-2). Proposed in 4.2: awaiting the author's ratification. Components: merno + miga. For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27). Archetype: null. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_simvokemye_2920",
+   "root": "simvokemye",
+   "type": "Compound",
+   "components": [
+    "simvo",
+    "kemye"
+   ],
+   "glosses": {
+    "root": "passcode (self-key: the secret key that proves who you are)"
+   },
+   "register": "everyday",
+   "domain": "Home & objects",
+   "english_synonyms": [
+    "passcode (self-key: the secret key that proves who you are)"
+   ],
+   "notes": "Added in 4.2 (changeset 2026-10-27-lexicon-4-2). Proposed in 4.2: awaiting the author's ratification. Components: simvo + kemye. For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27). Archetype: null. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_simvolalle_2921",
+   "root": "simvolalle",
+   "type": "Compound",
+   "components": [
+    "simvo",
+    "lalle"
+   ],
+   "glosses": {
+    "root": "login (self-opening: a door that opens once you prove who you are)"
+   },
+   "register": "everyday",
+   "domain": "Actions",
+   "english_synonyms": [
+    "login (self-opening: a door that opens once you prove who you are)"
+   ],
+   "notes": "Added in 4.2 (changeset 2026-10-27-lexicon-4-2). Proposed in 4.2: awaiting the author's ratification. Components: simvo + lalle. For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27). Archetype: null. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_vilnelallelornu_2922",
+   "root": "vilnelallelornu",
+   "type": "Compound",
+   "components": [
+    "vilnelalle",
+    "lornu"
+   ],
+   "glosses": {
+    "root": "waking hour (waking-hours: the hours of open eyes)"
+   },
+   "register": "everyday",
+   "domain": "Time",
+   "english_synonyms": [
+    "waking hour (waking-hours: the hours of open eyes)"
+   ],
+   "notes": "Added in 4.2 (changeset 2026-10-27-lexicon-4-2). Proposed in 4.2: awaiting the author's ratification. Components: vilnelalle + lornu. For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27). Archetype: null. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_patufarla_2923",
+   "root": "patufarla",
+   "type": "Compound",
+   "components": [
+    "patu",
+    "farla"
+   ],
+   "glosses": {
+    "root": "modular design (piece-making: a thing built from pieces that fit together)"
+   },
+   "register": "everyday",
+   "domain": "Actions",
+   "english_synonyms": [
+    "modular design (piece-making: a thing built from pieces that fit together)"
+   ],
+   "notes": "Added in 4.2 (changeset 2026-10-27-lexicon-4-2). Proposed in 4.2: awaiting the author's ratification. Components: patu + farla. For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27). Archetype: null. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_simvoreso_2924",
+   "root": "simvoreso",
+   "type": "Compound",
+   "components": [
+    "simvo",
+    "reso"
+   ],
+   "glosses": {
+    "root": "selfdeprecating humor (self-laughter: humour aimed at oneself)"
+   },
+   "register": "everyday",
+   "domain": "Emotions",
+   "english_synonyms": [
+    "selfdeprecating humor (self-laughter: humour aimed at oneself)"
+   ],
+   "notes": "Added in 4.2 (changeset 2026-10-27-lexicon-4-2). Proposed in 4.2: awaiting the author's ratification. Components: simvo + reso. For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27). Archetype: null. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_simvofollu_2925",
+   "root": "simvofollu",
+   "type": "Compound",
+   "components": [
+    "simvo",
+    "follu"
+   ],
+   "glosses": {
+    "root": "adaptive horror (self-horror: horror that shapes itself to who you are)"
+   },
+   "register": "everyday",
+   "domain": "Emotions",
+   "english_synonyms": [
+    "adaptive horror (self-horror: horror that shapes itself to who you are)"
+   ],
+   "notes": "Added in 4.2 (changeset 2026-10-27-lexicon-4-2). Proposed in 4.2: awaiting the author's ratification. Components: simvo + follu. For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27). Archetype: null. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_fatofarla_2926",
+   "root": "fatofarla",
+   "type": "Compound",
+   "components": [
+    "fato",
+    "farla"
+   ],
+   "glosses": {
+    "root": "vocation (fated making: the work one is meant to do)"
+   },
+   "register": "everyday",
+   "domain": "Actions",
+   "english_synonyms": [
+    "vocation (fated making: the work one is meant to do)"
+   ],
+   "notes": "Added in 4.2 (changeset 2026-10-27-lexicon-4-2). Proposed in 4.2: awaiting the author's ratification. Components: fato + farla. For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27). Archetype: null. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_pavmarivo_2927",
+   "root": "pavmarivo",
+   "type": "Compound",
+   "components": [
+    "pavma",
+    "rivo"
+   ],
+   "glosses": {
+    "root": "biological companion (a matter-companion: a companion of physical substance, the flesh counterpart to favrorivo (digital companion); new coinage, flag)"
+   },
+   "register": "everyday",
+   "domain": "People",
+   "english_synonyms": [
+    "biological companion (a matter-companion: a companion of physical substance, the flesh counterpart to favrorivo (digital companion)",
+    "new coinage, flag)"
+   ],
+   "notes": "Added in 4.2 (changeset 2026-10-27-lexicon-4-2). Proposed in 4.2: awaiting the author's ratification. Components: pavma + rivo. For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27). Archetype: null. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_mavopagodemrovordu_2928",
+   "root": "mavopagodemrovordu",
+   "type": "Compound",
+   "components": [
+    "mavopago",
+    "demrovordu"
+   ],
+   "glosses": {
+    "root": "social momentum (society-force: the push that a society carries (nested compound, 2.0:G42); new coinage, flag)"
+   },
+   "register": "everyday",
+   "domain": "Science & philosophical inquiry",
+   "english_synonyms": [
+    "social momentum (society-force: the push that a society carries (nested compound, 2.0:G42)",
+    "new coinage, flag)"
+   ],
+   "notes": "Added in 4.2 (changeset 2026-10-27-lexicon-4-2). Proposed in 4.2: awaiting the author's ratification. Components: mavopago + demrovordu. For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27). Archetype: null. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_linlegudo_2929",
+   "root": "linlegudo",
+   "type": "Compound",
+   "components": [
+    "linle",
+    "gudo"
+   ],
+   "glosses": {
+    "root": "grooming habit (cleanliness-everyday: the ordinary routine of keeping clean)"
+   },
+   "register": "everyday",
+   "domain": "Qualities",
+   "english_synonyms": [
+    "grooming habit (cleanliness-everyday: the ordinary routine of keeping clean)"
+   ],
+   "notes": "Added in 4.2 (changeset 2026-10-27-lexicon-4-2). Proposed in 4.2: awaiting the author's ratification. Components: linle + gudo. For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27). Archetype: null. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_dapatabu_2930",
+   "root": "dapatabu",
+   "type": "Compound",
+   "components": [
+    "dapa",
+    "tabu"
+   ],
+   "glosses": {
+    "root": "checkout (price-table: the counter where you pay)"
+   },
+   "register": "everyday",
+   "domain": "Home & objects",
+   "english_synonyms": [
+    "checkout (price-table: the counter where you pay)"
+   ],
+   "notes": "Added in 4.2 (changeset 2026-10-27-lexicon-4-2). Proposed in 4.2: awaiting the author's ratification. Components: dapa + tabu. For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27). Archetype: null. Tier 2 in the patch. Module core."
+  },
+  {
+   "id": "lx_ruhepagorinba_2931",
+   "root": "ruhepagorinba",
+   "type": "Compound",
+   "components": [
+    "ruhe",
+    "pagorinba"
+   ],
+   "glosses": {
+    "root": "emergency situation (storm-situation: circumstances in turmoil)"
+   },
+   "register": "everyday",
+   "domain": "Home & objects",
+   "english_synonyms": [
+    "emergency situation (storm-situation: circumstances in turmoil)"
+   ],
+   "notes": "Added in 4.2 (changeset 2026-10-27-lexicon-4-2). Proposed in 4.2: awaiting the author's ratification. Components: ruhe + pagorinba. For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27). Archetype: null. Tier 2 in the patch. Module core."
+  }
+ ],
+ "function_words": [],
+ "lexicalised_derivations": {},
+ "ops": [
+  {
+   "entry": "lx_peliganre_2891",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "peliganre",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): park (play-garden: a planted refuge for play; a public park): peli + ganre (domain Home & objects).",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_bujovelma_2892",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "bujovelma",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): pants (joint-garment: clothing that bends at the knee; trousers): bujo + velma (domain Home & objects).",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_vimolekta_2893",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "vimolekta",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): exhibit (viewing-gathering: things gathered to be seen; an exhibition): vimo + lekta (domain Core roots).",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_amorminvalinu_2894",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "amorminvalinu",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): girlfriend (loving girl: the girl one loves): amor + minvalinu (domain Family & society).",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_fasbigoza_2895",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "fasbigoza",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): irony (face-mockery: mockery worn behind a straight face; saying what one does not mean): fasbi + goza (domain Emotion & song).",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_talinulu_2896",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "talinulu",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): process (work-path: the way a task runs through its steps): tali + nulu (domain Home & objects).",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_pensamambi_2897",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "pensamambi",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): reflection (thought-moment: a moment given to thinking (plural pensamambiri)): pensa + mambi (domain Time).",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_dokralordi_2898",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "dokralordi",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): military brief (war-direction: orders handed down for a mission): dokra + lordi (domain Abstract).",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_opinulu_2899",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "opinulu",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): lifeline (hope-path: the one way out that keeps hope alive): opi + nulu (domain Home & objects).",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_vimopago_2900",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "vimopago",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): perspective (the place of seeing: a viewpoint; a standpoint): vimo + pago (domain Foundations).",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_loretekla_2901",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "loretekla",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): apathy (heart-halt: a heart that has stopped caring): lore + tekla (domain Movement & action).",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_nullotekla_2902",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "nullotekla",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): curfew (night-halt: the hour when movement stops for the night): nullo + tekla (domain Movement & action).",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_nimulore_2903",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "nimulore",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): affection (homelike heart (image compound): a heart changed by a safe home): nimu + lore (domain Body).",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_vallaregnaseno_2904",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "vallaregnaseno",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): voice command (voice-decree: a command given by voice): valla + regnaseno (domain Fiction).",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_minvalinunullo_2905",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "minvalinunullo",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): girls night (maiden-night: a night for the girls): minvalinu + nullo (domain Time).",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_kronominvafamli_2906",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "kronominvafamli",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): big sister (aged sister: the elder sister (nested compound, 2.0:G42)): krono + minvafamli (domain Family & society).",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lorevaye_0291",
+   "op": "lexicalise_from_pattern",
+   "from": "lorevaye",
+   "to": "lorevaye",
+   "ruling": "2.0:G40",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): lorevaye, an attested image compound of 4.1 (\"heart-held wind; air moving with the character of the heart\"), lexicalised as a headword. The patch lists it as new; it keeps its 4.1 id. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lorevaye_0291",
+   "op": "edit_gloss",
+   "slot": "root",
+   "archive": true,
+   "from": "heart-held wind; air moving with the character of the heart",
+   "to": "mood (heart-held wind: the weather of the heart (an attested image compound))",
+   "ruling": "0.8:R2",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): lorevaye, \"mood (heart-held wind: the weather of the heart (an attested image compound))\". Its 4.1 reading \"heart-held wind; air moving with the character of the heart\" is archived. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_lorevaye_0291",
+   "op": "edit_metadata",
+   "field": "domain",
+   "from": "Wind",
+   "to": "Nature",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): lorevaye moves to the domain Nature.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_ramusarbisenru_2907",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "ramusarbisenru",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): archived paper (remembered paper: a page kept in memory's store): ramu + sarbisenru (domain Storytelling).",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_sildabako_2908",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "sildabako",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): collateral damage (side-damage: harm done beside the target): silda + bako (domain Actions).",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_amordaluvimo_2909",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "amordaluvimo",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): racy photo (a sexual sight: a racy image): amordalu + vimo (domain Body).",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_marnamiru_2910",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "marnamiru",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): whiskey (grain drink (miru as the infused-drink archetype head, 3.2:G142)): marna + miru (domain Nature).",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_amordalunela_2911",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "amordalunela",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): floozy (a sex-person: coarse person-compound on nela (3.6:G154)): amordalu + nela (domain People).",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_zivusonbu_2912",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "zivusonbu",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): rant (a scornful noise poured out): zivu + sonbu (domain Abstract).",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_sildapavma_2913",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "sildapavma",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): byproduct (side-matter: the substance made beside the main thing): silda + pavma (domain Materials & physics).",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_helvilumi_2914",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "helvilumi",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): untapped potential (hidden light: a gift not yet shown): helvi + lumi (domain Foundations).",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_linupatu_2915",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "linupatu",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): embryo (child-speck: the child as a tiny piece): linu + patu (domain Abstract).",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_favromerno_2916",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "favromerno",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): pseudo-morning routine (simulated morning (like favrolumi); with routines: favromernosan krononuluri): favro + merno (domain Time).",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_krononulu_2917",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "krononulu",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): routine (time-path: the path walked through each day (plural krononuluri)): krono + nulu (domain Home & objects).",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_biotinosude_2918",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "biotinosude",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): biological manifestation (living appearance: life showing itself): biotino + sude (domain Actions).",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_mernomiga_2919",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "mernomiga",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): morning pleasantry (morning-bond: the small ties people renew at daybreak (verb mernoma, to greet the morning, also exists)): merno + miga (domain Abstract).",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_simvokemye_2920",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "simvokemye",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): passcode (self-key: the secret key that proves who you are): simvo + kemye (domain Home & objects).",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_simvolalle_2921",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "simvolalle",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): login (self-opening: a door that opens once you prove who you are): simvo + lalle (domain Actions).",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_vilnelallelornu_2922",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "vilnelallelornu",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): waking hour (waking-hours: the hours of open eyes): vilnelalle + lornu (domain Time).",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_patufarla_2923",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "patufarla",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): modular design (piece-making: a thing built from pieces that fit together): patu + farla (domain Actions).",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_simvoreso_2924",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "simvoreso",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): selfdeprecating humor (self-laughter: humour aimed at oneself): simvo + reso (domain Emotions).",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_simvofollu_2925",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "simvofollu",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): adaptive horror (self-horror: horror that shapes itself to who you are): simvo + follu (domain Emotions).",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_fatofarla_2926",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "fatofarla",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): vocation (fated making: the work one is meant to do): fato + farla (domain Actions).",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_pavmarivo_2927",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "pavmarivo",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): biological companion (a matter-companion: a companion of physical substance, the flesh counterpart to favrorivo (digital companion); new coinage, flag): pavma + rivo (domain People).",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_mavopagodemrovordu_2928",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "mavopagodemrovordu",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): social momentum (society-force: the push that a society carries (nested compound, 2.0:G42); new coinage, flag): mavopago + demrovordu (domain Science & philosophical inquiry).",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_linlegudo_2929",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "linlegudo",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): grooming habit (cleanliness-everyday: the ordinary routine of keeping clean): linle + gudo (domain Qualities).",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_dapatabu_2930",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "dapatabu",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): checkout (price-table: the counter where you pay): dapa + tabu (domain Home & objects).",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "lx_ruhepagorinba_2931",
+   "op": "add_compound",
+   "slot": "root",
+   "from": null,
+   "to": "ruhepagorinba",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): emergency situation (storm-situation: circumstances in turmoil): ruhe + pagorinba (domain Home & objects).",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.minvalinu",
+   "op": "edit_value",
+   "from": "\"missy\"",
+   "to": "\"missy; little girl\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): minvalinu is findable as \"little girl\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.vulrasan",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"upset\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): vulrasan is findable as \"upset\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.jusenulu",
+   "op": "edit_value",
+   "from": "\"amanda's case\"",
+   "to": "\"amanda's case; cases\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): jusenulu is findable as \"cases\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.mavomudu",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"exceptionalities\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): mavomudu is findable as \"exceptionalities\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.musvasan",
+   "op": "edit_value",
+   "from": "\"responsible\"",
+   "to": "\"responsible; responsible for\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): musvasan is findable as \"responsible for\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.sovesia",
+   "op": "edit_value",
+   "from": "\"to calm; to relax\"",
+   "to": "\"to calm; to relax; relaxing\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): sovesia is findable as \"relaxing\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.teklasan",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"paused\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): teklasan is findable as \"paused\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.mavopagomelvanela",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"social worker\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): mavopagomelvanela is findable as \"social worker\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.madijomru",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"field trips\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): madijomru is findable as \"field trips\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.kronosora",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"best friend\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): kronosora is findable as \"best friend\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.nimusan",
+   "op": "edit_value",
+   "from": "\"dear; cherished; dearies\"",
+   "to": "\"dear; cherished; dearies; dearest\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): nimusan is findable as \"dearest\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.turna",
+   "op": "edit_value",
+   "from": "\"access; entry; entry\"",
+   "to": "\"access; entry; entry; everse access\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): turna is findable as \"everse access\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.voprava",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"rolled in\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): voprava is findable as \"rolled in\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.finihatafa",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"prodded\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): finihatafa is findable as \"prodded\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.gudonasan",
+   "op": "edit_value",
+   "from": "\"unconventional\"",
+   "to": "\"unconventional; wonderful things\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): gudonasan is findable as \"wonderful things\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.holmosan",
+   "op": "edit_value",
+   "from": "\"blank\"",
+   "to": "\"blank; blank slate\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): holmosan is findable as \"blank slate\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.regnaseno",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"rules\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): regnaseno is findable as \"rules\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.vaniasasan",
+   "op": "edit_value",
+   "from": "\"gorgeous\"",
+   "to": "\"gorgeous; resplendent\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): vaniasasan is findable as \"resplendent\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.devomiga",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"trusted\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): devomiga is findable as \"trusted\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.kendejomru",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"escapades\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): kendejomru is findable as \"escapades\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.norunasan",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"despondent\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): norunasan is findable as \"despondent\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.ralenasan",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"muffled\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): ralenasan is findable as \"muffled\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.follusan",
+   "op": "edit_value",
+   "from": "\"scary; frightened\"",
+   "to": "\"scary; frightened; terrified\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): follusan is findable as \"terrified\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.noruasa",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"great dream\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): noruasa is findable as \"great dream\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.rinbara",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"cuddled up\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): rinbara is findable as \"cuddled up\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.valmilornu",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"miles\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): valmilornu is findable as \"miles\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.vaninasan",
+   "op": "edit_value",
+   "from": "\"ugly\"",
+   "to": "\"ugly; tacky\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): vaninasan is findable as \"tacky\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.helviyo",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"sneaky\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): helviyo is findable as \"sneaky\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.zoguza",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"squealed\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): zoguza is findable as \"squealed\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.vanisan",
+   "op": "edit_value",
+   "from": "\"lovely; attractive; hey beautiful\"",
+   "to": "\"lovely; attractive; hey beautiful; adorable\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): vanisan is findable as \"adorable\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.gudosan",
+   "op": "edit_value",
+   "from": "\"casual; conventional; customary\"",
+   "to": "\"casual; conventional; customary; casually\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): gudosan is findable as \"casually\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.marema",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"nurtured\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): marema is findable as \"nurtured\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.sollisan",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"left alone\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): sollisan is findable as \"left alone\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.tovoasasan",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"entrusted to\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): tovoasasan is findable as \"entrusted to\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.soraopisia",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"encouraged\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): soraopisia is findable as \"encouraged\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.zivuza",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"look distasteful\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): zivuza is findable as \"look distasteful\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.conorelnu",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"tourism revenue\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): conorelnu is findable as \"tourism revenue\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.pagonasan",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"familyless existence\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): pagonasan is findable as \"familyless existence\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.tivronasan",
+   "op": "edit_value",
+   "from": "\"loose\"",
+   "to": "\"loose; neglected\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): tivronasan is findable as \"neglected\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.lornula",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"logging hours\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): lornula is findable as \"logging hours\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.kersosan",
+   "op": "edit_value",
+   "from": "\"natural (grown, not made)\"",
+   "to": "\"natural (grown, not made); only natural\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): kersosan is findable as \"only natural\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.sizosan",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"flickering\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): sizosan is findable as \"flickering\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.miganasan",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"appear offline\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): miganasan is findable as \"appear offline\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.harlulore",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"reluctantly sociable\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): harlulore is findable as \"reluctantly sociable\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.lenda",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"deathqueen line\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): lenda is findable as \"deathqueen line\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.minvalinu",
+   "op": "edit_value",
+   "from": "\"missy; little girl\"",
+   "to": "\"missy; little girl; chica\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): minvalinu is findable as \"chica\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.nazrunia",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"moonwalked backwards\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): nazrunia is findable as \"moonwalked backwards\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.linuvani",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"cuteness\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): linuvani is findable as \"cuteness\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.lavimilobela",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"beamed\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): lavimilobela is findable as \"beamed\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.linu",
+   "op": "edit_value",
+   "from": "\"kid\"",
+   "to": "\"kid; kids\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): linu is findable as \"kids\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.mavovulra",
+   "op": "edit_value",
+   "from": "\"trauma\"",
+   "to": "\"trauma; traumas\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): mavovulra is findable as \"traumas\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.lardala",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"creates art\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): lardala is findable as \"creates art\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.minvalinu",
+   "op": "edit_value",
+   "from": "\"missy; little girl; chica\"",
+   "to": "\"missy; little girl; chica; our daughter\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): minvalinu is findable as \"our daughter\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.cunuasasan",
+   "op": "edit_value",
+   "from": "\"infinitely\"",
+   "to": "\"infinitely; theoretically infinite\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): cunuasasan is findable as \"theoretically infinite\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.bansasan",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"severe enough\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): bansasan is findable as \"severe enough\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.simvocuza",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"active profiles\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): simvocuza is findable as \"active profiles\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.nelasan",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"human peers\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): nelasan is findable as \"human peers\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.farlaasasan",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"creative panache\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): farlaasasan is findable as \"creative panache\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.surusan",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"emotional volatility\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): surusan is findable as \"emotional volatility\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.peremo",
+   "op": "edit_value",
+   "from": "\"no problem\"",
+   "to": "\"no problem; optimization problems\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): peremo is findable as \"optimization problems\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.punesan",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"pushed further\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): punesan is findable as \"pushed further\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.loredoza",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"inner strength\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): loredoza is findable as \"inner strength\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.simvolivna",
+   "op": "edit_value",
+   "from": "\"independence\"",
+   "to": "\"independence; less independence\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): simvolivna is findable as \"less independence\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.yugemeyiya",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"recovering well\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): yugemeyiya is findable as \"recovering well\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.vardeasasan",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"supremely rewarding\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): vardeasasan is findable as \"supremely rewarding\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.ravmira",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"solving puzzles\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): ravmira is findable as \"solving puzzles\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.loredonu",
+   "op": "edit_value",
+   "from": "\"commitment; dedication\"",
+   "to": "\"commitment; dedication; ongoing commitment\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): loredonu is findable as \"ongoing commitment\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.lektamambi",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"prior sessions\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): lektamambi is findable as \"prior sessions\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.mavoyuge",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"brain scans\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): mavoyuge is findable as \"brain scans\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.tebosan",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"early onset\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): tebosan is findable as \"early onset\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.vimolalle",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"square pane\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): vimolalle is findable as \"square pane\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.mubo",
+   "op": "edit_value",
+   "from": "\"paramount concern\"",
+   "to": "\"paramount concern; notable worry\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): mubo is findable as \"notable worry\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.loremiga",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"fond of\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): loremiga is findable as \"fond of\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.gonbiga",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"visit it\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): gonbiga is findable as \"visit it\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.sudesia",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"show you\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): sudesia is findable as \"show you\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.vismava",
+   "op": "edit_value",
+   "from": "\"to scan; to check; check on\"",
+   "to": "\"to scan; to check; check on; scanned herself\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): vismava is findable as \"scanned herself\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.pavma",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"physical actuality\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): pavma is findable as \"physical actuality\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.tevulusan",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"abandoned-looking\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): tevulusan is findable as \"abandoned-looking\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.tranasovlata",
+   "op": "edit_value",
+   "from": "\"to transform\"",
+   "to": "\"to transform; transformed into\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): tranasovlata is findable as \"transformed into\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.loteronelala",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"meet you\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): loteronelala is findable as \"meet you\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.verasan",
+   "op": "edit_value",
+   "from": "\"actual; realistic; valid; actually; really\"",
+   "to": "\"actual; realistic; valid; actually; really; can actually\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): verasan is findable as \"can actually\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.silbeseno",
+   "op": "edit_value",
+   "from": "\"messaged\"",
+   "to": "\"messaged; text messages\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): silbeseno is findable as \"text messages\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.larnela",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"huffed\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): larnela is findable as \"huffed\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.soraopisia",
+   "op": "edit_value",
+   "from": "\"encouraged\"",
+   "to": "\"encouraged; encourages\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): soraopisia is findable as \"encourages\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.lordi",
+   "op": "edit_value",
+   "from": "\"control; leadership\"",
+   "to": "\"control; leadership; in control\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): lordi is findable as \"in control\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.cerena",
+   "op": "edit_value",
+   "from": "\"bewilderment\"",
+   "to": "\"bewilderment; bewildering\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): cerena is findable as \"bewildering\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.kronosora",
+   "op": "edit_value",
+   "from": "\"best friend\"",
+   "to": "\"best friend; closest friends\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): kronosora is findable as \"closest friends\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.timru",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"felt tears\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): timru is findable as \"felt tears\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.lordi",
+   "op": "edit_value",
+   "from": "\"control; leadership; in control\"",
+   "to": "\"control; leadership; in control; maintaining control\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): lordi is findable as \"maintaining control\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.lisrola",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"don't leave\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): lisrola is findable as \"don't leave\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.yumlisan",
+   "op": "edit_value",
+   "from": "\"nice\"",
+   "to": "\"nice; somewhere nice\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): yumlisan is findable as \"somewhere nice\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.mellikrono",
+   "op": "edit_value",
+   "from": "\"dilated time; dilate time\"",
+   "to": "\"dilated time; dilate time; stretched time\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): mellikrono is findable as \"stretched time\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.vanisan",
+   "op": "edit_value",
+   "from": "\"lovely; attractive; hey beautiful; adorable\"",
+   "to": "\"lovely; attractive; hey beautiful; adorable; appealing\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): vanisan is findable as \"appealing\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.linlenasan",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"messy\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): linlenasan is findable as \"messy\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.pagomodo",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"irl actuality\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): pagomodo is findable as \"irl actuality\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.ruherilu",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"swirling storm\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): ruherilu is findable as \"swirling storm\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.fasbivelma",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"wear make-up\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): fasbivelma is findable as \"wear make-up\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.vilnetibi",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"eyebrows\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): vilnetibi is findable as \"eyebrows\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.fasbivelma",
+   "op": "edit_value",
+   "from": "\"wear make-up\"",
+   "to": "\"wear make-up; make up\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): fasbivelma is findable as \"make up\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.palvisan",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"applied\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): palvisan is findable as \"applied\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.follusan",
+   "op": "edit_value",
+   "from": "\"scary; frightened; terrified\"",
+   "to": "\"scary; frightened; terrified; frightening things\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): follusan is findable as \"frightening things\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.follusan",
+   "op": "edit_value",
+   "from": "\"scary; frightened; terrified; frightening things\"",
+   "to": "\"scary; frightened; terrified; frightening things; spooky\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): follusan is findable as \"spooky\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.zilevelma",
+   "op": "edit_value",
+   "from": "\"tuxedo; formal wear\"",
+   "to": "\"tuxedo; formal wear; fancier clothes\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): zilevelma is findable as \"fancier clothes\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.harmanasan",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"innocuous\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): harmanasan is findable as \"innocuous\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  },
+  {
+   "entry": "value:english_aliases.vorduna",
+   "op": "edit_value",
+   "from": null,
+   "to": "\"pure randomness\"",
+   "reason": "Liraasa 4.2 (the exact words whose meaning shifted in the 2100 Dreams draft): vorduna is findable as \"pure randomness\". An English name only; the word does not change. Proposed in 4.2: awaiting the author's ratification.",
+   "addedIn": "4.2",
+   "at": "2026-10-27T23:00:00Z",
+   "author": "nicolas"
+  }
+ ]
+}

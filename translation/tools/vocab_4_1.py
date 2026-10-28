@@ -28,7 +28,12 @@ CACHE = os.path.join(common.ROOT, "vocab_4_1_answers.json")
 # descriptions from the novel that are not concepts a dictionary needs
 EXCLUDE = {"barely-burnt", "looked down", "chronologically-bound affection", "presumed torture", "get high",
            "sneaky", "indignant", "de-winged bird", "burly form", "tiny human", "aura type",
-           "congratulatory anthem", "sappy talk", "triumphant joy", "tickle attack", "midflight"}
+           "congratulatory anthem", "sappy talk", "triumphant joy", "tickle attack", "midflight",
+           # 4.2: phrases, adverbs and adjectives (no noun to name), names, and a verb
+           "ability access", "ability lock", "acquiring talent", "actually intervene", "captured through",
+           "same set", "long ago", "coincidentally", "morose", "unique", "sustainable", "periodic",
+           "hypersexual", "cadence corner", "guild", "the guild", "predict", "grooming access", "cartoon love",
+           "autonomously"}
 SKIP = re.compile(r"^(part\b|chapter\b|haha|hm+|ok(ay)?$|oh$|um+$|uh$|yeah$|march|april|may$|june|july|\d)")
 
 ASK = """\
@@ -115,7 +120,10 @@ def write_patch(book, words, answers):
         lir = str(x.get("liraasa", "") or "").strip().lower()
         parts = [str(p).lower() for p in (x.get("parts") or [])]
         if ex and ex in forms:
-            aliases.append({"form": ex, "add_english": w})
+            # an alias only where the dictionary cannot already find the English: an alias for a
+            # word it finds adds nothing and can mislead the reader ("study" read as a noun)
+            if not book.lemma.get(w):
+                aliases.append({"form": ex, "add_english": w})
             continue
         if not lir:
             continue
@@ -124,7 +132,11 @@ def write_patch(book, words, answers):
             rejected.append({"english": w, "proposed": lir, "parts": parts, "why": "not a dictionary noun (a verb form, a joke or a slogan)"})
             continue
         # plural English names the singular sense
-        if re.search(r"(sh|ch|x|ss)es$", w):
+        if w in ("pants", "news", "physics"):
+            pass
+        elif re.search(r"[^aeiou]ies$", w):
+            w = w[:-3] + "y"
+        elif re.search(r"(sh|ch|x|ss)es$", w):
             w = w[:-2]
         elif re.search(r"[^s]s$", w) and not re.search(r"(ss|us|is|ics|news)$", w):
             w = w[:-1]

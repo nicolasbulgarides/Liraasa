@@ -3,7 +3,7 @@
  *
  *   npm run build:handoff
  *
- * Writes handoff/liraasa_4_1_complete.json: the canonical 4.1 lexicon (built
+ * Writes handoff/liraasa_4_2_complete.json: the canonical 4.2 lexicon (built
  * from 3.6 by `npm run integrate:4.0`, ADR-0029; everything up to 3.5 ratified, 3.6 and 4.0 proposed), with what a guide needs that
  * the lexicon records elsewhere:
  *
@@ -34,8 +34,9 @@ import { CHANGESETS_3_5 } from './changesets_3_5';
 import { CHANGESETS_3_6 } from './changesets_3_6';
 import { CHANGESETS_4_0 } from './changesets_4_0';
 import { CHANGESETS_4_1 } from './changesets_4_1';
+import { CHANGESETS_4_2 } from './changesets_4_2';
 
-const LEXICON = 'data/lexicon/liraasa_4_1.json';
+const LEXICON = 'data/lexicon/liraasa_4_2.json';
 const REPORT_1_2 = 'data/lexicon/integration_report_1_2.json';
 const REPORT_2_0 = 'data/lexicon/integration_report_2_0.json';
 const REPORT_2_1 = 'data/lexicon/integration_report_2_1.json';
@@ -48,7 +49,7 @@ const REPORT_3_3 = 'data/lexicon/integration_report_3_3.json';
 const REPORT_3_4 = 'data/lexicon/integration_report_3_4.json';
 const REPORT_3_5 = 'data/lexicon/integration_report_3_5.json';
 const OUT_DIR = 'handoff';
-const OUT = 'liraasa_4_1_complete.json';
+const OUT = 'liraasa_4_2_complete.json';
 
 const load = (path: string): unknown => JSON.parse(readFileSync(resolve(path), 'utf8'));
 
@@ -81,6 +82,7 @@ function main(): void {
   const v36 = CHANGESETS_3_6.map((p) => load(p) as LexiconChangeset);
   const v40 = CHANGESETS_4_0.map((p) => load(p) as LexiconChangeset);
   const v41 = CHANGESETS_4_1.map((p) => load(p) as LexiconChangeset);
+  const v42 = CHANGESETS_4_2.map((p) => load(p) as LexiconChangeset);
   const report35 = load(REPORT_3_5) as { counts: unknown };
 
   const examples = lexicon.examples.map((e) => ({ ...e }));
@@ -122,7 +124,7 @@ function main(): void {
   const complete = {
     ...lexicon,
     handoff_note:
-      'Liraasa 4.1 (everything up to 4.0 ratified, 4.1 proposed): all of 1.0, the 1.1 vocabulary supplement, the 1.2 changesets ' +
+      'Liraasa 4.2 (everything up to 4.0 ratified, 4.1 and 4.2 proposed): all of 1.0, the 1.1 vocabulary supplement, the 1.2 changesets ' +
       `${v12.map((c) => c.id).join(' and ')}, the 2.0 changesets ${v20.map((c) => c.id).join(' and ')} ` +
       '(word-building rulings 2.0:G37–G45, new vocabulary, the image-compound pattern), and the 2.1 changeset ' +
       `${v21.map((c) => c.id).join(' and ')} (rulings 2.1:G46–G59, 30 roots respelled), and the 2.2 changeset ` +
@@ -136,9 +138,10 @@ function main(): void {
       `${v35.map((c) => c.id).join(', ')} (the ratification of 3.0, 3.3 and 3.4, then Essentials, archetypes and domain packs, rulings 3.5:G150–G151, then the author's ratification of 3.5 and ruling 3.5:G152), and the 3.6 changeset ` +
       `${v36.map((c) => c.id).join(', ')} (the 2100 Dreams patch: robots, the mind, the neocity, rulings 3.6:G153–G155), and the 4.0 changeset ` +
       `${v40.map((c) => c.id).join(', ')} (what translating 2100 Dreams needed: 220 compounds, rulings 4.0:G156–G161, ratified 2026-10-27), and the 4.1 changeset ` +
-      `${v41.map((c) => c.id).join(', ')} (the vocabulary the 2100 Dreams draft still paraphrased); 4.1 is proposed. Revised examples keep ` +
+      `${v41.map((c) => c.id).join(', ')} (the vocabulary the 2100 Dreams draft still paraphrased), and the 4.2 changeset ` +
+      `${v42.map((c) => c.id).join(', ')} (the exact words whose meaning shifted in the draft); 4.1 and 4.2 are proposed. Revised examples keep ` +
       'their earlier text in liraasa_1_1 (1.2), liraasa_1_2 (2.0), liraasa_2_0 (2.1), liraasa_2_1 (2.2), liraasa_2_2 (2.3) or liraasa_2_3 (2.5). Ruling ids are edition-qualified: ' +
-      '0.8:R1, 1.0:G7, 1.2:G24, 2.0:G40, 2.1:G46, 2.2:G60, 2.3:G69, 2.5:G88, 3.0:G129, 3.2:G142, 3.3:G148, 3.4:G149, 3.5:G150, 3.6:G153, 4.0:G156. Built by scripts/build_handoff.ts from data/lexicon/liraasa_4_1.json.',
+      '0.8:R1, 1.0:G7, 1.2:G24, 2.0:G40, 2.1:G46, 2.2:G60, 2.3:G69, 2.5:G88, 3.0:G129, 3.2:G142, 3.3:G148, 3.4:G149, 3.5:G150, 3.6:G153, 4.0:G156. Built by scripts/build_handoff.ts from data/lexicon/liraasa_4_2.json.',
     examples,
     counts_1_1_to_1_2: report12.counts,
     changesets_1_2_full: v12,
@@ -165,6 +168,7 @@ function main(): void {
     changesets_3_6_full: v36,
     changesets_4_0_full: v40,
     changesets_4_1_full: v41,
+    changesets_4_2_full: v42,
   };
 
   mkdirSync(resolve(OUT_DIR), { recursive: true });

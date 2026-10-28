@@ -5,4 +5,4 @@
  * editions' words "new in <edition>" and says so in its edition_status; the
  * tests read the same list.
  */
-export const PROPOSED_EDITIONS: readonly string[] = ['4.1'];
+export const PROPOSED_EDITIONS: readonly string[] = ['4.1', '4.2'];

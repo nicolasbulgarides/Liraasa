@@ -738,15 +738,43 @@ describe('the 4.0 → 4.1 diff lesson', () => {
       lexicon: JSON.parse(readFileSync('data/lexicon/liraasa_4_0.json', 'utf8')) as RawLexicon,
       corpus: [],
     });
+    const at41 = buildLearnSource({
+      ...input,
+      lexicon: JSON.parse(readFileSync('data/lexicon/liraasa_4_1.json', 'utf8')) as RawLexicon,
+      corpus: [],
+    });
     const d = diffSnapshots(
       snapshotEdition(at40.data),
-      snapshotEdition(source.data),
-      source.replacementFor,
+      snapshotEdition(at41.data),
+      at41.replacementFor,
     );
     const patch = JSON.parse(readFileSync('data/proposals/liraasa_4_1_patch.json', 'utf8')) as {
       compounds_add: { headword: string }[];
     };
     expect([d.from, d.to]).toEqual(['4.0', '4.1']);
+    expect(d.renamed).toEqual([]);
+    expect(d.removed).toEqual([]);
+    // two were attested image compounds, lexicalised (reglossed, not added)
+    expect(d.added.length + d.reglossed.length).toBeGreaterThanOrEqual(patch.compounds_add.length);
+  });
+});
+
+describe('the 4.1 → 4.2 diff lesson', () => {
+  it('ACCEPTANCE: additions only: every 4.2 compound, no word renamed or removed', () => {
+    const at41b = buildLearnSource({
+      ...input,
+      lexicon: JSON.parse(readFileSync('data/lexicon/liraasa_4_1.json', 'utf8')) as RawLexicon,
+      corpus: [],
+    });
+    const d = diffSnapshots(
+      snapshotEdition(at41b.data),
+      snapshotEdition(source.data),
+      source.replacementFor,
+    );
+    const patch = JSON.parse(readFileSync('data/proposals/liraasa_4_2_patch.json', 'utf8')) as {
+      compounds_add: { headword: string }[];
+    };
+    expect([d.from, d.to]).toEqual(['4.1', '4.2']);
     expect(d.renamed).toEqual([]);
     expect(d.removed).toEqual([]);
     // two were attested image compounds, lexicalised (reglossed, not added)

@@ -224,7 +224,7 @@ describe('rule ids and the overlay', () => {
     // the overlay is shared with the 3.0 strict checker: a word added since 2.3 (iya, 3.0:G129) is not in this reference
     const later = new Set(
       (
-        read('../../handoff/liraasa_4_1_llm.json') as {
+        read('../../handoff/liraasa_4_2_llm.json') as {
           small_words: { function_words: { rows: string[][] } };
         }
       ).small_words.function_words.rows.map((r) => r[0]),

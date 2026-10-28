@@ -1,0 +1,1652 @@
+{
+ "patch": "Liraasa 4.2: the exact words whose meaning shifted in the 2100 Dreams draft",
+ "base_version": "4.1",
+ "target_version": "4.2",
+ "status": "PROPOSED: made by the editor at the author's request (2026-10-27)",
+ "base_file": "liraasa_4_1.json",
+ "base_counts": {
+  "headwords": 2508,
+  "meaningful_forms": 5407
+ },
+ "principles": [
+  "No new roots: every word is a compound of existing headwords, colour bases or time nouns.",
+  "An existing word that covers the sense is preferred, and made findable as an English alias."
+ ],
+ "modules": {
+  "core": "The exact words whose meaning shifted in the 2100 Dreams draft"
+ },
+ "function_words_add": [],
+ "rulings_add": [],
+ "roots_add": [],
+ "compounds_add": [
+  {
+   "module": "core",
+   "headword": "peliganre",
+   "parts": [
+    "peli",
+    "ganre"
+   ],
+   "domain": "Home & objects",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "peliganre",
+     "meaning": "park (play-garden: a planted refuge for play; a public park)"
+    }
+   },
+   "note": "For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "bujovelma",
+   "parts": [
+    "bujo",
+    "velma"
+   ],
+   "domain": "Home & objects",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "bujovelma",
+     "meaning": "pants (joint-garment: clothing that bends at the knee; trousers)"
+    }
+   },
+   "note": "For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "vimolekta",
+   "parts": [
+    "vimo",
+    "lekta"
+   ],
+   "domain": "Core roots",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "vimolekta",
+     "meaning": "exhibit (viewing-gathering: things gathered to be seen; an exhibition)"
+    }
+   },
+   "note": "For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "amorminvalinu",
+   "parts": [
+    "amor",
+    "minvalinu"
+   ],
+   "domain": "Family & society",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "amorminvalinu",
+     "meaning": "girlfriend (loving girl: the girl one loves)"
+    }
+   },
+   "note": "For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "fasbigoza",
+   "parts": [
+    "fasbi",
+    "goza"
+   ],
+   "domain": "Emotion & song",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "fasbigoza",
+     "meaning": "irony (face-mockery: mockery worn behind a straight face; saying what one does not mean)"
+    }
+   },
+   "note": "For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "talinulu",
+   "parts": [
+    "tali",
+    "nulu"
+   ],
+   "domain": "Home & objects",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "talinulu",
+     "meaning": "process (work-path: the way a task runs through its steps)"
+    }
+   },
+   "note": "For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "pensamambi",
+   "parts": [
+    "pensa",
+    "mambi"
+   ],
+   "domain": "Time",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "pensamambi",
+     "meaning": "reflection (thought-moment: a moment given to thinking (plural pensamambiri))"
+    }
+   },
+   "note": "For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "dokralordi",
+   "parts": [
+    "dokra",
+    "lordi"
+   ],
+   "domain": "Abstract",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "dokralordi",
+     "meaning": "military brief (war-direction: orders handed down for a mission)"
+    }
+   },
+   "note": "For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "opinulu",
+   "parts": [
+    "opi",
+    "nulu"
+   ],
+   "domain": "Home & objects",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "opinulu",
+     "meaning": "lifeline (hope-path: the one way out that keeps hope alive)"
+    }
+   },
+   "note": "For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "vimopago",
+   "parts": [
+    "vimo",
+    "pago"
+   ],
+   "domain": "Foundations",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "vimopago",
+     "meaning": "perspective (the place of seeing: a viewpoint; a standpoint)"
+    }
+   },
+   "note": "For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "loretekla",
+   "parts": [
+    "lore",
+    "tekla"
+   ],
+   "domain": "Movement & action",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "loretekla",
+     "meaning": "apathy (heart-halt: a heart that has stopped caring)"
+    }
+   },
+   "note": "For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "nullotekla",
+   "parts": [
+    "nullo",
+    "tekla"
+   ],
+   "domain": "Movement & action",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "nullotekla",
+     "meaning": "curfew (night-halt: the hour when movement stops for the night)"
+    }
+   },
+   "note": "For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "nimulore",
+   "parts": [
+    "nimu",
+    "lore"
+   ],
+   "domain": "Body",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "nimulore",
+     "meaning": "affection (homelike heart (image compound): a heart changed by a safe home)"
+    }
+   },
+   "note": "For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "vallaregnaseno",
+   "parts": [
+    "valla",
+    "regnaseno"
+   ],
+   "domain": "Fiction",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "vallaregnaseno",
+     "meaning": "voice command (voice-decree: a command given by voice)"
+    }
+   },
+   "note": "For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "minvalinunullo",
+   "parts": [
+    "minvalinu",
+    "nullo"
+   ],
+   "domain": "Time",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "minvalinunullo",
+     "meaning": "girls night (maiden-night: a night for the girls)"
+    }
+   },
+   "note": "For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "kronominvafamli",
+   "parts": [
+    "krono",
+    "minvafamli"
+   ],
+   "domain": "Family & society",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "kronominvafamli",
+     "meaning": "big sister (aged sister: the elder sister (nested compound, 2.0:G42))"
+    }
+   },
+   "note": "For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "lorevaye",
+   "parts": [
+    "lore",
+    "vaye"
+   ],
+   "domain": "Nature",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "lorevaye",
+     "meaning": "mood (heart-held wind: the weather of the heart (an attested image compound))"
+    }
+   },
+   "note": "For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "ramusarbisenru",
+   "parts": [
+    "ramu",
+    "sarbisenru"
+   ],
+   "domain": "Storytelling",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "ramusarbisenru",
+     "meaning": "archived paper (remembered paper: a page kept in memory's store)"
+    }
+   },
+   "note": "For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "sildabako",
+   "parts": [
+    "silda",
+    "bako"
+   ],
+   "domain": "Actions",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "sildabako",
+     "meaning": "collateral damage (side-damage: harm done beside the target)"
+    }
+   },
+   "note": "For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "amordaluvimo",
+   "parts": [
+    "amordalu",
+    "vimo"
+   ],
+   "domain": "Body",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "amordaluvimo",
+     "meaning": "racy photo (a sexual sight: a racy image)"
+    }
+   },
+   "note": "For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "marnamiru",
+   "parts": [
+    "marna",
+    "miru"
+   ],
+   "domain": "Nature",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "marnamiru",
+     "meaning": "whiskey (grain drink (miru as the infused-drink archetype head, 3.2:G142))"
+    }
+   },
+   "note": "For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "amordalunela",
+   "parts": [
+    "amordalu",
+    "nela"
+   ],
+   "domain": "People",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "amordalunela",
+     "meaning": "floozy (a sex-person: coarse person-compound on nela (3.6:G154))"
+    }
+   },
+   "note": "For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "zivusonbu",
+   "parts": [
+    "zivu",
+    "sonbu"
+   ],
+   "domain": "Abstract",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "zivusonbu",
+     "meaning": "rant (a scornful noise poured out)"
+    }
+   },
+   "note": "For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "sildapavma",
+   "parts": [
+    "silda",
+    "pavma"
+   ],
+   "domain": "Materials & physics",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "sildapavma",
+     "meaning": "byproduct (side-matter: the substance made beside the main thing)"
+    }
+   },
+   "note": "For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "helvilumi",
+   "parts": [
+    "helvi",
+    "lumi"
+   ],
+   "domain": "Foundations",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "helvilumi",
+     "meaning": "untapped potential (hidden light: a gift not yet shown)"
+    }
+   },
+   "note": "For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "linupatu",
+   "parts": [
+    "linu",
+    "patu"
+   ],
+   "domain": "Abstract",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "linupatu",
+     "meaning": "embryo (child-speck: the child as a tiny piece)"
+    }
+   },
+   "note": "For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "favromerno",
+   "parts": [
+    "favro",
+    "merno"
+   ],
+   "domain": "Time",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "favromerno",
+     "meaning": "pseudo-morning routine (simulated morning (like favrolumi); with routines: favromernosan krononuluri)"
+    }
+   },
+   "note": "For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "krononulu",
+   "parts": [
+    "krono",
+    "nulu"
+   ],
+   "domain": "Home & objects",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "krononulu",
+     "meaning": "routine (time-path: the path walked through each day (plural krononuluri))"
+    }
+   },
+   "note": "For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "biotinosude",
+   "parts": [
+    "biotino",
+    "sude"
+   ],
+   "domain": "Actions",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "biotinosude",
+     "meaning": "biological manifestation (living appearance: life showing itself)"
+    }
+   },
+   "note": "For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "mernomiga",
+   "parts": [
+    "merno",
+    "miga"
+   ],
+   "domain": "Abstract",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "mernomiga",
+     "meaning": "morning pleasantry (morning-bond: the small ties people renew at daybreak (verb mernoma, to greet the morning, also exists))"
+    }
+   },
+   "note": "For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "simvokemye",
+   "parts": [
+    "simvo",
+    "kemye"
+   ],
+   "domain": "Home & objects",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "simvokemye",
+     "meaning": "passcode (self-key: the secret key that proves who you are)"
+    }
+   },
+   "note": "For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "simvolalle",
+   "parts": [
+    "simvo",
+    "lalle"
+   ],
+   "domain": "Actions",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "simvolalle",
+     "meaning": "login (self-opening: a door that opens once you prove who you are)"
+    }
+   },
+   "note": "For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "vilnelallelornu",
+   "parts": [
+    "vilnelalle",
+    "lornu"
+   ],
+   "domain": "Time",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "vilnelallelornu",
+     "meaning": "waking hour (waking-hours: the hours of open eyes)"
+    }
+   },
+   "note": "For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "patufarla",
+   "parts": [
+    "patu",
+    "farla"
+   ],
+   "domain": "Actions",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "patufarla",
+     "meaning": "modular design (piece-making: a thing built from pieces that fit together)"
+    }
+   },
+   "note": "For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "simvoreso",
+   "parts": [
+    "simvo",
+    "reso"
+   ],
+   "domain": "Emotions",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "simvoreso",
+     "meaning": "selfdeprecating humor (self-laughter: humour aimed at oneself)"
+    }
+   },
+   "note": "For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "simvofollu",
+   "parts": [
+    "simvo",
+    "follu"
+   ],
+   "domain": "Emotions",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "simvofollu",
+     "meaning": "adaptive horror (self-horror: horror that shapes itself to who you are)"
+    }
+   },
+   "note": "For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "fatofarla",
+   "parts": [
+    "fato",
+    "farla"
+   ],
+   "domain": "Actions",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "fatofarla",
+     "meaning": "vocation (fated making: the work one is meant to do)"
+    }
+   },
+   "note": "For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "pavmarivo",
+   "parts": [
+    "pavma",
+    "rivo"
+   ],
+   "domain": "People",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "pavmarivo",
+     "meaning": "biological companion (a matter-companion: a companion of physical substance, the flesh counterpart to favrorivo (digital companion); new coinage, flag)"
+    }
+   },
+   "note": "For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "mavopagodemrovordu",
+   "parts": [
+    "mavopago",
+    "demrovordu"
+   ],
+   "domain": "Science & philosophical inquiry",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "mavopagodemrovordu",
+     "meaning": "social momentum (society-force: the push that a society carries (nested compound, 2.0:G42); new coinage, flag)"
+    }
+   },
+   "note": "For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "linlegudo",
+   "parts": [
+    "linle",
+    "gudo"
+   ],
+   "domain": "Qualities",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "linlegudo",
+     "meaning": "grooming habit (cleanliness-everyday: the ordinary routine of keeping clean)"
+    }
+   },
+   "note": "For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "dapatabu",
+   "parts": [
+    "dapa",
+    "tabu"
+   ],
+   "domain": "Home & objects",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "dapatabu",
+     "meaning": "checkout (price-table: the counter where you pay)"
+    }
+   },
+   "note": "For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27)."
+  },
+  {
+   "module": "core",
+   "headword": "ruhepagorinba",
+   "parts": [
+    "ruhe",
+    "pagorinba"
+   ],
+   "domain": "Home & objects",
+   "tier": 2,
+   "archetype": null,
+   "image_compound": false,
+   "title": false,
+   "forms": {
+    "n": {
+     "form": "ruhepagorinba",
+     "meaning": "emergency situation (storm-situation: circumstances in turmoil)"
+    }
+   },
+   "note": "For a word whose meaning shifted in the 2100 Dreams draft (4.2, the author's request of 2026-10-27)."
+  }
+ ],
+ "listed_derivations_add": [],
+ "lexicalised_diminutives_add": [],
+ "restored_forms_add": [],
+ "rejected_proposals": [
+  {
+   "english": "tapped",
+   "proposed": "finidumdo",
+   "parts": [
+    "fini",
+    "dumdo"
+   ],
+   "why": "not a dictionary noun (a verb form, a joke or a slogan)"
+  },
+  {
+   "english": "guild",
+   "proposed": "talilekta",
+   "parts": [
+    "tali",
+    "lekta"
+   ],
+   "why": "an adjective, a verb phrase or a one-off description (the editor)"
+  },
+  {
+   "english": "entertainment wizard",
+   "proposed": "pelizayuyo",
+   "parts": [
+    "peli",
+    "zayuyo"
+   ],
+   "why": "parts not headwords, misspelled, or already a word"
+  },
+  {
+   "english": "hugged",
+   "proposed": "molulomo",
+   "parts": [
+    "molu",
+    "lomo"
+   ],
+   "why": "not a dictionary noun (a verb form, a joke or a slogan)"
+  },
+  {
+   "english": "interesting",
+   "proposed": "pensalavi",
+   "parts": [
+    "pensa",
+    "lavi"
+   ],
+   "why": "not a dictionary noun (a verb form, a joke or a slogan)"
+  },
+  {
+   "english": "the guild",
+   "proposed": "talilekta",
+   "parts": [
+    "tali",
+    "lekta"
+   ],
+   "why": "an adjective, a verb phrase or a one-off description (the editor)"
+  },
+  {
+   "english": "periodic",
+   "proposed": "kronovopra",
+   "parts": [
+    "krono",
+    "vopra"
+   ],
+   "why": "an adjective, a verb phrase or a one-off description (the editor)"
+  },
+  {
+   "english": "misguided",
+   "proposed": "nibelirbu",
+   "parts": [
+    "nibe",
+    "lirbu"
+   ],
+   "why": "not a dictionary noun (a verb form, a joke or a slogan)"
+  },
+  {
+   "english": "lightning mage",
+   "proposed": "navufaruzayuyo",
+   "parts": [
+    "navufaru",
+    "zayuyo"
+   ],
+   "why": "parts not headwords, misspelled, or already a word"
+  },
+  {
+   "english": "predict",
+   "proposed": "kronosabe",
+   "parts": [
+    "krono",
+    "sabe"
+   ],
+   "why": "an adjective, a verb phrase or a one-off description (the editor)"
+  },
+  {
+   "english": "unique",
+   "proposed": "sollipatu",
+   "parts": [
+    "solli",
+    "patu"
+   ],
+   "why": "an adjective, a verb phrase or a one-off description (the editor)"
+  },
+  {
+   "english": "captured through",
+   "proposed": "vimotivro",
+   "parts": [
+    "vimo",
+    "tivro"
+   ],
+   "why": "an adjective, a verb phrase or a one-off description (the editor)"
+  },
+  {
+   "english": "bio-engineered",
+   "proposed": "manlibiotino",
+   "parts": [
+    "manli",
+    "biotino"
+   ],
+   "why": "not a dictionary noun (a verb form, a joke or a slogan)"
+  },
+  {
+   "english": "cadence corner",
+   "proposed": "melopukugaki",
+   "parts": [
+    "melopuku",
+    "gaki"
+   ],
+   "why": "an adjective, a verb phrase or a one-off description (the editor)"
+  },
+  {
+   "english": "half-hearted",
+   "proposed": "patulore",
+   "parts": [
+    "patu",
+    "lore"
+   ],
+   "why": "not a dictionary noun (a verb form, a joke or a slogan)"
+  },
+  {
+   "english": "coincidentally",
+   "proposed": "kronopeli",
+   "parts": [
+    "krono",
+    "peli"
+   ],
+   "why": "an adjective, a verb phrase or a one-off description (the editor)"
+  },
+  {
+   "english": "notable light",
+   "proposed": "vilnelumi",
+   "parts": [
+    "vilne",
+    "lumi"
+   ],
+   "why": "parts not headwords, misspelled, or already a word"
+  },
+  {
+   "english": "long ago",
+   "proposed": "lalnikrono",
+   "parts": [
+    "lalni",
+    "krono"
+   ],
+   "why": "an adjective, a verb phrase or a one-off description (the editor)"
+  },
+  {
+   "english": "illustrious",
+   "proposed": "lumiramu",
+   "parts": [
+    "lumi",
+    "ramu"
+   ],
+   "why": "parts not headwords, misspelled, or already a word"
+  },
+  {
+   "english": "hands red",
+   "proposed": "rubimanli",
+   "parts": [
+    "rubi",
+    "manli"
+   ],
+   "why": "not a dictionary noun (a verb form, a joke or a slogan)"
+  },
+  {
+   "english": "sustainable",
+   "proposed": "kronotovo",
+   "parts": [
+    "krono",
+    "tovo"
+   ],
+   "why": "an adjective, a verb phrase or a one-off description (the editor)"
+  },
+  {
+   "english": "supercomputer",
+   "proposed": "sabefavrovu",
+   "parts": [
+    "sabe",
+    "favro"
+   ],
+   "why": "parts not headwords, misspelled, or already a word"
+  },
+  {
+   "english": "routine",
+   "proposed": "krononulu",
+   "parts": [
+    "krono",
+    "nulu"
+   ],
+   "why": "parts not headwords, misspelled, or already a word"
+  },
+  {
+   "english": "shopping district",
+   "proposed": "taradapagokezupatu",
+   "parts": [
+    "taradapago",
+    "kezupatu"
+   ],
+   "why": "parts not headwords, misspelled, or already a word"
+  },
+  {
+   "english": "logged in",
+   "proposed": "simvolalle",
+   "parts": [
+    "simvo",
+    "lalle"
+   ],
+   "why": "parts not headwords, misspelled, or already a word"
+  },
+  {
+   "english": "hypersexual",
+   "proposed": "yalmuamordalu",
+   "parts": [
+    "yalmu",
+    "amordalu"
+   ],
+   "why": "an adjective, a verb phrase or a one-off description (the editor)"
+  },
+  {
+   "english": "acquiring talent",
+   "proposed": "jubalekta",
+   "parts": [
+    "juba",
+    "lekta"
+   ],
+   "why": "an adjective, a verb phrase or a one-off description (the editor)"
+  },
+  {
+   "english": "ability lock",
+   "proposed": "jubasevre",
+   "parts": [
+    "juba",
+    "sevre"
+   ],
+   "why": "an adjective, a verb phrase or a one-off description (the editor)"
+  },
+  {
+   "english": "rank",
+   "proposed": "salrupatu",
+   "parts": [
+    "salru",
+    "patu"
+   ],
+   "why": "parts not headwords, misspelled, or already a word"
+  },
+  {
+   "english": "cyber bullying",
+   "proposed": "migafolluhemlu",
+   "parts": [
+    "miga",
+    "folluhemlu"
+   ],
+   "why": "not a dictionary noun (a verb form, a joke or a slogan)"
+  },
+  {
+   "english": "meme gallery",
+   "proposed": "resofavrolardapago",
+   "parts": [
+    "resofavro",
+    "lardapago"
+   ],
+   "why": "parts not headwords, misspelled, or already a word"
+  },
+  {
+   "english": "ability access",
+   "proposed": "mavojubaturna",
+   "parts": [
+    "mavojuba",
+    "turna"
+   ],
+   "why": "an adjective, a verb phrase or a one-off description (the editor)"
+  },
+  {
+   "english": "layered",
+   "proposed": "rofevelma",
+   "parts": [
+    "rofe",
+    "velma"
+   ],
+   "why": "not a dictionary noun (a verb form, a joke or a slogan)"
+  },
+  {
+   "english": "morose",
+   "proposed": "fojilore",
+   "parts": [
+    "foji",
+    "lore"
+   ],
+   "why": "an adjective, a verb phrase or a one-off description (the editor)"
+  },
+  {
+   "english": "grooming access",
+   "proposed": "linleturna",
+   "parts": [
+    "linle",
+    "turna"
+   ],
+   "why": "an adjective, a verb phrase or a one-off description (the editor)"
+  },
+  {
+   "english": "cartoon love",
+   "proposed": "lendaamor",
+   "parts": [
+    "lenda",
+    "amor"
+   ],
+   "why": "an adjective, a verb phrase or a one-off description (the editor)"
+  },
+  {
+   "english": "same set",
+   "proposed": "sambalordilekta",
+   "parts": [
+    "samba",
+    "lordilekta"
+   ],
+   "why": "an adjective, a verb phrase or a one-off description (the editor)"
+  },
+  {
+   "english": "actually intervene",
+   "proposed": "cemnuturna",
+   "parts": [
+    "cemnu",
+    "turna"
+   ],
+   "why": "an adjective, a verb phrase or a one-off description (the editor)"
+  },
+  {
+   "english": "autonomously",
+   "proposed": "tovolordi",
+   "parts": [
+    "tovo",
+    "lordi"
+   ],
+   "why": "an adjective, a verb phrase or a one-off description (the editor)"
+  }
+ ],
+ "recipes_add": [],
+ "english_aliases_add": [
+  {
+   "form": "minvalinu",
+   "add_english": "little girl"
+  },
+  {
+   "form": "vulrasan",
+   "add_english": "upset"
+  },
+  {
+   "form": "jusenulu",
+   "add_english": "cases"
+  },
+  {
+   "form": "mavomudu",
+   "add_english": "exceptionalities"
+  },
+  {
+   "form": "musvasan",
+   "add_english": "responsible for"
+  },
+  {
+   "form": "sovesia",
+   "add_english": "relaxing"
+  },
+  {
+   "form": "teklasan",
+   "add_english": "paused"
+  },
+  {
+   "form": "mavopagomelvanela",
+   "add_english": "social worker"
+  },
+  {
+   "form": "madijomru",
+   "add_english": "field trips"
+  },
+  {
+   "form": "kronosora",
+   "add_english": "best friend"
+  },
+  {
+   "form": "nimusan",
+   "add_english": "dearest"
+  },
+  {
+   "form": "turna",
+   "add_english": "everse access"
+  },
+  {
+   "form": "voprava",
+   "add_english": "rolled in"
+  },
+  {
+   "form": "finihatafa",
+   "add_english": "prodded"
+  },
+  {
+   "form": "gudonasan",
+   "add_english": "wonderful things"
+  },
+  {
+   "form": "holmosan",
+   "add_english": "blank slate"
+  },
+  {
+   "form": "regnaseno",
+   "add_english": "rules"
+  },
+  {
+   "form": "vaniasasan",
+   "add_english": "resplendent"
+  },
+  {
+   "form": "devomiga",
+   "add_english": "trusted"
+  },
+  {
+   "form": "kendejomru",
+   "add_english": "escapades"
+  },
+  {
+   "form": "norunasan",
+   "add_english": "despondent"
+  },
+  {
+   "form": "ralenasan",
+   "add_english": "muffled"
+  },
+  {
+   "form": "follusan",
+   "add_english": "terrified"
+  },
+  {
+   "form": "noruasa",
+   "add_english": "great dream"
+  },
+  {
+   "form": "rinbara",
+   "add_english": "cuddled up"
+  },
+  {
+   "form": "valmilornu",
+   "add_english": "miles"
+  },
+  {
+   "form": "vaninasan",
+   "add_english": "tacky"
+  },
+  {
+   "form": "helviyo",
+   "add_english": "sneaky"
+  },
+  {
+   "form": "zoguza",
+   "add_english": "squealed"
+  },
+  {
+   "form": "vanisan",
+   "add_english": "adorable"
+  },
+  {
+   "form": "gudosan",
+   "add_english": "casually"
+  },
+  {
+   "form": "marema",
+   "add_english": "nurtured"
+  },
+  {
+   "form": "sollisan",
+   "add_english": "left alone"
+  },
+  {
+   "form": "tovoasasan",
+   "add_english": "entrusted to"
+  },
+  {
+   "form": "soraopisia",
+   "add_english": "encouraged"
+  },
+  {
+   "form": "zivuza",
+   "add_english": "look distasteful"
+  },
+  {
+   "form": "conorelnu",
+   "add_english": "tourism revenue"
+  },
+  {
+   "form": "pagonasan",
+   "add_english": "familyless existence"
+  },
+  {
+   "form": "tivronasan",
+   "add_english": "neglected"
+  },
+  {
+   "form": "lornula",
+   "add_english": "logging hours"
+  },
+  {
+   "form": "kersosan",
+   "add_english": "only natural"
+  },
+  {
+   "form": "sizosan",
+   "add_english": "flickering"
+  },
+  {
+   "form": "miganasan",
+   "add_english": "appear offline"
+  },
+  {
+   "form": "harlulore",
+   "add_english": "reluctantly sociable"
+  },
+  {
+   "form": "lenda",
+   "add_english": "deathqueen line"
+  },
+  {
+   "form": "minvalinu",
+   "add_english": "chica"
+  },
+  {
+   "form": "nazrunia",
+   "add_english": "moonwalked backwards"
+  },
+  {
+   "form": "linuvani",
+   "add_english": "cuteness"
+  },
+  {
+   "form": "lavimilobela",
+   "add_english": "beamed"
+  },
+  {
+   "form": "linu",
+   "add_english": "kids"
+  },
+  {
+   "form": "mavovulra",
+   "add_english": "traumas"
+  },
+  {
+   "form": "lardala",
+   "add_english": "creates art"
+  },
+  {
+   "form": "minvalinu",
+   "add_english": "our daughter"
+  },
+  {
+   "form": "cunuasasan",
+   "add_english": "theoretically infinite"
+  },
+  {
+   "form": "bansasan",
+   "add_english": "severe enough"
+  },
+  {
+   "form": "simvocuza",
+   "add_english": "active profiles"
+  },
+  {
+   "form": "nelasan",
+   "add_english": "human peers"
+  },
+  {
+   "form": "farlaasasan",
+   "add_english": "creative panache"
+  },
+  {
+   "form": "surusan",
+   "add_english": "emotional volatility"
+  },
+  {
+   "form": "peremo",
+   "add_english": "optimization problems"
+  },
+  {
+   "form": "punesan",
+   "add_english": "pushed further"
+  },
+  {
+   "form": "loredoza",
+   "add_english": "inner strength"
+  },
+  {
+   "form": "simvolivna",
+   "add_english": "less independence"
+  },
+  {
+   "form": "yugemeyiya",
+   "add_english": "recovering well"
+  },
+  {
+   "form": "vardeasasan",
+   "add_english": "supremely rewarding"
+  },
+  {
+   "form": "ravmira",
+   "add_english": "solving puzzles"
+  },
+  {
+   "form": "loredonu",
+   "add_english": "ongoing commitment"
+  },
+  {
+   "form": "lektamambi",
+   "add_english": "prior sessions"
+  },
+  {
+   "form": "mavoyuge",
+   "add_english": "brain scans"
+  },
+  {
+   "form": "tebosan",
+   "add_english": "early onset"
+  },
+  {
+   "form": "vimolalle",
+   "add_english": "square pane"
+  },
+  {
+   "form": "mubo",
+   "add_english": "notable worry"
+  },
+  {
+   "form": "loremiga",
+   "add_english": "fond of"
+  },
+  {
+   "form": "gonbiga",
+   "add_english": "visit it"
+  },
+  {
+   "form": "sudesia",
+   "add_english": "show you"
+  },
+  {
+   "form": "vismava",
+   "add_english": "scanned herself"
+  },
+  {
+   "form": "pavma",
+   "add_english": "physical actuality"
+  },
+  {
+   "form": "tevulusan",
+   "add_english": "abandoned-looking"
+  },
+  {
+   "form": "tranasovlata",
+   "add_english": "transformed into"
+  },
+  {
+   "form": "loteronelala",
+   "add_english": "meet you"
+  },
+  {
+   "form": "verasan",
+   "add_english": "can actually"
+  },
+  {
+   "form": "silbeseno",
+   "add_english": "text messages"
+  },
+  {
+   "form": "larnela",
+   "add_english": "huffed"
+  },
+  {
+   "form": "soraopisia",
+   "add_english": "encourages"
+  },
+  {
+   "form": "lordi",
+   "add_english": "in control"
+  },
+  {
+   "form": "cerena",
+   "add_english": "bewildering"
+  },
+  {
+   "form": "kronosora",
+   "add_english": "closest friends"
+  },
+  {
+   "form": "timru",
+   "add_english": "felt tears"
+  },
+  {
+   "form": "lordi",
+   "add_english": "maintaining control"
+  },
+  {
+   "form": "lisrola",
+   "add_english": "don't leave"
+  },
+  {
+   "form": "yumlisan",
+   "add_english": "somewhere nice"
+  },
+  {
+   "form": "mellikrono",
+   "add_english": "stretched time"
+  },
+  {
+   "form": "vanisan",
+   "add_english": "appealing"
+  },
+  {
+   "form": "linlenasan",
+   "add_english": "messy"
+  },
+  {
+   "form": "pagomodo",
+   "add_english": "irl actuality"
+  },
+  {
+   "form": "ruherilu",
+   "add_english": "swirling storm"
+  },
+  {
+   "form": "fasbivelma",
+   "add_english": "wear make-up"
+  },
+  {
+   "form": "vilnetibi",
+   "add_english": "eyebrows"
+  },
+  {
+   "form": "fasbivelma",
+   "add_english": "make up"
+  },
+  {
+   "form": "palvisan",
+   "add_english": "applied"
+  },
+  {
+   "form": "follusan",
+   "add_english": "frightening things"
+  },
+  {
+   "form": "follusan",
+   "add_english": "spooky"
+  },
+  {
+   "form": "zilevelma",
+   "add_english": "fancier clothes"
+  },
+  {
+   "form": "harmanasan",
+   "add_english": "innocuous"
+  },
+  {
+   "form": "vorduna",
+   "add_english": "pure randomness"
+  }
+ ],
+ "test_sentences": [],
+ "validation": {
+  "errors": []
+ },
+ "counts": {
+  "new_roots": 0,
+  "new_compounds": 42,
+  "headwords_after": 2550,
+  "meaningful_forms_after": 5449
+ }
+}

@@ -40,7 +40,13 @@ Validation 23 PASS, 2 WARN (`npm run validate:3.6`) and the author's validator
 PASS. The one recipe that broke a ruling is settled as for 3.5
 (`tests/grammar/patch_3_6.test.ts`). 3.5 is frozen as 3.6's baseline.
 
-**4.1 is current, proposed** (ADR-0031): `data/lexicon/liraasa_4_1.json`, built
+**4.2 is current, proposed** (ADR-0032): `data/lexicon/liraasa_4_2.json`, built
+from frozen 4.1 by `npm run integrate:4.2`: the exact words whose meaning
+shifted in the 2100 Dreams draft, named by the scorer's notes
+(`translation/tools/vocab_4_2.py` → `data/proposals/liraasa_4_2_patch.json`):
+42 compounds, 105 English aliases, no new roots; 2550 headwords.
+
+**4.1, proposed** (ADR-0031): `data/lexicon/liraasa_4_1.json`, built
 from frozen 4.0 by `npm run integrate:4.1`: the vocabulary the 2100 Dreams
 draft still paraphrased (`translation/tools/vocab_4_1.py` → `data/proposals/liraasa_4_1_patch.json`):
 40 compounds of existing headwords, 112 English aliases, no new roots; 2508
@@ -326,6 +332,8 @@ validator and parser.
 | `npm run integrate:3.3`    | Build 3.3 from frozen 3.1: the 3.1 ratification, then the 3.3 changeset (sha-checked baseline). `-- --check` writes nothing (ADR-0023).                                                                                                                                                                           | **working** |
 | `npm run integrate:3.4`    | Build 3.4 from frozen 3.3: the 3.4 patch, then the editor's decisions on four 3.3 sentences (sha-checked baseline). `-- --check` writes nothing (ADR-0024).                                                                                                                                                       | **working** |
 | `npm run integrate:3.5`    | Build 3.5 from frozen 3.4: the ratification of 3.0, 3.3 and 3.4, then the 3.5 patch with every module (sha-checked baseline). `-- --check` writes nothing (ADR-0025).                                                                                                                                             | **working** |
+| `npm run integrate:4.2`    | Build 4.2 from frozen 4.1: the exact words whose meaning shifted in the 2100 Dreams draft (sha-checked baseline). `-- --check` writes nothing (ADR-0032).                                                                                                                                                         | **working** |
+| `npm run validate:4.2`     | validate_3_0.py on 4.2 → `data/lexicon/validation_4_2.json`; then the author's validator on `handoff/liraasa_4_2_llm.json`.                                                                                                                                                                                       | **working** |
 | `npm run integrate:4.1`    | Build 4.1 from frozen 4.0: the vocabulary the 2100 Dreams draft still paraphrased (sha-checked baseline). `-- --check` writes nothing (ADR-0031).                                                                                                                                                                 | **working** |
 | `npm run validate:4.1`     | validate_3_0.py on 4.1 → `data/lexicon/validation_4_1.json`; then the author's validator on `handoff/liraasa_4_1_llm.json`.                                                                                                                                                                                       | **working** |
 | `npm run integrate:4.0`    | Build 4.0 from frozen 3.6: what translating 2100 Dreams needed (sha-checked baseline). `-- --check` writes nothing (ADR-0029).                                                                                                                                                                                    | **working** |

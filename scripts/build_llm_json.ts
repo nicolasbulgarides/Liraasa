@@ -4,7 +4,7 @@
  *
  *   npm run build:llm
  *
- * Writes handoff/liraasa_4_1_llm.json from the canonical 4.1 lexicon. It holds
+ * Writes handoff/liraasa_4_2_llm.json from the canonical 4.2 lexicon. It holds
  * every grammar rule and the full dictionary. It is shaped for a reader that
  * goes top to bottom: instructions and hard rules first, then sound, word
  * building, the clause, recipes and every ruling, then the small words, the
@@ -35,8 +35,8 @@ import { parseArgs } from './args';
 import { loadHymn } from './hymn';
 import { PROPOSED_EDITIONS } from './proposed_editions';
 
-const LEXICON = 'data/lexicon/liraasa_4_1.json';
-const OUT = 'handoff/liraasa_4_1_llm.json';
+const LEXICON = 'data/lexicon/liraasa_4_2.json';
+const OUT = 'handoff/liraasa_4_2_llm.json';
 /** The album, read against the live lexicon by scripts/build_album.ts; non-normative (2.5:G87). */
 const ALBUM = 'data/corpus/album_2_0/album_current.json';
 const ALBUM_READINGS = 'data/corpus/album_2_0/album_readings.json';
