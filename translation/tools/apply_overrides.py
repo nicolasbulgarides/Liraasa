@@ -25,6 +25,11 @@ def main():
         r = book.out[ch].get(sid)
         if r is None or r.get("liraasa") == fx["liraasa"]:
             continue
+        # a correction written against a given text applies only while the segment still reads so:
+        # a later pass may have replaced it with a better rendering, which it must not overwrite
+        if fx.get("base") is not None and r.get("liraasa") != fx["base"] and r.get("check", {}).get("ok"):
+            print(f"{sid}: changed since the correction was written, and passes; left as it is")
+            continue
         r["override"] = {"from": r.get("liraasa"), "from_score": r.get("score"), "reason": fx["reason"]}
         r["liraasa"] = fx["liraasa"]
         r["check"] = run.check(book, run.parser(), r)

@@ -2,5 +2,20 @@
  "c00-p0001": {
   "liraasa": "Lavbujuba",
   "reason": "Dedication heading: loredonu's dictionary sense is 'surrender' (dedication is only an English alias); lavbujuba, 'offering', is what a dedication is (the editor, at the author's request, 2026-10-26)"
+ },
+ "c07-p0084": {
+  "liraasa": "Maivo po masuma: “Iya Saraswati, taivo viki desida sidu yanoya ko maivori nullopressa ki? Maivori nedunia lusu tressa minvalinuri kopisa ito ka felra.”",
+  "reason": "The last grammar failures, fixed by the editor (2026-10-28): the vocative takes iya (3.0:G129).",
+  "base": "Maivo po masuma: “Saraswati, taivo viki desida sidu yanoya ko maivori nullopressa ki? Maivori nedunia lusu tressa minvalinuri kopisa ito ka felra.”"
+ },
+ "c08-p0044": {
+  "liraasa": "Taivo ke masunasan ki? Eli nulu de demro ne vimosudeva fime ito ke sabeasasan. Eli madi de galsa semnesia nazru maivori. Maivori povi kezuserbuka ito, ata maivori nosi navdinia melva.",
+  "reason": "The last grammar failures, fixed by the editor (2026-10-28): behind us as its own clause (2.2:G67).",
+  "base": "Taivo ke masunasan ki? Eli nulu de demro ne vimosudeva fime ito ke sabeasasan. Maivori povi kezuserbuka eli madi de galsa raho ke nazru maivori, ata maivori nosi navdinia melva."
+ },
+ "c11-p0015": {
+  "liraasa": "Kroti ola, maivo po senosia eli la lalninasan. Amanda ata Alianii po ne gome rivora la vordunasan, nara la ruli dorvasan. Amanda po hirnaha da Barnaby-Beaumont, ata saivo po tovota baba sabetelbasan karkokemye raho po gome migama ala saivo de farlasan vilneri. Li lavrasamniri raho po tovota mudu da linuvenre gase saivo, itori po gome sabetelbasia muya-krono. Ata li farlasan loteropalviri de li kersosan paturi po gome donuda ala itori ko karkokemye ata loterosan malosan tranari. Lanto, ola po gome silrosudesia. Kasa saivo po hirnaha da Diotrem de tivro, saivo po ke harlu ala Diotrem, ata tu saivo po ka baba mufrasan nela oro sora de Germayano oro Guild.",
+  "reason": "The last grammar failures, fixed by the editor (2026-10-28): the two-word name hyphenated so it reads as one name.",
+  "base": "Kroti ola, maivo po senosia eli la lalninasan. Amanda ata Alianii po ne gome rivora la vordunasan, nara la ruli dorvasan. Amanda po hirnaha da Barnaby Beaumont, ata saivo po tovota baba sabetelbasan karkokemye raho po gome migama ala saivo de farlasan vilneri. Li lavrasamniri raho po tovota mudu da linuvenre gase saivo, itori po gome sabetelbasia muya-krono. Ata li farlasan loteropalviri de li kersosan paturi po gome donuda ala itori ko karkokemye ata loterosan malosan tranari. Lanto, ola po gome silrosudesia. Kasa saivo po hirnaha da Diotrem de tivro, saivo po ke harlu ala Diotrem, ata tu saivo po ka baba mufrasan nela oro sora de Germayano oro Guild."
  }
 }
