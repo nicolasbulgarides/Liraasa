@@ -15,6 +15,7 @@ import json
 import re
 from concurrent.futures import ThreadPoolExecutor
 
+import calibrate
 import grammar_fix
 import report
 import run
@@ -82,11 +83,22 @@ def redo(state, book, r):
         cand["check"] = run.check(book, run.parser(), cand)
         if not cand["check"]["ok"]:
             return False
-        run.score_batch(state, book, ch, [cand])
+        # old and new scored side by side, in the same calls, twice: the scorer drifts between
+        # runs by about 0.05, so a stored score from another run is no fair comparison
+        old = dict(before, id=before["id"] + "~old")
+        new = dict(cand, id=before["id"] + "~new")
+        s1 = calibrate.score(state, book, [old, new])
+        s2 = calibrate.score(state, book, [old, new])
+        o = [s.get(old["id"]) for s in (s1, s2) if s.get(old["id"]) is not None]
+        n = [s.get(new["id"]) for s in (s1, s2) if s.get(new["id"]) is not None]
+        if not o or not n:
+            return False
+        cand["score"] = sum(n) / len(n)
+        cand["head_to_head"] = {"old": sum(o) / len(o), "new": cand["score"]}
     except run.Flagged:
         return False
     with run.LOCK:
-        if cand.get("score", 0) > before.get("score", 0):
+        if cand["head_to_head"]["new"] > cand["head_to_head"]["old"]:
             cand["chunked"] = {"from": before["liraasa"], "from_score": before.get("score"), "pieces": len(parts)}
             cand["status"] = "parsed"
             cand["confidence"] = run.confidence(cand)

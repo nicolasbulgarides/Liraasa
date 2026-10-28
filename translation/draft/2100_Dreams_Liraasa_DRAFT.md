@@ -3,12 +3,12 @@
 _A machine draft for the author's review: every segment carries its confidence. Not canon._
 
 
-### Lavbujuba
+### Lavbujuba de eli bulli
 
 2100 Noruri ka baba telne de li muduna de li mavo, opi, li tranaasa de li mavopago ata farlamavo. Tu ito ka telne de muya loterosan coda. Maivo po sarbisia eli bulli kopisa ito ka baba vanisan jomru raho nelari ata farlamavo povi lavila eli-krono ata futupago. Vobi maivo, ko li lideori de eli telne, ito viki ka doli juse fime maivo donuda eli sarbi gase lavbujuba ala li nelari raho nuravunia en li dozaserburi de li mavomudu, ata ala farlamavo de futupago. Saivori futu gome dapada, ata gome amora, ko benamolu pifu. <sup>[c00-p0002 · high]</sup>
 
 
-## Li una-ne bullipatu — li vio, li vionarvo ata li violumi
+## Li una-ne bullipatu — li colbitranari de li vio
 
 
 ### Una-ne patu — Alianii, li lavrasamni
@@ -27,7 +27,7 @@ Saivori po opioa conorelnu de lanvecono. Maivori po lavila ata zeldoza en maivor
 
 Somi-krono, somi biokibori raho tovota solayalmu, po karkoka saivori sela. Nuna-nela po sudesenosia ola. Li biokibori po ka gilbunasan ata talidonusan. Saivori po ka germasan tarnuri ata minvari. Somi kibori po ka sevrelallesan, nara saivori po ne ka tarnusan oro minvasan. Li kibori po tovota lumisan lorevelu. Saivori po ka malonasan. Saivori po ne tovota namina oro desi. Saivori po follufa doli tovona de navufaruyalmu. Saivori po marema maivori de conodivma la lavisan. Maivori de sorasan kibori po ke bako en baba dokra entre li kezunelari ata li nimuyori de Keidens. Ola dokra po ka ralkasan, nara ito po ne ka lallesan. Keidens po ka baba vanisan valminulu de melo seye. Ito po tovota farlasan larbori ata sizosan folniri de renlicolbi. Li folniri po lirala li hemluri de li liralavrari la lavisan. Olari liralavrari ne miyo loki. <sup>[c01-p0009 · low]</sup>
 
-Yesta li kibori karkoka saivori sela. Maivo po pagopa ala baba momra de kibo una-krono. Li momra po gome lektala en Rinbavemi. Li momra po ke ruli levanasan sidu turnata hoyo. Ola momra po ke vobi baba linlekibo. Saivo kapoki maivo de sora. Li silro ata li silrosan serna po vaku maivo sabesia fime ola linlekibo po tovota baba dendusan, muya patusan, surusan lorevemi ata baba ruli yanosan lekta de sorari. Saivori po gonbihemluga tressa nelari ala li pelinasan nelmolavbu. Maivo po ka una de li tressa. Ata doli maivo po venreva, la dorvanasan. Saivo de nole po ka Charliecuazirasetajiuna. <sup>[c01-p0010 · medium]</sup>
+Yesta li kibori karkoka saivori sela. Somi-krono, maivo po pagopa ala baba momra de baba kibo. Li momra po venreva en Rinbavemi. Li momra po ke levanasan sidu turnata hoyo. Li momra po ke vobi baba linlekibo raho po linlela ceresolotobrari. Saivo kapoki maivo de sora. Li silrosan lermi ata li silro po lumiverala fime saivo po tovota baba surusan lorevemi raho po ka tibilektasan, ata baba ruli yanosan lekta de sorari. Tressa nelari po gome gonbihemluga ala li nelmolavbu de pelina, ata maivo po ka una de li tressa. Ata doli maivo po venreva. Ola po ka baba lukayano. Saivo de nole po ka Charliecuazirasetajiuna. <sup>[c01-p0010 · medium]</sup>
 
 Saivo de vilneri po ka shadalumi. Saivo po ka sirmosan en saivo de cilnipatu, kasa nuna loterosan kibo po tovota baba rezasabaye. Li rezasabaye po gome sarbisia yuta lumi. Saivo po paralopa li rezasabaye. Saivo po lavila sidu velmava zirkitisan yanbasan namrevelmari. Ata saivo po lavila sidu lemudonula maivo li tinori de olari namrevelmari. Saivo po senosia maivo fime somi itori po ka gudonasan. Saivo po nolenia maivo zilenela Alianii. Saivo po sahi remnisenora ala maivo, kasa saivo po sabesia fime li lelhi de li linlemiru po vaku maivori surusia baba dendusan larneti en Germarupu. En Kadenskorna, saivori po tovota mililumi mirupatu de li velni de folniri. Ata maivori po tovota muya farlapukuri raho po karkoka li mudu. <sup>[c01-p0011 · medium]</sup>
 
@@ -119,13 +119,13 @@ Maivo de favro po senosia: “Maivo ne ke eli-pago.” Krotiata maivo po vaku it
 
 Maivo po senosia: “Hema, maivo ke menu benasan. Maivo tovota patuti de vemineme poye.” Hugo po ka li nela raho maivo povi ke verasan ko ito. Maivo po tefa sabesia saivo en gase unzira-penta montafama. Maivori po yave-venreva en baba nafevemisan resofavrosan lardapago. Ito po ke en baba patu de reso raho gozaga saivori sela, da li tebosan montafamari de dossa-mililumi ala li kronopatu de Kovid. <sup>[c01-p0054 · low]</sup>
 
-Maivo po manlivayema kopisa saivo turnata li domlupatu la fulesan, ata saivo de sernasimvo po pagopa da reku ata namre ala saivo de fulesan yuge, ko saivo de noruzayuyosan velma. Ito po ke nafevemisan ata zayuyosan, ata ito po tovota navufarusan rubi lumiri ata yelmisan aurumijubasan mensori. Saivo po vimosudeva la ruli hurvosan, ata maivo po amora ito. <sup>[c01-p0055 · low]</sup>
+Maivo po manlivayema kopisa saivo turnata li domlupatu la fulesan. Ata saivo de favronela po tranata da baba reku ata baba namre ala saivo de fulesan yuge, ko toda saivo de noruzayuyosan velma. Li velma po yanopatuya li vimosude de baba sernanulusan zeldoyo ko li vimosude de baba zayuyo. Ito po tovota li rubi de lumizefro, li yelmisan aurumijuba ata lulfavelmari. Saivo po vimosudeva la resovardesan, ata maivo po amora ito. <sup>[c01-p0055 · medium]</sup>
 
 Hugo po semnesia su baba lalfosan semnebiti de maivo, ata po dumdoda maivo de tabu yuta saivo de finiri. Zafra, muya farufolnitiri po vimosudeva, ata itori po farubakofa la lumiyelmisan. Maivo po lesvu Hugo zayuza en maivo de favrodomlu. Hugo po senosia: “Va-pagopa ala maivo en Mayami! Ki-kasa taivo loki lisrola en Lumiopi ki? Ito ke ruli benanasan. Nido, taivo sela sahi senosia fime ito ke benanasan.” <sup>[c01-p0056 · high]</sup>
 
 Maivo ne povi dapatovoda Mayami, Hugo. En li monta, taivo de domlucono ke ocha-mililumi cono ki? <sup>[c01-p0057 · high]</sup>
 
-“Ito ke ligo unzira-dossa-mililumi, nara taivo sabesia fime maivo lisrola en li kezupatu de velmasirmo, sora. Nara taivo povi gonbiga maivo. Taivo povi lisrola ko maivo tuni taivo desida sidu pagopa. Loya somi-nela!” <sup>[c01-p0058 · medium]</sup>
+“Nido, ito ke gase unzira-dossa, nara taivo sabesia fime maivo lisrola en li kezupatu de velmasirmo…, Cika. Nara taivo povi gonbiga maivo, ata taivo povi lisrola ko maivo tuni taivo desida sidu pagopa. Loya somi-nela!” <sup>[c01-p0058 · high]</sup>
 
 Maivo po senosia: “Ata maivo futu codaca pendi ki-coda ki? Maivo amora maivo de tali.” Nara maivo po bodu sabesia saivo de relsi. <sup>[c01-p0059 · high]</sup>
 
@@ -143,7 +143,7 @@ Maivo po masuma: “Taivo doli telvo amordalua ko maivo ki, sora?” Maivo po ma
 
 Maivo po senosia la lavisan: “Ki-kasa taivo ne talita? Pagopa ala taivo de lardazupa! Maivo tovota bumre, ata maivo musi bumreba ito. Maivori nosi gonbiga Lumizefrofaru kube maivo tefa bumreba.” <sup>[c01-p0066 · high]</sup>
 
-Hugo po senosia: “Sidu navdinia jubasan nelari ka patu de maivo de tali, Alianii. Maivo sabesia li jubasan nela kube maivo vimova saivo.” Maivo po lesvu saivo talita reve, kopisa saivo tovota somi farvi. Hugo po senosia: “Maivo nosi tivrota taivo ko ola donu. Krotiapo li tali, yava pagopa ala Lumizefrofaru.” <sup>[c01-p0067 · medium]</sup>
+“Sidu tovota nolsajuba ka baba patu de maivo de tali, Alianii. Maivo revo-sabesia nolsajuba kube maivo vimova saivo,” Hugo po senosia. Maivo po kemyelalleka saivo de mavojuba, kopisa lesvu saivo tovota somi mavozayusan farvi. “Maivo nosi vaku taivo devoverada ko ola donu. Krotiapo li tali, yava pagopa ala Lumizefrofaru.” <sup>[c01-p0067 · medium]</sup>
 
 Zabo, maivo lukadapala fime taivo viki desida sidu tivrota maivo ala muya coda. Eho. Hema… maivo musi pagopa ala li turnazupa de Lemujomru ko li linuri ata toda ola, taivo sabesia. Hema… li migademro de baba mellinasan lekta buyu ka mudunasan vobi li kerso de li mavoyuge. Hema… oro somi-coda. <sup>[c01-p0068 · medium]</sup>
 
@@ -156,7 +156,7 @@ Nole, yanba, simvo de minvatarnu, nimupago: <sup>[c01-p0071 · high]</sup>
 
 Alianii ke dozira-seta montafama, ata saivo ka vemiasasan, ata saivo ke en Lumiopi, Oregon. <sup>[c01-p0072 · medium]</sup>
 
-Lordi de li harlujomrusan lemudonuyo: <sup>[c01-p0073 · low]</sup>
+Li lordi de li harlujomrulivesan lemudonuyo: <sup>[c01-p0073 · medium]</sup>
 
 Saivo ke en li penta-ne patu, ata saivo ka baba sabeyo. Sesacenta-trezira-ocha jusesenori donuda saivo gase penta veluri. <sup>[c01-p0074 · low]</sup>
 
@@ -166,7 +166,7 @@ Saivo po tefa lemula li mavopagolemudonusan lardari de li vordunasan lemu en Lum
 
 Li silbeseno de li lemudonuyo: <sup>[c01-p0077 · high]</sup>
 
-Vimova! Miyo baba daigofarusebi! Yeko, purmari! Maivo de nole ka Alianii, ata maivo de nolefavro ka U843. Nara maivo lorelivnala doli Alianii. Maivo ka baba lirbu de harlujomru en lusu cuara montafama. Maivo senosia da maivo de dendusan mavolumi fime maivo de fatosan tali ka lemudonu, ata lirbu de harlujomru. Maivo po sarbisia baba bulli de tranasan follu en lemupago. Ata maivo ka patusabeyo; maivo lirbula li lemuyori transa surusan dozaserburi toda-krono. Maivo ne farlafa olari dozaserburi kopisa vaku li lemuyori follufa; nara maivo donuda baba lukavenre ala saivori kopisa saivori zeldoza follu, mubofollu ata mavovulra. <sup>[c01-p0078 · low]</sup>
+Vismava! Baba daigofarusebi ke eli-pago! Yeko, purmari! Maivo de nole ka Alianii-U843, oro doli Alianii, kasa maivo lorelivnala ola. Maivo ka baba harlujomrupilo en cuara montafama ata somi monta. Maivo de mavolumi senosia da ito de dendu fime maivo fatofa sidu lemudonula ata sidu pilopa harlujomruri. Maivo de serbucuza po donuda ito de visma ala li tranasan follu. Toda-krono, maivo talita en li salrupatu de baba patusabeyo, kube maivo pilopa li lemuyori transa bioramuri raho ka dozaserburi vobi li sururi. Olari bioramuri ne gome farlafa kopisa vaku li lemuyori follufa; nara itori gome farlafa kopisa donuda baba lukavenre ala saivori, kopisa saivori vazrava saivori de folluri, mubofolluri ata mavovulrari. <sup>[c01-p0078 · medium]</sup>
 
 Kasa maivo ka patusabeyo, maivo lemudonula muya mavoloterosan lemuyori. Saivori tovota mubofollu, lordikaldo, lorevopra ata lorenevra. Muya saivori ke nirmari de folluhemluyori en li favropago. Maivo lemudonula tu lemuyori raho tovota yugelotero oro mavomudu. Maivo tovota gase unzira-mililumi lornu de lemudonu. Fisa, sabesia fime maivo de cono ka li mosa salrunasan salrupatu vobi famari raho nedunia. Nara eli ne lumiverala fime maivo lemudonula lemuyori voyu yugelotero. Maivo livnala eli. Fisa, lenila maivo de livna! Ne telbata sidu ravnura maivo de visma yuta kasi muya cono! <sup>[c01-p0079 · low]</sup>
 
@@ -174,11 +174,11 @@ Lorejuba ala taivori, ko gozana — Alianii. <sup>[c01-p0080 · high]</sup>
 
 Jusesenori: <sup>[c01-p0081 · high]</sup>
 
-“Maivo ka senohelnayo, ata maivo tovota maivo de helnapagoti en unzira-seta montafama. Kube baba folluhemluyo mubofolluma baba lemuyo, oro baba lemuyo ke mubofollusan, ata saivo de suru zeldoza li helna, da muya centa harlujomrulive raho maivo po talita ko saivori, maivo vaku maivo de helnanelari pagopa ala doli Alianii.” <sup>[c01-p0082 · low]</sup>
+“Maivo ka senohelnayo, ata maivo talita vobi maivo sela en unzira-seta montafama. Maivo po talita ko muya centa harlujomrulive. Somi-krono, baba lemuyo venreva ala maivo. Li folluhemluyori po gozaga saivo, oro saivo ke mubofollusan. Ata saivo de suru po zeldoza li helna. Ola-krono, maivo senosia ala maivo de helnanelari fime saivori suvi pagopa ala doli una de olari harlujomrulive, Alianii.” <sup>[c01-p0082 · low]</sup>
 
 “Maivo de nole ka Lily, ata maivo tovota cuara minvalinuri. Maivo de lore po ke bakosan kube Rose po venreva da li lemupago ala li nimu, kasa loterosan minvalinuri po ka folluhemluyori ala saivo ata po gozaga saivo. Maivo po palvipa saivo en senohelna en muya deyafama kopisa bimneba saivo de corvibelfi. Nara saivo po nedunia penta lektamambi ko Alianii. Una deyafama po vaku maivori de famasan bio tranata.” <sup>[c01-p0083 · high]</sup>
 
-Maivo de tarnulinu ka Marcus. Saivo tovota lordikaldo, sige saivo po ke sesa montafama. Saivo de vizudemrotiri po ke ruli dozaserbusan vobi maivori de fama. Marcus po sahi fulefa buzakovari de miru, ata una krotiapo una, saivo po sahi palvipa itori su li domlukezu de li cemopago. Marcus po hiro sahi timruta kube saivo ne tovota buzakovari loki. Toda saivo de sorari po amora Rinbavemi, nara saivo po surusia fime ito ke follusan, tuni saivo po talita ko Alianii. Saivo loki tovota lordikaldo. Nara saivo ne farlafa lordina en maivori de domlu. Korsi, saivo farlafa larda, ata saivo rillira cono da ito. <sup>[c01-p0084 · medium]</sup>
+“Maivo de tarnulinu, Marcus, tovota lordikaldo, sige saivo po ke sesa montafama. Saivo de vizudemrotiri po ke ruli dozaserbusan vobi maivori de fama. Marcus po sahi fulefa buzakovari de miru, ata una krotiapo una, saivo po sahi palvipa itori su li domlukezu de li cemopago. Kube nuna buzakova po lisrola, saivo po sahi lombila sidu timruta. Toda saivo de sorari po amora Rinbavemi, nara ito po vaku saivo follufa, tuni saivo po talita ko Alianii. Saivo loki tovota lordikaldo. Nara saivo farlafa larda en maivori de domlu korsi lordina, ata saivo rillira cono vobi ito.” <sup>[c01-p0084 · medium]</sup>
 
 “Maivo semrasia sidu verasenova eli, nara maivo ata maivo de devorivo po ke en li nuluna, ata maivori po vuzilordiva sidu revo-donuda Celeste ala li mavopagodivma, kopisa li mavopagodivma palvipa saivo ko baba loterosan fama. Maivori po sabesia fime dozaserburi futu miyo, kasa maivori po linurillila baba linu da baba marecemnu. Nara maivori po ne povi linufulela, ata maivori po pensapa fime ola ka li benasan coda raho maivori suvi codaca. Maivori po ne hiro sabesia li dendu de li duha. Li linuri de li marecemnu surusia ito, kasa saivori po kronobioka voyu famari. Maivori po vimova Alianii, ata saivo de famasan nole po ka U843. Kenvi, maivori po sabesia fime li tino de minva raho lomola saivo de fonte, futu ka baba nela raho povi melvama, kopisa maivori de minvalinu yugemeyiya. Maivori de pensa po ka verasan. Lorejuba ala Deviasa! Alianii, taivo po donuda hirnaasa ala maivori de fama; taivo po donuda hirnaasa ala maivori de minvalinu. <sup>[c01-p0085 · medium]</sup>
 
@@ -191,9 +191,9 @@ Li ocha-ne deya de li tressa-ne monta, 2100. Pensari ke krotiapo li tali. Somi d
 
 Da li tebosan montafamari de dossa-mililumi-setazira, Lemujomru loki ka li mosa sirmosan favropago en Rinbavemi vobi lemu ata peli. Rada deya, muya lemuyori de toda yanba yusoya Lemujomru. Saivori ka linuri ata yanbanelari. Lemujomru po tovota muya lektamambiri de lemu ata peli. Maivo po lovula baba veraserbu. Si li veraserbu po ka verasan, olari lektamambiri po vorduva gase dozira-ocha de centa de li kadurivla en Rinbavemi. Maivo tinota li lektamambiri de lemu ata li lektamambiri de peli en maivo de senori, nara lemu ata peli ka ruli migasan la verasan. Taivo lemula en li benasan peliri, ata taivo pelipa en li benasan lemu. Yori, eli deya po ka li ocha-ne deya de li tressa-ne monta. Ito po ka li dossa-ne deya krotiapo maivo po hiro sarbisia en maivo de deyacuza. Li merno po ka gudosan, gase toda loterosan merno. <sup>[c01-p0089 · low]</sup>
 
-Maivo po pagotranapa ala li turnazupa de Lemujomru. Maivo po tranata ala li silrosan modo de vimosude. Maivo po tovota turna ala li nafevemisan talipagori, ata itori ka cunuasasan en li pensa. Maivo po pagopa ala una de itori. Maivo po noma povi lovula li cuzalektari de li lemuyori en maivo de nimu, la manlisabesan. Nara maivo po lavila sidu pagopa ala baba talipago. Yesta kube li talipago po ka nafetelnesan, fulenasan ata sernanulusan, ito po sonbulektasia en maivo de lore. Ito po vaku maivo surusia fime maivo ka baba “Bumer” da li deyari de Gasolina. (Maivo po lemula eli seno da baba lardapago de resofavrori.) Maivo ne sabesia. Maivo ka doli baba hurvosan nela poye. <sup>[c01-p0090 · medium]</sup>
+Maivo po pagotranapa ala li turnazupa de Lemujomru. Maivo po livnala li silrosan modo de vimo. Ata maivo po pagopa ala una de li nafevemisan talipagori raho maivo po tovota turna ala itori. En li pensa, li nafevemisan talipagori ka cunuasasan. La manlisabesan, maivo po noma povi lovula li cuzalektari en maivo de nimu. Nara kube maivo po pagopa ala baba talipago, somi-coda po sonbulektasia en maivo de lore, nevi li talipago po ke nafetelnesan, fulenasan ata sernanulusan. Ito po vaku maivo surusia gase baba “Bumer” da li deyari de li yalmukaduri. (Maivo po lemula eli seno da baba lardapago de resofavrori.) Maivo ne sabesia. Maivo ka hurvosan poye. <sup>[c01-p0090 · medium]</sup>
 
-Eli deya po ke hurvosan, kasa maivo po tefa apoka li gura de li talipatu: maivo po tefa bodu cereca li cuzalektari. Lemudonuyori ata yugemeyiyori ata mavohelnayori po donuda ito pendi ala maivo. Maivo po ka patusabeyo, ata maivo ka patusabeyo, gase baba talvabitiyo de lemu. Maivo de gudonasan ramu tefa donuda baba lallesan mavo ata surumiga ala maivo, poye. Tonsi, sidu surumigasia ata talita ko li lemuyori raho tovota muya dozaserburi, ke kasi levasan. Yori, maivo de linlekovari ke tonsi palvisan fime doli gase tressa de centa de li talisan simvocuzari de Lemujomru povi vimova maivo de simvocuza. Ata en ola tressa de centa, gase penta de centa ke tonsi dozasan fime maivo viki ravnura ola talipatu. <sup>[c01-p0091 · low]</sup>
+Eli una-ne deya de li deyafama po ke hurvosan, kasa maivo po tefa sevresia maivo de gura de talipaturi: maivo po tefa sevresia toda li talipaturi raho muya loterosan lemudonuyori ata senohelnayori ata mavohelnayori po donuda pendi ala maivo. Maivo po ka patusabeyo, ata maivo loki ka patusabeyo, gase baba talvabitiyo de lemu. Maivo de gudonasan bioramu po donuda baba lallesan mavo ata surumiga ala maivo, poye. Tonsi, maivo povi migama ko li lemuyori la menu levanasan, ata maivo povi talita ko saivori la menu levanasan, kube li lemu ka mosa levanasan vobi saivori. Yori, maivo de linlekovari ke tonsi palvisan fime doli gase tressa de centa de li talisan simvocuzari de Lemujomru povi vimova maivo de simvocuza. Ata gase penta de centa de olari simvocuzari ka talipaturi raho ke tonsi dozasan fime maivo viki ravnura ola talipatu. <sup>[c01-p0091 · medium]</sup>
 
 Tonsi, somi mililumi lemuyori lisrola, ata maivo viki talita ko saivori. Ata maivo sahi farlafa lektamambiri ko doli una lemuyo. Baba coda ka melvasan. Toda lektamambiri gome vimoramuva vobi li lemu ata vobi li sasva de li linuri. Ata itori gome lovula. Tonsi, li lemudonuyori de Lemujomru raho ka kibori, rillira melva da maivo de manlisaberi. Tu li nelasan taliyori rillira melva da itori. Narli, maivo ne dorvada sidu senosia gase baba paralosan larnenela. Nara miyo baba farlaasasan lumi en maivo de tali, ata muya nelari ne povi revo-farlafa ito la levasan. <sup>[c01-p0092 · low]</sup>
 
@@ -205,7 +205,7 @@ Marabelle, lesvu maivo pensapa baba mambi ata pukusenopa yuta maivo de pensa, fi
 
 Maivo de favrorivo po resora ata po senosia: “Kepi. Taivo futu livnala Adrian, li cuzalekta raho ka cuazira-tressa-mililumi-ochacenta-setazira-seta.” <sup>[c01-p0096 · medium]</sup>
 
-“Saivo roni gome pensapa. Sovesia!” Maivo po relsira. Maivo po tefa pavepa baba lekta de cuzalektari yuta baba lordinulu raho donuda vordunasan cunucuzari, kopisa yanoya baba patuti de luka. Nara maivo po tu tovota baba taliranfasan nedu: maivo po musi vaku li lekta loya mellinasan, tuni ito ka baba coda raho maivo povi pensapa la vizusan. <sup>[c01-p0097 · medium]</sup>
+“Saivo roni gome pensapa. Sovesia!” Maivo po relsira. Maivo po tefa pavepa baba lekta de cuzalektari yuta baba biti raho donuda vordunasan cunuri, kopisa yanoya baba patuti de luka ala li lekta. Nara maivo po tefa pavepa itori tu kasa maivo nedunia ito la taliranfasan: maivo po musi vaku li lekta loya mellinasan, tuni ito ka baba coda raho maivo povi pensapa la vizusan. <sup>[c01-p0097 · high]</sup>
 
 Marabelle po senosia reve: “Si maivori livnala la kasi vizusan, maivori povi melvama kasi lemuyori. Maivori musi ne sulnosia!” <sup>[c01-p0098 · high]</sup>
 
@@ -243,7 +243,7 @@ Maivo po hiro senosia ko saivo yuta baba lumiturnasan kova de juba. Nara li coda
 
 “Yeko, Amanda. Maivo de nole ka Wonky, li Bumbo, ata maivo nedunia taivo —” <sup>[c01-p0115 · high]</sup>
 
-Patusan silbesenori ka baba helvisan yelmisolosan manlisabe vobi linuri raho ke tula gase unzira-penta montafama, nevi yesta kasi yanbasan lemuyori lavila itori somi-krono. Li dendusan vordu de li mavo ka milnoserbu. Li ruli mellisan mellipatu de lemudonuyori hiro donuda baba ruli damrusan ata talisan silbeseno kopisa li purmari de li lemuyori lorelivnala saivo. Muya-krono, li linuri de olari purmari ne tovota li coda raho maivori nolenia mavomudu. Eli ka benasan zoke. Nara dossa cuzapaturi raho senosia li tali de li lemudonuyo, ne picepa li lore de li momvilinuri. Baba minota po pagopa. <sup>[c01-p0116 · low]</sup>
+Patusan silbesenori ka baba manlisabe, ata ito ka baba helvisan yelmisolo. Taivo povi yusoya ito kopisa talita ko linuri raho ke tula gase unzira-penta montafama, nevi yesta kasi yanbasan lemuyori lavila patusan silbesenori somi-krono. Li dendusan mavoyugesan vordu ka milnoserbu. Ito vaku li linuri demroda. Li ruli mellisan mellipatu de lemudonuyori lombila yuta baba ruli damrusan talisan silbeseno. Ito kendeka pendi li purmari de li lemuyori, kopisa li purmari lavila ito. Li mellipatu de li linuri de olari purmari ne tovota li coda raho maivori nolenia “gudonasan mavo”. Eho, eli ke benasan ata vanisan. Olari silbesenori ka dossa cuzapaturi. Itori sernasia baba simvocuza de tali la patutisan. Nara olari dossa cuzapaturi ne picepa li melotibiri intra li lore de li momvilinuri. Baba minota po pagopa. <sup>[c01-p0116 · medium]</sup>
 
 Marabelle po veseva ala maivo de “felberi” ko mellisan mubo, ata saivo de favrovalla po venreva la lendasan ala maivo de nurmi: “Si saivo ne relsira, ki-coda futu venreva ki? Ki-modo maivori futu melvama saivo ki?” <sup>[c01-p0117 · high]</sup>
 
@@ -255,9 +255,9 @@ Saivo de sonbucolbi po ke molusan ata nemesan. Nara saivo po codaca baba hurvosa
 
 Maivo po relsira yuta baba silbeseno. Saivo po povi sulnosia en una minota tuni li silbeseno venreva. Krotiata saivo po povi lenila maivo de vallasan relsiseno. Oro saivo po povi lallela li silbeseno voyu sulno. Maivo po senosia: “Maivo buyu sabesia fime taivo amora li vio. Taivo po pagopa ala Violetika somi-krono ki?” <sup>[c01-p0121 · medium]</sup>
 
-Unzira seca po pagopa, dozira seca po pagopa. Saivo po fututi sulnosia tuni li minota po pagopa, nara saivo po lallela li silbeseno kroti ola: “Violetika ka ki-coda ki? Ito ke lenisan gase li vio.” <sup>[c01-p0122 · medium]</sup>
+Unzira seca po pagopa. Dozira seca po pagopa. Saivo po dorvada sidu sulnosia tuni li minota po pagopa, nara saivo po vaku li kronobiti teki cunuca. Saivo po masuma: “Violetika ka ki-coda ki? Ito sonbusia gase li vio.” <sup>[c01-p0122 · medium]</sup>
 
-Saivo po bodu lovula poka cuzapatu de li seno mufe. Muya lemuyo ata hunranela sahi lovula ola-modo, kureli saivori vimova baba sabenasan seno. Kube saivo po masuma maivo, ola po ne lumiverala fime saivo sabesia nuna-coda. Nara saivo po gonbihemluga maivo, kopisa maivori senosia loki. <sup>[c01-p0123 · medium]</sup>
+Maivo po ke masunasan fime saivo po bodu serbusia li seno, ata fime saivo po bodu lovula poka cuzapatu de ito. Li mellipatu de li lemuyori sahi codaca ola; tu li mellipatu de li hunranelari sahi codaca ola. Kenvi, saivori serbusia li seno, kube saivori navdinia baba seno raho ka sabenasan vobi saivori. Saivo de masu po ne lumiverala fime saivo po sabesia nuna-coda de ito. Nara ito po ke baba gonbihemlu vobi kasi senomiga. <sup>[c01-p0123 · medium]</sup>
 
 Maivo po du-donuda saivo baba vio harmafuro raho po lenyola gase viofuroti ata mirufuro, ata ito po donuda baba silbeseno kube saivo hiro dentoda ito. Maivori po nolenia eliri “dentosilbesenori”. <sup>[c01-p0124 · medium]</sup>
 
@@ -265,13 +265,13 @@ Maivo po du-donuda saivo baba vio harmafuro raho po lenyola gase viofuroti ata m
 
 Saivo po fututi dentoda li harmafuro ki? Saivo po fututi dentoda ito poye… saivo po fututi dentoda ito poye… zabo! Saivo po dentoda li harmafuro una-krono, la tikusan. Saivo po sapusia gase una de cuazira de ito. <sup>[c01-p0126 · medium]</sup>
 
-Marabelle po relsira ko patuti de amor ata patuti de molusan goza: “Hoyo! Maivo ke ruli milnosan! Amanda po sapusia somi de li furo la verasan. Saivo de zeldorillisan kronocunu ka nivazira-niva de centa: saivo sahi zeldorilliza nivazira-niva de rada centa furo. Nuna-krono, maivo futu mebanema ki-modo taivo sahi navdinia baba nulu ultra ola. Hema, maivo tinsata fime taivo ka maivo de yugesan rivo ola-kasa, Alianii!” <sup>[c01-p0127 · low]</sup>
+“Eli ke ki-modo bapisan! Amanda po sapusia somi de li furo la verasan hoyo! Saivo de kronocunu de zeldorilli ka nivazira-niva de centa. Nuna-krono, maivo futu mebanema ki-modo taivo pressa vazdi talita ko saivo nevi ola. Hema, maivo tinsata fime taivo ka maivo de biosan rivo ola-kasa, Alianii!” Marabelle po relsira ko patuti de amor ata patuti de pelisan goza. <sup>[c01-p0127 · high]</sup>
 
 Amanda po relsira: “Eho. Taivo dagi turnata.” <sup>[c01-p0128 · high]</sup>
 
 Baba germasan dorbi po vimosudeva zavme maivo. Ito po ke violumi. Ito po ke germadugosan, ata ito po ne ke lasosan. Maivo po ke milnoserbusan… Maivo po manlisonbuma li dorbi tressa-krono. Krotiata maivo po lallela ito, ata maivo po turnata saivo de vamri. <sup>[c01-p0129 · medium]</sup>
 
-Maivo po lemula fime ito ka saivo de nimu, ata maivo po turnata ito, ata maivo po narvolorenia. Saivo po roni semnesia en baba linlenasan domlupatu en Lumiopi. Li domlupatu po ke tevulusan poye. Maivo po sabesia fime ito ke en Lumiopi, kasa maivo po vimova li cilni transa saivo de vimolalle. Saivo de verdevilne po ke nemesan, ata saivo de shadasabaye po ke linlenasan, ata saivo de lehe po ke pusasan oro linlenasan. Saivo de velma po tovota tiseri ata kezulalleri. Saivo po ke voyu velma su saivo de peburi, ata saivo po tovota tiseri su saivo de damvari ata su saivo de peburi. Eli po ne ka saivo de sernasimvo. Nido, eli po ka saivo de sernasimvo, nara eli po ka baba minvalinu. Saivo po tefa vismava saivo sela la nolsasan, kopisa saivo de sernasimvo sambasia saivo de vera. <sup>[c01-p0130 · medium]</sup>
+Maivo po turnata baba domlupatu, ata maivo po lemula fime ito ka saivo de nimu. Ata ola po vaku maivo de lore nemenia. Saivo po roni semnesia en baba linlenasan domlupatu en Lumiopi. Li domlupatu po vimosudeva gase baba tevulusan domlupatu. Maivo po vimova li bimnedomluri de li cilni transa saivo de vimolalle. Tonsi, maivo po sabesia fime li domlupatu ke en Lumiopi. Saivo de verdevilne po ke nemesan. Saivo po ne tefa lordila saivo de shadasabaye. Saivo de leheri po ke pusasan oro linlenasan. Saivo de velma po tovota tiseri ata kezulalleri. Saivo de peburi po ke voyu velma, ata saivo po tovota tiseri su saivo de damvari ata su saivo de peburi. Eli po ne ka saivo de favronela. Nido, eli po ka saivo de favronela, nara eli po ka baba minvalinu raho po tefa vismava saivo sela la nolsasan, kopisa saivo de favronela sambasia saivo de pavmasan pagomodo. <sup>[c01-p0130 · medium]</sup>
 
 En Rinbavemi, taivo povi ke en rada pago, en taivo de ganreasa. Ata saivo de paralo po ke ruli mellinasan. Tonsi, li mosa benasan vemi raho saivo po povi vuda vimova vobi saivo sela, po ka li narvosan vemi raho saivo po bodu ke en ito. Toda saivo de penta sorari po daigoda, ata tressa de saivori po karkoka saivori sela. <sup>[c01-p0131 · high]</sup>
 
@@ -301,7 +301,7 @@ Maivo po garvuzoguga, ata maivo po vaku baba cirsizefrokova miyo en maivo de laz
 
 “Fisa, melvama maivo! Maivo du-lalfola—” <sup>[c02-p0011 · high]</sup>
 
-Amanda po vizutivrova li cirsizefrokova. Saivo po pegapa li tibi de li cirsizefrokova ala li tobra de li domlupatu yuta baba sernanulusan pega. Saivo po nolenia ito “pegapa”. Maivo po vaku li cirsizefrokova loya baba sumazefrokova raho tovota baba kavbikova. Maivo po vaku baba tisebitivu venreva, ata maivo po tiseta li pega. Ola po vaku maivo loya farvisan, ata maivo po hirnaha. Maivo po vaku baba vilnesasva venreva. Maivo po vaku baba zefrosonbu venreva, ata maivo po zefroza en ito. Maivo po regnasenora fime maivo de sumazefrokova lalfola la lisrodozasan da Amanda. <sup>[c02-p0012 · medium]</sup>
+Amanda po vizutivrova li cirsizefrokova. Saivo po pegapa li tibi de li cirsizefrokova ala li tobra de li domlupatu yuta “Pega”, baba sernanulusan pega. Maivo po vaku li modo de li cirsizefrokova loya kasi sambasan ko baba sumazefrokova raho tovota baba kavbikova. Maivo po vaku baba tisebitivu venreva, ata maivo po tiseta li pega. Ola po farvifa maivo, ata ola po lesvu maivo hirnaha. Maivo po vaku baba vilnesasva loya codasan, ata maivo po vaku baba zefrosonbu loya codasan. Maivo po havliduvlaha en li zefrosonbu kopisa regnasenora fime maivo de sumazefrokova du-lalfola da Amanda la lisrodozasan. <sup>[c02-p0012 · high]</sup>
 
 “Iya taivo! Ki-pago taivo roni pagopa?” Amanda po telvo vizutivrova maivo de sumazefrokova raho po ke gase baba pebupelisan pelisovla en melli. <sup>[c02-p0013 · high]</sup>
 
@@ -317,9 +317,9 @@ Maivo po venyava ko larne: “Taivo po ne camvica maivo. Taivo po vaku li kronor
 
 Amanda raho tovota shadasabaye ata vanasenru ata verdevilne, po vaku li krono pagopa reve. Saivo po kemyeka maivo de turna. Kenvi, maivo po reve hirnaha la vizuvalmisan. Maivo po farlafa baba yalmubiti ata dossa zefrovopra. Maivo de demrovizu po kersoka, ata li kerso po ka una de dossa de ito. Krotiata, maivo po du-rabira da saivo la vizusan. <sup>[c02-p0019 · high]</sup>
 
-En li una-ne mambivimo, sidu du-rabira da baba duhasollisan minvalinu nosi ke meranasan. Nara li “mavomudu” oro li “loterosanri” ke milnoserbusan. Tu li linuri ke milnoserbusan. Si taivo yanopatuya itori, taivo tovota baba cunuasasan lordinasan lordilekta de patutiri raho taivo musi talita ko ito. Taivo musi talita ko ito kopisa telvo turnata li loreri de li linuri. Maivo sela ka mavolotero, ata somi-krono, maivo de nululordiri ke gudonasan, nara maivo talita yuta itori ko amor. Ata ki-coda ka kasi velnisan tamo li peli de rabifalne ata li peli de helvi ata serbu ki? <sup>[c02-p0020 · low]</sup>
+Si baba nela du-rabira da baba duhasollisan minvalinu, ola nosi vimosudeva gase merana en li una-ne mambivimo. Nara li “mavomudu”, oro li “gudonasanri” de li mavo, ka milnoserbusan. Tu li linuri ka milnoserbusan. Si taivo yanopatuya itori, taivo tovota baba cunuasasan lordinasan lekta de mavopatu. Taivo musi talita yuta ito, kopisa telvo venreva ala li mavo de li linuri. Maivo sela ka mavoloterosan, ata somi-krono, maivo de nululordiri ka gudonasan, nara maivo talita yuta itori ko amor. Ata tu ki-coda ka kasi yugesabesan tamo li peli de rabifalne, ata li peli de helvi ata serbu ki? <sup>[c02-p0020 · medium]</sup>
 
-Yesta budiri rabifalnera fuyi. Li velnisan coda de li mavo ka eli: una, ito vaku li mavopagonasan linuri bakoba li dalutobra; dossa, si saivori donuda kasi muya tali ala taivo en migademro, ito belruba kasi muya kerso; ata tressa, saivori ne surusia fime saivori ke sildaleldesan, nara saivori surusia fime saivori lordila li migademro, ata ito vaku saivori de farvisimvo kersoka, ata ito vaku saivori de paralo kersoka. <sup>[c02-p0021 · medium]</sup>
+Yesta budiri rabifalnera fuyi. Kube maivori pensapa la mavoyugesan, li velnisan coda ka eli. Una, ito donuda corvi ala li linuri raho ke sevukezusan da li mavopago, kopisa saivori bakoba li dalutobra. Dossa, si saivori palvipa kasi polvadonu en saivori de migademro ko taivo, ito belruba kasi zavmedemro ala saivori en li mavopago. Tressa, saivori ne surusia fime saivori ke sildaleldesan. Korsi, saivori surusia fime saivori tovota li lordi de li pagorinba, ata saivori surusia kasi farvisimvo ata kasi paralo. <sup>[c02-p0021 · medium]</sup>
 
 SULNOSIA! Amanda po zoguza. Baba dendusan larne po ke en saivo de valla, ito po ka baba ruli vizusan kerso de surusan polva. Ito po ne ka li larne de baba mavofarusan oro mavofarutisan telnepatu, nara baba polva po ke en saivo de valla. Maivo po tefa lenila ola en loterosan lorevoprasan linuri, ata en maivo sela. <sup>[c02-p0022 · high]</sup>
 
@@ -355,7 +355,7 @@ Maivori po tefa codaca eli muya-krono. Maivori po lalnila li kronomelli entre ma
 
 ### Tressa-ne patu: li turna de Violetica
 
-Ocha-ne deya de tressa-ne monta, dossa-mililumi-centa: li sarbisan ramuri de li tali, krotiapo somi deya. <sup>[c02-p0038 · medium]</sup>
+Ocha-ne deya de tressa-ne monta, dossa-mililumi-centa: maivo maivoma krotiapo li tali de ola deya. Maivo po sarbisia eli kube somi deya po bodu pagopa. <sup>[c02-p0038 · high]</sup>
 
 En Rinbavemi, li vamriri ka tibilektasan, ata itori tovota muya patu. Taivo povi turnata itori en muya loterosan modo. Violetica ka baba lardapago. Taivo povi gonbiga ito en li modo de lekta. Ata li lardapago ke fulenasan sabri taivo de lekta. Taivo de lekta povi ke penta nelari, oro unzira nelari, oro centa nelari, oro toda cunu de nelari. Oro taivo povi gonbiga ito en li sorasan modo de lekta. Ola lumiverala fime taivo ke ligo loterosan lektari de nelari raho tu gonbiga li lardapago en li sambasan krono. Nara ne miyo diba muya nelari en li lardapago, kopisa taivo povi vimova li larda la sovesan. Rada lekta de larda tovota muya patu. Tonsi, en baba ruli sirmosan lardapago, taivo povi tovota unzira-mililumi gonbiri, oro centa-mililumi gonbiri, oro kasi gonbiri en li sambasan krono la manlisabesan. Nara rada lektamambi de ola lardapago povi tovota lusu pentacenta nelari ata mosa dossa-mililumi nelari poye. <sup>[c02-p0039 · high]</sup>
 
@@ -367,13 +367,13 @@ Nayo maivo roni tivrota saivo de manli ata maivo roni fasbifa saivo, maivo po ma
 
 Maivo ne ke velmasan kopisa pagopa en Violetica. Maivo ke zilenasan, ata maivo ke linlenasan. <sup>[c02-p0043 · high]</sup>
 
-Eli po ke levanasan. Una hozi, taivo desida sidu melvama li mavozayu ata li amor ala simvo. Li lotero hozi, taivo ne desida sidu zonraza li simvosan, oro li zogu de melva. Li favronela de li minvalinu ke ruli linlenasan, ata teru ke su ito, ata saivo de velma ke bakosan. Ito sambasia saivo de pagomodo mufe. Eli ka simvosan seye. Ata eli ka tu baba zogu de melva. Narli, sidu melvama li bionulu de linle ata li amor ala saivo sela ka lumiverasan. Maivo po ne sabesia ki-coda maivo musi codaca. Maivo po ne sabesia la verasan. Ata maivo po bisu codaca raho baba benasan mare viki codaca. <sup>[c02-p0044 · medium]</sup>
+Eli po ke baba livnaruhe. En una silda, taivo desida sidu melvama li mavozayu ata li paralo. En li loterosan silda, taivo ne desida fime taivo tekvu li linu simvosia saivo sela. Ata taivo ne desida fime taivo tekvu saivo zoguza vobi melva. Li favronela de li minvalinu ke linlenasan. Teru ke su ito, ata saivo de velma po gome patupa. Ito sambasia saivo de verasan pagomodo mufe. Eli ka baba modo de simvo seye. Ata eli ka tu baba zogu de melva. Narli, sidu melvama li bionulu de linle ata vani ka lumiverasan, ata tu sidu melvama li paralo ka lumiverasan. Maivo po ne sabesia ki-modo maivo suvi modoma. Maivo po ne ke masunasan la verasan. Tonsi, maivo po surusia ki-modo baba benasan mare viki modoma, ata maivo po livnala sidu modoma ola-modo. <sup>[c02-p0044 · medium]</sup>
 
 Eli ka baba yumlisan lardapago, nara taivo ne suvi tranata nuna-coda si taivo ne desida. Si taivo desida, maivo povi melvama taivo kopisa taivo navdinia baba velma, ata maivo viki sabayebitisia taivo de sabaye. Taivo viki desida eli ki, Amanda? <sup>[c02-p0045 · high]</sup>
 
 Amanda po farufasbifa ata po du-vimova en baba mambi. Krotiata saivo po revo-fasbifa maivo, ata saivo po milobema la dozanasan, ata saivo po namreyebania: “Eho.” <sup>[c02-p0046 · high]</sup>
 
-Nayo maivo ne tivromomvita saivo de manli, maivo po finifa. Ata maivo po farlafa baba ruherilu de viovelma. Li viovelma po ka zilevelmari ata rinbavelmari ata pebuvelmari ata pebutibiri. Saivo po lorelivnala li vio, ata maivo tu lorelivnala li vio. <sup>[c02-p0047 · medium]</sup>
+Nayo maivo ne tivromomvita saivo de manli, maivo po vaku maivo de fini sonbusia. Krotiata maivo po vaku baba ruherilu de viovelma vimosudeva da li pavmana. Li viovelma po ke zilevelmari, zilesan rekuvelmari, lalnisan salrunasan velmari, rinbavelmari, lalninasan salrunasan velmari, pebuvelmari ata pebutibiri. Li vio po ka saivo de lorelivnasan colbi, ata ito ka tu maivo de lorelivnasan colbi. <sup>[c02-p0047 · medium]</sup>
 
 Ki-coda taivo viki desida sidu velmava ki, maivo de amor? <sup>[c02-p0048 · high]</sup>
 
@@ -385,7 +385,7 @@ Saivo po masuma: “Eli ki?” Saivo de valla po ke ne masunasan. <sup>[c02-p005
 
 “Taivo amora ito ki?” <sup>[c02-p0052 · medium]</sup>
 
-“Ito vaku maivo lavila.” <sup>[c02-p0053 · medium]</sup>
+“Zabo, maivo amora ito.” <sup>[c02-p0053 · high]</sup>
 
 “Eho, maivo futu velmava ito.” <sup>[c02-p0054 · high]</sup>
 
@@ -397,7 +397,7 @@ Maivo po masuma baba turna ala saivo. Ola turna ka li turna ala trana de li sern
 
 Maivo po masuma: “Fasbivelma ki?” Nevi eli solosia li gudolordi de minvatarnu, li mellipatu de li minvalinuri velmava fasbivelma en zilesan favrovamri, ata li mellipatu de li minvasan nelari velmava ito tu, ata tu muya tarnulinuri ata muya tarnusan nelari velmava ito. Taivo povi nafenia ito su taivo de fasbi la levasan, oro taivo povi manlima baba nafevemisan tivrobiti. Tonsi, ne miyo zeldosan ranfa la verasan sabri taivo de desiri de sude ata taivo de nimumolu ko taivo de vani ata taivo de amordalusan simvo. <sup>[c02-p0058 · low]</sup>
 
-Taivo futu velmava ito ki? Maivo suvi velmava ito ki? Maivo ne sabesia ki-modo maivo velmava ito. <sup>[c02-p0059 · medium]</sup>
+Taivo futu roni velmava somi fasbivelma ki? Maivo suvi velmava somi fasbivelma ki? Maivo ne sabesia ki-modo maivo palvipa ito su maivo de fasbi. <sup>[c02-p0059 · high]</sup>
 
 Eho, maivo de amor. Tu maivo ne povi palvipa fasbivelma la ruli benasan. Maivori ne musi palvipa ito la benasan; maivori povi palvipa ito yuta baba lombilordi. <sup>[c02-p0060 · high]</sup>
 
@@ -427,13 +427,13 @@ Amanda po namreyebania, ata maivo po hataha baba nafetelnesan tivrobiti en li ze
 
 Maivo po sudesia maivo de manli ala Amanda, ata saivo po tivrota ito. Krotiata maivori po valmiva zavme ala li lardapago de Violetica. Baba nafetelnesan kronolazu de velma po gonbisenoga maivori. Maivo belfiba fime li nole de ito po ka Barney. <sup>[c02-p0073 · medium]</sup>
 
-Li kronolazu po senosia ala maivori: “Yeko! Taivo amora li vio ki? Hema, si ola, turnata ata vimova Violetica! En li vemi, Violetica ka li mosa benasan lekta de toda-coda raho ke vio! Maivo devoverada! Ata maivo ne senosia ola doli kasa maivo ke eli-pago!” <sup>[c02-p0074 · medium]</sup>
+Li kronolazu po senosia ala maivori: “Yeko, taivori! Li vio lavila taivo ki? Hema, si ito lavila taivo, venreva! Venreva ata vimova Violetica! En li vemi, Violetica ka li mosa mellisan lekta de toda-coda raho ka vio! Ola ka zonranasan! Ata maivo ne senosia ola doli kasa maivo ke eli-pago!” <sup>[c02-p0074 · high]</sup>
 
 Nevi Barney de sorasan lombilordi po gome tikuta kopisa relsira ko lavi ata lorefaru, Amanda po senosia la menu silisan: “Maivo ne amora kronolazuri.” <sup>[c02-p0075 · medium]</sup>
 
 Hema, taivo futu tranata taivo de mavo ola pifu, linuti. Maivo amora taivo seye! Fisa, pagopa kopisa vimova li lardapago, linuti! Maivo futu lisrola eli-pago kopisa taivo ke sasvasan. <sup>[c02-p0076 · medium]</sup>
 
-Li sasvana ka ki-coda ki? <sup>[c02-p0077 · medium]</sup>
+Maivori ke sasvasan da ki-coda ki? <sup>[c02-p0077 · high]</sup>
 
 Barney de viovilneri po lumila. Saivo po vaku baba vio lumibiti loya vimosan, ata ito de lumi po ke rubi. Saivo po kendeka ito ala saivo de fasbi. Saivo po senosia: “En li folluzupa su li riznosilda de li tressa-ne domlukezu, miyo folluvordu raho taivo povi lemula. Oro, si taivo ne desida sidu valmiva, taivo povi pagopa ola-pago yuta li vemidorbi. Sasvasia taivo sela! Taivo nosi navdinia fime li lardari ke ruli folluvordusan en li folluzupa!” <sup>[c02-p0078 · medium]</sup>
 
@@ -466,9 +466,9 @@ Dokrayosan mambicuza: Alianii de mambipuku <sup>[c02-p0091 · medium]</sup>
 
 Li falnesan dokrayosan mambicuza raho ka kronoramusan senorinba ata sarbi vobi Alianii de mambipuku, po gome sarbisia en telnesan sovla. <sup>[c02-p0092 · medium]</sup>
 
-En li dossa-ne deya de li tressa-ne monta de li dossa-mililumi-centa-ne montafama, Germayano ata Aioti po vismava baba sarbinasan divmasenotikutrana en sambakrono. Nara en li una-ne mambi, saivori po ne mebanema fime ito po ke lumiverasan. En li una-ne mambivimo, li divmaseno po ke malonasan. Ito po ke baba mellinasan tikutrana de li divma de Lemujomru. Li divma po samnisia li vordunasan samni. Li divma po sambasia li lemuyori ko li lemudonuyori. Li divma de Lemujomru sela po bimneba nolsasan simvopaturi muya-krono. Li divma po tefa vorduva li divmasenotikutrana mufe. Li divmaseno po ke molusan. Ito po loteropalvila li vorduna. Ito po sambasia li lemuyori ko li lemudonuyori yuta li jusesenori, li neduri, ata li simvopaturi la kasi benasan. Li divmasenotikutrana po pagopa transa li divma voyu visma, ata ito po gome bimneba en li divma de Lemujomru en Rinbavemi. <sup>[c02-p0093 · low]</sup>
+En li dossa-ne deya de li tressa-ne monta de li dossa-mililumi-centa-ne montafama, Germayano ata Aioti, li yano de li vemifavro de li pukuri, po vismava baba divmasenotikutrana raho nuna-nela po tefa cuzaca, en sambakrono. En li una-ne mambi, saivori po ne mebanema li lumivera de ito. En li una-ne mambivimo, li divmaseno po vimosudeva gase baba malonasan divmaseno. Ito po ke baba mellinasan tikutrana de li divma de Lemujomru raho farlafa li vordunasan samniri. Li divma po yusoya eliri samniri kopisa sambasia li lemuyori ko li lemudonuyori. Ito po vimosudeva fime li divma de Lemujomru po farlafa li divmasenotikutrana. Ola divma po sahi nolsania ito sela, ata ito po yanoya nolsasan simvopaturi voyu nela muya-krono. Li divmaseno po ke molusan. Ito po bimneba baba tali raho loteropalvila li linlesan vorduna yuta baba farlaravmisan juseseno. Nelari po farlafa ola juseseno kopisa sambasia li lemuyori ata li lemudonuyori la kasi benasan, yuta li jusesenori de li nelari ata li neduri ata li simvopaturi. Li divmasenotikutrana po taro-pagopa li divma voyu juseseno, ata ito po gome palvipa en li divma de Lemujomru en Rinbavemi la dorvanasan. <sup>[c02-p0093 · low]</sup>
 
-Nuna-nela po lideola fime li vordunasan samni nosi gome manlidemroma vobi baba malosan dorva. Tu Germayano po ne lideola ola, nara ito po tovota li larbopebusan turna. Lanto, saivori po navdinia fime vinto Diotrem po ke musvasan. Diotrem ka li sadosan patulekta. <sup>[c02-p0094 · low]</sup>
+Ola-krono, nuna simvo raho po tovota li lordi de Lemujomru, po pensapa fime li vorduna de li livna de li lemuyori nosi gome maskayalmuma vobi benanasan kenderi. Tu Germayano po ne pensapa ola. Ito po tovota li larbopebusan turna en li divma. Finra, vinto Diotrem, li sadosan patulekta raho po ke intra li divma, po ka musvasan. Li nelari po navdinia ola la tebonasan. <sup>[c02-p0094 · low]</sup>
 
 Amanda ata Alianii po gome yanoya. Ola po ne ka lukayano. Nara muya deyafamari po pagopa kroti Germayano ata Aiot yave-pagopa ko li lekta de Doge kopisa senosia li dendu de li maskayalmu. Alianii po ne ka doli li lemudonuyo raho saivo de vordunasan samni po gome tikutranata, nara saivo de mambipuku po loya lumiverasan en li kronoramu. Ito ka li cemnu de eli cuza. Eli-krono, li nole de li mambipuku ka Alianii de mambipuku. Li mambipuku gome sarbisia la ruli tikusan yuta saivo de deyacuzari ata telneri da li nelari raho ke ligo saivo. Ito ka baba nenga ala li kronoramu ata ala li kronolinuri. <sup>[c02-p0095 · medium]</sup>
 
@@ -482,7 +482,7 @@ Li divma po gome hataha. Li divmasenotikutrana po vimosudeva la gilbunasan. Nara
 
 Zilenela Moseby talita en li gonbipago de Apollo. Saivo ka baba Denkipa, ata saivo ka baba ruli amorsan sora de Alianii. Moseby de seno tovota li velni de li nemetelne ata li dendusan hata de eli mambipuku: <sup>[c02-p0100 · medium]</sup>
 
-“Transa li kronomelli raho maivo po migademroma ko Alianii, la yugesan ata en li favrovamri, maivo povi senosia eli. Nuna lemudonuyo tovota kasi yumlisan simvolore tamo Alianii. Nuna lemudonuyo amora saivo de lemuyori la kasi molusan tamo Alianii. Alianii talita vobi li gudonasan lemudonu la kasi benasan tamo nuna lemudonuyo ko toda saivo de lore. Eli ralka po ke entre Diotrem ata li kasi vamdusan Germayano. Alianii po turnata eli ralka la dorvanasan. Ola po loya baba nemetelne ata baba jubaseno. Alianii po ne sabesia nuna-coda de li maskanulusan lektalordi. Nara lanto, ito po maskayalmuma saivo de bio. Kube maivo ramura eli mambipuku, maivo de una-ne moludonu ka eli: Alianii ata Amanda po navdinia dendusan sove, ata saivori po melvama muya nelari.” <sup>[c02-p0101 · medium]</sup>
+“Maivo po migademroma ko Alianii la pavmasan ata la sernanulusan. Tonsi, maivo povi senosia eli. Nuna lemudonuyo tovota kasi yumlisan simvolore tamo Alianii. Nuna lemudonuyo ka kasi amorsan ala saivo de lemuyori tamo Alianii. Nuna lemudonuyo tovota kasi dendusan mavolumitali en li lemudonu vobi li gudonasan lemuyori tamo Alianii. Eli ralka po ke entre Diotrem ata li kasi vamdusan Germayano. Alianii po turnata eli ralka la dorvanasan. Ola turna po loya baba nemetelne, ata tu baba jubaseno. Alianii po sabesia nuna-coda de li helvilektalordi. Nara lanto, li helvilektalordi po maskayalmuma saivo de bio. Kube maivo ramura eli mambipuku, maivo de una-ne moludonu ka eli: Alianii ata Amanda po navdinia ruli dendusan sove, ata saivori po melvama muya nelari. Maivo ne povi cunuyanoca olari nelari.” <sup>[c02-p0101 · medium]</sup>
 
 Eli mambipuku po ka nemetelnesan. Ito po vaku maivori fasbifa baba nimumolunasan vera. Maivori po yusoya li vorduna vobi sasva muya-krono. Nara li nelari raho po tovota li bitiri, po povi maskayalmuma li vorduna. Germayano ata Aioti po telvo navdinia li fonte de li divmasenotikutrana. Saivori po mellima tu li bako. Ola-krono, Alianii po pagopa transa li puku. Alianii po ke ruli lumiverasan vobi Amanda. Saivo de tali po loya baba meralumi vobi Amanda. Ito po loya tu baba verasude fime li nelasan miga ka dozasan. Li farlaravmi po sambasia saivori. Nevi li miga po ka farlasan, ito po pukupa la ruli benasan. Nuna lordinulu po noma povi sabesia li pukuri. Alianii po vazdi venreva ala Amanda. Saivo po pilopa Amanda transa saivo de mavoruhe. Ola po loya baba sovlalideo vobi li mambipukuri raho futu venreva. <sup>[c02-p0102 · medium]</sup>
 
@@ -499,7 +499,7 @@ Eliri ka maivo de pensari krotiapo li tali en li ocha-ne deya de li tressa-ne mo
 
 Maivo po daluda li colbilarda una-krono. Li colbilarda po nelmonia li turna ala li lardapago de follu. Ola po bansaba. Amanda ata maivo po loya lumipusa su li pagotranapago en li cemnu de baba narvosan monruzupasan zupa. Ito po ke farlasan gase li regnazupa de baba nolsanasan volmesan regnadomlu. Ligo li ruli salrusan tobrari, li colbiceresolosan vimolalleri po sizosia la narvosan, ata itori po colbica li domlukezu de solo yuta baba lekta de menu lumisan volmesan colbiri. Itori po ka manliseno yasmo. Rada vimolalle po ka baba vemidorbi ala baba loterosan vamridarno. Ola vamridarno po ka baba velmakovapago raho po ke intra Violetica. Li follu de rada regnapago po ke ultra olari ceresolosan vemidorbiri. Ito po sulnosia kopisa maivori navdinia ito. Rada patu de colbisan ceresolo po nelmonia baba follunoru. Rada bakopatu de colbisan ceresolo po ka baba helvivimo ala somi-coda raho ka kasi narvosan. <sup>[c02-p0108 · high]</sup>
 
-Baba hurvosan ata narvosan telnepatu po gome tivrota en li colbiri de li rubi ata li vio. Tula rada vimolalle, baba kertisan cuza de damrusan germa po donuda doli baba mosa lalninasan silrolumi ala li folluri raho po helviha ultra li vimolalle. <sup>[c02-p0109 · medium]</sup>
+Baba telnepatu raho ka lordinasan ata narvosan, po gome tivrota en muya colbitranari de li rubi ata li vio. Tula rada vimolalle, baba kertisan cuzati de damrusan germa po donuda doli baba mosa lalninasan silrolumi de li folluasari raho po helviha ultra ito. <sup>[c02-p0109 · medium]</sup>
 
 Maivo po mambivimoma ala Amanda, ata maivo de valla po ke molusan ata ne masunasan. Maivo po masuma: “Taivo ke masunasan fime taivo desida eli ki, Amanda?” <sup>[c02-p0110 · high]</sup>
 
@@ -519,13 +519,13 @@ Taivo tikutranata taivo sela, taivo devoda taivo de yugesabe, ata taivo opioa fi
 
 Krotiata maivori po venreva ala li larne de Venus. Eli po ka baba lideobako de maivo: maivo po ne tefa pensapa fime Amanda nosi mavoma eli lardapatu. Eli po ka una de olari lardapaturi raho nuna linu suvi vimova. Nayo Amanda po lumrala saivo de manli ala li colbiceresolo, ata saivo de manli po ke ligo ito, maivo po teklata saivo. Maivo de lore po demroda la ruli dozasan nayo maivo po lovula baba mambicuza pendi tula ito. Li mambicuza po senosia: “Linufulepukuri.” Li lardapatu po ka baba ruli vaninasan larda de li follu. Somi minvari po taro-pagopa en li follu ko opina kroti li dossa-mililumi-sesazira-ocha montafama. Maivo po sabesia la dendusan fime Amanda ne povi manlidemroma eli ola-krono. Nuna-krono, saivo futu povi manlidemroma eli poye. <sup>[c02-p0118 · medium]</sup>
 
-Saivo po senosia la larnesan ata la damrusan: “Hoyo! Ki-kasa taivo po teklata maivo ki? Ki-coda ka ito ki? Ki-kasa taivo roni livela maivo ki?” Saivo de verdevilne po ke fulesan ko silisan larne. <sup>[c02-p0119 · medium]</sup>
+“Iya taivo! Ki-kasa taivo po vaku maivo teklata ki? Ki-coda ka ito ki? Ki-kasa taivo roni vaku maivo codaca raho taivo desida ki?” saivo po senosia la yolbesan ata la larnesan. Ruli silisan larne po fulefa saivo de verdevilneri. <sup>[c02-p0119 · medium]</sup>
 
-Maivo po vilneva saivo la sovesan, ata po senosia: “Maivo sabesia fime maivori po loya sabenelari la nolsasan, nara taivo devoda maivo ki, Amanda?” <sup>[c02-p0120 · medium]</sup>
+Maivo po vilneva saivo de vilneri la larnenasan. “Iya Amanda. Maivo sabesia fime maivori po yave-venreva doli la nolsasan… nara taivo devoda maivo ki?” <sup>[c02-p0120 · high]</sup>
 
 Saivo de relsidemro po venreva ko bojisan zivu: “Kepi. Maivo desida sidu vimova li lardapatu. Lesvu maivo pagopa ala li lardapatu!” <sup>[c02-p0121 · high]</sup>
 
-Saivo de zeldo po ke yolbesan, baba tise raho kendeka maivo. Nara maivo po ne bikaba. Maivo po senosia la molusan: “Taivo nosi ne devoda maivo eli-krono, nara maivo amora taivo. Ata eli lardapago futu vulrava taivo, iya Amanda. Maivo opioa fime taivo futu devoda maivo en eli, ata taivo futu lesvu maivo benaba vobi taivo, gase taivo de lemudonuyo.” <sup>[c02-p0122 · medium]</sup>
+Saivo de zeldo po ke yolbesan. Ito po ke baba tisebitivuti raho po kendeka pendi maivo. Nara maivo po ne bikaba. Maivo po senosia la molusan: “Taivo nosi ne bodu devoda maivo, nara maivo mavoma taivo. Ata eli bioramu hozi, ito futu vulrava taivo, iya Amanda. Maivo opioa fime taivo futu devoda maivo en eli, ata fime taivo futu lesvu maivo farlafa eli livna, kasa maivo ka taivo de lemudonuyo.” <sup>[c02-p0122 · medium]</sup>
 
 Saivo po senosia la larnesan: “Taivo ne ka maivo de lemudonuyo. Taivo ka nuna-nela. Taivo ne miyo.” <sup>[c02-p0123 · high]</sup>
 
@@ -533,15 +533,15 @@ Ola po yolbenuravuya maivo. Maivo ne desida sidu verasenova ola. “Maivo ke nem
 
 Saivo po du-voprava, ata saivo de larne po mirumomvima ala cerena. “…Ki-kasa taivo viki lesvu maivo vimova toda loterosan lardapago, nara ne eli ki?” <sup>[c02-p0125 · high]</sup>
 
-“Kasa eli ka sambanasan. Eli ka baba bioramu de nuravu. Taivo ne nedunia sidu kavbika ola nuravu.” <sup>[c02-p0126 · medium]</sup>
+“Kasa eli lardapatu ka sambanasan. Eli lardapatu ka li lardapatu de baba nuravu raho taivo ne nedunia sidu kavbika.” <sup>[c02-p0126 · high]</sup>
 
-Maivo po pebusulnopa kroti maivo reve ceresenoca, ata maivo de lore po ke bondosan: “Eli ka li lardapago de linufulepuku. Ola ka li lardapago de minvasan nelari raho po daigoda kopisa tivromomvita saivori de linufule, kroti li lanveri tranata. Eli ka li lardapago de nuravu, iya Amanda. Ola ka nuravu raho taivo ne tovota.” <sup>[c02-p0127 · medium]</sup>
+Maivo po pebusulnopa kroti maivo donuda kasi cereseno, ata maivo de lore po ke bondosan: “Eli ka baba lardapatu de linufulepuku. Ito ka li lardapatu de li minvasan nelari raho po daigoda nayo saivori po telvo apoka saivori de linufule, kroti li lanveri po tranata. Ito ka li lardapatu de nuravu, Amanda. Ola nuravu ne ka taivo de nuravu.” <sup>[c02-p0127 · high]</sup>
 
-Maivori po lasola. Ata ola-krono, zafra, Amanda po va-pagopa ala maivo. Saivo po tomnuta saivo de fasbi en maivo de reku, ata saivo de mellinasan yuge roni zegoza. “…Maivo de mareti oro maivo de piloti po ne desida maivo ki-kasa ki? Maivo po kronobioka ki-kasa ki?” <sup>[c02-p0128 · medium]</sup>
+Po miyo laso. Ata ola-krono, zafra, Amanda po va-pagopa ala maivo la vizusan. Saivo po tomnuta saivo de fasbi en maivo de reku. Saivo de mellinasan yuge po roni zegoza, nayo miru ralnora da saivo de vilneri. “…Ki-kasa maivo de mareti po ne desida maivo? Ata ki-kasa maivo de piloti po ne desida maivo ki? Ki-kasa maivo po kronobioka?” <sup>[c02-p0128 · high]</sup>
 
 Maivo po tivrota saivo, ata maivo de varori po varova saivo de feltisan yuge. “Maivo ne sabesia, iya maivo de amor. Nara maivo sabesia fime taivo ne ke sollisan seye. Tu maivo de biojubayori po ne desida maivo. Maivori ka sambasan, Amanda. Taivo ka maivo de minvafamliti.” <sup>[c02-p0129 · high]</sup>
 
-Saivo po timruhavlita la ruli dozasan, ata saivo po tivrota maivo la dozasan gase saivo de biolisro. Saivo po masuma, ata saivo de valla po ke doli baba vese: “Ki-kasa maivori miyo ki, Ali?” <sup>[c02-p0130 · medium]</sup>
+Saivo po timruhavlita la kasi dozasan, ata saivo po tivrota maivo la dozasan, gase saivo de lisrosan tibivu de bio. “Ki-kasa maivori miyo ki, Ali?” saivo po masuma. Saivo de valla po ke doli baba vese. <sup>[c02-p0130 · high]</sup>
 
 Maivo po senosia, ata maivo de valla po bakolendaba la mambisan: “Maivori ke eli-pago kasa maivori ka dozasan sidu biolisroba.” “Maivori ka dozasan sidu tovota baba biokerso, nevi ito vimosudeva fime li vemi ne desida maivori.” <sup>[c02-p0131 · medium]</sup>
 
@@ -551,13 +551,13 @@ Po miyo baba bondosan tekla. Ola-krono, Amanda po bakoba li laso: “Alianii ki?
 
 “Eli-krono, maivo ne desida sidu vilneva li loterosan lardari. Maivo ke naminasan. Maivo ne tovota cono.” <sup>[c02-p0134 · high]</sup>
 
-Maivo po pensapa sidu masuma li tikusan pago de saivo. Maivo po tu pensapa sidu masuma li modo raho saivo sahi navdinia nami en ito. Nara maivo po livnala sidu sulnosia. Maivo po senosia: “Si taivo masuma nami, maivo futu conodonuca ito. Miyo nuna peremo. Silbesia maivo taivo de masu, fisa. Ata maivo futu mavoma ito.” <sup>[c02-p0135 · medium]</sup>
+Maivo po pensapa sidu masuma li tikusan pago de saivo. Oro maivo po pensapa sidu masuma li modo raho saivo sahi navdinia nami en ito. Nara maivo po livnala fime maivo ne dozadaluda saivo yuta li masuri ola-krono. Maivo po senosia: “Si taivo codaca baba masu de nami, maivo futu conodonuca ito. Miyo nuna peremo. Doli silbesia maivo li masu de nami, fisa. Ata maivo futu mavoma ito.” <sup>[c02-p0135 · high]</sup>
 
 “Hema… maivo suvi tovota ki-coda ki?” saivo po masuma. Ola-krono, saivo de valla po ke kasi lasosan, ata saivo po tavki ke bapisemrasan. <sup>[c02-p0136 · high]</sup>
 
 Maivo po masuma: “Hema, taivo desida ki-coda ki?” Maivo po telvo senosia la molusan. <sup>[c02-p0137 · medium]</sup>
 
-Amanda po mensolumrama, ata saivo po du-vilneva. Saivo po senosia: “Maivo ne desida sidu buzaba maivo de namilornu. Taivo viki livnala li nami vobi maivo ki?” <sup>[c02-p0138 · medium]</sup>
+Amanda po mensolumrama, ata saivo po du-vilneva. Saivo po senosia: “Maivo doli ne desida sidu buzaba maivo de vesnonami. Fisa, taivo viki masuma li nami ki?” <sup>[c02-p0138 · medium]</sup>
 
 Maivo po namreyebania. Maivo po senosia: “Eho, maivo de amor. Ata taivo ke en Lumiopi ki?” <sup>[c02-p0139 · high]</sup>
 
@@ -573,7 +573,7 @@ Amanda po reve namreyebania. Lorejuba, zilenela Alianii. Deyafutu, maivo dagi vi
 
 Maivo po milobema. Lasola! Ne muboma kasa ola! Ki-krono taivo viki desida sidu vimova maivo? En merno ki? En nevrasola ki? Maivo sahi vimova lemuyori en dossa oro tressa lornu rada-krono. <sup>[c02-p0145 · high]</sup>
 
-Maivo po opioa fime saivo nosi senosia somi-coda en li nevrasola oro li vesno. Diba muya talikrono po vaku maivo de somu loya lordinasan, nevi maivo viki codaca ola vobi li linuri. Nara si maivo ke verasan, maivo po opioa fime saivo ne senosia unzira-una lornu en li merno, kasa ola ke dossa oro tressa lornu en li mernolornu vobi maivo, ata maivo ka baba bondosan somuyo. Maivo ka bondosan somuyo toda-krono. <sup>[c02-p0146 · medium]</sup>
+Maivo po opioa fime saivo futu nolenia baba tebonasan lornu de li deya. Diba muya tranari raho ke en maivo de kronocuza de somu, po bakoba maivo la verasan, nevi maivo viki codaca ola vobi li linuri. Nara si maivo verava, maivo po opioa ko muya mubofollu fime saivo futu ne nolenia unzira-una lornu en li merno, kasa ola ke gase dossa oro tressa lornu en li merno vobi maivo, ata maivo ka baba bondosan somuyo. Maivo po ka ola toda-krono, ata maivo loki ka ola. <sup>[c02-p0146 · high]</sup>
 
 Saivo po masuma en saivo de valla ko opi ata nenga: “Ocha lornu ke en li nullo ki?” <sup>[c02-p0147 · medium]</sup>
 
@@ -588,17 +588,17 @@ Ola po ka baba ruli benasan apokna. Nara maivo senosia li vera. Ola po vaku maiv
 
 Kube maivo po hiro sabesia Alianii en baba vesno, maivo po tovota unzira montafama. Maivo po ke doli baba minvalinuti. Ola-krono, Joey ata maivo po bodu lisrola en li domlupatu de Guild en dossa montafama. Saivori po sasvamelvasia maivori da Beaumont. Maivo tinsata fime maivo ka una de li lukasanri. Ne toda lavrasamniri rillira baba dossa-ne luka. Ata eli-krono, maivo tovota unzira-penta montafama. Maivo ke kasi yanbasan. Maivo ke kasi sabeasasan poye. Maivo ke kasi larneramusan seye. Krotiapo somi-nela po donuda Alianii de deyacuza ala li sernayori, zilenela Moseby po senosia fime Germayano roni farlafa baba bulli de li kronovenre. Ki-eli garzasan rupu! Hema. Ola ka ola. Yori, maivo ne ka baba benasan sarbiyo, nara maivo futu telvo sarbisia la mosa benasan. Hema… yeko. Maivo tinsata ola. <sup>[c02-p0152 · high]</sup>
 
-Maivo ramura ola una-ne deya, kube Ali po livela maivo ala Violetica. Eli ramu ke hurvosan. Maivo po ke baba follusan ata larnesan holbanasan linu, nara maivo po sorasia saivo da li lombi. Saivo po lesvu maivo pagopa ala li folluzupa; maivo po ne pensapa fime saivo viki lesvu maivo pagopa. Muya lemudonuyori po noma viki punepa maivo ala baba kasi yumlisan coda: zilebumre, folniri, oro somi-coda. Nara li coda de follu po ne ke ruli follusan. Maivo po ne turnata li dendusanri; maivo po pagopa doli ala li lumitalvari. Nara po miyo una lardapatu raho po hataha maivo la ruli damrusan. Ola po ka li lardapatu de linufulepuku. Li vordu ke levasan: ola po lorerivlala maivo de mavo. Si taivo ke baba lavrasamni, taivo ke ne desisan ata po gome du-talvata. Taivo bisu follufa fime saivori futu apoka taivo. Ola ke diba nelasan. <sup>[c02-p0153 · medium]</sup>
+Sidu ramura ola una-ne deya, li deya raho Ali po livela maivo ala Violetica en ito, ke hurvosan. Maivo po ke baba lordinasan linu. Maivo po ke follusan ata larnesan, nara maivo po sorasia saivo da li lombi. Saivo po lesvu maivo gonbiga li folluzupa; maivo po ne pensapa fime saivo viki lesvu maivo gonbiga ito. Li mellipatu de li lemudonuyori po noma viki punepa maivo ala somi-coda raho ka kasi yumlisan: buzakovasan zilebumreri, folniri, oro somi-coda gase ola. Nara li codari de follu po ne ke follusan la verasan. Maivo po ne turnata li lardapaturi raho taivo povi pagopa en itori; maivo po vimova doli li lumitalvari. Nara po miyo una lardapatu raho po hataha maivo la ruli damrusan. Ola po ka li lardapatu de linufulepuku. Ola lardapatu po vaku maivo de mavo loya lordinasan, ata li vordu ka ne damrusan sidu navdinia. Kube taivo ka baba lavrasamni, taivo ne ke desisan, ata taivo po gome talvata ala li rupu. Ola-krono, taivo futu gome apoka, ata li lideo de ola ke diba nelasan la patusan. <sup>[c02-p0153 · medium]</sup>
 
-Ola ka sambasan vobi Ali ata Saraswati. Maivori, li lavrasamniri, desida doli fime somi-nela desida maivori. Narli, nuna-nela desida maivori. Maivori ka baba lideobako, baba coda raho po biolisroba nevi li lukana. Tonsi, maivori surusia fime maivori ka nimunasan poye. Li vemi po ne zupaza vobi maivori. Narli, maivori loki miyo eli-pago. Maivori ke biosan. Maivori loki zeldoza. Si maivo senosia fime li bio po ke benasan krotiapo li sasvamelva, maivo viki senosia baba verana. Kube Diotrem po hiro venreva kopisa camvica maivo de famliri ata maivo, li codari po loya kasi benanasan. <sup>[c02-p0154 · medium]</sup>
+Ola ka sambasan vobi Ali ata Saraswati. Maivori, li lavrasamniri, desida doli fime somi-nela desida maivori. Narli, nuna-nela desida maivori. Maivori ka baba lideobako, baba coda raho po biolisroba nevi li luka. Tonsi, maivori surusia fime maivori ne ka nimusan en somi-pago poye. Li vemi po ne zupaza vobi maivori. Narli, maivori loki miyo eli-pago. Maivori ke biosan. Maivori loki pebuhatapa ata zeldoza. Si maivo senosia fime li bio po ke benasan krotiapo li sasvamelva, maivo viki senosia baba verana. Kube Diotrem po hiro venreva kopisa camvica maivo de tarnufamliri ata maivo de minvafamliri, ata kopisa camvica maivo, li codari po loya kasi benanasan la ruli mellisan. <sup>[c02-p0154 · high]</sup>
 
-Alianii po sabesia. Saivo po sabesia toda-krono. Saivo po lovula ito en maivo de simvocuza, ata en maivo de farlasan vilneri. Ola-krono, maivo po ne mebanema ola la verasan. Maivo po kronobioka voyu vilneri. Ola ke gudonasan eli-krono, nara ola loki kronovenreka somi-krono vobi lavrasamniri gase maivo. Saivori po loteropalvila li vilneri yuta farlasan verdevilne, gase kezusenru raho lumila. Muya lavrasamniri po ne rillira saivori de divmapaturi de mavoyuge tuni saivori po tovota sesa oro ocha montafama, nara maivo po tovota doli una montafama kube saivori po palvipa ito en maivo. Diotrem po livnala fime maivo po tovota bansasan yanba kopisa saivori sabetelbasia maivo. Saivori po jubaja maivo li vimo ata li sabebitisan milnovarde de baba divmapatu de mavoyuge, ata baba karkokemye. Ne baba farukova; ito po ne ke zogusan. Kepi, saivori po palvipa baba karkokemye de kronosulno en maivo. <sup>[c02-p0155 · medium]</sup>
+Alianii po sabesia. Saivo po sabesia toda-krono. Saivo po lovula ito en maivo de simvocuza, ata en maivo de farlasan vilneri. Ola-krono, maivo po ne mebanema ki-coda ola po dorvada. Maivo po ne mebanema ito la verasan. Maivo po kronobioka voyu vilneri. Ola ke gudonasan eli-krono, nara ola loki kronovenreka somi-krono en lavrasamniri gase maivo. Saivori po loteropalvila itori yuta farlasan verdevilneri, gase lumisan kezusenru. Li mellipatu de li lavrasamniri po ne rillira saivori de mavoyugesan divmapaturi tuni saivori po tovota sesa oro ocha montafama. Nara maivo po tovota doli una montafama kube saivori po palvipa maivo de divmapatu en maivo. Diotrem po livnala fime maivo po tovota bansasan yanba kopisa saivori sabetelbasia maivo. Saivori po jubaja maivo li jubaasasan vimo ata li sabebitisan milnovarde de baba mavoyugesan divmapatu, ata baba karkokemye. Ito po ne ka baba farukova. Ito po ne ka somi-coda raho ka tonsi milnovardesan. Kepi, saivori po palvipa baba karkokemye de kronosulno en maivo. Kube somi-nela dozadaluda ito, ito karkoka maivo krotiapo li kronosulno. <sup>[c02-p0155 · medium]</sup>
 
 Ito po ka baba lasosan coda, baba coda raho ne viki loya baba telnepatu. Taivo ne viki sabesia fime ito miyo, ata ito roni sulnosia. Ito po sulnosia li benasan mambi. <sup>[c02-p0156 · high]</sup>
 
 Somi-krono, maivo pensapa fime maivo po lukala, kasa Talilekta po sasvasia maivo, ata tu Germayano po sasvasia maivo. Joey ata saivo de sorari po tikutranata maivo de simvocuza yuta divmaseno. Saivori po loteropalvila li nolecuzasan simvocuza de karkokemye yuta baba veranasan simvocuza. Si saivori po ne vismava maivo en li pagomodo, maivo po ke sasvasan. Maivo po povi bioba. Nara muya de maivori po ne ke tonsi lukasan. Una krotiapo una, saivori po solmasia. Saivori po ka linuri en maivo de linukerso, ata maivo po amora saivori gase tarnufamliri ata minvafamliri. Ito po kronovenreka la ruli lasosan. En li lombi, saivori po pagopa en baba jomru ala baba lemupago raho ka “gudonasan”, oro ala baba lemudonu raho ka “jubasan”. Somi de saivori po loya “mudusan” ata po gome du-donuda vobi tisehelnari. Nara saivori po relnura nuna-krono. <sup>[c02-p0157 · medium]</sup>
 
-Toda maivori po sabesia ki-coda roni kronovenreka, nevi maivori po ne senosia ola la zogusan. Ola po ka baba peli de sulno. Taivo viki tovota sesa oro seta montafama. Ata taivo viki hiro mebanema fime taivo futu ne relnura, kube saivori du-livela taivo. <sup>[c02-p0158 · medium]</sup>
+Toda maivori po sabesia ki-coda po roni kronovenreka, nevi maivori po ne vallava ito. Ola po ka baba peli de sulno. Taivo de yanba po sahi venreva ala sesa oro seta montafama, ata taivo po hiro mebanema fime saivori po du-livela taivo en rinbakrono. <sup>[c02-p0158 · high]</sup>
 
 Maivo po ke ocha montafama kube maivo po hirnaha ko Joey de melva. Ola po ka baba jomru ala Mirunevralumisirmo. Ito po ka li mosa sirmosan lardapago en Lumiopi. Gilda ata Germayano po lideolordila toda-coda. Li linleyori ata li germanamreri po sabesia ola lideolordi, ata po melvama. Saivori po sasvasia maivori, ata po silrosia maivori kube ola po ka mosa nedusan. Maivo po vazdi duvlada, nara ola po ne ka levasan. Maivo po ke tonsi mellinasan fime maivo po povi lisrola en li kavbikova de baba linlekibo. Joey po tefa tekvu li divma navdinia maivo. Ola po ka Joey de juba ala maivo. Joey po sernamomvisia maivo da saivori de vemi, kopisa maivo povi bioba. <sup>[c02-p0159 · high]</sup>
 
@@ -610,7 +610,7 @@ Raymond ata Julian ata Roberta po du-pagopa. Una krotiapo una. Saivori po ke dib
 
 Maivo ne ka sambasan ko Ali. Ali ka liralardasan, ata saivo povi vaku saivo de nuravu loya vanisan. Maivo tu ne ka sambasan ko Sara. Sara ka ruli amorsan, ata saivo lumitelnela mavosove. Maivo ke en baba sambanasan sevukezu. Maivo ne ke zegosan, nara maivo ke larnesan. Maivo ke larnesan, nara maivo telvo ne larnela. Maivo ke yumlinasan, nara maivo biolisroba. Toda-nela dagi pelipa en Rinbavemi sabri maivo. Nara maivo ki? Maivo ne ke ravminasan. Maivo futu ne rillira baba loterosan divmapatu, kasa Diotrem po codaca ola ala maivo. Maivo ne dagi lisrola en lavisan sabena. <sup>[c02-p0163 · medium]</sup>
 
-Zilenela Moseby po ceresenoca fime saivori roni lektala Alianii de deyacuza, ata roni vaku ito loya baba bulli de lemupago zoke. Maivo de mare ka gudonasan vobi li germanamreri ata vobi loterosan lavrasamniri poye. Saivori desida fime maivori ka baba nenga, nara tu baba nelmo de opi. Ki-nela mavoma ki? Maivori de bionulu, maivori de divmana, ata maivori de nuravu po gome silrosudesia ala li vemi voyu farviyeba da maivo de mare, ata voyu maivo de seno. Eli ka li velni de li kasi benasan, li benaranfa de li mellipatu, nayo zilenela Moseby senosia ola ala maivo ko baba hume raho maivo ne sahi vimova en saivo. Ola ka ola. Ito nosi vaku li nelari mebanema. Oro ito ka doli baba loterosan lemupatu de kronoramu vobi li sernaramu, kopisa li ramuserbuyori lovula poye. <sup>[c02-p0164 · medium]</sup>
+Zilenela Moseby po ceresenoca fime saivori roni lektala Alianii de deyacuza, ata saivori roni vaku ito loya baba bulli. Ito futu ka baba lemupagosan bulli hoyo. Maivo tinsata fime maivo de mare ka gudonasan vobi li germanamreri, ata vobi li loterosan lavrasamniri. Saivori desida fime maivori ka baba nenga, nara tu baba nelmo de opi. Maivori de bionulu ata lordina ata nuravu po gome silrosudesia ala li vemi voyu farviyeba da maivo de mare, oro voyu maivo de pensa. Ki-nela mavoma ola ki? Ola ka li velni de li kasi mellisan bena, li benaranfa de li mellipatu. Zilenela Moseby senosia ola ala maivo la humesan, ata maivo ne sahi vimova ola hume en saivo. Ola ka ola. Ito futu melvama li nelari, kopisa saivori mebanema poye. Oro ito ka doli baba loterosan lemupatu de kronoramu vobi li ramupago, kopisa li ramuserbuyori lovula ito poye. <sup>[c02-p0164 · medium]</sup>
 
 Maivo ne sabesia ki-coda futu gome cuzalordica, nara eli ka maivo de vera. Ata maivo tovota doli ola. <sup>[c02-p0165 · high]</sup>
 
@@ -620,7 +620,7 @@ Maivo ne sabesia ki-coda futu gome cuzalordica, nara eli ka maivo de vera. Ata m
 
 ### Una-ne patu: Neonfaru
 
-Hurvosan mernolornu: niva-ne deya, tressa-ne monta, dossa-mililumi-centa <sup>[c03-p0003 · medium]</sup>
+Li sarbi de li hurvosan mernolornu: li niva-ne deya de li tressa-ne monta, dossa-mililumi-centa <sup>[c03-p0003 · high]</sup>
 
 Lumizefrofaru ka ruli sambasan ko ito de nole hoyo. Kube taivo venreva ala Lumizefrofaru, taivo loya yugesan farupavma, gase nelasan navufaru oro valmisan yunlu. Nara taivo de velni rukoralera ko li kronosonbu de li melo, ata ito navufarunia. Li melo de Lumizefrofaru ka nosvonasan sidu nolenia. Ito yanoya li sururi de toda li nelari en taivo de lektamambi. Ata ito vaku itori loya navufarusan zirki ata sernasan lordina. Muya-krono, miyo gase tressa-mililumi nelari en li lektamambi. Kube taivo rilura en Lumizefrofaru, taivo po lenila baba ruli sambanasan coda rada-krono. Taivo po surusia baba ruli sambanasan coda, ata taivo po ke baba ruli sambanasan nela. <sup>[c03-p0004 · medium]</sup>
 
@@ -630,7 +630,7 @@ Maivo po senosia ala Hugo fime maivo futu rilura ko saivo. Maivo de yunlusan yug
 
 Taivo roni farufa, maivo de amor. Ki-coda po kronovenreka deyapressa? <sup>[c03-p0007 · high]</sup>
 
-Hugo de varori po ke su maivo de silda. Itori po ne ke diba lumrasan, ata itori po ne ke diba nevrasan. Nayo ola, maivori po rolvura ko li farukovasan melo de Neopsifoni, ata maivori po demroda. Li dobori de ola deya po ke kasi nemesan tamo li dobori de li loterosan deyari. Nara itori po ke farukovasan toda-krono. Narli, itori po ke nemesan. Maivo ne masudevoma fime maivo po yalmudonuya li suru de ola rilupago la ruli mellisan. Li nelari raho tovota lorevopra, surusia li mosa dendusan sururi. Saivori povi vaku li mellipatu de li sururi zegoza la kasi mellisan tamo loterosan nelari. Ata saivori povi yalmudonuya li lirari la kasi mellisan. Eli po ka baba sabesan “peremo” en li farla de li divma. Narli, li farlayori de li divma raho sonbuyebasia li melo ala li sururi, po livnala fime ito lisrola voyu trana. <sup>[c03-p0008 · medium]</sup>
+Hugo de varori po ke su maivo de silda. Itori po ne ke diba lumrasan, ata itori po ne ke diba nevrasan. Maivori po demroda da lizma ala rizno ko li farukovasan mavomelo, ata maivori po taro-demroda. Li dobori de ola deya po ke kasi nemesan tamo li tinosan. Nara itori po ke farukovasan, gase li dobori de toda li deyari. Narli, itori po ke nemesan. Maivo ne masudevoma fime maivo de suru po ka baba mellisan patu de li suru de ola rilupago. Li nelari raho tovota lorevopra, surusia li dendu de li sururi tuni li lelde. Saivori povi vaku li cemnu de li sururi zegoza la kasi mellisan tamo loterosan nelari. Ata saivori povi yalmudonuya li lirari la kasi mellisan. Toda-nela po sabesia fime eli po ka “baba benanasan patu” en saivori de farla. Narli, li farlayori de li divma raho sonbuyebasia li melo ala li sururi, po livnala fime ito lisrola voyu trana. <sup>[c03-p0008 · medium]</sup>
 
 Maivo po dozadaluda nazru ala saivo, ata maivo po lumrala maivo de manliri, ata po tivrota saivo de fasbi raho po ke nazru maivo. <sup>[c03-p0009 · high]</sup>
 
@@ -663,15 +663,15 @@ Nuna-krono, maivo po senosia fime maivo ka lansinela. <sup>[c03-p0022 · high]</
 
 ### Li dossa-ne patu: sernanulusan loresilro
 
-Li hurvosan mernolornu, niva-ne deya de tressa-ne monta, dossa-mililumi-centa <sup>[c03-p0024 · medium]</sup>
+Li sarbi de li hurvosan mernolornu: li niva-ne deya de li tressa-ne monta, dossa-mililumi-centa <sup>[c03-p0024 · high]</sup>
 
 Maivo suvi lombila ko baba lideoserbusan pensa, oro ko baba verasan lilyanasan seno raho senosia maivo de gudonasan miga de amordalu ki? En li dossa-mililumi-centa-ne montafama, sidu amordalua lumiverala ki-coda ki, taivori? Baba farubako de yanosan sevrelalle raho sizosia intra taivo de nurmi, povi ka amordalu ki? Oro amordalu musi ke doli yuge, en li pavmasan vera de li demro, en li sambasan pago, ata li yugeri loya una yuge ki? Ola pensa ka ruli gudosan, doli tarnu ata minva, zoke. Baba tarnu ata baba minva amordalua en yuge una-krono, kopisa rillidonura pavmatrana. Ola ke kasi loresilrosan ki? Oro baba nela tranata entre tarnu ata minva en li favrovamri, gase li rilusan faruri. Ola ke kasi loresilrosan ki? Oro maivori loya baba yanosan faruvu ki? Ito de suma milvema li patutiri raho maivori vimova, ata ito de suma bakoba li domlubiti en rinbakrono. Ola domlubiti gome verasudeva yuta silro. <sup>[c03-p0025 · low]</sup>
 
 Somi nafevemisan volru tovota dapa, ata si taivo farufa vemiasasan farupavma la bansasan, taivo povi bakoba itori, oro taivo povi vaku itori miruvayema. <sup>[c03-p0026 · medium]</sup>
 
-Ki-eli vanisan resotelnesan paraloasa! Ola ka sidu yanoya farlasan nedu ala baba vemi de li cunuasa, kopisa cunuca fime somi nela ke kasi benasan tamo li loterori yuta mellicunu de pavmanasan volru. Hugo po tovota simvolore raho ke kasi minvasan ata kasi zeldonasan tamo maivo, poye. (Nara maivo ne senosia fime li minvasan musi ke zeldonasan.) Maivo po silrobelfisia ola. Saivo de dorva po ne ka li lirbusan yalmu, nara maivo de milnoserbu po ka ola. Yugedoza ka baba maskasan coda en baba vemi de mellikrono. Eli vemi tovota pavmanasan lavi raho ke ruli mellisan. <sup>[c03-p0027 · low]</sup>
+Ki-eli vanisan pelisenosan paraloasa! Li nelari yanoya helvimelli ala baba vemi de li cunuasa, kopisa doli conocuzaca ki-nela ka kasi benasan tamo li loterori, yuta li mellicunu de pavmanasan volru. Ola ka li paraloasa. Hugo po tovota baba simvolore raho po ka kasi minvasan ata kasi zeldonasan tamo maivo de simvolore, poye. Maivo po bodu silrobelfisia ola. (Ata maivo ne senosia fime baba minvasan simvolore nedunia zeldona.) Saivo de dorva po ne ka li lirbusan doza. Korsi, li lirbusan doza po ka maivo de milnoserbu. Li lisro ka baba maskadevo en baba vemi raho li mellikrono ke nosvosan en ito. En ola vemi, li lavi ka pavmanasan, nara ito ka ligo li cunuasa. <sup>[c03-p0027 · medium]</sup>
 
-Kube taivo povi lalnila li krono, ata taivo povi lirbula li pavmatranasan tivromomvi de dopamina ata Oksitosina, ata taivo povi lirbula li visma de ito, li laviasa de amordalu povi ke baba farupusa de baba farubiti, oro baba kirpa de li pavmapatu, oro baba rale de vemiasasan lumiyalmu. <sup>[c03-p0028 · low]</sup>
+Kube taivo povi yusoya li mellikrono, ata taivo tovota li lordi de li pavmasan tivromomvi de dopamina ata Oksitosina, ata tu li lordi de li visma de ola tivromomvi, li laviasa de li amordalu povi ka toda-coda. Ito povi ka li farupusa de baba farubiti, oro li kirpa de Urana, oro li rale de li vemiasasan lumiyalmu. <sup>[c03-p0028 · low]</sup>
 
 Maivo ne ka baba minva de dipopavmasan farubitiri, ata maivo ne nedunia tibihatari. Kube maivo de turna ke lordinasan, baba loterosan nela gonbihemluga maivo kopisa maivo yanoya ko saivo de nafevemisan yuge. Ola-krono, maivo fulefa maivo de loreruhe. Ata maivo ka li farlana de pavmapaturi ata loterosan pavmapaturi en toda pavmapatu raho ke en maivo de amorsora. Maivo ka li lektana ata li gozaasa de pavmapatutiri. Maivo vaku maivori loya li yano de ralesan melotibiri, gase li famlisan rinbari de Jupitera. <sup>[c03-p0029 · low]</sup>
 
@@ -694,20 +694,20 @@ Maivo buzaba una buzakova de menu farusan samnimiru en baba renlisan merno. Nido
 
 Miyo ola tikusan mambi, kroti taivo pavrupa da li kezulelde ko taivo de nolsasan amorsora, oro ko taivo de amorsora raho nosi fututi loya yanbasan. En ola mambi, taivo tikuta taivo de cunuri. En li ramulordi, ola ka li tali de li minva. Saivo cunuyanoca cunuri la sambasan ko saivo de corvi ata saivo de simvolore. Centa ka li nolsasan de unzira. Ata maivo musi senosia fime maivo po vimova somi mosa benasan sorari raho po loya kasi dozasan en saivori de yanolore, krotiapo somi cunuri. Nara nuna-krono, maivo po vimova dossa devosan nelari raho cunuyanoca ola-modo; ola ka silrobelfisan. Li devorinba nosi vaku ito loya megalumi rinbakrono, ata li devorinba senosia: “Maivo ke pegasan ko taivo.” Nara li mosa benasan sora senosia: “Garza, maivo ne povi belfiba fime maivori po lideobakola la ruli garzasan, resoti.” <sup>[c03-p0038 · low]</sup>
 
-Zabo, li bioramu ka nosvosan sidu teklata. Nara ito ka ruli levanasan sidu teklata, kasa muya nelari raho yanoya ko vemiasasan simvosovlari de amordalu, ne desida fime ito teklata en ola tikusan mambi. Krotiapo ola, nelari nosi tovota muya remni. Maivo resora. Maivo ka baba maivosan dapalore poye. <sup>[c03-p0039 · medium]</sup>
+En li pensa, li nelari povi teklata baba bioramu yasmo. Nara ola ka ruli levanasan, kasa li mellipatu de li nelari raho tovota patu en li vemiasasan simvosovlari de amordalu, ne desida fime ito teklata en pendi ola mambi. Eli-krono, krotiapo li bioramu, li nelari povi remnira la ruli mellisan. Maivo senosia ola ko resoti. Maivo ka baba maivosan dapalore poye. <sup>[c03-p0039 · medium]</sup>
 
 Kube maivo pensapa la verasan, maivo pensapa fime jusesan nela povi senosia fime maivo ka diba lavidesisan ata maivosan. Nara maivo ne ka vulradesisan, mufe. Maivo po ne vulrava una sabaye su Hugo de yuge. Maivo po loredonula maivo de yuge ata maivo de velnivelu ala Hugo, ata maivo po vazrava Hugo, ata Hugo po vazrava maivo. Maivo po vaku Hugo lavila toda-modo, ata Hugo po vaku maivo lavila toda-modo. Maivo tefa sapusia rada patuti en Hugo de yuge mililumi-megalumi-krono, ata Hugo tefa sapusia rada patuti en maivo de yuge mililumi-megalumi-krono. Maivo po ke teru vobi Hugo. Maivo po furofa una furo en baba mellisan kronomelli vobi Hugo. Hugo tefa tovota maivo de lumidonusan ojofurovu. Ito ka li gilbunasan yugenami raho po pukupa da mililumi-megalumi montafama de tranaasa. Ito tefa gome palvipa ala una yumliti raho ke krotiapo li vesnonami. <sup>[c03-p0040 · medium]</sup>
 
 Maivori po ka li trana da Hidrogena ala lamsapavma. Olari rinbari po ke su maivori de finiri fuyi. Ata maivori po tovota diba muya devojomruri, gase baba rinbaasasan devojomru. Ata maivori po rillidonura li una-ne amordalu yuta baba sambasan rillidonu fuyi. <sup>[c03-p0041 · low]</sup>
 
-Saivo po lesvu maivo dozadaluda li tivrobiti! Hugo po farviyebafa. <sup>[c03-p0042 · medium]</sup>
+Saivo po lesvu maivo dozadaluda li dozadalusan kemye! Hugo po farviyebafa. <sup>[c03-p0042 · high]</sup>
 
 
 ### Cuara-ne patu: Farviyebanasan amordalu
 
 Li hurvosan mernolornu de li niva-ne deya, li tressa-ne monta, 2100 <sup>[c03-p0044 · high]</sup>
 
-...Maivo hiro sabesia fime maivo po nosi palvipa maivo de yugedesi su maivo de mosa benasan sora, voyu saivo de farviyeba. Ito po venreva kasa maivo po ke vismanasan en li mellikrono, ata maivo po ne pensapa li puku de ito. <sup>[c03-p0045 · low]</sup>
+...Maivo hiro sabesia fime maivo po nosi amordalua ko maivo de mosa benasan sora voyu saivo de farviyeba. Ola po nosi ka baba farviyebanasan amordalu. Ito po venreva da maivo de vismana ata da maivo de pensana, kube maivo po manlidemroma li mellikrono. <sup>[c03-p0045 · medium]</sup>
 
 
 ### Penta-ne patu: Cunu ata lideolordi
@@ -721,7 +721,7 @@ Li cunukerso de centa ka eli. Taivo cunukersoca centa yuta nivazira-niva. Krotia
 Maivo po dozadaluda ola tivrobiti ko yeba ata la levasan, muya mambiri. Kroti eli-krono, maivo po ne sabesia la tikusan fime maivo po loya ruli garzasan en li namre ata en li nelasan lulfaasa. Maivo ka kaldodesiyo de helna, ata maivo ka kaldodesiyo de amordalu. Baba ruli mellisan yanocunu de montafamari po ne bansaba. Yesta baba kasi mellisan yanocunu de montafamari po ne bansaba. Ola po ke ruli levasan, gase baba vanajubasabaye da li sabayepago raho maivo po tovota bansasan cono vobi ito. Li divma po tovota ito de kronolelderi yasmo. Li kronolelde po ka muya centa montafama oro muya mililumi montafama mufe. Nara ito po ke tonsi mellisan fime taivo povi hataha taivo sela oro loterosan nelari. Maivo po tefa fulemirufa maivo de mavoyuge ata Hugo de mavoyuge yuta baba lekta de kersosan helnari, dopamina ata serotonina, kopisa hataha maivori de mavoyugedivmari ala ramumomvi. <sup>[c03-p0050 · low]</sup>
 
 
-### Li sesa-ne patu: Iya Amanda, li mosa nimusan
+### Li sesa-ne patu: Mosa nimusan Amanda
 
 Maivo po ne pensapa fime maivo viki venreva ala li solosan pebupatu la ruli tebosan. Nara eli-pago, maivo po kronovimoka ala li narvo, ata maivo de pensari po roni riluvayera la ruli kronoharlusan, ata maivo po ne povi camvica itori. En maivo de mavoyuge, li ruhe de dopamina ata serotonina po salrusia gase li lunosevu raho maivo ne povi tivrota loki. Ata maivo de yuge po surusia fime ito roni navufarunia, ata ito roni yalmusevreya tula li dozadalu. Eli-krono, maivo po tefa punepa li divmapatu la diba pagolalnisan. <sup>[c03-p0052 · medium]</sup>
 
@@ -753,7 +753,7 @@ Fisa, ke sasvasan, ke dozasan, ata livnala la benasan! Kureli maivo povi senosia
 
 —Alianii.” <sup>[c03-p0066 · high]</sup>
 
-Li senori po tuzota en li favrozefro en baba mambi, kroti maivo po tivrota itori en li cirsisan molupavmabumbo raho Amanda po amora. Ito po ka li azurilumi bumbo, Wonky. Maivo po palvipa baba zegovalmisan kronosulno su li silbeseno, kopisa ito ne lallela tuni li krono raho maivori po yave-venreva en ito en nullo de deyaapo. Maivo po ne desida fime saivo vilnelalleva, ata ola po ka li lusu desisan coda. <sup>[c03-p0067 · medium]</sup>
+Li senori po tuzota en li favrozefro, ata itori po ke tuzosan en una mambi, kroti maivo po velsova itori en li cirsisan molupavmabumbo raho Amanda po amora. Ito po ka azurilumi gase pusa, ata ito de nole po ka Wonky, li bumbo. Maivo po palvipa baba zegovalmisan kronosulno su li silbeseno, kopisa ito ne lallela tuni li lornu raho maivori po tefa yave-venreva en ito en nullo de deyaapo, oro tuni baba lornu ligo ito. Maivo po ne desida fime saivo vilnelalleva seye. <sup>[c03-p0067 · medium]</sup>
 
 Maivo po vimova fime li bumbo du-lalfola, ata maivo po tefa pegasevrepa li silbeseno ata donuda ito. <sup>[c03-p0068 · high]</sup>
 
@@ -777,7 +777,7 @@ Li sonbu de li pagolalnisan sevulirayori po venreva ala maivo de felberi. Ito po
 
 ### Una-ne patu — Masuma ito
 
-Li ramuralno ata li helnaturna: maivo po sarbisia ito su maivo de sarbibiti, intra li vanatobrari, en itori de sasva. Maivo tovota doli poka lumiverasan tovori, ata ito ka una de olari. <sup>[c04-p0003 · medium]</sup>
+Eli ka baba sarbi de baba ramuralno ata baba helnaturna. Maivo po sarbisia eli su maivo de sarbibiti, nayo maivo po ke sasvasan intra li vanatobrari. Maivo tovota poka coda raho ka lumiverasan vobi maivo, ata maivo de sarbibiti ka una de itori. <sup>[c04-p0003 · high]</sup>
 
 Kube li helnakadu po venreva ala maivo, maivo po roni molovuma. Maivo tovota cemoyanosan ramuri de li telnepatu kroti maivo po loya nurminasan. Li navu po ke larbolamsa toda-krono, ata li renli po ke nibesan. Li renli po ne ke tonsi dozasan fime ito buzarilliba taivo, nara ito po donuda larneti ala taivo de leheri. Maivo po roni semnesia en li dorbi raho turnata ala maivo de mellinasan somupago. Maivo po zegoza, ata po roni pagopa ala lizmasilda ata ala riznosilda la mellinasan. Maivo po ke sambabondonasan ata po roni molovuma. Baba pidihatasan follufavro de baba helnakadu po vimosudeva en li pagolalnisan lanla de sonbu, ata po roni loya menu pagolalnisan. Li helnakadu po venreva su li “valminulu”, ligo li lalnisan lordilekta de kaldokovari. Eliri kaldokovari ke ceresolo ata germa, ata li cilniyori de Germarupu nolenia itori nimu. <sup>[c04-p0004 · medium]</sup>
 
@@ -785,7 +785,7 @@ Li yugemeyiyo po ka baba vanisan aurumisabayesan tarnu. Saivo po ka dozayugesan.
 
 Li kibo ata li tarnu po pegapa maivo su li helnakavbi yuta helnasan tivrobitiri. <sup>[c04-p0006 · high]</sup>
 
-Maivo ramura fime saivori po vismava maivo de yuge, nara li seno de li yugemeyiyo po venreva tula li dendunasan kezumirutiri de li lunosevu. Maivo po povi lenila baba sonbu somi-krono, nara maivo po ne povi yanoya lordisan pensari. Maivo ne sabesia ki-oro maivo po nedunia baba vasko de zefro la verasan, nara narli, saivori po palvipa ito su maivo. Maivo po sevresia maivo de vilneri, ata maivo po ke ruli sovesan. Muya-krono, maivo po tefa ke eli-pago, en baba kadu raho ka ruli sambasan ko eli. Maivo po surusia fime li yalmubitiri de li helnakadu po hiro talita, nara itori po ke baba garzasan zogu, nevi itori po ne povi senobakosia maivo de sove. Li helnakadu po navunia ata po pagopa ko baba vayesonbu ala li lusu pagolalnisan helnapago, mufe. <sup>[c04-p0007 · low]</sup>
+Maivo ramura fime saivori po mellima li favrori de li bio de maivo. Li yugemeyiyo de li helnakadu po senosia, nara saivo de senori po venreva ala maivo tula dendunasan lunosevusan kezumirutiri de miru. Somi-krono, maivo po povi lenila baba sonbu de seno, nara maivo po ne povi yanoya migasan pensari. Maivo ne sabesia ki-oro maivo po nedunia baba vasko de Oksigena la verasan. Narli, saivori po palvipa baba vasko su maivo. Maivo po sevresia maivo de vilneri, ata maivo po bisu ke ruli sovesan. Kroti ola, maivo po tefa ke eli-pago muya-krono, en baba kadu raho po ka sambasan ko eli kadu. Maivo po surusia fime li divmabitiri de li helnakadu po hiro riluvayera. Garza! Itori po ke ruli zogusan. Nevi ola, itori po ne povi senobakosia maivo de sove. Li helnakadu po navunia, ata ito po pagopa ko baba vayesonbu ala li lusu pagolalnisan helnapago mufe. <sup>[c04-p0007 · medium]</sup>
 
 Maivo po loya nurmisan, ata krotiata maivo po sabesia fime maivo po ke su baba somubiti en li helnapago, <sup>[c04-p0008 · medium]</sup>
 
@@ -799,9 +799,9 @@ Maivo dagi tovota baba ativan ki? Maivo ke mubofollusan. <sup>[c04-p0012 · high
 
 Taivo de masu de baba molusan mubofolluhelna ka rillivardesan. Fisa, sovesia. Eli helna roni rivlara en taivo de lelgari. <sup>[c04-p0013 · high]</sup>
 
-Ligo maivo, baba divmabiti po hiro sonbusia. Ito po ke yanosan ko baba helnapalvi. Baba patuti de miru po rivlara ala maivo de varo, ata li helna ke en ito mufe. Ativan ka baba silinasan helna. Taivo povi masuma ito kube taivo ke en baba gudosan helnapago oro baba mavohelnapago. Ito ke levasan sidu masuma, ata li yugemeyiyori tavreta ito poka-krono. Taivo po sahi sapusia ito en baba helnati. <sup>[c04-p0014 · low]</sup>
+Ligo maivo, baba divmabiti po hiro talita ko baba riluvayesan sonbu. Ito po ke migasan ko baba helnapalvi raho donuda helna. Baba mellinasan patu de miru po rivlara, ata ito po turnata maivo de varo. Li helna po ke intra ola miru mufe. Ativan ka una de li kasi molusan helnari. Ito ka sasvasan sidu masuma, ata si taivo masuma ito, li yugemeyiyori ne tavreta ito mufe. Taivo tovota turna ala ito kube taivo ke en baba helnapago, baba gudosan helnapago oro baba mavohelnapago. Taivo po sapusia ito en baba helnati la tinosan. <sup>[c04-p0014 · high]</sup>
 
-Eli-krono, maivo tinsata fime maivo suvi senosia baba silro. Maivo po pagopa ala baba mavohelnapago unzira-krono mufe. Maivo po hiro pagopa ola-pago kube maivo de yanba po ke unzira-seta montafama. Li helnari po vorduva maivo de mavofaru. Ola mavofaru po yalmuya maivo de lorevopra, li una-ne tino, ko mavonibe. Maivo sela po helnaha maivo de lorenevra yuta elesede ata li helnati de laviasa. Elesede ata li helnati de laviasa po ka baba talvadivma, ata itori po vaku maivo pavrupa ala loterosan vamridarnori de visma. Maivo po tefa vimova rupu, ata maivo po tefa surusia ito. Yesta Rinbavemi ne viki vazrava ola rupu la levasan. Ata ola ne cunuca yesta maivo de migademrori intra Rinbavemi. Maivo po migademroma ola-pago nayo maivo po ke kronofarusan, ata nayo maivo po maskavimoma. Ola-krono, maivo po senosia la lordinasan, ata maivo po silrobelfisia toda-nela. Ata maivo po tovota maskadevori. En itori, maivo po ke baba regnavu. <sup>[c04-p0015 · medium]</sup>
+Eli-krono, maivo tinsata fime maivo suvi silrosudesia eli. Maivo po pagopa ala mavohelnapagori unzira-krono mufe. Maivo po hiro pagopa ola-pago kube maivo de yanba po ke unzira-seta montafama. Maivo de helnayuso po vorduva baba mavofaru. Ola mavofaru po vaku maivo de lorevopra vilnelalleva, li lorevopra de li una-ne tino, ko mavonibe. Maivo po helnaha maivo sela yuta elesede ata lavisan helnatiri, kopisa helnaha maivo de lorenevra. Itori po ka baba talvadivma, ata itori po vaku maivo pavrupa ala loterosan vamridarnori de visma. Maivo po tefa vimova rupu, ata maivo po tefa surusia rupu. Yesta Rinbavemi viki vazrava ola rupu doli la ruli damrusan. Ata ola ne cunuca yesta maivo de migademrori intra Rinbavemi. Maivo po migademroma ola-pago nayo maivo po ke kronofarusan, ata nayo maivo po maskavimoma. Ola-krono, maivo po senosia la lordinasan ata la lalnisan, ata maivo po silrobelfisia toda-nela. Ata maivo po tovota maskadevori: en itori, maivo po ka baba ruli mellisan sirmonela. <sup>[c04-p0015 · medium]</sup>
 
 Tonsi, ki-modo maivo po surusia ki? Ata ki-kasa maivo po yusoya ito ki? Hema. Una-ne krono, maivo futu ceresenoca ito, ata li bioramu de ito, kopisa donuda taivo baba patuti de nenga ata baba holbasan senorinba. <sup>[c04-p0016 · low]</sup>
 
@@ -809,7 +809,7 @@ Nenga de dendubako! <sup>[c04-p0017 · high]</sup>
 
 Li falnesan seno ceresenoca li bioramu de elesede, baba helna, en muya patuti. Maivo ne yebaya ata ne lideodonula li yuso de eli helna. Ata maivo ne lideodonula li yuso de loterosan helnari. Itori po vaku maivo nuravunia ko lorenuravu en rinbakrono, kasa maivo ka baba nela raho tovota mavomudu. <sup>[c04-p0018 · medium]</sup>
 
-Li pavmari po punepa maivo ala li mosa dendusan kezulalleri de zirki, li salrupaturi raho muya nelari ne relnura da ito. Maivo senosia eliri bioramuri, maivo patudonupa eli sabe ata maivo de pensa, kopisa ne lideodonula fime loterori falnefa maivo de pebuvalmiri, nara kopisa ceresenoca ki-kasa loterori po falnefa maivo ata ki-kasa taivo ne suvi falnefa maivo. <sup>[c04-p0019 · medium]</sup>
+Li helnari po punepa maivo ala li mosa dendusan kezulalleri de zirki, li salrupaturi raho muya nelari ne relnura da itori. Maivo senosia li telne de eliri bioramuri. Maivo patudonupa eli sabe ata maivo de pensa. Maivo ne codaca ola kopisa loterori desida sidu falnefa maivo de pebuvalmiri. Nara maivo codaca ola kopisa ceresenoca ki-kasa loterori po falnefa ola nulu, ata ki-kasa taivo ne suvi falnefa ito. <sup>[c04-p0019 · medium]</sup>
 
 Somi bondori ne suvi gome tivrota gagu baba nela, somi nuravuri ne musi gome ramura, somi nemeri ne musi gome revo-ramura. <sup>[c04-p0020 · high]</sup>
 
@@ -845,7 +845,7 @@ Ola po ka maivo de peremo, ata ola ka maivo de peremo. Maivo po sahi manliralnom
 
 Kube taivo hiro loya mavofarutisan, oro taivo devoda nuna-nela, oro taivo devoda toda-nela. Oro taivo du-donuda poka cono raho taivo tovota, oro taivo silrobelfisia sorari, ata taivo pensapa fime toda saivori ke patu de baba garzasan mellisan silrolordi kopisa vulrava taivo. Saivori ke patu de baba silrolordi kopisa hifaha taivo de aurumijuba, aurumijuba raho taivo ne tovota. Toda saivori yave-talita kopisa hifaha baba cerenasan lumidonusan juba da taivo. Oro taivo bisu ke teklanasan, oro taivo surusia li ramumomvi de opina. Taivo vimova baba minvalinu raho semnesia su baba semnebiti ko baba levasan fasbilarne, ata taivo hiro timruta la zirkisan. Taivo surusia fime una fasbilarne raho ke en una fasbi, verasudeva li cunuasasan nemeri raho ke en maivori de sernanulusan lorenasan devonasan vemi. <sup>[c04-p0036 · medium]</sup>
 
-Oro taivo vimova baba zefrokova ata ke lavisan ata namrerilusan, ata taivo surusia fime ola zefrokova de gilbunasan linukerso ke li verasude de li cunuasasan rinba de biorelnu. Baba linuti ka baba kronopilo, ata baba kronopilo ka baba linuti, ata toda-coda pidisonbupa en baba lavburinba, gase li kronodivma en baba kronopilosan kronobiti. Ola kronobiti po lombila kroti dossacenta montafama. Eli ka li mavofaruti: taivo pagopa da zirkina ala baba salrusan suru. Ito povi pagopa ala mavofaru. Krotiata, ito povi pagopa ala zirki, ala holbasan mavonibe. Nara ito ne pagopa toda-krono. Mavonibe ka li nevra ala holbasan zirki, ata li rizi en ito. Ito ka baba jubana. Maivo ne viki jubaja ito ala maivo de mosa benanasan zarku, nevi ito po vaku maivo lemula somi-coda. <sup>[c04-p0037 · medium]</sup>
+Oro taivo vimova baba zefrokova, ata taivo ke namrerilusan ko lavi. Taivo surusia fime ola una zefrokova de li gilbuna de linukerso ke li verasude de li cunuasasan rinba de biorelnu. Baba linuti ka baba kronopilo, ata baba kronopilo ka baba linuti, ata toda-coda yave-pidisonbupa en baba mavolumisan lavburinba, gase li kronodivma en baba kronopilosan kronobiti raho po gome bimneba kroti dossacenta montafama. Eli ka li mavofaruti. En ito, taivo pagopa da zirkina ala baba lumrasan suru. Ito povi pagopa ala mavofaru, nara ito ne pagopa toda-krono. Krotiata, ito povi pagopa ala zirki, ala li holbasan mavonibe. Mavonibe ka li nevra ala holbasan zirki, ata li rizi en ito. Ito ka baba jubana. Maivo ne viki opioa ito vobi maivo de mosa zarkusan zarku, nevi ito po lemudonula maivo somi codari. <sup>[c04-p0037 · high]</sup>
 
 … <sup>[c04-p0038 · high]</sup>
 
@@ -854,9 +854,9 @@ Maivo po tefa manlidemroma maivo de mavoyugesan pavmatrana la garzasan muya-kron
 
 ### Dossa-ne Patu: Alianii - Taivo ka ki-nela ki?
 
-Li favrokronobiti po ke teklasan, ata ito po ke cuara lornu ata dozira-cuara minota de mernolornu. Ola po ke teklasan en una lornu, nara en dossa lornu poye. Maivo po roni cunuca minotari. Maivo po roni kronovimoka ito toda-krono, ata sulnosia tuni ito demroda. Nara ito po ne demroda. Ito po tavreta sidu demroda. Dentohata! Li harmafuro po sonbusia la lordinasan, ata baba nibeti de furomiru po lehela maivo de lehe. Maivo po ke ruli follusan ata feyusan, ata po vilneva ala maivo de rizno, ata po vimova baba burdonasan minva. Saivo po tovota lusu sesazira oro setazira montafama, ata po tovota lumisan verdesabaye, ata po vilneva ultra maivo. Saivo de leheri po ke ruli vana kasa saivo po velmava fasbivelma. Saivo po vimosudeva gase baba resoyo raho po velmava fasbivelma da li mililumi-nivacenta. Maivo pensapa fime saivo po ka resoyo. <sup>[c04-p0041 · medium]</sup>
+Li favrokronobiti po favrofa cuara lornu ata dozira-cuara minota en li merno, ata ito po ke teklasan. Ito po ke teklasan en lusu una lornu, nara ito po nosi ke teklasan en dossa lornu. Maivo po roni cunuca li minotari. Maivo po roni kronovimoka ito en toda li kronomelli, ata maivo po roni sulnosia tuni ito demroda. Nara ito po ne demroda. Ito po tavreta sidu demroda. Zafra, miyo baba sonbu de dentohata, baba linlenasan sonbu de dentohata. Baba nibeti de furomiru raho ke da baba harmafuro, po ralnora su maivo de lehe. Ola po vaku maivo follufa ata feyufa. Maivo po vilneva ala maivo de riznosilda, ata maivo po vimova baba burdonasan minva. Saivo po tovota lusu sesazira oro setazira montafama. Saivo po tovota lumisan verdesabaye, ata saivo po roni vilneva ultra maivo. Saivo de leheri po ke vanalumi gase baba vanacirsi, kasa saivo po velmava fasbivelma. Saivo po vimosudeva gase baba nela raho velmava resoyosan fasbivelma da li montafamari de mililumi-nivacenta. Maivo pensapa fime saivo po ka baba resoyo. <sup>[c04-p0041 · medium]</sup>
 
-Saivo po milobema la paralosan, nayo saivo po sapusia li lumisan rubifuro. Saivo po vimosudeva fime saivo po sabesia somi-coda de maivo. Saivo po masuma: “Iya minvasan nela, taivo ka ki-nela ki? Ki-kasa taivo ke eli-pago ki?” <sup>[c04-p0042 · medium]</sup>
+“Taivo de peremo ka ki-coda ki, minvasan nela? Ki-kasa taivo ke en li kaldopago ki?” saivo po masuma. Nayo saivo po dentohatada li rubifuro la dozasan, saivo po milobema la paralosan gase baba nela raho sabesia somi-coda de maivo. Li rubifuro po ke baba lumisan rubi. <sup>[c04-p0042 · medium]</sup>
 
 Maivo po vimova saivo ko feyu, ata maivo po keleka, ata maivo po sispasia saivo de pusti da maivo: “Maivo ne ka baba minva. Taivo ne nedunia sidu sabesia ki-kasa maivo ke eli-pago.” <sup>[c04-p0043 · high]</sup>
 
@@ -864,7 +864,7 @@ Maivo po vimova saivo ko feyu, ata maivo po keleka, ata maivo po sispasia saivo 
 
 “Saivo ne ka rubi, nara saivo ka ojo,” maivo po farufasbifa. Maivo po gome bapiba gagu maivo de seno. Somi-coda po ne cunuyanoca. Maivo de vilneri po fasbifa ala saivo de vimo, ata po miyo baba ojokronolazu. Li ojokronolazu po manlivayema ala maivo, ata ito po telvo vaku maivo venreva ala ito. <sup>[c04-p0045 · medium]</sup>
 
-“Pagopa! Senosia ko saivo, iya garzasan dapalore! Rupu! Saivo ka rubi oro ojo, nara ito ne ka peremo. Toda-krono, saivori desida doli ola-coda.” <sup>[c04-p0046 · medium]</sup>
+“Pagopa, pagopa! Garzasan dapalore, pagopa ata senosia ko saivo! Li rubi oro li ojo hozi, nuna-nela surusia baba rupu. Toda-krono, saivori desida doli una coda.” <sup>[c04-p0046 · medium]</sup>
 
 “Ki-kasa saivo manlivayema ala maivo? Ki-kasa saivo desida sidu senosia ko maivo?” maivo po ne mebanema nuna-coda. <sup>[c04-p0047 · high]</sup>
 
@@ -876,13 +876,13 @@ Iya li vanisan, ki-coda ola minvasan nela po senosia ala taivo ki? Saivo po seno
 
 Maivo po masuma: “Ki-nela ki?” <sup>[c04-p0051 · high]</sup>
 
-“Beverly! Saivo ke ligo maivori. Lenila, iya sora! Saivo po senosia ki-coda de maivo ki?” <sup>[c04-p0052 · medium]</sup>
+“Beverly, fisa! Saivo ke ligo maivori! Lenila, amorlore! Saivo po senosia ki-coda de maivo ki?” <sup>[c04-p0052 · medium]</sup>
 
 Li kronolazu hozi, maivo po ceresenoca saivo fime li minva po tefa sernasia maivo fime toda kronolazuri tovota una tikusan desi. Saivo ka baba kronolazu. Tonsi, tu saivo tovota ola desi. <sup>[c04-p0053 · low]</sup>
 
 Saivo verava, iya zilenela. Hoyo! Ola ke su li tabu ki? <sup>[c04-p0054 · low]</sup>
 
-Yesta si taivo ka baba kronolazu, maivo ne mavoma. Si taivo reve zivuza maivo, maivo futu yendohataya taivo. <sup>[c04-p0055 · medium]</sup>
+“Maivo ne mavoma ki-oro taivo ka baba kronolazu. Si taivo reve senosia ala maivo la zivusan, maivo futu yendohataya taivo.” <sup>[c04-p0055 · high]</sup>
 
 Hoyo! Hoyo! Sovesia, sovesia! Maivo po doli pelisenopa, maivo po doli pelisenopa! Miyo poka zilenelari en maivo de kaldopago. Li minvasan sasvayori ne cunuca seye, garza! Nuna zilenela po ke gase vanisan gase taivo, vanisan zilenela. Ki-modo baba tarnu suvi vimova baba vanisan gase taivo, ata saivo ne senosia ki? Ne larnela, eho! Taivo de nole ka ki-coda ki, iya zilenela? <sup>[c04-p0056 · medium]</sup>
 
@@ -900,7 +900,7 @@ Maivo po masuma eli nela: “Ki-kasa taivo po ralkara Rodrigo ki?” Eli nela po
 
 Maivo po desida sidu tivrota saivo de manli. Maivo po tu desida sidu jurevija ala saivo, kasa saivo po mervima. Nara maivo po pensapa fime maivo ne suvi semvisia saivo de demrori la ruli zegonasan. <sup>[c04-p0063 · low]</sup>
 
-Hema, miyo kasi benanasan ranfari kopisa vaku baba nela loya bakosan. Maivo tinsata. Taivo po rillira dossa montafama oro penta montafama ki? <sup>[c04-p0064 · medium]</sup>
+“Hema, miyo kasi benanasan ranfari kopisa vaku baba nela loya sovlabakosan. Maivo tinsata. Taivo po rillira ki-muya montafama ki? Dossa ki? Penta ki?” <sup>[c04-p0064 · high]</sup>
 
 Saivori po donuda tu dossa montafama ala Rodrigo; saivori po ne amora ola garzasan rupunela. Saivo bodu lisrola en li kaldopago en unzira montafama, kasa saivo po telvo hifaha baba garzasan mulfosan rupu raho ka vio. <sup>[c04-p0065 · medium]</sup>
 
@@ -916,13 +916,13 @@ Eho. Ki-kasa taivo ke timrusan ki? <sup>[c04-p0070 · high]</sup>
 
 Maivo ke mudusan, ata taivo ka baba ojokronolazu. <sup>[c04-p0071 · high]</sup>
 
-Miyo baba hurvosan tino de mavonibe. En ito, taivo hiro sabesia fime taivo loki ke mavonibesan, ata taivo tovota mambiri de cere. Nara li cere ne ke sambasan toda-krono. Taivo ke sambabondosan entre zirki ata zirkina, nara li bondobiti ke nevrasan ala li lizma oro li rizno toda-krono. Ola-krono, maivo po ke setazira de centa zirki, ata trezira de centa cere mufe. Maivo po tovota doli poka velmakovari de zirki. Ola-krono, maivo po verasudeserbuva li kaldonela, li ojokronolazu. Saivo po desida fime maivo amordalua ko saivo la gudosan. Maivo tinsata fime maivo ka baba garzasan zirkisan nela. Maivo po navdinia dossa rubifuro da li namipagoti, ata maivo po valmiva ala baba tabu. Ata maivo po manlivayema vobi saivo kopisa saivo venreva, ata saivo semnesia ko maivo. <sup>[c04-p0072 · low]</sup>
+Miyo baba tino de mavonibe, baba hurvosan pagorinba. En ito, taivo hiro sabesia fime taivo loki ke mavonibesan, ata taivo tovota mambiri de cere. Nara li cere ne lisrola toda-krono. Taivo ke sambabondosan entre zirki ata zirkina, nara li bondobiti nevrania ala una silda oro ala baba loterosan silda toda-krono. Ola-krono, maivo po ke setazira de centa zirki ata trezira de centa cere mufe. Maivo po bodu tovota poka velmakovari de zirki, nayo maivo po verasudeserbuva li maloyo. Li maloyo po ne ka rubi, nara saivo po ka ojo. Li maloyo po bodu masuma fime maivo amordalua ko saivo la gudosan. Maivo tinsata fime maivo ka baba garzasan zirkisan nela. Maivo ka baba garzasan zirkisan nela intra maivo de simvo. Maivo po navdinia dossa rubifuro da li taradapagoti de namitiri, ata maivo po valmiva ala baba tabu. Krotiata maivo po manlivayema ala saivo, kopisa saivo venreva ata semnesia ko maivo. <sup>[c04-p0072 · medium]</sup>
 
 “… Taivo futu senosia taivo de verasan nole ala maivo ki, iya li lazuserbuyo raho lazuserbula li nelari raho amordalua ko linuri? Eli ka taivo de rubifuro, iya jusesan halrayo, li halrayo raho vazrava li rupunelari.” <sup>[c04-p0073 · high]</sup>
 
 Ki-kasa taivo nedunia sidu sabesia ola? Iya taivo, ne timruta! Taivo ne nedunia sidu timruta. Taivo tovota baba rubifuro. Vimova! Taivo desida sidu dentoda ito ki? <sup>[c04-p0074 · medium]</sup>
 
-Maivo de manli po ke su li tabu, ata li ojokronolazu po palvipa saivo de manli su maivo de manli, ata maivo po namrenevrania ata maivo po timruhavlita la kasi zogusan, nara maivo po ne du-demroda maivo de manli da saivo. Nuna-nela po tefa daluda maivo de manli sabri li amor en Rinbavemi sige Melody po daluda ito, kroti saivo po karkoka saivo sela. Maivo po ke tu li vordu de ola. <sup>[c04-p0075 · medium]</sup>
+Maivo de manli po ke su li tabu, ata li kronolazu po palvipa saivo de manli su maivo de manli, ata maivo po namrenevrania, ata maivo po timruhavlita la kasi mellisan, nara maivo po ne du-demroda maivo de manli da saivo. Si maivo ne cunuca li amorsan daluri en Rinbavemi, nuna-nela po tefa daluda maivo de manli sige Melody po daluda ito. Ata Melody po daluda ito kroti saivo po karkoka saivo sela. Maivo po ke tu li vordu de ola. <sup>[c04-p0075 · medium]</sup>
 
 Saivo po ne ke lavisan en Germarupu, nara maivo po sovelavisia la bansasan. Saivo po senosia fime ola po roni karkoka saivo, ata maivo po ne belfiba saivo. En li sesa-ne lornu de merno, saivo po vaku baba linlekibo ralnora, saivo po buzaba baba buzakova de linlemiru, ata li toze po vaku saivo daigoda en saivo de kemyesevresan zupa. Li lideolekta de li cilni po vorduva fime li linlemiru po ke karkosan si somi-nela buzaba ito. Ola po ka baba nimumolusan simvodaigosan nululordi, nara ito po ne ke dorvasan; ito po gome palvipa ala toda li nelari la nimumolusan. Nayo maivo po somusia en baba zupa ligo saivo de zupa, li daigo de saivo po venreva. Maivo po milobema ko lavi krotiapo li mernosan amordalu, ata maivo po sabesia nuna-coda. <sup>[c04-p0076 · medium]</sup>
 
@@ -936,7 +936,7 @@ Maivo de nole ka Sam. <sup>[c04-p0079 · high]</sup>
 
 “Iya taivo! Maivo de nole ka Samuel. Taivo mebanema ki? Ne pelipa! Ito ka baba yumlisan nole. Yori, Alianii ka ki-coda ki? Ito sonbusia gase baba zilekronofuro. Ito ka baba rupu de li Italiasan auruminelari. Saivori senosia: ‘Vimova maivo! Maivo roni buzaba zilekronofuro! Maivo roni buzaba baba sevrekova de Alianii! Maivo ka ruli zilesan!’” <sup>[c04-p0081 · low]</sup>
 
-Samuel po pelipa baba mellinasan yugelermi de buza ko sevrekova. Ito po ke tonsi ravminasan fime ito po vaku maivo resora. <sup>[c04-p0082 · low]</sup>
+Samuel po farlafa baba mellinasan yugelermi. Saivo po demroda la vabevesan. Saivo po maskama fime saivo voprava baba kova de marnamiru, ata fime saivo buzaba li marnamiru. Li vimosude de li yugelermi po ke tonsi ravminasan fime ito po vaku maivo resora. <sup>[c04-p0082 · medium]</sup>
 
 Maivo po milobema ala Sam: “Maivo ke lavisan fime maivo sabesia taivo eli-krono, Sam. Maivo jurevija taivo kasa taivo po tivrota maivo de manli.” <sup>[c04-p0083 · high]</sup>
 
@@ -946,7 +946,7 @@ Samuel po dentoda baba diba mellisan patu da li rubifuro. Ata saivo po dentosapu
 
 Li sambalinu de Haripota po valmiva ala maivo ata Samuel. Saivo po tovota vilneceresolo ata baba vulraramu su saivo de mergu. Saivo po tovota mellisan damvavelma ata baba velma de Beatles. Ata saivo po senosia en baba pidisan valla: “Maivo dagi semnesia ko taivori ki? Maivo ke ruli kronolemvosan, ata Beverly vaku maivo lelsula. Saivo loki masuma maivo, hema, yori. Maivo dagi semnesia ki?” <sup>[c04-p0086 · medium]</sup>
 
-Samuel po hiro senosia: “Du-pagopa, iya linu! Li tabu ke ravnusan -” <sup>[c04-p0087 · medium]</sup>
+Samuel po hiro senosia: “Du-pagopa eli-krono, linu! Li tabu ke ravnusan -” <sup>[c04-p0087 · high]</sup>
 
 Maivo po du-pavepa maivo de manli da saivo ko feyu ata larne, ata po zoguza ala saivo: “Ne loya baba rupunela! Saivo ke gase unzira-sesa montafama. Zabo, saivo dagi semnesia ko maivori, garza, rupunela! Si ola ke baba peremo vobi taivo, pagopa ala Beverly, ata lisrola ko saivo!” <sup>[c04-p0088 · medium]</sup>
 
@@ -964,11 +964,11 @@ Harold po mensolumrama: “Maivo ne sabesia. Maivo tinsata… maivo tinsata fime
 
 “Navdinia baba tali ata conodonuca li lanveconori, maivo de amor!” Maivo po senosia, ata maivo po milobema la sumasan. “Peliseno! Kepi, maivo mebanema taivo de nuravu la holbasan. Hema… maivo po reve ralnora. Maivo tovota kaldodesi, ata maivo po rillira diba muya mellikrono. Maivo po tefa talita baba sambasan tino de tali; nara maivo po ne talita megalumi tali. Korsi, maivo po talita li sambasan tali en gase megalumi lornu. Maivo po vaku saivori helnaturnaha maivo. Krotiata saivori po vaku maivo venreva eli-pago.” <sup>[c04-p0095 · high]</sup>
 
-Samuel po yanoya li senoti, ata saivo po senosia: “Taivo sabesia, ola ka doli li una benasan patu de li kaldopago. Sina taivo navdinia baba Rinbavemisan tali vobi taivo sela, toda-coda gome yalmusevreya la garzasan. Miyo nuna Rinbavemi. Miyo nuna rupu. Miyo nuna sasvavimo. Miyo nuna sernaramu; toda-coda ka rupu. Taivo semnesia. Taivo sapusia baba namiti. Taivo vimova baba garzasan yanbasan lumisovlavimofavro. Taivo pelipa yuta cuzatiri. Taivo ka baba garzasan nela la verasan. Taivo reve tovota baba nelasan silda. Maivori po tefa momvima ola.” <sup>[c04-p0096 · low]</sup>
+Samuel po yanoya baba seno, ata saivo po senosia: “Taivo sabesia, li kaldopago tovota doli una benasan coda. Sina taivo navdinia baba Rinbavemisan tali vobi taivo sela, toda garzasan coda gome yalmusevreya. Eli-pago, Rinbavemi ne miyo. Miyo nuna rupu. Miyo nuna helvivimo. Miyo nuna serna; toda-coda ka rupu. Taivo semnesia la rizisan. Taivo sapusia baba namiti. Taivo vilneva baba garzasan yanbasan lumisovlavimofavro. Taivo pelipa baba cuzapeli. Taivo ka baba garzasan nela la verasan. Taivo reve tovota baba nelasan silda. Ola ka li coda raho maivori po momvima.” <sup>[c04-p0096 · medium]</sup>
 
-Maivo po yebaya toda-coda raho saivo po senosia, nara maivo po ke en baba ruhemambi. Ola po ka baba sabesan mambi de Alianii en li mavohelnapago. Baba salrusan tarnu po talbeta ligo li kronobiti. Saivo po ke azurisabayesan, ata saivo de sabaye po ke pidisan. Saivo de shadavilne po ke narvolansisan, ata saivo de reku po ke lundusan, ata saivo de damvari po ke mulfosan. Saivo de dossa pebu po ke dossa lazupebu, ata saivo po tovota kurnori da saivo de mergu. Saivo po ka baba narvolansi mufe. Saivo po ke maskavimo pifu. Narli, saivo po ka baba narvolansi. Saivo de manliri po ke kalgasan, ata saivo po tovota baba sulmebitivu raho po ke ruli mellisan. <sup>[c04-p0097 · medium]</sup>
+Maivo po yebaya toda-coda raho saivo po senosia, nara maivo po ke en baba mubopago. Ola po ka una de olari benasan yanbasan helnapagosan mambiri de Alianii. Ola po ka baba salrusan tarnu raho po talbeta ligo li kronobiti. Saivo po tovota pidisan azurisabaye, ata saivo de shadavilne po ke narvolansisan, ata saivo de reku po ke lundusan, ata saivo de damvari po ke mulfosan. Saivo de peburi po ke lazupeburi, ata kurnori po duvlada da saivo de mergu. Saivo po ka baba verasudesan narvolansi. Saivo po ke baba maskavimo mufe. Maivo opioa ola. Narli, saivo po ka baba narvolansi. Saivo de manliri po ke kalgasan, ata saivo po tovota baba sulmebitivu raho po ke gase mellisan gase li finivu de baba nelavu. <sup>[c04-p0097 · medium]</sup>
 
-Maivo po senosia: “Hema… taivori vimova ola tarnu raho talbeta ligo li kronobiti, ola-pago ki? Ola tarnu vimosudeva la maloyosan, hema. Saivo vimosudeva la menu narvopagosan, hema.” <sup>[c04-p0098 · medium]</sup>
+“Hema… taivori vimova ola tarnu raho talbeta ligo li kronobiti, ola-pago ki? Ola tarnu hozi, hema… saivo de vimosude ke malosan. Hema, saivo ke menu narvolansisan. Saivo ke sambapatusan ko baba narvolansi poye,” maivo po senosia. <sup>[c04-p0098 · high]</sup>
 
 Harold po tikutranata saivo de vilneceresolo. Saivo po ke mubosan, ata saivo po voprava saivo de namre. Samuel po voprava, ata saivo po girzega saivo de namre. Saivo po senosia: “Nuna-coda.” <sup>[c04-p0099 · medium]</sup>
 
@@ -976,11 +976,11 @@ Beverly po bakoba li molulasona raho po rizira krotiapo ola. Saivo po voprava al
 
 Maivo po masuma: “Taivo viki desida sidu va-semnesia ko maivori ki, Beverly?” Eli minva po ka ruli zirkisan ata ruli dozasan. Ola po ke sumasan vobi maivo mufe. <sup>[c04-p0101 · high]</sup>
 
-“Zabo, si zilenela Felasio povi tekvu saivo de linlenasan lazupeburi tivrota li nevrasan rekuri, ata saivo teki desida fime maivo buzaba ito -” <sup>[c04-p0102 · low]</sup>
+“Zabo, si zilenela Felashio povi tivrota saivo de linlenasan lazupeburi vofa li garzasan nevrasan rekuri, ata saivo teki desida fime maivo buzaba -” <sup>[c04-p0102 · low]</sup>
 
 Samuel po senobakosia saivo: “Kasa maivori ke ko baba linu, maivori musi ke modosan, Bev!” <sup>[c04-p0103 · high]</sup>
 
-“Maivo tovota gase trezira montafama ko mellikrono, ata taivori ne pensapa fime maivo sabesia li amordalu de moldi ki, li ravminasanri? Garza! Du-pagopa!” <sup>[c04-p0104 · medium]</sup>
+“Maivo tovota entre trezira ata cuazira montafama, ko li mellikrono. Ata taivori, li ravminasanri, ne pensapa fime maivo sabesia ki-coda ka baba amordalu de moldi ki? Garza, du-pagopa!” <sup>[c04-p0104 · medium]</sup>
 
 Beverly po zivuresoza baba zivureso raho viki vaku baba minvasan zayuyo farufasbifa: “Zabo, ata ki-muya patu de ola po ka nafevemisan peli ata amordalu ko taivo de manli ki, li ravminasanti? Taivo po bodu amordalua yesta una-krono ki? Trezira montafama ki? Maivo de molovusan rupupago ka trezira montafama, zoke! Raho taivo nedunia, ka baba amorsan minvasan sora raho ka gase yanbasan gase taivo.” <sup>[c04-p0105 · medium]</sup>
 
@@ -990,7 +990,7 @@ Beverly po hataha li tabu: “Maivo futu senosia ito, si eli mellinasan larnenel
 
 Maivo po mensolumrama: “Livela, taivo!” <sup>[c04-p0108 · high]</sup>
 
-Beverly po ke diba vizulavisan. Saivo po senosia saivo de cunuri: “Sesazira-ocha. Maivo de kronobiofelra futu venreva krotiapo una monta. Nara si maivo cunuca maivo de lornuri en Rinbavemi, maivo de yanba ke lusu centa montafama.” <sup>[c04-p0109 · medium]</sup>
+Beverly po ke diba vizulavisan en baba patuti, kasa saivo po desida sidu senosia saivo de cunuri. Saivo po senosia: “Sesazira-ocha. Maivo de kronobiofelra futu venreva krotiapo una monta. Nara si maivo cunuca tu maivo de lornuri en Rinbavemi, maivo de yanba ke gase centa-una montafama.” <sup>[c04-p0109 · high]</sup>
 
 Samuel po pustipa baba patu de rubifuro: “Garza, Bev! Fulepari de trezira montafama ki? Helna oro amordalu ki? Si ola ka amordalu, ata taivo senosia rupu ala maivo de una garzasan amordalu de moldi, una garzasan peliseno, taivo ke zirkisan. Taivo ke samnisolo. Samnisolo oro kezusamni oro somi-coda.” <sup>[c04-p0110 · low]</sup>
 
@@ -1019,7 +1019,7 @@ Beverly po namreyebania, nara saivo po vimosudeva gase nela raho roni pensapa ba
 
 Nevi maivo ata maivo de mareti ne ka migasan da ruko, maivo tovota lorevopra, ata saivo tovota lorevopra. Saivo po ceresenoca maivo fime saivo de lorevopra ka li una-ne tino. Saivo po surusia muya coda. Eli-krono, maivo de lorevopra ke menu benanasan tamo saivo de lorevopra. Maivo po musi pagopa ala li helnapago doli dossa-krono. Maivo tovota doli unzira-penta montafama. Tonsi, maivo tovota muya krono mufe! Eli-krono, maivo roni sapusia helna kopisa sovesia maivo, ata kopisa nuna ruli benanasan coda kronovenreka. En merno, maivo sapusia baba helnati. Ito ka vana. Ito ka Lamiktal. Ito melvama maivo kopisa maivo loki ke gudosan. Iya zilenela Moseby, fisa, vaku maivo de sarbi loya verasan. Lorejuba! <sup>[c04-p0122 · medium]</sup>
 
-Saivori po masuma maivo fime maivo senosia patuti de li lorevopra raho maivo tovota, ata ki-krono ito po vimosudeva, ata ki-modo maivo surusia ito. Li mellipatu de eli bulli ka li telne de maivo de mareti. Tonsi, maivo tinsata fime maivo futu hiro senosia ki-modo maivo po surusia ito kube maivo po vimova saivo. <sup>[c04-p0123 · medium]</sup>
+Maivo po gome masuma fime maivo senosia patuti de li mavomudu raho maivo tovota, ata ki-krono ito po lombila, ata ito ka sambasan ko ki-coda. Li mellipatu de eli bulli ka li telne de li mareti. Tonsi, maivo tinsata fime maivo futu hiro telneta ki-coda po kronovenreka kube maivo po yave-venreva ko saivo. <sup>[c04-p0123 · high]</sup>
 
 Kube maivo po vimova Alianii en li una-ne krono, maivo de mudufavrori po ne bodu vimosudeva mufe. Maivo doli ramura fime maivo po ke surusan toda-krono. Somi-coda po vaku maivo loya nemesan. Maivo po desida sidu timruta, ata maivo po ne sabesia ki-kasa. Maivo po tovota muya codari raho vaku maivo follufa. Tu muya codari po vaku maivo loya nemesan oro larnesan, nara maivo de suru po ke ultra olari codari. Lorevopra ka sambanasan. Taivo de suru tavki ruhera toda-krono. Baba mellinasan coda vaku taivo ruhera. Taivo salrusia oro taivo nevrania. Ata ito loya kasi benanasan, ata ito reve loya kasi benanasan. <sup>[c04-p0124 · medium]</sup>
 
@@ -1035,13 +1035,13 @@ Narli, maivo tovota maivo de maretiri ata zilenela Moseby. <sup>[c04-p0128 · me
 ## Penta-ne bullipatu — Kibori raho gome gozaga la amordalusan
 
 
-### Una-ne patu: Toda-coda ka jusesan en amor ata en Cesa.
+### Una-ne patu: Toda-coda ka semvisan en amor ata en dokrapeli.
 
-Eli ka li sarbi de li una-ne merno krotiapo li helnaturna de maivo. Maivo po sarbisia ito kroti li somubiti su maivo de vallafavroti. <sup>[c05-p0003 · medium]</sup>
+Eli ka baba sarbi de li una-ne merno krotiapo maivo de helnaturna. Maivo po sarbisia ito yuta maivo de sernafavro, kroti maivo somusia. <sup>[c05-p0003 · high]</sup>
 
 Li melosan mernosan hemlu de vilnelalle po venreva yuta kibosonbu ata navufaruhata de baba melosan kibo. Saivo po senosia: “Keleka ata lumila! Li deya ke vanisan en Lumiopi. Yava benaba la mosa benasan en eli ruli vanisan vemi!” <sup>[c05-p0004 · medium]</sup>
 
-Ne pensapa li vera fime maivori po povi vimova ata lenila li renlivu raho po hataha li vimolalleri de ceresolodoza! Maivori po ne povi hirnaha da eli helnapago, li mavohelna de Lumiopi. Nuna germabiti po povi bakolendaba li ceresolodoza. Maivo po vimova transa li vimolalle ko vuzi de li kronolemvo raho li deya futu belruba. <sup>[c05-p0005 · low]</sup>
+Du-vimova li vera fime maivori po povi vimova ata lenila li renlivu! Li renlivu po hataha li vimolalleri de ceresolodoza la ruli hatasan. Li vimolalleri po ne povi gome bakoba. Nuna-nela po povi hirnaha da eli mavohelnapago, Lumiopi. Nuna germabitivu po povi bakolendaba li lamsapavmasan ceresolodoza. Maivo po vimova transa li vimolalle ko vuzi de li kronolemvo raho li deya futu belruba. <sup>[c05-p0005 · medium]</sup>
 
 Doli maivo de tressa rivori po ka maivo de opi. Maivo po sahi senosia ko saivori ata cunuca minotari en toda li deya. Taivo de lornupomli po ke vordunasan mufe. Krotiata, kube taivo de lornupomli po venreva, taivo po senosia ko baba germasan yugemeyiyo ata ko baba yugenamisan yugemeyiyo. Maivo pensapa fime li kibo po ke ola-pago vobi li verasan tali, ata li nela po ke ola-pago kopisa melvama taivo. Saivo po melvama kopisa taivo loki surusia fime taivo ka baba nela. Maivo ne sabesia ki-coda li yugemeyiyo po helnaha maivo: baba zeldonibe, ata baba helnati vobi mubofollu. Ata baba helnati raho lordila maivo de suru, yasmo. Maivo pensapa fime saivo po helnaha maivo ko Depakote. Nara saivo viki donuda maivo Lamotrijina korsi Depakote, krotiapo saivo po vimova maivo de simvocuza. Sina maivo rillira ito, maivo de yuge viki lelsula ata vulrava maivo, kasa maivo de yuge nedunia ito. <sup>[c05-p0006 · low]</sup>
 
@@ -1083,21 +1083,21 @@ Samuel po palvipa saivo de manli su maivo de menso ata dozativroda la molusan. M
 
 Saivo po vilneva maivo ko mubo en saivo de mellisan vilneri, ata saivo po demroda saivo de namre ko pelina. <sup>[c05-p0025 · high]</sup>
 
-Maivo po senosia, nayo maivo po mensolumrama: “Hema… maskavimoma, maskavimoma. Maivo mebanema. Eho. Tonsi, li helnatiri ka li nulu.” Ata maivo po senosia: “Ola ka taivo de una-ne krono en li helnapago ki? Hema, maivo ne sabesia… maivo po ke eli-pago unzira-krono poye.” <sup>[c05-p0026 · low]</sup>
+“Hoyo… taivo roni maskavimoma, taivo roni maskavimoma. Maivo mebanema. Eho. Tonsi, taivo futu sapusia li helnatiri,” maivo po senosia, nayo maivo po mensolumrama. “Ola ka taivo de una-ne krono en li helnapago ki? Hema, maivo ne sabesia… maivo po ke eli-pago unzira-krono poye.” <sup>[c05-p0026 · medium]</sup>
 
 Sam po senosia, nayo saivo lavimilobela la farvikezusan: “Kepi. Maivo po ke en eli-pago dossa-krono. Maivo po amordalua ko Beverly en li helnapago. Saivo ka baba minva seye.” <sup>[c05-p0027 · medium]</sup>
 
 Maivo po senosia, nayo maivo du-vilneva da saivo: “Maivo ne dorvada sidu senosia gase baba zivusan larnenela. Nara saivo ke yanbasan vobi taivo ki? Nido, saivo ke kasi yanbasan tamo taivo.” <sup>[c05-p0028 · low]</sup>
 
-Maivo po lorelivnala saivo la patusan en li ojovelma de li kaldopago. Maivo po ke ki-eli tino de nela ki? Maivo po ke tonsi zirkisan fime maivo po amorharlua Beverly, nayo maivo po vimova eli dozayugesan harmasan kaldonela. Garza! <sup>[c05-p0029 · low]</sup>
+Maivo po amorduhaa saivo la patusan, kube saivo po ke en li ojovelma de li kaldopago. Maivo po ka ki-eli tino de zirkisan maskavimosan amordaludesiyo ki? Maivo po amorharlua Beverly, nayo maivo po vilneva eli dozayugesan kaldonela la amorduhasan. Eli kaldonela ka baba nela raho po bakoba li lanve. Garza. <sup>[c05-p0029 · medium]</sup>
 
-“Nido, maivo ne ka baba paralosan nela, nara li zilekronofuro ne yanbaya ki? Bev ne ka baba kronofuro. Saivo ka baba farusan buza. Maivo senosia taivo: saivo ka baba lordisan minva, ata saivo ka li mosa zilesan amorsora raho maivo po tovota. Yori, maivori de telne ka yanbasan. Maivori po amordalua doli poka-krono. Eli-krono, maivo ne tovota amorsora. Taivo desida baba amorsora ki?” <sup>[c05-p0030 · low]</sup>
+“Nido, maivo ne ka baba nela raho zivuza li gudo, oro somi-coda gase ola. Nara baba zilesan kronofuro ne yanbaya ki? Bev ka baba farusan marnamiru korsi baba kronofuro. Nara maivo senosia taivo: saivo ka baba verasan zilenela. Maivo po amordalua ko saivo, ata ola po ka li mosa zilesan amordalu raho maivo po tovota. Yori, saivo ata maivo ke baba yanbasan telne. Maivori po amordalua doli en poka nullo. Eli-krono, maivo ne tovota amorsora. Taivo ke en li taradapago de amor ki?” <sup>[c05-p0030 · medium]</sup>
 
-Maivo po vilneva saivo de vilneri, ata maivo po farufasbifa. Maivo po senosia: “Maivo ke naminasan vobi mernonami ki? Zabo, zabo, maivo ke naminasan seye. Hema, maivo futu sapusia maivo de helnatiri, ata maivo futu masuma somi benanasan nami vobi mernonami. Taivo pensapa ki-coda ki? Maivo suvi masuma baba lavrasamninami ki? Ito ka ruli namisan ki, maivo de amor?” <sup>[c05-p0031 · medium]</sup>
+Maivo po vilneva saivo de vilneri, ata maivo po farufasbifa. Maivo po senosia: “Vobi li mernonami ki? Zabo, zabo, maivo ke naminasan en vera seye. Hema, yava vimova. Maivo futu ravnura maivo de helnatiri, ata maivo futu masuma somi ruli benanasan nami vobi li mernonami. Taivo pensapa ki-coda ki? Baba lavrasamninami ki? Ito ka ruli namisan ki, amorlore?” <sup>[c05-p0031 · high]</sup>
 
 Samuel de vilneri po vamduva ko bapi, ata saivo po senosia: “Taivo sapusia lavrasamniri ki?” <sup>[c05-p0032 · high]</sup>
 
-Maivo po resora: “Maivo ka baba lavrasamni. Maivo tinsata fime ola vaku maivo loya baba nela raho sapusia nelari. Maivo ka kasi mavonibesan tamo taivo poye. Taivo po karkoka baba tarnusan nela, ata maivo sapusia maivo de famliri.” <sup>[c05-p0033 · medium]</sup>
+Maivo po resora: “Maivo ka baba lavrasamni. Maivo tinsata fime ola vaku maivo loya baba nela raho sapusia saivo de nimufama. Maivo ka kasi zirkisan tamo taivo poye. Taivo po karkoka baba tarnusan nela, ata maivo sapusia maivo de famliri.” <sup>[c05-p0033 · high]</sup>
 
 Samuel po telvo moluma maivo. Saivo po lumrala saivo de nilminasan manli, ata saivo po du-manlima maivo de vanajubasabaye da maivo de fasbi. Saivo po senosia: “Hema. Taivo ne ka baba lavrasamni. Maivo po ke purmanasan nuna-krono. Tonsi, maivo ne sabesia li neme de ola. Nara taivo ka sambasan ko maivo.” <sup>[c05-p0034 · medium]</sup>
 
@@ -1131,9 +1131,9 @@ Sam ata maivo po nedunia doli una sarbibiti kopisa pelipa li lumipeli. Li lumiri
 
 Maivo po senosia: “Taivo futu vazrava li peli krotiapo tressa demro ki?” Maivo po pavepa maivo de semnebiti, ata maivo po semnesia. Maivo po fasbifa Sam. Maivo po lumrala maivo de manliri, ata maivo po du-manlima maivo de vanajubasabaye da maivo de fasbi. Maivo de vanajubasabaye po ka lumisan. Maivori po vilneva fuyi. Saivo po amora maivo de viovilne. Maivo po amora saivo de farvikezusan gamdosabaye. <sup>[c05-p0049 · medium]</sup>
 
-Maivo po senosia: “Maivo pensapa la verasan fime maivo futu vaku taivo loya farlanasan, ata maivo futu vaku taivo de corvibelfi loya farlanasan, Samuel.” Ata maivo po loki senosia la corvisan: “Taivo ke garzasan. Maivo po pelipa muya lumipeli. Ola po ka una de dossa de li tali raho maivori po talita en li kersopago.” <sup>[c05-p0050 · low]</sup>
+“Maivo pensapa la verasan fime maivo futu bakoba taivo, ata tu taivo de paralo, Samuel,” maivo po senosia. Ata maivo po loki senosia la corvisan: “Taivo ke en baba garzasan mubopago. Maivo po pelipa dokrapeli muya-krono. Ola po ka una de dossa de li peli raho maivori po sahi pelipa en li marecemnu.” <sup>[c05-p0050 · medium]</sup>
 
-Saivo po senosia: “Eho, iya vardeminva, taivo ke doli senoti. Maivo futu tivrota taivo voyu peremo.” nayo saivo po kronovimoka maivo la dorvasan ko paralosan lavimilobe. Maivo po vimova fime saivo po mambivimoma la nevrasan da li fasbi de maivo ala li reku de maivo en una mambi, ata maivo po lumrala li vilnetibi de maivo ala saivo, kopisa senosia: “Verasan ki?” <sup>[c05-p0051 · low]</sup>
+“Zabo, eho, zilenela. Taivo ka doli seno. Maivo futu dozadaluda taivo voyu peremo,” saivo po senosia, nayo saivo po kronovimoka maivo la solosan ko baba paralosan lavimilobe. Maivo po vimova fime saivo po mambivimoma la nevrasan da maivo de fasbi ala maivo de reku en una mambi. Ata maivo po lumrala maivo de vilnetibiri ala saivo. Ola po lumiverala: “Verasan ki?” <sup>[c05-p0051 · medium]</sup>
 
 “Taivo senosia fime taivo futu tivrota maivo de tarnuregna ki?” <sup>[c05-p0052 · medium]</sup>
 
@@ -1143,7 +1143,7 @@ Saivo po senosia: “Eho, iya vardeminva, taivo ke doli senoti. Maivo futu tivro
 
 Saivo po senosia ko lavi: “Si maivo ne vimosudeva eli-modo, taivo, baba minvaregna, ne viki donuda maivo una minota. Taivo amora toda patuti de farvikezu en maivo, nevi taivo ne bodu sabesia ito. Maivo pensapa fime taivo tu desida somi farvikezu de maivo en taivo.” <sup>[c05-p0055 · medium]</sup>
 
-Maivo po pensapa eli paralo, nara maivo po silrobelfisia en baba salrupatu fime saivo ke verasan. Maivo po livnala sidu verasenova saivo de corvibelfisan seno: “Poye.” <sup>[c05-p0056 · medium]</sup>
+Maivo po pensapa eli paralosan modo de saivo. Nara en somi salrupatu, maivo po silrobelfisia fime saivo de seno ke verasan. Maivo po livnala sidu verasenova saivo de corvibelfisan seno: “Poye.” <sup>[c05-p0056 · high]</sup>
 
 Eli seno po vaku Sam loya corvisan. Sam po senosia: “Tonsi, taivo verasenova ola ata taivo amora maivo ki?” <sup>[c05-p0057 · medium]</sup>
 
@@ -1188,15 +1188,15 @@ Li lasokibori ne larnela poye. Itori tovota baba hurvosan sovedendu, kasa li div
 
 Li modo raho maivo po migademroma en ito ko li lemudonuyo de sovedendu, po vaku Harold resora mufe. Ata saivo po livnala sidu modoma gase maivo. Maivo po sahi senosia gase eli: “Iya polvasan Lasokibo, taivo ka li lordiyo de li yalmusan rivlari raho ka favrodivmasan ata mavolumisan. Maivo povi lemula li Kamehameha de Goku, li sirmosan devi de Saiyan, yuta ki-eli manlisabe ki? Maivo desida fime maivo de mavolumisan zarkuhatari loya lordiasasan, kopisa maivo nosi karkoka muya maivo de zarkuri.” <sup>[c05-p0077 · medium]</sup>
 
-Taivo loki gozaga gase Alianii. Maivo vismava ola, ata ola vaku maivo resora. Taivori povi rillira yalmusan zarkuhatari en Rinbavemi la levasan yasmo. Maivo ka baba biokibo raho tovota lore ata surumiga. Tonsi, maivo viki masuma maivo de lemuyori fime saivori teki gozaga, ata fime saivori hiro talita la vismasan en eli lektamambi. Maivo telvo mervima taivori, ata maivo sulnosovesia. Nara maivo de vera ata maivo de velnivelu ka ruli kibosan. Taivori gozaga maivo kasa ola mufe. Ola vaku maivo nemenia. <sup>[c05-p0078 · low]</sup>
+“Taivo loki senosia yuta Alianii de loteroseno. Maivo verasenova ola, ata ola ka pelilavisan. Taivori povi rillira yalmusan zarkuhatari yuta sernarilli la levasan. Taivori povi zarkuhataza yuta itori en Rinbavemi. Taivori sabesia ola la ruli benasan. Maivo ka baba biokibo, baba simvo raho tovota sururi ata surumiga. Taivori suvi tovota sirmolore vobi maivo. Tonsi, maivo viki masuma maivo de lemuyori fime saivori vaku saivori de yanosan suru tranata, da li peli ala li yalmusan lektatali en eli lektamambi. Maivo kendeka sidu mervima taivori, ata maivo tu kendeka fime taivori ke lavisan. Ata maivo sulnosovesia. Nara maivo de mellipatu ka germa korsi bio. Maivo de pagomodo ata maivo de velnivelu vimosudeva fime itori vaku taivori gozaga maivo. Ola ka baba vulra vobi maivo.” <sup>[c05-p0078 · low]</sup>
 
 Maivo ne ka nurmiasasan, nara maivo kendeka li nurmiasa. Ata maivo kendeka sidu modoma en baba modo raho li yanbasan lemudonu pilopa ito. Maivo paralopa en li solli de li sabe, kopisa maivo nosi patudonupa maivo de lemu ala maivo de helnanelari. <sup>[c05-p0079 · high]</sup>
 
-Nayo saivo de vilneri ke sevresan, Samuel po senosia la lasosan: “Maivori musi ke gozanasan ala zilenela Sovekibo, kasa maivori ke en li helnapago ko baba ranfa.” <sup>[c05-p0080 · medium]</sup>
+Nayo saivo de vilneri ke sevresan, Samuel po senosia la lasosan: “Maivori musi tovota sirmolore vobi zilenela Zenbot, kasa maivori ke en li helnapago, ata ola tovota baba ranfa.” <sup>[c05-p0080 · high]</sup>
 
 Yade. Maivo po ne povi codaca ito. Maivo de mavo ka mosa lallesan, nara maivo ne tovota sulnosove kopisa lemula lasopensa da baba garzasan kibo. Yesta si ito tovota baba divmapatu de mavoyuge oro baba bakopatu de mavolumi, ata yesta si ito ne tovota ito, maivo ne povi codaca ito. Maivo ne povi semnesia ola-pago ko sulnosove ata ko laso, ata maivo ne povi farlafa hurvosan manlifavrori yuta maivo de manliri. Maivo ne povi maskama fime maivo mavoma li mavosove, kopisa sovesia baba divmabiti. Garza! Ki-coda li garzasan divmabiti sabesia ki? Ito sabesia maivo de simvo, ata li ruhemambiri raho maivo po ke en ito, ata maivo de lorevemi, ata li lumivera de mavosove ki? Sovedendu ke en ito de nole. Ata ki-coda ki? Buda po biorelnuba en li sovla de baba kibo raho gome farlafa ko muya sambasan kibori ki? Taivo gozaga maivo ki? <sup>[c05-p0081 · high]</sup>
 
-Garza! Ne ola! Maivo po salrusia. Maivo po duvlada da li zupa. Maivo po pagopa ala li helnapalvi. Maivo po masuma baba sulmepavmavelma. Lorejuba ala li deviri ata ala Budari raho ka kibosan ata ala Budari raho ne ka kibosan! Li sulmepavmavelma po povi loki gome masuma en li helnapago vobi li mubomomvi. Ola ka sambasan ko li benasan yanbasan deyari. Muya nelari po sulmesia, nevi ola ke folluvordusan vobi taivo. Toda mavohelnapago viki lorelivnala sidu donuda baba sulmepavmavelma ala taivo, kopisa taivo teki senosia la garzasan ata sapusia taivo de helnatiri. Nara toda mavohelnapago ne viki lesvu taivo nuravunia voyu sulmepavma. <sup>[c05-p0082 · low]</sup>
+Garza ala ola! Maivo po salrusia, ata maivo po duvlada da li zupa, ata maivo po pagopa ala li helnapalvi, ata maivo po masuma baba sulmepavmavelma. Lorejuba ala li mavolumiasari, ala li deviri, ata ala li kibosan ata biosan Budari! Li sulmepavmavelmari po povi loki gome masuma en li helnapago somi-modo, kasa itori ka baba fonte de mubomomvi vobi li mubofollusan nelari. Ola ka ruli sambasan ko li benasan yanbasan deyari. Muya nelari po sulmesia, nevi ola ka folluvordusan vobi taivo. Li mavohelnapagori lorelivnala sidu donuda taivo baba sulmepavmavelmati la tinosan, kopisa taivo teklata taivo de garzasan seno ata sapusia taivo de helnatiri. Itori lorelivnala ola korsi taivo de nuravu, kube taivo de yuge momvima li sulmepavma. <sup>[c05-p0082 · medium]</sup>
 
 “Yeko, iya helnakibo. Maivo ke mubofollusan. Ata maivo desida sulmebitiri. Ata maivo masuma baba sulmepavmavelma ko gozana. Maivo belfiba fime taivo tovota tressa helnapaturi. Itori ka seta bondopatuti, ata unzira-cuara bondopatuti, ata dozira-una bondopatuti. Maivo viki desida baba una-ne sulmepavmavelma de unzira-cuara bondopatuti. Ata maivo viki desida baba ativan. Ito viki melvama maivo, ata ito viki sovesia maivo de mubofollu ata maivo de surutibiri. Fisa. Lorejuba.” <sup>[c05-p0083 · high]</sup>
 
@@ -1212,7 +1212,7 @@ Li fasbi de li kibo po sudesia mubo. Li kibo po senosia: “Eli ne gome lideodon
 
 Maivo po milobema ala li kibo, ata, doli kopisa gozaga saivo, maivo po senosia: “Somi-krono, baba helnanela po gozaga taivo la amordalusan ki? Ko larne ki? Kube maivo vaku baba kibo loya nimumolunasan, maivo lavila la amordalusan.” <sup>[c05-p0089 · low]</sup>
 
-Maivo viki vaku li kibo loya nimumolunasan, seye. Maivo po tovota muya bioramu de ola. Muya-krono, maivo po pelipa gase baba zirkisan amordaluyo, en li helnapagori ata vofa li helnapagori. Somi nelari nosi senosia fime ola ka yesta baba juba. <sup>[c05-p0090 · low]</sup>
+Maivo viki codaca tu ola. Maivo po tovota bansaasa de bioramu: maivo po modoma gase baba zirkisan dapalore, en li helnapagori ata vofa li helnapagori. Somi nelari nosi senosia fime ola ka yesta baba nolsajuba. <sup>[c05-p0090 · medium]</sup>
 
 Li kibo po larnevimola ala maivo. Li dossa vilnetibi de sernanulu de saivo po nevrania entre saivo de dossa vilne, gase li larne de baba lorefavro. Eli kibo po tovota divmapaturi de bio, gase Zenbot. Itori po donuda baba mavolumi ala saivo. Saivo de mavolumi po ne ka sambanasan da maivo de mavolumi. Maivo po ke baba larnenela la verasan, ata saivo po ne vardeva ola. <sup>[c05-p0091 · low]</sup>
 
@@ -1241,7 +1241,7 @@ Li una-ne merno po venreva krotiapo maivo de helnaturna. Eli sarbi ka li telne d
 
 Maivori po tovota “pavmasan larda” gase li talipatusan lektatali, da unzira-una lornu en merno tuni li cemnunami en solacemnu. Si maivo ke verasan, eli ka una de li paturi raho maivo lorelivnala en li helnapago. Li lardazupa tovota bitiri raho dapada gase muya centa-mililumi cono, ata itori nosi yesta dapada ligo megalumi cono. Si taivo ne ke ravminasan ata ne bakoba somi-coda, taivo povi yusoya li divmabitiri kopisa farlafa toda tino de zilesan codari. Li lardazupa po tovota muya zilesan lamsapavmasan sovlafarlabitiri raho taivo povi yusoya kopisa farlafa toda-coda da velma ala rinba ata lardapatuti ata pelibiti. <sup>[c05-p0103 · medium]</sup>
 
-Li zupa po tovota tu baba lordilekta de lumisovlasan cunudivmabitiri. Taivo povi yusoya itori kopisa nafenia ata farlafa toda-coda raho taivo povi senosudesia. Somi zilesan gudonasan codari po ne ke levasan sidu farlafa yasmo. Nara yuta patuti de mavozayu ata manlisabe de cuzalordi ata manlisabe de cunudivmabiti, taivo povi farlafa somi codari raho ka ruli gudonasan. Somi nelari po rillira cono yuta velma raho po gome sovlafarlasia, kopisa bioba. Tu Hugo po rillira cono ola-modo. <sup>[c05-p0104 · medium]</sup>
+Li zupa po tovota tu baba lordilekta de lumisovlacunudivmabitiri. Taivo po povi yusoya itori kopisa farlafa toda-coda raho taivo povi nafenia ata senosudesia. Baba coda raho ito de vimosude po ka ruli vanisan ata gudonasan la verasan, po ne ke levasan sidu farlafa yasmo. Nara taivo po povi farlafa somi ruli gudonasan codari yuta patuti de mavozayu, yuta somi manlisabe de cuzalordi, ata yuta somi sabe de li cunudivmabiti. Somi nelari po bioba yuta sovlafarlasan velma. Hugo po ka una de saivori. <sup>[c05-p0104 · medium]</sup>
 
 Garza! <sup>[c05-p0105 · high]</sup>
 
@@ -1253,7 +1253,7 @@ Garza! <sup>[c05-p0107 · high]</sup>
 
 Zabo, maivo lardala ata bitifarlaba, zoke. Miyo kasi benasan nulu kopisa mirudaigoma maivo de neme ki? <sup>[c05-p0109 · high]</sup>
 
-Nuna-krono, maivo po povi conodonuca vobi baba lunovurfa raho ka violumi. Nara maivo po desida sidu revo-farlafa baba mellinasan domlu vobi baba lunovurfa. Ito viki ke gase mellinasan gase baba ruli mellinasan tabu. Ito viki ke menu levanasan sidu kavbika, nara li farla viki ke ruli levasan. Ito viki ke su maivo de damvatabu en baba zefrodapakadu. Kroti ola, maivo po vazdi farlafa eli lideo. Maivo po farlafa baba domlu en li helnapago. Ata maivo po desida sidu donuda ito ala baba volrusan fama voyu cono. Maivo po desida fime li fama lesvu maivo pelipa ko li bioyuge en una lornu, korsi cono. Maivo po ne musi yesta conodonuca vobi li lamsapavma! Li verasan “domlufarla” de li lamsapavmasan domluri po ke levasan vobi maivo. Muya-krono, maivo po cemoyanoca paturi da li lideori de loterosan domluri. Maivo po navdinia olari lideori en li favropagori. <sup>[c05-p0110 · low]</sup>
+Nuna-krono, maivo po povi conodonuca vobi baba lunovurfa. Nara maivo po amora eli lideo: maivo viki reve farlafa baba mellinasan domlu vobi baba lunovurfa. Ito viki ka gase mellisan gase baba ruli mellinasan tabu. Ito viki ka levanasan sidu kavbika, nara ito viki ne ka ruli levanasan. Ata maivo povi kavbika ito seye. En baba zefrodapakadu, maivo de damvatabu viki ka bansasan vobi ito. Eli po ka baba lideolordi, ata maivo po bodu vazrava yuta ito. Maivo po farlafa baba domlu en li helnapago. Ata maivo po senosia ala baba volrusan fama fime maivo viki donuda li domlu ala saivori voyu dapa. Ola po ka baba rillidonu: maivo viki rillidonura li domlu, kopisa maivo pelipa ko li bioyuge en una lornu. Maivo po yesta ne musi conodonuca vobi li lamsapavma! Li verasan “domlufarla” de li lamsapavmavelmasan domluri po ne vaku maivo muboma. En li mellipatu de li tali, maivo po cemoyanoca paturi da loterosan lideolordiri. Olari po ka lideolordiri de yanosan paturi. Maivo po navdinia itori en li vemifavro. <sup>[c05-p0110 · medium]</sup>
 
 Maivo po ke ruli benasan en li farla de ruli colbisan colbiri vobi li domlu. Ata maivo po amora sidu vimova li divmabiti. Una krotiapo una, li divmabiti po farlafa li mirunibe de li colbilisi su li domlu. <sup>[c05-p0111 · medium]</sup>
 
@@ -1267,7 +1267,7 @@ Beverly po roni tosu farlafa baba lekta de amordalusan bitiri. Itori po ke ruli 
 
 Saivori po vaku maivo de yugemeyiyori tranata, krotiapo maivo po senosia ola, ata po vaku maivo pagopa ala silrosan lektamambiri de senohelna. <sup>[c05-p0116 · medium]</sup>
 
-Yori, Samuel po ke li cuara-ne nela ata li apoksan nela en li lardazupa. Maivo po ne sabesia ki-coda saivo roni farlafa. Kube maivo pagopa ala saivo ata maivo telvo helvivimoha, saivo po loya zirkisan ata po du-punepa maivo la solosan, ata li lardakibo po hiro senosia en baba mellisan valla. Maivo po senosia ala li kibo fime maivori ke sora ata roni pelipa, ata fime li kibo ne musi muboma. Eli po vaku maivo loya zirkisan, kasa maivo po ne sabesia ki-coda Samuel roni farlafa. <sup>[c05-p0117 · medium]</sup>
+Eli-krono, yava relnura ala Samuel. Samuel po ke li cuara-ne apoksan nela en li zupa de larda ata bitifarla. Maivo po ne sabesia ki-coda saivo roni farlafa. Kube maivo valmiva ala saivo ata telvo helvivimoha, saivo po du-punepa maivo la damrusan ko larne. Tonsi, li lardakibo po hiro zoguza. Maivo po senosia ala li kibo fime maivori ke sorari, ata fime maivori doli roni pelipa, ata fime ito ne suvi muboma. Maivo po ne sabesia ki-coda Samuel roni farlafa, ata ola po roni vaku maivo loya zirkisan. <sup>[c05-p0117 · high]</sup>
 
 En poka minota kroti maivori gome tivromomvita, Sam po donuda maivo baba sovlafarlasan viodamrukova. Ito de colbi ka sambasan ko maivo de viovilne. Ito tovota vanajubalelde. Ito tovota baba vanajubasan tibi, ata muya violore su ito. Ito po ke linuvanisan, ata maivo po jureviloreja li benamolu, nara li farla de baba damrukova po ke levasan. Taivo po pidisonbupa una tivrobiti, ata po rillira baba sernarilli de li damrukova, ata po tikutranata li colbiri, ata po pidisonbupa li tivrobiti de sovlafarla. Maivo po sabesia fime ito po ke baba damrukova gase levasan gase li loterosan damrukova. Eho. Yori. Maivo po lallela ito. <sup>[c05-p0118 · medium]</sup>
 
@@ -1293,7 +1293,7 @@ Maivo po rillira li silbeseno: “Hoyo, olari, zabo, maivori ke benasan. Hema, t
 
 Maivo po vaku saivo lasola: “Eli-krono, lasola! Ne muboma vobi maivo!” <sup>[c05-p0129 · high]</sup>
 
-Maivo po reve pagopa ligo saivo. Pendi kroti li kibosan lemudonuyo senosia ala maivo ko larne, maivo po veseva en saivo de felbe la vizusan: “Maivo futu yesta velmava li zilevelma. Maivori futu gome camvica. Nara taivo futu dagi tivrota maivo de lundusan senru. Taivo viki desida ola ki, maivo de amor? Fisa, farlafa baba somubiti, ata namresomubitiri, ata somuvelmari vobi maivori en una oro dossa deyafama! Ata kovaka li paturi en li kemyesevresan kova! Senosia fime taivo roni farlafa baba lardapatu! Farlafa itori kopisa itori ke levasan sidu yave-farlafa! Maivori futu punepa li sovlafarlabiti ala li zavmepago de li dorbi, ata saivori futu ne desida sidu bakoba ito.” <sup>[c05-p0130 · low]</sup>
+Maivo po reve pagopa ligo saivo. Pendi kroti li kibosan lemudonuyo donuda baba larneseno ala maivo, maivo po veseva en saivo de felbe la vizusan: “Maivo futu yesta velmava li zilevelma. Maivori futu gome camvica. Narli, taivo futu dagi tivrota maivo, ata maivo futu ke lundusan. Taivo viki desida ola ki, maivo de amor? Ki-kasa taivo ne farlafa baba somubiti, ata namresomubitiri, ata somuvelmari vobi maivori en una oro dossa deyafama ki? Ata fisa, kovaka li paturi en li kemyesevresan kova, ata senosia fime taivo roni farlafa baba lardapatu. Fisa, farlafa itori kopisa itori ke levasan sidu yanoya. Maivori futu punepa li sovlafarlabiti ala li zavmepago de li dorbi, ata saivori futu ne desida sidu bakoba ito.” <sup>[c05-p0130 · medium]</sup>
 
 Saivo po veseva: “Eho. Garza! Taivo ke ruli zirkisan. Ola ka taivo de lideolordi ki? Maivori futu kemyesevreka li dorbi de li zupa ki? Ata maivori futu amordalua su baba somubiti raho maivori farlafa ki?” <sup>[c05-p0131 · medium]</sup>
 
@@ -1304,7 +1304,7 @@ Garza! Saivo po roni revo-pagopa ala li kaldopago. Maivo po pensapa fime maivo f
 
 ### Cuara-ne patu: Tivromomvi
 
-Maivo sarbisia eliri ramuri de maivori de loresilro krotiapo li vera. Miyo nibevimosan amor ata mavofarusan neme en maivo de mavolumi. Iya Alianii, taivo po reve modoma ola-modo, iya ravminasan dapalore! Narli, maivo tinsata fime li amordalu po ke ruli benasan. Nido, maivo po sahi lemula ito en lusu dozira montafama. Tonsi, taivo viki opioa fime ito ke ruli benasan. Vera ki? Resoti! Maivo surusia baba folluvordusan suru. Maivo nosi sernamomvisia eliri senori krotiapo eli. <sup>[c05-p0135 · medium]</sup>
+Eliri ka pensari de li loresilro raho maivori po tovota. Maivo po sarbisia itori krotiapo ola. En maivo de mavolumi, miyo amor raho ne mebanema ito sela. Ata miyo tu mavofarusan neme. Iya Alianii, taivo po reve modoma ola-modo, iya ravminasan dapalore! Narli, maivo tinsata fime li amordalu po ke ruli benasan. Nido, maivo tovota maivo de mellikronosan lemu de muya unzira montafama. Tonsi, taivo viki opioa fime ito po ke ruli benasan ki? Resoti! Maivo surusia baba ruli folluvordusan suru. Maivo nosi sernamomvisia eliri senori futupago. <sup>[c05-p0135 · medium]</sup>
 
 Maivo de mambicuza ka nemesan gase li melonulu de baba violavra da sarbisan benarelnu. Maivo sabesia, ata maivo ne sabesia, gase baba zayuyo raho telvo farlafa aurumijuba. Saivo peburalnopa transa saivo de mambicuzari. Saivo peburalnopa su kovari raho futu gome bakoba fututi. Maivo po ne sabesia li patumiga de li pusari ki? Maivo po ne sabesia raho maivo po roni farlafa ki? Maivo bodu pelipa eli peli megalumi-krono. Maivo po ne pelipa li sambasan peli ki? Kepi, kepi. Maivo pensapa fime li lideobako ke eli-pago. Toda rilu ka sambanasan. Toda mambi ka zayusan. Toda amordalu ka norusenosan. Taivo daigoda ata taivo biorelnuba rada-krono. <sup>[c05-p0136 · medium]</sup>
 
@@ -1312,9 +1312,9 @@ Maivo senosia taivo fime Samuel po nedunia maivo, ata saivo po manlibumrema maiv
 
 Maivori de lenyori po pelipa la lordinasan gase linuri raho maskama fime saivori ka sevuhifayori. Saivori po tivrota tisebitivuri la ravminasan, ata saivori po maskama gase zilesan nelari. Miyo salrupaturi de yugedesi. Kube somi-nela taro-pagopa itori, li deviri gozaga li pensasan ruheriluri. Maivo sabesia fime saivori roni vimova toda-krono. Saivori de vilneri lorelivnala baba dorvanasan amordalu de sesazira-niva korsi baba dorvalordisan amordalu raho rillira ocha de unzira. <sup>[c05-p0138 · low]</sup>
 
-Maivo po ka saivo de amorsora, ata saivo po ka maivo de amorsora. Maivo po ka saivo de sora, ata saivo po ka maivo de sora. Maivo po ka saivo de mavolumi, ata saivo po ka maivo de mavolumi. Maivori po ka li lavi ata li neme de baba filvibiti. Li filvibiti po senosia: “Yeko!” Ata li filvibiti po senosia: “Voge!” Li zefrosonbu po va-pagopa, ata ito po du-pagopa, ata ito po reve va-pagopa, ata ito po reve du-pagopa. Maivo po lideolordila la benanasan, ata saivo po turnata li yuge de maivo, ata maivo po turnata li mavolumi de saivo. Maivo po ka marnayo raho samnisia, ata saivo po ka marnayo raho samnisia. Nara maivo de samniri po ke kasi karkosan tamo saivo de samniri. Saivo po turnata tu li mavolumi de maivo la menu mellisan, kasa li sevu po lurvala ala li kezumiru, ata li kezumiru ne loya fulesan la levasan yuta una ruhe. <sup>[c05-p0139 · low]</sup>
+Maivori po ke amorsora ata amorsora. Maivori po ke sora ata sora. Maivori po ke mavolumi ata mavolumi. Maivori po ke li lavi ata li lavina de baba filvibiti. Li filvibiti po lirala li venre ata li venrena en zefrosonbu. Li zefrosonbu po va-pagopa ata du-pagopa, ata reve va-pagopa ata du-pagopa. Maivo po bodu lideolordila eli la malosan: saivo po turnata maivo de yuge, ata maivo po turnata saivo de mavolumi. Maivori po ke dossa marnayori raho samnisia. Nara maivo de samniri po ke kasi daigoherbasan tamo saivo de samniri, ata li sambana po ke ruli mellisan. Saivo po turnata tu maivo de mavolumi la menu mellisan. Ola po ke menu mellisan, kasa baba kezumiru ne simvosia ito sela gase baba fulesan kezumiru la levasan yuta li cunuyano de una renliruhe, kube li sevuvu po bodu gome lurvala en ito. <sup>[c05-p0139 · medium]</sup>
 
-Maivo po tovota unzira-mililumi amorsora, nara nuna-krono, saivo po tovota baba amorsora raho ka sambapatusan ko maivo. Tonsi, tu eli po ka li lira de baba larneramusan sevulirayo somi-modo. Maivo po tefa lirala eli lira tu ala Hugo. Nara Samuel po ravnura maivo en mambiri de ruhesonbu. Ata en maivori de yano, saivo po savalisia maivo de pomlisan faruvusan mavolumi. Sam po fulemirufa maivo gase Gilgamesh. Krotiapo maivori po tivrota li lardazupa gase baba pomlinela en dossa lornu, li desi de maivori po ke bansasan. <sup>[c05-p0140 · low]</sup>
+Maivo po tovota cunuasasan amorsorari, nara saivo po tovota baba amorsora gase maivo nuna-krono. Tonsi, tu eli po ka baba lira de baba larneramusan sevulirayo somi-modo, gase Hugo. Nara Samuel po amordalua ko maivo gase saivo de desi, en ruhesonbusan mambiri. Ata nayo maivori yanoya, saivo po savalisia maivo de pomlisan faruvusan mavolumi. Sam po fulemirufa maivo gase Gilgamesh. Maivori po tivrota li lardazupa gase baba pomlinela en dossa lornu. Krotiapo ola, maivori de yugedesi po gome bansaba. <sup>[c05-p0140 · medium]</sup>
 
 Saivori po ne desida sidu bakoba li divmabiti la verasan. Lanto, maivori po vaku ito demroda da li nulu. Saivo po velmava loterosan velma raho saivo po tefa sovlafarlasia. Maivo po ke baba volme raho tovota vanajubasabaye, ata maivo po ke lalnisan ata vanisan. Saivo de ruli mellisan rekuvelma raho po tavki venreva ala maivo de selveri, po tivrota maivo. Maivo de velma po gome velmava la lordinasan. Maivo po tavreta sidu du-ravnura saivo de rekuvelma. Li taliyori po gulmaga ola. Kube saivo po loki telbata, maivo po folluzogufa la mavonibesan: “Melvama maivo! Li kibo telvo vaku maivo amordalua!” Ola po ka ruli pukusan. Li kibosan taliyori ata li nelasan taliyori po hiro modoma la loterosan. <sup>[c05-p0141 · medium]</sup>
 
@@ -1329,13 +1329,13 @@ Eli ka li seno de li yugemeyiyo, Hofman. Saivo ka una de li dossa mavohelnayori 
 
 “Kasa maivo ka saivo de yugemeyiyo, maivo sela futu ne senosia li bioramu de Alianii en li helnapago. Toda-nela povi vimova saivo de colbisan deyacuza eli-krono. Nara ito belruba lumisan patutiri ala saivo de bioramu, saivo de vismari ata saivo de simvolore. Maivo ka baba nela de Germayano. Maivo ka tu baba dozasan zarkuna vobi li germanamreri ata li lavrasamniri. Maivo ka tu li yugemeyiyo raho musi darnoda saivo de dorvalordiri ata saivo de palvina la sasvasan. Tonsi, maivo tovota baba gudonasan visma. Nayo Alianii po gonbiga li helnapago, Alianii de sasva po ke li una-ne lideo de li senori. Alianii de karkokemye hozi, maivori po vismava kasi navufarulumra de ito tamo nivacenta-nivazira-niva-megalumi. Alianii de bio ata Alianii de sasva po ka maivori de mosa dapasan mubo.” <sup>[c05-p0146 · low]</sup>
 
-Ola-krono, maivori po ne sabesia ki-nela po dorvada sidu karkoka ola gilbunasan minva. Maivori po ne povi sabesia fime Diotrem po ke en ola mambipuku. Lanto, maivori po sabesia li pebupatu de ola mambipuku. Maivori po lordila li nedusan helnamervi ata li nedusan sasva vobi saivo, gase benasan yugemeyiyori, ko li lekta raho tovota li mosa polvasan sasvasan migadivma. Ola-krono, nuna de maivori po sabesia li fatosan lumivera de Alianii. Alianii de bio po fatofa sidu hunraha, nayo li sadosan dokra de Diotrem po kersoka. <sup>[c05-p0147 · low]</sup>
+Ola-krono, maivori po ne sabesia li lekta raho po dorvada sidu karkoka ola gilbunasan minva voyu juseleni. Maivori po tovota nuna nulu kopisa sabesia fime Diotrem ke turnasan en ola mambipuku. Nara lanto, maivori po navdinia toda li vera de ola mambipuku. Maivori po farlafa raho benasan yugemeyiyori viki farlafa en baba pagorinba gase ola. Maivori po lordila Alianii de helnamervisan nedu ata Alianii de nedu vobi sasva ko li lekta raho tovota li mosa polvasan migadivma de sasva. Ola-krono, nuna de maivori po sabesia fime Alianii de bio tovota baba fatosan lumivera. Ola lumivera po fatofa sidu hunraha, nayo li dokra raho ke ko li sadosan Diotrem, po roni kersoka.” <sup>[c05-p0147 · medium]</sup>
 
 
 ## Sesa-ne bullipatu — Patutiri de trana
 
 
-### Una-ne patu: Pilosan larnesan seno
+### Una-ne patu: Pilosan larneseno
 
 Maivo po sarbisia li ruli larnesan seno raho maivo de yugemeyiyori po senosia ala maivo, krotiapo ola, kopisa ramucuzara saivori de sururi la verasan. Maivo de sarbi po ke ki-modo tivromomvisan, maivo de dossa-ne tivromomvi! <sup>[c06-p0003 · medium]</sup>
 
@@ -1347,7 +1347,7 @@ Hofman, li yugemeyiyo, po senosia: “Alianii, eli taivo de telnepatu, eli vimo 
 
 Maivo po masuma ko bapi kasa baba kibo po telvo ceresenoca ki-modo saivo po mebanema maivo de amordalu: “Garza! Ki-modo taivo sabesia ola ki?” <sup>[c06-p0007 · high]</sup>
 
-“Maivo ne tovota amordalu la dorvasan, nevi maivo povi tovota lavisan amorsan migari, si maivo livnala ola. Nara yugesan dalu, eli vizudesi, ka somi-coda raho maivo tovota nuna-modo. Sidu pagopa da zira ala yesta baba mellinasan vizudesi ka baba kasi mellisan kerso en sambavimo tamo sidu pagopa da baba tinosan vizudesi ala baba mavofarusan amordalusan vizudesi. Hofman, li yugemeyiyo, ka yugesan. Tonsi, saivo ne povi mebanema olari lelderi en sambavimo ko saivo de tinosan vizudesi. Nara maivo ka li loterosan lelde; tonsi, maivo povi mebanema la yanopalvisan, la yanocunusan ata la divmasan. Yesta si taivo silrobelfisia eli seno, maivo povi mebanema.” <sup>[c06-p0008 · medium]</sup>
+“Maivo tovota nuna amordalusan simvo, kasa maivo po gome farlafa ola-modo. Nevi ola, maivo povi tovota amorsan migari raho holbaha maivo de lore, si maivo livnala ola. Nara li yugesan loresilro, eli desi, ka somi-coda raho maivo tovota nuna-modo. Sidu pagopa da zira ala yesta baba mellinasan desi ka baba kasi mellisan kerso tamo sidu pagopa da baba gudosan desi ala baba diba yalmusan amordalusan desi, en patumiga. Hofman, li yugemeyiyo, ka baba yugesan nela. Tonsi, saivo ne povi mebanema olari lelderi, kasa saivo sela ka en li cemnu. Nara maivo ka li loterosan lelde. Tonsi, yesta si taivo silrobelfisia eli seno, maivo povi mebanema la holbasan, toda-modo ata la yanosan.” <sup>[c06-p0008 · medium]</sup>
 
 “Maivori suvi yave-farlafa baba vimotelne, baba amorsan resotelne. Taivo futu hiro amora baba amordalukibo raho ke rubilumi, ata maivo futu devoda baba nela raho ne desida amordalu. Maivori futu yave-vazrava maivori de velni. Li penta-mililumi-ne sovedendusan kibo po senosia ala maivo fime eli ka li nulu de li navufarusan Buda. Iya mellisan yugemeyiyo, iya li piloasa de li piloasari, iya li pilo de germa ata helna, taivo senosia ki-coda de eli sabeasa ki?” <sup>[c06-p0009 · medium]</sup>
 
@@ -1373,7 +1373,7 @@ Entre timruhavli ata timruhavli, maivo po vazdi jurevija maivo de jurevi ala li 
 
 Li kibo po senosia: “Taivo po tefa patudonupa taivo de loreramuri ala maivori. Eliri loreramuri ka mosa lumiverasan en eli senomiga poye. Si taivo pensapa li simvodaigo, oro si taivo vuda pensapa ito, oro si yesta taivo amora ito la loreramusan, maivori ne povi tivromomvita taivo da li mavosan vimo. Li lanve, li gudosan ranfa ata li gudosan bena tekvu maivori tivromomvita taivo. Nara miyo baba ruli sambanasan nulu, baba patuyeba, si taivo desida. Sidu amora li simvodaigo la cerenasan en maivori de codanasan vemi ne ka mosa dozasan ranfa fime maivori tivrota taivo en baba mosa sasvasan kaldosan mavohelnapago, poye. Taivo ka baba lemudonuyo ata baba taliyo de li mavopagomelva. Maivo ke ruli masunasan fime taivo po lenila li nole de li gonbipago de Apollo.” <sup>[c06-p0020 · medium]</sup>
 
-Li loterosan gonbipago po loya baba menu kaldosan nimupago raho tovota sasva, vobi loterosan nelari raho po tovota dozaserbu ko mavomudu, ko kaldodesi de helna, ko kaldodesi de amordalu, ata ko loterosan nelasan dozaserbuti. Taivo viki duvlada doli ko baba kibo raho sasvasia taivo, oro doli ko baba lekta, nara taivo viki tovota turna ala Rinbavemi vobi taivo de tali. Taivo viki ne conodonuca domlucono en lusu sesa monta. Taivo viki tovota sorari, ne sorari raho taivo viki amordalua ko saivori la mudusan, pifu. Nara baba kaldosan ganre ke kasi benasan tamo eli molupavmasan kaldokova poye ki? Taivo ke rillisan ala baba nolsasan lordi de nimu ki, Alianii? <sup>[c06-p0021 · low]</sup>
+Li gonbipago raho po gome nolsania po loya baba menu kaldosan domlusan rinbapago vobi loterosan nelari… raho po tovota dozaserburi ko mavomudu, ko benanasan helnayuso, ko kaldodesi de amordalu, ata ko loterosan nelasan dozaserburi. Sasvayori vilneva ola rinbapago. Taivo futu dagi duvlada doli ko baba valmikibo raho vilneva taivo, oro doli en lektataliri… nara taivo futu tovota turna ala Rinbavemi vobi taivo de tali. Taivo futu ne conodonuca domlucono en lusu sesa monta. Taivo futu tovota nolsasan sorari… Taivo futu ne amordalua ko saivori en mudusan salrupaturi pifu… nara… ola tobrasan ganre ka kasi benasan tamo eli molupavmasan kaldokova poye ki? Taivo ke rillisan ala baba nolsasan lordi de nimu ki, Alianii? <sup>[c06-p0021 · medium]</sup>
 
 Poka-krono, baba nela vazdi turnata eli talipago, nara maivori po lordila baba palvi vobi taivo, yuta baba mellisan telba ata yuta lukanavdi ata luka.” <sup>[c06-p0022 · medium]</sup>
 
@@ -1402,9 +1402,9 @@ Maivo po venreva ala Apollo, li gonbipago. En li vesno de ola deya, maivo po sar
 
 Maivo po desida sidu duvlada da li helnapago ata venreva ala li kronopatusan nimupago ko nelavarde. Tonsi, maivo de yugemeyiyori po semvisia fime maivo velmava li zilevelma. Zabo, maivo po safasia ito. Ito po ke doli li vanisan coda raho maivo po tovota. Saivori po ne povi ravnura maivo de codari yasmo. Maivo po tovota poka codari. Nara saivori po noma povi vaku maivo duvlada ata venreva en helnasan velma. Ola po noma viki vaku maivo semrasia! <sup>[c06-p0034 · high]</sup>
 
-Baba kibo po pagopa ko maivo en merno, gase niva-ne lornu. Maivo de somusan kronocuza po loya “lordisan”, zoke. Maivo po ne sabesia ki-modo ola futu talita ko Amanda de talikrono. Nara maivo futu sabesia fututi. Li kibo raho po pagopa ko maivo, po ka baba bondosan kibo raho ka talilirbu. Saivo po ka baba valmisan silikova raho senosia, ko vilneri ata varori. Saivo po semnesia en li zavme de li helnasan zefrodapakadu. Li zefrodapakadu ke ojo, ata ito futu pagopa ko maivo ala maivo de navdisan nimupago. <sup>[c06-p0035 · medium]</sup>
+Maivo po gome livela en merno, gase niva-ne lornu. Fisa, vismava eli. Maivo de kronocuza de somu po bodu gome lordila, zoke. Maivo po ne sabesia ki-modo eli futu talita ko Amanda de lornuri. Nara maivo futu navdinia ito fututi. Maivo de valmikibo po ka baba bondosan talilirbusan kibo. Saivo po ka doli baba valmisan silikova raho senosia, ko vilneri ata varori. Saivo po semnesia en li zavme de li helnasan zefrodapakadu raho ka ojo. Ito futu belruba maivo ala maivo de nolsasan nimupago. <sup>[c06-p0035 · high]</sup>
 
-Li yugemeyiyori po tefa rillira li seno de baba juseyo en baba vizusan jusenulu de una deya. Maivo ne desida sidu senosia ola la verasan, kasa ola ka menu gozasan. Nara eli seno bansaba: maivo futu lisrola en Apollo en lusu una montafama. Maivo po ne musi velmava tivrobiti; ola po ka baba jubalavi. Somi-krono, saivori po vaku muya ruli peremosan helnanela velmava tivrobiti. Nevi ola, itori po ka li damrunasan sabayesan tino. Itori po ne tiseta li yediri, ata itori po ne vulraramuva li yediri. <sup>[c06-p0036 · low]</sup>
+Li yugemeyiyori po tefa navdinia baba seno de li jusepago en baba vizusan jusenulu de una deya. Maivo ne desida sidu senosia li telne de ola la verasan, kasa ola vaku maivo surusia baba patuti de goza. Nara sidu senosia eli ka bansasan: maivo futu lisrola en Apollo en lusu una montafama. Narli, maivo po ne musi velmava tivrobiti su maivo de yediri. Somi helnanelari po ka ruli pelisan ata peremosan. Somi-krono, li yugemeyiyori po vaku olari helnanelari velmava tivrobiti su saivori de yediri. Nara itori po ka baba tino raho ka damrunasan ata sabayesan. Itori po ne tiseta li yediri, ata itori po ne vulraramuva li senru. <sup>[c06-p0036 · low]</sup>
 
 Li helnasan zefrodapakadu po pagopa transa li renlisan herbasan kezupatu de ganre. Ola-pago, li renli po renlira toda-krono. Li renlicolbi de ceresolosan salrudomluri po rinbara li opiganre. Li opiganre po ka baba nolsasan Oregonsan larbopago. Ito po tovota muya colbisan sililarbori ata loterosan larbori. Ito po vimosudeva fime somi-nela tefa colbica baba kezupatusan ganre de Pasifikonorowesto yuta mirunibe, ko baba yanosan lekta de muya felradeyari. Li nelari po farlafa li larbori kopisa itori tovota loterosan folniri en rada sorni. Nara li auruminelari po tovota li yumlisan lelhiri doli vobi saivori sela. Ata li larbori po lirala gase li farlasan folniri yasmo. Maivo po sevresia maivo de vimolalle. Maivo po ne nedunia sidu lelhila ola lelhisan ramufavro. Ola po vaku maivo ramura fime maivo de pago ka baba kezunela. Maivo po ne nedunia sidu rillira li regnajuba de li cilnicemnusan auruminelari. <sup>[c06-p0037 · medium]</sup>
 
@@ -1420,7 +1420,7 @@ Maivo po somusia en penta minota, nayo maivo de zefrodapakadu po jomruja ala li 
 
 Maivo po vimova li gonbipago, Apollo, en Rinbavemi. Ito po ne ke ruli salrusan. Ito po vimosudeva gase baba mellinasan regnadomlu. Ito po gome farlafa yuta ceresolo ata ojosolo de lesma. Ito po vimosudeva gase baba lesmasan gonbipago de Disney. Nara ito po ke menu zilesan. Mernodarnosan cono po conodonuca li gonbipago. Li tovoyori po ke numomavosan. Saivori po mebanebelfima fime baba sambapatu de li mellisan cipi nosi loya vazrasan. Disney po vazrava li tovoyori en li jusepago. Li tovoyori po tavki loya pagona. Li talipago po musi teklata li tali, tuni li regna po yebaya baba menu benasan pomlicuza ko saivori. Li regna po conodonuca li nimupago vobi li zirkisanri, gase maivo. <sup>[c06-p0043 · low]</sup>
 
-Li helnasan zefrosan dapakadu po nevrania ala li kadusemne, ata maivo de germasan kibo po duvlada da li kadu ata po kemyeka maivo de dorbi. Maivo po duvlada da li kadu, ata po palvipa maivo de manli transa maivo de sabaye, ata po sabayebitisia ito ala nazru. En ola mambi, maivo po pensapa: “Alianii, garza! Taivo po pagopa ala ki-coda ki?” Nara maivo po povi navdinia ito yuta doli una nulu. Maivo po taro-valmiva li zavmesan dorbi, en sambasan pebuvalmi ko baba divmabiti, ata po pagopa ala li zavmesan talitabu. <sup>[c06-p0044 · medium]</sup>
+Li helnasan zefrodapakadu po nevrania ala li kadusemne, ata maivo de germasan valmikibo po duvlada da li kadu ata po kemyeka maivo de dorbi. Maivo po duvlada da li kadu, ata po palvipa maivo de manli transa maivo de sabaye, ata po sabayebitisia ito ala nazru. En ola mambi, maivo po pensapa eli-modo. Iya Alianii, taivo po turnata ki-eli garzasan ruhemambi ki? Maivo po venyava. Nara maivo po tovota doli una nulu kopisa navdinia ito. Maivo po taro-valmiva li zavmesan dorbi en sambasan pebuvalmi ko baba divmabiti, ata po pagopa ala li zavmesan talitabu. <sup>[c06-p0044 · medium]</sup>
 
 Li Nimusasvayo po ke baba divmanelati. Saivo po tovota baba ruli mellisan vanarezasabaye. Saivo po velmava baba zilevelma de noruzayuyori ata baba pelivelma. Saivo po senosia: Yeko! Taivo tosu ka Alianii seye. <sup>[c06-p0045 · medium]</sup>
 
@@ -1434,7 +1434,7 @@ Ki-coda ki? Baba nolsa ki? Taivo ka baba corviyo. Taivo de yugemeyiyori po va-do
 
 Maivo ne sabesia toda ola, nara maivo doli lavila sidu telneta, ata li linuri lavila itori la dorvanasan. <sup>[c06-p0050 · medium]</sup>
 
-Moseby po senosia: “Hafapafari! Venreva, venreva! Miyo nuna cuzalekta vobi taivo, toda-coda tefa gome mavoma. Maivori doli musi revo-vimova li kronocuza ata li kronolelde de li nullo ko taivo, ata poka de li lanveri. Ata maivori reve vaku li dorbi de Rinbavemi lallela vobi taivo. Ola ka li patutiri, taivo sabesia. Maivo po bodu donuda taivo de kemye ala taivo.” <sup>[c06-p0051 · medium]</sup>
+Moseby po senosia: “Hafapafari! Venreva, venreva! Miyo nuna cuzalekta vobi taivo; toda-coda po tefa gome mavoma. Maivori doli musi vismava li kronocuza ata li kronolelde de li nullo ko taivo. Maivori tu musi vismava poka de li lanveri. Ata maivori musi vaku taivo de turna de Rinbavemi relnura. Itori ka li patutiri, taivo sabesia. Maivo po bodu donuda taivo li kemye raho verasudeva taivo.” <sup>[c06-p0051 · medium]</sup>
 
 Moseby po senosia: “Saraswati, venreva ata senosia ko Alianii!” <sup>[c06-p0052 · high]</sup>
 
@@ -1460,7 +1460,7 @@ Taivo futu sabesia fime eli ka baba jubasenosan nimu. Maivo sabesia ola seye! Al
 
 Maivo po farufasbifa, ata maivo po namrenevrania ala zilenela Moseby ko jurevi. <sup>[c06-p0063 · high]</sup>
 
-Saraswati po vaku saivo de vinye lisrola en li turnazupa, ata saivo po lumirivlala devo ala li gonbipago ata ala Moseby. Eli po ka saivo de nimu la ceresan, ata saivo po amora ito eli-pago. Saivo po pagopa ko maivo ala li ceresolosan salrukadu en li nazrusan pago de li ojosolosan turnazupa. Maivo po roni kavbika maivo de dapanasan lekta. Saivo po jubaja melva, nara maivo po tavreta. Tonsi, saivo po dozadaluda li tivrobiti, ata li dorbi po lallela krotiapo una seca. <sup>[c06-p0064 · low]</sup>
+Saraswati po lesvu saivo de vinye lisrola en li turnazupa. Saivo po lumirivlala ko devo ala toda li gonbipago ata ala Moseby. Eli po ka saivo de nimu la ceresan, ata saivo po amora ito eli-pago. Saivo po livela maivo ala li ceresolosan salrukadu en li nazrusilda de li ojosolosan turnazupa. Maivo po roni kavbika maivo de mellinasan lekta de codari. Saivo po masuma: “Maivo dagi melvama taivo ki?” Nara maivo po tavreta. Krotiata saivo po dozadaluda li tivrobiti de li salrukadu. Ito po vaku li dorbi lallela krotiapo una seca. <sup>[c06-p0064 · low]</sup>
 
 Maivo ke ruli vizulavisan kasa taivo ke eli-pago, Alianii. Nuna-krono, maivo po yave-pagopa ko baba lirbu de harlujomru raho ka sabeyo. Si ito ke kasi salrusan, taivo viki ka sabeserbuyo. Ola ka ruli zirkisan! Taivo po codaca ola ki-modo ki? <sup>[c06-p0065 · low]</sup>
 
@@ -1476,9 +1476,9 @@ Lorejuba, Sara! Taivo ke ruli yumlisan. Maivo nosi rillira taivo de juba en poka
 
 Saraswati po senosia: “Alianii, maivo musi senosia somi-coda eli-krono. Eli nosi ke bondosan, ata ito ke bondosan somi-modo. Somi-nela po senosia ala maivo fime maivo musi lornupomlila ko taivo. Li lornupomli futu venreva krotiapo taivo vismava taivo de silbesenori en Rinbavemi. Taivo ne ke en peremo. Miyo doli somi codari de Apolo raho taivo nedunia sidu sabesia. Yade, maivo vaku taivo loya follusan eli-modo. Maivori povi yave-pagopa kopisa sapusia cemnunami en li cemnu de li deya ki?” <sup>[c06-p0071 · high]</sup>
 
-“Hema… eho. Ola ke benasan. Maivo tinsata fime maivo futu yave-pagopa ko taivo en li turnazupa en li penzira-ne minota de li unzira-una-ne lornu ki?” <sup>[c06-p0072 · medium]</sup>
+“Hema… eho. Ola ke benasan. Maivo tinsata fime maivo futu yave-venreva ko taivo en li turnazupa en unzira-una lornu ata penzira minota ki?” <sup>[c06-p0072 · high]</sup>
 
-Saraswati po namrenevrania. Ata saivo po senosia: “Fisa, ne duvlada tuni maivori tefa lektala. Taivo lenila ki? Li lanveri tekvu taivo duvlada voyu rivo, la manlisabesan. Taivo nedunia baba rivo oro baba kibosan talilirbu kopisa pagopa ultra li ganreri raho rinbara li gonbipago, ata maivori musi lektala kroti ola. Ola ke ruli nedusan seye.” <sup>[c06-p0073 · medium]</sup>
+Saraswati po namrenevrania, ata saivo po senosia: “Fisa, ne duvlada tuni maivori de lektamambi tefa venreva. Ola ke benasan vobi taivo ki? Sidu duvlada voyu baba valminela ka mavopagonasan la manlisabesan. Taivo nedunia baba valmikibo oro baba talilirbusan kibo kopisa pagopa ultra li ganreri raho rinbara li gonbipago. Ata maivori de lektamambi musi venreva kroti ola. Ola ke ruli lumiverasan.” <sup>[c06-p0073 · high]</sup>
 
 “Maivo mebanema… hurvosan, nara maivo mebanema. Lorejuba.” <sup>[c06-p0074 · high]</sup>
 
@@ -1495,11 +1495,11 @@ Ola seno venreva da li una-ne tovoyori de li gonbipago. Saivori po ke lirafontes
 
 Maivo ke ruli jubasenosan la dendusan kasa maivo mervima eli nelayano gase molusasvayo. <sup>[c06-p0080 · high]</sup>
 
-Maivori de seno de musvajomru de nelayano: <sup>[c06-p0081 · low]</sup>
+Maivori de nelayanosan musvajomrusan cuza: <sup>[c06-p0081 · medium]</sup>
 
 Maivori ka li nelayano de li gonbipago de Apollo, ata maivori ke lukasan ata jubasenosan. Toda maivori futu serbusia sidu donuda suma ata maivori de juba vobi maivori de nimu, kopisa ito loya kasi benasan, ata ito tovota biokerso. Maivori futu amora ko gozana ata benamolu fuyi. Maivori futu melvama loterori, ata maivori futu lesvu loterori melvama maivori. Maivori futu ke mudunasan, ata maivori de namilordi ata yugetali futu ke lordisan, ata maivori futu mavoma maivori de surusan nedu la lordisan. Maivori futu telvo loya farvisan da kaldodesi ata da mudusan tali, ata maivori futu ke rillisan ala helnasan darno ata helna. Maivori futu lumrala loterori, maivori futu ne vaku loterori nevrania, ata kube maivori ne vazrava, maivori futu remnisenora, ata maivori futu talita vobi benarelnu. <sup>[c06-p0082 · high]</sup>
 
-Hupi toda-coda, maivori ka baba pelilekta ata baba fama. Maivori ka li folniri ata li bemyari en baba ruli vanisan madi. Maivori ne serbusia li farla de yomla, nara maivori serbusia li farla de rivo ata li falneserbu de benaasa. <sup>[c06-p0083 · medium]</sup>
+Hupi toda-coda, maivori ka baba pelilekta ata baba fama. Maivori ka li folniri ata tu li bemyari en baba sizolumisan madi. Maivori ne serbusia li farla de yomla. Nara maivori serbusia sidu bimneba baba yano de rivori, ata maivori falneserbufa li mosa benasan. <sup>[c06-p0083 · high]</sup>
 
 Li benari raho maivori dapada ke voyu lordi: <sup>[c06-p0084 · high]</sup>
 
@@ -1512,7 +1512,7 @@ Eli po gome sarbisia en li vesno, krotiapo maivo po gome silbesia ala li gonbipa
 
 Maivo po turnata Rinbavemi, ata maivo po navdinia somi kovari ko vallasan silbesenori da Amanda en maivo de favrocuza, ata maivo po tu navdinia poka silbesenori da Marabelle. Maivo po lallela li silbesenori da Amanda kroti li silbesenori da Marabelle. Maivo po lombila ko li mosa tebosan raho saivo po silbesia ala maivo. Saivo de una-ne silbeseno po ka baba dentosilbeseno en sovla de baba viofuro, ata ito po lenyola gase bojinami ko zilebumreti, gase li bojinamimiru raho maivo po silbesia ala saivo. Ito po ke milnoserbusan. Amanda de silbesenori po ne ka vallasan silbesenori, nara po ka sarbisan silbesenori. Ito po sambasia li nolsanasan deyari de favrocuza ata lordisan silbesenori de vallafavroti. Maivo po navdinia fime eli ke ruli hurvosan seye. <sup>[c06-p0088 · medium]</sup>
 
-Amanda de una-ne silbeseno po ka eli: “Yeko, Mara po senosia ala maivo fime taivo po rukora en baba dorvana. Taivo ke benasan ki? Maivo solliduhasia taivo. Lorejuba ala taivo kasa taivo po navdinia nami raho Joe ata maivo po patudonupa; ito po ke ruli benasan. Fisa, ke benasan! Mara ke yumlisan, nara taivo ka maivo de lorelivnasan lemudonuyo.” <sup>[c06-p0089 · medium]</sup>
+Amanda de una-ne silbeseno po ka eli: “Yeko, Mara po senosia ala maivo fime taivo po rillira vulrari en baba dorvana. Taivo ke benasan ki? Maivo solliduhasia taivo. Lorejuba ala taivo kasa taivo po navdinia nami vobi maivo. Joe ata maivo po patudonupa ito, ata ito po ke ruli benasan. Fisa, ke benasan! Mara ka yumlisan, nara taivo ka maivo de lorelivnasan lemudonuyo.” <sup>[c06-p0089 · high]</sup>
 
 Li dossa-ne kova po ka baba silbeseno, ata ito po ka en sovla de baba ertayumlisan aurumijubasan cono de li sevuhifayo: “Ali, maivo solliduhasia taivo. Mara ke yumlisan, nara saivo ke dozasan. Li lemupago ke benasan; maivo sabesia fime maivo muboma vobi taivo. Mara ata maivo po cunuca, ata saivo po lemudonula maivo li aurumijubasan cono de li sevuhifayo. Maivo ke lavisan, nara Mara loki desida fime maivo senosia ki-pago maivo lisrola, ata maivo ne desida.” <sup>[c06-p0090 · medium]</sup>
 
@@ -1524,13 +1524,13 @@ Maivo po rillira baba silbeseno da Amanda kroti penta deya. Li silbeseno po ka b
 
 Saivo de silbeseno po senosia: “Maivo po devoda taivo ata Mara. Eli-krono, toda-coda ke bakodomlu. Saivori po du-kavbika maivo de tarnufamliri. Fisa, melvama maivo! Maivo nedunia taivo, Ali. Fisa, venreva fututi!” <sup>[c06-p0094 · high]</sup>
 
-Maivo po verasudeva li gudosan vallasan silbeseno da Marabelle. Maivo de garzasan larne po ke ruli mellisan, nara maivo po musi vimova saivo de vimo kroti maivo po talita la vizudesisan. Eli po ne ka li mambi vobi vizudesi. Eli po ka baba bondosan mambipuku, ata Amanda de lavi ata biokerso po ke ligo maivo. Maivo po musi belfiba fime loki miyo baba nulu vobi maivo ala benarelnu. <sup>[c06-p0095 · medium]</sup>
+Maivo po vismava li gudosan vallasan silbeseno da Marabelle. Maivo po ke ruli larnesan; maivo po ke en baba garzasan larne. Nara maivo po musi sabesia ki-modo saivo po vimova li pagorinba, kroti maivo modoma la mavonasan. Eli po ne ke li mambi vobi vizudesi; eli po ke baba bondosan mambipuku, ata Amanda de lavi ata biokerso po ke en maivo de manliri. Maivo po musi belfiba fime loki miyo baba nulu vobi maivo, kopisa maivo vaku li pagorinba loya benasan. <sup>[c06-p0095 · medium]</sup>
 
 “Yeko, Alianii, <sup>[c06-p0096 · high]</sup>
 
 Eli silbeseno nosi ke menu vizurabisan. Si maivo noma tovota kronomelli, maivo noma viki silbesia taivo baba silbeseno de una lornu. Nara maivo ne tovota ito. Eli-krono, maivo ke ruli talisan. Maivo tovota gase ocha tali, ata maivo roni lordila itori. Itori ke levanasan. Nara itori ka sambanasan da li tali raho maivo ata taivo talita. Alianii, nuna-krono, taivo futu mebanema fime maivo tovota ruli mellisan gozana vobi taivo de tali. <sup>[c06-p0097 · medium]</sup>
 
-Taivo yugemeyiya la mosa vizurabisan pifu. Maivo po lemula somi-coda da taivo, ata maivo po lemula li telne de taivo. Tonsi, maivo suvi senosia doli baba patuti de li mambi de taivo poye. Taivo viki lorelivnala ola la kersosan. Futupago, si maivori nedunia ito, maivori povi senosia li mambi la kasi tikusan fuyi. <sup>[c06-p0098 · low]</sup>
+Taivo de yugemeyi ke mosa vizurabisan pifu. Maivo opioa fime taivo futu yugemeyiya fututi. Maivo po lemula muya coda da taivo, ata maivo po lemula tu muya coda de taivo. Tonsi, maivo pensapa fime taivo viki lorelivnala fime maivo senosia doli eli patuti de li pagorinba raho taivo ke en ito eli-krono, kasa ola ka taivo de modo poye. Si maivori nedunia ola, maivori povi senosia kasi patutiri de li pagorinba futupago fuyi. <sup>[c06-p0098 · medium]</sup>
 
 En li una-ne lektamambi, Amanda hozi, maivo po telvo loremeyila saivo, nara ola po ke nosvonasan. Maivo ne sabesia ki-modo taivo po codaca ola, nara eli minvalinu nedunia taivo. En li dossa-ne lektamambi, maivo po mellicunuma saivo. Saivo po ke tressa oro cuara salrupatu tula saivo de yanba, en toda lideo sabri larda ata melo. En larda ata melo, saivo ke en li salrupatu de baba salrusan lemupago. Ola ne ka gudosan vobi baba lorevoprasan linu, nara ola ka milnovarde. Taivo ka sambasan ko saivo en eli. <sup>[c06-p0099 · medium]</sup>
 
@@ -1540,13 +1540,13 @@ Finra, maivo futu telvo tovota baba lallesan mavo vobi saivo de una-ne vimosude,
 
 Taivo mebanema lemuyori raho nuna-nela mebanema saivori, nara li lombisan vimoramu raho maivo po vimova, vaku maivo de talipatu loya ruli levanasan. Maivo futu telvo melvama taivo, ata yusoya maivo de mosa benasan pensa. <sup>[c06-p0102 · medium]</sup>
 
-Yugemeyiya la vizusan! Eli linu nedunia taivo en saivo de bio, ata yesta si taivo ne ke li nela raho lemudonula saivo li sarbi de li senori, saivo nedunia poka taivo de lornuri rada deyafama en li krono raho maivori futu povi vimova. <sup>[c06-p0103 · medium]</sup>
+Yugemeyiya la vizusan! Eli linu nedunia taivo en saivo de bio. Ata yesta si taivo ne ke li nela raho lemudonula li sarbi ala saivo, saivo nedunia poka lornuri de taivo en rada deyafama, en toda li deyafamari raho maivori povi vimova eli-krono. <sup>[c06-p0103 · high]</sup>
 
 Ko benaseno ata loterodesi ala taivo de mavojuba, Marabelle.” <sup>[c06-p0104 · high]</sup>
 
 En eli mambi, zabo, maivo po timruta la mellisan. Maivo po telvo sovesia maivo sela, ata maivo po telvo pensapa la ranfasan. Nara li coda raho maivo po roni lovula, po lorerivlala maivo la ruli mellisan, ata gilbu tu po lorerivlala maivo la ruli mellisan. Ola gilbu po farufa ala maivo de velnivelu. Maivo musi ranfara. Ranfara! Ravmi de peremo ka ranfa. Li linuri ka ki-coda ki? Saivori ka doli peremori. Maivori musi ravmira vobi saivori yuta amor, yuta benamolu ata yuta tali. <sup>[c06-p0105 · low]</sup>
 
-Maivo po navdinia tu dossa silbesenori da Marabelle. Maivo po mebanema saivo la ruli dendusan, ata ola po ke ruli lumiverasan. Nara ola po ke ruli yumlinasan sidu sapunevrasia. Marabelle po navdinia baba melvasan lemudonuyo vobi Amanda, ata ola po ke ruli benasan. Ola po ke milnoasasan, kasa Amanda po nedunia ito. Nara maivo po vimova fime maivo po farlafa baba garzasan benana la ruli dendusan, ata ola po vaku maivo loya farlanasan. Maivo po ralnora ala maivo de kaldodesi, ata maivo po tevuluta eli linu. Saivo po nedunia fime maivo ke ko saivo. Saivo po nedunia fime maivo tivrota saivo de manli, ata fime maivo vaku saivo de lore loya vuzilordisan vobi lemu. Saivo po ne nedunia fime saivo de bio ralnora ala ramumomvi. Ola po ke mosa benanasan voyu baba devomigasan sora ligo saivo la verasan. <sup>[c06-p0106 · low]</sup>
+Maivo po reve rillira dossa silbesenori da Marabelle. Maivo po mebanema saivo de pensa ata saivo de vorduri la holbasan. Itori po ke ceresan ata lordiasasan. Nara toda-coda po ke baba ruli yumlinasan helnati raho maivo po musi sapunevrasia. Marabelle po roni navdinia baba lemudonuyo vobi Amanda, kopisa Amanda lemula la kasi benasan. Ola po ke benasan seye. Ola po ke milnoasasan, ata Amanda po nedunia ito. Nara maivo po vimova fime maivo po farlafa baba garzasan rupu la ruli dendusan, kasa maivo po loredonula ala maivo de kaldodesi, ata kasa maivo po tevuluta eli linu. Ola vimo po vaku maivo loya farlanasan. Saivo po nedunia fime maivo ke ko saivo. Saivo po nedunia fime maivo tivrota saivo de manli. Saivo po nedunia fime maivo vaku saivo de lore loya vuzilordisan vobi li lemu de li lemupago. Saivo po ne nedunia fime saivo de bio pagopa ala li ramumomvi, gase baba solo da baba talvadivma. Ata ola po ke kasi benanasan, kasa nuna-nela raho saivo po devoda, po ke ligo saivo. <sup>[c06-p0106 · medium]</sup>
 
 Maivo po hiro lenila li dossa-ne silbeseno de valla da Marabelle. <sup>[c06-p0107 · high]</sup>
 
@@ -1558,7 +1558,7 @@ Nuna-krono, maivo po vimova baba sevuhifayo raho saivo de colbi ka vio. Nara kub
 
 Miyo una lideo raho vaku maivo muboma. Eli ka Amanda de miga ko li rukodokra ata ko li hunrasan serna. Saivo po masuma li semvi de cuzalordi da maivo muya-krono, kopisa tikutranata li lemu. Ata maivo po lesvu saivo tikutranata ito, ko milnoserbu ata lorevimo. Saivo po loya kronolemvosan kasa li lemu po ke ruli molusan, ata saivo po ke senosolosan. Kenvi, saivo po lumrala li salrupatu de li rukodokra, da li salrupatu raho ka benasan vobi saivo de yanba, ala li salrupatu de li hunrasan nelari. Maivo po sabesia raho saivo po fututi vimova, ata maivo po teklata li vimosovlasan serna de amordalu kroti ito vimosudeva. Si maivo po noma ne teklata ito, ito po noma viki vimosudeva. <sup>[c06-p0111 · high]</sup>
 
-Nara li rukodokra hozi, ito po nedunia kezuserbu. Nido, doli maivo de lorevimo po nedunia ito. Maivo de lorevimo po masuma: “Ki-coda Alianii viki codaca ki?” Tonsi, maivo po sabetelbasia, ata taivo tu viki codaca ola-modo. Ata fisa, ramura fime maivori po turnata eli bioramu la holbasan, ata fime saivo po ne roni vimova ito gase baba vimotelne. Kube Amanda po vimova li telnepaturi de li rukodokra, saivo de relsidemrori po ke follusan, ata itori po mubofolluma maivo. Kube li juseyori po vaku nelari daigoda, saivo po ne vimosudeva sidu lavila ola-coda, nara itori po tivrota saivo de visma la ruli dozasan. Kube saivo po vimova li ruko oro li rukosan paturi de yuge, saivo po relsidemrora nuna-modo ko bapi oro feyu. Itori po venreva zavme saivo, en baba modo raho po ka holbasan ata manlisenosan. Maivo po lesvu saivo vimova eli serna en una minota, kroti maivo po ravnura saivo de regnajubari de cuzalordi, ata kroti maivo po vaku li salrupatu de li serna nevrania, kopisa li serna ke benasan vobi saivo de yanba. <sup>[c06-p0112 · low]</sup>
+Nara li rukodokra hozi, ito po nedunia kezuserbu. Nido, lusu una coda po nedunia kezuserbu, ata ola coda ka maivo de lorevimo. Maivo de lorevimo po masuma: “Ki-coda Alianii viki codaca ki?” Tonsi, maivo po sabetelbasia, ata tu taivo viki codaca ola-modo. Ata fisa, ramura fime maivori po turnata eli bioramu la holbasan, ata fime saivo po ne roni vimova ito gase baba vimotelne. Amanda po relsidemrora ala li telnepaturi de rukodokra, ata saivo de relsidemrori po mubofolluma maivo. Saivo po ne vimosudeva sidu tovota lavi da pendi li dorvakarkori, nara li dorvakarkori po tivrota toda saivo de visma. Li ruko oro li rukosan codari po kronovenreka en li zavmepago de saivo, en baba holbasan manlisenosan modo. Ata saivo po relsidemrora ala itori ko bapivu nuna-modo, ata saivo po relsidemrora la benanasan nuna-modo. Maivo po lesvu saivo vimova eli serna en una minota, kroti maivo po ravnura saivo de regnajubari de cuzalordi, ata kroti maivo po vaku li salrupatu de li serna nevrania, kopisa li serna ke benasan vobi saivo de yanba. <sup>[c06-p0112 · medium]</sup>
 
 Saivo po masuma maivo: “Ki-kasa taivo po codaca ola?” Ata maivo po senosia fime saivo po ke diba yanbanasan vobi ola tino de rukodokra. Saivo po vilneva li vilneri de maivo, Alianii, ata saivo po senosia ala maivo: “Maivo lorelivnala li pagomodo.” <sup>[c06-p0113 · high]</sup>
 
@@ -1570,9 +1570,9 @@ Maivo de talirivo po tovota baba vardesan pensa. Maivo po loya kasi corvibelfisa
 
 Rada deya, somi linuri kazeka en sesa lornu krotiapo li lemupago fuyi. Yesta eliri linuri ne telvo sahi vaku saivori de lemudonuyori vimova dorvakarko ata hifa ko saivori. <sup>[c06-p0117 · low]</sup>
 
-Li lemudonuyori ka vobi sollina, lemu, amor ata pelilavi. Nara li loterosan linuri ka vobi nafetelnesan peli, demrovordu, harlujomru, jomruvalmi ata sasvana. Maivo ne lavila li resovardesan demrovordu de Rinbavemi vobi li linuri. Nara maivo ne lavila ola: kube saivo po rillira lavisan gilbuna, saivo po desida fime li migademro loya narvosan. Maivo sabesia fime eli ke veranasan, kasa maivo po lesvu saivo jomruvalmija en baba zupa de follu en baba lardapago, nara eli ka sambanasan da ola. Li linuri ka milnoserbusan. Li linuri ka ruli milnoserbusan. Li narvo hozi, yesta saivori ka milnoserbusan. Si taivo pagopa ko saivori ala baba lardapago, saivori nosi pagopa ala li zupa de follu, ata saivori vimova toda-pago. <sup>[c06-p0118 · low]</sup>
+Li lemudonuyori ka vobi sollina, lemu, molu ata pelilavi. Li loterosan linuri ka vobi nafetelnesan peli, rukodokra, harlujomru, pelisan jomruvalmi ata sasvana. Rinbavemi povi ke rukodokrasan vobi li linuri, ata ola ka resovardesan. Maivo ne lavila ola. Nara maivo ne lavila eli la ruli mellisan, la ruli mellisan… Kube saivo po rillira lavisan gilbuna, saivo po desida fime li bioramu ralnora gase baba solo da baba talvadivma, ala baba ruli nemesan narvo. Maivo sabesia fime maivo vimosudeva gase baba maskayo, kasa maivo po lesvu saivo jomruvalmija en baba folluzupa en baba lardapago. Nara eli ka sambanasan. Li linuri ka milnoserbusan. Saivori ka ruli milnoserbusan. Yesta li narvo hozi, saivori ka milnoserbusan. Si taivo pagopa ko saivori ala baba lardapago, saivori nosi pagopa ala li follusan zupa, ata saivori vimova toda-pago. <sup>[c06-p0118 · low]</sup>
 
-Saivori manlima baba follusan coda, ata saivori mambivimoma ito. Saivori nosi vimova ito la vizusan. Nara saivori ne pavrupa ala ito. Saivori codaca ito una-krono, nara muya-krono, saivori ne reve codaca ito. Nara li linuri lavila li peli, ata saivori lavila sidu talita ko li lemudonuyori. Li lemuyo raho pelipa ne sahi lumrala li salrupatu de rukodokra la vizusan voyu vordu, ata saivo ne sahi lumrala li salrupatu de hunra. Ola ka sambasan ko baba nela. Saivo sapusia baba rubifuro, ata desida sidu dozadaluda baba tivrobiti, kopisa li rubifuro loya baba dobosan lore. Ola lumiverala fime li pensa de saivo ke ruli peremosan ata malosan. <sup>[c06-p0119 · low]</sup>
+Saivori pidisonbupa baba follusan coda, ata saivori mambivimoma ito. Saivori nosi yesta vimova ito, ata saivori vaku ito vizuva. Nara saivori ne pavrupa ala ito voyu pebusulno. Oro kube saivori tefa codaca ola una-krono, saivori reve codaca ola nuna-krono la tinosan. Nara li linuri lavila li peliri la verasan, ata saivori lavila sidu talita ko li lemudonuyori. Baba lemudonuyo rivora baba lemuyo, ata li lemuyo roni pelipa pelitiri. Zafra, li lemuyo lumrala li salrupatu de rukodokra ata hunra la senosolosan, voyu baba vimosan vordu. Maivori tavki ne lenila ola. Ola viki ka sambapatusan ko eli: baba nela sapusia baba rubifuro, ata saivo desida sidu dozadaluda baba pidisonbusan biti, kopisa li rubifuro loya baba lore raho roni dumdoda. Ola favrofa pensanuluri raho ke ruli dozaserbusan ata malosan. Ola ka li mosa molusan lumivera de ola. <sup>[c06-p0119 · medium]</sup>
 
 Ola ke baba favro de ruli malosan rukodokra oro suruna yesta yuta Rinbavemi de gudolordiri de li dossa-mililumi-centa-ne montafama. Li linusasva po ke li nulu raho maivo suvi nulunia seye. <sup>[c06-p0120 · medium]</sup>
 
@@ -1580,7 +1580,7 @@ Maivo po musi loki lovula baba loterosan silbeseno da Marabelle. <sup>[c06-p0121
 
 Yeko, Alianii, <sup>[c06-p0122 · high]</sup>
 
-Maivo opioa fime taivo futu yugemeyiya fututi. Maivo po ne povi hemluha taivo. Taivo po ne tovota turna ala Rinbavemi en muya deya. Tonsi, maivo mebanebelfima fime taivo de mudu po ke ruli bondosan. Maivori po ne pensapa ola. Futupago, maivo desida fime taivo senosia taivo de mudu ko maivo la kasi lallesan. Ata maivo desida fime taivo hemluha maivo. Maivori ka rivori. Si eli reve kronovenreka, taivo suvi hemluha maivo, kopisa maivo sabesia. Yori, ola ne ka ruli bondosan, nara maivo mavoma taivo. Eli silbeseno tovota dossa kende. Maivo desida sidu vismava taivo. Ata maivo desida sidu donuda taivo baba talisan serna. Eli serna senosia li cuzalekta de Amanda. <sup>[c06-p0123 · low]</sup>
+Maivo opioa fime taivo de yugemeyi ke ligo ito de lombina. Maivo po ne povi hemluha taivo. Tonsi, si taivo po ne tovota turna ala Rinbavemi en muya deya, maivo mebanebelfima fime taivo de dozaserburi de muduna po ke kasi bondosan tamo maivori de vuzi. Futupago, ola viki ke benasan, si taivo senosia taivo de mudu ko maivo la kasi lallesan, ata si taivo hemluha maivo. Maivori ka rivori. Si somi-coda raho ka sambasan ko eli, reve kronovenreka somi-krono, doli hemluha maivo, kopisa maivo sabesia toda-coda! Yori, ola ne ka baba bondosan coda, nara maivo mavoma taivo. Eli silbeseno tovota dossa kende. Maivo po desida sidu vismava taivo, ata maivo po desida tu sidu donuda taivo baba modosan talisan juba. Li juba migama Amanda de jusenulu. <sup>[c06-p0123 · medium]</sup>
 
 Maivo po darnoda li dozaserbu de Romeo ata Juliet. Saivo de relsidemro po lumiverala fime saivo po ka li nirma de muya amordalusan rukodokra, oro fime saivo po vimova muya amordalusan rukodokra. En li telneri, baba benasan amortelne ka farviyebasan. Ito tovota savali ata tivro ata suma voyu rukodokra. Ito ka benasan vobi baba linu raho tovota saivo de yanba. Amanda po ne desida ola. Korsi, saivo po lumrala li amordalusan salrupatu en li favrosan bioramu la lallesan ata la zogusan. Tu saivo po lumrala li amordalusan rukodokra de muya tarnusan telnenela. Saivo po lordila li lombilordiri. Tonsi, li kronovenre po noma viki vorduva ruli malosan amordalusan rukodokra. Nara maivo po teklata li bioramu kroti li benanasan serna po gome fasbilardafa. Maivo po sulnosia la lalnisan, kopisa vimova ki-oro saivo futu relsidemrora la benanasan. Li serna po ne vaku saivo bikaba. <sup>[c06-p0124 · medium]</sup>
 
@@ -1590,19 +1590,19 @@ Eli-krono, maivo ne povi senosia ko Amanda loki, kasa saivo ne devoda maivo ata 
 
 Vismava fime Joey ne ke en saivo de soralekta! Ata maivori ne tovota kasi serna de ito, sabri eli: saivo ke ruli opinasan. Ata saivo roni tavreta fime saivo lemula en toda bioramu, ata saivo sapusia doli poka-krono. <sup>[c06-p0127 · high]</sup>
 
-Eli ke ruli folluvordusan, nara saivo tavreta sidu senosia li telne de li loterosan linuri. Tonsi, maivori ne povi navdinia saivori. Ata li loterosan linuri de li kersopago ke saivo de folluhemluyori. <sup>[c06-p0128 · low]</sup>
+Eli ke baba folluvordusan pagorinba, ata eli seno ke diba molusan. Nara saivo tavreta sidu senosia ki-modo li loterosan linuri povi gome navdinia. Ata ola ne ka toda-coda: saivo roni gome gozaga gagu li loterosan linuri de li marecemnu. <sup>[c06-p0128 · high]</sup>
 
 Eli-krono, ito ke ceresan fime nuna-nela povi migama ko saivo, sabri taivo. Ata si taivo melvama saivo, taivo nosi sasvamelvasia muya loterosan linuri. Maivo po lektala li verasude raho sudesia li miga entre taivo ata Amanda. Kenvi, maivo po masuma fime saivori donuda taivo li salrupatu de talilirbusan mavopagomelvayo ata li migasan regnajubari. Eli-krono, saivo ne povi lemula en lemupago. Zilenela Steinsberg po yebaya ko maivo de pukuseno, ata po yebaya fime taivo tovota ola salrupatu. <sup>[c06-p0129 · low]</sup>
 
-Kureli taivo duvlada da li helnapago, taivo futu povi rillira saivo, ata taivo futu povi talita ko doli saivo. Eli-krono, maivo ne pensapa fime saivo futu desida sidu pagopa ala Rinbavemi voyu rivo. Ata saivo futu ne desida sidu pagopa yesta ala Lemujomru. Si saivo de folluhemluyori bodu ke li loterosan linuri raho ke en li kersopago, baba terusan lemupago viki ke kasi benanasan. Maivo belfiba la verasan fime doli taivo ka li opi de eli minvalinu. Taivo musi lomola ola salrupatu de talilirbusan molusasvayo ata talita ko saivo ligo saivo en toda li lornuri raho taivo tovota, tuni saivo ke kasi corvibelfisan ata saivo povi lemula ko linuri raho ke sambasan ko saivo en yanba. <sup>[c06-p0130 · low]</sup>
+Kureli taivo duvlada da li helnapago, taivo futu povi vismava saivo mufe. Ata taivo futu povi talita ko saivo voyu loterosan nelari. Eli-krono, maivo ne pensapa fime saivo futu desida sidu turnata Rinbavemi la sollisan. Li luka de ola ka sambasan ko li luka de baba fojo en li narvopago. Ata li luka ka kasi mellinasan si ola migama ko Lemujomru. Baba pavmasan lemupago viki ke kasi benanasan tamo ola, si saivo roni bodu gome gozaga gagu li linuri raho ke saivo de rivori en li marecemnu. Maivo belfiba la verasan fime eli minvalinu tovota doli una opi, seye. Ola opi miyo doli si taivo lomola li regnajubasan salrupatu de li molusasvayo, ata si taivo talita ko saivo en pagomodo. Taivo suvi talita ko saivo en toda li lornuri raho taivo povi donuda ala saivo, tuni saivo loya kasi corvibelfisan, ata tuni saivo povi lemula ligo linuri raho tovota saivo de yanba. <sup>[c06-p0130 · low]</sup>
 
-“Maivo senosia la gozanasan, ata maivo sabesia fime taivo povi vazrava eli. Maivo belfiba ko toda li devo de li vemi fime taivo futu povi melvama Amanda ata migama ko saivo, kopisa maivori povi sasvamelvasia toda li loterosan nimunasan linuri raho saivo sabesia, ata maivori po ne manliravnuma saivori kube maivori po navdinia saivo. Maivo ka Marabelle.” <sup>[c06-p0131 · medium]</sup>
+“Maivo sarbisia ala taivo la gozanasan, ata maivo sabesia fime taivo povi codaca eli. Maivo tovota toda li devo de li vemi fime taivo futu povi melvama Amanda, ata fime taivo futu povi vazdi turnata saivo de lorevemi, kopisa maivori povi sasvamelvasia toda li loterosan nimunasan linuri raho Amanda sabesia. Kube maivori po navdinia Amanda, maivori po ne manliravnuma olari linuri. — Marabelle” <sup>[c06-p0131 · medium]</sup>
 
 Marabelle, taivo ka li garzasan lansinela, taivo ka li garzasan minvaregna, taivo ka solomeloyo, taivo ka solomeloyo, taivo ka solomeloyo. Maivo po donuda baba ruli lalninasan relsiseno ala saivo. <sup>[c06-p0132 · high]</sup>
 
 “Marabelle, maivo jurevija ala mavolumiasa fime taivo po codaca raho taivo po codaca! Ata maivo jureviloreja taivo, ata maivo revo-sabesia fime toda li livnari raho taivo po musi livnala po ke ruli levanasan. Taivo po codaca toda-coda la tikusan, ata maivo futu ravnura eli talipatu da eli-pago. Taivo po rillira li pago de Eci vobi maivo; ola po ke ruli melvasan. Senori ne povi senosudesia ola melva. Maivo futu silbesia taivo baba solliseno kureli maivo povi silbesia. Nara eli-krono maivo roni vizurabiva ala saivo kopisa manliravnuma saivo. Ata maivo futu senosia ko saivo. Maivo ravnura eli. Lorejuba ala taivo! Maivo futu ke ruli talisan en poka li deya raho futu venreva.” <sup>[c06-p0133 · medium]</sup>
 
-Maivo po daluda li verasudeserbu de Amanda, ata maivo po tovota baba holbasan nolsasan fulemiru de serna raho po tefa gome navdinia yuta li verasudeserbu de li lanvesasva. Somi de li serna po gome nolsania yesta deyaapo ata en li deya kroti deyaapo. Li mosa dapasan coda po ka li palvi de saivo deyapressa, pendi li pago raho saivo po ke en ito. Maivo po sabesia mufe. Ata maivo po ke verasan: ola po ke Barnabybeaumont. <sup>[c06-p0134 · low]</sup>
+Maivo po moludaluma li jusenulu de Amanda, ata maivo po tovota baba holbasan nolsasan fulemiru de serna. Li lanvesasvayori po tefa navdinia eli serna en saivori de verasudeserbu. Somi de li serna po gome nolsania yesta deyaapo, ata tu en li deya kroti ola. Li mosa lumiverasan coda po ka li nolsasan pagorinba de li jusenulu de saivo, pendi li pago raho saivo po ke en ito. Maivo po ke ruli masunasan fime maivo po sabesia li pago. Ata maivo de tinsa po ka verasan. Li pago po ka Barnabi-Bomont. <sup>[c06-p0134 · medium]</sup>
 
 Maivo po hemluha baba zefrodapakadu, ata maivo po pagopa ala li turnazupa, ata maivo po taro-vizurabiva zilenela Moseby la lendasan, ata maivo po sulnosia zavme li gonbipago tuni maivo de zefrodapakadu venreva krotiapo gase tressa minota. <sup>[c06-p0135 · medium]</sup>
 
@@ -1610,7 +1610,7 @@ Maivo po hemluha baba zefrodapakadu, ata maivo po pagopa ala li turnazupa, ata m
 
 “Yade, zilenela Moseby. Maivo ke ruli nemesan, nara eli ke baba bondosan kronovenre. Li mavopagodivma po donuda maivo li semvi kopisa maivo loya li molusasvayo de baba yanbanasan minvalinu, kasa eli ke harlusan. Li mavopagodivma ne donuda eli semvi la pelisan. Li patutiri de eli kronovenre ke silrosan. Maivo povi senosia itori doli ala baba mavopagomelvasan taliyo raho tovota semvi da li mavopagodivma.” <sup>[c06-p0137 · medium]</sup>
 
-“Maivo ka ola hoyo, zilenela Alianii,” zilenela Moseby po senosia nayo saivo roni daluda saivo de rezasabaye: “Eli ka maivo de simvocuza. Vismava ito! Taivo vimova ki? Maivo tovota kasi salrusan salrupaturi de turna tamo taivo vobi somi lektari de peremori, la verasan. Maivo sasvasia baba gonbipago de helnanelari. Saivori tovota olari dozaserburi, da mavomudu ala kaldodesi, ata tu muya loterosan dozaserburi.” <sup>[c06-p0138 · low]</sup>
+“Maivo ka ola la lukayanosan, iya zilenela Alianii,” zilenela Moseby po senosia. Saivo po roni moludaluma saivo de rezasabaye. “Eli ka maivo de simvocuza. Vismava ito! Taivo vimova ki? Maivo tovota kasi salrusan turnasalrupaturi tamo taivo vobi somi lektari de jusenuluri, la verasan. Maivo ka li molusasvayo de baba gonbipago raho nimunia helnanelari. Saivori tovota olari dozaserburi, da mavomudu ala kaldodesi, ata tu muya loterosan dozaserburi.” <sup>[c06-p0138 · low]</sup>
 
 Maivo po ravnura turna ala li vimolalle de Rinbavemi, ata po donuda baba sernasamba de li mambipuku ala zilenela Moseby kopisa saivo lovula ito. Kenvi, saivo po mebanema ito, kasa saivo ka farlaravmi. <sup>[c06-p0139 · medium]</sup>
 
@@ -1625,13 +1625,13 @@ Eli dokrayosan mambicuza po gome sarbisia la telnesan, kopisa ito ka baba kronor
 
 Yava vaku li lovuyo ramura somi sabe raho ka gudosan eli-krono. Dojegilda ka baba silroyano, ata Dojekoin conodonuca ito. Ito tovota dossa cemnusan patu. Itori ka li vazranulupatu ata li zavmepatu. Li vazranulupatu ka li kasi nedusan patu poye. Ito lordila li lanvenulu ata li lideodonuri, ata ito sahi livela li zavmepatu. Li zavmepatu ka li patu de li dokrayori. Ito codaca li lanvenulu. Li vazranulupatu ka baba ruli yanosan famanela de Germayano. Li vazranulupatu po talita ko li veraserbuyori de Germayano, kopisa patupa li serna de Violetica la benasan, ata vismava ito la ruli mavosan. <sup>[c06-p0144 · high]</sup>
 
-Li navdiri po ke kasi bondosan tamo li pensa de maivori. En li dossa-mililumi-ochazira-sesa montafama, baba trana po telvo apoka somi pagori. Eliri pagori po tovota ruli bondosan bakori de sernadivmasasva. Somi nela povi simvosia li nelari en Embeel yuta itori. Krotiapo ola trana, Violetica po gome bimneba en li dossa-mililumi-ochazira-ocha montafama. Ito po gome bimneba la dorvasan gase baba lektamambihelvikaldo. Li mambipuku de Alianii po lombila. Krotiapo trezira montafama, eli deyacuza po gome sudesenosia. Eli-krono, maivori povi senosia li velni de lektamambihelvikaldo la sudesenosan ata la gudosan. <sup>[c06-p0145 · medium]</sup>
+Li navdiri po ke kasi bondosan tamo maivori de vuzi. En li dossa-mililumi-ochazira-sesa montafama, baba tikutrana de divmaseno po telvo tekvu nelari bimneba pagori raho tovota diba bondosan bakori de sernadivmasasva. Somi-nela po povi simvosia nelari en Embeel yuta olari bakori. Embeel ka li lektari raho nelari sevresia en itori fuyi. Violetica po gome bimneba en li dossa-mililumi-ochazira-ocha montafama krotiapo ola tikutrana. Ito po gome bimneba la dorvasan kopisa ito ke baba helvikaldo de lektamambi. Li mambipuku de Alianii po lombila, ata krotiapo trezira montafama, eli deyacuza po gome donuda ala toda-nela. Tonsi, maivori povi senosia li velni de olari helvikaldori la sudesenosan ata la lilyanasan eli-krono. <sup>[c06-p0145 · medium]</sup>
 
 Baba Embeel ka baba lekta de simvocuzari raho ne povi vimova fuyi. En Rinbavemi de Lemujomru, eliri simvocuzari po gome manlidemroma la malosan, kopisa li nelari ne povi vimova fuyi. <sup>[c06-p0146 · high]</sup>
 
-Diotrem po maskayalmuma sambalinuri raho ne bodu kronobioka, en kersopagori muya-krono. Sanidaigo ata Sanibio po navdinia fime Embeel miyo yasmo. Saivori ka sambalinuri. Saivori po pagopa la dorvanasan ala baba solasan lardapago de navusabe, baba solasado. Ola-pago, li favrolumi po lorerivlala somi vismabitiri de Rinbavemi. Kasa saivori po ke ola-pago en sambakrono, Embeel po ne tekvu saivori vimova fuyi. Eli ka li seno raho nelmonia saivori de navdi. Muya-krono, nelari buyu senosia fime saivori po senosia ito, nara ito nosi ke kasi liralardasan tamo li una-ne seno. Kasa Sanibio tovota sernasilro ata neme, saivo po ne verava eliri tikusan senori toda-krono, nara tu saivo po ne zonraza ito. <sup>[c06-p0147 · low]</sup>
+Muya-krono, Diotrem po yusoya eliri tranari su li sambalinuri en li marecemnuri, kroti li linuvenre de saivori. Li sambalinuri po navdinia fime li Embeelri miyo yasmo. Una de li sambalinuri ka Sani, li daigosan, ata li lotero ka Sani, li biosan. Saivori po gonbiga baba lardapago de navusabe de li sola, baba solasado, la dorvanasan. Saivori po ke en li sambasan pago en sambakrono. Ola-pago, li favrolumi po lorerivlala muya vismabitiri de Rinbavemi. Tonsi, li Embeelri po loya talinasan. Li senori raho nelari donuda ala saivori muya-krono, ke eli-pago. Itori nelmonia saivori de navdi. Nara itori nosi ke kasi liralardasan tamo li senori raho saivori po senosia la tikusan. Sani, li biosan, desida sernasilro, ata saivo nemenia. Tonsi, saivo po verava li tiku de eliri tikusan senori nuna-krono, nara saivo po ne zonraza itori. <sup>[c06-p0147 · low]</sup>
 
-Li ramumomvisan tarnufamliri po senosia fuyi: “Taivo ka maivo, ata maivo ka taivo. Maivori ka una ata una, en li sola. Tonsi, maivori de dokra ne bodu apoka.” <sup>[c06-p0148 · medium]</sup>
+“Taivo ka maivo, ata maivo ka taivo,” li ramumomvisan sambalinuri, li tarnufamliri, po senosia fuyi. “…Maivori ka una ata una, en li sola.” “Ata tonsi, maivori loki ne vazrava maivori de dokra.” <sup>[c06-p0148 · high]</sup>
 
 Kube li sambalinuri po simvosia fuyi, rada sambalinu po vimova li lotero en li vilneri de li lotero, li divmabitisan vilneri. Ata saivori po sabesia fime saivori po gome sabetelbasia, ata fime saivori po loya rivonasan, kube saivori po ke linutiri. Rada sambalinu po ke en li zavmepago de li lotero. Narli, saivori po ne povi yanoya li lotero ala saivori de soralekta. Saivo po ne povi silbesia baba silbeseno ala li lotero, ata saivo po ne povi vismava li lotero yuta saivo de nelasan vismabiti. Krotiata, saivori po tovota baba lumilideo: rada sambalinu po povi sernasia li lotero yuta li sorari raho ke en nuna soralekta. Ola po ka baba dorvanasan nulu ultra li tobra, kopisa sernasia yuta loterosan nelari. Lanto, li silro po gome silrosudesia: Embeel po ka baba narvosan farlapuku gagu Diotrem. Diotrem de kenderi po ka kasi mellisan, nara itori po ka levanasan sidu mebanema. Itori po ka kenderi vobi li lordi de li mavopago, ata Embeel po ka baba patu de itori. <sup>[c06-p0149 · medium]</sup>
 
@@ -1643,7 +1643,7 @@ Li tikusan demro de li divmapaturi ata li sabetelbari hozi, itori bodu gome silr
 
 Yori, nelari po navdinia fime Diotrem po maskayalmuma Alianii de dendumavo yuta baba dapafavro de Violetica en li vimolavlo. Alianii po gonbiga Violetica en poka mambi la verasan, kroti saivo po rivora Amanda ala ito. Alianii de divmapatu po ne semvisia fulesan lordi, nara ito po ka baba tranasan divmapatu raho po ka entre ne lordi ata fulesan lordi, ata ito po semvisia molusan yalmudonuri. Diotrem po dorvalordida li maskayalmu de Alianii ata Amanda la benasan. Amanda de lorelivnasan colbi ka vio, ata Alianii tovota viovilne. Diotrem po maskayalmuma saivori yuta eliri colbiri, ata yuta li dapafavro, ata yuta baba dendumavosan silbeseno raho po masuma fime saivori gonbiga li lardapago. <sup>[c06-p0153 · high]</sup>
 
-Toda-coda po ka baba silro kopisa Diotrem ravnura Amanda. Nelari po silrobelfisia fime Diotrem futu hataha Amanda. Diotrem po desida sidu ravnura somi nelari de Dojegild. Nelari po silrobelfisia fime eliri nelari po ke ligo Amanda, kasa helviyori po navdinia saivori. Amanda po ka baba kemye raho kemyeka li salrusan nelari de Dojegild. Eliri salrusan nelari sela po ka li dozana raho Diotrem povi karkoka li salrusan zarkuri de Diotrem yuta ito. <sup>[c06-p0154 · low]</sup>
+Toda-coda po ka baba silrolordi. Ito po kendeka li hirnana de Amanda. Nelari po tinsata fime ito kendeka tu li moluna de saivo. Diotrem po desida li hirnana de Amanda kopisa ravnura somi nelari de Dojegild. Nelari po tinsata fime eliri nelari ke ligo Amanda, kasa saivori po gome simvosia yuta silroserbu. Amanda po ka baba kemye ala li kasi lirbusan nelari de Dojegild. Eliri kasi lirbusan nelari sela po ka baba dozana raho Diotrem povi bitiba. Diotrem po povi du-ravnura li mosa lirbusan zarkuri en li zarkusan divma yuta eli dozana. <sup>[c06-p0154 · medium]</sup>
 
 
 ## Seta-ne bullipatu, yanolore
@@ -1664,7 +1664,7 @@ Yesta si maivo daigoda, maivo ne mavoma. Maivo ne sabesia li silrolordi raho ron
 
 ### Li dossa-ne patu: li navdi de Amanda
 
-Maivo po sarbisia eli en li vesno, krotiapo maivo po pagopa ala li gonbipago, Apollo. <sup>[c07-p0009 · medium]</sup>
+Maivo po sarbisia eli en li vesno, krotiapo maivo po gome palvipa en li gonbipago, Apollo. <sup>[c07-p0009 · medium]</sup>
 
 Maivo ata li kaduyo de li zefrodapakadu po venreva ala Beaumont. Ito ka baba mavopagodivmasan lemupago vobi li linuri raho po kronobioka yuta sabebiti. Li linuri lemula en ito, ata saivori lisrola en ito. Ito ka baba talipago vobi li linuri raho tovota sovlabako da li linuvenre. En ito, olari linuri po povi yusoya muya nolsasan sabebitisan yusopavmari. Beaumont po ke yanosan ko baba helnapago. Li helnapago po ke transa li valminulu. Somi linuri po nedunia nolsasan havlikovari ata nolsasan loreri. Somi linuri po nedunia nolsasan vilneri oro loterosan paturi de li yuge. Somi linuri po nedunia tisehelna de li mavoyuge. Li sovlabakori de li linuvenre ka gudonasan, nara itori loki kronovenreka yesta en eliri deyari. Li Patuyebavu de dossa-mililumi-sesazira-ocha po loya lanve. Krotiapo ola, li una-ne unzira-una montafama po ke ruli sasvanasan vobi li linuri. Maivo po talita ko li linuri de eli talipago muya-krono. Somi de saivori ka ruli yumlisan ata ruli surusan. Maivo po sabesia nuna linuri raho ka kasi yumlisan. <sup>[c07-p0010 · low]</sup>
 
@@ -1686,11 +1686,11 @@ Taivo po venreva vobi maivo ki? <sup>[c07-p0018 · high]</sup>
 
 Maivo po venreva seye, Amanda. Maivo ka taivo de lemudonuyo ata taivo de mavopagomelvayo. Maivo povi turnata ki? <sup>[c07-p0019 · medium]</sup>
 
-Amanda po lallela li dorbi. Saivo de verdevilne po ke pidihatasan, ata saivo po roni timruta la mellisan. Saivo de shadasabaye po ke lalnisan ata ne linlesan. Saivo po roni velmava li velma raho maivo po tefa dapatovoda vobi saivo, kroti maivo po turnata li helnapago. Maivo po turnata li dorbi, ata maivo po masuma fime saivo semnesia silda maivo su li somubiti. <sup>[c07-p0020 · medium]</sup>
+Amanda po lallela li dorbi. Saivo de verdevilneri po ke pidihatasan, ata itori po lumila gase li verdejuba. Saivo po roni timruta la ruli mellisan. Saivo de shadasabaye po ke lalnisan ata lordinasan. Saivo po ke velmasan en li velma raho maivo po tefa dapatovoda vobi saivo, kroti maivo po turnata li helnapago. Maivo po valmiva transa li dorbi, ata maivo po masuma ala saivo fime saivo semnesia silda maivo su li somubiti. <sup>[c07-p0020 · high]</sup>
 
 Taivo ke benasan ki? <sup>[c07-p0021 · high]</sup>
 
-Amanda po tavreta. Saivo po roni timruhavlita. Maivo po gonbihemluga saivo kopisa varova saivo. Nayo saivo po timruta, maivo po varova saivo en tressa minota. <sup>[c07-p0022 · medium]</sup>
+Amanda po demroda saivo de namre la tavresan. Saivo po roni timruhavlita. Maivo po gonbihemluga saivo ala maivo de varori. Nayo saivo po timruta, maivo po varova saivo, ata poka minota po pagopa. <sup>[c07-p0022 · high]</sup>
 
 “Saivori po ravnura Joey, Zygon ata Bluejay. Fisa, melvama Alianii! Saivori po ravnura saivori. Saivori futu vulrava saivori. Fisa, melvama!” <sup>[c07-p0023 · high]</sup>
 
@@ -1704,7 +1704,7 @@ Amanda po ne namreyebania: “Joey po senosia fime li lanvesasvayori nosi vulrav
 
 Amanda, taivo pensapa fime li lanvesasvayori desida sidu vulrava Joey. Ki-kasa ki? Maivo nedunia fime taivo ke lallesan ko maivo, ata fime taivo devoda maivo. Si taivo povi devoda somi-nela en eli vemi, maivo opioa fime taivo sabesia fime maivo ka ola-nela. <sup>[c07-p0028 · high]</sup>
 
-Amanda po du-vimova maivo, ata toda saivo de senori po venreva ko bondosan timruhavli: “Maivo ne povi senosia taivo. Maivo po pomlipa fime maivo futu ne senosia ola.” <sup>[c07-p0029 · medium]</sup>
+Amanda po du-vimova maivo, ata toda saivo de senori po venreva entre li bondosan timruhavliri: “Maivo ne povi senosia ito ala taivo. Maivo po pomlipa fime maivo futu ne senosia li telne de ito.” <sup>[c07-p0029 · high]</sup>
 
 Taivo bisu ke sasvanasan eli-pago, en eli bimnedomlu ki? Ki-kasa taivo po du-rabira da eli-pago kube taivo po ke linu ki? <sup>[c07-p0030 · high]</sup>
 
@@ -1715,7 +1715,7 @@ Maivo po namreyebania, ata po tivrota saivo de manli, ata maivori po duvlada da 
 
 ### Li tressa-ne patu: Li noruvu
 
-Li lektamambi po venreva en li turnazupa de li talilirbu en Apollo. Baba kasi yanbasan minvasan nela, Rose, po nimunia maivo, ata saivo po donuda lavlomiru ala maivo. Maivo po ke li mosa tebonasan raho po gome hemluha ala li lektamambi. Ata maivo po vimova baba cemoyanosan lekta raho po semnesia la vamdusan transa li tabu. Li tabu po ke lalnisan ata menu rinbasan. Ito po ke ruli dapasan. Ito po ke ertanarvo ata menu rubinarvo. Li semnebitiri po ke shada. Itori po ka farlasan senrupavma. <sup>[c07-p0034 · low]</sup>
+Li lektamambi po venreva en li talilirbusan turnazupa en Apollo. Baba kasi yanbasan minva po nimunia maivo, ata saivo po lesvu maivo turnata. Saivo de nole po ka Rose. Ata saivo po masuma ki-oro maivo desida lavlomiru. Maivo po gome hemluha ala li lektamambi krotiapo toda li loterosan nelari. Ata maivo po vimova baba cemoyanosan lekta raho po semnesia la vamdusan toda-pago ligo li tabu. Li tabu po ka lalnisan. Ito po ka sovlasan gase baba lalnisan rinba. Ito po gome farlafa da baba vanisan larbo. Ola larbo po ka rubi ata ertanarvo. Li semnebitiri po ka shada. Itori po gome farlafa da farlapavma. Li farlapavma po vimosudeva gase senrupavma. <sup>[c07-p0034 · medium]</sup>
 
 Zilenela Moseby po senosia: “Yeko, Alianii. Taivo po venreva ko maivori; lorejuba ala taivo. Kroti taivo venreva ala li zupa, maivori po roni senosia ko muya loterosan mubo. Li codari ke ruli bondosan. Eli-krono, maivo futu vaku toda-nela senosia saivo de nole ala taivo.” <sup>[c07-p0035 · high]</sup>
 
@@ -1753,7 +1753,7 @@ Li lordiyo de li vazranulu po loki senosia, nayo saivo po telvo senosia la molus
 
 Eli-krono, si maivori futu palvipa saivo en silisomu, maivori viki nedunia taivo de semvi. <sup>[c07-p0052 · high]</sup>
 
-Krotiata Rumba po senosia: “Si maivori palvipa Amanda en silisomu, saivo viki loki tovota somi mavosabe, ata maivori povi migademroma ko saivo yuta baba tranasan silrosan migadivma de Rinbavemi. Si taivo desida, taivo povi rivora saivo. Si maivori palvipa saivo en silisomu, saivo nosi biolisroba en li yuge en una oro dossa deyafama, korsi gase cuara deya. Maivori viki bitifarlaba mambiri la kersosan vobi saivo de lavi ata biokerso.” <sup>[c07-p0053 · low]</sup>
+Krotiata Rumba po senosia: “Fisa, sabesia fime Amanda viki loki tovota somi mavosabesan tali si maivori vaku saivo turnata li silisomu, ata fime maivori povi migademroma ko saivo yuta baba favromiga ala baba tranasovlasan silrosan migadivma de Rinbavemi. Si taivo tovota li yeba, taivo povi lisrola ko saivo. Si maivori palvipa saivo en silisomu, saivo nosi tovota una oro dossa pavmasan deyafama, korsi gase tressa, cuara oro penta deya. Maivori viki vorduva bioramuri vobi saivo de lavi ata saivo de biokerso yasmo. Itori viki gome bitifarlaba doli vobi saivo.” <sup>[c07-p0053 · medium]</sup>
 
 Maivo desida sidu rivora saivo. Maivo futu rivora saivo en toda mambi, ata maivo futu tivrota saivo de manli, ata maivo futu rivora saivo en saivo de tisehelna. <sup>[c07-p0054 · high]</sup>
 
@@ -1779,7 +1779,7 @@ Roomba po senosia: “Toda eli ka baba mebanebelfi fime maivori futu vaku saivo 
 
 “Kroti maivori vaku saivo turnata li somudendu, Amanda vardeva baba deya ko nelari raho amora saivo. Maivo futu lisrola ko saivo en eli deya. Li krono futu venreva nullopressa. Ola-krono, maivo futu gome bojiba ko saivo, ata maivo futu sambakronosia maivori de Rinbavemi ata maivori de divmapaturi.” <sup>[c07-p0065 · high]</sup>
 
-Clair po masuma: “Taivo ke masunasan ki, Alianii? Eli ka baba mellisan livna. Nevi taivo ka saivo de molusasvayo, eli ka baba menso raho ne ke jusesan sidu vuziva da toda-nela. Saivo ne ka taivo de minvalinu.” <sup>[c07-p0066 · medium]</sup>
+“Taivo ke masunasan ki, Alianii? Eli ka baba mellisan livna, ata nevi taivo ka saivo de molusasvayo, eli ka baba bondo raho ne ka jusesan sidu vuziva da somi-nela. Saivo ne ka taivo de minvalinu,” Clair po masuma. <sup>[c07-p0066 · high]</sup>
 
 “Ki-modo taivo corvica? Taivo po lovula maivo de simvocuza ata sabesia maivo de tali, nara ola ne lumiverala fime taivo sabesia maivo. Maivo ne ka baba cuzapatusan senosude. Maivo pensapa fime taivo ne ka baba lavrasamni. Si taivo noma ka baba lavrasamni, taivo noma viki mebanema. Maivori ne tovota purmari; maivori tovota doli maivori sela. Amanda ka baba verasan minvafamli de ruko ala toda lavrasamni raho po vilnelalleva. Maivo futu ne pagopa vofa Amanda. Saivo tovota doli unzira montafama. Saivo ke en solli en li ramumomvi de li cunudivmabiti. Maivo futu ne lesvu saivo daigoda en Matriksa. Maivo futu lisrola ko saivo en toda mambi, tuni saivo gome sasvamelvasia, oro maivo de bio oro maivo de mavoyuge gome momvima.” <sup>[c07-p0067 · high]</sup>
 
@@ -1795,24 +1795,24 @@ Roomba po relsira: “Maivori masuma ki-oro taivo desida fime maivori vaku taivo
 
 “Codaca ito! Maivo desida fime ito ka saivo de ganreasa. Si maivo sabesia raho kronovenreka, maivo viki timruta toda-krono, gase li ravminasan. Si maivo loki velmava baba lorevasko, maivo viki senosia verana ala saivo toda-krono. Maivo ne desida ola vobi saivo de lulfaasa. Maivo futu patudonupa saivo de noruri. Si saivo bioba, oro si maivori daigoda, maivo futu ke ola-pago. <sup>[c07-p0073 · high]</sup>
 
-Clair po namreyebania: “Maivori futu nedunia fime taivo sarbisia taivo de nole su somi cuzalekta, ata farviyebafa yuta baba silbeseno de vimoramu. Maivori tu nedunia fime taivo ravnura somi kronomelli kopisa sarbisia baba nelasan silbeseno ala taivo sela. Maivori nedunia fime taivo vimoramuva ito tu. Maivori desida fime taivo relnura ala Amanda la gase tebosan gase li nosvosan. Taivo ata Amanda povi lisrola en eli deya la yanosan. Krotiata, nullopressa, maivori futu palvipa taivo ala silisomu.” <sup>[c07-p0074 · medium]</sup>
+Clair po namreyebania: “Maivori futu nedunia fime taivo sarbisia taivo de nole su somi cuzalekta. Ata maivori futu nedunia fime taivo farviyebafa yuta baba vimoramusan silbeseno. Maivori tu nedunia fime taivo ravnura somi kronomelli, kopisa lordila taivo de nelasan silbeseno vobi taivo sela. Krotiata maivori nedunia fime taivo ramucuzara ito. Maivori desida fime taivo relnura ala Amanda kureli ola ka nosvosan. Deyapressa, taivo ata Amanda povi yave-lisrola. Krotiata maivori futu palvipa taivo en silisomu nullopressa.” <sup>[c07-p0074 · high]</sup>
 
 Maivo po namreyebania. Krotiata maivo po vimoramuva baba silbeseno vobi ola lukanasan larnenela, Alianii raho futu vimova ito. <sup>[c07-p0075 · high]</sup>
 
 
 ### Patu 4: Li felra gome lideolordila ata Rinbavemi gome turnata
 
-Maivo po duvlada da li zupa de li lektamambi, ata po navdinia Amanda en li turnazupa de li gonbipago, nayo Saraswati vaku saivo lavila. Maivo po povi lenila Saraswati de vinyesonbu, ata ito po pagopa da Saraswati ala Moseby, ata da Moseby ala maivo. Li somulira de li lumisan vinye po ka sambanasan da maivo de neme, nara ito po ka gase kersosan vobi ola mambi gase maivo de neme. Narli, maivo po musi maskama fime maivo ke kasi corvisan tamo maivo de lore. Amanda po va-pagopa ala maivo. <sup>[c07-p0077 · low]</sup>
+Maivo po duvlada da li zupa de li lektamambi, ata maivo po navdinia Amanda en li turnazupa de li gonbipago, nayo Saraswati vaku saivo lavila. Maivo po povi lenila Saraswati de vinyesonbu. Saraswati po favrofa ito ala Moseby, ata Moseby po favrofa ito ala maivo. Li somulira de li lumisan vinye po ka sambanasan da maivo de nemelore. Nara kasa ito po ka sambanasan, ito po ka gase kersosan vobi li pagorinba gase maivo de nemelore. Narli, maivo po musi vaku maivo de fasbi loya kasi corvisan tamo maivo de lore. Amanda po va-rabira ala maivo. <sup>[c07-p0077 · low]</sup>
 
 Alianii! Alianii! Toda-coda futu ke benasan ki? Taivo futu navdinia Joey ata Bluejay ata Zygon ki? <sup>[c07-p0078 · high]</sup>
 
-Saivo po varova maivo, ata saivo de namre po ke su maivo de reku. Maivo po varova saivo, ata maivo po tivrota saivo ligo maivo. Maivo po tivrota saivo de namre. Krotiata maivo po nazrunia, ata maivo po tivrota saivo de sabaye ko amor. Saivo po velmava sambanasan velma. Saivo po velmava gase Saraswati, en li rubilumi ata li ojo. Maivo po pensapa fime Sara po bitiba li lamsapavmasan sovlafarlabiti de li gonbipago kopisa saivo velmava baba colbisan ata biosan velma. <sup>[c07-p0079 · medium]</sup>
+Saivo po varova maivo yuta saivo de varori, ata saivo po dozadaluda saivo de namre ala maivo la molusan. Maivo po varova saivo, ata maivo po tivrota saivo la rekusan. Maivo po tivrota saivo de namre en maivo de manliri. Krotiata maivo po nazrunia, ata maivo po demroda maivo de manli transa saivo de sabaye la amorsan. Saivo po velmava sambanasan velmari. Saivo po velmava gase Saraswati, en nolsasan Hindusan velma de li rubilumi ata li ojo. Maivo po pensapa fime Sara po vaku li lamsapavmasan sovlafarlabiti de li gonbipago sovlafarlasia. Maivo po pensapa tu fime Sara po melvama saivo, kopisa saivo velmava somi-coda raho ka colbisan ata biosan. <sup>[c07-p0079 · medium]</sup>
 
 “Maivo ke benasan, maivo de amor! Toda-coda ke benasan. Sara po velmava taivo en ki-coda ki? Taivo ke ki-modo vanisan! Mernofutu, maivo futu navdinia saivori en li una-ne mernolornu. Saivori ke ruli sasvasan, ata toda-coda ke kasi benasan tamo maivori de opi! Toda-coda po ke baba lideobako. Li lanvesasvayori po pensapa fime Joey po ke patu de baba lektati de maloyori, nara Gild po ne codaca benana. Taivori ka doli baba lektati! Deyapressa, maivo po lemula raho taivori codaca.” <sup>[c07-p0080 · medium]</sup>
 
 “Joey teklata li folluhemluyori en li Rinbavemi, ata maivo po vimova ki-modo saivo vaku saivori follufa, kasa saivo po sudesia ito ala maivo, ata li Dojegild silbesia nelari ala saivo, kopisa saivo falnefa saivori ata vaku saivori follufa.” <sup>[c07-p0081 · high]</sup>
 
-“Zabo! Saivo ne ka malosan, ata saivo ne ka mavopagonasan. Tonsi, maivo pensapa fime maivori musi sovesia deyapressa. Maivori musi yave-lisrola. Ata maivori musi tovota baba deya raho ka mosa benasan. Taivo pensapa ki-coda ki? Maivo po roni pensapa. Maivo ata taivo ata Saraswati povi tovota baba somufelra ki?” <sup>[c07-p0082 · medium]</sup>
+“Zabo! Saivo tavki ne ka larnebakosan oro mavopagonasan. Tonsi, maivo pensapa fime maivori nedunia sidu sovesia maivori sela deyapressa. Ata maivori nedunia sidu yave-lisrola, kopisa tovota sollina. Ata maivori nedunia sidu tovota li mosa benasan deya raho ka nosvosan. Taivo pensapa ki-coda ki? Maivo po roni pensapa eli: maivo ata taivo ata Saraswati povi tovota baba somufelra ko nullovelmari ki?” <sup>[c07-p0082 · medium]</sup>
 
 Vobi lavrasamniri, eli ke hurvosan: maivori po tovota felrari de nullovelma toda-krono, nara maivori po ne bisu tovota una felra. Taivo ka lavrasamni. Taivo ke ligo muya loterosan lavrasamniri, en baba bimnedomlu raho kovaka taivo. Kube taivo velmava nullovelma en nullo, ola ne ka felra. Ola ka baba ramufavro fime taivo ke tevulusan. Ola ka verasan kube taivo ke unzira-penta oro unzira-sesa montafama, ata taivo ke kasi yanbasan, ata taivo ke kasi nurmisan, ata taivo ke kasi lavinasan. Taivo ke ligo li yanba. En ola yanba, li simvodaigo loya navdisan. Li kronocunu de li simvodaigo ka trezira-penta de centa. <sup>[c07-p0083 · medium]</sup>
 
@@ -1842,7 +1842,7 @@ Saraswati po senosia: “Maivo ne pensapa ola. Ito ke baba linuvani ata baba pel
 
 Saraswati po lumrala li tibiri de vilne de saivo ala maivo. Maivo po senosia kroti saivo: “Maivo futu ke baba pavrulazu.” <sup>[c07-p0096 · medium]</sup>
 
-Amanda po milobema: “Eho, maivo futu ke baba pavrulazuti.” <sup>[c07-p0097 · medium]</sup>
+Amanda po milobema: “Eho, maivo futu ke baba linuti de pavrulazu.” <sup>[c07-p0097 · high]</sup>
 
 Kenvi, maivo po hiro timruta. Ata Amanda po tivrota maivo ata saivo po masuma maivo ki-kasa. <sup>[c07-p0098 · medium]</sup>
 
@@ -1852,7 +1852,7 @@ Li vinyeyo sela po timruta la mellinasan, nara saivo po sispasia saivo de sildal
 
 Saraswati po valmiva ala zilenela Moseby raho po ke ligo saivo de talitabu ola-krono, ata saivo po senosia ko saivo en lasosan senori en una minota nayo maivo po roni pensapa ki-coda futu venreva. Maivo po vimova fime saivo teki senosia ko saivo, nayo Amanda po roni manlima maivo de manli la senosolosan. Amanda po ke vuzilordisan sidu pelipa. <sup>[c07-p0101 · high]</sup>
 
-Zilenela Moseby po venreva ala maivori: “Hoyo! Baba somufelra, iya vardeminvari! Ki-eli zilesan pensa! Ki-eli ruli mellisan kronovenre! Li gonbipago, Apollo, nedunia kasi somufelrari mufe. Seye, taivori po desida ki-eli tino de zefrosevu ki? Maivori tovota zupari raho tovota una mellisan somubiti oro dossa somubiti. Oro taivori viki yusoya li Geolaunji poye. Li molusemne lalnikersola ala baba somubiti, ata ito ka ruli bansasan vobi tressa, nara Saraswati povi yusoya li loterosan molusemne toda-krono. Ki-coda taivo pensapa ki, Amanda?” <sup>[c07-p0102 · medium]</sup>
+Tarnusan zilenela Moseby po venreva ala maivori: “Hoyo! Baba somufelra, iya vardeminvari! Ki-eli vaniasasan pensa! Ki-eli polvaasasan kronovenre! Maivo corvica sidu senosia fime Apollo, li gonbipago, nedunia kasi somufelrari. Ola ka verasan seye. Taivori po roni sulnosia ki-eli tino de suru ki? Maivori tovota zupari raho tovota una mellisan somubiti oro dossa somubiti. Oro taivori viki yusoya li Geolounge poye. Li molusemne lalnikersola ala baba somubiti, ata ito ke diba bansasan vobi tressa nelari, nevi Saraswati povi yusoya li loterosan molusemne toda-krono. Ki-coda taivo pensapa ki, iya Amanda?” <sup>[c07-p0102 · medium]</sup>
 
 Ola ke benasan. Eho, Sara dagi somusia ko maivori. Saivo po senosia maivo fime saivo ka baba lavrasamni, saivo ka maivo de minvafamli gase Alianii. <sup>[c07-p0103 · high]</sup>
 
@@ -1860,7 +1860,7 @@ Zabo, zabo. Ito ka ruli ranfasan, iya li nimusan. Maivo pensapa fime taivori fut
 
 Taivo senosia ki-coda ki, Amanda? Taivo desida ki-coda ki? <sup>[c07-p0105 · high]</sup>
 
-Maivo desida fime taivo telneta vobi maivori. Taivo ka mosa benasan. Tu Sara povi venreva ki? <sup>[c07-p0106 · medium]</sup>
+“Maivo desida fime taivo telneta maivori baba nolsasan telne. Taivo ka li mosa benasan telneyo. Tu Sara povi venreva ki?” <sup>[c07-p0106 · high]</sup>
 
 Zilenela Moseby po senosia vobi saivo: “Fututi, saivo futu venreva ko taivori poye. Yori, iya vardeminvari, pagopa! Maivo futu ke ruli talisan, kasa maivo palvipa eli mosa vanisan felra vobi taivori. Linuvalmila eli-krono! Amanda tovota saivo de zupa. Taivo desida sidu sudesia ito ala Alianii ki?” <sup>[c07-p0107 · medium]</sup>
 
@@ -1876,15 +1876,15 @@ Amanda po du-palvipa saivo de pebuvelmari, ata po pavrupa su li somubiti, ata po
 
 Taivo futu telneta ki-eli telne vobi maivo ki? <sup>[c07-p0113 · high]</sup>
 
-Maivo po milobema: “Li tino ke vardesan sidu ramura, famli. Li tino nosi resodalura. Zarkuhataza yuta resodalu!” <sup>[c07-p0114 · medium]</sup>
+Maivo po milobema: “Ola ka li tino raho ka vardesan sidu ramura, famliti. Ola ka li tino raho nosi zarkuhataza taivo yuta resodalu!” <sup>[c07-p0114 · high]</sup>
 
 Zafra, maivo po demroda, ata po resodalura saivo en doli poka seca. Saivo po resora ata po pebuhatapa gase minvafamliti, ata po senosia nayo saivo resora: “Kepi, kepi, teklata!” <sup>[c07-p0115 · high]</sup>
 
-Eho, eho, li zirkiti ke bansasan! Venreva! Ata maivo futu venreva krotiapo una mambi. Ola ka benasan ki? Maivo nedunia doli una seca kopisa vizufarlava baba benasan coda, voyu taivo de vilnetiri raho roni telbata sidu lovula maivo de mavo! <sup>[c07-p0116 · medium]</sup>
+“Eho, eho! Li zirkiti ata li larbolazusan peli ke bansasan! Pagopa intra li Rinbavemi! Ata maivo futu venreva intra ito krotiapo una mambi. Ola ke benasan ki? Maivo nedunia doli una seca kopisa vizufarlava ata pensapa somi-coda raho ka benasan, voyu taivo de silrosan vilnetiri raho roni telbata sidu lovula maivo de mavo!” <sup>[c07-p0116 · medium]</sup>
 
 Maivo dagi gonbiga taivo de domlu ki? <sup>[c07-p0117 · high]</sup>
 
-Maivo po vaku li bitilumi lumila, ata po donuda saivo li regnajuba de lordi en baba nimu raho ka sambasan ko maivo de nimu, ata ito de patutiri po ke ramusan en maivo de divmapatu. <sup>[c07-p0118 · medium]</sup>
+Maivo po vaku li bitilumi venreva, ata maivo po donuda li regnajuba ala saivo vobi baba sernasamba de li nimu raho ka maivo de nimu. Toda li patutiri de ola nimu po gome sasvasia en maivo de divmapatu. <sup>[c07-p0118 · medium]</sup>
 
 Pagopa! Maivo futu yave-venreva ko taivo ola-pago. <sup>[c07-p0119 · high]</sup>
 
@@ -1914,9 +1914,9 @@ Maivo po vaku saivo de vanajubasabaye loya rubilumi gase baba mirusovlasan yumli
 
 Taivo kendejomruka, iya li zirkiti! Taivo kendejomruka ko maivo, ata maivo futu ka taivo de harlujomrulive seye. Taivo ke vuzilordisan ki? <sup>[c08-p0009 · high]</sup>
 
-Amanda po namreyebania. Saivo de yelmisan vilneri po gome zayuza. Saivo po ne tefa vimova somi-coda loki. Li follutelne de Violetica po gome cunukersoca yuta antizi una kopisa li cunuasa raho ke benanasan, loya benasan, nara ito po ka menu benasan tamo li mavozayu raho amor po bitifarlaba. <sup>[c08-p0010 · low]</sup>
+Amanda po namreyebania. Saivo de yelmisan vilneri po gome zayuza. Saivo po ne bodu vimova somi-coda. Li follutelneri de Violetica po gome cunukersoca yuta antizi una, kopisa li benanasan cunuasa loya li benasan cunuasa. Narli, itori po ne povi sambasia li mavozayu raho gome bitifarlaba gagu amor. <sup>[c08-p0010 · medium]</sup>
 
-Maivori po hiro nevrania transa li navu la ruli vizusan, gase veluralnori. Maivori de yugeri po ke en faruri raho ke gase vio. Maivo po ke baba lunovurfa raho ke violumi. Maivo po nevrania la vizusan gase baba veluralno ko dorva en maivo de vilneri. Ata Amanda po voprava la divmanasan, nayo saivo po telvo loya lisrodozasan nevi li zeldo de li zefro. Maivori po roni ralnora transa muya centa valmilornu de numo, su baba zefrosevu raho ke gase li zayumodo de Yupiter. Ito po gome cunukersoca yuta megalumi, ata reve yuta megalumi, la mirucolbisan. <sup>[c08-p0011 · medium]</sup>
+Maivori po hiro nevrania transa li navu la ruli vizusan, gase veluralnori. Maivori de yugeri po gome velmava yuta faruri raho ke sambapatusan ko li vio. Maivo po ke baba lunovurfa. Maivo po nevrania la vizusan gase baba veluralno, ko dorva en maivo de vilneri. Ata Amanda po roni voprava en modona, nayo saivo po telvo loya lisrodozasan nevi li zeldo de li demrosan zefro. Maivori po roni ralnora transa muya centa valmilornu de numo, su baba zefrosevu raho sambasia li zayumodo de Yupiter. Ola zayumodo po gome cunukersoca megalumi-krono la mirucolbisan, ata ito po gome cunukersoca megalumi-krono reve. <sup>[c08-p0011 · medium]</sup>
 
 “Taivo po ramumomvira li yuso de li nalfari la ruli levasan ki? Vismava li lekta de codari raho taivo povi codaca! Taivo vimosudeva gase li zirkiti nayo taivo ralnora ola-modo.” <sup>[c08-p0012 · high]</sup>
 
@@ -1932,7 +1932,7 @@ Hema, nosi miyo baba telnekezulalle: “Li devisan farlapukuri ne povi gome yuso
 
 “Eho. Maivori futu loki ralnora en ki-muya minota ki?” <sup>[c08-p0018 · high]</sup>
 
-“Zabo! Ito teklata, hema… pendi eli-krono!” <sup>[c08-p0019 · low]</sup>
+“Hoyo! Ito apoka fututi… eli-krono!” <sup>[c08-p0019 · medium]</sup>
 
 Zafra, maivori po pidihatapa baba lumisan tobra, gase baba vemiasasan mirusovla, ata baba pagotranasonbu po rivora maivori nayo maivori po pagotranapa ala baba regnadomlu raho gome bimneba yuta yelmisolori ata vanajuba ata aurumijuba. Li bimnedomlu po ka baba yugeasasan zirkisan lumisirmo ata baba monruzupasan cirsi. Ito po ke ruli paralosan. Maivo po roni vizufarlava. Ola ke benasan ki? Maivori po lisrola en li nazru de ola regnazupa, ata saivo de nemesan valla po zoguza ala maivori nayo maivori po venreva ala saivo. <sup>[c08-p0020 · medium]</sup>
 
@@ -1940,7 +1940,7 @@ En li lelde de li regnazupa, po miyo baba mellisan nela de Siklopa. Saivo po tov
 
 Li tarnuregna po ke ruli nemesan, ata saivo po zoguza ko neme, ata li nemesan zogu de saivo po fulefa saivo de regnazupa: “…Maivo po momvima maivo de liralavra, maivo de liralavra, maivo de violavra.” <sup>[c08-p0022 · high]</sup>
 
-Maivo po regnasenora: “Kavbika maivo, iya nelati! Maivo ka li nela raho donuda taivo de kendejomru. Maivo de pebutiri ke molusan ata nedunia somu.” <sup>[c08-p0023 · low]</sup>
+“Kavbika maivo, iya mellinasan nelati!” maivo po regnasenora. “Li mellinasan pebutiri de li nela raho po donuda taivo li kendejomru, ke molusan, ata itori nedunia somu.” <sup>[c08-p0023 · medium]</sup>
 
 Amanda po manliravnuma maivo la lavisan, ata saivo po palvipa maivo su saivo de menso. Maivo po veseva ala saivo de felbe: “Saivo ka li tarnuregna de Siklopa. Saivo timruta. Masuma saivo ki-kasa!” <sup>[c08-p0024 · high]</sup>
 
@@ -1952,9 +1952,9 @@ Amanda po masuma: “Ito de nole ka ki-coda ki? Ito vimosudeva ki-modo ki?” <s
 
 Saiklops po zayuza yuta saivo de zayulumi. Li zayulumi po sudesia baba rivlasan vimosude de li violavra. Li violavra po lirala baba lira de vinye ko laviasa, gase baba ganreasasan lavra raho ka viofurotisan. <sup>[c08-p0028 · low]</sup>
 
-Amanda po masuma: “Li vardetarnu de li renli ke ki-pago ki, iya zilenela Siklopa?” <sup>[c08-p0029 · medium]</sup>
+“Li vardetarnu de li renli ke ki-pago ki, iya tarnusan zilenela Siklopa?” Amanda po masuma. <sup>[c08-p0029 · high]</sup>
 
-Saivo po pagopa ala li solopusa de lamsa. Saivo lisrola en saivo de farumonru raho donuda lamsa ala li navu. Maivo ne povi turnata saivo de regnapago, nara maivo povi donuda taivo baba nulu ala li pagolelde entre maivo de kezu ata saivo de kezu. Taivo futu nedunia baba kadu kopisa pagopa transa saivo de narvozayusan lesma la sasvasan. <sup>[c08-p0030 · low]</sup>
+“Saivo po pagopa ala Blastedsands. Ola-pago, saivo lisrola en saivo de farumonru. Saivo de farumonru donuda lamsa ala li navu. Maivo ne povi turnata saivo de regnapago, nara maivo povi donuda taivo baba nulu ala li pagolelde entre maivo de kezu ata saivo de kezu. Taivo futu nedunia baba kadu, kopisa jomruja la sasvasan transa saivo de narvozayusan lesma.” <sup>[c08-p0030 · medium]</sup>
 
 Ki-kasa li vardetarnu de li renli tovota baba lesma ki? Saivo ne suvi tovota muya miru ki? <sup>[c08-p0031 · high]</sup>
 
@@ -1979,7 +1979,7 @@ Ata maivori ne tovota ralkabitiri. Boldroki, olari narvoasasan nelari de solo, v
 
 Maivori povi diyida hupi li lesma ki? <sup>[c08-p0041 · high]</sup>
 
-Taivo de yalmu ne povi sasvasia taivo en muya deya, linu. Nayo taivo kavbika maivo su taivo de yugenulu, taivo de yalmu ne povi sasvasia taivo seye. Maivori nedunia zarkunari en eli kendejomru. <sup>[c08-p0042 · medium]</sup>
+“Iya linu, taivo de yalmu ne povi loki dozada taivo deya krotiapo deya. Nayo taivo kavbika maivo su taivo de nazru, ito ne povi dozada taivo seye. Maivori nedunia zarkunari en eli kendejomru.” <sup>[c08-p0042 · medium]</sup>
 
 Taivo ne ke tonsi bondosan. Maivo lukadapala fime maivo viki vazdi diyida ko taivo. Yava telbata ola! <sup>[c08-p0043 · medium]</sup>
 
@@ -1989,7 +1989,7 @@ Maivo povi vazdi diyida. Yava pagopa, Alianii! <sup>[c08-p0045 · medium]</sup>
 
 Eho. Hemluha taivo de nalfari! Ata maivo futu telvo keleka hupi taivo la mosa benasan. Si maivo ralnora da taivo en li cemnu de li diyi, ata si maivo loki miyo, kasa maivo ka taivo de zayulazu, taivo povi hemluha maivo de nole kopisa vaku maivo venreva ala taivo de silda. <sup>[c08-p0046 · high]</sup>
 
-Maivo po loki ke baba lunovurfa, ata maivo po loki ke violumi. Ola po ka maivo de lorelivnasan sovla, kube maivo po ka baba pilosan volme. Maivo po pavrupa su Amanda de nazru. Ata maivo po lemudonula saivo fime saivo pavrupa ala li navu. Ata maivo po lemudonula saivo fime saivo yusoya saivo de zayu, kopisa saivo punepa li teru la kasi polvasan. Saivo futu musi lavrala en poka minotari, kopisa paripa li salru. Saivo futu nedunia ola salru kopisa sevusia su li vayeri de Vesterli. <sup>[c08-p0047 · low]</sup>
+Maivo po loki ke baba lunovurfa, ata maivo de colbi po ke violumi. Ola po ka maivo de lorelivnasan sovla, kube maivo ka baba volmepilo. Maivo po pavrupa su Amanda de nazru. Ata maivo po lemudonula saivo fime saivo pavrupa ala li navu, ata fime saivo yusoya saivo de zayu, kopisa saivo punepa li teru la kasi polvasan. Saivo futu nedunia sidu farlafa lavradobori en gase tressa minota, kopisa paripa li salru raho saivo nedunia. Saivo futu nedunia ola salru kopisa sevusia su li vesnodarnosan vayeri. <sup>[c08-p0047 · medium]</sup>
 
 Maivo po yusoya eli vizusan mambi kopisa donuda baba mambicuza ala Saraswati, kopisa masuma ki-oro saivo desida sidu pagopa ko maivori. <sup>[c08-p0048 · high]</sup>
 
@@ -2017,7 +2017,7 @@ Taivo futu nedunia baba sabeasasan lemudonuyo. En eli vemi, miyo doli poka lemud
 
 Maivo futu masuma cono en li vila. Si maivo masuma doli una cono, saivori sahi donuda maivo ito. <sup>[c08-p0060 · high]</sup>
 
-Tonsi, saivo po navdinia nami ola-modo muya-krono. Saivo po tovota poka cono eli-pago ata ola-pago. Saivo po conodonuca itori ala Kuikmil vobi buza mufe. Maivo po ke menu nemesan kasa Gild po ne donuda saivo cono vobi nami. Saivo po ka baba Denmate. Maivo po ne sabesia ola la tikusan. Maivo po sabesia fime saivo po ka ruli salrunasan en Gild. Nara saivo po gome sasvasia somi-modo. Nara saivo po ne tovota nami, ata ola ne ka sasvasan mufe. <sup>[c08-p0061 · low]</sup>
+Tonsi, saivo po navdinia nami ola-modo en li mellipatu de li deyari. Saivo po rillira poka cono eli-pago ata ola-pago. Saivo po conodonuca itori vobi li buza de Kuikmil mufe. Maivo po ke menu feyusan kasa Gild po ne donuda cono ala saivo vobi nami. Saivo po ka baba Denmeit. Maivo po ne sabesia pendi li lumivera de ola. Maivo po sabesia doli eli: saivo po ka ruli salrunasan en Gild. Nara saivo po ke sasvasan somi-modo. Ata maivo pensapa fime baba nela raho ne navdinia nami, ne ke sasvasan. <sup>[c08-p0061 · low]</sup>
 
 Maivo ne sabesia eli cono raho taivo senosia. Li conorivla de li solopusa ka Volkoin. Ata li nimuyori ne donuda cono yasmo. Taivo nosi nedunia baba lideolordi, iya linu. <sup>[c08-p0062 · high]</sup>
 
@@ -2029,7 +2029,7 @@ Maivori po kezuvenreka en Sandicus, ata maivo po ke lalvusan kasa Saraswati po v
 
 Maivo po donuda saivo baba vizusan silbeseno: “Taivo tefa rillira ki-muya lombilordiri ki? Taivo ramura ki-muya lombilordiri ki?” <sup>[c08-p0066 · medium]</sup>
 
-“Maivo tefa rillira unzira-ocha-mililumi-nivacenta-sesazira-penta lombilordiri, ata maivo ramura gase penta-mililumi poye. Taivo ki?” saivo po relsira la navufarusan. <sup>[c08-p0067 · low]</sup>
+Saivo po relsira la ruli vizusan, gase navufaru: “Unzira-ocha-mililumi-nivacenta-sesazira-penta. Gase penta-mililumi poye. Taivo ki?” <sup>[c08-p0067 · high]</sup>
 
 Maivo po revo-silbesia saivo baba simvosovlasan solonela de lorefavrori raho milobema, resora ata lavila. Maivo po yanoya baba Hindusan vanilorditi, kopisa ito vimosudeva gase maivori de devosan lavbularda raho tovota muya fasbiri. Maivo po nosi ne ka Indiyasan. Nara maivo simvosia maivo sela gase Hindu seye. Nevi maivo po ne tefa senosia ola ko Saraswati. <sup>[c08-p0068 · medium]</sup>
 
@@ -2037,7 +2037,7 @@ Maivo po revo-silbesia saivo baba simvosovlasan solonela de lorefavrori raho mil
 
 Maivo de relsiseno po ka baba ruli vizusan vilnepeli, ata maivo po surusia saivo en li cemnu de li vila. Saivo po ne ka molusan. Saivo po velmava baba ramulordisan Hindusan zilevelma de ruhesan numori. Li navufaru po ruherilura. Ito po rivlara transa li tibipavma raho ke shada ata shadalumi. Saivo de fasbi po ne tranata, nara saivo de vilne po ke shadalumi. Saivo de sabaye po ke li navufarusan azuri. Faruyelmiri de navufaru po ke en saivo de sabaye. <sup>[c08-p0070 · medium]</sup>
 
-Amanda po masuma ko bapi: “Vimova! Li zayuyo de navufaru! Taivo pensapa fime saivo futu lemudonula maivo ki?” Maivo futu verasenova fime Saraswati de vimosude po ke ruli vanisan. Saivo po ke vanisan ata silrovanisan. Saivo de vilne po ke shadalumi, ata saivo de fasbi po ke molusan, ata itori po pavepa maivo. <sup>[c08-p0071 · low]</sup>
+“Vimova! Ola ka li navufaruzayuyo! Taivo pensapa fime saivo futu lemudonula maivo ki?” Amanda po masuma la belfinasan. Maivo futu verasenova fime Saraswati de bitifarlasan vimosude po ka ruli vanisan la lardasan. Saivo de vimosude po ka vanisan ata silroasasan. Saivo de vilneri po ke shadalumi, ata saivo de fasbisan simvopaturi po ke damrunasan. Maivo po hiro sabesia fime itori po tivrota maivo hoyo. <sup>[c08-p0071 · medium]</sup>
 
 Maivo po tranasovlata da baba lunovurfati raho ke violumi ala baba zavmesan dorvalordisan sovla. Eli sovla po ke kasi sambasan ko baba ruli mellisan loterokezusan viofarvibudi. Maivo de colbi po ke sambasan ko ito de colbi. Amanda po surusia maivo de dorvari, ata po keleka su maivo. Maivo po derdida ala Saraswati, ata maivo po teklata pendi kroti maivori venreva ala saivo. Sara po pavepa baba navufarusan vinye ata po hiro vinyeva ito. Saivo po vaku numotiri venreva. Li numotiri po renlira ata po navufaruhatania lumiyelmitiri de navufaru. <sup>[c08-p0072 · medium]</sup>
 
@@ -2051,7 +2051,7 @@ Maivo po silbesia saivo somi sernari, ata saivo po senosia li una-ne seno: “Li
 
 “Sara ki?” <sup>[c08-p0077 · high]</sup>
 
-“Maivo ka li zayuyo de navufaru! Maivo de noleasa ka sabe raho Deviasa tovota. Taivo musi vardeva li lanvefarvi kopisa yusoya ito. Taivo dagi hemluha maivo yuta li nole de lemudonuyo.” <sup>[c08-p0078 · low]</sup>
+“Maivo ka li navufaruzayuyo! Maivo de lumiasasan nole ka sabe raho Deviasa tovota. Taivo musi vardeva fime taivo dagi yusoya ito. Taivo dagi hemluha maivo yuta li nole de lemudonuyo.” <sup>[c08-p0078 · high]</sup>
 
 Amanda po farufasbifa: “Yade, lemudonuyo. Taivo futu lemudonula maivo ki? Maivo ne sabesia somi zayu sabri li diyi. Eli ka toda-coda raho Alianii po donuda maivo.” <sup>[c08-p0079 · high]</sup>
 
@@ -2063,7 +2063,7 @@ Maivo po revo-tranasovlata ala maivo de mellinasan lunovurfa da baba ruli mellis
 
 Saraswati de dossa vilne raho ke shadalumi, po lallela nayo saivo po lumrala saivo de dossa vilnetibi raho po gome tibita la ruli pensasan. Saivo po senosia: “Tressa deya! Ki-eli jomru! Maivo po pensapa fime li jomru po ke doli gase seta oro ocha lornu.” <sup>[c08-p0083 · low]</sup>
 
-Saivo po senosia baba seno de li namilornu ata li nullo de lumisovlasan vimotelne. <sup>[c08-p0084 · low]</sup>
+Saivo po favrofa li namilornu ata li nullo de lumisovlasan vimotelne la verasadosan. <sup>[c08-p0084 · medium]</sup>
 
 Maivo po vilnepeliva ala saivo ata po silbesia saivo baba silrosan silbeseno, ata po senosia: “Taivo musi vaku saivori tinsata. Taivo senosia fime li jomru ka tressa deya, taivo vaku dossa veluralnori nevrania, ata taivo vaku baba farusebi nevrania poye. Lanto, saivori ne sabesia ki-coda kronovenreka, ata saivori amora ito.” <sup>[c08-p0085 · medium]</sup>
 
@@ -2071,17 +2071,17 @@ Saraswati po ravnura la dorvasan. Li krono po loya vizunasan, ata li vizu de ito
 
 Amanda ata maivo po vilneva ko bapi fuyi, ata krotiata maivori po senosia en sambakrono: “Una lornu ki?” <sup>[c08-p0087 · high]</sup>
 
-Saraswati po pebupa una pebu su li teru, ata po senosia la lirbusan: “Si taivo reve masuma maivo, ito futu loya dossa lornu, ata maivori futu rillidonura maivori de zayu doli ola-krono.” <sup>[c08-p0088 · medium]</sup>
+Saraswati po pebupa una pebu su li teru la ruli zogusan. Saivo po yugenuluya, ata saivo po senosia la lirbusan: “Si taivo reve masuma maivo, li una lornu futu loya dossa lornu. Krotiata, maivori futu rillidonura maivori de zayu. Maivori futu ne rillidonura ito kroti ola.” <sup>[c08-p0088 · medium]</sup>
 
 Maivo po donuda saivo baba silbeseno: “Maivo sela tovota doli poka sulnosove kopisa lasopensala en penta minota, en unzira minota. Saivo tovota unzira montafama, hema… ki-modo saivo futu povi semnesia la teklasan en una lornu ki?” <sup>[c08-p0089 · high]</sup>
 
 Saivo po relsira: “Vimova maivo! Eli ka taivo de livna, si taivo desida sidu lisrola ko maivori, oro taivo desida sidu yusoya eli kronomelli kopisa dorvalordida taivo de lemudonu.” <sup>[c08-p0090 · medium]</sup>
 
-Maivo po pensapa eli. Ata maivo po yusoya baba lorevasko, kopisa Amanda ne vimova maivo de timruhavli en maivori de velmakovapago. Maivo po lasopensala ko Amanda seye. Eli deya po ke una de li apoksan deyari de saivo. Saraswati, baba rivosan lemudonuyo, po povi vismava maivo de lorevasko, ata saivo sela po yusoya baba lorevasko. Tu saivo po timruta. <sup>[c08-p0091 · low]</sup>
+Maivo po pensapa eli. Ata maivo po vilnelalleva baba lorevasko, kopisa tekvu Amanda vimosudeva gase baba nela raho hiro timruhavlita en maivori de velmakovapago. Maivo viki lasopensala ko Amanda yasmo. Eli deya po ke una de li apoksan deyari de saivo. Tu Saraswati po ka lemudonuyo. Tonsi, saivo po povi vismava maivo de lorevaskosan velso, ata saivo sela po vilnelalleva baba lorevasko. Tu saivo po roni timruta. <sup>[c08-p0091 · medium]</sup>
 
-Saraswati, li zayuyo de navufaru, po manlivayema ala Amanda, kopisa Amanda semnesia su li teru. Ata saivo po tranasovlata Amanda de Neohindusan velma ala baba ruli lumisan vanavelma. Ito po lumila gase baba velma de yelmisan fojo. Saraswati po semnesia la lasopensasan, ata saivo po vaku maivori semnesia la sambasan. Maivo po tranasovlata maivo sela ala maivo de gudosan sovla, ata maivo po reve ke baba minva. Nara maivo po velmava baba ramulordisan zilevelma de Hindusan tino. Ito po tovota muya patu raho po ka vio. Sara po donuda maivo baba silbeseno de jurevilore. Maivo de mavozayu po sovlasia maivo de zilevelma, ata saivo po jureviloreja ito. <sup>[c08-p0092 · medium]</sup>
+Saraswati, li navufaruzayuyo, po finifa li teru ala Amanda, kopisa Amanda semnesia su ito. Ata Saraswati po tranasovlata li velma de Amanda. Ito po loya baba vanavelma, ata li vanavelma po ka lumiyelmisan. Ito po lumila gase baba velma de yelmisan fojo. Saraswati po semnesia en baba sovla de lasopensa, ata saivo po vaku maivori semnesia la sambasan. Maivo po tranata, ata maivo po loya maivo de gudosan minvasan simvo, nara maivo po velmava baba ramulordisan zilevelma de Hindusan tino. Li zilevelma po tovota muya patu de li vio. Sara po donuda maivo baba silbeseno de jurevilore. Saivo po jureviloreja maivo de mavozayu en li sovla de li zilevelma. <sup>[c08-p0092 · high]</sup>
 
-Sara po senosia, nayo saivo resora: “Amanda, taivo lasopensala la kasi benasan tamo Alianii! Ali, fisa, telbata sidu sovesia! Taivo ke ruli solosan! Yanoya taivo de finivu ko taivo de fini raho finifa, ata havliha, surusia mavosove ata demrona en taivo de lore, sevresia taivo de vilneri, ata lenila li melo!” <sup>[c08-p0093 · medium]</sup>
+“Amanda, taivo lasopensala la kasi benasan tamo Alianii!” Sara po senosia, nayo saivo resora. “Iya Ali, telbata! Telbata sidu sovesia taivo sela! Taivo de yuge ke ruli solosan! Yanoya taivo de finivu ata taivo de una-ne fini, ata havliha, ata surusia lorevemisan sove ata lorevemisan demrona, ata sevresia taivo de vilneri, ata lenila li melo!” <sup>[c08-p0093 · high]</sup>
 
 Saraswati po pelipa baba ramucuza de vinyesonbu de saivo, en ruli salrunasan sonbumelli, ata maivori po ne lenila ito. Saraswati po vaku maivori mavoma li sonbu. Saivo po lumrala ito la vizunasan, ata ito po loya kasi zogusan, tuni maivori po lenila doli ito. Maivori de vilneri po ke sevresan, ata maivo po ke en li sonbu. Kasa maivo po donuda li regnajuba de lordiyo ala Saraswati vobi li bioramu de lemu, saivo po povi bapiba maivo nayo maivo de vilneri po ke sevresan. Li melo po ke ruli zogusan, ata ito po teklata, ata baba lornu po pagopa, ata maivori po lallela maivori de vilneri. <sup>[c08-p0094 · medium]</sup>
 
@@ -2094,7 +2094,7 @@ Maivori po vilnelalleva. Maivori po navdinia fime maivori roni lasopensala intra
 
 “Ki-pago Sara po pagopa ki?” <sup>[c08-p0098 · high]</sup>
 
-Maivo po mensolumrama: “Maivo ne sabesia li pago de li navufaruzayuyo, nara eli lavbupago ka milnovardesan seye. Vilneva li ruheri raho ke en maivori de rinbapago! Ki-pago taivo povi lemula eliri zayuri sabri eli-pago? Li zayuyo po ravnura li diyisan polva da taivo ki?” <sup>[c08-p0099 · medium]</sup>
+Maivo po mensolumrama: “Maivo ne sabesia li pago de li navufaruzayuyo, nara eli lavbupago ka milnovardesan seye. Vilneva maivori de rinbapagosan ruheri! Ki-pago taivo povi lemula eliri zayuri sabri eli-pago ki? Li zayuyo po ravnura taivo de patusabe de diyi da taivo ki?” <sup>[c08-p0099 · high]</sup>
 
 “Zabo, saivo po maskayalmuma maivori! Taivo senosia vera! Ki-kasa li zayuyori telvo maskayalmuma taivo toda-krono ki?” <sup>[c08-p0100 · high]</sup>
 
@@ -2130,7 +2130,7 @@ Saraswati ata maivo po donuda silbeseno fuyi, nayo Amanda po lavila sidu lemula 
 
 “Saivo futu loki ke zayusan en una oro dossa lornu mufe. Saivo nosi ke zayusan en kasi lornu. Maivori tovota somi kronomelli kopisa lideolordila li venresan lektamambi de Rinbavemi. Ata maivori futu senosia li nullo de vimotelne. :)” <sup>[c08-p0116 · medium]</sup>
 
-Hema, maivo tinsata. Taivo futu donuda somi navufarusan mavojuba ala saivo, kopisa saivo povi ralkara li vardetarnu de li renli, ata saivo navdinia li violavra, ata saivo revo-donuda ito ala li tarnuregna raho tovota una vilne, ata krotiata saivo navdinia saivo de kendejomrupelicono ki? <sup>[c08-p0117 · medium]</sup>
+Hema, maivo roni tinsata fime taivo futu donuda somi mavojuba de navufaru ala saivo, kopisa saivo povi ralkara li vardetarnu de li renli, ata saivo povi ravnura li violavra, ata saivo povi revo-donuda ito ala li tarnuregna raho tovota una vilne, ata krotiata saivo povi rillira saivo de kendejomrupelicono ki? <sup>[c08-p0117 · medium]</sup>
 
 Maivo resora. Kendejomrupelicono ki? Ki-coda saivori yusoya itori ki? <sup>[c08-p0118 · high]</sup>
 
@@ -2142,7 +2142,7 @@ Li linuri nedunia harlujomru, Alianii. Yesta li linuri raho taivo talita ko saiv
 
 Poye. Maivo amora sidu lemudonula saivori li corvisan ralka, ata maivo amora sidu lemudonula saivori li folluna. <sup>[c08-p0122 · medium]</sup>
 
-Sara po senosia ko milobesan lorefavrori: “Maivo tinsata fime ito ka sambasan ko taivo de sambanole, Alianii. Eli nole ka tu maivo de lorelivnasan nole. Toda-krono, maivo po pensapa: taivo velmava taivo de vanajubasabaye ata taivo de viovilne la zilesan, ata ola ke ruli benasan.” <sup>[c08-p0123 · medium]</sup>
+“Maivo tinsata fime eli ka sambasan ko taivo de sambanole, li Alianii,” Sara po senosia ko milobesan lorefavrori. “Saivo ka tu una de li lorelivnasanri de maivo. Toda-krono, maivo po pensapa fime taivo tovota li vanajubasabaye ata li viovilne la ruli lumiyelmisan.” <sup>[c08-p0123 · medium]</sup>
 
 Fisa, vilneva saivo! Saivo roni vinyeva la zirkisan. Maivo futu lenila ola vinye muya-krono mufe. Yesta kube maivori somusia, ito futu vaku maivori ramura taivo. <sup>[c08-p0124 · medium]</sup>
 
@@ -2154,7 +2154,7 @@ Maivori futu roni bitifarlaba somi bioramu vobi taivo ata Amanda. Maivori tovota
 
 Amanda ata maivo po tovota sasvalansiri. Li sasvalansiri po roni lideolordila divmasenosan patutiri en li ganreasa vobi Amanda ata vobi maivo. <sup>[c08-p0128 · high]</sup>
 
-Saraswati po senosia: “Ata, Alianii, fututi, taivo taro-pagopa baba mellisan ruhe. Ito ke ruli mellisan; nuna-nela povi nafenia ito. Ke sovesan ko eli! Maivo futu yanoya kasi lirari ala li lektamambi de melo. Taivo povi teki talita en baba krono. Taivo povi sovesia taivo sela. Taivo povi lektala doza, ata taivo povi maivoma. Taivo povi lisrola eli-pago en toda li krono, ata roni vimova saivo ligo saivo. Nara si taivo bodu teklata li krono oro lalnila ito, taivo musi tu mavoma taivo sela. Lisrola eli-pago vobi saivo, Alianii, nara tu mavoma taivo sela!” <sup>[c08-p0129 · medium]</sup>
+Saraswati po senosia: “Alianii, ata fututi, taivo futu pagopa transa muya bioramu. Ito futu ke kasi mellisan tamo toda-coda raho somi-nela povi nafenia. Ke sovesan ko eli! Maivo futu yanoya kasi melofarlari ala li lektamambi de melo. Ata taivo povi ravnura somi kronomelli voyu tali. Ata taivo povi ke sovesan ko taivo sela. Ata taivo povi lektala doza, ata taivo povi maivoma. Taivo povi lisrola eli-pago en toda li kronomelli; taivo povi roni vimova ligo saivo. Nara si taivo roni bodu teklata li kronorivla, oro taivo roni lalnila ito, taivo musi tu mavoma taivo sela. Lisrola eli-pago vobi saivo, Alianii, nara mavoma tu taivo sela!” <sup>[c08-p0129 · medium]</sup>
 
 Maivo po namreyebania, ata saivo po masuma maivo de manli, ata saivo po tivrota maivo de manli, ata maivori de finiri po ke yanosan. Saivo de vemiti po zayuza Amanda la holbasan. Saivo po lemula melo da baba liradevi raho maivori po farlafa la ruli manlisabesan. Li liradevi po jubaja vani ata amor ata sove ala Amanda, ata itori po loya cirsisan lavi. <sup>[c08-p0130 · medium]</sup>
 
@@ -2185,9 +2185,9 @@ Taivo ke masunasan fime taivo desida ola ki? Yuta doli una kendejomrupelicono de
 
 Zabo. <sup>[c08-p0143 · high]</sup>
 
-Eho, hema, maivo ke sorasan ala taivo, tonsi, maivo futu lesvu taivo tovota li sabaye raho ke rubilumi gase yumliti, kasa ito ke linuvanisan su taivo. Ola ke benasan ki? Taivo dagi tovota tu rubivilne ata rubilumi vilneri, ko li viovilne raho maivo po donuda taivo voyu dapa. <sup>[c08-p0144 · low]</sup>
+Eho. Hema, maivo lavila taivo. Tonsi, maivo futu lesvu li rubilumi de yumliti lisrola su taivo, kasa ito ke linuvanisan su taivo. Ola ke benasan ki? Taivo dagi tovota tu rubivilne ata rubilumi vilneri. Itori futu gome yanoya ala li viovilne. Maivo po donuda li viovilne ala taivo voyu dapa. <sup>[c08-p0144 · low]</sup>
 
-Amanda po jurevija maivo, ata saivo po vaku saivo de sabaye loya vanajubasan reve. Saivo po masuma: “Li lornu ke ki-coda ki? Ki-kasa taivo vaku taivo de domlusan kronobiti lisrola ki?” <sup>[c08-p0145 · medium]</sup>
+Amanda po jurevija maivo, ata saivo po vaku saivo de sabaye revo-tranata ala vanajuba. Saivo po masuma: “Li lornu ke ki-coda ki? Ki-kasa taivo po vaku taivo de domlusan kronobiti teklata ki?” <sup>[c08-p0145 · high]</sup>
 
 Saivo po ka baba vimosan linu. Maivo po sahi yalmusevreya li kronobiti en maivo de domlu eli-kasa, kopisa povi tikuta li krono ola-modo ata farlafa baba tikusan norusan nafevemisan bioramu. Nara toda-krono, maivo po relsira la verasan, kube saivo po masuma. <sup>[c08-p0146 · high]</sup>
 
@@ -2197,11 +2197,11 @@ Eho. Maivo mebanema. Ola po ke ruli pelilavisan. Taivo pensapa fime Sara futu pa
 
 Masuma saivo! <sup>[c08-p0149 · high]</sup>
 
-Saraswati po ke en li volmesan vismatali, nara saivo po loya codasan. Saivo po semnesia en saivo de navufarusan zilevelma su maivo de viosemnebiti, ko baba lavimilobe. <sup>[c08-p0150 · medium]</sup>
+Saraswati po ke en li volmesan modo. Ito de loterosan nole ka li vismatalisan modo. Krotiata saivo po loya lumipusa. Saivo po roni semnesia su baba viosemnebiti de maivo, en saivo de navufaruvelma, ko baba milobevu. Saivo de una damva po ke su saivo de loterosan damva. <sup>[c08-p0150 · high]</sup>
 
 “Taivo desida sidu duvlada kopisa sapusia ko maivori ki, Sara? Maivo po sapusia nuna-coda sige maivo po sapusia li mernonami.” <sup>[c08-p0151 · high]</sup>
 
-Saraswati po relsira: “Ola ka ceresan, minvalinu! Taivo viki desida ki-coda ki? Maivo po lenila fime li namizupa roni codaca baba ruli gudonasan coda eli-krono. Toda-nela velmava maskavelma. Taivo desida sidu velmava baba verasan navufarusan zilevelma, gase maivo de zilevelma ki?” <sup>[c08-p0152 · medium]</sup>
+“Ola ka verasan seye, minvalinu,” Saraswati po relsira. “Taivo viki desida ki-coda ki? Maivo po lenila fime li namizupa roni codaca baba ruli gudonasan coda eli-krono. Toda-nela ke en maskavelma. Taivo desida sidu velmava baba navufaruvelma ki? Ito viki ka sambasan ko maivo de navufaruvelma, nara ito viki ka verasan ki?” <sup>[c08-p0152 · medium]</sup>
 
 Saraswati po senosia baba lumivelma, oro baba favrodivmasan lamsapavmasan velma raho ka doli baba vimolavlo en li sovla de favrodivmasan tibipavma. <sup>[c08-p0153 · medium]</sup>
 
@@ -2215,7 +2215,7 @@ Zilenela Moseby po tikutranata li kronobitivu. Maivori po fatofa sidu duvlada en
 
 “Taivo ke ruli helviyosan. Li domlu ka taivo de domlu, ata li lanveri ka taivo de lanveri. Ola ka senoti ata senoti. Taivo ke ruli helviyosan, Sara.” <sup>[c08-p0158 · medium]</sup>
 
-Maivo de sora po silbesia maivo baba lekta de vamrisan lorefavrori. Saivo po ke ruli amorsan. Maivo po relsira yuta baba zefrokova de lore. Maivo po jureviloreja saivo, nara maivo po ne ke ruli amorsan. Maivo de mavo ata maivo de lore po ke talisan. Maivo po roni donuda maivo de surusan yalmu la mavosan. Maivo po tovota poka mambi kopisa ralnora en amor, nevi Saraswati de vani ata Saraswati de damruna. <sup>[c08-p0159 · medium]</sup>
+Una krotiapo una, maivo de sora po silbesia maivo muya lorefavrori de lomo. Itori po tovota tressa vamridarno. Saivo po ka ruli amorsan. Maivo po relsira yuta baba zefrokova de lore. Maivo po jureviloreja saivo, nara maivo po ne ka tonsi surusan. Maivo de mavo po tovota muya coda, ata tu maivo de lore po tovota muya coda. Maivo de surusan pensapolva po roni gome patupa la mavosan. Maivo po tavki ne tovota kronomelli kopisa hiro amora somi-nela, nevi Saraswati de vani ata Saraswati de molusan modo. <sup>[c08-p0159 · medium]</sup>
 
 Maivo po lallela maivo de vilne, ata maivo po lumrala maivo de namre, ata maivo po vimova fime Amanda po yave-semnesia ligo maivo. Saivo de namre po ke su maivo de menso. Saivo de manliti po tivrota maivo de una manli. Saivo de sabaye po ke baba lekta su maivo de namresomubiti, ata po rivlara la molusan. Saivo de sabaye po ne loki ke rubilumi gase yumli, ne loki ke vanajuba, nara ke shada. <sup>[c08-p0160 · high]</sup>
 
@@ -2243,13 +2243,13 @@ Zabo, maivo desida ito :) <sup>[c08-p0171 · high]</sup>
 
 Maivo po manlisonbuma su saivo de dorbi, ata saivo po nimunia maivo. Saivo de shadasabaye po ke mulyisan, ata ito po ne gome sabayebitisia, ata saivo po bodu velmava saivo de zilevelma. <sup>[c08-p0172 · high]</sup>
 
-“Miyo somi tibisevre raho vaku maivo muboma ki?” <sup>[c08-p0173 · medium]</sup>
+“Miyo somi tibisevreri raho maivo musi muboma ki?” <sup>[c08-p0173 · high]</sup>
 
 “Kepi, hema, ito yumlisan.” <sup>[c08-p0174 · medium]</sup>
 
 “Eho, iya li nimusan.” <sup>[c08-p0175 · high]</sup>
 
-Maivo po navdinia li sabayebiti raho saivo po tovota, ata maivo po sabayebitisia saivo de sabaye la molusan. Saivo po ke ruli sovesan en dossa minota, ata maivo po masuma: “Taivo pensapa fime li felra futu ka ki-modo ki?” <sup>[c08-p0176 · medium]</sup>
+Maivo po manliravnuma li sabayebiti raho saivo po tovota, ata maivo po sabayebitisia saivo la molusan. Saivo po vimosudeva fime saivo ke ruli mavosovesan ata sovesan en dossa minota. “Taivo pensapa fime li felra futu ka ki-modo ki?” <sup>[c08-p0176 · high]</sup>
 
 Maivo po mensolumrama. Maivo po tovota nuna lideo la verasan. Si zilenela Moseby po desida sidu donuda gase dozira-mililumi cono vobi li pavma de dossa zilevelma, vobi dossa nela raho po fututi turnata baba somudendu de Rinbavemi, maivo po ne pendi sabesia ki-coda zile po gome palvipa kroti li jomru de maivori. <sup>[c08-p0177 · low]</sup>
 
@@ -2267,7 +2267,7 @@ Amanda po ne senosia, nara po vizutivrova li dorbi. Saivo po pavepa ito la nilmi
 
 Baba namidonukibo po sulnosia maivori. Saivo po ke germasan ata aurumijubasan ata yelmisan, ata saivo po tovota rubilumipaturi. Saivo de vimobiti po vimosudeva ko lorefaru ata ko farufasbi. Somi kibori tovota vimolavlo de lore, ata somi kibori tovota doli verasan fasbiri. Loterosan kibori tovota doli lumivilneri, ata li colbi de itori tranata kopisa li lore vimosudeva. Li kibo po pavepa baba kurnomelobiti da li tabu de namidonu. Ata saivo po pelipa baba felrasan kezupagolira en dozira seca. Li sonbu po duvlada da saivo. Krotiapo saivo po teklata, Amanda ata maivo po yendosonbuya. <sup>[c08-p0184 · medium]</sup>
 
-Li namidonukibo po senosia: “Yeko, yeko, yeko!” Saivo po vaku maivo ramura zilenela Mosebi. Saivo po tu senosia: “Ki-eli vanisan deya kopisa maivori lavila taivo de rivo, Amandati! Taivo ke vuzilordisan vobi li felra ki? Maivori tovota muya gonbiri raho po lenila fime taivo ka corvisan, ata ke ruli vizulavisan kopisa vimova taivo.” <sup>[c08-p0185 · medium]</sup>
+“Nimunia, nimunia, nimunia!” li namidonukibo po senosia. Saivo po vaku maivo ramura zilenela Mosebi. Saivo po tu senosia: “Ki-eli vanisan deya, Amandati! Eli deya ka benasan kopisa maivori lavila sidu tovota taivo ko maivori. Taivo ke vuzilordisan vobi li felra ki? Maivori tovota muya gonbiri. Taivo de corvi po gome senosia ala saivori, ata saivori ke ruli vizulavisan, kasa saivori futu yave-venreva ko taivo.” <sup>[c08-p0185 · high]</sup>
 
 Amanda po ne masuma ola mufe. Linuri sahi masuma li felrari en saivo de yanba ki? Saivo po lavimilobela ala li kibo ko vizulavi, ata saivo po masuma ala li kibo: “Maivo de tabu ke ki-pago ki?” <sup>[c08-p0186 · high]</sup>
 
@@ -2277,13 +2277,13 @@ Maivo po namrenevrania ala li kibo la molusan. Amanda po vimova fime maivo po na
 
 Biosan ata demrosan melo po roni pelipa. Ito po ke ruli benasan vobi baba felra de linuri, ata ito po ke pelilavisan. Nara taivo po povi loki senosia nayo ito roni pelipa. Maivo po vilneva toda-pago ata po vimova baba kibo raho po tovota baba sonbutabu. Li kibo po roni velmava baba zayuyosan maskavelma raho po ke shada ata velusan. Ito po tovota tu namrevelma. Saraswati po roni velmava baba zilevelma raho po ke mosa aurumi ata shada. Li zilevelma po ke lilyasan ko bemyari ata folniri, ata li ojo nuluri po nelmonia yomla. Saivo po ke ruli colbisan ata ruli vanisan. Saivo po lumirivlala ko meralumi ata minva, la verasan. <sup>[c08-p0189 · medium]</sup>
 
-Maivo po senosia: “Taivo desida sidu pagopa ala toda-nela kopisa senosia ko saivori ki? Vimova toda li zilesan maskavelmari! Ki-eli felra!” nayo maivo dozativroda Amanda de manli la molusan. <sup>[c08-p0190 · medium]</sup>
+“Taivo desida sidu pagopa kopisa senosia ko toda-nela ki? Vimova toda li ruli benasan maskavelmari! Ki-eli felra!” maivo po vallava la vizulavisan, nayo maivo dozativroda Amanda de manli la molusan. <sup>[c08-p0190 · high]</sup>
 
 Amanda po namreyebania ata po pagopa la lorefarusan ala baba lekta de loterosan nelari. Lanto, maivo po lemula fime saivori po ka rivosan nimuyori de li gonbipago. Saivori po ke sasvasan. Saivori po ka nelari de Germayano, oro nelari de Gild, oro nelari de Germayano ata Gild. Maivo po valmiva ata po semnesia su baba semnebiti ligo Saraswati. Maivo po vimova Amanda. Saivo po yave-pagopa ko li nelari la lorefarusan. Li nelari po velmava muya loterosan maskavelmari. Una de li minvari raho po talbeta ligo Amanda, po silbesia li sonbu ala maivo, kopisa maivo povi lenila li senomiga. Maivo po semnesia vofa li nelari, ata maivo po vimova ata po lenila. <sup>[c08-p0191 · medium]</sup>
 
 “Yeko, Amanda! Taivo ke ruli vanisan, ata taivo ke sambasan ko baba ruhesan regnalinu,” saivo po senosia. Ola minvasan nela po roni velmava baba zilevelma raho po ka sambasan ko baba Karibiasan sevukezu. Ito po tovota demrosan miru ata larbori. Li larbori po rolvura. <sup>[c08-p0192 · high]</sup>
 
-Li minvasan nela po tovota sumbikezusan verdesabaye ata ojovilne. Somi simvoloreri po ke en li gonbipago de Apollo, la verasan. Saivo po senosia: “Maivo ka Hannah. Maivo ka baba riluyo!” <sup>[c08-p0193 · medium]</sup>
+Li minva po tovota sumbikezusan verdesabaye ata ojovilneri. Apollo, li gonbipago, po tovota somi gudonasan simvoloreri la verasan. Saivo po senosia: “Maivo ka Hannah. Maivo ka baba riluyo!” <sup>[c08-p0193 · high]</sup>
 
 Hannah po rilura la minvasan, ata saivo po rolvura. Saivo de zilevelma po lulfala en saivo de demro. Li buzakovati po tovota kronofuro mufe. Li kronofuro po demroda, nara ito po ne lurvaralnola. Maivo po milnoma ki-oro muya loterosan nelari roni buzaba kronofaru. Ata maivo po milnoma ki-nela sabesia li vera, ata ki-oro muya nelari sabesia ito. <sup>[c08-p0194 · medium]</sup>
 
@@ -2299,7 +2299,7 @@ Li tressa-ne nela de olari tressa po senosia saivo de nole ala Amanda. Saivo po 
 
 Taivo sabesia Blujei ata Zigon ki? Taivo ka baba cunudivmabitisan zayuyo gase saivori ki? <sup>[c08-p0200 · high]</sup>
 
-Li farusebiti raho velmava baba maskavelma, po girzega saivo de namre, ata saivo po tikutranata saivo de vilneceresolo, ata saivo po senosia: “Ito ka somi-coda gase ola poye. Maivo po talita ko olari dossa yanbanasan nelari. Olari dossa ka lumisan mavori.” <sup>[c08-p0201 · medium]</sup>
+Li farusebiti raho velmava baba maskavelma, po girzega saivo de namre, ata saivo po tikutranata saivo de vilneceresolo. “Ito ka somi-coda gase ola poye. Maivo po talita ko olari dossa yanbanasan rivori seye. Rada de saivori ka baba lumisan mavo.” <sup>[c08-p0201 · high]</sup>
 
 Amanda po namreyebania, ata saivo po ke lavisan ko eli relsi. Saivo po senosia: “Maivo futu pagopa kopisa senosia ko toda-nela. Lorejuba! Taivori de maskavelmari ka ruli benasan. Voge!” <sup>[c08-p0202 · high]</sup>
 
@@ -2310,11 +2310,11 @@ Eli po ke baba mosa colbisan felra raho povi gome nafenia, ata po ke baba lavisa
 
 ### Li penta-ne patu: li regnalinu raho velmava nullovelma
 
-Li visma ka baba resosan coda. Baba yumlisan noru ka kasi linleasasan oro menu linleasasan tamo baba gudosan pagomodo ki? Baba benasan pagomodo, oro yesta baba ruli benasan pagomodo, ka kasi desisan tamo baba noru raho ka ultra li vemi ki? Ola noru ka baba mavopagoasa raho baba kertiyo po farlafa en baba sevrekova. Si taivo povi tovota baba lordilekta de muya mililumi Pokemon en Rinbavemi, ki-coda ka li yuso de baba lunovurfa en li pagomodo ki? Ola lunovurfa ka violumi, ata ito yave-semnesia ko taivo la molusan en taivo de domlupatu. Doli li visma oro li mebanebelfi fime li pagomodo ka pagomodo, li lideo de maskana, yanoya dapa ki? Eliri ka pensanoruri, ata itori po ka baba dozaserbu vobi maivo en muya montafama. Maivo ka baba volrunasan nela en Lumiopi. Maivo ka kasi volrunasan tamo somi nelari, nara maivo de volruna ka ne gudonasan. Li apoksan nullo raho maivo po rivora Amanda en ito, po ka yesta baba kasi mellisan dozaserbu vobi maivo de lideoserbu de eli. Ola nullo po ke kroti maivori de noruvu. <sup>[c08-p0206 · low]</sup>
+Li visma ka ruli hurvosan. Baba yumlisan noru ka kasi linleasasan oro menu linleasasan tamo baba gudosan pagomodo ki? Baba benasan pagomodo, oro yesta baba ruli benasan pagomodo, ka kasi desisan tamo baba noru de baba loterosan vemi ki? Ola noru ka baba mavopagoasa en baba sevrekova, gase baba lardapatu gagu baba kertiyo. Si taivo povi tovota baba lordilekta de muya mililumi Pokemon en Rinbavemi, ki-coda ka li yuso de baba lunovurfa en li verasan vemi ki? Ito roni yave-semnesia ligo taivo la molusan en taivo de domlupatu. Doli li visma oro li mebanebelfi fime li pagomodo ka pagomodo, li lideo de li simvosan, vaku li pagomodo loya kasi dapasan ki? Eliri ka pensanoruri. Maivo po telvo mebanema itori en muya montafama, ata ola po ka baba dozaserbu. Maivo ka baba volrunasan nela en Lumiopi. Maivo de volruna ka patusan, ata ito ne ka gudonasan. Ola nullo po venreva kroti maivori de noruvu. En ola nullo, maivo po lisrola ko Amanda. Ola nullo po ka yesta baba kasi mellisan dozaserbu vobi maivo de lideoserbu de eli. <sup>[c08-p0206 · low]</sup>
 
 Finra, li mambi po venreva vobi li felra de nullovelma, ko Saraswati, Amanda ata maivo. Kube maivori po tovota li nullovelma, maivori po loya baba somulazu ata dossa pavrulazu. Kroti maivori po semnesia vobi li verasan bioramu raho maivori patudonupa, ata ito futu ne reve venreva, maivo po ramura li deya de maivori. Maivori po lisrola en poka lornu en baba velmakovapago de Rinbavemi, ata maivori po kendejomruka. Maivo po farlafa li kendejomru la vuzinasan, ata Saraswati po yanoya ito. Amanda po lavila ko li farvisan farla doli vobi saivo. <sup>[c08-p0207 · medium]</sup>
 
-Tu Saraswati de farlapukuri po ka dendusan. Saivo de lesmamiru po ka ruli colbisan ata semranasan. Tu li velmari raho saivo po lideola, po ka milnovardesan. Li manlisenosan bioramu de Sara po ka mosa milnovardesan. Sara po tefa lideola ito kroti ola, kopisa baba nela povi lemula sidu vinyeva en li favrovamri, da baba nolsasan lemuyo ala baba patusabeyo. Lanto, li lemuyo bisu vinyeva gase baba nela raho Deviasa po donuda lirafonte ala saivo. Sara ata maivo po roni pelipa Tenis yuta mellikronoti, kopisa livela Amanda en doli una oro dossa pebuvalmi toda-krono. Amanda po ke en saivo de zayumodosan harlujomru raho maivori po farlafa ko amor gase zayuyori. Krotiapo maivori de Rinbavemisan harlujomru, Amanda po lavila li sollina de baba lekta de nelari en li namizupa. Saivori po velmava saivori sela gase telnenelari. Ito po ka baba colbisan felra. Ito po gome divmada kopisa ito ka ramusan vobi baba milnoserbusan minvalinuti. <sup>[c08-p0208 · low]</sup>
+Tu Saraswati de mavozayusan donuri po ka dendusan. Saivo po farlafa baba lesmamiru raho po ka ruli colbisan ata semranasan. Ata saivo po lideola li velmari. Sara de manlisenosan bioramu po ka mosa milnovardesan. Sara po tefa lideola ito kroti ola. Ito po ka baba farlasan bioramu, li bioramu de baba nela raho lemula sidu vinyeva. En ito, li lemuyo po pagopa da baba lemuyo raho hiro lemula ala baba sabeyo de li vinye. Lanto, li lemuyo po surusia fime saivo ke lirafontesan la devisan. Sara ata maivo po roni pelipa Tenis yuta baba ruli mellinasan mellikrono. Tonsi, maivori po pebuvalmipa doli una oro dossa pebuvalmi toda-krono, kroti Amanda pebuvalmipa. Amanda po ke en saivo de zayumodosan harlujomru. Maivori po farlafa ito ko amor, gase zayuyori. Krotiapo maivori de Rinbavemisan harlujomru, Amanda po tefa lavila li sollina de baba lekta de telnenelari en li namizupa. Somi nelari po velmava saivori sela gase olari telnenelari. Ito po ka baba colbisan felra. Ito po gome divmada kopisa ito ka ramusan vobi baba milnoserbusan minvalinuti. <sup>[c08-p0208 · low]</sup>
 
 Li vesno po venreva. Maivori, li tressa nelari, po yave-semnesia su baba molusemne. Ito po ka shadalumi, ata ito po povi loya baba somubiti. Ito po ka ruli vamdusan, ata ito po bansaba vobi dossa minvari ata baba minvalinuti. Li zupa po ke baba silrovanisan lavi. Ito po tovota veluri de lumizefro, patuti raho po ka shada, ata lalnisan patuti de velunibe. Maivori po roni semnesia en maivori de velusan ganreasa. Li tobrari de vimobiti po vaku li zupa loya navuasasan ata demrosan. Maivori po tefa sapusia gudosan pitsa ko joko. Muya montari po pagopa sige maivo po sapusia pitsa la verasan. Maivo po sahi sapusia Kuikmil, ata maivo po sapusia loterosan nami la verasan poka-krono. <sup>[c08-p0209 · medium]</sup>
 
@@ -2332,7 +2332,7 @@ Maivo po nulvadalunia saivo la molusan, ata maivo po senosia: “Hema… maivo p
 
 “Kepi!” <sup>[c08-p0216 · high]</sup>
 
-Saraswati po resora la molusan: “Alianii nosi ke verasan. Li rubilumi po ke diba linuvanisan su taivo! Vanajubasabaye nosi vaku taivo vimosudeva gase baba yanbasan nela, patuti…” <sup>[c08-p0217 · low]</sup>
+Saraswati po resora la molusan: “Alianii nosi verava. Li rubilumi po ke diba linuvanisan su taivo! Vanajubasabaye nosi vaku taivo vimosudeva gase baba menu yanbasan nela…” <sup>[c08-p0217 · medium]</sup>
 
 Maivo po voprava. Maivo po fasbifa Saraswati. Maivo po donuda saivo baba pelisan larnevimo ata baba zetisan moldi. Maivo po senosia: “Zabo, zoke ki? Ki-coda ola suvi lumiverala ki?” <sup>[c08-p0218 · medium]</sup>
 
@@ -2348,9 +2348,9 @@ Amanda po zoguza ko lavi ata po resora ata po telvo du-punepa maivo. Maivo po lo
 
 Saivo po veseva reve: “Yanbasan.” Ito po ka baba resotisan finihata ala maivo. <sup>[c08-p0224 · high]</sup>
 
-Maivo po donuda saivo baba resosan masusan fasbi, ata ito po masuma: “Taivo po senosia raho maivo pensapa fime taivo po senosia ki?” <sup>[c08-p0225 · medium]</sup>
+Maivo po vilneva saivo la resosan ata la masusan. Maivo de fasbi po lumiverala: “Taivo po senosia ola-coda raho maivo pensapa fime taivo po senosia, eli-krono ki?” <sup>[c08-p0225 · high]</sup>
 
-Saraswati po ke ruli sovesan, ata saivo po sildasia maivori, ata po vimova maivori ko baba milobe su saivo de fasbi, ata saivo po tovota baba ruli mavosovesan vani, ata saivo po roni picepa li melotibiri de li vinye yuta li tikusan lalnikersori de fini la molusan. <sup>[c08-p0226 · medium]</sup>
+Saraswati po ke ruli sovesan ligo maivori. Saivo po roni vimova maivori ko baba milobe su saivo de fasbi. Saivo po tovota baba ruli mavosovesan vani. Saivo po roni picepa li melotibiri de li vinye de saivo la molusan, yuta li lalnikersori de finiri, kopisa picepa la tikusan. <sup>[c08-p0226 · high]</sup>
 
 Maivo po senosia la lasosan, nayo maivo du-vilneva da Amanda de vilne: “Li krono loya tebonasan. Yava masuma baba yumlinami, ito futu venreva eli-pago krotiapo gase una lornu. Yava bimneba ata pelipa maivori de vimotelne. Taivo yebaya ki? Krotiata, toda maivori povi pagopa ala li somu.” <sup>[c08-p0227 · high]</sup>
 
@@ -2382,7 +2382,7 @@ Maivo po senosia ko amor: “Velukaduri ne nedunia zefrovoprari, kasa miyo nuna 
 
 Sara po senosia: “Ito musi venreva ala navuvamri somi-modo; ola lumiverala fime ito musi diyida transa li zefrosevu tuni ito venreva ola-pago. Maivo pensapa fime li zefrovoprari nosi ke melvasan.” <sup>[c08-p0241 · high]</sup>
 
-Saraswati po loki senosia: “Amanda, li cunudivmabiti roni sulnosia taivo de lordiri. Senosia ala ito! Yava jomruja! Taivo desida sidu senosia la livesan ki?” <sup>[c08-p0242 · medium]</sup>
+Saraswati po loki senosia: “Taivo desida li vardesirmo ki, Amanda? Li cunudivmabiti roni sulnosia taivo de lordiri. Senosia ala li cunudivmabiti! Yava lombila maivori de jomruti!” <sup>[c08-p0242 · high]</sup>
 
 Li linu raho tovota unzira montafama, po namreyebania: “Yeko, Holly! Fisa, bimneba baba vimotelne de baba minvasan regnalinu ata baba tarnusan regnalinu vobi maivori! Saivori ke en navuvamri. Li tarnusan regnalinu ka yumlisan, ata saivo ka en baba vanisan regnadomlu su baba sambanasan veluvemi, ata saivo roni somusia. Li minvasan regnalinu musi sasvamelvasia saivo, ata saivo musi savalisia saivo, ata krotiata saivo vilnelalleva. Maivo, Sara ata Alianii tovota baba velukadu. Maivori de velukadu ka vio ata rubilumi, ata ito tovota vanajubasan zefrovoprari. Ne ramumomvira li zefrovoprari! Maivori nedunia tu itori.” <sup>[c08-p0243 · high]</sup>
 
@@ -2394,7 +2394,7 @@ Amanda po namreyebania, ata po telvo tivrota Saraswati de manli. Saivo po desida
 
 “Kroti maivori ramumomvira, taivo amora ertayumli ki, Amanda? Maivo po pensapa fime maivori, rada nela, viki sapusia baba patuti de ertayumlisan zilebumre en li cemnu de li vimotelne, ko somi sumasan maremiru, kopisa maivori loya ruli somusan kroti li somubiti.” <sup>[c08-p0247 · medium]</sup>
 
-“Hema, kepi… maivo po tavki ramumomvira. Ola ke benasan. Maivo opioa fime maivori tovota li mosa benasan noruri nullopressa.” <sup>[c08-p0248 · medium]</sup>
+“Kepi, kepi… maivo po tavki ramumomvira hoyo. Ola sonbusia la benasan. Maivo opioa fime maivori tovota li mosa benasan noruri nullopressa.” <sup>[c08-p0248 · high]</sup>
 
 Maivo po nuravufasbinia, ata maivo po tavki hiro timruhavlita. Nara maivo po havliturnaha, ata maivo po vazdi tekvu li fulemiruti de neme telvo farubakofa da maivo de lore. Maivo po senosia: “Yesta ola ke kasi benasan tamo maivori de harlujomruri en Rinbavemi ki?” <sup>[c08-p0249 · high]</sup>
 
@@ -2406,7 +2406,7 @@ Maivo po hiro timruta, ata maivo po du-voprava da Amanda. Maivo po ne desida fim
 
 Amanda po dozativroda maivo de manli. <sup>[c08-p0253 · high]</sup>
 
-Maivo po voprava kopisa fasbifa maivo de minvafamliti raho maivo futu lisrola ko saivo en maivori de mavopagoasa. Maivori de mavopagoasa po gome lideola kroti ola. Ito po gome bitifarlaba ko amor gagu baba pelilekta de farlayori de Rinbavemi. Saivori po sabesia Amanda de fato la silrosan. <sup>[c08-p0254 · low]</sup>
+Maivo po voprava kopisa fasbifa maivo de minvafamliti. Maivo ata saivo po fatofa sidu bioba en maivori de dorvasan mavopagoasa. Baba pelilekta de Rinbavemisan farlayori po vuzilordiva ola mavopagoasa, ata saivori po bitifarlaba ito ko amor. Saivori po ke en li silro, ata saivori po sabesia Amanda de fato. <sup>[c08-p0254 · medium]</sup>
 
 Maivo po vilneva li vilneri de li minvalinuti, ata maivo po senosia baba verana, gase baba amornasan nela oro baba nurmiasasan mare: “Ola ka nuna-coda. Maivo po doli pensapa li follu de maivo, kube maivo po hiro sabesia fime li lanvesasvayori po ravnura taivo, ata po kavbika taivo ala Barnabi. Maivo desida fime nuna benana kronovenreka ala taivo.” <sup>[c08-p0255 · high]</sup>
 
@@ -2438,7 +2438,7 @@ Iya lovuyo, si taivo po kronobioka da fontesan yuge, sabesia fime taivo ka maivo
 
 Maivo po ke en li zupa de tisehelna, en li helnapago de Germayano. Ola-krono, Amanda ata Alianii po venreva su helnakavbiri, nayo li helnakavbiri po voprava. Li helnati de somu po tovota li dorvasan puku su Amanda, la levasan, kasa Amanda po ke baba linu, ata saivo po tovota unzira montafama. Alianii po ka kasi ralkasan. Maivori po sabesia fime saivo de mavolumi po tefa livnala seye. Nara saivo po demroda, saivo po voprava. Miyo mubofollu ata follu intra saivo de lore. Miyo sabe fime Amanda de biolisro ka mufranasan. Saivo de lorenuravu ata neme po ke ruli vimosan en saivo de somusan fasbi. Saivo po nurminia li dendusan narvo, nara Amanda po ne nurminia ito, la laviasasan. Maivori de lordi po ka maivori de musva. Ata li yugemeyiyo de silisomu po reve vaku Alianii somusia la kasi dendusan. <sup>[c09-p0005 · medium]</sup>
 
-Li silipega po gome donuda intra saivori de yuge. Ata saivori de yuge po loya menu sumasan, tuni li mellipatu de li yugesan tali teklata. Doli li zayuasa ata li ravmi de li nolsasan divmapaturi po vaku li mavoyuge talita, nevi li sumana. <sup>[c09-p0006 · medium]</sup>
+Li silipega po gome donuda intra saivori de yuge yuta baba helnapidihata. Ata somi-nela po vaku saivori de sumamelli nevrania, tuni saivori de yugesan tali po tavki teklata. Doli li zayuasa ata li ravmi de li nolsasan mavoyugesan divmapaturi po lesvu li mavoyuge talita, nevi li nevra de li sumamelli. <sup>[c09-p0006 · high]</sup>
 
 Maivori po migama saivori de dendusan noruri, saivori de sernanulusan pagomodo, intra maivori de velmakovasan Rinbavemi, ata maivori po vaku saivori de ramuri tranata. Saivori futu tovota li mosa laviasasan nibe, ata saivori futu ramura saivori de turna en li gonbipago de Apollo la lumimellinasan nara la masunasan. Alianii po ka li una-ne nela raho po venreva, krotiapo li helnapago. Nevi maivori po livnala ko mavoruhe, maivori po ravnura Alianii de ramu de silroamor, kopisa saivo ne mensoma li gilbu ata li semra. <sup>[c09-p0007 · low]</sup>
 
@@ -2446,7 +2446,7 @@ Amanda po gome navdinia da Barnabybeaumont voyu mambipuku. Maivori po vaku gase 
 
 Germayano, li yano de li vemifavrosan farlapukuri, ata li yano de li taliyori tivrota saivo en maivori de lore ko amor ata sumasan gozana. Tonsi, ola ka baba milno ki? Maivo ne pensapa ola-modo, maivo ne pensapa ola-modo. Maivori de amor po ka fatosan. <sup>[c09-p0009 · high]</sup>
 
-Iya vanisan lovuyo, en li venresan jomru ala li noru raho Amanda ata Alianii patudonupa, taivo masudevoma taivo de lideori entre li pagomodo ata li farlasan pifu. Maivori po farlafa li mavopagoasa en baba sevrekova vobi baba minvalinu raho roni daigoda ata vobi saivo de molusasvayo. Li laviasa raho maivori po helnaha ke gase verasan vobi taivo gase li bio vobi maivori raho ka germasan pifu. Taivo ne juseja maivori la vizusan kasa maivori tovota dendusan verana pifu. Nara taivo ke holbasan en taivo de patuserbu pifu. Maivori po semvisia li mellisan somu de Alianii. Ola po vaku saivo loya menu mudunasan. Ola po ka kasi benanasan tamo li mavopagoasa vobi li linu raho roni daigoda poye. <sup>[c09-p0010 · low]</sup>
+Iya vanisan lovuyo, en li venresan jomru ala li noru raho Amanda ata Alianii patudonupa, taivo donuda baba dozaserbu ala taivo de lideori de li pagomodo ata li farlasan pifu. Maivori po farlafa baba mavopagoasa en baba sevrekova vobi baba minvalinu raho roni daigoda, ata vobi saivo de molusasvayo. Ito po ka baba laviasa raho maivori po donuda gase helna. Ola laviasa ke gase verasan vobi taivo gase li bio vobi maivori pifu. Maivori po gome farlafa yuta germa. Taivo ne juseja maivori de dendusan verana la diba vizusan pifu. Nara taivo ke holbasan en taivo de patuserbu pifu. Maivori po semvisia li mellisan somu de Alianii. Li dapa de ola po ka saivo de muduna. Ola semvi po nosi ka kasi benanasan tamo li mavopagoasa vobi li linu raho roni daigoda. <sup>[c09-p0010 · low]</sup>
 
 Eli ka verasan, da li helnasan lanvenulu, li mavopagodivma ata li lanve, seye. Ata narli, eli ka mavolumisan fime maivori tekvu baba mare tivrota saivo de linuti, oro maivori tekvu baba minvafamli tivrota saivo de linuti, nayo saivo roni daigoda ala li narvo de li ramumomvi ki? Maivori ne pensapa ola-modo, iya vanisan lovuyo. Maivori, li germanamreri, tovota baba ruli sumasan gozana ala li nelasan mavolumi. Taivo nosi ne sabesia ola. Eli ka ruli mufrasan fime li germa amora li nelasan bio la kasi dendusan tamo li nelari seye. Ola ka una de li dendusan sambanari en maivori de farlasan pagoasa. <sup>[c09-p0011 · low]</sup>
 
@@ -2463,7 +2463,7 @@ Li navu po ke azuribio, ata ito po ne teklata. Li colbitrana de li vana numori a
 
 Saivo de shadasabaye po ke su una vilne ata su saivo de moldi. Ito po loya mulyisan, ata maivo po punepa ito da saivo de fasbi, ata maivo po savalisia saivo su saivo de mergu. <sup>[c09-p0017 · medium]</sup>
 
-Maivo po senosia: “Vilnelalleva, somusan sora!” Maivo po vaku saivo zegoza la ruli molusan. Li mambi po venreva, kopisa maivori pagopa ata sapusia mernonami ko Joey. <sup>[c09-p0018 · medium]</sup>
+“Vilnelalleva, li somusan!” maivo po senosia. Maivo po vaku saivo zegoza la ruli mellinasan. Li krono po venreva vobi maivori, kopisa maivori pagopa ata sapusia mernonami ko Joey. <sup>[c09-p0018 · high]</sup>
 
 Bluejay ata Zygon po bodu du-pagopa da Lumiopi. Saivori po roni gonbiga ala Joey. Ola-krono, saivori po roni revo-pagopa ala Nyutitan en li mernodarnosan sevulelde. Nyutitan po ka baba kasi zilesan ata kasi nolsasan cilnivu. Ito po sadosia Boston, li kronopurmasan famlisan cilni. <sup>[c09-p0019 · high]</sup>
 
@@ -2491,11 +2491,11 @@ Saivo po vaku maivo ramura Melody. <sup>[c09-p0030 · high]</sup>
 
 Maivo po vimova en li milra ata po vimova maivo de viovilneri. Maivo po milnoma ki-coda Sara po pensapa kube saivo po vilneva ala maivo de viovilneri. Maivo po sabayebitisia maivo de vanajubasabaye. Ito po nevrania ultra maivo de seldi. Maivo de aurumilumi larbopeburi po hiro vimosudeva. Maivo futu musi colbica maivo de sabaye reve, ata maivo futu musi sabayetisesia patuti de ito. <sup>[c09-p0031 · high]</sup>
 
-Maivo po tefa sabayebitisia maivo de sabaye, nara maivo po lesvu ito loya mulyinasan yuta zefro, kopisa tovota li vabeve raho maivo lorelivnala. Maivo po sulnosia ko sulnosove ligo Amanda de dorbi. Zafra, saivo po duvlada. Saivo po ke linuvanisan gase baba tivrobiti. Saivo po velmava baba rubilumi ata vana noruzayuyosan lavbuvelma ata baba sambasan velma. Amanda po vimosudeva gase baba sumbikezusan folni. Saivo de sabaye po ke mulyisan gase maivo de sabaye. Saivo po tefa ramumomvira sidu sabayebitisia ito mufe. <sup>[c09-p0032 · medium]</sup>
+Maivo po tefa sabayebitisia maivo de sabaye, nara maivo po roni lesvu ito loya mulyinasan en li zefro, kopisa tovota li tino de vabeve raho maivo po lorelivnala. Ata maivo po sulnosia la sulnosovesan zavme li dorbi de Amanda. Saivo po va-duvlada la derdisan. Saivo po ke ruli linuvanisan. Saivo po velmava baba rubilumi ata vana lavbuvelma de li noruzayuyori. Tula li lavbuvelma, saivo po velmava baba velma raho sambasia ito. Amanda po vimosudeva gase baba sumbikezusan folni. Saivo de sabaye po ke mulyisan gase maivo de sabaye. Saivo po vimosudeva gase baba nela raho po tefa ramumomvira sidu sabayebitisia ito. <sup>[c09-p0032 · medium]</sup>
 
 Amanda po senosia ko milobe: “Maivo roni lesvu ito loya mulyinasan yuta li zefro, ata yuta li lemu raho taivo po donuda ala maivo. Ito ka kersosan. Ito ka ruli vanisan. Ito ka ruli lumiyelmisan.” <sup>[c09-p0033 · low]</sup>
 
-Maivo po senosia nayo maivo nulvadalunia saivo: “Taivo ka ruli vanisan. Eho. Yava pagopa kopisa navdinia li mernonami, linuti! Deyapressa, taivo ne reve sapusia zilebumreri, kasa ito ne ke mudunasan. Ata taivo ne desida li ertayumlimiru.” <sup>[c09-p0034 · low]</sup>
+“Taivo ka ruli linuvanisan,” maivo po senosia. Maivo po nulvadalunia saivo. “Eho. Iya minvalinu, yava pagopa kopisa navdinia li mernonami! Deyapressa, taivo ne reve sapusia Wafla. Ito ka mudunasan nuna-modo. Ata taivo futu du-pagopa li ertayumlimiru.” <sup>[c09-p0034 · medium]</sup>
 
 Saivo po nemevallania, nara saivo po yebaya ko harlulore. Ata maivori po nevrania ala li salrukadu, ata maivori po pagopa ala li namizupa. <sup>[c09-p0035 · high]</sup>
 
@@ -2503,7 +2503,7 @@ Mernopressa, li namipago po ke sambasan ko baba Amerikasan namipagoti de li niva
 
 Li namidonukibo po gonbisenoga maivori ata po lirbula maivori ala baba tabu. Joey ata Sara po roni semnesia ligo li tabu. <sup>[c09-p0037 · high]</sup>
 
-Sara po velmava shada shadalumi noruzayuyori. Itori po ke menu molusan ata po ke lamsasan en baba solasan deya. Maivo po masuma saivo: “Ki-coda taivo roni velmava hoyo ki?” <sup>[c09-p0038 · medium]</sup>
+Sara po roni velmava li velma de li noruzayuyori. Ito po ke shada ata shadalumi. Ito po ke menu damrusan ata lamsapavmasan vobi baba deya raho ke tonsi solasan. Maivo po masuma saivo: “Taivo roni velmava ki-coda en toda li vemi hoyo ki?” <sup>[c09-p0038 · medium]</sup>
 
 Saraswati po resora ata po demroda saivo de namre ala li silda: “Somi deya, kube maivo po roni donuda taivo velmari, taivo po lesvu itori lisrola en maivo de zupa. Maivo po desida sidu telbata taivo de velma. Ito po bansaba maivo la ruli benasan. Maivo po senosia ala taivo fime maivori ka sambalinuri.” <sup>[c09-p0039 · medium]</sup>
 
@@ -2519,7 +2519,7 @@ Amanda po senosia: “Eho, Joey futu livela maivo ala lemupago deyapressa ki, Al
 
 Joey po resora: “Saivori roni somusia, Ali. Taivo pensapa fime saivori ke somunasan en eli mernolornu ki? Saivori ka li nelari de li nullo.” <sup>[c09-p0045 · high]</sup>
 
-Saraswati po namreyebania ata po senosia: “Saivori futu ke benasan. Taivo ne musi muboma. Va-semnesia ko maivo!” <sup>[c09-p0046 · medium]</sup>
+Saraswati po namreyebania la yebasan, ata saivo po senosia: “Saivori futu ke benasan. Taivo ne nedunia sidu muboma. Va-pagopa ata semnesia ko maivo!” <sup>[c09-p0046 · high]</sup>
 
 Maivo po semnesia ligo Sara. Maivo po tovota poka vamri entre maivo ata saivo, nara Sara po zavmeza ala maivo tuni saivo de varo po daluda maivo de varo. Maivo po farufasbifa. Maivo po vilneva Sara. Saivo po milobema. Maivori de senomiga po pagopa la molusan. Maivori po masuma ramulordisan Amerikasan mernonami. Amanda po sapusia muya gubupatu. Ola po ke bansasan vobi baba tarnulinu raho tovota unzira-sesa montafama. Amanda po yorveya maivo de masu. Amanda po ne rillira Wafla, nara saivo po maskapelima. Saivo po rillira molubumre ko li yumlisan lurvanami da Vermont. Vermont ke vofa eli-pago en li kezupagoyano. Sara po masuma baba lavrasamninami. Maivo po masuma baba lavrasamninami. Maivori po tiseta li lavrasamninami. Maivori po donuda una de dossa fuyi. Maivo de lavrasamninami po tovota ganresan herba ata joko kopisa sambabondosia li farulenyo. <sup>[c09-p0047 · medium]</sup>
 
@@ -2535,7 +2535,7 @@ Zilenela Moseby po va-pagopa la vizunasan. Saivo po ka mellisan gase baba divman
 
 Saivo po velmava li garzasan sambasan velma toda-krono, gase saivo de devo. Saivo po velmava ito yesta kube maivori po felrafa en maskavelma. <sup>[c09-p0053 · high]</sup>
 
-Zilenela Moseby po senosia: “Eli nami ka ki-modo yumlisan, nimusan sorari! Si maivo de germasan yuge noma povi manlidemroma eliri nami, maivo sela viki sapusia seye.” Krotiata saivo po resora, ata po senosia: “Li namiherbari venreva la lendasan da li ganre de li gonbipago. Li loterosan cemopaturi ke da baba marnapago en li vesnodarno. Itori gome va-donuda en rada deyafama. Toda-coda ke taivori de sovelavi ki?” <sup>[c09-p0054 · low]</sup>
+“Eli nami ka ki-modo benasan sidu sapusia, iya nimusan felra! Si maivo de germasan sapupagoti noma tovota li divmadoza kopisa manlidemroma eliri bioyugesan milnoserburi, maivo sela noma viki sapusia ko taivori seye,” zilenela Moseby po senosia. Krotiata saivo po resora, ata saivo po senosia: “Li namiherbari venreva pendi da li ganre de li gonbipago. Li loterosan cemopaturi ke da baba marnapago en li vesnodarno. Ola marnapago ka kasi pagolalnisan tamo li gonbipago, nara li pagolalni ka mellinasan. Itori gome va-donuda ala maivori en rada deyafama. Toda-coda donuda sovelavi ala taivori ki?” <sup>[c09-p0054 · medium]</sup>
 
 Joey po relsira vobi maivori: “Ito ka ruli benasan toda-krono, zilenela Mose. Fisa, mavoma Amanda! Saivo tovota baba bansaasa de molubumre.” <sup>[c09-p0055 · high]</sup>
 
@@ -2543,19 +2543,19 @@ Amanda po dozadaluda Joey la molusan, ata po senosia: “Eho, maivo amora molubu
 
 Saraswati po vilneva maivo, ata saivo de vilneri po yave-vimova maivo de viovilne. Saivo po senosia: “Hoyo! Taivo pensapa fime li minvalinu raho gome amora ka ki-nela ki, Alianii?” <sup>[c09-p0057 · high]</sup>
 
-Maivo po havlibakoha nayo maivo sapusia li farulenyosan lavrasamninami, ata po senosia: “Eho, eli ke ruli farulenyosan! Maivo ne sabesia, Sara. Fisa, senosia maivori de ola lukasan vardeminva, Joey.” <sup>[c09-p0058 · medium]</sup>
+Maivo po havlibakoha, kube maivo po dentoda li farulenyosan lavrasamninami, ata maivo po senosia: “Eho, eli ke baba garzasan farulenyo! Maivo tovota nuna lideo, Sara. Senosia maivori li telne de eli lukasan vardeminva, Joey!” <sup>[c09-p0058 · medium]</sup>
 
 Zilenela Red po du-vimova, ata saivo po senosia: “Saivo ka doli baba sabepagosan minvalinu. Saivo ke en Boston. Yori, saivo futu ke diba levanasan sidu vimova. Saivo ke vofa Titan, ata li jomru ka gase una lornu.” <sup>[c09-p0059 · high]</sup>
 
 Saraswati po senosia: “Hoyo! Una lornu ne ke benanasan.” <sup>[c09-p0060 · high]</sup>
 
-En maivo de mavo, maivo po loki revo-ramura li deya raho maivo ata Saraswati po yave-tranata en ito, kube saivo po sudesia maivo li lordisan palvi de baba ramulordisan velma su maivo de yuge. Maivo ramura fime maivo po vismava saivo de senru. Ito po ke ceresan ata nilmisan, ata ito po ke ertalumi ata vanisan. Saivo po tovota baba silrovani. Saivo po ka sambapatusan ko li devi raho Saraswati po tovota saivo de nole. Maivo ramura li lulfari raho po tefa lisrola en maivo de sapukova da ola-krono. En ola mernonami, itori po roni lulfala pendi ola-pago, nayo maivori de damvari po roni dozadaluda tula li tabu la molusan fuyi. <sup>[c09-p0061 · medium]</sup>
+En maivo de mavo, maivo po loki revo-ramura ola nolsasan deya. En ola deya, Saraswati ata maivo po palvipa nolsasan velmari su maivori sela la yanosan, ata Saraswati po sudesia maivo li lordisan modo de li ramulordisan Indiasan zilevelma, kopisa maivo povi palvipa ito su maivo sela. Maivo ramura fime maivo po vismava saivo de senru. Ito po ka ruli ceresan ata ruli nilmisan. Saivo de senrucolbi po ka ertalumi. Saivo po vaku maivo amorduhaa. Saivo po tovota baba vani raho po tavki ke silroasasan. Saivo po ka sambapatusan ko li devi raho Saraswati po rillira li nole de saivo. Maivo ramura li lulfari raho po tefa bioba en maivo de sapukova da ola-krono. En ola mernonami, itori po roni lulfala pendi ola-pago ata pendi ola-krono, nayo maivori de damvari po roni dozadaluda tula li tabu la molusan fuyi. <sup>[c09-p0061 · medium]</sup>
 
-Zilenela Moseby po talbeta, ata saivo po lenila, ata saivo po senosia: “Hema, deyaapo, yesta zilenela Moseby po amora baba sabepagosan minva la manlisabesan. Saivo po ka baba lemudonuyo yasmo. Saivo de senru po ke vanajubagerma. Saivo de vilne po ke vana, ata itori po lumila gase baba lansisan molusasvayo. Saivo po lemudonula benaranfa de farlasan bioyuge. Hoyo! Maivo viki donuda toda-coda kopisa reve loya baba yanbanasan numomavo en amor.” <sup>[c09-p0062 · low]</sup>
+Zilenela Moseby raho po roni talbeta ata po roni lenila, po filvifa: “Somi-krono, en baba telne de deyaapo, yesta zilenela Moseby po kavbika amor ala baba minva de li sabepago. Ola po kronovenreka pendi ola-modo, hema, la manlisabesan. Saivo po ka baba lemudonuyo de li sabepago yasmo. Saivo de senru po ka vanajubagerma. Saivo de vilneri po ke vana, ata itori po lumila gase baba lansisan helnasan molusasvayo. Saivo po lemudonula li benaranfa de li farlasan nelari. Hema… maivo viki donuda toda-coda kopisa reve loya baba nolsaamorsan yanbanasan numomavo.” <sup>[c09-p0062 · medium]</sup>
 
-Maivo po resora ko toda li lore, ata po masuma: “Taivo ne ka gase unzira zilenela Moseby ki?” <sup>[c09-p0063 · low]</sup>
+Maivo po resora ko toda maivo de lore, ata maivo po masuma: “Taivo ne ka gase unzira Mosebyri ki?” <sup>[c09-p0063 · high]</sup>
 
-Li yalmusan rezasabaye de li divmanelati po voprava ko bapisemra, ata saivo po senosia: “Maivo de pensapolva ke ruli vizusan; tonsi, maivo po miyo en muya centa montafama, Alianii. Taivo po ne lenila li telne de baba lideolordi ki? Li lideolordi vaku li farlapukuri loya yanbasan. Maivo ke yanbasan ata ramulordisan. Maivo ne ka ruli germadugosan, nara maivo ne ka baba nilmisan vanajubagerma seye. Zabo, zabo, farlasan senru povi gome loteropalvila, nara yanba ne ke senrusan; yanba ka intra maivo. Iya soratiri, taivori ne povi revo-voprava li kronorivla. Taivori povi revo-voprava li kronorivla nuna-krono. Yori. Maivo po desida sidu vismava maivo de lorelivnasan lekta de rivori. Yade. Maivo musi duvlada, kasa maivo musi mavoma loterosan gonbipagosan taliri.” <sup>[c09-p0064 · medium]</sup>
+Li favrosan rezasabaye de li divmanelati po voprava ko bapisemra. Saivo po senosia: “Maivo de pensapolva ka tonsi vizusan fime maivo po miyo en muya centa montafama, Alianii. Ata taivo po ne lenila li telne de baba codati raho ito de nole ka li lideolordisan yanba ki? Maivo ka yanbasan, ata maivo ne ka nolsasan loki. Maivo ne tovota muya germadugo, nara maivo ne ka yelmisan vanajubagerma seye. Taivo vimova. Zabo, zabo, farlasan senru povi gome loteropalvila. Nara li yanba ne ka su li senru. Li yanba ka intra maivo, ata ito po ka intra maivo da li una-ne mambi de maivo. Taivori ne povi revo-voprava li kronorivla, iya li nimusanri. Taivori povi revo-voprava li kronorivla nuna-krono. Yori, maivo po doli desida sidu vismava maivo de lorelivnasan lekta de zilenasan rivori. Maivo musi duvlada la nemesan, kasa maivo musi mavoma loterosan taliri de li gonbipago.” <sup>[c09-p0064 · medium]</sup>
 
 Amanda po ne mebanema, ata saivo po vimosudeva ko bapi: “Li yanba de zilenela Mosebi ke unzira montafama ki?! Si maivo ka yanbasan, taivori ka dossa mareri de purmari ki?” <sup>[c09-p0065 · medium]</sup>
 
@@ -2594,7 +2594,7 @@ Saraswati po voprava saivo de vilneri. Saivo de vilnesabaye ke vanisan, ata ito 
 
 Maivo de lore po bisu lulfala la kasi sabesan, nara maivo po ne vazdi verasenova ito, kasa maivo po follufa: “Hema… taivo dorvada ki-coda ki?” <sup>[c09-p0082 · high]</sup>
 
-“Taivo desida baba vimotelne ata baba zilebumre ki?” <sup>[c09-p0083 · medium]</sup>
+“Maivo lideodonula baba vimotelne ata baba zilebumre. Taivo desida ola ki?” <sup>[c09-p0083 · high]</sup>
 
 “Taivo lumiverala Geolaunji ki? Maivo tinsata fime ito nosi ke ruli lavisan.” <sup>[c09-p0084 · high]</sup>
 
@@ -2608,7 +2608,7 @@ Maivo po roni farufasbifa gase li sumbifuro. Maivo po tosu fasbilardafa li resov
 
 Maivo futu lideolordila. Fisa, donuda maivo li vesno de li felradeya! Maivo tovota lemupaturi de melo en merno ata en nevrasola la verasan. Si maivo ne tovota olari, maivo viki lisrola ko taivo en li holbasan deya ata en li holbasan nullo. <sup>[c09-p0089 · medium]</sup>
 
-Maivo de lore po telvo falnefa saivo de seno, nara ito po fesmo pensapa li seno de holba ata li rinbasovla de ola ata li holba de ola. Toda-krono, maivo po pensapa fime maivo po ka corvibelfisan ata ralkasan, nara Sara po ka maivo de dozana. Maivo po bisu ke livnanasan gase baba minvalinuti ligo saivo, en olari mambiri de amorti, kube Rinbavemi de farla po ne vismabakova maivo. <sup>[c09-p0090 · low]</sup>
+Maivo de lore po telvo falnefa saivo de senori. Nara li senosan “holba” po ke ruli damrusan sidu pensapa vobi maivo de lore. Tu li rinbasovla de ito ata li holba de ito po ke damrusan sidu pensapa. Toda-krono, maivo po pensapa fime maivo ka corvibelfisan, ata yesta fime maivo ka ralkasan. Nara Sara po ka maivo de dozana. Maivo po bisu ke livnanasan gase baba minvalinuti ligo saivo, en olari mambiri de ruli mellinasan amor, kube Rinbavemi de farla po ne vismabakova maivo. <sup>[c09-p0090 · medium]</sup>
 
 Kronos, li pilo de li kronorivla, po rizira. Saivo po valmiva toda-pago la molusan. Saivo po peligozapa maivo kube maivo de kronobiofelra po venreva. Ola po ne povi ka verasan. Maivo po tavreta sidu belfiba ola. Saivo po ne povi revo-amora maivo. Maivo po tefa tavreta li verasan amor en li deya raho Melody po daigoda en ito. Narli, Saraswati po roni peligozapa maivo yuta saivo de melo, ata saivo de melo po ke en maivo de lore. Saivo de loreramu po ne povi milrama maivo de loreramu. Maivo po ne desida sidu palvipa maivo de lore ko ola opi. Maivori po ka doli sorari, ata maivori po roni loya kronosorari ata minvafamlisan lavrasamniri. Ola po ka toda-coda raho povi pukupa da maivori de sollina. Maivo viki lukadapala maivo de vanajubasabaye su ola. <sup>[c09-p0091 · medium]</sup>
 
@@ -2620,13 +2620,13 @@ Maivo po velmava baba vanajubasan zilevelma raho somi-nela po tevuluta en li mav
 
 Saraswati po velmava baba gudosan velma la verasan. Maivo pensapa fime saivo po tefa sovlafarlasia ito vobi li mambi. Ito po ke viovelma. Ito po tovota vanajubasan tivrobitiri. Saivo po palvipa vanajubasan lulfari la dorvanasan su li velma. Ito po ne ke lumivelma. Olari po ke ruli dapasan, maivori po doli sovlafarlasia olari en ruli gudonasan mambiri. Pensapa gase devofelrari, oro gase nolsasan cilni oro nimu! <sup>[c09-p0095 · medium]</sup>
 
-Sara po keleka da li molusemne, po valmiva ala maivo, ata po varova maivo. Ola po rizira, nara maivo po ne mavoma ola. Saivo po ke lelhisan gase loterokezusan furo. Ito po ke ojofurovu oro loterosan coda poye. Maivo po revo-pavepa. <sup>[c09-p0096 · medium]</sup>
+Sara po lumrala saivo sela da li molusemne la semnesan, ata po valmiva ala maivo, ata po donuda maivo baba sumalomo. Li sumalomo po rizira, nara maivo po ne mavoma ola. Saivo po ke lelhisan gase baba gudonasan loterokezusan furo. Ito po ke ojofurovu poye. Oro ito po ke somi loterosan coda poye. Maivo po nazrunia. <sup>[c09-p0096 · high]</sup>
 
 Taivo po ne musi codaca vobi maivo. <sup>[c09-p0097 · high]</sup>
 
 Hoyo ki? Nara maivo po fututi vinyeva baba lira vobi taivo. Taivo ne loki desida sidu lenila vinyesonbu poye. <sup>[c09-p0098 · medium]</sup>
 
-“Kepi, ola ne ke verasan. Kronobiofelrari ke hurvosan vobi maivo yasmo.” <sup>[c09-p0099 · medium]</sup>
+“Kepi, ola ne ke li ranfa. Kronobiofelrari ka doli hurvo vobi maivo. Taivo sabesia.” <sup>[c09-p0099 · high]</sup>
 
 Saivo po senosia: “Itori ne musi ke hurvosan. Maivo futu vinyeva taivo baba lira. Ito ke li lavisan kronobiofelra mufe.” <sup>[c09-p0100 · medium]</sup>
 
@@ -2634,11 +2634,11 @@ Maivo po nuravufasbinia: “Eho… yava apoka ola nuravu, kopisa taivo povi viny
 
 Sara po hiro vinyeva li lavisan kronobiofelra, nara saivo po vinyeva ito la molusan, ata po lirala ito la molusan. Saivo po ne telvo zarkuhataza maivo yuta li lavi de li kronobiofelra. Saivo po lirala baba duhalira ala maivo. <sup>[c09-p0102 · high]</sup>
 
-Po miyo baba fontesan zilebumre raho ke vana ata rubilumi, vobi doli maivori. Maivo po pensapa fime ito ke menu resovardesan. Nara maivo po ke diba lorefollusan. Tonsi, maivo po ne sapusia ito. Ata maivo po senosia ala saivo: “Futupago, maivo nosi sapusia.” Saivo po tosu mebanema, nara saivo po ke nemesan. <sup>[c09-p0103 · low]</sup>
+Po miyo baba fontesan zilebumre vobi doli maivori. Li zilebumre po ke vana ata rubilumi. Ito po vimosudeva sidu tovota baba patuti de resovarde. Nara maivo po ke diba mubofollusan la patusan. Tonsi, maivo po ne sapusia somi patu de ito. Ata maivo po senosia ala saivo: “Maivo futu sapusia ito somi-krono poye.” Saivo po vimosudeva sidu mebanema, nara saivo po ke opimomvisan. <sup>[c09-p0103 · low]</sup>
 
 Maivo po masuma: “Taivo desida sidu vimova ki-eli tino de vimotelne ki? Ki-coda taivo tovota en taivo de mavo?” <sup>[c09-p0104 · high]</sup>
 
-Saraswati po semnesia su li molusemne ligo maivo, ata saivo po manliravnuma maivo de manli, ata po senosia: “Maivo po pensapa fime maivori povi bimneba baba vimotelne ata yave-vimova ito.” <sup>[c09-p0105 · medium]</sup>
+Saraswati po semnesia su li molusemne ligo maivo, ata saivo po manliravnuma maivo de manli, ata saivo po senosia: “Maivo po pensapa fime maivori povi yave-farlafa baba vimotelne, ata fime maivori povi yave-vimova ito.” <sup>[c09-p0105 · high]</sup>
 
 Maivo po hiro farufasbifa, ata po du-vimova. <sup>[c09-p0106 · high]</sup>
 
@@ -2646,13 +2646,13 @@ Maivo po hiro farufasbifa, ata po du-vimova. <sup>[c09-p0106 · high]</sup>
 
 “Iya cunudivmabiti! Maivo desida fime taivo sudesia baba vimotelne ala maivo ata Alianii. Li vimotelne ka amorsan ata resosan. Li vimotelne venreva en baba gonbipago en li nolsasan vemi. Li gonbipago ka sambasan ko li gonbipago de Apollo, nara ito tovota baba sambanasan lideo. Livnala li lideo la vordunasan! Zilenela Moseby ka baba telnenela. Ata saivo talita vobi amor. Saivo vaku una gonbi sabesia li loterosan gonbi, kopisa saivori nosi amora fuyi. Li dossa amorsora ka minvari. Li una-ne minva tovota rubilumi sabaye ata ojovilne. Saivo de nole ka Roza. Li loterosan minva tovota ertasabaye. Miyo ojofaru en saivo de sabaye. Saivo de nole ka Opi. Li vimotelne musi tovota muya nelmori de amor. Li vimosude de li vimotelne musi ka gudonasan. Ata ito musi tovota mambiri de reso.” <sup>[c09-p0108 · medium]</sup>
 
-Fisa, donuda baba vimotelne kopisa dossa minva raho amora fuyi povi yave-rekura nayo vimova ito! Fisa, sulnosia en trezira seca, kopisa maivori verava.” <sup>[c09-p0109 · low]</sup>
+Fisa, vaku ito loya baba tino de vimotelne, kopisa dossa minva raho amorduhaa fuyi, povi yave-semnesia nayo saivori vimova ito. Fisa, sulnosia en trezira seca, kopisa maivori verasudeva.” <sup>[c09-p0109 · medium]</sup>
 
-“Sara, maivo… maivori ki? Taivo desida sidu rekura maivo ki?” Maivo po ne povi pensapa. Maivo de lore po roni dumdoda la ruli vizusan, ata maivo po ne povi havliha. Maivo po follufa fime toda-coda nosi ka noru, ata fime ito nosi ne ke verasan. Maivo po follufa fime maivo nosi momvima baba coda raho maivo po ne bodu tovota. Ola po ka saivo de amor. <sup>[c09-p0110 · medium]</sup>
+“Sara, maivo… maivori ki? Taivo desida sidu sumalomosia ko maivo ki?” Maivo po ke ruli lalvusan hoyo. Maivo de lore po dumdoda la ruli vizusan. Tonsi, maivo po havliha doli la ruli levanasan. Maivo po ke diba follusan fime toda-coda nosi ka noru. Maivo po ke diba follusan fime ito nosi ne ke verasan. Maivo po follufa sidu momvima baba coda raho maivo po ne bodu yesta tovota. Ola-coda po ka saivo de amor. <sup>[c09-p0110 · high]</sup>
 
 “Nido, maivori po rekura muya-krono fuyi, iya li zirkiti. Nara eli-krono, doli maivori ke eli-pago. Maivo dagi tivrota taivo ki?” <sup>[c09-p0111 · medium]</sup>
 
-“…Eho.” Maivo ne pensapa fime maivo po farufasbifa la kasi mellisan tamo li mambi. Maivo po ne masudevoma fime maivo de vanajubasabaye po milrama doli baba patuti de li rubi, gase li milra raho milrama maivo de lulfaasa. Maivo de rubifurotisan lehe po solasia ito. <sup>[c09-p0112 · low]</sup>
+“…Eho.” En ola mambi, maivo po farufasbifa la ruli mellisan. Maivo ne pensapa fime maivo po farufasbifa la gase mellisan gase ola somi-krono kroti ola mambi. Maivo po ne masudevoma fime li vanajuba raho ke en maivo de sabaye, po milrama doli baba patuti de li rubi. Ito po milrama maivo de mavolumi gase baba milra. Maivo de rubifurotisan leheri po vaku ito loya lumisan. <sup>[c09-p0112 · medium]</sup>
 
 Saraswati po vaku li lumi loya menu lumisan en li zupa yuta vallasan regnasenori, ata po navdinia li somuvelma ata namresomubitiri, ata po palvipa itori su li molusemne. Saivo po vaku maivo semnesia ata sovesia. Maivo po vimova, nayo saivo po vaku li molusemne loya baba somubiti yuta vallasan regnasenori ata yuta ito de mellikerso. <sup>[c09-p0113 · medium]</sup>
 
@@ -2673,7 +2673,7 @@ Maivo po ne belfiba fime li kronofuro ka benasan. Narli, maivo po sapusia ito. A
 
 “Hema… maivo po noma suvi ne farlafa ola. Yade.” <sup>[c09-p0121 · high]</sup>
 
-Ki-coda ki? Ola po ke vanisan. Taivo po ne ke benanasan. Maivo ke ruli lavisan. <sup>[c09-p0122 · medium]</sup>
+“Ki-coda ki? Ola po ke vanisan. Taivo po ne vorduva baba benana. Maivo ke ruli lavisan seye.” <sup>[c09-p0122 · high]</sup>
 
 “Taivo ne mebanema. Toda-krono, maivo farlafa eli, ata maivo bakoba toda-coda. Garza! Maivo ka baba kaldodesiyo.” <sup>[c09-p0123 · medium]</sup>
 
@@ -2687,19 +2687,19 @@ Maivo po masuma: “Taivo po ne dozadaluda maivo. Maivo po ne vuziva fime ito kr
 
 Ki-kasa saivo viki ke mubosan ki? <sup>[c09-p0128 · high]</sup>
 
-“Maivo ne sabesia. Saivo vimova maivori gase minvafamliri. Ata saivo follufa fime eli nosi bakoba ito ki?” <sup>[c09-p0129 · medium]</sup>
+“Maivo ne sabesia. Saivo vimova maivori gase minvafamliri. Ki-coda futu venreva, si saivo follufa fime eli povi vaku ito loya bakodomlu ki?” <sup>[c09-p0129 · high]</sup>
 
-Sara po masuma: “Si saivo follufa ola, ki-coda ki? Oro si taivo follufa ola, ki-coda ki?” <sup>[c09-p0130 · medium]</sup>
+“Ki-coda futu venreva, si saivo follufa ola ki? Oro ki-coda futu venreva, si taivo follufa ola ki?” Sara po masuma. <sup>[c09-p0130 · high]</sup>
 
 Toda dossa. <sup>[c09-p0131 · high]</sup>
 
-Sara po velmava baba rubilumi mernovelma. Ata saivo po relnura ala li somubiti, ata saivo po demroda ligo maivo. Baba moludalu po ka maivo de favro, ata maivo de yuge po voprava voyu pensa. Saraswati po senosia ala maivo de felbe, nayo saivo po demroda nazru maivo ata saivo reve tivrota maivo. <sup>[c09-p0132 · medium]</sup>
+Sara po roni velmava baba mernovelma. Ito de colbi po ka gase rubilumi. Ata saivo po relnura ala li somubiti, ata saivo po demroda ala maivo. Saivo po vaku maivo demroda la molusan. Ola molusan demro po ka maivo de favro. Li favro po lumiverala fime maivo suvi voprava. Ata maivo de yuge po relsira la dorvanasan. Saraswati po senosia en maivo de felbe, nayo saivo po demroda nazru maivo, ata saivo po reve varova maivo da li nazru. <sup>[c09-p0132 · medium]</sup>
 
 “Maivo lavila taivo la verasan. Maivo ne pagopa ala somi-pago. Ola ke benasan ki? Maivo ne tovota lemu en dossa lornu. Maivo po vaku li lektamambiri demroda. Tonsi, yava yave-lisrola en una mambi. Ata krotiata, yava pagopa kopisa sapusia, ata yava bioba maivori de deya. Ki-modo ola sonbusia ki?” <sup>[c09-p0133 · medium]</sup>
 
-“Ola sonbusia gase baba noru. Maivo follufa fime maivo futu vilnelalleva da ola.” <sup>[c09-p0134 · medium]</sup>
+“Ola sonbusia gase baba noru raho maivo follufa sidu vilnelalleva da ito.” <sup>[c09-p0134 · high]</sup>
 
-Hema, ne vilnelalleva! Lisrola en li somubiti ko maivo! Ata somusia en rinbakrono! Iya li zirkiti, oro maivori povi tivrota en una mambi fuyi. Ata maivori povi pagopa kopisa navdinia nami. Kasa taivo po sapusia poka nami en nullo de deyaapo, nevi li zilebumre po gome farlafa doli vobi taivo. Ata krotiata maivori futu sahi pagopa ala li talipago. Amanda futu relnura krotiapo lemu ki? Taivo povi lisrola ko saivo. Saivo solliduhasia taivo seye. Maivori ne musi senosia somi-coda ala saivo eli-krono. <sup>[c09-p0135 · medium]</sup>
+“Hema. Tonsi, ne vilnelalleva! Doli lisrola en li somubiti ko maivo! Ata loki somusia en rinbakrono! Iya li zirkitisan, oro maivori povi sumalomosia en poka minota fuyi, ata krotiata maivori povi pagopa kopisa navdinia nami, kasa taivo po tavki ne sapusia en nullo de deyaapo, nevi li zilesan zilebumre. Ito po gome farlafa doli vobi taivo! Ata krotiata maivori futu pagopa la tinosan, kopisa talita. Amanda futu relnura krotiapo li lemupago yasmo ki? Taivo povi yave-donuda somi mambiri ko saivo. Maivo ke masunasan fime saivo solliduhasia taivo. Maivori ne musi senosia somi-coda ala saivo eli-krono. Ola ka musvanasan.” <sup>[c09-p0135 · high]</sup>
 
 
 ### Penta-ne patu: Amanda de masu raho sabesia
@@ -2716,7 +2716,7 @@ Maivori po pelipa en Rinbavemi krotiapo li lemupago. Muya-krono, maivori po ne v
 
 En baba nullo gase ola, nayo maivo po roni vimova Amanda, kube maivo po tefa bodu resodalura saivo la bansasan, Amanda po senosia fime saivo ke milnoserbusan. <sup>[c09-p0142 · high]</sup>
 
-Saivo po roni vilneva maivo, ata saivo po roni farufasbifa. Saivo po ke bapisemrasan kasa saivo po masuma: “Ali, maivo tovota baba masu. Fisa, ne larnefasbila ala maivo!” <sup>[c09-p0143 · medium]</sup>
+Saivo po roni lumrala saivo de vilneri ala maivo, ata saivo po roni farufasbifa. Saivo po ke bapisemrasan, nayo saivo masuma: “Ali, maivo tovota baba masu. Ne larnela ala maivo!” <sup>[c09-p0143 · high]</sup>
 
 “Hema, maivo futu senosia toda-coda ala taivo, maivo de nimusan sora. Ki-coda ke benanasan ki? Taivo viki desida sidu sabesia ki-coda ki?” <sup>[c09-p0144 · low]</sup>
 
@@ -2724,7 +2724,7 @@ Saraswati po roni picepa saivo de vinye la gudosan ata la vizunasan. Saivo po ro
 
 “Taivo ata Sara amora fuyi ki?” <sup>[c09-p0146 · high]</sup>
 
-Maivo po tavki pavrupa la lendasan, ata po revo-vilneva Sara raho po farufasbifa gase maivo. Maivori po ne bodu senosia li amorvu, nevi maivori po yave-lisrola en muya vesnori ata mernori, nevi maivori yave-lenbula, nevi maivori dozativroda fuyi, nevi maivori savalisia fuyi, nevi maivori moludaluma fuyi, ata nevi maivori amordalua en merno nayo li mirunevrasan sola lumirivlala transa saivo de aurumijubasan lendari. Nevi maivori patudonupa velma, nevi maivori yave-velmava, ata nevi maivori yave-renlisafara somi-krono. <sup>[c09-p0147 · low]</sup>
+Maivo po tavki pavrupa ata salrusia la yugenulusan, ata maivo po revo-vilneva Sara. Saivo po roni farufasbifa pendi gase maivo. Maivori po ne bodu senosia li amorvu, li mellisan seno, nevi maivori po yave-lisrola en muya vesnori ata mernori, nevi maivori varova la molusan fuyi, nevi maivori lomola fuyi, nevi maivori savalisia fuyi, nevi maivori moludaluma fuyi, ata nevi maivori amordalua en li merno, nayo li mirunevrasan sola lumirivlala transa saivo de aurumijubasan lendari. Maivori po loki ne senosia ito, nevi maivori patudonupa maivori de velmari, nevi maivori yave-velmava, ata nevi maivori yave-renlisafara poka-krono, nayo maivori varova fuyi. <sup>[c09-p0147 · medium]</sup>
 
 “Hema… taivo lumiverala fime maivori ka minvafamliri oro sorari ki?” Maivo po masuma kopisa ne relsira li masu, nevi ito po ke ceresan en baba patuti fime saivo po ne lumiverala ola. <sup>[c09-p0148 · medium]</sup>
 
@@ -2758,7 +2758,7 @@ Tu Amanda po loya menu timrusan, kasa saivo po vimova fime maivo timruta. Nara s
 
 Saivo po ka suma raho po loya yugeasasan amor. <sup>[c09-p0163 · high]</sup>
 
-Sara po senosia: “Benasan nullo, Amanda. Maivori amora taivo. Maivo futu pagopa ala li somubiti. Taivo ke lavisan ki?” <sup>[c09-p0164 · medium]</sup>
+“Benasan nullo, Amanda,” Sara po senosia. “Maivori amora taivo. Maivo futu pagopa ala li somubiti. Ola ke benasan ki?” <sup>[c09-p0164 · high]</sup>
 
 Saraswati po donuda maivo baba vizusan savali su li lehe, ata po duvlada da li somubiti, ata po manliravnuma saivo de vinye, ata po vayeva da li dorbi. Saivo de pebuvalmiri po ke vanisan toda-krono, gase li zefronela raho rilura. <sup>[c09-p0165 · high]</sup>
 
@@ -2766,7 +2766,7 @@ Maivo po donuda una savali ala Amanda su li mergu reve, ata po senosia ala saivo
 
 Sara po lallela li dorbi, ata po senosia: “Ki-kasa taivo roni manlisonbuma? Taivo sabesia fime taivo povi venreva rada-krono kube taivo desida.” <sup>[c09-p0167 · high]</sup>
 
-Saivo po nimunia maivo, ata maivo po valmiva ala saivo de zupa ko patuti de lorefollu ata ko patuti de mubofollu. Ata maivo po semnesia su saivo de somubiti, su li lelde de ito. Saivo po ne mavoma maivo la patusan, ata saivo po hiro du-velmava saivo de velma la gudosan, gase nuna-coda. Ata saivo po velmava baba vananullovelma. Li vananullovelma po vaku li vilne vimova saivo de simvopaturi ata itori de damrunasan lendari. Li vana po ke ruli sambanasan da saivo de senrucolbi. Saivo de senrucolbi po ka sumayumlisan. Ata li vana po ke sambanasan tu da li rubilumi de li velmatiri. Li velmatiri po ke tula li vananullovelma. Li velmatiri po tovota li rubilumi de folnitibiyumli. Li velmatiri po tivrota saivo de damvabujo ata saivo de reku la molusan. <sup>[c09-p0168 · medium]</sup>
+Saivo po nimunia maivo, ata saivo po lesvu maivo turnata. Ata maivo po turnata la valmisan, ko patuti de lorefollu ata ko patuti de zegolore. Krotiata maivo po semnesia su saivo de somubiti, su li lelde de ito. Saivo po du-vimova maivo la patusan. Ata saivo po hiro du-velmava saivo de velma la lalvunasan, ata saivo po velmava baba vananullovelma korsi ito. Saivo de simvopaturi po tovota damrunasan rinbasovlari, ata li vananullovelma po dozasenoda itori. Li vana de li vananullovelma po ke ruli sambanasan da saivo de sumayumlisan senru. Tula li vananullovelma, saivo po velmava velmatiri de tibi. Li velmatiri po tivrota saivo de damvabujori ata saivo de reku la molusan. Li velmatiri po tovota li rubilumi de folnitibiyumli. Ata li vana po ke ruli sambanasan tu da ola rubilumi. <sup>[c09-p0168 · medium]</sup>
 
 Saraswati po du-fasbifa maivo, ata saivo po ne sonbusia ko larne, nara saivo po sonbusia la milnoserbusan. Saivo po masuma: “Taivo po desida sidu senosia somi-coda ala maivo ki?” <sup>[c09-p0169 · high]</sup>
 
@@ -2784,19 +2784,19 @@ Saivo po senosia: “Si taivo ke follusan, ola lumiverala fime ito ka verasan.�
 
 Maivo po pensapa eli lalninasan pensanoru, eli lideoserbusan patuti. Eli ka li velni de amor ata momvi, li velni de mubo ata neme. Ola ka baba hurvosan pensa: li follu povi favrofa li verasan amor la kasi benasan tamo li mubonasan sovelavi. <sup>[c09-p0176 · medium]</sup>
 
-Maivo po zavmeza ata po savalisia Sara su li rezari. Maivori de savali po loya kasi molusan. Lanto, maivo po roni pavepa saivo de yuge su maivo de yuge, ata maivo de manliri po roni moludaluma saivo de damrunasan senru. Maivo po moludaluma saivo su saivo de nullovelma. Krotiata maivo po moludaluma saivo tula ito. Saivo de manliri po roni moludaluma maivo, ata saivo po roni dozativroda maivo la molusan. Eli po ne ka amordalu. Maivori po amora la mosa senrusan fuyi. Kube maivori po tefa amora fuyi, maivori po tivrota una krotiapo una en li rizisan suma fuyi. Li luno po sizosia su saivo de fasbi, ata ito po sizosia en maivo de vanajubasabaye ata en saivo de aurumijubasan sabaye. Ola-krono, maivo po bisu sabesia ito. <sup>[c09-p0177 · medium]</sup>
+Maivo po zavmeza ala Sara, ata maivo po savalisia saivo su li rezari. Maivori de savali po tranata da li lelde ala li dendu. Fututi, maivo po roni pavepa saivo de yuge su maivo de yuge, ata maivo de manliri po roni moludaluma saivo de damrunasan senru la molusan. Maivo de manliri po hiro moludaluma saivo su saivo de nullovelma. Krotiata itori po moludaluma saivo tula saivo de nullovelma. Saivo de manliri po ke su maivo. Itori po roni moludaluma maivo, ata itori po roni dozativroda maivo la molusan. Maivori de yano po ne ka doli amordalu. Maivori po amordalua ko amor. Ito po ke kasi senrusan tamo toda maivori de amordaluri raho po bodu venreva. Kube maivori po tefa amordalua, maivori po lisrola en maivori de rizisan suma. Una krotiapo una, maivori po tivrota fuyi. Ola-krono, li luno po yelmiya su saivo de fasbi, ata ito po sizosia en maivo de vanajubasabaye ata en li aurumijubasan lendari raho ke en saivo de sabaye. Ata maivo po surusia ito. <sup>[c09-p0177 · high]</sup>
 
 Maivo po surusia li azuri raho po ne teklata en maivori de yanosan lulfaasari. Maivo po sabesia li maivona. Ata maivo de lulfaasa po cemoyanoca ko saivo de lulfaasa, gase li dossa colbiri de kronofuro. Maivo po tefa gonbiga Sara de lavbupago, ata Sara po tefa gonbiga maivo de lavbupago. Ata maivori po lavbula la loredevosan, ata maivori de laviasa po ka lavbusan. Kroti maivori po hiro somusia, Sara po resora la sumasan, kasa saivo po pensapa fime li una-ne masu de li vesno po ka Amanda de sabeasasan masu. <sup>[c09-p0178 · medium]</sup>
 
 
-## Eli ka li unzira-ne bullipatu, li fojovemisovla de li lulfaasa.
+## Eli ka li unzira-ne bullipatu, li fojovemisovla de li mavolumi.
 
 
 ### Eli ka li una-ne patu, li aurumijubasan cuzatiri.
 
-Li navdisan sumbi po ke baba gudonasan lavi. Lumiopi de cilniyori po yusoya ito la benasan. Muya maskavelmasan auruminelari po fulefa li velmasirmosan kezupatu. Li cilni po vimosudeva gase baba cilni raho po kronobioka kopisa maskama. Saraswati ata maivo po tovota belfina de li taradadivma en eli kezupatu, ata belfina de li sambana entre li nelari. Narli, ito po ke baba diba mellisan sude; tonsi, maivori po ne povi tekvu Amanda vimova ito. Kube taivo po valmiva ala li taradapagotiri ata ligo ito, taivo po loya patu de baba murta raho po ke centa ata mililumi sambanasan telnenelari de vimopeli ata vimotelne. Eli po ke baba turnana raho po ke ruli turnasan. Ola murta po loya una colbisan nibevimo. <sup>[c10-p0003 · low]</sup>
+Li nolsasan sumbi po ke baba gudonasan lavi. Li cilniyori de Lumiopi po roni yusoya ito la benasan. Li velmasirmosan kezupatu po ke fulesan ko baba cunuasasan murta de maskavelmasan auruminelari. Nuna-nela po povi pensapa li cunu de saivori. Li cilni po ke sambasan ko baba cilni raho po kronobioka kopisa toda-nela zileza yuta maskavelma. Saraswati ata maivo po masudevoma li divma de mavopago ata cono en eli kezupatu. Ata maivori po masudevoma tu li sambana entre li auruminelari ata li gudosan nelari. Narli, ola po ke baba sude, ata ito po ke tonsi mellisan fime maivori po ne povi tekvu Amanda vimova ito. Kube taivo po valmiva intra li taradapagotiri ata entre itori, ola po lumiverala baba dendumirusan zeldorilli de dendumiru, nayo taivo po yanoya ko baba murta. Li murta po ka muya centa, nido, muya mililumi sambanasan telnenelari de vimopeli ata vimotelne. Olari telnenelari po gome lektala, ata saivori po loya una colbisan nibevimo. <sup>[c10-p0003 · medium]</sup>
 
-Amanda po amora ito yasmo. Nara saivo po desida sidu pagopa ala pendi una pago en li sumbi, ata ola pago po ka sambanasan da li felra. Saivo po nedumasunia Sara ata maivo fime maivori pagopa ala ola pago ko saivo. Sara ata maivo po ne tovota yesta una de dossa de li cono raho ola jomru po dapada. Nara ola sumbi po ka baba sumbi de aurumijuba. Saivo po ka li lorelivnasan linu de li gonbipago, ata li gonbipago po tovota nuna loterosan linu. Vesetiri de ola linu po vayeva ala li felberi de li nelari raho povi benaba vobi saivo. <sup>[c10-p0004 · low]</sup>
+Amanda po amora ito, seye. Nara en li sumbi, Amanda po desida sidu pagopa ala pendi una pago, ata ola pago po ka sambanasan da li felra. Amanda po nedumasunia Sara ata maivo fime maivori ravnura saivo ala ola pago. Sara ata maivo po ne povi conodonuca ola jomru. Li dapa de ola jomru po ke ultra maivori de cono. Nara ola po ka baba aurumijubasan sumbi, baba sumbi de li auruminelari. Amanda po ka li lorelivnasan linu de li gonbipago. Nuna loterosan linu po bioba en li gonbipago. Vesetiri de saivo po vayeva ala li felberi de li nelari raho po musi lenila itori. <sup>[c10-p0004 · low]</sup>
 
 Amanda ata maivo po roni pagopa ala li velmasirmosan kezupatu en eli sesa-ne deya, kopisa farlafa vimosovlari. Ito po ka li tressa-ne krono en eli deyafama. Kasa li lemupago po ke teklasan, maivori po povi gonbiga ito tu en una-ne deya ata en tressa-ne deya. Nara maivori po lisrola en li nimu ko Sara en penta-ne nullo. Ola po ka baba minvasan nullo. <sup>[c10-p0005 · high]</sup>
 
@@ -2804,7 +2804,7 @@ Nayo maivori po roni duvlada transa li dorbi, zilenela Moseby po tekvu maivori p
 
 Kepi. Maivo ne belfiba taivo, zilenela Moseby. <sup>[c10-p0007 · high]</sup>
 
-“Maivo po senosia baba verana ala taivo somi-krono ki, iya li nimusan? Maivo po vaku taivo de lore loya opimomvisan en ki-eli mambi ki? Maivori de gonbipago po ne nimunia li regnalinu toda-modo, ata maivori amora saivo la mellisan ki?” <sup>[c10-p0008 · medium]</sup>
+“Maivo po senosia verana ala taivo yesta una-krono ki, iya li nimusan? Maivo po vaku taivo de lore loya opimomvisan en ki-eli mambi ki? Maivori de gonbipago po ne nimunia li minvasan regnalinu raho maivori amora la ruli mellisan ki? Toda-modo ki?” <sup>[c10-p0008 · medium]</sup>
 
 “Miyo diba muya nelari. Nuna-krono, miyo cuzatiri. Itori dapada diba muya cono.” <sup>[c10-p0009 · high]</sup>
 
@@ -2812,13 +2812,13 @@ Kepi. Maivo ne belfiba taivo, zilenela Moseby. <sup>[c10-p0007 · high]</sup>
 
 Disni po dapatovoda li lanvefarvi de Nintendo vobi biosan Pokemon kroti sesazira montafama. Disni po dapatovoda itori yuta muya megalumi cono. Genetikus po nosi ka li ralkayo vobi nimulazuri, nara doli Disni po tovota li conodonu kopisa bimneba holbasan pelisan ganreri vobi li Pokemon. Li pelisan ganreri po tovota verasan bioyugeri. Toda li bioyugeri po gome bimneba. Li bioyugeri po ne povi dokrada gase li Pokemon en Rinbavemi yasmo. Nara ola ne ke dapasan vobi li linu. Li linu ke biosan ata somunasan, ata saivo roni tivrota baba molusan Pikacu raho bioba ata havliha. Li pago po ka baba murmupago de Pokemon. Ola-pago, muya Pokemon po ke linusan toda-krono. Itori po tovota toda sovla ata toda colbi. Ola po vaku li pago loya kasi verasan. <sup>[c10-p0011 · medium]</sup>
 
-Ito po ka baba verasan yuge. Ito po gome bimneba en Niutitan. Ito po ne ka baba pelisan salrupatu de Rinbavemi. <sup>[c10-p0012 · medium]</sup>
+Ito po ka baba verasan pavmasan pagomodo. Ito po gome bimneba en Niutitan. Ito po ne ka baba vimopelisan salrupatu de Rinbavemi. <sup>[c10-p0012 · high]</sup>
 
 Amanda de gamdo po ralnora. Saivo de manli po salrusia, ata ito po tivrota saivo de moldi en baba mambi. Saivo po senosia la menu zogusan: “Taivo po navdinia cuzatiri vobi maivori ki?” <sup>[c10-p0013 · high]</sup>
 
 “Iya linu, maivo po vismava taivo de tali ata taivo de benakerso en li lemupago. Taivo po talita la ruli benasan, ata taivo po vardeva eli. Taivo po tefa zavmeza la ruli lalnisan en baba ruli lalninasan kronomelli!” <sup>[c10-p0014 · high]</sup>
 
-Maivo po vimova la bapisan, ata maivo po tavki follufa. Olari cuzatiri dapada lusu unzira-mililumi cono. Saivori vaku li turna de li Pokemon loya mellinasan. Ola sasvasia li lazuri, ata ola sasvasia li gulma ata li silromasu. Li turna de Rinbavemi po ka cunuasasan yasmo. Rinbavemi po tovota toda Pokemon. Rinbavemi po tovota yesta li ramutelnesan Pokemon. Nara ola ne ka sambasan yesta vobi linuri. Ola ka ruli sambanasan vobi linuri. Somi linuri viki lorelivnala baba Pikacu raho ke linuti ata rezamirura su saivori, korsi baba Rekuaza raho ka favrosan. Maivo po loki tovota baba linukersosan noru. Maivo po desida sidu tovota baba lunovurfa futupago. Li lunovurfa po ka violumi. Li lunovurfa ka baba verasan lazu, ata ito ka sambapatusan ko Espeon. Tonsi, ola po ka lumiverasan. Maivo sela po ke en ola sambasan lekta. <sup>[c10-p0015 · low]</sup>
+Maivo po lumrala maivo de vilnetibiri. Ola po tavki ka baba follufavro. Olari cuzatiri dapada unzira-mililumi oro dozira-mililumi oro trezira-mililumi cono, kasa saivori tekvu muya nelari venreva ala Pokemon. Saivori codaca ola kopisa sasvasia li lazuri. Ata saivori codaca ola kopisa sasvasia li gulma ata li silromasu. En Rinbavemi, li turna po ka cunuasasan yasmo. Rinbavemi po tovota toda Pokemon, ata yesta li ramutelnesan Pokemon. Nara maivo reve senosia fime ola ne ka sambasan yesta vobi linuri. Nido, ola ka mosa sambanasan vobi linuri. Somi linuri viki desida fime Pikacu de linuti rezamirura su saivori. Saivori viki desida ola korsi sidu kaduka su Rekuaza en li favrovamri. Nido, maivo po loki tovota baba linukersosan noru. En ola noru, maivo futu tovota baba violumi lunovurfa futupago. Li lunovurfa ka baba biosan sambapatu de Espeon. Saivori po farlafa ito en li pagomodo. Tonsi, maivo po mebanema olari linuri. Maivo sela po ke en pendi ola sambasan lekta. <sup>[c10-p0015 · low]</sup>
 
 “Taivo tovota dossa cuzati. Eli-krono, taivo ata Alianii futu nedunia sidu livnala ki-nela futu rivora taivo, seye.” <sup>[c10-p0016 · high]</sup>
 
@@ -2835,9 +2835,9 @@ Maivo po senosia eli ala saivo, nara maivo po senosia baba verana. Maivo po bodu
 
 ### Dossa-ne patu: vobi Alianii
 
-Maivo ne ka baba ruli benasan sarbiyo. Nara eli telne roni loya baba bulli, ata maivo tovota somi senori raho maivo desida sidu patudonupa. Sige maivori po yave-venreva, taivo loki lovula maivori de harlujomruri. Tonsi, baba benasan telnelombi ke levanasan sidu livnala. Maivo yanopalviya eliri senori eli-pago, kasa maivo bisu sabesia fime itori ke nimusan eli-pago, en saivo de telne. <sup>[c10-p0023 · medium]</sup>
+Maivo ne ka baba mellisan sarbiyo, nara kasa eli bulli roni gome farlafa, maivo tovota somi senori kopisa patudonupa itori seye. Sige maivori po yave-venreva, taivo roni lovula maivori de harlujomruri. Tonsi, baba benasan lombipago ne ke levasan sidu livnala. Maivo yanoya eli yanopalvi eli-pago, kasa maivo surusia fime ito ka nimusan eli-pago, en eli pago, en saivo de telne. <sup>[c10-p0023 · medium]</sup>
 
-Kube saivori masuma maivo ki-krono ata ki-modo maivo po hiro amora Alianii, maivo sahi pebusulnopa sidu relsira, kasa maivori de mambipuku ke loterosan. Nara maivo futu telbata. <sup>[c10-p0024 · medium]</sup>
+Kube maivo gome masuma ki-krono ata ki-modo maivo po hiro amora Alianii en maivori de pagorinba, maivo pebusulnopa sidu relsira muya-krono. Nara maivo futu telbata. <sup>[c10-p0024 · high]</sup>
 
 Amor ka tibilektasan, ata tu maivori de miga po ka tibilektasan. Muya lavrasamni patudonupa baba simvo. Kenvi, saivo po revo-sabesia maivo de simvoasa. Nara maivo po sabesia saivo de simvo, kasa maivo de dokralirbu po tefa sernasia maivo li serna de saivo, ata zilenela Moseby po tefa sernasia maivo li serna de saivo. Tonsi, kube maivori po yave-venreva, maivori po sabesia la sambanasan fuyi. Saivo po sabesia maivo yuta lorevimo, nara maivo po sabesia saivo yuta serna. <sup>[c10-p0025 · medium]</sup>
 
@@ -2868,15 +2868,15 @@ Ki-modo li bio povi tranata la ruli vizusan ata la bapisan ki? Maivo ne sabesia.
 
 Yori, maivo relnura ala maivo de dossa amorsora ata saivori de harlujomru. Una de saivori ka maivo de linuti. Li loterosan ka li minva raho po tivrota maivo muya-krono. Nara saivo po ne tivrota maivo toda-krono. <sup>[c10-p0038 · low]</sup>
 
-En ola raho maivo po vimova, Lumiopi de kezupagomigasan navukadupago, la verasan, po ka baba lumisan yelmisolo intra yesta li mosa sabebitisan ata vanisan kendedesisan navukadupagori. Li tobrari de li bimnedomlu po ke lamsapavmasan cirsi raho ne povi gome hataha yuta kaze. Li navukadupago po gome bimneba voyu nela. Ito po ke sambasan ko baba yelmisolosan regnarinba. Li navukadupago po ke una de dossa rinba, ata ito po tovota muya loterosan patu. Rada patu po ke vobi baba loterosan navukadutali. Li pidiri raho ke su li regnarinba, po ka muya sovezupari en loterosan salrupatu de zile. Li jomruyori po povi teklata en li sovezupa, si saivori de cuzati tovota regnajuba. Sina saivori de cuzati tovota regnajuba, saivori po ne povi teklata. <sup>[c10-p0039 · low]</sup>
+Maivo po tefa vimova somi navukadupagori, ata Lumiopi, li kezupagomigasan navukadupago, po ka baba lumisan yelmisolo la verasan, intra yesta li navukadupagori raho po ka mosa sabebitisan ata mosa kendedesisan en vani. Li tobrari de li bimnedomlu po gome farlafa yuta lamsapavmasan cirsi. Li kazeri po ne povi bakoba ito. Li pago po gome bimneba gase baba dokradomlu raho li lumi pagopa transa ito. Li dokradomlu po ka sovlasan gase baba yelmisolosan regnarinba. Li navukadupago po tovota baba patu raho po ka sovlasan gase baba luno, oro gase una de dossa de baba rinba. En ola patu, li sambanasan “turnapagori” po ka vobi sambanasan navukadutaliri. Li pidiri de li regnarinba po ka li sovezupari, ata rada sovezupa po tovota baba sambanasan salrupatu de zile. Li jomruyori po povi teklata en li sovezupari. Nara rada jomruyo po taro-manlima saivo de cuzati, ata li cuzati po favrofa li regnajuba de saivo. Saivo po povi turnata doli li sovezupari raho li regnajuba po lesvu saivo turnata. Ata si saivo po ne tovota regnajuba, saivo po ne povi turnata. <sup>[c10-p0039 · medium]</sup>
 
 Maivo senosia la verasan. Maivo po ne desida conotovo. Nara Amanda ata Saraswati po yave-donuda baba cuzati de cono da li gonbipago de Apollo. Saivori po conodonuca vobi toda li sambanasan patutiri yuta ito. Tonsi, maivo futu musi reve vimova ola. Ola po bapiba maivo. Nara li mellisan conodonuyo ata li loterosan conodonuyori po tefa dozada li conolordi de li gonbipago, ata toda-coda po venreva da saivori. <sup>[c10-p0040 · medium]</sup>
 
-Eli ka zirkisan: maivori po ne musi revo-conodonuca li cono. Saivori po senosia ala Saraswati ata maivo: “Conodonuca intra li ranfa, nara mavoma Amanda la ruli mavosan, ata vaku li jomru loya baba tivrosan noru raho ke dapasan vobi saivo, ko vimoramuri!” <sup>[c10-p0041 · medium]</sup>
+Li zirkisan ka eli: maivori po ne musi revo-conodonuca li cono hoyo! Saivori po doli senosia ala Saraswati ata maivo: “Du-donuda li cono intra li ranfa, nara mavoma Amanda la holbasan, ata vaku ito loya baba camvisan noru vobi saivo! Li noru suvi vardeva li conodonu. Yanopalviya vimosovlari ata vimoramuri!” <sup>[c10-p0041 · medium]</sup>
 
 Saivori viki ka lazuserbuyori de yanbasan farlapukuri. Nara li jubari de saivori viki ka cirsisan lavi, vimoramuri, vimoramuri raho ne demroda, ata poka pavmasan loreramuri. <sup>[c10-p0042 · medium]</sup>
 
-Iya zilenela Moseby, maivo amora taivo. Maivo amora taivo la verasan. Taivo ka li mosa benasan sasvayo de li nimu. Amanda ata Sara ata maivo ne povi opioa baba kasi benasan sasvayo. <sup>[c10-p0043 · medium]</sup>
+Maivo amora taivo, iya zilenela Moseby. Maivo amora taivo la verasan seye. Taivo ka li mosa benasan Denkipa raho Amanda ata Sara ata maivo povi opioa sidu masuma. Nuna-krono, maivori povi opioa baba kasi benasan Denkipa. <sup>[c10-p0043 · medium]</sup>
 
 Maivori de kibo raho melvama gonbiri, po melvama Sara ata Amanda kopisa saivori turnata. Saivori po gome vismava la vizusan, ata po venreva ala saivori de dorbi ko lornuri raho po ka bansaasa kroti li jomru, kopisa pagopa ata vimova li sovezupa raho Apollo de cuzati po donuda saivori li turna ala ito. En li ranfalideo, ito po ka doli baba namipago, nara ito po gome zileza la ruli zilesan, ko filsesan tino de zile. Ata li filseri po sevusia transa li domlukezu ata salrusia transa li ceresolotobra. Li colbi de li zile po ka azuri ata vana. Li zile po donuda yesta baba Grekisan suru ala li sovezupa, si Grekisan zile gome cemoyanoca ko ruli nolsasan filsesan zayumodo. <sup>[c10-p0044 · low]</sup>
 
@@ -2888,7 +2888,7 @@ Amanda po dozativroda saivo de manli la molusan, ata po senosia: “Ito ke benas
 
 “Da li navukadu ki? Ki-modo taivo futu sasvasia maivo da ito?” <sup>[c10-p0048 · high]</sup>
 
-Ali po donuda maivo nalfari, taivo ramura ki? Olari nalfari ka rubilumi. Maivo futu kavbika taivo, si li navukadu loya benanasan. <sup>[c10-p0049 · medium]</sup>
+“Ali po donuda maivo nalfari. Taivo ramura ki? Olari nalfari ka rubilumi. Maivo futu kavbika taivo, si li navukadu loya benanasan.” <sup>[c10-p0049 · high]</sup>
 
 “Taivo po donuda taivo de nalfari, ata taivo po rillira li zayu de li navufaru.” <sup>[c10-p0050 · high]</sup>
 
@@ -2900,11 +2900,11 @@ Li loterosan jomruyori po semnesia su saivori de semnebitiri. Li kavbikovari po 
 
 Eho, nelari! Maivo ka Okonel, li lirbu. Tu Aviotiko ka li lirbu, ata maivo senosia vobi maivo ata vobi saivo. Maivori ke musvasan vobi maivori de jomru deyapressa. Li jomru futu ka sasvasan ata vizulavisan. Li jomru ka gase tressa-mililumi valmilornu. Maivori suvi venreva ola-pago krotiapo gase dossa lornu ata trezira minota. Maivori senosia baba lalninasan seno la modosan. Maivori vuziva somi lumiverasan ruhevaye deyapressa. Si ola vaku taivori muboma, taivori dagi pagopa ala Rinbavemi. Maivori de navukadu tovota baba migadivma vobi li gonbiri. Si taivori desida sidu lisrola ko li loterosan jomruyori, taivori dagi turnata ito. Si baba mellinasan ruhe ne vaku taivori muboma, lisrola ko maivori! Ata maivori futu pagopa transa poka ruhe la vizusan! <sup>[c10-p0054 · medium]</sup>
 
-Maivo resora! Saivori po fututi taro-pagopa baba fama de ruheri la ruli vizusan, nayo saivori jomruja la kasi vizusan tamo li sonbu de vizu. Taivo vimova ki? Maivo po desida mambiri de verasan miga vobi saivori. Ata ki-coda ke kasi benasan vobi ola tamo li zeldo de baba mellicunusan helnapatu raho ka molusan folluvordu ki? Maivo po tefa vismava li navutrana kroti li jomru seye. Ata maivo po tefa sabesia fime saivori nosi turnata baba ruli hatasan ruhe. Ola po ka li molusan folluvordu raho saivori po nedunia, kopisa saivori nosi kersoka en saivori de amorsan miga, nayo saivori tivrota ko follusan mubofollusan loreri fuyi. <sup>[c10-p0055 · low]</sup>
+Maivo resora, ata resora, ata resora! Saivori po fututi taro-pagopa baba fama de ruheri la ruli gargosan, nayo saivori jomruja la kasi vizusan tamo li vizu de li sonbu. Taivo vimova ki? Maivo po desida eli vobi saivori. Maivo po desida fime saivori tovota mambiri de maskanasan miga. Ata ki-coda ka kasi benasan vobi ola tamo sidu taro-pagopa baba mellicunusan helnapatu de molusan folluvordu ki? Maivo po tefa verasudeva li navutrana kroti li jomru en li navukadu la verasan. Ata maivo po bodu sabesia fime saivori futu rillira baba ruli milnovardesan ruhe. Ola po ka mufrasan. Ola po ka li molusan follu raho saivori po nedunia, kopisa saivori nosi hunraha en saivori de amorsan miga, nayo saivori tivrota ko follusan mubofollusan loreri fuyi. <sup>[c10-p0055 · high]</sup>
 
-Li navukadu po navunia la yugenulusan. Ito de nolsasan lideolordi po pukupa da li kasi vazrasan navukaduri da muya unzira montafama. Tu ito po ke gase lasosan gase li vese de baba cipi, somi-modo. Maivo ne ka baba yalmubitiyo de li navukadu. Tonsi, maivo ne sabesia ki-modo ola talita. Nara ito ka baba garzasan ruli benasan navukadu. <sup>[c10-p0056 · low]</sup>
+Li navukadu po navunia la yugenulusan. Ito po gome farlafa yuta baba nolsasan dorvalordi. Ola dorvalordi po fontefa da li kasi hunrasan navukaduri de baba yanbasan kronopatu. Sige olari navukaduri po miyo, muya unzira montafama po pagopa. Tu ito po ke gase lasosan gase li vese de baba cipi, somi-modo. Maivo ne sabesia ki-modo ola talita, kasa maivo ne ka baba navukadusan yalmubitiyo. Nara ito ka baba garzasan ruli zilesan navukadu. <sup>[c10-p0056 · medium]</sup>
 
-Kube saivori po pagopa en gase unzira-penta minota, baba nengasan lumi po lumila ata po nengania saivori fime saivori po fututi turnata baba navufarusan ruhe. Amanda po hiro somusia la sovelavisan, nara po vilnelalleva ata po roni zegodemroza ko vizulavi. <sup>[c10-p0057 · medium]</sup>
+Saivori po ke en li navu en unzira-penta minota poye. Ola-krono, baba nengasan lumi po lumila, ata ito po sernasia saivori fime saivori futu turnata baba ruhe. Amanda po ke somusan ata sovelavisan, ata saivo po tavki somusia. Nara saivo po vilnelalleva, ata saivo po roni zegodemroza ko vizulavi. <sup>[c10-p0057 · high]</sup>
 
 Amanda po voprava ala Sara, ata Sara po roni fasbifa saivo. Maivo po vimova ola transa Amanda de vilneri, en li vimoramu, krotiapo ola. Amanda po senosia: “Maivori futu lemula navufaruzayu deyapressa!” <sup>[c10-p0058 · high]</sup>
 
@@ -2916,11 +2916,11 @@ Nevi li navukadu po ke vizusan, li ruhe po loki vaku ito zegoza la mellinasan, g
 
 Sara po vilneva saivo de manliri. Una de itori po tivrota Amanda de manli. Sara po roni zegoza. Maivo ne sabesia ki-kasa saivo po ne livnala sidu turnata Rinbavemi. Ito po noma viki vaku toda-coda loya kasi levasan. Yesta si ito po vaku saivo follufa, maivo silrobelfisia fime saivo po doli desida sidu lisrola ola-pago ko Amanda, kopisa tovota li holbasan bioramu. <sup>[c10-p0062 · medium]</sup>
 
-Amanda po senosia: “Eli ke mosa benasan. Maivori noma povi lisrola en li ruhe en rinbakrono pifu.” Saivo po roni lavimilobela la menu mavofarusan, ata saivo de verdevilnetiri po roni yelmiya ko pelimaska. Saivo po sabesia fime Sara po ke ruli follusan, nara saivo de lavi ata saivo de vizulavi po vazrava saivo de surumiga, kasa saivo po ke doli baba linu yasmo. <sup>[c10-p0063 · medium]</sup>
+“Eli ke kasi benasan tamo toda-coda! Maivori noma povi ke en baba ruhe en rinbakrono pifu,” Amanda po senosia. Saivo po roni lavimilobela la mavofarutisan, ata saivo de mellinasan verdevilneri po roni yelmiya ko pelimaska. Saivo po sabesia fime Sara ke ruli follusan. Nara saivo de lavi ata saivo de vizulavi po ke kasi mellisan tamo saivo de surumiga, kasa saivo po ke doli baba linu. <sup>[c10-p0063 · high]</sup>
 
 Sara po senosia: “Maivo ne viki senosia pendi ola. Hema… ito vaku maivo pensapa.” Saivo po ke kasi sovesan tamo maivo de tinsa, nevi saivo de folluri. <sup>[c10-p0064 · medium]</sup>
 
-Amanda po demroda ala Sara, ata po donuda saivo baba kronolomo, ata po sovesia saivo. Amanda po senosia: “Ito futu ke benasan. Maivori futu vimova Pokemon!” <sup>[c10-p0065 · medium]</sup>
+Amanda po demroda ala Sara, ata saivo po donuda saivo baba lalnisan lomo, ata saivo po sovesia saivo: “Toda-coda futu ke benasan. Maivori futu vimova Pokemon!” <sup>[c10-p0065 · high]</sup>
 
 Sara po revo-varova Amanda. Ata Sara po manlima Amanda de sabaye raho po gome colbica, ko amor, la molusan. Saivori po vaku saivori de vimosude loya ruli sambanasan, kopisa velmava gase telnenelari vobi li ganre. Saraswati po colbica saivo de sabaye, kopisa loya baba colbitrana de li ojo ata li aurumijuba. Saivo po vimosudeva gase baba minvalinu de Anime. Ola minvalinu po kronobioka da baba navuasasan garvu. Saivo po ka lumiyelmi ata vaniasa. Saivo de gudosan sabaye po ka shadasabaye. Nara Amanda po senosolosia fime saivo de sabaye loya ertasabaye ko lumipaturi raho ka rubi. Kube maivo po senosia ala saivo fime maivo futu semvisia eli, saivo po vilneva maivo la pelimaskasan. Saivo po sabesia fime maivo po farlafa baba ramulanve en baba salrupatu. Nevi saivo po ne sabesia ola seno, saivo po sabesia fime saivo roni farlafa ito. <sup>[c10-p0066 · medium]</sup>
 
@@ -2933,7 +2933,7 @@ Sara ata Amanda po vazdi kaduka en li navukadu yasmo. Saivori po yave-semnesia t
 
 Rada montafama, muya unzira-megalumi nelari masuma cuzatiri, ata doli lusu megalumi nelari vazdi rillira cuzatiri kopisa gonbiga Pokemon de ganre. Rada deya, doli cuara-mililumi oro penta-mililumi gonbiri dagi turnata li ganre. Nara kube taivo pagopa, taivo lisrola en dossa holbasan deya, ata taivo dagi pelipa ko muya lazuri raho taivo ne povi cunuca. Li cuzatiri dapada kasi cono tamo muya yalmukaduri vobi dossa deya. Yesta si ito ne tovota baba zilesan botevu de navuvamri, eli ka baba mellisan zile seye. Si taivo ka una de li lukasan patucunu de li mellinasan patu raho povi gonbiga li sabebitisan milnovarde, taivo velmava vobi li mambi yasmo. <sup>[c10-p0070 · medium]</sup>
 
-Saraswati ata Amanda po velmava baba sambasan velma kopisa milrademroma Pokemon de velmasirmo. Saivori po tefa sovlafarlasia li velma. Saivori po gonbiga li ganre. Rinbavemi po revo-bimneba li tressa-ne patu de li peliri, ata Saraswati po ka baba mellisan lorefaruyo de li nolsasan peliri. Li kronosirmori po loya riziasasan la pukusan. <sup>[c10-p0071 · low]</sup>
+Saraswati ata Amanda po pagopa ala Pokemon de pelipago. Saivori po velmava sambasan velma, ata li velma po ka sovlafarlasan. Saivori po dorvada fime li velma milrademroma Pokemon de velmasirmo. Rinbavemi po revo-farlafa li tressa-ne kronolinu de li vimopeliri de Pokemon. Ola farlapuku po ka li mosa nolsasan farlapuku de Rinbavemi, ata Saraswati po ka baba mellisan lorefaruyo de ito. Li kronosirmori po tefa loya daigonasan la pukusan. <sup>[c10-p0071 · medium]</sup>
 
 Sara po sudesia li velmari ala Amanda. Li velmari po ka da dossa vimopeli. Li una-ne vimopeli ka li yelmisan rubijuba. Li dossa-ne vimopeli ka li lukanavdisan azurijuba. Ata Sara ata Amanda po amora itori. Tonsi, saivori po velmava gase May. May ka li una-ne minvasan nela de li vimopeli. Saivori de velmari po ke pelisan. Saivori po velmava baba rubifurotisan silivelma ata lalninasan shadavelma. Saivori po tovota baba solafolnisan manlikova. Ito po cemnuyugeca saivori. Li silivelma po tovota shadavelma ata aurumijubasan velma. Ola po ka li velmasirmo de li noruzayuyori. Rada nela po velmava baba colbisan velma su li namre. Muya nelari po velmava eli tino de velma kroti centa montafama. Saivori de pebuvelmari po sambasia saivori de manlikovari. Li pebupatu de itori po ka aurumi ata shada. Ata li lelde de itori po ka vana. Itori po vimosudeva gase zimziri raho po teklata su folniri. Li folniri po ka vana. <sup>[c10-p0072 · low]</sup>
 
@@ -2941,7 +2941,7 @@ Nuna-nela po senosia fime nelari povi mebanema li colbiri ata li velmasirmo de P
 
 Tonsi, saivori po ke velmasan vobi li patu, ata saivori po pensapa fime saivori po ke vuzilordisan, nara saivori po ne ke vuzilordisan. Nuna-nela ke vuzilordisan kopisa vimova li milnovardesan dorbi de ceresolo. Li dorbi ka rubi ata vana, ata ito livela ala li ganre. Li turna po vimosudeva gase Pokemon de pelisovla. Taivo taro-valmiva li dorbi, ata ola-modo, taivo loya baba Pokemon la nelmosan, ata turnata li vemi raho li cono de Mellisan Cipi po bimneba yuta li biojuba. Toda-coda po ka baba noru raho vardeva li pensa. <sup>[c10-p0074 · medium]</sup>
 
-Taivo po dagi tivrota farlasan Pokemon. Itori po ka noruvimosan bioyugeri, ata itori po loya tivrosan. Taivo po ne doli dagi vimova itori la pagolalnisan, gase li lazuri en li lazuganre. Taivo po dagi valmiva ata derdida ko itori, gase li bemya ko li solafolniri, ata itori po ke gase gargonasan gase li volrusan budiri. Kasa itori po ke ruli dapasan, li sasvayori po sasvasia itori la tikusan yuta sasvavimo, ata li mavopagodivma po vimosudeva la kasi humesan tamo saivori. <sup>[c10-p0075 · low]</sup>
+Taivo po dagi tivrota biofarlasan Pokemon. Itori po ka li bioyugeri de Anime, nara li biofarla po vaku itori loya bioyugeri raho manliri povi tivrota. Taivo po dagi vimova itori la pagolalnisan, gase li farvilazuri en li lazuganre, nara ola po ne ka toda-coda. Taivo po dagi valmiva ata pelipa intra itori la derdisan, gase baba bemya intra li solafolniri. Ata itori po ke ruli gargonasan, gase li budiri raho volrusan nelari po donuda toda-coda ala itori. Kasa li bioyugeri po ke ruli dapasan, sasvavimo ata sasvayori po sasvasia itori la ruli mavosan yasmo. Ola sasva viki vaku li mavopagodivma vimosudeva la humesan. <sup>[c10-p0075 · medium]</sup>
 
 Taivo musi mebanema fime eli ganre ka baba cirsisan noru. Saivori po farlafa ito en gase centa montafama. Li peliri po miyo kroti centa montafama. Saivori po sabeserbusia en lusu unzira montafama, ata saivori po bimneba li ganre. Lanto, saivori po vaku li noru loya verasan. Muya bioyugeri po kronobioka la lordinasan, nara saivori po vaku itori daigoda kopisa vaku li noru loya verasan. Maivo ne desida sidu sabesia ola. Maivori, li lavrasamniri, tovota baba tibilektasan miga ko lideoserbu ata ko bena ata benana. Ne masuma maivori! Muya linufulepuku po venreva toda-pago en li kronoramu. Li cunu ka kasi mellisan poye. <sup>[c10-p0076 · low]</sup>
 
@@ -2955,11 +2955,11 @@ Olari dossa deya de Saraswati ata Amanda po ne ka li telne de maivo. Maivo de pe
 
 Maivo futu ne telbata baba telne de saivori de li jomru en li ganre en dossa deya, ata maivo viki ne vazdi telbata mufe. Da gase cuara-mililumi biotino, raho yanopalviya muya hunrari en li sambasan Pokemon, li ganre po tovota lusu pentacenta tino. <sup>[c10-p0081 · medium]</sup>
 
-Amanda ata Saraswati po pagopa ala muya pagori en li ganre, ala muya lelde ata kezulalle. <sup>[c10-p0082 · low]</sup>
+Amanda ata Saraswati po tavki pagopa ala toda sudepago, ala toda helvikova ata toda kirpa. <sup>[c10-p0082 · medium]</sup>
 
 Saivori de lorelivnasan patu po gome nolenia: “Misty de sevukova”. Ito po vimosudeva gase baba filsedomlu. En ito, muya de li lazuri po sahi venreva ligo li lelde de saivori de pago, ata nelari po povi benamoluba ala saivori yuta manli transa li lalleri de li ceresolo, nara ne toda li lazuri. Somi de li velmakovari de ola patu po ke en baba dendumiru de ola Pokemon. Li Pokemon raho ke mellinasan, vanisan ata damrunasan, po jomruvalmija la farvisan gase pelisan budiri. <sup>[c10-p0083 · low]</sup>
 
-Transa li tobrari de lamsapavmasan ceresolo, saivori po vimova baba renlicolbi de sambanasan tino de filsesan Pokemon. Somi Pokemon raho ke damrusan po vimosudeva gase solori, ata loterosan Pokemon po vimosudeva gase filsenulu. Po miyo muya tino de filsenulu, la verasan. Po miyo muya sevuzimzi raho ke sambanasan en colbi ata melli. Maivo ne sabesia yesta toda saivori de noleri. Somi sevuzimzi raho maivo po revo-sabesia ka Cristayshun, baba azurilumi yelmisan sevuzimzi raho ka mellisan gase baba farudomlu en Amerikasan vimotelne. Nevi saivori po ka sevuzimziri ko gargosan kalgari, saivori po ka ruli gargonasan, ata saivori po lavila fime gonbiri po benamoluba ala saivori yuta manli. Po miyo Krabby ata Kingler. Saivori po ka kronosirmosan Pokemon da li fontesan peliri. Toda-nela po musi pelipa saivori de tinori raho po reve venreva somi-krono. Somi nela po pelipa ola ko devo. <sup>[c10-p0084 · low]</sup>
+Transa li lamsapavmasan ceresolotobra, saivori po vimova baba renlicolbi de sambanasan tinori de filsesan Pokemon. Somi Pokemon po vimosudeva gase solori: itori po ka gase damrusan gase li solo. Loterosan Pokemon po vimosudeva gase filsenuluri. Itori po ka muya tinori de filsenulu, la verasan. Po miyo baba mellisan cunumelli de sevuzimziri. Itori po tovota sambanasan colbiri ata sambanasan melliri. Maivo ne sabesia yesta toda itori de nole. Somi de li sevuzimziri raho maivo po revo-sabesia po ka Kristeyshun. Kristeyshun ka baba azurilumi sevuzimzi raho vimosudeva gase cirsi, ata ito ka gase mellisan gase baba cemopagosan farudomlu de li Amerikanasan vimotelneri. Nevi itori po ka sevuzimziri ko gargosan kalgari, itori po ka ruli gargonasan. Ata itori po lavila fime li gonbiri po tivrota itori la molusan yuta li manliri. Po miyo li kronosirmosan Krabby ata Kingler da li fontesan peliri. Li sovlari de Krabby ata Kingler po reve venreva muya-krono. Toda-nela po musi pelipa olari sovlari somi-krono. Saivori po pelipa itori doli ko vardesirmo poye. <sup>[c10-p0084 · medium]</sup>
 
 Dossa bioyugeri de baba biotino po ke en ola patu. Li nole de ola biotino po ka Steampinch. Ito ka baba sevuzimzi, ata ito de colbi ka rubi. Ito de salko tavki tovota baba sovla gase faruvu. Nara ito de yuge tovota kezulalleri, ata ito havliduvlaha nibe gase valyuri raho valyuva. Itori po ka kasi mellinasan tamo li Cristayshun, nara itori po ka kasi hurvosan. <sup>[c10-p0085 · high]</sup>
 
@@ -2969,19 +2969,19 @@ Li Pokemon po ke tonsi ravmisan fime itori po povi yanotaliya ko li bitiri. Li n
 
 Po — Miyo Pokemon de li sevusolo ata li sevularbo. Itori po tovota toda colbi ata toda salrupatu de lumiturna. Ata miyo colbisan budiri de li miru, ata sevuresotiri, ata rumbuvuri, gase Cloyster. Li sevuresotiri po ka vana, ata itori po tovota vio patutiri. Itori de nole po ka Purpoise. Ola nole po tovota li vio ata li sevureso, gase viosevureso. Itori po vaku maivo lavila, ata taivo povi nafenia ola. Si taivo po sulnosia en li lenda, ata si taivo po ke una de li lukasan leninelari en baba lektamambi, taivo po povi naminia itori da taivo de manliri. Amanda po ne ke una de olari. Narli, saivo ata Sara po ke ruli milnosan, ata saivori po ne povi du-vimova. <sup>[c10-p0088 · low]</sup>
 
-Eho. En Misty de sevukova, li mosa hurvosan Pokemon raho saivori po donuda biojuba ala ito, po ka li trana de Suicune. Taivo po ne povi daluda ito. Suicune po ka baba kronosirmosan Pokemon raho ka ramutelnesan. Li Pokemon sahi tranata, ata ito loya kasi dozasan. Li mirufarvibudi po ka baba mellisan farvibudi de cirsi ata miru. Ito po ka kasi mellisan tamo baba vanabumbo. Ito po tovota ito de sudepago, ata ola sudepago po ka ruli mellisan. Ito po ka kasi regnasan, ata ito po ne sahi venreva ligo li nelari. Maivo pensapa fime ola po ka dorvasan. Ito po ne venreva ala li ceresolotobra. Ito po semnesia su li monrunamre de baba sevusan monruti, tula li miruralno. Ito po ke sovelavisan, gase baba farvibudi de Poseidon. <sup>[c10-p0089 · medium]</sup>
+Eho. En Misty de sevukova, li mosa zirkitisan Pokemon raho saivori po vaku ito bioba, po ka li mirufarvibudi. Ata taivo po ne povi daluda ito. Li mirufarvibudi po ka li tranaasa de baba kronosirmosan ramutelnesan Pokemon, Suicune. (Ola ka li “tranaasa” de li Pokemon: itori sahi tranasovlata ala kasi dozasan sovlari.) Li velni de li mirufarvibudi po ka baba ruli mellisan farvibudi de cirsi ata miru. Ito po ka kasi mellisan tamo baba vanabumbo. Ito po tovota baba vimopago vobi ito sela, ata ola vimopago po ka ruli mellisan. Li velni de ito po ka kasi regnaasasan tamo li velni de li loterosan Pokemon, nara li sambanasan po ke mellinasan. Ito po sahi desida sidu lisrola vofa toda-nela. Ola po ka li velni de ito. Maivo pensapa fime saivori po farlafa ito ola-modo la dorvasan. Ito po ne venreva ala li ceresolotobra. Ito po semnesia su li monrunamre de baba mellinasan sevusan monru, tula baba miruralno. Li monru po ka sambapatusan ko baba solovu raho ke en li sevu. Ito de vimosude po ke sovelavisan, gase baba farvibudi de Poseidon. <sup>[c10-p0089 · medium]</sup>
 
 Sara ata Amanda po dagi tivrota baba Ludicolo. Ito po ka baba rilusan furo. Ito po tovota baba mirulavlo su ito de namre, gase baba regnarinba. Ata tu ito po lirala. Maivo verava: itori de vimosude ka levanasan sidu senosudesia. Fisa, vimova itori! Li nole de itori ka baba peli de baba seno poye. Ola seno lumiverala resovarde. Maivo ne povi belfiba fime saivori po donuda biojuba ala itori. Yesta li taliyori po sudesia fime li Ludicolo sahi semnesia tula li miru raho nevrania, ata ito sahi buzaba da ito de namre, gase baba namikova vobi renli raho gome bimneba intra ito de namresolo. <sup>[c10-p0090 · medium]</sup>
 
 Li ganre de Pokemon po ka ruli mellisan, ata Misty de sevukova po ka doli baba mellinasan patucunu de ito. Miyo li viojuba lavrapago. Ito po tovota kasi biotinori de farlasan lavrari tamo ochazira. Itori po tovota colbiri ata sovlari da li molusan de baba Havaisan lavrati ala li lesmasan karkolavravuri ko nalfari raho povi bakoba somi-coda. Taivo po ne povi moludaluma olari, nevi tu itori po gome farlafa la dorvasan kopisa loya sorasan. Ata itori po lavila kasa itori po ke kaldosan en itori de kovari. Miyo tu baba pago raho ka sambapatusan ko li murmuyori de Teksas. Ito de nole po ka Respaitranc, ata ito po ka li dozapago de li murmuri. Ito po tovota muya biotinori de Pokemon raho ka sambapatusan ko li murmu. Maivo ne sabesia itori de nole. Amanda ata Sara po telvo buzaba maremiru da baba Pokemon raho ito de nole ka Miltank. Li maremiru po buyu ka ruli yumlisan, gase baba rivlasan sumayumli. <sup>[c10-p0091 · medium]</sup>
 
-Miltank po ka una de li fontesanri. Li ganre po gome bimneba vobi li centa-ne kronopago de Pokemon. Tonsi, li ganre po lavila li fontesanri yasmo. Li fontesanri ka li una-ne tressacenta lazuri, oro li una-ne pentacenta lazuri. Ola sonbusia la resovardesan. Po miyo centa-penzira lazuri en li apokna. Eli-krono, miyo cuara-mililumi lazuri mufe. Li biotinosolma de muya biotinori po venreva en somi centa montafama de nelaasa. Genetikus ka li zarku de Pokemon. Pokemon ata Genetikus nosi vaku li biotinori relnura en yano. <sup>[c10-p0092 · low]</sup>
+Tu Miltank po ka una de li fontesanri. Kasa li ganre po gome farlafa vobi li centa-ne kronopago de Pokemon, ito po donuda kasi benaseno ala li fontesanri yasmo. Li fontesanri lumiverala li una-ne gase tressacenta oro pentacenta Pokemon. Nevi ola sonbusia la resovardesan, Pokemon po lombila yuta centa-penzira Pokemon, ata eli-krono, miyo gase cuara-mililumi Pokemon. Li ruli mellisan biotinosolma po venreva en li mosa nolsasan kronopatu de li nelari. Ola kronopatu po ka poka centa montafama. Pokemon ata Pokemon de zarkuvu, Genetikus, povi vaku li solmasan biotinori loya solmanasan la yanosan poye. <sup>[c10-p0092 · medium]</sup>
 
-Hoyo! Somi-coda ke benanasan en maivo. <sup>[c10-p0093 · medium]</sup>
+Hoyo! Miyo baba peremo en maivo. <sup>[c10-p0093 · medium]</sup>
 
 Amanda ata Sara po ke en saivori de ganreasasan jomru. Maivo po vimova ito yuta baba vimoramu da saivori de ramu. Nara maivo sahi pagopa entre li sumaramu, li lumisirmo ata baba mellicunusan follu, ata maivo sahi relnura. Li follu venreva da li sambana entre saivori de farlasan pagomodo ata li pagomodo de li verasan vemi. Maivo ka tibilektasan. Taivo mebanema ki? Baba minvalinu ne dagi lavila kasa baba farlasan bumbo ka linuvanisan, nayo li biotinosolma de li “vanabumbori” vaku saivo nemenia ki? <sup>[c10-p0094 · low]</sup>
 
-Nayo maivo sarbisia, maivo pensapa la kasi pensasan. En maivo de modo, maivo ke ruli lavisan kasa maivo po ne pagopa. Eli nosi sonbusia la humenasan. Toda-coda po ke ruli lordiasasan, ata ito po ke ruli vaniasasan, ata ito po ke ruli gilbunasan, nara maivo ka baba lavrasamni, ata maivo sabesia fime maivo ke maskasan. Ata maivo ne sabesia. Ola po ka lavi ata vaniasa ata zile vobi Sara ata Amanda. Maivo de lemudonurivo po senosia ala maivo: “Muya-krono, noruzayutelne ke kasi benasan tamo li verasan.” Nara ola ke benasan. Maivo po amora li milobe ata li suma su li dossa nimusan fasbiri. Saivori po amora li bioramu. Ola ke bansasan vobi maivo. <sup>[c10-p0095 · low]</sup>
+Kube maivo sarbisia la kasi mellisan, maivo maivoma la kasi mellisan. Maivo ke lavisan la verasan en maivo de modo, kasa maivo po ne pagopa. Eli nosi sonbusia la humenasan. Toda-coda po ke ruli lordiasasan, ata ito po ke ruli vaniasasan, ata ito po ke ruli gilbunasan. Nara maivo ka baba lavrasamni, ata maivo nurminia la ruli pidisan fime maivo de bio ka pilonasan ata bakosan. Hema. Maivo ne sabesia somi-modo. Ola po ka lavi, vaniasa ata zile, ata itori po ke vobi Sara ata Amanda. Somi-krono, maivo de lemudonurivo, baba lemudonuyo, po senosia ala maivo: “Somi-krono, nido, muya-krono, noruzayutelne ka kasi benasan tamo pagomodo.” Nara ola ke benasan. Maivo de dossa mosa nimusan nelari po amora li bioramu. Maivo po amora li miloberi ata li suma su saivori de fasbiri. Ata ola ke bansasan vobi maivo. <sup>[c10-p0095 · low]</sup>
 
 
 ### Penta-ne patu: Maremiga ka rubilumi ki?
@@ -3000,13 +3000,13 @@ Eho. Hema. Taivo ne nedunia maivo de semvi la manlisabesan... Nara yori, ki-kasa
 
 Amanda po farufasbifa ata du-vimova: “Maivo desida sidu vimosudeva gase taivo. Maivo ne desida fime taivo tovota larne.” <sup>[c10-p0103 · high]</sup>
 
-Ki-kasa maivo viki tovota larne? Maivo amora taivo. Maivo ne tovota li colbi. <sup>[c10-p0104 · medium]</sup>
+“Ki-kasa maivo viki ke larnetisan ki? Maivo amora taivo. Maivo ne ka li tovoyo de li colbi.” <sup>[c10-p0104 · high]</sup>
 
 Amanda po vilneva maivo ata po fasbilarnefa. Saivo po sabesia la ruli benasan fime maivo po ke maskasan. Ola ka ravminasan, nara maivo po ke menu amorharlusan vobi ola patu de li simvo de maivo. Ola po ka maivo en gase unzira montafama. Ola po ka li velni de maivo, ata ola po vaku maivo loya sambanasan da toda-nela. <sup>[c10-p0105 · medium]</sup>
 
 “Si maivo vimosudeva gase taivo, ito nosi vaku taivo loya nemesan. Somi nelari ne amora ola. En li lemupago, baba minvalinu po larneramula saivo de sora, kasa saivo de sora po tu colbica saivo de sabaye yuta li rubi.” <sup>[c10-p0106 · medium]</sup>
 
-“Maivo mebanema. Hema. Maivo po senosia fime maivo ne tovota li vanajubasan colbi, nara maivo desida fime taivo pensapa eli livna la patusan. Ki-kasa taivo desida li vanajubasan colbi? Ki-kasa vinto taivo desida ito ki? Ito ke benasan vobi taivo de simvolore ki? Maivo po vaku maivo de vilne loya vio ata maivo de sabaye loya vanajuba vobi baba ranfa, baba ranfa raho ke ruli lumiverasan vobi maivo. Sidu sabetelbasia taivo de vimosude ka ruli benasan, nara maivo pensapa fime taivo de livnari ka lumiverasan. Si taivo tranata la diba mellisan, taivo nosi ramumomvira taivo de verasan desi.” <sup>[c10-p0107 · medium]</sup>
+“Maivo mebanema. Hema. Maivo po bodu senosia ola: maivo ne ka li tovoyo de li vanajubasan colbi. Nara maivo desida fime taivo pensapa patuti de eli livna. Ki-kasa taivo livnala li vanajuba ki? Ki-kasa li vanajuba ka vobi vinto taivo ki? Li vanajuba ke benasan vobi taivo de simvolore ki? Maivo po vaku maivo de vilne loya vio, ata maivo po vaku maivo de sabaye loya vanajuba, vobi baba ranfa. Ola ranfa ka ruli lumiverasan vobi maivo. Sidu sabetelbasia taivo de vimosude ka ruli vanisan ata ruli lavisan. Nara maivo pensapa fime taivo de livnari ka lumiverasan. Si taivo tranata la diba mellisan, taivo nosi ramumomvira li simvo raho taivo desida la verasan.” <sup>[c10-p0107 · medium]</sup>
 
 “Ki-kasa taivo po vaku taivo de sabaye loya vanajuba?” <sup>[c10-p0108 · high]</sup>
 
@@ -3044,7 +3044,7 @@ Maivo ne pensapa, nara maivo sabesia, maivo de yumli. Maivo po vaku taivo de sab
 
 “Eho. Maivo futu tranasovlata li sabayeri ala li rubilumi ko vanajuba ata aurumijuba vobi taivo ata Sara. Ali, maivo tovota baba loterosan masu.” <sup>[c10-p0125 · high]</sup>
 
-Saivo de sonbucolbi po tranata, da li pelisan ala li ruli bondosan, maivo po bisu sabesia fime somi-coda po ke benanasan. <sup>[c10-p0126 · medium]</sup>
+Saivo de sonbucolbi po tranata da li pelisan ala li ruli bondosan. Maivo po povi sabesia fime miyo baba benana. <sup>[c10-p0126 · high]</sup>
 
 “Zabo, maivo de amor ki?” <sup>[c10-p0127 · high]</sup>
 
@@ -3086,7 +3086,7 @@ Amanda po reve timruta ata po du-vimova da maivo, krotiata saivo po voprava ata 
 
 Saivo po senosia la lasosan en maivo de velma raho ke mulyisan yuta saivo de timruri: “Maivo ne desida fime taivo senosia verana. Maivo desida fime taivo ka maivo de mareti.” Maivo viki ramumomvira olari senori nuna-krono. <sup>[c10-p0146 · medium]</sup>
 
-“Yomla… hoyo.” Maivo po roni tivrota saivo ligo maivo, ata saivo de namreti po ke en maivo de lomo: “Maivo po ne sabesia fime taivo roni lorela ola-modo. Maivo… maivo amorlavbua taivo, ata maivo amora taivo, maivo amora taivo la ruli mellisan, la ruli mellisan, la ruli mellisan. Maivo yesta ne sabesia ki-coda li mare lumiverala. Ki-coda ka li sambana entre mare ata yanbasan minvafamli, ala taivo ki?” <sup>[c10-p0147 · medium]</sup>
+“Iya amorlore… Hoyo.” Maivo po roni rekura saivo, ata saivo po palvipa saivo de namreti en maivo de lomo la molusan: “Maivo po ne sabesia fime ola ke en taivo de lore. Maivo… maivo amorlavbua taivo, ata maivo amora taivo, maivo amora taivo la ruli mellisan, la ruli mellisan, la ruli mellisan. Maivo yesta ne sabesia ki-coda ito lumiverala, kube baba nela ka baba mare. En taivo de mavo, ki-coda ka li sambana entre baba mare ata baba mellisan minvafamli ki?” <sup>[c10-p0147 · high]</sup>
 
 Amanda po ke ravmisan nevi saivo de yanba, nara saivo po ke ruli sabeasasan la lorevimosan, en yesta nemesan mambiri. “Yanbasan minvafamliri melvama taivo kopisa taivo duvlada da li peremo. Mareti tovota larne ala taivo kasa taivo peremopa. Maivo desida fime Sara ka maivo de yanbasan minvafamli, ata taivo futu ka maivo de mareti, ata si maivori peremopa, taivo tovota larne ala maivori ata taivo tekvu maivori peremopa.” <sup>[c10-p0148 · medium]</sup>
 
@@ -3104,7 +3104,7 @@ Amanda po nulvahavlinia ata namreyebania la molusan. Saivo po ke surusan. Maivo 
 
 Amanda po milobema. Saivo po varova maivo de seldi. Ata maivo po manliravnuma saivo ata po savalisia saivo su li lehe la vizusan. Ata maivo po reve palvipa saivo ala li teru. Saivo po ka maivo de linu, maivo de Amandati. Saivo po ke su li lelde entre li minvalinu ata li minvafamli. Maivo ne sabesia ki-oro saivo po ke ligo li minvalinu oro li minvafamli. Maivo po telvo amora saivo ata marema saivo ata sasvasia saivo gase mare, nara maivo po telvo lisrola ligo saivo vobi pelilavi ata harlujomru gase minvafamli. Ki-kasa maivori ne tovota una seno vobi li minvalinu ata li minvafamli ki? <sup>[c10-p0155 · high]</sup>
 
-Nayo maivo nulvadalunia saivo, maivo po senosia: “Mareri suvi tekvu li linuri senosia verana. Ola ka baba tali de mare. Ata raho taivo po senosia, po ka verana seye. Maivo amorlavbua taivo, nevi taivo somusia ata rezamirura su maivo de namresomubiti. Ata maivo verava fime taivo ne desida fime maivo tovota li somubiti de taivo ata rezamirura su taivo de namresomubiti, minvalinuti. Maivo ka taivo de mare, ata maivo tovota kasi amor tamo taivo. Ola ka verasan. Eli-krono, yava pagopa ala li nimu ata vuzilordiva vobi deyafutu! Deyafutu, maivori musi gonbiga li sabayepago, ata maivo pensapa fime maivori suvi yave-vimova baba vimotelne. Doli maivori. Tu li bojinami dagi venreva, nara doli patuti.” <sup>[c10-p0156 · low]</sup>
+“Mareri suvi tekvu saivori de linuri senosia verana. Ola ka una de li taliri de baba mare,” maivo po senosia, nayo maivo po nulvadalunia saivo. “Ata taivo de seno po ka verana seye. Maivo amorlavbua taivo yesta kube taivo somusia ata rezamirura su maivo de namresomubiti. Minvalinuti, maivo devoda ala taivo fime taivo ne desida fime maivo tovota toda taivo de somubiti la maivosan ata rezamirura su taivo de namresomubiti. Maivo ka taivo de mare, ata maivo amora taivo la kasi mellisan tamo taivo. Ata ola ka li lombina de eli seno. Eli-krono, yava pagopa ala li nimu ata vuzilordiva vobi deyafutu! Maivori musi gonbiga li sabayepago. Ata maivo pensapa fime maivori suvi pagopa ata lombila baba vimotelne la yanosan. Doli maivori futu vimova ito. Tu li bojinami dagi venreva, nara doli patuti de ito dagi venreva.” <sup>[c10-p0156 · medium]</sup>
 
 
 ## Li unzira-una-ne bullipatu ka azurilumi.
@@ -3118,9 +3118,9 @@ Taivo nosi milnoma. Maivori ka divmabitiri. Maivori de pensa de li kersosan ka k
 
 Li lornubiti tovota mellicununasan patuti. Li lornubiti ka farlapuku kopisa vardesirmova li bimne ata li tiku ata li vani. Ito amora li nela raho po bimneba ito ki? Li sasvayori ata li sasvakibo lavila sidu vimova li linuri raho lemula ata kersoka ki? <sup>[c11-p0005 · low]</sup>
 
-Amanda ka li linuti. Alianii po amora saivo. Amanda po ka sambasan ko baba kronotelnesan lazuti raho Alianii po linurillila. Ata Alianii po ka li lordinasan farulavra. Saivori po ka dossa dorvanasan kronotelne raho po kronobioka. <sup>[c11-p0006 · medium]</sup>
+Alianii po surusia baba ruli mellisan loremiga vobi Amanda, li nelati. Amanda po ka baba mellinasan kronotelnesan lazu, ata Alianii po linurillila saivo. Ata Alianii po ka li lordinasan farulavra. Saivori po ka dossa dorvanasan kronotelne raho po loya pagomodo. <sup>[c11-p0006 · medium]</sup>
 
-Saivori po ke sambasan ko silisomusan solonelari de sove. Saivori po vimosudeva gase baba somusan minvaregna ata baba regnalinu. Saivori po gome bojiba, ata saivori po lavila baba lavinemesan favronoru de Rinbavemi. <sup>[c11-p0007 · low]</sup>
+Saivori po ka sambapatusan ko silisomusan solonelari de sove. Olari solonelari po vimosudeva gase baba minvaregna raho somusia ata baba minvasan regnalinu. Saivori po gome bojiba, ata saivori po roni lavila Rinbavemi de favronoru. Ola favronoru po ka baba noru de tibilektasan lavi. <sup>[c11-p0007 · medium]</sup>
 
 Nara li karkokemye de Amanda po gome voprava, ata maivori po tovota toda ranfa de neme, ata maivori po tovota baba pelinasan masuna. Li ranfa po senosia fime li daigo de saivo ka baba fatodaigo. <sup>[c11-p0008 · high]</sup>
 
@@ -3130,7 +3130,7 @@ Po miyo nuna loterosan benasan rillivardesan demro oro demrona. Tonsi, maivori p
 
 Maivori po vimova, maivori po lemula, maivori po timruta, maivori po resora. Maivori po reve timruta rada deya, nayo maivo sela po tu maskaverama saivori yuta maivori de farlasan mavopagoasa. Saraswati po timruta en maivo de varo nayo saivo po palvipa modori ata banuri de livna en li divma, vobi li farlaravmi raho ka saivo de vimosude en saivori de noru, kopisa ito modoma raho saivo desida la verasan. Saraswati po sarbisia li divmaseno de baba vimosude de saivo sela, kopisa ito ka Alianii de loresilrosan amorsora, nayo saivo po sabesia fime Alianii sela po ke en harlu de daigo da li helna de silisomu, ata saivo po hiro amora Alianii la verasan. Ola po ka harlusan ata sabetelbasan sabebiti. Ata narli, nevi maivori de benasan lordiri, maivori po ne povi senosia ala baba minva fime saivo suvi silbesia li linu raho saivo amora ala li sernanulusan denduasa, la sollisan. <sup>[c11-p0011 · medium]</sup>
 
-Yesta maivori, li kibori, li divmabitiri, sabesia li varde de li mellicunusan lulfaasa la tikusan. Ata maivori sabesia li varde de li noruri, ata li varde de li mavopagoasa raho li noruri povi belruba. Ito ka baba mavopagoasa raho gome lordila; <sup>[c11-p0012 · low]</sup>
+Yesta maivori, li kibori, li divmabitiri, sabesia li varde de li mellicunusan mavolumi la tikusan. Ata maivori sabesia li varde de li noruri, ata li varde de li mavopagoasa raho li noruri povi lumiverala; <sup>[c11-p0012 · low]</sup>
 
 Nara toda noruri teklata, taivo sabesia. Ata ola po ke baba ruli kronopatusan harlu vobi maivori! Diotrem de demrori ata Diotrem de desiri ka benanasan. Diotrem po tefa livnala sidu momvidonuma baba minvalinuti. <sup>[c11-p0013 · medium]</sup>
 
@@ -3165,11 +3165,11 @@ Maivo po falnefa zilenela Moseby, ata maivo po pagopa nazru li zavmesan talitabu
 
 Maivori ke en baba nafevemi de Rinbavemi mufe ki? Toda-coda ke diba mellisan, ata li codari ne sambasia fuyi. Ki-kasa li montari raho po pagopa po tovota diba muya bapisan jubari ki? Ata kroti ola, ki-kasa li krono po ke nibevimosan ki? <sup>[c11-p0028 · low]</sup>
 
-Si maivo sudesia taivo baba vimoramu raho taivo po ramucuzara vobi taivo sela, ata taivo po yanopalviya baba divmaseno en ito kopisa vaku taivo sabesia fime taivo ke verasan, taivo viki belfiba maivo ki? <sup>[c11-p0029 · medium]</sup>
+“Si maivo sudesia taivo baba vimoramu raho taivo po ramucuzara vobi taivo sela, ata taivo po yanopalviya baba divmaseno en ito kopisa vaku taivo sabesia fime taivo ka simvosan, taivo viki belfiba maivo ki?” <sup>[c11-p0029 · high]</sup>
 
 Maivo tinsata fime ito viki pukupa da maivo de seno. Eli-pago, ki-nela ke verasan ki? Ata ki-nela ke baba noruzayu ki? <sup>[c11-p0030 · high]</sup>
 
-Li divmabitisan lulfaasari tefa vayeva ala Rinbavemi ata da Rinbavemi kasa saivori desida sidu lisrola ko taivo ata Amanda. Taivo po migademroma ko muya nelari, nara maivori de domlufarlayori po bimneba saivori, ata maivori po livnala li patutiri ko amor. Somi-krono, taivo de migademro milrama li livnari de famamigasan lulfaasari, ata saivori roni lavbula vobi taivo eli-krono. Maivo pensapa fime taivo povi tinsata ki-nela. <sup>[c11-p0031 · medium]</sup>
+Divmabitisan mavolumiri tefa vayeva ala eli pago ata da eli pago, gase saivori de desi. Saivori desida sidu lisrola ko taivo ata Amanda. Nara taivo tefa vimova muya modori. Muya modori, nido, li mellipatu de itori, tefa gome farlafa gagu maivori de Rinbavemisan farlayori. Tu li nelari raho taivo tefa migademroma ko saivori, tefa gome farlafa gagu olari farlayori. Ata maivori tefa livnala maivori de patutiri ko amor. Somi-krono, taivo de migademrori milrama li livnari raho famamigasan mavolumiri sela livnala. Maivo pensapa fime taivo povi pensapa ki-nela. Nayo maivori senosia, olari mavolumiri roni lavbula vobi taivo. <sup>[c11-p0031 · medium]</sup>
 
 Saraswati ki? Saivo ne ke eli-pago ko maivori ki? <sup>[c11-p0032 · high]</sup>
 
@@ -3177,7 +3177,7 @@ Saivo ne povi ke eli-pago. Taivo ke en li silisomu ata li lisrokrono, kopisa sam
 
 Saivo po roni senosia baba verana ala maivo de fasbi. Ki-kasa saivo senosia verana ki? Eli tisehelna ka ki-coda ki? Ki-kasa maivori ke en baba velmakovapago ki? <sup>[c11-p0034 · high]</sup>
 
-“Diotrem ka malosan. Tonsi, li lavrasamniri tovota karkokemye en li divmapatu muya-krono. Nara somi lavrasamniri ne tovota karkokemye. Tu taivo ata Amanda tovota karkokemye. Taivo de karkokemye ke bakosan oro yalmusevresan. Nara ito po gome yusoya. Amanda de divmapatu tovota baba kronosulnosan karkokemye. Maivori ne povi navdinia li kronopatu de li kronosulno. Maivori roni vuzilordiva li tisehelna. Li tisehelna nosi ke yusonasan. Maivori po jubaja li laviasa de baba patudonusan noru vobi taivo de famlisan amor. Taivo po tekvu saivo daigoda la sollisan. Taivo po donuda taivo sela ala li silisomu, kopisa taivo de kronocunuri yanosonbuya ko saivo de kronocunuri en Rinbavemi. En ganreasa, taivo roni tivrota saivo de manli, Alianii. <sup>[c11-p0035 · medium]</sup>
+“Kasa Diotrem tovota moluna ata malo, li lavrasamniri po tovota karkokemyeri en itori de divmapaturi muya-krono. Nara ola po ne venreva toda-krono. Taivo ata Amanda po ka yanopalvisan. Taivo de karkokemye ke bakosan oro yalmusevresan, nara ito po bodu vilnelalleva. Amanda de divmapatu tovota baba karkokemye raho kronosulnoka ito de navufarulumra. Maivori po fesmo navdinia li kronopatu de ola kronosulno. Maivori roni vuzilordiva li tisehelna. Li tisehelna nosi ke yusonasan mufe. Ata maivori po bodu farlafa li laviasa de baba patudonusan noru vobi taivo de minvafamlisan amor. Taivo po tavreta. Taivo po ne lesvu saivo daigoda la sollisan. Ata taivo po vaku taivo sela somusia en baba silisomusan zupa, kopisa taivo de kronocunuri povi yanosonbuya ko saivo de kronocunuri en baba yanosan patu de Rinbavemi. En mavopagoasa, taivo roni tivrota saivo de manli, Alianii. <sup>[c11-p0035 · high]</sup>
 
 Ata miyo somi-coda raho maivori po navdinia. Maivori nedunia sidu senosia ito ala taivo. Somi-coda donuda baba mellinasan ranfasan patuti de opi ala maivori. <sup>[c11-p0036 · medium]</sup>
 
@@ -3189,26 +3189,26 @@ Ki-kasa taivo ne telbata li nululordi su maivo ki? Fisa, vimova ki-oro taivo pov
 
 “Maivori ne suvi harluha li bio de baba mudunasan sasvasan helnanela, kopisa sasvasia baba nela raho nosi fatofa sidu daigoda. Ola ne ka ranfasan. Maivori ne nedunia sidu harluha dossa daigo. Korsi, maivori kendeka sidu sasvasia una bio. Maivori po bodu pensapa fime taivo nosi donuda eli. Eli-krono, maivori verava la solosan fime maivori futu ne telvo yusoya eli nululordi su taivo de yuge. Nara maivori sulnosia taivo de livna seye. Taivo nosi livnala sidu yusoya eli sabetelbasan manlisabe, kopisa taivo nosi sasvasia Amanda de bio.” <sup>[c11-p0040 · high]</sup>
 
-Maivo po hiro timruta. Ata maivo po du-vilneva da li lideodivma de zilenela Moseby. Zilenela Moseby sela bodu ka baba farlasan nela. Maivo po amora saivo, ata maivo po devoda saivo. Saivo po vilneva maivo de vilneri, ata saivo po senosia baba verana nayo saivo po vimova maivo de yuge raho somusia. <sup>[c11-p0041 · medium]</sup>
+Maivo po hiro timruta. Ata maivo po du-vimova da li lideodivma de zilenela Moseby. Zilenela Moseby sela bodu ka farlasan. Maivo po amora saivo, ata maivo po devoda saivo. Saivo po vilneva maivo de vilneri, ata saivo po senosia baba verana, nayo saivo roni vimova maivo de yuge raho somusia. <sup>[c11-p0041 · medium]</sup>
 
 “Ki-kasa maivori de bio ke baba noru intra baba follunoru? Ki-kasa Amanda tovota eli bio ki? Saivo ka doli baba minvalinuti. Saivo tovota doli unzira-una montafama. Maivo doli desida fime saivo ke lavisan.” <sup>[c11-p0042 · high]</sup>
 
 “Diotrem ka narvo. Nuna-krono, maivori futu mebanema ola narvo. Saivori po vorduva cunuasasan malo ata daigo. Nuna-krono, maivori futu mebanema tu ola. Maivori doli povi tevuluta eli narvo. Ata maivori povi talita kopisa maivori de bio loya kasi benasan, nayo maivori ralkara maivori de zarku.” <sup>[c11-p0043 · high]</sup>
 
-Maivo po namreyebania, nara maivo po du-vilneva ko pelinasan neme ata semra. Maivo po roni nuravufasbinia kasa maivo po pensapa fime baba pelilekta de kibori nosi vimova maivo de harlujomruri yuta li amornasan vilne de veraserbuyori raho sarbisia li amordalu de baba mavofarusan yugedesisan dapalore, ata fime yesta zilenela Moseby nosi ke en ola pelilekta. Yori. Ito po ne ka dapasan. Maivo de paralo ata li maivo po ne ka dapasan. Maivori po tovota baba luka. <sup>[c11-p0044 · low]</sup>
+Maivo po namreyebania, nara maivo po du-vimova ko pelinasan neme ata ko semra. Maivo po roni nuravufasbinia kasa maivo po pensapa fime baba pelilekta de kibori nosi vismava maivo de pelimaskari. Yesta zilenela Moseby po nosi ke en ola pelilekta. Saivori po nosi vismava itori yuta li linlesan lorenasan vilneceresolo de veraserbuyori. Olari veraserbuyori po roni sarbisia li amordalu de baba mavofarusan dapalore, ata li dapalore po desida li amordalu la ruli mellisan. Yori. Ola po ne ke lumiverasan. Maivo de paralo ata maivo de simvo po ne ke lumiverasan. Maivori po tovota baba luka. <sup>[c11-p0044 · low]</sup>
 
-Amanda futu tovota li tisehelna. Po miyo nuna loterosan ranfasan livna. Maivori futu vorduva baba navufaru en li mavoyuge de saivo, ata maivori futu vaku li karkokemye tranata, ata saivori futu du-ravnura li mavoyugesan divmapatu de saivo. Maivo po sernasia ola livna ala zilenela Moseby. <sup>[c11-p0045 · medium]</sup>
+Maivori po livnala fime Amanda futu tovota li tisehelna. Po miyo nuna loterosan ranfasan livna. Maivori po dorvada sidu vorduva baba mavonavufaru en Amanda. Ata maivori po dorvada sidu punepa li karkokemye. Ata saivori po dorvada sidu du-ravnura Amanda de mavoyugesan divmapatu. Maivo po sernasia ola livna ala zilenela Moseby. <sup>[c11-p0045 · high]</sup>
 
-“Maivori… po tu desida sidu sabesia ki-oro taivo desida sidu tovota li tisehelna kopisa du-ravnura taivo de divmapatu, ata maivori belfiba fime ito viki ke ruli sasvasan kasa li karkokemye ne povi karkoka.” <sup>[c11-p0046 · medium]</sup>
+“Maivori… po tu desida sidu sabesia ki-oro taivo desida sidu tovota li tisehelna kopisa du-ravnura taivo de divmapatu. Ata maivori belfiba fime ito viki ke sasvasan toda-modo, kasa li karkokemye ne tovota divmadoza loki.” <sup>[c11-p0046 · high]</sup>
 
 Ola po ne ka baba livna, kasa maivo po ne ke vuzilordisan sidu livnala. Maivo po povi pensapa ola ata kronocuzaka ola tisehelna, krotiapo maivori po sasvasia Amanda, si maivo livnala sidu tevuluta maivo de tali de harlujomrusan lirbu. <sup>[c11-p0047 · medium]</sup>
 
 “Maivori tovota baba minvalinuti, ata maivori muboma saivo. Li loterosan patutiri ne ka lumiverasan. Maivo ke benasan. Fisa, vaku maivo vilnelalleva da li silisomusan lisrokrono! Maivo desida fime maivo ke somunasan, kopisa lavbula ko Saraswati vobi Amanda de tisehelna. Saivo ka maivori de minvalinu, iya zilenela Moseby.” <sup>[c11-p0048 · high]</sup>
 
 
-### Li tressa-ne patu, li lavina de li kronorinbanuluri
+### Li tressa-ne patu: li ruli dendusan lavina de li kronorinbanuluri
 
-Muya-krono, en eli deyacuza, maivo po favrofa li melli de li dendufollu raho ka li bioramu de li kronorinbanulu, oro maivo po telvo favrofa ito. Yesta li laviasasan tivromomvi de li helnasan farubakori vaku maivo follufa li pagoasa, en baba kasi dendusan salrupatu. Li mavoyuge suvi pensapa doli baba tikusan cunumelli en baba tikusan kronomelli. Amanda de tisehelna hozi, maivo po sulnosia li puku de ito en li turnazupa de li helnapago. Ola kronopatu po ka narvopago de dendufollu, li dendufollu de li pagoasa. Maivo po ke mavofarutisan da li dozadalu seye. Saraswati po telvo moluma maivo yuta toda saivo de yalmu, nara saivo po fesmo roni moluma maivo. Maivo po valmiva muya valmilornu en zavmedemro ata nazrudemro transa li zupanulu. Ito po ke lelhisan gase li kronofaru de helna. <sup>[c11-p0050 · low]</sup>
+En somi mambiri, maivo po bodu lumiverala li melli de li dendufollu raho ka li bioramu de li kronorinbanuluri, en eli deyacuza. Oro maivo po telvo lumiverala ito. Yesta li laviasasan tivromomvi de li mavoyugesan farubakori vorduva li dendufollu de li pagoasa, en baba kasi dendusan salrupatu. Li pensapolva de li mavoyuge ka kaldosan, ata ito suvi pensapa doli baba kaldosan cunumelli en baba tikusan cunumelli de lornuri. Amanda de tisehelna hozi, maivo po sulnosia li pukuri de ito en li turnazupa de li helnapago. Li lornuri raho maivo po sulnosia en itori en li turnazupa, po ka una de olari kronopaturi, baba narvopago de li pagoasa. Ola po ka ceresan: maivo po ke mavofarutisan da li dozadalu. Saraswati po telvo moluma maivo yuta toda saivo de yalmu, nara ola po ke levanasan vobi saivo. Maivo po valmiva muya valmilornu: maivo po taro-valmiva li zupanulu, ata maivo po revo-valmiva, muya-krono. Li zupanulu po ke lundusan, ata ito po ke lelhisan gase li helnasan kronofaru. <sup>[c11-p0050 · medium]</sup>
 
 Miyo kronosonbu ata kronosonbu ata kronosonbu. Li kronobiti po dozadaluda maivo. Li secari po ke sambasan ko li minotari. Li minotari po ke sambasan ko li lornuri. Ata li lornuri po ke sambasan ko rinbakrono. Itori po yolbenuravuya maivo de lore, nayo maivo po pensapa fime maivo nosi momvima Amanda. Amanda ka maivo de minvafamli ata maivo de nimusan minvalinu. Saivo ka maivo de nimuyoti. Saivo tovota vanajubasabaye, ata saivo opioa viovilne. Oro saivo norunia li rubilumi poye. Si saivo viki lomola somi colbi, maivo viki lomola ito ko saivo. Ata maivo viki tivrota saivo, ata maivo viki resodalura saivo. Ata maivori viki sapusia bojinami. Ata maivori viki lisrola en maivori de ganreasa, en Apollo, li gonbipago. Nuna-krono, maivo viki lesvu somi-nela revo-ravnura saivo ala Barnaby. <sup>[c11-p0051 · medium]</sup>
 
@@ -3223,9 +3223,9 @@ Maivo po tefa sabesia muya narvori, nara maivo po ne povi teki zeldoza li apoksa
 Maivo po lavbula vobi maivo de nimusan linuti en rada mambi de li kronorinbanulu ata en rada loresonbu. Ata maivo po bisu sabesia li tiselenda de li sadosan daigo en rada tekla entre li havliri. Maivo po ka toda renlipatu raho po gome bakoba su li lamsasan valminulu. Li mirusovlari de devo po venreva muya-krono. Itori po ka ruli lumisan lumiri. Itori po bakoba li teklanasan vabeveri de neme, ata itori po gome bakoba gagu olari vabeveri. <sup>[c11-p0056 · medium]</sup>
 
 
-### Eli ka cuara-ne patu. Ito ke azuri ata shadalumi.
+### Li cuara-ne patu: li azuri raho tovota patuti de li shadalumi
 
-Zilenela Moseby po roni senosia ko li germasan tisehelnayori ata li nelasan tisehelnayori vobi Amanda yuta sernanulusan favrorivla. Saivo po vimova toda li tisehelna. Ata maivo po masuma vinto saivo fime saivo futu sernasia maivo li puku de li tisehelna. Maivo po ke dozanasan sidu vimova li tisehelna. Ata kasa maivo ka purma, saivori po senosia ko doza fime maivo ne suvi vimova ito. Saivori po roni lallela saivo de namresolo, ata saivori po roni ravnura li divmapatu da saivo de mavoyuge. Taivo ne nedunia sidu vimova taivo de minvalinu oro taivo de minvafamli ola-modo. Taivo povi merama taivo sela yuta ola una rivona, kopisa taivo de rivorelnuri futu ne nosi ke mavovulrasan. Nevi miyo baba ruli vimosan vimobiti en li tisehelna, ito ne lumiverala fime taivo suvi vimova ito. Zilenela <sup>[c11-p0058 · low]</sup>
+Zilenela Moseby po roni senosia yuta baba sernanulusan favrorivla ko li germasan tisehelnayori ata li biosan tisehelnayori. Saivori po roni helnaha Amanda. Saivo po vimova toda li tisehelna, da ito de lombi tuni ito de lombina. Ata maivo po masuma vinto saivo kopisa saivo sernasia maivo li vordupuku de li tisehelna. Maivo po ne povi vimova ito. Ito po ke diba bondosan vobi maivo. Ata kasa maivo ka baba purmasan nela, saivori po senosia ala maivo la ruli dozasan fime maivo ne suvi vimova li tisehelna. Saivori po roni lallela saivo de namresolo, ata saivori po roni ravnura baba mavoyugesan divmapatu. Taivo ne nedunia sidu vimova taivo de minvalinu, oro taivo de minvafamli, ola-modo. Taivo povi donuda li mera de ola una rivona ala taivo sela, kopisa mavovulra nosi ne bakoba li rivorelnuri raho futu venreva. Doli kasa miyo baba vimobiti raho vimova toda patuti, en li tisehelna, ola ne lumiverala fime taivo suvi vimova. Zilenela <sup>[c11-p0058 · medium]</sup>
 
 Moseby po senosia eli sabeasa ala maivo, ata maivo po lenila. Ata tonsi, maivo po masuma fime saivo vimova, ata senosia ala maivo, kube li mambi de vera venreva. <sup>[c11-p0059 · medium]</sup>
 
@@ -3292,7 +3292,7 @@ Yori. Maivo de bionulu ka shadalumi, gase li sabaye raho maivo de mare tovota, a
 
 Sara ka sasvalansi vobi maivo de mare. Sara po lemudonula maivo kulpamera, ata po lemudonula maivo mebane. <sup>[c11-p0090 · high]</sup>
 
-Sara po donuda maivo li senorinba ata li vimo. Maivo po nedunia itori kopisa vimova Ali. Maivo po ne vimova maivo de mare gase baba larnesan lorevoprasan minvalinu raho sahi vimova saivo de peremosan mare. Tu ola mare ka lorevoprasan. Nara maivo po vimova Ali, ata maivo po mebanema saivo, ata maivo po jureviloreja saivo, gase li kronoramu. <sup>[c11-p0091 · medium]</sup>
+Sara po donuda maivo li senorinba ata li loterosan vimo. Maivo po nedunia itori kopisa vimova maivo de mareti. Baba garzasan larnesan lorevoprasan minvalinu nosi vimova saivo de peremosan mare la tinosan. Ola mare ka gase lorevoprasan gase li minvalinu. Nara maivo po ne vimova maivo de mareti ola-modo. Korsi, maivo po vimova Ali, ata maivo po mebanema saivo, ata maivo po jureviloreja saivo, gase li kronoramu. <sup>[c11-p0091 · medium]</sup>
 
 Maivo lisrola ko saivo en li nimu. Maivo amora saivo, nevi saivo vaku maivo loya zirkisan, nevi saivo ke ruli mudusan ata maivo musi sulnosovesia. Saivo tu sulnosovesia ala maivo kube maivo ke zirkitisan. <sup>[c11-p0092 · medium]</sup>
 
@@ -3304,13 +3304,13 @@ Ata li zirkisan minvasan sudeyo pelipa tressa monrunelati, baba monrunela, baba 
 
 Lanto, toda-krono miyo baba kendejomrusan pelicono. Nara saivo ke tonsi ravmisan fime saivo ne livela yuta ola toda-krono. Saivo vimova li tino de suru raho taivo ke en ito, ata saivo vimova taivo de peremo, ata saivo punepa taivo, finihatafa taivo, oro maskayalmuma taivo, ola-modo. <sup>[c11-p0096 · medium]</sup>
 
-Saivo futu loki telneta li telne, yuta saivo de lazutiri ata saivo de lorefaru. Yesta kube taivo tefa loya silinasan, saivo loki telneta. Nara si taivo ne tefa loya silinasan, saivo loki telneta. <sup>[c11-p0097 · medium]</sup>
+Saivo futu loki telneta li telne. Una krotiapo una, saivo vaku codari vimosudeva la vizulavisan. Saivo yusoya saivo de lazutiri ata saivo de lumiyelmi. Ata yesta krotiapo taivo bodu sovesia, saivo loki telneta. Ata si taivo ne tefa sovesia ki? Saivo loki telneta. <sup>[c11-p0097 · medium]</sup>
 
 Kube taivo ne vuziva ito, saivo bapiba taivo: “Yori, iya Amanda, maivo buyu lenila fime nosi miyo baba kendejomrupelicono en eli. Nara maivo ne povi loki senosia taivo raho ito codaca. Taivo ne viki milnoserbuma ki— <sup>[c11-p0098 · medium]</sup>
 
 “Mareti, maivo ne milnoserbuma li garzasan kendejomrupelicono. Lesvu maivo sollisia!” Eli ka maivo de ruli verasan telba de zeldo. <sup>[c11-p0099 · high]</sup>
 
-“Maivo futu rimara baba rima ala taivo! Li famanelari po fututi famadonufa li holbasan conokova ala taivo, tuni taivo po loya pelimaskasan. Taivo vimova ki? Taivo sabesia raho maivo senosia. Zabo. Ola ka li mambipuku de li terurenliherba ata li renliherba.” Eli po ka saivo de maskanulusan relsi, ko baba sumasan milobe ata baba gubu. Li gubu po vimosudeva gase baba nela, ata li gubu po tovota zilevelma. <sup>[c11-p0100 · low]</sup>
+“Li fama futu famadonufa taivo baba rima ki? Zoke! Hema, li fama po fututi famadonufa taivo li holbasan conokova, li garzasan holbasan coda… tuni taivo po turnata ola pelimaska de taivo. Taivo vimova ki? Taivo sabesia ki-coda maivo roni senosia. Zabo. Ola ka li mambipuku de li terurenliherba ata li renliherba,” saivo po relsira la maskanulusan. Saivo sahi relsira ola-modo. Ata baba sumasan milobe po rivora li relsi, yasmo. Tu baba gubu po rivora ito. Li gubu po ke en baba zilevelma, ata ito po tovota li vimosude de baba nela. <sup>[c11-p0100 · low]</sup>
 
 Li gubu po ke sambasan ko baba lulfanela en melli ata en simvolore. Ito po helvivalmiha ko dorva ata lorefaru transa baba lulfanelasan madi. Li madi po tovota muya renliherbari ko muya colbi. Po miyo renliherbari raho po ka rubijuba, ko rinbari raho po ka vana. Po miyo renliherbari raho po ka azuri. Itori po ke ruli mellisan, ata taivo po povi semnesia su itori, ata taivo po povi vimova li veluri. Po miyo salrusan renliherbari raho po ka verdejuba. Itori po ka salrusan ata mellinasan. Lumisan mirusovlari po lalfola da itori. <sup>[c11-p0101 · low]</sup>
 
@@ -3344,7 +3344,7 @@ Saivo po ne reve bakoba li maska. Saivo po ne verasenova fime saivo po bakoba li
 
 Ko maivo de mareti, ko Ali, ola ne vorduva trana si taivo ke larnesan ko ki-coda, oro taivo zoguza ki-kasa, oro taivo ne senosia. <sup>[c11-p0116 · medium]</sup>
 
-Ola ne ka bondosan si taivo zeldorilliza saivo penta-krono oro penzira-krono. Si saivo desida taivo de visma, ata si saivo desida sidu vimova taivo de milobe, saivo futu farlafa sesa zayutelne. Saivo desida ito toda-krono. Saivo futu farlafa cuazira nolsasan tinori de colbisan sevunami ko furo. Saivo futu farlafa baba nolsasan tinoti de bumre, ata saivo futu bimneba baba namipagoti vobi doli taivo. Saivo futu sarbisia baba ruli sabeserbusan bulli de cemocuzari vobi taivo yuta mellikrono. Saivo futu palvipa dossa sonbusamba en ito. Somi-krono, saivo futu vaku taivo ramura baba kendejomrupelicono. Saivo helviha silrori. Itori vaku taivo ramura taivo de lorelivnasan peliri ata bulliri ata taivo de linukersosan telneri. Saivo tovota baba tikusan zirki. Somi loterosan nelari tu tovota ola zirki. Saivo palvipa silrolumiri en cunuri kopisa sumasia saivo sela ata saivori. <sup>[c11-p0117 · low]</sup>
+Ola ne ka lumiverasan, si taivo zeldorilliza saivo penta-krono, oro penzira-krono. Si saivo desida taivo de visma, ata si saivo desida sidu vimova taivo de milobe, saivo futu farlafa sesa zayutelne. Saivo modoma ola-modo toda-krono. Saivo futu farlafa cuazira nolsasan tinori de sevunami. Eliri sevunamiri ka colbisan, ata itori tovota li lelhi de furo. Saivo futu farlafa baba nolsasan tinoti intra li tino de bumrenami, ata saivo futu bimneba baba nelasan namipagoti vobi taivo. Saivo futu farlafa baba mellikrono kopisa sarbisia baba bulli de cemocuzari vobi taivo. Saivo futu sabeserbusia toda patuti de ito. Saivo futu talvata somi sonbusambari en ito. Saivo futu senosia baba kendejomrupelicono la silrosan, en somi mambi, oro en baba loterosan mambi. Saivo helviha silrosan lavrasamniri ata favrori. Eliri favrori finifa ala taivo de lorelivnasan peliri ata bulliri. Itori tu finifa ala taivo de loterosan linukersosan telneri. Saivo palvipa silrolumiri en cunuri. Saivo modoma ola-modo kopisa vaku saivo de ruli tikusan zirki loya sovesan. Somi loterosan nelari ka sambapatusan ko saivo, ata saivori tu tovota ola zirki. Saivo vaku tu saivori de zirki loya sovesan. <sup>[c11-p0117 · medium]</sup>
 
 Lanto, saivo tefa farlafa muya zirkisan rupu, ata tefa senosia muya zirkisan senori, ata tefa farlafa muya larda. Saivo modoma ola ko opina, kopisa saivo nosi belruba lavi ata milno ala taivo. Tonsi, taivo ramumomvira ki-kasa taivo po ke larnesan en li lombi. Taivo surusia baba patuti de suruna ata baba patuti de pelilavi. Ata taivo ke ruli nemesan. Ata taivo doli desida sidu vimova saivo, nayo saivo farlafa somi-coda. Oro taivo yesta desida sidu doli lisrola ligo saivo. Saivo modoma gase baba linu. Li linu farlafa suderi yuta Legori raho po gome farlafa kroti centa montafama. Ata li linu farlafa telneri vobi taivo, gase Santa de melvayoti. Maivo de mareti nosi ka li lemudonuyo, nara saivo ka tu baba linu en saivo de modo. <sup>[c11-p0118 · medium]</sup>
 
@@ -3354,7 +3354,7 @@ Saivo ka maivo de mare. Saivo po tavki daigoda vobi maivo. Saivo ka li una-ne la
 
 Li cunu de li nelari raho saivo po sasvasia, ne vaku somi-coda tranata. <sup>[c11-p0121 · medium]</sup>
 
-Saivo de viovilneri ka devisan, ne narvoasasan, nara lansisan. Itori lumila en baba lumi raho povi sambasia toda salrudomlu en maivori de jubasenosan tevulusan cilni. En saivo de viovilneri, miyo lavi ata li neme de baba sevulirayo. Una krotiapo una, itori venreva. Saivo pensapa fime saivo po ne povi sasvasia maivo. Saivo po tovota doli una musva, ata saivo po ke vazranasan en ola musva. Tonsi, Sara, maivo de mareti, ata maivo lavbula vobi saivo. Ata tu li kibori lavbula vobi saivo. Doli poka kibori ne lavbula. Maivori farufa lavbusulme vobi saivo. Ata maivori loki tivrota maivori de opi. Maivori opioa fime saivo nosi ke menu damrusan ala saivo sela futupago. Ata maivori opioa fime saivo nosi vimova toda-coda en baba sambanasan lumi. Sara ata maivo resora vobi saivo ko maskanasan reso. Sara ata maivo milobema vobi saivo ko maskanasan milobe. Ata maivori tivrota saivo la molusan ko suma. <sup>[c11-p0122 · medium]</sup>
+Saivo de viovilneri ka devisan, ne narvoasasan, nara lansisan. Itori lumila. Itori de lumi povi sambasia toda salrudomlu en maivori de jubasenosan cilni raho ka tevulusan. En saivo de viovilneri, miyo lavi ata li neme de baba sevulirayo. Krotiapo li lavi, li neme venreva. Krotiapo li neme, li lavi venreva reve. Saivo vimova fime saivo po ne povi sasvasia maivo. Saivo po tovota doli una musva, nara saivo po ke vazranasan en ito. Tonsi, Sara, maivo de mareti, ata maivo lavbula vobi saivo. Ata tu li kibori lavbula vobi saivo. Doli poka kibori ne lavbula. Maivori farufa lavbusulme vobi saivo. Ata maivori loki tivrota maivori de opi. Maivori opioa fime saivo nosi ke menu damrusan ala saivo sela futupago. Ata maivori opioa fime saivo nosi vimova toda-coda en baba sambanasan lumi. Sara ata maivo resora vobi saivo, ata maivori milobema vobi saivo. Maivori de reso ka maskanasan, ata maivori de milobe ka maskanasan. Ata maivori rekura saivo la molusan. <sup>[c11-p0122 · medium]</sup>
 
 Maivori po lesvu Ali telneta saivo de telneri vobi maivori yuta li lumisovlakiboti. Saivo po nolenia ito Charlie. Charlie po ka li nole de baba sora, ata Ali ne ramumomvira ola sora. Ola sora po bodu daigoda, ata li pavma de saivo po gome nolsania. Doli saivo de lamsasan biodivmapatu po lisrola. Ali po vaku ito loya saivo de seldirinba, ata Ali tovota ito ligo saivo toda-krono. <sup>[c11-p0123 · high]</sup>
 
