@@ -205,7 +205,11 @@ def claude(state, prompt, model, kind, effort=None):
                 state.s["pauses"].append({"at": now(), "why": "weekly usage cap" if weekly else "usage limit", "minutes": mins, "detail": blob.strip()[:200]})
             state.save()
             log(f"usage limit: sleeping {mins} min (until {until:%H:%M})")
-            time.sleep(mins * 60)
+            # wait by the wall clock, a minute at a time: a long time.sleep does not count the
+            # hours the computer spends asleep, and would wake long after the reset
+            until_t = datetime.now() + timedelta(minutes=mins)
+            while datetime.now() < until_t:
+                time.sleep(60)
             continue
         with LOCK:
             state.s["pauses"].append({"at": now(), "why": "error / outage", "minutes": backoff / 60, "detail": blob.strip()[:300]})
