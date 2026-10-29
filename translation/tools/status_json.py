@@ -41,7 +41,7 @@ def main():
         scored, score_sum = scored + len(sc), score_sum + sum(sc)
     events = list(reversed(state.get("events", [])))[:25]
     last_pause = (state.get("pauses") or [{}])[-1]
-    finished = os.path.exists(os.path.join(common.ROOT, "FINISHED"))
+    finished = os.path.exists(os.path.join(common.ROOT, "FINISHED")) or os.path.exists(os.path.join(common.ROOT, "FINISHED_ALL"))
     if finished:
         phase = "Finished"
     elif done < total:
